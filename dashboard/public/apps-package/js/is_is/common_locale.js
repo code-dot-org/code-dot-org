@@ -346,7 +346,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "showBlocksHeader":function(d){return "Sýna kubba"},
 "showCodeHeader":function(d){return "Sýna kóða"},
 "showGeneratedCode":function(d){return "Sýna kóða"},
-"showTextHeader":function(d){return "Show Text"},
+"showTextHeader":function(d){return "Sýna texta"},
 "showToolbox":function(d){return "Sýna verkfærakassann"},
 "signup":function(d){return "Skráning á inngangsnámskeiðið"},
 "stringEquals":function(d){return "strengur=?"},

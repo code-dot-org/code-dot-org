@@ -410,6 +410,7 @@
     heading_legacy: <h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>
     your_gallery: Galerija
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Vīrietis
     female: Sieviete
@@ -508,9 +509,13 @@
       title: Flappy kods
       body: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy
         koda apmācību!
-    20hour:
-      title: Ievadkurss
-      body: Izmēģini mūsu 20 stundu ievadu Datorzinātņu kursā.
+    20-hour:
+      title: Accelerated Course
+      body: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
+        Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās
+        prieku mācīties visos vecumos.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta versijā
       try_frozen: Zīmē kopā ar Annu un Elzu no "Ledus sirds"

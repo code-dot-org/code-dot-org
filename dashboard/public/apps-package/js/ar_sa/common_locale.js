@@ -157,7 +157,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "and":function(d){return "و"},
 "backToPreviousLevel":function(d){return "الرجوع إلى المستوى السابق"},
 "blocklyMessage":function(d){return "بلوكلي"},
-"blocks":function(d){return "مكعبات"},
+"blocks":function(d){return "مقاطع برمجيّة"},
 "booleanFalse":function(d){return "خطأ"},
 "booleanTrue":function(d){return "صحيح"},
 "catActions":function(d){return "الاجراءات"},

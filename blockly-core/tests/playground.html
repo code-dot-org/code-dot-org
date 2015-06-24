@@ -3,40 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>Blockly Playground</title>
-<script type="text/javascript" src="../build-output/blockly_uncompressed.js"></script>
-<script type="text/javascript" src="../generators/javascript.js"></script>
-<script type="text/javascript" src="../generators/javascript/logic.js"></script>
-<script type="text/javascript" src="../generators/javascript/loops.js"></script>
-<script type="text/javascript" src="../generators/javascript/math.js"></script>
-<script type="text/javascript" src="../generators/javascript/text.js"></script>
-<script type="text/javascript" src="../generators/javascript/lists.js"></script>
-<script type="text/javascript" src="../generators/javascript/colour.js"></script>
-<script type="text/javascript" src="../generators/javascript/variables.js"></script>
-<script type="text/javascript" src="../generators/javascript/procedures.js"></script>
-<script type="text/javascript" src="../generators/python.js"></script>
-<script type="text/javascript" src="../generators/python/logic.js"></script>
-<script type="text/javascript" src="../generators/python/loops.js"></script>
-<script type="text/javascript" src="../generators/python/math.js"></script>
-<script type="text/javascript" src="../generators/python/text.js"></script>
-<script type="text/javascript" src="../generators/python/lists.js"></script>
-<script type="text/javascript" src="../generators/python/colour.js"></script>
-<script type="text/javascript" src="../generators/python/variables.js"></script>
-<script type="text/javascript" src="../generators/python/procedures.js"></script>
-<script type="text/javascript" src="../msg/messages.js"></script>
-<script type="text/javascript" src="../blocks/logic.js"></script>
-<script type="text/javascript" src="../blocks/loops.js"></script>
-<script type="text/javascript" src="../blocks/math.js"></script>
-<script type="text/javascript" src="../blocks/text.js"></script>
-<script type="text/javascript" src="../blocks/lists.js"></script>
-<script type="text/javascript" src="../blocks/colour.js"></script>
-<script type="text/javascript" src="../blocks/variables.js"></script>
-<script type="text/javascript" src="../blocks/procedures.js"></script>
+<script type="text/javascript" src="../closure-library-read-only/closure/goog/base.js"></script>
+<script type="text/javascript" src="./test_dependency_map.js"></script>
 <script type="text/javascript">
 'use strict';
+goog.require('Blockly.Playground');
+goog.require('goog.tweak');
 // Depending on the URL argument, render as LTR or RTL.
 var rtl = (document.location.search == '?rtl');
 var block = null;
-
+</script>
+<script type="text/javascript" src="../msg/js/en_us.js"></script>
+<script type="text/javascript">
 function start() {
   var toolbox = document.getElementById('toolbox');
   Blockly.inject(document.getElementById('blocklyDiv'), {
@@ -45,6 +23,20 @@ function start() {
     toolbox: toolbox,
     assetUrl: function(path) { return '../' + path; }
   });
+
+  goog.tweak.registerBoolean('openContract', 'pre-opens contract editor', false);
+  if (goog.tweak.getBoolean('openContract')) {
+    newContractEditor();
+  }
+}
+
+function newContractEditor() {
+  Blockly.defaultNumExampleBlocks = 2;
+  Blockly.useContractEditor = true;
+  Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
+    disableExamples: false
+  });
+  Blockly.contractEditor.openWithNewFunction();
 }
 
 function toXml() {
@@ -276,6 +268,7 @@ h1 {
     </category>
     <category name="Variables" custom="VARIABLE"></category>
     <category name="Functions" custom="PROCEDURE"></category>
+    <category name="CSinA Vars" custom="FUNCTIONAL_VARIABLE" />
   </xml>
 
   <h1>Blockly Playground</h1>
@@ -292,6 +285,8 @@ h1 {
   </script>
 
   <p>
+    <input type="button" value="Create Contract Editor" onclick="newContractEditor()">
+    &nbsp;
     <input type="button" value="Export to XML" onclick="toXml()">
     &nbsp;
     <input type="button" value="Import from XML" onclick="fromXml()">

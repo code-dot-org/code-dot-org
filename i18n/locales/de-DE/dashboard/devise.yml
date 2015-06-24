@@ -73,4 +73,4 @@ de:
         hello: 'Hallo %{email}'
         someone_invited_you: 'Jemand hat sie eingeladen %{url}, Sie können es über den Link unten Akzeptieren.'
         accept: Einladung Annehmen
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        ignore: 'Wenn Sie diese Einladung nicht annehmen möchten, ignorieren Sie bitte diese E-Mail. <br /> Ihr Konto wird nicht erstellt werden, bis Sie den obigen Link zugreifen und Ihr Kennwort einstellen.'

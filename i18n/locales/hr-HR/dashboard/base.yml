@@ -359,6 +359,7 @@ hr:
     heading_legacy: '<h2>Naš općeniti tečaj za</h2><h1>sve uzraste</h1>'
     your_gallery: Galerija
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Muško
     female: Žensko
@@ -441,9 +442,10 @@ hr:
     flappy:
       title: Flappy kôd
       body: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!
-    20hour:
-      title: Uvodni tečaj
-      body: Isprobajte naš 20-satni tečaj Uvod u informatiku.
+    20-hour:
+      title: Accelerated Course
+      body: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
       try_frozen: Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva

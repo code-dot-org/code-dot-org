@@ -781,8 +781,7 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.current &&
-      dashboard.project.current.id) {
+  if (window.dashboard && dashboard.project.getCurrentId()) {
     clientApi.ajax('GET', '', function (xhr) {
       assetListStore.reset(JSON.parse(xhr.responseText));
     }, function () {
@@ -1226,8 +1225,8 @@ studioApp.runButtonClickWrapper = function (callback) {
 Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || (!dashboard.project.isEditing ||
-      (dashboard.project.current && dashboard.project.current.id))) {
+  if (!window.dashboard || !window.dashboard.project.isEditing() ||
+      window.dashboard.project.getCurrentId()) {
     $(window).trigger('appModeChanged');
     if (callback) {
       callback();
@@ -2348,6 +2347,12 @@ designMode.onPropertyChange = function(element, name, value) {
       element.parentNode.style.top = value + 'px';
       break;
     case 'width':
+      element.setAttribute('width', value + 'px');
+      break;
+    case 'height':
+      element.setAttribute('height', value + 'px');
+      break;
+    case 'style-width':
       element.style.width = value + 'px';
       element.parentNode.style.width = value + 'px';
 
@@ -2356,7 +2361,7 @@ designMode.onPropertyChange = function(element, name, value) {
           element.style.height;
       }
       break;
-    case 'height':
+    case 'style-height':
       element.style.height = value + 'px';
       element.parentNode.style.height = value + 'px';
 
@@ -2696,7 +2701,12 @@ function makeDraggable (jqueryElements) {
 
     // Chrome/Safari both have issues where they don't properly render the
     // wrapper if the inner element is a div. This is a hack that causes a
-    // rerender to happen.
+    // rerender to happen in chrome
+    var currHeight = wrapper.parent().height();
+    wrapper.parent().height(currHeight + 1);
+    wrapper.parent().height(currHeight);
+
+    // And a hack for Safari
     if (this.tagName === 'DIV') {
       setTimeout(function () {
         wrapper.hide().show(0);
@@ -3514,8 +3524,8 @@ applabCommands.createCanvas = function (opts) {
     var height = opts.height || Applab.appHeight;
     newElement.width = width;
     newElement.height = height;
-    newElement.style.width = width + 'px';
-    newElement.style.height = height + 'px';
+    newElement.setAttribute('width', width + 'px');
+    newElement.setAttribute('height', height + 'px');
     // Unlike other elements, we use absolute position, otherwise our z-index
     // doesn't work
     newElement.style.position = 'absolute';
@@ -4863,7 +4873,7 @@ AppStorage.tempChannelId =
 
 AppStorage.getChannelId = function() {
   // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.project.current && dashboard.project.current.id;
+  var id = dashboard && dashboard.project.getCurrentId();
   return id || AppStorage.tempChannelId;
 };
 
@@ -4989,7 +4999,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('GET', url, true);
   req.send();
-  
+
 };
 
 var handleReadRecords = function(searchParams, onSuccess, onError) {
@@ -6949,12 +6959,12 @@ var TextAreaProperties = React.createClass({displayName: "TextAreaProperties",
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
           foo: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7060,12 +7070,12 @@ var TextInputProperties = React.createClass({displayName: "TextInputProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7163,6 +7173,13 @@ module.exports = {
     element.style.width = Applab.appWidth + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
+    // We want our screen to be behind canvases. By setting any z-index on the
+    // screen element, we create a new stacking context with this div as its
+    // root, which results in all children (including canvas) to appear in front
+    // of it, regardless of their z-index value.
+    // see http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
+    element.style.position = 'absolute';
+    element.style.zIndex = 0;
 
     return element;
   }
@@ -7203,12 +7220,12 @@ var RadioButtonProperties = React.createClass({displayName: "RadioButtonProperti
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7301,14 +7318,14 @@ var LabelProperties = React.createClass({displayName: "LabelProperties",
           lockState: $(element).data('lock-width') || PropertyRow.LockState.UNLOCKED, 
           handleLockChange: this.props.handleChange.bind(this, 'lock-width'), 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           lockState: $(element).data('lock-height') || PropertyRow.LockState.UNLOCKED, 
           handleLockChange: this.props.handleChange.bind(this, 'lock-height'), 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7375,11 +7392,13 @@ module.exports = {
       height: 'auto'
     }).appendTo($(document.body));
 
+    var padding = parseInt(element.style.padding, 10);
+
     if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-      element.style.width = clone.width() + 1 + 'px';
+      element.style.width = clone.width() + 1 + 2 * padding + 'px';
     }
     if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
-      element.style.height = clone.height() + 1 + 'px';
+      element.style.height = clone.height() + 1 + 2 * padding + 'px';
     }
 
     clone.remove();
@@ -7445,12 +7464,12 @@ var ImageProperties = React.createClass({displayName: "ImageProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7532,12 +7551,12 @@ var DropdownProperties = React.createClass({displayName: "DropdownProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7686,12 +7705,12 @@ var CheckboxProperties = React.createClass({displayName: "CheckboxProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7772,12 +7791,12 @@ var CanvasProperties = React.createClass({displayName: "CanvasProperties",
         React.createElement(PropertyRow, {
           desc: 'width (px)', 
           isNumber: true, 
-          initialValue: parseInt(element.style.width, 10), 
+          initialValue: parseInt(element.getAttribute('width'), 10), 
           handleChange: this.props.handleChange.bind(this, 'width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
-          initialValue: parseInt(element.style.height, 10), 
+          initialValue: parseInt(element.getAttribute('height'), 10), 
           handleChange: this.props.handleChange.bind(this, 'height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
@@ -7800,8 +7819,8 @@ module.exports = {
   PropertyTable: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
-    element.style.height = '100px';
-    element.style.width = '100px';
+    element.setAttribute('width', '100px');
+    element.setAttribute('height', '100px');
 
     return element;
 
@@ -7849,12 +7868,12 @@ var ButtonProperties = React.createClass({displayName: "ButtonProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -8601,7 +8620,7 @@ module.exports = React.createClass({displayName: "exports",
 
 module.exports = {
   basePath: function (path) {
-    return '/v3/assets/' + dashboard.project.current.id + (path ? '/' + path : '');
+    return '/v3/assets/' + dashboard.project.getCurrentId() + (path ? '/' + path : '');
   },
   ajax: function (method, file, success, error, data) {
     var xhr = new XMLHttpRequest();

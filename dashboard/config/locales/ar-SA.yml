@@ -409,6 +409,7 @@
     heading_legacy: <h2>دورتنا عامة لـ</h2><h1>جميع الأعمار</h1>
     your_gallery: معرض
     no_primary_course: جرب الدورة تدريبية في "الاستوديو التعليمات البرمجية"
+    print_certificate: Print Certificate
   gender:
     male: ذكر
     female: أنثى
@@ -504,9 +505,13 @@
       title: رمز لعبة flappy
       body: هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس برمجة Flappy
         التعليمية الخاصة بنا!
-    20hour:
-      title: دورة مقدمة
-      body: حاول 20 ساعة دورة مقدمة لعلوم الحاسب الآلي.
+    20-hour:
+      title: Accelerated Course
+      body: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة. تم تصميم
+        هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة، ولكن
+        أنها متعة للتعلم لكل الإعمار.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: جرب درس ساعة الكود الجديد ب"بيتا"
       try_frozen: الفنان مع آنا و إنسا, من Frozen

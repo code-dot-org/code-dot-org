@@ -346,7 +346,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "showBlocksHeader":function(d){return "Vis blokke"},
 "showCodeHeader":function(d){return "Vis kode"},
 "showGeneratedCode":function(d){return "Vis kode"},
-"showTextHeader":function(d){return "Show Text"},
+"showTextHeader":function(d){return "Vis tekst"},
 "showToolbox":function(d){return "Vis værktøjskasse"},
 "signup":function(d){return "Tilmeld til Introduktion kursus"},
 "stringEquals":function(d){return "streng =?"},

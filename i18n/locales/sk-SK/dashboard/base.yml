@@ -67,7 +67,7 @@ sk:
     student_count: '%{count} študentov sa už zaregistrovalo.'
     teacher_count: '%{count} učitelov sa už zaregistrovalo.'
     overview_student: 'Vytvor si účet a sleduj ako postupuješ. Tvoj email sa používa hlavne na prihlásenie a na získanie zabudnutého hesla. Viac informácií nájdeš na našej stránke zásad <a href="http://code.org/privacy">Ochrany súkromia</a>.'
-    overview_teacher: 'Výučujte informatiku vo vašej triede.<p/> Po prihlásení na účet budete mať možnosť pridávať svojich študentov a sledovať ich pokrok.'
+    overview_teacher: 'Učte informatiku vo Vašej triede.<p/> Po prihlásení na účet budete mať možnosť pridávať svojich študentov a sledovať ich pokrok.'
     no_signup_message: 'Môžete <a target="_blank" href="http://learn.code.org">prehliadať rôzne úrovne a hádanky</a>, ale pre uloženie Vášho postupu je nutné prihlásenie.'
     teacher_educator_guide: Pozrieť príručku učiteľa
     teacher_pitch: Prihlásiť sa do Code.org ako učiteľ
@@ -78,7 +78,7 @@ sk:
     school_address: Adresa školy (voliteľné)
     address_placeholder: adresa, mesto, štát, PSČ
     gender: Pohlavie (voliteľné)
-    birthday: Narodený (voliteľné)
+    birthday: Narodeniny (voliteľné)
     age: Vek
     user_type: Ste študent/žiak alebo učiteľ?
     submit: Zaregistrovať sa
@@ -89,14 +89,14 @@ sk:
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovať aspoň 6 znakov
     mismatch_password: Zadané dve heslá sa nezhodujú
-    student_terms: "Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>. Keď mám vek pod 13 rokov, odoslaním tohoto formulára zároveň potvrdzujem že mám oprávnenie od mojich rodičov alebo zákonného zástupcu na používanie služby Code.org. <br/>Pre používateľov mladších ako 13 rokov nie sú e-mailové adresy uložené vo forme, ktorá umožnuje ich kontaktovanie."
+    student_terms: "Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>. Ak mám menej než 13 rokov, odoslaním tohoto formulára zároveň potvrdzujem že mám oprávnenie od mojich rodičov alebo zákonného zástupcu na používanie služby Code.org. <br/>Pre používateľov mladších ako 13 rokov nie sú e-mailové adresy uložené vo forme, ktorá umožnuje ich kontaktovanie."
     teacher_terms: "Záväzne súhlasím s podmienkami služby <a href='http://code.org/tos'>Code.org</a>."
     additional_information: Potrebujeme niektoré ďalšie informácie pre pokračovanie vášho prihlásenia/registrácie.
   signin_form:
     title: Máte už vytvorený účet? Prihláste sa
     login: E-mail alebo užívateľské meno
     password: Heslo
-    remember: Pamätaj si moje prihlásenie
+    remember: Zapamätať prihlásenie
     submit: Prihlásiť sa
   signin:
     try_heading: Chcete skúsiť kódovanie bez prihlásenia?
@@ -105,8 +105,8 @@ sk:
   signinsection:
     welcome: 'Vitajte v %{section_name}'
     name: Vyberte vaše meno
-    picture: Teraz nájdite váš tajný obrázok
-    words: Teraz zadajte vaše tajné slová
+    picture: Teraz nájdite Váš tajný obrázok
+    words: Teraz zadajte Vaše tajné slová
     login: Prihlásiť sa
   password:
     reset_form:
@@ -114,7 +114,7 @@ sk:
       email: E-mailová adresa
       submit: Pošlite mi pokyny na obnovenie hesla
     change_form:
-      title: Zmeňte vaše heslo
+      title: Zmeňte Vaše heslo
       new_password: Nové heslo
       confirm_password: Potvrdiť nové heslo
       submit: Zmeniť moje heslo
@@ -133,7 +133,7 @@ sk:
     added_teacher: '%{name} pridaný ako váš učiteľ'
     registered: 'Zaregistrovali ste sa na %{section_name}.'
     error:
-      signed_in: Odhláste sa prosím pred pokračovaním
+      signed_in: Pred pokračovaním sa prosím odhláste
       username_not_found: 'Užívateľské meno %{username} nebolo nájdené'
       username_in_use: '%{username} je už obsadené, prosím vyberte si iné'
       no_teacher: 'Nepodarilo sa nájsť žiadne prihlásenie pomocou "%{teacher_email_or_code}". Prosím požiadajte ich, aby sa zaregistrovali tu a následne sa pokúste opakovane pridať'
@@ -325,9 +325,9 @@ sk:
     classroom_activity: Nesúvisaca aktivita
   home:
     title: Štúdio kódu
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio je domov pre online kurzy vytvorené Code.org
     lines_of_code: '%{lines_count} RIADKOV KÓDU BOLO NAPÍSANÉ ŠTUDENTAMI'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} RIADKOV KÓDU<br/>NAPÍSANÉ %{students_count} MILIÓNMI ŠTUDENTOV'
     all_courses: Prehľad kurzov 1, 2 a 3
     lesson_plans: Plány lekcií
     signin_message: 'Máte účet? %{link}'
@@ -348,7 +348,7 @@ sk:
     local_school: miestna škola
     online: Online
     see_details: Pozri detaily
-    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
+    prize_info: 'Ceny za účasti (iba pre učiteľov verejných škôl v U.S.): Nad $1,000 v odmenách tried.'
     tryfirst: 'Alebo môžete najprv vyskúšať a neskôr sa zaregistrovať:'
     trynow: Skús teraz
     add_hint_help: Prosím pomôžte nám pridať tipy pre Code.org tutoriály
@@ -362,6 +362,7 @@ sk:
     heading_legacy: '<h2>Náš všeobecný kurz pre</h2><h1>Všetky vekové kategórie</h1>'
     your_gallery: Galéria
     no_primary_course: Vyskúšajte kurz v Štúdiu kódu
+    print_certificate: Print Certificate
   gender:
     male: Muž
     female: Žena
@@ -385,7 +386,7 @@ sk:
     subtitle: Pozrite si tieto videá a tipy
     teacher: Pozrite si riešenie
     auth_error: Nemáte oprávnenie vidieť riešenie.
-    submit: Update Artist Location
+    submit: Aktualizovať umiestnenie Umelca
     direction: Štart smeru (v stupňoch)
   video:
     tab: Video.
@@ -405,7 +406,7 @@ sk:
     upgrade:
       header: Prosím aktualizujte svoj prehliadač.
       message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
-      button: Take me to the list of supported browsers
+      button: Prejsť na zoznam podporovaných prehliadačov
   slow_loading: Trvá to dlhšie než zvyčajne...
   try_reloading: Skúste načítať stránku znovu
   next_stage: Hotovo! Pokračujte do ďalšej úrovne
@@ -417,38 +418,39 @@ sk:
   video_coming_soon: Video už čoskoro!
   share_code:
     title: "Kliknite na 'Beh' na zobrazenie môjho kódu za behu"
-    bounce_og_title: Check out my Bounce Game
-    flappy_og_title: Check out my Flappy Game
-    studio_og_title: Check out my Play Lab App
+    bounce_og_title: Pozri sa na moju Skákaciu hru
+    flappy_og_title: Pozri sa na moju Flappy hru
+    studio_og_title: Pozri sa na moju Aplikáciu hravého laboratória
     check_out_what_i_made: Pozrite čo som vytvorila
-    og_description: I wrote the code myself with Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
+    og_description: Tento kód som napísala sama s Code.org
+    phone_number_not_allowed: Vyzerá to tak, že sa tu vyskytuje telefónne číslo. Skúste zmeniť text.
+    address_not_allowed: Vyzerá to tak, že sa tu vyskytuje adresa. Skúste zmeniť text.
+    email_not_allowed: Vyzerá to tak, že sa tu vyskytuje e-mail. Skúste zmeniť text.
+    profanity_not_allowed: Vyzerá to tak, že sa tu vyskytujú nadávky. Skúste zmeniť text.
   builder:
     created: Vytvorili ste nový skript.
     destroyed: Zničili ste skript.
-    manage: Build Levels
+    manage: Tvoriť úrovne
     view: Zobraziť
     back: Späť ku skriptom
-    success: You successfully edited the blocks.
+    success: Bloky boli úspešne upravené.
     level:
       create: Vytvoriť novú úroveň
-      current: Current Levels
-      unused: Unused Levels
+      current: Aktuálne úrovne
+      unused: Nepoužité úrovne
   upsell:
     hoc:
       title: Hodina kódovania
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: Skúste základy informatiky. Milióny jej dali šancu.
     flappy:
       title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+      body: Chcete napísať svoju vlastnú hru za menej než 10 minút? Skúste náš Flappy Code tutoriál!
+    20-hour:
+      title: Accelerated Course
+      body: Tento 20-hodinový kurz predstavuje základ informatiky a programovania. Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví študentov všetkých vekových kategórií.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
+      try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
       title: Galéria
@@ -491,12 +493,12 @@ sk:
     correct_body: To je správna odpoveď.
   contract_match:
     wrong_title: Nesprávna odpoveď
-    badname: Your contract has the wrong name.
-    badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
-    baddomainsize: "Your contract doesn't have the right number of items in the domain."
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    badname: Vaša zmluva má nesprávny názov.
+    badname_case: Názvy funkcií rozlišujú malé a veľké písmená. Prípadne skúste zmeniť meno Vašej zmluvy.
+    badrange: Vaša zmluva má nesprávny rozsah.
+    baddomainsize: Vaša zmluva nemá správny počet položiek v doméne.
+    baddomainname: Jedna alebo viac doménových položiek má nesprávny názov.
+    baddomaintype: Jedna alebo viac doménových položiek má nesprávny typ alebo sú v nesprávnom poradí.
   text_match:
     placeholder: Zadajte vašu odpoveď
     open_response_title: Vďaka
@@ -514,7 +516,7 @@ sk:
           title: K-8 Úvod do Kurzu Počítačovej Vedy (15-25 hours)
           description: Tento 20-hodinový kurz predstavuje základ informatiky a programovania. Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví študentov všetkých vekových kategórií.
         Hour of Code:
-          title: Hour of Code 2013
+          title: Hodina Kódu 2013
           description: ""
         edit-code:
           title: Upraviť kód
@@ -523,11 +525,11 @@ sk:
           title: Udalosti
           description: ""
         builder:
-          title: Builder
+          title: Prekladač
           description: ""
         flappy:
           title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          description: Chcete napísať svoju vlastnú hru za menej než 10 minút? Skúste náš Flappy Code tutoriál!
         jigsaw:
           title: Skladačka
           description: ""
@@ -542,7 +544,7 @@ sk:
     header: Konto aktualizácia údajov
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'Ak si neželáte poskytnúť váš vek môže sa <a href="%{url}"> odhlásiť</a>.'
-  zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+  zendesk_too_young_message: 'Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu stránku podpory. Môžeš si prezerať <a href="http://support.code.org">support.code.org</a> bez prihlásenia, prípadne požiadať tvojich rodičov alebo učiteľov, aby nás za teba kontaktovali.'
   progress:
     not_started: nezačal
     in_progress: v procese
@@ -571,17 +573,17 @@ sk:
     more: Viac
     name: Meno
     updated: Aktualizovaný
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    project_type: Typ projektu
+    help_text: 'Kliknite na <strong>Vytvoriť aplikáciu</strong> alebo <strong>Nakresliť niečo</strong> a vytvorte nové Hravé Laboratórium alebo Umelecký projekt!<br/> Môžete sa vrátiť spať a pracovať ma svojom projekte kedykoľvek.'
+    need_help: Potrebujete pomôcť so štartom?
     really_delete: Odstrániť?
     delete_yes: Áno
     delete_no: Nie
     saved: Uložené
     not_saved: Neuložené
     cancel: Zrušiť
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    delete_confirm_title: Naozaj chcete odstrániť tento projekt?
+    delete_confirm_text: Vymazaním tohto projektu sa navždy zmaže aj z Vášho Projektového zoznamu. Všetci, s ktorými ste zdieľali odkaz, nebudú schopní naďalej Váš projekt vidieť.
     view_all: Zobraziť moje Projekty
     remix: Remix
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: "Kliknite na 'Remix' a roztočte to s Vašou vlastnou verziou!"

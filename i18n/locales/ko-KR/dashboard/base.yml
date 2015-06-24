@@ -325,9 +325,9 @@ ko:
     classroom_activity: 언플러그드 활동
   home:
     title: 코드 스튜디오
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio는 Code.org에서 만든, 집에서 온라인으로 학습하는 과정입니다.
     lines_of_code: '%{lines_count} 학생 들에 의해 작성 된 코드의 라인'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} 코드의 라인들<br/>쓰여진 %{students_count} 만명이 넘는 학생들에 의해서'
     all_courses: 코스1, 2, 3 살펴보기
     lesson_plans: 레슨 계획
     signin_message: '이미 등록되어있나요? %{link}'
@@ -362,6 +362,7 @@ ko:
     heading_legacy: '<h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>'
     your_gallery: 갤러리
     no_primary_course: Code Studio에서 과정을 시도해보세요
+    print_certificate: Print Certificate
   gender:
     male: 남
     female: 여
@@ -444,9 +445,10 @@ ko:
     flappy:
       title: 플래피 코드
       body: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
-    20hour:
-      title: 소개 코스
-      body: 20 시간 코스의 컴퓨터과학(CS, 정보과학) 코스를 경험해 보세요.
+    20-hour:
+      title: Accelerated Course
+      body: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만, 연령에 상관없이 재미있게 배울 수 있습니다.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: 새로운(beta) Hour of Code 튜토리얼 해보기
       try_frozen: 프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐

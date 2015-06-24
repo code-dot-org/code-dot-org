@@ -363,9 +363,10 @@ he:
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: גלריה
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: גבר
     female: אישה
@@ -448,9 +449,10 @@ he:
     flappy:
       title: קוד מתנופף
       body: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
-    20hour:
-      title: קורס מבוא
-      body: נסה את קורס מדעי המחשב בן 20 השעות שלנו.
+    20-hour:
+      title: Accelerated Course
+      body: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen

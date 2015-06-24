@@ -4,7 +4,7 @@
 
 module.exports = {
   basePath: function (path) {
-    return '/v3/assets/' + dashboard.project.current.id + (path ? '/' + path : '');
+    return '/v3/assets/' + dashboard.project.getCurrentId() + (path ? '/' + path : '');
   },
   ajax: function (method, file, success, error, data) {
     var xhr = new XMLHttpRequest();

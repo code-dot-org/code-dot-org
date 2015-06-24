@@ -425,6 +425,7 @@
     heading_legacy: <h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>
     your_gallery: Qalereya
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Kişi
     female: Qadın
@@ -525,9 +526,13 @@
       title: Qanadlı Kod
       body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod
         dərsliyimizi sınayın!
-    20hour:
-      title: Giriş kursu
-      body: Bizim 20 saatlıq İnformatikaya Giriş kursunu sınaqdan keçirin.
+    20-hour:
+      title: Accelerated Course
+      body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas
+        anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə
+        istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'

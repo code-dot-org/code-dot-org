@@ -223,7 +223,6 @@ da:
           "Artist: For Loops": Kunstner For loops/sløjfer
           "Play Lab: For Loops": 'Play Lab: For løkker'
           "Artist: Functions": 'Kunstner: Funktioner'
-          "Artist: Functions with Paraqmeters": 'Kunstner: funktioner med parametre'
           "Unplugged: Tangrams": 'Unplugged: Tangrammer'
           Artist: Kunstner
           Bee: Bee
@@ -366,7 +365,8 @@ da:
           description: Skab billeder med bits og bytes.
           Pixelation: Pixelation
         20-hour:
-          title: 20-Hour Intro Course
+          title: Accelerated Intro to CS Course
+          description_audience: Fra 10 år (efter kursus 3)
           description: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
           Introduction to Computer Science: Introduktion til datalogi
           The Maze: Labyrinten
@@ -496,6 +496,7 @@ da:
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -819,6 +820,7 @@ da:
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -877,6 +879,7 @@ da:
           Booleans: Booleans
           "Eval: Conditionals": 'Eval: Conditionals'
           Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
@@ -936,14 +939,46 @@ da:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Afslutning
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Hour of Code
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evalueringsblokke
+          Strings and Images: Strenge og billeder
+          Writing Contracts: Writing Contracts
+          Defining Variables: Definere variabler
+          Defining Functions: Definere funktioner
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          "Eval: Conditionals": 'Eval: Conditionals'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science

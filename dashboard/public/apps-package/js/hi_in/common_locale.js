@@ -169,7 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "कार्य"},
 "catText":function(d){return "पाठ"},
 "catVariables":function(d){return "चर"},
-"clearPuzzle":function(d){return "Clear Puzzle"},
+"clearPuzzle":function(d){return "पुन: प्रारंभ करें"},
 "clearPuzzleConfirm":function(d){return "This will delete all blocks and reset the puzzle to its start state."},
 "clearPuzzleConfirmHeader":function(d){return "Are you sure you want to clear the puzzle?"},
 "codeMode":function(d){return "Code"},

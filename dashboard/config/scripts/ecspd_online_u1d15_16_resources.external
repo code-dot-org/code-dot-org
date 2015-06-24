@@ -6,7 +6,17 @@ css 'unplugged'
 markdown <<MARKDOWN
 ## Computer Programs and Following Directions
 
-Here is a TEDx video of Christopher Steiner talking about Algorithms and their uses.
+In Unit 1 Day 15-16, students investigate algorithms and simple computer programs.
+
+### Additional Resources
+
+<strong>Assessment: </strong>An great assessment or assignment is to ask students to write an algorithm for an every-day activity. Recipes, sheet music, schedules, and driving directions are good examples of resources humans have already created to communicate algorithms for complicated tasks. Each of these examples has an unambiguous language - tablespoon, crescendo, AM/PM, and exit numbers to name a few. 
+
+Have students create an algorithm for a simple task. Tasks could include walking, brushing teeth, or making cereal among others. Have them develop an unambiguous language for their every day activity.
+
+### Extended Resources
+
+Below, you will find a TEDx video of Christopher Steiner talking about Algorithms and their uses. You might consider showing this video to your students to encourage further discussion on algorithms and their uses. 
 
 <iframe width="850" height="500" src="https://www.youtube.com/embed/H_aLU-NOdHM" frameborder="0" allowfullscreen></iframe>
 

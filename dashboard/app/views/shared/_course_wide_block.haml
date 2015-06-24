@@ -1,4 +1,6 @@
--if id == 'hoc'
+- showState ||= false
+
+-if id == Script::HOC_NAME
   .courseblock-span6.courseblock-wide-small
     =link_to hoc_reset_url do
       .courseblock-span2.imgspan
@@ -16,7 +18,8 @@
         %h3= t('upsell.flappy.title')
         .smalltext= t('upsell.flappy.body')
 
--elsif id == '20-hour' && view == 'large'
+-elsif id == Script::TWENTY_HOUR_NAME && view == 'large'
+  - url = script_reset_url(id)
   .courseblock-span6.courseblock-wide-large
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
@@ -26,7 +29,9 @@
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
         .smalltext= t('upsell.20-hour.body')
 
--elsif id == '20-hour' && view == 'small'
+-elsif id == Script::TWENTY_HOUR_NAME && view == 'small'
+  - url = script_reset_url(id)
+  - audience = data_t_suffix('script.name', id, 'description_audience')
   .courseblock-span6.courseblock-wide-small
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
@@ -34,8 +39,13 @@
       .courseblock-span4.heading
         %h3= t('upsell.20-hour.title')
         .smalltext= t('upsell.20-hour.body_short')
+      - if current_user
+        .audiencebar.smalltext.audience= audience
+      - else
+        .bottombar.smalltext.audience= audience
+      = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
-- elsif id == 'artist' || id == 'playlab'
+- elsif id == Script::ARTIST_NAME || id == Script::PLAYLAB_NAME
 
   - url = script_reset_url(id)
   - title = data_t_suffix('script.name', id, 'title')
@@ -48,8 +58,9 @@
       .courseblock-span4.heading
         %h3= title
         .smalltext= body
+    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
--elsif id == 'course1' || id == 'course2' || id == 'course3' || id == 'course4' || id == 'algebra'
+-elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME, Script::ALGEBRA_NAME].include? id
   .courseblock-span6.courseblock-wide-large
     =link_to script_url(id) do
       .courseblock-span2.imgspan
@@ -61,5 +72,5 @@
             &nbsp;
             %span.betatext
               =t('beta')
-        %h4= data_t_suffix('script.name', id, 'description_audience')     
+        %h4= data_t_suffix('script.name', '20-hour', 'description_audience')  
         .smalltext= data_t_suffix('script.name', id, 'description')
