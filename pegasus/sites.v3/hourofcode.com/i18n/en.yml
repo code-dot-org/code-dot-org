@@ -48,7 +48,7 @@
   prizes_nav_terms: "Terms and Conditions"
   prizes_nav_faq: "FAQ"
 
-  whats_next_header: "What's Next?"
+  whats_next_header: "What's next?"
   whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
   whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>How to run an Hour of Code</a>"
   whats_next_promote: "<a href='http://hourofcode.com/resources'>Promote the Hour of Code</a>"
@@ -85,7 +85,7 @@
   front_join_us_host: "Host it"
   front_join_us_support: "Support it"
 
-  signup_header: 'Organize an Hour of Code event during Dec 7 - 13, and register it here.'
+  signup_header: 'Organize an Hour of Code during Dec 7 - 13, and register it here.'
   signup_name_label: 'Your name'
   signup_email_label: 'Your email'
   signup_organization_name_label: 'School or organization name'
