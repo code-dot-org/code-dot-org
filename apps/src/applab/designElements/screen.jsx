@@ -28,7 +28,7 @@ var ScreenProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <ImagePickerPropertyRow
           desc={'image'}
-          initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
+          initialValue={element.dataset.canonicalImageUrl}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
       </div>);
   }
