@@ -390,7 +390,7 @@ Blockly.Bubble.prototype.layoutBubble_ = function() {
   var relativeLeft = -this.width_ / 4;
   var relativeTop = -this.height_ - Blockly.BlockSvg.MIN_BLOCK_Y;
   // Prevent the bubble from being offscreen.
-  if (this.blockSpace_.scrollbar) {
+  if (this.blockSpace_.scrollbarPair) {
     // Fetch the blockSpace's metrics, if they exist.
     var metrics = this.blockSpace_.getMetrics();
     if (this.anchorX_ + relativeLeft <

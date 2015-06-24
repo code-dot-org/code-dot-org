@@ -389,9 +389,9 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
     }
   }
   if (Blockly.hasVerticalScrollbars || Blockly.hasHorizontalScrollbars) {
-    this.blockSpace.scrollbar = new Blockly.ScrollbarPair(
+    this.blockSpace.scrollbarPair = new Blockly.ScrollbarPair(
       this.blockSpace, Blockly.hasHorizontalScrollbars, Blockly.hasVerticalScrollbars);
-    this.blockSpace.scrollbar.resize();
+    this.blockSpace.scrollbarPair.resize();
   }
 };
 
@@ -472,8 +472,8 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   }
 
   // Update the scrollbars (if they exist).
-  if (this.blockSpace.scrollbar) {
-    this.blockSpace.scrollbar.resize();
+  if (this.blockSpace.scrollbarPair) {
+    this.blockSpace.scrollbarPair.resize();
   } else {
     this.setBlockSpaceMetricsNoScroll_();
   }
@@ -547,7 +547,7 @@ Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
     // Unlike google Blockly, we don't want to show a context menu
     // Blockly.showContextMenu_(e);
   } else if ((Blockly.readOnly || isTargetSvg) &&
-    this.blockSpace.scrollbar) {
+    this.blockSpace.scrollbarPair) {
     // If the blockSpace is editable, only allow dragging when gripping empty
     // space.  Otherwise, allow dragging when gripping anywhere.
     this.blockSpace.dragMode = true;
@@ -556,8 +556,8 @@ Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
     this.startDragMouseY = e.clientY;
     this.startDragMetrics =
       this.blockSpace.getMetrics();
-    this.startScrollX = this.blockSpace.pageXOffset;
-    this.startScrollY = this.blockSpace.pageYOffset;
+    this.startScrollX = this.blockSpace.xOffsetFromView;
+    this.startScrollY = this.blockSpace.yOffsetFromView;
 
     // Stop the browser from scrolling/zooming the page
     e.preventDefault();
@@ -575,28 +575,33 @@ Blockly.BlockSpaceEditor.prototype.onMouseUp_ = function(e) {
 };
 
 /**
- * Handle a mouse-move on SVG drawing surface.
+ * Handle a mouse-move on SVG drawing surface (panning).
  * @param {!Event} e Mouse move event.
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.onMouseMove_ = function(e) {
   if (this.blockSpace.dragMode) {
     Blockly.removeAllRanges();
-    var dx = e.clientX - this.startDragMouseX;
-    var dy = e.clientY - this.startDragMouseY;
+    var mouseDx = e.clientX - this.startDragMouseX; // + if mouse right
+    var mouseDy = e.clientY - this.startDragMouseY; // + if mouse down
     var metrics = this.startDragMetrics;
-    var x = this.startScrollX + dx;
-    var y = this.startScrollY + dy;
-    x = Math.min(x, -metrics.contentLeft);
-    y = Math.min(y, -metrics.contentTop);
-    x = Math.max(x, metrics.viewWidth - metrics.contentLeft -
-      metrics.contentWidth);
-    y = Math.max(y, metrics.viewHeight - metrics.contentTop -
-      metrics.contentHeight);
 
-    // Move the scrollbars and the page will scroll automatically.
-    this.blockSpace.scrollbar.set(-x - metrics.contentLeft,
-        -y - metrics.contentTop);
+    // New target scroll (x,y) offset
+    var newScrollX = this.startScrollX + mouseDx; // new pan-right (+) position
+    var newScrollY = this.startScrollY + mouseDy; // new pan-down (+) position
+
+    // Don't allow panning past top left
+    newScrollX = Math.min(newScrollX, 0);
+    newScrollY = Math.min(newScrollY, 0);
+
+    // Don't allow panning past bottom or right
+    var furthestScrollAllowedX = -metrics.maxViewableX + metrics.viewWidth;
+    var furthestScrollAllowedY = -metrics.maxViewableY + metrics.viewHeight;
+    newScrollX = Math.max(newScrollX, furthestScrollAllowedX);
+    newScrollY = Math.max(newScrollY, furthestScrollAllowedY);
+
+    // Set the scrollbar position, which will auto-scroll the canvas
+    this.blockSpace.scrollbarPair.set(-newScrollX, -newScrollY);
   }
 };
 
@@ -782,59 +787,65 @@ Blockly.BlockSpaceEditor.prototype.hideChaff = function(opt_allowToolbox) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
-  var blockBox, leftEdge, rightEdge, topEdge, bottomEdge;
+  var blockBox;
 
-  var svgSize = this.svgSize();
+  var svgSize = this.svgSize(); // includes toolbox
   var toolboxWidth = 0;
   if (this.toolbox || this.flyout_) {
     toolboxWidth = this.toolbox ? this.toolbox.width : this.flyout_.width_;
   }
   svgSize.width -= toolboxWidth;
-  var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
-  var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
   try {
-    if (Blockly.isMsie() || Blockly.isTrident()) {
-      this.blockSpace.getCanvas().style.display = "inline"; // required for IE
-      blockBox = {
-        x: this.blockSpace.getCanvas().getBBox().x,
-        y: this.blockSpace.getCanvas().getBBox().y,
-        width: this.blockSpace.getCanvas().scrollWidth,
-        height: this.blockSpace.getCanvas().scrollHeight
-      };
-    }
-    else {
-      blockBox = this.blockSpace.getCanvas().getBBox();
-    }
+    blockBox = this.getCanvasBBox(this.blockSpace.getCanvas());
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     return null;
   }
-  if (this.blockSpace.scrollbar) {
-    // add some buffer space to the right/below existing contents
-    leftEdge = 0;
-    rightEdge = Math.max(blockBox.x + blockBox.width + viewWidth, viewWidth * 1.5);
-    topEdge = 0;
-    bottomEdge = Math.max(blockBox.y + blockBox.height + viewHeight, viewHeight * 1.5);
 
-  } else {
-    leftEdge = blockBox.x;
-    rightEdge = leftEdge + blockBox.width;
-    topEdge = blockBox.y;
-    bottomEdge = topEdge + blockBox.height;
-  }
   var absoluteLeft = Blockly.RTL ? 0 : toolboxWidth;
+
+  // view*: Viewport dimensions relative to workspace 0,0
+  // content*: Bounding rect on actual blocks, relative to workspace 0,0
+  // absolute*: Blockspace origin offset from the SVG element origin
+  //            (top right of toolbox in LTR, top left of SVG in RTL)
+  var viewLeft = -this.blockSpace.xOffsetFromView;
+  var viewWidth = svgSize.width;
+  var viewHeight = svgSize.height;
+  var viewTop = -this.blockSpace.yOffsetFromView;
   return {
-    viewHeight: svgSize.height,
-    viewWidth: svgSize.width,
-    contentHeight: bottomEdge - topEdge,
-    contentWidth: rightEdge - leftEdge,
-    viewTop: -this.blockSpace.pageYOffset,
-    viewLeft: -this.blockSpace.pageXOffset,
-    contentTop: topEdge,
-    contentLeft: leftEdge,
+    viewHeight: viewHeight,
+    viewWidth: viewWidth,
+    viewTop: viewTop,
+    viewLeft: viewLeft,
+    contentHeight: blockBox.height,
+    contentWidth: blockBox.width,
+    contentTop: blockBox.y,
+    contentLeft: blockBox.x,
+    maxViewableX: Math.max(blockBox.x + blockBox.width, viewWidth),
+    maxViewableY: Math.max(blockBox.y + blockBox.height, viewHeight),
     absoluteTop: 0,
     absoluteLeft: absoluteLeft
   };
+};
+
+/**
+ * Gets a bbox
+ * May throw error if canvas is hidden in Firefox
+ * @param {SVGGElement} canvas - the svg canvas
+ * @returns {SVGRect}
+ */
+Blockly.BlockSpaceEditor.prototype.getCanvasBBox = function(canvas) {
+  if (Blockly.isMsie() || Blockly.isTrident()) {
+    canvas.style.display = "inline"; // required for IE
+    return {
+      x: canvas.getBBox().x,
+      y: canvas.getBBox().y,
+      width: canvas.scrollWidth,
+      height: canvas.scrollHeight
+    };
+  }
+
+  return canvas.getBBox();
 };
 
 /**
@@ -844,22 +855,19 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
-  if (!this.blockSpace.scrollbar) {
+  if (!this.blockSpace.scrollbarPair) {
     throw "Attempt to set editor's scroll position without scrollbars.";
   }
   var metrics = this.getBlockSpaceMetrics_();
   if (goog.isNumber(xyRatio.x)) {
-    this.blockSpace.pageXOffset = -metrics.contentWidth * xyRatio.x -
-      metrics.contentLeft;
+    this.blockSpace.xOffsetFromView = -metrics.maxViewableX * xyRatio.x;
   }
   if (goog.isNumber(xyRatio.y)) {
-    this.blockSpace.pageYOffset = -metrics.contentHeight * xyRatio.y -
-      metrics.contentTop;
+    this.blockSpace.yOffsetFromView = -metrics.maxViewableY * xyRatio.y;
   }
   var translation = 'translate(' +
-    (this.blockSpace.pageXOffset + metrics.absoluteLeft) + ',' +
-    (this.blockSpace.pageYOffset + metrics.absoluteTop) + ')';
-  // todo: translate contract editor div :P
+    (this.blockSpace.xOffsetFromView + metrics.absoluteLeft) + ',' +
+    (this.blockSpace.yOffsetFromView + metrics.absoluteTop) + ')';
   this.blockSpace.getCanvas().setAttribute('transform', translation);
   this.blockSpace.getBubbleCanvas().setAttribute('transform', translation);
 };

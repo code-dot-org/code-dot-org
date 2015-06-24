@@ -217,7 +217,7 @@ Blockly.Flyout.prototype.getMetrics_ = function() {
     viewHeight: viewHeight,
     viewWidth: viewWidth,
     contentHeight: optionBox.height + optionBox.y,
-    viewTop: -this.blockSpace_.pageYOffset,
+    viewTop: -this.blockSpace_.yOffsetFromView,
     contentTop: 0,
     absoluteTop: this.CORNER_RADIUS,
     absoluteLeft: 0
@@ -240,10 +240,11 @@ Blockly.Flyout.prototype.getHeight = function() {
 Blockly.Flyout.prototype.setMetrics_ = function(yRatio) {
   var metrics = this.getMetrics_();
   if (goog.isNumber(yRatio.y)) {
-    this.blockSpace_.pageYOffset = -metrics.contentHeight * yRatio.y
+    // TODO(bjordan+bbuchanan): needs to change?
+    this.blockSpace_.yOffsetFromView = -metrics.contentHeight * yRatio.y
         - metrics.contentTop;
   }
-  var y = this.blockSpace_.pageYOffset + metrics.absoluteTop;
+  var y = this.blockSpace_.yOffsetFromView + metrics.absoluteTop;
   this.blockSpace_.getCanvas().setAttribute('transform', 'translate(0,'
       + y + ')');
 };
