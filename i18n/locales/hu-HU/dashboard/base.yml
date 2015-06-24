@@ -358,6 +358,7 @@ hu:
     heading_legacy: '<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>'
     your_gallery: Galéria
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Férfi
     female: Nő
@@ -440,9 +441,10 @@ hu:
     flappy:
       title: Flappy kód
       body: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld ki a Flappy kód gyakorlatot!
-    20hour:
-      title: Bevezető tanfolyam
-      body: Próbáld ki a 20 órás, Bevezetés a számítógép-tudományba tanfolyamunkat.
+    20-hour:
+      title: Accelerated Course
+      body: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
       try_frozen: 'Művészkedj Annával és  Elzával a Jégvarázsból'

@@ -221,7 +221,6 @@ id:
           "Artist: For Loops": 'Artis: Untuk Pengulangan'
           "Play Lab: For Loops": 'Lab Bermain: Untuk Pengulangan'
           "Artist: Functions": 'Artis: Fungsi'
-          "Artist: Functions with Paraqmeters": 'Artis: Fungsi dengan Parameter'
           "Unplugged: Tangrams": 'Dicabut: Tangram'
           Artist: Artis
           Bee: Lebah
@@ -365,6 +364,7 @@ id:
           Pixelation: Pixelation / pikselasi
         20-hour:
           title: Pengenalan Kursus 20 jam
+          description_audience: Usia 10 + (setelah Kursus 3)
           description: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.
           Introduction to Computer Science: Pengantar Ilmu Komputer
           The Maze: Labirin
@@ -494,6 +494,7 @@ id:
           Encoding B&W Images: 'Pengkodean gambar B&W'
           Encoding Color Images: Pengkodean Gambar Berwarna
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -817,6 +818,7 @@ id:
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -875,6 +877,7 @@ id:
           Booleans: Boolean
           "Eval: Conditionals": 'Eval: Kondisional'
           Next Steps: Langkah berikutnya
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Mendefinisikan fungsi'
         cspfacilitator:
@@ -934,14 +937,46 @@ id:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Penutupan
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          description_short: Gunakan Lab bermain untuk membuat sebuah cerita atau permainan.
+          description: Gunakan Lab bermain untuk membuat sebuah cerita atau permainan.
           Hour of Code: Jam kode
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Langkah berikutnya
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          Course Overview: Course Overview
+          Computer Science Pedagogy: ilmu mendidik/pedagogi ilmu pengetahuan Komputer
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Blok Evaluasi
+          Strings and Images: String dan gambar
+          Writing Contracts: Menulis kontrak
+          Defining Variables: Mendefinisikan variabel
+          Defining Functions: Mendefinisikan fungsi
+          Rocket-Height: Ketinggian roket
+          Booleans: Boolean
+          "Eval: Conditionals": 'Eval: Kondisional'
+          Next Steps: Langkah berikutnya
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science

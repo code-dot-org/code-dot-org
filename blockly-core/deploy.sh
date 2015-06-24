@@ -43,3 +43,7 @@ else
   rm build-output/blocks_compressed.js.bak
   echo "Done building build-output/blockly_compressed.js, build-output/javascript_compressed.js and build-output/blocks_compressed.js"
 fi
+
+# Run blockly-core tests with every build
+./test.sh
+

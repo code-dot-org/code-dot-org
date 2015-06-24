@@ -123,7 +123,7 @@
         parameters: Funzioni con parametri
     level:
       instructions:
-        maze_2_2: 'Puoi aiutarmi a catturare il cattivo maialino? Accosta due blocchi
+        maze_2_2: 'Puoi aiutarmi a catturare il maialino cattivo? Accosta due blocchi
           "vai avanti" uno sopra l''altro e poi premi "Esegui" per aiutarmi a raggiungerlo. '
         maze_2_1: Questo maialino mi fa arricciare le penne. Aiutami a prenderlo!
         maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maiale. Evita
@@ -523,7 +523,7 @@
         studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane
           fino al gatto?
         studio_c3_story_4: Riesci a scrivere un programma che fa arrivare questo cane
-          fino al gatto e che fa dire "Ciao" al gatto quando il cane lo raggiunge?
+          fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?
         studio_c3_story_5: Riesci ad aggiungere un blocco per far sì che il polpo
           sia felice?
         studio_c3_story_6: Crea una storia come vuoi tu. Quando hai fatto, clicca

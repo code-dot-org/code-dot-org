@@ -171,7 +171,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catVariables":function(d){return "متغیرها"},
 "clearPuzzle":function(d){return "دوباره شروع کنید"},
 "clearPuzzleConfirm":function(d){return "این کار معما را به حالت ابتدایی تنظیم خواهد کرد و تمام بلوک هایی که شما اضافه کردید یا تغییر داده اید را حذف خواهد کرد."},
-"clearPuzzleConfirmHeader":function(d){return "آیا مطمئنید که می خواهید دوباره شروع کنید?"},
+"clearPuzzleConfirmHeader":function(d){return "آیا مطمئنی که می خواهی دوباره شروع کنی؟"},
 "codeMode":function(d){return "کد"},
 "codeTooltip":function(d){return "کد جاوا اسکریپت تولید شده رو ببین."},
 "continue":function(d){return "ادامه بده"},
@@ -311,7 +311,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "genericFeedback":function(d){return "ببین چطور به اینجا رسیدی، و سعی کن برنامه ات را درست کنی."},
 "hashError":function(d){return "با عرض پوزش، '%1' با هیچ کدام از برنامه‌های ذخیره شده مطابقت ندارد."},
 "help":function(d){return "راهنما"},
-"hideToolbox":function(d){return "(مخفی کردن)"},
+"hideToolbox":function(d){return "(پنهان کردن)"},
 "hintHeader":function(d){return "این هم یک راهنمایی:"},
 "hintRequest":function(d){return "راهنمایی را ببینید"},
 "hintTitle":function(d){return "راهنمایی:"},
@@ -346,7 +346,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "showBlocksHeader":function(d){return "بلوک‌ها را نشان بده"},
 "showCodeHeader":function(d){return "کد را نشان بده"},
 "showGeneratedCode":function(d){return "نمایشِ کد"},
-"showTextHeader":function(d){return "Show Text"},
+"showTextHeader":function(d){return "نمایش متن"},
 "showToolbox":function(d){return "نمایش جعبه ابزار"},
 "signup":function(d){return "برای دوره‌ی مقدماتی نام نویسی کنید"},
 "stringEquals":function(d){return "رشته =?"},
@@ -365,4 +365,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ویدیو را ببینید"},
 "when":function(d){return "وقتی"},
 "whenRun":function(d){return "زمان اجرا"},
-"workspaceHeaderShort":function(d){return "فضای تمرین : "}};
+"workspaceHeaderShort":function(d){return "محیط کار: "}};

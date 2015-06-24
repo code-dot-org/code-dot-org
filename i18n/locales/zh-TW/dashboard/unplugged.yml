@@ -80,11 +80,11 @@ zh:
         desc: 這個課程將在我們的日常中使用演算法，並以種植種子為例。我們亦會專注在電腦科學的大鋼以及演算法的重要性。
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: 建立基礎
         desc: 學生將以僅提供的物品建構一個結構，這個結構必須能夠達成一項任務 ( 抅到指定高度或是承受指定重量 ) ， 當一切越演複雜學生更能夠討論彼此的想法。
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
+        title: 愈來愈糟
         desc: 這個課程將以舞蹈介紹程式設計的迴圈概念 ( 重複的指令 )。學生將學到簡單的編舞，並被要求重複之。
         video: C1_getting_loopy
       RelayProgramming:
@@ -96,11 +96,11 @@ zh:
         desc: 要了解條件陳述式，學生將打一場牌，並創建規則，例如「如果出紅色牌，將可以得到一點」或「如果出黑色牌，他人將得到一點」。
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: 大事件
         desc: 'Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.'
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
+        title: 安全的到達地點
         desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:

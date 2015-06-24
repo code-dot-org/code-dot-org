@@ -1307,13 +1307,12 @@
       Course 4 Artist Functions 3_instruction: "Używając bloku funkcji \"rysuj kwadrat\",
         czy mógłbyś narysować ten obrazek? Wskazówka: kwadraty są oddalone od siebie
         o 120 pikseli.\r\n"
-      Course 4 Artist Functions 4_instruction: |
-        Are you ready to create your own
-        "Function Block"? Click on the "Functions" block in the tool box, name
-        it "draw a triangle", then create a triangle as you have done before with
-        the Action and Loops blocks. Then click on the Save and Close in the upper
-        right hand corner. Hint: Create a triangle that is 100 pixels in length. Good
-        luck!
+      Course 4 Artist Functions 4_instruction: 'Czy jesteś gotowy do utworzenia własnego
+        bloku funkcyjnego? Kliknij na bloku "Funkcje" w polu narzędzi, nazwij funkcję
+        "rysuj trójkąt", następnie utwórz trójkąt, jak to zrobiłeś wcześniej z użyciem
+        bloków działania i pętli. Następnie kliknij przyciski Zapisz i Zamknij w prawym
+        górnym rogu. Wskazówka: Utwórz trójkąt, który ma boki o długości 100 pikseli.
+        Powodzenia!'
       Course 4 Artist Functions 5 OLD_instruction: Spróbujmy użyć naszych dwóch funkcji,
         by narysować dom - co trzeba ustalić w tym kod, aby prawidłowo narysować dom?
       Course 4 Artist Functions 5_instruction: "Używając bloku funkcji \"rysuj kwadrat\",
@@ -1323,21 +1322,20 @@
         trójkąt leżący na kwadracie?
       Course 4 Artist Functions 7_instruction: Czy potrafisz narysować rząd kwadratów
         przy użyciu funkcji kwadrat? Każdy kwadrat ma bok o długości 40 pikseli.
-      Course 4 Artist Functions 8_instruction: "Are you getting the hang of how to\nuse
-        function blocks? Let's modify this square so that it is 200 pixels in\nsize.
-        Hint: click on \"edit\" to change the size of the \"draw a square\"\nfunction
-        editor. Remember to click on \"save and close\" to get out of the\nfunction
-        editor. \n"
-      Course 4 Artist Functions 9_instruction: |
-        We have given you most of the code
-        to create a function. However there seems to be something missing. Can you
-        make this function block complete?
+      Course 4 Artist Functions 8_instruction: 'Czy poznałeś już, jak używać bloków
+        funkcyjnych? Zmodyfikujmy ten kwadrat tak, aby miał bok o długości 200 pikseli.
+        Wskazówka: Kliknij na "Edytuj", aby zmienić w edytorze funkcji "rysuj kwadrat"
+        rozmiar kwadratu. Pamiętaj, aby kliknąć na "Zapisz i Zamknij" , by wyjść z
+        edytora funkcji. '
+      Course 4 Artist Functions 9_instruction: Daliśmy Ci większość kodu, aby utworzyć
+        funkcję. Jednak wydaje się, że czegoś brakuje. Czy potrafisz zakończyć tworzenie
+        tego bloku funkcji?
       Course 4 Artist Params 1_instruction: Napisz funkcję, która rysuje kwadrat o
         boku 50 pikseli
-      Course 4 Artist Params 10_instruction: "You can call functions from inside\nother
-        functions! Using your \"shape\" function as a base, create 3 house shapes\neach
-        20 pixels larger than the last starting at 50 pixels in length. Using\na counter
-        loop might be helpful. \n"
+      Course 4 Artist Params 10_instruction: 'Możesz wywoływać funkcje z wnętrza innych
+        funkcji! Za pomocą swojej funkcji "kształt", utwórz 3 kształty domów, każdy
+        o 20 pikseli większy niż poprzedni, zaczynając od długości 50 pikseli. Pomocne
+        może być użycie pętli licznikowej. '
       Course 4 Artist Params 11_instruction: |
         How about a function called "pinwheel"
         that takes three parameters - "sides," "length" and "repeat." You can
@@ -1362,31 +1360,27 @@
         przypadku trójkąta. Tym razem narysuj 3 kwadraty o długości 25, 50 i 75 pikseli
         , oddalone od siebie o 100 pikseli.\n"
       Course 4 Artist Params 5_instruction: |
-        Use both of your new functions to draw
-        this picture. To make this easier you use a loop with a "counter" parameter.
-      Course 4 Artist Params 6_instruction: "Let's edit this \"draw a shape\" function.\nIt
-        already has a \"length\" parameter. Now, let's edit the function to also\nadd
-        a \"sides\" parameter. Remember the angle to turn for a given shape is\n360
-        divided by the sides it has. Hint: lengths for each shape are the triangle\nis
-        100 pixels, the hexagon is 25 pixels and the square is 50 pixels. \n"
-      Course 4 Artist Params 7_instruction: "Can you draw these shapes by filling\nin
-        the \"???\" The square and triangle are 100 pixels in size while the hexagon\nis
-        75 pixels in size. \n"
+        Użyj obu swoich nowych funkcji, aby narysować ten obrazek. Aby ułatwić to sobie, użyj pętli z parametrem "licznik".
+      Course 4 Artist Params 6_instruction: 'Przeredaguj tę funkcję "rysuj kształt".
+        Ma ona już parametru "długość". Teraz, dodaj parametr "boki". Pamiętaj, że
+        kąt obrotu dla danego kształtu wynosi 360 podzielone przez liczbę stron, które
+        zawiera. Wskazówka: długości poszczególnych kształtów wynoszą 100 pikseli
+        dla trójkąta, 25 pikseli dla sześciokąta i 50 pikseli dla kwadratu. '
+      Course 4 Artist Params 7_instruction: 'Czy potrafisz narysować ten kształt wypełniając
+        znaki "???" Kwadrat i trójkąt mają wielkość 100 pikseli, a sześciokąt ma wielkość
+        75 pikseli. '
       Course 4 Artist Params 8_instruction: |
         Czy domyślasz się, jak narysować ten kształt? Oto podpowiedź: utwórz nową funkcja z 6 bokami, zwaną sześciokątem.
-      Course 4 Artist Params 9_instruction: |
-        Do you remember when we used the counter
-        loop but removed a loop within? Let's have some fun and use the "draw a
-        shape" function with "sides" and "length" parameters. Can you re create
-        these shapes? The square counter should be 5/100/5, the triangle counter should
-        be 10/100/10 and the hexagon is 2/100/2.
-      Course 4 Artist Var 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Course 4 Artist Vars 1_instruction: |
-        Can you help me draw a triangle? It's
-        100 pixels long on each side.
+      Course 4 Artist Params 9_instruction: Czy pamiętasz, jak użyliśmy pętli z licznikiem
+        ale z usuniętą pętlą wewnętrzną? Zabawmy się teraz i użyjmy funkcji "rysuj
+        kształt" z parametrami "boki" i "długość" parametry. Czy potrafisz ponownie
+        utworzyć te kształty? Licznik dla kwadratu powinien być 5/100/5, dla trójkąta
+        - 10/100/10 i dla sześciokąta - 2/100/2.
+      Course 4 Artist Var 9_instruction: 'Oto jest algorytm do rysowania trójkąta.
+        Zmodyfikuj go tak, aby używał zmiennej "boki". Zastąp liczbę 3 zmienną "boki".
+        Wskazówka: Pamiętaj, aby użyć bloku "ustal boki na".'
+      Course 4 Artist Vars 1_instruction: Czy możesz mi pomóc narysować trójkąt? Wszystkie
+        jego boki maj długość 100 pikseli.
       Course 4 Artist Vars 10_instruction: |
         Here's an algorithm that draws a triangle
         out of smaller triangles. Can you modify it so that it uses the "sides"
@@ -1522,26 +1516,22 @@
         collect all of these nectars with the a single function? Try adding a new
         parameter to your function called "nectars" to control the amount of nectar
         to collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 4_instruction: |
-        Try using your new function to collect
-        all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee Params 4_instruction: Spróbuj używając swojej nowej funkcji, zebrać
+        wszystkie kwiaty. Pamiętaj, aby użyć lewych i prawych zmiennych.
       Course 4 Bee Params 5_instruction: |
         Let's start from scratch - can you create
         a new function called "get 5 nectar" with a direction parameter?
-      Course 4 Bee Params 6 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
+      Course 4 Bee Params 6 (copy 1)_instruction: Spróbuj stosując swoją nową funkcję
+        zebrać cały ten nektar.
       Course 4 Bee Params 6_instruction: |
         Wouldn't it be nice if we could collect
         all of these nectars with the a single function? Try adding a new parameter
         to your function called "nectars" to control the amount of nectar to collect.
         You'll probably want to rename the function too!
-      Course 4 Bee Params 7 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 7_instruction: |
-        Try using your new function to collect
-        all of this nectar.
+      Course 4 Bee Params 7 (copy 1)_instruction: Spróbuj stosując swoją nową funkcję
+        zebrać cały ten nektar.
+      Course 4 Bee Params 7_instruction: Spróbuj użyć swojej nowej funkcji, aby zebrać
+        cały ten nektar.
       Course 4 Bee Params 8_instruction: |
         Oooh, now there's honey to deal with too!
         How could you update your function to either get nectar or make honey.
@@ -2808,13 +2798,15 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2L04 - NetSim Routers with Addresses_instruction: |
-        NetSim: Variant 3: Connects
-        groups of 2-6 students with a router, and explores issues in routing and DNS
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as

@@ -22,7 +22,7 @@ tr:
           "Maze 2: Loops": 'Labirent 2: Döngüler'
           "Bee 2: Loops": 'Arı 2: Döngüler'
           Multi & Match: 'Çoklu & Eşleştirme'
-          K-1 Flappy: K-1 Salınım
+          K-1 Flappy: K-1 Flappy
           Flappy non blockly: Bloksuz salınma
           title: Ders 1
           Artist 2: Aktör 2
@@ -221,7 +221,6 @@ tr:
           "Artist: For Loops": 'Sanatçı: For Döngüleri'
           "Play Lab: For Loops": 'Oyun Laboratuvarı: For Döngüleri'
           "Artist: Functions": 'Aktör: Fonksiyonlar'
-          "Artist: Functions with Paraqmeters": 'Sanatçı: Fonksiyonlar ve Parametreler'
           "Unplugged: Tangrams": 'Unplugged: Tangramlar'
           Artist: Aktör
           Bee: Arı
@@ -365,6 +364,7 @@ tr:
           Pixelation: Pikselleşme
         20-hour:
           title: 20 saat giriş kursu
+          description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
           description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
           Introduction to Computer Science: Bilgisayar Bilimlerine Giriş
           The Maze: Labirent
@@ -494,6 +494,7 @@ tr:
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: "Algebra PD'de Bilgisayar Bilimi"
           description: Teach Functional Programming through Algebra
@@ -817,6 +818,7 @@ tr:
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: "Algebra PD'de Bilgisayar Bilimi"
           description: Teach Functional Programming through Algebra
@@ -856,7 +858,7 @@ tr:
           Online PD: Online PD
           title: All the Things!
           description: All the level types for UI testing
-          Odometer: Odometer
+          Odometer: Kilometre sayacı
           Text Compression: Text Compression
           Pixelation: Pikselleşme
           Multi2: Multi2
@@ -875,6 +877,7 @@ tr:
           Booleans: Boolean Değerleri
           "Eval: Conditionals": 'Eval: Şartlar'
           Next Steps: Sonraki Adımlar
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
@@ -934,14 +937,46 @@ tr:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Özet
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Kodlama saati 2015
+          description_short: "Bir hikaye ya da oyun oluşturmak için Play Lab'i kullanın."
+          description: "Bir hikaye ya da oyun oluşturmak için Play Lab'i kullanın."
           Hour of Code: Saat Kodu
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Sonraki Adımlar
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Değerlendirme Blokları
+          Strings and Images: Diziler ve Görüntüler
+          Writing Contracts: Yazılı sözleşmeler
+          Defining Variables: Değişkenler Tanımlama
+          Defining Functions: Fonksiyonlar Tanımlama
+          Rocket-Height: Rocket-Height
+          Booleans: Boolean Değerleri
+          "Eval: Conditionals": 'Eval: Şartlar'
+          Next Steps: Sonraki Adımlar
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science

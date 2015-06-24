@@ -54,20 +54,17 @@
         hvor der mangler et ben. Ændr blokkene for at tegne benet.
       2-3 Artist Debugging 7_instruction: Det ser ud til at K'et i koden er tegnet
         baglæns. Kan du få det til at ligne et K?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
+      2-3 Artist Debugging 8_instruction: Min vindmølle er ikke færdig. Hvor mange
+        gange skal jeg gentage, for at lave den færdig?
       2-3 Artist Debugging 9_instruction: |
         The code for this stem is incorrect. Hint:
         The angle is off by 60 degrees
-      2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
+      2-3 Artist Debugging Assessment 1_instruction: 'Denne figure er for lille. Kan
+        du lave den større? Hint: Den skal være 75 pixels længere på hver side.'
       2-3 Artist Free Play_instruction: Fri leg! Tegn lige hvad du har lyst til.
-      2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
+      2-3 Artist Functions 1_instruction: 'Hej. Mig zombie kunstner. Mig elske tegning.
+        Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25
+        pixels kortere end firkantens længde.'
       2-3 Artist Functions 10_instruction: |
         Here's two functions, one to draw a
         big gear and one to draw a small gear. Use them to draw the inside of a machine!
@@ -3007,13 +3004,15 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2L04 - NetSim Routers with Addresses_instruction: |
-        NetSim: Variant 3: Connects
-        groups of 2-6 students with a router, and explores issues in routing and DNS
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as

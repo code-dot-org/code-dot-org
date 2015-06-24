@@ -221,7 +221,6 @@ pt-BR:
           "Artist: For Loops": 'Artista: laços for'
           "Play Lab: For Loops": 'Laboratório: laços for'
           "Artist: Functions": 'Artista: Funções'
-          "Artist: Functions with Paraqmeters": 'Artista: funções com parâmetros'
           "Unplugged: Tangrams": 'Offline: tangrams'
           Artist: Artista
           Bee: Abelha
@@ -365,6 +364,7 @@ pt-BR:
           Pixelation: Pixelização
         20-hour:
           title: Curso de introdução de 20 horas
+          description_audience: A partir de 10 anos (após o Curso 3)
           description: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
           Introduction to Computer Science: Introdução à Ciência da Computação
           The Maze: O Labirinto
@@ -393,7 +393,7 @@ pt-BR:
           Applab: Laboratório de aplicativo
           The Artist: O Artista
           Play Lab: Laboratório
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: Laboratório 2015
         events:
           title: Eventos
           description: ""
@@ -494,6 +494,7 @@ pt-BR:
           Encoding B&W Images: Codificações de imagem em preto e branco
           Encoding Color Images: Codificação de imagens coloridas
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Ciência da computação em álgebra PD
           description: Ensine programação funcional com álgebra
@@ -817,6 +818,7 @@ pt-BR:
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Ciência da computação em álgebra PD
           description: Ensine programação funcional com álgebra
@@ -875,6 +877,7 @@ pt-BR:
           Booleans: Booleanos
           "Eval: Conditionals": 'Eval: Condicionais'
           Next Steps: Próximas etapas
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: definição de funções'
         cspfacilitator:
@@ -934,14 +937,46 @@ pt-BR:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Resumo
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Hora do Código 2015
+          description_short: Use o laboratório para criar uma história ou um jogo.
+          description: Use o laboratório para criar uma história ou um jogo.
           Hour of Code: Hora do Código
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Próximas etapas
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Ensine programação funcional com álgebra
+          Course Overview: Visão geral do curso
+          Computer Science Pedagogy: Pedagogia em ciência da computação
+          Teacher Dashboard: Painel de controle do professor
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Strings e imagens
+          Writing Contracts: Escrevendo contratos
+          Defining Variables: Definir variáveis
+          Defining Functions: Definir funções
+          Rocket-Height: Altura do foguete
+          Booleans: Booleanos
+          "Eval: Conditionals": 'Eval: Condicionais'
+          Next Steps: Próximas etapas
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science

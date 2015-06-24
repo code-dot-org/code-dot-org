@@ -325,9 +325,9 @@ is:
     classroom_activity: Verkefni án tölvu
   home:
     title: Kóðastúdíó
-    description: Code Studio is home to online courses created by Code.org
+    description: Í Kóðastúdíóinu er að finna netnámskeið frá Code.org
     lines_of_code: '%{lines_count} LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LÍNUR AF KÓÐA<br/>SKRIFAÐAR AF %{students_count} MILJÓNUM NEMENDA'
     all_courses: Yfirlit yfir námskeið 1, 2 og 3
     lesson_plans: Námsáætlun
     signin_message: 'Þegar skráð(ur)? %{link}'
@@ -362,6 +362,7 @@ is:
     heading_legacy: '<h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>'
     your_gallery: Safn
     no_primary_course: Prófaðu námskeið hjá Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -444,9 +445,10 @@ is:
     flappy:
       title: Flappy kóði
       body: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!
-    20hour:
-      title: Kynningarnámskeið
-      body: Prófaðu 20 klst. námskeiðið Kynning á tölvunarfræði.
+    20-hour:
+      title: Accelerated Course
+      body: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
       try_frozen: Listamaður með Önnu og Elsu úr Frozen

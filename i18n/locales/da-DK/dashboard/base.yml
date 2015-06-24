@@ -302,7 +302,7 @@ da:
     panel:
       answer_viewer: Svar Viser
       student: Elev
-      viewing_solution: Viewing Solution
+      viewing_solution: Vis løsningsforslag
       try_it_yourself: Prøv selv
       section: Afsnit
   user:
@@ -325,9 +325,9 @@ da:
     classroom_activity: Unplugged aktivitet
   home:
     title: Kode Værktøj
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio er hjem for online kurser lavet af Code.org
     lines_of_code: '%{lines_count} LINJER KODE SKREVET AF ELEVER'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINJER KODE <br/> SKREVET AF %{students_count} MILLIONER STUDERENDE'
     all_courses: Oversigt over kursus 1, 2 og 3
     lesson_plans: Lektionsplaner
     signin_message: 'Allerede registreret? %{link}'
@@ -362,6 +362,7 @@ da:
     heading_legacy: '<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
     no_primary_course: Prøv et kursusforløb på Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Mand
     female: Kvinde
@@ -444,9 +445,10 @@ da:
     flappy:
       title: Flappy kode
       body: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!
-    20hour:
-      title: Introkursus
-      body: Prøv vores 20-timers Introduktionskursus til programmering og datalogi.
+    20-hour:
+      title: Accelerated Course
+      body: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
       try_frozen: Kunstner med Anna og Elsa, fra Frozen
