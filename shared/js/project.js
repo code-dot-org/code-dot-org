@@ -14,30 +14,74 @@ var events = {
   hashchange: 'hashchange'
 };
 
+/**
+ * @typedef {Object} ProjectInstance
+ * @property {string} id
+ * @property {string} name
+ * @property {string} levelHtml
+ * @property {string} levelSource
+ * hidden // unclear when this ever gets set
+ * @property {boolean} isOwner Populated by our update/create callback.
+ * @property {string} updatedAt String representation of a Date. Populated by
+ *   out update/create callback
+ * @property {string} projectUrl Path where this particular app type is hosted
+ */
+var current;
+var isEditing = false;
+
 module.exports = {
+  /**
+   * @returns {string} id of the current project, or undefined if we don't have
+   *   a current project.
+   */
+  getCurrentId: function () {
+    if (!current) {
+      return;
+    }
+    return current.id;
+  },
+
+  /**
+   * @returns {string} name of the current project, or undefined if we don't have
+   *   a current project
+   */
+  getCurrentName: function () {
+    if (!current) {
+      return;
+    }
+    return current.name;
+  },
+
+  /**
+   * @returns {boolean} true if we're editing
+   */
+  isEditing: function () {
+    return isEditing;
+  },
+
   init: function () {
-    if (appOptions.level.isProjectLevel || this.current) {
+    if (appOptions.level.isProjectLevel || current) {
 
       $(window).on(events.hashchange, function () {
         var hashData = parseHash();
-        if ((this.current &&
-            hashData.channelId !== this.current.id) ||
-            hashData.isEditingProject !== this.isEditing) {
+        if ((current &&
+            hashData.channelId !== current.id) ||
+            hashData.isEditingProject !== isEditing) {
           location.reload();
         }
       }.bind(this));
 
-      if (this.current && this.current.levelHtml) {
-        appOptions.level.levelHtml = this.current.levelHtml;
+      if (current && current.levelHtml) {
+        appOptions.level.levelHtml = current.levelHtml;
       }
 
-      if (this.isEditing) {
-        if (this.current) {
-          if (this.current.levelSource) {
-            appOptions.level.lastAttempt = this.current.levelSource;
+      if (isEditing) {
+        if (current) {
+          if (current.levelSource) {
+            appOptions.level.lastAttempt = current.levelSource;
           }
         } else {
-          this.current = {
+          current = {
             name: 'My Project'
           };
         }
@@ -49,15 +93,15 @@ module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          this.current.levelSource = dashboard.getEditorSource();
+          current.levelSource = dashboard.getEditorSource();
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
         window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
-        if (!this.current.hidden) {
-          if (this.current.isOwner || location.hash === '') {
+        if (!current.hidden) {
+          if (current.isOwner || location.hash === '') {
             dashboard.header.showProjectHeader();
           } else {
             // Viewing someone else's project - set share mode
@@ -66,14 +110,14 @@ module.exports = {
             setAppOptionsForShareMode(false);
           }
         }
-      } else if (this.current && this.current.levelSource) {
-        appOptions.level.lastAttempt = this.current.levelSource;
+      } else if (current && current.levelSource) {
+        appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
         setAppOptionsForShareMode(true);
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
-      this.current = {
+      current = {
         name: 'Untitled Project'
       };
       dashboard.header.showMinimalProjectHeader();
@@ -83,10 +127,10 @@ module.exports = {
     }
   },
   updateTimestamp: function () {
-    if (this.current.updatedAt) {
+    if (current.updatedAt) {
       // TODO i18n
       $('.project_updated_at').empty().append("Saved ")  // TODO i18n
-          .append($('<span class="timestamp">').attr('title', this.current.updatedAt)).show();
+          .append($('<span class="timestamp">').attr('title', current.updatedAt)).show();
       $('.project_updated_at span.timestamp').timeago();
     } else {
       $('.project_updated_at').text("Not saved"); // TODO i18n
@@ -111,18 +155,18 @@ module.exports = {
    */
   save: function(source, callback) {
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
-    var channelId = this.current.id;
-    this.current.levelSource = source;
-    this.current.levelHtml = window.Applab && Applab.getHtml();
-    this.current.level = this.appToProjectUrl();
+    var channelId = current.id;
+    current.levelSource = source;
+    current.levelHtml = window.Applab && Applab.getHtml();
+    current.projectUrl = this.appToProjectUrl();
 
-    if (channelId && this.current.isOwner) {
-      channels.update(channelId, this.current, function (err, data) {
+    if (channelId && current.isOwner) {
+      channels.update(channelId, current, function (err, data) {
         this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));
     } else {
-      channels.create(this.current, function (err, data) {
+      channels.create(current, function (err, data) {
         this.updateCurrentData_(err, data, true);
         executeCallback(callback, data);
       }.bind(this));
@@ -134,9 +178,9 @@ module.exports = {
       return;
     }
 
-    this.current = data;
+    current = data;
     if (isNewChannel) {
-      location.href = this.current.level + '#' + this.current.id + '/edit';
+      location.href = current.projectUrl + '#' + current.id + '/edit';
     }
     this.updateTimestamp();
   },
@@ -145,7 +189,7 @@ module.exports = {
    */
   autosave_: function () {
     // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-    if (this.current.levelSource === undefined) {
+    if (current.levelSource === undefined) {
       return;
     }
     // `dashboard.getEditorSource()` is expensive for Blockly so only call
@@ -155,7 +199,7 @@ module.exports = {
     }
 
     var source = dashboard.getEditorSource();
-    if (this.current.levelSource === source) {
+    if (current.levelSource === source) {
       hasProjectChanged = false;
       return;
     }
@@ -168,7 +212,7 @@ module.exports = {
    * Renames and saves the project.
    */
   rename: function(newName, callback) {
-    this.current.name = newName;
+    current.name = newName;
     this.save(dashboard.getEditorSource(), callback);
   },
   /**
@@ -176,13 +220,13 @@ module.exports = {
    * copy as the current project.
    */
   copy: function(newName, callback) {
-    delete this.current.id;
-    delete this.current.hidden;
-    this.current.name = newName;
+    delete current.id;
+    delete current.hidden;
+    current.name = newName;
     this.save(dashboard.getEditorSource(), callback);
   },
   delete: function(callback) {
-    var channelId = this.current.id;
+    var channelId = current.id;
     if (channelId) {
       channels.delete(channelId, function(err, data) {
         executeCallback(callback, data);
@@ -200,7 +244,7 @@ module.exports = {
       var hashData = parseHash();
       if (hashData.channelId) {
         if (hashData.isEditingProject) {
-          module.exports.isEditing = true;
+          isEditing = true;
         } else {
           $('#betainfo').hide();
         }
@@ -212,23 +256,23 @@ module.exports = {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname;
           } else {
-            module.exports.current = data;
+            current = data;
             deferred.resolve();
           }
         });
         return deferred;
       } else {
-        module.exports.isEditing = true;
+        isEditing = true;
       }
     } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
       // this is an embedded project
-      module.exports.isEditing = true;
+      isEditing = true;
       deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
           deferred.reject();
         } else {
-          module.exports.current = data;
+          current = data;
           dashboard.header.showProjectLevelHeader();
           deferred.resolve();
         }
