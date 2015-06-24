@@ -473,8 +473,8 @@ applabCommands.createCanvas = function (opts) {
     var height = opts.height || Applab.appHeight;
     newElement.width = width;
     newElement.height = height;
-    newElement.style.width = width + 'px';
-    newElement.style.height = height + 'px';
+    newElement.setAttribute('width', width + 'px');
+    newElement.setAttribute('height', height + 'px');
     // Unlike other elements, we use absolute position, otherwise our z-index
     // doesn't work
     newElement.style.position = 'absolute';
