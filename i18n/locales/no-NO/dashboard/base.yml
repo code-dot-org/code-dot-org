@@ -362,6 +362,7 @@
     heading_legacy: '<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Mann
     female: Kvinne
@@ -444,9 +445,10 @@
     flappy:
       title: Flappy kode
       body: Vil du lage ditt eget spill på mindre enn 10 minutter? Prøv opplæringen i Flaksekode!
-    20hour:
-      title: Introduksjonskurs
-      body: Prøv vårt 20-timers introduksjonskurs i data!
+    20-hour:
+      title: Accelerated Course
+      body: Denne 20-timers kurset introduserer kjernebegreper innen informatikk og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det er morsomt å lære for alle aldersgrupper.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Prøv den nye Kodetime veiledningen i beta
       try_frozen: Kunstner med Anna og Elsa fra Frost

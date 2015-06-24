@@ -129,61 +129,42 @@ ca-ES:
   studiobar_donate_body: Un infant aprèn per cada dòlar que dongui
   studiobar_shop_title: Botiga
   studiobar_shop_body: Trencar els estereotips. Portar el nostre logotip amb orgull.
-  homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+  homepage_hero_text_malala: '"Vaig motivar a les nenes de cada país per aprendre una hora de codi" Malala, Premi Nobel de la pau'
+  homepage_hero_text_susan: '"Si es pot canviar la tecnologia, es pot canviar el món." Susan, CEO de YouTube'
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
+    &ldquo;No juguis només amb el telèfon,
+    programa'l&rdquo;
     President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Els nostres fills &mdash;les nenes incloses&mdash; 
+    necessiten l'oportunitat d'aprendre ciència de la computació.&rdquo;
+    Sheryl, COO de Facebook
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;La informàtica obrir
+    les millors oportunitats del món.&rdquo;
+    Satya, CEO de Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Si programes, pots triar 
+    el curs de la teva vida.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;Aquestes habilitats han canviat el meu futur. 
+    Per no parlar, és simplement diversió.&rdquo;
+    Luna, 7è grau
+  homepage_hero_text_student2: |-
+    "Jo mai, mai vist els meus fills tan entusiasmat amb l'aprenentatge." Michael, professor
+  homepage_hero_text_student3: |-
+    "Informàtica és un camp que no saps si t'agrada o no abans de provar-lo" Jackson, 6è grau
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
-  homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
-  homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
+    &ldquo;Es pot fer res la ment 
+    vol fer amb programació.&rdquo;
+    Maya, 2n grau
+  homepage_hero_text_student5: '"Informàtica no és per a algú altre. És per a vostè, aquí, ara."Geraldo, professor'
+  homepage_hero_text_teacher1: '"La Codificació provoca creativitat, inspiració i innovació &mdash; que són essencials en qualsevol carrera." Floresa, professor'
+  homepage_hero_text_teacher2: '"Aquest programa té el 100% dels meus estudiants compromesos, implicats i participant." Adam, professor'
   homepage_hero_text_stat_loc: '#loc línies de codi escrites pels alumnes'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_students: "comptes d'estudiant a Code Studio"
+  homepage_hero_text_stat_served: "L'Hora del Codi: #served servit"
   homepage_slot_text_hoc: "L'Hora de Codi"
   homepage_slot_text_frozen: "Frozen amb l'Anna i l'Elsa"
   homepage_slot_text_teacher: Teacher Dashboard
@@ -195,13 +176,13 @@ ca-ES:
   homepage_action_text_teachervideo: Mira el vídeo
   homepage_action_text_learn: Comença a aprendre
   homepage_action_text_signpetition: Signa la petició
-  homepage_signpetition_dropdown: 'I agree &#x25BE;'
+  homepage_signpetition_dropdown: "Estic d'acord &#x25BE;"
   homepage_banner_text_main: Code.org i el College Board formen una aliança per millorar la diversitat en informàtica.
   homepage_banner_text_link: Aprèn més
   homepage_slot_text_title_hoc: Hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: "Proveu l'Hora de programació"
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: "Amfitrió d'una hora de codi"
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Alumnes
   homepage_slot_text_blurb_students: Explora tots els nostres tutorials
@@ -213,7 +194,7 @@ ca-ES:
   homepage_slot_text_link_k5: Cursos per als graus K-5
   homepage_slot_text_link_fullcurriculum: Mira el nostre programa complet
   homepage_slot_text_link_pd: Desenvolupament professional
-  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_title_advocates: Defensors
   homepage_slot_text_blurb_advocates: Recolza la nostra feina
   homepage_slot_text_link_stats: Veure les estadístiques
   homepage_slot_text_link_buy: "Involucra't"
@@ -293,6 +274,24 @@ ca-ES:
   dashboard_landing_view_progress: 'Veure el progrés per %{biggest_section}'
   dashboard_landing_available_title: Cursos disponibles
   dashboard_landing_available_courses: Aquí hi ha cursos actualment disponible per a tu i els teus alumnes.
+  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
+  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
+  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
+  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_ecs: Explorant la informàtica
+  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
+  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
   dashboard_landing_loading: Carregant...
   dashboard_action_edit: Edita
   dashboard_action_save: Desa
@@ -368,18 +367,18 @@ ca-ES:
   dashboard_students_print_page: Imprimeix aquesta pàgina
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Fes clic aquí</a> per veure el nostre document de privacitat, que pot ser compartit o imprès per als teus alumnes.'
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_curriculum_k5_title: Recursos per a educadors de K-5
+  dashboard_curriculum_middle_title: Recursos per a educadors de primària
+  dashboard_curriculum_high_title: Recursos per a educadors de secundària
   dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Veure totes les unitats didàctiques
   dashboard_course1: 'Curs 1:'
   dashboard_course2: 'Curs 2:'
   dashboard_course3: 'Curs 3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: 'Curs 4 (beta): '
+  dashboard_curriculum: "Pla d'estudis"
   dashboard_curriculum_overview: Resum del curriculum de cicle superior de primària
-  dashboard_overview: Overview
+  dashboard_overview: Vista general
   dashboard_sequence: Seqüència
   dashboard_framework: Marc de treball
   dashboard_standards: Estàndards
@@ -390,10 +389,10 @@ ca-ES:
   dashboard_puzzle_solving: 'Resol el trencaclosques:'
   dashboard_student_worksheet: "Full de l'alumne"
   dashboard_teacher_worksheet: Full del professor
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csina: 'Informàtica en àlgebra:'
+  dashboard_curriculum_csins: 'Informàtica en la ciència:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_ecs: 'Explorant la informàtica:'
   dashboard_grade_k: K
   dashboard_grade_other: Altres
   dashboard_login_word: Paraula
@@ -422,7 +421,7 @@ ca-ES:
   dashboard_sections_password_account_creation: Contrasenya de text creat per alumne
   dashboard_sections_login_type_explanation: "Aquesta taula t'explica quin d'aquests tipus d'inici de sessió,<b>imatge, paraula o correu electrònic</b>, vols triar per a la secció."
   dashboard_faq: Preguntes freqüents
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: Preguntes freqüents sobre K-5
   code_hoc_coming: "L'hora del Codi és aquí - 8-14 de desembre!"
   code_sign_up: "Inscriure's a participar durant la setmana de l'educació CS"
   learn_more: Més informació

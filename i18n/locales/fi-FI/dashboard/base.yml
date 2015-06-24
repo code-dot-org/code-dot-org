@@ -312,7 +312,7 @@ fi:
       answer_viewer: Answer Viewer
       student: Oppilas
       viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      try_it_yourself: Kokeile itse
       section: Ryhmä
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
@@ -371,6 +371,7 @@ fi:
     heading_legacy: '<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>'
     your_gallery: Galleria
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Mies
     female: Nainen
@@ -404,7 +405,7 @@ fi:
     download: Lataa video
   compatability:
     https:
-      header: Please enable HTTPS for Code.org.
+      header: Ota HTTPS käyttöön sivulla Code.org.
       message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
       hide_this_warning: Piilota varoitus
     working:
@@ -453,9 +454,10 @@ fi:
     flappy:
       title: Flappy Code
       body: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!
-    20hour:
-      title: Johdantokurssi
-      body: Kokeile 20 tunnin kurssia Johdanto tietojenkäsittelytieteeseen.
+    20-hour:
+      title: Accelerated Course
+      body: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
       try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
@@ -508,8 +510,8 @@ fi:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Kirjoita vastauksesi tähän
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Kiitos
+    open_response_body: Kiitos vastauksestasi!
   dialog:
     ok: OK
   time:

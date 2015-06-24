@@ -54,8 +54,8 @@
       2-3 Artist Debugging 8_instruction: مروحتي الدوارة الورقية لم تنتهي بعد، كم
         مرة يجب ان احاول حتى انتهي منها؟
       2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
+        التعليمة البرمجية لهذا الجذر غير صحيحة.تلميح:
+        زاوية الخروج هي 60 درجة
       2-3 Artist Debugging Assessment 1_instruction: |
         هذا الشكل صغيرٌ جدًا، هل بالإمكانك جعله أكبر ؟
         تلميح : ينبغي أن يكون طول كل جانب 75 بكسل.
@@ -86,8 +86,8 @@
         ورسم النظارات أكبر. المربعات الآن 45 بكسل عن بعضها البعض.
       2-3 Artist Functions 4_instruction: استخدام كتلة "تكرار" لرسم هذه 3 مربعات.
       2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
+        إستخدم خاصية "أرسم منزل" للرسم
+        المنزلين يستعملان خاصتين مختلفتين.(تلميح:المنزل الأول هو 100 بيكسل).
       2-3 Artist Functions 9_instruction: هنا دالة رقاقة الثلج. حاول التجربة لصنع
         مشهد شتاء! هذا مستوى اللعب الحر، لذلك لا يوجد لغز لمحاولة حله. استمتع!
       2-3 Artist Loops 1_instruction: هل يمكنك أن تصنع شغل سداسي مع بطول ضلع 100 بكسل
@@ -95,21 +95,17 @@
       2-3 Artist Loops 10_instruction: ماذا يحدث للتصميم عندما نجعل الخطوة الأخيرة
         إلى الأمام نصف الطول؟
       2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
+        الآن لنضع دورة *أخرى* حول الحلقة التي حولنا
+        الإنشاء الكلي! لا تنسى إضافة زاوية في نهاية الحلقة الخارجية.
+      2-3 Artist Loops 2_instruction: الآن إستعمل واجهة تكرارية لبناء خلية القذيفة.
       2-3 Artist Loops 4_instruction: عاوز تشوف إيه اللى هيحصل لو كررنا الشكل ده  كتير
         باستخدام قالب تكرار (loop)؟
       2-3 Artist Loops 5_instruction: ودلوقتى خلينا نعمل تغيير بسيط على قالب التكرار(loop)
         ونشوف ده هيأثر ازاى على الصورة.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
+      2-3 Artist Loops 6_instruction: أضف حركة إضافية وتدوير آخر داخل الحلقة ثم شاهد
+        تغيرات التصميم.
+      2-3 Artist Loops 7_instruction: يمكننا إستعمال الحلقات لإنشاء أنواع مختلفة من
+        المضلعات. هل يمكنك إنشاء معين داخل هذا المسدس?
       2-3 Artist Loops 8_instruction: خلينا نحط الحاجتين جوه قالب تكرار.
       2-3 Artist Loops 9_instruction: "هنكرر نفس الحاجات، لكن هنسيب مسافة بينهم.r\\\nاستخدم
         نفس الكود اللى فات بس ضيف خطوة لقدام بعد نهاية قالب التكرار (loop) الخارجى.
@@ -151,9 +147,8 @@
       2-3 Artist Nested Loops 4_instruction: |
         كرر الماسة 12 مرة عشان ترسم وردة.
         ملحوظة: 12 ماسة زى الـ 12 مثلث اللى انت لسه رسمهم. محتاج تلف أد إيه بعد كل شكل والتانى؟
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
+      2-3 Artist Nested Loops 5_instruction: إملأ في مبنى النوافذ هذا حلقات متداخلة.
+        طول النوافد هو20 بيكسلات وبعيدة ب 20 بكسيلات.
       2-3 Artist Nested Loops 6_instruction: الديناصور ده عنده 8 نتوءات على ذيله،
         طول كل واحدة فيهم 30 بيكسل. كرر المثلث 8 مرات، يس اوعى تنسى تتحرك لقدام بعد
         كل نتوء.
@@ -811,13 +806,11 @@
       4-5 Maze Conditionals 7_instruction: |
         Ok, let's do that again for practice
         - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
+      4-5 Maze Conditionals 8_instruction: قطعة "إذا والا" تقوم  بالتأكد من شرط، ثم
+        تقوم بعمل شيء أو شيء آخر . من اجل الوصول إلى زهرة عباد الشمس حاول إستخدام  هذا
+        المقطع البرمجي الجديد.
+      4-5 Maze Conditionals 9_instruction: تمرين اخر على قطعة " اذا - والا ", هل تقدر
+        اعطاء اجابة صحيحة من أول محاولة ؟
       4-5 Maze Conditionals Assessment 1_instruction: |
         Use a "repeat until" and
         an "if-else" block to get me to the sunflower in as few blocks as possible.
@@ -2186,16 +2179,13 @@
         Intricate snow patterns can be created with
         very simple shapes. Can you make a pattern by repeating 5 circles of size
         5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
+      frozen square iterative_instruction: يبدو أننا في منتصف الطريق إلى رسم مربع.
+        دعونا نرسم 4 خطوط معا لنكوّن مربّعا.
+      frozen square loop 3x_instruction: لنقم برسم ثلاثة مربّعات. تأكد من الدوران
+        بمقدار 120 درجة قبل كل مربّع جديد.
+      frozen square loop_instruction: مرحبا، أنا أنا أرينديلي! دعونا نرسم مربعا باستخدام
+        المقطع  "كرّر"، الذي يستخدم مقاطع أقل. كم من مرة (؟) يجب تكرار المقاطع البرمجيّة
+        الموجودة داخل المقطع "كرّر" لرسم دائرة؟
       frozen square snowflake_instruction: |
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
@@ -2900,15 +2890,13 @@
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: بلوط! بلوط! بلوط! إستخدم المقطع "إذا" للوصول هناك بأقل
+        عدد من المقاطع.
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
+      scrat 17_instruction: طيب، دعونا نفعل ذلك مرة أخرى للتّمرّن -هذا ليس مختلف جداً،
+        ولكن احترس من الجدار!
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
@@ -2919,38 +2907,30 @@
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
+      scrat 19_instruction: تمرين اخر على قطعة " اذا - والا ", هل تقدر اعطاء اجابة
+        صحيحة من أول محاولة ؟
+      scrat 20_instruction: هل يمكنك إضافة 3 مقاطع برمجيّة  فقط لمساعدتي في حل متاهة
+        أكثر تعقيداً؟ إذا قمت بذلك بالطريقة الصّحيحة، يمكنني أن أمشي في أي مسار متعرج
+        بغض النظر عن الطول. بسرعة! الجليد يذوب!
       SpecialFrozenLevel_instruction: |
         You've officially become a master artist!
         Create a winter wonderland.
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: |
-        Draw this diamond with 120 and 60 degree
-        angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: |
-        Can you draw this hexagon with 100 pixel
-        sides and 60 degree turns?
-      Standalone_Artist_4_instruction: |
-        Now you've got a new block to play with,
-        the loop. This will repeat a set of commands. What happens if you loop these
-        commands 6 times?
+      Standalone_Artist_1_instruction: مرحبا بكم في الفنان! أولاً، دعونا نحاول رسم
+        مربّع بسيط باستخدام المقطع اتجه إلى اليمين و المقطع تقدّم إلى الأمام. يجب
+        أن يكون كل جانب بطول 100 بكسل.
+      Standalone_Artist_2_instruction: ارسم هذه الماسة ذات الزوايا 120 و 60 درجة و
+        بطول 150 بيكسل.
+      Standalone_Artist_3_instruction: هل يمكنك رسم مسدس الزوايا هذا بطول الضلع 100
+        بيكسل وباستدارة 60 درجة؟
+      Standalone_Artist_4_instruction: الآن تحصلت على مقطع برمجي جديد للعب به، كرّر.
+        وهو سيكرّر مجموعة من الأوامر. ماذا يحدث لو كررت هذه الأوامر 6 مرات؟
       Standalone_Artist_5.5_instruction: |
         Notice how we simplified the diamond code
         by turning it into a loop. You can loop that whole sequence 12 times to draw
         the flower. Hint: You'll need to turn 30 degrees after your diamond loop
         so you don't keep drawing over the same diamond.
-      Standalone_Artist_5_instruction: |
-        How many times do you need to loop this diamond
-        to draw the flower?
+      Standalone_Artist_5_instruction: كم عدد المرات التي يجب فيها تكرارهذه الماسة
+        لرسم زهرة في النهاية؟
       Standalone_Artist_6_instruction: |
         Loop this hexagon code 6 times to create
         the design. How many degrees will you need to turn each time? Hint: divide
@@ -2969,10 +2949,9 @@
         Now go ahead and make whatever picture you'd
         like! You've even got an empty function that you can make do whatever you
         want!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
+      Standalone_Artist_v2_instruction: مرحبا بكم في الفنان! أولاً، دعونا نحاول رسم
+        مربّع بسيط باستخدام المقطع اتجه إلى اليمين و المقطع تقدّم إلى الأمام. يجب
+        أن يكون كل جانب بطول 100 بكسل.
       Text Compression Peter Piper_instruction: |
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
@@ -2995,13 +2974,15 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2L04 - NetSim Routers with Addresses_instruction: |
-        NetSim: Variant 3: Connects
-        groups of 2-6 students with a router, and explores issues in routing and DNS
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as

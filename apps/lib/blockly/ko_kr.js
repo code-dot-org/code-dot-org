@@ -1,4 +1,4 @@
-Blockly.Msg.ACTUAL = "전화 phone";
+Blockly.Msg.ACTUAL = "호출";
 Blockly.Msg.ADD = "추가 ";
 Blockly.Msg.ADD_COMMENT = "설명 입력";
 Blockly.Msg.ADD_PARAMETER = "매개 변수 추가";

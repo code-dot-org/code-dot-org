@@ -257,47 +257,34 @@
         There is now more nectar at the flowers.
         Edit the given function so that it collects 4 nectars and use it to collect
         all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: "Each flower contains one unit of nectar. Collect\nnectar
-        from each of the flowers. \n"
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
+      2-3 Bee Functions 6_instruction: Nyt käytä samaa funktiota kerätäksesi mesi
+        kolmesta kukasta.
+      2-3 Bee Functions 7_instruction: Kukat ovat nyt kauempana. Muokkaa annettua
+        funktiota ja käytä sitä kerätäksesi mesi kukista.
+      2-3 Bee Functions 8_instruction: Luo oma funktio jolla saat 7 mettä liikutettua
+        eteenpäin ja tehtyä 7 hunajaa. Käytä funktiota kerätäksesi mesi jokaisesta
+        kukasta ja tee hunajasta hunajakenno.
+      2-3 Bee Functions 9_instruction: Luo oma funktio joka kulkee polkua, kerää mettä,
+        luo hunajaa ja palaa takaisin mehiläisen luo polkua pitkin.
+      2-3 Bee Functions Assessment 1_instruction: 'Arviointi: Käytä funktiota kerätäksesi
+        mesi jokaisesta kukasta.'
+      2-3 Bee Functions Assessment 2_instruction: 'Arviointi: Luo funktio joka tekee
+        3 hunajaa kerralla.'
+      2-3 Bee Loops 1_instruction: 'Jokainen kukka sisältää yhden verran mettä. Kerää
+        mesi jokaisesta kukasta. '
+      2-3 Bee Loops 10_instruction: Voitko käyttää while loop kahden loopin sisällä
+        kerätäksesi kaikki mesi?
+      2-3 Bee Loops 11_instruction: Käytä while loop kerätäksesi mesi kukista tällä
+        kentällä.
+      2-3 Bee Loops 12_instruction: Käytä while loop kerätäksesi mesi kukista tällä
+        kentällä.
       2-3 Bee Loops 13_instruction: |
         Assessment: Use the repeat block to collect
         all of the nectar.
-      2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
-        from these flowers? \n"
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 2A_instruction: |
-        Can you do the same task more easily with a
+      2-3 Bee Loops 1A_instruction: 'Hei, olen mehiläinen. Voitko auttaa minua keräämään
+        mettä näistä kukista? '
+      2-3 Bee Loops 2_instruction: Käytä loop kerätäksesi mettä ja tehdäksesi hunajaa.
+      2-3 Bee Loops 2A_instruction: Voitko tehdä saman tehtävän helpommin käyttämällä
         loop?
       2-3 Bee Loops 3_instruction: |
         Collect nectar from each flower and make honey
@@ -2970,13 +2957,15 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2L04 - NetSim Routers with Addresses_instruction: |
-        NetSim: Variant 3: Connects
-        groups of 2-6 students with a router, and explores issues in routing and DNS
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as

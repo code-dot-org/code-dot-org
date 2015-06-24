@@ -426,6 +426,7 @@
     heading_legacy: <h2>Nasz ogólny kurs dla</h2><h1>Wszystkich grup wiekowych</h1>
     your_gallery: Galeria
     no_primary_course: Wypróbuj kurs w Studio Kodowania
+    print_certificate: Print Certificate
   gender:
     male: Mężczyzna
     female: Kobieta
@@ -525,9 +526,13 @@
       title: Flappy Code
       body: Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz
         poradnik Flappy Code!
-    20hour:
-      title: Wprowadzenie do kursu
-      body: Wypróbuj nasz 20-to godzinny kurs Wprowadzenie do informatyki.
+    20-hour:
+      title: Accelerated Course
+      body: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki
+        i programowania. Kurs jest przeznaczony do użytku klasach od 1 do 8, może
+        być również przyjemną nauką we wszystkich grupach wiekowych.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Wypróbuj nasz nowy samouczek Godziny Kodowania (Hour of Code)
         w wersji beta

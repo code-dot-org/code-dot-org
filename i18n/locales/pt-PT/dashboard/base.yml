@@ -362,6 +362,7 @@ pt:
     heading_legacy: '<h2>O nosso curso geral para</h2><h1>Todas as idades</h1>'
     your_gallery: Galeria
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Masculino
     female: Feminino
@@ -444,9 +445,10 @@ pt:
     flappy:
       title: Flappy Bird
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
-    20hour:
-      title: Curso de introdução
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen

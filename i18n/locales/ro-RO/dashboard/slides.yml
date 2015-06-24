@@ -33,7 +33,7 @@ ro:
         text: 'Fiecare bloc este o instrucție. Dacă tragi un bloc de tip "mută înainte" către spațiul tău de lucru și apeși pe "Execută Programul" pasărea se mută cu un spațiu pe labirint.'
       11:
         image: notes/hoc1_11.jpg
-        text: Pentru a face mai multe acţiuni, puteţi muta mai multe blocuri în spaţiul de lucru atasandu-le împreună. Pasarea va face comenzile de sus în jos.
+        text: Pentru a face mai multe acţiuni, puteţi trage mai multe blocuri în spaţiul de lucru atașându-le împreună. Pasărea va executa comenzile de sus în jos.
       12:
         image: notes/hoc1_12.jpg
         text: 'Dacă rulezi un program și vrei să îl repari pentru ca apoi să-l încerci din nou, apasă pe butonul "Reset".'
@@ -160,26 +160,26 @@ ro:
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: 'Salut, numele meu este Saloni. Eu folosesc programarea să pot ajuta și găsi soluții în medicină și sănătate. Hai să învățăm despre blocul "IF - ELSE" (Daca-Altfel). Arată la fel ca blocul "IF (Daca)", dar are o parte în plus la sfârșit care spune "altfel".'
+        text: 'Salut, numele meu este Saloni. Eu folosesc informatica să pot ajuta și găsi soluții în medicină și sănătate. Hai să învățăm  despre blocul "dacă altfel". Arată ca blocul "dacă", dar are o parte în plus la sfârșit care spune "altfel".'
       2:
         image: notes/hoc5_2.jpg
-        text: 'Dacă pun un bloc "mută înainte" în locul unde spune "execută" și un bloc "ia-o la stânga" unde spune "altfel" asta înseamnă că zombie-ul va alege între 2 opțiuni. DACĂ există o cale în față, zombie-ul se va mișca înainte și ALTFEL (nu există o cale înainte), zombie-ul se va întoarce la stânga.'
+        text: 'Dacă pun un bloc "mută înainte" în locul unde spune "execută" și un bloc "întoarce la stânga" unde spune "altfel" asta înseamnă că zombie-ul va alege între 2 opțiuni. DACĂ există o cale în față, zombie-ul se va mișca înainte și ALTFEL (nu există o cale înainte), zombie-ul se va întoarce la stânga.'
       3:
         image: notes/hoc5_3.jpg
-        text: 'La fel ca blocul "dacă", putem pune blocuri "IF-ELSE (Dacă-Altfel)" în interiorul blocului "repetare", astfel încât zombie continua sa se mişte şi blocul "dacă-altfel" va continua să verifice dacă există o posibilitate de întoarcere.'
+        text: 'La fel ca blocul "dacă", putem pune blocuri "dacă altfel" în interiorul blocului "repetare", astfel încât zombie continuă să se mişte şi blocul "dacă altfel" va continua să verifice dacă există o posibilitate de întoarcere.'
       4:
         image: notes/hoc5_4.jpg
         text: Acum , condu-i pe zombie unde le este locul!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: O instrucţiune if-else este o decizie între două lucruri. Să vedem cum putem folosi o instrucţiune if-else cu amicul nostru veverita Scrat.
+        text: O instrucţiune dacă-altfel este o decizie între două lucruri. Hai să vedem cum putem folosi o instrucţiune dacă-altfel cu amicul nostru veverița Scrat.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: 'Acest bloc arată la fel ca blocul "dacă", dar există o ramură suplimentară în partea de jos care spune "altfel". Dacă punem un bloc "mergi înainte" unde scrie "execută" şi un bloc "întoarce la stânga" unde scrie "altfel",  atunci veverița Scrat va merge înainte dacă este posibil. Dacă nu există drum înainte, Scrat se va întoarce la stânga.'
+        text: 'Acest bloc arată la fel ca blocul "dacă", dar există o ramură suplimentară în partea de jos care spune "altfel". Dacă punem un bloc "mută înainte" unde scrie "execută" şi un bloc "întoarce la stânga" unde scrie "altfel",  atunci veverița Scrat va merge înainte dacă este posibil. Dacă nu există drum înainte, Scrat se va întoarce la stânga.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: 'Înseamna luarea unei decizii și a face una dintre două acţiuni pe baza acestei decizii. Şi la fel ca blocurile "dacă", puteţi pune blocuri "if-else" în interiorul blocurilor "repeta".'
+        text: 'Înseamnă luarea unei decizii și a face una dintre două acţiuni pe baza acelei decizii. Şi la fel ca blocurile "dacă", puteţi pune blocuri "dacă-altfel" în interiorul blocurilor "repetare".'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
         text: Acum, haideţi să o ajutăm pe veverița Scrat să obțină acea ghindă!
@@ -267,10 +267,10 @@ ro:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: Buna, numele meu este Lyndsey. Sunt model, actriță şi imi programez propriile mele aplicații. Să folosim programarea și să ne alăturam personajelor Anna şi Elsa în explorarea magiei şi frumuseţii gheții.
+        text: Bună, numele meu este Lyndsey. Sunt model, actriță şi imi programez propriile mele aplicații. Hai să folosim codul și să ne alăturăm personajelor Anna şi Elsa în explorarea magiei şi frumuseţii gheții.
       2:
         image: notes/frozen1_2.jpg
-        text: Veţi crea fulgi de zăpadă şi modele în gheaţă in timp ce patinați. Apoi puteti construi un paradis de iarnă, pe care îl puteţi împartăși cu prietenii.
+        text: 'Veţi crea fulgi de zăpadă şi modele în gheaţă in timp ce patinați și  apoi puteti construi un paradis de iarnă, pe care îl puteţi distribui prietenilor.'
       3:
         image: notes/frozen1_3.jpg
         text: În următoarea oră, vei învăța elementele de bază ale programării. Programarea tradițională este, de obicei, sub forma text, dar vom folosi Blockly, care foloseste blocuri vizuale ce se pot glisa și fixa pentru a scrie programe. Acest mod este folosit și de studenţi în universități pentru a învăța bazele programării. Sub capota, de fapt scrieți cod.

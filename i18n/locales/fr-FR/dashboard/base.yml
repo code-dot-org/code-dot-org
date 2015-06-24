@@ -223,7 +223,7 @@ fr:
         playlab: Créer une application
         artist: Dessine quelque chose
     user:
-      classroom: "Page d'accueil des enseignants"
+      classroom: "Page d'accueil de l'enseignant"
       district_dashboard: Tableau de bord de district
       label: 'Bonjour %{username}'
       stats: Ma progression
@@ -365,6 +365,7 @@ fr:
     heading_legacy: '<h2>Nos cours pour</h2><h1>Tous les âges</h1>'
     your_gallery: Galerie
     no_primary_course: Essayer un cours sur Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Masculin
     female: Féminin
@@ -447,9 +448,10 @@ fr:
     flappy:
       title: "Flappy l'oiseau"
       body: "Vous voulez développer votre propre jeu vidéo en moins de 10 minutes ? C'est par ici!"
-    20hour:
-      title: "Cours d'introduction"
-      body: "Essayez notre intro de 20 heures de cours d'informatique."
+    20-hour:
+      title: Accelerated Course
+      body: "Ce cours de 20 heures introduit les notions de base de l'informatique et les concepts de la programmation. Il est conçu pour la grande section jusqu'à la 4ème (14 ans et moins), mais il n'y a pas d'âge pour apprendre."
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Essayez notre nouveau tutoriel heure de Code en version bêta
       try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
@@ -578,7 +580,7 @@ fr:
     project_type: Type de projet
     help_text: "Cliquez sur <strong>faire une application</strong> ou <strong>Dessiner quelque chose</strong> ci-dessous pour faire un nouveau projet de laboratoire de jeu ou d'artiste ! <br/>Vous pouvez y revenir et travailler sur vos projets à tout moment."
     need_help: "Besoin d'aide pour démarrer ?"
-    really_delete: Supprimer ?
+    really_delete: Voukez-vous vraiment supprimer ?
     delete_yes: Oui
     delete_no: Non
     saved: Enregistré

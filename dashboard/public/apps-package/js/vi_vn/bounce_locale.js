@@ -239,7 +239,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPaddleTooltip":function(d){return "Chọn hình cho mái chèo"},
 "setPaddleSpeedRandom":function(d){return "Thiết lập mái chèo tốc độ ngẫu nhiên"},
 "setPaddleSpeedVerySlow":function(d){return "Thiết lập tốc độ rất chậm cho mái chèo"},
-"setPaddleSpeedSlow":function(d){return "Thiết lập mái chèo tốc độ chậm"},
+"setPaddleSpeedSlow":function(d){return "Thiết lập tốc độ chèo chậm"},
 "setPaddleSpeedNormal":function(d){return "Thiết lập tốc độ mái chèo bình thường"},
 "setPaddleSpeedFast":function(d){return "Thiết lập tốc độ cho mái chèo nhanh"},
 "setPaddleSpeedVeryFast":function(d){return "Thiết lập mái chèo tốc độ rất nhanh"},

@@ -327,7 +327,7 @@ pt-BR:
     title: Code Studio
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS POR %{students_count} MILHÕES DE ESTUDANTES'
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos de aula
     signin_message: 'Já se registrou? %{link}'
@@ -362,6 +362,7 @@ pt-BR:
     heading_legacy: '<h2>Nosso curso geral para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Masculino
     female: Feminino
@@ -444,9 +445,10 @@ pt-BR:
     flappy:
       title: Código do Flappy bird
       body: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
-    20hour:
-      title: Curso Introdutório
-      body: Experimente nossa introdução ao curso de Ciência da Computação de 20 horas.
+    20-hour:
+      title: Accelerated Course
+      body: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão beta
       try_frozen: O Artista com Anna e Elsa, do filme Frozen

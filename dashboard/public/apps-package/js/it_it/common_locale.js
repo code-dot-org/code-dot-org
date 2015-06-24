@@ -346,7 +346,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "showBlocksHeader":function(d){return "Mostra i blocchi"},
 "showCodeHeader":function(d){return "Mostra il codice"},
 "showGeneratedCode":function(d){return "Mostra il codice"},
-"showTextHeader":function(d){return "Show Text"},
+"showTextHeader":function(d){return "Visualizza testo"},
 "showToolbox":function(d){return "Visualizza strumenti"},
 "signup":function(d){return "Iscriviti al corso introduttivo"},
 "stringEquals":function(d){return "stringa = ?"},

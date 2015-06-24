@@ -372,10 +372,10 @@
     classroom_activity: Безмашинна вправа
   home:
     title: Студія коду
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio є домвікою для онлайн курсів, створених в Code.org
     lines_of_code: '%{lines_count} РЯДКІВ КОДУ, НАПИСАНА УЧНЯМИ'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} РЯДКІВ КОДУ <br/> НАПИСАНІ %{students_count}
+      МІЛЬЙОНАМИ СТУДЕНТІВ'
     all_courses: Огляд курсів, 1, 2 і 3
     lesson_plans: Плани уроків
     signin_message: Вже зареєстровані? %{link}
@@ -419,6 +419,7 @@
     heading_legacy: <h2>Загальний курс</h2><h1>для будь-якого віку</h1>
     your_gallery: Галерея
     no_primary_course: Спробуйте курс Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Чоловік
     female: Жінка
@@ -455,10 +456,10 @@
     download: Завантажити відео
   compatability:
     https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
+      header: Будь ласка, увімкніть HTTPS для Code.org.
+      message: Для підвищення безпеки, ми перейшли до HTTPS на %{https_date}. Ви не
+        зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'>
+        натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org.
       hide_this_warning: Сховати попередження
     working:
       header: Ми працюємо над підтримкою для вашого браузера.
@@ -514,9 +515,13 @@
       title: Код Пурха
       body: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати
         Пурха!
-    20hour:
-      title: Вступний курс
-      body: Спробуйте наш 20-годинний вступний курс інформатики.
+    20-hour:
+      title: Accelerated Course
+      body: Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування.
+        Цей курс розроблено для використання на заняттях в основній школі, але може
+        бути цікавим для будь-якого віку.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
       try_frozen: Художник з Анною та Ельзою, із Крижаного серця

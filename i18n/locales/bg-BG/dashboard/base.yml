@@ -323,9 +323,9 @@ bg:
     classroom_activity: Ънплъгд дейност
   home:
     title: Студио по кодиране
-    description: Code Studio is home to online courses created by Code.org
+    description: Студиото за кодиранепредставя всички онлайн курсове, създадени от Code.org
     lines_of_code: '%{lines_count} РЕДА КОД, НАПИСАНИ ОТ УЧЕНИЦИТЕ'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} линии  код <br/> НАПИСАНИ от %{students_count} милиона ученици'
     all_courses: Преглед на курсове 1, 2 и 3
     lesson_plans: Учебни планове
     signin_message: 'Вече сте регистриран? %{link}'
@@ -360,6 +360,7 @@ bg:
     heading_legacy: '<h2>Нашият общ курс за</h2><h1>Всички възрасти</h1>'
     your_gallery: Галерия
     no_primary_course: Опитайте курс в студиото по кодиране
+    print_certificate: Print Certificate
   gender:
     male: Мъж
     female: Жена
@@ -442,9 +443,10 @@ bg:
     flappy:
       title: Flappy код
       body: Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте нашите Flappy код уроци!
-    20hour:
-      title: Въвеждащ курс
-      body: 'Опитайте нашият 20-часов курс "Въведение в компютърните науки".'
+    20-hour:
+      title: Accelerated Course
+      body: Този 20-часов курс представя основните компютърни науки, концепции и термини в програмирането. Курсът е предназначен най-вече за използване в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Опитайте нашия нов Час на кодирането (бета версия)
       try_frozen: Художникът с Анна и Елза от Frozen

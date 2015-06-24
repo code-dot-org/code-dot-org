@@ -325,9 +325,9 @@ ro:
     classroom_activity: Activitate Unplugged
   home:
     title: Studio de Cod
-    description: Code Studio is home to online courses created by Code.org
+    description: Studio-ul Code este gazda cursurilor online create de Code.org
     lines_of_code: '%{lines_count} LINII DE COD SCRISE DE ELEVI'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINII DE COD<br/>SCRISE DE %{students_count} MILIOANE DE ELEVI'
     all_courses: Prezentare generală a cursurilor 1, 2 și 3
     lesson_plans: Planuri de lecție
     signin_message: 'Deja înregistrat? %{link}'
@@ -362,6 +362,7 @@ ro:
     heading_legacy: '<h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
     no_primary_course: Încercaţi un curs la Studio-ul Code
+    print_certificate: Print Certificate
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -444,9 +445,10 @@ ro:
     flappy:
       title: Codul Flappy
       body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!
-    20hour:
-      title: Curs Introductiv
-      body: Încearcă cursul nostru de 20 de ore Introducere în Știința Calculatorului.
+    20-hour:
+      title: Accelerated Course
+      body: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Încercați noul nostru tutorial Ora de cod în versiune beta
       try_frozen: Artist cu Anna și Elsa, din Frozen
@@ -581,7 +583,7 @@ ro:
     not_saved: Nesalvat
     cancel: Anulează
     delete_confirm_title: Sigur ștergeți aceast proiect?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
+    delete_confirm_text: Ștergerea proiectului tău îl va elimina definitiv pe acesta din propria listă Proiectele Mele. Orice persoană căreia i-ai distribuit link-ul nu va mai putea vedea proiectul tău.
     view_all: Vizualizează proiectele mele
     remix: Remix
     click_to_remix: "Click 'Remix' to spin-off your own version!"

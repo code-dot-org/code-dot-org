@@ -382,10 +382,10 @@
     classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
-    description: Code Studio is home to online courses created by Code.org
+    description: Code-Studio ist Heimat von online Kurse erstellt von Code.org
     lines_of_code: '%{lines_count} Codezeilen von den Studenten erstellt'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} Zeilen CODE <br/> von %{students_count}
+      Millionen Studenten geschrieben'
     all_courses: Übersicht der Level 1, 2 und 3
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
@@ -429,6 +429,7 @@
     heading_legacy: <h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Männlich
     female: Weiblich
@@ -530,9 +531,13 @@
       title: Flappy Code
       body: Willst du dein eigenes Spiel in weniger als 10 Minuten schreiben? Probiere
         unser Flappy Code-Tutorial!
-    20hour:
-      title: Einführungskurs
-      body: Versuche unseren 20-Stunden Informatik-Einführungskurs.
+    20-hour:
+      title: Accelerated Course
+      body: Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik
+        und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen
+        1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
       try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
@@ -591,9 +596,10 @@
     wrong_title: Falsche Antwort
     badname: Dein Vertrag hat den falschen Namen.
     badname_case: Funktionsnamen verwenden Groß-/Kleinschreibung. Achte auf die Schreibweise!
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
+    badrange: Dein Vertrag hat den falschen Namen.
+    baddomainsize: Ihr Vertrag verfügen nicht die richtige Anzahl der Objekte in der
+      Domäne.
+    baddomainname: Einer oder mehrere Ihrer Domänen-Artikel hat den falschen Namen.
     baddomaintype: One or more of your domain items has the wrong type, or they are
       in the wrong order.
   text_match:
