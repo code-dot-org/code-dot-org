@@ -1,0 +1,18 @@
+name 'PDAlg Puzzles Pre'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://code.org/curriculum/docs/web/k5online.css" />
+
+### PUZZLES > Some Puzzle Practice
+
+In the next several stages you'll have a chance to practice puzzles covering a wide variety of concepts from this course. Any puzzles that you already completed during your in-person PD will load up your most recent answer - if you'd like a chance to reattempt that puzzle from the beginning, just click "Start Over."
+
+#### Sometimes we think better offline!
+
+The paper Design Recipe and the Circles of Evaluation can be incredibly helpful tools for you and your students to refer back to. While working on the computer allows us to iterate, test, and tinker quickly, it's still often beneficial to slow down and go back to paper when you hit a wall. If you run into a confusing puzzle, stop and draw out the circles or work through the full Design Recipe on paper.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
