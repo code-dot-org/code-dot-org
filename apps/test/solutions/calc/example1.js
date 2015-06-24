@@ -57,7 +57,8 @@ module.exports = {
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
       },
       customValidator: function (assert) {
-        assert.equal(Calc.__testonly__.appState.message, calcMsg.emptyComputeBlock());
+        assert.equal(Calc.__testonly__.appState.message,
+          commonMsg.emptyTopLevelBlock({topLevelBlockName: 'evaluate'}));
         return true;
       },
       xml: '<xml></xml>'
