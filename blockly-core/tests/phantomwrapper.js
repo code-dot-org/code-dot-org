@@ -47,30 +47,30 @@ var page = WebPage.create();
 var path = 'file://' + fs.absolute('blockly_test.html');
 console.log("Loading blockly-core test page with phantomjs");
 page.open(path, function (status) {
-    if (status !== 'success') {
-      console.log(RED + "PhantomJS failed to load test page" + DEFAULT_STYLE);
+  if (status !== 'success') {
+    console.log(RED + "PhantomJS failed to load test page" + DEFAULT_STYLE);
+    phantom.exit(1);
+    return;
+  }
+
+  waitFor(function () {
+    // Wait until we either see a success or failure message
+    return /\[(?:PASSED|FAILED)\]/.test(page.plainText);
+  }, function () {
+
+    // Color-code output
+    console.log(page.plainText
+        .replace(/PASSED/g, GREEN + '$&' + DEFAULT_STYLE)
+        .replace(/FAILED/g, RED + '$&' + DEFAULT_STYLE));
+
+    if (/\[FAILED\]/.test(page.plainText)) {
+      console.log(RED + "Blockly-Core tests failed" + DEFAULT_STYLE);
       phantom.exit(1);
       return;
     }
 
-    waitFor(function () {
-      // Wait until we either see a success or failure message
-      return /\[(?:PASSED|FAILED)\]/.test(page.plainText);
-    }, function () {
-
-      // Color-code output
-      console.log(page.plainText
-          .replace(/PASSED/g, GREEN + '$&' + DEFAULT_STYLE)
-          .replace(/FAILED/g, RED + '$&' + DEFAULT_STYLE));
-
-      if (/\[FAILED\]/.test(page.plainText)) {
-        console.log(RED + "Blockly-Core tests failed" + DEFAULT_STYLE);
-        phantom.exit(1);
-        return;
-      }
-
-      console.log(GREEN + "Blockly-Core tests passed" + DEFAULT_STYLE);
-      phantom.exit(0);
-    });
+    console.log(GREEN + "Blockly-Core tests passed" + DEFAULT_STYLE);
+    phantom.exit(0);
+  });
 });
 
