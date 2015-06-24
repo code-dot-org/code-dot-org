@@ -17,14 +17,14 @@ class Script < ActiveRecord::Base
   EDIT_CODE_NAME = 'edit-code'
   TWENTY_FOURTEEN_NAME = 'events'
   JIGSAW_NAME = 'jigsaw'
-
   HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
-
+  INFINITY_NAME = 'infinity'
+  ARTIST_NAME = 'artist'
+  ALGEBRA_NAME = 'algebra'
   FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
-
   COURSE1_NAME = 'course1'
   COURSE2_NAME = 'course2'
   COURSE3_NAME = 'course3'
