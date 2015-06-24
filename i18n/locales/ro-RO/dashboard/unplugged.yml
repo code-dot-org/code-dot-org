@@ -97,19 +97,19 @@ ro:
         video: C2_decizii_cu_cărți
       BigEvent:
         title: Marele eveniment
-        desc: Elevilor li se prezintă conceptul de ”eveniment” în programare, care reprezintă o acțiune pe care o urmărește constant calculatorul. Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa în funcție de butonul care a fost apăsat.
+        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care reprezintă acțiuni pe care calculatorul le monitorizează în mod constant. Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa în funcție de butonul care a fost apăsat.
         video: C1_marele eveniment_fără calculator
       GoingPlacesSafely:
         title: Mergând în locuri în siguranţă
         desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii arată cum poate fi sigură navigarea pe Internet.
-        video: C1_vizitând_locuri_sigure
+        video: C1_vizitând_locuri_în siguranță
       GraphPaperProgramming:
         title: Programare pe Hârtie Milimetrică
-        desc: Elevii scriu un algoritm (set de instrucțiuni) folosind un set de comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă un desen.
-        video: C2_hârtie_grafică
+        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă un desen.
+        video: C2_hârtie_milimetrică
       PaperPlanes:
         title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
-        desc: Această lecție evidențiază algoritmi pe care îi folosim în viața de zi cu zi, de exemplu realizarea de avioane din hârtie. De asemenea, această lecție încearcă să formeze o imagine mai clară despre informatică și rolul esențial pe care îl au algoritmii.
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie. De asemenea, această lecție se concentrează pe o imagine de ansamblu despre informatică și rolul esențial pe care îl joacă algoritmii.
         video: C2_avioane_de_hârtie
       BinaryBracelets:
         title: Brăţări Binare
@@ -118,61 +118,61 @@ ro:
       DigitalFootprint:
         title: Amprenta ta Digitală
         desc: 'Profesorii introduc elevilor ideea că postarea informațiilor online despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.'
-        video: C2_digital_footprint
+        video: C2_urme_digitale
       ComputationalThinking:
         title: Gândire Computațională
-        desc: Elevii folosesc paşii de gândire computaţională (descompune, model meci, abstracte, algoritmul) să-și dea seama cum să joace un joc care vine fără instrucţiuni.
-        video: C3_computational_thinking
+        desc: Elevii folosesc paşii de gândire computațională (descompunere, potrivire de patern, astractizare, algoritm) pentru a-și dea seama cum să joace un joc care vine fără instrucţiuni.
+        video: C3_gândire_computațională
       FunctionalSuncatchers:
         title: Prinzători ai Soarelui Funcţionali
-        desc: Elevii creează un algoritm cu variabile şi funcţii (bucăţi de cod pe care doriţi să utilizaţi peste si peste din nou) pentru a crea suncatchers folosind șiruri de mărgele.
-        video: C3_functional_suncatchers
+        desc: Elevii creează un algoritm cu variabile şi funcţii (bucăţi de cod pe care doriţi să le utilizaţi în mod repetat) pentru a realiza suncatchers folosind ață și mărgele.
+        video: C3_suncatcher-uri_funționale
       SongwritingParameters:
         title: Compoziții muzicale cu parametri
         desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre transmiterea parametrilor (care personalizează o funcție fără a trebui să rescrie întreaga funcție).
         video: C3_compoziție_cu_parametri
       DiceRace:
         title: 'Algoritmi din viaţa reală: cursa de zaruri'
-        desc: Această lecție arată modul în care noi folosim algoritmi în viața de zi cu zi. Elevii vor identifica şi nota algoritmul pentru un joc de zaruri.
-        video: C3_dice_race
+        desc: Această lecție indică modul în care noi folosim algoritmi în viața de zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul pentru un joc de zaruri.
+        video: C3_cursa_de_zaruri
       Internet:
         title: Internet
-        desc: Elevii transmit mesaje pe bucăți de hârtie simulând trimiterea mesajelor folosind Internetul.
+        desc: Elevii transmit mesaje pe bucăți de hârtie simulând metode variate de transmisie pe Internet.
         video: C3_internet
       Crowdsourcing:
         title: Obţinând Informaţii/Critici
-        desc: Elevii folosesc crowdsourcing, o tehnica de rezolvare a problemelor comune în informatică, pentru a finaliza o sarcină împreună ca o modalitate mai eficientă decât rezolvarea individuală.
+        desc: Elevii folosesc crowdsourcing, o tehnica uzuală de rezolvare a problemelor din informatică, pentru a finaliza o sarcină împreună ca o modalitate mai eficientă decât rezolvarea individuală.
         video: C3_crowdsourcing
       DigitalCitizenship:
         title: Cetățenia Digitală
-        desc: Elevii exploreaza diferenţa dintre informaţii private şi informaţii personale, distinge ceea ce este sigur şi nesigure pentru a partaja online.
+        desc: Elevii exploreaza diferenţa dintre informaţii private şi informaţii personale, pentru a distinge ce este sigur şi nesigure să distribuie online.
       TangramAlgorithms:
         title: Algoritmi Tangram
         desc: Această lecţie ne arată ceva important despre algoritmi. Dacă vă păstraţi un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul dumneavoastră are nevoie de mai multe detalii.
-        video: C4_unplugged_algorithms
+        video: C4_algoritmi_fără_calculator
       EnvelopeVariables:
-        title: Plic Variabile
-        desc: 'Variabilele permit libertate în informatică.  Această lecţie vă ajută să înțelegeți ce sunt variabile şi cum le putem folosi în moduri diferite. Utilizați această activitate înainte de (sau în legătură cu) lecţia pe abstractizare.'
-        video: C4_unplugged_variables
+        title: Variabile de tip plic
+        desc: 'Variabilele permit foarte multă libertate în informatică.  Această lecţie vă ajută să înțelegeți ce sunt variabile şi cum le putem folosi în multe moduri diferite. Utilizați această activitate înainte de (sau în conjuncție cu) lecţia despre abstractizare ca idea să fie întradevăr înțeleasă.'
+        video: C4_variabile_fără_calculator
       MadGlibs:
         title: Mad Glibs
-        desc: 'Abstractizarea este una dintre cele mai importante aptitudini pentru ca un programator să înţeleagă.  Această activitate îi va pune pe elevii dvs. să analizeze povestiri pentru a găsi diferenţe, astfel încât să poată generaliza. Acele povestiri generalizate vor deveni șabloane pentru altele noi, distractive și ciudate.'
-        video: C4_unplugged_madlibs
+        desc: 'Abstractizarea este una dintre cele mai importante aptitudini pentru ca un programator să înţeleagă.  Această activitate îi va pune pe elevii dvs. să analizeze povestiri pentru a găsi diferenţe, astfel încât să poată abstractiza. Acele povestiri abstractizate vor deveni șabloane pentru altele noi, distractive și trăznite.'
+        video: C4_madlib-uri_fără_calculator
       ForLoopFun:
-        title: Distracție cu blocul Pentru
-        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum avem de gând să învăţăm cum să folosim repetiții cu structură extra încorporată.
+        title: Pentru distracția cu bucle
+        desc: Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum vom învăța cum să folosim bucle cu structură extra încorporată.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Compozitie cu parametri
-        desc: 'Una dintre structurile cele mai magnifice din lumea informaticii este funcţia.  Funcţiile (uneori numite proceduri) sunt mini-programe pe care le puteţi folosi iar și iar in programul mai mare. Această lecţie va ajuta elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii este o practică așa de utilă.  '
-        video: C4_unplugged_parameters
+        desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile (uneori numite proceduri) sunt mini-programe pe care le puteţi folosi iar și iar in interiorul programului vostru mai mare. Această lecţie va ajuta elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii este o practică așa de utilă.  '
+        video: C4_parametri_fără_calculator
       BinaryImages:
         title: Imagini binare
-        desc: 'Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca informații complexe (precum imagini şi culori) în sistem binar.'
-        video: C4_unplugged_binary
+        desc: 'Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de asemenea, chiar și informații mai complexe (precum imagini şi culori) în sistem binar.'
+        video: C4_sistem_binar_fără_calculator
       VideoGamesCoordinatePlanes:
         title: Jocuri Video și Planuri de coordonate
-        desc: Descoperă cum jocurile video la care îți place sa te joci sunt de fapt dirijate de algebră! Explorează cum expresiile algebrice și planul de coordonate ne pot ajuta să înțelegem cum funționează jocurile și apoi începe planificarea unui joc pe care să-l creezi tu.
+        desc: Descoperă cum jocurile video la care îți place sa te joci sunt de fapt dirijate de algebră! Explorează cum expresiile algebrice și planul de coordonate ne pot ajuta să înțelegem cum funționează jocurile video și apoi începe planificarea unui joc pe care să-l creezi tu.
         video: alg_11_coordinate_plane
       Contracts:
         title: Contracte, Domeniu și Gamă
@@ -187,7 +187,7 @@ ro:
         desc: Booleenii sunt al patrulea și ultimul tip de date despre care vei învăța în acest curs. În cadrul acestei activități vei învăța definirea operatorilor booleeni și cum ne ajută ei să scriem funcții care gândesc logic
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Decizii și porțiuni de funcții
+        title: Condiționale și funcții pe porțiuni
         desc: Parametri pe care-i alocăm funcțiilor determină output-urile să varieze pe baza unui model foarte rigid. Să presupunem că vrem parametri cu niște valori pentru a crea output-uri folosind un model, dar alte valori pentru a utiliza un model diferit. Acum sunt necesare condiționalele...
         video: alg_10_conditionals
       CollisionDetection:

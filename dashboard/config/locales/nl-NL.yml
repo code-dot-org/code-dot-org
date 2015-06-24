@@ -432,6 +432,7 @@
     heading_legacy: <h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Man
     female: Vrouw
@@ -532,9 +533,13 @@
       title: Flappy Code
       body: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy
         Code opdracht!
-    20hour:
-      title: Introductiecursus
-      body: Probeer onze cursus Introductie Informatica van 20 uur.
+    20-hour:
+      title: Accelerated Course
+      body: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en
+        programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor
+        alle leeftijden leuk om te leren.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Probeer onze nieuwe Uur Code in beta
       try_frozen: Maak kunst met Anna en Elsa van Frozen

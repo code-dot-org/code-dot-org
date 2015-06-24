@@ -257,12 +257,12 @@
           jalan di depan, Scrat akan berbelok ke kiri.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: It's making a decision and doing one of the two actions based on that
-          decision. And just like "if" blocks, you can put "if-else" blocks inside
-          "repeat" blocks.
+        text: Hal ini membuat keputusan dan melakukan salah satu dari dua tindakan
+          berdasarkan keputusan itu. Dan seperti halnya  blok "if" / "jika", Anda
+          dapat menempatkan blok "if-else" / "kecuali-jika" dalam blok "ulangi" .
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Sekarang mari kita membantu Scrat tupai mendapatkan bijinya itu!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -411,13 +411,13 @@
           written right below the surface.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: Daerah tengah ini terdapar toolbox, dan masing-masing blok ini adalah
+          tindakan yang Elsa dan Anna dapat lakukan.
       7:
         image: notes/frozen1_7.jpg
-        text: The white space on the right is called the workspace, and this is where
-          we'll build our program. To move around the ice surface, you'll use the
-          "Move Forward" block.
+        text: Ruang putih di sebelah kanan disebut ruang kerja, dan ini adalah di
+          mana kita akan membangun program kita. Untuk bergerak di sekitar permukaan
+          es, Anda akan menggunakan blok "Move Forward" / "Bergerak maju".
       8:
         image: notes/frozen1_8.jpg
         text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
@@ -466,8 +466,8 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Hi, I 'm Chris Bosh. Saya pemain bola basket profesional, dan saya dikodekan
+          di perguruan tinggi.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define
@@ -508,8 +508,9 @@
           you can actually play.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: Ada blok "when arrow" / "ketika panah"  dan blok "move actor" / "bergerak
+          aktor". Anda dapat menempatkan blok ini bersama-sama untuk menggerakan aktor
+          dengan tombol panah.
       3:
         image: notes/playlab_3.png
         text: And there are some blocks that do stuff when actors collide or are clicked.
@@ -517,33 +518,35 @@
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Kita akan membuat game menggunakan Play Lab. permainan yang bagus memiliki
+          cerita, dan setiap cerita memiliki aktor. Kita akan belajar cara membuat
+          aktor seperti penyihir, alinens, dan hewan berbicara, bergerak dan berinteraksi
+          dengan satu sama lain. Pada akhir tutorial ini, Anda dapat membangun sebuah
+          game dari awal dan berbagi dengan teman-teman Anda.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: Layar Anda dibagi menjadi 3 bagian utama. Di sebelah kiri adalah ruang
+          permainan dimana program Anda akan berjalan. Petunjuk untuk setiap tingkat
+          ditulis di bawah ini.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: Wilayah tengah adalah toolbox, dan masing-masing blok ini adalah sepotong
+          kode. Ruang putih di sebelah kanan disebut ruang kerja dan ini adalah di
+          mana kita akan membangun program kita.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Untuk memulai, Anda harus hubungkan blok anda ke blok "when run" / "ketika
+          menjalankan" yang bewarna oranye. Anda dapat menghubungkan beberapa blok
+          bersama-sama dengan menyeret mereka sampai Anda melihat garis kuning, dan
+          kemudian mereka akan merampas bersama-sama.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Dalam teka-teki pertama ini, aktor kami adalah seekor pinguin dan kami
+          akan membuatnya mengatakan "Hello!" dengan menyeret blok katakan keluar,
+          menghubungkannya saat menjalankan blok, dan mengetikkan "Hello." Kami juga
+          dapat membuat penguin bergerak dengan menggunakan  blok move right/bergerak
+          ke kanan dan blok move left /bergerak ke kiri. Setelah anda menempatkan
+          blok anda, tekan tombol Jalankan untuk melihat apa yang teleh anda programkan.
       6:
         image: notes/playlab_intro_6.png
         text: Mulai dan pada akhir, Anda akan dapat membuat game sendiri dengan segala

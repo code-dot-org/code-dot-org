@@ -326,9 +326,9 @@ id:
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
-    description: Code Studio is home to online courses created by Code.org
+    description: Kode Studio adalah rumah untuk kursus online yang dibuat oleh Code.org
     lines_of_code: '%{lines_count} GARIS KODE DITULIS OLEH PELAJAR'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} baris kode <br/> DITULIS oleh %{students_count} jutaan siswa'
     all_courses: Tinjauan Kursus 1, 2, dan 3
     lesson_plans: Rencana pelajaran
     signin_message: 'Sudah terdaftar? %{link}'
@@ -363,6 +363,7 @@ id:
     heading_legacy: '<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>'
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Laki-laki
     female: Wanita
@@ -445,9 +446,10 @@ id:
     flappy:
       title: Flappy Code
       body: Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba Tutorial Flappy code kami!
-    20hour:
-      title: Kursus perkenalan
-      body: Mencoba kami Introduksi Kursus ilmu komputer dalam 20 jam.
+    20-hour:
+      title: Accelerated Course
+      body: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk semua usia.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Cobalah pedoman Hour of Code baru kami dalam versi beta
       try_frozen: Seniman bersama Anna dan Elsa, dari Frozen

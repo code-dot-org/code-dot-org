@@ -978,7 +978,7 @@ en:
       U1L4 NetSim SendAB_instruction: crwdns38964:0crwdne38964:0
       U1L8 NetSim numbers no decimal_instruction: crwdns41622:0crwdne41622:0
       U1L8 NetSim numbers with decimal_instruction: crwdns41848:0crwdne41848:0
-      U2L04 - NetSim Routers with Addresses_instruction: crwdns41849:0crwdne41849:0
+      U2L05 - NetSim - Packets and Building TCP_instruction: crwdns42113:0crwdne42113:0
       U2L10 NetSim Automatic DNS_instruction: 'crwdns38742:0[hostname]crwdne38742:0'
       U2L10 NetSim Manual DNS_instruction: crwdns38743:0crwdne38743:0
       U2L2 NetSim Hub Mode_instruction: crwdns38744:0crwdne38744:0

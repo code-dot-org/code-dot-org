@@ -251,6 +251,24 @@ en-US:
   dashboard_landing_view_progress: 'crwdns7781:0%{biggest_section}crwdne7781:0'
   dashboard_landing_available_title: crwdns7782:0crwdne7782:0
   dashboard_landing_available_courses: crwdns7783:0crwdne7783:0
+  dashboard_landing_more_tutorials: crwdns42148:0crwdne42148:0
+  dashboard_landing_more_tutorials_desc: crwdns42149:0crwdne42149:0
+  dashboard_hoc_courses: crwdns42150:0crwdne42150:0
+  dashboard_hoc_courses_desc: crwdns42151:0crwdne42151:0
+  dashboard_k5_courses: crwdns42152:0crwdne42152:0
+  dashboard_k5_courses_desc: crwdns42153:0crwdne42153:0
+  dashboard_middle_courses: crwdns42154:0crwdne42154:0
+  dashboard_middle_courses_desc: crwdns42155:0crwdne42155:0
+  dashboard_high_courses: crwdns42156:0crwdne42156:0
+  dashboard_high_courses_desc: crwdns42157:0crwdne42157:0
+  dashboard_course_csina: crwdns42158:0crwdne42158:0
+  dashboard_course_csina_desc: crwdns42159:0crwdne42159:0
+  dashboard_course_csins: crwdns42160:0crwdne42160:0
+  dashboard_course_csins_desc: crwdns42161:0crwdne42161:0
+  dashboard_course_ecs: crwdns42162:0crwdne42162:0
+  dashboard_course_ecs_desc: crwdns42163:0crwdne42163:0
+  dashboard_course_csp: crwdns42164:0crwdne42164:0
+  dashboard_course_csp_desc: crwdns42165:0crwdne42165:0
   dashboard_landing_loading: crwdns7784:0crwdne7784:0
   dashboard_action_edit: crwdns7785:0crwdne7785:0
   dashboard_action_save: crwdns7786:0crwdne7786:0

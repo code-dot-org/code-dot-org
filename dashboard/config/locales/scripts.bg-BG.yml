@@ -255,7 +255,6 @@
           'Artist: For Loops': Художник - за циклите
           'Play Lab: For Loops': 'Театрална лаборатория: За циклите'
           'Artist: Functions': 'Художник: функции'
-          'Artist: Functions with Paraqmeters': Художник - функции с параметри
           'Unplugged: Tangrams': 'Ънплъгд: Танграмите'
           Artist: Художник
           Bee: Пчела
@@ -409,6 +408,7 @@
           Pixelation: Пикселизация
         20-hour:
           title: 20-часов въвеждащ курс
+          description_audience: Възраст 10 + (след курс 3)
           description: Този 20-часов курс представя основните компютърни науки, концепции
             и термини в програмирането. Курсът е предназначен най-вече за използване
             в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
@@ -439,7 +439,7 @@
           Applab: Лаборатория за приложения
           The Artist: Художникът
           Play Lab: Театрална лаборатория
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: Игрална лаборатория 2015
         events:
           title: Събития
           description: ''
@@ -552,6 +552,7 @@
           Encoding B&W Images: Кодиране черно-бели изображения
           Encoding Color Images: Кодиране на цветни изображения
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Компютърни науки в алгебрата
           description: Научете функционалното програмиране чрез алгебра
@@ -904,6 +905,7 @@
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Компютърни науки в алгебрата
           description: Научете функционалното програмиране чрез алгебра
@@ -962,6 +964,8 @@
           Booleans: Booleans
           'Eval: Conditionals': 'Оценка: Условия'
           Next Steps: Следващи стъпки
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Оценка: Дефиниране на функции'
         cspfacilitator:
@@ -1023,14 +1027,51 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Заключение
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Часът на кодирането 2015
+          description_short: Използвайте Игралната лаборатория, за да създадете история
+            или игра.
+          description: Използвайте Игралната лаборатория, за да създадете история
+            или игра.
           Hour of Code: Час на Кодирането
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Следващи стъпки
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Научете функционалното програмиране чрез алгебра
+          Course Overview: Преглед на курса
+          Computer Science Pedagogy: Педагогика на Компютърните науки
+          Teacher Dashboard: Учителско табло
+          Evaluation Blocks: Блокове за оценка
+          Strings and Images: Стрингове и изображения
+          Writing Contracts: Писане на Договори
+          Defining Variables: Дефиниране на променливите
+          Defining Functions: Дефиниране на функции
+          Rocket-Height: Ракета - височина
+          Booleans: Booleans
+          'Eval: Conditionals': 'Оценка: Условия'
+          Next Steps: Следващи стъпки
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science

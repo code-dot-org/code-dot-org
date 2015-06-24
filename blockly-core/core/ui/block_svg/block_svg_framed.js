@@ -52,11 +52,11 @@ Blockly.BlockSvgFramed.prototype.initChildren = function () {
   }, this.svgGroup_);
   this.frameText_.appendChild(document.createTextNode(Blockly.Msg.FUNCTION_HEADER));
 
-  goog.base(this, 'initChildren');
+  Blockly.BlockSvgFramed.superClass_.initChildren.call(this);
 };
 
 Blockly.BlockSvgFramed.prototype.renderDraw_ = function(iconWidth, inputRows) {
-  goog.base(this, 'renderDraw_', iconWidth, inputRows);
+  Blockly.BlockSvgFramed.superClass_.renderDraw_.call(this, iconWidth, inputRows);
 
   var groupRect = this.svgPath_.getBoundingClientRect();
   var width = groupRect.width + 2 * FRAME_MARGIN_SIDE;
@@ -84,7 +84,7 @@ Blockly.BlockSvgFramed.prototype.renderDraw_ = function(iconWidth, inputRows) {
 };
 
 Blockly.BlockSvgFramed.prototype.dispose = function () {
-  goog.base(this, 'dispose');
+  Blockly.BlockSvgFramed.superClass_.dispose.call(this);
 
   this.frameClipRect_ = null;
   this.frameBase_ = null;

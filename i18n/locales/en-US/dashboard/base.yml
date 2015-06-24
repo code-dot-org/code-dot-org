@@ -355,6 +355,7 @@ en:
     heading_legacy: crwdns8843:0crwdne8843:0
     your_gallery: crwdns23431:0crwdne23431:0
     no_primary_course: crwdns36301:0crwdne36301:0
+    print_certificate: crwdns41905:0crwdne41905:0
   gender:
     male: crwdns2618:0crwdne2618:0
     female: crwdns2619:0crwdne2619:0
@@ -437,9 +438,10 @@ en:
     flappy:
       title: crwdns4902:0crwdne4902:0
       body: crwdns4903:0crwdne4903:0
-    20hour:
-      title: crwdns4904:0crwdne4904:0
-      body: crwdns4905:0crwdne4905:0
+    20-hour:
+      title: crwdns41906:0crwdne41906:0
+      body: crwdns41907:0crwdne41907:0
+      body_short: crwdns41908:0crwdne41908:0
     hoc2014:
       try_new_tutorial: crwdns23500:0crwdne23500:0
       try_frozen: crwdns23501:0crwdne23501:0
