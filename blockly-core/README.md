@@ -6,6 +6,7 @@ This is a fork of [Blockly](https://code.google.com/p/blockly/), an open source 
 
 ```
 cd blockly-core
+npm install
 ./deploy.sh
 ```
 
@@ -23,10 +24,11 @@ This is the most typical use case for current development.
 
 Additionally, [Dashboard's UI tests](https://github.com/code-dot-org/dashboard/tree/finished/test/ui) cover certain features of blockly-core through Cucumber / Selenium scenarios.
 
-To run a handful of utility tests:
+There are three ways to run the handful of utility tests:
 
-1. `./deploy.sh debug` which builds `build-output/blockly_uncompressed.js`
-2. Open the test page in your browser: `open tests/blockly_test.html`
+1. `./deploy.sh` rebuilds blockly-core and then runs the tests.
+2. `./test.sh` will just run the tests against the last version of blockly you built.
+3. Or, open the test page in your browser: `open tests/blockly_test.html`
 
 ### Standalone usage
 
