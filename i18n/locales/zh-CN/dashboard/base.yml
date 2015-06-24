@@ -359,6 +359,7 @@ zh:
     heading_legacy: '<h2>我们的一般课程</h2><h1>所有年龄</h1>'
     your_gallery: 画廊
     no_primary_course: 试试在 Code Studio 参加一个课程
+    print_certificate: Print Certificate
   gender:
     male: 男性
     female: 女性
@@ -441,9 +442,10 @@ zh:
     flappy:
       title: 飞扬的代码
       body: 想要在 10 分钟内写你自己的游戏吗？请尝试我们飞扬的代码教程 ！
-    20hour:
-      title: 课程简介
-      body: 尝试我们 20 小时计算机科学课程简介 。
+    20-hour:
+      title: Accelerated Course
+      body: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: 试试我们新的beta 版的一小时代码教程
       try_frozen: 艺术家与冻结的安娜和艾尔莎

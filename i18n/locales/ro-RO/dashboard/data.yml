@@ -410,7 +410,7 @@ ro:
         C4_bee_conditional: Condiţii de Ortografie
         C4_variables_artist: 'Variabile - Artist'
         C4_variables_playlab: 'Variabile - Joc Laborator'
-        C4_for_loops: Repetiții Pentru
+        C4_for_loops: Bucle Pentru
         C4_math_artist: Programarea Artistului cu matematică
         C4_function_edit: Editare de funcții
         C4_function_create: Crearea de funcții
@@ -419,7 +419,7 @@ ro:
         C4_unplugged_algorithms: Algoritmi cu Tangrame
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variabile în plicuri
-        C4_unplugged_forloops: Repetiții Pentru
+        C4_unplugged_forloops: Bucle Pentru
         C4_unplugged_parameters: Compoziții muzicale cu parametri
         C4_unplugged_binary: Binar
         frozen_intro: Introducere în Ora de cod

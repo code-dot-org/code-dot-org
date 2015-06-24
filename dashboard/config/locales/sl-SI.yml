@@ -412,6 +412,7 @@
     heading_legacy: <h2>Naš tečaj za</h2><h1>vse starosti</h1>
     your_gallery: Galerija
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Moški
     female: Ženska
@@ -510,9 +511,13 @@
       title: Program za Plahutača (Flappyja)
       body: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj si z priročnikom
         za Plahutača (Flappy-ja)!
-    20hour:
-      title: Uvodni tečaj
-      body: Preizkusite začetniški 20-urni tečaj računalništva.
+    20-hour:
+      title: Accelerated Course
+      body: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja.
+        Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v
+        vseh starostih.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Uporabite naš nov priročnik za Uro kodiranja
       try_frozen: Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)

@@ -16,7 +16,7 @@
   "catVariables":"متغیرها",
   "clearPuzzle":"دوباره شروع کنید",
   "clearPuzzleConfirm":"این کار معما را به حالت ابتدایی تنظیم خواهد کرد و تمام بلوک هایی که شما اضافه کردید یا تغییر داده اید را حذف خواهد کرد.",
-  "clearPuzzleConfirmHeader":"آیا مطمئنید که می خواهید دوباره شروع کنید?",
+  "clearPuzzleConfirmHeader":"آیا مطمئنی که می خواهی دوباره شروع کنی؟",
   "codeMode":"کد",
   "codeTooltip":"کد جاوا اسکریپت تولید شده رو ببین.",
   "continue":"ادامه بده",
@@ -156,7 +156,7 @@
   "genericFeedback":"ببین چطور به اینجا رسیدی، و سعی کن برنامه ات را درست کنی.",
   "hashError":"با عرض پوزش، '%1' با هیچ کدام از برنامه‌های ذخیره شده مطابقت ندارد.",
   "help":"راهنما",
-  "hideToolbox":"(مخفی کردن)",
+  "hideToolbox":"(پنهان کردن)",
   "hintHeader":"این هم یک راهنمایی:",
   "hintRequest":"راهنمایی را ببینید",
   "hintTitle":"راهنمایی:",
@@ -191,7 +191,7 @@
   "showBlocksHeader":"بلوک‌ها را نشان بده",
   "showCodeHeader":"کد را نشان بده",
   "showGeneratedCode":"نمایشِ کد",
-  "showTextHeader":"Show Text",
+  "showTextHeader":"نمایش متن",
   "showToolbox":"نمایش جعبه ابزار",
   "signup":"برای دوره‌ی مقدماتی نام نویسی کنید",
   "stringEquals":"رشته =?",
@@ -210,5 +210,5 @@
   "watchVideo":"ویدیو را ببینید",
   "when":"وقتی",
   "whenRun":"زمان اجرا",
-  "workspaceHeaderShort":"فضای تمرین : "
+  "workspaceHeaderShort":"محیط کار: "
 }

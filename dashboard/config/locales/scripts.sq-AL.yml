@@ -256,7 +256,6 @@
           'Artist: For Loops': 'Artisti: Ciklet For'
           'Play Lab: For Loops': 'Play Lab: Ciklet For'
           'Artist: Functions': 'Artisti: Funksionet'
-          'Artist: Functions with Paraqmeters': 'Artisti: Funksionet me Parametra'
           'Unplugged: Tangrams': |
             Unplugged: Tangrams
           Artist: Artisti
@@ -412,6 +411,7 @@
           Pixelation: Pixelation
         20-hour:
           title: Hyrja K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)
+          description_audience: Moshat 10+ (pas Kursit 3)
           description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike
             dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat
             e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
@@ -547,6 +547,7 @@
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -897,6 +898,7 @@
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -955,6 +957,8 @@
           Booleans: Booleans
           'Eval: Conditionals': 'Eval: Kushtet'
           Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
         cspfacilitator:
@@ -1016,14 +1020,49 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Mbështjell
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Ora e Kodit
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Blloqet e Vlerësimit
+          Strings and Images: Stringjet dhe Imazhet
+          Writing Contracts: Writing Contracts
+          Defining Variables: Përcaktimi i Variablave
+          Defining Functions: Përcaktimi i Funksioneve
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          'Eval: Conditionals': 'Eval: Kushtet'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science

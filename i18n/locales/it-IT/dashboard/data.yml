@@ -124,7 +124,7 @@ it:
     level:
       instructions:
         maze_2_2: |-
-          Puoi aiutarmi a catturare il cattivo maialino? Accosta due blocchi "vai avanti" uno sopra l'altro e poi premi "Esegui" per aiutarmi a raggiungerlo. 
+          Puoi aiutarmi a catturare il maialino cattivo? Accosta due blocchi "vai avanti" uno sopra l'altro e poi premi "Esegui" per aiutarmi a raggiungerlo. 
         maze_2_1: Questo maialino mi fa arricciare le penne. Aiutami a prenderlo!
         maze_2_2_5: Fammi fare il percorso per arrivare a quello sciocco maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
         maze_2_3: Guidami verso quel cattivone verde! Fai attenzione alla dinamite (TNT)
@@ -312,7 +312,7 @@ it:
         studio_c3_story_1: 'Riesci a far dire a questo cane "Ciao a tutti"?'
         studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa al gatto?
         studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane fino al gatto?
-        studio_c3_story_4: 'Riesci a scrivere un programma che fa arrivare questo cane fino al gatto e che fa dire "Ciao" al gatto quando il cane lo raggiunge?'
+        studio_c3_story_4: 'Riesci a scrivere un programma che fa arrivare questo cane fino al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?'
         studio_c3_story_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
         studio_c3_story_6: 'Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.'
         studio_c3_game_1: 'Riesci a scrivere un programma per far dire "ciao" al polpo quando viene cliccato?'

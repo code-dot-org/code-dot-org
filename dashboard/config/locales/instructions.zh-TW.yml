@@ -3,9 +3,10 @@
     instructions:
       2-3 Artist 1 new_instruction: 嗨，我是一個藝術家。您可以寫程式來讓我畫出任何東西。現在請您用一些程式積木，讓我沿著圖中的灰色線條畫畫。（每一條線的長度都是
         100 像素）
-      2-3 Artist 11_instruction: 幫這個八邊形畫上8個邊，每邊長100像素。你應該轉多少度？(提示：360除以8是多少?)
-      2-3 Artist 12_instruction: 設定"重複次數"程式積木來製造一個圓作為眼球。如果每一次動作都向右轉1度，你需要重複多少次來完成這個圓?180?360?500?
-      2-3 Artist 2 new_instruction: '這房子有個半完成的牆。兩邊都是 100，但是半完成的牆是只有 50。完成這個牆。 '
+      2-3 Artist 11_instruction: '我們來做一個停止的交通標誌吧！要畫上一個正 8 邊形，每邊長100像素。您想一下，應該轉多少度？(提示：360除以8是多少?) '
+      2-3 Artist 12_instruction: 設定「重複次數」的程式積木來製造一個圓作為眼球。如果每一次動作都向右轉1度，您需要重複多少次來完成這個圓呢？是
+        180 次？360 次？還是 500 次？
+      2-3 Artist 2 new_instruction: '這房子有個半完成的牆。每一邊都應該是 100，但是半完成的牆是只有 50。請試著完成這個牆吧。 '
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
       2-3 Artist 3.4_instruction: |
@@ -2123,111 +2124,48 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
-      frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
-      frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
-      frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
+      frozen circle function in circle_instruction: 現在我們來建立 20 個重疊的圓，每一個都轉 18 度。
+      frozen circle function with parameter_instruction: 這裡有一個「建立一個圓圈」的程式積木，可以畫出不同大小的圓。您可以用這個來建立一個大小為
+        5 的小圓，跟一個大小為 10 的較大的圓嗎？
+      frozen circle function_instruction: 用新的「建立一個圓圈」的程式積木來建立 10 個重疊的圓。不要忘了每次畫完一個圓要往前進喔！
+      frozen circle_instruction: 圓是一個特殊的形狀。您能想到中間的問號應該要選擇哪一個數字，才能畫出一個圓嗎？
+      frozen cross rotate dense_instruction: 現在我們來重複 90 次！要重複 90 次的話，每次要幾度才能轉到 360
+        度呢？提示：答案其實很小喔。
+      frozen cross rotate_instruction: 現在試著重複 10 次吧。每條線之間您需要轉幾度呢？
+      frozen cross_instruction: 用「重覆」程式積木來建立一個加號。您注意到艾莎女王可以往前與往後移動嗎？
+      frozen diamond mini snowflake_instruction: 您知道每一片雪花形狀都不同嗎？我們來試試建立一片新的雪花吧。用「重複」程式積木來將一個平行四邊形重複四次，每次轉
+        90 度。
+      frozen diamond snowflake_instruction: 現在，我們用「重複」的程式積木來把平行四邊形重複 10 次，每次都向右轉 36
+        度試試看，看看出現一片怎麼樣的雪花。
+      frozen diamond_instruction: 我們來建立一個平行四邊形吧！就跟正方形一樣，只是角度不同：改用 60 度跟 120 度，而不是
+        90 度。
+      frozen freeplay_instruction: 您已經變成一個專業的藝術家囉！來建立一個美麗的冬天吧。
       frozen line_instruction: 嗨！我是艾倫戴爾的艾莎女王。請幫幫我畫出一條線。
-      frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
-      frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
-      frozen square loop 3x_instruction: |
-        Let's create three squares, turning after
-        each square. Be sure to turn by 120 degrees before each new square.
-      frozen square loop_instruction: |
-        Hi, I’m Anna of Arendelle! Let’s make a square
-        with the “Repeat” block, which uses fewer blocks. How many times (???) should
-        the “Repeat” block loop the blocks inside it to make a square?
-      frozen square snowflake_instruction: |
-        Can you create a snowflake using the
-        “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
-        degrees between each square?
-      hoc2015_intro_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_sandbox_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
-      Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
-      Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      frozen perpendicular_instruction: 現在我們來看看能不能建立兩條線，然後讓兩條線成 90 度。您除了用「向前移動」程式積木外，還需要「向右轉」或「向左轉」的程式積木喔。
+      frozen snowflake branch_instruction: 試試看用「建立雪花分支」的程式積木吧！建立三個分支，這樣看起來就開始像個雪花囉！
+      frozen snowflake full_instruction: 這次我們把它重複八次，變成一個漂亮的雪花！
+      frozen snowflower_instruction: 精細複雜的雪花樣式其實可以用非常簡單的形狀來產生。您可以畫重複五個大小為 5 的圓，以及五個大小為
+        10 個圓嗎？
+      frozen square iterative_instruction: 看起來我們已經畫了一個正方形的一半囉！現在我們試著把四條線接在一起，變成一個正方形吧！
+      frozen square loop 3x_instruction: 這次我們來建立三個正方形吧！每個正方形完成後，記得要轉 120 度，再畫下一個正方形。
+      frozen square loop_instruction: 嗨，我是艾倫戴爾的安娜公主。現在讓我們用「重複」程式積木來做一個正方形吧！這樣我們不必放很多的程式積木。中間的問號
+        (???) 可以拉下來，決定我們要重複幾次。我們要畫一個正方形的話，應該要重複幾次呢？
+      frozen square snowflake_instruction: 這次您可以用「重複」程式積木來畫 10 次正方形，每次轉 36 度嗎？這樣可以畫出一片雪花喔！
+      hoc2015_intro_instruction: 阿廣是「演員1」。用「移動演員1」的程式積木來讓阿廣往右走到杯麵那裡。
+      hoc2015_sandbox_instruction: 阿廣是「演員1」。用「移動演員1」的程式積木來讓阿廣往右走到杯麵那裡。
+      Infinity_catch_instruction: 您能寫一個程式，用方向鍵控制艾莎 (演員2) 去抓到安娜嗎？
+      Infinity_finale_instruction: 自由發揮吧！然後把您的成果分享出來！
+      Infinity_move_collide_instruction: 阿廣是「演員1」。讓他向右走到杯麵那裡，然後碰到時播放一個音效出來。
+      Infinity_move_directions_instruction: 杯麵是「演員2」。將「移動演員2」的程式積木加到上下方向鍵程式積木下。執行時用方向鍵讓杯麵走向其他兩個角色。
+      Infinity_move_right_instruction: 阿廣是「演員1」。用「移動演員1」的程式積木來讓阿廣往右走到杯麵那裡。
+      Infinity_repeat_instruction: 用「永遠重複執行」程式積木讓安娜上下移動 400 個像素。
+      Infinity_say_instruction: 用「說」的程式積木讓安娜說 "Hi there."。
+      Infinity_shoot_instruction: 杯麵是「演員2」。讓杯麵對著阿廣發射火箭吧！
+      Infinity_shoot_directions_instruction: 阿廣是「演員3」。讓阿廣對著其他四個角色各發射一個東西出去，每一次發射後都等一秒再發射下一個。
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
-      Infinity_touch_score_instruction: |
-        Make Anna score a point when she touches
-        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_four_instruction: 上、下、左、右移動安娜去碰四個雪花。
+      Infinity_touch_score_instruction: 讓安娜去碰雪花，每次碰到就得一分。按下「執行」以後，就用方向鍵去控制安娜讓她得分吧！
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2279,7 +2217,7 @@
       K-1 Artist2 Assessment1_instruction: |
         Assessment: Draw a square next to the
         other square.
-      K-1 Artist2 Free Draw_instruction: Draw anything!
+      K-1 Artist2 Free Draw_instruction: 自由發揮吧！
       K-1 Artist2_7_instruction: Draw a rectangle to give the dresser a top drawer!
       K-1 Bee 1_instruction: 讓我移動到花兒那，採點花蜜，再回到蜂巢，製作蜂蜜
       K-1 Bee 10_instruction: 讓我採4次花蜜來製作2次蜂蜜
@@ -2908,9 +2846,7 @@
         Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!
-      SpecialFrozenLevel_instruction: |
-        You've officially become a master artist!
-        Create a winter wonderland.
+      SpecialFrozenLevel_instruction: 您已經變成一個專業的藝術家囉！來建立一個美麗的冬天吧。
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
@@ -2977,13 +2913,15 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2L04 - NetSim Routers with Addresses_instruction: |
-        NetSim: Variant 3: Connects
-        groups of 2-6 students with a router, and explores issues in routing and DNS
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as

@@ -251,6 +251,24 @@ ko-KR:
   dashboard_landing_view_progress: '%{biggest_section} 진도 살펴보기'
   dashboard_landing_available_title: 가능한 코스
   dashboard_landing_available_courses: 선생님과 학생들에게 현재 가능한 코스
+  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
+  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
+  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
+  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_ecs: 컴퓨터과학(정보과학) 살펴보기
+  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
+  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
   dashboard_action_edit: 편집
   dashboard_action_save: 저장
@@ -326,18 +344,18 @@ ko-KR:
   dashboard_students_print_page: 이 페이지 인쇄
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">학생들을 위한 개인정보보호 정책 문서</a>'
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: K-5(초등학교 5학년) 교육자 리소스
+  dashboard_curriculum_middle_title: 중학교 교육자 리소스
+  dashboard_curriculum_high_title: 고등학교 교육자 리소스
+  dashboard_lesson_plans: 수업 계획
   dashboard_view_all_lesson_plans: 모든 레슨 계획 살펴보기
   dashboard_course1: '코스1:'
   dashboard_course2: '코스2:'
   dashboard_course3: '코스3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: '코스 4(베타):'
+  dashboard_curriculum: 교과 과정
   dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
-  dashboard_overview: Overview
+  dashboard_overview: 개요
   dashboard_sequence: 순차
   dashboard_framework: 구성
   dashboard_standards: 기준
@@ -348,10 +366,10 @@ ko-KR:
   dashboard_puzzle_solving: '퍼즐-해결:'
   dashboard_student_worksheet: 학생 활동지
   dashboard_teacher_worksheet: 교사 활동지
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csina: '대수학 영역의 컴퓨터 과학:'
+  dashboard_curriculum_csins: '과학 영역의 컴퓨터 과학:'
+  dashboard_curriculum_csp: 'AP ® 컴퓨터 과학 원리:'
+  dashboard_curriculum_ecs: 컴퓨터과학 살펴보기
   dashboard_grade_k: K
   dashboard_grade_other: 기타
   dashboard_login_word: 단어
@@ -379,7 +397,7 @@ ko-KR:
   dashboard_sections_password_account_creation: 학생이 만든 텍스트 암호
   dashboard_sections_login_type_explanation: '이 표는 로그인 유형, <b>그림, 문자, 이메일</b> 등에 대한 내용입니다. 수업에 필요한 경우 선택적으로 사용할 수 있습니다.'
   dashboard_faq: 자주 묻는 질문
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기

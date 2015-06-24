@@ -364,6 +364,7 @@ lt:
     heading_legacy: '<h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>'
     your_gallery: Galerija
     no_primary_course: Išmėginkite Kodavimo Studijos kursus
+    print_certificate: Print Certificate
   gender:
     male: Vyras
     female: Moteris
@@ -446,9 +447,10 @@ lt:
     flappy:
       title: Flappy kodas
       body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!
-    20hour:
-      title: Įvadiniai kursai
-      body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
+    20-hour:
+      title: Accelerated Course
+      body: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Išbandykite naująsias „Programavimo valandos“ pamokėles beta versijoje
       try_frozen: 'Piešimas su Ana ir Elze iš "Ledo šalies"'

@@ -253,7 +253,6 @@
           'Artist: For Loops': 'Artiste : Les boucles pour'
           'Play Lab: For Loops': 'Labo : Pour les boucles'
           'Artist: Functions': 'Artiste : les fonctions'
-          'Artist: Functions with Paraqmeters': 'Artiste : Fonctions avec Paramètres'
           'Unplugged: Tangrams': 'Débranché : les tangrams'
           Artist: Artiste
           Bee: Abeille
@@ -410,6 +409,7 @@
           Pixelation: Pixellisation
         20-hour:
           title: Intro des 20 heures de cours
+          description_audience: 10 ans et + (après le Cours 3)
           description: Ce cours de 20 heures introduit les notions de base de l'informatique
             et les concepts de la programmation. Il est conçu pour la grande section
             jusqu'à la 4ème (14 ans et moins), mais il n'y a pas d'âge pour apprendre.
@@ -551,6 +551,7 @@
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -903,6 +904,7 @@
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Informatique en DP d'algèbre
           description: Apprendre la programmation fonctionnelle par l'algèbre
@@ -961,6 +963,8 @@
           Booleans: Booléens
           'Eval: Conditionals': 'Evaluation : instructions conditionnelles'
           Next Steps: Prochaines étapes
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval : Définition de fonctions'
         cspfacilitator:
@@ -1022,14 +1026,49 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Résumé
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Heure de Code
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Prochaines étapes
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Apprendre la programmation fonctionnelle par l'algèbre
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Pédagogie des sciences informatiques
+          Teacher Dashboard: Tableau de bord enseignant
+          Evaluation Blocks: Blocs d'évaluation
+          Strings and Images: Textes et Images
+          Writing Contracts: Rédaction de contrats
+          Defining Variables: Définition de Variables
+          Defining Functions: Définition de fonctions
+          Rocket-Height: Hauteur de la fusée
+          Booleans: Booléens
+          'Eval: Conditionals': 'Evaluation : instructions conditionnelles'
+          Next Steps: Prochaines étapes
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science

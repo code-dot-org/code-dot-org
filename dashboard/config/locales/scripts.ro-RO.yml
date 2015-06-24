@@ -8,7 +8,7 @@
           The Maze: Labirintul
           Multi: Multi
           Match: Meci
-          Math Image: Imagine Matematica
+          Math Image: Imagine Matematică
           title: Curs de Testare
           description: Doar un curs de testare intern.
         course1:
@@ -18,13 +18,13 @@
           'Maze: Debugging': 'Labirint: Depanare'
           'Artist 1: Intro': 'Artistul 1: Introducere'
           Artists 2: Artiştii 2
-          Spelling Bee: Test de Ortografie
-          Spelling Bee not blockly: Test de Ortografie fără Blockly
-          'Bee 1: Intro': 'albinaa 1: Introducere'
+          Spelling Bee: Albina de Ortografie
+          Spelling Bee not blockly: Albina de Ortografie, nu Blockly
+          'Bee 1: Intro': 'albina 1: Introducere'
           'Maze 2: Loops': 'Labirint 2: Bucle'
-          'Bee 2: Loops': 'Ortografie 2: Bucle'
+          'Bee 2: Loops': 'Albina 2: Bucle'
           Multi & Match: Multiplică & Potriveşte
-          K-1 Flappy: Flappy K-1
+          K-1 Flappy: Flappy pentru Clasa 1
           Flappy non blockly: Flappy fără Blockly
           title: Curs 1
           Artist 2: Artistul 2
@@ -40,16 +40,16 @@
             să creeze programe de calculator, care îi vor ajuta să înveţe să colaboreze
             cu alții, să-și dezvolte abilităţile de rezolvare a problemelor şi să
             persevereze prin sarcini dificile. Până la sfârşitul acestui curs, elevii
-            vor crea propriul joc sau poveste personalizate, pe care îl/o pot partaja.
+            vor crea propriul joc sau poveste personalizate, pe care îl/o pot distribui.
             Recomandat pentru clasa 1.
-          'Bee: Sequence': 'Ortografie: Secvenţă'
+          'Bee: Sequence': 'Albină: Secvenţă'
           'Artist: Sequence': 'Artist: Secvenţă'
           'Artist: Shapes': 'Artist: Forme'
           'Maze: Loops': 'Labirint: Bucle'
           'Bee: Loops': 'Ortografie: Bucle'
           'Studio: Create a Story': 'Laboratorul de Joacă: Creează o Poveste'
           'Artist: Loops': 'Artist: Bucle'
-          description_audience: Vârstele 4 + (pre-cititori)
+          description_audience: Vârstele 4 + (preșcolari)
           description_short: Curs 1 este proiectat pentru cititori timpurii
         course2:
           The Maze: Labirintul
@@ -80,7 +80,7 @@
           description: Cursul 2 este conceput pentru elevii care pot citi şi nu au
             nici o experienţă anterioară de programare. În acest curs elevii vor crea
             programe pentru a rezolva probleme şi vor dezvolta jocuri sau poveşti
-            interactive pe care le pot partaja. Recomandat pentru clasele 2-5.
+            interactive pe care le pot distribui. Recomandat pentru clasele 2-5.
           'Maze: Sequence': 'Labirint: Secvenţă'
           'Artist: Sequence': 'Artist: Secvenţă'
           'Maze: Loops': 'Labirint: Bucle'
@@ -92,7 +92,7 @@
           'Artist: Sequence2': 'Artist: Secvenţă2'
           'Maze: Sequence2': 'Labirint: Secvenţă2'
           'Artist: Nested Loops': 'Artist: Bucle Adunate'
-          description_audience: Vârstele 6 + (lectură necesare)
+          description_audience: Vârstele 6 + (lectură necesară)
           description_short: Curs 2 este conceput pentru elevii care pot citi
         course3:
           The Maze: Labirintul
@@ -101,64 +101,64 @@
           title: Cursul 3
           Artist Functions: Funcţii de Artist
           Artist For Loops: Artist Pentru Bucle
-          Artist Nested Loops: Bucle Adunate de un Artist
+          Artist Nested Loops: Bucle imbricate pentru artist
           Bee Conditionals: Condiţii de Ortografie
-          Bee Nested Loops: Bucle Adunate de Ortografie
-          Bee Debuggin: Depanarea Ortografiei
+          Bee Nested Loops: Bucle imbricate pentru albină
+          Bee Debuggin: Depanarea Albinei
           Bee Debugging: Depanarea Ortografiei
           Bee Functions: Funcţii de Ortografie
-          Artist Functions with Params: Funcţii de Artist cu Parametri
+          Artist Functions with Params: Funcţii de Artist cu date tehnice
           Bounce: Săritură
           Maze Conditionals: Condiţionale de Labirint
           Artist Functions with Parameters: Funcţii de Artist cu Parametri
           Computational Thinking: Gândire Computațională
           Functional Suncatchers: Prinzători ai Soarelui Funcţionali
-          Songwriting Parameters: Parametri de compoziție
+          Songwriting Parameters: Parametri de compoziție muzicală
           Dice Race: Cursă de Zaruri
           Internet: Internet
           Crowdsourcing: Obţinând Informaţii/Critici
           Digital Citizenship: Cetățenia Digitală
-          Farmer - While Loops: Fermier - În Timp ce Şerpuieşte
-          description: Cursul 3 este conceput pentru elevii care au parcurs cursul
-            2. Elevii vor aprofunda subiectele introduse în cursurile anterioare pentru
-            a le adapta la soluţii pentru probleme mai complexe de programare. Până
-            la sfârşitul acestui curs, elevii vor crea povești și jocuri interactive,
-            pe care le pot partaja cu oricine. Recomandat pentru clasele 4-5.
+          Farmer - While Loops: Fermier - Bucle "în timp ce"
+          description: "Cursul 3 este conceput pentru elevii care au parcurs cursul
+            2. Elevii vor aprofunda subiectele introduse în cursurile anterioare,
+            pentru a le adapta la soluţii pentru probleme mai complexe de programare.
+            La sfârşitul acestui curs, elevii vor crea povești și jocuri interactive,
+            pe care le pot distribui oricui. \nRecomandat claselor 4-5.\n"
           'Studio: Create a Game': 'Laboratorul de Joacă: Creează un Joc'
           Maze: Labirint
           Artist: Artist
           'Artist: Functions': 'Artist: Funcţii'
-          'Bee: Functions': 'Ortografie: Funcţii'
+          'Bee: Functions': 'Albină: Funcţii'
           'Bee: Conditionals': 'Ortografie: Condiţionale'
           'Maze: Conditionals': 'Labirint: Condiţionale'
           'Artist: Nested Loops': 'Artist: Bucle Adunate'
-          'Farmer: While Loops': 'Fermier: În Timp ce Şerpuieşte'
-          'Bee: Nested Loops': 'Ortografie: Bucle Adunate'
+          'Farmer: While Loops': Fermier - Bucle "în timp ce"
+          'Bee: Nested Loops': 'Albină: Bucle imbricate'
           'Bee: Debugging': 'Ortografie: Depanare'
           Maze2: Labirint2
           Artist2: Artist2
           'Artist: Functions2': 'Artist: Funcţii2'
-          'Bee: Functions2': 'Ortografie: Funcţii2'
-          'Bee: Conditionals2': 'Ortografie: Condiţionale2'
+          'Bee: Functions2': 'Albină: Funcţii2'
+          'Bee: Conditionals2': 'Albină: Condiţionale2'
           'Maze: Conditionals2': 'Labirint: Condiţionale2'
-          'Artist: Nested Loops2': 'Artist: Bucle Adunate2'
-          'Farmer: While Loops2': 'Fermier: În Timp ce Şerpuieşte2'
-          'Bee: Nested Loops2': 'Ortografie: Bucle Adunate2'
-          'Bee: Debugging2': 'Ortografie: Depanare2'
+          'Artist: Nested Loops2': 'Artist: Bucle imbricate2'
+          'Farmer: While Loops2': Fermier - Bucle "în timp ce"2
+          'Bee: Nested Loops2': 'Albină: Bucle imbricate2'
+          'Bee: Debugging2': 'Albină: Depanare2'
           'Artist: Patterns': 'Artist: Modele'
           Songwriting: Compunând Cântece
-          description_audience: Vârstele 8 + (după cursul 2)
-          description_short: Curs 3 este un follow-up (urmare) la curs 2.
+          description_audience: Vârste 8 + (după cursul 2)
+          description_short: Cursul 3 este un continuarea cursului 2.
         msm:
-          title: Matematică de Şcoală Mijlocie
-          description: Lucrare în progres pentru Matematică de Şcoală Mijlocie.
+          title: Matematică de Gimnaziu
+          description: Lucrare privată în progres pentru Matematică de Gimnaziu.
           Graph Paper Programming: Programare pe Hârtie Milimetrică
           Assessments: Evaluări
           Unit 1: Unitatea 1
           Unit 2: Unitatea 2
           Ninja Cat and the Coordinate Plane: Pisica Ninja și planul de coordonate
           'Calc: Circles of Evaluation': 'Calcul: Cercuri de evaluare'
-          'Artist: Strings and Images': 'Artist: Siruri de caractere şi imagini'
+          'Artist: Strings and Images': 'Artist: Șiruri şi imagini'
           Contracts: Contracte
           'Artist: Writing Contracts': 'Artist: Scrierea de contracte'
           'Calc: Defining Variables': 'Calcul: Definirea variabilelor'
@@ -172,23 +172,23 @@
           'Play Lab: Booleans': 'Laboratorul de joc: Booleene'
           'Calc: Boolean Operators': 'Calcul: Operatori booleeni'
           'Play Lab: Boolean Operators': 'Laborator de joc: Operatorii booleeni'
-          Conditionals and Piecewise Functions: Decizii și porțiuni de funcții
-          'Artist: Conditionals': 'Artist: Decizii'
+          Conditionals and Piecewise Functions: Condiționale și funcții pe porțiuni
+          'Artist: Conditionals': 'Artist: Condiționale'
           Collision Detection and the Distance Formula: Detectarea coliziunilor şi
             Formula pentru distanţă
-          'Play Lab: Collision Detection': 'Laborator de joc: Detectare coliziune'
+          'Play Lab: Collision Detection': 'Laborator de joc: Detectarea coliziunii'
           'Unplugged: Ninja Cat and the Coordinate Plane': 'Fără calculator: Pisica
             Ninja și planul de coordonate'
-          'Eval: Strings and Images': 'Evaluare: Șiruri de caractere și imagini'
+          'Eval: Strings and Images': 'Evaluare: Șiruri și imagini'
           'Unplugged: Contracts': 'Fără calculator: Contracte'
           'Eval: Writing Contracts': 'Evaluare: Scrierea de contracte'
           'Unplugged: The Design Recipe': 'Fără calculator: Rețeta pentru design'
           'Eval: Defining Functions': 'Evaluare: Funcţii rapide'
           'Eval: Functions': 'Evaluare: Rețeta pentru design'
           'Unplugged: Booleans': 'Fără calculator: booleene'
-          'Unplugged: Conditionals and Piecewise Functions': 'Fără calculator: Decizii
-            și porțiuni de funcții'
-          'Eval: Conditionals': 'Evaluare: Decizii'
+          'Unplugged: Conditionals and Piecewise Functions': 'Fără calculator: Condiționale
+            și funcții pe porțiuni'
+          'Eval: Conditionals': 'Evaluare: Condiționale'
           'Unplugged: Collision Detection and the Distance Formula': 'Fără calculator:
             Detectarea de coliziuni și formula pentru distanță'
           'Calc: Evaluation Blocks': 'Calcul: Blocuri de evaluare'
@@ -229,48 +229,47 @@
             amuzante!
         frozen:
           title: Codați cu Anna și Elsa
-          description: Să folosim cod pentru a ne alătura Annei şi Elsei care explorează
-            magia şi frumuseţea de gheaţă. Veţi crea fulgi de zăpadă şi modele ca
-            la patinaj şi veți face un paradis de iarnă, pe care apoi veți putea să-l
-            partajați cu prietenii!
+          description: Hai să folosim programarea pentru a ne alătura Annei şi Elsei
+            în timp ce explorează magia şi frumuseţea gheței. Veţi crea fulgi de zăpadă
+            şi modele ca la patinaj şi veți face un paradis de iarnă, pe care apoi
+            veți putea să-l distribuiți prietenilor!
           Artist: Artist
           description_short: Hai să ne folosim de cod pentru a le alătura pe Anna
             şi Elsa în explorarea magiei şi frumuseţii de gheaţă.
         course4:
-          description_short: Elevii care vor să urmeze cursul 4 ar trebui să fi parcurs
-            cursurile 2 și 3.
-          description: Cursul 4 este conceput pentru elevii care au parcurs cursurile
-            2 și 3. Elevii vor aprofunda subiectele introduse în cursurile anterioare
+          description_short: Elevii care aleg cursul 4 ar trebui să fi parcurs cursurile
+            2 și 3.
+          description: "Cursul 4 este conceput pentru elevii care au parcurs cursul
+            2 și 3. Elevii vor aprofunda subiectele introduse în cursurile anterioare,
             pentru a le adapta la soluţii pentru probleme mai complexe de programare.
-            Până la sfârşitul acestui curs, elevii vor crea povești și jocuri interactive,
-            pe care le pot partaja cu oricine. Recomandat pentru clasele 4-8.
+            La sfârşitul acestui curs, elevii vor crea povești și jocuri interactive,
+            pe care le pot distribui oricui. \nRecomandat claselor 4-8.\n"
           'Artist: Variables': 'Artist: Variabile'
-          'Bee: For Loops': 'Albină: Repetiții Pentru'
+          'Bee: For Loops': 'Albină: Pentru bucle'
           title: Curs 4
-          'Algorithms: Tangrams': 'Algoritmi: Tangram'
+          'Algorithms: Tangrams': 'Algoritmi: Tangrame'
           Variables: Variabile
-          'Play Lab: Variables': 'Laboratorul de joc: Variabile'
-          'Play Lab: Functions with Parameters': 'Laboratorul de joc: Funcții cu parametri'
+          'Play Lab: Variables': 'Laborator de joc: Variabile'
+          'Play Lab: Functions with Parameters': 'Laborator de joc: Funcții cu parametri'
           'Bee: Functions with Parameters': 'Albină: Funcții cu parametri'
-          'Artist: For Loops': 'Artist: Repetiții Pentru'
-          'Play Lab: For Loops': 'Laboratorul de joc: Repetiții For'
+          'Artist: For Loops': 'Artist: Bucle pentru'
+          'Play Lab: For Loops': 'Laborator de joc: Bucle pentru'
           'Artist: Functions': 'Artist: Funcţii'
-          'Artist: Functions with Paraqmeters': 'Artist: Funcţii cu parametri'
-          'Unplugged: Tangrams': 'Fără calculator: Tangram'
+          'Unplugged: Tangrams': 'Fără calculator: Tangrame'
           Artist: Artist
           Bee: Albină
           'Unplugged: Envelope Variables': 'Fără calculator: Variabile plic'
           'Unplugged: Madlibs': 'Fără calculator: Madlibs'
-          'Unplugged: For Loop Fun': 'Fără calculator: Distracție cu repetiția Pentru'
-          'Unplugged: Songwriting with Parameters': 'Fără calculator: Compoziție cu
-            parametri'
+          'Unplugged: For Loop Fun': 'Fără calculator: Distracție cu Bucle Pentru'
+          'Unplugged: Songwriting with Parameters': 'Fără calculator: Compoziție muzicală
+            cu parametri'
           'Artist: Functions with Parameters': 'Artist: Funcţii cu parametri'
           'Unplugged: Binary': 'Fără calculator: Binar'
           Bee Binary: Binar cu Albină
           Farmer Binary: Binar cu fermier
           Maze and Bee: Labirint şi albină
           Artist Binary: Binar cu artist
-          description_audience: Vârstele 10 + (după curs 3)
+          description_audience: Vârstele 10 + (după cursul 3)
         Course4pre:
           title: Curs 4 Condiţii prealabile
           description_short: O scurtă prezentare a conceptelor pentru elevii care
@@ -283,19 +282,19 @@
           'Artist: Loops': 'Artist: Bucle'
           'Bee: Conditionals': 'Ortografie: Condiţionale'
           'Artist: Nested Loops': 'Artist: Bucle Adunate'
-          'Farmer: While Loops': 'Fermier: În Timp ce Şerpuieşte'
-          'Bee: Nested Loops': 'Ortografie: Bucle Adunate'
+          'Farmer: While Loops': Fermier - Bucle "în timp ce"
+          'Bee: Nested Loops': 'Albină: Bucle imbricate'
           'Artist: Functions': 'Artist: Funcţii'
           'Bee: Debugging': 'Ortografie: Depanare'
         usability:
           Intro: Introducere
-          Variables and For Loops: Variabile și repetiții For
+          Variables and For Loops: Variabile și Bucle pentru
           Functions and Functions with Parameters: Funcții și funcții cu parametri
-          title: Testarea utilizării
+          title: Testarea uzabilității
           description_short: '[șir gol]'
-          description: O selecție din nivelurile cursului 4 pentru testarea utlizării.
+          description: O selecție din nivelurile cursului 4 pentru testarea uzabilității.
           Variables: Variabile
-          For Loops: Repetiții Pentru
+          For Loops: Bucle Pentru
           Binary: Binar
         potus:
           title: speciale
@@ -315,10 +314,10 @@
           Usability testing for MSM: Teste pentru matematică de gimnaziu
           Evaluation Blocks: Blocuri de evaluare
           Blocks to Math: Blocuri în matematică
-          Strings and Images: Șiruri de caractere și Imagini
+          Strings and Images: Șiruri și Imagini
           Defining Variables: Definirea Variabilelor
           Defining Functions: Definirea Funcțiilor
-          Design Recipe: Rețetă de proiectare
+          Design Recipe: Rețetă de design
           Booleans: Booleene
           Conditionals: Condiţionale
           Free Play: Joc la liber
@@ -328,7 +327,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Fără calculator: Jocuri
             video și planuri de coordonate'
           'Calc: Evaluation Blocks': 'Calcul: Blocuri de evaluare'
-          'Eval: Strings and Images': Șiruri de caractere și Imagini
+          'Eval: Strings and Images': Șiruri și Imagini
           'Unplugged: Contracts': 'Fără calculator: Contracte'
           'Eval: Writing Contracts': 'Evaluare: Scrierea de contracte'
           'Calc: Defining Variables': 'Calcul: Definirea variabilelor'
@@ -343,8 +342,8 @@
           'Eval: Boolean Operators': 'Evaluare: Operatorii booleeni'
           'Play Lab: Booleans': 'Laboratorul de joc: Booleene'
           'Play Lab: Boolean (Big Game)': 'Laboratorul de joc: Boolean (jocul mare)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Fără calculator: Decizii
-            și porțiuni de funcții'
+          'Unplugged: Conditionals and Piecewise Functions': 'Fără calculator: Condiționale
+            și funcții pe porțiuni'
           'Eval: Conditionals': Condiţionale
           'Unplugged: Collision Detection and the Distance Formula': 'Fără calculator:
             Detectarea de coliziuni și formula pentru distanță'
@@ -364,7 +363,7 @@
             de programare utilizat în Code.org CS în Algebră
           Algebra Demo: Demo Algebră
           Evaluation Blocks: Blocuri de evaluare
-          Making Pictures: Fotografiere
+          Making Pictures: Crearea Imaginilor
           Defining Variables: Definirea Variabilelor
           Defining Simple Functions: Definirea Funcțiilor Simple
           The Design Recipe: Rețeta pentru design
@@ -372,13 +371,13 @@
           title: K5 Professional Development
           description: Professional Development for K5 Courses
           description_short: Professional Development for K5 Courses
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           Blockly Basics: Bazele Blockly
-          Writing computer programs: Scriind programe pentru computer
-          Navigating the teacher dashboard: Navigând dashboard-ul profesorului
-          Unplugged lessons: Lecţii offline
+          Writing computer programs: Scrierea de programe pentru computer
+          Navigating the teacher dashboard: Navigarea în tabelul de activitate a profesorului
+          Unplugged lessons: Lecţii fără calculator
           Classroom Culture: Cultura sălii de clasă
-          Ways to go beyond Courses 1, 2, and 3: Metode de a progresa dupa Cursurile
+          Ways to go beyond Courses 1, 2, and 3: Metode de a progresa după Cursurile
             1, 2, si 3
           K-5 Courses: K-5 Courses
           Writing computer programs in Blockly: Writing computer programs in Blockly
@@ -410,6 +409,7 @@
           Pixelation: Pixelare
         20-hour:
           title: Cursul Introducere K-8 in Programare (15-25 ore)
+          description_audience: Vârstele 10 + (după cursul 3)
           description: Acest curs de 20 de ore prezintă concepte de bază din informatică
             şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru
             clasele K-8, dar este distractiv de învăţat la toate vârstele.
@@ -507,8 +507,8 @@
           'Artist: Loops': 'Artist: Bucle'
           'Bee: Conditionals': 'Ortografie: Condiţionale'
           'Artist: Nested Loops': 'Artist: Bucle Adunate'
-          'Farmer: While Loops': 'Fermier: În Timp ce Şerpuieşte'
-          'Bee: Nested Loops': 'Ortografie: Bucle Adunate'
+          'Farmer: While Loops': Fermier - Bucle "în timp ce"
+          'Bee: Nested Loops': 'Albină: Bucle imbricate'
           'Artist: Functions': 'Artist: Funcţii'
           'Bee: Debugging': 'Ortografie: Depanare'
         cspunit1:
@@ -545,13 +545,14 @@
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Fără calculator: Jocuri
             video și planuri de coordonate'
           'Calc: Evaluation Blocks': 'Calcul: Blocuri de evaluare'
-          'Eval: Strings and Images': 'Evaluare: Șiruri de caractere și imagini'
+          'Eval: Strings and Images': 'Evaluare: Șiruri și imagini'
           'Unplugged: Contracts': 'Fără calculator: Contracte'
           'Eval: Writing Contracts': 'Evaluare: Scrierea de contracte'
           'Calc: Defining Variables': 'Calcul: Definirea variabilelor'
@@ -566,15 +567,15 @@
           'Eval: Boolean Operators': 'Evaluare: Operatorii booleeni'
           'Play Lab: Booleans': 'Laboratorul de joc: Booleene'
           'Play Lab: Boolean (Big Game)': 'Laboratorul de joc: Boolean (jocul mare)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Fără calculator: Decizii
-            și porțiuni de funcții'
-          'Eval: Conditionals': 'Evaluare: Decizii'
+          'Unplugged: Conditionals and Piecewise Functions': 'Fără calculator: Condiționale
+            și funcții pe porțiuni'
+          'Eval: Conditionals': 'Evaluare: Condiționale'
           'Unplugged: Collision Detection and the Distance Formula': 'Fără calculator:
             Detectarea de coliziuni și formula pentru distanță'
           'Play Lab: Collision Detection (Big Game)': 'Laboratorul de joc: Detectarea
             de coliziuni (jocul mare)'
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri de caractere și Imagini
+          Strings and Images: Șiruri și Imagini
           Contracts: Contracte
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
@@ -583,10 +584,10 @@
           Booleans: Booleene
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: Decizii și porțiuni de funcții
+          Conditionals and Piecewise Functions: Condiționale și funcții pe porțiuni
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -597,7 +598,7 @@
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri de caractere și Imagini
+          Strings and Images: Șiruri și Imagini
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -615,7 +616,7 @@
           Text Compression: Text Compression
         CSPPD:
           new stage: new stage
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           title: Computer Science Principles PD
           description: Online Introduction to CSP
           What is CSP?: What is CSP?
@@ -630,7 +631,7 @@
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
         ECSPD:
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           What is ECS?: What is ECS?
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -640,7 +641,7 @@
           description: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
           Pre-Workshop Online Component: Pre-Workshop Online Component
@@ -725,18 +726,18 @@
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Blocuri de evaluare
           The Big Game: The Big Game
-          Strings and Images: Șiruri de caractere și Imagini
+          Strings and Images: Șiruri și Imagini
           The Design Recipe: Rețeta pentru design
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
         Glenallan Career Day Demo:
@@ -746,7 +747,7 @@
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         ECSPD-NexTech:
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           What is ECS?: What is ECS?
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -756,7 +757,7 @@
           description: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           What is ECS?: What is ECS?
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -768,7 +769,7 @@
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           Evaluation Blocks: Blocuri de evaluare
           logo_image: nextech_logo.png
           Course Overview: Course Overview
@@ -780,7 +781,7 @@
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           Evaluation Blocks: Blocuri de evaluare
           logo_image: izone_logo.png
           Course Overview: Course Overview
@@ -790,7 +791,7 @@
             Algebra
           Preparing for in-person PD: Preparing for in-person PD
         sciencePD-NexTech:
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
@@ -809,7 +810,7 @@
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
         sciencePD-iZone:
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
@@ -895,11 +896,12 @@
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri de caractere și Imagini
+          Strings and Images: Șiruri și Imagini
           Defining Variables: Definirea Variabilelor
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
@@ -945,14 +947,16 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri de caractere și Imagini
+          Strings and Images: Șiruri și Imagini
           Writing Contracts: Writing Contracts
           Defining Variables: Definirea Variabilelor
           Defining Functions: Definirea Funcțiilor
           Rocket-Height: Rocket-Height
           Booleans: Booleene
-          'Eval: Conditionals': 'Evaluare: Decizii'
+          'Eval: Conditionals': 'Evaluare: Condiționale'
           Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
         cspfacilitator:
@@ -979,11 +983,11 @@
           title: 'Teaching Kids to Code: The Basics'
           description: Learn to code and how to teach computer science basics to your
             students with this free, self-paced online course.
-          Introduction to PD: Introducere in Dezvoltarea Profesionala
+          Introduction to PD: Introducere in Dezvoltarea Profesională
           K-5 Courses: K-5 Courses
-          Writing computer programs: Scriind programe pentru computer
+          Writing computer programs: Scrierea de programe pentru computer
           'Programming Concept: Loops': 'Programming Concept: Loops'
-          Unplugged lessons: Lecţii offline
+          Unplugged lessons: Lecţii fără calculator
           'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
           Computer Science Pedagogy: Computer Science Pedagogy
           'Programming Concept: Functions': 'Programming Concept: Functions'
@@ -1014,14 +1018,49 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Încheiere
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Oră de Cod
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Blocuri de evaluare
+          Strings and Images: Șiruri și Imagini
+          Writing Contracts: Writing Contracts
+          Defining Variables: Definirea Variabilelor
+          Defining Functions: Definirea Funcțiilor
+          Rocket-Height: Rocket-Height
+          Booleans: Booleene
+          'Eval: Conditionals': 'Evaluare: Condiționale'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science

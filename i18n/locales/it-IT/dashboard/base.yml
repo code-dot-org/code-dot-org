@@ -327,9 +327,9 @@ it:
     classroom_activity: 'Attività "Senza Rete"'
   home:
     title: Officina del Codice
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio è la base di partenza per i corsi online creati da Code.org
     lines_of_code: '%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} linee di codice <br/> scritte da %{students_count} milioni di studenti'
     all_courses: Panoramica dei corsi 1, 2 e 3
     lesson_plans: Piani di lavoro delle lezioni
     signin_message: 'Già iscritto? %{link}'
@@ -364,6 +364,7 @@ it:
     heading_legacy: '<h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte le età</h1>'
     your_gallery: La tua collezione
     no_primary_course: Prova un corso presso Studio Code
+    print_certificate: Print Certificate
   gender:
     male: Maschile
     female: Femminile
@@ -446,9 +447,10 @@ it:
     flappy:
       title: 'Codice di "Flappy"'
       body: 'Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice di "Flappy"!'
-    20hour:
-      title: Corso Introduttivo
-      body: Prova il nostro corso introduttivo di informatica in 20 lezioni.
+    20-hour:
+      title: Accelerated Course
+      body: "Questo corso in 20 lezioni introduce i concetti fondamentali dell'informatica e della programmazione. Il corso è progettato per l'uso nelle scuole elementari e medie inferiori, ma è divertente per imparare a qualunque età."
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: "Prova la nuova lezione dell'Ora del Codice in versione provvisoria"
       try_frozen: Artista con Anna ed Elsa, da Frozen
@@ -483,14 +485,14 @@ it:
     wrong_title: Risposta non corretta
     wrong_body: 'La risposta che hai scelto non è corretta.  Per favore riprova!'
     correct_title: Molto bene!
-    correct_body: Questa risposta è corretta.
+    correct_body: Questa è la risposta corretta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Riprova!
     wrong_body: 'La risposta che hai scelto non è corretta.  Per favore riprova!'
     correct_title: Molto bene!
-    correct_body: Questa risposta è corretta.
+    correct_body: Questa è la risposta corretta.
   contract_match:
     wrong_title: Risposta non corretta
     badname: Il vostro contratto ha il nome sbagliato.
