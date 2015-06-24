@@ -76,6 +76,13 @@ function airstrike(n) {
     block.render();
   }
 }
+
+function sizeTo(sizeString) {
+  document.getElementById('blocklyDiv').style.height = sizeString;
+  var ev = document.createEvent('Event');
+  ev.initEvent('resize', true, true);
+  window.dispatchEvent(ev);
+}
 </script>
 
 <style>
@@ -297,6 +304,15 @@ h1 {
     <input type="button" value="Generate Python" onclick="toCode('Python')">
     <br>
     <textarea id="importExport" style="width: 26%; height: 12em"></textarea>
+  </p>
+  <hr>
+  <p>
+    <input type="button" value="Size: 100px" onclick="sizeTo('100px')">
+    &nbsp;
+    <br>
+    <input type="button" value="Size: 95%" onclick="sizeTo('95%')">
+    &nbsp;
+    <br>
   </p>
   <hr>
 

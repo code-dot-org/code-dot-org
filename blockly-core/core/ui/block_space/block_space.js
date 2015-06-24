@@ -106,13 +106,13 @@ Blockly.BlockSpace.prototype.dragMode = false;
  * Current horizontal scrolling offset.
  * @type {number}
  */
-Blockly.BlockSpace.prototype.pageXOffset = 0;
+Blockly.BlockSpace.prototype.xOffsetFromView = 0;
 
 /**
  * Current vertical scrolling offset.
  * @type {number}
  */
-Blockly.BlockSpace.prototype.pageYOffset = 0;
+Blockly.BlockSpace.prototype.yOffsetFromView = 0;
 
 /**
  * The blockSpace's trashcan (if any).
@@ -140,7 +140,7 @@ var fireGlobalChangeEventPid_ = null;
  * This blockSpace's scrollbars, if they exist.
  * @type {Blockly.ScrollbarPair}
  */
-Blockly.BlockSpace.prototype.scrollbar = null;
+Blockly.BlockSpace.prototype.scrollbarPair = null;
 
 /**
  * Sets up debug console logging for events
@@ -239,7 +239,7 @@ Blockly.BlockSpace.prototype.setTrashcan = function(trashcan) {
 
 /**
  * Get the SVG element that forms the drawing surface.
- * @return {!Element} SVG element.
+ * @return {!SVGGElement} SVG element.
  */
 Blockly.BlockSpace.prototype.getCanvas = function() {
   return this.svgBlockCanvas_;
@@ -705,9 +705,9 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
         {
           // Initial part of the drag:
           // fade normal blocks from fully-visible to mostly-visible.
-          normalIntensity = INNER_TRASH_NORMAL_INTENSITY + 
-            (xDifference - INNER_TRASH_DISTANCE) / 
-            (trashZoneWidth - INNER_TRASH_DISTANCE) * 
+          normalIntensity = INNER_TRASH_NORMAL_INTENSITY +
+            (xDifference - INNER_TRASH_DISTANCE) /
+            (trashZoneWidth - INNER_TRASH_DISTANCE) *
             INNER_TRASH_TRASHCAN_INTENSITY;
         }
       }
