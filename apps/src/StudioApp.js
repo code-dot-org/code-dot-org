@@ -1593,6 +1593,10 @@ StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
   return !!this.getUnfilledFunctionalBlock();
 };
 
+/**
+ * @returns {Block} The first block that has an unfilled input, or undefined
+ *   if there isn't one.
+ */
 StudioApp.prototype.getUnfilledFunctionalBlock = function () {
   var unfilledBlock;
   Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
