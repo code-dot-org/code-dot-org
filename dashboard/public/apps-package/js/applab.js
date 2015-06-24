@@ -2348,6 +2348,12 @@ designMode.onPropertyChange = function(element, name, value) {
       element.parentNode.style.top = value + 'px';
       break;
     case 'width':
+      element.setAttribute('width', value + 'px');
+      break;
+    case 'height':
+      element.setAttribute('height', value + 'px');
+      break;
+    case 'style-width':
       element.style.width = value + 'px';
       element.parentNode.style.width = value + 'px';
 
@@ -2356,7 +2362,7 @@ designMode.onPropertyChange = function(element, name, value) {
           element.style.height;
       }
       break;
-    case 'height':
+    case 'style-height':
       element.style.height = value + 'px';
       element.parentNode.style.height = value + 'px';
 
@@ -3519,8 +3525,8 @@ applabCommands.createCanvas = function (opts) {
     var height = opts.height || Applab.appHeight;
     newElement.width = width;
     newElement.height = height;
-    newElement.style.width = width + 'px';
-    newElement.style.height = height + 'px';
+    newElement.setAttribute('width', width + 'px');
+    newElement.setAttribute('height', height + 'px');
     // Unlike other elements, we use absolute position, otherwise our z-index
     // doesn't work
     newElement.style.position = 'absolute';
@@ -6954,12 +6960,12 @@ var TextAreaProperties = React.createClass({displayName: "TextAreaProperties",
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
           foo: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7065,12 +7071,12 @@ var TextInputProperties = React.createClass({displayName: "TextInputProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7215,12 +7221,12 @@ var RadioButtonProperties = React.createClass({displayName: "RadioButtonProperti
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7313,14 +7319,14 @@ var LabelProperties = React.createClass({displayName: "LabelProperties",
           lockState: $(element).data('lock-width') || PropertyRow.LockState.UNLOCKED, 
           handleLockChange: this.props.handleChange.bind(this, 'lock-width'), 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           lockState: $(element).data('lock-height') || PropertyRow.LockState.UNLOCKED, 
           handleLockChange: this.props.handleChange.bind(this, 'lock-height'), 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7459,12 +7465,12 @@ var ImageProperties = React.createClass({displayName: "ImageProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7546,12 +7552,12 @@ var DropdownProperties = React.createClass({displayName: "DropdownProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7700,12 +7706,12 @@ var CheckboxProperties = React.createClass({displayName: "CheckboxProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7786,12 +7792,12 @@ var CanvasProperties = React.createClass({displayName: "CanvasProperties",
         React.createElement(PropertyRow, {
           desc: 'width (px)', 
           isNumber: true, 
-          initialValue: parseInt(element.style.width, 10), 
+          initialValue: parseInt(element.getAttribute('width'), 10), 
           handleChange: this.props.handleChange.bind(this, 'width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
-          initialValue: parseInt(element.style.height, 10), 
+          initialValue: parseInt(element.getAttribute('height'), 10), 
           handleChange: this.props.handleChange.bind(this, 'height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
@@ -7814,8 +7820,8 @@ module.exports = {
   PropertyTable: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
-    element.style.height = '100px';
-    element.style.width = '100px';
+    element.setAttribute('width', '100px');
+    element.setAttribute('height', '100px');
 
     return element;
 
@@ -7863,12 +7869,12 @@ var ButtonProperties = React.createClass({displayName: "ButtonProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
