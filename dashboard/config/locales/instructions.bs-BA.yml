@@ -18,9 +18,8 @@
         Nacrtaj isprekidanu liniju koristeći u isto vrijeme blokove za crtanje i skakanje.
       2-3 Artist 3_instruction: Ovaj šešir je visok 100 piksela. Nacrtaj šešir koji
         ima 70 piksela manje.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
+      2-3 Artist 3new_instruction: Crveni šešir je visok 100 piksela. Dovrši scrtanje
+        crnog šešira koji je kraći za 70 piksela. Širina crnog šešira je 50 piksela.
       2-3 Artist 4_instruction: Pomozi mi da završim kuću za ovu mačku.
       2-3 Artist 5_instruction: Zamijeni ovaj kod sa blokom "ponavljaj puta" da bi
         se nacrtala ista kuća sa samo 3 bloka.
@@ -271,25 +270,22 @@
         iz cvjetova u ovoj livadi.
       2-3 Bee Loops 13_instruction: 'Procjena: Upotrijebi blok za ponavljanje da bi
         sakupio/la sav nektar.'
-      2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
-        from these flowers? \n"
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 2A_instruction: |
-        Can you do the same task more easily with a
-        loop?
+      2-3 Bee Loops 1A_instruction: Zdravo ja sam pčela. Možeš li mi pomoći da sakupim
+        nektar iz ovih cvjetova?
+      2-3 Bee Loops 2_instruction: Upotrijebi petlju za sakupljanje nektra i pravljenje
+        meda.
+      2-3 Bee Loops 2A_instruction: Možeš li izvršiti isti zadatak na lakši način
+        pomoću petlje?
       2-3 Bee Loops 3_instruction: Sakupi nektar iz svakog cvijeta i napravi med u
         svakoj saći meda.
-      2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |
-        Now use the new repeat block to collect all
-        of the nectar and make all of the honey.
+      2-3 Bee Loops 3A_instruction: Možeš li upotrijebiti petlju da sakupiš sav taj
+        nektar?
+      2-3 Bee Loops 3B_instruction: Sada upotrijevi novi blok za ponavljanje da bi
+        sakupio/la sav nektar i napravio/la sav med.
       2-3 Bee Loops 4_instruction: Upotrijebi sličnu petlju kao u prethodnom zadatku,
         ali sada ubaci zaokret.
-      2-3 Bee Loops 4A_instruction: |
-        What happens if you loop this sequence 3 times?
-        Don't forget to make the honey at the end!
+      2-3 Bee Loops 4A_instruction: Šta će se dogoditi ako ponoviš ovaj slijed 3 puta?
+        Ne zaboravi napraviti med na kraju!
       2-3 Bee Loops 5_instruction: Upotrijebi petlju da bi se išlo prema dolje i sakupi
         nektar.
       2-3 Bee Loops 6_instruction: Upotrijebi petlju za sakupljanje nektra iz svakog
@@ -537,10 +533,9 @@
       4-5 Artist Patterns 9.5_instruction: Hajde da iskoristimo petlju u ovom kodu
         da bismo nacrtali dva reda šestougaonika. Primjeti kako je drugi red pomjeren
         udesno.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
+      4-5 Artist Patterns 9_instruction: 'Sada ponovi ovaj kod 3 puta da bi nacrtao/la
+        čitav red. Savjet: svaki šestougaonike je 80 piksela širok od najdalje tačke
+        idući s lijeva na desno.'
       4-5 Artist Patterns Free Play_instruction: Vrijeme za slobodno igranje - iskušaj
         svoju vještinu u kreiranju uzoraka po tvom izboru!
       4-5 Bee Conditionals 1 (copy 1)_instruction: Pčela ne može razabrati da li je
@@ -681,65 +676,50 @@
         "ako-inače" blok da bi me doveo/la do suncokreta koristeći što manje blokova.
       4-5 Nested Loops 1_instruction: 'Dovrši kod za crtanje ovih trokutova. Prvi
         dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
-      4-5 Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag by
-        looping the provided blocks. The stars are 50 pixels apart, but remember that
-        the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles\ncomplete
-        a 360 degree rotation.  \n"
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother
-        loop. This is called a nested loop.\r\n"
+      4-5 Nested Loops 10_instruction: Nacrtati zadnji red zvijezda na ovoj zastavi
+        tako što ćeš ponavljati date blokove. Zvijezde su odmaknute za 50 piksela,
+        ali zapamti da su zvijezde same 30 piksela široke.
+      4-5 Nested Loops 11_instruction: Možeš li nacrtati ovih 10 kvadrata ovog trotoara
+        koristeći ugniježdene petlje? Svaki kvadrat je širok 30 piksela.
+      4-5 Nested Loops 12_instruction: Možeš li nacrtati ovih 36 trokutova koristeći
+        ugniježdenu petlju?
+      4-5 Nested Loops 2_instruction: 'Sada ugnijezdi ovu petlju unutar druge petlje
+        da bi nacrtao/la 10 trokutova. Ovo se zove ugniježdena petlja. Savjet: Svih
+        10 trokutova zatvaraju ugao od 360 stepeni.  '
+      4-5 Nested Loops 3_instruction: "Napravi sunce tako što ćeš ugnijezditi početni
+        kod u drugu petlju. Ovo se zove ugniježdena petlja.\r\n"
       4-5 Nested Loops 5_instruction: Ponavljaj dati kod u petlji da bi se napravila
         vjetrenjača.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
+      4-5 Nested Loops 6_instruction: Možeš li nacrtati šestougaonik tako što ćeš
+        pozivati kod za trokut u petlji?
+      4-5 Nested Loops 7_instruction: 'Ponavljaj ovaj dizajn 10 puta. Za koliko moraš
+        okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)'
+      4-5 Nested Loops 8_instruction: 'Ponavljaj ovaj dizajn 6 puta. Za koliko moraš
+        okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 6?)'
       4-5 Nested Loops 9_instruction: Nacrtaj zube u ustima aligatora!
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
-      4-5 While Loops 1_instruction: |
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
-      4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 Nested Loops Assessment 1_instruction: Upotrijebi ugniježdenu petlju za
+        kompletiranje ovog dizajna.
+      4-5 While Loops 1_instruction: Pomjeri me do rupe i napuni je sa dvije lopate
+        zemlje koristeći "napuni" blok.
+      4-5 While Loops 2_instruction: Pomjeri me do hrpe zemlje i ukloni je sa 5 zahvata
+        lopate koristeći "ukloni" blok.
+      4-5 While Loops 3_instruction: 'Pokreni me do hrpe i ukloni je do kraja, a onda
+        se pomjeri do rupe i popuni je do kraja. Savjet: Koristi što manje blokova.'
+      4-5 While Loops 4_instruction: 'Wow, pronašao sam stvarno duboku rupu! Ne znam
+        koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava
+        sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti "dok" petlju ovaj
+        put.'
+      4-5 While Loops 5_instruction: Wow, sada vidim dvije duboke rupe! Možeš li napisati
+        program koji ih obje popunjava sve dok se zemlja ne izjednači?
+      4-5 While Loops 6_instruction: Wow, sada vidim veliku hrpu zemlje! Možeš li
+        napisati program koji je uklanja sve dok se zemlja ne izjednači?
+      4-5 While Loops 7_instruction: Wow, sada vidim tri hrpe zemlje! Možeš li napisati
+        program koji uklanja svaku od njih sve dok se zemlja ne izjednači?
+      4-5 While Loops 8_instruction: ' Vidim tamo jako duboku rupu i jako veliku hrpu
+        zemlje. Koliko zahvata lopate mi je potrebno da bi se zemlja poravnala? Savjet:
+        Koristi "dok" petlju za oboje.'
+      4-5 While Loops Assessment 1_instruction: Sada vidim puno rupa i hrpa. Pomozi
+        mi da ih popunim i uklonim sve dok se zemlja ne poravna.
       Artist - Nested Loops 1_instruction: 'Dovrši kod za crtanje ovih trokutova.
         Prvi dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
       Artist - Nested Loops 10_instruction: Nacrtaj zadnji red zvijezda na ovoj zastavi
@@ -1361,9 +1341,8 @@
       Course 4 Bee 1_instruction: 'Pčela ne može razaznati da li je ovo cvijet ili
         saće meda. Prvo provjeri da li je ovo cvijet ili saće meda, a zatim pokupi
         nektar samo ako je u pitanju cvijet. '
-      Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
+      Course 4 Bee 2_instruction: Provjeri svaki objekat da vidiš je li cvijet. Ako
+        jeste, pokupi nektar ... inače, samo ga ignoriši!
       Course 4 Bee 3_instruction: Nepoznati objekat je ili cvijet ili saće meda. Upotrijebi
         ako/inače blok za sakupljanje nektra u pitanju cvijeta. Inače napravi med
         (jer je onda u pitanju saće meda).
@@ -1550,10 +1529,9 @@
         postavimo da igrač može pobijediti (ili izgubiti). Koristi beskonačnu petlju
         da provjeriš vrijednost rezultata. Ako je rezultat veći od 20, neka neprijatelj
         nestane. Ako je rezultat manji od 0, neka igrač nestane.
-      Course 4 Play Labs For Loops 1_instruction: |
-        Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the counter block to speak the counter
-        variable each time the loop is run.
+      Course 4 Play Labs For Loops 1_instruction: Hajde da učinimo da ovaj pas izgovori
+        svaki broj od 1 do 100. Upotrijebi petlju i brojač blok za izgovaranje svake
+        brojač varijable pri svakom prolasku kroz petlju.
       Course 4 Play Labs For Loops 2_instruction: Hajde da ovaj putpokušamo brojati
         neparne brojeve od 1 do 100.
       Course 4 Play Labs For Loops 3_instruction: Ako računamo sa većim korakom, brojimo
@@ -1833,47 +1811,36 @@
       frozen square snowflake_instruction: Možeš li napraviti pahulju snijega koristeći
         "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni"
         blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?
-      hoc2015_intro_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_sandbox_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
+      hoc2015_intro_instruction: Hiro je "lik 1". Upotrijebi Pokreni blok za pomjeranje
+        Hiro-a udesno sve dok ne dotakne Baymax-a.
+      hoc2015_sandbox_instruction: Hiro je "lik 1". Upotrijebi Pokreni blok za pomjeranje
+        Hiro-a udesno sve dok ne dotakne Baymax-a.
+      Infinity_catch_instruction: 'Možeš li koristeći tipke sa strelicama načiniti
+        da Elsa ("lik 2") prestigne Annu? '
       Infinity_finale_instruction: Napravi šta god želiš i podijeli!
-      Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
-      Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
-      Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
+      Infinity_move_collide_instruction: Hiro je "lik 1". Pomjeri ga udesno sve do
+        Baymax-a te odsviraj zvuk kada se dotaknu.
+      Infinity_move_directions_instruction: Baymax je "lik 2". Dodaj Pokreni blokove
+        i onda pomjeri Baymax-a koristeći strelice. Neka onda dotakne dva ostala lika.
+      Infinity_move_right_instruction: Hiro je "lik 1". Koristi Pokreni blok da bi
+        pomjerio/la Hiro-a udesno sve dok ne dotakne Baymax-a.
       Infinity_repeat_instruction: Upotrijebi "ponavljaj zauvijek" blok da napraviš
         da se Anna kreće gore i dole za 400 piksela.
-      Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
-      Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+      Infinity_say_instruction: Učini da Anna kaže "Zdravo." koristeći Kaži blok.
+      Infinity_shoot_instruction: Baymax je "lik 2". Neka Baymax baci raketu na Hiro-a.
+      Infinity_shoot_directions_instruction: Hiro je "lik 3". Neka Hiro baci po projektil
+        na svaki od četiri lika. Čekaj jednu sekundu prije svakog bacanja.
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Dodirni još više pahuljica!
       Infinity_touch_four_instruction: Pokreni Annu prema gore, dole lijevo, i onda
         desno da bi dotakla svaku od četiri pahuljice.
-      Infinity_touch_score_instruction: |
-        Make Anna score a point when she touches
-        a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Infinity_touch_score_instruction: Učini da Anna osvoji bod svaki put kada dotakne
+        pahuljicu snijega. Onda klikni na "Pokreni" i upravi Annu da dodatkne svaku
+        od pahuljica samo jednom.
       K-1 Artist 1 Assessment 1_instruction: Nacrtaj kratku liniju gore i jednu dugačku
         liniju desno!
-      K-1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both the
-        jump and draw blocks
+      K-1 artist 1 level 10_instruction: Nacrtaj isprekidanu liniju koristeći blokove
+        za skakanje i za crtanje
       K-1 artist 1 level 9_instruction: Nacrtaj ovo koristeći tri linije
       K-1 Artist Loops 1_instruction: Nacrtaj ovu liniju krećući se ka Istoku 4 puta.
       K-1 Artist Loops 2_instruction: Možeš li nacrtati ovu istu liniju ali koristeći
@@ -1906,19 +1873,18 @@
         bez crtanja. Skoči prema gore i nacrtaj liniju.
       K-1 Artist1 8_instruction: Nacrtaj isprekidanu liniju koristeći blokove za skakanje
         i crtanje
-      K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
+      K-1 Artist1 9_instruction: Crtaj i Skači da bi napravio/la isprekidanu liniju
       K-1 Artist1 Assessment 1_instruction: Nacrtaj kratke i duge linije!
       K-1 Artist1 Assessment 2_instruction: Nacrtaj kratke isprekidane linije!
       K-1 Artist2 1_instruction: Nacrtaj kvadrat ispod trokuta.
       K-1 Artist2 2_instruction: Skoči i nacrtaj kvadrat pored kuće.
       K-1 Artist2 3_instruction: Nacrtaj kvadrat iznad drugog kvadrata
       K-1 Artist2 4_instruction: Nacrtaj pravougaonik za dovršetak mosta.
-      K-1 Artist2 5_instruction: Draw a rectangle to complete the bridge supports
-      K-1 Artist2 6_instruction: Draw two squares to make a rectangle!
-      K-1 Artist2 Assessment1_instruction: |
-        Assessment: Draw a square next to the
-        other square.
-      K-1 Artist2 Free Draw_instruction: Draw anything!
+      K-1 Artist2 5_instruction: Nacrtaj pravougaonik da bi dovršio/la bazu mosta
+      K-1 Artist2 6_instruction: Nacrtaj dva kvadrata da bi napravio/la pravougaonik!
+      K-1 Artist2 Assessment1_instruction: 'Ocjenjivanje: Nacrtaj kvadrat pored drugog
+        kvadrata.'
+      K-1 Artist2 Free Draw_instruction: Nacrtaj bilo šta!
       K-1 Artist2_7_instruction: Nacrtaj pravougaonik da bi dobio/la gornju laticu
         ormarića!
       K-1 Bee 1_instruction: Pokreni me do cvijeta, pokupi nektar, i onda me pomjeri
@@ -1950,20 +1916,18 @@
         med!'
       K-1 Bee Loops 12_instruction: 'Procjena: Upotrijebi petlje za skupljanje nektra,
         pravljenje meda i pokretanje!'
-      K-1 Bee Loops 2_instruction: |
-        Use a loop to move and then get the nectar and
-        make honey!
+      K-1 Bee Loops 2_instruction: Upotrijebi petlju za pomjeranje a onda pokupi nektar
+        i napravi med!
       K-1 Bee Loops 3_instruction: Upotrijebi petlje za skupljanje nektra i pravljenje
         meda!
-      K-1 Bee Loops 4_instruction: |
-        Use loops to get the nectar, make honey, and
-        to move!
-      K-1 Bee Loops 5_instruction: Use loops to get the nectar and honey!
+      K-1 Bee Loops 4_instruction: Upotrijebi petlje za skupljanje nektra, pravljenje
+        meda i pokretanje!
+      K-1 Bee Loops 5_instruction: Koristi petlje za skupljanje nektra i meda!
       K-1 Bee Loops 6_instruction: Upotrijebi petlje za skupljanje nektra, pravljenja
         meda i pokretanja!
       K-1 Bee Loops 7_instruction: Upotrijebi petlje za skupljanje nektra i pravljenje
         meda!
-      K-1 Bee Loops 8_instruction: Use loops to get the nectar and honey!
+      K-1 Bee Loops 8_instruction: Koristi petlje za skupljanje nektra i meda!
       K-1 Bee Loops 9_instruction: Upotrijebi petlje za skupljanje nektra, pravljenja
         meda i pokretanja!
       K-1 Bee Loops Assessment 1_instruction: Pokupi nektar za pravljenje meda i upotrijebi
@@ -2035,10 +1999,10 @@
         dovedeš do svinje!
       K-1 Maze Multi 14_instruction: Nivo Procjene
       K-1 Maze Multi 15_instruction: Nivo Procjene
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig"
-      K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig."
+      K-1 Maze Sequence Assessment 1_instruction: "Ovo je test!\r\nPokreći se u jednom
+        smjeru,\na zatim u drugom da bi me doveo/la do svinje"
+      K-1 Maze Sequence Assessment 2_instruction: "Ovo je test!\r\nPokreći se u jednom
+        smjeru,\na zatim u drugom da bi me doveo/la do svinje."
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -2162,9 +2126,8 @@
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
+      New Artist Project_instruction: Nacrtaj nešto cool! Tvoj kod je snimljen kao
+        pojekt kojem se možeš vratiti kada god poželiš.
       NEW Course 4 Artist Functions 1_instruction: Možeš li pomoću petlje nacrtati
         kvadrat koji ima dužinu od 100 piksela?
       NEW Course 4 Artist Functions 10_instruction: Klikni na "uredi" da popuniš blokove
@@ -2477,79 +2440,65 @@
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: Žir! Žir! Žir! Dovedi me do tamo koristeći "ako" blok.
+        Pri tome koristi što manje blokova.
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
+      scrat 17_instruction: Ok, hajde da to ponovimo još jednom radi vježbe  - ovo
+        nije toliko različito, ali pazi na zid!
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: |
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
+      scrat 18_instruction: '"Ako-inače" blokovi provjeravaju uslov, i onda izvrše
+        jednu stvar ILI drugu. Da bi me doveo/la do žira, koristi ovaj novi blok.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
+      scrat 19_instruction: Još jedna vježba za "ako-inače" blok. Možeš li to uspješno
+        izvršiti od prve?
+      scrat 20_instruction: 'Možeš li dodati samo 3 bloka da bi mi pomogao/la da riješim
+        ovaj teži labirint? Ako uspjedneš, ja mogu hodati po bilo kakvoj krivudavoj
+        liniji bez obzira na njenu dužinu. Požuri! Led se otapa! '
       SpecialFrozenLevel_instruction: Službeno si postao/postala majstor-umjetnik!
         Napravi snježnu bajku.
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: |
-        Draw this diamond with 120 and 60 degree
-        angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: |
-        Can you draw this hexagon with 100 pixel
-        sides and 60 degree turns?
-      Standalone_Artist_4_instruction: |
-        Now you've got a new block to play with,
-        the loop. This will repeat a set of commands. What happens if you loop these
-        commands 6 times?
-      Standalone_Artist_5.5_instruction: |
-        Notice how we simplified the diamond code
-        by turning it into a loop. You can loop that whole sequence 12 times to draw
-        the flower. Hint: You'll need to turn 30 degrees after your diamond loop
-        so you don't keep drawing over the same diamond.
-      Standalone_Artist_5_instruction: |
-        How many times do you need to loop this diamond
-        to draw the flower?
-      Standalone_Artist_6_instruction: |
-        Loop this hexagon code 6 times to create
-        the design. How many degrees will you need to turn each time? Hint: divide
-        the number of degrees in a circle by the number of times you are looping.
-      Standalone_Artist_7_instruction: |
-        A function is another programming tool to
-        help you avoid repeating yourself. This function draws a flower, so you can
-        use it any time you want to draw a flower. Use this and the new jump block
-        to draw these flowers. Hint: The flowers are 150 pixels apart
+      Standalone_Artist_1_instruction: Dobrodošao u Umjetnik! Kao prvo, hajde da pokušamo
+        napraviti jednostavan kvadrat koristeći blok za skretanje u desno i blok za
+        kretanje naprijed. Svaka stranica bi trebala biti 100 piksela duga.
+      Standalone_Artist_2_instruction: Nacrtaj ovaj dijamant sa stepenima od 120 i
+        60 stupnjeva te stranicama dugačkim 150 piksela.
+      Standalone_Artist_3_instruction: Možeš li nacrtati ovaj šestougaonik za stranicama
+        od 100 piksela i okretima od 60 stepeni?
+      Standalone_Artist_4_instruction: 'Sada imaš novi blok s kojim se možeš igrati:
+        petlja. Ovaj blok će ponavljati komande. Šta će se desiti ako ponoviš ove
+        komande 6 puta?'
+      Standalone_Artist_5.5_instruction: 'Zapazi kako smo pojednostavili kôd za crtanje
+        dijamanta tako što smo koristili petlju. Možeš u petlji ponoviti cijeli niz
+        12 puta da bi nacrtao/la cvijet. Savjet: Nakon svake petlje za crtanje dijamanta
+        trebaš se okrenuti za 30 stepeni da ne bi crtao/la uvijek na istom mjestu.'
+      Standalone_Artist_5_instruction: Koliko puta trebaš ponoviti ovaj dijamant da
+        bi nacrtao/la cvijet?
+      Standalone_Artist_6_instruction: 'Ponovi ovaj šestougaonik 6 puta da bi napravio
+        dizajn. Za koliko stepeni ćeš morati okrenuti svaki put? Savjet: podijeli
+        broj stepeni kruga sa brojem ponavljanja.'
+      Standalone_Artist_7_instruction: 'Funkcija je još jedan programski alat koji
+        ti pomaže da se ne ponavljaš. Ova funkcija crta cvijet. Ovu funkciju možeš
+        koristiti svaki put kada poželiš nacrtati cvijet. Upotrijebi ovo i novi blok
+        za skakanje da bi nacrtao/la ove cvjetove. Savjet: Ovi cvjetovi su udaljeni
+        za 150 piksela'
       Standalone_Artist_8_instruction: Evo funkcija koja se zove "Nacrtaj oblik" koju
         smo programirali da crta šestougaonike. Pokreni kod i vidi šta će se desiti.
         Zatim eksperimentiši sa funkcijom. Možeš li učiniti da funkcija crta uzorke
         načinjene od kvadrata, trokutova ili osmougaonika?
       Standalone_Artist_9_instruction: Sada nastavi i napravi sliku po svojoj želji!
         Čak imaš i praznu funkciju s kojom možeš raditi i načiniti šta god želiš!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
+      Standalone_Artist_v2_instruction: Dobrodošao u Umjetnik! Kao prvo, hajde da
+        pokušamo napraviti jednostavan kvadrat koristeći blok za skretanje u desno
+        i blok za kretanje naprijed. Svaka stranica bi trebala biti 100 piksela duga.
+      Text Compression Peter Piper_instruction: Ova pjesma je sažeta tako što su dvije
+        uobičajene fraze zamijenjene simbolima iz rječnika. Možeš li pronaći još neke
+        uobičajene uzorke da bi se pjesma još više mogla sažeti?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -2568,13 +2517,15 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2L04 - NetSim Routers with Addresses_instruction: |
-        NetSim: Variant 3: Connects
-        groups of 2-6 students with a router, and explores issues in routing and DNS
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as

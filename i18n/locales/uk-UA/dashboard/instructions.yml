@@ -232,9 +232,7 @@ uk:
       4-5 Artist Functions 14 Free play_instruction: 'Тут ми пропонуємо тобі декілька функцій. Використай їх будь-яким чином, як тобі подобається всередині одного чи більше циклів, щоб створити малюнок, яким ти можеш поділитися з твоїми друзями. Натисни "Виконати", щоб побачити приклад.'
       4-5 Artist Functions 15 Assessment_instruction: 'Оцінювання: Використай функцію "намалювати квадрат", щоб створити квадрати. Квадрати - 50, 100 та 150 пікселів.'
       4-5 Artist Functions 2a_instruction: 'Зараз помісти ці блоки в нову функцію під назвою "намалювати маленький трикутник" та виконай її.'
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
+      4-5 Artist Functions 2b_instruction: 'Тепер створіть функцію під назвою "намалювати маленький трикутник" за допомогою даних блоків.'
       4-5 Artist Functions 3_instruction: |
         Now create the functions "draw a medium
         triangle" and "draw a large triangle". The "draw a small triangle" function
@@ -2548,13 +2546,12 @@ uk:
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2L04 - NetSim Routers with Addresses_instruction: |
-        NetSim: Variant 3: Connects
-        groups of 2-6 students with a router, and explores issues in routing and DNS
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as

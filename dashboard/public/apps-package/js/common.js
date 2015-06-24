@@ -6067,6 +6067,7 @@ StudioApp.prototype.init = function(config) {
       afterInject: config.afterInject,
       readOnly: config.readonlyWorkspace,
       textModeAtStart: config.level.textModeAtStart,
+      beginnerMode: config.level.beginnerMode,
       autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
@@ -7032,7 +7033,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     options.codeFunctions, options.dropletConfig);
   this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
     mode: 'javascript',
-    modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
+    modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig, options),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
     enablePaletteAtStart: !options.readOnly,
@@ -14271,7 +14272,7 @@ function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (dropletConfig) {
+exports.generateDropletModeOptions = function (dropletConfig, options) {
   var modeOptions = {
     functions: {
     },
@@ -14279,7 +14280,10 @@ exports.generateDropletModeOptions = function (dropletConfig) {
       arithmetic: { color: COLOR_ORANGE },
       logic: { color: COLOR_ORANGE },
       conditionals: { color: COLOR_BLUE },
-      loops: { color: COLOR_BLUE },
+      loops: {
+        color: COLOR_BLUE,
+        beginner: options.beginnerMode || false
+      },
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
       comments: { color: COLOR_WHITE },

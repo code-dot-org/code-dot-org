@@ -427,6 +427,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Male
     female: Female
@@ -526,9 +527,13 @@
       title: Code ta' Flappy
       body: Tixtieq tibni loghba originali f'inqas minn 10 minuti? Prova il-lezzjoni
         ta' Flappy Code!
-    20hour:
-      title: Kors t'Indroduzzjoni
-      body: Ipprova il-kors t'20 siegha Introduzzjoni ghax-xjenza tal-kompjuter.
+    20-hour:
+      title: Accelerated Course
+      body: This 20-hour course covers the core computer science and programming concepts
+        in courses 2-4. The course is designed for use with ages 10-18. Check out
+        courses 2-4 for a more complete experience!
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Prova il-kors gdid Hour of Code fis-sezzjoni beta
       try_frozen: Artist ma' Anna u Elsa mil film Frozen

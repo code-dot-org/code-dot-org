@@ -14,7 +14,7 @@
   "catProcedures": "कार्य",
   "catText": "पाठ",
   "catVariables": "चर",
-  "clearPuzzle": "Clear Puzzle",
+  "clearPuzzle": "पुन: प्रारंभ करें",
   "clearPuzzleConfirm": "This will delete all blocks and reset the puzzle to its start state.",
   "clearPuzzleConfirmHeader": "Are you sure you want to clear the puzzle?",
   "codeMode": "Code",

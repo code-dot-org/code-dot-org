@@ -360,9 +360,10 @@ mr:
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Male
     female: Female
@@ -445,9 +446,10 @@ mr:
     flappy:
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen

@@ -241,7 +241,6 @@
           'Artist: For Loops': 'Menininkas: kartojimai'
           'Play Lab: For Loops': 'Žaidimų laboratorija: kartojimai'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
-          'Artist: Functions with Paraqmeters': 'Menininkas: komandos su parametrais'
           'Unplugged: Tangrams': 'Be kompiuterio: tanagramos'
           Artist: Menininkas
           Bee: Bitė
@@ -396,6 +395,7 @@
           Pixelation: Pikseliavimas
         20-hour:
           title: 20-ties valandų įvadiniai kursai
+          description_audience: Amžius 10+ (pabaigus 3 kursą)
           description: Šis 20-ties valandų informatikos kursas supažindina su programavimo
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
             esant bet kurioje amžiaus grupėje.
@@ -529,6 +529,7 @@
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -880,6 +881,7 @@
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -938,6 +940,8 @@
           Booleans: Loginės reikšmės
           'Eval: Conditionals': 'Eval: Conditionals'
           Next Steps: Kiti žingsniai
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
         cspfacilitator:
@@ -999,14 +1003,49 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Apibendrinimas
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: „Programavimo valanda“
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Kiti žingsniai
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Išmokite programuoti funkcijas panaudojant algebrą
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Informatikos pedagogika
+          Teacher Dashboard: Mokytojo prietaisų skydelis
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Eilutės ir paveikslėliai
+          Writing Contracts: Writing Contracts
+          Defining Variables: Kintamųjų apibrėžimas
+          Defining Functions: Komandų apibrėžimas
+          Rocket-Height: Rocket-Height
+          Booleans: Loginės reikšmės
+          'Eval: Conditionals': 'Eval: Conditionals'
+          Next Steps: Kiti žingsniai
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science

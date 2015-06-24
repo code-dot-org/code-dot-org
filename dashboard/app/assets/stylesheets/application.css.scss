@@ -24,6 +24,7 @@
  * Shared
  *= require user-menu
  *= require user-progress
+ *= require user-hero
  *= require course-blocks
  */
 
@@ -962,14 +963,21 @@ a.download-video {
     border-radius: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
-    color:white;
+    color: white;
+    overflow: hidden;
   }
 
   .welcomeleft {
-    text-align: right;
+    float: left;
+    text-align: center;
+    width: 190px;
+    img {
+    padding-left: 50px;
+    }
   }
 
   .welcomeright {
+    float: left;
     text-align: center;
   }
 

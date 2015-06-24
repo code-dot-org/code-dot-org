@@ -221,7 +221,6 @@ en:
           "Artist: For Loops": crwdns21802:0crwdne21802:0
           "Play Lab: For Loops": crwdns21803:0crwdne21803:0
           "Artist: Functions": crwdns21804:0crwdne21804:0
-          "Artist: Functions with Paraqmeters": crwdns21805:0crwdne21805:0
           "Unplugged: Tangrams": crwdns22240:0crwdne22240:0
           Artist: crwdns22241:0crwdne22241:0
           Bee: crwdns22242:0crwdne22242:0
@@ -365,6 +364,7 @@ en:
           Pixelation: crwdns34822:0crwdne34822:0
         20-hour:
           title: crwdns35335:0crwdne35335:0
+          description_audience: crwdns42114:0crwdne42114:0
           description: crwdns34824:0crwdne34824:0
           Introduction to Computer Science: crwdns34825:0crwdne34825:0
           The Maze: crwdns34826:0crwdne34826:0
@@ -494,6 +494,7 @@ en:
           Encoding B&W Images: crwdns36524:0crwdne36524:0
           Encoding Color Images: crwdns36525:0crwdne36525:0
           Lossy Compression and File Formats: crwdns41851:0crwdne41851:0
+          "Practice PT: Encode a Complex Thing": crwdns42115:0crwdne42115:0
         algebraPD:
           title: crwdns35393:0crwdne35393:0
           description: crwdns35394:0crwdne35394:0
@@ -812,6 +813,7 @@ en:
           Public Key Crypto: crwdns41472:0crwdne41472:0
           Security and Hacking in the Real World: crwdns41623:0crwdne41623:0
           Packets and Making a Reliable Internet: crwdns41852:0crwdne41852:0
+          Routers and Redundancy: crwdns42116:0crwdne42116:0
         algebraPD2a:
           title: crwdns38690:0crwdne38690:0
           description: crwdns38691:0crwdne38691:0
@@ -870,6 +872,7 @@ en:
           Booleans: crwdns38841:0crwdne38841:0
           "Eval: Conditionals": crwdns38842:0crwdne38842:0
           Next Steps: crwdns38843:0crwdne38843:0
+          Best Practices for Teaching Computer Science: crwdns42117:0crwdne42117:0
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": crwdns38844:0crwdne38844:0
         cspfacilitator:
@@ -929,14 +932,46 @@ en:
           Unit 1, Day 11-14: crwdns41864:0crwdne41864:0
           Unit 1, Day 15-16: crwdns41865:0crwdne41865:0
           Unit 1, Day 17-19: crwdns41866:0crwdne41866:0
+          Wrap-up: crwdns42118:0crwdne42118:0
         equityPD:
           title: crwdns41867:0crwdne41867:0
           description: crwdns41868:0crwdne41868:0
           Introduction to the Equity PD: crwdns41869:0crwdne41869:0
           Equity Vs. Equality: crwdns41870:0crwdne41870:0
           Code.org Equity PD: crwdns41871:0crwdne41871:0
+          Necessary Background: crwdns42119:0crwdne42119:0
         hoc2015:
           title: crwdns41872:0crwdne41872:0
           description_short: crwdns41873:0crwdne41873:0
           description: crwdns41874:0crwdne41874:0
           Hour of Code: crwdns41875:0crwdne41875:0
+        K5-OnlinePD:
+          title: crwdns42120:0crwdne42120:0
+          description: crwdns42121:0crwdne42121:0
+          Getting Started: crwdns42122:0crwdne42122:0
+          Computer Science Fundamentals: crwdns42123:0crwdne42123:0
+          "Mastering the Basics: Sequencing": crwdns42124:0crwdne42124:0
+          "Mastering the Basics: Loops": crwdns42125:0crwdne42125:0
+          "Mastering the Basics: Conditionals": crwdns42126:0crwdne42126:0
+          "Mastering the Basics: Functions": crwdns42127:0crwdne42127:0
+          "Mastering the Basics: Events": crwdns42128:0crwdne42128:0
+          Best Practices for Teaching Computer Science: crwdns42129:0crwdne42129:0
+          Planning: crwdns42130:0crwdne42130:0
+          Next Steps: crwdns42131:0crwdne42131:0
+          Looking Ahead: crwdns42132:0crwdne42132:0
+        algebraPD2:
+          title: crwdns42133:0crwdne42133:0
+          description: crwdns42134:0crwdne42134:0
+          Course Overview: crwdns42135:0crwdne42135:0
+          Computer Science Pedagogy: crwdns42136:0crwdne42136:0
+          Teacher Dashboard: crwdns42137:0crwdne42137:0
+          Evaluation Blocks: crwdns42138:0crwdne42138:0
+          Strings and Images: crwdns42139:0crwdne42139:0
+          Writing Contracts: crwdns42140:0crwdne42140:0
+          Defining Variables: crwdns42141:0crwdne42141:0
+          Defining Functions: crwdns42142:0crwdne42142:0
+          Rocket-Height: crwdns42143:0crwdne42143:0
+          Booleans: crwdns42144:0crwdne42144:0
+          "Eval: Conditionals": crwdns42145:0crwdne42145:0
+          Next Steps: crwdns42146:0crwdne42146:0
+          Best Practices for Teaching Computer Science: crwdns42147:0crwdne42147:0

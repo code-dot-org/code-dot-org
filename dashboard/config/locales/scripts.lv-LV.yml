@@ -252,7 +252,6 @@
           'Artist: For Loops': 'Mākslinieks: Cikls ar skaitītāju'
           'Play Lab: For Loops': 'Spēles laboratorija: Cikls ar skaitītāju'
           'Artist: Functions': 'Mākslinieks: Funkcijas'
-          'Artist: Functions with Paraqmeters': 'Mākslinieks: Funckijas ar parametriem'
           'Unplugged: Tangrams': 'Atvienots: Tangrams'
           Artist: Mākslinieks
           Bee: Bite
@@ -409,6 +408,7 @@
           Pixelation: Pixelation
         20-hour:
           title: K-8 Ievads Datorzinātņu kursos (15-25stundas)
+          description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
           description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
             pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs,
             bet tas sagādās prieku mācīties visos vecumos.
@@ -544,6 +544,7 @@
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -896,6 +897,7 @@
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -954,6 +956,8 @@
           Booleans: Booleans
           'Eval: Conditionals': 'Vērtēšana: nosacījumi'
           Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
         cspfacilitator:
@@ -1015,14 +1019,49 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Ietīt
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Programmēšanas stunda
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Writing Contracts: Writing Contracts
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          'Eval: Conditionals': 'Vērtēšana: nosacījumi'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science

@@ -771,29 +771,27 @@
         (nested loop) um das Muster fertig zu stellen.
       4-5 While Loops 1_instruction: Bewege mich zu dem Loch und fülle es mit zwei
         Schaufeln voll Erde, indem du den "füllen" Block benutzt.
-      4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
+      4-5 While Loops 2_instruction: Bewege mich zu dem Schmutzhaufen und entferne
+        ihn mit fünf Schöpfern mit der Schaufel. Benutz dazu den "entfernen"-Baustein.
+      4-5 While Loops 3_instruction: 'Bewege mich zum Haufen und entferne ihn vollständig,
+        dann beweg mich zum Loch und fülle es komplett auf. Tipp: Benutzz dazu so
+        wenig Bausteine wie möglich.'
+      4-5 While Loops 4_instruction: 'Wow, ich habe ein wirklich tiefes Loch gefunden!
+        Ich weiß nicht, wie viele Schöpfer Erde ich dazu brauchen werde. Kannst du
+        ein Programm schreiben, das es auffüllt, bis der Boden wieder eben ist? Tipp:
+        Versuche es diesmal mit der While-Schleife.'
       4-5 While Loops 5_instruction: Wow, jetzt sind da zwei tiefe Löcher! Kannst
         du ein Programm schreiben, welches beide voll füllt bis der Boden eben ist?
       4-5 While Loops 6_instruction: Wow, jetzt ist da ein großer Haufen Erde! Kannst
         du ein Programm schreiben, welches alles entfernt, damit der Boden eben ist?
       4-5 While Loops 7_instruction: Wow, da sind jetzt drei Haufen Erde! Kannst du
         ein Programm schreiben, welches jeden entfernt bis der Boden eben ist?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 While Loops 8_instruction: ' Hier ist ein wirklich tiefes Loch und ein wirklich
+        großer Haufen Erde. Wie viele Schöpfer Erde müssen bewegt werden, damit der
+        Grund wieder eben ist? Tipp: Verwende die While-Schleife für beides.'
+      4-5 While Loops Assessment 1_instruction: Hier sind viele Löcher und Erdhaufen.
+        Hilf mir, die Löcher zu füllen und die Haufen zu entfernen und den Grund wieder
+        zu ebnen.
       Artist - Nested Loops 1_instruction: 'Vervollständige den Code, damit diese
         Dreiecke gezeichnet werden. Das erste hast du erledigt. Hinweis: 3 Dreiecke
         in einer 360- Grad- Drehung.'
@@ -823,9 +821,8 @@
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
-      Artist - Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete
-        the design.
+      Artist - Nested Loops Assessment 1_instruction: Verwende eine verschachtelte
+        Schleife (nested loop) um das Design fertigzustellen.
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1243,66 +1240,53 @@
         times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: Kannst du mich zu dem Schwein bringen indem
         du 5 Baustein benutzt?
-      Course 4 2_instruction: |
-        The bee only wants nectar right now. Remember, not
-        all objects are flowers, so check to gather nectar only at flowers.
+      Course 4 2_instruction: Die Biene will jetzt nur Nektar. Denk daran, dass nicht
+        alle Objekte Blumen sind, also achte darauf, nur Nektar von Blumen zu sammeln.
       Course 4 Artist 1_instruction: 'Hilf mir, meine Box fertig zu zeichnen. (Jede
         Linie ist 300 Pixel lang) '
-      Course 4 Artist 10_instruction: "It's Free Play time! Have fun and draw anything\nyou
-        would like. \n"
-      Course 4 Artist 2_instruction: |
-        Can you loop this code to draw the greyed out
-        square?
+      Course 4 Artist 10_instruction: 'Es ist an der Zeit, frei zu spielen! Viel Spaß
+        und zeichne alles, was du möchtest. '
+      Course 4 Artist 2_instruction: Kannst du diesen Code in einer Schleife erstellen,
+        um das grau ausgeblendete Quadrat zu zeichnen?
       Course 4 Artist 3_instruction: Ok, versuche herauszufinden was passiert, wenn
         du diesen Code ausführst (oder klicke "Ausführen" um es auszuprobieren). Dann
         wiederhole es oft genug um die Zeichnung zu vervollständigen.
-      Course 4 Artist 4_instruction: |
-        How many degrees are in a circle?  Fill in
-        the repeat block with that number to create a circle of colors.
+      Course 4 Artist 4_instruction: Wie viele Grad hat ein Kreis? Trag in den Wiederholungsbaustein
+        die Zahl ein, um einen Farbenkreis zu erstellen.
       Course 4 Artist 5_instruction: Zeichne die andere Hälfte dieses Designs, sodass
         es symmetrisch ist. Die Dreiecke sind gleichseitig und 50 Pixel lang.
-      Course 4 Artist 6_instruction: |
-        Complete the code to draw these triangles.
-        Hint: 3 triangles in a 360 degree rotation.
-      Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10
-        triangles.  This is called a nested loop.  Hint: All 10 triangles complete\na
-        360 degree rotation.  \n"
-      Course 4 Artist 8_instruction: |
-        Draw this sun by looping this whole block of
-        code 12 times.
-      Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn in between each shape that's drawn. Here's a hint for how much you
-        have to turn: What is 360 divided by 10?
-      Course 4 Artist Binary 1_instruction: |
-        Here's a function that takes a binary
-        string of 1's and 0's and instructs the artist to turn on the go from left
-        to right, top to bottom, filling in the squares when it sees a 1 and ignoring
-        it when it sees a 0. Run this code to see how the artist uses binary to draw
-        this pattern.
-      Course 4 Artist Binary 2_instruction: |
-        Which of these binary strings could
-        you loop 8 times to draw this image?
-      Course 4 Artist Binary 3_instruction: |
-        Can you draw this pattern by looping
-        a three digit binary string?
-      Course 4 Artist Binary 4_instruction: |
-        Each binary string represents one row
-        of this picture. Can you rearrange them so it draws a smiley face instead
-        of a frowny face?
-      Course 4 Artist Binary 5_instruction: |
-        Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: |
-        What is the shortest binary string that
-        you can repeat to draw this image?
+      Course 4 Artist 6_instruction: 'Vervollständige den Code, um diese Dreiecke
+        zu zeichnen. Tipp: 3 Dreiecke in einer 360-Grad-Drehung.'
+      Course 4 Artist 7_instruction: 'Erstelle nun eine Schleife in einer weiteren
+        Schleife um 10 Dreiecke zu zeichnen. Dies nennt man eine verschachtelte Schleife
+        (engl. nested loop). Tipp: Alle 10 Dreiecke ergeben eine 360-Grad-Drehung.  '
+      Course 4 Artist 8_instruction: Zeichne diese Sonne, indem du diesen ganzen Code-Baustein
+        12 Mal durchlaufen lässt.
+      Course 4 Artist 9_instruction: 'Durchlaufe dieses Design 10 Mal und gehe dabei
+        sicher, dass nach jeder gezeichneten Figur gedreht wird. Ein kleiner Tipp,
+        damit du weißt, wie weit gedreht werden muss: Was ist 360 geteilt durch 10?'
+      Course 4 Artist Binary 1_instruction: Hier ist eine Funktion, die einen Binärstring
+        von Einsen und Nullen verwendet und den Künstler anweist, unterwegs die Quadrate
+        von rechts nach links und von oben nach unten zu füllen, wenn er eine Eins
+        sieht und sie zu ignorieren, wenn er eine Null sieht. Führ diesen Code aus,
+        um zu sehen, wie der Künstler die Binärmethode anwendet um dieses Muster auszumalen.
+      Course 4 Artist Binary 2_instruction: Welche dieser Binärfolgen könntest du
+        8 Mal durchlaufen lassen, um dieses Bild zu malen?
+      Course 4 Artist Binary 3_instruction: Kannst du dieses Muster zeichnen, indem
+        du eine dreistellige Binärzeichenfolfe durchlaufen lässt?
+      Course 4 Artist Binary 4_instruction: Jede dieser Binärzeichenfolgen steht für
+        eine Reihe dieses Bildes. Kannst du sie so neu anordnen, dass ein Smiley-Gesicht,
+        anstatt eines traurigen Gesichts, gezeichnet wird?
+      Course 4 Artist Binary 5_instruction: Welche sechsstellige Binärzeichenfolge
+        wird dieses Bild zeichnen, wenn sie 11 Mal wiederholt wird?
+      Course 4 Artist Binary 6_instruction: Was ist die kürzeste binäre Zeichenfolge,
+        die du wiederholen kannst, um dieses Bild zu zeichen?
       Course 4 Artist Binary 7_instruction: Stelle diese Zeichnung fertig.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a higher
-        resolution canvas to draw on - 16 bits by 16 bits!
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
+      Course 4 Artist Binary Free Play 2_instruction: 'Freies Spielen: Hier ist eine
+        Leinwand mit einer höheren Auflösung um darauf zu zeichnen - 16 bits mal 16
+        bits!'
+      Course 4 Artist Binary Free Play_instruction: 'Freies Spielen: Zeichne mit binären
+        Zeichenfolgen, was auch immer du möchtest!'
       Course 4 Artist For  Functions 10_instruction: |
         Let's Step it up a little,
         can you draw a Star shape using the "Draw a Square Line" function? Good
@@ -1311,12 +1295,11 @@
         Let's Step it up a little,
         can you draw a Star shape using the "Draw a Square Line" function? Good
         luck!
-      Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        in size. Hint: use a repeat block.
-      Course 4 Artist For Loops 10_instruction: |
-        Free Play Time! Have fun drawing
-        whatever you like with the blocks you have learned how to use
+      Course 4 Artist For Loops 1_instruction: 'Zeichne dieses Dreieck, das 50 Pixel
+        groß ist. Tipp: Benutze einen Wiederholen Baustein.'
+      Course 4 Artist For Loops 10_instruction: Zeit zum Freien Spielen! Zeichne,
+        was auch immer du möchtest mit den Bausteinen, die du soeben gelernt hast,
+        zu benutzen. Viel Spaß!
       Course 4 Artist For Loops 11_instruction: |
         Remember when we used a variable
         to control the number of sides in a shape? This pattern starts with a triangle
@@ -2920,13 +2903,15 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2L04 - NetSim Routers with Addresses_instruction: |
-        NetSim: Variant 3: Connects
-        groups of 2-6 students with a router, and explores issues in routing and DNS
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as

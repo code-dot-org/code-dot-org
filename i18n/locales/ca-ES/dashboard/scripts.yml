@@ -221,7 +221,6 @@ ca:
           "Artist: For Loops": 'Artista: Per bucles'
           "Play Lab: For Loops": 'Play Lab: Per bucles'
           "Artist: Functions": 'Artista: Funcions'
-          "Artist: Functions with Paraqmeters": 'Artista: Funcions amb paràmetres'
           "Unplugged: Tangrams": 'Sense connexió: Tangrams'
           Artist: Artista
           Bee: Abella
@@ -365,6 +364,7 @@ ca:
           Pixelation: Pixelation
         20-hour:
           title: Curs introductori de 20 hores
+          description_audience: Edat 10 + (després del curs 3)
           description: "Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat."
           Introduction to Computer Science: Introducció a la informàtica
           The Maze: El laberint
@@ -494,6 +494,7 @@ ca:
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -817,6 +818,7 @@ ca:
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -875,6 +877,7 @@ ca:
           Booleans: Veritat o fals
           "Eval: Conditionals": 'Eval: Condicionals'
           Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
@@ -934,14 +937,46 @@ ca:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Recapitulació
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Hora del codi 2015
+          description_short: Usa Play Lab per a crear una història o un joc.
+          description: Usa Play Lab per a crear una història o un joc.
           Hour of Code: Hora del codi
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Writing Contracts: Writing Contracts
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Rocket-Height: Rocket-Height
+          Booleans: Veritat o fals
+          "Eval: Conditionals": 'Eval: Condicionals'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science

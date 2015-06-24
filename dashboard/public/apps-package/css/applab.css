@@ -27,7 +27,7 @@
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px; }
-  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab canvas, #divApplab label {
+  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab label {
     box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
