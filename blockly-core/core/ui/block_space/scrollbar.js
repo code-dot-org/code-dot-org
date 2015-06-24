@@ -34,11 +34,18 @@ goog.require('goog.userAgent');
  * @param {!Blockly.BlockSpace} blockSpace BlockSpace to bind the scrollbars to.
  * @constructor
  */
-Blockly.ScrollbarPair = function(blockSpace) {
+Blockly.ScrollbarPair = function(blockSpace, addHorizontal, addVertical) {
   this.blockSpace_ = blockSpace;
   this.oldHostMetrics_ = null;
-  this.hScroll = new Blockly.Scrollbar(blockSpace, true, true);
-  this.vScroll = new Blockly.Scrollbar(blockSpace, false, true);
+
+  if (addHorizontal) {
+    this.hScroll = new Blockly.Scrollbar(blockSpace, true, true);
+  }
+
+  if (addVertical) {
+    this.vScroll = new Blockly.Scrollbar(blockSpace, false, true);
+  }
+
   this.corner_ = Blockly.createSvgElement('rect',
       {'height': Blockly.Scrollbar.scrollbarThickness,
       'width': Blockly.Scrollbar.scrollbarThickness,
@@ -57,9 +64,13 @@ Blockly.ScrollbarPair.prototype.dispose = function() {
   this.corner_ = null;
   this.blockSpace_ = null;
   this.oldHostMetrics_ = null;
-  this.hScroll.dispose();
+  if (this.hScroll) {
+    this.hScroll.dispose();
+  }
   this.hScroll = null;
-  this.vScroll.dispose();
+  if (this.vScroll) {
+    this.vScroll.dispose();
+  }
   this.vScroll = null;
 };
 
@@ -78,50 +89,52 @@ Blockly.ScrollbarPair.prototype.resize = function() {
   // Only change the scrollbars if there has been a change in metrics.
   var resizeH = false;
   var resizeV = false;
-  if (!this.oldHostMetrics_ ||
-      this.oldHostMetrics_.viewWidth != hostMetrics.viewWidth ||
-      this.oldHostMetrics_.viewHeight != hostMetrics.viewHeight ||
-      this.oldHostMetrics_.absoluteTop != hostMetrics.absoluteTop ||
-      this.oldHostMetrics_.absoluteLeft != hostMetrics.absoluteLeft) {
+
+  /**
+   * @type {function(this:Blockly.ScrollbarPair, string[])}
+   */
+  var anyPropertyChanged = this.metricsChangedOnAxis.bind(this, this.oldHostMetrics_, hostMetrics);
+
+  if (anyPropertyChanged(['viewWidth', 'viewHeight', 'absoluteTop', 'absoluteLeft'])) {
     // The window has been resized or repositioned.
     resizeH = true;
     resizeV = true;
   } else {
     // Has the content been resized or moved?
-    if (!this.oldHostMetrics_ ||
-        this.oldHostMetrics_.contentWidth != hostMetrics.contentWidth ||
-        this.oldHostMetrics_.viewLeft != hostMetrics.viewLeft ||
-        this.oldHostMetrics_.contentLeft != hostMetrics.contentLeft) {
+    if (anyPropertyChanged(['contentWidth', 'viewLeft', 'contentLeft'])) {
       resizeH = true;
     }
-    if (!this.oldHostMetrics_ ||
-        this.oldHostMetrics_.contentHeight != hostMetrics.contentHeight ||
-        this.oldHostMetrics_.viewTop != hostMetrics.viewTop ||
-        this.oldHostMetrics_.contentTop != hostMetrics.contentTop) {
+    if (anyPropertyChanged(['contentHeight', 'viewTop', 'contentTop'])) {
       resizeV = true;
     }
   }
-  if (resizeH) {
+  if (this.hScroll && resizeH) {
     this.hScroll.resize(hostMetrics);
   }
-  if (resizeV) {
+  if (this.vScroll && resizeV) {
     this.vScroll.resize(hostMetrics);
   }
 
   // Reposition the corner square.
-  if (!this.oldHostMetrics_ ||
-      this.oldHostMetrics_.viewWidth != hostMetrics.viewWidth ||
-      this.oldHostMetrics_.absoluteLeft != hostMetrics.absoluteLeft) {
+  if (this.vScroll && anyPropertyChanged(['viewWidth', 'absoluteLeft'])) {
     this.corner_.setAttribute('x', this.vScroll.xCoordinate);
   }
-  if (!this.oldHostMetrics_ ||
-      this.oldHostMetrics_.viewHeight != hostMetrics.viewHeight ||
-      this.oldHostMetrics_.absoluteTop != hostMetrics.absoluteTop) {
+  if (this.hScroll && anyPropertyChanged(['viewHeight', 'absoluteTop'])) {
     this.corner_.setAttribute('y', this.hScroll.yCoordinate);
   }
 
   // Cache the current metrics to potentially short-cut the next resize event.
   this.oldHostMetrics_ = hostMetrics;
+};
+
+Blockly.ScrollbarPair.prototype.metricsChangedOnAxis = function(oldMetrics, currentMetrics, propertiesToCheck) {
+  if (!oldMetrics) {
+    return true;
+  }
+
+  return propertiesToCheck.some(function (propName) {
+    return oldMetrics[propName] != currentMetrics[propName];
+  });
 };
 
 /**
@@ -145,20 +158,32 @@ Blockly.ScrollbarPair.prototype.set = function(x, y) {
   if (Blockly.Scrollbar === Blockly.ScrollbarNative) {
     // Native scrollbar mode.
     // Set both scrollbars and suppress their two separate onScroll events.
-    this.hScroll.set(x, false);
-    this.vScroll.set(y, false);
+    if (this.hScroll) {
+      this.hScroll.set(x, false);
+    }
+    if (this.vScroll) {
+      this.vScroll.set(y, false);
+    }
     // Redraw the surface once with the new settings for both scrollbars.
     var xyRatio = {};
-    xyRatio.x = (this.hScroll.outerDiv_.scrollLeft /
-                 this.hScroll.innerImg_.offsetWidth) || 0;
-    xyRatio.y = (this.vScroll.outerDiv_.scrollTop /
-                 this.vScroll.innerImg_.offsetHeight) || 0;
+    if (this.hScroll) {
+      xyRatio.x = (this.hScroll.outerDiv_.scrollLeft /
+                   this.hScroll.innerImg_.offsetWidth) || 0;
+    }
+    if (this.vScroll) {
+      xyRatio.y = (this.vScroll.outerDiv_.scrollTop /
+                   this.vScroll.innerImg_.offsetHeight) || 0;
+    }
     this.blockSpace_.setMetrics(xyRatio);
   } else {
     // SVG scrollbars.
     // Set both scrollbars and allow each to call a separate onScroll execution.
-    this.hScroll.set(x, true);
-    this.vScroll.set(y, true);
+    if (this.hScroll) {
+      this.hScroll.set(x, true);
+    }
+    if (this.vScroll) {
+      this.vScroll.set(y, true);
+    }
   }
 };
 

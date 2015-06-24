@@ -388,9 +388,9 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
       this.flyout_.show(Blockly.languageTree.childNodes);
     }
   }
-  if (Blockly.hasScrollbars) {
+  if (Blockly.hasVerticalScrollbars || Blockly.hasHorizontalScrollbars) {
     this.blockSpace.scrollbar = new Blockly.ScrollbarPair(
-      this.blockSpace);
+      this.blockSpace, Blockly.hasHorizontalScrollbars, Blockly.hasVerticalScrollbars);
     this.blockSpace.scrollbar.resize();
   }
 };
@@ -845,7 +845,7 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
  */
 Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
   if (!this.blockSpace.scrollbar) {
-    throw 'Attempt to set editor this scroll without scrollbars.';
+    throw "Attempt to set editor's scroll position without scrollbars.";
   }
   var metrics = this.getBlockSpaceMetrics_();
   if (goog.isNumber(xyRatio.x)) {
@@ -859,6 +859,7 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
   var translation = 'translate(' +
     (this.blockSpace.pageXOffset + metrics.absoluteLeft) + ',' +
     (this.blockSpace.pageYOffset + metrics.absoluteTop) + ')';
+  // todo: translate contract editor div :P
   this.blockSpace.getCanvas().setAttribute('transform', translation);
   this.blockSpace.getBubbleCanvas().setAttribute('transform', translation);
 };
