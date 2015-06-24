@@ -8,7 +8,7 @@ nav: about_nav
 
 **Code.org's work covered by CBS This Morning:**
 
-<embed src="//www.cbsnews.com/common/video/cbsnews_player.swf" scale="noscale" salign="lt" type="application/x-shockwave-flash" background="#000000" width="375" height="246" allowFullScreen="true" allowScriptAccess="always" FlashVars="pType=embed&si=254&pid=cGUsG_QQ1U_t&url=//www.cbsnews.com/videos/cracking-the-code-push-to-teach-computer-science-in-classrooms" />
+<iframe width="375" height="246" src="//www.youtube.com/embed/sUXfjzzHO5g?controls=2" frameborder="0" allowfullscreen></iframe>
 
 [/col-50]
 

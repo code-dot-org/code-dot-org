@@ -12,7 +12,7 @@ We’d like to host a variety of engaging options, but the primary goal is to op
 ## Index:
 - [How tutorials will be evaluated for inclusion](#inclusion)
 - [General guidelines for creating an Hour of Code activity](#guidelines)
-- [How to submit (Due 10/1/2014)](#submit)
+- [How to submit (Due 10/1/2015)](#submit)
 - [Suggestions for designing your activity](#design)
 - [Trademark Guidelines](#tm)
 - [Tracking Pixel](#pixel)
@@ -57,7 +57,7 @@ Ultimately, the goal of the Hour of Code campaign is to broaden participation in
 
 Note also, that the 2013 CSEdWeek was a fantastic success as measured by the responses from teachers and students - 20M participants from Dec 9 - 23, and 97% said they enjoyed it and want to repeat the campaign!! 
 
-As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2014 campaign.
+As a result, the existing listings are certainly “good enough,” and the driving reason to add tutorials to the Hour of Code listings isn’t to broaden the choices, but to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
 
 [**Back to the top**](#top)  
 
@@ -119,7 +119,7 @@ Visit the [Hour of Code Activity Submission page](https://docs.google.com/a/code
 		- Receive a certificate that they completed the Hour of Code
 		- See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
 		- For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to <http://code.org/api/hour/finish> as well. 
-- ***(Optional)*** We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 8, 12:01 am through Dec. 14, 11:59 pm)
+- ***(Optional)*** We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm)
 	- For online activities (especially smartphone/tablet apps):
 		- Number of users
 		- How many completed the task
