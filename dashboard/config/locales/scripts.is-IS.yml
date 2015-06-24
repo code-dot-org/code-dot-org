@@ -249,7 +249,6 @@
           'Artist: For Loops': 'Listamaður: Frá lykkjur'
           'Play Lab: For Loops': 'Leikjasmiðjan: Frá lykkjur'
           'Artist: Functions': 'Listamaður: Föll'
-          'Artist: Functions with Paraqmeters': 'Listamaður: Föll með stikum'
           'Unplugged: Tangrams': 'Verkefni án tölvu: Tangram'
           Artist: Listamaður
           Bee: Býfluga
@@ -404,6 +403,7 @@
           Pixelation: Dílamynstur
         20-hour:
           title: 20 klst. kynningarnámskeið
+          description_audience: Fyrir 10+ ára (eftir Námskeið 3)
           description: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
             og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi
             13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
@@ -434,7 +434,7 @@
           Applab: App-smiðjan
           The Artist: Listamaðurinn
           Play Lab: Leikjasmiðja
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: Leikjasmiðjan 2015
         events:
           title: Atvik
           description: ''
@@ -542,6 +542,7 @@
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna fallmiðaða forritun í gegnum algebru
@@ -893,6 +894,7 @@
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna fallmiðaða forritun í gegnum algebru
@@ -951,6 +953,8 @@
           Booleans: Boolean gildi
           'Eval: Conditionals': 'Greining: Skilyrði'
           Next Steps: Næstu skref
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Mat: Skilgreining falla'
         cspfacilitator:
@@ -1012,14 +1016,49 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Samantekt
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Klukkustund kóðunar 2015
+          description_short: Notaðu Leikjasmiðjuna til að búa til sögu eða leik.
+          description: Notaðu Leikjasmiðjuna til að búa til sögu eða leik.
           Hour of Code: Klukkustund kóðunar
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Næstu skref
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
+          Teacher Dashboard: Stjórnborð kennara
+          Evaluation Blocks: Matskubbar
+          Strings and Images: Strengir og myndir
+          Writing Contracts: Ritun samninga
+          Defining Variables: Skilgreining breytna
+          Defining Functions: Skilgreining falla
+          Rocket-Height: Hæð-flaugar
+          Booleans: Boolean gildi
+          'Eval: Conditionals': 'Greining: Skilyrði'
+          Next Steps: Næstu skref
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science

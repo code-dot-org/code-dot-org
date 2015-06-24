@@ -423,6 +423,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Lalaki
     female: Babae
@@ -525,9 +526,14 @@
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
         tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod ng computer
+        science at mga konsepto ng programming. Ang kursong ito ay ginawa para magamit
+        sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin sa lahat
+        ng edad. '
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Subukan ang aming bagong Oras ng Code tutorial nasa beta
       try_frozen: Artist with Anna and Elsa, from Frozen

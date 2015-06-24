@@ -1,4 +1,4 @@
-// There's also a set of code that lives in dashbaord/app/assets/javascript
+// There's also a set of code that lives in dashboard/app/assets/javascript
 // that should really be going through our browserify type pipeline
 
 // TODO (brent) - figure out story for sharing code between different packages. (linklocal)

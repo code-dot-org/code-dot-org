@@ -371,6 +371,7 @@
     heading_legacy: <h2>我們的一般課程</h2>適合<h1>所有年齡</h1>
     your_gallery: 相片圖庫
     no_primary_course: 試試在 Code Studio 參加一個課程
+    print_certificate: Print Certificate
   gender:
     male: 男性
     female: 女性
@@ -466,9 +467,11 @@
     flappy:
       title: Flappy遊戲設計
       body: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
-    20hour:
-      title: 課程簡介
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen

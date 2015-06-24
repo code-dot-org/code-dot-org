@@ -41,7 +41,7 @@ ja:
           "Bee: Loops": 'Bee: Loops'
           "Studio: Create a Story": プレイラボ：お話を作りましょう
           "Artist: Loops": 'Artist: Loops'
-          description_audience: Ages 4+ (pre-readers)
+          description_audience: Ages 4-6
           description_short: Course 1 is designed for early readers.
         course2:
           The Maze: 迷路
@@ -80,7 +80,7 @@ ja:
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": アーティスト：入れ子のループ
-          description_audience: 'Ages  6+ (reading required)'
+          description_audience: Ages 6-18
           description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: 迷路
@@ -131,7 +131,7 @@ ja:
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
           Songwriting: Songwriting
-          description_audience: Ages 8+ (after Course 2)
+          description_audience: Ages 8-18
           description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Middle School Math
@@ -221,7 +221,6 @@ ja:
           "Artist: For Loops": 'Artist: For Loops'
           "Play Lab: For Loops": 'Play Lab: For Loops'
           "Artist: Functions": アーティスト：関数
-          "Artist: Functions with Paraqmeters": 'Artist: Functions with Paraqmeters'
           "Unplugged: Tangrams": 'Unplugged: Tangrams'
           Artist: アーティスト
           Bee: Bee
@@ -235,7 +234,7 @@ ja:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10+ (after Course 3)
+          description_audience: Ages 10-18
         Course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -366,7 +365,8 @@ ja:
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: 20-Hour Intro Course
+          title: Accelerated Intro to CS Course
+          description_audience: Ages 10-18
           description: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
           Introduction to Computer Science: コンピューター・サイエンス入門
           The Maze: 迷路
@@ -496,6 +496,7 @@ ja:
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -819,6 +820,7 @@ ja:
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -877,6 +879,7 @@ ja:
           Booleans: Booleans
           "Eval: Conditionals": 'Eval: Conditionals'
           Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
@@ -936,14 +939,46 @@ ja:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: まとめ
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Hour of Code（コーディングを学ぶ時間）
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Writing Contracts: Writing Contracts
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          "Eval: Conditionals": 'Eval: Conditionals'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science

@@ -361,6 +361,7 @@ tr:
     heading_legacy: '<h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>'
     your_gallery: Galeri
     no_primary_course: "Code Studio'daki kurslardan birisini deneyin"
+    print_certificate: Print Certificate
   gender:
     male: Erkek
     female: Kadın
@@ -443,9 +444,10 @@ tr:
     flappy:
       title: Flappy Kod
       body: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!
-    20hour:
-      title: Giriş Kursu
-      body: 20 saatlik Bilişim Teknolojilerine Giriş kursumuzu deneyin.
+    20-hour:
+      title: Accelerated Course
+      body: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Yeni Kodlama Saati öğreticimizi beta halinde deneyin
       try_frozen: "Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı"

@@ -346,7 +346,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "showBlocksHeader":function(d){return "Покажи блоковете"},
 "showCodeHeader":function(d){return "Покажи кода"},
 "showGeneratedCode":function(d){return "Покажи кода"},
-"showTextHeader":function(d){return "Show Text"},
+"showTextHeader":function(d){return "Показване на текст"},
 "showToolbox":function(d){return "Показване на инструменти"},
 "signup":function(d){return "Регистрация във встъпителния курс"},
 "stringEquals":function(d){return "низ =?"},

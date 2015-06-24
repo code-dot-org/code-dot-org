@@ -249,7 +249,6 @@
           'Artist: For Loops': 'Umjetnik: Od-Do-Za Petlje'
           'Play Lab: For Loops': 'Laboratorij Igara: Od-Do-Za Petlje'
           'Artist: Functions': 'Umjetnik: Funkcije'
-          'Artist: Functions with Paraqmeters': 'Umjetnik: Funkcije s Parametrima'
           'Unplugged: Tangrams': 'Izvanmrežno: Tangrami'
           Artist: Umjetnik
           Bee: Pčela
@@ -404,6 +403,7 @@
           Pixelation: Pikselizacija
         20-hour:
           title: 20-satni Uvodni Kurs
+          description_audience: Dob 10+ (nakon Kursa 3)
           description: Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja
             i nformatike. Kurs je namijenjen za korištenje u nižim razredima osnovne
             škole, ali je zabavan za učenje bez obzira na dob polaznika.
@@ -542,6 +542,7 @@
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Predaji Funkcionalno Programiranje kroz Algebru
@@ -892,6 +893,7 @@
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Računarstvo u Algebri Profesionalni Razvoj
           description: Predaji Funkcionalno Programiranje kroz Algebru
@@ -950,6 +952,8 @@
           Booleans: Booleans
           'Eval: Conditionals': 'Eval: Conditionals'
           Next Steps: Slijedeći Koraci
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Definiranje Funkcija'
         cspfacilitator:
@@ -1011,14 +1015,49 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Zamotavanje
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Sat Kodiranja
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
+          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
+          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
+          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
+          'Mastering the Basics: Events': 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Planning: Planning
+          Next Steps: Slijedeći Koraci
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Predaji Funkcionalno Programiranje kroz Algebru
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Pedagogija Računarstva
+          Teacher Dashboard: Nadzorna Ploča za Nastavnike
+          Evaluation Blocks: Blokovi Izvršenja
+          Strings and Images: Nizovi Karaktera i Slike
+          Writing Contracts: Pisanje Ugovora
+          Defining Variables: Definiranje Varijabli
+          Defining Functions: Definiranje Funkcija
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          'Eval: Conditionals': 'Eval: Conditionals'
+          Next Steps: Slijedeći Koraci
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science

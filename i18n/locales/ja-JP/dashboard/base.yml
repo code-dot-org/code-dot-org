@@ -359,9 +359,10 @@ ja:
     heading_hoc2014: '<h2>Hour of Code</h2> <h1>全年齢対象</h1>'
     heading_elementary: '<h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>'
     heading_apps: '<h2>お楽しみ</h2><h1>みんなの</h1>'
-    heading_legacy: '<h2>Our general course for</h2><h1>All Ages</h1>'
+    heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: 男性
     female: 女性
@@ -395,8 +396,8 @@ ja:
     download: ビデオのダウンロード
   compatability:
     https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      header: HTTPS を有効にしてください
+      message: "Code.org では、セキュリティを強化するため、%{https_date} をもって HTTPS に切り替えます。それ以降は、HTTPS を有効にしない限り Code.org にアクセスできなくなります。HTTPS を有効にする方法については<a href='%{it_requirements_url}'>こちらをクリック</a>してください。"
       hide_this_warning: この警告を非表示
     working:
       header: お使いのブラウザーのサポートに取り組みちゅうです。
@@ -444,9 +445,10 @@ ja:
     flappy:
       title: Flappy Code
       body: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
-    20hour:
-      title: 入門コース
-      body: コンピュータサイエンスコースの入門編（20時間）に挑戦する
+    20-hour:
+      title: Accelerated Course
+      body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: 動作試験中の新しい Hour of Code チュートリアルをお試しください。
       try_frozen: Artist with Anna and Elsa, from Frozen

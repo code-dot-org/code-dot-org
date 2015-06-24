@@ -131,7 +131,7 @@ hr:
           "Bee: Debugging2": 'Pčela: Ispravljanje pogrešaka 2'
           "Artist: Patterns": 'Umjetnik: Uzorci'
           Songwriting: Pisanje pjesama
-          description_audience: Ages 8+ (after Course 2)
+          description_audience: Ages 8-18
           description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Middle School Math
@@ -221,7 +221,6 @@ hr:
           "Artist: For Loops": 'Umjetnik: Petlje brojača'
           "Play Lab: For Loops": 'Laboratorij igara: Petlje brojača'
           "Artist: Functions": 'Umjetnik: Funkcije'
-          "Artist: Functions with Paraqmeters": 'Umjetnik: Funkcije s parametrima'
           "Unplugged: Tangrams": 'Izvanmrežno: Tangrami'
           Artist: Umjetnik
           Bee: Pčela
@@ -364,7 +363,8 @@ hr:
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: 20-Hour Intro Course
+          title: Accelerated Intro to CS Course
+          description_audience: Dob 10+ (nakon Tečaja 3)
           description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
           Introduction to Computer Science: Uvod u računalstvo
           The Maze: Labirint
@@ -494,6 +494,7 @@ hr:
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -817,6 +818,7 @@ hr:
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
           Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -875,6 +877,7 @@ hr:
           Booleans: Booleans
           "Eval: Conditionals": 'Provjera: Uvjeti'
           Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         Calc Define Funcs 5 - multiply 1:
           "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
@@ -934,14 +937,46 @@ hr:
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Zamotavanje
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Hour of Code
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
+          Getting Started: Getting Started
+          Computer Science Fundamentals: Computer Science Fundamentals
+          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
+          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
+          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
+          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
+          "Mastering the Basics: Events": 'Mastering the Basics: Events'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Planning: Planning
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Evaluation Blocks
+          Strings and Images: Strings and Images
+          Writing Contracts: Writing Contracts
+          Defining Variables: Defining Variables
+          Defining Functions: Defining Functions
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          "Eval: Conditionals": 'Provjera: Uvjeti'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
