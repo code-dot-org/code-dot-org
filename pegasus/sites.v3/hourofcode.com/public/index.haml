@@ -91,9 +91,11 @@ social:
                   %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
                     =hoc_s(:get_started)
 
+
             #remainder{style: "text-align:center; margin-top: 15px;"}
-              %a{:href=>"http://#{codeorg_url()}/learn/beyond", :style=>'font-size: 16px; color: white'}
-                =hoc_s(:beyond_an_hour)
+              -# Hiding "beyond an hour of code" link for now
+                %a{:href=>"http://#{codeorg_url()}/learn/beyond", :style=>'font-size: 16px; color: white'}
+                  =hoc_s(:beyond_an_hour)
               =view :share_buttons, facebook:facebook, twitter:twitter
           %br/
           %br/
@@ -135,18 +137,19 @@ social:
     .col-xs-6.col-sm-4
       %img{src: "/images/fill-600x400/highlight-nba.jpg", style: "width: 100%"}
 
-    .col-xs-6.col-sm-4
+    .hidden-xs.col-sm-4
       %img{src: "/images/fill-600x400/highlight-celebrate.jpg", style: "width: 100%"}
 
   %br/
 
   .row
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%"}
-      %img{src: "/images/fill-600x400/highlight-pair.jpg", style: "width: 100%; padding-top:20px;"}
+      .hidden-xs
+        %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%; padding-bottom:20px"}
+      %img{src: "/images/fill-600x400/highlight-pair.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-8
-      %img{src: "/images/fill-600x400/highlight-selfie.jpg", style: "width: 100%"}
+      %img{src: "/images/fill-800x533/highlight-selfie.jpg", style: "width: 100%"}
 
   %br/
 
@@ -154,7 +157,7 @@ social:
     .col-xs-6.col-sm-4
       %img{src: "/images/fill-600x400/highlight-obama.jpg", style: "width: 100%"}
 
-    .col-xs-6.col-sm-4
+    .hidden-xs.col-sm-4
       %img{src: "/images/fill-600x400/highlight-girls.jpg", style: "width: 100%"}
 
     .col-xs-6.col-sm-4
