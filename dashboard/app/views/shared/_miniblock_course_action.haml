@@ -1,0 +1,15 @@
+- if current_user && showState
+  .clear
+  - script = Script.find_by_name(id)
+  - if current_user.completed_scripts.include?(script)
+    = link_to script_certificate_image_url(current_user, script), class: 'whitelink' do
+      .bottombar.smalltext.printcertificate
+        = t('home.print_certificate')
+  - elsif current_user.working_on_scripts.include?(script)
+    %a.whitelink{href: build_script_level_url(current_user.next_unpassed_progression_level(script))}
+      .bottombar.smalltext.continue
+        = t('continue')
+  - else
+    = link_to url, class: 'whitelink' do
+      .bottombar.smalltext.trynow
+        = t('home.trynow')
