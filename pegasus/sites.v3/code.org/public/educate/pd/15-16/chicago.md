@@ -178,15 +178,13 @@ Breakfast and lunch will be served.
 ### Location
 **Option 1:**
 <br />
-Microsoft Technology Center
+TechNexus
 <br />
-AON Center, Suite 200
+20N. Wacker 
 <br />
-Room: MPR 2
+Suite 1200
 <br />
-200 East Randolph Street
-<br />
-Chicago, IL 60601
+Chicago, IL 60606 
 <br />
 <br />
 **Option 2:**
