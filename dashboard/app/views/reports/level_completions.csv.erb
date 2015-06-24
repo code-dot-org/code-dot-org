@@ -1,0 +1,8 @@
+<%=
+CSV.generate do |csv|
+  csv << headers.map{|s|s.gsub("\n",' ')}
+  data.each do |data|
+    csv << data.values
+  end
+end
+%>

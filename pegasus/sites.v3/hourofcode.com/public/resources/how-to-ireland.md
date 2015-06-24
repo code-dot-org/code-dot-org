@@ -7,17 +7,15 @@ nav: resources_nav
     <h1 class="col-sm-6">How to teach one Hour of Code</h1>
 </div>
 
-<font size="4">On December 8th, as part of the global Hour of Code movement Microsoft is seeking to enable as many people as possible in Ireland to have the opportunity to learn how to code.
+<font size="4">
 
-On 19th November Microsoft will run a training session for people hosting events at its campus in Sandyford from 6pm - 8pm. 
+Details about the Hour of Code in Ireland coming soon! 
 
-This will run through the curriculum which can be delivered for Hour of Code on 8th December. If you would like to register to attend this event please email cillian@q4pr.ie.  Places are on a first come first served basis.
-</font>
-## Details of the curriculum can be found [here](https://www.touchdevelop.com/hourofcode2)
+## Details of the curriculum can be found [here](https://www.touchdevelop.com/hourofcode2).
 
 
 ## 1) Try the tutorials:
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **All Hour of Code tutorials:**
 
