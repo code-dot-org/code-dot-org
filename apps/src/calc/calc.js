@@ -675,7 +675,6 @@ Calc.generateResults_ = function () {
     return;
   }
 
-  debugger;
   if (studioApp.hasUnfilledFunctionalBlock()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;

@@ -81,6 +81,71 @@ module.exports = {
       '</xml>'
     },
     {
+      description: 'empty input inside a variable',
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, commonMsg.emptyBlockInVariable({name: 'age'}));
+        return true;
+      },
+      xml: '<xml>' +
+        '<block type="functional_definition" inline="false" editable="false">' +
+          '<mutation>' +
+            '<outputtype>Number</outputtype>' +
+            '<isfunctionalvariable>true</isfunctionalvariable>' +
+          '</mutation>' +
+          '<title name="NAME">age</title>' +
+          // missing input here
+        '</block>' +
+        '<block type="functional_compute" inline="false" deletable="false" movable="false">' +
+          '<functional_input name="ARG1">' +
+            '<block type="functional_call" movable="false" id="callout_here">' +
+              '<mutation name="age"></mutation>' +
+            '</block>' +
+          '</functional_input>' +
+        '</block>' +
+      '</xml>'
+    },
+    {
+      description: 'empty input inside a function',
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, commonMsg.emptyBlockInFunction({name: 'f'}));
+        return true;
+      },
+      // f(x) = __
+      // f(3)
+      xml: '<xml>' +
+        '  <block type="functional_compute" inline="false" deletable="false" movable="false">' +
+        '  <functional_input name="ARG1">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="f">' +
+        '        <arg name="x" type="Number"/>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">3</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        '<block type="functional_definition" inline="false" uservisible="false">' +
+        '  <mutation>' +
+        '    <arg name="x" type="Number"/>' +
+        '    <outputtype>Number</outputtype>' +
+        '  </mutation>' +
+        '  <title name="NAME">f</title>' +
+        // missing block here
+        '</block>' +
+        '</xml>',
+    },
+    {
       description: 'extra top block',
       expected: {
         result: false,
