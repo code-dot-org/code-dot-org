@@ -23,12 +23,12 @@ var CanvasProperties = React.createClass({
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
-          initialValue={parseInt(element.style.width, 10)}
+          initialValue={parseInt(element.getAttribute('width'), 10)}
           handleChange={this.props.handleChange.bind(this, 'width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
-          initialValue={parseInt(element.style.height, 10)}
+          initialValue={parseInt(element.getAttribute('height'), 10)}
           handleChange={this.props.handleChange.bind(this, 'height')} />
         <PropertyRow
           desc={'x position (px)'}
@@ -51,8 +51,8 @@ module.exports = {
   PropertyTable: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
-    element.style.height = '100px';
-    element.style.width = '100px';
+    element.setAttribute('width', '100px');
+    element.setAttribute('height', '100px');
 
     return element;
 
