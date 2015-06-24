@@ -77,7 +77,7 @@ social:
               -#%br/
               %div{style:"clear:both"}
             #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; width:100%"}
-              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_regular_video) 
+              %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_regular_video)
               %img{src: "/images/play-button.png", width: "60", onclick: "return startVideo();", style: "cursor: pointer"}
         .col-sm-6.col-xs-12.col-md-5
           #textbacking{style: "color:white; background-color:rgba(0, 178, 192, 0.5); margin-top:50px; padding: 20px; border-radius: 17px"}
@@ -101,7 +101,7 @@ social:
           %br/
 
       %div{style:"clear:both"}
-    
+
 
 %br/
 %br/
@@ -201,15 +201,15 @@ social:
       %br/
       =hoc_s(:stats_michael)
 
-  -##join
-  -#  %h1=hoc_s(:front_join_us_button)
-  -#  %div
-  -#    .row
-  -#      .col-md-6
-  -#        =view :signup_form
-  -#      .col-md-6
-  -#        =view :join_us_description
-  -#        =view :whats_next
+  #join
+    %h1=hoc_s(:front_join_us_button)
+    %div
+      .row
+        .col-md-6
+          =view :signup_form
+        .col-md-6
+          =view :join_us_description
+          =view :whats_next
 
   -# FAQ
 
