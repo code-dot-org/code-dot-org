@@ -27,5 +27,5 @@ Through completing this online course, participants will:
 <br/>
 No previous experience with coding or computer science education is assumed. This is a beginner's course.
 
-
+[<button class="teacher-button">Try now</button>](https://studio.code.org/s/K5-OnlinePD)
 

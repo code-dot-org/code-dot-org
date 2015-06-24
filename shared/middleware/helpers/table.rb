@@ -237,6 +237,8 @@ class DynamoTable
         table_name:CDO.dynamo_tables_table,
         item:{
           hash:@hash,
+          channel_id:@channel_id,
+          table_name:@table_name,
           row_id:id,
           updated_at:DateTime.now.to_s,
           updated_ip:ip_address,

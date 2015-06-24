@@ -43,6 +43,7 @@ assessment 'U1L7 Free Response Reflection'
 
 stage 'Sending Numbers'
 level 'U1L8 Student Lesson Introduction'
+video_key_for_next_level 'csp_internetsimulator_2'
 level 'U1L8 NetSim numbers with decimal'
 assessment 'U1L8 Free Response Reflection'
 assessment 'U1L8 Free Response2'
@@ -87,7 +88,6 @@ level 'Pixelation - Lesson 14 - Fix bit offset'
 level 'Pixelation - Lesson 14 - Make your own B and W Image'
 assessment 'U1L14 Assessment 1'
 assessment 'U1L14 - Assessment 2'
-
 
 stage 'Encoding Color Images'
 level 'U1L15 Student Lesson Summary'
