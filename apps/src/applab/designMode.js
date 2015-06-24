@@ -1,4 +1,4 @@
-/* global $, Applab */
+/* global $, Applab, dashboard */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
@@ -116,7 +116,8 @@ designMode.maybeAddAssetPathPrefix = function (filename) {
     return filename;
   }
 
-  var channelId = dashboard && dashboard.project.current && dashboard.project.current.id;
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
   if (!channelId) {
     return filename;
   }
