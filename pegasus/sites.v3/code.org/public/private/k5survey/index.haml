@@ -1,4 +1,5 @@
 :ruby
+  dont_cache
   facilitator_id = params['user_id']
   authentication_required!
   forbidden! unless (have_permission?('create_professional_development_workshop') && (dashboard_user[:id] == facilitator_id.to_i)) || !facilitator_id || dashboard_user[:admin]
