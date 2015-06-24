@@ -105,6 +105,26 @@ designMode.resetElementTray = function (allowEditing) {
 };
 
 /**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+designMode.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.current && dashboard.project.current.id;
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
+};
+
+/**
  * Handle a change from our properties table. After handling properties
  * generically, give elementLibrary a chance to do any element specific changes.
  */
@@ -178,19 +198,23 @@ designMode.onPropertyChange = function(element, name, value) {
           designMode.editElementProperties(element);
         }
       };
-      backgroundImage.src = value;
+      backgroundImage.src = designMode.maybeAddAssetPathPrefix(value);
+      element.dataset.canonicalImageUrl = value;
+
       break;
 
     case 'screen-image':
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundImage = 'url(' + designMode.maybeAddAssetPathPrefix(value) + ')';
+      element.dataset.canonicalImageUrl = value;
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
-      element.src = value;
+      element.src = designMode.maybeAddAssetPathPrefix(value);
+      element.dataset.canonicalImageUrl = value;
       element.onload = function () {
         // naturalWidth/Height aren't populated until image has loaded.
         element.style.width = element.naturalWidth + 'px';
