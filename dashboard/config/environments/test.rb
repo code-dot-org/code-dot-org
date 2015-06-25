@@ -39,8 +39,11 @@ Dashboard::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  # Whether or not to display pretty blockly.
-  config.pretty_apps = false
+  # Whether or not to display pretty apps (formerly called blockly).
+  config.pretty_apps = true
+
+  # Whether or not to display pretty shared js assets
+  config.pretty_sharedjs = true
 
   # disable this for test by default, it won't make much sense if we keep wiping the db
   CDO.disable_s3_image_uploads = true
