@@ -1893,6 +1893,8 @@ consoleApi.log = function() {
   var firstArg = nativeArgs[0];
   if (typeof firstArg === 'string' || firstArg instanceof String) {
     output = vsprintf(firstArg, nativeArgs.slice(1));
+  } else if (nativeArgs.length === 1) {
+    output = firstArg;
   } else {
     for (i = 0; i < nativeArgs.length; i++) {
       output += nativeArgs[i].toString();
@@ -4837,7 +4839,7 @@ function outputApplabConsole(output) {
     if (debugOutput.textContent.length > 0) {
       debugOutput.textContent += '\n' + output;
     } else {
-      debugOutput.textContent = output;
+      debugOutput.textContent = String(output);
     }
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
