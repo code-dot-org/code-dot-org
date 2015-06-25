@@ -14,19 +14,7 @@ Code.org is offering 1-day workshops to prepare educators and content-area teach
 
 These workshops will be facilitated by experienced computer science educators in over 60 cities across the United States.
 
-[<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a workshop (for K-5 teachers)</button>](/professional-development-workshops)
-
----
-## Online, Self-Paced Courses for Teachers
-Want to teach computer science but aren’t sure where to start? With our free, self-paced online courses, we’ve made it easy for anyone to get started teaching computer science.  Whether you teach in a public school or a private school, in a formal classroom or an informal after-school or summer school setting, this course will help you:
-
-- Learn the basics of computer science
-- Review best practices for teaching these basics to your students
-- Access free curriculum and resources for teachers
-- Plan for how you might get started teaching computer science
-- Connect with a community of fellow educators who are making positive change in their classrooms through coding
-
-[<button>Learn more</button>](/educate/professional-development-online)
+[<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a local workshop (for K-5 teachers)</button>](/professional-development-workshops) &nbsp;&nbsp;[<button>Online workshop</button>](/professional-development-online)
 
 ---
 ## Professional development for middle school math or science teachers
