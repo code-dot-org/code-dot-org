@@ -1642,8 +1642,7 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
   }
 
   var procedureInfo = topParent.getProcedureInfo();
-  var isVariable = procedureInfo.parameterNames.length === 0;
-  if (isVariable) {
+  if (topParent.isVariable()) {
     return msg.emptyBlockInVariable({name: procedureInfo.name});
   } else {
     return msg.emptyBlockInFunction({name: procedureInfo.name});
