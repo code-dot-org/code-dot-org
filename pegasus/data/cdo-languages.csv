@@ -2,6 +2,7 @@ code_s!,four_letter_code_s,name_s,english_name_s
 ar,ar-SA,العربية,Arabic
 az,az-AZ,Azərbaycan dili,Azerbaijani
 bg,bg-BG,български,Bulgarian
+bs,bs-BA,Босански,Bosnian
 ca,ca-ES,Català,Catalan
 cs,cs-CZ,Čeština,Czech
 da,da-DK,Dansk,Danish
@@ -31,9 +32,11 @@ pt-pt,pt-PT,Português (Portugal),Portuguese (Portugal)
 ro,ro-RO,Română,Romanian
 ru,ru-RU,Pусский,Russian
 sl,sl-SI,Slovenščina,Slovenian
+sq,sq-AL,Shqip,Albanian
 sr,sr-SP,Cрпски,Serbian
 sv,sv-SE,Svenska,Swedish
 tr,tr-TR,Türkçe,Turkish
 uk,uk-UA,Українська,Ukrainian
+vi,vi-VN,Tiếng Việt,Vietnamese
 zh-cn,zh-CN,简体字,Chinese (Simplified)
 zh-tw,zh-TW,繁體字,Chinese (Traditional)
