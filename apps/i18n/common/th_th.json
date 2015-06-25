@@ -210,5 +210,8 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: "
+  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
 }

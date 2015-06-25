@@ -75,5 +75,9 @@ Code.org’s library of videos may be redistributed freely on the express condit
 
 The celebrities and video "cast" members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
 
+<center>
+
 ![image](/images/fit-200/cc-logo.png)
+
+</center>
 

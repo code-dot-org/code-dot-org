@@ -210,5 +210,8 @@
   "watchVideo": "觀看影片",
   "when": "當",
   "whenRun": "當按下\"執行\"時",
-  "workspaceHeaderShort": "工作區:"
+  "workspaceHeaderShort": "工作區:",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
 }
