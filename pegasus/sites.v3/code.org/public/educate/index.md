@@ -26,7 +26,7 @@ Whether you're a school teacher, an administrator, an after-school teacher, or a
 
 To introduce your students to our popular introductory courses, attend one of our high quality local workshops, free of charge.
 
-[<button class="teacher-button">Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button class="teacher-button">Find a local workshop</button>](/professional-development-workshops) &nbsp;&nbsp;[<button class="teacher-button">Online workshop</button>](/professional-development-online)
+[<button class="teacher-button">Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button class="teacher-button">Find a local workshop</button>](/professional-development-workshops) &nbsp;&nbsp;[<button class="teacher-button">Online workshop</button>](/educate/professional-development-online)
 
 ### Middle and high school teachers
 

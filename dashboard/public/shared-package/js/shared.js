@@ -199,7 +199,7 @@ var events = {
  * @property {boolean} isOwner Populated by our update/create callback.
  * @property {string} updatedAt String representation of a Date. Populated by
  *   out update/create callback
- * @property {string} projectUrl Path where this particular app type is hosted
+ * @property {string} level Path where this particular app type is hosted
  */
 var current;
 var isEditing = false;
@@ -333,7 +333,7 @@ module.exports = {
     var channelId = current.id;
     current.levelSource = source;
     current.levelHtml = window.Applab && Applab.getHtml();
-    current.projectUrl = this.appToProjectUrl();
+    current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
       channels.update(channelId, current, function (err, data) {
@@ -355,7 +355,8 @@ module.exports = {
 
     current = data;
     if (isNewChannel) {
-      location.href = current.projectUrl + '#' + current.id + '/edit';
+      var projectUrl = current.projectUrl || current.level;
+      location.href = projectUrl + '#' + current.id + '/edit';
     }
     this.updateTimestamp();
   },

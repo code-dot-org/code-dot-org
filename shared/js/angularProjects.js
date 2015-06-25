@@ -30,8 +30,9 @@ services.factory('projectsService', ['$resource',
     });
 
     Project.prototype.url = function() {
-      if (this.projectUrl && this.id) {
-        return this.projectUrl + '#' + this.id;
+      var projectUrl = this.projectUrl || this.level;
+      if (projectUrl && this.id) {
+        return projectUrl + '#' + this.id;
       } else {
         return null;
       }
