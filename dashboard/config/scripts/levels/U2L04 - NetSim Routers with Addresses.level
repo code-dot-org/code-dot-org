@@ -51,7 +51,7 @@
     "show_log_browser_button": "true",
     "broadcast_mode": "false",
     "connected_routers": "true",
-    "minimum_extra_hops": "0",
+    "minimum_extra_hops": "1",
     "maximum_extra_hops": "3",
     "address_format": "4.4",
     "packet_count_bit_width": "4",
