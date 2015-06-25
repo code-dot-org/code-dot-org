@@ -1619,12 +1619,18 @@ Studio.runButtonClick = function() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
+  var tryAgainText;
+  // For free play, show keep playing, unless it's a big game level
+  if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
+    tryAgainText = commonMsg.keepPlaying();
+  }
+
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
-      tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+      tryAgainText: tryAgainText,
       continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
