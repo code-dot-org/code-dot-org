@@ -229,7 +229,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
 
     // Add a handler that allows the workspace to bump undeletable blocks
     // back into its working area.
-    this.addChangeListener(this.bumpBlocksIntoView_);
+    this.addChangeListener(this.bumpBlocksIntoBlockSpace_);
   }
 
   /**
@@ -299,7 +299,7 @@ Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
  * 2. delete blocks on top of flyout
  * @private
  */
-Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
+Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
   // Immediately return if dragging, to avoid expensive calculations
   if (Blockly.Block.isDragging()) {
     return;
@@ -312,14 +312,14 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
   }
 
   // Calculate bounds of view, including bump padding
-  var viewInnerTop = metrics.viewTop + Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
-  var viewInnerLeft = metrics.viewLeft + Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
-  var viewInnerBottom = metrics.viewTop + metrics.viewHeight
+  var blockSpaceInnerTop = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
+  var blockSpaceInnerLeft = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
+  var blockSpaceInnerBottom = metrics.maxViewableY
     - Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM;
-  var viewInnerRight = metrics.viewLeft + metrics.viewWidth
+  var blockSpaceInnerRight = metrics.maxViewableX
     - Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT;
-  var viewInnerWidth = viewInnerRight - viewInnerLeft;
-  var viewInnerHeight = viewInnerBottom - viewInnerTop;
+  var blockSpaceInnerWidth = blockSpaceInnerRight - blockSpaceInnerLeft;
+  var blockSpaceInnerHeight = blockSpaceInnerBottom - blockSpaceInnerTop;
 
   // Check every block, and bump if needed.
   this.blockSpace.getTopBlocks(false).forEach(function (block) {
@@ -328,16 +328,16 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
     }
     // Skip block if it doesn't fit in the view anyway.
     var blockHW = block.getHeightWidth();
-    if (blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
+    if (blockHW.width > blockSpaceInnerWidth || blockHW.height > blockSpaceInnerHeight) {
       return;
     }
 
     // If these values are positive, the block needs to be bumped
     var blockXY = block.getRelativeToSurfaceXY();
-    var howFarOutsideLeft = Math.max(0, viewInnerLeft - blockXY.x);
-    var howFarOutsideRight = Math.max(0, blockXY.x - viewInnerRight);
-    var howFarAboveTop = Math.max(0, viewInnerTop - blockXY.y);
-    var howFarBelowBottom = Math.max(0, blockXY.y - viewInnerBottom);
+    var howFarOutsideLeft = Math.max(0, blockSpaceInnerLeft - blockXY.x);
+    var howFarOutsideRight = Math.max(0, blockXY.x - blockSpaceInnerRight);
+    var howFarAboveTop = Math.max(0, blockSpaceInnerTop - blockXY.y);
+    var howFarBelowBottom = Math.max(0, blockXY.y - blockSpaceInnerBottom);
 
     // Calculate needed bump
     var moveX = howFarOutsideLeft ? howFarOutsideLeft : -howFarOutsideRight;
@@ -812,6 +812,16 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   var viewWidth = svgSize.width;
   var viewHeight = svgSize.height;
   var viewTop = -this.blockSpace.yOffsetFromView;
+
+  var scrollbarPair = this.blockSpace.scrollbarPair;
+  var canScrollHorizontally = scrollbarPair && scrollbarPair.canScrollHorizontally();
+  var canScrollVertically = scrollbarPair && scrollbarPair.canScrollVertically();
+
+  var maxViewableX = canScrollHorizontally ?
+      Math.max(blockBox.x + blockBox.width, viewWidth) : viewWidth;
+  var maxViewableY = canScrollVertically ?
+      Math.max(blockBox.y + blockBox.height, viewHeight) : viewHeight;
+
   return {
     viewHeight: viewHeight,
     viewWidth: viewWidth,
@@ -821,8 +831,8 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
     contentWidth: blockBox.width,
     contentTop: blockBox.y,
     contentLeft: blockBox.x,
-    maxViewableX: Math.max(blockBox.x + blockBox.width, viewWidth),
-    maxViewableY: Math.max(blockBox.y + blockBox.height, viewHeight),
+    maxViewableX: maxViewableX,
+    maxViewableY: maxViewableY,
     absoluteTop: 0,
     absoluteLeft: absoluteLeft
   };
