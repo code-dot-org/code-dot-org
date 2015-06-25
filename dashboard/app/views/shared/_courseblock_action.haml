@@ -5,7 +5,7 @@
   - user_script = current_user.user_scripts.where(script_id: script.id).first
   - next_unpassed_progression_level = current_user.next_unpassed_progression_level(script)
 
-  - if user_script.try(:completed_at)
+  - if user_script.try(:completed_at) || (user_script && next_unpassed_progression_level.nil?)
     = link_to script_certificate_image_url(current_user, script), class: 'whitelink' do
       .bottombar.smalltext.printcertificate
         = t('home.print_certificate')
