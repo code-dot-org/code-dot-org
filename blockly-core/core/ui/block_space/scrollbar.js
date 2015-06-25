@@ -77,6 +77,16 @@ Blockly.ScrollbarPair.prototype.dispose = function() {
   this.vScroll = null;
 };
 
+/** @returns {boolean} */
+Blockly.ScrollbarPair.prototype.canScrollHorizontally = function() {
+  return !!(this.hScroll);
+};
+
+/** @returns {boolean} */
+Blockly.ScrollbarPair.prototype.canScrollVertically = function() {
+  return !!(this.vScroll);
+};
+
 /**
  * Recalculate both of the scrollbars' locations and lengths.
  * Also reposition the corner rectangle.
