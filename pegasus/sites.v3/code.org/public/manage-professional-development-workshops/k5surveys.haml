@@ -1,7 +1,8 @@
 :ruby
+  dont_cache
   facilitator_id = params['user_id']
   authentication_required!
-  forbidden! unless (have_permission?('create_professional_development_workshop') && (dashboard_user[:id] == facilitator_id.to_i)) || dashboard_user[:admin]
+  forbidden! unless (have_permission?('create_professional_development_workshop') && (dashboard_user[:id] == facilitator_id.to_i)) || !facilitator_id || dashboard_user[:admin]
 
   all_facilitators = DB.fetch('SELECT user_id, name FROM forms WHERE kind="ProfessionalDevelopmentWorkshop" GROUP BY user_id ORDER BY name, created_at;')
   all_surveys = DB.fetch('SELECT * FROM forms WHERE kind="K5ProfessionalDevelopmentSurvey"')
@@ -103,7 +104,7 @@
     %option{value:"/private/k5survey"}
       Select a Facilitator
     - all_facilitators.each do |facilitator|
-      %option{value:'/private/k5survey?user_id=' + facilitator[:user_id].to_s}
+      %option{value:'/manage-professional-development-workshops/k5surveys?user_id=' + facilitator[:user_id].to_s}
         #{facilitator[:name]} - #{facilitator[:user_id].to_s}
 
 - if workshops.count > 0

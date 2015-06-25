@@ -1893,6 +1893,8 @@ consoleApi.log = function() {
   var firstArg = nativeArgs[0];
   if (typeof firstArg === 'string' || firstArg instanceof String) {
     output = vsprintf(firstArg, nativeArgs.slice(1));
+  } else if (nativeArgs.length === 1) {
+    output = firstArg;
   } else {
     for (i = 0; i < nativeArgs.length; i++) {
       output += nativeArgs[i].toString();
@@ -2217,7 +2219,7 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
 
 
 },{}],51:[function(require,module,exports){
-/* global $, Applab */
+/* global $, Applab, dashboard */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
@@ -2324,6 +2326,27 @@ designMode.resetElementTray = function (allowEditing) {
 };
 
 /**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+designMode.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
+};
+
+/**
  * Handle a change from our properties table. After handling properties
  * generically, give elementLibrary a chance to do any element specific changes.
  */
@@ -2397,19 +2420,23 @@ designMode.onPropertyChange = function(element, name, value) {
           designMode.editElementProperties(element);
         }
       };
-      backgroundImage.src = value;
+      backgroundImage.src = designMode.maybeAddAssetPathPrefix(value);
+      element.dataset.canonicalImageUrl = value;
+
       break;
 
     case 'screen-image':
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundImage = 'url(' + designMode.maybeAddAssetPathPrefix(value) + ')';
+      element.dataset.canonicalImageUrl = value;
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
-      element.src = value;
+      element.src = designMode.maybeAddAssetPathPrefix(value);
+      element.dataset.canonicalImageUrl = value;
       element.onload = function () {
         // naturalWidth/Height aren't populated until image has loaded.
         element.style.width = element.naturalWidth + 'px';
@@ -4812,7 +4839,7 @@ function outputApplabConsole(output) {
     if (debugOutput.textContent.length > 0) {
       debugOutput.textContent += '\n' + output;
     } else {
-      debugOutput.textContent = output;
+      debugOutput.textContent = String(output);
     }
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
@@ -7157,7 +7184,7 @@ var ScreenProperties = React.createClass({displayName: "ScreenProperties",
           handleChange: this.props.handleChange.bind(this, 'backgroundColor')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'image', 
-          initialValue: elementUtils.extractImageUrl(element.style.backgroundImage), 
+          initialValue: element.dataset.canonicalImageUrl || '', 
           handleChange: this.props.handleChange.bind(this, 'screen-image')})
       ));
   }
@@ -7482,7 +7509,7 @@ var ImageProperties = React.createClass({displayName: "ImageProperties",
           handleChange: this.props.handleChange.bind(this, 'top')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'picture', 
-          initialValue: element.getAttribute('src'), 
+          initialValue: element.dataset.canonicalImageUrl || '', 
           handleChange: this.props.handleChange.bind(this, 'picture')}), 
         React.createElement(BooleanPropertyRow, {
           desc: 'hidden', 
@@ -7899,7 +7926,7 @@ var ButtonProperties = React.createClass({displayName: "ButtonProperties",
           handleChange: this.props.handleChange.bind(this, 'fontSize')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'image', 
-          initialValue: elementUtils.extractImageUrl(element.style.backgroundImage), 
+          initialValue: element.dataset.canonicalImageUrl || '', 
           handleChange: this.props.handleChange.bind(this, 'image')}), 
         React.createElement(BooleanPropertyRow, {
           desc: 'hidden', 
@@ -8382,7 +8409,7 @@ module.exports = React.createClass({displayName: "exports",
     } else {
       var rows = this.state.assets.map(function (asset) {
         var choose = this.props.assetChosen && this.props.assetChosen.bind(this,
-            AssetsApi.basePath(asset.filename));
+            asset.filename);
 
         return React.createElement(AssetRow, {
             key: asset.filename, 

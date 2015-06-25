@@ -365,4 +365,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Peržiūrėk šį vaizdo įrašą"},
 "when":function(d){return "kada"},
 "whenRun":function(d){return "paleidus"},
-"workspaceHeaderShort":function(d){return "Darbo laukas: "}};
+"workspaceHeaderShort":function(d){return "Darbo laukas: "},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};

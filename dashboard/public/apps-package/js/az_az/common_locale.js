@@ -365,4 +365,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Videoya baxın"},
 "when":function(d){return "nə zaman"},
 "whenRun":function(d){return "icra etdikdə"},
-"workspaceHeaderShort":function(d){return "iş sahəsi: "}};
+"workspaceHeaderShort":function(d){return "iş sahəsi: "},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
