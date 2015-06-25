@@ -454,10 +454,7 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
 
   // Subtract any pixels present above the svg element from the available height
   var containerDiv = svg.parentNode;
-  var containerStyle = window.getComputedStyle(containerDiv);
-  var containerTopBorder = containerStyle ? (parseInt(containerStyle.borderTopWidth, 10) || 0) : 0;
-  var headerHeight = goog.style.getPageOffsetTop(svg)
-    - (goog.style.getPageOffsetTop(containerDiv) + containerTopBorder);
+  var headerHeight = this.getWorkspaceTopOffset();
 
   var svgWidth = containerDiv.clientWidth - svgBorderWidth;
   var svgHeight = containerDiv.clientHeight - headerHeight;
@@ -477,6 +474,15 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   } else {
     this.setBlockSpaceMetricsNoScroll_();
   }
+};
+
+Blockly.BlockSpaceEditor.prototype.getWorkspaceTopOffset = function() {
+  var svg = this.svg_;
+  var containerDiv = svg.parentNode;
+  var containerStyle = window.getComputedStyle(containerDiv);
+  var containerTopBorder = containerStyle ? (parseInt(containerStyle.borderTopWidth, 10) || 0) : 0;
+  return goog.style.getPageOffsetTop(svg) -
+    (goog.style.getPageOffsetTop(containerDiv) + containerTopBorder);
 };
 
 /**

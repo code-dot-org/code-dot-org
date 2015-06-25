@@ -93,15 +93,29 @@ body {
   background-color: #fff;
   font-family: sans-serif;
   overflow: hidden;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 h1 {
   font-weight: normal;
   font-size: 140%;
 }
 #blocklyDiv {
-  float: right;
+  position: absolute;
+  left: calc(30% + 4px);
   height: 95%;
-  width: 70%;
+  width: calc(70% - 8px);
+}
+#controls-section {
+  position: absolute;
+  width: calc(30% - 4px);
+  left: 0;
+  top: 0;
+}
+#controls {
+  margin: 5px;
 }
 </style>
 </head>
@@ -279,48 +293,49 @@ h1 {
     <category name="CSinA Vars" custom="FUNCTIONAL_VARIABLE" />
   </xml>
 
-  <h1>Blockly Playground</h1>
+  <div id="controls-section">
+    <div id="controls">
+      <h1>Blockly Playground</h1>
 
-  <p><a href="javascript:void([document.getElementById('blocklyDiv').style.display = 'block', Blockly.mainBlockSpace.render()])">Show</a>
-   - <a href="javascript:void(document.getElementById('blocklyDiv').style.display = 'none')">Hide</a></p>
+      <p><a href="javascript:void([document.getElementById('blocklyDiv').style.display = 'block', Blockly.mainBlockSpace.render()])">Show</a>
+       - <a href="javascript:void(document.getElementById('blocklyDiv').style.display = 'none')">Hide</a></p>
 
-  <script type="text/javascript">
-    if (rtl) {
-      document.write('[ &larr; RTL. Switch to <A HREF="?ltr">LTR</A>. ]');
-    } else {
-      document.write('[ &rarr; LTR. Switch to <A HREF="?rtl">RTL</A>. ]');
-    }
-  </script>
+      <script type="text/javascript">
+        if (rtl) {
+          document.write('[ &larr; RTL. Switch to <A HREF="?ltr">LTR</A>. ]');
+        } else {
+          document.write('[ &rarr; LTR. Switch to <A HREF="?rtl">RTL</A>. ]');
+        }
+      </script>
 
-  <p>
-    <input type="button" value="Create Contract Editor" onclick="newContractEditor()">
-    &nbsp;
-    <input type="button" value="Export to XML" onclick="toXml()">
-    &nbsp;
-    <input type="button" value="Import from XML" onclick="fromXml()">
-    <br>
-    <input type="button" value="Generate JavaScript" onclick="toCode('JavaScript')">
-    &nbsp;
-    <input type="button" value="Generate Python" onclick="toCode('Python')">
-    <br>
-    <textarea id="importExport" style="width: 26%; height: 12em"></textarea>
-  </p>
-  <hr>
-  <p>
-    <input type="button" value="Size: 100px" onclick="sizeTo('100px')">
-    &nbsp;
-    <br>
-    <input type="button" value="Size: 95%" onclick="sizeTo('95%')">
-    &nbsp;
-    <br>
-  </p>
-  <hr>
+      <p>
+        <input type="button" value="Create Contract Editor" onclick="newContractEditor()">
+        &nbsp;
+        <input type="button" value="Export to XML" onclick="toXml()">
+        &nbsp;
+        <input type="button" value="Import from XML" onclick="fromXml()">
+        <br>
+        <input type="button" value="Generate JavaScript" onclick="toCode('JavaScript')">
+        &nbsp;
+        <input type="button" value="Generate Python" onclick="toCode('Python')">
+        <br>
+        <textarea id="importExport" style="width: 100%; height: 12em"></textarea>
+      </p>
+      <hr>
+      <p>
+        <input type="button" value="Size: 100px" onclick="sizeTo('100px')">
+        &nbsp;
+        <br>
+        <input type="button" value="Size: 95%" onclick="sizeTo('95%')">
+        &nbsp;
+        <br>
+      </p>
+      <hr>
 
-  <p>
-    Stress test with an <input type="button" value="Airstrike!" onclick="airstrike(100)">
-  </p>
-
-  </form>
-
+      <p>
+        Stress test with an <input type="button" value="Airstrike!" onclick="airstrike(100)">
+      </p>
+    </div>
+  </div>
 </body>
 </html>
