@@ -505,7 +505,7 @@ Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
  * @protected
  */
 Blockly.FunctionEditor.prototype.getBlockSpaceEditorToScreenTop_ = function () {
-  return this.getWindowBorderChromeHeight() + this.getContractDivHeight();
+  return this.getWindowBorderChromeHeight();
 };
 
 /**
@@ -545,8 +545,9 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
     this.modalBlockSpace.getMetrics().viewWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
     Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
   var currentY = 0;
+  currentY += this.getContractDivHeight();
   currentY += this.flyout_.getHeight();
-  this.flyout_.customYOffset = currentY;
+  this.flyout_.customYOffset = currentY; // TODO(bjordan/bbuchanan): dirty way: maybe set this during scroll?
   this.flyout_.position_();
 
   currentY += Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
