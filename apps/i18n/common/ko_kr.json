@@ -210,5 +210,8 @@
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: "
+  "workspaceHeaderShort": "작업 영역: ",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
 }

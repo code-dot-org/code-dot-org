@@ -210,5 +210,8 @@
   "watchVideo": "Δείτε το βίντεο",
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
-  "workspaceHeaderShort": "Χώρος εργασίας: "
+  "workspaceHeaderShort": "Χώρος εργασίας: ",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
 }

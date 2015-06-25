@@ -210,5 +210,8 @@
   "watchVideo": "Tonton Video",
   "when": "apabila",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
 }
