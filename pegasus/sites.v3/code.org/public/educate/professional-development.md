@@ -14,7 +14,7 @@ Code.org is offering 1-day workshops to prepare educators and content-area teach
 
 These workshops will be facilitated by experienced computer science educators in over 60 cities across the United States.
 
-[<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a local workshop (for K-5 teachers)</button>](/professional-development-workshops) &nbsp;&nbsp;[<button>Online workshop</button>](/professional-development-online)
+[<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a local workshop (for K-5 teachers)</button>](/professional-development-workshops) &nbsp;&nbsp;[<button>Online workshop</button>](/educate/professional-development-online)
 
 ---
 ## Professional development for middle school math or science teachers
