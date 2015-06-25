@@ -102,7 +102,7 @@ gem 'redcarpet', '~> 3.1.1'
 
 gem 'geocoder'
 
-gem 'rmagick', require: 'RMagick'
+gem 'rmagick'
 
 gem 'acts_as_list'
 
