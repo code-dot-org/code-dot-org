@@ -355,7 +355,8 @@ module.exports = {
 
     current = data;
     if (isNewChannel) {
-      location.href = current.projectUrl + '#' + current.id + '/edit';
+      var projectUrl = current.projectUrl || current.level;
+      location.href = projectUrl + '#' + current.id + '/edit';
     }
     this.updateTimestamp();
   },
