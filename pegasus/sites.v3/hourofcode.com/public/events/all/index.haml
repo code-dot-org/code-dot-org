@@ -27,7 +27,7 @@ nav: events_nav
 
 %ul
   %li{class: "hoc-event-country"}
-    %span{style: "font-weight: bold;"}= "United States (#{by_country['US'].count} #{hoc_s(:events)})"
+    %span{style: "font-weight: bold;"}= "United States (#{by_country['US'].count rescue '0'} #{hoc_s(:events)})"
     %ul{style: "margin-top: 0; margin-bottom: 0;"}
       -by_state.each_pair do |state_code, events|
         -unless state_code.nil_or_empty?

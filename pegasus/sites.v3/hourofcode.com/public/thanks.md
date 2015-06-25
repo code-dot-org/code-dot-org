@@ -30,7 +30,9 @@ social:
 
 # Thanks for signing up to host an Hour of Code!
 
-**EVERY** Hour of Code organizer will receive a prize as a thank you. 2015 Hour of Code organizer prizes will be announced in the fall! <a href="<%= hoc_uri('/prizes') %>">See last year's prizes.</a>
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+
+We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
 
 ## 1. Spread the word 
 Tell your friends about the #HourOfCode. 
