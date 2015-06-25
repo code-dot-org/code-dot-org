@@ -66,7 +66,7 @@ var ButtonProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <ImagePickerPropertyRow
           desc={'image'}
-          initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
+          initialValue={element.dataset.canonicalImageUrl || ''}
           handleChange={this.props.handleChange.bind(this, 'image')} />
         <BooleanPropertyRow
           desc={'hidden'}

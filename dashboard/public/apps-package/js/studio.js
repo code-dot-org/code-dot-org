@@ -1639,12 +1639,18 @@ Studio.runButtonClick = function() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
+  var tryAgainText;
+  // For free play, show keep playing, unless it's a big game level
+  if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
+    tryAgainText = commonMsg.keepPlaying();
+  }
+
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
-      tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+      tryAgainText: tryAgainText,
       continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
@@ -1790,7 +1796,10 @@ Studio.checkForPreExecutionFailure = function () {
   if (studioApp.hasUnfilledFunctionalBlock()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Studio.message = commonMsg.emptyFunctionalBlock();
+    // Some of our levels (i.e. big game) have a different top level block, but
+    // those should be undeletable/unmovable and not hit this. If they do,
+    // they'll still get the generic unfilled block message
+    Studio.message = studioApp.getUnfilledFunctionalBlockError('functional_start_setValue');
     Studio.preExecutionFailure = true;
     return true;
   }
