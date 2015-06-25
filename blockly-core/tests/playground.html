@@ -25,9 +25,12 @@ function start() {
     assetUrl: function(path) { return '../' + path; }
   });
 
-  goog.tweak.registerBoolean('openContract', 'pre-opens contract editor', false);
-  if (goog.tweak.getBoolean('openContract')) {
+  goog.tweak.registerBoolean('openContractEditor', 'pre-opens contract editor', false);
+  goog.tweak.registerBoolean('openFunctionEditor', 'pre-opens function editor', false);
+  if (goog.tweak.getBoolean('openContractEditor')) {
     newContractEditor();
+  } else if (goog.tweak.getBoolean('openFunctionEditor')) {
+    newFunctionEditor();
   }
 }
 
@@ -38,6 +41,13 @@ function newContractEditor() {
     disableExamples: false
   });
   Blockly.contractEditor.openWithNewFunction();
+}
+
+function newFunctionEditor() {
+  Blockly.defaultNumExampleBlocks = 2;
+  Blockly.functionEditor = new Blockly.FunctionEditor({
+  });
+  Blockly.functionEditor.openWithNewFunction();
 }
 
 function toXml() {
@@ -310,6 +320,8 @@ h1 {
 
       <p>
         <input type="button" value="Create Contract Editor" onclick="newContractEditor()">
+        &nbsp;
+        <input type="button" value="Create Function Editor" onclick="newFunctionEditor()">
         &nbsp;
         <input type="button" value="Export to XML" onclick="toXml()">
         &nbsp;
