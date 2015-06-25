@@ -78,6 +78,9 @@ Dashboard::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # Whether or not to display pretty blockly.
+  # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
+
+  # Whether or not to display pretty shared js assets
+  config.pretty_sharedjs = true
 end
