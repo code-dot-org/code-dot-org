@@ -1,12 +1,16 @@
 - if current_user && showState
   .clear
+
   - script = Script.find_by_name(id)
-  - if current_user.completed_scripts.include?(script)
+  - user_script = current_user.user_scripts.where(script_id: script.id).first
+  - next_unpassed_progression_level = current_user.next_unpassed_progression_level(script)
+
+  - if user_script.try(:completed_at)
     = link_to script_certificate_image_url(current_user, script), class: 'whitelink' do
       .bottombar.smalltext.printcertificate
         = t('home.print_certificate')
-  - elsif current_user.working_on_scripts.include?(script)
-    %a.whitelink{href: build_script_level_url(current_user.next_unpassed_progression_level(script))}
+  - elsif next_unpassed_progression_level
+    %a.whitelink{href: build_script_level_url(next_unpassed_progression_level)}
       .bottombar.smalltext.continue
         = t('continue')
   - else
