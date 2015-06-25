@@ -39,7 +39,6 @@
 "bs-BA":
   english: "Bosnian"
   native: "Босански"
-  debug: true
   webfonts: false
 
 "ca": "ca-ES"
@@ -336,7 +335,6 @@
 "sq-AL":
   english: "Albanian"
   native: "Shqip"
-  debug: true
 
 "sr": "sr-SP"
 "sr-SP":
@@ -386,7 +384,6 @@
 "vi-VN":
   english: "Vietnamese"
   native: "Tiếng Việt"
-  debug: true
 
 "zh": "zh-CN"
 "zh-CN":
