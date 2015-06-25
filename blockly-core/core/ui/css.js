@@ -581,7 +581,6 @@ Blockly.Css.CONTENT = [
   '}',
   '#modalContainer {',
   '  position: absolute;',
-  '  top: 30px;',
   '  width: 100%;',
   '  bottom: 0;',
   '}',
