@@ -297,6 +297,8 @@ en:
       OnlinePDK5 Intro: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Cirlces of Eval:
+        Circles of Evaluation: Circles of Evaluation
       PDAlg Culture: {}
       PDAlg Curriculum Overview:
         Curriculum Overview: Curriculum Overview
@@ -315,6 +317,8 @@ en:
       PDAlg Facilitators:
         Meet Your Facilitators: Meet Your Facilitators
       PDAlg Intro: {}
+      PDAlg P2 Welcome:
+        Welcome to the next phase!: Welcome to the next phase!
       PDAlg Post Survey:
         CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
       PDAlg Puzzles Pre: {}
@@ -739,6 +743,8 @@ en:
       broadcast lesson plan: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
+      equity activity:
+        Initial Activity: Initial Activity
       equity in CS:
         Equity in Computer Science: Equity in Computer Science
       equity is more:
