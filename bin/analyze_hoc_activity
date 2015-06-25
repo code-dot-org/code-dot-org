@@ -21,12 +21,16 @@ def add_count_to_hash(hash, key, count)
 end
 
 def analyze_day_fast(date)
+  day = date.strftime('%Y-%m-%d')
+  next_day = (date + 1).strftime('%Y-%m-%d')
   froms = [
-    "FROM hoc_activity WHERE started_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_started_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
+    "FROM hoc_activity WHERE (started_at >= '#{day}' AND started_at < '#{next_day}')" +
+      " OR (pixel_started_at >= '#{day} AND pixel_started_at < '#{next_day}'",
   ]
 
   finished_froms = [
-    "FROM hoc_activity WHERE finished_at LIKE '#{date.strftime('%Y-%m-%d')} %' OR pixel_finished_at LIKE '#{date.strftime('%Y-%m-%d')} %'",
+    "FROM hoc_activity WHERE (finished_at >= '#{day}' AND finished_at < '#{next_day}')" +
+      " OR (pixel_finished_at >= '#{day} AND pixel_finished_at < '#{next_day}'",
   ]
 
   #HipChat.log "Analyzing by <b>tutorial</b>..." if rack_env?(:production)
