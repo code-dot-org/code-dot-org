@@ -19,4 +19,4 @@
     appOptions.locale = '#{js_locale}';
     //]]>
 
-  %script{src: "/shared/js/shared#{'.min' unless Rails.configuration.pretty_sharedjs}.js"}
+  %script{src: minifiable_shared_path('/shared/js/shared.js')}
