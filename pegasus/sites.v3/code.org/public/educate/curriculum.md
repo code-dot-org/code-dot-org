@@ -7,7 +7,7 @@ nav: educate_nav
 
 Code.org offers an elementary school curriculum that allows even the youngest students to explore the limitless world of computing. Each of our 20-lesson courses blend online, self-guided and self-paced tutorials with “unplugged” activities that require no computer at all. By the end of each course, students can create interactive games, stories, and art that they can share with anyone. Built on our online [Code Studio](http://studio.code.org) learning platform, these courses are available in dozens of languages, and already used by millions of students in tens of thousands of classrooms. 98% of participating teachers recommend the program.
 
-For teachers in the United States, Code.org offers high quality, 1-day professional development workshops free of charge to in-service teachers to prepare to offer our curriculum in elementary school classrooms. 
+For teachers in the United States, Code.org offers high quality, 1-day professional development workshops free of charge to in-service teachers to prepare to offer our curriculum in elementary school classrooms. We also offer [a free, self-paced online workshop](/educate/professional-development-online) for educators who can't attend an in-person training. 
 
 [<button>Learn more</button>](/k5)
 
@@ -18,7 +18,7 @@ Code.org has two interdisciplinary modules at the middle school level. Code.org 
 [<button>CS in Science</button>](/curriculum/science) &nbsp;&nbsp;[<button>CS in Algebra</button>](/curriculum/algebra)
 
 <br/>
-In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels, and could be worked into a middle school after-school program or as a semester-long computer-programming course.
+In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels, and could be worked into a middle school after-school program or as a semester-long computer-programming course. [Free, self-paced online professional development](/educate/professional-development-online) is available to help teachers get started.
 
 # High School 
 

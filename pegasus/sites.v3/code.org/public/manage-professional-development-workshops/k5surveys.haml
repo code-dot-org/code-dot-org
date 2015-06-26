@@ -101,7 +101,7 @@
   K-5 Facilitator Profile
 - if dashboard_user[:admin]
   %select#facilitator_dropdown
-    %option{value:"/private/k5survey"}
+    %option{value:"/manage-professional-development-workshops/k5surveys"}
       Select a Facilitator
     - all_facilitators.each do |facilitator|
       %option{value:'/manage-professional-development-workshops/k5surveys?user_id=' + facilitator[:user_id].to_s}
