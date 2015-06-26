@@ -203,9 +203,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
 
   container.appendChild(svg);
   goog.events.listen(svg, 'selectstart', function() { return false; });
-  var defs = Blockly.createSvgElement('defs', {
-    id: 'blocklySvgDefs'
-  }, svg);
+  this.defs_ = Blockly.createSvgElement('defs', { id: 'blocklySvgDefs'}, svg);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
 
   // If we're going to have a toolbox, create a rect which is the same
@@ -250,6 +248,14 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   Blockly.WidgetDiv.DIV = goog.dom.createDom('div', 'blocklyWidgetDiv');
   Blockly.WidgetDiv.DIV.style.direction = Blockly.RTL ? 'rtl' : 'ltr';
   document.body.appendChild(Blockly.WidgetDiv.DIV);
+};
+
+/**
+ * Adds an SVG element to this BlockSpace's <defs>
+ * @param {SVGElement} definitionToAdd
+ */
+Blockly.BlockSpaceEditor.prototype.addToSvgDefs = function(definitionToAdd) {
+  this.defs_.appendChild(definitionToAdd);
 };
 
 Blockly.BlockSpaceEditor.prototype.addToolboxOrFlyout_ = function() {
