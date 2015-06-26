@@ -18,7 +18,7 @@ To a format that visually demonstrates hierarchy and order of operations.
 
   <img src="https://studio.code.org/script_assets/pd/645.png"/>
 
-The visual layout of the Circles of Evaluation is an essential element in helping students understand how to compose complex expressions and functions. We designed our programming language to extend and reinforce the visual metaphor of the Circles, allowing studnts to work out problems on paper using the circles before programming on the computer.
+The visual layout of the Circles of Evaluation is an essential element in helping students understand how to compose complex expressions and functions. We designed our programming language to extend and reinforce the visual metaphor of the Circles, allowing students to work out problems on paper using the circles before programming on the computer.
 
 <img src="https://studio.code.org/script_assets/pd/circles_to_blocks.png"/>
 
