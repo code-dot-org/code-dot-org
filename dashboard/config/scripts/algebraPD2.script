@@ -12,7 +12,8 @@ level 'PDAlg block match'
 #level 'PDAlg Implementation'
 #level 'PDAlg Course Goals'
 
-stage 'Practice with Puzzles'
+stage 'Teaching with Puzzles'
+level 'PDAlg Puzzle Tips'
 level 'PDAlg Puzzles Pre'
 
 stage 'Evaluation Blocks'
@@ -151,5 +152,5 @@ level 'PDAlg Dashboard 3'
 level 'PDAlg Teacher Plan'
 
 stage 'Next Steps'
-level 'PDAlg end of P3'
-level 'PDAlg whats next'
+level 'PDAlg phase 3 resources'
+level 'PDAlg phase 2 reflection'
