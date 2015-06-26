@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require_relative '../src/env'
 require_relative '../../lib/cdo/web_purify'
 
-class WebPurifyTest < Minitest::Test
+class WebPurifyTest < Minitest::Unit::TestCase
   def test_profanity_checking
     return unless CDO.webpurify_key
     assert_nil(WebPurify.find_potential_profanity('not a swear'))

@@ -19,7 +19,7 @@ def remove_dates(string)
   string.gsub(/'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}'/, 'DATE')
 end
 
-class SectionApiHelperTest < Minitest::Test
+class SectionApiHelperTest < Minitest::Unit::TestCase
   describe DashboardSection do
     before do
       DASHBOARD_DB.fetch = {}
