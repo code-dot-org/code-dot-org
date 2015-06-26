@@ -87,7 +87,7 @@ module.exports = {
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
-          this.save(dashboard.getEditorSource(), callback);
+          this.save(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -153,10 +153,10 @@ module.exports = {
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    */
-  save: function(source, callback) {
+  save: function(callback) {
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
-    current.levelSource = source;
+    current.levelSource = dashboard.getEditorSource();
     current.levelHtml = window.Applab && Applab.getHtml();
     current.level = this.appToProjectUrl();
 
@@ -204,7 +204,7 @@ module.exports = {
       return;
     }
 
-    this.save(source, function () {
+    this.save(function () {
       hasProjectChanged = false;
     });
   },
@@ -213,7 +213,7 @@ module.exports = {
    */
   rename: function(newName, callback) {
     current.name = newName;
-    this.save(dashboard.getEditorSource(), callback);
+    this.save(callback);
   },
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
@@ -223,7 +223,7 @@ module.exports = {
     delete current.id;
     delete current.hidden;
     current.name = newName;
-    this.save(dashboard.getEditorSource(), callback);
+    this.save(callback);
   },
   delete: function(callback) {
     var channelId = current.id;
