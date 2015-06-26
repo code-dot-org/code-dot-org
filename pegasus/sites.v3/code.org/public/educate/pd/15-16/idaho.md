@@ -19,7 +19,7 @@ nav: pd2_nav
 
 The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
 </br>
-</br>
+
 **Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
 
 ### Save the dates
@@ -36,7 +36,19 @@ Breakfast and lunch will be served.
 
 Boise State University 
 <br/>
-More details coming soon!
+Micron Business and Economics Building 
+<br/>
+4th Floor, Room MBEB 4100
+<br/>
+2360 University Drive
+<br/>
+Boise, ID 83706
+
+All participants can park for free using the parking coupon below. The Student Union Building is located on the corner of S. Lincoln Ave. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
+
+[Parking Coupon and Directions to Brady Garage](/files/BSU_Parking_Directions_July13.pdf)
+<br/>
+[Directions to Campus](https://www.google.com/maps/place/Micron+Business+and+Economics+Bldg,+Boise+State+University,+2360+University+Dr,+Boise,+ID+83706/@43.6056576,-116.2101993,17z/data=!3m1!4b1!4m2!3m1!1s0x54aef8f459aab969:0xb3580921a6cbd8f6)
 
 ### What do I bring to Phase 2?
 
@@ -84,7 +96,19 @@ Breakfast and lunch will be served.
 
 Boise State University 
 <br/>
-More details coming soon!
+Micron Business and Economics Building 
+<br/>
+4th Floor, Room MBEB 4001
+<br/>
+2360 University Drive
+<br/>
+Boise, ID 83706
+
+All participants can park for free using the parking coupon below. The Student Union Building is located on the corner of S. Lincoln Ave. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
+
+[Parking Coupon and Directions to Brady Garage](/files/BSU_Parking_Directions_July13.pdf)
+<br/>
+[Directions to Campus](https://www.google.com/maps/place/Micron+Business+and+Economics+Bldg,+Boise+State+University,+2360+University+Dr,+Boise,+ID+83706/@43.6056576,-116.2101993,17z/data=!3m1!4b1!4m2!3m1!1s0x54aef8f459aab969:0xb3580921a6cbd8f6)
 
 ### What do I bring to Phase 2?
 
@@ -110,7 +134,7 @@ More info coming soon!
 
 The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Science course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
 </br>
-</br>
+
 **Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
 
 ### Save the dates
@@ -123,7 +147,24 @@ Breakfast and lunch will be served.
 
 ### Location
 
-Boise State University - More details coming soon!
+Boise State University
+<br/>
+Student Union Building
+<br/>
+2nd floor, Bishop Barnwell Room
+<br/>
+1700 W. University Drive
+<br/>
+Boise, ID 83706
+
+
+All participants can park for free using the parking coupon below. The Student Union Building is located on the corner of S. Lincoln Ave. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
+
+[Parking Coupon and Directions to Lincoln Parking Garage](/files/BSU_Parking_Directions_CSinS.pdf)
+<br/>
+[Directions to Campus](https://www.google.com/maps/place/1700+W+University+Dr,+Boise+State+University,+Boise,+ID+83706/@43.6017937,-116.2016841,17z/data=!3m1!4b1!4m2!3m1!1s0x54aef85925cb8921:0xc72ca81d7eb0fc69)
+<br/>
+[Student Union Map](http://conferenceservices.boisestate.edu/wp-content/uploads/2011/07/SUBMap_June13.pdf)
 
 ### What do I bring to Phase 2?
 

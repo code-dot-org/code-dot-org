@@ -1,24 +1,19 @@
 - user_script ||= nil
 .course_progress
-  .row#lesson
-    .span9#heading
-      %h3.whitetext{style: 'margin: 0; display: inline-block'}
-        %a.expando{style: 'color: white'}
-          %i.fa.fa-plus-square
-        = image_tag(script.logo_image, class: 'logo') if script.logo_image
-        = data_t_suffix('script.name', script.name, "title")
-      - if script.beta?
-        %span.betatext{style: 'font-size: 24.5px'}
-          != '&nbsp; beta'
+  - unless script.name.in?([Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::FLAPPY_NAME, Script::PLAYLAB_NAME, Script::ARTIST_NAME, Script::COURSE1_NAME, Script::COURSE2_NAME, Script::COURSE3_NAME, Script::COURSE4_NAME, Script::TWENTY_HOUR_NAME])
+    .row#lesson
+      .span9#heading
+        %h3.whitetext{style: 'margin: 0; display: inline-block'}
+          = image_tag(script.logo_image, class: 'logo') if script.logo_image
+          = data_t_suffix('script.name', script.name, "title")
+        - if script.beta?
+          %span.betatext{style: 'font-size: 24.5px'}
+            != '&nbsp; beta'
 
-    .span3#heading{style: 'text-align: right;'}
-      - if user_script.try(:completed_at)
-        %a{href: script_certificate_image_url(current_user, script)}
-          %button.btn{style: 'background: #0ebe0e; color: white; text-shadow: none'}= t('home.print_certificate')
-      - elsif current_user.next_unpassed_progression_level(script)
-        = link_to build_script_level_url(current_user.next_unpassed_progression_level(script)) do
-          %button.btn.btn-primary.button-continue#continue_button= t('continue')
-
-  .row#stats{style: 'display: none', 'data-script-id' => "#{script.id}"}
-    .span12.content#rightside{style: 'margin-left: 10px;'}
-      Loading...
+      .span3#heading{style: 'text-align: right;'}
+        - if user_script.try(:completed_at)
+          %a{href: script_certificate_image_url(current_user, script)}
+            %button.btn{style: 'background: #0ebe0e; color: white; text-shadow: none'}= t('home.print_certificate')
+        - elsif current_user.next_unpassed_progression_level(script)
+          = link_to build_script_level_url(current_user.next_unpassed_progression_level(script)) do
+            %button.btn.btn-primary.button-continue#continue_button= t('continue')
