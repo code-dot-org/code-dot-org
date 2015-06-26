@@ -187,16 +187,25 @@ Blockly.BlockSpace.prototype.createDom = function() {
   */
   this.svgGroup_ = Blockly.createSvgElement('g', {'class': 'svgGroup'}, null);
   this.svgBlockCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBlockCanvas'}, this.svgGroup_);
+  this.svgDragCanvas_ = Blockly.createSvgElement('g', {'class': 'svgDragCanvas'}, this.svgGroup_);
   this.svgBubbleCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBubbleCanvas'}, this.svgGroup_);
   this.fireChangeEvent();
   return this.svgGroup_;
 };
 
 /**
- * Moves element currently in this BlockSpace to the front of the canvas
- * @param {Element} blockSVGElement svg element to move to the front
+ * Moves element currently in this BlockSpace to the drag canvas group
+ * @param {Element} blockSVGElement svg element to move to the drag group
  */
-Blockly.BlockSpace.prototype.moveElementToFront = function(blockSVGElement) {
+Blockly.BlockSpace.prototype.moveElementToDragCanvas = function(blockSVGElement) {
+  this.getDragCanvas().appendChild(blockSVGElement);
+};
+
+/**
+ * Moves element currently in this BlockSpace drag canvas back to the main canvas
+ * @param {Element} blockSVGElement svg element to move to the main canvas
+ */
+Blockly.BlockSpace.prototype.moveElementToMainCanvas = function(blockSVGElement) {
   this.getCanvas().appendChild(blockSVGElement);
 };
 
@@ -210,6 +219,7 @@ Blockly.BlockSpace.prototype.dispose = function() {
     this.svgGroup_ = null;
   }
   this.svgBlockCanvas_ = null;
+  this.svgDragCanvas_ = null;
   this.svgBubbleCanvas_ = null;
   if (this.flyout_) {
     this.flyout_.dispose();
@@ -243,6 +253,14 @@ Blockly.BlockSpace.prototype.setTrashcan = function(trashcan) {
  */
 Blockly.BlockSpace.prototype.getCanvas = function() {
   return this.svgBlockCanvas_;
+};
+
+/**
+ * Get the SVG element that forms the drawing surface for dragged elements
+ * @return {!SVGGElement} SVG element.
+ */
+Blockly.BlockSpace.prototype.getDragCanvas = function () {
+  return this.svgDragCanvas_;
 };
 
 /**

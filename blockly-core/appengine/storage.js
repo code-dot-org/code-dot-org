@@ -142,7 +142,6 @@ BlocklyStorage.handleRequest_ = function() {
 BlocklyStorage.monitorChanges_ = function() {
   var startXmlDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   var startXmlText = Blockly.Xml.domToText(startXmlDom);
-  var canvas = Blockly.mainBlockSpace.getCanvas();
   function change() {
     var xmlDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
     var xmlText = Blockly.Xml.domToText(xmlDom);
