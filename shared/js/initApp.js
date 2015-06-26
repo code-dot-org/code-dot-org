@@ -116,15 +116,18 @@ function initApp() {
   window[appOptions.app + 'Main'](appOptions);
 }
 
+// Attempts to lookup the name in the digest hash, or returns the name if not found.
+function tryDigest(name) {
+  return (window.digestManifest || {})[name] || name;
+}
+
 // Returns a function which returns a $.Deferred instance. When executed, the
 // function loads the given app script.
 function loadSource(name) {
   return function () {
     var deferred = new $.Deferred();
-    name = name + '.js';
-    var digestName = window.digestManifest ? digestManifest[name] : name;
     document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + 'js/' + digestName
+      src: appOptions.baseUrl + 'js/' + tryDigest(name + '.js')
     }).on('load', function () {
       deferred.resolve();
     })[0]);
