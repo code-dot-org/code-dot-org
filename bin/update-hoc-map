@@ -29,11 +29,11 @@ file = Tempfile.new(['data', '.csv'])
 
 exported = 0
 
-CSV.open(file.path) do |csv|
+CSV.open(file.path, 'w') do |csv|
   all_forms.each do |form|
     data = JSON.parse(form[:data])
     processed_data = JSON.parse(form[:processed_data])
-    row = [form[:id], data['organization_name_s'], data['location_city_s'], data['location_p']]
+    row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p']]
     next if row.any?(&:nil?)
     exported += 1
     csv << row
