@@ -8,9 +8,11 @@ nav: educate_nav
 
 ## Educational videos
 
-We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. While this library is a work-in-progress, our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos.
+We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. Our goal is to enable our efforts to be amplified beyond our own curriculum's reach. Many more videos are coming soon. **Note:** see below for the licensing restrictions on use of these videos.
 
 ## For high school Computer Science Principles:
+
+### More videos coming soon
 
 <div style="float:left; padding:10px; width:49%">
 
@@ -79,5 +81,7 @@ We are building a growing library of educational videos available for re-use by 
 Code.org’s library of videos may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
 
 The celebrities and video "cast" members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
+
+![image](/images/cc-logo.png)
 
 
