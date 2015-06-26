@@ -22,6 +22,9 @@ var baseOptions = {
     if (window.dashboard.isChrome34) {
       chrome34Fix.fixup();
     }
+    if (appOptions.level.projectTemplateLevelName) {
+      $('#clear-puzzle-header').hide();
+    }
     $(document).trigger('appInitialized');
   },
   onAttempt: function(report) {
