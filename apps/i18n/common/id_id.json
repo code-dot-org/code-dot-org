@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Menciptakan loop/perulangan yang terdiri dari ekspresi kondisional dan blok pernyataan dieksekusi untuk setiap iterasi dari loop. Loop terus melaksanakan selama kondisi bernilai true/benar",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "Blok \"Ulangi\" atau blok \"Jika\" membutuhkan blok lain di dalamnya supaya bisa bekerja. Pastikan blok yang berada didalam diletakkan secara pas.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja.",
   "emptyFunctionalBlock": "Kamu memiliki blok dengan masukan yang tidak terisi.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "akhir",
   "errorEmptyFunctionBlockModal": "Diharuskan adanya blok di dalam fungsi mu. Klik \"sunting\" lalu geser blok itu ke dalam Blok Hijau.",
   "errorIncompleteBlockInFunction": "Klik \"sunting\" untuk memastikan bahwa Anda tidak menyisakan satupun blok di dalam fungsi ini.",
@@ -210,8 +213,5 @@
   "watchVideo": "Tonton Videonya",
   "when": "ketika",
   "whenRun": "ketika dijalankan",
-  "workspaceHeaderShort": "Area kerja: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Area kerja: "
 }

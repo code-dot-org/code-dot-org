@@ -501,8 +501,8 @@ sl:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Vnesite vaš odgovor tukaj
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Hvala
+    open_response_body: Hvala za vaš odgovor!
   dialog:
     ok: Vredu
   time:
@@ -546,44 +546,44 @@ sl:
     sign_out: 'Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.'
   zendesk_too_young_message: 'Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa brez prijave brskate po <a href="http://support.code.org">support.code.org</a>, ali pa zaprosite starše ali učitelje, da nas kontaktirajo.'
   progress:
-    not_started: not started
-    in_progress: in progress
+    not_started: ni začeto
+    in_progress: v teku
     completed_too_many_blocks: dokončano, imate preveč blokov
     completed_perfect: dokončano, odlično
     furthest_level_attempted: poskusili ste najvišji nivo
-    assessment: assessment
+    assessment: ocenjevanje
   studio:
     courses_working_on: Tečaji, ki jih še nisi dokončal/a
     completed_courses: Tečaji, ki si jih dokončal/a
     all_courses: Vsi tečaji
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: Projekti
+    create: Ustvari projekt
+    create_a_project: 'Ustvari nov projekt:'
+    new: Ustvari novo
+    rename: Preimenuj
     save: Shrani
     delete: Izbriši
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Vrni se na tečaj
+    my_projects: Moji projekti
     share: Deli
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Deli svoj projekt
+    share_copy_link: 'Kopiraj povezavo:'
+    close: Zapri
     more: Več
     name: Ime
-    updated: Updated
-    project_type: Project Type
+    updated: Posodobljeno
+    project_type: Vrsta projekta
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
     need_help: Need help getting started?
     really_delete: Izbriši?
     delete_yes: Da
     delete_no: Ne
-    saved: Saved
-    not_saved: Not saved
+    saved: Shranjeno
+    not_saved: Ni shranjeno
     cancel: Prekliči
-    delete_confirm_title: Are you sure you want to delete this project?
+    delete_confirm_title: Ali ste prepričani, da želite izbrisati ta projekt?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    view_all: Poglej si Moji projekti
     remix: Remix
     click_to_remix: "Click 'Remix' to spin-off your own version!"

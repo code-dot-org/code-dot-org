@@ -104,7 +104,7 @@ pl:
         TextMatch: Dopasowanie tekstu
         StudioEC: Lab Gier
         Applab: App Lab
-        NetSim: Symulator Internetowy
+        NetSim: Symulator internetowy
     trophy:
       name:
         Bronze: Brąz
@@ -378,7 +378,7 @@ pl:
         C2_artist_intro: 'Artysta - wprowadzenie'
         C2_zuck_repeat_loop: 'Labirynt: Pętle'
         C2_artist_loops: 'Artysta: Pętle'
-        C2_artist_debugging: 'Artysta: debugowanie'
+        C2_artist_debugging: 'Artysta: Debugowanie'
         C2_bee_loops: 'Pszczółka: Pętle'
         C2_bee_debugging: 'Pszczółka: Debugowanie'
         C2_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
@@ -395,7 +395,7 @@ pl:
         C3_artist_functions: Funkcje Artysty
         C3_bee_functions: Funkcje Pszczoły
         C3_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
-        C3_maze_conditionals: 'Labirynt: wyrażenia warunkowe'
+        C3_maze_conditionals: 'Labirynt: Wyrażenia warunkowe'
         C3_artist_nested_loops: 'Zagnieżdżające się  pętle'
         C3_farmer_while: Pętle Dopóki (While)
         C3_bee_nested_loops: 'Zagnieżdżające się  pętle'
@@ -422,7 +422,7 @@ pl:
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Zmienne w Kopertach
         C4_unplugged_forloops: Pętle dla (for)
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: Pisanie Piosenek z parametrami
         C4_unplugged_binary: Binarny
         frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
         frozen_loops: Wprowadzenie do Pętli

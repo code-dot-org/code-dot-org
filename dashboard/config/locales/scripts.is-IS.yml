@@ -977,22 +977,10 @@
           App Lab: Appsmiðja
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
+        K5-OnlinePD:
           title: 'Teaching Kids to Code: The Basics'
           description: Learn to code and how to teach computer science basics to your
             students with this free, self-paced online course.
-          Introduction to PD: Kynning á PD
-          K-5 Courses: 5 - 11 ára (K-5) námskeið
-          Writing computer programs: Skrifa tölvuforrit
-          'Programming Concept: Loops': 'Programming Concept: Loops'
-          Unplugged lessons: Verkefni án tölvu
-          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
-          Computer Science Pedagogy: Kennsluhættir í tölvunarfræði
-          'Programming Concept: Functions': 'Programming Concept: Functions'
-          Teacher Dashboard: Stjórnborð kennara
-          'Programming Concept: Events': 'Programming Concept: Events'
-          Reflection: Reflection
-          Next Steps: Næstu skref
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -1003,7 +991,8 @@
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: Mastering the Basics - Sequencing
+          Next Steps: Næstu skref
+          Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
@@ -1029,22 +1018,6 @@
           description_short: Notaðu Leikjasmiðjuna til að búa til sögu eða leik.
           description: Notaðu Leikjasmiðjuna til að búa til sögu eða leik.
           Hour of Code: Klukkustund kóðunar
-        K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your
-            students with this free, self-paced online course.
-          Getting Started: Getting Started
-          Computer Science Fundamentals: Computer Science Fundamentals
-          'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
-          'Mastering the Basics: Loops': 'Mastering the Basics: Loops'
-          'Mastering the Basics: Conditionals': 'Mastering the Basics: Conditionals'
-          'Mastering the Basics: Functions': 'Mastering the Basics: Functions'
-          'Mastering the Basics: Events': 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching
-            Computer Science
-          Planning: Planning
-          Next Steps: Næstu skref
-          Looking Ahead: Looking Ahead
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Kenna fallmiðaða forritun í gegnum algebru
@@ -1062,3 +1035,8 @@
           Next Steps: Næstu skref
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Velkomin!
+          The Design Recipe: Hönnunaruppskriftin
+          Teaching with Puzzles: Teaching with Puzzles

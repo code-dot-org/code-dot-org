@@ -335,8 +335,10 @@ zh-TW:
   dashboard_students_reset_password: 重置密碼
   dashboard_students_share_section: 分享此課程區段的登入頁面給您的學生們：
   dashboard_students_print_info: 列印學生登入資料卡
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: 通關圖片
   dashboard_students_reset_picture: ' 藉由<b>顯示通關密錀</b>，與 <b>重置通關密錀</b>您可隨時重置學生通關圖片。系統將產生新的通關圖片讓他們登錄時使用。'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: 通關密語
   dashboard_students_reset_word: '藉由<b>顯示通關密語</b>，與 <b>重置通關密語</b>您可隨時重置學生通關密語。系統將產生新的通關密語讓他們登錄時使用。'
   dashboard_students_join_link: 告訴您的學生建立自己的帳戶並加入您的課程區段於

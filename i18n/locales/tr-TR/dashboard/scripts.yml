@@ -309,8 +309,8 @@ tr:
           "Play Lab: Collision Detection (Big Game)": 'Büyük oyun - çarpışma algılama'
         infinity:
           title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          description_short: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
+          description: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
           Play Lab: Oyun Laboratuvarı
           Infinity: Sonsuz
         algebrademo:
@@ -856,8 +856,8 @@ tr:
           online pd?: online pd?
           AppLab: AppLab
           Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
+          title: Her şey!
+          description: Kulanıcı arayüzü testi için tüm seviye tipleri
           Odometer: Kilometre sayacı
           Text Compression: Text Compression
           Pixelation: Pikselleşme
@@ -889,32 +889,20 @@ tr:
           App Lab: Uygulama Laboratuvarı
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Hoşgeldiniz!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Hoşgeldiniz!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: İnternet Simülatörü
           App Lab: Uygulama Laboratuvarı
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Introduction to PD: Kişisel Geliştirme Giriş
-          K-5 Courses: K-5 dersleri
-          Writing computer programs: Bilgisayar programları yazma
-          "Programming Concept: Loops": 'Programming Concept: Loops'
-          Unplugged lessons: Bağımsız dersler
-          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
-          Computer Science Pedagogy: Computer Science Pedagogy
-          "Programming Concept: Functions": 'Programming Concept: Functions'
-          Teacher Dashboard: Teacher Dashboard
-          "Programming Concept: Events": 'Programming Concept: Events'
-          Reflection: Reflection
-          Next Steps: Sonraki Adımlar
+        K5-OnlinePD:
+          title: 'Teaching Courses 1-4: The Basics'
+          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -924,11 +912,12 @@ tr:
           "Mastering the Basics: Events": 'Mastering the Basics: Events'
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+          Next Steps: Sonraki Adımlar
+          Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
-          Welcome!: Welcome!
+          Welcome!: Hoşgeldiniz!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -950,20 +939,6 @@ tr:
           description_short: "Bir hikaye ya da oyun oluşturmak için Play Lab'i kullanın."
           description: "Bir hikaye ya da oyun oluşturmak için Play Lab'i kullanın."
           Hour of Code: Saat Kodu
-        K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Getting Started: Getting Started
-          Computer Science Fundamentals: Computer Science Fundamentals
-          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
-          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
-          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
-          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
-          "Mastering the Basics: Events": 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-          Planning: Planning
-          Next Steps: Sonraki Adımlar
-          Looking Ahead: Looking Ahead
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
@@ -980,3 +955,8 @@ tr:
           "Eval: Conditionals": 'Eval: Şartlar'
           Next Steps: Sonraki Adımlar
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Hoşgeldiniz!
+          The Design Recipe: Tasarım Tarifi
+          Teaching with Puzzles: Teaching with Puzzles

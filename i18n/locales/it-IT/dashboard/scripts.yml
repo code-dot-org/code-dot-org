@@ -41,7 +41,7 @@ it:
           "Bee: Loops": 'Ape: Cicli'
           "Studio: Create a Story": 'Laboratorio: Crea una Storia'
           "Artist: Loops": 'Artista: Cicli'
-          description_audience: Da 4 anni in su (pre-scolare)
+          description_audience: Età 4-6 anni (pre-scolare)
           description_short: Il corso 1 è progettato per chi sta iniziando a leggere.
         course2:
           The Maze: Il Labirinto
@@ -80,7 +80,7 @@ it:
           "Artist: Sequence2": 'Artista: Sequenza 2'
           "Maze: Sequence2": 'Labirinto: Sequenza 2'
           "Artist: Nested Loops": 'Artista: Cicli Annidati'
-          description_audience: Da 6 anni in su (necessario saper leggere)
+          description_audience: Età 6-18 anni
           description_short: Il corso 2 è progettato per studenti che sanno leggere.
         course3:
           The Maze: Il Labirinto
@@ -131,7 +131,7 @@ it:
           "Bee: Debugging2": 'Ape: Correzione di Errori 2'
           "Artist: Patterns": 'Artista: Schemi'
           Songwriting: Composizione di canzoni
-          description_audience: Da 8 anni in su (dopo il Corso 2)
+          description_audience: Età 8-18 anni
           description_short: Il Corso 3 è la continuazione del Corso 2.
         msm:
           title: Matematica per la Scuola Media
@@ -234,7 +234,7 @@ it:
           Farmer Binary: 'Contadina: Binario'
           Maze and Bee: "Il Labirinto e l'Ape: Sequenze, Cicli, Istruzioni Condizionali"
           Artist Binary: 'Artista: Binario'
-          description_audience: Da 10 anni in su (dopo il Corso 3)
+          description_audience: Età 10-18 anni
         Course4pre:
           title: Prerequisiti del Corso 4
           description_short: Una breve presentazione dei concetti importanti per gli studenti che non hanno svolto i Corsi 2 e 3.
@@ -366,7 +366,7 @@ it:
           Pixelation: Conversione di pixel
         20-hour:
           title: Corso introduttivo di 20 ore
-          description_audience: Da 10 anni in su (dopo il Corso 3)
+          description_audience: Età 10-18 anni
           description: "Questo corso in 20 lezioni introduce i concetti fondamentali dell'informatica e della programmazione. Il corso è progettato per l'uso nelle scuole elementari e medie inferiori, ma è divertente per imparare a qualunque età."
           Introduction to Computer Science: "Cos'è l'informatica"
           The Maze: Il labirinto
@@ -891,32 +891,20 @@ it:
           App Lab: Laboratorio per le App
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Benvenuti!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Benvenuti!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Simulatore di Internet
           App Lab: Laboratorio per le App
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Introduction to PD: Introduzione a PD
-          K-5 Courses: K-5 Courses
-          Writing computer programs: Scrivere programmi per il computer
-          "Programming Concept: Loops": 'Programming Concept: Loops'
-          Unplugged lessons: Lezioni Senza Rete
-          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
-          Computer Science Pedagogy: Computer Science Pedagogy
-          "Programming Concept: Functions": 'Programming Concept: Functions'
-          Teacher Dashboard: Teacher Dashboard
-          "Programming Concept: Events": 'Programming Concept: Events'
-          Reflection: Reflection
-          Next Steps: Next Steps
+        K5-OnlinePD:
+          title: 'Teaching Courses 1-4: The Basics'
+          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -926,11 +914,12 @@ it:
           "Mastering the Basics: Events": 'Mastering the Basics: Events'
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
-          Welcome!: Welcome!
+          Welcome!: Benvenuti!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -952,20 +941,6 @@ it:
           description_short: Utilizza il laboratorio Play Lab per creare una storia o un gioco.
           description: Utilizza il laboratorio Play Lab per creare una storia o un gioco.
           Hour of Code: "L'Ora del Codice"
-        K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Getting Started: Getting Started
-          Computer Science Fundamentals: Computer Science Fundamentals
-          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
-          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
-          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
-          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
-          "Mastering the Basics: Events": 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-          Planning: Planning
-          Next Steps: Next Steps
-          Looking Ahead: Looking Ahead
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
@@ -982,3 +957,8 @@ it:
           "Eval: Conditionals": 'Valutazione: Istruzioni Condizionali'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Benvenuti!
+          The Design Recipe: La Ricetta della Progettazione
+          Teaching with Puzzles: Teaching with Puzzles

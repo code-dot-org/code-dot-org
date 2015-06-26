@@ -124,7 +124,7 @@ fi-FI:
   studiobar_frozen_body: Luo talven ihmemaa Annan ja Elsan kanssa
   studiobar_donate_title: Lahjoita
   studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
-  studiobar_shop_title: Verkkokauppa
+  studiobar_shop_title: Kauppa
   studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
   homepage_hero_text_malala: '&ldquo;Haastan tytöt kaikista maista oppimaan yhden koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja'
   homepage_hero_text_susan: |
@@ -173,7 +173,7 @@ fi-FI:
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Kaikki oppituntimme
   homepage_slot_text_course4: Kurssi 4
-  homepage_slot_text_shop: Verkkokauppa
+  homepage_slot_text_shop: Kauppa
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Katso video
   homepage_action_text_teachervideo: Katso video
@@ -277,9 +277,9 @@ fi-FI:
   dashboard_landing_view_progress: 'Tarkastele etenemistä ryhmälle %{biggest_section}'
   dashboard_landing_available_title: Saatavilla olevat kurssit
   dashboard_landing_available_courses: Nämä kurssit ovat tällä hetkellä saatavilla sinulle ja oppilaillesi.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials: Haluatko nähdä vielä enemmän oppitunteja?
   dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
-  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses: Koodaustunti kaikenikäisille
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
@@ -361,8 +361,10 @@ fi-FI:
   dashboard_students_reset_password: Nollaa salasana
   dashboard_students_share_section: 'Jaa tämän ryhmän kirjautumissivu oppilaidesi kanssa:'
   dashboard_students_print_info: Tulosta kortit oppilaidesi kirjautumistiedoista.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Salainen kuva
   dashboard_students_reset_picture: 'Voit nollata oppilaan salaisen kuvan koska tahansa valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salainen kuva luodaan oppilaalle käytettäväksi sisäänkirjautuessa.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Salainen sana
   dashboard_students_reset_word: 'Voit nollata oppilaan salaisen sanan koska tahansa valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salaisten sanojen pari luodaan oppilaalle käytettäväksi sisäänkirjautuessa. '
   dashboard_students_join_link: Pyydä oppilaitasi luomaan omat tunnuksensa ja liittymään ryhmääsi osoitteessa
@@ -373,7 +375,7 @@ fi-FI:
   dashboard_curriculum_k5_title: K-5 Educator Resources
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_lesson_plans: Tuntisuunnitelma
   dashboard_view_all_lesson_plans: Katso kaikkia tuntisuunnitelmia
   dashboard_course1: 'Kurssi 1:'
   dashboard_course2: 'Kurssi 2:'
