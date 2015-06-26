@@ -1,6 +1,6 @@
 - create_params = {cookieDomain: (Rails.env.development? ? 'none' : 'auto')}
 -# The following dimensions must match in order the custom dimension settings in our Google Analytics account.
-- selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio = (1..6).map{|x|"dimension#{x}"}
+- selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio, has_teacher = (1..7).map{|x|"dimension#{x}"}
 - dimensions = {}
 - dimensions[selected_language_dim] = language if (accepted_languages.present? && accepted_languages.first != language)
 - dimensions[env_dim] = Rails.env
@@ -8,6 +8,7 @@
   - dimensions[age_dim] = current_user.age
   - dimensions[gender_dim] = current_user.gender
   - dimensions[user_type_dim] = current_user.user_type
+  - dimensions[has_teacher] = current_user.teachers.any?
   - create_params[:userId] = "#{current_user.id}#{'-dev' unless Rails.env.production?}"
 :javascript
   // Google Analytics snippet (https://developers.google.com/analytics/devguides/collection/analyticsjs/)
