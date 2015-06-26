@@ -201,6 +201,15 @@ config.copy = {
   }
 };
 
+config.digest = {
+  options: {
+    out: 'build/package/js/manifest.js'
+  },
+  files: {
+    src: ['build/package/js/**/*.js']
+  }
+};
+
 config.lodash = {
   'build': {
     'dest': 'src/lodash.js',
@@ -421,6 +430,22 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
   grunt.registerTask('noop', function () {});
 
+  // Add md5 digest to filenames
+  grunt.registerMultiTask('digest', function () {
+    var crypto = require('crypto');
+    var fs = require('fs');
+    var manifest = {};
+    this.filesSrc.forEach(function (file) {
+      var data = grunt.file.read(file);
+      var digest = crypto.createHash('md5').update(data).digest('hex');
+      var oldName = path.relative('build/package/js', file);
+      var newName = oldName.replace(/\.js$/, '-' + digest + '.js');
+      fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
+      manifest[oldName] = newName;
+    });
+    grunt.file.write(this.options().out, 'var digestManifest = ' + JSON.stringify(manifest));
+  });
+
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function() {
     var fs = require('fs');
@@ -446,7 +471,8 @@ module.exports = function(grunt) {
     'newer:copy:static',
     'newer:copy:lib',
     'newer:concat',
-    'newer:sass'
+    'newer:sass',
+    'digest'
   ]);
 
   grunt.registerTask('build', [
