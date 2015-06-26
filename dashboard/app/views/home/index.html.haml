@@ -49,6 +49,13 @@
     %br/
     %br/
     %br/
+    - unless current_user.working_on_user_scripts.empty?
+      - current_user.working_on_user_scripts.each do |user_script| 
+        = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
+
+    - unless current_user.completed_user_scripts.empty?   
+      - current_user.completed_user_scripts.each do |user_script|    
+        = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }    
     = render partial: 'home/projects'
     - unless @gallery_activities.empty?
       = render partial: 'home/gallery'
