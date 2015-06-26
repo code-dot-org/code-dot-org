@@ -1,6 +1,6 @@
 // TODO (brent) - way too many globals
 // TODO (brent) - I wonder if we should sub-namespace dashboard
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -121,8 +121,10 @@ function initApp() {
 function loadSource(name) {
   return function () {
     var deferred = new $.Deferred();
+    name = name + '.js';
+    var digestName = window.digestManifest ? digestManifest[name] : name;
     document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + 'js/' + name + '.js'
+      src: appOptions.baseUrl + 'js/' + digestName
     }).on('load', function () {
       deferred.resolve();
     })[0]);
@@ -141,11 +143,11 @@ function loadStyle(name) {
 
 loadStyle('common');
 loadStyle(appOptions.app);
-var promise;
+var promise = loadSource('manifest')();
 if (appOptions.droplet) {
   loadStyle('droplet/droplet.min');
   loadStyle('tooltipster/tooltipster.min');
-  promise = loadSource('jsinterpreter/acorn_interpreter')()
+  promise = promise.then(loadSource('jsinterpreter/acorn_interpreter'))
       .then(loadSource('marked/marked'))
       .then(loadSource('ace/ace'))
       .then(loadSource('ace/mode-javascript'))
@@ -154,7 +156,7 @@ if (appOptions.droplet) {
       .then(loadSource('tooltipster/jquery.tooltipster'))
       .then(dashboard.project.load);
 } else {
-  promise = loadSource('blockly')()
+  promise = promise.then(loadSource('blockly'))
       .then(loadSource('marked/marked'))
       .then(loadSource(appOptions.locale + '/blockly_locale'))
       .then(dashboard.project.load);
