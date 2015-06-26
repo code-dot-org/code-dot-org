@@ -447,11 +447,13 @@
     con sus alumnos:'
   dashboard_students_print_info: Imprimir tarjetas con la información de registro
     de sus alumnos.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Imagen secreta
   dashboard_students_reset_picture: Puedes restablecer la imagen secreta de un alumno
     en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Reiniciar
     secreto</b>. Se generará una nueva imagen secreta para que ese estudiante pueda
     registrarse.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Palabra secreta
   dashboard_students_reset_word: 'Puedes restablecer las palabras secretas de un alumno
     en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Reiniciar

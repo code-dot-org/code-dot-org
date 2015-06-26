@@ -429,11 +429,13 @@
   dashboard_students_reset_password: Nulstil adgangskode
   dashboard_students_share_section: 'Del dette holds loginside med dine elever:'
   dashboard_students_print_info: Udskrive kort med dine elever login-oplysninger.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Hemmeligt billede
   dashboard_students_reset_picture: Du kan nulstille en elevs hemmelige billede til
     enhver tid ved at vælge <b>Vis hemmeligt</b>, og derefter <b>Nulstille hemmeligt</b>.
     Et nyt hemmeligt billede vil blive genereret for den studerende at bruge, når
     de logger på.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Hemmeligt ord
   dashboard_students_reset_word: 'Du kan nulstille en elevs hemmelige ord når som
     helst ved at vælge <b>Vis hemmelighed</b>, og derefter <b>Nulstil hemmelighed</b>.
