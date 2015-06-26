@@ -6,8 +6,8 @@
   "user_id": 1,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  var customLogic = Studio.customLogic;\r\n  return customLogic.stopped.left && customLogic.sam && customLogic.sam.x < 0;\r\n}",
-    "failure_condition": "function () {\r\n  return (Studio.sprite[0].x < -100);\r\n}",
+    "success_condition": "function () {\r\n  var customLogic = Studio.customLogic;\r\n  return customLogic.stopped.left && customLogic.sam && customLogic.sam.x < 25;\r\n}",
+    "failure_condition": "function () {\r\n  return (Studio.sprite[0].x < -10);\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "soft_buttons": [
       "leftButton",
@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called safe-left? - it should take a Number for its domain that represents Sam's x-coordinates and return true if he's inside the left boundary of the yard (x > -25). If your function works, Sam shouldn't be able to leave the yard from the left side.",
+    "instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called safe-left? - it should take a Number for its domain that represents Sam's x-coordinates and return true if he's completely visible on screen. If your function works, Sam shouldn't be able to leave the yard from the left side.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -45,29 +45,30 @@
     "timeout_after_when_run": "false",
     "custom_game_type": "Sam the Bat",
     "disable_examples": "false",
-    "markdown_instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called _safe-left?_ - it should take a Number for its domain that represents Sam's x-coordinates and return true if he's inside the left boundary of the yard (x > -25). If your function works, Sam shouldn't be able to leave the yard from the left side."
+    "markdown_instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called `safe-left?` - it should take a Number for its domain that represents Sam's x-coordinates and return `true` if he's completely visible on screen. If your function works, Sam shouldn't be able to leave the yard from the left side.",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">
-          <functional_input name="VALUE">
-            <block type="functional_pass">
-              <mutation name="safe-left?"/>
-            </block>
-          </functional_input>
-        </block>
-        <block type="functional_definition" inline="false" deletable="false" movable="false" editable="false">
+        <block type="functional_definition" inline="false" editable="false">
           <mutation>
             <arg name="x" type="Number"/>
-            <description>Given Sam's x coordinate, return true if his x is greater than -25.</description>
+            <description>Given Sam's x coordinate, return true if his x is greater than 50</description>
             <outputtype>Boolean</outputtype>
           </mutation>
           <title name="NAME">safe-left?</title>
           <functional_input name="STACK">
             <block type="functional_boolean">
               <title name="VAL">true</title>
+            </block>
+          </functional_input>
+        </block>
+        <block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">
+          <functional_input name="VALUE">
+            <block type="functional_pass">
+              <mutation name="safe-left?"/>
             </block>
           </functional_input>
         </block>
