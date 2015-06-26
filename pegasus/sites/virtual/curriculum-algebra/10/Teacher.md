@@ -82,8 +82,6 @@ The final puzzle of this stage is a Free Play puzzle that will allow you amd you
 
 Place the following input/output tables on the board and see if students can come up with functions that will produce the appropriate animation.
 
-[together]
-
 <div style="float:left">
 
 <h4>Challenge 1</h4>
@@ -157,5 +155,7 @@ Place the following input/output tables on the board and see if students can com
 <div style="clear:both"></div>
 
 Once students have figured out the provided Input Output tables, encourage them to come up with non-linear animation functions of their own.
+
+[together]
 
 <%= partial('../docs/_footer', :lesson => lesson) %>
