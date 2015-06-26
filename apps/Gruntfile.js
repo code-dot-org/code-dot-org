@@ -206,7 +206,7 @@ config.digest = {
     out: 'build/package/js/manifest.js'
   },
   files: {
-    src: ['build/package/js/**/*.js']
+    src: ['build/package/js/**/*.js', '!build/package/js/ace/**/*.js']
   }
 };
 
