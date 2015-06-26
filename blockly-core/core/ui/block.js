@@ -220,7 +220,7 @@ Blockly.Block.prototype.initSvg = function() {
                        this.onMouseDown_);
   }
   this.setCurrentlyHidden(this.currentlyHidden_);
-  this.moveToFrontOfBlockSpace_();
+  this.moveToFrontOfMainCanvas_();
 };
 
 /**
@@ -290,6 +290,7 @@ Blockly.Block.terminateDrag_ = function() {
       selected.moveConnections_(dx, dy);
       delete selected.draggedBubbles_;
       selected.setDragging_(false);
+      selected.moveToFrontOfMainCanvas_();
       selected.render();
       goog.Timer.callOnce(
           selected.bumpNeighbours_, Blockly.BUMP_DELAY, selected);
@@ -472,6 +473,7 @@ Blockly.Block.prototype.unplug = function(healStack, bump) {
 Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
   var x = 0;
   var y = 0;
+  var elementIsRootCanvas = false;
   if (this.svg_) {
     var element = this.svg_.getRootElement();
     do {
@@ -480,7 +482,9 @@ Blockly.Block.prototype.getRelativeToSurfaceXY = function() {
       x += xy.x;
       y += xy.y;
       element = element.parentNode;
-    } while (element && element != this.blockSpace.getCanvas());
+      elementIsRootCanvas = (element == this.blockSpace.getCanvas() ||
+          element == this.blockSpace.getDragCanvas());
+    } while (element && !elementIsRootCanvas);
   }
   return {x: x, y: y};
 };
@@ -1009,15 +1013,25 @@ Blockly.Block.prototype.setDraggingHandleImmovable_ = function(adding, immovable
 };
 
 /**
- * Moves this block to the front of its BlockSpace
+ * Move the block's svg into the drag-layer SVGGElement
  * @private
  */
-Blockly.Block.prototype.moveToFrontOfBlockSpace_ = function () {
+Blockly.Block.prototype.moveToDragCanvas_ = function () {
   if (!this.svg_) {
     return;
   }
+  this.blockSpace.moveElementToDragCanvas(this.svg_.getRootElement());
+};
 
-  this.blockSpace.moveElementToFront(this.svg_.getRootElement());
+/**
+ * Move the block's svg into the regular canvas SVGGElement
+ * @private
+ */
+Blockly.Block.prototype.moveToFrontOfMainCanvas_ = function () {
+  if (!this.svg_) {
+    return;
+  }
+  this.blockSpace.moveElementToMainCanvas(this.svg_.getRootElement());
 };
 
 /**
@@ -1050,7 +1064,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       var firstImmovableBlockHandler = this.generateReconnector_(this.previousConnection);
       this.setParent(null);
       this.setDraggingHandleImmovable_(true, firstImmovableBlockHandler);
-      this.moveToFrontOfBlockSpace_();
+      this.moveToDragCanvas_();
       this.blockSpace.recordDeleteAreas();
     }
   }
@@ -1246,7 +1260,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
     }
     // Move this block up the DOM.  Keep track of x/y translations.
     var xy = this.getRelativeToSurfaceXY();
-    this.moveToFrontOfBlockSpace_();
+    this.moveToFrontOfMainCanvas_();
     this.svg_.getRootElement().setAttribute('transform',
         'translate(' + xy.x + ', ' + xy.y + ')');
 

@@ -885,6 +885,7 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
     (this.blockSpace.xOffsetFromView + metrics.absoluteLeft) + ',' +
     (this.blockSpace.yOffsetFromView + metrics.absoluteTop) + ')';
   this.blockSpace.getCanvas().setAttribute('transform', translation);
+  this.blockSpace.getDragCanvas().setAttribute('transform', translation);
   this.blockSpace.getBubbleCanvas().setAttribute('transform', translation);
 };
 
@@ -899,6 +900,7 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
     var translation = 'translate(' + (metrics.absoluteLeft) + ',' +
       (metrics.absoluteTop) + ')';
     this.blockSpace.getCanvas().setAttribute('transform', translation);
+    this.blockSpace.getDragCanvas().setAttribute('transform', translation);
     this.blockSpace.getBubbleCanvas().setAttribute('transform',
       translation);
   }
