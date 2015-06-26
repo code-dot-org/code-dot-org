@@ -691,6 +691,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    designMode.addKeyboardHandlers();
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
@@ -829,6 +831,8 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
+
+  designMode.addKeyboardHandlers();
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
