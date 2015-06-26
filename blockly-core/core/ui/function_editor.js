@@ -196,7 +196,7 @@ Blockly.FunctionEditor.prototype.openWithNewFunction = function() {
 Blockly.FunctionEditor.prototype.bindToolboxHandlers_ = function() {
   var paramAddTextElement = goog.dom.getElement('paramAddText');
   var paramAddButton = goog.dom.getElement('paramAddButton');
-  if (!Blockly.disableParamEditing && paramAddTextElement && paramAddButton) {
+  if (!Blockly.disableParamEditing) {
     Blockly.bindEvent_(paramAddButton, 'click', this,
         goog.bind(this.addParamFromInputField_, this, paramAddTextElement));
     Blockly.bindEvent_(paramAddTextElement, 'keydown', this, function(e) {
@@ -406,13 +406,43 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.container_.setAttribute('id', 'modalContainer');
   goog.dom.insertSiblingAfter(this.container_, Blockly.mainBlockSpaceEditor.svg_);
   this.container_.style.top = Blockly.mainBlockSpaceEditor.getWorkspaceTopOffset();
+  var self = this;
   this.modalBlockSpaceEditor =
       new Blockly.BlockSpaceEditor(this.container_,
-        goog.bind(this.calculateMetrics_, this), false, true);
+        goog.bind(this.calculateMetrics_, this),
+        function (xyRatio) {
+          // `this` is the blockspace editor
+          Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
+          if (self.contractDiv_) {
+            self.positionClippingRect_();
+            self.positionSizeContractDom_(this);
+          }
+        },
+        true);
+
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
   this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
+
   Blockly.modalBlockSpace = this.modalBlockSpace;
   Blockly.modalBlockSpaceEditor = this.modalBlockSpaceEditor;
+
+  var clipPathID = "modalBlockCanvasClipRect";
+  var clipPath = Blockly.createSvgElement(
+    "clipPath", {
+      id: clipPathID
+    }
+  );
+
+  this.modalBlockSpaceEditor.addToSvgDefs(clipPath);
+  var clipPathURL = "url(#" + clipPathID + ")";
+  this.modalBlockSpace.getCanvas().setAttribute('clip-path', clipPathURL);
+
+  this.clipPathRect_ = Blockly.createSvgElement("rect", {
+    x: 150, // left of green, offset by
+    y: 0, // top of green
+    width: 100, // width of modal viewport
+    height: 400 // height of modal viewport
+  }, clipPath);
 
   this.modalBlockSpaceEditor.addChangeListener(
       Blockly.mainBlockSpace.fireChangeEvent);
@@ -424,9 +454,13 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 
   this.addCloseButton_();
 
-  // Set up contract definition HTML section
   this.createContractDom_();
   this.createParameterEditor_();
+
+  this.setupParametersToolbox_();
+  this.positionSizeContractDom_();
+
+  this.bindToolboxHandlers_();
 
   // The function editor block space passes clicks through via
   // pointer-events:none, so register the unselect handler on lower elements
@@ -473,7 +507,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
     this.functionDefinitionBlock.description_ = e.target.value;
   }
 
-  this.setupParametersToolbox_();
   this.addEditorFrame_();
 
   this.onResizeWrapper_ = Blockly.bindEvent_(window,
@@ -536,6 +569,19 @@ Blockly.FunctionEditor.prototype.readyToBeLaidOut_ = function () {
     this.isOpen();
 };
 
+Blockly.FunctionEditor.prototype.getAboveFlyoutHeight = function () {
+  return this.getContractDivHeight()
+    + this.flyout_.getHeight()
+    + this.modalBlockSpace.yOffsetFromView;
+};
+
+Blockly.FunctionEditor.prototype.positionFlyout_ = function (currentY) {
+  currentY += this.getAboveFlyoutHeight();
+  this.flyout_.customYOffset = currentY;
+  this.flyout_.position_();
+  return currentY;
+};
+
 Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
   if (!this.readyToBeLaidOut_()) {
     return;
@@ -545,10 +591,7 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
     this.modalBlockSpace.getMetrics().viewWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
     Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
   var currentY = 0;
-  currentY += this.getContractDivHeight();
-  currentY += this.flyout_.getHeight();
-  this.flyout_.customYOffset = currentY; // TODO(bjordan/bbuchanan): dirty way: maybe set this during scroll?
-  this.flyout_.position_();
+  currentY += this.positionFlyout_(currentY);
 
   currentY += Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
   this.functionDefinitionBlock.moveTo(currentX, currentY);
@@ -590,7 +633,6 @@ Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {
   this.modalBlockSpace.svgGroup_.insertBefore(flyoutDom,
     this.modalBlockSpace.svgBlockCanvas_);
   this.flyout_.init(this.modalBlockSpace, false);
-  this.bindToolboxHandlers_();
 };
 
 Blockly.FunctionEditor.prototype.addEditorFrame_ = function () {
@@ -656,12 +698,23 @@ Blockly.FunctionEditor.prototype.position_ = function() {
   this.layOutBlockSpaceItems_();
 };
 
+Blockly.FunctionEditor.prototype.positionClippingRect_ = function () {
+  var metrics = this.modalBlockSpace.getMetrics();
+  var width = metrics.viewWidth;
+  var height = metrics.viewHeight;
+  this.clipPathRect_.setAttribute('width', width);
+  this.clipPathRect_.setAttribute('height', height);
+  this.clipPathRect_.setAttribute('x', -this.modalBlockSpace.xOffsetFromView);
+  this.clipPathRect_.setAttribute('y', -this.modalBlockSpace.yOffsetFromView);
+};
+
 Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function () {
   var metrics = this.modalBlockSpace.getMetrics();
   var left = metrics.absoluteLeft;
-  this.contractDiv_.style.left = left + 'px';
+  this.contractDiv_.style.left = (left + this.modalBlockSpace.xOffsetFromView) + 'px';
   this.contractDiv_.style.top = this.getContractDomTopY_() + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
+  this.positionFlyout_(0);
 };
 
 /**
@@ -669,7 +722,7 @@ Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function () {
  * @protected
  */
 Blockly.FunctionEditor.prototype.getContractDomTopY_ = function() {
-  return this.getWindowBorderChromeHeight();
+  return this.getWindowBorderChromeHeight() + this.modalBlockSpace.yOffsetFromView;
 };
 
 Blockly.FunctionEditor.prototype.createParameterEditor_ = function() {
@@ -697,7 +750,6 @@ Blockly.FunctionEditor.prototype.createContractDom_ = function() {
       + '<div>' + Blockly.Msg.FUNCTION_DESCRIPTION_LABEL + '</div>'
       + '<div><textarea id="functionDescriptionText" rows="2"></textarea></div>'
       + '<div style="margin: 0;" id="paramEditingArea"></div>';
-  this.positionSizeContractDom_();
   this.contractDiv_.style.display = 'block';
   this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
 };
