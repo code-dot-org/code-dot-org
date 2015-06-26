@@ -17,6 +17,8 @@ gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
 gem 'parallel'
 
+gem 'google-api-client'
+
 group :development do
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
@@ -98,7 +100,7 @@ gem 'honeybadger', '~> 1.11.2',  group: [:staging, :production] # error monitori
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.1.1'
+gem 'redcarpet', '~> 3.2.3'
 
 gem 'geocoder'
 

@@ -303,7 +303,7 @@ GEM
       rails (>= 3.1)
       react-source (~> 0.13)
     react-source (0.13.1)
-    redcarpet (3.1.1)
+    redcarpet (3.2.3)
     redis (3.1.0)
     ref (1.0.5)
     rerun (0.10.0)
@@ -439,6 +439,7 @@ DEPENDENCIES
   factory_girl_rails
   font-awesome-rails
   geocoder
+  google-api-client
   google_drive (~> 1.0.0)
   haml
   haml-rails
@@ -473,7 +474,7 @@ DEPENDENCIES
   rack-ssl-enforcer
   rails (= 4.0.3)
   react-rails (~> 1.0)
-  redcarpet (~> 3.1.1)
+  redcarpet (~> 3.2.3)
   redis (~> 3.1.0)
   rerun (~> 0.10.0)
   retryable
