@@ -5,7 +5,7 @@ require 'pdf-reader'
 require_relative '../src/env'
 require 'pdf/collate'
 
-class PDFMergerTest < Minitest::Test
+class PDFMergerTest < Minitest::Unit::TestCase
   include PDF
 
   def setup

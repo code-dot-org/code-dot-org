@@ -2,7 +2,7 @@ require_relative '../../lib/cdo/pegasus'
 require_relative '../../lib/cdo/yaml'
 require 'minitest/autorun'
 
-class YamlTest < Minitest::Test
+class YamlTest < Minitest::Unit::TestCase
 
   def test_markdown_no_front_matter
     content = """
