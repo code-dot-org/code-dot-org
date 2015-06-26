@@ -491,7 +491,9 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
-  this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
+  this.frameClipDiv_ = this.createFrameClipDiv_();
+  this.frameClipDiv_.insertBefore(this.contractDiv_, this.frameClipDiv_.firstChild);
+  this.container_.insertBefore(this.frameClipDiv_, this.container_.firstChild);
   this.initializeAddButton_();
 };
 
