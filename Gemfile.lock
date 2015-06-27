@@ -439,6 +439,7 @@ DEPENDENCIES
   factory_girl_rails
   font-awesome-rails
   geocoder
+  google-api-client
   google_drive (~> 1.0.0)
   haml
   haml-rails

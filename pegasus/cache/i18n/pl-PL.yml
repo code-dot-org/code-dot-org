@@ -298,7 +298,7 @@
   dashboard_landing_news_title: Zasoby nauczyciela w K-5 (tylko po angielsku)
   dashboard_landing_new_beta: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5.
   dashboard_landing_new_k5courses: Nowość! Wypróbuj nasze kursy dla uczniów w K-5.
-  dashboard_landing_useful_links: Inne przydatne linki (tylko po angielsku)
+  dashboard_landing_useful_links: Inne przydatne linki
   dashboard_landing_office_hours: Zapytaj osobiście! Odwiedź nasze co miesięczne wideo
     godziny.
   dashboard_landing_print_certificates: Drukowanie certyfikatów dla uczniów, którzy
@@ -317,10 +317,10 @@
   dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
     by our partners.</a> Learn to program with robots, make web pages, make your own
     app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
     students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses: 20-godzinne kursy dla K-5
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -328,12 +328,12 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: 20-godzinne kursy dla gimnazjum
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: Całoroczne kursy dla liceum
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
@@ -341,7 +341,7 @@
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: Informatyki w przyrodzie
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
@@ -431,10 +431,12 @@
     tej sekcji:'
   dashboard_students_print_info: Wydrukuj karty z Informacjami o logowaniu dla swoich
     uczniów.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Tajny Obrazek
   dashboard_students_reset_picture: Możesz zresetować tajny obrazek ucznia w dowolnym
     momencie wybierając <b>Pokaż sekret</b>, a następnie <b>Resetuj sekret</b>. Nowy
     tajny obrazek zostanie wygenerowane dla tego ucznia, gdy będzie się logował.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Tajne Słowo
   dashboard_students_reset_word: 'Możesz zresetować tajne słowa ucznia w dowolnym
     momencie wybierając <b>Pokaż sekret</b>, a następnie <b>Resetuj sekret</b>. Nowa
@@ -449,16 +451,16 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Kliknij tutaj</a>, aby prywatne dokumenty mogły być udostępnione lub drukowane
     dla Twoich uczniów.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: Zasoby dla edukatorów w K-5
+  dashboard_curriculum_middle_title: Zasoby dla edukatorów w gimnazjum
+  dashboard_curriculum_high_title: Zasoby dla edukatorów w liceum
+  dashboard_lesson_plans: Plany lekcji
   dashboard_view_all_lesson_plans: Zobacz wszystkie plany lekcji
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
   dashboard_overview: Overview
   dashboard_sequence: Sekwencja (ciąg)
@@ -471,8 +473,8 @@
   dashboard_puzzle_solving: 'Rozwiązywanie zagadek (łamigłówek):'
   dashboard_student_worksheet: arkusz ucznia
   dashboard_teacher_worksheet: arkusz nauczyciela
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csina: 'Informatyka w algebrze:'
+  dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K

@@ -34,20 +34,20 @@ pl:
           The Big Event: Wielkie Wydarzenie
           Going Places Safely: Bezpiecznie dotrzeć na miejsce
           description: Kurs 1 umożliwia początkującym tworzenie programów komputerowych, które pomogą im nauczyć się współpracować z innymi, rozwijać umiejętności rozwiązywania problemów i wytrwać przy rozwiązywaniu trudnych zadań. Przy końcu tego kursu uczniowie tworzą własne gry lub historyjki, którymi mogą podzielić się z innymi. Zalecany dla przedszkola i pierwszej klasy.
-          "Bee: Sequence": 'Pszczółka: sekwencja'
+          "Bee: Sequence": 'Pszczółka: Sekwencja'
           "Artist: Sequence": 'Artysta: Sekwencja'
-          "Artist: Shapes": 'Artysta: kształty'
+          "Artist: Shapes": 'Artysta: Kształty'
           "Maze: Loops": 'Labirynt: Pętle'
           "Bee: Loops": 'Pszczółka: Pętle'
           "Studio: Create a Story": 'Play Lab: Utwórz opowieść'
           "Artist: Loops": 'Artysta: Pętle'
-          description_audience: Wiek 4 + (jeszcze nie czytający)
+          description_audience: W wieku 4-6
           description_short: Kurs 1 jest przeznaczony dla początkujących.
         course2:
           The Maze: Labirynt
           Suzi: Suzi
           The Artist: Artysta
-          Artist Debugging: 'Artysta: debugowanie'
+          Artist Debugging: 'Artysta: Debugowanie'
           Bounce: Odbicie
           "Studio: Create a Story": 'Play Lab: Utwórz opowieść'
           Artist Loops: 'Artysta: Pętle'
@@ -80,7 +80,7 @@ pl:
           "Artist: Sequence2": 'Artysta: Sekwencja2'
           "Maze: Sequence2": 'Labirynt: Sekwencja2'
           "Artist: Nested Loops": 'Artysta: Pętle zagnieżdżone'
-          description_audience: Powyżej 6 lat (wymagana umiejętność czytania)
+          description_audience: W wieku 6-18
           description_short: Kurs 2 jest przeznaczony dla uczniów, którzy potrafią czytać.
         course3:
           The Maze: Labirynt
@@ -88,16 +88,16 @@ pl:
           The Artist: Artysta
           title: Kurs 3
           Artist Functions: 'Artysta: Funkcje'
-          Artist For Loops: 'Artysta: pętle "for" (dla)'
-          Artist Nested Loops: 'Artysta: zagnieżdżone pętle'
+          Artist For Loops: 'Artysta: Pętle "for" (dla)'
+          Artist Nested Loops: 'Artysta: Zagnieżdżone pętle'
           Bee Conditionals: 'Pszczółka: Wyrażenia warunkowe'
-          Bee Nested Loops: 'Pszczółka: pętle zagnieżdżone'
+          Bee Nested Loops: 'Pszczółka: Pętle zagnieżdżone'
           Bee Debuggin: 'Pszczółka: Debugowanie'
           Bee Debugging: 'Pszczółka: Debugowanie'
           Bee Functions: 'Pszczółka: Funkcje'
           Artist Functions with Params: 'Artysta: Funkcje z parametrami'
           Bounce: Odbicie
-          Maze Conditionals: 'Labirynt: wyrażenia warunkowe'
+          Maze Conditionals: 'Labirynt: Wyrażenia warunkowe'
           Artist Functions with Parameters: 'Artysta: Funkcje z Parametrami'
           Computational Thinking: Myślenie komputacyjne
           Functional Suncatchers: Funkcjonalni Łapacze Słońca (Suncatchers)
@@ -106,7 +106,7 @@ pl:
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Cyfrowe obywatelstwo
-          Farmer - While Loops: 'Farmer: Pętla "while" (dopóki)'
+          Farmer - While Loops: 'Farmer: Pętla "dopóki" (while)'
           description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania omówione w poprzednich kursach dla elastycznego rozwiązania bardziej złożonych problemów. Uczniowie będą tworzyć interaktywne opowiadania i gry, którymi mogą dzielić się z innymi. Zalecane dla klas 4-5.
           "Studio: Create a Game": 'Play Lab: Utwórz grę'
           Maze: Labirynt
@@ -116,7 +116,7 @@ pl:
           "Bee: Conditionals": 'Pszczółka: wyrażenia warunkowe'
           "Maze: Conditionals": 'Labirynt: Wyrażenia warunkowe'
           "Artist: Nested Loops": 'Artysta: Pętle zagnieżdżone'
-          "Farmer: While Loops": 'Farmer: Pętle "while" (dopóki)'
+          "Farmer: While Loops": 'Farmer: Pętle "dopóki" (whilei)'
           "Bee: Nested Loops": 'Pszczółka: Pętle zagnieżdżone'
           "Bee: Debugging": 'Pszczółka: debugowanie'
           Maze2: Labirynt 2
@@ -131,7 +131,7 @@ pl:
           "Bee: Debugging2": 'Pszczółka: Debugowanie 2'
           "Artist: Patterns": 'Artysta: Wzorce'
           Songwriting: Pisanie piosenek
-          description_audience: W wieku 8 lat + (po Kursie 2)
+          description_audience: W wieku 8-18
           description_short: Kurs 3 jest kontynuacją Kursu 2.
         msm:
           title: Middle School Math
@@ -218,7 +218,7 @@ pl:
           "Play Lab: Variables": 'Play Lab: Zmienne'
           "Play Lab: Functions with Parameters": 'Play Lab: Funkcje z parametrami'
           "Bee: Functions with Parameters": 'Pszczółka: Funkcje z Parametrami'
-          "Artist: For Loops": 'Artysta: pętle "for"'
+          "Artist: For Loops": 'Artysta: pętle "dla" (for)'
           "Play Lab: For Loops": 'Play Lab: Pętle "dla" (for)'
           "Artist: Functions": 'Artysta: Funkcje'
           "Unplugged: Tangrams": 'Bez komputera: Tangramy'
@@ -234,7 +234,7 @@ pl:
           Farmer Binary: 'Rolnik: Binarny'
           Maze and Bee: Labirynt i Pszczółka
           Artist Binary: 'Artysta: Binarny'
-          description_audience: W wieku 10 lat + (po Kursie 3)
+          description_audience: W wieku 10-18
         Course4pre:
           title: Wymagania wstępne dla Kursu 4
           description_short: Krótkie przypomnienie pojęć dla uczniów, którzy nie ukończyli Kursów 2 i 3.
@@ -245,7 +245,7 @@ pl:
           "Artist: Loops": 'Artysta: Pętle'
           "Bee: Conditionals": 'Pszczółka: wyrażenia warunkowe'
           "Artist: Nested Loops": 'Artysta: Pętle zagnieżdżone'
-          "Farmer: While Loops": 'Farmer: Pętle "while" (dopóki)'
+          "Farmer: While Loops": 'Farmer: Pętle "dopóki" (whilei)'
           "Bee: Nested Loops": 'Pszczółka: Pętle zagnieżdżone'
           "Artist: Functions": 'Artysta: Funkcje'
           "Bee: Debugging": 'Pszczółka: debugowanie'
@@ -347,10 +347,10 @@ pl:
           "Programming Concept: Functions": 'Programming Concept: Functions'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
-          title: Symulator Internetowy
+          title: Symulator internetowy
           description_short: ""
           description: ""
-          Internet Simulator: Symulator Internetowy
+          Internet Simulator: Symulator internetowy
           Unit 1: Rozdział 1
           Unit 2: Rozdział 2
           Sending Bits: Sending Bits
@@ -363,9 +363,9 @@ pl:
           description: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
-          title: 20-godzinny Kurs Wprowadzający
-          description_audience: W wieku 10 lat + (po Kursie 3)
-          description: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki i programowania. Kurs jest przeznaczony do użytku klasach od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.
+          title: Przyspieszone wprowadzenie do kursu informatyki
+          description_audience: W wieku 10-18
+          description: Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18 lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!
           Introduction to Computer Science: Wprowadzenie do informatyki
           The Maze: Labirynt
           Computational Thinking: Myślenie komputacyjne
@@ -457,7 +457,7 @@ pl:
           "Artist: Loops": 'Artysta: Pętle'
           "Bee: Conditionals": 'Pszczółka: wyrażenia warunkowe'
           "Artist: Nested Loops": 'Artysta: Pętle zagnieżdżone'
-          "Farmer: While Loops": 'Farmer: Pętle "while" (dopóki)'
+          "Farmer: While Loops": 'Farmer: Pętle "dopóki" (whilei)'
           "Bee: Nested Loops": 'Pszczółka: Pętle zagnieżdżone'
           "Artist: Functions": 'Artysta: Funkcje'
           "Bee: Debugging": 'Pszczółka: debugowanie'
@@ -885,36 +885,24 @@ pl:
           description: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Symulator Internetowy
+          Internet Simulator: Symulator internetowy
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Witamy!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Witamy!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Symulator Internetowy
+          Internet Simulator: Symulator internetowy
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Introduction to PD: Introduction to PD
-          K-5 Courses: K-5 Courses
-          Writing computer programs: Writing computer programs
-          "Programming Concept: Loops": 'Programming Concept: Loops'
-          Unplugged lessons: Unplugged lessons
-          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
-          Computer Science Pedagogy: Computer Science Pedagogy
-          "Programming Concept: Functions": 'Programming Concept: Functions'
-          Teacher Dashboard: Teacher Dashboard
-          "Programming Concept: Events": 'Programming Concept: Events'
-          Reflection: Reflection
-          Next Steps: Next Steps
+        K5-OnlinePD:
+          title: 'Teaching Courses 1-4: The Basics'
+          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -924,11 +912,12 @@ pl:
           "Mastering the Basics: Events": 'Mastering the Basics: Events'
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
-          Welcome!: Welcome!
+          Welcome!: Witamy!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -946,24 +935,10 @@ pl:
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Godzina Kodowania 2015
+          description_short: Posłuż się Play Lab, by utworzyć historyjkę lub grę.
+          description: Posłuż się Play Lab, by utworzyć historyjkę lub grę.
           Hour of Code: Godzina kodowania (Hour of Code)
-        K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Getting Started: Getting Started
-          Computer Science Fundamentals: Computer Science Fundamentals
-          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
-          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
-          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
-          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
-          "Mastering the Basics: Events": 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-          Planning: Planning
-          Next Steps: Next Steps
-          Looking Ahead: Looking Ahead
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
@@ -980,3 +955,8 @@ pl:
           "Eval: Conditionals": 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Witamy!
+          The Design Recipe: The Design Recipe
+          Teaching with Puzzles: Teaching with Puzzles

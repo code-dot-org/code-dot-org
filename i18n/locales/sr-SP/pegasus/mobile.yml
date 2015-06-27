@@ -373,8 +373,10 @@ sr-SP:
   dashboard_students_reset_password: Ресетуј лозинку
   dashboard_students_share_section: 'Поделите страницу за пријаву ове групе са својим ученицима:'
   dashboard_students_print_info: Отштампајте картице са подацима за пријављивање ученика/це.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Тајна слика
   dashboard_students_reset_picture: 'Можете да ресетујете тајну слику било када бирањем <b>Покажи тајну</b> и тада<b>Ресетуј тајну</b>. Нова слика ће бити изабрана за тог ученика када се пријаве.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Тајна Реч
   dashboard_students_reset_word: 'Можете ресетовати тајне речи ученика било када бирањем <b>Покажи тајну</b> и тад <b>Ресетуј тајну</b>. Нови пар тајних речи ће бити изабране за тог студента да их користи када се пријаве. '
   dashboard_students_join_link: Реците вашим ученицима да направе сопствене налоге и придруже се вашој групи на

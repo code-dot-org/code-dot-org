@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Býr til lykkju sem samanstendur af yrðingu með skilyrði og bálki yrðinga sem eru keyrðar í hverri umferð lykkjunnar. Lykkjan er keyrð á meðan skilyrðið gefur gildið \"true\"",
   "dropletBlock_whileBlock_signatureOverride": "while lykkja",
   "emptyBlocksErrorMsg": "Kubbarnir \"endurtaka\" og \"ef\" verða að innihalda aðra kubba til að virka. Gættu þess að innri kubburinn smellpassi í ytri kubbinn.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Fallkubburinn þarf að innhalda aðra kubba til að virka.",
   "emptyFunctionalBlock": "Það er kubbur með óútfyllt inntak.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "endir",
   "errorEmptyFunctionBlockModal": "Það þurfa að vera kubbar innan í skilgreiningunni á fallinu. Smelltu á \"breyta\" og dragðu kubba inn í græna kubbinn.",
   "errorIncompleteBlockInFunction": "Smelltu á \"breyta\" til að ganga úr skugga um að það vanti ekki neina kubba í skilgreininguna á fallinu.",
@@ -210,8 +213,5 @@
   "watchVideo": "Horfa á videóið",
   "when": "þegar",
   "whenRun": "þegar keyrt",
-  "workspaceHeaderShort": "Vinnusvæði: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Vinnusvæði: "
 }

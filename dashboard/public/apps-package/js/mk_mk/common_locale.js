@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Repeat something while a condition is true"},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "while loop"},
 "emptyBlocksErrorMsg":function(d){return "На \"Повтори \" или \" Ако \" блокот треба да има и други блокови во него за  да работат. Бидете сигурни дека внатрешниот блок се вклопува правилно во внатрешноста на  блок."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Функцијата блок треба да има и други блокови во  него за да работи."},
 "emptyFunctionalBlock":function(d){return "You have a block with an unfilled input."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "Крај"},
 "errorEmptyFunctionBlockModal":function(d){return "Мора да има блока во дефиниција на вашата функција. Притисни \"применувај\" и извлечи блока во зелениот блок."},
 "errorIncompleteBlockInFunction":function(d){return "Притисни \"уредувај\" за да сте сигурни дека нема блока што фалат од дефиницијата на вашата функција."},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Погледни го видеото"},
 "when":function(d){return "Кога"},
 "whenRun":function(d){return "Кога трча"},
-"workspaceHeaderShort":function(d){return "Работна површина: "},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "Работна површина: "}};

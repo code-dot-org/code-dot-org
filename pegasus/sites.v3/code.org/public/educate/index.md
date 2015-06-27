@@ -27,6 +27,7 @@ Whether you're a school teacher, an administrator, an after-school teacher, or a
 To introduce your students to our popular introductory courses, attend one of our high quality local workshops, free of charge.
 
 [<button class="teacher-button">Learn more</button>](/educate/k5/) &nbsp;&nbsp;[<button class="teacher-button">Find a local workshop</button>](/professional-development-workshops)
+<br><br>
 Can't attend a local workshop? Consider completing our free, self-paced [online workshop.](/educate/professional-development-online)
 
 ### Middle and high school teachers
@@ -34,7 +35,8 @@ Can't attend a local workshop? Consider completing our free, self-paced [online 
 Our [workshops](/educate/professional-development) for teachers in grades 6-12 are only available as part of a [district-wide partnership](/districts).
 
 [<button class="teacher-button">Learn more</button>](/educate/professional-development)
-If a district partnership isn't an option for you, our free, self-paced [online workshop](/educate/professional-development-online) provides an opportunity for teachers to get started teaching CS on their own.
+<br><br>
+If a district partnership isn't an option for you, you might consider using [Courses 1-4](/educate/k5) with your students. Our free, self-paced [online workshop](/educate/professional-development-online) provides an opportunity for you to get started teaching CS on their own.
 
 
 <br/>
