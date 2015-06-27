@@ -439,11 +439,13 @@
     με τους μαθητές σας:'
   dashboard_students_print_info: Εκτυπώσετε τις κάρτες με τα στοιχεία σύνδεσης των
     μαθητών σας.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Μυστική εικόνα
   dashboard_students_reset_picture: Μπορείτε να τον επαναφέρετε τη μυστική εικόνα
     ενός μαθητή ανά πάσα στιγμή επιλέγοντας <b>Εμφάνιση μυστικού</b> και, στη συνέχεια,
     <b>Επαναφορά μυστικού</b>. Θα δημιουργηθεί μια νέα μυστική εικόνα γι αυτόν τον
     μαθητή για να την χρησιμοποιήσει στη σύνδεσή του.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Μυστική λέξη
   dashboard_students_reset_word: 'Μπορείτε να τον επαναφέρετε τις μυστικές λέξεις
     ενός μαθητή ανά πάσα στιγμή επιλέγοντας <b>Εμφάνιση μυστικού</b> και, στη συνέχεια,
