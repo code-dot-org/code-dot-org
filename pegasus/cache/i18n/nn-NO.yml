@@ -426,10 +426,12 @@
   dashboard_students_reset_password: Tilbakestill passord
   dashboard_students_share_section: 'Del påloggingssida til denne seksjonen med elevane:'
   dashboard_students_print_info: Skriv ut kort med elevane sin påloggingsinformasjon.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Hemmeleg bilde
   dashboard_students_reset_picture: Du kan tilbakestille ein elevs hemmelege bilde
     når som helst ved å velje <b>Vis løyndom</b> og så <b>Tilbakestill løyndom</b>.
     Et nytt hemmelig bilde vil bli generert for den eleven når han loggar inn.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Hemmeleg ord
   dashboard_students_reset_word: 'Du kan tilbakestille en elevs hemmelege ord når
     som helst ved å velje <b>Vis hemmeleg</b> og så <b>Tilbakestill løyndom</b>. Et

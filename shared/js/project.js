@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, $, trackEvent, Applab */
+/* global dashboard, appOptions, $, trackEvent, Applab, Blockly */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -87,13 +87,13 @@ module.exports = {
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
-          this.save(dashboard.getEditorSource(), callback);
+          this.save(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          current.levelSource = dashboard.getEditorSource();
+          current.levelSource = getEditorSource();
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
@@ -152,12 +152,21 @@ module.exports = {
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
+   * @param {string?} source Optional source to be provided, saving us another
+   *   call to getEditorSource
+   * @param {function} callback Fucntion to be called after saving
    */
   save: function(source, callback) {
+    if (arguments.length === 1) {
+      // If no source is provided, the only argument is our callback and we
+      // ask for the source ourselves
+      callback = arguments[0];
+      source = getEditorSource();
+    }
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
     current.levelSource = source;
-    current.levelHtml = window.Applab && Applab.getHtml();
+    current.levelHtml = getLevelHtml();
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
@@ -192,14 +201,16 @@ module.exports = {
     if (current.levelSource === undefined) {
       return;
     }
-    // `dashboard.getEditorSource()` is expensive for Blockly so only call
+    // `getEditorSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
       return;
     }
 
-    var source = dashboard.getEditorSource();
-    if (current.levelSource === source) {
+    var source = getEditorSource();
+    var html = getLevelHtml();
+
+    if (current.levelSource === source && current.levelHtml === html) {
       hasProjectChanged = false;
       return;
     }
@@ -213,7 +224,7 @@ module.exports = {
    */
   rename: function(newName, callback) {
     current.name = newName;
-    this.save(dashboard.getEditorSource(), callback);
+    this.save(callback);
   },
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
@@ -223,7 +234,7 @@ module.exports = {
     delete current.id;
     delete current.hidden;
     current.name = newName;
-    this.save(dashboard.getEditorSource(), callback);
+    this.save(callback);
   },
   delete: function(callback) {
     var channelId = current.id;
@@ -331,4 +342,17 @@ function determineNoPadding() {
     default:
       return false;
   }
+}
+
+/**
+ * @returns {string} The serialized level source from the editor.
+ */
+function getEditorSource() {
+  return window.Blockly ?
+    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) :
+    window.Applab && Applab.getCode();
+}
+
+function getLevelHtml() {
+  return window.Applab && Applab.getHtml();
 }

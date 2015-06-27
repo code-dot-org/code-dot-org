@@ -17,6 +17,8 @@ gem 'google_drive', '~> 1.0.0'
 gem 'dalli' # memcached
 gem 'parallel'
 
+gem 'google-api-client'
+
 group :development do
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'

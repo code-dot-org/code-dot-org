@@ -63,6 +63,7 @@
 
   front_join_us_heading: 'An Hour of Code for every student.'
   front_join_us_description: 'Computer science is a foundation for every student. Help us introduce it to 100 million.'
+  front_join_us_description_short: 'Computer science is a foundation for every student.'
   front_join_us_button: 'Join us'
   front_what_is_hoc: 'What is the Hour of Code?'
   front_join_us_header: 'Anyone can learn the basics, and have fun doing it!'
