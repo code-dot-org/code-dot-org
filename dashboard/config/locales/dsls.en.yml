@@ -2194,7 +2194,6 @@ en:
         : The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?
       PDAlg DR Multi 2:
         For a given number of dollars, return the number of treats.: For a given number of dollars, return the number of treats.
-        Given a number of dollars, produce the number of 50 cent treats you could purchase: Given a number of dollars, produce the number of 50 cent treats you could purchase
         Given a number of dollars, produce the number<br>of 50 cent treats you could purchase: Given a number of dollars, produce the number<br>of 50 cent treats you could purchase
         How many times does 50 go into dollars?: How many times does 50 go into dollars?
         How many treats can you buy with your dollars?: How many treats can you buy with your dollars?
