@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Repeat something while a condition is true"},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "while loop"},
 "emptyBlocksErrorMsg":function(d){return "Aby bloky \"Opakuj\" alebo \"Ak\" pracovali, musia byť naplnené ďalšími blokmi. Uistite sa, že vnútorný blok je správne umiestnený vo vnútri týchto blokov."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Aby funkčný blok pracoval správne, musí obsahovať ďalšie bloky."},
 "emptyFunctionalBlock":function(d){return "Máš blok s nevyplneným vstupom."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "koniec"},
 "errorEmptyFunctionBlockModal":function(d){return "V tvojej definícii funkcie musia byť nejaké bloky. Klikni na \"upraviť\" a presuň bloky do vnútra zeleného bloku."},
 "errorIncompleteBlockInFunction":function(d){return "Kliknite na tlačidlo \"upraviť\" aby ste sa uistili, že nemáte žiadne chýbajúce bloky vnútri funkcie."},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pozrieť video"},
 "when":function(d){return "keď"},
 "whenRun":function(d){return "pri spustení"},
-"workspaceHeaderShort":function(d){return "Pracovná plocha: "},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "Pracovná plocha: "}};
