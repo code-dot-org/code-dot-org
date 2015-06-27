@@ -8,7 +8,7 @@
         .clear
         .smalltext= data_t_suffix('script.name', script.name, 'description')
         .clear
-        - if user_script.try(:completed_at)
+        - if user_script.try(:completed_at) || (user_script && next_unpassed_progression_level.nil?)
           %a{href: script_certificate_image_url(current_user, script)}
             .bottombar.smalltext.printcertificate{style: 'bottom: 0; position: absolute'}= t('home.print_certificate')
         - elsif current_user.next_unpassed_progression_level(script)
