@@ -376,8 +376,10 @@ lv-LV:
   dashboard_students_reset_password: Atiestatīt paroli
   dashboard_students_share_section: 'Dalies ar šīs sadaļas pierakstīšanās lapu ar saviem studentiem:'
   dashboard_students_print_info: Izprintēt kartītes ar savu skolēnu pierakstīšanās informācīju.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Slepenais attēls
   dashboard_students_reset_picture: 'Tu vari atiestatīt skolēna slepeno attēlu jebkurā laikā, izvēloties <b>Parādīt noslēpumu</b> un tad <b>Atiestatīt noslēpumu</b>. Skolēnam tiks ģenerēts jauns drošības attēls, ko viņš izmantos pieslēdzoties.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Slepenais vārds
   dashboard_students_reset_word: 'Jūs varat atiestatīt skolēna slepeno vārdu jebkurā laikā, izvēloties <b>Parādīt slepeno</b> un pēc tam <b>Atjaunot slepeno</b>. Tiks ģenerēts jauns vārdu pāris, ko skolēns izmantos, kad pierakstīsies.'
   dashboard_students_join_link: Lieciet saviem skolēniem izveidot savus kontus un pievienoties jūsu sadaļai

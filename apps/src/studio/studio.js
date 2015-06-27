@@ -160,8 +160,8 @@ function loadLevel() {
   // Load maps.
   Studio.map = level.map;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
-  Studio.slowJSExecutionFactor = level.slowJSExecutionFactor || 1;
-  Studio.ticksBeforeFaceSouth = Studio.slowJSExecutionFactor +
+  Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
+  Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
                                   IDLE_TICKS_BEFORE_FACE_SOUTH;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
@@ -658,7 +658,7 @@ Studio.onTick = function() {
   Studio.executeQueue('whenGameStarts');
 
   if (Studio.JSInterpreter) {
-    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJSExecutionFactor;
+    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor;
   }
 
   callHandler('repeatForever');
@@ -2263,14 +2263,14 @@ Studio.displaySprite = function(i, isWalking) {
 
   if (level.gridAlignedMovement) {
     if (sprite.x > sprite.displayX) {
-      sprite.displayX += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+      sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     } else if (sprite.x < sprite.displayX) {
-      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     }
     if (sprite.y > sprite.displayY) {
-      sprite.displayY += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+      sprite.displayY += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     } else if (sprite.y < sprite.displayY) {
-      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     }
   } else {
     sprite.displayX = sprite.x;

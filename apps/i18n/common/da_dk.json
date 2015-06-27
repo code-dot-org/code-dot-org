@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Opretter en løkke, bestående af et betinget udtryk og en sætningsblok, der eksekveres for hver gentagelse af løkken. Løkken fortsætter eksekvering så længe betingelsen evalueres er sand",
   "dropletBlock_whileBlock_signatureOverride": "imens løkke",
   "emptyBlocksErrorMsg": "\"Gentag\" eller \"Hvis\" blokkene skal have andre blokke inden i for at virke. Kontroller, at den indre blok passer ordentligt inde i blokken.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Funktion blokken skal have andre blokke inde i den for at virke.",
   "emptyFunctionalBlock": "Du har en blok med et ikke-udfyldt input.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "slut",
   "errorEmptyFunctionBlockModal": "Der skal være blokke i din definition af en funktion. Klik på \"Rediger\" og træk blokke ind i den grønne blok.",
   "errorIncompleteBlockInFunction": "Klik på \"Rediger\" for at sikre at der ikke mangler nogen blokke i din definition af funktionen.",
@@ -210,8 +213,5 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når programmet kører",
-  "workspaceHeaderShort": "Arbejdsområde: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Arbejdsområde: "
 }

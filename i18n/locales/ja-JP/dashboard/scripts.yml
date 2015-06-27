@@ -26,14 +26,14 @@ ja:
           Flappy non blockly: blocklyを使わないFlappy
           title: コース1
           Artist 2: Artist 2
-          Happy Maps: Happy Maps
+          Happy Maps: ハッピーマップ
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 現実のアルゴリズム：種を植えましょう
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
           Going Places Safely: 安全な道を通って行く
-          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          description: コース1は、他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学ぶ手助けとなるようなプログラムを、初心者でも作れるようにデザインされています。このコースの終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。年長・小学１年生(5-7歳)にオススメのコースです。
           "Bee: Sequence": 'Bee: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
           "Artist: Shapes": 'Artist: Shapes'
@@ -42,7 +42,7 @@ ja:
           "Studio: Create a Story": プレイラボ：お話を作りましょう
           "Artist: Loops": 'Artist: Loops'
           description_audience: Ages 4-6
-          description_short: Course 1 is designed for early readers.
+          description_short: コース１は初心者向けです。
         course2:
           The Maze: 迷路
           Suzi: Suzi
@@ -80,7 +80,7 @@ ja:
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": アーティスト：入れ子のループ
-          description_audience: Ages 6-18
+          description_audience: 6-18 才
           description_short: Course 2 is designed for students who can read.
         course3:
           The Maze: 迷路
@@ -131,7 +131,7 @@ ja:
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
           Songwriting: Songwriting
-          description_audience: Ages 8-18
+          description_audience: 8-18 才
           description_short: Course 3 is a follow-up to Course 2.
         msm:
           title: Middle School Math
@@ -234,7 +234,7 @@ ja:
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
           Artist Binary: Artist Binary
-          description_audience: Ages 10-18
+          description_audience: 10-18 才
         Course4pre:
           title: Course 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -366,7 +366,7 @@ ja:
           Pixelation: Pixelation
         20-hour:
           title: Accelerated Intro to CS Course
-          description_audience: Ages 10-18
+          description_audience: 10-18 才
           description: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
           Introduction to Computer Science: コンピューター・サイエンス入門
           The Maze: 迷路
@@ -902,21 +902,9 @@ ja:
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Introduction to PD: Introduction to PD
-          K-5 Courses: K-5 Courses
-          Writing computer programs: Writing computer programs
-          "Programming Concept: Loops": 'Programming Concept: Loops'
-          Unplugged lessons: Unplugged lessons
-          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
-          Computer Science Pedagogy: Computer Science Pedagogy
-          "Programming Concept: Functions": 'Programming Concept: Functions'
-          Teacher Dashboard: Teacher Dashboard
-          "Programming Concept: Events": 'Programming Concept: Events'
-          Reflection: Reflection
-          Next Steps: Next Steps
+        K5-OnlinePD:
+          title: 'Teaching Courses 1-4: The Basics'
+          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -926,7 +914,8 @@ ja:
           "Mastering the Basics: Events": 'Mastering the Basics: Events'
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
@@ -952,20 +941,6 @@ ja:
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Hour of Code（コーディングを学ぶ時間）
-        K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Getting Started: Getting Started
-          Computer Science Fundamentals: Computer Science Fundamentals
-          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
-          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
-          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
-          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
-          "Mastering the Basics: Events": 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-          Planning: Planning
-          Next Steps: Next Steps
-          Looking Ahead: Looking Ahead
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
@@ -982,3 +957,8 @@ ja:
           "Eval: Conditionals": 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Welcome!
+          The Design Recipe: The Design Recipe
+          Teaching with Puzzles: Teaching with Puzzles

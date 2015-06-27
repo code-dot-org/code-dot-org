@@ -73,8 +73,6 @@ social:
 
             #leftvideo{style: "width: 100%;"}
               = view :index_video
-              -#%br/
-              -#%br/
               %div{style:"clear:both"}
             #leftbutton{style: "position:absolute; left:0; top:0; text-align:center; width:100%"}
               %h1.front-header-banner{style: "color:white; text-shadow: 0px 0px 4px rgba(31, 31, 31, 1); margin-top: 0px; margin-bottom:10px; padding:20px"}=hoc_s(:front_watch_regular_video)
@@ -82,21 +80,20 @@ social:
         .col-sm-6.col-xs-12.col-md-5
           #textbacking{style: "color:white; background-color:rgba(0, 178, 192, 0.5); margin-top:50px; padding: 20px; border-radius: 17px"}
             %div.front-header-banner{style: "color:white; margin-top:0px"}
-              =hoc_s(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
               %h4
-                =hoc_s(:anybody_can_learn)
-            #joinustext{style: "font-size: 18px; font-weight: 500"}
+                =hoc_s(:front_join_us_heading)
+              =hoc_s(:front_join_us_description_short)
+            #joinustext{style: "font-size: 18px; font-weight: 500; padding-top:20px;"}
               %div{style: "width: 100%; text-align: center"}
-                %a#trybutton{href: "http://#{codeorg_url()}/learn", target: "_blank", style: "text-decoration:none"}
+                %a#joinbutton{onclick: "adjustScroll('hocsignupform')", target: "_blank", style: "text-decoration:none"}
                   %button.btn.btn-default{style: "font-size: 18px; font-weight: 500; padding-left: 30px; padding-right: 30px; height: 40px;"}
-                    =hoc_s(:get_started)
+                    =hoc_s(:front_join_us_button)
 
 
             #remainder{style: "text-align:center; margin-top: 15px;"}
-              -# Hiding "beyond an hour of code" link for now
-                %a{:href=>"http://#{codeorg_url()}/learn/beyond", :style=>'font-size: 16px; color: white'}
-                  =hoc_s(:beyond_an_hour)
-              =view :share_buttons, facebook:facebook, twitter:twitter
+              %a{onclick: "adjustScroll('faqs')", style: "color:white; cursor:pointer"}
+                =hoc_s(:front_what_is_hoc)
+
           %br/
           %br/
 
@@ -145,7 +142,7 @@ social:
   .row
     .col-xs-6.col-sm-4
       .hidden-xs
-        %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%; padding-bottom:30px"}
+        %img{src: "/images/fill-600x400/highlight-pakistan.jpg", style: "width: 100%; padding-bottom:30px"}
       %img{src: "/images/fill-600x400/highlight-pair.jpg", style: "width: 100%;"}
 
     .col-xs-6.col-sm-8
@@ -155,7 +152,7 @@ social:
 
   .row
     .col-xs-6.col-sm-4
-      %img{src: "/images/fill-600x400/highlight-obama.jpg", style: "width: 100%"}
+      %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%"}
 
     .hidden-xs.col-sm-4
       %img{src: "/images/fill-600x400/highlight-girls.jpg", style: "width: 100%"}
@@ -174,7 +171,7 @@ social:
   .row#infotop{style: "font-weight: 500; font-size: 16px; color: rgb(26, 172, 186)"}
     .col-xs-6.col-sm-4{style: "text-align:center;"}
       %p=hoc_s(:stats_growth)
-      %img{src: "/images/stats-info1.jpg", style: "width: 100%"}
+      %img{src: "/images/stats-languages.png", style: "width: 100%"}
 
     .col-xs-6.col-sm-4{style: "text-align:center"}
       %p=hoc_s(:stats_global)
@@ -201,6 +198,7 @@ social:
       %br/
       =hoc_s(:stats_michael)
 
+  %a#hocsignupform{name: 'signup'}
   #join
     %h1=hoc_s(:front_join_us_button)
     %div

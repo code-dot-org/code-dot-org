@@ -357,6 +357,7 @@ is:
       4-5 While Loops 7_instruction: Nú eru þrír haugar af mold! Getur þú skrifað forrit til að fjarlægja þá alveg?
       4-5 While Loops 8_instruction: 'Hér er mjög djúp hola og mjög stór moldarhaugur. Hve mörg skóflufylli þarf að flytja til að slétta yfirborðið? Vísbending: Notaðu "meðan" lykkju fyrir bæði.'
       4-5 While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar. Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Artist - Nested Loops 1_instruction: 'Ljúktu við kóðann til að teikna þessa þríhyrninga. Sá fyrsti er tilbúinn. Vísbending: 3 þríhyrningar í 360 gráðu snúningi.'
       Artist - Nested Loops 10_instruction: Teiknaðu síðustu röðina af stjörnum á flaggið með því að hafa gefnu kubbana í lykkju. Það eru 50 dílar á milli stjarna, en þær eru sjálfar 30 dílar á breidd.
       Artist - Nested Loops 11_instruction: Getur þú teiknað þessar 10 gangstéttarhellur með faldaðri lykkju? Hver ferningur er 30 dílar.
@@ -494,8 +495,6 @@ is:
       Code Studio Puzzle Challenge Bee Screencast_instruction: Færðu býfluguna að blóminu og sæktu allan blómasafann.
       Code Studio Puzzle Challenge Square - Artist_instruction: 'Teiknaðu ferning með því að nota gefnu breytuna "lengd".'
       Code Studio Puzzle Challenge Var - Artist_instruction: 'Teiknaðu línu með því að nota breytu "lengd" með gildið 180.'
-      course 1 artist 1 level 10_instruction: Teiknaðu brotalínuna með því að nota bæði hoppa og færa kubba
-      course 1 artist 1 level 9_instruction: Teiknaðu þetta með þremur strikum
       Course 2 Bee Loops 1_instruction: 'Hæ, ég er býfluga. Getur þú hjálpað mér að safna blómasafanum úr þessum blómum? '
       Course 2 Bee Loops 13_instruction: 'Mat: Notaðu "endurtaka" kubbinn til að safna öllum blómasafanum.'
       Course 2 Bee Loops 2_instruction: Er auðveldara að leysa þetta sama verkefni með lykkju?

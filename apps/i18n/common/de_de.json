@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while-Schleife",
   "emptyBlocksErrorMsg": "Innerhalb der \"Wiederholen\"- oder \"Wenn\"-Blöcke müssen sich andere Blöcke befinden, um zu funktionieren. Achte darauf, dass der innere Block genau in den umfassenden Block passt.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Der Funktionsblock muss andere Blöcke beinhalten, um zu funktionieren.",
   "emptyFunctionalBlock": "Du hast einen Block ohne Eingabe.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "Ende",
   "errorEmptyFunctionBlockModal": "Es müssen Blöcke innerhalb deiner Funktionsdefinition sein. Klicke auf \"Bearbeiten\", und ziehe die Blöcke in den grünen Block.",
   "errorIncompleteBlockInFunction": "Klicke auf \"Bearbeiten\", um sicherzustellen, dass kein Block innerhalb deiner Funktionsdefinition fehlt.",
@@ -191,7 +194,7 @@
   "showBlocksHeader": "Zeige Blöcke",
   "showCodeHeader": "Programm anzeigen",
   "showGeneratedCode": "Programm anzeigen",
-  "showTextHeader": "Show Text",
+  "showTextHeader": "Text anzeigen",
   "showToolbox": "Zeige Werkzeuge",
   "signup": "Für den Einführungskurs anmelden",
   "stringEquals": "string=?",
@@ -210,8 +213,5 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "wenn ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Arbeitsbereich: "
 }

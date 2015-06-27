@@ -8,7 +8,7 @@
         blank: jest wymagane
     attributes:
       user:
-        name: Wyświetl Nazwę
+        name: Wyświetl Nazwisko
         email: Email
         username: Nazwa użytkownika
         password: Hasło
@@ -42,8 +42,8 @@
   less: MNIEJ
   beta: beta
   try_hoc: 'Spróbuj Godziny Kodowania (Hour of Code), kliknij tutaj >> '
-  try_k8intro: Wypróbuj nasz wprowadzający kurs z informatyki  dla K-8 (15-25 godzin)
-  k8intro: Kurs Wprowadzenia do Informatyki dla K-8 (15-25 godzin)
+  try_k8intro: Wypróbuj nasz wprowadzający kurs z informatyki (15-25 godzin)
+  k8intro: Kurs Wprowadzenie do Informatyki dla K-8 (15-25 godzin)
   already_started: 'Już rozpocząłeś ? Wznów tutaj >> '
   demos: 'Admin: Wszystkie dema'
   continue: Dalej
@@ -53,14 +53,14 @@
     sign_in_with: Zaloguj się przy użyciu %{provider}
     signed_in: Zalogowany!
     signed_out: Wylogowałeś się z <a href="%{url}"> Code.org</a>.
-    sign_out_of: Używałeś %{provider} do zalogowania się . <a href="%{url}"> kliknij
+    sign_out_of: Używałeś %{provider} do zalogowania się . <a href="%{url}"> Kliknij
       tutaj,</a> aby wylogować się z %{provider}.
     already_signedup: Czy masz już założone konto?
     notyet_signedup: Jeszcze nie dołączyłeś?
-    google_oauth2: konta Google
+    google_oauth2: Konto Google
     twitter: Twitter
     facebook: Facebooka
-    windowslive: konta Microsoft
+    windowslive: Konto Microsoft
     forgot_password: Nie pamiętasz swojego hasła?
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
     need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
@@ -73,7 +73,7 @@
     overview_teacher: Ucz informatyki w swojej klasie rejestrując się na konto. <p/>
       Będziesz mógł dodać swoich uczniów i śledzić ich postępy.
     no_signup_message: Możesz <a target="_blank" href="http://learn.code.org"> przeglądać
-      różne etapy i łamigłówki </a>, ale musisz się zarejestrować, aby zapisać swoje
+      różne etapy i łamigłówki </a>, ale musisz się zarejestrować, aby zachować swoje
       wyniki.
     teacher_educator_guide: Patrz podręcznik nauczyciela
     teacher_pitch: Rejestracja do Code.org dla nauczycieli
@@ -111,7 +111,7 @@
     remember: Zapamiętaj mnie
     submit: Zaloguj się
   signin:
-    try_heading: Chcesz spróbować kodowania bez rejestracji?
+    try_heading: Czy chcesz spróbować kodowania bez rejestracji?
     try_hoc: Najpierw wypróbuj Godzinę Kodowania
     try_20hours: Wypróbuj nasz 20 godzinny Wstęp do informatyki
   signinsection:
@@ -150,7 +150,7 @@
       username_in_use: nazwa użytkownika %{username} jest już zajęta, wybierz inną
       no_teacher: Nie odnaleziono osoby zalogowanej jako '%{teacher_email_or_code}'.
         Poproś, by się zarejestrowali tutaj a później spróbuj dodać ich ponownie
-      section_not_found: Nie można odnaleźć sekcję z kodem "%{section_code}".
+      section_not_found: Nie można odnaleźć sekcji z kodem "%{section_code}".
       blank_code: Wprowadź kod sekcji
       cant_join_own_section: Przepraszamy, ale nie możesz przyłączyć się do swojej
         własnej sekcji.
@@ -171,7 +171,7 @@
     provider: 'Dostawca:'
     code: 'Kod:'
     redeem_header: 'Do pobrania:'
-    donorschoose_register: Zarejestruj jako nauczyciel w DonorsChoose.org
+    donorschoose_register: Zarejestruj się jako nauczyciel w DonorsChoose.org
     donorschoose_project: Wyślij projekt
     donorschoose_how_to: Jak wykorzystać Twój kod
     success: Twoja nagroda została z powodzeniem odebrana, zobacz poniższy kod.
@@ -180,14 +180,14 @@
     error_not_earned: Nie zdobyłeś jeszcze tej nagrody.
     error_already_redeemed: Twoja nagroda została już odebrana.
     no_prizes_available: Przykro nam, ale obecnie nie mamy żadnych nagród do zaoferowania.
-    teacher_info_required: 'Nagrody dla nauczyciela wymagają nazwy i adresu szkoły:'
+    teacher_info_required: 'Nagrody dla nauczycieli wymagają nazwy i adresu szkoły:'
     teacher_email_required: 'Nagrody dla nauczycieli wymagają podania potwierdzonego
-      adres e-mail:'
+      adresu e-mail:'
     confirm:
       title: Prosimy o potwierdzenie
       'no': Nie
       'yes': Tak
-      msg: Jesteś pewien, że chcesz pretendować do nagrody %{prize_name}?
+      msg: Czy jesteś pewien, że chcesz pretendować do nagrody %{prize_name}?
       msg_student: 'Uwaga: Możesz wybrać tylko jeden typ nagrody.'
       msg_publicschool: Proszę potwierdzić, że jesteś nauczycielem szkoły publicznej
         w USA.
@@ -214,22 +214,22 @@
         ważna dla uczniów z USA i tylko do wyczerpania zapasów.'
       teacher:
         earned: 15 lub więcej uczniów zebrało wszystkie trofea %{num_trophies}. Wygrałeś
-          nagrodę nauczyciela w wysokości 750$! (tylko dla nauczycieli z USA)
+          nagrodę nauczyciela (tylko dla nauczycieli z USA)
         not_earned_title: Ucz klasę, by otrzymać do 1000$ kredytu <a target="_blank"
           href="http://DonorsChoose.org"> DonorsChoose.org</a> (tylko dla nauczycieli
           w USA)
-        not_earned: Aby nagrodzić nauczyciela, który po raz pierwszy uczy informatyki,
+        not_earned: Aby nagrodzić nauczycieli, którzy po raz pierwszy uczą informatyki,
           możesz otrzymać do 1000$ <a href="http://DonorsChoose.org"> DonorsChoose.org</a>
-          kredytów za pokierowanie klasą w czasie kursu wprowadzającego K-8. Aby się
-          zakwalifikować, musisz z powodzeniem przeprowadzić co najmniej 15 uczniów
-          przez cały kurs wprowadzający K-8, i wszystkich 15 (lub więcej) uczniów
+          kredytów za pokierowanie klasą w czasie kursu wprowadzającego dla K-8. Aby
+          się zakwalifikować, musisz z powodzeniem przeprowadzić co najmniej 15 uczniów
+          przez cały kurs wprowadzający dla K-8, i wszystkich 15 (lub więcej) uczniów
           musi ukończyć wszystkie samouczki i zdobyć wszystkie trofea %{num_trophies}.
           Jeśli 7 lub więcej uczniów, którzy zdobyli wszystkie trofea, to dziewczęta,
           Twoja nagroda wynosi 1000$ w kredytach <a target="_blank" href="http://DonorsChoose.org">
           DonorsChoose.org</a>. W przeciwnym razie, Twoja nagroda wynosi 750$ w kredytach
           <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>.
           Kredyty <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
-          mogą być wykorzystane tylko przez nauczycieli w szkołach publicznych w USA.
+          mogą być wykorzystane tylko przez nauczycieli ze szkół publicznych w USA.
         bonus:
           not_earned_title: Nadal możesz otrzymać dodatkowe 250$ w kredytach <a target="_blank"
             href="http://DonorsChoose.org"> DonorsChoose.org</a> (tylko dla nauczycieli
@@ -262,7 +262,7 @@
       sign_in_to_save: Zaloguj się, by zapisać postępy
       free_play:
         playlab: Utwórz aplikację
-        artist: Narysuj coś
+        artist: Narysuj cokolwiek
     user:
       classroom: Domowa strona nauczyciela
       district_dashboard: Panel dzielnicy/okręgu
@@ -279,11 +279,10 @@
       progress: Twoje postępy
       lines: 'Łączna ilość linii kodu: %{lines}'
       close: ZAMKNIJ
-      mastery: Pomysły
+      mastery: Pojęcia
       puzzle_map: Etapy
-      prizes: Zbierz wszystkie %{total_trophies} trofeów i wygraj nagrody!
-      prize_earned: Zebrane zostały wszystkie %{total_trophies} trofeów. Wygrałeś
-        nagrodę!
+      prizes: Zbierz wszystkie %{total_trophies} trofea i wygraj nagrody!
+      prize_earned: Zebrane zostały wszystkie %{total_trophies} trofea. Wygrałeś nagrodę!
       prize_us_only: (Tylko dla uczniów w USA)
       prizes_link: Więcej informacji
   teacher:
@@ -299,10 +298,10 @@
       stages: 'Etap(y) do wyświetlenia:'
       show_past: 'Pokaż aktywność ucznia (%{bullet_html}) w przeszłości:'
       levels_key: Klucz poziomów
-      perfect: Wypełniona, doskonale
-      completed: Zakończona, ale przy użyciu zbyt wielu bloków
-      tried: Próbowałem, ale nie została zakończona
-      not_tried: Nie próbowałem jeszcze
+      perfect: Wykonane, doskonale
+      completed: Wykonane, ale przy użyciu zbyt wielu bloków
+      tried: Próbowano, ale nie zakończono
+      not_tried: Jeszcze nie próbowano
       activity: Wskazuje aktywność ucznia w ostatnich %{hours} %{plural}
       no_section: Brak przypisanej sekcji
       trophies: trofea
@@ -314,8 +313,8 @@
       dashboard: Przejdź do Panelu Nauczyciela
       add: Dodaj uczniów
       remove: usuń ucznia
-      confirm_remove: Czy na pewno usunąć tego ucznia?
-      help_reassign: Aby podzielić klasę na wiele sekcji, wybierz uczniów do zapisania
+      confirm_remove: Czy na pewno chcesz usunąć tego ucznia?
+      help_reassign: Aby podzielić klasę na wiele sekcji, wybierz uczniów, aby zapisać
         ich do nowej sekcji.
       help_register: Zamiast spędzać dużo czasu indywidualnie importując dane uczniów,
         możesz szybko utworzyć swoją klasę prosząc uczniów, by się zarejestrowali.
@@ -334,7 +333,7 @@
       students: Uczniowie
       section_code: Kod Sekcji
       add_section_code: Dodaj kod sekcji uczniów
-      secret: Tajnego typu
+      secret: Tajny typ
       grade: Poziom/Ocena
       course: Kurs
       rename: zmień nazwę
@@ -372,18 +371,19 @@
     delete_confirm: Czy na pewno chcesz usunąć swoje konto?
   user_level:
     completed: Ukończono
-    tried: Próbowałem
+    tried: Próbowano
   user_stats:
     recent_activity: Ostatnia aktywność
     show_more: Pokaż więcej
     classroom_activity: Aktywność unplugged (bez komputera)
   home:
-    title: Studio Code
-    description: Code Studio is home to online courses created by Code.org
+    title: Studio Kodowania (Code Studio)
+    description: Studio Kodowania jest miejscem dla kursów online utworzonych przez
+      Code.org
     lines_of_code: '%{lines_count} LINIE KODU NAPISANEGO PRZEZ UCZNIÓW'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
-    all_courses: Streszczenie kursów 1, 2 i 3
+    lines_of_code_linebreak: '%{lines_count} LINII KODU<br/> NAPISANYCH PRZEZ %{students_count}
+      MILIONÓW UCZNIÓW'
+    all_courses: Streszczenie Kursów 1, 2 i 3
     lesson_plans: Plany lekcji
     signin_message: Jesteś już zarejestrowany? %{link}
     student_reg_link: Rejestracja uczniów
@@ -398,7 +398,7 @@
     teacher_print_certificates: Wydrukuj certyfikaty dla uczniów, którzy ukończyli
       ten kurs
     teacher_read_blog: Przeczytaj o nowościach i aktualizacjach materiałów na naszym
-      blogu pedagogicznym
+      Blogu Pedagogicznym
     classroom: Twoja klasa
     student_progress: Twoje postępy w nauce
     student_stats: Zdobyłeś %{trophy_count} z %{trophy_max} trofeów "Concept Mastery".
@@ -418,15 +418,15 @@
       od 1 do 8, może być również przyjemną nauką we wszystkich grupach wiekowych.
     test_videos_help: Sprawdź nasz nowy odtwarzacz wideo w swojej szkole
     try_beta_courses: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5
-    use_as_teacher: Korzystanie z tej strony jako nauczyciel
+    use_as_teacher: Korzystaj z tej strony jako nauczyciel
     heading_hoc2014: <h2>Godzina kodowania dla</h2><h1>Wszystkich grup wiekowych</h1>
-    heading_elementary: <h2>20 godzin kursów dla</h2><h1>Początkujących (w każdym
+    heading_elementary: <h2>20-godzinne kursy dla</h2><h1>Początkujących (w każdym
       wieku)</h1>
     heading_apps: <h2>Zabawy dla</h2><h1>Wszystkich</h1>
-    heading_legacy: <h2>Nasz ogólny kurs dla</h2><h1>Wszystkich grup wiekowych</h1>
+    heading_legacy: <h2>Nasz przyspieszony kurs dla</h2><h1>Wszystkich grup wiekowych</h1>
     your_gallery: Galeria
     no_primary_course: Wypróbuj kurs w Studio Kodowania
-    print_certificate: Print Certificate
+    print_certificate: Drukuj Certyfikat
   gender:
     male: Mężczyzna
     female: Kobieta
@@ -499,7 +499,7 @@
     title: Kliknij "Uruchom", aby zobaczyć mój program w akcji
     bounce_og_title: Sprawdź moją grę Bounce
     flappy_og_title: Sprawdź moją grę Flappy
-    studio_og_title: Sprawdź moje Play Lab aplikacje
+    studio_og_title: Sprawdź moją Play Lab aplikację
     check_out_what_i_made: Sprawdź, co zrobiłem
     og_description: Sam napisałem kod z pomocą Code.org
     phone_number_not_allowed: Wygląda na to, że tam jest numer telefonu. Spróbuj zmienić
@@ -513,7 +513,7 @@
     manage: Buduj poziomy
     view: Zobacz
     back: Powrót do skryptów
-    success: Pomyślnie wyedytowałeś bloki.
+    success: Pomyślnie zredagowałeś bloki.
     level:
       create: Utwórz nowy poziom
       current: Aktualne poziomy
@@ -527,12 +527,11 @@
       body: Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz
         poradnik Flappy Code!
     20-hour:
-      title: Accelerated Course
-      body: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z zakresu informatyki
-        i programowania. Kurs jest przeznaczony do użytku klasach od 1 do 8, może
-        być również przyjemną nauką we wszystkich grupach wiekowych.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      title: Przyspieszony Kurs
+      body: Ten 20-godzinny godzinny kurs pokrywa podstawowe pojęcia z zakresu informatyki
+        i programowania z kursów 2-4. Kurs jest przeznaczony dla uczniów w wieku 10-18
+        lat. Przejrzyj bogatsze w doświadczenia kursy 2-4!
+      body_short: Poznaj podstawy informatyki w przyspieszonej wersji kursów 2-4.
     hoc2014:
       try_new_tutorial: Wypróbuj nasz nowy samouczek Godziny Kodowania (Hour of Code)
         w wersji beta
@@ -554,7 +553,7 @@
       obrazki pisząc własne programy komputerowe. Klikaj na obrazkach, aby zobaczyć
       każdy z programów w akcji.
     activity_count: W ciągu ostatnich dni <b>%{days}</b>, uczniowie wykonali <b>%{count}</b>
-      aplikacji i obrazków pisząc własne programy komputerowe. Klikaj na obrazkach
+      aplikacje i obrazki pisząc własne programy komputerowe. Klikaj na obrazkach
       i zrzutach z ekranu, aby zobaczyć każdy program w akcji.
     want_to_make_your_own: Chcesz zrobić własną?
     more: Więcej &rarr;
@@ -658,7 +657,7 @@
     completed_too_many_blocks: zakończona, zbyt wiele bloków
     completed_perfect: zakończona, doskonale
     furthest_level_attempted: próbowano najdalszy poziom
-    assessment: ewaluacja
+    assessment: ocena/ewaluacja
   studio:
     courses_working_on: Kursy, w których bierzesz udział
     completed_courses: Ukończone kursy

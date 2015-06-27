@@ -225,7 +225,7 @@ fil:
       classroom: Home Page ng Teacher
       district_dashboard: District Dashboard
       label: 'Mabuhay %{username}'
-      stats: My progress
+      stats: Code Studio
       settings: My account
       prizes: Mga Premyo
       logout: Sign out
