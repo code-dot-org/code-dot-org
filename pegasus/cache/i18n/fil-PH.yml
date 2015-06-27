@@ -450,11 +450,13 @@
     estudyante:'
   dashboard_students_print_info: I-print ang mga card na may inpormasyon ng iyong
     mga estudyante.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Sekreto na Picture
   dashboard_students_reset_picture: Maaari mo i-reset ang sekretong picture ng iyong
     estudyante kahit anong oras sa pagpili sa <b>Ipakita ang sekreto</b> at saka <b>I-reset
     ang sekreto</b>. May bagong sekretong picture ang ipapakita upang magamit ito
     ng estudyante upang makapag-sign in.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Sekretong Salita
   dashboard_students_reset_word: 'Maaari mong i-reset ang sikretong salita isang mag-aaral
     sa anumang oras sa pamamagitan ng pagpili ng <b> Ipakita ang secret</b> at pagkatapos

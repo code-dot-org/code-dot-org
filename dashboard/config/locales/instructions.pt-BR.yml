@@ -941,6 +941,7 @@
       4-5 While Loops Assessment 1_instruction: |
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Artist - Nested Loops 1_instruction: |
         Complete o código para desenhar esses triângulos. O
         primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
@@ -1379,10 +1380,6 @@
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Desenhe uma reta usando
         uma variável "comprimento" definida como 180.
-      course 1 artist 1 level 10_instruction: |
-        Desenhe a reta tracejada usando
-        os blocos pule e desenhe
-      course 1 artist 1 level 9_instruction: Faça o desenho usando três retas
       Course 2 Bee Loops 1_instruction: "Olá, eu sou uma abelha. Você pode me ajudar
         a coletar\no néctar dessas flores? \n"
       Course 2 Bee Loops 13_instruction: |

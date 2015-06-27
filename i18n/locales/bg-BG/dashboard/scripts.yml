@@ -900,21 +900,9 @@ bg:
           App Lab: Лаборатория за приложения
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Introduction to PD: Въведение в PD
-          K-5 Courses: Курсове за K-5
-          Writing computer programs: Писане на компютърни програми
-          "Programming Concept: Loops": 'Концепции на програмирането: Цикли'
-          Unplugged lessons: Уроци без компютър
-          "Programming Concept: Conditionals": 'Концепции на програмирането: Условия'
-          Computer Science Pedagogy: Педагогика на Компютърните науки
-          "Programming Concept: Functions": 'Концепции на програмирането: функции'
-          Teacher Dashboard: Учителско табло
-          "Programming Concept: Events": 'Концепции на програмирането: събития'
-          Reflection: Рефлексия
-          Next Steps: Следващи стъпки
+        K5-OnlinePD:
+          title: 'Teaching Courses 1-4: The Basics'
+          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -924,7 +912,8 @@ bg:
           "Mastering the Basics: Events": 'Mastering the Basics: Events'
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+          Next Steps: Следващи стъпки
+          Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
@@ -950,20 +939,6 @@ bg:
           description_short: Използвайте Игралната лаборатория, за да създадете история или игра.
           description: Използвайте Игралната лаборатория, за да създадете история или игра.
           Hour of Code: Час на Кодирането
-        K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Getting Started: Getting Started
-          Computer Science Fundamentals: Computer Science Fundamentals
-          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
-          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
-          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
-          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
-          "Mastering the Basics: Events": 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-          Planning: Planning
-          Next Steps: Следващи стъпки
-          Looking Ahead: Looking Ahead
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Научете функционалното програмиране чрез алгебра
@@ -980,3 +955,8 @@ bg:
           "Eval: Conditionals": 'Оценка: Условия'
           Next Steps: Следващи стъпки
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Добре дошли!
+          The Design Recipe: Рецепта за дизайн
+          Teaching with Puzzles: Teaching with Puzzles

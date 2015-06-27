@@ -361,8 +361,10 @@ sv-SE:
   dashboard_students_reset_password: Återställ lösenord
   dashboard_students_share_section: 'Dela denna sektions inloggningssida med dina elever:'
   dashboard_students_print_info: Skriv ut kort med dina elevers inloggningsuppgifter.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Hemlig bild
   dashboard_students_reset_picture: 'Du kan återställa en elevs hemliga bild när som helst genom att välja <b>Visa hemliga</b> och sedan <b>återställa hemliga</b>. En ny hemlig bild ska genereras för eleven att använda när den loggar in.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Hemligt ord
   dashboard_students_reset_word: 'Du kan återställa en elevs hemliga ord när som helst genom att välja <b>Visa hemlig</b> och sedan <b>återställa hemlig</b>. Ett par nya hemliga ord ska genereras för eleven att använda när den loggar in. '
   dashboard_students_join_link: Tala om för dina elever att de ska skapa sina egna konton och gå med i din sektion på

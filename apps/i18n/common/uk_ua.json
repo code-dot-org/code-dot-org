@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "Блоки \"Повторити\" та \"Якщо\" повинні містити інші блоки. Переконайтесь, що внутрішній блок належно розміщений всередині зовнішнього.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Для функціонування цей блок повинен містити інші блоки.",
   "emptyFunctionalBlock": "У вас є блок з незаповненим вводом.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "кінець",
   "errorEmptyFunctionBlockModal": "Потрібно розмістити блоки всередині блоку визначення функції. Клацніть \"Редагувати\" та перетягніть блоки всередину зеленого блоку.",
   "errorIncompleteBlockInFunction": "Натисніть кнопку \"Редагувати\", щоб переконатися, що всі потрібні блоки розміщено всередині визначення функції.",
@@ -210,8 +213,5 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "коли гра починається",
-  "workspaceHeaderShort": "Робоча область: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Робоча область: "
 }

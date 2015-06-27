@@ -339,8 +339,10 @@ bn-BD:
   dashboard_students_reset_password: গুপ্ত-সংকেত পুনরায় সেট করুন
   dashboard_students_share_section: 'পৃষ্ঠার এই সেকশনে চিহ্ন আপনার ছাত্রের সাথে শেয়ার করুন:'
   dashboard_students_print_info: আপনার ছাত্র যুক্ত হওয়ার তথ্য কার্ড মুদ্রন করুন
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: গুপ্ত ছবি
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: গুপ্ত শব্দ
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
   dashboard_students_join_link: আপনার ছাত্রদের বলুন তাদের নিজস্ব একাউন্ট তৈরি করতে এবং আপনার দিকের অংশে যোগ করুন

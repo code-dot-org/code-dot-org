@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Crea un bucle que consta de una expresión condicional y un bloque de comandos ejecutados en cada iteración del bucle. El bucle continúa ejecutar mientras la condición se evalúa como true",
   "dropletBlock_whileBlock_signatureOverride": "bucle \"while\"",
   "emptyBlocksErrorMsg": "Los bloques \"repetir\" o \"si\" deben tener otros bloques dentro de ellos para funcionar. Asegúrate que el bloque interno quede correctamente dentro del bloque que lo contiene.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "El bloque de función necesita tener otros bloques en su interior para funcionar.",
   "emptyFunctionalBlock": "Tienes un bloque con una entrada vacía.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "fin",
   "errorEmptyFunctionBlockModal": "Deben haber bloques dentro de tu definición de función. Haga clic en Editar y arrastre bloques dentro del bloque verde.",
   "errorIncompleteBlockInFunction": "Haga clic en \"Editar\" para asegurarse de que no tienes ningún bloque desaparecido dentro de su definición de función.",
@@ -148,7 +151,7 @@
   "errorUnusedFunction": "Has creado una función pero nunca la has usado en tu espacio de trabajo. Haz clic en Funciones en la caja de herramientas y asegúrate que la usas en tu programa.",
   "errorUnusedParam": "Añadiste un bloque parámetro pero no lo usaste en la definición. Asegúrate de que usas tu parámetro haciendo clic en Editar y situando el bloque parámetro dentro del bloque verde.",
   "extraTopBlocks": "Tienes bloques con entradas vacías.",
-  "extraTopBlocksWhenRun": "Tienes bloques sin conectar. ¿Quieres conectar estos al bloque \"cuando se ejecute\"?",
+  "extraTopBlocksWhenRun": "Tienes bloques sin ataduras. ¿Quisiste decir fijar éstos al bloque \"cuando ejecuta\"?",
   "finalStage": "¡Felicidades! Has completado la etapa final.",
   "finalStageTrophies": "¡Felicidades! Has completado la etapa final y ganaste  {numTrophies, plural, one {un trofeo} other {# trofeos}}.",
   "finish": "Terminar",
@@ -210,8 +213,5 @@
   "watchVideo": "Mira el Video",
   "when": "cuando",
   "whenRun": "cuando se ejecuta",
-  "workspaceHeaderShort": "Espacio de trabajo: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Espacio de trabajo: "
 }

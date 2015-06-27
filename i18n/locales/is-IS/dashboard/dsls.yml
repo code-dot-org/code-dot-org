@@ -157,18 +157,6 @@ is:
         Instructions: Leiðbeiningar
         Match the puzzles to the blocks: Tengdu þrautirnar við kubbana
         Maze Match: 'Völundarhús - Samtengingar'
-      Coordinate Matching:
-        (250, 400): (250, 400)
-        (320, 240): (320, 240)
-        (480, 100): (480, 100)
-        (500, 240): (500, 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: Ský
-        Coordinates of Ninjacat: Hnit Ninjacat
-        Dog: Hundur
-        Match each character with its correct coordinate!: Tengdu hvern leikmann við rétt hnit hans!
-        Ninjacat: Ninjacat
-        Ruby: Roðasteinn
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -271,63 +259,6 @@ is:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Tengdu kort við algrím sem kemur Flurb til blómanna.
         Matching: Samsvörun
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
-        (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
-        Converting Circles to Code: Umbreyta hringjum í kóða
-        Match each circle of evaluation with the correct code!: Tengdu hvern matshring við rétta kóðann!
-      Match example to contract:
-        (big-string? "gigantic" 5): '(big-string? "risastórt" 5)'
-        (bigger-string "big" "little"): '(bigger-string "stór" "lítill")'
-        (find-price "cheese"): '(find-price "ostur")'
-        (find-price 4): (find-price 4)
-        (small-star "blue"): '(small-star "blá")'
-        (small-star "solid"): '(small-star "fyllt")'
-        Contracts of Functions: Lýsingar á föllum
-        Match each example with the correct contract!: Tengdu hvert dæmi við rétta lýsingu!
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "bigger-string: string string -> string": 'bigger-string: string string -> string'
-        "find-price: number -> number": 'find-price: number -> number'
-        "find-price: string -> number": 'find-price: string -> number'
-        "small-star: string -> image": 'small-star: string -> image'
-      Match math to circles:
-        (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
-        (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit 1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit 1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
-        Converting Math to Circles of Evaluation: Umbreyta reikningi í matshring
-        Match each mathematical expression with the correct circle of evaluation!: Tengdu hverja reikningsformúlu við samsvarandi matshring!
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (- 72 19))'
-        (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
-        (+ (3 x 15) (- 72 19)): '(+ (3 x 15) (- 72 19))'
-        (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
-        (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
-        3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
-        3 x 15 - 72 + 19: '3 x 15 - 72 + 19'
-        72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
-        Converting Math to Code: Umbreyta reikningi í kóða
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Tengdu hverja reikningsformúlu við rétta kóðann. Notaðu matshring til að hjálpa þér að finna svarið!
-      parts of contract:
-        (yearbook-picture "Sally" 1992): '(mynd "Sally" 1992)'
-        Here is a contract for a new function. Match each item with the word that describes it.: Hér er lýsing á nýju falli. Tengdu hvert atriði við orðið sem lýsir því.
-        Parts of a Contract: Hlutar lýsingar
-        domain: Svið
-        example: dæmi
-        function name: heiti falls
-        image: mynd
-        range: svið
-        string numer: tölustafur
-        yearbook-picture: mynd í árbók
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -664,21 +595,6 @@ is:
         Line 4: Line 4
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
-      Circle to code:
-        (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
-        (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
-        (+ 5 (* 4 (- 8 6))): '(+ 5 (* 4 (- 8 6)))'
-        "/script_assets/msm/Unit%202/exercise_1.png": '/script_assets/msm/Unit%202/exercise_1.png'
-        Code from Circle: Kóði frá hring
-        Pick the Racket code that comes from the circle of evaluation!: Veldu Racket kóðann sem verður til út frá matshringnum!
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: "The unicorn's x value increases"
-        The unicorn's y value changes: "The unicorn's y value changes"
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -841,50 +757,6 @@ is:
         Driver and Helper: Ökumaður og aðstoðarmaður
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Einn drengurinn er <b>ökumaður</b>. Og annar er <b>aðstoðarmaður</b>.'
         This time, which boy is the <large>driver</large>?: 'Hver er nú <large>ökumaðurinn</large>?'
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): '(* (+ 5 6) (/ 8 2))'
-        (/ (* (+ 5 6) 8) 2): '(/ (* (+ 5 6) 8) 2)'
-        (/ (* 8 2) (+ 5 6)): '(/ (* 8 2) (+ 5 6))'
-        (/ (+ 5 6) (* 8 2)): '(/ (+ 5 6) (* 8 2))'
-        (5 + 6) * 8 / 2: '(5 + 6) * 8 / 2'
-        0: '? Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu matshring til að hjálpa þér að finna svarið!'
-        1: ': Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu matshring til að hjálpa þér að finna svarið!'
-        Racket Code for Math Expressions: Racket kóði fyrir reikning
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): '(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))'
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): '(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)'
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
-        0: '? Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu matshring til að hjálpa þér að finna svarið!'
-        1: ': Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu matshring til að hjálpa þér að finna svarið!'
-        Racket Code for Math Expressions: Racket kóði fyrir reikning
-      Multi Define Funcs 1:
-        3: "3"
-        What is the name of this function?: Hvað heitir þetta fall?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 2:
-        3: "3"
-        What is the name of the parameter?: Hvað heitir stikinn?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 3:
-        5: "5"
-        6: "6"
-        What should g(2) return?: Hvað ætti g(2) að gefa?
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: 'Strengir og myndir - valspurningar'
-        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
       Warmup questions:
         Coding in Racket: Kóðun með Racket
         Select the best answer to the question.: Veldu besta svarið við spurningunni.
@@ -893,14 +765,6 @@ is:
         left, right, top: vinstri, hægri, efst
         random: af handahófi
         top, left, right: efst, vinstri, hægri
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
-        (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
-        (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'
-        (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solid" "red")'
-        "/script_assets/msm/Unit%202/exercise_5.png": '/script_assets/msm/Unit%202/exercise_5.png'
-        Code from Circle: Kóði frá hring
-        Pick the Racket code that comes from the circle of evaluation!: Veldu Racket kóðann sem verður til út frá matshringnum!
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -909,11 +773,3 @@ is:
         Presidents: Forsetar
         This multiple choice is all about the presidents of the United States.: Þessi valspurning er um alla forseta Bandaríkjanna.
         Who was the first president of the USA?: Hver var fyrsti forseti Bandaríkjanna?
-      valid contracts multi:
-        Pick the best answer to the question.: Veldu besta svarið við spurningunni.
-        Valid Contracts: Gildar lýsingar
-        Which of these is a valid contract for the function circle?: Hver þessara er rétt lýsing út frá greiningarhring fallsins?
-        "circle: 5 solid blue -> circle ": 'hringur: 5 einlitt blátt -> hringur '
-        "circle: number string string -> image": 'hringur: tala strengur strengur -> mynd'
-        "circle: number string string -> shape": 'hringur: tala strengur strengur -> form'
-        "circle: size style color -> image": 'hringur: stærð snið litur -> mynd'
