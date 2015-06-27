@@ -1,4 +1,4 @@
-Blockly.Msg.ACTUAL = "skutečný";
+Blockly.Msg.ACTUAL = "volání";
 Blockly.Msg.ADD = "Přidat";
 Blockly.Msg.ADD_COMMENT = "Přidat komentář";
 Blockly.Msg.ADD_PARAMETER = "Přidat parametr";

@@ -381,8 +381,10 @@
   dashboard_students_reset_password: パスワードのリセット
   dashboard_students_share_section: このセクションのサインインページを生徒達と共有する：
   dashboard_students_print_info: 学生用のログイン情報でカードを印刷する
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: 秘密の画像
   dashboard_students_reset_picture: <b>秘密を表示</b> し、<b>秘密をリセット</b> を選択して、いつでも学生の秘密の画像をリセットできます。新しい秘密の画像は生徒がサインインする際に生成されます
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: 秘密の単語
   dashboard_students_reset_word: <b>秘密の表示</b>と<b>秘密のリセット</b>を選ぶことで、いつでも生徒の秘密の単語をリセットすることができます。新しい秘密の単語はサインインしたときに生成されます
   dashboard_students_join_link: あなたのセクションに入るよう生徒に自分のアカウントの作り方を教えましょう
