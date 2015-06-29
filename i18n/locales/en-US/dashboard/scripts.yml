@@ -895,31 +895,20 @@ en:
           App Lab: crwdns41640:0crwdne41640:0
           Broadcast Lesson: crwdns41641:0crwdne41641:0
           Text Compression Lesson: crwdns41642:0crwdne41642:0
-        OnlinePD-K5:
-          title: crwdns41854:0crwdne41854:0
-          description: crwdns41855:0crwdne41855:0
-          Introduction to PD: crwdns41643:0crwdne41643:0
-          K-5 Courses: crwdns41644:0crwdne41644:0
-          Writing computer programs: crwdns41645:0crwdne41645:0
-          "Programming Concept: Loops": crwdns41646:0crwdne41646:0
-          Unplugged lessons: crwdns41647:0crwdne41647:0
-          "Programming Concept: Conditionals": crwdns41648:0crwdne41648:0
-          Computer Science Pedagogy: crwdns41649:0crwdne41649:0
-          "Programming Concept: Functions": crwdns41650:0crwdne41650:0
-          Teacher Dashboard: crwdns41651:0crwdne41651:0
-          "Programming Concept: Events": crwdns41652:0crwdne41652:0
-          Reflection: crwdns41653:0crwdne41653:0
-          Next Steps: crwdns41654:0crwdne41654:0
-          Getting Started: crwdns41655:0crwdne41655:0
-          Computer Science Fundamentals: crwdns41656:0crwdne41656:0
-          "Mastering the Basics: Sequencing": crwdns41657:0crwdne41657:0
-          "Mastering the Basics: Loops": crwdns41658:0crwdne41658:0
-          "Mastering the Basics: Conditionals": crwdns41659:0crwdne41659:0
-          "Mastering the Basics: Functions": crwdns41660:0crwdne41660:0
-          "Mastering the Basics: Events": crwdns41661:0crwdne41661:0
-          Best Practices for Teaching Computer Science: crwdns41662:0crwdne41662:0
-          Planning: crwdns41663:0crwdne41663:0
-          Mastering the Basics - Sequencing: crwdns41664:0crwdne41664:0
+        K5-OnlinePD:
+          title: crwdns42120:0crwdne42120:0
+          description: crwdns42121:0crwdne42121:0
+          Getting Started: crwdns42122:0crwdne42122:0
+          Computer Science Fundamentals: crwdns42123:0crwdne42123:0
+          "Mastering the Basics: Sequencing": crwdns42124:0crwdne42124:0
+          "Mastering the Basics: Loops": crwdns42125:0crwdne42125:0
+          "Mastering the Basics: Conditionals": crwdns42126:0crwdne42126:0
+          "Mastering the Basics: Functions": crwdns42127:0crwdne42127:0
+          "Mastering the Basics: Events": crwdns42128:0crwdne42128:0
+          Best Practices for Teaching Computer Science: crwdns42129:0crwdne42129:0
+          Planning: crwdns42130:0crwdne42130:0
+          Next Steps: crwdns42131:0crwdne42131:0
+          Looking Ahead: crwdns42132:0crwdne42132:0
         ECSPD2:
           title: crwdns41856:0crwdne41856:0
           description: crwdns41857:0crwdne41857:0
@@ -945,20 +934,6 @@ en:
           description_short: crwdns41873:0crwdne41873:0
           description: crwdns41874:0crwdne41874:0
           Hour of Code: crwdns41875:0crwdne41875:0
-        K5-OnlinePD:
-          title: crwdns42120:0crwdne42120:0
-          description: crwdns42121:0crwdne42121:0
-          Getting Started: crwdns42122:0crwdne42122:0
-          Computer Science Fundamentals: crwdns42123:0crwdne42123:0
-          "Mastering the Basics: Sequencing": crwdns42124:0crwdne42124:0
-          "Mastering the Basics: Loops": crwdns42125:0crwdne42125:0
-          "Mastering the Basics: Conditionals": crwdns42126:0crwdne42126:0
-          "Mastering the Basics: Functions": crwdns42127:0crwdne42127:0
-          "Mastering the Basics: Events": crwdns42128:0crwdne42128:0
-          Best Practices for Teaching Computer Science: crwdns42129:0crwdne42129:0
-          Planning: crwdns42130:0crwdne42130:0
-          Next Steps: crwdns42131:0crwdne42131:0
-          Looking Ahead: crwdns42132:0crwdne42132:0
         algebraPD2:
           title: crwdns42133:0crwdne42133:0
           description: crwdns42134:0crwdne42134:0
@@ -975,3 +950,8 @@ en:
           "Eval: Conditionals": crwdns42145:0crwdne42145:0
           Next Steps: crwdns42146:0crwdne42146:0
           Best Practices for Teaching Computer Science: crwdns42147:0crwdne42147:0
+          Teaching with the Design Recipe: crwdns43213:0crwdne43213:0
+          Practice with Puzzles: crwdns43214:0crwdne43214:0
+          Welcome!: crwdns43215:0crwdne43215:0
+          The Design Recipe: crwdns43216:0crwdne43216:0
+          Teaching with Puzzles: crwdns43217:0crwdne43217:0

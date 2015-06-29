@@ -349,7 +349,7 @@ Eval.execute = function() {
   if (studioApp.hasUnfilledFunctionalBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = commonMsg.emptyFunctionalBlock();
+    Eval.message = studioApp.getUnfilledFunctionalBlockError('functional_display');
   } else if (studioApp.hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;

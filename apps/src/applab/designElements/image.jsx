@@ -34,12 +34,12 @@ var ImageProperties = React.createClass({
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')} />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
@@ -52,7 +52,7 @@ var ImageProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'top')} />
         <ImagePickerPropertyRow
           desc={'picture'}
-          initialValue={element.getAttribute('src')}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')} />
         <BooleanPropertyRow
           desc={'hidden'}

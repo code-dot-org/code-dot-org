@@ -37,6 +37,12 @@ li{
 	padding: 0 0 0 20px;
 }
 
+ol ul li {
+	color: #666666;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
 
 .plc{
 	background: rgba(119, 100, 160, 1);

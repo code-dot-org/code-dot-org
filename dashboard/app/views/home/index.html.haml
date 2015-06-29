@@ -25,6 +25,10 @@
   - if current_user
     #user_hero
       = render template: 'api/user_hero'
+    - [current_user.working_on_user_scripts, current_user.completed_user_scripts].compact.reduce([], :|).each_slice(2) do |course_pair|
+      .row
+        - course_pair.each do |user_script|
+          = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
 
   - else # no logged in user
     = render partial: 'home/sign_in_buttons'

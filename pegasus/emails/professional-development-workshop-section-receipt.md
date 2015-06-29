@@ -57,7 +57,9 @@ Please take a moment to complete [this short survey](http://code.org/professiona
 
 Attached to this email, you will also find a personalized certificate acknowledging your successful completion of Code.org's K-5 Professional Development.
 
-For more support, check out Code.org's [online office hours](http://code.org/educate/k5/k5officehours), [K-5 forum](http://support.code.org/hc/communities/public/topics) and [FAQ](http://support.code.org/). Or [contact us](http://code.org/contact).
+**Need more support?**
+
+Check out our [online workshop](https://code.org/educate/professional-development-online), [K-5 forum](http://support.code.org/hc/communities/public/topics) and [FAQ](http://support.code.org/). Or [contact us](http://code.org/contact).
 
 Thanks again for your support,
 

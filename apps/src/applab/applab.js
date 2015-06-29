@@ -415,6 +415,11 @@ Applab.getCode = function () {
 };
 
 Applab.getHtml = function () {
+  // This method is called on autosave. If we're about to autosave, let's update
+  // levelHtml to include our current state.
+  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+    designMode.serializeToLevelHtml();
+  }
   return Applab.levelHtml;
 };
 
@@ -469,8 +474,7 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.current &&
-      dashboard.project.current.id) {
+  if (window.dashboard && dashboard.project.getCurrentId()) {
     clientApi.ajax('GET', '', function (xhr) {
       assetListStore.reset(JSON.parse(xhr.responseText));
     }, function () {
@@ -687,6 +691,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    designMode.addKeyboardHandlers();
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
@@ -826,6 +832,8 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
+  designMode.addKeyboardHandlers();
+
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
   designMode.parseFromLevelHtml(newDivApplab, isDesigning);
@@ -914,8 +922,8 @@ studioApp.runButtonClickWrapper = function (callback) {
 Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || (!dashboard.project.isEditing ||
-      (dashboard.project.current && dashboard.project.current.id))) {
+  if (!window.dashboard || !window.dashboard.project.isEditing() ||
+      window.dashboard.project.getCurrentId()) {
     $(window).trigger('appModeChanged');
     if (callback) {
       callback();

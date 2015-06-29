@@ -273,38 +273,38 @@ ro:
         text: 'Veţi crea fulgi de zăpadă şi modele în gheaţă in timp ce patinați și  apoi puteti construi un paradis de iarnă, pe care îl puteţi distribui prietenilor.'
       3:
         image: notes/frozen1_3.jpg
-        text: În următoarea oră, vei învăța elementele de bază ale programării. Programarea tradițională este, de obicei, sub forma text, dar vom folosi Blockly, care foloseste blocuri vizuale ce se pot glisa și fixa pentru a scrie programe. Acest mod este folosit și de studenţi în universități pentru a învăța bazele programării. Sub capota, de fapt scrieți cod.
+        text: În următoarea oră, vei învăța elementele de bază ale programării. Programarea tradițională este, de obicei, sub forma text, dar vom folosi Blockly, care foloseste blocuri vizuale ce se pot glisa și fixa pentru a scrie programe. Acest mod este folosit și de studenţi în universități pentru a învăța bazele programării. Sub capotă, de fapt scrieți cod.
       4:
         image: notes/frozen1_4.jpg
         text: Un program este un set de instrucţiuni care îi spune unui computer ce să facă. Să construim un cod sau un program, care o va ajuta pe Elsa să creeze o linie simplă. Vom folosi acest lucru mai târziu pentru a crea modele mai complexe.
       5:
         image: notes/frozen1_5.jpg
-        text: Ecranul este împărţit în trei părţi principale. În stânga, este suprafaţa de gheaţăunde va rula programul tău. Instrucţiunile pentru fiecare nivel sunt scrise chiar sub suprafaţă.
+        text: Ecranul tău este împărţit în trei părţi principale. În stânga, este suprafaţa de gheaţăunde va rula programul tău. Instrucţiunile pentru fiecare nivel sunt scrise chiar sub suprafaţă.
       6:
         image: notes/frozen1_6.jpg
-        text: Aceasta zonă de mijloc este setul de instrumente, şi fiecare din aceste blocuri este o acţiune care Elsa şi Anna o pot face.
+        text: Aceasta zonă de mijloc este setul de instrumente, şi fiecare din aceste blocuri reprezintă o acţiune pe care Elsa şi Anna o pot face.
       7:
         image: notes/frozen1_7.jpg
-        text: 'Spaţiul alb din dreapta este numit spațiul de lucru, şi aceasta este zona în care vom construi programul nostru. Pentru a muta suprafața de gheață veţi utiliza blocul de "Mută înainte".'
+        text: 'Spaţiul alb din dreapta este numit spațiul de lucru şi acesta este locul în care vom construi programul nostru. Pentru a muta suprafața de gheață vei utiliza blocul de "Mută înainte".'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Aici, blocul "Mută înainte", spune, "merge mai departe 100 pixeli." Ce se întâmplă atunci când am apăsaţi "Execută" ? Elsa avansează o anumită zonă pe ecran, 100 pixeli de fapt! Practic, pixelii sunt pătrate foarte mici pe ecranul computerului.'
+        text: 'Aici, blocul "Mută înainte", spune, "merge înainte cu 100 pixeli." Ce se întâmplă atunci când am apăsaţi "Execută" ? Elsa avansează o anumită porțiune pe ecran, de fapt 100 pixeli! De fapt, pixelii sunt pătrate foarte mici pe ecranul computerului.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'Alt bloc pe care îl avem în acest puzzle spune "întoarce dreapta 90 de grade." Şi când vom folosi acest bloc "întoarce dreapta", Elsa se întoarce un anumit unghi. Vă puteți juca cu unghiul de rotire al Elsei. Unghiul este măsurat de la pozitia actuală a Elsei. Deci, acesta este un viraj la 90 de grade. Şi acesta este un viraj de 120 de grade.'
+        text: 'Alt bloc pe care îl avem în acest puzzle spune "întoarce dreapta 90 de grade." Şi când vom folosi acest bloc "întoarce dreapta", Elsa se întoarce un anumit unghi. Vă puteți juca cu unghiul de rotire al Elsei. Unghiul este măsurat față de poziția inițială a Elsei. Deci, acesta este un viraj la 90 de grade. Şi acesta este un viraj de 120 de grade.'
       10:
         image: notes/frozen1_10.jpg
         text: Amintiţi-vă, puteţi schimba numărul de pixeli şi grade făcând clic pe săgeţile de lângă ei.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Bună, eu sunt Paola! Computerele sunt foarte bune la repetarea acţiunilor. Voi puteţi număra până 10, 20 sau 100. Dar un calculator poate număra un miliard sau un trilioan. Nu se va plictisi şi va dura doar câteva secunde. Dacă este de numărat, de desenat sau orice altceva --computerele poat repeta lucruri sute sau chiar miliarde de ori.
+        text: Bună, eu sunt Paola! Computerele sunt foarte bune la repetarea acţiunilor. Voi puteţi număra până 10, 20 sau 100. Dar un calculator poate număra un miliard sau un trilion. Nu se va plictisi şi îi va doar câteva secunde. Fie că este de numărat, de desenat sau orice altceva --computerele pot repeta lucruri sute sau chiar miliarde de ori.
       2:
         image: notes/frozen2_2.jpg
         text: 'În programare, numim aceasta o buclă. O buclă repetă codul respectiv de mai multe ori. Pentru următorul puzzle-ului, trebuie să o ajuți pe Anna să creeze un pătrat cu blocul "Repetă".'
       3:
         image: notes/frozen2_3.jpg
-        text: 'Orice bloc de cod ai pus in interiorul blocului "Repetă" va fi repetat în secvenţă, ori de câte ori doriţi.'
+        text: 'Orice bloc de cod pui in interiorul blocului "Repetă" va fi repetat în secvenţă, ori de câte ori dorești.'
       4:
         image: notes/frozen2_4.jpg
         text: 'Pentru a desena un pătrat, puteţi folosi "Muta înainte" şi "Întoarce dreapta" de 4 ori. Dar modul mai simplu este de a spune computerului sa repete actiunea pereche "Muta înainte" şi "Întoarce dreapta la 90 de grade"  de 4 ori. Pentru a face acest lucru, trebuie sa inseram blocul "Muta înainte" şi "Întoarce Dreapta" în interiorul unui bloc "Repetare".'

@@ -4,8 +4,8 @@ question 'Here is another router network. The table displays the current state o
 
 wrong '5'
 wrong '6'
-wrong '8'
-right '9'
+right '8'
+wrong '9'
 wrong '11'
 
 markdown <<MARKDOWN

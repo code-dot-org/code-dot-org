@@ -727,6 +727,11 @@ Applab.getCode = function () {
 };
 
 Applab.getHtml = function () {
+  // This method is called on autosave. If we're about to autosave, let's update
+  // levelHtml to include our current state.
+  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+    designMode.serializeToLevelHtml();
+  }
   return Applab.levelHtml;
 };
 
@@ -781,8 +786,7 @@ Applab.init = function(config) {
   studioApp.runButtonClick = this.runButtonClick.bind(this);
 
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.current &&
-      dashboard.project.current.id) {
+  if (window.dashboard && dashboard.project.getCurrentId()) {
     clientApi.ajax('GET', '', function (xhr) {
       assetListStore.reset(JSON.parse(xhr.responseText));
     }, function () {
@@ -999,6 +1003,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    designMode.addKeyboardHandlers();
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
@@ -1138,6 +1144,8 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
+  designMode.addKeyboardHandlers();
+
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
   designMode.parseFromLevelHtml(newDivApplab, isDesigning);
@@ -1226,8 +1234,8 @@ studioApp.runButtonClickWrapper = function (callback) {
 Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || (!dashboard.project.isEditing ||
-      (dashboard.project.current && dashboard.project.current.id))) {
+  if (!window.dashboard || !window.dashboard.project.isEditing() ||
+      window.dashboard.project.getCurrentId()) {
     $(window).trigger('appModeChanged');
     if (callback) {
       callback();
@@ -1894,6 +1902,8 @@ consoleApi.log = function() {
   var firstArg = nativeArgs[0];
   if (typeof firstArg === 'string' || firstArg instanceof String) {
     output = vsprintf(firstArg, nativeArgs.slice(1));
+  } else if (nativeArgs.length === 1) {
+    output = firstArg;
   } else {
     for (i = 0; i < nativeArgs.length; i++) {
       output += nativeArgs[i].toString();
@@ -2218,7 +2228,7 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
 
 
 },{}],51:[function(require,module,exports){
-/* global $, Applab */
+/* global $, Applab, dashboard */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
@@ -2229,6 +2239,7 @@ var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
 var _ = require('../utils').getLodash();
+var KeyCodes = require('../constants').KeyCodes;
 
 var designMode = module.exports;
 
@@ -2258,6 +2269,8 @@ designMode.onDivApplabClick = function (event) {
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
   }
+  // give the div focus so that we can listen for keyboard events
+  $("#divApplab").focus();
   designMode.editElementProperties(element);
 };
 
@@ -2325,6 +2338,27 @@ designMode.resetElementTray = function (allowEditing) {
 };
 
 /**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+designMode.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
+};
+
+/**
  * Handle a change from our properties table. After handling properties
  * generically, give elementLibrary a chance to do any element specific changes.
  */
@@ -2348,6 +2382,12 @@ designMode.onPropertyChange = function(element, name, value) {
       element.parentNode.style.top = value + 'px';
       break;
     case 'width':
+      element.setAttribute('width', value + 'px');
+      break;
+    case 'height':
+      element.setAttribute('height', value + 'px');
+      break;
+    case 'style-width':
       element.style.width = value + 'px';
       element.parentNode.style.width = value + 'px';
 
@@ -2356,7 +2396,7 @@ designMode.onPropertyChange = function(element, name, value) {
           element.style.height;
       }
       break;
-    case 'height':
+    case 'style-height':
       element.style.height = value + 'px';
       element.parentNode.style.height = value + 'px';
 
@@ -2392,19 +2432,23 @@ designMode.onPropertyChange = function(element, name, value) {
           designMode.editElementProperties(element);
         }
       };
-      backgroundImage.src = value;
+      backgroundImage.src = designMode.maybeAddAssetPathPrefix(value);
+      element.setAttribute('data-canonical-image-url', value);
+
       break;
 
     case 'screen-image':
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundImage = 'url(' + designMode.maybeAddAssetPathPrefix(value) + ')';
+      element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
-      element.src = value;
+      element.src = designMode.maybeAddAssetPathPrefix(value);
+      element.setAttribute('data-canonical-image-url', value);
       element.onload = function () {
         // naturalWidth/Height aren't populated until image has loaded.
         element.style.width = element.naturalWidth + 'px';
@@ -2745,7 +2789,7 @@ designMode.configureDragAndDrop = function () {
   $('#visualization').droppable({
     accept: '.new-design-element',
     drop: function (event, ui) {
-      var elementType = ui.draggable[0].dataset.elementType;
+      var elementType = ui.draggable[0].getAttribute('data-element-type');
 
       // Subtract out the distance between #visualization (which we are
       // dropping into) and #codeApp (where the coordinates come from).
@@ -2891,8 +2935,47 @@ designMode.addScreenIfNecessary = function(html) {
   return rootDiv[0].outerHTML;
 };
 
+designMode.addKeyboardHandlers = function () {
+  $('#divApplab').keydown(function (event) {
+    if (!Applab.isInDesignMode() || Applab.isRunning()) {
+      return;
+    }
+    if (!currentlyEditedElement || $(currentlyEditedElement).hasClass('screen')) {
+      return;
+    }
 
-},{"../StudioApp":5,"../utils":315,"./DesignToggleRow.jsx":12,"./DesignWorkspace.jsx":15,"./assetManagement/show.js":25,"./designElements/library":45,"react":646}],30:[function(require,module,exports){
+    var current, property, newValue;
+
+    switch (event.which) {
+      case KeyCodes.LEFT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current - 1;
+        property = 'left';
+        break;
+      case KeyCodes.RIGHT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current + 1;
+        property = 'left';
+        break;
+      case KeyCodes.UP:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current - 1;
+        property = 'top';
+        break;
+      case KeyCodes.DOWN:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current + 1;
+        property = 'top';
+        break;
+      default:
+        return;
+    }
+    designMode.onPropertyChange(currentlyEditedElement, property, newValue);
+  });
+};
+
+
+},{"../StudioApp":5,"../constants":104,"../utils":315,"./DesignToggleRow.jsx":12,"./DesignWorkspace.jsx":15,"./assetManagement/show.js":25,"./designElements/library":45,"react":646}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3519,8 +3602,8 @@ applabCommands.createCanvas = function (opts) {
     var height = opts.height || Applab.appHeight;
     newElement.width = width;
     newElement.height = height;
-    newElement.style.width = width + 'px';
-    newElement.style.height = height + 'px';
+    newElement.setAttribute('width', width + 'px');
+    newElement.setAttribute('height', height + 'px');
     // Unlike other elements, we use absolute position, otherwise our z-index
     // doesn't work
     newElement.style.position = 'absolute';
@@ -4807,7 +4890,7 @@ function outputApplabConsole(output) {
     if (debugOutput.textContent.length > 0) {
       debugOutput.textContent += '\n' + output;
     } else {
-      debugOutput.textContent = output;
+      debugOutput.textContent = String(output);
     }
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
@@ -4868,7 +4951,7 @@ AppStorage.tempChannelId =
 
 AppStorage.getChannelId = function() {
   // TODO(dave): pull channel id directly from appOptions once available.
-  var id = dashboard && dashboard.project.current && dashboard.project.current.id;
+  var id = dashboard && dashboard.project.getCurrentId();
   return id || AppStorage.tempChannelId;
 };
 
@@ -4994,7 +5077,7 @@ AppStorage.readRecords = function(tableName, searchParams, onSuccess, onError) {
   var url = '/v3/shared-tables/' + AppStorage.getChannelId() + '/' + tableName;
   req.open('GET', url, true);
   req.send();
-  
+
 };
 
 var handleReadRecords = function(searchParams, onSuccess, onError) {
@@ -6954,12 +7037,12 @@ var TextAreaProperties = React.createClass({displayName: "TextAreaProperties",
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
           foo: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7065,12 +7148,12 @@ var TextInputProperties = React.createClass({displayName: "TextInputProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7152,7 +7235,7 @@ var ScreenProperties = React.createClass({displayName: "ScreenProperties",
           handleChange: this.props.handleChange.bind(this, 'backgroundColor')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'image', 
-          initialValue: elementUtils.extractImageUrl(element.style.backgroundImage), 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'screen-image')})
       ));
   }
@@ -7168,6 +7251,13 @@ module.exports = {
     element.style.width = Applab.appWidth + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
+    // We want our screen to be behind canvases. By setting any z-index on the
+    // screen element, we create a new stacking context with this div as its
+    // root, which results in all children (including canvas) to appear in front
+    // of it, regardless of their z-index value.
+    // see http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
+    element.style.position = 'absolute';
+    element.style.zIndex = 0;
 
     return element;
   }
@@ -7208,12 +7298,12 @@ var RadioButtonProperties = React.createClass({displayName: "RadioButtonProperti
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7306,14 +7396,14 @@ var LabelProperties = React.createClass({displayName: "LabelProperties",
           lockState: $(element).data('lock-width') || PropertyRow.LockState.UNLOCKED, 
           handleLockChange: this.props.handleChange.bind(this, 'lock-width'), 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           lockState: $(element).data('lock-height') || PropertyRow.LockState.UNLOCKED, 
           handleLockChange: this.props.handleChange.bind(this, 'lock-height'), 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7452,12 +7542,12 @@ var ImageProperties = React.createClass({displayName: "ImageProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7470,7 +7560,7 @@ var ImageProperties = React.createClass({displayName: "ImageProperties",
           handleChange: this.props.handleChange.bind(this, 'top')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'picture', 
-          initialValue: element.getAttribute('src'), 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'picture')}), 
         React.createElement(BooleanPropertyRow, {
           desc: 'hidden', 
@@ -7539,12 +7629,12 @@ var DropdownProperties = React.createClass({displayName: "DropdownProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7693,12 +7783,12 @@ var CheckboxProperties = React.createClass({displayName: "CheckboxProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7779,12 +7869,12 @@ var CanvasProperties = React.createClass({displayName: "CanvasProperties",
         React.createElement(PropertyRow, {
           desc: 'width (px)', 
           isNumber: true, 
-          initialValue: parseInt(element.style.width, 10), 
+          initialValue: parseInt(element.getAttribute('width'), 10), 
           handleChange: this.props.handleChange.bind(this, 'width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
-          initialValue: parseInt(element.style.height, 10), 
+          initialValue: parseInt(element.getAttribute('height'), 10), 
           handleChange: this.props.handleChange.bind(this, 'height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
@@ -7807,8 +7897,8 @@ module.exports = {
   PropertyTable: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
-    element.style.height = '100px';
-    element.style.width = '100px';
+    element.setAttribute('width', '100px');
+    element.setAttribute('height', '100px');
 
     return element;
 
@@ -7856,12 +7946,12 @@ var ButtonProperties = React.createClass({displayName: "ButtonProperties",
           desc: 'width (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.width, 10), 
-          handleChange: this.props.handleChange.bind(this, 'width')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-width')}), 
         React.createElement(PropertyRow, {
           desc: 'height (px)', 
           isNumber: true, 
           initialValue: parseInt(element.style.height, 10), 
-          handleChange: this.props.handleChange.bind(this, 'height')}), 
+          handleChange: this.props.handleChange.bind(this, 'style-height')}), 
         React.createElement(PropertyRow, {
           desc: 'x position (px)', 
           isNumber: true, 
@@ -7887,7 +7977,7 @@ var ButtonProperties = React.createClass({displayName: "ButtonProperties",
           handleChange: this.props.handleChange.bind(this, 'fontSize')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'image', 
-          initialValue: elementUtils.extractImageUrl(element.style.backgroundImage), 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'image')}), 
         React.createElement(BooleanPropertyRow, {
           desc: 'hidden', 
@@ -7949,7 +8039,6 @@ var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({displayName: "ZOrderRow",
   propTypes: {
-    // TODO - is passing the element and modifying it good React? I think no
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     onDepthChange: React.PropTypes.func.isRequired
   },
@@ -8370,7 +8459,7 @@ module.exports = React.createClass({displayName: "exports",
     } else {
       var rows = this.state.assets.map(function (asset) {
         var choose = this.props.assetChosen && this.props.assetChosen.bind(this,
-            AssetsApi.basePath(asset.filename));
+            asset.filename);
 
         return React.createElement(AssetRow, {
             key: asset.filename, 
@@ -8608,7 +8697,7 @@ module.exports = React.createClass({displayName: "exports",
 
 module.exports = {
   basePath: function (path) {
-    return '/v3/assets/' + dashboard.project.current.id + (path ? '/' + path : '');
+    return '/v3/assets/' + dashboard.project.getCurrentId() + (path ? '/' + path : '');
   },
   ajax: function (method, file, success, error, data) {
     var xhr = new XMLHttpRequest();

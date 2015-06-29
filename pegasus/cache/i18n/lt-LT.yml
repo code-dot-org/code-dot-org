@@ -423,10 +423,12 @@
   dashboard_students_reset_password: Nustatyti naują slaptažodį
   dashboard_students_share_section: 'Nurodykite šios grupės prisijungimo puslapį mokiniams:'
   dashboard_students_print_info: Atspausdinkite korteles su mokinių prisijungimo informacija.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Prisijungimo paveikslėlis
   dashboard_students_reset_picture: Bet kada galima pakeisti  mokinio prisijungimo
     paveikslėlį, parinkus <b>Rodyti raktą</b> ir tada  <b>Sukurti naują raktą</b>.
     Mokiniui bus sukurtas naujas  paveikslėlis-raktas.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Prisijungimo žodžiai
   dashboard_students_reset_word: 'Bet kada galima pakeisti  mokinio slaptažodį, parinkus
     <b>Rodyti raktą</b> ir tada  <b>Sukurti naują raktą</b>. Mokiniui bus sukurta

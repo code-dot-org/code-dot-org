@@ -429,10 +429,12 @@
   dashboard_students_share_section: 'Поделитесь страницей со своими студентами для
     входа в этот раздел:'
   dashboard_students_print_info: Распечатать карточки с данными для доступа учеников.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Секретное изображение
   dashboard_students_reset_picture: Вы может поменять секретное изображение ученика
     в любое время, выберите <b>Показать секрет</b>,  затем <b>Сменить секрет</b>.
     Новое секретное изображение будет сгенерировано для входа этого ученика.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Секретное слово
   dashboard_students_reset_word: 'Вы можете сбросить секретные слова ученика в любое
     время выбрав <b>Показать секрет</b> и затем <b>Сбросить секрет</b>. Новая пара

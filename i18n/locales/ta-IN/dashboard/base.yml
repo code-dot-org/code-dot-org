@@ -223,7 +223,7 @@ ta:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
       label: 'வணக்கம் %{username}'
-      stats: My progress
+      stats: Code Studio
       settings: எனது கணக்கு
       prizes: பரிசுகள்
       logout: வெளியேறு

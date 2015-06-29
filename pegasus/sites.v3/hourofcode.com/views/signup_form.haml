@@ -1,7 +1,6 @@
 -#Disabled so the Google Maps API doesn't get included twice, which can cause unexpected errors.
 -#%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
 
-%a#hocsignupform{name: 'signup'}
 #signupform
   %h2= hoc_s(:signup_header)
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
@@ -40,6 +39,18 @@
         %label
           %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
           =hoc_s(:signup_event_entire_school_label)
+
+    - if @country == 'us'
+      .form-group
+        .checkbox
+          %label
+            %input#hoc-send-posters-flag{name: "send_posters_flag_b", type: "checkbox", value: "1"}/
+            =hoc_s(:signup_send_posters_flag_label)
+
+      .form-group{style: "display: none;"}
+        %label.control-label{for: "hoc-send-posters-address"}= hoc_s(:signup_send_posters_address_label)
+        %div
+          %textarea#hoc-send-posters-address.form-control{name: "send_posters_address_s", placeholder: hoc_s(:signup_send_posters_address_placeholder), style: "height: 5em;"}
 
     .form-group
       .checkbox
@@ -110,7 +121,7 @@
     $("#signup_submit").attr('disabled','disabled');
 
     $.ajax({
-      url: "/forms/HocSignup2014",
+      url: "/forms/HocSignup2015",
       type: "post",
       dataType: "json",
       data: $("#hoc-signup-form").serialize()
