@@ -35,12 +35,12 @@ var ButtonProperties = React.createClass({
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')} />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
@@ -66,7 +66,7 @@ var ButtonProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <ImagePickerPropertyRow
           desc={'image'}
-          initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')} />
         <BooleanPropertyRow
           desc={'hidden'}

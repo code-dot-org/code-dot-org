@@ -1,4 +1,4 @@
-// There's also a set of code that lives in dashbaord/app/assets/javascript
+// There's also a set of code that lives in dashboard/app/assets/javascript
 // that should really be going through our browserify type pipeline
 
 // TODO (brent) - figure out story for sharing code between different packages. (linklocal)
@@ -10,6 +10,7 @@ var glob = require('glob');
 var del = require('del');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
+var rename = require('gulp-rename');
 
 var browserify = require('./lib/frontend/browserify');
 
@@ -57,6 +58,11 @@ gulp.task('compress', ['bundle-js'], function () {
   ];
   return gulp.src(files)
     .pipe(uglify())
+    .pipe(rename(function (path) {
+      if (path.extname === '.js') {
+        path.basename += '.min';
+      }
+    }))
     .pipe(gulp.dest(BUILD_TARGET));
 });
 
@@ -65,4 +71,4 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('watch', ['enable-watch', 'bundle-js']);
-gulp.task('default', ['lint', 'bundle-js']);
+gulp.task('default', ['lint', 'compress']);

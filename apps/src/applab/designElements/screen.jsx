@@ -28,7 +28,7 @@ var ScreenProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <ImagePickerPropertyRow
           desc={'image'}
-          initialValue={elementUtils.extractImageUrl(element.style.backgroundImage)}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
       </div>);
   }
@@ -44,6 +44,13 @@ module.exports = {
     element.style.width = Applab.appWidth + 'px';
     element.style.left = '0px';
     element.style.top = '0px';
+    // We want our screen to be behind canvases. By setting any z-index on the
+    // screen element, we create a new stacking context with this div as its
+    // root, which results in all children (including canvas) to appear in front
+    // of it, regardless of their z-index value.
+    // see http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
+    element.style.position = 'absolute';
+    element.style.zIndex = 0;
 
     return element;
   }

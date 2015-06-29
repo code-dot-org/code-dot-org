@@ -441,10 +441,12 @@
   dashboard_students_reset_password: Скинути пароль
   dashboard_students_share_section: 'Надайте адресу сторінки входу для своїх учнів:'
   dashboard_students_print_info: Роздрукуйте картки з вхідною інформацією своїх учнів.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Таємне зображення
   dashboard_students_reset_picture: Можете скинути таємне зображення у будь-який момент,
     обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створено
     нове таємне зображення, яке потрібно використати для наступного входу цього учня.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Таємне слово
   dashboard_students_reset_word: 'Можете скинути таємне слово у будь-який момент,
     обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створена
