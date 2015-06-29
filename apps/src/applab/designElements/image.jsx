@@ -52,7 +52,7 @@ var ImageProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'top')} />
         <ImagePickerPropertyRow
           desc={'picture'}
-          initialValue={element.dataset.canonicalImageUrl || ''}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')} />
         <BooleanPropertyRow
           desc={'hidden'}
