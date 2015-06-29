@@ -104,6 +104,11 @@ debugArea.snapOpen = function () {
   setContentsVisible(true);
   setIconPointingDown(true);
   setHeight(lastOpenHeight_);
+
+  // Set the 'clear' button visible
+  rootDiv_.find('#clear-console-header')
+      .css('opacity', 1)
+      .css('visibility', 'visible');
 };
 
 debugArea.snapShut = function () {
@@ -112,6 +117,11 @@ debugArea.snapShut = function () {
   setContentsVisible(false);
   setIconPointingDown(false);
   setHeight(getHeightWhenClosed());
+
+  // Set the 'clear' button hidden (not display:none, it should take up space)
+  rootDiv_.find('#clear-console-header')
+      .css('opacity', 0)
+      .css('visibility', 'hidden');
 };
 
 /**
@@ -149,6 +159,13 @@ debugArea.slideOpen = function () {
   },{
     step: utils.fireResizeEvent
   });
+
+  // Animate the 'clear' button appearing at the same time
+  var clearButton = rootDiv_.find('#clear-console-header');
+  clearButton.css('visibility', 'visible')
+  clearButton.animate({
+    opacity: 1.0
+  });
 };
 
 debugArea.slideShut = function () {
@@ -176,6 +193,16 @@ debugArea.slideShut = function () {
     bottom: closedHeight
   },{
     step: utils.fireResizeEvent
+  });
+
+  // Animate the 'clear' button vanishing at the same time
+  var clearButton = rootDiv_.find('#clear-console-header');
+  clearButton.animate({
+    opacity: 0.0
+  },{
+    complete: function () {
+      clearButton.css('visibility', 'hidden');
+    }
   });
 };
 
