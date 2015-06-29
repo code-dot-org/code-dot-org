@@ -76,8 +76,9 @@ module.exports = {
    * @param {ElementType} elementType Type of element to create
    * @param {number} left Position from left.
    * @param {number} top Position from top.
+   * @param {boolean} withoutId If true, don't generate an id
    */
-  createElement: function (elementType, left, top) {
+  createElement: function (elementType, left, top, withoutId) {
     var elementClass = elements[elementType];
     if (!elementClass) {
       throw new Error('Unknown elementType: ' + elementType);
@@ -86,7 +87,9 @@ module.exports = {
     var element = elementClass.create();
 
     // Stuff that's common across all elements
-    element.id = this.getUnusedElementId(elementType.toLowerCase());
+    if (!withoutId) {
+      element.id = this.getUnusedElementId(elementType.toLowerCase());
+    }
 
     if (elementType !== ElementType.SCREEN) {
       element.style.position = 'absolute';
