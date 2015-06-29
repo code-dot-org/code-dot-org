@@ -117,7 +117,7 @@ vi-VN:
   studiobar_elementary_body: 'Our three new courses for K&#8209;5'
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: Lập trình Flappy
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
@@ -188,7 +188,7 @@ vi-VN:
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Khóa học 4
   homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
+  homepage_slot_text_flappy: Lập trình Flappy
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: Watch the video
   homepage_action_text_learn: Start learning
@@ -375,9 +375,11 @@ vi-VN:
   dashboard_students_reset_password: Reset password
   dashboard_students_share_section: "Share this section's sign in page with your students:"
   dashboard_students_print_info: "Print out cards with your students' login information."
-  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word: Secret Word
+  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word: 'This section uses <b>word</b> as its secret type.  It means that each of your students has a pair of secret words used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
   dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."
@@ -442,9 +444,9 @@ vi-VN:
   code_sign_up: Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính
   learn_more: Tìm hiểu thêm
   hoc2014_try_new_tutorials: Làm thử theo hướng dẫn của chúng tôi về Giờ lập trình
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorial: Hãy thử lớp học Một giờ Lập trình phiên bản beta của chúng tôi
   hoc2014_try_scrat: Angry Birds, PvZ, và Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
   carousel_heading_international: Các hướng dẫn bằng ngôn ngữ của bạn
   carousel_heading_domestic: Hướng dẫn có sẵn bằng tiếng Anh
   carousel_heading_beginners: Hướng dẫn cho người mới bắt đầu

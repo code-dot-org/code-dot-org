@@ -157,18 +157,6 @@ ar:
         Instructions: التعليمات
         Match the puzzles to the blocks: طابق الاحجيات مع القطع
         Maze Match: تطابق المتاهة
-      Coordinate Matching:
-        (250, 400): (250، 400)
-        (320, 240): (320، 240)
-        (480, 100): (480، 100)
-        (500, 240): (500، 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: غيمة
-        Coordinates of Ninjacat: احداثيات القط النينجا
-        Dog: كلب
-        Match each character with its correct coordinate!: اربط كل شخصية مع الاحداثيات المناسبة لها!
-        Ninjacat: القط النينجا
-        Ruby: ياقوت
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -271,63 +259,6 @@ ar:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: وصل الخريطة إلى الخوارزمية التي تجعل Flurb يصل للورود .
         Matching: مطابقة
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): (+ (-(/4 7) 9) 3)
-        (+ (- 9 3) (* 4 7)): '(+ (-9 3) (* 4 7))'
-        (+ 3 (/ 4 7)): (+ 3 (/4 7))
-        (/ (+ 4 7) 3): (/(+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
-        Converting Circles to Code: تحويل الدوائر الى رمز
-        Match each circle of evaluation with the correct code!: اربط كل حلقة تقييم مع الرمز المناسب لها!
-      Match example to contract:
-        (big-string? "gigantic" 5): '(سلسلة كبيرة؟ 5 "العملاق")'
-        (bigger-string "big" "little"): '(أكبر-سلسلة "كبير" "صغير")'
-        (find-price "cheese"): '(البحث عن السعر "الجبن")'
-        (find-price 4): (البحث عن-السعر 4)
-        (small-star "blue"): '(الصغيرة-ستار "الأزرق")'
-        (small-star "solid"): '(الصغيرة-ستار "الصلبة")'
-        Contracts of Functions: تقلصات الدالة
-        Match each example with the correct contract!: طابق كل مثال مع التقلص الصحيح!
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "bigger-string: string string -> string": 'أكبر سلسلة: سلسلة السلسلة-> السلسلة'
-        "find-price: number -> number": 'البحث--السعر: رقم-> رقم'
-        "find-price: string -> number": 'البحث--السعر: سلسلة-> عدد'
-        "small-star: string -> image": 'نجوم الصغيرة: سلسلة-> الصورة'
-      Match math to circles:
-        (2 + 3 * 5) / 2: '(2 + 3 * 5)/2'
-        (2 + 3) * 5 / 2: '(2 + 3) * 5/2'
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit 1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit 1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): '2 + 3 * (5/2)'
-        Converting Math to Circles of Evaluation: تحويل الرياضيات إلى دوائر التقييم
-        Match each mathematical expression with the correct circle of evaluation!: طابق كل تعبير رياضي مع الدائرة الصحيحة للتقييم !
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (-72-19))'
-        (+ (- (* 3 15) 72) 19): '(+ (-(* 3 15) 72) 19)'
-        (+ (3 x 15) (- 72 19)): (+ (3 × 15) (-72-19))
-        (- (+ 72 3) (* 19 15)): '(-(+ 72 3) (* 19 15))'
-        (15 + 3) x (72 - 19): '(15 + 3) × (72 - 19)'
-        3 x 15 + (- 72 19): '3 × 15 + (72 - 19)'
-        3 x 15 - 72 + 19: 3 × 15-72 + 19
-        72 + 3 - 19 x 15: '72 + 3 - 19 × 15'
-        Converting Math to Code: تحويل الرياضيات إلى تعليمات برمجية
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: طابق كل عبارة رياضية مع الرمز الصحيح. استعمل دائرة التقييم لتساعدك على الاجابة!
-      parts of contract:
-        (yearbook-picture "Sally" 1992): '(الكتاب السنوي-صورة "سالي" 1992)'
-        Here is a contract for a new function. Match each item with the word that describes it.: هذا عقد جديد لمهمة جديدة . طابق كل عنصر مع الكلمة التي تصفه .
-        Parts of a Contract: أجزاء من العقد
-        domain: مجال
-        example: مثال
-        function name: اسم الدالة
-        image: صورة
-        range: مدى
-        string numer: سلسلة numer
-        yearbook-picture: 'الكتاب السنوي - صورة'
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -664,21 +595,6 @@ ar:
         Line 4: Line 4
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
-      Circle to code:
-        (+ (* (- 8 6) 4) 5) : '(+ (* (-8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): '(+ 5 (* (-6 8) 4))'
-        (+ 5 (* (- 8 6) 4)): '(+ 5 (* (-8 6) 4))'
-        (+ 5 (* 4 (- 8 6))): '(+ 5 (* 4 (-8 6)))'
-        "/script_assets/msm/Unit%202/exercise_1.png": '/script_assets/msm/Unit%202/exercise_1.png'
-        Code from Circle: التعليمات البرمجية من دائرة
-        Pick the Racket code that comes from the circle of evaluation!: اختر رمز مضرب الذي يأتي من دائرة التقييم!
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: "The unicorn's x value increases"
-        The unicorn's y value changes: "The unicorn's y value changes"
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -841,50 +757,6 @@ ar:
         Driver and Helper: سائق ومساعد
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'واحد من هؤلاء الأولاد هو <b>السائق</b>.  وواحد هو <b>مساعد</b>.'
         This time, which boy is the <large>driver</large>?: 'هذه المرة، الصبي الذي هو <large>السائق</large>؟'
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): '(* (+ 5 6) (/8 2))'
-        (/ (* (+ 5 6) 8) 2): '(/(* (+ 5 6) 8) 2)'
-        (/ (* 8 2) (+ 5 6)): '(/(* 8 2) (+ 5 6))'
-        (/ (+ 5 6) (* 8 2)): '(/(+ 5 6) (* 8 2))'
-        (5 + 6) * 8 / 2: '(5 + 6) * 8/2'
-        0: '? اختر رمز مضرب يطابق التعبير الرياضي نظراً. رسم دائرة للتقييم لمساعدتك في العثور على الجواب الصحيح!'
-        1: ': اختر رمز مضرب يطابق التعبير الرياضي نظراً. رسم دائرة للتقييم لمساعدتك في العثور على الجواب الصحيح!'
-        Racket Code for Math Expressions: رمز مضرب للتعبيرات الرياضية
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): '(+ (+ (* (* (/20 2) 3) 7) 2) (+ 4 6))'
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/2 20) 7) 3) 2)'
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): '(+ (+ (+ 4 6) (* (* (/20 2) 3) 7)) 2)'
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/20 (* 2 (* 3 (+ 7 2)))'
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20/2 × 3 × 7 + 2
-        0: '? اختر رمز مضرب يطابق التعبير الرياضي نظراً. رسم دائرة للتقييم لمساعدتك في العثور على الجواب الصحيح!'
-        1: ': اختر رمز مضرب يطابق التعبير الرياضي نظراً. رسم دائرة للتقييم لمساعدتك في العثور على الجواب الصحيح!'
-        Racket Code for Math Expressions: رمز مضرب للتعبيرات الرياضية
-      Multi Define Funcs 1:
-        3: "3"
-        What is the name of this function?: What is the name of this function?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 2:
-        3: "3"
-        What is the name of the parameter?: What is the name of the parameter?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 3:
-        5: "5"
-        6: "6"
-        What should g(2) return?: What should g(2) return?
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
       Warmup questions:
         Coding in Racket: الترميز في مضرب
         Select the best answer to the question.: حدد أفضل إجابة على السؤال.
@@ -893,14 +765,6 @@ ar:
         left, right, top: أعلى اليسار، اليمين،
         random: عشوائي
         top, left, right: أعلى، يسار، يمين
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(المستطيل (+ 8 2) (-7 5) "الصلبة" "الأحمر")'
-        (rectangle (+ 8 2) (- 7 5) solid red): (المستطيل (+ 8 2) (-7 5) الأحمر الصلبة)
-        (rectangle (10) (2) "solid" "red"): '(المستطيل (10) (2) "الصلبة" "الأحمر")'
-        (rectangle 10 2 "solid" "red"): '(مستطيل 10 2 "الصلبة" "الأحمر")'
-        "/script_assets/msm/Unit%202/exercise_5.png": '/script_assets/msm/Unit%202/exercise_5.png'
-        Code from Circle: التعليمات البرمجية من دائرة
-        Pick the Racket code that comes from the circle of evaluation!: اختر رمز مضرب الذي يأتي من دائرة التقييم!
       test multi text:
         Fred Flintstone: فريد فلينتستون
         George Jetson: جورج جيتسون
@@ -909,11 +773,3 @@ ar:
         Presidents: الرؤساء
         This multiple choice is all about the presidents of the United States.: هذا الاختيار من متعدد كل شيء عن رؤساء الولايات المتحدة.
         Who was the first president of the USA?: من هو أول رئيس للولايات المتحدة الأمريكية؟
-      valid contracts multi:
-        Pick the best answer to the question.: اختيار أفضل إجابة على السؤال.
-        Valid Contracts: عقود سارية المفعول
-        Which of these is a valid contract for the function circle?: وهذه هو عقد صحيح لدائرة الدالة؟
-        "circle: 5 solid blue -> circle ": 'الدائرة: 5 الزرقاء الصلبة-> دائرة '
-        "circle: number string string -> image": 'دائرة: رقم سلسلة سلسلة-> الصورة'
-        "circle: number string string -> shape": 'دائرة: رقم سلسلة سلسلة-> الشكل'
-        "circle: size style color -> image": 'دائرة: حجم نمط اللون-> الصورة'

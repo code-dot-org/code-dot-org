@@ -368,8 +368,10 @@ is-IS:
   dashboard_students_reset_password: Endurstilla leyniorð
   dashboard_students_share_section: 'Deila innskráningarsíðu þessa hóps með nemendum þínum:'
   dashboard_students_print_info: Prenta út spjöld með innskráningarupplýsingum nemenda þinna.
+  dashboard_students_secret_picture_title: Leynimynd
   dashboard_students_secret_picture: Leynimynd
   dashboard_students_reset_picture: 'Þú getur endurstillt leynimynd nemanda hvenær sem er með því að velja <b>Sýna leyndarmál</b> og síðan <b>Endurstilla leyndarmál</b>. Ný leynimynd verður búin til sem nemandi notar til að skrá sig inn.'
+  dashboard_students_secret_word_title: Leyniorð
   dashboard_students_secret_word: Leyniorð
   dashboard_students_reset_word: 'Þú getur endurstillt leyniorð nemanda hvenær sem er með því að velja <b>Sýna leyndarmál</b> og síðan <b>Endurstilla leyndarmál</b>. Nýtt par leyniorða verður búið til sem nemandi notar til að skrá sig inn. '
   dashboard_students_join_link: Segðu nemendum þínum að búa til eigin aðgang og ganga svo í hópinn á

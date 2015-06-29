@@ -9,6 +9,7 @@ var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
 var _ = require('../utils').getLodash();
+var KeyCodes = require('../constants').KeyCodes;
 
 var designMode = module.exports;
 
@@ -38,6 +39,8 @@ designMode.onDivApplabClick = function (event) {
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
   }
+  // give the div focus so that we can listen for keyboard events
+  $("#divApplab").focus();
   designMode.editElementProperties(element);
 };
 
@@ -700,4 +703,43 @@ designMode.addScreenIfNecessary = function(html) {
   rootDiv.append(screenElement);
 
   return rootDiv[0].outerHTML;
+};
+
+designMode.addKeyboardHandlers = function () {
+  $('#divApplab').keydown(function (event) {
+    if (!Applab.isInDesignMode() || Applab.isRunning()) {
+      return;
+    }
+    if (!currentlyEditedElement || $(currentlyEditedElement).hasClass('screen')) {
+      return;
+    }
+
+    var current, property, newValue;
+
+    switch (event.which) {
+      case KeyCodes.LEFT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current - 1;
+        property = 'left';
+        break;
+      case KeyCodes.RIGHT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current + 1;
+        property = 'left';
+        break;
+      case KeyCodes.UP:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current - 1;
+        property = 'top';
+        break;
+      case KeyCodes.DOWN:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current + 1;
+        property = 'top';
+        break;
+      default:
+        return;
+    }
+    designMode.onPropertyChange(currentlyEditedElement, property, newValue);
+  });
 };

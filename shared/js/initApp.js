@@ -1,6 +1,6 @@
 // TODO (brent) - way too many globals
 // TODO (brent) - I wonder if we should sub-namespace dashboard
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -101,15 +101,6 @@ $.extend(true, appOptions, baseOptions);
     }
   }
 })(appOptions.level);
-
-/**
- * @returns {string} The serialized level source from the editor.
- */
-dashboard.getEditorSource = function() {
-  return window.Blockly ?
-    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) :
-    window.Applab && Applab.getCode();
-};
 
 function initApp() {
   dashboard.project.init();

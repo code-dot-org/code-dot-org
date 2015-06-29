@@ -369,7 +369,7 @@
     show_more: បង្ហាញ​ច្រើន​ទៀត
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: ដំណើការ​របស់​ខ្ញុំ
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}

@@ -52,9 +52,9 @@
   auth:
     sign_in_with: Loghează-te cu %{provider}
     signed_in: Înregistrat!
-    signed_out: Aţi ieşit de pe <a href="%{url}">Code.org</a>.
-    sign_out_of: Ai folosit %{provider} pentru a intra. <a href="%{url}">Fă clic aici</a>
-      pentru a ieşi de pe %{provider}.
+    signed_out: Te-ai delogat de pe <a href="%{url}">Code.org</a>.
+    sign_out_of: Ai folosit %{provider} pentru a te loga. <a href="%{url}">Fă clic
+      aici</a> pentru ate deloga de pe %{provider}.
     already_signedup: Te-ai înscris deja?
     notyet_signedup: Nu te-ai alăturat încă?
     google_oauth2: Cont Google
@@ -67,19 +67,19 @@
   signup_form:
     student_count: '%{count} studenţi s-au înregistrat deja.'
     teacher_count: '%{count} profesori s-au înregistrat deja.'
-    overview_student: Creaţi-vă un cont pentru a vă putea urmări progresul. Email-ul
-      este utilizat în principal pentru a vă permite să vă conectaţi şi pentru recuperarea
-      parolei. Pentru informaţii suplimentare, consultaţi <a href="http://code.org/privacy">
+    overview_student: Creează-ți un cont pentru a-ți putea urmări progresul. Email-ul
+      este utilizat în principal pentru a-ți permite să te loghezi şi pentru recuperarea
+      parolei. Pentru informaţii suplimentare, consultă <a href="http://code.org/privacy">
       Politica de confidenţialitate</a>.
-    overview_teacher: Predați informatica în clasa dvs. prin crearea unui cont. <p/>
-      Veţi putea să adăugaţi eleviii dumneavoastră şi să urmăriţi progresul lor.
+    overview_teacher: Înregistrează-te și crează-ți un cont pentru a preda informatica
+      în clasa ta. <p/> Vei putea să-ți adăugi eleviii şi să le urmărești progresul.
     no_signup_message: Poţi <a target="_blank" href="http://learn.code.org"> parcurge
       diverse stadii şi puzzle-uri</a>, dar va trebui să te înregistrezi pentru a-ți
       salva progresul.
     teacher_educator_guide: Consultă ghidul educatorului
-    teacher_pitch: Profesor înscriere Code.org
+    teacher_pitch: Înscriere profesor la Code.org
     teacher_title: Înregistrare Profesor
-    student_pitch: Student înscriere Code.org
+    student_pitch: Înscriere student la Code.org
     student_title: Înscriere student
     school_name: Numele şcolii (opţional)
     school_address: Adresa şcolii (opţional)
@@ -87,7 +87,7 @@
     gender: Sex (opţional)
     birthday: Ziua de naştere (opţional)
     age: Vârsta
-    user_type: Sunteți elev sau profesor?
+    user_type: Ești student sau profesor?
     submit: Inregistrează-te
     teacher: Ești profesor?
     valid_username: Disponibil!
@@ -96,15 +96,15 @@
     valid_password: Parolă validă!
     invalid_password: Parola trebuie să conţină cel puțin 6 caractere
     mismatch_password: Cele două parole introduse nu se potrivesc
-    student_terms: Sunt de acord să respect <a href='http://code.org/tos'> termenii
-      și condițiile</a> Code.org. Dacă eu sunt sub vârsta de 13 ani, confirm prin
-      trimiterea acestui formular că am permisiunea părintelui sau tutorelui legal
-      de a utiliza serviciile Code.org. <br/>Pentru utilizatorii sub 13 ani, adresele
-      de e-mail nu sunt stocate într-un formular care să ne permită să-l contactăm.
-    teacher_terms: Sunt de acord cu <a href='http://code.org/tos'>termenii de serviciu</a>
-      de pe Code.org.
-    additional_information: Mai avem nevoie de nişte informaţii pentru a te putea
-      înscrie.
+    student_terms: Sunt de acord să respect <a href='http://code.org/tos'>termenii
+      și condițiile</a> ale Code.org. Dacă am vârsta sub 13 ani, confirm prin trimiterea
+      acestui formular că am permisiunea părintelui sau tutorelui legal de a utiliza
+      serviciile Code.org.<br/>Pentru utilizatorii sub 13 ani, adresele de e-mail
+      nu sunt stocate într-un formular care să ne permită să-i contactăm.
+    teacher_terms: Sunt de acord cu <a href='http://code.org/tos'>termenii și condițiile
+      de utilizare</a> de la Code.org.
+    additional_information: Mai avem nevoie de câteva informaţii adiționale pentru
+      a te putea înscrie.
   signin_form:
     title: Ai deja un cont? Conectează-te
     login: Email sau nume de utilizator
@@ -112,14 +112,14 @@
     remember: Ține-mă minte
     submit: Loghează-te
   signin:
-    try_heading: Dorești să încerci să programezi fără înscriere?
+    try_heading: Dorești să încerci să programezi fără a te înregistra?
     try_hoc: Încearcă prima dată o Oră de Cod
     try_20hours: Încearcă cele 20 de ore ale noastre de Introducere în Informatică
   signinsection:
-    welcome: Bine ai venit pe %{section_name}
+    welcome: Bine ai venit la %{section_name}
     name: Alege-ţi numele
     picture: Acum găseşte-ţi poza secretă
-    words: Acum scrie-ţi cuvintele secrete
+    words: Acum introdu cuvintele tale secrete
     login: Loghează-te
   password:
     reset_form:
@@ -151,8 +151,8 @@
       username_in_use: '%{username} este deja luat, te rugăm să alegi altul'
       no_teacher: Nu am găsit pe nimeni logat cu '%{teacher_email_or_code}'. Te rugăm
         să le ceri să se înregistreze aici și apoi încearcă să-i mai adăugi o dată
-      section_not_found: Nu s-a putut găsi o secţiune conţinând codul '%{section_code}'.
-      blank_code: Vă rugăm să introduceţi un cod de secţiune
+      section_not_found: Nu am găsit o secţiune conţinând codul '%{section_code}'.
+      blank_code: Te rugăm să introduci un cod de secţiune
       cant_join_own_section: Ne pare rău, dar nu poţi intra în propria secţiune.
     mail:
       invite_student:
@@ -192,7 +192,7 @@
       msg_student: 'NOTĂ: Poți să alegi doar unul din aceste premii.'
       msg_publicschool: Te rugăm să confirmi că ești un profesor la o școală publică
         din SUA.
-      msg_visit_website: Vizitaţi site-ul
+      msg_visit_website: Vizitează site-ul
     providers:
       apple_itunes: $10 iTunes Gift Card
       donors_choose: DonorsChoose.org $750 credit
@@ -208,8 +208,8 @@
       choose: 'Alege un premiu:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Ai câştigat un premiu! (Numai pentru studenţii din SUA)
-      not_earned_title: Dacă termini tutorial-ul o să câştigi premii (valabil doar
-        pentru studenţii din SUA)
+      not_earned_title: Termină tutorial-ul și câştigă premii (valabil doar pentru
+        studenţii din S.U.A)
       not_earned: 'Învață toate conceptele de informatică, colectează toate %{num_trophies}
         trofee, şi câştigă premii reale. Poţi alege între 10GB de spaţiu gratuit pe
         Dropbox, $10 în credit pe Skype, şi descărcări gratuite de jocuri. Notă: Ofertă
@@ -218,7 +218,7 @@
       teacher:
         earned: 15 sau mai mulți studenţii au colectat toate %{num_trophies} trofee.
           Ai câștigat un premiu pentru profesor! (Numai pentru profesorii din SUA)
-        not_earned_title: Dacă predai clasei, vei câştiga până la $1000 în <a target="_blank"
+        not_earned_title: Predai clasei tale și câştigi până la $1000 în <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> credite (doar pentru
           profesorii din SUA)
         not_earned: Ca răsplată pentru profesorii de informatică nou veniți, poți
@@ -235,7 +235,7 @@
           target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> pot
           fi utilizate numai de profesori din școlile de stat din SUA.
         bonus:
-          not_earned_title: Încă puteţi câştiga $250 în plus în <a target="_blank"
+          not_earned_title: Încă mai poţi câştiga $250 adiționali în <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a> credite (doar pentru
             profesorii din SUA)
           earned: 7 sau mai mulți dintre studenții care au completat toate cele  %{num_trophies}
@@ -264,11 +264,11 @@
       finished_hoc: Am terminat Ora mea de Cod
       sign_in_to_save: Loghează-te pentru a salva progresul
       free_play:
-        playlab: Creare aplicație
+        playlab: Creează o aplicație
         artist: Desenează ceva
     user:
       classroom: Pagina de Start a Profesorilor
-      district_dashboard: Tablou de bord local
+      district_dashboard: Tabel de instrumente pe zonă districtuală
       label: Salut %{username}
       stats: Progresul meu
       settings: Contul meu
@@ -299,13 +299,13 @@
     tools: Instrumente pentru profesor
     followers:
       section: 'Secţiunea:'
-      stages: 'Pasul(Paşii) de afişat:'
-      show_past: 'Arată activitatea de studen (%{bullet_html}) din trecut:'
+      stages: 'Etapa(Etapele) de afişat:'
+      show_past: 'Arată activitatea anterioară a elevului (%{bullet_html}):'
       levels_key: Cheia nivelurilor
-      perfect: Terminat, perfect
-      completed: Terminat, dar ai folosit prea multe blocuri
+      perfect: Finalizat, perfect
+      completed: Finalizat, dar ai folosit prea multe blocuri
       tried: Încercat, dar neterminat
-      not_tried: Nu a fost încercat incă
+      not_tried: Nu a fost încă încercat
       activity: Indică activitatea elevului din ultimele %{hours} %{plural}
       no_section: Nici o secţiune atribuită
       trophies: trofee
@@ -314,21 +314,21 @@
       username: nume de utilizator
       password: parolă
       manage: Gestionează elevi
-      dashboard: Du-te la Tabloul de Bord al Profesorilor
+      dashboard: Du-te la Tabloul de Instrumente al Profesorilor
       add: Adaugă elevi
       remove: elimină elev
-      confirm_remove: Sunteţi sigur că vreţi să eliminaţi acest elev?
+      confirm_remove: Ești sigur că vrei să elimini acest elev?
       help_reassign: Pentru a-ţi împărţi clasa în mai multe secţiuni, alege elevii
-        atribuiţi unei secţiuni noi.
-      help_register: În loc de a petrece mult timp importând datele studenţilor, îţi
-        poţi configura clasa foarte repede rugându-i să se înregistreze. Elevii tăi
-        vor fi nevoiţi să îşi aleagă nume de utilizator şi parole, dar NU va trebui
-        să introducă o adresă de e-mail. Dacă un elev şi-a uitat parola, vei putea
-        să o resetezi pentru el/ea.
-      register: Roagă-i pe elevii tăi să se înregistreze
+        pe care îi atribui unei secţiuni noi.
+      help_register: În loc să petreci mult timp importând datele fiecărui student,
+        îţi poţi configura clasa foarte repede rugându-i pe aceștia să se înregistreze
+        ei. Elevii tăi vor fi nevoiţi să îşi aleagă numele de utilizator şi parole,
+        dar NU vor fi nevoiți să introducă o adresă de e-mail. Dacă un elev își uită
+        parola, vei putea să o resetezi tu pentru el/ea.
+      register: Roagă-i pe elevii tăi să se înregistreze singuri
       vist: Cere elevilor să viziteze
       section_code: 'şi să îşi introducă codul lor de secţiune:'
-      first_please: În primul rând, vă rugăm să %{add_section}
+      first_please: În primul rând, te rugăm să %{add_section}
       for: Pentru
       enter: 'introdu:'
     sections:
@@ -363,15 +363,15 @@
       section: Secţiune
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
-    email_confirm_needed_required: 'Adresa ta de email %{email} nu a fost confirmată:'
-    email_confirm_wrong_email: (Adresă email greşită?)
+    email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
+    email_confirm_wrong_email: (Adresă de e-mail greşită?)
     email_resend_confirm: Retrimite instrucțiunile de confirmare
     new_password_hint: (lasă necompletat dacă nu dorești să schimbi)
     current_password_hint: (avem nevoie de parola ta curentă pentru a confirma modificările)
     delete: Șterge-ți contul
-    delete_text: Apasă butonul de dedesubt pentru a-ți șterge contul.
-    delete_text_teacher_note: 'Atenție: ștergerea contului implică ștergerea conturilor
-      elevilor tăi.'
+    delete_text: Apasă butonul de mai jos pentru a-ți șterge contul.
+    delete_text_teacher_note: 'Atenție: ștergerea contului tău nu implică ștergerea
+      conturilor elevilor tăi.'
     delete_confirm: Ești sigur ca vrei să-ți ștergi contul?
   user_level:
     completed: Finalizat
@@ -379,9 +379,9 @@
   user_stats:
     recent_activity: Activitate recentă
     show_more: Arată mai multe
-    classroom_activity: Activitate Unplugged
+    classroom_activity: Activitate fără Calculator
   home:
-    title: Studio de Cod
+    title: Studio-ul Code
     description: Studio-ul Code este gazda cursurilor online create de Code.org
     lines_of_code: '%{lines_count} LINII DE COD SCRISE DE ELEVI'
     lines_of_code_linebreak: '%{lines_count} LINII DE COD<br/>SCRISE DE %{students_count}
@@ -412,16 +412,17 @@
     local_school: şcoală locală
     online: online
     see_details: Vezi detalii
-    prize_info: 'Premii pentru participarea (doar pentru profesorii americani din
-      sistemul public de învățământ): până la 1.000 dolari în recompense pentru clasă.'
+    prize_info: 'Premii pentru participare (doar pentru profesorii americani din sistemul
+      public de învățământ): până la 1.000 dolari în recompense pentru clasă.'
     tryfirst: 'Sau, poţi încerca prima dată, urmând să te înscrii mai târziu:'
     trynow: Încearcă acum
     add_hint_help: Ajută-ne să adăugăm sugestii inteligente pentru tutorialele Code.org
     20hour_overview: Acest curs de 20 de ore prezintă concepte de bază din informatică
       şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele
       K-8, dar este distractiv de învăţat la toate vârstele.
-    test_videos_help: Încearcă noul nostru video player la şcoala ta
-    try_beta_courses: Nou! Încearcă cursele noastre beta pentru elevi K-5
+    test_videos_help: Testează noul nostru video player la şcoala ta
+    try_beta_courses: Nou! Încearcă cursurile noastre beta pentru elevi de clasele
+      1-5
     use_as_teacher: Foloseşte acest site drept profesor
     heading_hoc2014: <h2>Ora de programare pentru</h2><h1>toate vârstele</h1>
     heading_elementary: <h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>
@@ -429,7 +430,7 @@
     heading_legacy: <h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>
     your_gallery: Galerie
     no_primary_course: Încercaţi un curs la Studio-ul Code
-    print_certificate: Print Certificate
+    print_certificate: Imprima certificatul
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -533,12 +534,12 @@
       body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția
         noastră Codul Floppy!
     20-hour:
-      title: Accelerated Course
+      title: Curs accelerat
       body: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare.
         Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar
         este distractiv de învăţat la toate vârstele.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: Învață informatică de bază în cadrul unei versiuni accelerate ale
+        cursurilor 2-4.
     hoc2014:
       try_new_tutorial: Încercați noul nostru tutorial Ora de cod în versiune beta
       try_frozen: Artist cu Anna și Elsa, din Frozen
@@ -550,7 +551,8 @@
       title: Frozen
     infinity:
       title: Laborator de joc Infinity
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje
+        Disney Infinity.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
     students_made_these_with_code: Elevii au făcut acestea cu secvențe de cod!
@@ -592,13 +594,13 @@
   contract_match:
     wrong_title: Răspuns incorect
     badname: Contractul tău are numele greşit.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    badname_case: Numele funcțiilor cad sub incidența caracterelor mici sau mari folosite.
+      Încearcă să schimbi tipul literelor folosite la scrierea contractul tău.
+    badrange: Contractul tău este greşit.
+    baddomainsize: Contractul tău are un număr incorect de elemente în domeniu.
+    baddomainname: Unul sau mai multe elemente din domeniul tău are un nume greșit.
+    baddomaintype: Unul sau mai multe elemente ale domeniului tău sunt de tip greșit
+      sau sunt in ordine greșită.
   text_match:
     placeholder: Completați răspunsul aici
     open_response_title: Mulţumesc
@@ -698,4 +700,4 @@
       nu va mai putea vedea proiectul tău.
     view_all: Vizualizează proiectele mele
     remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    click_to_remix: Fă clic pe "Remix" pentru a-ți crea propria ta versiune!

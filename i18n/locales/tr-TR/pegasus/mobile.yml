@@ -358,8 +358,10 @@ tr-TR:
   dashboard_students_reset_password: Şifreyi Sıfırlayın
   dashboard_students_share_section: 'Bu bölümün oturum açma sayfasını öğrencilerinizle paylaşın:'
   dashboard_students_print_info: Öğrencinizin kullanıcı giriş bilgilerinin bulunduğu kartlar yazdırın.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Gizli resim
   dashboard_students_reset_picture: 'Öğrencinizin gizli resmini sıfırlamak için önce <b>Gizi göster</b>, sonra <b>Gizi sıfırla</b> seçeneklerini kullanabilirsiniz. Oturum açma aşamasında kullanılmak üzere yeni bir Gizli resim oluşturulacaktır.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Gizli sözcük
   dashboard_students_reset_word: 'Öğrencinizin gizli sözcüğünü sıfırlamak için önce <b>Gizi göster</b>, sonra <b>Gizi sıfırla</b> seçeneklerini kullanabilirsiniz. Oturum açma aşamasında kullanılmak üzere yeni bir Gizli sözcük çifti oluşturulacaktır. '
   dashboard_students_join_link: Öğrencilerinize, bir hesap oluşturmalarını ve sizin bölümünüze katılmalarını söyleyin

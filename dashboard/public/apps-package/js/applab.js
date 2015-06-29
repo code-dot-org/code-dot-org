@@ -727,6 +727,11 @@ Applab.getCode = function () {
 };
 
 Applab.getHtml = function () {
+  // This method is called on autosave. If we're about to autosave, let's update
+  // levelHtml to include our current state.
+  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+    designMode.serializeToLevelHtml();
+  }
   return Applab.levelHtml;
 };
 
@@ -998,6 +1003,8 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    designMode.addKeyboardHandlers();
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
@@ -1136,6 +1143,8 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
+
+  designMode.addKeyboardHandlers();
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
@@ -2230,6 +2239,7 @@ var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
 var _ = require('../utils').getLodash();
+var KeyCodes = require('../constants').KeyCodes;
 
 var designMode = module.exports;
 
@@ -2259,6 +2269,8 @@ designMode.onDivApplabClick = function (event) {
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
   }
+  // give the div focus so that we can listen for keyboard events
+  $("#divApplab").focus();
   designMode.editElementProperties(element);
 };
 
@@ -2923,8 +2935,47 @@ designMode.addScreenIfNecessary = function(html) {
   return rootDiv[0].outerHTML;
 };
 
+designMode.addKeyboardHandlers = function () {
+  $('#divApplab').keydown(function (event) {
+    if (!Applab.isInDesignMode() || Applab.isRunning()) {
+      return;
+    }
+    if (!currentlyEditedElement || $(currentlyEditedElement).hasClass('screen')) {
+      return;
+    }
 
-},{"../StudioApp":5,"../utils":315,"./DesignToggleRow.jsx":12,"./DesignWorkspace.jsx":15,"./assetManagement/show.js":25,"./designElements/library":45,"react":646}],30:[function(require,module,exports){
+    var current, property, newValue;
+
+    switch (event.which) {
+      case KeyCodes.LEFT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current - 1;
+        property = 'left';
+        break;
+      case KeyCodes.RIGHT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current + 1;
+        property = 'left';
+        break;
+      case KeyCodes.UP:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current - 1;
+        property = 'top';
+        break;
+      case KeyCodes.DOWN:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current + 1;
+        property = 'top';
+        break;
+      default:
+        return;
+    }
+    designMode.onPropertyChange(currentlyEditedElement, property, newValue);
+  });
+};
+
+
+},{"../StudioApp":5,"../constants":104,"../utils":315,"./DesignToggleRow.jsx":12,"./DesignWorkspace.jsx":15,"./assetManagement/show.js":25,"./designElements/library":45,"react":646}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7988,7 +8039,6 @@ var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({displayName: "ZOrderRow",
   propTypes: {
-    // TODO - is passing the element and modifying it good React? I think no
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     onDepthChange: React.PropTypes.func.isRequired
   },

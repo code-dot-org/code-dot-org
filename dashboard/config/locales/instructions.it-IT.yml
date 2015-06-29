@@ -70,9 +70,9 @@
         più lungo della lunghezza attuale.'
       2-3 Artist Free Play_instruction: 'Tempo di giocare: disegna qualunque cosa
         ti piaccia.'
-      2-3 Artist Functions 1_instruction: 'Ciao. Me artista zombie. Me piace disegnare!
-        Aiutami a disegnare gli occhiali quadrati.  Suggerimento: il ponte tra le
-        lenti è 25 pixel più corto della lunghezza del quadrato.'
+      2-3 Artist Functions 1_instruction: 'Ciao. Io artista zombie. Mi piace disegnare!
+        Aiutami a disegnare questi occhiali quadrati. Suggerimento: l''asta tra le
+        lenti è di 25 pixel più corta della lunghezza di ciascuna lente.'
       2-3 Artist Functions 10_instruction: Qui ci sono due funzioni, una per disegnare
         un ingranaggio grande e una per disegnare un ingranaggio piccolo. Usale per
         disegnare l'interno di una macchina!
@@ -149,8 +149,7 @@
       2-3 Artist Match Hex Pic_instruction: 'Sfida: Aiuta a finire l''esagono.'
       2-3 Artist Match Rho Pic_instruction: 'Sfida: Completa il codice mancante.'
       2-3 Artist Match Sq Pic_instruction: 'Sfida: Completa il codice mancante'
-      2-3 Artist Match Tri pic_instruction: 'Esercizio di Verifica (Associazioni):
-        inserisci il codice mancante.'
+      2-3 Artist Match Tri pic_instruction: Esercizio di Verifica (Corrispondenza)
       2-3 Artist Nested Loops 1_instruction: "Hai già utilizzato i cicli per disegnare,
         ma sapevi che puoi inserire un ciclo all'interno di un altro ciclo?\r Crea
         un ciclo che ripete per 3 volte tutti i blocchi di codice in grigio, allo
@@ -297,9 +296,8 @@
         polline dai fiori in questo campo.
       2-3 Bee Loops 12_instruction: Usa un ciclo mentre "while" per raccogliere il
         polline dai fiori in questo campo.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      2-3 Bee Loops 13_instruction: Questo è un esercizio di verifica -- Usa il blocco
+        "ripeti" per raccogliere tutto il nettare.
       2-3 Bee Loops 1A_instruction: 'Ciao, sono un''ape. Riesci ad aiutarmi a raccogliere
         il nettare da questi fiori? '
       2-3 Bee Loops 2_instruction: Usa un ciclo per raccogliere il nettare e trasformarlo
@@ -788,6 +786,7 @@
         piatto il terreno? Suggerimento: Usa il ciclo WHILE (mentre) per entrambi.'
       4-5 While Loops Assessment 1_instruction: Ci sono molte buche e montagne. Aiutami
         a riempirle e rimuoverle per rendere il terreno piano.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1213,14 +1212,10 @@
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      course 1 artist 1 level 10_instruction: Disegna la linea tratteggiata usando
-        sia i blocchi "salta" che quelli per disegnare
-      course 1 artist 1 level 9_instruction: Disegna la figura usando tre linee
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? \n"
-      Course 2 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      Course 2 Bee Loops 13_instruction: Questo è un esercizio di verifica -- Usa
+        il blocco "ripeti" per raccogliere tutto il nettare.
       Course 2 Bee Loops 2_instruction: |
         Can you do the same task more easily with
         a loop?
@@ -1240,8 +1235,8 @@
         fiori.
       Course 4 Artist 1_instruction: Aiutami a disegnare il quadrato. (Ogni linea
         è lunga 300 pixel)
-      Course 4 Artist 10_instruction: 'Spazio Libero! Divertiti e disegna quello che
-        ti piace. '
+      Course 4 Artist 10_instruction: 'Tempo di giocare: divertiti a disegnare qualunque
+        cosa ti piaccia.'
       Course 4 Artist 2_instruction: Riesci ad inserire questo codice in un ciclo
         in modo da contornare di grigio il quadrato?
       Course 4 Artist 3_instruction: Cerca di immaginare cosa succede se si esegue
@@ -2077,61 +2072,63 @@
         ogni fiocco di neve.
       K-1 Artist 1 Assessment 1_instruction: Disegna una linea breve verso l'alto
         e una lunga verso destra!
-      K-1 artist 1 level 10_instruction: Disegna la linea tratteggiata usando sia
-        i blocchi "salta" che quelli per disegnare
-      K-1 artist 1 level 9_instruction: Disegna la figura usando tre linee
+      K-1 artist 1 level 10_instruction: Questo è un esercizio di verifica -- Disegna
+        la linea tratteggiata usando sia i blocchi "salta" che quelli per disegnare.
+      K-1 artist 1 level 9_instruction: Questo è un esercizio di verifica -- Disegna
+        la figura usando tre linee.
       K-1 Artist Loops 1_instruction: Disegna questa linea spostando 4 volte l'artista
         verso Est.
       K-1 Artist Loops 2_instruction: Riesci a disegnare la stessa linea usando un
         blocco "ripeti" (detto anche "ciclo")?
       K-1 Artist Loops 3_instruction: Riesci a ripetere i blocchi già pronti per disegnare
         le 6 linee in grigio?
-      K-1 Artist Loops 4_instruction: Un blocco "ripeti", o "ciclo", potrebbe aiutarti
+      K-1 Artist Loops 4_instruction: Un blocco "ripeti", o "ciclo", può aiutarti
         a disegnare la parte superiore di questo castello?
       K-1 Artist Loops 5_instruction: Che cosa puoi ripetere per 4 volte per disegnare
         gli scalini di questo esercizio?
       K-1 Artist Loops 6_instruction: 'Per completare questo disegno hai bisogno di
-        due blocchi "ripeti", o "cicli": uno per salire le scale e l''altro scenderle.'
+        due blocchi "ripeti", o "cicli": uno per salire le scale e l''altro per scenderle.'
       K-1 Artist Loops 7_instruction: Puoi completare questa figura usando due cicli?
       K-1 Artist Loops 8_instruction: La scala di questo esercizio ha i gradini più
         larghi.
-      K-1 Artist Loops 9_instruction: 'Questo è un esercizio di verifica: usa un ciclo
-        per disegnare gli scalini'
+      K-1 Artist Loops 9_instruction: Questo è un esercizio di verifica -- Usa un
+        ciclo per disegnare gli scalini.
       K-1 Artist Loops Free Play_instruction: 'Tempo di giocare: disegna qualcosa
         di divertente!'
-      K-1 Artist1 1_instruction: Disegna il piede della persona con una linea
+      K-1 Artist1 1_instruction: Disegna il piede della persona con una linea.
       K-1 Artist1 10_instruction: Disegna e Salta per costruire la linea tratteggiata
-        fino al tesoro
+        fino al tesoro.
       K-1 Artist1 2_instruction: Disegna il baffo del gatto con due linee!
-      K-1 Artist1 3_instruction: Per completare la casa, disegna due linee verso est
-        e due linee verso nord!
+      K-1 Artist1 3_instruction: Disegna due linee verso est e due linee verso nord
+        per completare la casa!
       K-1 Artist1 4_instruction: Disegna linee in su, in orizzontale, e in basso per
         completare il castello!
       K-1 Artist1 5.5_instruction: Completa la terza torre del castello usando linee
         brevi
       K-1 Artist1 5_instruction: Disegna il gambo di questo fiore con due linee!
-      K-1 Artist1 6_instruction: Completa il disegno usando il blocco "salta"!
+      K-1 Artist1 6_instruction: Il blocco "salta" ti consente di muoverti senza disegnare.
+        Completa il disegno usando il blocco "salta"!
       K-1 Artist1 7_instruction: Usa il blocco "salta" per muoverti senza disegnare.
         Salta su e disegna una linea.
       K-1 Artist1 8_instruction: Disegna la linea tratteggiata usando sia i blocchi
         "salta" che quelli per disegnare
-      K-1 Artist1 9_instruction: Disegna e Salta per costruire la linea tratteggiata
+      K-1 Artist1 9_instruction: Disegna e Salta per costruire la linea tratteggiata.
       K-1 Artist1 Assessment 1_instruction: Disegna le linee corte e quelle lunghe!
       K-1 Artist1 Assessment 2_instruction: Disegna le linee corte tratteggiate!
       K-1 Artist2 1_instruction: Disegna un quadrato sotto il triangolo.
       K-1 Artist2 2_instruction: Salta e disegna un quadrato accanto alla casa.
-      K-1 Artist2 3_instruction: Disegna un quadrato sopra l'altro quadrato
+      K-1 Artist2 3_instruction: Disegna un quadrato sopra l'altro quadrato.
       K-1 Artist2 4_instruction: Disegna un rettangolo per completare il ponte.
       K-1 Artist2 5_instruction: Disegna un rettangolo per completare i pilastri del
-        ponte
+        ponte.
       K-1 Artist2 6_instruction: Disegna due quadrati per costruire un rettangolo!
       K-1 Artist2 Assessment1_instruction: Questo è un esercizio di verifica -- Salta
-        e disegna una quadrato vicino all'altro quadrato.
+        e disegna un quadrato vicino all'altro quadrato.
       K-1 Artist2 Free Draw_instruction: Disegna qualunque cosa tu voglia disegnare!
       K-1 Artist2_7_instruction: Disegna un rettangolo per dare alla cassettiera il
         cassetto superiore!
       K-1 Bee 1_instruction: Spostami sul fiore, prendi il nettare, poi fammi arrivare
-        al favo e fai il miele
+        al favo e fai il miele.
       K-1 Bee 10_instruction: Prendi quattro dosi di nettare e poi fai due dosi di
         miele!
       K-1 Bee 11.5_instruction: Prendi quattro dosi di nettare per fare quattro dosi
@@ -2139,13 +2136,14 @@
       K-1 Bee 11_instruction: Prendi tre dosi di nettare e poi fai una dose di miele!
       K-1 Bee 12_instruction: Prendi tre dosi di nettare e poi fai due dosi di miele!
       K-1 Bee 13_instruction: Prendi tre dosi di nettare e poi fai una dose di miele!
-      K-1 Bee 14_instruction: Spostami sul fiore, prendi il nettare, poi fammi arrivare
-        al favo e fai il miele
-      K-1 Bee 15_instruction: Prendi due dosi di nettare e fai due dosi di miele!
+      K-1 Bee 14_instruction: Questo è un esercizio di verifica -- Spostami sul fiore,
+        prendi il nettare, poi fammi arrivare al favo e fai il miele.
+      K-1 Bee 15_instruction: Questo è un esercizio di verifica -- Prendi due dosi
+        di nettare e fai due dosi di miele!
       K-1 Bee 2_instruction: Spostami sul fiore, prendi il nettare, poi fammi arrivare
-        al favo e fai il miele
+        al favo e fai il miele.
       K-1 Bee 3_instruction: Spostami sul fiore, prendi il nettare, poi fammi arrivare
-        al favo e fai il miele
+        al favo e fai il miele.
       K-1 Bee 4_instruction: Prendi due dosi di nettare e poi fai due dosi di miele!
       K-1 Bee 5_instruction: Prendi tre dosi di nettare e poi fai tre dosi di miele!
       K-1 Bee 6_instruction: Prendi due dosi di nettare e poi fai due dosi di miele!
@@ -2157,10 +2155,10 @@
       K-1 Bee Loops 1_instruction: Prendi il nettare per fare il miele!
       K-1 Bee Loops 10_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
         prendere il nettare, fare il miele e spostarti!
-      K-1 Bee Loops 11_instruction: Questo è un esercizio di verifica -- Usa i "cicli"
-        per prendere il nettare e fare il miele!
-      K-1 Bee Loops 12_instruction: Questo è un esercizio di verifica -- Usa i "cicli"
-        per prendere il nettare, fare il miele e spostarti!
+      K-1 Bee Loops 11_instruction: Questo è un esercizio di verifica -- Usa i blocchi
+        "ripeti", o "cicli", per prendere il nettare e fare il miele!
+      K-1 Bee Loops 12_instruction: Questo è un esercizio di verifica -- Usa i blocchi
+        "ripeti", o "cicli", per prendere il nettare, fare il miele e spostarti!
       K-1 Bee Loops 2_instruction: Usa un blocco "ripeti" (detto anche "ciclo") per
         muoverti,  quindi raccogli il nettare e fai il miele!
       K-1 Bee Loops 3_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
@@ -2184,7 +2182,7 @@
       K-1 Bee Puzzle 12_instruction: Prendi tre dosi di nettare e poi fai due dosi
         di miele
       K-1 Building a Foundation Assessment_instruction: Costruisci una piramide a
-        tre livelli, non ci sono altri suggerimenti. Gioca un po' con i blocchi finché
+        tre livelli, non ci sono altre indicazioni. Gioca un po' con i blocchi finché
         non riesci a costruirla!
       k-1 maze 1_instruction: Riesci a spostarmi verso Ovest per prendere il maialino?
       K-1 Maze 10_instruction: Gira intorno alla dinamite (TNT) per farmi prendere
@@ -2211,35 +2209,37 @@
       K-1 Maze Assessment 2_instruction: Questo è un esercizio di verifica -- Fammi
         arrivare al maialino!
       K-1 maze debug 1_instruction: Modifica il codice per farmi arrivare al maialino!
-      K-1 maze debug 10_instruction: Correggi questo codice riordinando, aggiungendo
-        o cancellando blocchi di codice, per farmi arrivare al maialino!
-      K-1 maze debug 11_instruction: "Questo è un esercizio di verifica!\r Correggi
-        questo codice riordinando, aggiungendo o cancellando blocchi di codice, per
-        farmi arrivare al maialino"
+      K-1 maze debug 10_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 11_instruction: "Questo è un esercizio di verifica --\r Correggi
+        questo programma riordinando, aggiungendo o cancellando blocchi, per farmi
+        arrivare al maialino!"
       K-1 maze debug 2_instruction: Cerca di capire che cosa manca, quindi aggiungi
         i blocchi necessari per farmi arrivare al maialino!
       K-1 maze debug 3_instruction: Cerca di capire che cosa va eliminato, quindi
         rimuovi i blocchi necessari per farmi arrivare al maialino!
       K-1 maze debug 4_instruction: Esegui questi blocchi di codice e poi correggili!
         Credo che ci sia un errore nel percorso.
-      K-1 maze debug 5_instruction: Correggi questo codice riordinando, aggiungendo
-        o cancellando blocchi di codice, per farmi arrivare al maialino!
-      K-1 maze debug 6_instruction: Correggi questo codice riordinando, aggiungendo
-        o cancellando blocchi di codice, per farmi arrivare al maialino!
-      K-1 maze debug 7_instruction: Correggi questo codice riordinando, aggiungendo
-        o cancellando blocchi di codice, per farmi arrivare al maialino!
-      K-1 maze debug 8_instruction: Correggi questo codice riordinando, aggiungendo
-        o cancellando blocchi di codice, per farmi arrivare al maialino!
-      K-1 maze debug 9_instruction: Correggi questo codice riordinando, aggiungendo
-        o cancellando blocchi di codice, per farmi arrivare al maialino!
-      K-1 Maze debug Assessment 1_instruction: Questo è un esercizio di verifica --
-        Correggi questo codice riordinando, aggiungendo o cancellando blocchi di codice,
-        per farmi arrivare al maialino!
+      K-1 maze debug 5_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 6_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 7_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 8_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 9_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 Maze debug Assessment 1_instruction: "Questo è un esercizio di verifica
+        --\r Correggi questo programma riordinando, aggiungendo o cancellando blocchi,
+        per farmi arrivare al maialino!"
       K-1 Maze Loops 1_instruction: Fammi arrivare al maialino!
       K-1 Maze Loops 10_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
       K-1 Maze Loops 11_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
       K-1 Maze Loops 12_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
-      K-1 Maze Loops 2_instruction: Usa il blocco "ripeti" per farmi arrivare al maialino!
+      K-1 Maze Loops 2_instruction: Prova ad usare il nuovo blocco "ripeti" (detto
+        anche "ciclo") per farmi arrivare al maialino! Esso mi farà "ripetere", per
+        il numero di volte che hai impostato, tutte le azioni all'interno del blocco.
       K-1 Maze Loops 3_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
       K-1 Maze Loops 4_instruction: Fammi arrivare al maialino!
       K-1 Maze Loops 5_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
@@ -2255,8 +2255,8 @@
       K-1 Maze Multi 15_instruction: Esercizio di verifica
       K-1 Maze Sequence Assessment 1_instruction: "Questo è un esercizio di verifica!\r
         Spostami in una direzione e poi in un'altra per farmi prendere il maialino."
-      K-1 Maze Sequence Assessment 2_instruction: "Questo è un esercizio di verifica!\r
-        Spostami in una direzione e poi in un'altra per farmi prendere il maialino."
+      K-1 Maze Sequence Assessment 2_instruction: "Questo è un esercizio di verifica
+        --\r Spostami in una direzione e poi in un'altra per farmi prendere il maialino!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -2449,22 +2449,22 @@
         pixels.
       NEW Course 4 Artist Params 14_instruction: 'Riuscite a ricreare queste forme?
         Trascinare il parametro "lunghezza" nella definizione della funzione. '
-      NEW Course 4 Artist Params 15_instruction: |
-        Freeplay: Here are the functions
-        you've written, and some more for you to play with. Draw something awesome!
+      NEW Course 4 Artist Params 15_instruction: Gioco libero. Ecco sono le funzioni
+        che hai scritto e delle altre con cui poete giocare. Disegnate qualcosa di
+        incredibile!
       NEW Course 4 Artist Params 2_instruction: Crea da zero una funzione "disegna
         un triangolo di 50 pixel di lato"
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3
-        triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
+      NEW Course 4 Artist Params 3_instruction: "Ora usiamo la funzione per disegnare
+        3 triangoli dall'ultimo puzzle in fila. Suggerimento: ogni triangolo varia
+        di 50 pixel.\r\n"
       NEW Course 4 Artist Params 4_instruction: Notate qualcosa di diverso in questi
         blocchi di funzione? Fare clic su "Esegui" per vedere cosa succede.
-      NEW Course 4 Artist Params 5_instruction: "Fill in the ??? in the length parameter\ninput
-        block. Hint: The pentagon is 100 pixels in size. \n"
-      NEW Course 4 Artist Params 6_instruction: |
-        Fill in the "length" parameter
-        to draw these shapes by replacing the "???" with the right numbers. The
-        square and triangle are 100 pixels in size while the hexagon is 75 pixels
-        in size.
+      NEW Course 4 Artist Params 5_instruction: 'Compilare il campo ??? nel blocco
+        di input del parametro lunghezza. Suggerimento: Il pentagono ha dimensioni
+        di 100 pixel. '
+      NEW Course 4 Artist Params 6_instruction: Compilate il parametro "lunghezza"
+        per disegnare queste forme sostituendo a "???" i valori corretti. Il quadrato
+        e il triangolo hanno le dimensioni di 100 pixel e l'esagono è di 75 pixel.
       NEW Course 4 Artist Params 7_instruction: 'Puoi completare questo disegno? Suggerimento:
         ogni triangolo è 25 pixel più grande del precedente.  Il primo triangolo ha
         le dimensioni di 25 pixel.'
@@ -2682,25 +2682,21 @@
         always see at least a bit of him, so lets write some functions that help make
         sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
-        and return true if he's inside the left boundary of the yard (x > -25). If
-        your function works, Sam shouldn't be able to leave the yard from the left
-        side.
+        and return true if he's completely visible on screen. If your function works,
+        Sam shouldn't be able to leave the yard from the left side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the safe-right?
-        function to make sure Sam can't go past x = 425.
+        on the left, now let's do the same thing on the right. Complete the safe-right?
+        function to make sure Sam can't go off the right side of the screen.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
         from going either direction? Try using the AND block to program the function
         on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
-        by moving Sam as far as he can go in all four directions. Click Finish when
-        Sam is completely protected.
+        Free Play: Awesome, we've kept Sam safe
+        on the left and right! Use this free play stage to experiment with your functions
+        and further improve onscreen?
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2772,17 +2768,14 @@
         vedere che cosa fa e poi fai esperimenti con questa funzione per vedere cosa
         succede. Potete fare in modo che disegni una composizione di quadrati, triangoli
         o ottagoni?
-      Standalone_Artist_9_instruction: |
-        Now go ahead and make whatever picture you'd
-        like! You've even got an empty function that you can make do whatever you
-        want!
+      Standalone_Artist_9_instruction: Ora procedi  e realizza qualsiasi immagine
+        che desideri! Hai anche una funzione vuota con cui puoi fare quello che vuoi!
       Standalone_Artist_v2_instruction: Benvenuto all'Artista! Prima di tutto, cerchiamo
         di fare un semplice quadrato utilizzando il blocco gira a destra e il blocco
         muovi in avanti. Ogni lato deve essere lungo 100 pixel.
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
+      Text Compression Peter Piper_instruction: Questa poesia è stata compressa sostituendo
+        due frasi comuni con simboli del dizionario. Sei in grado di identificare
+        un altro modello comune per comprimere la poesia ulteriormente?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters

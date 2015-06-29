@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "\"Upprepa\" eller \"Om\" blocken måste ha andra block inuti sig för att fungera. Se till att det inre blocket sitter rätt inuti blocket.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Funktionsblocket måste ha andra block i sig för att fungera.",
   "emptyFunctionalBlock": "Du har ett block med en ofylld inmatning.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "slut",
   "errorEmptyFunctionBlockModal": "Det måste finnas block inuti din funktionsdefinition. Klicka på \"redigera\" och dra block in i det gröna blocket.",
   "errorIncompleteBlockInFunction": "Klicka på \"Redigera\" för att se till att  någon block inte saknas inuti din funktionsdefinition.",
@@ -210,8 +213,5 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "när startat",
-  "workspaceHeaderShort": "Arbetsyta: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Arbetsyta: "
 }

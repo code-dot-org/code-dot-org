@@ -223,7 +223,7 @@ th:
       classroom: หน้าแรกของคุณครู
       district_dashboard: District Dashboard
       label: 'Hi %{username}'
-      stats: My progress
+      stats: Code Studio
       settings: My account
       prizes: รางวัล
       logout: ออกจากระบบ

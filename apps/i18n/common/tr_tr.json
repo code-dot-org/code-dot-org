@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "\"Tekrar\" bloğu veya \"Eğer\" bloğunun çalışması için  içerisinde bir başka blok yer almalıdır. İçteki bloğu, dış blok içerisine yerleştirdiğine emin ol.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Fonksiyon bloğunun çalışabilmesi için içine başka bloklar koymalısın.",
   "emptyFunctionalBlock": "Doldurulmamış bir giriş bloğunuz bulunuyor.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "son",
   "errorEmptyFunctionBlockModal": "Fonksiyon tanımının içinde bloklara ihtiyacın var. \"Düzenle\" butonuna tıkla ve blokları yeşil bloğun içine sürükle.",
   "errorIncompleteBlockInFunction": "Fonksiyon tanımının içinde eksik blokların kalıp kalmadığından emin olmak için \"düzenle\" butonuna tıkla.",
@@ -210,8 +213,5 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Çalışma alanı: "
 }
