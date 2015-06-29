@@ -34,24 +34,46 @@ The first phase of professional development is a two-hour introduction that focu
 
 **Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
 
-Milestone Complete!
+### Save the dates
 
-### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
+Group 1: Monday, June 15, 2015 - Friday, June 19, 2015
+<br/>
+Group 2: Monday, June 22, 2015 - Friday, June 26, 2015
+<br/>
+Mon - Thurs: 8:30am - 3:30pm
+<br/>
+Friday: 8:30am - 1:30pm
+<br/>
+Breakfast and lunch will be served. 
 
-**Save the Dates**
+### Location
 
-10/17/2015
+Group 1 and Group 2 will attend PD at the following location:
+
+UCLA
+<br/>
+Moore Hall Room 3140
+<br/>
+457 Portola Plaza
+<br/>
+Los Angeles, CA 90095
+
+Please allow plenty of time on the first day to locate the parking lot and Moore Hall. Parking for Moore Hall will be in Parking Lot 2 and the campus map can be found [here](/files/ucla-campus-map.pdf). Stop at the kiosk and let them know you are here for the Exploring Computer Science workshop. The attendant will give you a parking pass and you will not be required to pay for parking. 
+
+### What do I bring to Phase 2? ###
+Water Bottle
+<br />
+Snacks
+<br />
+Laptop optional, not required
 </br>
-12/12/2015
 </br>
-2/20/2016
-</br>
-4/16/2016
 
-8:30am - 3:30pm
-</br>
-Breakfast and lunch will be served.
+**Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
 
+More info coming soon!
+</br>
+</br>
 
 **Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
 
