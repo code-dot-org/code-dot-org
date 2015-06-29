@@ -592,6 +592,9 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
     Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
   var currentY = 0;
   currentY += this.positionFlyout_(currentY);
+  // The flyout isn't laid out in block-space coordinates, it factors in
+  // scroll offset, so we have to remove that component
+  currentY -= this.modalBlockSpace.yOffsetFromView;
 
   currentY += Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
   this.functionDefinitionBlock.moveTo(currentX, currentY);
