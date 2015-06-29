@@ -2433,7 +2433,7 @@ designMode.onPropertyChange = function(element, name, value) {
         }
       };
       backgroundImage.src = designMode.maybeAddAssetPathPrefix(value);
-      element.dataset.canonicalImageUrl = value;
+      element.setAttribute('data-canonical-image-url', value);
 
       break;
 
@@ -2442,13 +2442,13 @@ designMode.onPropertyChange = function(element, name, value) {
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
       element.style.backgroundImage = 'url(' + designMode.maybeAddAssetPathPrefix(value) + ')';
-      element.dataset.canonicalImageUrl = value;
+      element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
       element.src = designMode.maybeAddAssetPathPrefix(value);
-      element.dataset.canonicalImageUrl = value;
+      element.setAttribute('data-canonical-image-url', value);
       element.onload = function () {
         // naturalWidth/Height aren't populated until image has loaded.
         element.style.width = element.naturalWidth + 'px';
@@ -2789,7 +2789,7 @@ designMode.configureDragAndDrop = function () {
   $('#visualization').droppable({
     accept: '.new-design-element',
     drop: function (event, ui) {
-      var elementType = ui.draggable[0].dataset.elementType;
+      var elementType = ui.draggable[0].getAttribute('data-element-type');
 
       // Subtract out the distance between #visualization (which we are
       // dropping into) and #codeApp (where the coordinates come from).
@@ -7235,7 +7235,7 @@ var ScreenProperties = React.createClass({displayName: "ScreenProperties",
           handleChange: this.props.handleChange.bind(this, 'backgroundColor')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'image', 
-          initialValue: element.dataset.canonicalImageUrl || '', 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'screen-image')})
       ));
   }
@@ -7560,7 +7560,7 @@ var ImageProperties = React.createClass({displayName: "ImageProperties",
           handleChange: this.props.handleChange.bind(this, 'top')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'picture', 
-          initialValue: element.dataset.canonicalImageUrl || '', 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'picture')}), 
         React.createElement(BooleanPropertyRow, {
           desc: 'hidden', 
@@ -7977,7 +7977,7 @@ var ButtonProperties = React.createClass({displayName: "ButtonProperties",
           handleChange: this.props.handleChange.bind(this, 'fontSize')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'image', 
-          initialValue: element.dataset.canonicalImageUrl || '', 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'image')}), 
         React.createElement(BooleanPropertyRow, {
           desc: 'hidden', 
