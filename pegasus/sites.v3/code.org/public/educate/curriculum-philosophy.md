@@ -81,7 +81,7 @@ While there are many course-specific goals that address CS content learned at di
 - work involves collaborating in an equitable learning environment where they support their peers so all can flourish
 - can be effectively taught using both computer-based and non-computer activities, which reinforce one another
 - can be used as a tool for helping others through socially relevant learning experiences
-- Involves problem solving that can be challenging. It is not always easy but like any difficult puzzle, the challenge makes it fun. 
+- involves problem solving that can be challenging. It is not always easy but like any difficult puzzle, the challenge makes it fun and teaches perseverance. 
 
 ## Equity in K-12 Curriculum
 

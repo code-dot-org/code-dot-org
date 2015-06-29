@@ -53,5 +53,11 @@ module.exports = {
     element.style.zIndex = 0;
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'screen-image', url);
+    }
   }
 };
