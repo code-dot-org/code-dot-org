@@ -324,7 +324,7 @@ pt:
     show_more: Mostrar mais
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: O meu progresso
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'

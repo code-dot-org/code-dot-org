@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Býr til lykkju sem samanstendur af yrðingu með skilyrði og bálki yrðinga sem eru keyrðar í hverri umferð lykkjunnar. Lykkjan er keyrð á meðan skilyrðið gefur gildið \"true\""},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "while lykkja"},
 "emptyBlocksErrorMsg":function(d){return "Kubbarnir \"endurtaka\" og \"ef\" verða að innihalda aðra kubba til að virka. Gættu þess að innri kubburinn smellpassi í ytri kubbinn."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Fallkubburinn þarf að innhalda aðra kubba til að virka."},
 "emptyFunctionalBlock":function(d){return "Það er kubbur með óútfyllt inntak."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "endir"},
 "errorEmptyFunctionBlockModal":function(d){return "Það þurfa að vera kubbar innan í skilgreiningunni á fallinu. Smelltu á \"breyta\" og dragðu kubba inn í græna kubbinn."},
 "errorIncompleteBlockInFunction":function(d){return "Smelltu á \"breyta\" til að ganga úr skugga um að það vanti ekki neina kubba í skilgreininguna á fallinu."},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Horfa á videóið"},
 "when":function(d){return "þegar"},
 "whenRun":function(d){return "þegar keyrt"},
-"workspaceHeaderShort":function(d){return "Vinnusvæði: "},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "Vinnusvæði: "}};

@@ -376,8 +376,10 @@ fil-PH:
   dashboard_students_reset_password: I-reset ang password
   dashboard_students_share_section: 'Ibahagi itong section sign in page sa iyong mga estudyante:'
   dashboard_students_print_info: I-print ang mga card na may inpormasyon ng iyong mga estudyante.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Sekreto na Picture
   dashboard_students_reset_picture: 'Maaari mo i-reset ang sekretong picture ng iyong estudyante kahit anong oras sa pagpili sa <b>Ipakita ang sekreto</b> at saka <b>I-reset ang sekreto</b>. May bagong sekretong picture ang ipapakita upang magamit ito ng estudyante upang makapag-sign in.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Sekretong Salita
   dashboard_students_reset_word: 'Maaari mong i-reset ang sikretong salita isang mag-aaral sa anumang oras sa pamamagitan ng pagpili ng <b> Ipakita ang secret</b> at pagkatapos ay <b> I-reset ang sikreto</b>. Ang isang bagong pares ng mga secret na salita ang mabubuo para sa mag-aaral na gagamitin kapag nag-sign in sila. '
   dashboard_students_join_link: Sabihin sa iyong mga mag-aaral na lumikha ng kanilang sariling mga account at sumali sa iyong seksyon sa

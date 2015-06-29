@@ -904,21 +904,9 @@ sq:
           App Lab: Laboratori i Aplikacionit
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Introduction to PD: Hyrje në PD
-          K-5 Courses: K-5 Courses
-          Writing computer programs: Duke shkruar programe kompjuterike
-          "Programming Concept: Loops": 'Programming Concept: Loops'
-          Unplugged lessons: Mësimet unplugged
-          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
-          Computer Science Pedagogy: Computer Science Pedagogy
-          "Programming Concept: Functions": 'Programming Concept: Functions'
-          Teacher Dashboard: Teacher Dashboard
-          "Programming Concept: Events": 'Programming Concept: Events'
-          Reflection: Reflection
-          Next Steps: Next Steps
+        K5-OnlinePD:
+          title: 'Teaching Courses 1-4: The Basics'
+          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -928,7 +916,8 @@ sq:
           "Mastering the Basics: Events": 'Mastering the Basics: Events'
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
@@ -954,20 +943,6 @@ sq:
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: Ora e Kodit
-        K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your students with this free, self-paced online course.
-          Getting Started: Getting Started
-          Computer Science Fundamentals: Computer Science Fundamentals
-          "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
-          "Mastering the Basics: Loops": 'Mastering the Basics: Loops'
-          "Mastering the Basics: Conditionals": 'Mastering the Basics: Conditionals'
-          "Mastering the Basics: Functions": 'Mastering the Basics: Functions'
-          "Mastering the Basics: Events": 'Mastering the Basics: Events'
-          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-          Planning: Planning
-          Next Steps: Next Steps
-          Looking Ahead: Looking Ahead
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
@@ -984,3 +959,8 @@ sq:
           "Eval: Conditionals": 'Eval: Kushtet'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Welcome!
+          The Design Recipe: Receta e Dizenjimit
+          Teaching with Puzzles: Teaching with Puzzles

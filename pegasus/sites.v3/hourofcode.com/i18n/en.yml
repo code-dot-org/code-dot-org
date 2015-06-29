@@ -63,6 +63,7 @@
 
   front_join_us_heading: 'An Hour of Code for every student.'
   front_join_us_description: 'Computer science is a foundation for every student. Help us introduce it to 100 million.'
+  front_join_us_description_short: 'Computer science is a foundation for every student.'
   front_join_us_button: 'Join us'
   front_what_is_hoc: 'What is the Hour of Code?'
   front_join_us_header: 'Anyone can learn the basics, and have fun doing it!'
@@ -191,20 +192,18 @@
   hoc_faq_behind_hoc_uk_a: "The Hour of Code is organised by <a href='http://uk.code.org'>Code.org</a>, a public 501c3 non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. An <a href='http://uk.code.org/about/partners'>unprecedented coalition of partners</a> have come together to support the Hour of Code, too &mdash; including Microsoft, Google, Cambridge University Press, Tech City and The Department of Education."
   hoc_faq_host_uk_a: "Of course. Hour of Code activities are self-guided. All you have to do is pick the tutorial you want and pick an hour &mdash; we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. <a href='http://uk.code.org/learn'>Try our current tutorials</a>."
 
-  highlights_hoc_2014_heading: "Last year's Hour of Code"
 
-  stats_hoc_2013_heading: 'In one week alone:'
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."
+  stats_i18n: "Students are learning in 40 languages"
   stats_tumblr: "Tumblr: 3.5 years"
   stats_facebook: "Facebook: 3 years"
   stats_twitter: "Twitter: 2.5 years"
   stats_pinterest: "Pinterest: 2 years"
   stats_instagram: "Instagram: 14 months"
   stats_hoc: "The Hour of Code: 5 days"
-  stats_global: "15 million students worldwide learned an Hour of Code."
-  stats_girls_more: "More girls tried computer science than in the last 70 years."
-  stats_girls_million: "Over 10 million girls in 2013"
+  stats_global: "Over 100M students have tried an Hour of Code"
+  stats_girls_more: "More girls tried computer science than in the last 70 years"
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'

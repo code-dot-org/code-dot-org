@@ -374,9 +374,11 @@ ta-IN:
   dashboard_students_reset_password: Reset password
   dashboard_students_share_section: "Share this section's sign in page with your students:"
   dashboard_students_print_info: "Print out cards with your students' login information."
-  dashboard_students_secret_picture: Secret Picture
+  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: "You may reset a student's secret picture at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret picture will be generated for that student to use when they sign in."
-  dashboard_students_secret_word: Secret Word
+  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word: 'This section uses <b>word</b> as its secret type.  It means that each of your students has a pair of secret words used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_word: "You may reset a student's secret words at any time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret words will be generated for that student to use when they sign in. "
   dashboard_students_join_link: Tell your students to create their own accounts and join your section at
   dashboard_students_no_email: "If your students do not have email addresses, or you would like to create accounts for them, change this section's secret type to <b>word</b> or <b>picture</b>."

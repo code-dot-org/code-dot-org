@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Δημιουργεί ένα βρόχο που αποτελείται από μία έκφραση υπό συνθήκη και ένα μπλοκ εντολών που εκτελούνται σε κάθε επανάληψη του βρόχου. Ο βρόχος συνεχίζει να εκτελεταί όσο η συνθήκη υπολογίζεται ως αληθής"},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "βρόχος ενώ"},
 "emptyBlocksErrorMsg":function(d){return "Το μπλοκ του \"Repeat\" ή του \"If\" πρέπει να περιέχει άλλα μπλοκ για να δουλέψει. Σιγουρέψου ότι το εσωτερικό μπλοκ χωράει σωστά μέσα στο μπλόκ που το περιέχει."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Το μπλόκ της συνάρτησης χρειάζεται να έχει άλλα μπλοκ μέσα του για να δουλέψει."},
 "emptyFunctionalBlock":function(d){return "Έχετε ένα μπλόκ με κενό περιεχόμενο."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "τέλος"},
 "errorEmptyFunctionBlockModal":function(d){return "Πρέπει να εισάγετε κάποια μπλοκ μέσα στον ορισμό της συνάρτησης. Κάντε κλικ στο κουμπί \"Επεξεργασία\" και σύρετε τα μπλοκς μέσα στο πράσινο μπλοκ."},
 "errorIncompleteBlockInFunction":function(d){return "Κάντε κλικ στο κουμπί \"Επεξεργασία\" για να βεβαιωθείτε ότι δε λείπει κάποιο μπλοκ μέσα στον ορισμό της συνάρτησης."},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Δείτε το βίντεο"},
 "when":function(d){return "όταν"},
 "whenRun":function(d){return "όταν εκτελείται"},
-"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "}};
