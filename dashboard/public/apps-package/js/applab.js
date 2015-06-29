@@ -2652,7 +2652,10 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   }
 
   children.each(function () {
-    elementLibrary.onDeserialize($(this)[0]);
+    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
+  });
+  children.children().each(function() {
+    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
   });
 };
 
@@ -7004,10 +7007,10 @@ module.exports = {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function (element) {
+  onDeserialize: function (element, onPropertyChange) {
     var elementType = this.getElementType(element);
-    if (elements[elementType].onDeserialize) {
-      elements[elementType].onDeserialize(element);
+    if (elements[elementType] && elements[elementType].onDeserialize) {
+      elements[elementType].onDeserialize(element, onPropertyChange);
     }
   },
 
@@ -7288,6 +7291,12 @@ module.exports = {
     element.style.zIndex = 0;
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'screen-image', url);
+    }
   }
 };
 
@@ -7616,6 +7625,12 @@ module.exports = {
     element.setAttribute('src', '');
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'picture', url);
+    }
   }
 };
 
@@ -8038,6 +8053,12 @@ module.exports = {
     element.style.backgroundColor = '#1abc9c';
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'image', url);
+    }
   }
 };
 
@@ -8053,11 +8074,6 @@ module.exports.rgb2hex = function (rgb) {
     return ("0" + parseInt(x).toString(16)).slice(-2);
   }
   return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
-};
-
-module.exports.extractImageUrl = function (str) {
-  var inner = str.match(/^url\((.*)\)$/);
-  return inner ? inner[1] : str;
 };
 
 
