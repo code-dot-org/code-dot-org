@@ -72,6 +72,29 @@ class AssetsApi < Sinatra::Base
   end
 
   #
+  # PUT /v3/assets/<dest-channel-id>?src=<src-channel-id>
+  #
+  # Copy all files from one channel to another. Return metadata of copied files.
+  #
+  put %r{/v3/assets/([^/]+)$} do |encrypted_dest_channel_id|
+    src_owner_id, src_channel_id = storage_decrypt_channel_id(request.GET['src'])
+    dest_owner_id, dest_channel_id = storage_decrypt_channel_id(encrypted_dest_channel_id)
+
+    src_prefix = "#{CDO.assets_s3_directory}/#{src_owner_id}/#{src_channel_id}"
+    s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:src_prefix).contents.map do |fileinfo|
+      filename = %r{#{src_prefix}/(.+)$}.match(fileinfo.key)[1]
+      mime_type = Sinatra::Base.mime_type(filename.split('.').last)
+      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+
+      src = "#{CDO.assets_s3_bucket}/#{src_prefix}/#{filename}"
+      dest = "#{CDO.assets_s3_directory}/#{dest_owner_id}/#{dest_channel_id}/#{filename}"
+      s3.copy_object(bucket:CDO.assets_s3_bucket, key:dest, copy_source:src)
+
+      {filename:filename, category:category, size:fileinfo.size}
+    end.to_json
+  end
+
+  #
   # PUT /v3/assets/<channel-id>/<filename>
   #
   # Create a file.
