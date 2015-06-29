@@ -142,7 +142,7 @@ Visita la [página de envío de actividades para la Hora de Programación](https
 
 ## Sugerencias para diseñar tu actividad
 
-**Incluya el logotipo de CSEdWeek logo en su tutorial.** Puede incluir el logotipo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) o [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) en su tutorial, pero no es obligatorio. También puede contactarnos para obtener el permiso para usar el logotipo "en colaboración con Code.org". ***Este logotipo solo puede ser utilizado cuando se otorga permiso explícito por Code.org.*** Puede ser que tengamos un logotipo de la Hora de Código, pero en este momento no tenemos alguno. Bajo ninguna circunstancia se puede utilizar el nombre o logotipo de Code.org. Ambos son marca registrada, y no pueden ser combinado con una marca de terceros.
+**Incluya el logotipo de CSEdWeek logo en su tutorial.** Puede incluir el logotipo de CSEdWeek ([pequeño](https://www.dropbox.com/s/ojlltuegr7ruvx1/csedweek-logo-final-small.jpg) o [grande](https://www.dropbox.com/s/yolheibpxapzpp1/csedweek-logo-final-big.png)) en su tutorial, pero no es obligatorio. También puede contactarnos para obtener el permiso para usar el logotipo "en colaboración con Code.org". ***Este logotipo solo puede ser utilizado cuando se otorga permiso explícito por Code.org.*** Puede ser que tengamos un logotipo de la Hora del Código, pero en este momento no tenemos alguno. Bajo ninguna circunstancia se puede utilizar el nombre o logotipo de Code.org. Ambos son marca registrada, y no pueden ser combinado con una marca de terceros.
 
 **Asegúrese de que el estudiante promedio pueda finalizar confortablemente en una hora.** Considere agregar una actividad abierta al final, para los alumnos que avancen más rápidamente durante la lección. Recuerde que la mayoría de los niños son principiantes iniciales para las ciencias de la computación y la programación.
 
@@ -155,7 +155,7 @@ Visita la [página de envío de actividades para la Hora de Programación](https
 
 **Incorpore retroalimentación al final de la actividad.** (Por Ejemplo: “¡Ha finalizado 10 niveles y aprendido sobre ciclos! ¡Felicidades!”)
 
-**Incorpore Medios Sociales.** Aliente a los alumnos a que publiquen en medios sociales (cuando sea apropiado) cuando hayan finalizado una actividad, por ejemplo "He terminado una Hora de Código con ________, ¿y tu? #HoraDeCódigo” o “He hecho una #HoraDeCódigo como parte de la #CSEdWeek. ¿y tu? @Scratch.” Use el HashTag **#HoraDeCódigo** (Con letras H, D, C mayúsculas)
+**Incorpore Medios Sociales.** Aliente a los alumnos a que publiquen en medios sociales (cuando sea apropiado) cuando hayan finalizado una actividad, por ejemplo "He terminado una Hora del Código con ________, ¿y tu? #HoraDeCódigo” o “He hecho una #HoraDeCódigo como parte de la #CSEdWeek. ¿y tu? @Scratch.” Use el HashTag **#HoraDeCódigo** (Con letras H, D, C mayúsculas)
 
 **Crea tu actividad en otros idiomas además de en inglés**. Este año el foco de esta campaña es internacional y nos gustaría tener actividades para ofrecer a los participantes que no hablan inglés.
 
@@ -183,9 +183,9 @@ Beneficios de la programación en parejas:
 
 ## Guía de Marca Registrada
 
-Habiendo probado 40 millones de estudiantes la hora de código, y con más de un 97% de los profesores participantes pidiendo que el evento se repita anualmente, estamos tomando medidas para asegurarnos de establecer la hora del código como un movimiento que pueda repetirse anualmente con mayor fidelidad y sin confusión.
+Habiendo probado 40 millones de estudiantes la Hora del Código, y con más de un 97% de los profesores participantes pidiendo que el evento se repita anualmente, estamos tomando medidas para asegurarnos de establecer la hora del código como un movimiento que pueda repetirse anualmente con mayor fidelidad y sin confusión.
 
-Una pieza de esto es para proteger la marca "Hora de código" para evitar confusiones. Muchos de nuestros tutores asociados han usado "Hora de código" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que encaje dentro de unos límites:
+Una pieza de esto es para proteger la marca "Hora del Código" para evitar confusiones. Muchos de nuestros tutores asociados han usado "Hora del Código" en sus sitios web. No queremos evitar este uso, pero queremos asegurarnos de que encaje dentro de unos límites:
 
   1. Cualquier referencia a "Hour Of Code" debe usarse de tal manera que no sugiera que es tu propia marca, sino hacer referencia a la "Hour Of Code" como un movimiento de base. Un buen ejemplo es: "Participa en la Hour of Code patrocinada por ACMECorp.com". Un mal uso es: "Participa en la Hour of Code de ACME Corp"
   2. Usa un "TM" subscrito en los lugares más donde menciones la "Hora de Programación", así como en tu sitio web o en descripciones interna de apps
@@ -201,9 +201,9 @@ Una pieza de esto es para proteger la marca "Hora de código" para evitar confus
 
 ## Rastrear un Pixel
 
-Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y última hoja de sus tutoriales de Hora de Código (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
+Para rastrear con más precisión la participación le pedimos a cada socio que hace tutoriales incluir una imagen de 1 pixel en la primera y última hoja de sus tutoriales de Hora del Código (Una imagen de un pixel al inicio y una imagen de un pixel en la página final. No en páginas intermedias).
 
-Esto permitirá a los usuarios cuentar directamente reclutar y visitar su página web para hacer su hora de código, o los usuarios que la visitan cuando un profesor escriba tu URL directamente en su pizarra. Conducirá a cuentas de participación más precisas para el tutorial, que le ayudará a atraer a los usuarios. Si usted integrar el pixel al final también permitirá medir las tasas de finalización.
+Esto permitirá a los usuarios cuentar directamente reclutar y visitar su página web para hacer su Hora del Código, o los usuarios que la visitan cuando un profesor escriba tu URL directamente en su pizarra. Conducirá a cuentas de participación más precisas para el tutorial, que le ayudará a atraer a los usuarios. Si usted integrar el pixel al final también permitirá medir las tasas de finalización.
 
 Si tu tutorial es aprobado e incluido en la última páginal, Code.org le proporcionará un seguimiento único píxel para integrar su tutorial. Ver ejemplo abajo.
 
