@@ -1,6 +1,7 @@
 /* global $ */
 
 var React = require('react');
+var library = require('./designElements/library');
 
 module.exports = React.createClass({
   propTypes: {
@@ -53,7 +54,14 @@ module.exports = React.createClass({
   makeDraggable: function () {
     $(this.getDOMNode()).find('.new-design-element').draggable({
       containment: '#codeApp',
-      helper: 'clone',
+      helper: function () {
+        var elementType = this.getAttribute('data-element-type');
+        if (elementType === library.ElementType.SCREEN) {
+          return $(this).clone();
+        }
+        var element = library.createElement(elementType, 0, 0, true);
+        return element;
+      },
       appendTo: '#codeApp',
       revert: 'invalid',
       // Make sure the dragged element appears in front of #belowVisualization,
