@@ -1,6 +1,6 @@
 
 
-# Llevar la Hora de Código a su distrito escolar.
+# Llevar la Hora del Código a su distrito escolar.
 
 ## Como conseguir la participación de cada escuela y cada estudiante aprendiendo!
 

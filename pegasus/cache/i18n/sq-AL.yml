@@ -439,11 +439,13 @@
     e tu:'
   dashboard_students_print_info: Printo karta me informacionin e login-it të studentëve
     të tu.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Figura e Fshehur
   dashboard_students_reset_picture: Ti mund të rivendosësh një figurë të fshehur të
     studentit në çdo kohë duke zgjedhur <b>Trego të fshehtën</b> dhe pastaj <b>Rivendos
     të fshehtën</b>. Një figurë e re e fshehur do të gjenerohet për ata studentë që
     ta përdorin kur të futen.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Fjala e Fshehur
   dashboard_students_reset_word: 'Ti mund të rivendosësh një figurë të fshehur të
     studentit në çdo kohë duke zgjedhur <b>Trego të fshehtën</b> dhe pastaj <b>Rivendos

@@ -6,10 +6,27 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Someone started the code, but then realized there must be a quicker way! Use a \"for\" block to replace the blocks and complete the triangular spiral. (Hint: the last line length is 300 pixels.",
+    "instructions": "Someone started the code, but then realized there must be a quicker way! Use a \"for\" block to replace the blocks and complete the triangular spiral. (Hint: the last line length is 300 pixels.)",
     "x": "200",
     "y": "200",
-    "start_direction": "90"
+    "start_direction": "90",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
