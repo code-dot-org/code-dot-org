@@ -9,7 +9,7 @@
     = link_to script_certificate_image_url(current_user, script), class: 'whitelink' do
       .bottombar.smalltext.printcertificate
         = t('home.print_certificate')
-  - elsif next_unpassed_progression_level
+  - elsif current_user.working_on_scripts.include?(script)
     %a.whitelink{href: build_script_level_url(next_unpassed_progression_level)}
       .bottombar.smalltext.continue
         = t('continue')
