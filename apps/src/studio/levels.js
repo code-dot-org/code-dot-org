@@ -1525,7 +1525,7 @@ levels.hoc2015_1 = {
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
-  'slowJSExecutionFactor': 10,
+  'slowJsExecutionFactor': 10,
   'markerHeight': 50,
   'markerWidth': 50,
   'codeFunctions': {
@@ -1554,7 +1554,7 @@ levels.hoc2015_2 = {
   'blockMovingIntoWalls': true,
   'gridAlignedMovement': true,
   'removeItemsWhenActorCollides': true,
-  'slowJSExecutionFactor': 10,
+  'slowJsExecutionFactor': 10,
   'markerHeight': 50,
   'markerWidth': 50,
   'codeFunctions': {

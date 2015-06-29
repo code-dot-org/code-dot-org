@@ -11,11 +11,11 @@ nav: resources_nav
 
 <% if @country == 'ie' %>
 
-## ¿Organiza una Hora de Código en Irlanda? [Revisa la guía](<%= hoc_uri('/resources/how-to-ireland') %>)
+## ¿Organiza una Hora del Código en Irlanda? [Revisa la guía](<%= hoc_uri('/resources/how-to-ireland') %>)
 
 <% else %>
 
-## ¿Organizas una Hora de Código? [Revisa la guía](<%= hoc_uri('/resources/how-to') %>)
+## ¿Organizas una Hora del Código? [Revisa la guía](<%= hoc_uri('/resources/how-to') %>)
 
 <% end %>
 
@@ -54,7 +54,7 @@ nav: resources_nav
   <div style="float:left; padding:10px">
     <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
     <p>
-      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>La Hora de Código está aquí - Cualquiera pueden aprender</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
+      <a href="https://www.youtube.com/watch?FC5FbmsH4fw"><strong>La Hora del Código está aquí - Cualquiera pueden aprender</strong></a> <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
   
@@ -141,7 +141,7 @@ nav: resources_nav
 </p>
 
 <p>
-  Las ciencias de la computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora de Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
+  Las ciencias de la computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora del Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
 </p>
 
 <p>
@@ -173,15 +173,15 @@ nav: resources_nav
 </p>
 
 <p>
-  En una semana el pasado año, 15 millones de estudiantes experimentaron ciencias de la computación! Las ciencias de la computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora de Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
+  En una semana el pasado año, 15 millones de estudiantes experimentaron ciencias de la computación! Las ciencias de la computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora del Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
 </p>
 
 <p>
-  Ahora el movimiento Hora de Código está apuntando a los 100 millones de estudiantes.
+  Ahora el movimiento Hora del Código está apuntando a los 100 millones de estudiantes.
 </p>
 
 <p>
-  Por eso cada uno de los [X cantidad] de estudiantes en [NOMBRE DE LA ESCUELA] se están uniendo al mayor evento de aprendizaje de la historia: La Hora de Código, durante Dic. 8-14.
+  Por eso cada uno de los [X cantidad] de estudiantes en [NOMBRE DE LA ESCUELA] se están uniendo al mayor evento de aprendizaje de la historia: La Hora del Código, durante Dic. 7-13.
 </p>
 
 <p>
@@ -189,7 +189,7 @@ nav: resources_nav
 </p>
 
 <p>
-  La Hora de Código, organizada por la entidad sin ánimo de lucro Code.org y más de 100 otros, es una declaración de que la generación de estudiantes de hoy está lista para aprender las habilidades cruciales para el éxito en el siglo 21. Por favor, únetenos.
+  La Hora del Código, organizada por la entidad sin ánimo de lucro Code.org y más de 100 otros, es una declaración de que la generación de estudiantes de hoy está lista para aprender las habilidades cruciales para el éxito en el siglo 21. Por favor, únetenos.
 </p>
 
 <p>
@@ -225,11 +225,11 @@ nav: resources_nav
 </p>
 
 <p>
-  Por eso nuestra escuela entera se une el evento de aprendizaje más grande en la historia: la hora del código, en la semana de ciencias de la computación (Dec. 8-14). El año pasado 15 millones de estudiantes intentaron informática en una semana. Este año, nos unimos a los estudiantes en todo el mundo para alcanzar los 100 millones de estudiantes.
+  Por eso nuestra escuela entera se une el evento de aprendizaje más grande en la historia: la hora del código, en la semana de ciencias de la computación (Dec. 7-13). El año pasado 15 millones de estudiantes intentaron informática en una semana. Este año, nos unimos a los estudiantes en todo el mundo para alcanzar los 100 millones de estudiantes.
 </p>
 
 <p>
-  Nuestra hora de código es una declaración que [nombre de la escuela] está listo para enseñar estas habilidades fundamentales del siglo XXI. Para continuar trayendo actividades de programación a sus estudiantes, queremos hacer nuestro evento hora del código enorme. Os animo a ser voluntarios, llegar a medios de comunicación locales, compartir las noticias sobre los canales de medios sociales y acoger eventos adicionales hora del código en su comunidad.
+  Nuestra Hora del Código es una declaración que [nombre de la escuela] está listo para enseñar estas habilidades fundamentales del siglo XXI. Para continuar trayendo actividades de programación a sus estudiantes, queremos hacer nuestro evento hora del código enorme. Os animo a ser voluntarios, llegar a medios de comunicación locales, compartir las noticias sobre los canales de medios sociales y acoger eventos adicionales hora del código en su comunidad.
 </p>
 
 <p>
@@ -265,11 +265,11 @@ nav: resources_nav
 </p>
 
 <p>
-  Por eso nuestra escuela entera se une el evento de aprendizaje más grande en la historia: la hora del código, en la semana de ciencias de la computación (Dec. 8-14). El año pasado 15 millones de estudiantes intentaron informática en una semana. Este año, nos unimos a los estudiantes en todo el mundo para alcanzar los 100 millones de estudiantes.
+  Por eso nuestra escuela entera se une el evento de aprendizaje más grande en la historia: la hora del código, en la semana de ciencias de la computación (Dec. 7-13). El año pasado 15 millones de estudiantes intentaron informática en una semana. Este año, nos unimos a los estudiantes en todo el mundo para alcanzar los 100 millones de estudiantes.
 </p>
 
 <p>
-  Le escribo para invitarlos a participar en nuestro evento de hora de código y hablar en nuestra Asamblea de comienzo. Se llevará a cabo el [fecha, hora, lugar] y hará una declaración fuerte que [nombre del estado o ciudad] está listo para enseñar a nuestros estudiantes habilidades críticas del siglo XXI. Queremos asegurarnos que nuestros estudiantes estén en la vanguardia de la creación de tecnología del futuro, no sólo consumirla.
+  Le escribo para invitarlos a participar en nuestro evento de Hora del Código y hablar en nuestra Asamblea de comienzo. Se llevará a cabo el [fecha, hora, lugar] y hará una declaración fuerte que [nombre del estado o ciudad] está listo para enseñar a nuestros estudiantes habilidades críticas del siglo XXI. Queremos asegurarnos que nuestros estudiantes estén en la vanguardia de la creación de tecnología del futuro, no sólo consumirla.
 </p>
 
 <p>

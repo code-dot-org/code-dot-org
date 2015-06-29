@@ -437,10 +437,12 @@
   dashboard_students_share_section: 'Zdieľajte prihlasovaciu stránku tejto sekcie
     so svojimi žiakmi:'
   dashboard_students_print_info: Vytlačiť kartičky s prihlasovacími údajmi študentov.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Tajný obrázok
   dashboard_students_reset_picture: Tajný obrázok študenta môžete kedykoľvek obnoviť
     výberom <b>Zobraziť tajomstvo</b> a potom <b>Obnoviť tajomstvo</b>. Nový tajný
     obrázok bude pre tohoto študenta vygenerovaný pri ďalšom prihlásení.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Tajné slovo
   dashboard_students_reset_word: 'Tajné slová študentov môžete kedykoľvek obnoviť
     výberom <b>Zobraziť tajomstvo</b> a potom <b>Obnoviť tajomstvo</b>. Nový pár tajných
