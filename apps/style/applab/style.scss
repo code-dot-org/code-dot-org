@@ -330,7 +330,7 @@ $debug-commands-column-width: 270px;
     line-height: $workspace-headers-height;
   }
 
-  &:hover {
+  &.js-hover-hack {
     cursor: pointer;
 
     #show-hide-debug-icon {

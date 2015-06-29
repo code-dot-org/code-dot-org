@@ -11,6 +11,7 @@
  */
 /* global $ */
 
+var dom = require('../dom');
 var utils = require('../utils');
 
 var debugArea = module.exports;
@@ -40,7 +41,40 @@ debugArea.init = function (debugAreaRoot, codeTextboxRoot) {
   rootDiv_ = $(debugAreaRoot);
   codeTextbox_ = $(codeTextboxRoot);
   lastOpenHeight_ = rootDiv_.height;
+
+  bindHandlersForDebugCommandsHeader();
 };
+
+/**
+ * Binds mouseover, mouseout, click and touch handlers for the debug commands
+ * header div.
+ */
+function bindHandlersForDebugCommandsHeader() {
+  var header = rootDiv_.find('#debug-commands-header');
+  header.mouseover(onCommandsHeaderOver);
+  header.mouseout(onCommandsHeaderOut);
+  dom.addClickTouchEvent(header[0], debugArea.slideToggle);
+}
+
+/**
+ * We do this manually instead of via a simple css :hover because this element
+ * can be animated out from under the cursor when sliding open and closed,
+ * and the :hover effect isn't removed unless the mouse is moved.
+ */
+function onCommandsHeaderOver() {
+  var header = rootDiv_.find('#debug-commands-header');
+  header.addClass('js-hover-hack');
+}
+
+/**
+ * We do this manually instead of via a simple css :hover because this element
+ * can be animated out from under the cursor when sliding open and closed,
+ * and the :hover effect isn't removed unless the mouse is moved.
+ */
+function onCommandsHeaderOut() {
+  var header = rootDiv_.find('#debug-commands-header');
+  header.removeClass('js-hover-hack');
+}
 
 /** @returns {boolean} */
 debugArea.isOpen = function () {
@@ -95,10 +129,16 @@ debugArea.slideOpen = function () {
   isOpen_ = true;
   setContentsVisible(true);
 
+  // Manually remove hover effect at start and end of animation to get *close*
+  // to the correct effect.
+  onCommandsHeaderOut();
   rootDiv_.animate({
     height: lastOpenHeight_
   },{
-    complete: setIconPointingDown.bind(this, true)
+    complete: function () {
+      setIconPointingDown(true);
+      onCommandsHeaderOut();
+    }
   });
 
   // Animate the bottom of the workspace at the same time
@@ -117,12 +157,16 @@ debugArea.slideShut = function () {
   // We will leave the header and resize bar visible, so together they
   // constitute our height when closed.
   var closedHeight = getHeightWhenClosed();
+  // Manually remove hover effect at start and end of animation to get *close*
+  // to the correct effect.
+  onCommandsHeaderOut();
   rootDiv_.animate({
     height: closedHeight
   },{
     complete: function () {
       setContentsVisible(false);
       setIconPointingDown(false);
+      onCommandsHeaderOut();
     }
   });
 
