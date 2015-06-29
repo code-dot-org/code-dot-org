@@ -667,10 +667,6 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
-    var debugCommandsHeader = document.getElementById('debug-commands-header');
-    if (debugCommandsHeader) {
-      dom.addClickTouchEvent(debugCommandsHeader, debugAreaController.slideToggle);
-    }
 
     var clearButton = document.getElementById('clear-console-header');
     if (clearButton) {
