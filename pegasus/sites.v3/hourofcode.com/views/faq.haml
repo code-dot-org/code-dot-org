@@ -83,6 +83,7 @@
   %h2= hoc_s(:hoc_faq_scratch_q)
   %div= hoc_s(:hoc_faq_scratch_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
+-if @country == 'us'
   %h2= hoc_s(:hoc_faq_count_hoc_q)
   %div= hoc_s(:hoc_faq_count_hoc_a).gsub(/http:\/\/code.org/, "http://#{codeorg_url()}")
 
