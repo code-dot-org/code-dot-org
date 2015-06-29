@@ -435,13 +435,14 @@ Blockly.FunctionEditor.prototype.create_ = function() {
 
   this.modalBlockSpaceEditor.addToSvgDefs(clipPath);
   var clipPathURL = "url(#" + clipPathID + ")";
-  this.modalBlockSpace.getCanvas().setAttribute('clip-path', clipPathURL);
+  this.modalBlockSpace.getClippingGroup().setAttribute('clip-path', clipPathURL);
 
+  // Clip path gets positioned/size dynamically later
   this.clipPathRect_ = Blockly.createSvgElement("rect", {
-    x: 150, // left of green, offset by
-    y: 0, // top of green
-    width: 100, // width of modal viewport
-    height: 400 // height of modal viewport
+    x: 0,
+    y: 0,
+    width: 1,
+    height: 1
   }, clipPath);
 
   this.modalBlockSpaceEditor.addChangeListener(
@@ -633,7 +634,7 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
 Blockly.FunctionEditor.prototype.setupParametersToolbox_ = function () {
   this.flyout_ = new Blockly.HorizontalFlyout(this.modalBlockSpaceEditor);
   var flyoutDom = this.flyout_.createDom();
-  this.modalBlockSpace.svgGroup_.insertBefore(flyoutDom,
+  this.modalBlockSpace.getClippingGroup().insertBefore(flyoutDom,
     this.modalBlockSpace.svgBlockCanvas_);
   this.flyout_.init(this.modalBlockSpace, false);
 };
@@ -705,10 +706,10 @@ Blockly.FunctionEditor.prototype.positionClippingRects_ = function () {
   var metrics = this.modalBlockSpace.getMetrics();
   var width = metrics.viewWidth;
   var height = metrics.viewHeight;
+  this.clipPathRect_.setAttribute('x', metrics.absoluteLeft);
+  this.clipPathRect_.setAttribute('y', metrics.absoluteTop);
   this.clipPathRect_.setAttribute('width', width);
   this.clipPathRect_.setAttribute('height', height);
-  this.clipPathRect_.setAttribute('x', -this.modalBlockSpace.xOffsetFromView);
-  this.clipPathRect_.setAttribute('y', -this.modalBlockSpace.yOffsetFromView);
   this.frameClipDiv_.style.left = metrics.absoluteLeft + 'px';
   this.frameClipDiv_.style.top = metrics.absoluteTop + 'px';
   this.frameClipDiv_.style.width = width + 'px';

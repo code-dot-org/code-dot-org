@@ -186,7 +186,8 @@ Blockly.BlockSpace.prototype.createDom = function() {
   </g>
   */
   this.svgGroup_ = Blockly.createSvgElement('g', {'class': 'svgGroup'}, null);
-  this.svgBlockCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBlockCanvas'}, this.svgGroup_);
+  this.clippingGroup_ = Blockly.createSvgElement('g', {'class': 'svgClippingGroup'}, this.svgGroup_);
+  this.svgBlockCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBlockCanvas'}, this.clippingGroup_);
   this.svgDragCanvas_ = Blockly.createSvgElement('g', {'class': 'svgDragCanvas'}, this.svgGroup_);
   this.svgBubbleCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBubbleCanvas'}, this.svgGroup_);
   this.fireChangeEvent();
@@ -245,6 +246,15 @@ Blockly.BlockSpace.prototype.addTrashcan = function() {
 
 Blockly.BlockSpace.prototype.setTrashcan = function(trashcan) {
   this.trashcan = trashcan;
+};
+
+/**
+ * Get the SVG element that wraps groups that should clip at the
+ * blockspace view bounds.
+ * @return {!SVGGElement} SVG element.
+ */
+Blockly.BlockSpace.prototype.getClippingGroup = function() {
+  return this.clippingGroup_;
 };
 
 /**
