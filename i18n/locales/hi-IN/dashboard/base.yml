@@ -223,7 +223,7 @@ hi:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
       label: 'Hi %{username}'
-      stats: My progress
+      stats: Code Studio
       settings: My account
       prizes: Prizes
       logout: Sign out

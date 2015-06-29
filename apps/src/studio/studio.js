@@ -160,8 +160,8 @@ function loadLevel() {
   // Load maps.
   Studio.map = level.map;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
-  Studio.slowJSExecutionFactor = level.slowJSExecutionFactor || 1;
-  Studio.ticksBeforeFaceSouth = Studio.slowJSExecutionFactor +
+  Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
+  Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
                                   IDLE_TICKS_BEFORE_FACE_SOUTH;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
@@ -658,7 +658,7 @@ Studio.onTick = function() {
   Studio.executeQueue('whenGameStarts');
 
   if (Studio.JSInterpreter) {
-    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJSExecutionFactor;
+    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor;
   }
 
   callHandler('repeatForever');
@@ -1619,12 +1619,18 @@ Studio.runButtonClick = function() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
+  var tryAgainText;
+  // For free play, show keep playing, unless it's a big game level
+  if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
+    tryAgainText = commonMsg.keepPlaying();
+  }
+
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
-      tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+      tryAgainText: tryAgainText,
       continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
@@ -1770,7 +1776,10 @@ Studio.checkForPreExecutionFailure = function () {
   if (studioApp.hasUnfilledFunctionalBlock()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Studio.message = commonMsg.emptyFunctionalBlock();
+    // Some of our levels (i.e. big game) have a different top level block, but
+    // those should be undeletable/unmovable and not hit this. If they do,
+    // they'll still get the generic unfilled block message
+    Studio.message = studioApp.getUnfilledFunctionalBlockError('functional_start_setValue');
     Studio.preExecutionFailure = true;
     return true;
   }
@@ -2254,14 +2263,14 @@ Studio.displaySprite = function(i, isWalking) {
 
   if (level.gridAlignedMovement) {
     if (sprite.x > sprite.displayX) {
-      sprite.displayX += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+      sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     } else if (sprite.x < sprite.displayX) {
-      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     }
     if (sprite.y > sprite.displayY) {
-      sprite.displayY += Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+      sprite.displayY += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     } else if (sprite.y < sprite.displayY) {
-      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJSExecutionFactor;
+      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     }
   } else {
     sprite.displayX = sprite.x;

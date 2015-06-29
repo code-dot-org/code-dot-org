@@ -14,24 +14,14 @@ Code.org is offering 1-day workshops to prepare educators and content-area teach
 
 These workshops will be facilitated by experienced computer science educators in over 60 cities across the United States.
 
-[<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a workshop (for K-5 teachers)</button>](/professional-development-workshops)
-
----
-## Online, Self-Paced Courses for Teachers
-Want to teach computer science but aren’t sure where to start? With our free, self-paced online courses, we’ve made it easy for anyone to get started teaching computer science.  Whether you teach in a public school or a private school, in a formal classroom or an informal after-school or summer school setting, this course will help you:
-
-- Learn the basics of computer science
-- Review best practices for teaching these basics to your students
-- Access free curriculum and resources for teachers
-- Plan for how you might get started teaching computer science
-- Connect with a community of fellow educators who are making positive change in their classrooms through coding
-
-[<button>Learn more</button>](/educate/professional-development-online)
+[<button>Learn more</button>](/k5) &nbsp;&nbsp;[<button>Find a local workshop (for K-5 teachers)</button>](/professional-development-workshops)
+<br><br>
+Can't find a workshop in your area? Consider completing our free, self-paced [online workshop.](/educate/professional-development-online)
 
 ---
 ## Professional development for middle school math or science teachers
 
-Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. The multi-phased professional development programs for this curriculum are only available in the context of a full school district partnership with Code.org.
+Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. The multi-phased professional development programs for this curriculum are only available in the context of [a full school district partnership with Code.org](/educate/districts). 
 
 ### Phase 1
 
@@ -57,7 +47,7 @@ One day in-person and/or online professional development workshops combined with
 ---
 ## Professional development for high school teachers to teach computer science
 
-Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. This multi-phased professional development program is only available in the context of a full school district partnership with Code.org.
+Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. This multi-phased professional development program is only available in the context of [a full school district partnership with Code.org](/educate/districts).
 
 ### Phase 1
 Online component focused on exploring the impact of computer science and reflecting on pedagogical techniques to broaden participation in computing.
@@ -84,4 +74,4 @@ Quarterly in-person and/or online professional development workshops combined wi
 
 
 ---
-For the intellectually curious, we've also published our [professional development philosophy](/educate/professional-development-philosophy), which we use to guide our own team's effort as well as our work with our education partners.
+For the intellectually curious, we've also published our [professional development philosophy](/educate/professional-development-philosophy), which we use to guide our own team's effort as well as our work with our education partners. 

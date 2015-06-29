@@ -436,10 +436,12 @@
     mit Ihren Schülern:'
   dashboard_students_print_info: Drucken Sie Karten mit den Login-Daten Ihrer Schüler
     aus.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Geheimes Bild
   dashboard_students_reset_picture: Sie können jederzeit das geheime Bild eines Schülers
     über <b>Geheimnis anzeigen</b>, <b>Geheimnis zurücksetzen</b> zurücksetzen. Für
     den Schüler wird beim nächsten Anmelden ein neues geheimes Bild generiert.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Geheimwort
   dashboard_students_reset_word: Sie können jederzeit das geheime Wort eines Schülers
     über <b>Geheimnis anzeigen</b>, <b>Geheimnis zurücksetzen</b> zurücksetzen. Für

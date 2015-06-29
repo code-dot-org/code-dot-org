@@ -157,18 +157,6 @@ sl:
         Instructions: Instructions
         Match the puzzles to the blocks: Poveži ustrezen bloke z rešitvami
         Maze Match: Maze Match
-      Coordinate Matching:
-        (250, 400): (250, 400)
-        (320, 240): (320, 240)
-        (480, 100): (480, 100)
-        (500, 240): (500, 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: Cloud
-        Coordinates of Ninjacat: Coordinates of Ninjacat
-        Dog: Dog
-        Match each character with its correct coordinate!: Match each character with its correct coordinate!
-        Ninjacat: Ninjacat
-        Ruby: Ruby
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -271,63 +259,6 @@ sl:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
         Matching: Matching
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
-        (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
-        Converting Circles to Code: Converting Circles to Code
-        Match each circle of evaluation with the correct code!: Match each circle of evaluation with the correct code!
-      Match example to contract:
-        (big-string? "gigantic" 5): '(big-string? "gigantic" 5)'
-        (bigger-string "big" "little"): '(bigger-string "big" "little")'
-        (find-price "cheese"): '(find-price "cheese")'
-        (find-price 4): (find-price 4)
-        (small-star "blue"): '(small-star "blue")'
-        (small-star "solid"): '(small-star "solid")'
-        Contracts of Functions: Contracts of Functions
-        Match each example with the correct contract!: Match each example with the correct contract!
-        "big-string: string number -> boolean": 'big-string: string number -> boolean'
-        "bigger-string: string string -> string": 'bigger-string: string string -> string'
-        "find-price: number -> number": 'find-price: number -> number'
-        "find-price: string -> number": 'find-price: string -> number'
-        "small-star: string -> image": 'small-star: string -> image'
-      Match math to circles:
-        (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
-        (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit 1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit 1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
-        Converting Math to Circles of Evaluation: Converting Math to Circles of Evaluation
-        Match each mathematical expression with the correct circle of evaluation!: Match each mathematical expression with the correct circle of evaluation!
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (- 72 19))'
-        (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
-        (+ (3 x 15) (- 72 19)): '(+ (3 x 15) (- 72 19))'
-        (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
-        (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
-        3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
-        3 x 15 - 72 + 19: '3 x 15 - 72 + 19'
-        72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
-        Converting Math to Code: Converting Math to Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!
-      parts of contract:
-        (yearbook-picture "Sally" 1992): '(yearbook-picture "Sally" 1992)'
-        Here is a contract for a new function. Match each item with the word that describes it.: Here is a contract for a new function. Match each item with the word that describes it.
-        Parts of a Contract: Parts of a Contract
-        domain: Domena
-        example: Primer
-        function name: function name
-        image: image
-        range: Razpon
-        string numer: string numer
-        yearbook-picture: yearbook-picture
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -664,21 +595,6 @@ sl:
         Line 4: Line 4
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
-      Circle to code:
-        (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
-        (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
-        (+ 5 (* 4 (- 8 6))): '(+ 5 (* 4 (- 8 6)))'
-        "/script_assets/msm/Unit%202/exercise_1.png": '/script_assets/msm/Unit%202/exercise_1.png'
-        Code from Circle: Code from Circle
-        Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: "The unicorn's x value increases"
-        The unicorn's y value changes: "The unicorn's y value changes"
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -841,50 +757,6 @@ sl:
         Driver and Helper: Driver and Helper
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
         This time, which boy is the <large>driver</large>?: 'This time, which boy is the <large>driver</large>?'
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): '(* (+ 5 6) (/ 8 2))'
-        (/ (* (+ 5 6) 8) 2): '(/ (* (+ 5 6) 8) 2)'
-        (/ (* 8 2) (+ 5 6)): '(/ (* 8 2) (+ 5 6))'
-        (/ (+ 5 6) (* 8 2)): '(/ (+ 5 6) (* 8 2))'
-        (5 + 6) * 8 / 2: '(5 + 6) * 8 / 2'
-        0: '? Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
-        1: ': Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
-        Racket Code for Math Expressions: Racket Code for Math Expressions
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): '(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))'
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): '(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)'
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
-        0: '? Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
-        1: ': Pick the Racket code that matches the mathematical expression given. Draw a circle of evaluation to help you find the right answer!'
-        Racket Code for Math Expressions: Racket Code for Math Expressions
-      Multi Define Funcs 1:
-        3: "3"
-        What is the name of this function?: What is the name of this function?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 2:
-        3: "3"
-        What is the name of the parameter?: What is the name of the parameter?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 3:
-        5: "5"
-        6: "6"
-        What should g(2) return?: What should g(2) return?
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: Strings and Images Multiple Choice
-        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -893,14 +765,6 @@ sl:
         left, right, top: left, right, top
         random: naključno
         top, left, right: top, left, right
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solid" "red")'
-        (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solid red)'
-        (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solid" "red")'
-        (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solid" "red")'
-        "/script_assets/msm/Unit%202/exercise_5.png": '/script_assets/msm/Unit%202/exercise_5.png'
-        Code from Circle: Code from Circle
-        Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -909,11 +773,3 @@ sl:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
-      valid contracts multi:
-        Pick the best answer to the question.: Pick the best answer to the question.
-        Valid Contracts: Valid Contracts
-        Which of these is a valid contract for the function circle?: Which of these is a valid contract for the function circle?
-        "circle: 5 solid blue -> circle ": 'circle: 5 solid blue -> circle '
-        "circle: number string string -> image": 'circle: number string string -> image'
-        "circle: number string string -> shape": 'circle: number string string -> shape'
-        "circle: size style color -> image": 'circle: size style color -> image'

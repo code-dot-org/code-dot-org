@@ -365,8 +365,10 @@ hu-HU:
   dashboard_students_reset_password: Jelszó beállítása
   dashboard_students_share_section: 'Oszd meg a diákjaiddal ennek a szekciónak a belépési oldalát:'
   dashboard_students_print_info: Nyomtasd ki a diákjaid belépési adatait tartalmazó kártyákat.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Titkos kép
   dashboard_students_reset_picture: 'A <b>Titok mutatása</b>, majd a <b>Titok beállítása</b> kiválasztásával bármikor újra beállíthatod egy diák titkos képét. A diák bejelentkezéséhez egy új kép készül.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Titkos szó
   dashboard_students_reset_word: 'A <b>Titok mutatása</b>, majd a <b>Titok beállítása</b> kiválasztásával bármikor új titkos szót állíthat be egy diák számára. Ilyenkor egy új titkos szópár készül, amivel a diák ismét be tud majd lépni. '
   dashboard_students_join_link: Mondd meg a diákjaidnak, hogy hozzanak létre egy hozzáférést és csatlakozzanak a szekciódhoz

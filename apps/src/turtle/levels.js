@@ -349,7 +349,7 @@ var levels = module.exports = {
   '2_9': {
     answer: answer(2, 9),
     initialX: 100,
-    ideal: 13,
+    ideal: 15,
     toolbox: toolbox(2, 9),
     startBlocks: startBlocks(2, 9),
     requiredBlocks: [

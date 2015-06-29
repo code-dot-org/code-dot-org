@@ -297,6 +297,8 @@ en:
       OnlinePDK5 Intro: {}
       PDAlg Attitude Survey:
         CS in Algebra Pre-attitude survey: CS in Algebra Pre-attitude survey
+      PDAlg Cirlces of Eval:
+        Circles of Evaluation: Circles of Evaluation
       PDAlg Culture: {}
       PDAlg Curriculum Overview:
         Curriculum Overview: Curriculum Overview
@@ -315,8 +317,11 @@ en:
       PDAlg Facilitators:
         Meet Your Facilitators: Meet Your Facilitators
       PDAlg Intro: {}
+      PDAlg P2 Welcome:
+        Welcome to the next phase!: Welcome to the next phase!
       PDAlg Post Survey:
         CS in Algebra Post-attitude survey: CS in Algebra Post-attitude survey
+      PDAlg Puzzle Tips: {}
       PDAlg Puzzles Pre: {}
       PDAlg Scope:
         Scope and Sequence: Scope and Sequence
@@ -341,6 +346,10 @@ en:
         The Concept of Function: The Concept of Function
       PDAlg hard video:
         Why is Algebra so Hard?: Why is Algebra so Hard?
+      PDAlg phase 2 reflection:
+        What's Next?: What's Next?
+      PDAlg phase 3 resources:
+        What's Next?: What's Next?
       PDAlg whats next:
         What's Next?: What's Next?
       PDCSP Intro: {}
@@ -739,6 +748,8 @@ en:
       broadcast lesson plan: {}
       equity Intro:
         Introduction to Equity PD: Introduction to Equity PD
+      equity activity:
+        Initial Activity: Initial Activity
       equity in CS:
         Equity in Computer Science: Equity in Computer Science
       equity is more:
@@ -947,7 +958,6 @@ en:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Artist Loops Matching One
         Match the loop to the shape: Match the loop to the shape
-        Matching loops: Matching loops
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -2183,7 +2193,7 @@ en:
         : The first step in the Design Recipe is to create a contract based on the word problem. Which part of this contract has the student gotten wrong?
       PDAlg DR Multi 2:
         For a given number of dollars, return the number of treats.: For a given number of dollars, return the number of treats.
-        Given a number of dollars, produce the number of 50 cent treats you could purchase: Given a number of dollars, produce the number of 50 cent treats you could purchase
+        Given a number of dollars, produce the number<br>of 50 cent treats you could purchase: Given a number of dollars, produce the number<br>of 50 cent treats you could purchase
         How many times does 50 go into dollars?: How many times does 50 go into dollars?
         How many treats can you buy with your dollars?: How many treats can you buy with your dollars?
         ? Now that this student has fixed their contract, it's time to move onto the purpose statement. Which of the following purpose statements covers all of the necessary information?

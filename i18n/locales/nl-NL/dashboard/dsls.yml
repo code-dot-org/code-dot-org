@@ -157,18 +157,6 @@ nl:
         Instructions: Instructies
         Match the puzzles to the blocks: Koppel de juiste puzzels aan de juiste blokken
         Maze Match: Doolhof Combinatie
-      Coordinate Matching:
-        (250, 400): (250, 400)
-        (320, 240): (320, 240)
-        (480, 100): (480, 100)
-        (500, 240): (500, 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: Wolk
-        Coordinates of Ninjacat: Coördinaten van Ninjakat
-        Dog: Hond
-        Match each character with its correct coordinate!: Koppel elk figuur aan de juiste coördinaten!
-        Ninjacat: Ninjakat
-        Ruby: Ruby
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -271,63 +259,6 @@ nl:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Combineer de Kaart met de algoritme die de Flurb naar de bloemen brengt.
         Matching: Koppelen
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
-        (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
-        Converting Circles to Code: Verander Cirkels naar Code
-        Match each circle of evaluation with the correct code!: Combineer elke cirkel van evaluatie met de juiste code!
-      Match example to contract:
-        (big-string? "gigantic" 5): '(grote-tekst? "gigantische" 5)'
-        (bigger-string "big" "little"): '(groter-tekst "groot" "klein")'
-        (find-price "cheese"): '(zoek-prijs "kaas")'
-        (find-price 4): (zoek-prijs 4)
-        (small-star "blue"): "(kleine-ster 'blauw')"
-        (small-star "solid"): '(klein-ster "vast")'
-        Contracts of Functions: Ontwerpen van functies
-        Match each example with the correct contract!: Combineer elk voorbeeld met de juiste ontwerp!
-        "big-string: string number -> boolean": 'grote-tekst: tekst nummer-> boolean'
-        "bigger-string: string string -> string": 'groter-tekst: tekst tekst-> tekst'
-        "find-price: number -> number": 'zoek-prijs: nummer-> nummer'
-        "find-price: string -> number": 'zoek-prijs: tekst-> nummer'
-        "small-star: string -> image": 'kleine-ster: tekst-> afbeelding'
-      Match math to circles:
-        (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
-        (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit 1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit 1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
-        Converting Math to Circles of Evaluation: Verander Wiskunde naar kringen van Evaluatie
-        Match each mathematical expression with the correct circle of evaluation!: Combineer elk wiskundige berekening met de juiste cirkel van evaluatie!
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (- 72 19))'
-        (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
-        (+ (3 x 15) (- 72 19)): '(+ (3 x 15) (- 72 19))'
-        (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
-        (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
-        3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
-        3 x 15 - 72 + 19: '3 x 15 - 72 + 19'
-        72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
-        Converting Math to Code: Wiskundige berekeningen omzetten naar Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Combineer elke wiskundige som met de juiste code. Gebruik een cirkel van evaluatie om je te helpen om het antwoord te krijgen!
-      parts of contract:
-        (yearbook-picture "Sally" 1992): '(Jaarboek-afbeelding "Sally" 1992)'
-        Here is a contract for a new function. Match each item with the word that describes it.: Hier is een ontwerp voor een nieuwe functie. Combineer elk item met het woord dat het beschrijft.
-        Parts of a Contract: onderdelen van een functie ontwerp
-        domain: domein
-        example: voorbeeld
-        function name: functienaam
-        image: afbeelding
-        range: bereik
-        string numer: tekenreeks nummer
-        yearbook-picture: Jaarboek-afbeelding
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -664,21 +595,6 @@ nl:
         Line 4: Line 4
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
-      Circle to code:
-        (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
-        (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
-        (+ 5 (* 4 (- 8 6))): '(+ 5 (* 4 (- 8 6)))'
-        "/script_assets/msm/Unit%202/exercise_1.png": '/script_assets/msm/Unit%202/exercise_1.png'
-        Code from Circle: Code van Cirkel
-        Pick the Racket code that comes from the circle of evaluation!: Kies de Racketcode die uit de evaluatiecirkel komt!
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: "The unicorn's x value increases"
-        The unicorn's y value changes: "The unicorn's y value changes"
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -841,50 +757,6 @@ nl:
         Driver and Helper: Chauffeur en Helper
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Één van deze jongens is de <b>chauffeur</b>.  En één is de <b>helper</b>.'
         This time, which boy is the <large>driver</large>?: 'Welke jongen is dit keer de <large>chauffeur</large>?'
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): '(* (+ 5 6) (/ 8 2))'
-        (/ (* (+ 5 6) 8) 2): '(/ (* (+ 5 6) 8) 2)'
-        (/ (* 8 2) (+ 5 6)): '(/ (* 8 2) (+ 5 6))'
-        (/ (+ 5 6) (* 8 2)): '(/ (+ 5 6) (* 8 2))'
-        (5 + 6) * 8 / 2: '(5 + 6) * 8 / 2'
-        0: '? Kies de Raketcode die bij de berekening hoort. Teken een evaluatiecirkel om je te helpen het juiste antwoord te vinden!'
-        1: ': Kies de Racketcode bij de som hoort. Teken een evaluatiecirkel om je te helpen het juiste antwoord te vinden!'
-        Racket Code for Math Expressions: Raketcode voor berekeningen
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): '(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))'
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): '(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)'
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
-        0: '? Kies de Raketcode die bij de berekening hoort. Teken een evaluatiecirkel om je te helpen het juiste antwoord te vinden!'
-        1: ': Kies de Racketcode bij de som hoort. Teken een evaluatiecirkel om je te helpen het juiste antwoord te vinden!'
-        Racket Code for Math Expressions: Raketcode voor berekeningen
-      Multi Define Funcs 1:
-        3: "3"
-        What is the name of this function?: Wat is de naam van deze functie?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 2:
-        3: "3"
-        What is the name of the parameter?: Wat is de naam van de parameter?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 3:
-        5: "5"
-        6: "6"
-        What should g(2) return?: Wat moet g(2) teruggeven?
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: Tekst en plaatjes Meerkeuzevraag
-        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
       Warmup questions:
         Coding in Racket: Programmeren in Racket
         Select the best answer to the question.: Kies het beste antwoord bij de vraag.
@@ -893,14 +765,6 @@ nl:
         left, right, top: links, rechts, boven
         random: willekeurig
         top, left, right: boven, links, rechts
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rechthoek (+ 8 2) (-7 5) "geheel" "rood")'
-        (rectangle (+ 8 2) (- 7 5) solid red): '(rechthoek (+ 8 2) (-7 5) "geheel" "rood")'
-        (rectangle (10) (2) "solid" "red"): '(rechthoek (10) (2) "geheel" "rood")'
-        (rectangle 10 2 "solid" "red"): '(rechthoek 10 2 "geheel" "rood")'
-        "/script_assets/msm/Unit%202/exercise_5.png": '/script_assets/msm/Unit%202/exercise_5.png'
-        Code from Circle: Code van Cirkel
-        Pick the Racket code that comes from the circle of evaluation!: Kies de Racketcode die uit de evaluatiecirkel komt!
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -909,11 +773,3 @@ nl:
         Presidents: presidenten
         This multiple choice is all about the presidents of the United States.: Deze Meerkeuze gaat over de presidenten van de Verenigde Staten.
         Who was the first president of the USA?: Wie was de eerste president van de VS?
-      valid contracts multi:
-        Pick the best answer to the question.: Kies het beste antwoord op de vraag.
-        Valid Contracts: Geldige ontwerpen
-        Which of these is a valid contract for the function circle?: Welke van de volgende is een geldig opdracht voor de functie cirkel?
-        "circle: 5 solid blue -> circle ": 'cirkel: 5 geheel blauw ->cirkel '
-        "circle: number string string -> image": 'Cirkel: nummer tekst tekst ->plaatje'
-        "circle: number string string -> shape": 'cirkel: nummer string string ->plaatje'
-        "circle: size style color -> image": 'cirkel: grootte stijl kleur-> plaatje'

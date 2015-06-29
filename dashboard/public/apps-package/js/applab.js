@@ -727,6 +727,11 @@ Applab.getCode = function () {
 };
 
 Applab.getHtml = function () {
+  // This method is called on autosave. If we're about to autosave, let's update
+  // levelHtml to include our current state.
+  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+    designMode.serializeToLevelHtml();
+  }
   return Applab.levelHtml;
 };
 
@@ -998,6 +1003,36 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    // Prevent the backspace key from navigating back. Make sure it's still
+    // allowed on other elements.
+    // Based on http://stackoverflow.com/a/2768256/2506748
+    $(document).on('keydown', function (event) {
+      var doPrevent = false;
+      if (event.keyCode !== KeyCodes.BACKSPACE) {
+        return;
+      }
+      var d = event.srcElement || event.target;
+      if ((d.tagName.toUpperCase() === 'INPUT' && (
+          d.type.toUpperCase() === 'TEXT' ||
+          d.type.toUpperCase() === 'PASSWORD' ||
+          d.type.toUpperCase() === 'FILE' ||
+          d.type.toUpperCase() === 'EMAIL' ||
+          d.type.toUpperCase() === 'SEARCH' ||
+          d.type.toUpperCase() === 'DATE' )) ||
+          d.tagName.toUpperCase() === 'TEXTAREA') {
+        doPrevent = d.readOnly || d.disabled;
+      }
+      else {
+        doPrevent = !d.isContentEditable;
+      }
+
+      if (doPrevent) {
+        event.preventDefault();
+      }
+    });
+
+    designMode.addKeyboardHandlers();
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
@@ -1136,6 +1171,8 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
+
+  designMode.addKeyboardHandlers();
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
@@ -1893,6 +1930,8 @@ consoleApi.log = function() {
   var firstArg = nativeArgs[0];
   if (typeof firstArg === 'string' || firstArg instanceof String) {
     output = vsprintf(firstArg, nativeArgs.slice(1));
+  } else if (nativeArgs.length === 1) {
+    output = firstArg;
   } else {
     for (i = 0; i < nativeArgs.length; i++) {
       output += nativeArgs[i].toString();
@@ -2217,7 +2256,7 @@ exports.setRGB = function (imageData, x, y, r, g, b, a) {
 
 
 },{}],51:[function(require,module,exports){
-/* global $, Applab */
+/* global $, Applab, dashboard */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
@@ -2228,6 +2267,7 @@ var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
 var _ = require('../utils').getLodash();
+var KeyCodes = require('../constants').KeyCodes;
 
 var designMode = module.exports;
 
@@ -2257,6 +2297,8 @@ designMode.onDivApplabClick = function (event) {
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
   }
+  // give the div focus so that we can listen for keyboard events
+  $("#divApplab").focus();
   designMode.editElementProperties(element);
 };
 
@@ -2321,6 +2363,27 @@ designMode.resetElementTray = function (allowEditing) {
   $('#design-toolbox .new-design-element').each(function() {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
+};
+
+/**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+designMode.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
 };
 
 /**
@@ -2397,19 +2460,23 @@ designMode.onPropertyChange = function(element, name, value) {
           designMode.editElementProperties(element);
         }
       };
-      backgroundImage.src = value;
+      backgroundImage.src = designMode.maybeAddAssetPathPrefix(value);
+      element.setAttribute('data-canonical-image-url', value);
+
       break;
 
     case 'screen-image':
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundImage = 'url(' + designMode.maybeAddAssetPathPrefix(value) + ')';
+      element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
-      element.src = value;
+      element.src = designMode.maybeAddAssetPathPrefix(value);
+      element.setAttribute('data-canonical-image-url', value);
       element.onload = function () {
         // naturalWidth/Height aren't populated until image has loaded.
         element.style.width = element.naturalWidth + 'px';
@@ -2585,7 +2652,10 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   }
 
   children.each(function () {
-    elementLibrary.onDeserialize($(this)[0]);
+    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
+  });
+  children.children().each(function() {
+    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
   });
 };
 
@@ -2750,7 +2820,7 @@ designMode.configureDragAndDrop = function () {
   $('#visualization').droppable({
     accept: '.new-design-element',
     drop: function (event, ui) {
-      var elementType = ui.draggable[0].dataset.elementType;
+      var elementType = ui.draggable[0].getAttribute('data-element-type');
 
       // Subtract out the distance between #visualization (which we are
       // dropping into) and #codeApp (where the coordinates come from).
@@ -2896,8 +2966,47 @@ designMode.addScreenIfNecessary = function(html) {
   return rootDiv[0].outerHTML;
 };
 
+designMode.addKeyboardHandlers = function () {
+  $('#divApplab').keydown(function (event) {
+    if (!Applab.isInDesignMode() || Applab.isRunning()) {
+      return;
+    }
+    if (!currentlyEditedElement || $(currentlyEditedElement).hasClass('screen')) {
+      return;
+    }
 
-},{"../StudioApp":5,"../utils":315,"./DesignToggleRow.jsx":12,"./DesignWorkspace.jsx":15,"./assetManagement/show.js":25,"./designElements/library":45,"react":646}],30:[function(require,module,exports){
+    var current, property, newValue;
+
+    switch (event.which) {
+      case KeyCodes.LEFT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current - 1;
+        property = 'left';
+        break;
+      case KeyCodes.RIGHT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current + 1;
+        property = 'left';
+        break;
+      case KeyCodes.UP:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current - 1;
+        property = 'top';
+        break;
+      case KeyCodes.DOWN:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current + 1;
+        property = 'top';
+        break;
+      default:
+        return;
+    }
+    designMode.onPropertyChange(currentlyEditedElement, property, newValue);
+  });
+};
+
+
+},{"../StudioApp":5,"../constants":104,"../utils":315,"./DesignToggleRow.jsx":12,"./DesignWorkspace.jsx":15,"./assetManagement/show.js":25,"./designElements/library":45,"react":646}],30:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4812,7 +4921,7 @@ function outputApplabConsole(output) {
     if (debugOutput.textContent.length > 0) {
       debugOutput.textContent += '\n' + output;
     } else {
-      debugOutput.textContent = output;
+      debugOutput.textContent = String(output);
     }
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }
@@ -6898,10 +7007,10 @@ module.exports = {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function (element) {
+  onDeserialize: function (element, onPropertyChange) {
     var elementType = this.getElementType(element);
-    if (elements[elementType].onDeserialize) {
-      elements[elementType].onDeserialize(element);
+    if (elements[elementType] && elements[elementType].onDeserialize) {
+      elements[elementType].onDeserialize(element, onPropertyChange);
     }
   },
 
@@ -7157,7 +7266,7 @@ var ScreenProperties = React.createClass({displayName: "ScreenProperties",
           handleChange: this.props.handleChange.bind(this, 'backgroundColor')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'image', 
-          initialValue: elementUtils.extractImageUrl(element.style.backgroundImage), 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'screen-image')})
       ));
   }
@@ -7182,6 +7291,12 @@ module.exports = {
     element.style.zIndex = 0;
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'screen-image', url);
+    }
   }
 };
 
@@ -7482,7 +7597,7 @@ var ImageProperties = React.createClass({displayName: "ImageProperties",
           handleChange: this.props.handleChange.bind(this, 'top')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'picture', 
-          initialValue: element.getAttribute('src'), 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'picture')}), 
         React.createElement(BooleanPropertyRow, {
           desc: 'hidden', 
@@ -7510,6 +7625,12 @@ module.exports = {
     element.setAttribute('src', '');
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'picture', url);
+    }
   }
 };
 
@@ -7899,7 +8020,7 @@ var ButtonProperties = React.createClass({displayName: "ButtonProperties",
           handleChange: this.props.handleChange.bind(this, 'fontSize')}), 
         React.createElement(ImagePickerPropertyRow, {
           desc: 'image', 
-          initialValue: elementUtils.extractImageUrl(element.style.backgroundImage), 
+          initialValue: element.getAttribute('data-canonical-image-url') || '', 
           handleChange: this.props.handleChange.bind(this, 'image')}), 
         React.createElement(BooleanPropertyRow, {
           desc: 'hidden', 
@@ -7932,6 +8053,12 @@ module.exports = {
     element.style.backgroundColor = '#1abc9c';
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'image', url);
+    }
   }
 };
 
@@ -7949,11 +8076,6 @@ module.exports.rgb2hex = function (rgb) {
   return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 };
 
-module.exports.extractImageUrl = function (str) {
-  var inner = str.match(/^url\((.*)\)$/);
-  return inner ? inner[1] : str;
-};
-
 
 },{}],37:[function(require,module,exports){
 var React = require('react');
@@ -7961,7 +8083,6 @@ var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({displayName: "ZOrderRow",
   propTypes: {
-    // TODO - is passing the element and modifying it good React? I think no
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     onDepthChange: React.PropTypes.func.isRequired
   },
@@ -8382,7 +8503,7 @@ module.exports = React.createClass({displayName: "exports",
     } else {
       var rows = this.state.assets.map(function (asset) {
         var choose = this.props.assetChosen && this.props.assetChosen.bind(this,
-            AssetsApi.basePath(asset.filename));
+            asset.filename);
 
         return React.createElement(AssetRow, {
             key: asset.filename, 

@@ -21,12 +21,12 @@ contacto: [**INFORMACIÓN DE CONTACTO**]
 **Fecha** - [**Inserte el nombre**] se unió a los miembros principales y de Facultad[**Inserte el nombre de la escuela**], líderes empresariales y familias locales hoy por [**Nombre del evento**] para participar en la hora del código como parte de ciencias de Computación Semana educativa. [Inserte el nombre] y miembros de la comunidad que esta aprendiendo entre decenas de millones de personas alrededor del mundo a participar en el mayor evento en la historia.
 
 [INSERTAR **DETALLES DEL EVENTO, USAR LENGUAJE DESCRIPTIVO Y CUANTIFICABLE. POR ejemplo:**]   
-"Daniels Run Elementary school celebró una hora en toda la escuela del evento código para exponer a sus estudiantes las Ciencias de la computación. Más de 700 estudiantes de todos los grados hicieron al menos una hora de código. Y una docena de padres y voluntarios de la comunidad ayudaron con el día y reunieron a los niños para un ensamblado mostrando por qué informática es importante en la vida de estos estudiantes"
+"Daniels Run Elementary school celebró una hora en toda la escuela del evento código para exponer a sus estudiantes las Ciencias de la computación. Más de 700 estudiantes de todos los grados hicieron al menos una Hora del Código. Y una docena de padres y voluntarios de la comunidad ayudaron con el día y reunieron a los niños para un ensamblado mostrando por qué informática es importante en la vida de estos estudiantes"
 
 [**TEXTO COMÚN MUESTRA DE CONTEXTO:**]   
 Los equipos están por todas partes, pero menos escuelas enseñan ciencias de la computación que hace 10 años. Las niñas y los estudiantes de color están severamente subrepresentados. La buena noticia es que esto vamos a cambiar para mejor. La hora del código es una presentación o puerta de entrada para todos los estudiantes que tendrán acceso a la educación de la ciencia de computación de alta calidad.
 
-Durante la semana de Ciencias de la computación de educación del año pasado, 15 millones de estudiantes hicieron la hora del código. Las ciencias de la computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora de Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
+Durante la semana de Ciencias de la computación de educación del año pasado, 15 millones de estudiantes hicieron la hora del código. Las ciencias de la computación estuvieron en las portadas de Google, MSN, Yahoo! y Disney. El presidente Obama, Shakira y Ashton Kutcher dieron inicio a la Hora del Código a través de mensajes de vídeo. Más de 100 socios se unieron para apoyar este movimiento.
 
 Este año el movimiento hora del código es el objetivo para los estudiantes de 100 millones.
 

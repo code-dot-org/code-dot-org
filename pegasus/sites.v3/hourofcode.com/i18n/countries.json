@@ -68,7 +68,7 @@
     "default_language": "ar"
   },
   "es": {
-    "full_name": "Spain and Latin America",
+    "full_name": "Spain",
     "default_language": "es"
   },
   "eu": {
@@ -122,6 +122,10 @@
   "kr": {
     "full_name": "Korea",
     "default_language": "ko"
+  },
+  "la": {
+    "full_name": "Latin America",
+    "default_language": "es"
   },
   "lv": {
     "full_name": "Latvia",
