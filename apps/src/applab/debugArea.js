@@ -11,6 +11,7 @@
  */
 /* global $ */
 
+var applabMsg = require('./locale');
 var dom = require('../dom');
 var utils = require('../utils');
 
@@ -184,9 +185,16 @@ function setContentsVisible(isVisible) {
 }
 
 function setIconPointingDown(isPointingDown) {
-  var icon = rootDiv_.find('#show-hide-debug-icon');
+  var commandsHeader = rootDiv_.find('#debug-commands-header');
+
+  var icon = commandsHeader.find('#show-hide-debug-icon');
   icon.toggleClass('fa-chevron-circle-up', !isPointingDown);
   icon.toggleClass('fa-chevron-circle-down', isPointingDown);
+
+  var headerText = commandsHeader.find('.header-text');
+  headerText.text(isPointingDown ? applabMsg.debugCommandsHeaderWhenOpen() :
+      applabMsg.debugCommandsHeaderWhenClosed());
+
 }
 
 function setHeight(newHeightInPixels) {
