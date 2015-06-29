@@ -71,6 +71,7 @@ This lesson has three new and important words:<br/>
      - If I sneeze, then you say "Gesundheit."
      - What examples can you come up with?
 
+
 Up to now, all of the functions you’ve seen have done the same thing to their inputs:
 
 - green-triangle always made green triangles, no matter what the size was.
