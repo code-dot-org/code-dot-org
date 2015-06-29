@@ -127,6 +127,7 @@ Because of how numbers 3,4, 5, and 7 were asked it is likely that some people wi
 
 Play this several times.  Be creative with using _or_s and _and_s.  Remind students that the OR means that either part of the statement being true will result in the entire statement being true.  In English, an “or” is often an “exclusive or” such as “You can have chicken or fish.”  In English, you only get to pick one, but with Boolean logic you could have chicken, fish, or both!!  For the example person above, “I was born in December OR my favorite number is 13” is true.  Note that “I was born in December AND my favorite number is 13” is also true.
 
+
 Have a student try to act as the quizmaster after several rounds.  If a mistake is made by you, a student quizmaster, or the person whose card you are reading, see if you can analyze where the mistake was made or why the question being asked might not have been clear.
 
 How does this activity connect with our game? In our game, we may need to determine: Is a target too far left or too far right?  If so, then perhaps some action should occur.

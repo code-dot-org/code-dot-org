@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'rmagick'
 require 'cdo/graphics/certificate_image'
 
 def create_session_row(row)
