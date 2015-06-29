@@ -36,6 +36,7 @@ The students will do lots of dragging and dropping as they fill in the missing p
 
 [/together]
 
+
 [together]
 
 ## Activity: Solving Word Problems with the Design Recipe

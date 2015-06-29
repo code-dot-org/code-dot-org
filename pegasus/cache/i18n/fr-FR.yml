@@ -319,26 +319,28 @@
   dashboard_landing_available_title: Cours disponibles
   dashboard_landing_available_courses: Voici les cours actuellement disponibles pour
     vous et vos élèves.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
-  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
-    and programming within the context of middle school math and science - as a tool
-    to teach math and science concepts. To register for professional development workshops,
-    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_landing_more_tutorials: Vous voulez voir encore plus de tutoriels ?
+  dashboard_landing_more_tutorials_desc: Il y a d'autres tutoriels <a href="/learn/beyond">
+    offerts par nos partenaires.</a> Apprendre à programmer avec des robots, créer
+    des pages web, votre propre application ou explorer d'autres langages tels que
+    C++, Ruby ou Python !
+  dashboard_hoc_courses: L'heure du Code pour tous les âges
+  dashboard_hoc_courses_desc: Essayez l'un de ces tutoriels plus courts (1 heure)
+    avec vos élèves !
+  dashboard_k5_courses: 20 heures de cours de Grande Section à CM2
+  dashboard_k5_courses_desc: Ces cours fondent en ligne, tutoriels autoguidés à votre
+    rythme avec des activités "unplugged" (sans ordinateur). Chaque cours se compose
+    d'environ 20 leçons qui peuvent être mises en œuvre comme une seule unité ou au
+    cours d'un semestre. Même les jeunes lecteurs de Grande Section (école maternelle)
+    peuvent participer. Pour vous aider à démarrer, nous proposons des ateliers de
+    perfectionnement professionnel de haute qualité aux États-Unis gratuitement. <a
+    href="/professional-development-workshops"> en trouver un près de chez vous!</a>
+  dashboard_middle_courses: Cours de 20 heures (Collège)
+  dashboard_middle_courses_desc: Notre programme pour le Collège utilise l'informatique
+    et la programmation dans le cadre du programme de mathématiques et de sciences
+    au Collège -  un outil pour enseigner des concepts mathématiques et scientifiques.
+    Pour vous inscrire aux ateliers de perfectionnement professionnel, demander un
+    <a href="/educate/districts"> </a> avec Code.org.
   dashboard_high_courses: Year-long High School Courses
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
@@ -438,11 +440,13 @@
     avec vos élèves :'
   dashboard_students_print_info: Imprimez des cartes avec les données de connexion
     de vos élèves.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Image secrète
   dashboard_students_reset_picture: Vous pouvez réinitialiser l'image secrète d'un
     élève à tout moment en choisissant <b>Afficher le secret</b>, puis <b>Réinitialiser
     le secret</b>. Une nouvelle image secrète sera générée pour que cet élève l'utilise
     lors de sa connexion.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Mot secret
   dashboard_students_reset_word: 'Vous pouvez à tout moment réinitialiser les mots
     secrets d''un élève en choisissant <b>Afficher le secret</b> puis <b>Réinitialiser

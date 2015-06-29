@@ -141,10 +141,11 @@ module LevelsHelper
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
 
     # Edit blocks-dependent options
-    if level_options['edit_blocks']
+    if level_view_options[:edit_blocks]
       # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
-      level_options['edit_blocks'] = @edit_blocks
+      level_options['edit_blocks'] = level_view_options[:edit_blocks]
       level_options['edit_blocks_success'] = t('builder.success')
+      level_options['toolbox'] = level_view_options[:toolbox_blocks]
     end
 
     # Process level view options

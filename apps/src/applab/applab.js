@@ -415,6 +415,11 @@ Applab.getCode = function () {
 };
 
 Applab.getHtml = function () {
+  // This method is called on autosave. If we're about to autosave, let's update
+  // levelHtml to include our current state.
+  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+    designMode.serializeToLevelHtml();
+  }
   return Applab.levelHtml;
 };
 
@@ -686,6 +691,36 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    // Prevent the backspace key from navigating back. Make sure it's still
+    // allowed on other elements.
+    // Based on http://stackoverflow.com/a/2768256/2506748
+    $(document).on('keydown', function (event) {
+      var doPrevent = false;
+      if (event.keyCode !== KeyCodes.BACKSPACE) {
+        return;
+      }
+      var d = event.srcElement || event.target;
+      if ((d.tagName.toUpperCase() === 'INPUT' && (
+          d.type.toUpperCase() === 'TEXT' ||
+          d.type.toUpperCase() === 'PASSWORD' ||
+          d.type.toUpperCase() === 'FILE' ||
+          d.type.toUpperCase() === 'EMAIL' ||
+          d.type.toUpperCase() === 'SEARCH' ||
+          d.type.toUpperCase() === 'DATE' )) ||
+          d.tagName.toUpperCase() === 'TEXTAREA') {
+        doPrevent = d.readOnly || d.disabled;
+      }
+      else {
+        doPrevent = !d.isContentEditable;
+      }
+
+      if (doPrevent) {
+        event.preventDefault();
+      }
+    });
+
+    designMode.addKeyboardHandlers();
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
@@ -824,6 +859,8 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
+
+  designMode.addKeyboardHandlers();
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);

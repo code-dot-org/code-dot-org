@@ -1590,7 +1590,16 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
  * @returns true if any non-example block in the workspace has an unfilled input
  */
 StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+  return !!this.getUnfilledFunctionalBlock();
+};
+
+/**
+ * @returns {Block} The first block that has an unfilled input, or undefined
+ *   if there isn't one.
+ */
+StudioApp.prototype.getUnfilledFunctionalBlock = function () {
+  var unfilledBlock;
+  Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
 
@@ -1599,8 +1608,45 @@ StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
       return false;
     }
 
-    return block.hasUnfilledFunctionalInput();
+    if (block.hasUnfilledFunctionalInput()) {
+      unfilledBlock = block;
+      return true;
+    }
   });
+
+  return unfilledBlock;
+};
+
+/**
+ * Get the error message when we have an unfilled block
+ * @param {string} topLevelType The block.type For our expected top level block
+ */
+StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
+  var unfilled = this.getUnfilledFunctionalBlock();
+
+  if (!unfilled) {
+    return null;
+  }
+
+  var topParent = unfilled;
+  while (topParent.getParent()) {
+    topParent = topParent.getParent();
+  }
+
+  if (unfilled.type === topLevelType) {
+    return msg.emptyTopLevelBlock({topLevelBlockName: unfilled.getTitleValue()});
+  }
+
+  if (topParent.type !== 'functional_definition') {
+    return msg.emptyFunctionalBlock();
+  }
+
+  var procedureInfo = topParent.getProcedureInfo();
+  if (topParent.isVariable()) {
+    return msg.emptyBlockInVariable({name: procedureInfo.name});
+  } else {
+    return msg.emptyBlockInFunction({name: procedureInfo.name});
+  }
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
