@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Repeat something while a condition is true"},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "while loop"},
 "emptyBlocksErrorMsg":function(d){return "\"Gjenta\"- eller \"Hvis\"-blokken må ha andre blokker inne i seg for å fungere. Kontroller at den indre blokken sitter riktig på plass i blokken som er utenfor."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Funksjonsblokken må ha andre blokker inni seg for å virke."},
 "emptyFunctionalBlock":function(d){return "Du har en blokk som mangler inndata."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "slutt"},
 "errorEmptyFunctionBlockModal":function(d){return "Det må være blokker inni funksjonsdefinisjonen din. Klikk \"Rediger\" og dra blokker inn i den grønne blokken."},
 "errorIncompleteBlockInFunction":function(d){return "Klikk \"Rediger\" for å sørge for at du ikke mangler noen blokker inni funksjonsdefinisjonen din."},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Se videoen"},
 "when":function(d){return "når"},
 "whenRun":function(d){return "når den kjører"},
-"workspaceHeaderShort":function(d){return "Arbeidsområde: "},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "Arbeidsområde: "}};

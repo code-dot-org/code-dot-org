@@ -364,40 +364,35 @@
       2-3 maze sq15_instruction: Ayçiçeğine sadece 5 blok kullanarak ulaşabilir misin?
       2-3 maze sq16_instruction: Tamam, bu benzer, ama biraz farklı. Sadece 5 blokta
         yapabilirsin?
-      2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+      2-3 Maze sq2_instruction: Yolu takip et ve beni aptal domuzun yanına götür.
+        TNT'lerden uzak dur yoksa tüylerim uçabilir!
       2-3 Maze sq3_instruction: Yeşil şeytana gitmeme önderlik et! (Patlayıcılara
         dikkat et)
       2-3 Maze sq4_instruction: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa kızabilirim!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
-      2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
+      2-3 Maze sq5_instruction: Beni domuza götür!Bir bloğu kaç kere tekrar etmek
+        zorundayım?
+      2-3 Maze sq6_instruction: 'Bir önceki cevabı sadece iki blok ile değiştirebilir
+        misin? (İpucu: "Tekrarla" bloğunu kullanarak bir döngü oluştur.)'
+      2-3 Maze sq7_instruction: Sadece 3 blok kullanarak beni yeşil davetsiz misafire
+        götür.
+      2-3 Maze sq8_instruction: Beni domuza götür!(İhtiyacın olduğunda "tekrarla"
+        bloğunu nerede kullanacaksın?)
+      2-3 Maze sq9_instruction: Domuza ulaşırken döngüler yaratarak daha az blok kullan.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
-        long) \n"
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
-      4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: Can you loop this code to complete the square?
-      4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+      2-3level1_instruction: İleri giderek kuşa yaramaz domuzu yakalamak için yardım
+        et
+      4-5 Artist 1_instruction: 'Kutumu çizmemi tamamlamak için yardım et.(Her doğru
+        parçası 300 piksel uzunluğundadır) '
+      4-5 Artist 10_instruction: Kodu denemek için "Çalıştır" düğmesine basın. Ardından
+        çizimi tamamlayana kadar tekrar edin.Her defasında rengi farklı olacaktır.
+      4-5 Artist 11_instruction: Yeşil çizgileri tamamlayın. 300 piksel  ve 15 piksel
+        uzunlukları ayrı çizgilerdir.
+      4-5 Artist 2_instruction: Kareyi tamamlamak için döngü kullanabilir misiniz?
+      4-5 Artist 3.5_instruction: Tamam, şimdi bu kodu çalıştırırsak ne olacağınız
+        keşfedelim (veya "Çalıştır" düğmesine basın).Ardından çizimi tamamlamak gerekli
+        olduğu kadar tekrarlayın.Renkler (büyük olasılıkla) her defasında farklı olacaktır.
       4-5 Artist 3_instruction: |
         This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle.
@@ -830,6 +825,7 @@
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1256,10 +1252,6 @@
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      course 1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both
-        the jump and draw blocks
-      course 1 artist 1 level 9_instruction: Üç satır kullanarak bunu çizin
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? \n"
       Course 2 Bee Loops 13_instruction: |
@@ -1562,11 +1554,10 @@
         Use the variable "sides" to control
         how many times this loop gets run.
       Course 4 Artist Vars 6_instruction: |
-        Hmmm, I tried changing the "sides" variable
-        to 4 from the code in the last puzzle, but it's still drawing a triangle.
-        Can you use the "sides" variable (along with a math block) to make sure
-        that I turn the right amount too? Hint: 360 divided by the number of sides
-        will give you the number of degrees to turn.
+        I changed the sides variable to 4 from
+        the code in the last puzzle, can you use the sides variable (along with a
+        math block) to make sure that I turn the right amount? To draw a regular polygon
+        I should turn 360 / sides each time.
       Course 4 Artist Vars 7_instruction: |
         Can you modify the "sides" variable
         to help me draw this hexagon?
@@ -1577,8 +1568,8 @@
         time) \n"
       Course 4 Artist Vars 9_instruction: |
         Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Replace the number
-        3 with the "sides" variable, and use the "set sides to" block.
+        variable instead of a fixed number to draw a triangle. Use the "set sides
+        to" block.
       Course 4 Bee 1_instruction: "The bee can't tell if this is a flower or a honeycomb.\nCheck
         first if it is a flower or a honeycomb, and then only gather nectar\nfrom
         it if it is a flower. \n"
@@ -2632,8 +2623,9 @@
         let's try it again this time let's make this cool design with with 60 pixel
         hexagon's.
       NEW Course 4 Artist Vars 4_instruction: |
-        Let's try it again. Now, let's make
-        this cool design with with 60 pixel hexagons.
+        Let's try it again. Can you set the
+        length variable to make this cool design with with hexagons? Hint: It's a
+        multiple of 10.
       NEW Course 4 Artist Vars 6_instruction: |
         Can you help me draw this cool pattern
         by dropping in the "length" variable block into the correct places?
@@ -2827,25 +2819,21 @@
         always see at least a bit of him, so lets write some functions that help make
         sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
-        and return true if he's inside the left boundary of the yard (x > -25). If
-        your function works, Sam shouldn't be able to leave the yard from the left
-        side.
+        and return true if he's completely visible on screen. If your function works,
+        Sam shouldn't be able to leave the yard from the left side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the safe-right?
-        function to make sure Sam can't go past x = 425.
+        on the left, now let's do the same thing on the right. Complete the safe-right?
+        function to make sure Sam can't go off the right side of the screen.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
         from going either direction? Try using the AND block to program the function
         on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
-        by moving Sam as far as he can go in all four directions. Click Finish when
-        Sam is completely protected.
+        Free Play: Awesome, we've kept Sam safe
+        on the left and right! Use this free play stage to experiment with your functions
+        and further improve onscreen?
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"

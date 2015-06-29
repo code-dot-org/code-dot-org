@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Repeat something while a condition is true"},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "while loop"},
 "emptyBlocksErrorMsg":function(d){return "\"重複\"和\"如果\"程式積木需要包含其它積木在裏面才能正常運作, 請檢查裏面是否有安排適當的程式積木."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "\"函式\"積木裡面需要放其他程式積木才能運作"},
 "emptyFunctionalBlock":function(d){return "你有一塊未填充的程式積木。"},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "結束"},
 "errorEmptyFunctionBlockModal":function(d){return "在此需要定義您的函式區塊。按一下\"編輯\"並在綠色區塊內部拖曳區塊。"},
 "errorIncompleteBlockInFunction":function(d){return "按一下\"編輯\"來確保你的函式定義中沒有缺少任何區塊。"},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "觀看影片"},
 "when":function(d){return "當"},
 "whenRun":function(d){return "當按下\"執行\"時"},
-"workspaceHeaderShort":function(d){return "工作區:"},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "工作區:"}};

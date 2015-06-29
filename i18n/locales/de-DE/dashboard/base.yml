@@ -70,7 +70,7 @@ de:
     overview_teacher: 'Für Lehrer: Registrieren Sie sich, um ihre Schüler hinzuzufügen und ihren Lernfortschritt zu verfolgen.'
     no_signup_message: 'Du kannst <a target="_blank" href="http://learn.code.org">die verschiedenen Level und Aufgaben</a> durchsuchen, aber um Deinen Fortschritt zu speichern musst Du dich anmelden.'
     teacher_educator_guide: Lehrer-Handbuch
-    teacher_pitch: Registrierung für LehrerInnen
+    teacher_pitch: Lehrer-Registrierung für Code.org
     teacher_title: Registrierung (Lehrer)
     student_pitch: Schüler-Registrierung für Code.org
     student_title: Registrierung für Schüler
@@ -365,7 +365,7 @@ de:
     heading_legacy: '<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>'
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
-    print_certificate: Print Certificate
+    print_certificate: Zertifikat drucken
   gender:
     male: Männlich
     female: Weiblich
@@ -449,9 +449,9 @@ de:
       title: Flappy Code
       body: Willst du dein eigenes Spiel in weniger als 10 Minuten schreiben? Probiere unser Flappy Code-Tutorial!
     20-hour:
-      title: Accelerated Course
+      title: Beschleunigter Kurs
       body: 'Dieser 20-stündige Kurs führt in die wichtigsten Konzepte der Informatik und des Programmierens ein. Der Kurs wurde für den Gebrauch in den Klassenstufen 1 - 9 entworfen, aber es macht in jedem Alter Spaß zu lernen.'
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: Lernen Sie grundlegende Informatik in einer verschnellerten Version der Kurse 2-4.
     hoc2014:
       try_new_tutorial: Probiere unsere neue Testversion der Programmierstunde aus
       try_frozen: Künstler mit Anna und Elsa, aus Die Eiskönigin
@@ -501,7 +501,7 @@ de:
     badrange: Dein Vertrag hat den falschen Namen.
     baddomainsize: Ihr Vertrag verfügen nicht die richtige Anzahl der Objekte in der Domäne.
     baddomainname: Einer oder mehrere Ihrer Domänen-Artikel hat den falschen Namen.
-    baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
+    baddomaintype: Einer oder mehrere deiner Domäneelemente hat den falschen Typ, oder sie sind in der falschen Reihenfolge.
   text_match:
     placeholder: Gebe hier deine Antwort ein
     open_response_title: Danke

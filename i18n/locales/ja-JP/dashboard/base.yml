@@ -223,7 +223,7 @@ ja:
       classroom: 先生用ホームページ
       district_dashboard: District Dashboard
       label: 'こんにちは  %{username}'
-      stats: 私の進捗状況
+      stats: 進み具合
       settings: 私のアカウント
       prizes: 賞品
       logout: サインアウト
@@ -324,7 +324,7 @@ ja:
     show_more: もっと見る
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: 進み具合
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'

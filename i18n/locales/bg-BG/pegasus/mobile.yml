@@ -251,14 +251,14 @@ bg-BG:
   dashboard_landing_view_progress: 'Преглед на прогреса за %{biggest_section}'
   dashboard_landing_available_title: Налични курсове
   dashboard_landing_available_courses: Ето курсове, които в момента са достъпни за вас и вашите ученици.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
-  dashboard_middle_courses: 20-Hour Middle School Courses
-  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_landing_more_tutorials: Искате ли да видите още уроци?
+  dashboard_landing_more_tutorials_desc: 'Има повече уроци <a href="/learn/beyond">, предлагани от нашите партньори.</a> Научете се да програмирате с роботи, да правите уеб страници, да направете свое собствено  приложение или разгледайте уроци с други езици като C++, Ruby или Python!'
+  dashboard_hoc_courses: Часът на кодирането за всички възрасти
+  dashboard_hoc_courses_desc: Опитайте някои от тези кратки едночасови уроци с учениците си!
+  dashboard_k5_courses: '20-часов курс за K-5 (детска градина- 5 клас)'
+  dashboard_k5_courses_desc: 'Тези онлайн курсове съдържат самонасочващи уроци за обучение  с  дейности, които не изискват компютър на всички. Всеки курс се състои от около 20 уроци, които могат да се прилагат еднократно или като обучение в течение на семестъра. Дори деца от детската градина, които не могат да четат, могат да участват. За да Ви помогнем да започнете, ние предлагаме семинари с високо качество  за професионално развитие в САЩ безплатно. <a href="/professional-development-workshops"> Намерете един близо до Вас!</a>'
+  dashboard_middle_courses: 20-часови курсове за средно училище
+  dashboard_middle_courses_desc: 'Нашата учебна програма за Средното училище използва компютърните науки и програмиране в контекста на обучението по математика и наука - като инструмент, за преподаване на математически и научни концепции. За да се регистрирате в семинари за професионално развитие, регистрирайте се за <a href="/educate/districts">  партньорство</a> с Code.org.'
   dashboard_high_courses: Year-long High School Courses
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Компютърни науки в алгебрата
@@ -335,9 +335,11 @@ bg-BG:
   dashboard_students_reset_password: Възстанови парола
   dashboard_students_share_section: 'Споделете този код за раздел с вашите ученици:'
   dashboard_students_print_info: Отпечатайте карти с информация за влизане в сайта на вашите ученици.
+  dashboard_students_secret_picture_title: Тайна картинка
   dashboard_students_secret_picture: Тайна картинка
   dashboard_students_reset_picture: 'Може да зададете нова тайна картина на ученика по всяко време като изберете <b>Покажи тайна</b> и след това <b>възстанови тайна</b>. Нова тайна картина ще бъде генерирана за този ученик. Той ще я използва, когато влезне отново в сайта.'
-  dashboard_students_secret_word: Тайна дума
+  dashboard_students_secret_word_title: Тайна дума
+  dashboard_students_secret_word: Подпомагаща дума
   dashboard_students_reset_word: 'Може да зададете нови тайни думи на учениците си по всяко време като изберете <b>Покажи тайна</b> и след това <b>възстанови тайна</b>. Нова двойка тайни думи ще се генерира, за да се използват при следващото влизане. '
   dashboard_students_join_link: 'Кажете на вашите ученици да си създат свои собствени акаунти и да се присъединят към вашият раздел '
   dashboard_students_no_email: 'Ако учениците ви нямат свой имейл адрес, но искате да създадете акаунти за тях, променете начина на влизане в този раздел на <b>дума</b> или <b>картина</b>.'
@@ -521,7 +523,7 @@ bg-BG:
   scratch_platformtext: Само за десктоп браузъри (не е за таблети)
   lightbot_platformtext: ВСИЧКИ браузъри и iOS, Android или игрова конзола
   thinkersmith_platformtext: Ънплъгд
-  condcards_platformtext: Изключено
+  condcards_platformtext: Ънплъгд
   lightbotintl_platformtext: iOS, Android (или уеб браузър)
   codehs_platformtext: Съвременни браузъри. (Започването на курса изисква $$)
   codecademy_platformtext: Съвременни уеб браузъри. iOS, Android приложения

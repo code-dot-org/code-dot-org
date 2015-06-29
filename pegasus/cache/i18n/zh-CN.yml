@@ -369,8 +369,10 @@
   dashboard_students_reset_password: 重置密码
   dashboard_students_share_section: 与您的学生共享此学习小组的登录页面：
   dashboard_students_print_info: 打印出包含学生登录信息的卡片
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: 秘密图片
   dashboard_students_reset_picture: 您可以通过选择<b>显示密钥</b>以及<b>重置密钥</b>来随时重置学生的秘密图片。该学生再次登录时系统将生成新的秘密图片供其使用。
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: 密语
   dashboard_students_reset_word: '您可以通过选择<b>显示密钥</b>以及<b>重置密钥</b>来随时重置学生的密语。该学生再次登录时系统将生成新的一对单词密语供其使用。 '
   dashboard_students_join_link: 告诉您的学生来创建他们自己的账号并在此加入您的学习小组

@@ -18,7 +18,15 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "embed": "false"
+    "embed": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -177,6 +185,9 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="math_number">
+          <title name="NUM">???</title>
+        </block>
         <block type="draw_move" inline="true">
           <title name="DIR">moveForward</title>
           <value name="VALUE">

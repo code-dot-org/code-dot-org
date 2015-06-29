@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Repeat something while a condition is true"},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "while loop"},
 "emptyBlocksErrorMsg":function(d){return "\"Korda\" või \"Kui\" ploki sees peavad olema teised plokid et see töötaks. Veendu et sisemine plokk sobib plokiga mille sees ta on."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Funktsiooni plokk peab sisaldama teisi plokke et ta töötaks."},
 "emptyFunctionalBlock":function(d){return "Teil on täitmata sisendiga plokk."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "lõpeta"},
 "errorEmptyFunctionBlockModal":function(d){return "Sinu funktsiooni definitsioonis peavad olema plokid. Vajuta \"muuda\" ja lohista plokid rohelise ploki sisse."},
 "errorIncompleteBlockInFunction":function(d){return "Kliki nupul \"edit\" ja veendu et sul ei ole funktsiooni definitsioonist mõnda plokki puudu."},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Vaata videot"},
 "when":function(d){return "kui"},
 "whenRun":function(d){return "kui käib"},
-"workspaceHeaderShort":function(d){return "Tööruum: "},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "Tööruum: "}};
