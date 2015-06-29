@@ -447,11 +447,13 @@
   dashboard_students_reset_password: Reset kata sandi
   dashboard_students_share_section: 'Berbagi halaman masuk ini dengan siswa Anda:'
   dashboard_students_print_info: Ctak kartu dengan informasi login siswa Anda.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Gambar rahasia
   dashboard_students_reset_picture: Anda dapat menyetel ulang gambar rahasia siswa
     kapan saja dengan memilih <b>Tampilkan rahasia</b> dan kemudian <b>menyetel ulang
     rahasia</b>. Gambar rahasia baru akan dibuat bagi pelajar tersebut untuk digunakan
     ketika mereka masuk.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Kata sandi
   dashboard_students_reset_word: 'Anda dapat menyetel ulang kata rahasia siswa kapan
     saja dengan memilih <b>Tampilkan rahasia</b> dan kemudian <b>menyetel ulang rahasia</b>.

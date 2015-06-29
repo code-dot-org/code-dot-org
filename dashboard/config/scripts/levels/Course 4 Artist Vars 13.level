@@ -22,7 +22,14 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"which_equation\",\"callout_text\":\"Which equation makes each side shorter for shapes with more sides?\",\"element_id\":\"[block-id='10']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top left\",\"at\":\"bottom left\"},\"style\":{\"classes\":\"no-tip\"}}}\r\n]",
     "slider_speed": ".6",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -181,18 +188,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-            <block type="math_number">
-              <title name="NUM">8</title>
-            </block>
-          </value>
-        </block>
-      </xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

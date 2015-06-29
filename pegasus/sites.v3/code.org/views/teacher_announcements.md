@@ -2,21 +2,28 @@
 
 # Teacher Announcements
 
-June 15, 2015 &mdash; We've recently made some improvements to the teacher dashboard and added a new answer viewer on Code Studio puzzles. Watch this video for a tour of the new features!
+June 26, 2015 &mdash; We're launching online PD for teachers! Learn  how to teach computer science using Code.org’s Courses 1-4 with this free, self-paced online course.
 
-<!---
-Please uncomment when the teacher tumblr is ready
-[Learn more >](http://codecurriculum.tumblr.com/)
+[Learn more >](/educate/professional-development-online)
 <br/>
-[View all announcements >](http://codecurriculum.tumblr.com/)
---->
+[View all announcements >](http://teachcodeorg.tumblr.com/)
 
 [/text]
+
+[video]
+
+![Online PD](/images/apple-touch-icon-precomposed.png "OnlinePD")
+
+[/video]
+
+<!---
 
 [video]
 
 <%= view :display_video_thumbnail, id: "video1", video_code: "k56Y2MIL9dM", play_button: 'caption', caption: 'Watch the video' %>
 
 [/video]
+
+--->
 
 <div style="clear:both"/>
