@@ -394,7 +394,10 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   }
 
   children.each(function () {
-    elementLibrary.onDeserialize($(this)[0]);
+    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
+  });
+  children.children().each(function() {
+    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
   });
 };
 
