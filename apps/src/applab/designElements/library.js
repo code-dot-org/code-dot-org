@@ -101,6 +101,10 @@ module.exports = {
     return elements[elementType].PropertyTab;
   },
 
+  getElementEventTab: function(elementType) {
+    return elements[elementType].EventTab;
+  },
+
   /**
    * @param {HTMLElement} element
    * @returns {string} String representing elementType

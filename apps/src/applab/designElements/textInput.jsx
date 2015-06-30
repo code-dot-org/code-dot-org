@@ -74,8 +74,30 @@ var TextInputProperties = React.createClass({
   }
 });
 
+var TextInputEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
+  render: function () {
+    var element = this.props.element;
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+      </div>
+    );
+  }
+});
+
 module.exports = {
   PropertyTab: TextInputProperties,
+  EventTab: TextInputEvents,
 
   create: function () {
     var element = document.createElement('input');
