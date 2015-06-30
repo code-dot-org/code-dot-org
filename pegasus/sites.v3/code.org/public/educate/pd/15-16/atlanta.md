@@ -16,74 +16,43 @@ nav: pd2_nav
 
 ## Exploring Computer Science
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone complete! 
 
-</br>
-</br>
-<br/>
-
-**Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
 In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study. 
 
-</br>
-</br>
+### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
+
 <br/>
+**Save the Dates:**
 
-**Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
-
-</br>
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students. 
-
-</br>
-<br/>
-
-#### Save the Dates:
-
-</br>
 Quarter 1: Saturday, September 12, 2015
-
-</br>
+<br/>
 Quarter 2: Saturday, December 12, 2015
-
-</br>
+<br/>
 Quarter 3: Saturday, March 5, 2015
-
-</br>
+<br/>
 Quarter 4: Saturday, April 23, 2015
 
-</br>
-<br/>
 
-#### Location
+**Location**
 
-</br>
 TBD
 
-</br>
-<br/>
+**What to bring to Phase 3 quarterly sessions:**
 
-#### What to bring to Phase 3 quarterly sessions:
-
-</br>
 Laptop
-
-</br>
+<br/>
 ECS green journal and curriculum guide
-
-</br>
+<br/>
 Snacks
-
-</br>
+<br/>
 Water
 
-</br>
-</br>
-<br/>
-
-**Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
 More info coming soon!
 
@@ -94,21 +63,15 @@ More info coming soon!
 
 ## CS in Algebra
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone complete! 
-</br>
-</br>
-<br/>
 
-**Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
 In-person milestone complete! More info coming soon on your Phase 2 online portion. 
-</br>
-</br>
-<br/>
 
-**Phase 3: Academic Year Development (2 days in-person & ~10 hours online)**
+### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
 More info coming soon!
 
@@ -118,23 +81,36 @@ More info coming soon!
 
 ## CS in Science
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone complete! 
-</br>
-</br>
-<br/>
 
-**Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
 In-person milestone complete! More info coming soon on your Phase 2 online portion. 
-</br>
-</br>
+
+### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ### 
+
 <br/>
+**Save the dates**
 
-**Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)**
+Semester 1: Saturday, September 12, 2015 
+<br/>
+Semester 2: Saturday, March 5, 2016 
 
-More info coming soon!
+**Location**
+
+TBD
+
+**What to bring to Phase 3 bi-yearly sessions:**
+
+Laptop
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
 
 
 [**Back to the top**](#top)
