@@ -72,7 +72,7 @@ var ImageProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: ImageProperties,
+  PropertyTab: ImageProperties,
   create: function () {
     var element = document.createElement('img');
     element.style.height = '100px';

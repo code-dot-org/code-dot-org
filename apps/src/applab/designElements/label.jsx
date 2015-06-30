@@ -83,7 +83,7 @@ var LabelProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: LabelProperties,
+  PropertyTab: LabelProperties,
 
   create: function () {
     var element = document.createElement('label');

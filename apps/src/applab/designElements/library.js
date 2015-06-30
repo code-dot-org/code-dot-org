@@ -97,8 +97,8 @@ module.exports = {
     return element;
   },
 
-  getElementPropertyTable: function (elementType) {
-    return elements[elementType].PropertyTable;
+  getElementPropertyTab: function (elementType) {
+    return elements[elementType].PropertyTab;
   },
 
   /**

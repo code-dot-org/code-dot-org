@@ -35,7 +35,7 @@ var ScreenProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: ScreenProperties,
+  PropertyTab: ScreenProperties,
   create: function () {
     var element = document.createElement('div');
     element.setAttribute('class', 'screen');

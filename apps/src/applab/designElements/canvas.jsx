@@ -48,7 +48,7 @@ var CanvasProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: CanvasProperties,
+  PropertyTab: CanvasProperties,
   create: function () {
     var element = document.createElement('canvas');
     element.setAttribute('width', '100px');

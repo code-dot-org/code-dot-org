@@ -62,7 +62,7 @@ var CheckboxProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: CheckboxProperties,
+  PropertyTab: CheckboxProperties,
 
   create: function() {
     var element = document.createElement('input');

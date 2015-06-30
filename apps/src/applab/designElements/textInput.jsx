@@ -75,7 +75,7 @@ var TextInputProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: TextInputProperties,
+  PropertyTab: TextInputProperties,
 
   create: function () {
     var element = document.createElement('input');

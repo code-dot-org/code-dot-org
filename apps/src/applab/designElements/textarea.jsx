@@ -82,7 +82,7 @@ var TextAreaProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: TextAreaProperties,
+  PropertyTab: TextAreaProperties,
 
   create: function() {
     var element = document.createElement('div');
