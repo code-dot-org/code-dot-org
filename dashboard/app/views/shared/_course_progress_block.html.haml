@@ -4,7 +4,7 @@
     =link_to script_url(script.id) do
       %h3= data_t_suffix('script.name', script.name, 'title')
       .clear
-      .smalltext= data_t_suffix('script.name', script.name, 'description')
+      .smalltext= data_t_suffix('script.name', script.name, 'description_short')
       .clear
     - next_unpassed_progression_level = current_user.next_unpassed_progression_level(script)
     - if user_script.try(:completed_at) || (user_script && next_unpassed_progression_level.nil?)
