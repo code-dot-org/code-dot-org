@@ -12,6 +12,7 @@ en:
           Math Image: Math Image
           title: Test Course
           description: Just an internal test course.
+          description_short: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
           'Maze: Sequence': 'Maze: Sequence'
@@ -309,6 +310,7 @@ en:
           'Eval: Conditionals': Conditionals
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision Detection and the Pythagorean Theorem'
           'Play Lab: Collision Detection (Big Game)': The Big Game - Collision Detection
+          description_short: Learn Functional Programming through Algebra
         infinity:
           title: Disney Infinity Play Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
@@ -364,6 +366,7 @@ en:
           title: Pixelation
           description: Create images with bits and bytes.
           Pixelation: Pixelation
+          description_short: Create images with bits and bytes.
         20-hour:
           title: Accelerated Intro to CS Course
           description_audience: Ages 10-18
@@ -396,6 +399,7 @@ en:
           The Artist: The Artist
           Play Lab: Play Lab
           Play Lab 2015: Play Lab 2015
+          description_short: Edit Code
         events:
           title: Events
           description: ''
@@ -403,22 +407,27 @@ en:
           Studio: Studio
           Calc: Calc
           Eval: Eval
+          description_short: Events
         flappy:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
           Flappy Code: Flappy Code
+          description_short: Write your own Flappy game in less than 10 minutes!
         jigsaw:
           title: Jigsaw
           description: ''
           Jigsaw: Jigsaw
+          description_short: Try our Jigsaw tutorial
         step:
           title: Step
           description: ''
           Step: Step
+          description_short: Step tutorial
         Hour of Code:
           title: Hour of Code 2013
           description: ''
           Hour of Code 2013: Hour of Code 2013
+          description_short: Try the basics of computer science with many fun characters!
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -539,6 +548,7 @@ en:
           Teacher Dashboard: Teacher Dashboard
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
+          description_short: Teach Algebra through Functional Programming
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -554,10 +564,12 @@ en:
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection (Big Game)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
+          description_short: Teach Algebra through Functional Programming
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
+          description_short: Compress text by identifying repeated patterns.
         CSPPD:
           new stage: new stage
           Introduction to PD: Introduction to PD
@@ -569,11 +581,13 @@ en:
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
           Preparing for in-person PD: Preparing for in-person PD
+          description_short: Online Introduction to CSP
         CSPLessonSamples:
           title: CSP Lesson Samples
           description_short: lesson samples for csp
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
+          description: Lesson samples for CSP
         ECSPD:
           Introduction to PD: Introduction to PD
           What is ECS?: What is ECS?
@@ -584,6 +598,7 @@ en:
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
+          description_short: Online Introduction to ECS
         sciencePD:
           Introduction to PD: Introduction to PD
           title: Computer Science in Science PD
@@ -600,10 +615,17 @@ en:
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
+          description_short: In Partnership with Project GUTS
         rbo-reference:
           reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
           description_short: Programming
@@ -665,6 +687,7 @@ en:
           Strings and Images: Strings and Images
           The Design Recipe: The Design Recipe
           Next Steps: Next Steps
+          description_short: Teach Algebra through block-based Functional Programming
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
@@ -691,6 +714,7 @@ en:
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
+          description_short: Online Introduction to ECS
         ECSPD-iZone:
           Introduction to PD: Introduction to PD
           What is ECS?: What is ECS?
@@ -701,6 +725,7 @@ en:
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
+          description_short: Online Introduction to ECS
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -712,6 +737,7 @@ en:
           Teacher Dashboard: Teacher Dashboard
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
+          description_short: Teach Algebra through Functional Programming
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -723,6 +749,7 @@ en:
           Teacher Dashboard: Teacher Dashboard
           Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           Preparing for in-person PD: Preparing for in-person PD
+          description_short: Teach Algebra through Functional Programming
         sciencePD-NexTech:
           Introduction to PD: Introduction to PD
           logo_image: nextech_logo.png
@@ -739,6 +766,7 @@ en:
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
+          description_short: In Partnership with Project GUTS
         sciencePD-iZone:
           Introduction to PD: Introduction to PD
           logo_image: izone_logo.png
@@ -755,6 +783,7 @@ en:
           Introduction to StarLogo Nova: Introduction to StarLogo Nova
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
+          description_short: In Partnership with Project GUTS
         ui_tests:
           title: UI Tests
           description: Script for test. Careful, don't change level ordering.
@@ -762,6 +791,8 @@ en:
           Free Response: Free Response
           Multi: Multi
           Big Game: Big Game
+          description_short: ui_tests
+          new stage: new stage
         sciencePD2:
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
@@ -773,6 +804,9 @@ en:
           Curricular Modules: Curricular Modules
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
+          title: Computer Science in Science PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
         sciencePD3:
           new stage: new stage
           Welcome: Welcome
@@ -780,8 +814,14 @@ en:
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
           Discussion Forums: Discussion Forums
+          title: Computer Science in Science PD
+          description_short: Phase 3 Professional Development
+          description: Phase 3 Professional Development
         Testing:
           Testing: Testing
+          title: Testing
+          description_short: Testing
+          description: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
           description_short: The Internet
@@ -840,6 +880,7 @@ en:
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
           Free Play: Free Play
+          description_short: Teach Functional Programming through Algebra
         allthethings:
           Jigsaw: Jigsaw
           Maze: Maze
@@ -864,6 +905,7 @@ en:
           Text Compression: Text Compression
           Pixelation: Pixelation
           Multi2: Multi2
+          description_short: All the level types for UI testing
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
@@ -880,6 +922,7 @@ en:
           'Eval: Conditionals': 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          description_short: Teach Functional Programming through Algebra
         Calc Define Funcs 5 - multiply 1:
           'Eval: Defining Functions': 'Eval: Defining Functions'
         cspfacilitator:
@@ -892,6 +935,7 @@ en:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
           Welcome!: Welcome!
+          description_short: Online levels for PD workshop
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -916,6 +960,7 @@ en:
           Planning: Planning
           Next Steps: Next Steps
           Looking Ahead: Looking Ahead
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
@@ -929,6 +974,7 @@ en:
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
           Wrap-up: Wrap-up
+          description_short: Blended Summer Study
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -936,6 +982,7 @@ en:
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
+          description_short: How to lead a discussion on equity in a Code.org PD
         hoc2015:
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
@@ -962,3 +1009,4 @@ en:
           Welcome!: Welcome!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
+          description_short: Teach Functional Programming through Algebra
