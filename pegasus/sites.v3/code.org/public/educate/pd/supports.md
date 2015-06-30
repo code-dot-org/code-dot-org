@@ -15,6 +15,17 @@ nav: pd_nav
 
 <a id="hs"></a>
 
+## Computer Science Principles
+
+Find the Computer Science Principles curriculum at [https://code.org/educate/csp](https://code.org/educate/csp).
+
+### What are the technical requirements to teach Computer Science Principles?
+	
+The following domains white-listed for access:
+<br/>
+• Code.org
+<br/>
+• youtube.com/education
 
 ## Exploring Computer Science Supports
 
