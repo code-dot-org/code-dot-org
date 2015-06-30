@@ -1,0 +1,12 @@
+details {
+  summary {
+    cursor: pointer;
+    h1 {
+      // Supports
+      // <summary><h1>Title</h1><p>See more</p></summary>
+      // idiom often used by level builders
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+}
