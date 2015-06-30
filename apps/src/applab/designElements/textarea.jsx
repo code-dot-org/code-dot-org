@@ -114,8 +114,7 @@ module.exports = {
     element.style.fontSize = '14px';
     element.style.color = '#000000';
     element.style.backgroundColor = '';
-    element.style.border = '1px solid';
-
+    
     this.onDeserialize(element);
 
     return element;
