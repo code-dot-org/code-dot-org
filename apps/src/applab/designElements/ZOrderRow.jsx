@@ -3,7 +3,6 @@ var rowStyle = require('./rowStyle');
 
 var ZOrderRow = React.createClass({
   propTypes: {
-    // TODO - is passing the element and modifying it good React? I think no
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
     onDepthChange: React.PropTypes.func.isRequired
   },

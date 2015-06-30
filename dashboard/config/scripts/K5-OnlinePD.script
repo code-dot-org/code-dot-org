@@ -1,4 +1,7 @@
 pd 'true'
+title "Teaching Courses 1-4: The Basics"
+description "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
+description_short "Learn how to teach Courses 1-4 with this free, self-paced online course."
 
 stage 'Getting Started'
 level 'OPD-K5 Welcome'

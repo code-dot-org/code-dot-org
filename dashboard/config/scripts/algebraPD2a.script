@@ -1,5 +1,6 @@
 title 'Computer Science in Algebra PD'
 description "Teach Functional Programming through Algebra"
+description_short "Teach Functional Programming through Algebra"
 login_required 'true'
 pd 'true'
 

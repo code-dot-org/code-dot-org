@@ -486,7 +486,8 @@
         jigsaw_10: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
         jigsaw_11: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
         jigsaw_12: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_13: Correggi la figura!
+        jigsaw_13: Questo è un esercizio di verifica -- Sistema i blocchi nell'ordine
+          corretto per formare l'immagine indicata.
         mazestep_1: Qui c'è la descrizione del passo del labirinto
         mazestep_2: Qui c'è la descrizione del passo del labirinto
         mazestep_3: Qui c'è la descrizione del passo del labirinto
@@ -583,22 +584,22 @@
         studio_k1_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
         studio_k1_6: Crea una storia tutta tua! Sposta il cane e il gatto in tutte
           le direzioni e fai dire loro ciò che desideri.
-        maze_wordsearch_k_1: Spostami per scrivere le lettere della parola EAST
-        maze_wordsearch_k_2: Spostami per scrivere le lettere della parola SOUTH
-        maze_wordsearch_k_3: Spostami per scrivere le lettere della parola WEST
-        maze_wordsearch_k_4: Spostami per scrivere le lettere della parola NORTH
+        maze_wordsearch_k_1: Spostami per scrivere le lettere della parola EAST.
+        maze_wordsearch_k_2: Spostami per scrivere le lettere della parola SOUTH.
+        maze_wordsearch_k_3: Spostami per scrivere le lettere della parola WEST.
+        maze_wordsearch_k_4: Spostami per scrivere le lettere della parola NORTH.
         maze_wordsearch_k_6: Spostami a Est e poi a Sud per scrivere le lettere della
-          parola JUMP
+          parola JUMP.
         maze_wordsearch_k_9: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola CODE
+          le lettere della parola CODE.
         maze_wordsearch_k_13: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola DEBUG
+          le lettere della parola DEBUG.
         maze_wordsearch_k_15: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola ABOVE
+          le lettere della parola ABOVE.
         maze_wordsearch_k_16: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola BELOW
+          le lettere della parola BELOW.
         maze_wordsearch_k_20: Questo è un esercizio di verifica! Spostami in una direzione
-          e poi in un'altra per scrivere le lettere della parola STORY
+          e poi in un'altra per scrivere le lettere della parola STORY.
         applab_ec_simple: Crea la tua App usando i blocchi nella cassetta degli attrezzi.
         turtle_ec_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore
           preferito scegliendolo col nuovo blocco "imposta colore".'

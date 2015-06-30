@@ -420,7 +420,7 @@
     heading_legacy: <h2> دوره عمومی ما </h2><h1>همه سنین</h1>
     your_gallery: گالری
     no_primary_course: یک کلاس را در کد استدیو امتحان کنید
-    print_certificate: Print Certificate
+    print_certificate: چاپ گواهینامه
   gender:
     male: مرد
     female: زن
@@ -524,12 +524,11 @@
       body: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی Flappy
         ما را امتحان کن!
     20-hour:
-      title: Accelerated Course
+      title: دوره های سریع
       body: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می
         پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره
         راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: دانش پایه کامپیوتر را در نسخه سریع درس های 2 تا 4 یاد بگیر.
     hoc2014:
       try_new_tutorial: ورژن بتای ساعت آموزش کد جدید ما را امتحان کنید
       try_frozen: هنرمندی با آنا و السا, از کارتون منجمد

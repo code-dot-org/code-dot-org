@@ -415,7 +415,16 @@ Applab.getCode = function () {
 };
 
 Applab.getHtml = function () {
+  // This method is called on autosave. If we're about to autosave, let's update
+  // levelHtml to include our current state.
+  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+    designMode.serializeToLevelHtml();
+  }
   return Applab.levelHtml;
+};
+
+Applab.setLevelHtml = function (html) {
+  Applab.levelHtml = designMode.addScreenIfNecessary(html);
 };
 
 Applab.onTick = function() {
@@ -460,6 +469,15 @@ Applab.initReadonly = function(config) {
   studioApp.initReadonly(config);
 };
 
+function extendHandleClearPuzzle() {
+  var orig = studioApp.handleClearPuzzle.bind(studioApp);
+  studioApp.handleClearPuzzle = function (config) {
+    orig(config);
+    Applab.setLevelHtml(config.level.startHtml || '');
+    studioApp.resetButtonClick();
+  };
+}
+
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -467,6 +485,7 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+  extendHandleClearPuzzle();
 
   // Pre-populate asset list
   if (window.dashboard && dashboard.project.getCurrentId()) {
@@ -596,7 +615,7 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
-  Applab.levelHtml = designMode.addScreenIfNecessary(level.levelHtml || "");
+  Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
   studioApp.init(config);
 
@@ -685,6 +704,36 @@ Applab.init = function(config) {
       var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
+
+    // Prevent the backspace key from navigating back. Make sure it's still
+    // allowed on other elements.
+    // Based on http://stackoverflow.com/a/2768256/2506748
+    $(document).on('keydown', function (event) {
+      var doPrevent = false;
+      if (event.keyCode !== KeyCodes.BACKSPACE) {
+        return;
+      }
+      var d = event.srcElement || event.target;
+      if ((d.tagName.toUpperCase() === 'INPUT' && (
+          d.type.toUpperCase() === 'TEXT' ||
+          d.type.toUpperCase() === 'PASSWORD' ||
+          d.type.toUpperCase() === 'FILE' ||
+          d.type.toUpperCase() === 'EMAIL' ||
+          d.type.toUpperCase() === 'SEARCH' ||
+          d.type.toUpperCase() === 'DATE' )) ||
+          d.tagName.toUpperCase() === 'TEXTAREA') {
+        doPrevent = d.readOnly || d.disabled;
+      }
+      else {
+        doPrevent = !d.isContentEditable;
+      }
+
+      if (doPrevent) {
+        event.preventDefault();
+      }
+    });
+
+    designMode.addKeyboardHandlers();
 
     designMode.renderDesignWorkspace();
 
@@ -824,6 +873,8 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
+
+  designMode.addKeyboardHandlers();
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);

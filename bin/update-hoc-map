@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+
+# The map on hourofcode.com is run off of a Google Fusion Table:
+# https://developers.google.com/maps/documentation/javascript/fusiontableslayer
+# This script updates the fusion table using the REST API:
+# https://developers.google.com/fusiontables/docs/v2/using by
+# uploading the entire contents of the HocSignup2015 forms table in
+# our database.
+
+require File.expand_path('../../pegasus/src/env', __FILE__)
+require 'cdo/hip_chat'
+require src_dir 'database'
+require 'cdo/properties'
+
+require 'google/api_client'
+
+DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
+
+TABLE_ID = '164RLDWEyPij3-Z9O0791ta_a8RfuCdGUkWRFcnBD'
+
+# TODO this file is not checked in so this won't work unless you also get the key file
+PRIVATE_KEY_FILENAME = 'code-dot-org-hoc-map-c3fc0a673b37.p12'
+
+all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2015')
+
+puts "Processing #{all_forms.count} forms"
+
+file = Tempfile.new(['data', '.csv'])
+
+exported = 0
+
+CSV.open(file.path, 'w') do |csv|
+  all_forms.each do |form|
+    data = JSON.parse(form[:data])
+    processed_data = JSON.parse(form[:processed_data])
+    row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p']]
+    next if row.any?(&:nil?)
+    exported += 1
+    csv << row
+  end
+end
+
+puts "#{exported} rows exported"
+
+file.close
+
+client = Google::APIClient.new(:application_name => 'HOC map update',
+                               :application_version => '1.0.0')
+key = Google::APIClient::KeyUtils.load_from_pkcs12(PRIVATE_KEY_FILENAME, 'notasecret')
+client.authorization = Signet::OAuth2::Client.new(
+  :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
+  :audience => 'https://accounts.google.com/o/oauth2/token',
+  :scope => 'https://www.googleapis.com/auth/fusiontables',
+  :issuer => '460190065247-jmmb1vpqu9povn7dq886jk5dg17lrkee@developer.gserviceaccount.com',
+  :signing_key => key)
+client.authorization.fetch_access_token!
+
+
+fusiontables = client.discovered_api('fusiontables', 'v2')
+
+media = Google::APIClient::UploadIO.new(file.path, 'application/octet-stream')
+
+result = client.execute(api_method: fusiontables.table.replace_rows,
+                        parameters: {
+                          tableId: TABLE_ID,
+                          uploadType: 'media',
+                        },
+                        media: media)
+p result

@@ -57,15 +57,12 @@ GEM
       builder
       mime-types
       xml-simple
-    aws-sdk (2.0.29)
-      aws-sdk-resources (= 2.0.29)
-    aws-sdk-core (2.0.29)
-      builder (~> 3.0)
+    aws-sdk (2.1.2)
+      aws-sdk-resources (= 2.1.2)
+    aws-sdk-core (2.1.2)
       jmespath (~> 1.0)
-      multi_json (~> 1.0)
-      multi_xml (~> 0.5)
-    aws-sdk-resources (2.0.29)
-      aws-sdk-core (= 2.0.29)
+    aws-sdk-resources (2.1.2)
+      aws-sdk-core (= 2.1.2)
     bcrypt (3.1.7)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -218,7 +215,7 @@ GEM
       powerbar
     mocha (1.0.0)
       metaclass (~> 0.0.1)
-    multi_json (1.10.1)
+    multi_json (1.11.1)
     multi_test (0.1.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -310,7 +307,7 @@ GEM
       listen (~> 2.7, >= 2.7.3)
     retriable (1.4.1)
     retryable (1.3.5)
-    rmagick (2.13.2)
+    rmagick (2.13.4)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -439,6 +436,7 @@ DEPENDENCIES
   factory_girl_rails
   font-awesome-rails
   geocoder
+  google-api-client
   google_drive (~> 1.0.0)
   haml
   haml-rails
@@ -502,4 +500,4 @@ DEPENDENCIES
   videojs_rails
 
 BUNDLED WITH
-   1.10.4
+   1.10.5

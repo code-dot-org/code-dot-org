@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Repeat something while a condition is true"},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "while loop"},
 "emptyBlocksErrorMsg":function(d){return "\"Tekrar\" bloğu veya \"Eğer\" bloğunun çalışması için  içerisinde bir başka blok yer almalıdır. İçteki bloğu, dış blok içerisine yerleştirdiğine emin ol."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "Fonksiyon bloğunun çalışabilmesi için içine başka bloklar koymalısın."},
 "emptyFunctionalBlock":function(d){return "Doldurulmamış bir giriş bloğunuz bulunuyor."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "son"},
 "errorEmptyFunctionBlockModal":function(d){return "Fonksiyon tanımının içinde bloklara ihtiyacın var. \"Düzenle\" butonuna tıkla ve blokları yeşil bloğun içine sürükle."},
 "errorIncompleteBlockInFunction":function(d){return "Fonksiyon tanımının içinde eksik blokların kalıp kalmadığından emin olmak için \"düzenle\" butonuna tıkla."},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Videoyu İzle"},
 "when":function(d){return "Ne zaman"},
 "whenRun":function(d){return "Çalıştığı zaman"},
-"workspaceHeaderShort":function(d){return "Çalışma alanı: "},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "Çalışma alanı: "}};

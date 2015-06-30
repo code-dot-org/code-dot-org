@@ -178,155 +178,115 @@ ro:
       2-3 Bee Functions 9_instruction: |
         Creează-ţi propria funcţie care se duce în jos pe 
         cale, obține nectar, face miere şi, apoi, returnează albina în partea de sus a căii.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: |
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
+      2-3 Bee Functions Assessment 1_instruction: 'Evaluare: Folositi functia data pentru a colecta nectar din fiecare floare.'
+      2-3 Bee Functions Assessment 2_instruction: 'Evaluare: Creează o funcţie pentru a produce 3 miere dintr-o dată.'
+      2-3 Bee Loops 1_instruction: 'Fiecare floare contine o unitate de nectar. Colecteaza nectarul din fiecare floare. '
+      2-3 Bee Loops 10_instruction: Poti folosi o bucla cat timp inauntrul altor doua bucle pentru a colecta tot nectarul?
+      2-3 Bee Loops 11_instruction: Foloseste o bucla cat timp pentru a colecta tot nectarul florilor din acest camp.
+      2-3 Bee Loops 12_instruction: Foloseste o bucla cat timp pentru a colecta tot nectarul florilor din acest camp.
       2-3 Bee Loops 13_instruction: |
         Assessment: Use the repeat block to collect
         all of the nectar.
       2-3 Bee Loops 1A_instruction: 'Hei, eu sunt o albină. Mă poţi ajuta să strâng nectarul din aceste flori? '
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 2A_instruction: |
-        Can you do the same task more easily with a
-        loop?
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |
-        Now use the new repeat block to collect all
-        of the nectar and make all of the honey.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
+      2-3 Bee Loops 2_instruction: Foloseste o bucla pentru a colecta nectarul si a face miere.
+      2-3 Bee Loops 2A_instruction: Poti face aceasi sarcina mai usor cu o bucla?
+      2-3 Bee Loops 3_instruction: Colecteaza nectarul din fiecare floare si fa miere la fiecare fagure de miere.
+      2-3 Bee Loops 3A_instruction: Poti folosi o bucla pentru a colecta tot nectarul?
+      2-3 Bee Loops 3B_instruction: Acum foloseste noul bloc de repetitie pentru a colecta tot nectarul si a face toata mierea.
+      2-3 Bee Loops 4_instruction: Foloseste o bucla similara ca in puzzleul trecut, dar foloseste un viraj.
       2-3 Bee Loops 4A_instruction: |
-        What happens if you loop this sequence 3 times?
-        Don't forget to make the honey at the end!
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
-      2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
+        Ce se intampla daca repeti aceasi secventa de 3 ori?
+        Nu uita sa faci mierea la sfarsit!
+      2-3 Bee Loops 5_instruction: Foloseste o bucla pentru a merge in jos si colecteaza tot nectarul.
+      2-3 Bee Loops 6_instruction: Foloseste o bucla pentru a colecta nectarul din fiecare floare si a face miere la fiecare fagure de miere.
+      2-3 Bee Loops 7_instruction: Pune aceste blocuri intr-o bucla pentru a colecta nectarul din fiecare floare.
+      2-3 Bee Loops 8_instruction: 'Aceste flori mov au o cantitate necunoscuta de nectar. Foloseste bucla "cat timp nectar" pentru a colecta tot nectarul. Aceasta bucla va merge atat timp cat conditia este indeplinita, in acest caz nectar > 0.'
+      2-3 Bee Loops 9_instruction: Bucla cat timp poate face aceasi actiune ca si declaratia daca intr-o bucla. Adauga o bucla cat timp acestui cod pentru a face aceasi sarcina.
       2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
+        Evaluare - utilizează o buclă "în timp ce" pentru a colecta 
+        tot nectarul din această floare.
       2-3 Maze 1_instruction: |
-        Can you help me to catch the naughty pig? Stack a
-        couple of "move forward" blocks together and press "Run". 
+        Mă poți ajuta să prin porcul buclucaș? Stivează două
+        blocuri "mută înainte" împreună și apasă "Rulează". 
       2-3 Maze 10_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
+        Du-mă la floare, mi-e foame! De căte ori
+        trebuie să repeți un bloc?
       2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
+        Poți înlocui răspunsul anterior cu
+        doar două blocuri? (Sugestie: Creează o buclă folosind un bloc "repetă ori".)
       2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |
-        Get me to the pig, now with the Repeat times
-        block!
+        Poți înlocui răspunsul anterior cu
+        doar două blocuri? (Sugestie: Creează o buclă folosind un bloc "repetă ori".)
+      2-3 Maze 12 (old)_instruction: Du-mă la porc, acum cu blocul Repetă ori!
       2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
-      2-3 Maze 13_instruction: Get me to the pig using only two blocks.
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
+        Poți înșocui aceste cinci blocuri cu doar două blocuri?
+        (Sugestie: Creează o buclă folosind un block "repetă ori".)
+      2-3 Maze 13 (old)_instruction: Du-mă la porc, acum cu blocul Repetă până când!
+      2-3 Maze 13_instruction: Du-mă la porc folosind doar două blocuri.
+      2-3 Maze 14 (old)_instruction: Du-mă la porc cu blocul Repetă până când!
       2-3 Maze 14_instruction: |
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 15_instruction: Use two loops to get to the pig using fewer blocks.
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
+        Du-mă la floarea-soarelui! (Unde este acel bloc "repetă 
+        ori", când am nevoie de el?)
+      2-3 Maze 15 (old)_instruction: Du-mă la porc cu blocul Repetă până când!
+      2-3 Maze 15_instruction: Utilizează două bucle pentru a ajunge la porc folosind mai puține blocuri.
+      2-3 Maze 16 (old)_instruction: Du-mă la porc cu blocul Repetă până când!
       2-3 Maze 16 before_instruction: Du-mă la porc.
-      2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
-      2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
+      2-3 Maze 16_instruction: Du-mă la floarea-soarelui. Buclează secvența!
+      2-3 Maze 2_instruction: Acest porc îmi zbârlește penele. Ajută-mă să-l prind!
       2-3 Maze 3_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+        Trasează calea şi du-mă la porcul buclucaș. Evită 
+        TNT-ul sau penele vor zbura!
       2-3 Maze 4_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze 5_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+        Păstrează-ți calmul și ajută-mă să găsesc porcul rău. Altfel
+        s-ar putea să mă supăr!
       2-3 Maze 7_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze 8_instruction: Du-mă la porc!
       2-3 Maze 9_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      2-3 Maze Loops 17_instruction: Get me to the sunflower!
-      2-3 Maze Loops 18_instruction: Get me to the sunflower!
-      2-3 Maze Loops 19_instruction: Get me to the sunflower!
-      2-3 Maze Loops 20_instruction: Get me to the sunflower!
-      2-3 Maze Loops 21_instruction: Get me to the sunflower!
+      2-3 Maze Loops 17_instruction: Du-mă la floarea-soarelui!
+      2-3 Maze Loops 18_instruction: Du-mă la floarea-soarelui!
+      2-3 Maze Loops 19_instruction: Du-mă la floarea-soarelui!
+      2-3 Maze Loops 20_instruction: Du-mă la floarea-soarelui!
+      2-3 Maze Loops 21_instruction: Du-mă la floarea-soarelui!
       2-3 Maze Loops Assessment 1_instruction: |
-        Assessment:  Get me to the sunflower
-        using only 5 blocks! 
+        Evaluare: Du-mă la floarea-soarelui 
+        folosind doar 5 blocuri! 
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
-      2-3 Maze sq10_instruction: Get me to the pig! What blocks got repeated?
-      2-3 Maze sq10v2_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq11_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
+      2-3 Maze sq10_instruction: Du-mă la porc! Ce blocuri au fost repetate?
+      2-3 Maze sq10v2_instruction: Du-mă la porc! Ce blocuri au fost repetate?
+      2-3 maze sq11_instruction: Du-mă la porc! Ce blocuri au fost repetate?
+      2-3 maze sq12_instruction: 'Poți înlocui răspunsul anterior cu o buclă folosinf blocul "repetă ori"?'
       2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
+        Dragă persoană. Eu zombie. Trebuie... să ajung... la floarea-soarelui.
+        Creează o buclă cu blocul "repetă până când".
+      2-3 maze sq14_instruction: Poți ajunge la floarea-soarelui folosind doar patru blocuri?
+      2-3 maze sq15_instruction: Poți ajunge la floarea-soarelui folosind doar cinci blocuri?
       2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
+        Ok, acesta este similar, dar un pic diferit. Poți
+        să faci acest lucru doar în cinci blocuri?
       2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+        Trasează calea și condu-mă la porcul buclucaș. Evită 
+        TNT-ul sau penele vor zbura!
       2-3 Maze sq3_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+        Păstrează-ți calmul și ajută-mă să găsesc porcul rău. Altfel
+        s-ar putea să mă supăr!
       2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
+        Du-mă la porc! De câte ori trebuie să 
+        repeți un bloc?
       2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
+        Poți înlocui răspunsul precedent cu doar două
+        blocuri? (Sugestie: Creează o buclă folosind blocul "repetă ori".)
+      2-3 Maze sq7_instruction: Du-mă la intrusul verde utilizând doar trei blocuri.
       2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
+        Du-mă la porc! (Unde este acel bloc "repetă ori" 
+        atunci când am nevoie de el?)
+      2-3 Maze sq9_instruction: Creează bucle pentru a ajunge la porc folosind mai puține blocuri.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
@@ -358,113 +318,94 @@ ro:
          de grade. Lungimea părții înclinate este dublul înălţimii de 100 pixeli. Finalizează desenul.
       4-5 Artist 8_instruction: Linia de la jumătate pe un teren de fotbal este perpendiculară pe tuşă. Acest câmp are un perimetru de 800 pixeli şi este lung de 240 pixeli. Cât de lat este? Trasează limitele şi linia de la jumătatea drumului.
       4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
+        Desenează cealaltă jumătate pentru că design-ul este simetric. 
+        Triunghiurile sunt echilaterale şi au o lungime de 50 pixeli.
       4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
+        Evaluare: Utilizează o buclă pentru a desena triunghiul 
+        echilateral. Fiecare latură are 300 de pixeli.
+      4-5 Artist For Loops 1_instruction: Așează numerele de la 1 până la 10 în blocuri de lățime şi rulează codul.
       4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
+        Completează blocul "pentru" astfel încât acesta 
+        numără 0, 20, 40, 60, 80... 200.
       4-5 Artist For Loops 12_instruction: |
-        What happens if you reverse the "from"
-        and "to" numbers? Complete the "for" block so that it counts 200, 180,
-        160, 140, 120...0. 
+        Ce se întâmplă dacă inversezi numerele "de la" 
+        şi la" numere? Completează blocul "pentru" astfel încât acesta să numere 200, 180, 160, 140, 120... 0. 
       4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
+        Acest model a fost început fără o buclă "pentru" şi conține prea multe blocuri!  Utilizează un bloc "pentru" ca să finalizezi spirala.  Sugestie: 
+        lungimea ultimei linii este de 250 pixeli.
       4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
+        Cineva a început codul, dar apoi și-a dat seama 
+        că trebuie să existe o modalitate mai rapidă! Utilizează un bloc "pentru" cu scopul de a înlocui blocurile şi de a finaliza spirala triunghiulară. (Sugestie: lungimea ultimei linii este de 300 de pixeli.
       4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.
+        Cineva a început codul, dar apoi și-a dat seama 
+        că trebuie să existe o modalitate mai rapidă! Utilizează un bloc "pentru" cu scopul de a înlocui blocurile şi de a finaliza spirala hexagonală. (Sugestie: lungimea ultimei linii este de 200 de pixeli.
       4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+        Acesta este un bloc "pentru". În loc să tastezi 
+        1,2,3... 10, blocul "pentru" poate repeta blocurile în interiorul acestuia şi enumera 
+        numerele pentru tine. Plasează numărul 10 în interiorul secţiunii "la" a blocului 
+        "pentru".
       4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
+        Cum putem număra de la 1 la 50? Editează 
+        blocul "pentru".
+      4-5 Artist For Loops 4_instruction: 'Completează blocul "pentru" astfel încât acesta numără de la 1 la 10 cu câte 1.'
       4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+        Desenează pătrate cu laturi de 50, 60, 70, 
+        80 și 90 de pixeli. Vei avea nevoie să utilizezi funcţia "desenează un pătrat" de cinci ori.
       4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
+        Desenează aceleași patrate, dar folosește un bloc "numără 
+        cu" pentru a modifica dimensiunile. Plasează blocul "numărător" în funcţia "desenează 
+        un pătrat". Sugestie: Este în categoria variabilelor.
       4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+        Poţi finaliza programul prin plasarea 
+        blocurilor în interiorul unui bloc "pentru" care numără de la 10 la 200 cu câte 10? Poţi 
+        găsi blocul "pentru" în categoria de bucle.
       4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
+        Aceste cercuri au diametrul de 5, 10, 15, 20, 
+        25, 30 şi 35. Desenează cercurile folosind un bloc "pentru".
       4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
+        Desen liber!  Desenează orice te simți inspirat 
+        să creezi.
+      4-5 Artist Functions 1_instruction: Utilizează o buclă de repetare pentru a desena acest triunghi.
       4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
+        Pune acest cod în interiorul funcţiei 'desenează un fulg de nea' 
+        şi înlocuiește numărul 50 cu parametrul "dimensiune". Funcţia este deja 
+        apelată pentru a crea un fulg de nea, care este de 100 pixeli.
       4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
+        Utilizează funcţia 'desenează un fulg de nea' 
+        pentru a crea fulgi de diferite dimensiuni.  Indiciu: primul fulg de nea are 25 în lungime 
+        şi fiecare fulg de zăpadă este de două ori mai mare decât cel dinainte.
       4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
+        Această funcţie "desenează un hexagon" foloseşte 
+        funcţia "desenează un triunghi". Completează funcţia hexagonului. (Indiciu: un 
+        hexagon are 6 laturi, fiecare cu lungimea de 100 pixeli)
       4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
+        Completează funcţia "desenează valuri".  Fiecare 
+        val este alcătuit dintr-un val Superior şi un val inferior.   Sugestie: Desenează 5 valuri 
+        albastre.
       4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+        Aici sunt date unele funcţii care să 
+        deseneze planete, stele, rachete şi roboţi. Folosește-le oricum dorești pentru a crea 
+        poze pe care le poţi distribui prietenilor tăi.
       4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
+        Aici, noi ți-am pus la dispoziție 
+        mai multe funcţii.  Folosește-le oricum dorești în interiorul uneia sau mai multor bucle 
+        pentru a crea fotografii pe care le poți distribui prietenilor tăi. Fă clic pe 'Rulează' pentru a vedea 
+        un exemplu.
       4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
+        Evaluare: Utilizează funcţia "desenează 
+        un pătrat" pentru a crea pătratele.  Pătratele sunt de 50, 100 şi 150 
+        de pixeli.
       4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: |
-        Now create the functions "draw a medium
-        triangle" and "draw a large triangle". The "draw a small triangle" function
-        is done for you. The triangles have side lengths of 50 (small), 100 (medium),
-        and 150 (large). 
+        Acum pune aceste blocuri într-o funcţie nouă, 
+        numită "desenează un triunghi mic" şi apeleaz-o.
+      4-5 Artist Functions 2b_instruction: 'Acum creează o funcţie numită "desenează un triunghi mic" folosind blocurile furnizate.'
+      4-5 Artist Functions 3_instruction: 'Acum creează funcţiile "desenează un triunghi mediu" şi "desenează un triunghi mare". Funcţia "desenează un triunghi mic" este făcută pentru tine. Triunghiurile au laturi cu lungimea de 50 (mici), 100 (mediu) şi 150 (mare). '
       4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
+        Această funcție nouă "desenează un triunghi" 
+        are un parametru şi poate face munca a tuturor celor trei funcţii dinainte. Desenează 
+        aceleaşi triunghiuri folosind această nouă funcţie.
+      4-5 Artist Functions 5_instruction: 'Poţi modifica funcţia "desenează un triunghi" într-o funcţie "desenează un pătrat" pentru a schimba desenul?'
+      4-5 Artist Functions 6_instruction: 'Utilizează funcțiile "desenează un pătrat" şi "desenează un triunghi" pentru a desena o casă. (Sugestie: laturile pătratului sunt de 200 de pixeli)'
       4-5 Artist Functions 6b_instruction: |
         Use the draw a square and triangle functions
         along with other blocks to create a house by adding them to the 'draw a house"
@@ -600,7 +541,7 @@ ro:
       4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
       4-5 Bee Debugging 3_instruction: Find the errors and fix them.
       4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
-      4-5 Bee Debugging 5_instruction: "Something isn't right here..."
+      4-5 Bee Debugging 5_instruction: Ceva nu este în regulă aici...
       4-5 Bee Debugging 6_instruction: |
         The purple flower has an unknown amount of
         nectar. Fix the blocks to get all of the nectar from the flower.
@@ -609,7 +550,7 @@ ro:
         This function is fine, but it isn't used
         properly.
       4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
+      4-5 Bee Debugging Assessment 1_instruction: 'Evaluare: Repară codul.'
       4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
       4-5 Bee Nested Loops 2_instruction: |
         Collect all of the nectar from each flower.
@@ -644,7 +585,7 @@ ro:
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: Poți ajunge la floarea-soarelui folosind doar patru blocuri?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
@@ -775,6 +716,7 @@ ro:
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1196,10 +1138,6 @@ ro:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      course 1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both
-        the jump and draw blocks
-      course 1 artist 1 level 9_instruction: Draw this using three lines
       Course 2 Bee Loops 1_instruction: |
         Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? 
@@ -1515,11 +1453,10 @@ ro:
         Use the variable "sides" to control
         how many times this loop gets run.
       Course 4 Artist Vars 6_instruction: |
-        Hmmm, I tried changing the "sides" variable
-        to 4 from the code in the last puzzle, but it's still drawing a triangle.
-        Can you use the "sides" variable (along with a math block) to make sure
-        that I turn the right amount too? Hint: 360 divided by the number of sides
-        will give you the number of degrees to turn.
+        I changed the sides variable to 4 from
+        the code in the last puzzle, can you use the sides variable (along with a
+        math block) to make sure that I turn the right amount? To draw a regular polygon
+        I should turn 360 / sides each time.
       Course 4 Artist Vars 7_instruction: |
         Can you modify the "sides" variable
         to help me draw this hexagon?
@@ -1531,8 +1468,8 @@ ro:
         this time) 
       Course 4 Artist Vars 9_instruction: |
         Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Replace the number
-        3 with the "sides" variable, and use the "set sides to" block.
+        variable instead of a fixed number to draw a triangle. Use the "set sides
+        to" block.
       Course 4 Bee 1_instruction: |
         The bee can't tell if this is a flower or a honeycomb.
         Check first if it is a flower or a honeycomb, and then only gather nectar
@@ -2584,8 +2521,9 @@ ro:
         let's try it again this time let's make this cool design with with 60 pixel
         hexagon's.
       NEW Course 4 Artist Vars 4_instruction: |
-        Let's try it again. Now, let's make
-        this cool design with with 60 pixel hexagons.
+        Let's try it again. Can you set the
+        length variable to make this cool design with with hexagons? Hint: It's a
+        multiple of 10.
       NEW Course 4 Artist Vars 6_instruction: |
         Can you help me draw this cool pattern
         by dropping in the "length" variable block into the correct places?
@@ -2781,25 +2719,21 @@ ro:
         always see at least a bit of him, so lets write some functions that help make
         sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
-        and return true if he's inside the left boundary of the yard (x > -25). If
-        your function works, Sam shouldn't be able to leave the yard from the left
-        side.
+        and return true if he's completely visible on screen. If your function works,
+        Sam shouldn't be able to leave the yard from the left side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the safe-right?
-        function to make sure Sam can't go past x = 425.
+        on the left, now let's do the same thing on the right. Complete the safe-right?
+        function to make sure Sam can't go off the right side of the screen.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
         from going either direction? Try using the AND block to program the function
         on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (425) or bottom (-25) either? Test your program
-        by moving Sam as far as he can go in all four directions. Click Finish when
-        Sam is completely protected.
+        Free Play: Awesome, we've kept Sam safe
+        on the left and right! Use this free play stage to experiment with your functions
+        and further improve onscreen?
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"

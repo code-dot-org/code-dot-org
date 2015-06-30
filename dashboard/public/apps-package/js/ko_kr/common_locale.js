@@ -292,8 +292,11 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_whileBlock_description":function(d){return "Repeat something while a condition is true"},
 "dropletBlock_whileBlock_signatureOverride":function(d){return "만약 반복"},
 "emptyBlocksErrorMsg":function(d){return "\"반복\" 블럭이나 \"조건\" 블럭이 실행되려면, 그 안에 다른 블럭들이 있어야 합니다. 블럭 안쪽에 필요한 블럭들을 끼워 맞춰 연결하세요."},
+"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
+"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
 "emptyFunctionBlocksErrorMsg":function(d){return "함수 블럭 안에는 다른 블럭을 넣어주어야 합니다."},
 "emptyFunctionalBlock":function(d){return "입력값을 넣지 않은 블럭이 있습니다."},
+"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."},
 "end":function(d){return "끝"},
 "errorEmptyFunctionBlockModal":function(d){return "함수 정의 안에 블럭을 추가해야 합니다. \"편집\"을 클릭한 후 녹색 블럭 안으로 블럭을 드래그하세요."},
 "errorIncompleteBlockInFunction":function(d){return "함수 정의 안에 빠진 블럭을 채우려면 \"편집\"을 클릭하세요."},
@@ -365,7 +368,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "비디오 보기"},
 "when":function(d){return "~할 때"},
 "whenRun":function(d){return "실행하면"},
-"workspaceHeaderShort":function(d){return "작업 영역: "},
-"emptyBlockInFunction":function(d){return "The function "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyBlockInVariable":function(d){return "The variable "+common_locale.v(d,"name")+" has an unfilled input."},
-"emptyTopLevelBlock":function(d){return "There are no blocks to run. You must attach a block to the "+common_locale.v(d,"topLevelBlockName")+" block."}};
+"workspaceHeaderShort":function(d){return "작업 영역: "}};

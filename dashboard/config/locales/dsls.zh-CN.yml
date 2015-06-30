@@ -164,19 +164,6 @@
         Instructions: 说明
         Match the puzzles to the blocks: 匹配拼圖塊
         Maze Match: 迷宫比赛
-      Coordinate Matching:
-        (250, 400): (250, 400)
-        (320, 240): (320, 240)
-        (480, 100): (480, 100)
-        (500, 240): (500, 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
-          1/exercise_3_ninjacat.png
-        Cloud: 云服务
-        Coordinates of Ninjacat: Ninjacat 的坐标
-        Dog: 小狗
-        Match each character with its correct coordinate!: 匹配每一个字符与其正确的坐标！
-        Ninjacat: Ninjacat
-        Ruby: Ruby
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -280,72 +267,6 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: 匹配地图和算法让Flurb取到花.
         Matching: 匹配
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): (+ (- (/ 4 7) 9) 3)
-        (+ (- 9 3) (* 4 7)): (+ (- 9 3) (* 4 7))
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit
-          1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
-          1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit
-          1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit
-          1/Exercise_5_question_4.png
-        Converting Circles to Code: 将圆转换为代码
-        Match each circle of evaluation with the correct code!: 匹配每个评价圈与其正确的代码 ！
-      Match example to contract:
-        (big-string? "gigantic" 5): （大字符串？"硕大无比"5）
-        (bigger-string "big" "little"): (大字符串"大""小")
-        (find-price "cheese"): (查找价格"奶酪")
-        (find-price 4): (查找价格 4)
-        (small-star "blue"): (小星"蓝色")
-        (small-star "solid"): (小星"固体")
-        Contracts of Functions: 功能合同
-        Match each example with the correct contract!: 配合每个例子与其正确的合同!
-        'big-string: string number -> boolean': 大字符串：串号 -> boolean
-        'bigger-string: string string -> string': 大字符串： 字符串 字符串 -> 字符串
-        'find-price: number -> number': 查找价格：数字-> 数字
-        'find-price: string -> number': 查找价格：字符串 -> 数字
-        'small-star: string -> image': 小星： 字符串-> 图像
-      Match math to circles:
-        (2 + 3 * 5) / 2: (2 + 3 * 5) / 2
-        (2 + 3) * 5 / 2: (2 + 3) * 5 / 2
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit
-          1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit
-          1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit
-          1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit
-          1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): 2 + 3 * (5 / 2)
-        Converting Math to Circles of Evaluation: 转换为数学评价圆
-        Match each mathematical expression with the correct circle of evaluation!: 匹配每个数学表达式和其正确的评价圈！
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): (* (+ 15 3) (- 72 19))
-        (+ (- (* 3 15) 72) 19): (+ (- (* 3 15) 72) 19)
-        (+ (3 x 15) (- 72 19)): (+ (3 x 15) (- 72 19))
-        (- (+ 72 3) (* 19 15)): (- (+ 72 3) (* 19 15))
-        (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
-        3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
-        3 x 15 - 72 + 19: 3 x 15 - 72 + 19
-        72 + 3 - 19 x 15: 72 + 3 - 19 x 15
-        Converting Math to Code: 将数学转换为代码
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: 匹配每个数学表达式与正确的代码。使用评价圈来帮助您得到答案
-          ！
-      parts of contract:
-        (yearbook-picture "Sally" 1992): (年鉴图片"莎莉"1992年)
-        Here is a contract for a new function. Match each item with the word that describes it.: 这里是一个新的函数的合同。匹配每个项目和描述它的词。
-        Parts of a Contract: 合同的部分
-        domain: 域
-        example: 示例
-        function name: 函数名称
-        image: 图片
-        range: 范围
-        string numer: 字符串号码
-        yearbook-picture: 年鉴图片
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -722,21 +643,6 @@
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
           lines of code should be removed so the program will work as intended? Select
           <u>two</u> answers
-      Circle to code:
-        (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): (+ 5 (* (- 6 8) 4))
-        (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
-        (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
-        /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
-        Code from Circle: 圆圈的代码
-        Pick the Racket code that comes from the circle of evaluation!: 选择从分析圆圈所得到的球拍代码。
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: The unicorn's x value increases
-        The unicorn's y value changes: The unicorn's y value changes
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -915,58 +821,6 @@
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 这些男孩中的一个是
           <b>司机</b>。一个 <b>帮手</b>。
         This time, which boy is the <large>driver</large>?: 这一次，哪个男孩是 <large>司机</large>？
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
-        (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
-        (/ (* 8 2) (+ 5 6)): (/ (* 8 2) (+ 5 6))
-        (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
-        (5 + 6) * 8 / 2: (5 + 6) * 8 / 2
-        0: 挑选球拍代码中与给定数学表达式匹配的部分。画一个数值的周期图去帮助你找到正确的答案。
-        1: 挑选球拍代码中与给定数学表达式匹配的部分。画一个数值的周期图去帮助你找到正确的答案。
-        Racket Code for Math Expressions: 球拍代码的数学表达式
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4
-          6))
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
-          2)
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7))
-          2)
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 × 3 × 7 + 2
-        0: 挑选球拍代码中与给定数学表达式匹配的部分。画一个数值的周期图去帮助你找到正确的答案。
-        1: 挑选球拍代码中与给定数学表达式匹配的部分。画一个数值的周期图去帮助你找到正确的答案。
-        Racket Code for Math Expressions: 球拍代码的数学表达式
-      Multi Define Funcs 1:
-        3: '3'
-        What is the name of this function?: What is the name of this function?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Define Funcs 2:
-        3: '3'
-        What is the name of the parameter?: What is the name of the parameter?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Define Funcs 3:
-        5: '5'
-        6: '6'
-        What should g(2) return?: What should g(2) return?
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
-          1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
-          1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
-          1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
-          1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: 字符串和图像多项选择
-        Which of these Evaluation Blocks will draw the image on the left?: Which of
-          these Evaluation Blocks will draw the image on the left?
-        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: 选择最佳答案。
@@ -975,14 +829,6 @@
         left, right, top: 左，右，上
         random: 随机
         top, left, right: 上，左，右
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): (长方形 (+ 8 2) (- 7 5) "实心" "红色")
-        (rectangle (+ 8 2) (- 7 5) solid red): (长方形 (+ 8 2) (- 7 5) 实心 红色)
-        (rectangle (10) (2) "solid" "red"): (长方形 (10) (2) "实心" "红色")
-        (rectangle 10 2 "solid" "red"): (长方形 10 2 "实心" "红色")
-        /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
-        Code from Circle: 圆圈的代码
-        Pick the Racket code that comes from the circle of evaluation!: 选择从分析圆圈所得到的球拍代码。
       test multi text:
         Fred Flintstone: Fred 打火石
         George Jetson: 乔治 · 杰特森
@@ -991,11 +837,3 @@
         Presidents: 总统
         This multiple choice is all about the presidents of the United States.: 这道选择题是关于美国总统的。
         Who was the first president of the USA?: 美国第一任总统是谁？
-      valid contracts multi:
-        Pick the best answer to the question.: 选择最佳答案
-        Valid Contracts: 有效合约
-        Which of these is a valid contract for the function circle?: 哪个是圆圈函数的有效合约？
-        'circle: 5 solid blue -> circle ': '圆圈：5 实心 蓝色 -> 圆圈 '
-        'circle: number string string -> image': 圆圈：数字 字符串 字符串 -> 图像
-        'circle: number string string -> shape': 圆圈：数字 字符串 字符串 -> 形状
-        'circle: size style color -> image': 圆圈：大小 风格 颜色 -> 图像

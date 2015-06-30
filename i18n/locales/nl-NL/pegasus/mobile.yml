@@ -360,8 +360,10 @@ nl-NL:
   dashboard_students_reset_password: Wachtwoord resetten
   dashboard_students_share_section: 'Delen van de inlogpagina van de groep met uw leerlingen:'
   dashboard_students_print_info: Print de kaarten met inloggegevens van uw leerlingen.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Geheime Foto
   dashboard_students_reset_picture: 'U kan  op elk moment de geheime afbeelding van een student  resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen. Een nieuwe geheime afbeelding zal worden gegenereerd welke  gebruikt moet worden wanneer ze inloggen.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Wachtwoord
   dashboard_students_reset_word: |
     U kan op elk moment de wachtwoord van een student  resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen. Een nieuwe 

@@ -28,7 +28,7 @@ var ScreenProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')} />
         <ImagePickerPropertyRow
           desc={'image'}
-          initialValue={element.dataset.canonicalImageUrl || ''}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'screen-image')} />
       </div>);
   }
@@ -53,5 +53,11 @@ module.exports = {
     element.style.zIndex = 0;
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'screen-image', url);
+    }
   }
 };

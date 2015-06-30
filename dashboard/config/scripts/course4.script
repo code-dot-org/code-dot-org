@@ -1,6 +1,6 @@
 title 'Course 4'
 description_short "Students taking Course 4 should have already taken Courses 2 and 3."
-description_audience "Ages 10+ (after Course 3)"
+description_audience "Ages 10-18"
 hidden 'false'
 
 stage 'Unplugged: Tangrams'
@@ -54,7 +54,9 @@ level 'Course 4 Artist Vars 10'
 level 'Course 4 Artist Vars 11'
 level 'Course 4 Artist Vars 12'
 level 'Course 4 Artist Vars 13'
+level 'Course 4 Variables Assessment'
 level 'Course 4 Artist Vars 14'
+level 'Course 4 Artist Inspire'
 
 stage 'Play Lab: Variables'
 level 'Course 4 Play Lab Vars 1'

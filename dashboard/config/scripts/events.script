@@ -1,6 +1,7 @@
 id '4'
 title 'Events'
-description ""
+description 'Events'
+description_short 'Events'
 hidden 'true'
 
 stage 'Bounce'
