@@ -444,7 +444,7 @@ module.exports = function(grunt) {
 
       var data = grunt.file.read(file);
       var digest = crypto.createHash('md5').update(data).digest('hex');
-      var oldName = path.relative('build/package/js', file);
+      var oldName = path.relative('build/package', file);
       var newName = oldName.replace(/\.js$/, '-' + digest + '.js');
       fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
       manifest[oldName] = newName;
