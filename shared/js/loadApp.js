@@ -11,7 +11,7 @@ function loadSource(name) {
   return function () {
     var deferred = new $.Deferred();
     document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + 'js/' + tryDigest(name + '.js')
+      src: appOptions.baseUrl + tryDigest('js/' + name + '.js')
     }).on('load', function () {
       deferred.resolve();
     })[0]);

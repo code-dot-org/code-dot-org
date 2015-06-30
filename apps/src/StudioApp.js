@@ -504,8 +504,7 @@ StudioApp.prototype.assetUrl_ = function (path) {
     throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
-  var digestedPath = digestManifest[path.slice(3)];
-  return this.BASE_URL + (digestedPath ? 'js/' + digestedPath : path);
+  return this.BASE_URL + (digestManifest[path] || path);
 };
 
 /**
