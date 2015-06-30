@@ -409,15 +409,32 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   var self = this;
   this.modalBlockSpaceEditor =
       new Blockly.BlockSpaceEditor(this.container_,
-        goog.bind(this.calculateMetrics_, this),
+
+        // getMetrics():
+        function() {
+          // `this` is the new BlockSpaceEditor
+          var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+          metrics.absoluteLeft +=
+              FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
+          metrics.absoluteTop += self.getBlockSpaceEditorToScreenTop_();
+          metrics.viewWidth -=
+              (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
+          metrics.viewHeight -=
+              FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + self.getWindowBorderChromeHeight();
+          return metrics;
+        },
+
+        // setMetrics():
         function (xyRatio) {
-          // `this` is the blockspace editor
+          // `this` is the new BlockSpaceEditor
           Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
           if (self.contractDiv_) {
             self.positionClippingRects_();
             self.positionSizeContractDom_(this);
           }
         },
+
+        // hideTrashRect:
         true);
 
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
@@ -514,24 +531,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
       goog.events.EventType.RESIZE, this, this.position_);
 
   this.modalBlockSpaceEditor.svgResize();
-};
-
-/**
- * @returns {Function} function which returns the function editor's
- *  blockSpace metrics
- * @private
- */
-Blockly.FunctionEditor.prototype.calculateMetrics_ = function() {
-  // Define a special getMetrics function for our block space editor
-  var metrics = Blockly.mainBlockSpace.getMetrics();
-  metrics.absoluteLeft +=
-    FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-  metrics.absoluteTop += this.getBlockSpaceEditorToScreenTop_();
-  metrics.viewWidth -=
-    (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
-  metrics.viewHeight -=
-    FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + this.getWindowBorderChromeHeight();
-  return metrics;
 };
 
 /**
