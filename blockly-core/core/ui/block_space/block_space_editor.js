@@ -330,7 +330,7 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
   var blockSpaceInnerHeight = blockSpaceInnerBottom - blockSpaceInnerTop;
 
   // Check every block, and bump if needed.
-  this.blockSpace.getTopBlocks(false).forEach(function (block) {
+  this.blockSpace.getTopBlocks(false, false).forEach(function (block) {
     if (!block.isVisible()) {
       return;
     }
