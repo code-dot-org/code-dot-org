@@ -80,7 +80,7 @@ var DropdownProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: DropdownProperties,
+  PropertyTab: DropdownProperties,
 
   create: function() {
     var element = document.createElement('select');

@@ -66,7 +66,7 @@ var RadioButtonProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: RadioButtonProperties,
+  PropertyTab: RadioButtonProperties,
 
   create: function() {
     var element = document.createElement('input');

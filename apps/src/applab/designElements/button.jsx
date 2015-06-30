@@ -86,7 +86,7 @@ var ButtonProperties = React.createClass({
 });
 
 module.exports = {
-  PropertyTable: ButtonProperties,
+  PropertyTab: ButtonProperties,
   create: function () {
     var element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));

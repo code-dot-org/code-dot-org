@@ -44,7 +44,7 @@ var DesignProperties = module.exports = React.createClass({
     }
 
     var elementType = elementLibrary.getElementType(this.props.element);
-    var propertyClass = elementLibrary.getElementPropertyTable(elementType);
+    var propertyClass = elementLibrary.getElementPropertyTab(elementType);
 
     var propertiesElement = React.createElement(propertyClass, {
       element: this.props.element,
