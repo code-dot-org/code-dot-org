@@ -423,6 +423,10 @@ Applab.getHtml = function () {
   return Applab.levelHtml;
 };
 
+Applab.setLevelHtml = function (html) {
+  Applab.levelHtml = designMode.addScreenIfNecessary(html);
+};
+
 Applab.onTick = function() {
   if (!Applab.running) {
     return;
@@ -465,6 +469,15 @@ Applab.initReadonly = function(config) {
   studioApp.initReadonly(config);
 };
 
+function extendHandleClearPuzzle() {
+  var orig = studioApp.handleClearPuzzle.bind(studioApp);
+  studioApp.handleClearPuzzle = function (config) {
+    orig(config);
+    Applab.setLevelHtml(config.level.startHtml || '');
+    studioApp.resetButtonClick();
+  };
+}
+
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -472,6 +485,7 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+  extendHandleClearPuzzle();
 
   // Pre-populate asset list
   if (window.dashboard && dashboard.project.getCurrentId()) {
@@ -601,7 +615,7 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
-  Applab.levelHtml = designMode.addScreenIfNecessary(level.levelHtml || "");
+  Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
   studioApp.init(config);
 
