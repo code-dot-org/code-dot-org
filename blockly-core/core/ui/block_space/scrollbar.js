@@ -226,6 +226,9 @@ Blockly.ScrollbarSvg.prototype.resize = function(opt_metrics) {
       return;
     }
   }
+
+  var blockSpaceSize = this.blockSpace_.getScrollableSize(hostMetrics);
+
   /* hostMetrics is an object with the following properties.
    * .viewHeight: Height of the visible rectangle,
    * .viewWidth: Width of the visible rectangle,
@@ -247,9 +250,9 @@ Blockly.ScrollbarSvg.prototype.resize = function(opt_metrics) {
       // Only show the scrollbar if needed.
       // Ideally this would also apply to scrollbar pairs, but that's a bigger
       // headache (due to interactions with the corner square).
-      this.setVisible(outerLength < hostMetrics.maxViewableX);
+      this.setVisible(outerLength < blockSpaceSize.width);
     }
-    this.ratio_ = outerLength / hostMetrics.maxViewableX;
+    this.ratio_ = outerLength / blockSpaceSize.width;
     if (this.ratio_ === -Infinity || this.ratio_ === Infinity ||
         isNaN(this.ratio_)) {
       this.ratio_ = 0;
@@ -275,9 +278,9 @@ Blockly.ScrollbarSvg.prototype.resize = function(opt_metrics) {
       outerLength -= Blockly.Scrollbar.scrollbarThickness;
     } else {
       // Only show the scrollbar if needed.
-      this.setVisible(outerLength < hostMetrics.maxViewableY);
+      this.setVisible(outerLength < blockSpaceSize.height);
     }
-    this.ratio_ = outerLength / hostMetrics.maxViewableY;
+    this.ratio_ = outerLength / blockSpaceSize.height;
     if (this.ratio_ === -Infinity || this.ratio_ === Infinity ||
         isNaN(this.ratio_)) {
       this.ratio_ = 0;

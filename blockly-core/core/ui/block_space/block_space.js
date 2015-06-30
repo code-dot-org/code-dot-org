@@ -767,3 +767,43 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   trashcanElement.style["opacity"] = trashIntensity;
   trashcanElement.style["display"] = trashcanDisplay;
 };
+
+/**
+ * Gives the logical size of the blockly workspace, currently defined as the
+ * distance from the block-space origin to the far edge of the farthest block
+ * in each scrollable direction (the workspace expands down and/or right to
+ * accommodate content), never to be smaller than the blockspace viewport size.
+ *
+ * Gets used in calculations for scrolling and block bumping.
+ *
+ * @param {Object} metrics object with information about view and content
+ *        dimensions, e.g. output of
+ *        Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_
+ * @param {number} metrics.contentLeft - distance from x=0 to left edge of
+ *        bounding box around all blocks in the blockspace.
+ * @param {number} metrics.contentWidth - width of the bounding box around all
+ *        blocks in the blockspace.
+ * @param {number} metrics.viewWidth - amount of horizontal blockspace that can
+ *        be displayed at once.
+ * @param {number} metrics.contentTop - distance from y=0 to top edge of bounding
+ *        box around all blocks in the blockspace.
+ * @param {number} metrics.contentHeight - height of the bounding box around all
+ *        blocks in the blockspace.
+ * @param {number} metrics.viewHeight - amount of vertical blockspace that can be
+ *        displayed at once.
+ * @returns {{width: number, height: number}}
+ */
+Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
+  var scrollbarPair = this.scrollbarPair;
+  var canScrollHorizontally = scrollbarPair && scrollbarPair.canScrollHorizontally();
+  var canScrollVertically = scrollbarPair && scrollbarPair.canScrollVertically();
+
+  return {
+    width: canScrollHorizontally ?
+        Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) :
+        metrics.viewWidth,
+    height: canScrollVertically ?
+        Math.max(metrics.contentTop + metrics.contentHeight, metrics.viewHeight) :
+        metrics.viewHeight
+  };
+};
