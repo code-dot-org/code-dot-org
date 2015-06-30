@@ -1,0 +1,27 @@
+name 'sciPD2b reflection'
+title 'Reflection on Phase 2'
+description 'description here'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Stay in Touch!
+
+
+<br/>
+Your Summer PD may be over, but this isn't the end of your support for teaching CS in Science. During the school year you'll recieve two separate days of in person PD as well as some additional online support. As you leave this phase of your professional development, take a moment to reflect on what you've learned and what you have yet to really master. With that in mind, head back to the forum and share both the things that excite you, and the elements of teaching CS that you still need some support with. We'll use this information to help craft the followup PD offerings to better fit your needs.
+<br/>
+
+
+<a href="http://discourse.code.org/t/reflecting-on-summer-cs-in-science-pd/146" target="blank"><button class="plc">Reflect on your PD >></button></a>
+<br/><br/>
+
+Now that you've completed the second phase of PD, please take a few minutes to give us your feedback on the material by completing this post-survey. We really appreciate you taking the time to let us know what we can do to support you better! (If you are having trouble viewing the form, click this [link](https://docs.google.com/forms/d/1Ras8L-5R_6BY2u1SZBrU2-ax8ByhSqXcgf9iHUvkUq4/viewform?usp=send_form) to access the form directly.)
+
+<iframe src="https://docs.google.com/forms/d/1Ras8L-5R_6BY2u1SZBrU2-ax8ByhSqXcgf9iHUvkUq4/viewform?embedded=true" width="760" height="500" frameborder="2" marginheight="0" marginwidth="0">Loading...</iframe>
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
