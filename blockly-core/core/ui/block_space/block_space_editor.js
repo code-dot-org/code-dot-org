@@ -317,12 +317,14 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
     return;
   }
 
+  var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
+
   // Calculate bounds of view, including bump padding
   var blockSpaceInnerTop = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
   var blockSpaceInnerLeft = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
-  var blockSpaceInnerBottom = metrics.maxViewableY
+  var blockSpaceInnerBottom = blockSpaceSize.height
     - Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM;
-  var blockSpaceInnerRight = metrics.maxViewableX
+  var blockSpaceInnerRight = blockSpaceSize.width
     - Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT;
   var blockSpaceInnerWidth = blockSpaceInnerRight - blockSpaceInnerLeft;
   var blockSpaceInnerHeight = blockSpaceInnerBottom - blockSpaceInnerTop;
@@ -597,6 +599,7 @@ Blockly.BlockSpaceEditor.prototype.onMouseMove_ = function(e) {
     var mouseDx = e.clientX - this.startDragMouseX; // + if mouse right
     var mouseDy = e.clientY - this.startDragMouseY; // + if mouse down
     var metrics = this.startDragMetrics;
+    var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
 
     // New target scroll (x,y) offset
     var newScrollX = this.startScrollX + mouseDx; // new pan-right (+) position
@@ -607,8 +610,8 @@ Blockly.BlockSpaceEditor.prototype.onMouseMove_ = function(e) {
     newScrollY = Math.min(newScrollY, 0);
 
     // Don't allow panning past bottom or right
-    var furthestScrollAllowedX = -metrics.maxViewableX + metrics.viewWidth;
-    var furthestScrollAllowedY = -metrics.maxViewableY + metrics.viewHeight;
+    var furthestScrollAllowedX = -blockSpaceSize.width + metrics.viewWidth;
+    var furthestScrollAllowedY = -blockSpaceSize.height + metrics.viewHeight;
     newScrollX = Math.max(newScrollX, furthestScrollAllowedX);
     newScrollY = Math.max(newScrollY, furthestScrollAllowedY);
 
@@ -825,15 +828,6 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   var viewHeight = svgSize.height;
   var viewTop = -this.blockSpace.yOffsetFromView;
 
-  var scrollbarPair = this.blockSpace.scrollbarPair;
-  var canScrollHorizontally = scrollbarPair && scrollbarPair.canScrollHorizontally();
-  var canScrollVertically = scrollbarPair && scrollbarPair.canScrollVertically();
-
-  var maxViewableX = canScrollHorizontally ?
-      Math.max(blockBox.x + blockBox.width, viewWidth) : viewWidth;
-  var maxViewableY = canScrollVertically ?
-      Math.max(blockBox.y + blockBox.height, viewHeight) : viewHeight;
-
   return {
     viewHeight: viewHeight,
     viewWidth: viewWidth,
@@ -843,8 +837,6 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
     contentWidth: blockBox.width,
     contentTop: blockBox.y,
     contentLeft: blockBox.x,
-    maxViewableX: maxViewableX,
-    maxViewableY: maxViewableY,
     absoluteTop: 0,
     absoluteLeft: absoluteLeft
   };
@@ -881,11 +873,12 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
     throw "Attempt to set editor's scroll position without scrollbars.";
   }
   var metrics = this.getBlockSpaceMetrics_();
+  var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
   if (goog.isNumber(xyRatio.x)) {
-    this.blockSpace.xOffsetFromView = -metrics.maxViewableX * xyRatio.x;
+    this.blockSpace.xOffsetFromView = -blockSpaceSize.width * xyRatio.x;
   }
   if (goog.isNumber(xyRatio.y)) {
-    this.blockSpace.yOffsetFromView = -metrics.maxViewableY * xyRatio.y;
+    this.blockSpace.yOffsetFromView = -blockSpaceSize.height * xyRatio.y;
   }
   var translation = 'translate(' +
     (this.blockSpace.xOffsetFromView + metrics.absoluteLeft) + ',' +
