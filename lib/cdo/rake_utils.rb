@@ -34,7 +34,7 @@ module RakeUtils
     status, output = system__ command
     unless status == 0
       error = RuntimeError.new("'#{command}' returned #{status}")
-      raise error, CDO.filter_backtrace([output])
+      raise error, error.message, CDO.filter_backtrace([output])
     end
   end
 
