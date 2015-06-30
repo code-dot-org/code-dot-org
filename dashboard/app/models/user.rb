@@ -581,6 +581,15 @@ SQL
     save!
   end
 
+  def completed?(script)
+    user_script = user_scripts.where(script_id: script.id).first
+    user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)
+  end
+
+  def working_on?(script)
+    working_on_scripts.include?(script)
+  end
+
   def working_on_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
