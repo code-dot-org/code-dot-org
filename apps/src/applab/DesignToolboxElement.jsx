@@ -59,8 +59,27 @@ module.exports = React.createClass({
         if (elementType === library.ElementType.SCREEN) {
           return $(this).clone();
         }
+        setTimeout(function () {
+          console.log('can break here if you want');
+        }, 1000);
         var element = library.createElement(elementType, 0, 0, true);
-        return element;
+        element.style.position = 'static';
+
+        var div = document.getElementById('divApplab');
+        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+
+        var parent = $('<div/>').addClass('draggingParent');
+
+        parent[0].style.transform = "scale(" + xScale + ", " + yScale + ")";
+
+        // TODO
+        // Dragged elements have a white background whereas drop + drag is transparent
+        // Radio button/checkbox/text are all offset from cursor
+        // When dropping all elements, it actually gets dropped a few pixels off
+        // from where it was when released
+
+        return parent.append(element)[0];
       },
       appendTo: '#codeApp',
       revert: 'invalid',
