@@ -435,7 +435,13 @@ module.exports = function(grunt) {
     var crypto = require('crypto');
     var fs = require('fs');
     var manifest = {};
+    var outFile = this.options().out;
     this.filesSrc.forEach(function (file) {
+
+      if (file === outFile) {
+        return;
+      }
+
       var data = grunt.file.read(file);
       var digest = crypto.createHash('md5').update(data).digest('hex');
       var oldName = path.relative('build/package/js', file);
@@ -443,7 +449,7 @@ module.exports = function(grunt) {
       fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
       manifest[oldName] = newName;
     });
-    grunt.file.write(this.options().out, 'var digestManifest = ' + JSON.stringify(manifest));
+    grunt.file.write(outFile, 'var digestManifest = ' + JSON.stringify(manifest));
   });
 
   // Generate locale stub files in the build/locale/current folder
