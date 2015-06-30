@@ -4,6 +4,7 @@
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
+var assets = require('./clientApi').create('/v3/assets');
 var channels = require('./clientApi').create('/v3/channels');
 
 var events = {
@@ -231,10 +232,22 @@ module.exports = {
    * copy as the current project.
    */
   copy: function(newName, callback) {
+    var srcChannel = current.id;
+    var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
     delete current.hidden;
     current.name = newName;
-    this.save(callback);
+    this.save(wrappedCallback);
+  },
+  copyAssets: function (srcChannel, callback) {
+    var destChannel = current.id;
+    assets.copyAll(srcChannel, destChannel, function(err) {
+      if (err) {
+        $('.project_updated_at').text('Error copying files');  // TODO i18n
+        return;
+      }
+      executeCallback(callback);
+    });
   },
   delete: function(callback) {
     var channelId = current.id;

@@ -80,5 +80,11 @@ module.exports = {
     element.setAttribute('src', '');
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'picture', url);
+    }
   }
 };
