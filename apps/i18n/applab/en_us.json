@@ -1,4 +1,5 @@
 {
+  "addEventHeader": "Click a link below to add a function to your code that will be called when the event is triggered.",
   "catActions": "Actions",
   "catControl": "Loops",
   "catEvents": "Events",
