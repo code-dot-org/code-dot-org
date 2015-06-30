@@ -435,11 +435,13 @@
     teus alumnes:'
   dashboard_students_print_info: Imprimeix targetes amb la informació d'accés dels
     teus alumnes.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Imatge secreta
   dashboard_students_reset_picture: Pots restablir la imatge secreta d'un alumne en
     qualsevol moment triant<b>Mostra imatge secreta</b>seguit de<b>Restableix imatge
     secreta</b>. Una nova imatge secreta es generarà per a l'alumne i la podrà utilitzar
     quan inicii sessió.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Paraula secreta
   dashboard_students_reset_word: 'Podeu restablir paraules secretes d''un estudiant
     en qualsevol moment triant <b>Mostra secreta</b> i llavors <b>restaurar secreta</b>.

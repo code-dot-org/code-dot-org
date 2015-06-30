@@ -44,7 +44,7 @@ Micron Business and Economics Building
 <br/>
 Boise, ID 83706
 
-All participants can park for free using the parking coupon below. The Student Union Building is located on the corner of S. Lincoln Ave. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
+All participants can park for free using the parking coupon below. The Micron Business and Economics Building is located on the corner of S. Capitol Blvd. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
 
 [Parking Coupon and Directions to Brady Garage](/files/BSU_Parking_Directions_July13.pdf)
 <br/>
@@ -104,7 +104,8 @@ Micron Business and Economics Building
 <br/>
 Boise, ID 83706
 
-All participants can park for free using the parking coupon below. The Student Union Building is located on the corner of S. Lincoln Ave. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
+
+All participants can park for free using the parking coupon below. The Micron Business and Economics Building is located on the corner of S. Capitol Blvd. and W. University Drive. See below for links to maps to assist you in getting to the workshop.
 
 [Parking Coupon and Directions to Brady Garage](/files/BSU_Parking_Directions_July13.pdf)
 <br/>

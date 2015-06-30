@@ -66,7 +66,7 @@ var ButtonProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <ImagePickerPropertyRow
           desc={'image'}
-          initialValue={element.dataset.canonicalImageUrl || ''}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')} />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -99,5 +99,11 @@ module.exports = {
     element.style.backgroundColor = '#1abc9c';
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'image', url);
+    }
   }
 };

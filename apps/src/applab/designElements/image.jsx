@@ -52,7 +52,7 @@ var ImageProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'top')} />
         <ImagePickerPropertyRow
           desc={'picture'}
-          initialValue={element.dataset.canonicalImageUrl || ''}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')} />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -80,5 +80,11 @@ module.exports = {
     element.setAttribute('src', '');
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'picture', url);
+    }
   }
 };

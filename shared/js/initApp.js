@@ -1,6 +1,6 @@
 // TODO (brent) - way too many globals
 // TODO (brent) - I wonder if we should sub-namespace dashboard
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 window.setupApp = function () {
   var timing = require('./timing');
@@ -86,8 +86,8 @@ window.setupApp = function () {
   };
   $.extend(true, appOptions, baseOptions);
 
-// Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
-// E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
+  // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
+  // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
   (function fixUpFunctions(node) {
     if (typeof node !== 'object') {
       return;
@@ -105,21 +105,9 @@ window.setupApp = function () {
       }
     }
   })(appOptions.level);
-
-  /**
-   * @returns {string} The serialized level source from the editor.
-   */
-  dashboard.getEditorSource = function() {
-    return window.Blockly ?
-        Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
-        :
-    window.Applab && Applab.getCode();
-  };
 };
 
-window.loadApp = require('./loadApp');
-
-window.initApp = function () {
+function initApp() {
   dashboard.project.init();
   window[appOptions.app + 'Main'](appOptions);
-};
+}

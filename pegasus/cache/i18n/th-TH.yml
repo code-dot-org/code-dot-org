@@ -416,9 +416,11 @@
   dashboard_students_reset_password: รีเซ็ตรหัสผ่าน
   dashboard_students_share_section: แชร์หน้าล็อกอินของกลุ่มนี้ให้แก่นักเรียน
   dashboard_students_print_info: พิมพ์ข้อมูลสำหรับใช้ล็อกอินให้แก่นักเรียน
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: รูปภาพลับ
   dashboard_students_reset_picture: คุณอาจตั้งค่ารูปภาพลับของนักเรียนตลอดเวลา โดยเลือก<b>แสดงความลับ</b>แล้ว<b>รีเซ็ตความลับ</b>
     รูปภาพลับใหม่จะถูกสร้างขึ้นสำหรับนักเรียนที่จะใช้ เมื่อพวกเขาเข้าสู่ระบบ
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: ข้อความลับ
   dashboard_students_reset_word: 'คุณสามารถตั้งค่าคำลับของนักเรียนได้ตลอดเวลา โดยเลือก<b>แสดงความลับ</b>แล้ว<b>รีเซ็ตความลับ</b>
     คำลับคู่ใหม่จะถูกสร้างขึ้นสำหรับนักเรียนที่จะใช้ เมื่อพวกเขาเข้าสู่ระบบ '
