@@ -71,8 +71,32 @@ var ImageProperties = React.createClass({
   }
 });
 
+var ImageEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
+  render: function () {
+    var element = this.props.element;
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+      </div>
+    );
+  }
+});
+
+
 module.exports = {
   PropertyTab: ImageProperties,
+  EventTab: ImageEvents,
+
   create: function () {
     var element = document.createElement('img');
     element.style.height = '100px';

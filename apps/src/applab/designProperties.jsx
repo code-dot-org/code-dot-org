@@ -52,6 +52,12 @@ var DesignProperties = module.exports = React.createClass({
       onDepthChange: this.props.onDepthChange
     });
 
+    var eventClass = elementLibrary.getElementEventTab(elementType);
+    var eventsElement = React.createElement(eventClass, {
+      element: this.props.element,
+      handleChange: this.props.handleChange
+    });
+
     var deleteButton;
     var element = this.props.element;
     // First screen is not deletable
@@ -192,7 +198,7 @@ var DesignProperties = module.exports = React.createClass({
           </div>
           <div id="eventsBody"
               style={this.state.selectedTab === TabType.EVENTS ? styles.activeBody : styles.inactiveBody}>
-            coming soon...
+            {eventsElement}
           </div>
         </div>
       </div>

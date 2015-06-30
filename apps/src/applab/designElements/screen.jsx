@@ -34,8 +34,31 @@ var ScreenProperties = React.createClass({
   }
 });
 
+var ScreenEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
+  render: function () {
+    var element = this.props.element;
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+      </div>
+    );
+  }
+});
+
 module.exports = {
   PropertyTab: ScreenProperties,
+  EventTab: ScreenEvents,
+
   create: function () {
     var element = document.createElement('div');
     element.setAttribute('class', 'screen');
