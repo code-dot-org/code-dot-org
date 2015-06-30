@@ -225,6 +225,7 @@
     font-size: 24px;
     font-family: $gotham-bold;
     float: left;
+    width: 94%;
   }
 
   h4 {
@@ -247,6 +248,7 @@
     font-weight:normal;
     color:$charcoal;
     float: left;
+    padding-right: 10px;
   }
 
   .audiencebar {
@@ -266,6 +268,17 @@
     padding-top: 4px;
     padding-bottom:4px;
     margin: 0;
+  }
+
+  .bottombartext {
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+    float: left;
+    padding-left: 10px;
   }
 
   .audience {
