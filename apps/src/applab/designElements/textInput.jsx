@@ -6,6 +6,8 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -80,8 +82,42 @@ var TextInputEvents = React.createClass({
     handleChange: React.PropTypes.func.isRequired
   },
 
+  getChangeEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "change", function(event) {\n' +
+      '  console.log("Text was entered in ' + id + '!");\n' +
+      '  console.log("Entered text: " + getText("' + id + '"));\n' +
+      '});\n';
+    return code;
+  },
+
+  insertChange: function() {
+    this.props.onInsertEvent(this.getChangeEventCode());
+  },
+
+  getInputEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "input", function(event) {\n' +
+      '  console.log("A character was typed in ' + id + '!");\n' +
+      '  console.log("Current text: " + getText("' + id + '"));\n' +
+      '});\n';
+    return code;
+  },
+
+  insertInput: function() {
+    this.props.onInsertEvent(this.getInputEventCode());
+  },
+
   render: function () {
     var element = this.props.element;
+
+    var changeName = 'Change';
+    var changeDesc = 'Triggered when the text input loses focus if the text has changed.';
+
+    var inputName = 'Input';
+    var inputDesc = 'Triggered immediately every time the text input contents change.';
 
     return (
       <div id='eventRowContainer'>
@@ -90,6 +126,15 @@ var TextInputEvents = React.createClass({
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={changeName}
+          desc={changeDesc}
+          handleInsert={this.insertChange}/>
+        <EventRow
+          name={inputName}
+          desc={inputDesc}
+          handleInsert={this.insertInput}/>
       </div>
     );
   }
