@@ -6,13 +6,12 @@
       .clear
       .smalltext= data_t_suffix('script.name', script.name, 'description_short')
       .clear
-    - next_unpassed_progression_level = current_user.next_unpassed_progression_level(script)
-    - if user_script.try(:completed_at) || (user_script && next_unpassed_progression_level.nil?)
+    - if current_user.completed?(script)
       %a{href: script_certificate_image_url(current_user, script)}
         .bottombar.bottombartext.printcertificate{style: 'bottom: 0; position: absolute'}= t('home.print_certificate')
-    - elsif next_unpassed_progression_level
-      %a{href: build_script_level_url(next_unpassed_progression_level)}
+    - elsif current_user.working_on?(script)
+      %a{href: build_script_level_url(current_user.next_unpassed_progression_level(script))}
         .bottombar.bottombartext.continue{style: 'bottom: 0; position: absolute'}= t('continue')
     - else
-      = link_to build_script_level_url(current_user.next_unpassed_progression_level(script)) do
+      %a{href: script_url(script.id)}
         .bottombar.bottombartext.trynow{style: 'bottom: 0; position: absolute'}= t('home.trynow') 
