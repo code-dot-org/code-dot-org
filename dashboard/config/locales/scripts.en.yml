@@ -944,3 +944,12 @@ en:
           Welcome!: Welcome!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
+          description_short: Teach Functional Programming through Algebra
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Welcome!
+          Wrap-Up: Wrap-Up
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules

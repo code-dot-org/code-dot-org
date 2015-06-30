@@ -833,6 +833,10 @@ en:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect
+      sciPD2 StarLogoNova:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 challenge:
+        Most Challenging Module: Most Challenging Module
       sciPD2 discussion:
         Phase 2 Discussion: Phase 2 Discussion
       sciPD2 discussion lesson1:
@@ -851,6 +855,10 @@ en:
         Phase 2 Evaluation: Phase 2 Evaluation
       sciPD2 implement:
         Implementation Planning: Implementation Planning
+      sciPD2 mods:
+        Reviewing the Modules: Reviewing the Modules
+      sciPD2 remember:
+        Thinking Back: Thinking Back
       sciPD2 resource common:
         Phase 2 Common Forms: Phase 2 Common Forms
       sciPD2 resource module1:
@@ -863,6 +871,13 @@ en:
         Phase 2 Module 4: Phase 2 Module 4
       sciPD2 resource reference:
         Phase 2 Guides and Resources: Phase 2 Guides and Resources
+      sciPD2 timeline:
+        Timeline of PD Phases: Timeline of PD Phases
+      sciPD2b intro:
+        Introduction to Phase 2: Introduction to Phase 2
+      sciPD2b reflection:
+        Reflection on Phase 2: Reflection on Phase 2
+        description here: description here
       sciPD3 intro:
         Welcome to Phase 3: Welcome to Phase 3
       sciPD3 logistics:
@@ -875,6 +890,8 @@ en:
         Phase 3 Module 3: Phase 3 Module 3
       sciPD3 resource module4:
         Phase 3 Module 4: Phase 3 Module 4
+      sciencePD2b remixing:
+        Remixing in StarLogo Nova: Remixing in StarLogo Nova
       test demo level:
         demo description: demo description
         demo title: demo title
