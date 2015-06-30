@@ -7,8 +7,9 @@ module RakeUtils
 
   def self.system__(command)
     puts command
-    Kernel::system "#{command} 2>&1"
-    $?.exitstatus
+    output = `#{command} 2>&1`
+    status = $?.exitstatus
+    [status, output]
   end
 
   def self.command_(*args)
@@ -24,13 +25,17 @@ module RakeUtils
   end
 
   def self.system_(*args)
-    system__ command_ *args
+    status, _ = system__ command_ *args
+    status
   end
 
   def self.system(*args)
     command = command_ *args
-    status = system__ command
-    raise RuntimeError, "'#{command}' returned #{status}" unless status == 0
+    status, output = system__ command
+    unless status == 0
+      error = RuntimeError.new("'#{command}' returned #{status}")
+      raise error, CDO.filter_backtrace([output])
+    end
   end
 
   def self.bundle_exec(*args)

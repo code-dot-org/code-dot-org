@@ -161,6 +161,21 @@ var base = {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, false);
     });
+  },
+
+  // Copy to the destination collection, since we expect the destination
+  // to be empty. A true rest API would replace the destination collection:
+  // https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+  copyAll: function(src, dest, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + dest + '?src=' + src,
+      type: "put"
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
   }
 };
 
@@ -179,6 +194,7 @@ module.exports = {
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
+var assets = require('./clientApi').create('/v3/assets');
 var channels = require('./clientApi').create('/v3/channels');
 
 var events = {
@@ -406,10 +422,22 @@ module.exports = {
    * copy as the current project.
    */
   copy: function(newName, callback) {
+    var srcChannel = current.id;
+    var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
     delete current.hidden;
     current.name = newName;
-    this.save(callback);
+    this.save(wrappedCallback);
+  },
+  copyAssets: function (srcChannel, callback) {
+    var destChannel = current.id;
+    assets.copyAll(srcChannel, destChannel, function(err) {
+      if (err) {
+        $('.project_updated_at').text('Error copying files');  // TODO i18n
+        return;
+      }
+      executeCallback(callback);
+    });
   },
   delete: function(callback) {
     var channelId = current.id;

@@ -156,14 +156,14 @@ namespace :build do
         begin
           RakeUtils.rake 'db:migrate'
         rescue => e
-          HipChat.log "/quote #{e.message} #{e.backtrace.join("\n")}", message_format: 'text'
+          HipChat.log "/quote #{e.message} #{CDO.backtrace e}", message_format: 'text'
         end
 
         HipChat.log 'Seeding <b>pegasus</b>...'
         begin
           RakeUtils.rake 'seed:migrate'
         rescue => e
-          HipChat.log "/quote #{e.message} #{e.backtrace.join("\n")}", message_format: 'text'
+          HipChat.log "/quote #{e.message} #{CDO.backtrace e}", message_format: 'text'
         end
       end
 
