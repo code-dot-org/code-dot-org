@@ -121,6 +121,9 @@ No return value.
 
 [tips]
 
+### Tips
+
+The checkbox can also be used in design mode.
 
 [/tips]
 
