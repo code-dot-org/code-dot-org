@@ -1,7 +1,7 @@
-name 'unique level name here'
-title 'title'
-description 'description here'
-href 'path/to/html/in/asset/folder'
+name 'sciencePD2b remixing'
+title 'Remixing in StarLogo Nova'
+css 'unplugged'
+skip_dialog true
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
 

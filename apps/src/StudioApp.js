@@ -407,25 +407,29 @@ StudioApp.prototype.init = function(config) {
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
       this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
-        if (this.isUsingBlockly()) {
-          if (Blockly.functionEditor) {
-            Blockly.functionEditor.hideIfOpen();
-          }
-          Blockly.mainBlockSpace.clear();
-          this.setStartBlocks_(config, false);
-          if (config.level.openFunctionDefinition) {
-            this.openFunctionDefinition_(config);
-          }
-        } else {
-          var resetValue = '';
-          if (config.level.startBlocks) {
-            // Don't pass CRLF pairs to droplet until they fix CR handling:
-            resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
-          }
-          this.editor.setValue(resetValue);
-        }
+        this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
+  }
+};
+
+StudioApp.prototype.handleClearPuzzle = function (config) {
+  if (this.isUsingBlockly()) {
+    if (Blockly.functionEditor) {
+      Blockly.functionEditor.hideIfOpen();
+    }
+    Blockly.mainBlockSpace.clear();
+    this.setStartBlocks_(config, false);
+    if (config.level.openFunctionDefinition) {
+      this.openFunctionDefinition_(config);
+    }
+  } else {
+    var resetValue = '';
+    if (config.level.startBlocks) {
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
+    }
+    this.editor.setValue(resetValue);
   }
 };
 
