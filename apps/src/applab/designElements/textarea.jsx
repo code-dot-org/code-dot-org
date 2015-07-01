@@ -81,8 +81,30 @@ var TextAreaProperties = React.createClass({
   }
 });
 
+var TextAreaEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
+  render: function () {
+    var element = this.props.element;
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+      </div>
+    );
+  }
+});
+
 module.exports = {
-  PropertyTable: TextAreaProperties,
+  PropertyTab: TextAreaProperties,
+  EventTab: TextAreaEvents,
 
   create: function() {
     var element = document.createElement('div');
