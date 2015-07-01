@@ -77,6 +77,8 @@ NetSimMetronome.prototype.render = function (clock) {
     this.progress_ = 0;
     this.pulseAge_ = Infinity;
   } else {
+    // For a non-infinite interval, update the meter progress value according
+    // to the current time.
     this.pulseAge_ = clock.time - this.lastPulseTime_;
     this.progress_ = Math.min(this.pulseAge_ / this.pulseIntervalMillis_, 1);
 
