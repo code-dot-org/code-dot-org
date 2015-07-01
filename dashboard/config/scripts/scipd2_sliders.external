@@ -1,0 +1,47 @@
+name 'sciPD2 sliders'
+title 'Creating a Slider'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+
+### Creating a Slider
+
+<br/><br/>
+<img src="https://images.code.org/fb8040982cdae8d34e4a6f5851c3f146-image-1435701822929.gif" class="roundedPic lefted" width="350px"/>A slider is a very useful input element when you want to let the user change numbers quickly during runtime.  
+
+
+#### Using a Slider
+
+In the image to the left, you will see that sliders are being used to control the number of turtles around the world. There are also sliders for the number of steps that the turtles should take when they begin to walk, and the radius of the overall turtle circle.
+
+To use a slider, click the circular "knob" that resides along the horizontal line of the slider that you want to control.  Drag the knob to the left or the right to quickly increase or decrease the variable that it controls.
+
+<br/>
+#### Adding a Slider 
+
+<img src="https://images.code.org/e8bb45ffc0546ff6b3a50e51d444ec1c-image-1435702508183.gif" class="roundedPic righted" width="400px" style="margin-bottom:20px;"/>To create a slider, go to the upper left-hand corner of Spaceland and click “Edit Widgets". Next, click the the "New Widget" button that is outlined in red.  This will create a new widget frame and allow you to choose what type of interface you want it to have.  In this case, select "Horizontal Slider".
+
+Enter your widget name before clicking "Add Widget" at the bottom of the pop-up window, and you'll see your new slider appear in your workspace.
+
+<br/><br/>
+#### Coding for a Slider
+<br/>
+<img src="https://images.code.org/c656583165ce79149f017f12a2a4db5c-image-1435703648528.gif" class="roundedPic lefted" width="350px"/>
+
+Once you have created your slider, you can click the dropdown above the puzzle piece drawers and select the "Interface" option.
+
+You will see a variety of ways to use the data coming from your new slider.  One of the easiest is to select the "slider value" puzzle piece and drop it into your code like a variable. 
+
+Finally, you only need to go back into your spaceland are and move your slider around to control your values. Easy as turtle pie!
+
+<br/><br/>
+
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN
