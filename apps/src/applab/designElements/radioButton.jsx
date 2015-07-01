@@ -70,7 +70,8 @@ var RadioButtonProperties = React.createClass({
 var RadioButtonEvents = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
   },
 
   getChangeEventCode: function() {

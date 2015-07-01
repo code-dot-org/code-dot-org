@@ -66,7 +66,8 @@ var CheckboxProperties = React.createClass({
 var CheckboxEvents = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
   },
 
   getChangeEventCode: function() {

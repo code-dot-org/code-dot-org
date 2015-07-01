@@ -52,7 +52,8 @@ var CanvasProperties = React.createClass({
 var CanvasEvents = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
   },
 
   getClickEventCode: function() {
