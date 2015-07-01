@@ -93,7 +93,8 @@ if (process.env.MOOC_LOCALE) {
 }
 
 config.clean = {
-  all: ['build']
+  all: ['build'],
+  digest: ['build/package/js/**/*-????????????????????????????????.js']
 };
 
 var ace_suffix = DEV ? '' : '-min';
@@ -437,8 +438,10 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('digest', function () {
     var manifest = {};
     var manifestFile = this.options().out;
+
     this.filesSrc.forEach(function (file) {
 
+      // Don't add a digest to the manifest
       if (file === manifestFile) {
         return;
       }
@@ -477,7 +480,8 @@ module.exports = function(grunt) {
     'newer:copy:lib',
     'newer:concat',
     'newer:sass',
-    'digest'
+    'clean:digest',
+    'newer:digest'
   ]);
 
   grunt.registerTask('build', [
