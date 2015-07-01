@@ -40,6 +40,7 @@ var elementLibrary = require('./designElements/library');
 var clientApi = require('./assetManagement/clientApi');
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
+var DebugArea = require('./DebugArea');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -48,6 +49,14 @@ var TestResults = studioApp.TestResults;
  * Create a namespace for the application.
  */
 var Applab = module.exports;
+
+/**
+ * Controller for debug console and controls on page
+ * TODO: Rename to debugArea once other debugArea references are moved out of
+ *       this file.
+ * @type {DebugArea}
+ */
+var debugAreaController = null;
 
 //Debug console history
 Applab.debugConsoleHistory = {
@@ -635,6 +644,10 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
+  debugAreaController = new DebugArea(
+      document.getElementById('debug-area'),
+      document.getElementById('codeTextbox'));
+
   if (level.editCode) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
@@ -676,6 +689,7 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
+
     var clearButton = document.getElementById('clear-console-header');
     if (clearButton) {
       dom.addClickTouchEvent(clearButton, clearDebugOutput);
@@ -777,6 +791,10 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
                                 (window.innerHeight - event.pageY) - offset));
 
+  if (debugAreaController.isShut()) {
+    debugAreaController.snapOpen();
+  }
+  
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 
