@@ -18,7 +18,7 @@ require 'mail'
 
 def main()
   # Run the build script and exit if it didn't do anything.
-  script = File.expand_path('../build', __FILE__)
+  script = File.expand_path(__dir__, 'build')
   log = `\"#{script}\" #{ARGV.join(' ')} 2>&1`.strip
   status = $?.exitstatus
   return status if status == 0 && log.empty?
