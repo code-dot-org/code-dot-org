@@ -1255,6 +1255,27 @@ Applab.onCodeModeButton = function() {
   Applab.serializeAndSave();
 };
 
+/**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+Applab.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
+};
+
 Applab.onPuzzleComplete = function() {
   // Submit all results as success / freePlay
   Applab.result = ResultType.SUCCESS;
@@ -1413,7 +1434,7 @@ function quote(str) {
 Applab.getAssetDropdown = function (typeFilter) {
   var options = assetListStore.list(typeFilter).map(function (asset) {
     return {
-      text: quote(clientApi.basePath(asset.filename)),
+      text: quote(asset.filename),
       display: quote(asset.filename)
     };
   });
