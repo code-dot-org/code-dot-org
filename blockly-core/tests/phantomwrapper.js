@@ -8,7 +8,7 @@ var RED = "\033[31m";
 /**
  * Wait until the test condition is true or a timeout occurs. Useful for waiting
  * on a server response or for a ui change (fadeIn, etc.) to occur.
- * 
+ *
  * Lifted from this phantomjs example:
  * https://github.com/ariya/phantomjs/blob/master/examples/waitfor.js
  *
@@ -18,10 +18,10 @@ var RED = "\033[31m";
  * @param onReady what to do when testFx condition is fulfilled,
  * it can be passed in as a string (e.g.: "1 == 1" or "$('#bar').is(':visible')" or
  * as a callback function.
- * @param timeOutMillis the max amount of time to wait. If not specified, 3 sec is used.
+ * @param timeOutMillis the max amount of time to wait. If not specified, 10 sec is used.
  */
 function waitFor(testFx, onReady, timeOutMillis) {
-  var maxtimeOutMillis = timeOutMillis ? timeOutMillis : 3000, //< Default Max Timout is 3s
+  var maxtimeOutMillis = timeOutMillis ? timeOutMillis : 10000, //< Default Max Timout is 10s
       start = new Date().getTime(),
       condition = false,
       interval = setInterval(function() {
@@ -40,7 +40,7 @@ function waitFor(testFx, onReady, timeOutMillis) {
           }
         }
       }, 250); //< repeat check every 250ms
-};
+}
 
 // This is a thin wrapper around using phantomjs to load and run the blockly core tests
 var page = WebPage.create();
