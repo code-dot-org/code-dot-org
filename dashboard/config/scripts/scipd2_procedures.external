@@ -1,0 +1,25 @@
+name 'sciPD2 procedures'
+title 'Creating Procedures'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Creating Procedures
+
+<br/><br/>
+<figure class="lefted" style="margin-bottom:40px;">
+    <img src="https://images.code.org/5c1bbec7e263248ad7abbb816a875775-image-1435731650635.43.52.png" class="roundedPic" width="350px">
+    <figcaption>Image Courtesy <a href="http://www.slnova.org/media/cms_page_media/106/Skill_Cards_2014.pdf" target="_new">StarLogo Nova</a> Skill Cards<br/></figcaption>
+</figure><img src="https://images.code.org/b390abd13d769fd6102bb32e1e97c6d5-image-1435732889447.gif" class="righted roundedPic" width="500px" border="solid thick"style="margin-bottom:40px;"/>
+
+
+<br/><br/><br/>
+Whether you are used to calling them procedures, functions, or subroutines, saving groups of instructions to call repeatedly can be a huge time-saver in computer programming.
+
+To make your hunk of code easier to call from other areas of your program, simply wrap it in a "procedure" block (located in the "Procedures" drawer) and give it a name.  Use the "call" block (also from the "Procedures" drawer) to invoke that code from another place in your program.
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
