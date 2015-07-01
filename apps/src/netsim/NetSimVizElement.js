@@ -111,7 +111,7 @@ NetSimVizElement.prototype.tick = function () {
 /**
  * Update the root group's properties to reflect our current position
  * and scale.
- * @param {RunLoop.Clock} clock
+ * @param {RunLoop.Clock} [clock] - sometimes omitted during setup
  */
 NetSimVizElement.prototype.render = function (clock) {
   if (clock) {
