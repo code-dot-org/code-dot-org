@@ -76,6 +76,10 @@ In-person milestone complete! More info coming soon on your Phase 2 online porti
 
 More info coming soon!
 
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)###
+
+More info coming soon!
+
 [**Back to the top**](#top)
 
 <a id="ecs"></a>
@@ -141,13 +145,42 @@ In-person milestone complete! It is now time to complete the 8 hour online porti
 </br>
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)###
 
-More info coming soon!
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
-</br>
+
+**Save the dates:**
+
+Quarter 1: Saturday, September 19, 2015
+
+Quarter 2: Saturday, December 5, 2015
+
+Quarter 3: Saturday, February 6, 2016
+
+Quarter 4: Saturday, April 23, 2016
+
+**Location**
+
+TBD
+
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
+
+
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
 More info coming soon!
 
 [**Back to the top**](#top)
 
+----------
+Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 
+<br />
+<br />
