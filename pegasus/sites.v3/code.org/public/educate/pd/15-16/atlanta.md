@@ -29,7 +29,7 @@ In-person milestone complete! It is now time to complete the 8 hour online porti
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the Dates:**
+**Save the dates:**
 
 Quarter 1: Saturday, September 12, 2015
 
@@ -91,9 +91,11 @@ Milestone complete!
 
 In-person milestone complete! More info coming soon on your Phase 2 online portion. 
 
-### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ### 
+### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) 
 
-<br/>
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+
 **Save the dates:**
 
 Semester 1: Saturday, September 12, 2015 
