@@ -3,6 +3,8 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -40,8 +42,27 @@ var ScreenEvents = React.createClass({
     handleChange: React.PropTypes.func.isRequired
   },
 
+  // The screen click event handler code currently receives clicks to any
+  // other design element. This could be worked around by checking for
+  // event.targetId === "<id>" here, at the expense of added complexity.
+  getClickEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "click", function(event) {\n' +
+      '  console.log("' + id + ' clicked!");\n' +
+      '  moveTo(event.x, event.y);\n' +
+      '});\n';
+    return code;
+  },
+
+  insertClick: function() {
+    this.props.onInsertEvent(this.getClickEventCode());
+  },
+
   render: function () {
     var element = this.props.element;
+    var clickName = 'Click';
+    var clickDesc = 'Triggered when the screen is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id='eventRowContainer'>
@@ -50,6 +71,11 @@ var ScreenEvents = React.createClass({
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={clickName}
+          desc={clickDesc}
+          handleInsert={this.insertClick}/>
       </div>
     );
   }
