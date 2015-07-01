@@ -34,8 +34,31 @@ var ScreenProperties = React.createClass({
   }
 });
 
+var ScreenEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
+  render: function () {
+    var element = this.props.element;
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+      </div>
+    );
+  }
+});
+
 module.exports = {
-  PropertyTable: ScreenProperties,
+  PropertyTab: ScreenProperties,
+  EventTab: ScreenEvents,
+
   create: function () {
     var element = document.createElement('div');
     element.setAttribute('class', 'screen');
@@ -59,5 +82,8 @@ module.exports = {
     if (url) {
       onPropertyChange(element, 'screen-image', url);
     }
+    // Properly position existing screens, so that canvases appear correctly.
+    element.style.position = 'absolute';
+    element.style.zIndex = 0;
   }
 };

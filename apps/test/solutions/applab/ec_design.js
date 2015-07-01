@@ -41,7 +41,7 @@ module.exports = {
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
         var assetUrl = 'http://localhost:8001/apps/static/flappy_promo.png';
-        var imageInput = $("#design-properties input").last()[0];
+        var imageInput = $("#propertyRowContainer input").last()[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
           target: { value: assetUrl }
