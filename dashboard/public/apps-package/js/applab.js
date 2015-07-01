@@ -7334,8 +7334,7 @@ var TextInputEvents = React.createClass({displayName: "TextInputEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Text was entered in ' + id + '!");\n' +
-      '  console.log("Entered text: " + getText("' + id + '"));\n' +
+      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -7348,8 +7347,7 @@ var TextInputEvents = React.createClass({displayName: "TextInputEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "input", function(event) {\n' +
-      '  console.log("A character was typed in ' + id + '!");\n' +
-      '  console.log("Current text: " + getText("' + id + '"));\n' +
+      '  console.log("' + id + ' current text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -7578,8 +7576,7 @@ var RadioButtonEvents = React.createClass({displayName: "RadioButtonEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' changed state!");\n' +
-      '  console.log("Radio button checked? " + getChecked("' + id + '"));\n' +
+      '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -8065,7 +8062,6 @@ var DropdownEvents = React.createClass({displayName: "DropdownEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Option selected from ' + id + '!");\n' +
       '  console.log("Selected option: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
@@ -8254,8 +8250,7 @@ var CheckboxEvents = React.createClass({displayName: "CheckboxEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' changed state!");\n' +
-      '  console.log("Checkbox checked? " + getChecked("' + id + '"));\n' +
+      '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -8378,7 +8373,7 @@ var CanvasEvents = React.createClass({displayName: "CanvasEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked!");\n' +
+      '  console.log("' + id + ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
       '  setActiveCanvas("' + id + '");\n' +
       '  circle(event.offsetX, event.offsetY, 10);\n' +
       '});\n';
