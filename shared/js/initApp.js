@@ -2,112 +2,115 @@
 // TODO (brent) - I wonder if we should sub-namespace dashboard
 /* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
-window.setupApp = function () {
-  var timing = require('./timing');
-  var chrome34Fix = require('./chrome34Fix');
+var timing = require('./timing');
+var chrome34Fix = require('./chrome34Fix');
 
-  if (!window.dashboard) {
-    throw new Error('Assume existence of window.dashboard');
+window.apps = {
+  load: require('./loadApp'),
+  setup: function () {
+
+    if (!window.dashboard) {
+      throw new Error('Assume existence of window.dashboard');
+    }
+    dashboard.project = require('./project');
+
+    timing.startTiming('Puzzle', script_path, '');
+
+    // Sets up default options and initializes blockly
+    var baseOptions = {
+      containerId: 'codeApp',
+      Dialog: Dialog,
+      cdoSounds: CDOSounds,
+      position: {blockYCoordinateInterval: 25},
+      onInitialize: function() {
+        dashboard.createCallouts(this.callouts);
+        if (window.dashboard.isChrome34) {
+          chrome34Fix.fixup();
+        }
+        $(document).trigger('appInitialized');
+      },
+      onAttempt: function(report) {
+        if (appOptions.level.isProjectLevel) {
+          return;
+        }
+        if (appOptions.channel) {
+          // Don't send the levelSource or image to Dashboard for channel-backed levels.
+          // (The levelSource is already stored in the channels API.)
+          delete report.program;
+          delete report.image;
+        }
+        report.fallbackResponse = appOptions.report.fallback_response;
+        report.callback = appOptions.report.callback;
+        // Track puzzle attempt event
+        trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
+        if (report.pass) {
+          trackEvent('Puzzle', 'Success', script_path, report.attempt);
+          timing.stopTiming('Puzzle', script_path, '');
+        }
+        trackEvent('Activity', 'Lines of Code', script_path, report.lines);
+        sendReport(report);
+      },
+      onResetPressed: function() {
+        cancelReport();
+      },
+      onContinue: function() {
+        if (lastServerResponse.videoInfo) {
+          showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.nextRedirect) {
+          window.location.href = lastServerResponse.nextRedirect;
+        }
+      },
+      backToPreviousLevel: function() {
+        if (lastServerResponse.previousLevelRedirect) {
+          window.location.href = lastServerResponse.previousLevelRedirect;
+        }
+      },
+      showInstructionsWrapper: function(showInstructions) {
+        // Always skip all pre-level popups on share levels or when configured thus
+        if (this.share || appOptions.level.skipInstructionsPopup) {
+          return;
+        }
+
+        var hasVideo = !!appOptions.autoplayVideo;
+        var hasInstructions = !!(appOptions.level.instructions ||
+        appOptions.level.aniGifURL);
+
+        if (hasVideo) {
+          showVideoDialog(appOptions.autoplayVideo);
+          if (hasInstructions) {
+            $('.video-modal').on('hidden.bs.modal', function() {
+              showInstructions();
+            });
+          }
+        } else if (hasInstructions) {
+          showInstructions();
+        }
+      }
+    };
+    $.extend(true, appOptions, baseOptions);
+
+    // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
+    // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
+    (function fixUpFunctions(node) {
+      if (typeof node !== 'object') {
+        return;
+      }
+      for (var i in node) {
+        if (/^fn_/.test(i)) {
+          try {
+            /* jshint ignore:start */
+            node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
+            /* jshint ignore:end */
+          } catch (e) {
+          }
+        } else {
+          fixUpFunctions(node[i]);
+        }
+      }
+    })(appOptions.level);
+  },
+  init: function () {
+    dashboard.project.init();
+    window[appOptions.app + 'Main'](appOptions);
   }
-
-  dashboard.project = require('./project');
-
-// Sets up default options and initializes blockly
-  timing.startTiming('Puzzle', script_path, '');
-  var baseOptions = {
-    containerId: 'codeApp',
-    Dialog: Dialog,
-    cdoSounds: CDOSounds,
-    position: {blockYCoordinateInterval: 25},
-    onInitialize: function() {
-      dashboard.createCallouts(this.callouts);
-      if (window.dashboard.isChrome34) {
-        chrome34Fix.fixup();
-      }
-      $(document).trigger('appInitialized');
-    },
-    onAttempt: function(report) {
-      if (appOptions.level.isProjectLevel) {
-        return;
-      }
-      if (appOptions.channel) {
-        // Don't send the levelSource or image to Dashboard for channel-backed levels.
-        // (The levelSource is already stored in the channels API.)
-        delete report.program;
-        delete report.image;
-      }
-      report.fallbackResponse = appOptions.report.fallback_response;
-      report.callback = appOptions.report.callback;
-      // Track puzzle attempt event
-      trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
-      if (report.pass) {
-        trackEvent('Puzzle', 'Success', script_path, report.attempt);
-        timing.stopTiming('Puzzle', script_path, '');
-      }
-      trackEvent('Activity', 'Lines of Code', script_path, report.lines);
-      sendReport(report);
-    },
-    onResetPressed: function() {
-      cancelReport();
-    },
-    onContinue: function() {
-      if (lastServerResponse.videoInfo) {
-        showVideoDialog(lastServerResponse.videoInfo);
-      } else if (lastServerResponse.nextRedirect) {
-        window.location.href = lastServerResponse.nextRedirect;
-      }
-    },
-    backToPreviousLevel: function() {
-      if (lastServerResponse.previousLevelRedirect) {
-        window.location.href = lastServerResponse.previousLevelRedirect;
-      }
-    },
-    showInstructionsWrapper: function(showInstructions) {
-      // Always skip all pre-level popups on share levels or when configured thus
-      if (this.share || appOptions.level.skipInstructionsPopup) {
-        return;
-      }
-
-      var hasVideo = !!appOptions.autoplayVideo;
-      var hasInstructions = !!(appOptions.level.instructions ||
-      appOptions.level.aniGifURL);
-
-      if (hasVideo) {
-        showVideoDialog(appOptions.autoplayVideo);
-        if (hasInstructions) {
-          $('.video-modal').on('hidden.bs.modal', function() {
-            showInstructions();
-          });
-        }
-      } else if (hasInstructions) {
-        showInstructions();
-      }
-    }
-  };
-  $.extend(true, appOptions, baseOptions);
-
-  // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
-  // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
-  (function fixUpFunctions(node) {
-    if (typeof node !== 'object') {
-      return;
-    }
-    for (var i in node) {
-      if (/^fn_/.test(i)) {
-        try {
-          /* jshint ignore:start */
-          node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
-          /* jshint ignore:end */
-        } catch (e) {
-        }
-      } else {
-        fixUpFunctions(node[i]);
-      }
-    }
-  })(appOptions.level);
 };
-
-function initApp() {
-  dashboard.project.init();
-  window[appOptions.app + 'Main'](appOptions);
-}
