@@ -9,10 +9,6 @@ var EventRow = module.exports = React.createClass({
     handleInsert: React.PropTypes.func.isRequired
   },
 
-  handleInsert: function() {
-    this.props.handleInsert();
-  },
-
   render: function() {
     var style = {
       container: $.extend({}, rowStyle.container, rowStyle.maxWidth),
@@ -36,7 +32,7 @@ var EventRow = module.exports = React.createClass({
           {this.props.desc}
         </div>
         <div>
-          <a onClick={this.handleInsert} className='hover-pointer'>Insert and show code</a>
+          <a onClick={this.props.handleInsert} className='hover-pointer'>Insert and show code</a>
         </div>
       </div>
     );
