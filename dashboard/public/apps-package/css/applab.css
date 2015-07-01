@@ -342,6 +342,16 @@ img#turtleImage {
   border-right: 1px solid gray; }
   #debug-commands-header .fa {
     margin: 0 0.25em; }
+  #debug-commands-header #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: 30px; }
+  #debug-commands-header.js-hover-hack {
+    cursor: pointer; }
+    #debug-commands-header.js-hover-hack #show-hide-debug-icon {
+      color: white; }
 
 .debug-commands, .debug-console {
   display: block;
