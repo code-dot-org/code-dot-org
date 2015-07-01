@@ -17,8 +17,7 @@ nav: pd2_nav
 ### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone Complete!
-</br>
-</br>
+
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
 In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study.
@@ -28,17 +27,15 @@ In-person milestone complete! It is now time to complete the 8 hour online porti
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-
 **Save the Dates:**
 
-Quarter 1: Saturday, September 12, 2015
+Quarter 1: Saturday, September 26, 2015
 
-Quarter 2: Saturday, December 12, 2015
+Quarter 2: Saturday, December 5, 2015
 
-Quarter 3: Saturday, March 5, 2015
+Quarter 3: Saturday, February 6, 2016
 
-Quarter 4: Saturday, April 23, 2015
-
+Quarter 4: Saturday, March 12, 2016
 
 
 **Location**
@@ -50,14 +47,12 @@ TBD
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop
-
+<br/>
 ECS green journal and curriculum guide
-
+<br/>
 Snacks
-
+<br/>
 Water
-
-
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
@@ -98,6 +93,8 @@ In-person milestone complete! More info coming soon on your Phase 2 online porti
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
+**Save the dates:**
+
 Semester 1: Saturday, September 19, 2015 
 
 Semester 2: Saturday, February 6, 2016 
@@ -107,25 +104,20 @@ Semester 2: Saturday, February 6, 2016
 TBD
 
 
-
 **What to bring to Phase 3 biyearly sessions:**
 
 Laptop
-
+<br/>
 ECS green journal and curriculum guide
-
+<br/>
 Snacks
-
+<br/>
 Water
 
 
-Back to the top
-
-Please visit FAQs for more information.
+[**Back to the top**](#top)
 
 
-
-</br>
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
@@ -141,8 +133,7 @@ More info coming soon!
 ### Phase 1: Online Introduction (~2 hours) ###
 
 Milestone complete!
-</br>
-</br>
+
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
 In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study.
