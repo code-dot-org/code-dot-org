@@ -223,6 +223,42 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
+    },
+
+    {
+      description: "clear puzzle clears design mode",
+      editCode: true,
+      xml: 'button("my_button", "text");',
+      runBeforeClick: function (assert) {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          // drag a button out
+          $("#designModeButton").click();
+          testUtils.dragToVisualization('BUTTON', 10, 10);
+          validatePropertyRow(0, 'id', 'button1', assert);
+
+          assert.equal($("#divApplab button").length, 1);
+
+          // Enter code mode
+          $("#codeModeButton").click();
+          assert.equal(/<button id="button1"/.test(Applab.levelHtml), true,
+            "levelHtml has added button");
+
+          // hit clear, and click through confirmation dialog
+          // TODO - disable temporarily
+          // $("#clear-puzzle-header").click();
+          // assert.equal($("#continue-button").is(':visible'), true);
+          // $("#continue-button").click();
+          //
+          // assert.equal(Applab.levelHtml, "", "levelHtml was cleared");
+          // assert.equal($("#divApplab button").length, 1, "button is not in play area");
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
     }
   ]
 };

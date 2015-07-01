@@ -13,9 +13,16 @@
 $('head').append($('<script src="/blockly/js/marked/marked.js" type="text/javascript"/>'));
 
 function codeMirror(name, mode, callback, attachments) {
+  // Code mirror parses html using xml mode
+  var htmlMode = false;
+  if (mode === 'html') {
+    mode = 'xml';
+    htmlMode = true;
+  }
+
   var editor = CodeMirror.fromTextArea(document.getElementById('level_' + name), {
     mode: mode,
-    htmlMode: false,
+    htmlMode: htmlMode,
     viewportMargin: Infinity,
     matchTags: {bothTags: true},
     autoCloseTags: true,
