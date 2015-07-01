@@ -759,6 +759,11 @@ Applab.init = function(config) {
   }
 };
 
+Applab.appendToEditor = function(newCode) {
+  var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
+  studioApp.editor.setValue(code);
+};
+
 Applab.onMouseDownDebugResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
 
