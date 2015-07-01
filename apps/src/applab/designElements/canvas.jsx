@@ -2,6 +2,8 @@ var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var CanvasProperties = React.createClass({
   propTypes: {
@@ -53,8 +55,25 @@ var CanvasEvents = React.createClass({
     handleChange: React.PropTypes.func.isRequired
   },
 
+  getClickEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "click", function(event) {\n' +
+      '  console.log("' + id + ' clicked!");\n' +
+      '  setActiveCanvas("' + id + '");\n' +
+      '  circle(event.offsetX, event.offsetY, 10);\n' +
+      '});\n';
+    return code;
+  },
+
+  insertClick: function() {
+    this.props.onInsertEvent(this.getClickEventCode());
+  },
+
   render: function () {
     var element = this.props.element;
+    var clickName = 'Click';
+    var clickDesc = 'Triggered when the canvas is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id='eventRowContainer'>
@@ -63,6 +82,11 @@ var CanvasEvents = React.createClass({
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={clickName}
+          desc={clickDesc}
+          handleInsert={this.insertClick}/>
       </div>
     );
   }
