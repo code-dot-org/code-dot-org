@@ -807,3 +807,13 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
         metrics.viewHeight
   };
 };
+
+/**
+ * Can be called to force an update of scrollbar height/position and usable
+ * blockspace size according to the current content.
+ */
+Blockly.BlockSpace.prototype.updateScrollableSize = function () {
+  if (this.scrollbarPair) {
+    this.scrollbarPair.resize();
+  }
+};
