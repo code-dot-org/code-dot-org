@@ -3,48 +3,70 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
-### LOOKING AHEAD > What is mastery?
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
 
-In the stages that follow, you will master the following basic core concepts of computer science:
 
-- Stage 3: Sequencing
-- Stage 4: Loops
-- Stage 5: Conditionals
-- Stage 6: Functions
-- Stage 7: Events
+### Remixing
 
-#### What is "mastery"?
-We define "mastery" as being able to do the following:
+<br/>
 
-- Define and explain what is meant by the core concept, and why it's important in computer science
-- Write simple programs applying the concept (by using visual programming to solve puzzles)
-- Reflect on how you might integrate the concept into your practice
+One of the most helpful things to learn in StarLogo Nova is the art of "remixing."  Remixing a project not only saves a new copy of the project that you've been working on, it also allows you to make changes without disturbing previous work.  When in doubt, remix before you edit! 
 
-Use this list as your rubric as you work through the course. As you complete each stage, ask yourself:
+<br/>
 
-- Can I define and explain the importance of this particular core concept at a beginner level?
-- Was I able to successfully complete the simple puzzles in this stage?
-- Do I have a few ideas on how I might use this in my classroom?
+<div dir="ltr" style="margin-left: 0pt;">
+<table style="border-collapse: collapse; border: none;"><colgroup><col width="312"></col><col width="312"></col></colgroup><tbody>
+<tr style="height: 0px;"><td colspan="2" style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">For this refresher, remix “Orientation – version 4” from your Phase 1 online PD and rename it “Refreshing – version 1”.</span><span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> </span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="89px;" src="https://lh5.googleusercontent.com/ZEdh_sdba-2Ba-NFyHarerbA6EDQdpRq68QcM4pehz0aCk77EH1Dg-I-W20ZoKZRQFkYLc8WVeEmcwV_f9ZCglwIBTK2Htm2uhNP8_oaS7-you4Lf9Xk9QIvXRp-h9v1k7j1AEk" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="228px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Use “clear terrain” to erase any existing drawing on the terrain between drawings.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="83px;" src="https://lh5.googleusercontent.com/QDCUpKX9aILylZSEynxCSAqK3quysa7s_EcJ33AwFCmUHEZZUxZ03Ge6R2NDtSC13NAIIUwG2_IKbVrrRUqhz3SvnKG9qjJOA85OEEzPbimfuo3e1TLdAR49Z7rqT-KNFTAi_o0" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="228px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Use “delete everyone” to get rid of all existing agents between drawings.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="85px;" src="https://lh3.googleusercontent.com/8FCqC8KO0TRzWd4SHyHJ6711LkDidJh3QSPsPTke73l-YTZtaEJd27DQHhih3A-dN_NXFPgiSheYLhbPiGuHVCJ3A7r-o5qMgKY_jIRCjpigY_9HttMeE0F13F33Y3RWuZ6uK_0" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="265px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Extension #1: Change the number of flower petals dramatically.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="101px;" src="https://lh3.googleusercontent.com/ULNBIeFY9QODYhM-IZVUDHWXSOR8SzqiiItk9Cuy_chS2A8iIPtk3kIlu0QWl-b1jwPfz_EPTg5Jey0Lf2Q-0lE-WbbHhkkFJDiELdB76PZlgzjF-GWQrS6YqBCqftAy-3yhoLY" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="247px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Extension #2: Draw a flower with polygon petals instead of round petals. [replace the number of steps and the degrees to turn]</span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="68px;" src="https://lh6.googleusercontent.com/K-xN2UsDXiGzdSiz6KMKSmlYMUk-40pGmjqLDwrDsSghTkgsHPQFJhQGUdqcmR83U8uA3zGNnUOPgzOusUF7zuaObzWmaRYONbfIUpCIrKqNJS9bSljYbiaz5n2sO3toEHRg7Og" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="559px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Extension #3: Change the color of the flowers.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.68; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #222222; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img height="59px;" src="https://lh4.googleusercontent.com/tdNKFaBjbkI30NMmOrjwPd22Dc9aeLjszmwsGgVCPJZMrM8rhsSvu0M0KUeNzVV3vvlEH8FrVuGhiZ8wA4wU4L3rb8tMFO4lSJ6JgFvO_jcW63_60_joiJRT4aYldn_XpPIAljk" style="-webkit-transform: rotate(0.00rad); border: none; transform: rotate(0.00rad);" width="559px;" /></span></div>
+</td><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Extension #4: Change the starting location (x, y) of agents.</span></div>
+</td></tr>
+<tr style="height: 0px;"><td colspan="2" style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Define or identify the following terms: Workspace, SpaceLand, Information area, Terrain, Page, Drawer, Blocks, Buttons, Widgets, Agents.</span></div>
+</td></tr>
+</tbody></table>
+</div>
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 17pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Verdana; font-size: 16px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> </span></div>
+<div dir="ltr" style="margin-left: 0pt;">
+<table style="border-collapse: collapse; border: none;"><colgroup><col width="624"></col></colgroup><tbody>
+<tr style="height: 0px;"><td style="border-bottom: solid #000000 1px; border-left: solid #000000 1px; border-right: solid #000000 1px; border-top: solid #000000 1px; padding: 8px 8px 8px 8px; vertical-align: top;"><div dir="ltr" style="line-height: 1.38; margin-bottom: 31pt; margin-top: 15pt;">
+<span style="background-color: transparent; color: #3c3c3c; font-family: Arial; font-size: 15px; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Copy the URL of your "Refresher - version 1" project then paste it in the PLC discussion area <a href="http://forum.code.org/t/computer-science-in-science-online-pd2-refresher/855" target="_new">located here</a>.</span></div>
+</td></tr>
+</tbody></table>
+</div>
 
-If you answer yes to each question, proceed to the next stage. If you answer no to any of the questions, consider revisiting the stage or exploring more about the topic in the student side of Code Studio before moving on.
-<br><br>
-#### Things to keep in mind while learning computer science:
+<br/><br/>
 
-- The world of computer programming moves so fast that there really are no masters. **We're all learners** at different stages but we are still always learners.
-- Programming becomes more comfortable every time you come back to it. **You're not going to be an expert your first time.**
-- There's no way around it, the act of programming and **learning to program takes time, but anyone can do it!**
-<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
->**Key Takeway:** The goal of the next several stages is not to turn you into a computer scientist, but to instead help you feel comfortable enough with the core concepts that you are excited to share your knowledge with your students.
 
-#### After I "master" the concepts, what comes next?
-
-In **Stage 8**, you'll explore code.org's free curricula and resources for teachers. You can choose to use any of these resources or other curricular resources of your choosing. Completing this course will give you the basics you need to understand any beginning CS curriculum.
-<br><br>
-
-In **Stages 9 and 10**, we'll point you in the direction of resources you can use to learn more or feel more prepared to teach these concepts in your classroom.
-<br><br>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Let's learn to code!</a>
 MARKDOWN

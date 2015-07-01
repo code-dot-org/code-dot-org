@@ -28,7 +28,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Modify this algorithm so it uses the `sides` variable instead of a fixed number to draw a pentagon. Replace the number 5 with the `sides` variable, and use the `set sides to` block."
   }
 }]]></config>
   <blocks>

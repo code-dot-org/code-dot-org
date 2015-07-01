@@ -40,6 +40,7 @@ var elementLibrary = require('./designElements/library');
 var clientApi = require('./assetManagement/clientApi');
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
+var DebugArea = require('./DebugArea');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -48,6 +49,14 @@ var TestResults = studioApp.TestResults;
  * Create a namespace for the application.
  */
 var Applab = module.exports;
+
+/**
+ * Controller for debug console and controls on page
+ * TODO: Rename to debugArea once other debugArea references are moved out of
+ *       this file.
+ * @type {DebugArea}
+ */
+var debugAreaController = null;
 
 //Debug console history
 Applab.debugConsoleHistory = {
@@ -423,6 +432,10 @@ Applab.getHtml = function () {
   return Applab.levelHtml;
 };
 
+Applab.setLevelHtml = function (html) {
+  Applab.levelHtml = designMode.addScreenIfNecessary(html);
+};
+
 Applab.onTick = function() {
   if (!Applab.running) {
     return;
@@ -465,6 +478,15 @@ Applab.initReadonly = function(config) {
   studioApp.initReadonly(config);
 };
 
+function extendHandleClearPuzzle() {
+  var orig = studioApp.handleClearPuzzle.bind(studioApp);
+  studioApp.handleClearPuzzle = function (config) {
+    orig(config);
+    Applab.setLevelHtml(config.level.startHtml || '');
+    studioApp.resetButtonClick();
+  };
+}
+
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -472,6 +494,7 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+  extendHandleClearPuzzle();
 
   // Pre-populate asset list
   if (window.dashboard && dashboard.project.getCurrentId()) {
@@ -601,7 +624,7 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
-  Applab.levelHtml = designMode.addScreenIfNecessary(level.levelHtml || "");
+  Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
   studioApp.init(config);
 
@@ -620,6 +643,10 @@ Applab.init = function(config) {
     // Use offsetWidth of viz so we can include any possible border width:
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
+
+  debugAreaController = new DebugArea(
+      document.getElementById('debug-area'),
+      document.getElementById('codeTextbox'));
 
   if (level.editCode) {
     // Initialize the slider.
@@ -662,6 +689,7 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
+
     var clearButton = document.getElementById('clear-console-header');
     if (clearButton) {
       dom.addClickTouchEvent(clearButton, clearDebugOutput);
@@ -731,6 +759,11 @@ Applab.init = function(config) {
   }
 };
 
+Applab.appendToEditor = function(newCode) {
+  var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
+  studioApp.editor.setValue(code);
+};
+
 Applab.onMouseDownDebugResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
 
@@ -763,6 +796,10 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
                                 (window.innerHeight - event.pageY) - offset));
 
+  if (debugAreaController.isShut()) {
+    debugAreaController.snapOpen();
+  }
+  
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 

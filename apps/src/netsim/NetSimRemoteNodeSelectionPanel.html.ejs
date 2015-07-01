@@ -168,6 +168,34 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
     <table>
 
       <%
+        // Outgoing request table (hidden if empty)
+        if (outgoingRequestRows.length > 0) {
+          writeHeader(i18n.outgoingConnectionRequests());
+          outgoingRequestRows.forEach(function (row) {
+            var outgoingStatus = i18n.lobbyStatusWaitingForOther({
+              spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
+              otherName: row.displayName,
+              otherStatus: row.status
+            });
+            writeNodeRow(row.nodeID, row.displayName, outgoingStatus, 'cancel-button', row.classAttr);
+          });
+          writeEmptyRow();
+        }
+
+        // Incoming requests table (hidden if empty)
+        if (requestRows.length > 0) {
+          writeHeader(i18n.incomingConnectionRequests());
+          requestRows.forEach(function (row) {
+            var buttonType;
+            if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
+              buttonType = 'accept-button';
+            }
+            var incomingStatus = i18n.lobbyStatusWaitingForYou();
+            writeNodeRow(row.nodeID, row.displayName, incomingStatus, buttonType, row.classAttr);
+          });
+          writeEmptyRow();
+        }
+
         // Primary lobby list
         writeHeader(i18n.lobby());
         lobbyRows.forEach(function (row) {
@@ -209,34 +237,6 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
           writeEmptyRow(buttons.join(' '));
         } else if (lobbyRows.length === 0) {
           writeEmptyRow(i18n.lobbyIsEmpty());
-        }
-
-        // Incoming requests table
-        if (requestRows.length > 0) {
-          writeEmptyRow();
-          writeHeader(i18n.incomingConnectionRequests());
-          requestRows.forEach(function (row) {
-            var buttonType;
-            if (!controller.hasOutgoingRequest() && row.canConnectToNode) {
-              buttonType = 'accept-button';
-            }
-            var incomingStatus = i18n.lobbyStatusWaitingForYou();
-            writeNodeRow(row.nodeID, row.displayName, incomingStatus, buttonType, row.classAttr);
-          });
-        }
-
-        // Outgoing request table
-        if (outgoingRequestRows.length > 0) {
-          writeEmptyRow();
-          writeHeader(i18n.outgoingConnectionRequests());
-          outgoingRequestRows.forEach(function (row) {
-            var outgoingStatus = i18n.lobbyStatusWaitingForOther({
-              spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
-              otherName: row.displayName,
-              otherStatus: row.status
-            });
-            writeNodeRow(row.nodeID, row.displayName, outgoingStatus, 'cancel-button', row.classAttr);
-          });
         }
       %>
 

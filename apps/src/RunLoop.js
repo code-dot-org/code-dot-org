@@ -24,18 +24,33 @@ var windowNow = (window.performance && window.performance.now) ?
     window.performance.now.bind(window.performance) : Date.now;
 
 /**
- * Ticks per second on older browsers where we can't lock to the repaint event.
+ * How many ticks we try to fire every second.
+ * @type {number}
+ * @const
+ */
+var PREFERRED_TICKS_PER_SECOND = 10;
+
+/**
+ * Precalculated milliseconds per tick.
+ * @type {number}
+ * @const
+ */
+var PREFERRED_MS_PER_TICK = (1000 / PREFERRED_TICKS_PER_SECOND);
+
+/**
+ * Rendered frames per second on older browsers where we can't lock to the
+ * repaint event.
  * @type {number}
  * @const
  */
 var FALLBACK_FPS = 30;
 
 /**
- * Precalculated milliseconds per tick for fallback case
+ * Precalculated milliseconds per frame for fallback case
  * @type {number}
  * @const
  */
-var FALLBACK_MS_PER_TICK = (1000 / FALLBACK_FPS);
+var FALLBACK_MS_PER_FRAME = (1000 / FALLBACK_FPS);
 
 
 
@@ -52,18 +67,36 @@ var RunLoop = module.exports = function () {
   this.enabled = false;
 
   /**
-   * Tracks current time and delta time for the loop.
+   * Tracks current time and delta time for the tick loop.
    * Passed to observers when events fire.
-   * @type {RunClock}
+   * @type {RunLoop.Clock}
    */
-  this.clock = new RunLoop.Clock();
+  this.tickClock = new RunLoop.Clock();
 
   /**
-   * Method that gets called over and over.
+   * Tracks current time and delta time for the render loop.
+   * Passed to observers when events fire.
+   * @type {RunLoop.Clock}
+   */
+  this.renderClock = new RunLoop.Clock();
+
+  /**
+   * Method that gets called over and over, regardless of whether NetSim
+   * is in focus or not.  Called less often than render().  Can be slowed
+   * to about once per second when NetSim is in the background.
    * @type {Function}
    * @private
    */
   this.tick_ = this.buildTickMethod_();
+
+  /**
+   * Method that gets called over and over when NetSim is visible.  Gets as
+   * close to maximum framerate as possible.  Called more often than tick(), but
+   * can be paused entirely when NetSim is in the background.
+   * @type {Function}
+   * @private
+   */
+  this.render_ = this.buildRenderMethod_();
 
   /**  @type {ObservableEvent} */
   this.tick = new ObservableEvent();
@@ -96,36 +129,51 @@ RunLoop.Clock = function () {
 RunLoop.prototype.buildTickMethod_ = function () {
   var tickMethod;
   var self = this;
+  tickMethod = function () {
+    if (self.enabled) {
+      var curTime = windowNow();
+      self.tickClock.deltaTime = curTime - self.tickClock.time;
+      self.tickClock.time = curTime;
+      self.tick.notifyObservers(self.tickClock);
+      setTimeout(tickMethod, PREFERRED_MS_PER_TICK - self.tickClock.deltaTime);
+    }
+  };
+  return tickMethod;
+};
+
+RunLoop.prototype.buildRenderMethod_ = function () {
+  var renderMethod;
+  var self = this;
   if (window.requestAnimationFrame) {
-    tickMethod = function (hiResTimeStamp) {
+    renderMethod = function (hiResTimeStamp) {
       if (self.enabled) {
-        self.clock.deltaTime = hiResTimeStamp - self.clock.time;
-        self.clock.time = hiResTimeStamp;
-        self.tick.notifyObservers(self.clock);
-        self.render.notifyObservers(self.clock);
-        requestAnimationFrame(tickMethod);
+        self.renderClock.deltaTime = hiResTimeStamp - self.renderClock.time;
+        self.renderClock.time = hiResTimeStamp;
+        self.render.notifyObservers(self.renderClock);
+        requestAnimationFrame(renderMethod);
       }
     };
   } else {
-    tickMethod = function () {
+    renderMethod = function () {
       if (self.enabled) {
         var curTime = windowNow();
-        self.clock.deltaTime = curTime - self.clock.time;
-        self.clock.time = curTime;
-        self.tick.notifyObservers(self.clock);
-        self.render.notifyObservers(self.clock);
-        setTimeout(tickMethod, FALLBACK_MS_PER_TICK - self.clock.deltaTime);
+        self.renderClock.deltaTime = curTime - self.renderClock.time;
+        self.renderClock.time = curTime;
+        self.render.notifyObservers(self.renderClock);
+        setTimeout(renderMethod, FALLBACK_MS_PER_FRAME - self.renderClock.deltaTime);
       }
     };
   }
-  return tickMethod;
+  return renderMethod;
 };
 
 /** Start the run loop (runs immediately) */
 RunLoop.prototype.begin = function () {
   this.enabled = true;
-  this.clock.time = windowNow();
-  this.tick_(this.clock.time);
+  this.tickClock.time = windowNow();
+  this.renderClock.time = windowNow();
+  this.tick_(this.tickClock.time);
+  this.render_(this.renderClock.time);
 };
 
 /**

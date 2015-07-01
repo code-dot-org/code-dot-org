@@ -47,9 +47,9 @@ var PropertyRow = React.createClass({
   },
 
   render: function() {
-    var idRowStyle = $.extend({}, rowStyle.container, {
+    var idRowStyle = $.extend({}, rowStyle.container, rowStyle.maxWidth, {
       backgroundColor: '#a69bc1',
-      width: 245
+      paddingBottom: 10
     });
 
     var inputElement;

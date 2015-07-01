@@ -15,13 +15,11 @@ nav: pd2_nav
 
 ## Exploring Computer Science
 
-**Phase 1: Online Introduction (~2 hours)**
+###Phase 1: Online Introduction (~2 hours)###
 
-The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-</br>
-</br>
+Milestone complete!
 
-**Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
+###Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)###
 
 ### Save the dates
 
