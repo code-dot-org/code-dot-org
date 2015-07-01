@@ -7,11 +7,12 @@ function tryDigest(name) {
 
 // Returns a function which returns a $.Deferred instance. When executed, the
 // function loads the given app script.
-function loadSource(name) {
+function loadSource(name, cacheBust) {
   return function () {
     var deferred = new $.Deferred();
+    cacheBust = cacheBust ? '?' + Math.random() : '';
     document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + tryDigest('js/' + name + '.js')
+      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + cacheBust
     }).on('load', function () {
       deferred.resolve();
     })[0]);
@@ -31,7 +32,7 @@ function loadStyle(name) {
 module.exports = function (callback) {
   loadStyle('common');
   loadStyle(appOptions.app);
-  var promise = loadSource('manifest')();
+  var promise = loadSource('manifest', true)();
   if (appOptions.droplet) {
     loadStyle('droplet/droplet.min');
     loadStyle('tooltipster/tooltipster.min');
