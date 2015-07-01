@@ -1740,10 +1740,11 @@ NetSimVisualization.prototype.tick = function (clock) {
 
 /**
  * Render: Let all vizentities "redraw" (or in our case, touch the DOM)
+ * @param {RunLoop.Clock} clock
  */
-NetSimVisualization.prototype.render = function () {
+NetSimVisualization.prototype.render = function (clock) {
   this.elements_.forEach(function (element) {
-    element.render();
+    element.render(clock);
   });
 };
 
@@ -3233,7 +3234,18 @@ NetSimVizNode.prototype.tick = function (clock) {
     var randomX = 300 * Math.random() - 150;
     var randomY = 300 * Math.random() - 150;
     this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
-  } else if (this.isForeground && this.tweens_.length > 0) {
+  }
+};
+
+/**
+ * When visible, runs every frame
+ * @param {RunLoop.Clock} [clock]
+ */
+NetSimVizNode.prototype.render = function (clock) {
+  NetSimVizNode.superPrototype.render.call(this, clock);
+
+  // If currently animating, adjust text box sizes to match
+  if (this.isForeground && this.tweens_.length > 0) {
     this.resizeNameBox_();
     this.resizeAddressBox_();
   }
@@ -3411,22 +3423,26 @@ NetSimVizElement.prototype.isDying = function () {
  * Update all of the tweens currently running on this VizElement (which will
  * probably modify its properties) and then remove any tweens that are completed
  * from the list.
- * @param {RunLoop.Clock} clock
  */
-NetSimVizElement.prototype.tick = function (clock) {
-  this.tweens_.forEach(function (tween) {
-    tween.tick(clock);
-  });
-  this.tweens_ = this.tweens_.filter(function (tween) {
-    return !tween.isFinished;
-  });
+NetSimVizElement.prototype.tick = function () {
 };
 
 /**
  * Update the root group's properties to reflect our current position
  * and scale.
+ * @param {RunLoop.Clock} [clock] - sometimes omitted during setup
  */
-NetSimVizElement.prototype.render = function () {
+NetSimVizElement.prototype.render = function (clock) {
+  if (clock) {
+    // Update tweens in the render loop so they are very smooth
+    this.tweens_.forEach(function (tween) {
+      tween.tick(clock);
+    });
+    this.tweens_ = this.tweens_.filter(function (tween) {
+      return !tween.isFinished;
+    });
+  }
+
   // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
   //                   out of date.
   var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
@@ -8136,15 +8152,14 @@ var NetSimMetronome = module.exports = function (rootDiv, runLoop) {
   this.pulseAge_ = 0;
 
   // Register with run loop
-  runLoop.tick.register(this.tick.bind(this));
   runLoop.render.register(this.render.bind(this));
 };
 
 /**
- * Update internal state as time passes.
+ * Fill the root div with new elements reflecting the current state
  * @param {RunLoop.Clock} clock
  */
-NetSimMetronome.prototype.tick = function (clock) {
+NetSimMetronome.prototype.render = function (clock) {
   if (!this.lastPulseTime_) {
     this.lastPulseTime_ = clock.time;
   }
@@ -8154,25 +8169,21 @@ NetSimMetronome.prototype.tick = function (clock) {
   if (this.pulseIntervalMillis_ === Infinity) {
     this.progress_ = 0;
     this.pulseAge_ = Infinity;
-    return;
-  }
+  } else {
+    // For a non-infinite interval, update the meter progress value according
+    // to the current time.
+    this.pulseAge_ = clock.time - this.lastPulseTime_;
+    this.progress_ = Math.min(this.pulseAge_ / this.pulseIntervalMillis_, 1);
 
-  this.pulseAge_ = clock.time - this.lastPulseTime_;
-  this.progress_ = Math.min(this.pulseAge_ / this.pulseIntervalMillis_, 1);
-
-  if (this.pulseAge_ >= this.pulseIntervalMillis_) {
-    // Pulse
-    var minimumLastPulseTime = clock.time - this.pulseIntervalMillis_;
-    while (this.lastPulseTime_ < minimumLastPulseTime) {
-      this.lastPulseTime_ += this.pulseIntervalMillis_;
+    if (this.pulseAge_ >= this.pulseIntervalMillis_) {
+      // Pulse
+      var minimumLastPulseTime = clock.time - this.pulseIntervalMillis_;
+      while (this.lastPulseTime_ < minimumLastPulseTime) {
+        this.lastPulseTime_ += this.pulseIntervalMillis_;
+      }
     }
   }
-};
 
-/**
- * Fill the root div with new elements reflecting the current state
- */
-NetSimMetronome.prototype.render = function () {
   var renderedMarkup = $(markup({
     progress: this.progress_,
     pulseAge: this.pulseAge_
@@ -38454,18 +38465,33 @@ var windowNow = (window.performance && window.performance.now) ?
     window.performance.now.bind(window.performance) : Date.now;
 
 /**
- * Ticks per second on older browsers where we can't lock to the repaint event.
+ * How many ticks we try to fire every second.
+ * @type {number}
+ * @const
+ */
+var PREFERRED_TICKS_PER_SECOND = 10;
+
+/**
+ * Precalculated milliseconds per tick.
+ * @type {number}
+ * @const
+ */
+var PREFERRED_MS_PER_TICK = (1000 / PREFERRED_TICKS_PER_SECOND);
+
+/**
+ * Rendered frames per second on older browsers where we can't lock to the
+ * repaint event.
  * @type {number}
  * @const
  */
 var FALLBACK_FPS = 30;
 
 /**
- * Precalculated milliseconds per tick for fallback case
+ * Precalculated milliseconds per frame for fallback case
  * @type {number}
  * @const
  */
-var FALLBACK_MS_PER_TICK = (1000 / FALLBACK_FPS);
+var FALLBACK_MS_PER_FRAME = (1000 / FALLBACK_FPS);
 
 
 
@@ -38482,18 +38508,36 @@ var RunLoop = module.exports = function () {
   this.enabled = false;
 
   /**
-   * Tracks current time and delta time for the loop.
+   * Tracks current time and delta time for the tick loop.
    * Passed to observers when events fire.
-   * @type {RunClock}
+   * @type {RunLoop.Clock}
    */
-  this.clock = new RunLoop.Clock();
+  this.tickClock = new RunLoop.Clock();
 
   /**
-   * Method that gets called over and over.
+   * Tracks current time and delta time for the render loop.
+   * Passed to observers when events fire.
+   * @type {RunLoop.Clock}
+   */
+  this.renderClock = new RunLoop.Clock();
+
+  /**
+   * Method that gets called over and over, regardless of whether NetSim
+   * is in focus or not.  Called less often than render().  Can be slowed
+   * to about once per second when NetSim is in the background.
    * @type {Function}
    * @private
    */
   this.tick_ = this.buildTickMethod_();
+
+  /**
+   * Method that gets called over and over when NetSim is visible.  Gets as
+   * close to maximum framerate as possible.  Called more often than tick(), but
+   * can be paused entirely when NetSim is in the background.
+   * @type {Function}
+   * @private
+   */
+  this.render_ = this.buildRenderMethod_();
 
   /**  @type {ObservableEvent} */
   this.tick = new ObservableEvent();
@@ -38526,36 +38570,51 @@ RunLoop.Clock = function () {
 RunLoop.prototype.buildTickMethod_ = function () {
   var tickMethod;
   var self = this;
+  tickMethod = function () {
+    if (self.enabled) {
+      var curTime = windowNow();
+      self.tickClock.deltaTime = curTime - self.tickClock.time;
+      self.tickClock.time = curTime;
+      self.tick.notifyObservers(self.tickClock);
+      setTimeout(tickMethod, PREFERRED_MS_PER_TICK - self.tickClock.deltaTime);
+    }
+  };
+  return tickMethod;
+};
+
+RunLoop.prototype.buildRenderMethod_ = function () {
+  var renderMethod;
+  var self = this;
   if (window.requestAnimationFrame) {
-    tickMethod = function (hiResTimeStamp) {
+    renderMethod = function (hiResTimeStamp) {
       if (self.enabled) {
-        self.clock.deltaTime = hiResTimeStamp - self.clock.time;
-        self.clock.time = hiResTimeStamp;
-        self.tick.notifyObservers(self.clock);
-        self.render.notifyObservers(self.clock);
-        requestAnimationFrame(tickMethod);
+        self.renderClock.deltaTime = hiResTimeStamp - self.renderClock.time;
+        self.renderClock.time = hiResTimeStamp;
+        self.render.notifyObservers(self.renderClock);
+        requestAnimationFrame(renderMethod);
       }
     };
   } else {
-    tickMethod = function () {
+    renderMethod = function () {
       if (self.enabled) {
         var curTime = windowNow();
-        self.clock.deltaTime = curTime - self.clock.time;
-        self.clock.time = curTime;
-        self.tick.notifyObservers(self.clock);
-        self.render.notifyObservers(self.clock);
-        setTimeout(tickMethod, FALLBACK_MS_PER_TICK - self.clock.deltaTime);
+        self.renderClock.deltaTime = curTime - self.renderClock.time;
+        self.renderClock.time = curTime;
+        self.render.notifyObservers(self.renderClock);
+        setTimeout(renderMethod, FALLBACK_MS_PER_FRAME - self.renderClock.deltaTime);
       }
     };
   }
-  return tickMethod;
+  return renderMethod;
 };
 
 /** Start the run loop (runs immediately) */
 RunLoop.prototype.begin = function () {
   this.enabled = true;
-  this.clock.time = windowNow();
-  this.tick_(this.clock.time);
+  this.tickClock.time = windowNow();
+  this.renderClock.time = windowNow();
+  this.tick_(this.tickClock.time);
+  this.render_(this.renderClock.time);
 };
 
 /**
