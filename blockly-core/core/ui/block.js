@@ -372,6 +372,9 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
     this.svg_.disposeUiEffect();
   }
 
+  var updateBlockSpaceCallback = goog.bind(
+      this.blockSpace.updateScrollableSize, this.blockSpace);
+
   // This block is now at the top of the blockSpace.
   // Remove this block from the blockSpace's list of top-most blocks.
   this.blockSpace.removeTopBlock(this);
@@ -422,6 +425,7 @@ Blockly.Block.prototype.dispose = function(healStack, animate) {
   }
 
   this.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DISPOSED);
+  updateBlockSpaceCallback();
 };
 
 /**
