@@ -28,3 +28,13 @@
 .field
   = f.label :beginner_mode, 'Beginner mode for loops'
   = boolean_check_box f, :beginner_mode
+.field
+  = f.label :start_html, 'Starting design mode html'
+  %p
+    This should be equivalent to the level html created by design mode. The recommended way to generate this
+    is to add your elements in design mode, hit run, then open up the browser console and type `Applab.levelHtml`.
+    Copy the result and paste it here (it should start with something like
+    #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
+  = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: Applab.pretty_print(@level.start_html)
+  :javascript
+    codeMirror('start_html', 'html');

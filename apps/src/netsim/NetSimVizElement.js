@@ -104,22 +104,26 @@ NetSimVizElement.prototype.isDying = function () {
  * Update all of the tweens currently running on this VizElement (which will
  * probably modify its properties) and then remove any tweens that are completed
  * from the list.
- * @param {RunLoop.Clock} clock
  */
-NetSimVizElement.prototype.tick = function (clock) {
-  this.tweens_.forEach(function (tween) {
-    tween.tick(clock);
-  });
-  this.tweens_ = this.tweens_.filter(function (tween) {
-    return !tween.isFinished;
-  });
+NetSimVizElement.prototype.tick = function () {
 };
 
 /**
  * Update the root group's properties to reflect our current position
  * and scale.
+ * @param {RunLoop.Clock} [clock] - sometimes omitted during setup
  */
-NetSimVizElement.prototype.render = function () {
+NetSimVizElement.prototype.render = function (clock) {
+  if (clock) {
+    // Update tweens in the render loop so they are very smooth
+    this.tweens_.forEach(function (tween) {
+      tween.tick(clock);
+    });
+    this.tweens_ = this.tweens_.filter(function (tween) {
+      return !tween.isFinished;
+    });
+  }
+
   // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
   //                   out of date.
   var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
