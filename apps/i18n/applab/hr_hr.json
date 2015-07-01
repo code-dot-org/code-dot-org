@@ -1,4 +1,5 @@
 {
+  "addEventHeader": "Click a link below to add a function to your code that will be called when the event is triggered.",
   "catActions": "Actions",
   "catControl": "Loops",
   "catEvents": "Events",
@@ -15,7 +16,7 @@
   "debugConsoleHeader": "Debug Console",
   "designToolboxDescription": "Drag the elements into your app!",
   "designToolboxHeader": "Design Toolbox",
-  "designWorkspaceDescription": "Click on an element to edit its properties.",
+  "designWorkspaceDescription": "Click on an element to edit its properties. Create code in Events.",
   "designWorkspaceHeader": "Workspace",
   "dropletBlock_appendItem_description": "Append the item to the end of the array",
   "dropletBlock_appendItem_param0": "list",
