@@ -1,4 +1,7 @@
 var path = require('path');
+var crypto = require('crypto');
+var fs = require('fs');
+var mkdirp = require('mkdirp');
 
 var config = {};
 
@@ -432,13 +435,11 @@ module.exports = function(grunt) {
 
   // Add md5 digest to filenames
   grunt.registerMultiTask('digest', function () {
-    var crypto = require('crypto');
-    var fs = require('fs');
     var manifest = {};
-    var outFile = this.options().out;
+    var manifestFile = this.options().out;
     this.filesSrc.forEach(function (file) {
 
-      if (file === outFile) {
+      if (file === manifestFile) {
         return;
       }
 
@@ -449,13 +450,11 @@ module.exports = function(grunt) {
       fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
       manifest[oldName] = newName;
     });
-    grunt.file.write(outFile, 'var digestManifest = ' + JSON.stringify(manifest));
+    grunt.file.write(manifestFile, 'window.digestManifest = ' + JSON.stringify(manifest));
   });
 
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function() {
-    var fs = require('fs');
-    var mkdirp = require('mkdirp');
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
     APPS.concat('common').map(function (item) {
