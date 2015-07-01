@@ -42,7 +42,7 @@ body {
   font-size: 80px;
   line-height: 80px;
   margin-top:30px;
-  margin-bottom:30px;  
+  margin-bottom:30px;
 }
 
 .headercontent {
@@ -113,4 +113,6 @@ body {
   overflow: hidden;
 }
 
-
+.standards {
+  margin-bottom: 30px;
+}
