@@ -38,6 +38,9 @@ level 'sciPD2 remix1'
 
 stage 'Thinking Ahead to Implementation'
 level 'sciPD2 implement1'
+level 'sciPD2 implement2'
 
 stage 'Wrap-Up'
+level 'sciPD2 thanks'
 level 'sciPD2b reflection'
+level 'sciPD2b end'
