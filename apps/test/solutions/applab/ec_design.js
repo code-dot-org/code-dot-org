@@ -41,7 +41,7 @@ module.exports = {
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
         var assetUrl = 'http://localhost:8001/apps/static/flappy_promo.png';
-        var imageInput = $("#design-properties input").last()[0];
+        var imageInput = $("#propertyRowContainer input").last()[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
           target: { value: assetUrl }
@@ -215,6 +215,42 @@ module.exports = {
           $("#designModeButton").click();
 
           assert.equal($('#my_button').length, 0, 'API created element should be gone');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "clear puzzle clears design mode",
+      editCode: true,
+      xml: 'button("my_button", "text");',
+      runBeforeClick: function (assert) {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          // drag a button out
+          $("#designModeButton").click();
+          testUtils.dragToVisualization('BUTTON', 10, 10);
+          validatePropertyRow(0, 'id', 'button1', assert);
+
+          assert.equal($("#divApplab button").length, 1);
+
+          // Enter code mode
+          $("#codeModeButton").click();
+          assert.equal(/<button id="button1"/.test(Applab.levelHtml), true,
+            "levelHtml has added button");
+
+          // hit clear, and click through confirmation dialog
+          // TODO - disable temporarily
+          // $("#clear-puzzle-header").click();
+          // assert.equal($("#continue-button").is(':visible'), true);
+          // $("#continue-button").click();
+          //
+          // assert.equal(Applab.levelHtml, "", "levelHtml was cleared");
+          // assert.equal($("#divApplab button").length, 1, "button is not in play area");
 
           Applab.onPuzzleComplete();
         });

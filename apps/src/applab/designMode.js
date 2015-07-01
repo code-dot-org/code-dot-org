@@ -365,6 +365,11 @@ designMode.onDepthChange = function (element, depthDirection) {
   designMode.editElementProperties(element);
 };
 
+designMode.onInsertEvent = function(code) {
+  Applab.appendToEditor(code);
+  $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
+};
+
 designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
   // Children are screens. Want to operate on grandchildren
@@ -682,6 +687,7 @@ designMode.renderDesignWorkspace = function(element) {
     handleChange: designMode.onPropertyChange.bind(this, element),
     onDepthChange: designMode.onDepthChange,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
+    onInsertEvent: designMode.onInsertEvent.bind(this),
     handleManageAssets: showAssetManager
   };
   React.render(React.createElement(DesignWorkspace, props), designWorkspace);

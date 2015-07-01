@@ -38,7 +38,7 @@ Several documents describe the overarching themes and direction of the course.
 - [Curriculum overview](/files/CSPCurriculumOverview2015.pdf) (rev. Feb. 2015)
 - [Year-long view of the curriculum](/files/CSPCurriculumMap2015.png)
 - [Unit coverage of the CSP framework](/files/CSPFrameworkCoverage.png)
-
+- [Professional development overview](/files/CSPPDoverview.pdf)
 
 
 ## <a name="lessons"></a>Lessons
