@@ -2486,8 +2486,12 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'image':
       var image = new Image();
       var backgroundImage = new Image();
-      backgroundImage.onload = function(){
+      var originalImage = element.style.backgroundImage;
+      backgroundImage.onload = function() {
         element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+        if (originalImage === element.style.backgroundImage) {
+          return;
+        }
         element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
           backgroundImage.naturalHeight + 'px';
         element.style.width = backgroundImage.naturalWidth + 'px';
@@ -2512,12 +2516,20 @@ designMode.onPropertyChange = function(element, name, value) {
       break;
 
     case 'picture':
+      var originalSrc = element.src;
       element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
       element.onload = function () {
+        if (element.src === originalSrc) {
+          return;
+        }
         // naturalWidth/Height aren't populated until image has loaded.
         element.style.width = element.naturalWidth + 'px';
         element.style.height = element.naturalHeight + 'px';
+        if ($(element.parentNode).is('.ui-resizable')) {
+          element.parentNode.style.width = element.naturalWidth + 'px';
+          element.parentNode.style.height = element.naturalHeight + 'px';
+        }
         // Re-render properties
         if (currentlyEditedElement === element) {
           designMode.editElementProperties(element);
@@ -2758,8 +2770,15 @@ function makeDraggable (jqueryElements) {
         elm.outerWidth(wrapper.width());
         elm.outerHeight(wrapper.height());
         var element = elm[0];
-        designMode.onPropertyChange(element, 'width', element.style.width);
-        designMode.onPropertyChange(element, 'height', element.style.height);
+        // canvas uses width/height. other elements use style.width/style.height
+        var widthProperty = 'style-width';
+        var heightProperty = 'style-height';
+        if (element.hasAttribute('width') || element.hasAttribute('height')) {
+          widthProperty = 'width';
+          heightProperty = 'height';
+        }
+        designMode.onPropertyChange(element, widthProperty, element.style.width);
+        designMode.onPropertyChange(element, heightProperty, element.style.height);
       },
       grid: [GRID_SIZE, GRID_SIZE],
       containment: 'parent'
@@ -7013,6 +7032,7 @@ module.exports = {
       element.style.position = 'absolute';
       element.style.left = left + 'px';
       element.style.top = top + 'px';
+      element.style.margin = '0px';
     }
 
     return element;
