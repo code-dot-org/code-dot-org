@@ -170,8 +170,12 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'image':
       var image = new Image();
       var backgroundImage = new Image();
-      backgroundImage.onload = function(){
+      var originalImage = element.style.backgroundImage;
+      backgroundImage.onload = function() {
         element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+        if (originalImage === element.style.backgroundImage) {
+          return;
+        }
         element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
           backgroundImage.naturalHeight + 'px';
         element.style.width = backgroundImage.naturalWidth + 'px';
@@ -507,9 +511,7 @@ function makeDraggable (jqueryElements) {
 
     wrapper.css({
       top: elm.css('top'),
-      left: elm.css('left'),
-      width: parseInt(elm[0].style.width, 10) + parseInt(elm[0].style.margin, 10),
-      height: parseInt(elm[0].style.height, 10) + parseInt(elm[0].style.margin, 10)
+      left: elm.css('left')
     });
 
     // Chrome/Safari both have issues where they don't properly render the
