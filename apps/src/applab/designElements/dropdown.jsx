@@ -6,6 +6,8 @@ var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var OptionsSelectRow = require('./OptionsSelectRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -85,8 +87,24 @@ var DropdownEvents = React.createClass({
     handleChange: React.PropTypes.func.isRequired
   },
 
+  getChangeEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "change", function(event) {\n' +
+      '  console.log("Option selected from ' + id + '!");\n' +
+      '  console.log("Selected option: " + getText("' + id + '"));\n' +
+      '});\n';
+    return code;
+  },
+
+  insertChange: function() {
+    this.props.onInsertEvent(this.getChangeEventCode());
+  },
+
   render: function () {
     var element = this.props.element;
+    var changeName = 'Change';
+    var changeDesc = 'Triggered every time an option is selected from the dropdown.';
 
     return (
       <div id='eventRowContainer'>
@@ -95,6 +113,11 @@ var DropdownEvents = React.createClass({
           initialValue={element.id}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={changeName}
+          desc={changeDesc}
+          handleInsert={this.insertChange}/>
       </div>
     );
   }
