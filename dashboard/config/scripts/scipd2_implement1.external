@@ -1,0 +1,15 @@
+name 'sciPD2 implement1'
+title 'Thinking Ahead'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+
+### Thinking Ahead to Implementation
+
+You may not have finished all the modules by this time, but you should have made some progress with both the curriculum and the StarLogo Nova tool.
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

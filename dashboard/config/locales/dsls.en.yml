@@ -791,6 +791,8 @@ en:
         Agent Based Modeling of Adaptive Systems Forum: Agent Based Modeling of Adaptive Systems Forum
       sciPD agent based video:
         Agent Based Modeling: Agent Based Modeling
+      sciPD breeds:
+        Breeds in SL Nova: Breeds in SL Nova
       sciPD class models forum:
         Models in the Classroom: Models in the Classroom
       sciPD class models video:
@@ -833,10 +835,18 @@ en:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect
+      sciPD2 SLN explore:
+        Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
       sciPD2 StarLogoNova:
         Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 camera:
+        Changing Camera View: Changing Camera View
       sciPD2 challenge:
         Most Challenging Module: Most Challenging Module
+      sciPD2 color:
+        Detecting Collisions: Detecting Collisions
+      sciPD2 conditionals:
+        Using Conditionals: Using Conditionals
       sciPD2 discussion:
         Phase 2 Discussion: Phase 2 Discussion
       sciPD2 discussion lesson1:
@@ -855,10 +865,16 @@ en:
         Phase 2 Evaluation: Phase 2 Evaluation
       sciPD2 implement:
         Implementation Planning: Implementation Planning
+      sciPD2 implement1:
+        Thinking Ahead: Thinking Ahead
       sciPD2 mods:
         Reviewing the Modules: Reviewing the Modules
+      sciPD2 procedures:
+        Creating Procedures: Creating Procedures
       sciPD2 remember:
         Thinking Back: Thinking Back
+      sciPD2 remix1:
+        Remixing Experience: Remixing Experience
       sciPD2 resource common:
         Phase 2 Common Forms: Phase 2 Common Forms
       sciPD2 resource module1:
@@ -871,8 +887,12 @@ en:
         Phase 2 Module 4: Phase 2 Module 4
       sciPD2 resource reference:
         Phase 2 Guides and Resources: Phase 2 Guides and Resources
+      sciPD2 sliders:
+        Creating a Slider: Creating a Slider
       sciPD2 timeline:
         Timeline of PD Phases: Timeline of PD Phases
+      sciPD2 wiggle:
+        Walk with a Wiggle: Walk with a Wiggle
       sciPD2b intro:
         Introduction to Phase 2: Introduction to Phase 2
       sciPD2b reflection:

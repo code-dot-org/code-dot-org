@@ -21,7 +21,23 @@ level 'sciencePD2b remixing'
 stage 'Reviewing the Modules'
 level 'sciPD2 mods'
 level 'sciPD2 remember'
+level 'sciPD2 challenge'
 
+stage 'Advanced StarLogo Nova'
+level 'sciPD2 SLN explore'
+level 'sciPD2 sliders'
+level 'sciPD breeds'
+level 'sciPD2 camera'
+level 'sciPD2 wiggle'
+level 'sciPD2 color'
+level 'sciPD2 procedures'
+level 'sciPD2 conditionals'
+
+stage 'Remixing Phases 1 and 2'
+level 'sciPD2 remix1'
+
+stage 'Thinking Ahead to Implementation'
+level 'sciPD2 implement1'
 
 stage 'Wrap-Up'
 level 'sciPD2b reflection'
