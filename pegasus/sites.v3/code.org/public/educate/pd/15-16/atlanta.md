@@ -39,6 +39,9 @@ Quarter 3: Saturday, March 5, 2015
 
 Quarter 4: Saturday, April 23, 2015
 
+8:30am - 3:30pm
+<br/>
+Breakfast and lunch will be served.
 
 **Location**
 
@@ -101,6 +104,11 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 Semester 1: Saturday, September 12, 2015 
 
 Semester 2: Saturday, March 5, 2016 
+
+8:00am - 4:00pm
+</br>
+<br/>
+Breakfast and lunch will be served. 
 
 **Location**
 

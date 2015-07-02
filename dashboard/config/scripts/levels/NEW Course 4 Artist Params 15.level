@@ -20,7 +20,15 @@
     "free_play": "true",
     "impressive": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "scrollbars": "true",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

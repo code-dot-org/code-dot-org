@@ -92,6 +92,7 @@ module.exports = {
       element.style.position = 'absolute';
       element.style.left = left + 'px';
       element.style.top = top + 'px';
+      element.style.margin = '0px';
     }
 
     return element;

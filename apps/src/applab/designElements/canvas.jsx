@@ -60,7 +60,7 @@ var CanvasEvents = React.createClass({
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked!");\n' +
+      '  console.log("' + id + ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
       '  setActiveCanvas("' + id + '");\n' +
       '  circle(event.offsetX, event.offsetY, 10);\n' +
       '});\n';

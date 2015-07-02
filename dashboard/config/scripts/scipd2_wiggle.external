@@ -7,8 +7,12 @@ markdown <<MARKDOWN
 
 ### Walking with Wiggle
 
-<br/><br/>
-<img src="https://images.code.org/06a54f403c0b53afaeeb1b7b8fb16795-image-1435716339660.gif" class="lefted roundedPic" width="350px"/>In the real world, animals rarely walk in a straight line.  Animals meander. They wander, and they graze...especially when they're not being chased by predators!
+In the real world, animals rarely walk in a straight line.  Animals meander. They wander, and they graze...especially when they're not being chased by predators!
+
+
+<img src="https://images.code.org/06a54f403c0b53afaeeb1b7b8fb16795-image-1435716339660.gif" class="lefted roundedPic" width="350px"/>
+
+#### Adding a Wiggle
 
 If you want to add a bit more realism, you can add a bit of wiggle to any agent's walk.
 
