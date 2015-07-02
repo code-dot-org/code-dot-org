@@ -200,7 +200,8 @@ DebugArea.prototype.slideShut = function () {
   this.codeTextbox_.animate({
     bottom: closedHeight
   },{
-    step: utils.fireResizeEvent
+    step: utils.fireResizeEvent,
+    complete: utils.fireResizeEvent
   });
 
   // Animate the 'clear' button vanishing at the same time
