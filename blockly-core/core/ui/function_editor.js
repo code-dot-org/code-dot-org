@@ -437,6 +437,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
         // hideTrashRect:
         true);
 
+  this.modalBlockSpaceEditor.bindMouseEventsTo(this.container_);
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
   this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
 
@@ -748,6 +749,7 @@ Blockly.FunctionEditor.prototype.createFrameClipDiv_ = function () {
   var frameClipDiv = goog.dom.createDom('div');
   frameClipDiv.style.position = 'absolute';
   frameClipDiv.style.overflow = 'hidden';
+  frameClipDiv.style.pointerEvents = 'none';
   return frameClipDiv;
 };
 
