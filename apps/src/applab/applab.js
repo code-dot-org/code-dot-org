@@ -734,6 +734,7 @@ Applab.init = function(config) {
           d.type.toUpperCase() === 'FILE' ||
           d.type.toUpperCase() === 'EMAIL' ||
           d.type.toUpperCase() === 'SEARCH' ||
+          d.type.toUpperCase() === 'NUMBER' ||
           d.type.toUpperCase() === 'DATE' )) ||
           d.tagName.toUpperCase() === 'TEXTAREA') {
         doPrevent = d.readOnly || d.disabled;
@@ -799,7 +800,7 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   if (debugAreaController.isShut()) {
     debugAreaController.snapOpen();
   }
-  
+
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 
