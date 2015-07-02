@@ -802,6 +802,11 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   }
 
   dialog.show({hideOptions: hideOptions});
+
+  if (renderedMarkdown && $.fn.details) {
+    // if available, process markdown with <details> tag polyfill
+    $('details').details();
+  }
 };
 
 /**
