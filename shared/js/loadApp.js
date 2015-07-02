@@ -5,14 +5,20 @@ function tryDigest(name) {
   return (window.digestManifest || {})[name] || name;
 }
 
-// Returns a function which returns a $.Deferred instance. When executed, the
-// function loads the given app script.
+/**
+ * Returns a function which returns a $.Deferred instance. When executed, the
+ * function loads the given app script.
+ * @param name The name of the module to load.
+ * @param cacheBust{Boolean?} If true, append a random query string to bypass the
+ *   cache.
+ * @returns {Function}
+ */
 function loadSource(name, cacheBust) {
   return function () {
     var deferred = new $.Deferred();
-    cacheBust = cacheBust ? '?' + Math.random() : '';
+    var param = cacheBust ? '?' + Math.random() : '';
     document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + cacheBust
+      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + param
     }).on('load', function () {
       deferred.resolve();
     })[0]);

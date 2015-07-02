@@ -4,15 +4,21 @@
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
+var loadApp = require('./loadApp');
+var project = require('./project');
 
 window.apps = {
-  load: require('./loadApp'),
+  // Loads the dependencies for the current app based on values in `appOptions`.
+  // This function takes a callback which is called once dependencies are ready.
+  load: loadApp,
+  // Legacy Blockly initialization that was moved here from _blockly.html.haml.
+  // Modifies `appOptions` with some default values in `baseOptions`.
   setup: function () {
 
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
     }
-    dashboard.project = require('./project');
+    dashboard.project = project;
 
     timing.startTiming('Puzzle', script_path, '');
 
@@ -109,6 +115,7 @@ window.apps = {
       }
     })(appOptions.level);
   },
+  // Initialize the Blockly or Droplet app.
   init: function () {
     dashboard.project.init();
     window[appOptions.app + 'Main'](appOptions);
