@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## checkbox(checkboxId, checked)
+## checkbox(id, checked)
 
 [/name]
 
@@ -20,8 +20,10 @@ Category: UI Controls
 
 [short_description]
 
-Creates a checkbox with the specified `checkboxId`.
+Creates a checkbox with the specified `id`.
 The initial state of the checkbox (checked/unchecked) is determined by the `checked` (true/false) parameter.
+
+**Note:** The Checkbox can also be used in design mode.
 
 [/short_description]
 
@@ -34,7 +36,7 @@ ____________________________________________________
 
 
 <pre>
-checkbox("checkbox-1", true);
+checkbox("checkbox1", true);
 </pre>
 
 [/example]
@@ -48,11 +50,10 @@ ____________________________________________________
 Getting the state of a checkbox:
 
 <pre>
-// Create a checked checkbox with id checkbox-1
-checkbox("checkbox-1", true);
+checkbox("checkbox1", true);                // Create a checked checkbox with id checkbox1
+var isChecked = getChecked("checkbox1");    // isChecked will be assigned the boolean value true
 
-// isChecked will be assigned the boolean value true
-var isChecked = getChecked("checkbox-1");
+console.log("The value of isChecked is " + isChecked);
 </pre>
 
 [/example]
@@ -66,19 +67,16 @@ ____________________________________________________
 Many websites have a registration page where users are asked to accept the terms of service by checking a checkbox.
 
 <pre>
-checkbox("checkbox-1", false);
-textLabel("label-1", "I accept the terms of service");
+checkbox("checkbox1", false);
+textLabel("label1", "I accept the terms of service");
 
-button("button-1", "Register");
+button("button1", "Register");                            // Create a "Register" button.
 
-// Whenever the "Register" button is clicked ...
-onEvent("button-1", "click", function(){
+onEvent("button1", "click", function(){                   // Whenever the "Register" button is clicked ...
 
-  // Get a boolean indicating whether the checkbox is checked or not.
-  var acceptedTermsOfService = getChecked("checkbox-1");
+  var acceptedTermsOfService = getChecked("checkbox1");   // Get a boolean indicating whether the checkbox is checked or not.
 
-  // Based on the boolean, write a message to the screen
-  if(acceptedTermsOfService){
+  if(acceptedTermsOfService){                             // Based on the boolean, write a message to the screen.
     write("OK");
   } else {
     write("You must accept the terms of service");
@@ -96,7 +94,7 @@ ____________________________________________________
 
 ### Syntax
 <pre>
-checkbox(checkboxId, checked);
+checkbox(id, checked);
 </pre>
 
 [/syntax]
@@ -107,8 +105,8 @@ checkbox(checkboxId, checked);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| checkboxId | String | Yes | A unique identifier for the checkbox. The id is used for referencing the created checkbox. For example, getting the checkbox's state (checked/unchecked).  |
-| checked | Boolean | No | Indicates the intial state (checked/unchecked) of the checkbox. Default value: `false`.  |
+| id | String | Yes | A unique identifier for the checkbox. The id is used for referencing the created checkbox. For example, getting the checkbox's state (checked/unchecked).  |
+| checked | Boolean | No | Indicates the initial state (checked/unchecked) of the checkbox. Default value: `false`.  |
 
 [/parameters]
 
@@ -121,6 +119,9 @@ No return value.
 
 [tips]
 
+### Tips
+
+The checkbox can also be used in design mode.
 
 [/tips]
 

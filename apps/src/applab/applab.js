@@ -40,6 +40,7 @@ var elementLibrary = require('./designElements/library');
 var clientApi = require('./assetManagement/clientApi');
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
+var DebugArea = require('./DebugArea');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -48,6 +49,14 @@ var TestResults = studioApp.TestResults;
  * Create a namespace for the application.
  */
 var Applab = module.exports;
+
+/**
+ * Controller for debug console and controls on page
+ * TODO: Rename to debugArea once other debugArea references are moved out of
+ *       this file.
+ * @type {DebugArea}
+ */
+var debugAreaController = null;
 
 //Debug console history
 Applab.debugConsoleHistory = {
@@ -635,6 +644,10 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
+  debugAreaController = new DebugArea(
+      document.getElementById('debug-area'),
+      document.getElementById('codeTextbox'));
+
   if (level.editCode) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
@@ -676,6 +689,7 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
+
     var clearButton = document.getElementById('clear-console-header');
     if (clearButton) {
       dom.addClickTouchEvent(clearButton, clearDebugOutput);
@@ -745,6 +759,11 @@ Applab.init = function(config) {
   }
 };
 
+Applab.appendToEditor = function(newCode) {
+  var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
+  studioApp.editor.setValue(code);
+};
+
 Applab.onMouseDownDebugResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
 
@@ -777,6 +796,10 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
                                 (window.innerHeight - event.pageY) - offset));
 
+  if (debugAreaController.isShut()) {
+    debugAreaController.snapOpen();
+  }
+  
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 
@@ -1232,6 +1255,27 @@ Applab.onCodeModeButton = function() {
   Applab.serializeAndSave();
 };
 
+/**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+Applab.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
+};
+
 Applab.onPuzzleComplete = function() {
   // Submit all results as success / freePlay
   Applab.result = ResultType.SUCCESS;
@@ -1390,7 +1434,7 @@ function quote(str) {
 Applab.getAssetDropdown = function (typeFilter) {
   var options = assetListStore.list(typeFilter).map(function (asset) {
     return {
-      text: quote(clientApi.basePath(asset.filename)),
+      text: quote(asset.filename),
       display: quote(asset.filename)
     };
   });

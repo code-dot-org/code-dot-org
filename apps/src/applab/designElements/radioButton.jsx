@@ -5,6 +5,8 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var RadioButtonProperties = React.createClass({
   propTypes: {
@@ -65,8 +67,52 @@ var RadioButtonProperties = React.createClass({
   }
 });
 
+var RadioButtonEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
+  },
+
+  getChangeEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "change", function(event) {\n' +
+      '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
+      '});\n';
+    return code;
+  },
+
+  insertChange: function() {
+    this.props.onInsertEvent(this.getChangeEventCode());
+  },
+
+  render: function () {
+    var element = this.props.element;
+    var changeName = 'Change';
+    var changeDesc = 'Triggered when the radio button state changes ' +
+        'both from selected to de-selected, and from de-selected to selected.';
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={changeName}
+          desc={changeDesc}
+          handleInsert={this.insertChange}/>
+      </div>
+    );
+  }
+});
+
 module.exports = {
-  PropertyTable: RadioButtonProperties,
+  PropertyTab: RadioButtonProperties,
+  EventTab: RadioButtonEvents,
 
   create: function() {
     var element = document.createElement('input');

@@ -209,10 +209,14 @@ NetSimLocalClientNode.prototype.tick = function (clock) {
 /**
  * Handler for a heartbeat update failure.  Propagates the failure up through
  * our own "lost connection" callback.
+ * @param {Error} err
  * @private
  */
-NetSimLocalClientNode.prototype.onFailedHeartbeat = function () {
+NetSimLocalClientNode.prototype.onFailedHeartbeat = function (err) {
   logger.error("Heartbeat failed.");
+  if (err) {
+    logger.error(err.message);
+  }
   if (this.onNodeLostConnection_ !== undefined) {
     this.onNodeLostConnection_();
   }

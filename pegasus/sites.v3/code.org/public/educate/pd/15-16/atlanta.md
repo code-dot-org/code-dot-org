@@ -26,17 +26,22 @@ In-person milestone complete! It is now time to complete the 8 hour online porti
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-<br/>
-**Save the Dates:**
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+
+**Save the dates:**
 
 Quarter 1: Saturday, September 12, 2015
-<br/>
+
 Quarter 2: Saturday, December 12, 2015
-<br/>
+
 Quarter 3: Saturday, March 5, 2015
-<br/>
+
 Quarter 4: Saturday, April 23, 2015
 
+8:30am - 3:30pm
+<br/>
+Breakfast and lunch will be served.
 
 **Location**
 
@@ -89,14 +94,21 @@ Milestone complete!
 
 In-person milestone complete! More info coming soon on your Phase 2 online portion. 
 
-### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ### 
+### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) 
 
-<br/>
-**Save the dates**
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+
+**Save the dates:**
 
 Semester 1: Saturday, September 12, 2015 
-<br/>
+
 Semester 2: Saturday, March 5, 2016 
+
+8:00am - 4:00pm
+</br>
+<br/>
+Breakfast and lunch will be served. 
 
 **Location**
 
