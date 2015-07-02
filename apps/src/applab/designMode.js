@@ -172,6 +172,8 @@ designMode.onPropertyChange = function(element, name, value) {
       var backgroundImage = new Image();
       var originalImage = element.style.backgroundImage;
       backgroundImage.onload = function() {
+        // remove loader so that API calls dont hit this
+        delete backgroundImage.onload;
         element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
         if (originalImage === element.style.backgroundImage) {
           return;
@@ -204,6 +206,8 @@ designMode.onPropertyChange = function(element, name, value) {
       element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
       element.onload = function () {
+        // remove loader so that API calls dont hit this
+        delete element.onload;
         if (element.src === originalSrc) {
           return;
         }
