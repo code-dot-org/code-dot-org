@@ -92,13 +92,18 @@ module.exports = {
       element.style.position = 'absolute';
       element.style.left = left + 'px';
       element.style.top = top + 'px';
+      element.style.margin = '0px';
     }
 
     return element;
   },
 
-  getElementPropertyTable: function (elementType) {
-    return elements[elementType].PropertyTable;
+  getElementPropertyTab: function (elementType) {
+    return elements[elementType].PropertyTab;
+  },
+
+  getElementEventTab: function(elementType) {
+    return elements[elementType].EventTab;
   },
 
   /**

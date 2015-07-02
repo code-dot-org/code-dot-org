@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({309:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({312:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var Artist = require('./turtle');
@@ -19,7 +19,7 @@ window.turtleMain = function(options) {
 };
 
 
-},{"../StudioApp":5,"../appMain":9,"./blocks":302,"./levels":307,"./skins":311,"./turtle":314}],311:[function(require,module,exports){
+},{"../StudioApp":5,"../appMain":9,"./blocks":305,"./levels":310,"./skins":314,"./turtle":317}],314:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -81,7 +81,7 @@ exports.load = function (assetUrl, id) {
 };
 
 
-},{"../skins":265}],302:[function(require,module,exports){
+},{"../skins":268}],305:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -1028,7 +1028,7 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../locale":147,"./colours":303,"./customLevelBlocks":305,"./locale":308,"./turtle":314}],314:[function(require,module,exports){
+},{"../locale":150,"./colours":306,"./customLevelBlocks":308,"./locale":311,"./turtle":317}],317:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -2490,7 +2490,7 @@ Artist.prototype.resetStepInfo_ = function () {
 };
 
 
-},{"../codegen":102,"../dropletUtils":106,"../locale":147,"../slider":266,"../templates/page.html.ejs":293,"../utils":315,"./api":301,"./colours":303,"./controls.html.ejs":304,"./dropletConfig":306,"./levels":307,"./locale":308}],307:[function(require,module,exports){
+},{"../codegen":105,"../dropletUtils":109,"../locale":150,"../slider":269,"../templates/page.html.ejs":296,"../utils":318,"./api":304,"./colours":306,"./controls.html.ejs":307,"./dropletConfig":309,"./levels":310,"./locale":311}],310:[function(require,module,exports){
 var levelBase = require('../level_base');
 var Colours = require('./colours');
 var answer = require('./answers').answer;
@@ -3396,7 +3396,7 @@ levels.ec_1_10 = utils.extend(levels['1_10'], {
 });
 
 
-},{"../block_utils":73,"../level_base":146,"../utils":315,"./answers":300,"./colours":303,"./locale":308,"./requiredBlocks":310,"./startBlocks.xml.ejs":312,"./toolbox.xml.ejs":313}],313:[function(require,module,exports){
+},{"../block_utils":76,"../level_base":149,"../utils":318,"./answers":303,"./colours":306,"./locale":311,"./requiredBlocks":313,"./startBlocks.xml.ejs":315,"./toolbox.xml.ejs":316}],316:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3524,7 +3524,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":308,"ejs":487}],312:[function(require,module,exports){
+},{"./locale":311,"ejs":490}],315:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3590,7 +3590,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":308,"ejs":487}],310:[function(require,module,exports){
+},{"./locale":311,"ejs":490}],313:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for StudioApp.requiredBlocks_.
@@ -3795,7 +3795,7 @@ module.exports = {
 };
 
 
-},{"../required_block_utils":263}],306:[function(require,module,exports){
+},{"../required_block_utils":266}],309:[function(require,module,exports){
 module.exports.blocks = [
   {'func': 'moveForward', 'category': 'Artist', 'params': ["100"], 'idArgLast': true },
   {'func': 'turnRight', 'category': 'Artist', 'params': ["90"], 'idArgLast': true },
@@ -3811,7 +3811,7 @@ module.exports.categories = {
 };
 
 
-},{}],304:[function(require,module,exports){
+},{}],307:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3831,7 +3831,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":487}],305:[function(require,module,exports){
+},{"ejs":490}],308:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
@@ -4521,12 +4521,12 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
 }
 
 
-},{"../utils":315,"./locale":308}],308:[function(require,module,exports){
+},{"../utils":318,"./locale":311}],311:[function(require,module,exports){
 // locale for turtle
 module.exports = window.blockly.turtle_locale;
 
 
-},{}],303:[function(require,module,exports){
+},{}],306:[function(require,module,exports){
 // Create a limited colour palette to avoid overwhelming new users
 // and to make colour checking easier.  These definitions cannot be
 // moved to blocks.js, which is loaded later, since they are used in
@@ -4560,7 +4560,7 @@ var Colours = {
 module.exports = Colours;
 
 
-},{}],300:[function(require,module,exports){
+},{}],303:[function(require,module,exports){
 /**
  * Blockly Demo: Turtle Graphics
  *
@@ -4908,7 +4908,7 @@ exports.answer = function(page, level) {
 };
 
 
-},{"./api":301}],301:[function(require,module,exports){
+},{"./api":304}],304:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -5103,4 +5103,4 @@ ArtistAPI.prototype.drawStamp = function(stamp, id) {
 };
 
 
-},{"../utils":315}]},{},[309]);
+},{"../utils":318}]},{},[312]);

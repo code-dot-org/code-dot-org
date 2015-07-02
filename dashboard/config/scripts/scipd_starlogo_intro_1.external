@@ -5,9 +5,11 @@ skip_dialog true
 
 
 markdown <<MARKDOWN
+### Introduction to StarLogo Nova
+
 **Who is this for?**
 
-This is a Guided introduction to StarLogo Nova that was designed for teachers and students. Teachers participating in the Code.org Project GUTS Middle School Computer Science in Science Program are being asked to complete the tutorial before showing up to the face-to-face workshop. Students of participating teachers are being asked to complete the tutorial during Module 1 Lesson 2 (day 2 of module 1).
+This is a Guided introduction to StarLogo Nova that was designed for teachers and students. Teachers participating in the Code.org Project GUTS Middle School Computer Science in Science Program have been asked to complete the tutorial as part of Phase 1. Students of participating teachers are being asked to complete the tutorial during Module 1 Lesson 2 (day 2 of module 1).
 
 **What is StarLogo Nova?**
 
@@ -15,11 +17,11 @@ StarLogo Nova is an agent-based modeling (ABM) environment that was created by t
 
 **Where can I find it?**
 
-To get started in StarLogo Nova, all you need to do is go to [slnova.org] (http://www.slnova.org/) and request an account.
+To get started in StarLogo Nova, all you need to do is go to [slnova.org] (http://www.slnova.org/) and request an account (unless you already have one).
 
 **When will I use it?**
 
-In Code.org’s Computer Science in Science modules we will use StarLogo Nova to build and experiment with models of complex adaptive systems within regular school day classes. Why is this important? StarLogo Nova gives students and teachers access to tools, similar to those used by scientists and researchers, with which to study systems in the world around them.
+In Code.org’s Computer Science in Science modules, we will use StarLogo Nova to build and experiment with models of complex adaptive systems within regular school day classes. Why is this important? StarLogo Nova gives students and teachers access to tools, similar to those used by scientists and researchers, with which to study systems in the world around them.
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({135:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({138:[function(require,module,exports){
 (function (global){
 var appMain = require('../appMain');
 window.Flappy = require('./flappy');
@@ -17,7 +17,7 @@ window.flappyMain = function(options) {
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../appMain":9,"./blocks":129,"./flappy":132,"./levels":133,"./skins":136}],136:[function(require,module,exports){
+},{"../appMain":9,"./blocks":132,"./flappy":135,"./levels":136,"./skins":139}],139:[function(require,module,exports){
 /**
  * Load Skin for Flappy.
  */
@@ -187,7 +187,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":265}],133:[function(require,module,exports){
+},{"../skins":268}],136:[function(require,module,exports){
 /*jshint multistr: true */
 
 // todo - i think our prepoluated code counts as LOCs
@@ -763,7 +763,7 @@ module.exports.k1_9 = {
 };
 
 
-},{"../block_utils":73,"../utils":315,"./constants":130,"./locale":134}],132:[function(require,module,exports){
+},{"../block_utils":76,"../utils":318,"./constants":133,"./locale":137}],135:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -1777,7 +1777,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":102,"../dom":105,"../dropletUtils":106,"../locale":147,"../skins":265,"../templates/page.html.ejs":293,"../utils":315,"./api":128,"./constants":130,"./controls.html.ejs":131,"./locale":134,"./visualization.html.ejs":137}],137:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":105,"../dom":108,"../dropletUtils":109,"../locale":150,"../skins":268,"../templates/page.html.ejs":296,"../utils":318,"./api":131,"./constants":133,"./controls.html.ejs":134,"./locale":137,"./visualization.html.ejs":140}],140:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1797,7 +1797,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":487}],131:[function(require,module,exports){
+},{"ejs":490}],134:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1817,7 +1817,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":147,"ejs":487}],130:[function(require,module,exports){
+},{"../locale":150,"ejs":490}],133:[function(require,module,exports){
 module.exports = {
   WORKSPACE_BUFFER: 20,
   WORKSPACE_COL_WIDTH: 210,
@@ -1828,7 +1828,7 @@ module.exports = {
   AVATAR_Y_OFFSET: 0
 };
 
-},{}],129:[function(require,module,exports){
+},{}],132:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -2475,13 +2475,13 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../StudioApp":5,"../block_utils":73,"../locale":147,"../utils":315,"./locale":134}],134:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":76,"../locale":150,"../utils":318,"./locale":137}],137:[function(require,module,exports){
 // locale for flappy
 
 module.exports = window.blockly.flappy_locale;
 
 
-},{}],128:[function(require,module,exports){
+},{}],131:[function(require,module,exports){
 var studioApp = require('../StudioApp').singleton;
 
 exports.FlapHeight = {
@@ -2584,4 +2584,4 @@ exports.incrementPlayerScore = function(id) {
 };
 
 
-},{"../StudioApp":5}]},{},[135]);
+},{"../StudioApp":5}]},{},[138]);
