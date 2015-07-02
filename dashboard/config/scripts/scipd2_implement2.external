@@ -12,14 +12,16 @@ markdown <<MARKDOWN
 
 What did you realize while you were completing your implementation document?  
 
-- Are there any areas where you feel completely ready and confident?
-- Are there any areas where you could use more time and experience?
-- Is there anywhere that you could use extra help from Code.org?
+<ul style="margin-left:500px">
+	<li>Are there any areas where you feel completely ready and confident?</li>
+	<li>Are there any areas where you could use more time and experience?</li>
+    <li>Is there anywhere that you could use extra help from Code.org?</li>
+</ul>
 
 
 Take some time to discuss your implementation plan (along with your answers to these questions) on the PLC discussion forum, then come back to continue on to the next stage.
 
-Make sure to read over responses from others and see if you can contribute anything positive to their experience. Remember, if you help your cohorts, there is a greater chance that they will be able to help you, as well!
+Make sure to read over responses from others and see if you can contribute anything positive to their experience. Remember, if you help your cohorts, there is a greater chance that they will be able to help you as well!
 
 <a href="http://forum.code.org/t/implementation-planning/957" target="_new"><button>
 	Visit Implementation Forum >>
