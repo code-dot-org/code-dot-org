@@ -479,9 +479,7 @@ module.exports = function(grunt) {
     'newer:copy:static',
     'newer:copy:lib',
     'newer:concat',
-    'newer:sass',
-    'clean:digest',
-    'newer:digest'
+    'newer:sass'
   ]);
 
   grunt.registerTask('build', [
@@ -489,7 +487,9 @@ module.exports = function(grunt) {
     'exec:browserify',
     // Skip minification in development environment.
     DEV ? 'noop' : ('concurrent:uglify'),
-    'postbuild'
+    'postbuild',
+    'clean:digest',
+    'digest'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
