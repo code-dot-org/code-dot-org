@@ -76,7 +76,7 @@ module.exports = {
    * @param {ElementType} elementType Type of element to create
    * @param {number} left Position from left.
    * @param {number} top Position from top.
-   * @param {boolean} withoutId If true, don't generate an id
+   * @param {boolean} [withoutId] If true, don't generate an id
    */
   createElement: function (elementType, left, top, withoutId) {
     var elementClass = elements[elementType];
