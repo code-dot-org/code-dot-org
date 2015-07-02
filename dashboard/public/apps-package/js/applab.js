@@ -1567,6 +1567,27 @@ Applab.onCodeModeButton = function() {
   Applab.serializeAndSave();
 };
 
+/**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+Applab.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
+};
+
 Applab.onPuzzleComplete = function() {
   // Submit all results as success / freePlay
   Applab.result = ResultType.SUCCESS;
@@ -1725,7 +1746,7 @@ function quote(str) {
 Applab.getAssetDropdown = function (typeFilter) {
   var options = assetListStore.list(typeFilter).map(function (asset) {
     return {
-      text: quote(clientApi.basePath(asset.filename)),
+      text: quote(asset.filename),
       display: quote(asset.filename)
     };
   });
@@ -2403,27 +2424,6 @@ designMode.resetElementTray = function (allowEditing) {
 };
 
 /**
- * If the filename is relative (contains no slashes), then prepend
- * the path to the assets directory for this project to the filename.
- * @param {string} filename
- * @returns {string}
- */
-designMode.maybeAddAssetPathPrefix = function (filename) {
-  filename = filename || '';
-  if (filename.indexOf('/') !== -1) {
-    return filename;
-  }
-
-  var channelId = dashboard && dashboard.project.getCurrentId();
-  // TODO(dave): remove this check once we always have a channel id.
-  if (!channelId) {
-    return filename;
-  }
-
-  return '/v3/assets/' + channelId + '/'  + filename;
-};
-
-/**
  * Handle a change from our properties table. After handling properties
  * generically, give elementLibrary a chance to do any element specific changes.
  */
@@ -2486,8 +2486,12 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'image':
       var image = new Image();
       var backgroundImage = new Image();
-      backgroundImage.onload = function(){
+      var originalImage = element.style.backgroundImage;
+      backgroundImage.onload = function() {
         element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+        if (originalImage === element.style.backgroundImage) {
+          return;
+        }
         element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
           backgroundImage.naturalHeight + 'px';
         element.style.width = backgroundImage.naturalWidth + 'px';
@@ -2497,7 +2501,7 @@ designMode.onPropertyChange = function(element, name, value) {
           designMode.editElementProperties(element);
         }
       };
-      backgroundImage.src = designMode.maybeAddAssetPathPrefix(value);
+      backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
 
       break;
@@ -2506,18 +2510,26 @@ designMode.onPropertyChange = function(element, name, value) {
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + designMode.maybeAddAssetPathPrefix(value) + ')';
+      element.style.backgroundImage = 'url(' + Applab.maybeAddAssetPathPrefix(value) + ')';
       element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
-      element.src = designMode.maybeAddAssetPathPrefix(value);
+      var originalSrc = element.src;
+      element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
       element.onload = function () {
+        if (element.src === originalSrc) {
+          return;
+        }
         // naturalWidth/Height aren't populated until image has loaded.
         element.style.width = element.naturalWidth + 'px';
         element.style.height = element.naturalHeight + 'px';
+        if ($(element.parentNode).is('.ui-resizable')) {
+          element.parentNode.style.width = element.naturalWidth + 'px';
+          element.parentNode.style.height = element.naturalHeight + 'px';
+        }
         // Re-render properties
         if (currentlyEditedElement === element) {
           designMode.editElementProperties(element);
@@ -2758,8 +2770,15 @@ function makeDraggable (jqueryElements) {
         elm.outerWidth(wrapper.width());
         elm.outerHeight(wrapper.height());
         var element = elm[0];
-        designMode.onPropertyChange(element, 'width', element.style.width);
-        designMode.onPropertyChange(element, 'height', element.style.height);
+        // canvas uses width/height. other elements use style.width/style.height
+        var widthProperty = 'style-width';
+        var heightProperty = 'style-height';
+        if (element.hasAttribute('width') || element.hasAttribute('height')) {
+          widthProperty = 'width';
+          heightProperty = 'height';
+        }
+        designMode.onPropertyChange(element, widthProperty, element.style.width);
+        designMode.onPropertyChange(element, heightProperty, element.style.height);
       },
       grid: [GRID_SIZE, GRID_SIZE],
       containment: 'parent'
@@ -3396,7 +3415,7 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = opts.src;
+  newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
@@ -4063,7 +4082,7 @@ applabCommands.setImageURL = function (opts) {
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = opts.src;
+    element.src = Applab.maybeAddAssetPathPrefix(opts.src);
     return true;
   }
   return false;
@@ -4073,7 +4092,8 @@ applabCommands.playSound = function (opts) {
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
-    studioApp.cdoSounds.playURL(opts.url,
+    var url = Applab.maybeAddAssetPathPrefix(opts.url);
+    studioApp.cdoSounds.playURL(url,
                                {volume: 1.0,
                                 forceHTML5: true,
                                 allowHTML5Mobile: true
@@ -7012,6 +7032,7 @@ module.exports = {
       element.style.position = 'absolute';
       element.style.left = left + 'px';
       element.style.top = top + 'px';
+      element.style.margin = '0px';
     }
 
     return element;
@@ -7313,8 +7334,7 @@ var TextInputEvents = React.createClass({displayName: "TextInputEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Text was entered in ' + id + '!");\n' +
-      '  console.log("Entered text: " + getText("' + id + '"));\n' +
+      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -7327,8 +7347,7 @@ var TextInputEvents = React.createClass({displayName: "TextInputEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "input", function(event) {\n' +
-      '  console.log("A character was typed in ' + id + '!");\n' +
-      '  console.log("Current text: " + getText("' + id + '"));\n' +
+      '  console.log("' + id + ' current text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -7557,8 +7576,7 @@ var RadioButtonEvents = React.createClass({displayName: "RadioButtonEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' changed state!");\n' +
-      '  console.log("Radio button checked? " + getChecked("' + id + '"));\n' +
+      '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -8044,7 +8062,6 @@ var DropdownEvents = React.createClass({displayName: "DropdownEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Option selected from ' + id + '!");\n' +
       '  console.log("Selected option: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
@@ -8233,8 +8250,7 @@ var CheckboxEvents = React.createClass({displayName: "CheckboxEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' changed state!");\n' +
-      '  console.log("Checkbox checked? " + getChecked("' + id + '"));\n' +
+      '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -8357,7 +8373,7 @@ var CanvasEvents = React.createClass({displayName: "CanvasEvents",
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
-      '  console.log("' + id + ' clicked!");\n' +
+      '  console.log("' + id + ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
       '  setActiveCanvas("' + id + '");\n' +
       '  circle(event.offsetX, event.offsetY, 10);\n' +
       '});\n';

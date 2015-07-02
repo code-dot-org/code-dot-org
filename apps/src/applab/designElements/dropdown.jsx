@@ -92,7 +92,6 @@ var DropdownEvents = React.createClass({
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Option selected from ' + id + '!");\n' +
       '  console.log("Selected option: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
