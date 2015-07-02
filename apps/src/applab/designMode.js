@@ -442,18 +442,6 @@ function getInnerElement(outerElement) {
  *   draggable.
  */
 function makeDraggable (jqueryElements) {
-  // function getContainment(element) {
-  //   var style = window.getComputedStyle(element);
-  //   return [
-  //     // We use visualization rather than divApplab so that we don't have to
-  //     // worry about scaling
-  //     $("#visualization").offset().left - parseInt(style.marginLeft, 10),
-  //     $("#visualization").offset().top - parseInt(style.marginTop, 10),
-  //     $("#visualization").offset().left + $("#visualization").width() + parseInt(style.marginRight, 10),
-  //     $("#visualization").offset().top + $("#visualization").height() + parseInt(style.marginBottom, 10)
-  //   ]
-  // }
-
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
   jqueryElements.each(function () {
     var elm = $(this);
