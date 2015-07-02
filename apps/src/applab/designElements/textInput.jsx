@@ -87,8 +87,7 @@ var TextInputEvents = React.createClass({
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("Text was entered in ' + id + '!");\n' +
-      '  console.log("Entered text: " + getText("' + id + '"));\n' +
+      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
   },
@@ -101,8 +100,7 @@ var TextInputEvents = React.createClass({
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "input", function(event) {\n' +
-      '  console.log("A character was typed in ' + id + '!");\n' +
-      '  console.log("Current text: " + getText("' + id + '"));\n' +
+      '  console.log("' + id + ' current text: " + getText("' + id + '"));\n' +
       '});\n';
     return code;
   },

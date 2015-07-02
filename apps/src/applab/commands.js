@@ -193,7 +193,7 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = opts.src;
+  newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
@@ -860,7 +860,7 @@ applabCommands.setImageURL = function (opts) {
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = opts.src;
+    element.src = Applab.maybeAddAssetPathPrefix(opts.src);
     return true;
   }
   return false;
@@ -870,7 +870,8 @@ applabCommands.playSound = function (opts) {
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
-    studioApp.cdoSounds.playURL(opts.url,
+    var url = Applab.maybeAddAssetPathPrefix(opts.url);
+    studioApp.cdoSounds.playURL(url,
                                {volume: 1.0,
                                 forceHTML5: true,
                                 allowHTML5Mobile: true
