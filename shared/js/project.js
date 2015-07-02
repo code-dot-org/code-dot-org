@@ -240,6 +240,10 @@ module.exports = {
     this.save(wrappedCallback);
   },
   copyAssets: function (srcChannel, callback) {
+    if (!srcChannel) {
+      executeCallback(callback);
+      return;
+    }
     var destChannel = current.id;
     assets.copyAll(srcChannel, destChannel, function(err) {
       if (err) {
