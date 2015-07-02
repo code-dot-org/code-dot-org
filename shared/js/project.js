@@ -365,9 +365,15 @@ function determineNoPadding() {
  * @returns {string} The serialized level source from the editor.
  */
 function getEditorSource() {
-  return window.Blockly ?
-    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) :
-    window.Applab && Applab.getCode();
+  var source;
+  if (window.Blockly) {
+    // If we're readOnly, source hasn't changed at all
+    source = Blockly.readOnly ? current.levelSource :
+      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  } else {
+    source = window.Applab && Applab.getCode();
+  }
+  return source;
 }
 
 function getLevelHtml() {
