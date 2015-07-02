@@ -78,8 +78,7 @@ var RadioButtonEvents = React.createClass({
     var id = this.props.element.id;
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
-      '  console.log("' + id + ' changed state!");\n' +
-      '  console.log("Radio button checked? " + getChecked("' + id + '"));\n' +
+      '  console.log("' + id + ' checked? " + getChecked("' + id + '"));\n' +
       '});\n';
     return code;
   },
