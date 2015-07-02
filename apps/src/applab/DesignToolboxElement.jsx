@@ -51,27 +51,19 @@ module.exports = React.createClass({
     this.makeDraggable();
   },
 
+  /**
+   * Create a draggable item as we drag an item from the toolbox.
+   */
   makeDraggable: function () {
     $(this.getDOMNode()).find('.new-design-element').draggable({
-      // containment: '#codeApp',
+      // Create an item (without an id) for dragging that looks identical to the
+      // element that will ultimately be dropped. Note, this item has no
+      // containment, and doesn't snap to a grid as we drag (but does on drop)
       helper: function () {
-        // we want to set containment at time of first drag, in case we've been
-        // resized
-        // var contain = [
-        //   $("#visualization").offset().left, $("#visualization").offset().top,
-        //   $("#design-toolbox").offset().left + $("#design-toolbox").width(),
-        //   $("#visualization").offset().top + $("#visualization").height()
-        // ];
-        // console.log(contain);
-        // $(this).draggable('option', 'containment', contain);
-
         var elementType = this.getAttribute('data-element-type');
         if (elementType === library.ElementType.SCREEN) {
           return $(this).clone();
         }
-        setTimeout(function () {
-          console.log('can break here if you want');
-        }, 1000);
         var element = library.createElement(elementType, 0, 0, true);
         element.style.position = 'static';
 
@@ -81,13 +73,10 @@ module.exports = React.createClass({
 
         var parent = $('<div/>').addClass('draggingParent');
 
-        // parent[0].style.transform = "scale(" + xScale + ", " + yScale + ")";
+        parent[0].style.transform = "scale(" + xScale + ", " + yScale + ")";
         parent[0].style.backgroundColor = 'transparent';
 
-        // TODO
-        // When dropping all elements, it actually gets dropped a few pixels off
-        // from where it was when released
-
+        // Have the cursor be in the center of the dragged item.
         // element.width/height() returns 0 for canvas (probably because it
         // hasn't actually been renderd yet)
         var elementWidth = $(element).width() ||
@@ -99,38 +88,8 @@ module.exports = React.createClass({
           top: Math.min(event.offsetY, elementHeight)
         });
 
-        // console.log('cursorAt: ' + (elementWidth / 2) + ', ' +
-        //   Math.min(event.offsetY, element.height));
-        console.log(event.offsetY, elementHeight);
-
         return parent.append(element)[0];
       },
-      // drag: function (event, ui) {
-      //   var GRID_SIZE = 5;
-      //   // draggables are not compatible with CSS transform-scale,
-      //   // so adjust the position in various ways here.
-      //
-      //   // dragging
-      //   var div = document.getElementById('divApplab');
-      //   var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      //   var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-      //   var changeLeft = ui.position.left - ui.originalPosition.left;
-      //   var newLeft  = (ui.originalPosition.left + changeLeft) / xScale;
-      //   var changeTop = ui.position.top - ui.originalPosition.top;
-      //   var newTop = (ui.originalPosition.top + changeTop) / yScale;
-      //
-      //   // snap top-left corner to nearest location in the grid
-      //   newLeft -= (newLeft + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      //   newTop -= (newTop + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      //
-      //   ui.position.left = newLeft;
-      //   ui.position.top = newTop;
-      //
-      //   ui.helper.css({
-      //     top: newTop,
-      //     left: newLeft
-      //   });
-      // },
       appendTo: '#codeApp',
       revert: 'invalid',
       // Make sure the dragged element appears in front of #belowVisualization,
