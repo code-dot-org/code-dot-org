@@ -6,7 +6,7 @@
 
 function setGlobals () {
   // Initialize browser environment.
-  document.body.innerHTML = '<div id="app"></div>';
+  document.body.innerHTML = '<div id="codeApp"><div id="app"></div></div>';
   // locale file requires Blockly as a global
   try {
     window.Blockly = require('blockly');
