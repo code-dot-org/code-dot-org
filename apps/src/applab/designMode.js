@@ -442,6 +442,18 @@ function getInnerElement(outerElement) {
  *   draggable.
  */
 function makeDraggable (jqueryElements) {
+  // function getContainment(element) {
+  //   var style = window.getComputedStyle(element);
+  //   return [
+  //     // We use visualization rather than divApplab so that we don't have to
+  //     // worry about scaling
+  //     $("#visualization").offset().left - parseInt(style.marginLeft, 10),
+  //     $("#visualization").offset().top - parseInt(style.marginTop, 10),
+  //     $("#visualization").offset().left + $("#visualization").width() + parseInt(style.marginRight, 10),
+  //     $("#visualization").offset().top + $("#visualization").height() + parseInt(style.marginBottom, 10)
+  //   ]
+  // }
+
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
   jqueryElements.each(function () {
     var elm = $(this);
@@ -567,19 +579,12 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      // Subtract out the distance between #visualization (which we are
-      // dropping into) and #codeApp (where the coordinates come from).
-      // Assumes the parent of #visualization has a very small offset from #codeApp.
-      var visualization = document.getElementById('visualization');
-      var left = ui.position.left - visualization.offsetLeft;
-      var top = ui.position.top - visualization.offsetTop;
-
       var div = document.getElementById('divApplab');
       var xScale = div.getBoundingClientRect().width / div.offsetWidth;
       var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-      left = left / xScale;
-      top = top / yScale;
+      var left = (ui.helper.offset().left - $('#divApplab').offset().left) / xScale;
+      var top = (ui.helper.offset().top - $('#divApplab').offset().top) / yScale;
 
       // snap top-left corner to nearest location in the grid
       left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
