@@ -9,8 +9,11 @@ markdown <<MARKDOWN
 
 ### Creating a Slider
 
-<br/><br/>
-<img src="https://images.code.org/fb8040982cdae8d34e4a6f5851c3f146-image-1435701822929.gif" class="roundedPic lefted" width="350px"/>A slider is a very useful input element when you want to let the user change numbers quickly during runtime.  
+
+A slider is a very useful input element when you want to let the user change numbers quickly during runtime. 
+
+<br/>
+<img src="https://images.code.org/fb8040982cdae8d34e4a6f5851c3f146-image-1435701822929.gif" class="roundedPic lefted" width="350px"/> 
 
 
 #### Using a Slider
@@ -35,7 +38,7 @@ Once you have created your slider, you can click the dropdown above the puzzle p
 
 You will see a variety of ways to use the data coming from your new slider.  One of the easiest is to select the "slider value" puzzle piece and drop it into your code like a variable. 
 
-Finally, you only need to go back into your spaceland are and move your slider around to control your values. Easy as turtle pie!
+Finally, you only need to go back into your spaceland area and move your slider around to control your values. Easy as turtle pie!
 
 <br/><br/>
 
