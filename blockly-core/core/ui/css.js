@@ -565,6 +565,7 @@ Blockly.Css.CONTENT = [
   '}',
   '.paramToolbox {',
   '  padding: 0 0 5px 0;',
+  '  pointer-events: auto;',
   '}',
   '.paramToolbox input, .paramToolbox textarea {',
   '  box-sizing: border-box;',
