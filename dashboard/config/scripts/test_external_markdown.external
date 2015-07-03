@@ -1,0 +1,36 @@
+name 'Test External Markdown'
+title 'Test External Markdown'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Testing External Markdown Rendering
+
+I am **bold**, _italic_, *other italic* and -strikethroughed-, and `code-y`.
+
+* Item `a`
+* Item `b`
+* Item `c`
+
+1. Item #1
+2. Item #2
+3. Item #3
+
+<details>
+<summary id="summary-tag">Click me to see a cool list</summary>
+This is bare text.
+<p id="extra-details-tag">I am in a p tag</p>
+<ul>
+<li>Thing 1</li>
+<li>Thing 2</li>
+<li>Thing 3</li>
+<li>Thing 4</li>
+</ul>
+</details>
+
+<details>
+<summary>Click me to see another cool thing</summary>
+Hi I am a second thing.
+</details>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
