@@ -357,6 +357,32 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
   });
 };
 
+/**
+ * Bind (or re-bind) "blockspace" mouse events that represent clicking "nowhere"
+ * against the given element.  Allows the modal editors to customize which
+ * element picks up their 'nowhere' clicks.
+ * @param {Element} newTarget really ought to be an svg?
+ */
+Blockly.BlockSpaceEditor.prototype.bindMouseEventsTo = function (newTarget) {
+  if (this.mouseDownBindData_) {
+    Blockly.unbindEvent_(this.mouseDownBindData_);
+  }
+  if (this.mouseMoveBindData_) {
+    Blockly.unbindEvent_(this.mouseMoveBindData_);
+  }
+  if (this.svgContextMenuBindData_) {
+    Blockly.unbindEvent_(this.svgContextMenuBindData_);
+  }
+  if (this.mouseUpBindData_) {
+    Blockly.unbindEvent_(this.mouseUpBindData_);
+  }
+  this.mouseDownBindData_ = Blockly.bindEvent_(newTarget, 'mousedown', this, this.onMouseDown_);
+  this.mouseMoveBindData_ = Blockly.bindEvent_(newTarget, 'mousemove', this, this.onMouseMove_);
+  this.svgContextMenuBindData_ = Blockly.bindEvent_(newTarget, 'contextmenu', null, Blockly.BlockSpaceEditor.onContextMenu_);
+  this.mouseUpBindData_ = Blockly.bindEvent_(newTarget, 'mouseup', this, this.onMouseUp_);
+  this.mouseEventTarget_ = newTarget;
+};
+
 Blockly.BlockSpaceEditor.prototype.init_ = function() {
   this.detectBrokenControlPoints();
 
@@ -366,10 +392,7 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
   // out of bounds and released will know that it has been released.
   // Also, 'keydown' has to be on the whole document since the browser doesn't
   // understand a concept of focus on the SVG image.
-  Blockly.bindEvent_(this.svg_, 'mousedown', this, this.onMouseDown_);
-  Blockly.bindEvent_(this.svg_, 'mousemove', this, this.onMouseMove_);
-  Blockly.bindEvent_(this.svg_, 'contextmenu', null, Blockly.BlockSpaceEditor.onContextMenu_);
-  Blockly.bindEvent_(this.svg_, 'mouseup', this, this.onMouseUp_);
+  this.bindMouseEventsTo(this.svg_);
   Blockly.bindEvent_(Blockly.WidgetDiv.DIV, 'contextmenu', null,
     Blockly.BlockSpaceEditor.onContextMenu_);
 
@@ -540,7 +563,7 @@ Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
 */
 Blockly.BlockSpaceEditor.prototype.setCursor = function(cursorType) {
   Blockly.Css.setCursor(cursorType, this.svg_);
-}
+};
 
 /**
  * Handle a mouse-down on SVG drawing surface.
@@ -550,9 +573,8 @@ Blockly.BlockSpaceEditor.prototype.setCursor = function(cursorType) {
 Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
   Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost.
   this.hideChaff();
-  var isTargetSvg = e.target && e.target.nodeName &&
-    e.target.nodeName.toLowerCase() == 'svg';
-  if (!Blockly.readOnly && Blockly.selected && isTargetSvg) {
+  var isOwnMouseTarget = e.target && e.target === this.mouseEventTarget_;
+  if (!Blockly.readOnly && Blockly.selected && isOwnMouseTarget) {
     // Clicking on the document clears the selection.
     Blockly.selected.unselect();
   }
@@ -560,7 +582,7 @@ Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
     // Right-click.
     // Unlike google Blockly, we don't want to show a context menu
     // Blockly.showContextMenu_(e);
-  } else if ((Blockly.readOnly || isTargetSvg) &&
+  } else if ((Blockly.readOnly || isOwnMouseTarget) &&
     this.blockSpace.scrollbarPair) {
     // If the blockSpace is editable, only allow dragging when gripping empty
     // space.  Otherwise, allow dragging when gripping anywhere.
