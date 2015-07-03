@@ -91,3 +91,7 @@ level 'U3L16 - use images'
 stage 'Online PD'
 level 'PDK5 Intro C'
 level 'PDK5 Foundations F'
+
+stage 'Markdown Details'
+level 'Test External Markdown'
+
