@@ -32,7 +32,16 @@
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"right_arrow_fireball\",\"callout_text\":\"Use the right arrow to shoot fireballs\",\"element_id\":\"#rightButton\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"bottom center\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "markdown_instructions": "In our game, how should we score points? \r\n\r\n1. Add 1 to your `points` variable each time the Dog hits the Cat with a fireball. \r\n2. Use the `when actor 2 touches anything` event to trigger an update to your score. You can increment your variable by setting `points = points + 1.`\r\n3. Get your score up to 10 (going one at a time!) to pass the level.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

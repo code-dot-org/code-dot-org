@@ -17,11 +17,18 @@
     "x": "25",
     "impressive": "false",
     "slider_speed": ".5",
-    "ideal": "15",
+    "ideal": "13",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

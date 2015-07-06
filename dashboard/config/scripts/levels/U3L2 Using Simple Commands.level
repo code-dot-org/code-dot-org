@@ -10,10 +10,16 @@
       "moveForward": {
         "params": [
           ""
+        ],
+        "paletteParams": [
+          ""
         ]
       },
       "turnLeft": {
         "params": [
+          ""
+        ],
+        "paletteParams": [
           ""
         ]
       },
@@ -41,7 +47,13 @@
     "app_height": "200",
     "instructions": "Draw a square using only moveForward and turnLeft.  The square should be drawn above and to the left of the turtle's starting position.",
     "callout_json": "[]",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-leftSquare.gif"
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-leftSquare.gif",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>
