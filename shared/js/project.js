@@ -111,7 +111,7 @@ module.exports = {
             setAppOptionsForShareMode(false);
           }
         }
-      } else if (current && current.levelSource) {
+      } else if (current) {
         appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
