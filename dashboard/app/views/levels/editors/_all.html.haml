@@ -47,15 +47,20 @@
     updateVideoPreview();
   });
 
+:css
+  .required:after {
+    content: ' *';
+    color: #ff0000;
+  }
 .field.callouteditor
   %div{id: 'callout_template', style: 'display: none;'}
     %div{class: 'callout_space'}
       %label Callout
       %table
         %tr
-          %td Element ID
-          %td Localization Key
-          %td Callout text
+          %td{class: 'required'} Element ID
+          %td{class: 'required'} Localization Key
+          %td{class: 'required'} Callout text
         %tr
           %td
             %input{class: 'element_id', type: 'text', placeholder: '#runButton'}
