@@ -1,0 +1,27 @@
+---
+title: Poste Messages
+---
+
+:ruby
+  rows = DB.fetch("
+    SELECT
+      poste_messages.name as message
+    FROM poste_messages
+    ORDER BY id desc
+  ")
+
+%table
+  %tr
+    %th Message
+    %th
+  - rows.each do |row|
+    %tr
+      %td
+        = row[:message]
+      %td
+        %button
+          %a{href: "/poste/stats?name=#{row[:message]}"} Stats
+        %button
+          %a{href: "/poste/opens?name=#{row[:message]}"} Opens
+        %button
+          %a{href: "/poste/clicks?name=#{row[:message]}"} Clicks

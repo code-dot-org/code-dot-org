@@ -301,7 +301,7 @@ module.exports = {
             setAppOptionsForShareMode(false);
           }
         }
-      } else if (current && current.levelSource) {
+      } else if (current) {
         appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
@@ -430,6 +430,10 @@ module.exports = {
     this.save(wrappedCallback);
   },
   copyAssets: function (srcChannel, callback) {
+    if (!srcChannel) {
+      executeCallback(callback);
+      return;
+    }
     var destChannel = current.id;
     assets.copyAll(srcChannel, destChannel, function(err) {
       if (err) {
@@ -551,9 +555,15 @@ function determineNoPadding() {
  * @returns {string} The serialized level source from the editor.
  */
 function getEditorSource() {
-  return window.Blockly ?
-    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) :
-    window.Applab && Applab.getCode();
+  var source;
+  if (window.Blockly) {
+    // If we're readOnly, source hasn't changed at all
+    source = Blockly.readOnly ? current.levelSource :
+      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  } else {
+    source = window.Applab && Applab.getCode();
+  }
+  return source;
 }
 
 function getLevelHtml() {
