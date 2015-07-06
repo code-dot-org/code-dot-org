@@ -430,7 +430,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
           Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
           if (self.contractDiv_) {
             self.positionClippingRects_();
-            self.positionSizeContractDom_(this);
+            self.positionSizeContractDom_();
           }
         },
 
@@ -474,9 +474,13 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.addCloseButton_();
 
   this.createContractDom_();
+
+
+
   this.createParameterEditor_();
 
   this.setupParametersToolbox_();
+  this.positionClippingRects_();
   this.positionSizeContractDom_();
 
   this.bindToolboxHandlers_();
