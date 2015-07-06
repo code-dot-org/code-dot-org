@@ -126,7 +126,7 @@ namespace :build do
         RakeUtils.rake 'db:migrate'
 
         HipChat.log 'Seeding <b>dashboard</b>...'
-        RakeUtils.rake 'seed:incremental'
+        RakeUtils.rake 'seed:all'
       end
 
       unless rack_env?(:development)
