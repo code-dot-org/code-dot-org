@@ -1046,6 +1046,7 @@ Applab.init = function(config) {
           d.type.toUpperCase() === 'FILE' ||
           d.type.toUpperCase() === 'EMAIL' ||
           d.type.toUpperCase() === 'SEARCH' ||
+          d.type.toUpperCase() === 'NUMBER' ||
           d.type.toUpperCase() === 'DATE' )) ||
           d.tagName.toUpperCase() === 'TEXTAREA') {
         doPrevent = d.readOnly || d.disabled;
@@ -1111,7 +1112,7 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   if (debugAreaController.isShut()) {
     debugAreaController.snapOpen();
   }
-  
+
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
 
@@ -2487,23 +2488,25 @@ designMode.onPropertyChange = function(element, name, value) {
       var image = new Image();
       var backgroundImage = new Image();
       var originalImage = element.style.backgroundImage;
-      backgroundImage.onload = function() {
-        element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-        if (originalImage === element.style.backgroundImage) {
-          return;
-        }
-        element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
-          backgroundImage.naturalHeight + 'px';
-        element.style.width = backgroundImage.naturalWidth + 'px';
-        element.style.height = backgroundImage.naturalHeight + 'px';
-        // Re-render properties
-        if (currentlyEditedElement === element) {
-          designMode.editElementProperties(element);
-        }
-      };
       backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
-
+      if (backgroundImage.src !== originalImage) {
+        backgroundImage.onload = function() {
+          // remove loader so that API calls dont hit this
+          element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+          if (originalImage === element.style.backgroundImage) {
+            return;
+          }
+          element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
+            backgroundImage.naturalHeight + 'px';
+          element.style.width = backgroundImage.naturalWidth + 'px';
+          element.style.height = backgroundImage.naturalHeight + 'px';
+          // Re-render properties
+          if (currentlyEditedElement === element) {
+            designMode.editElementProperties(element);
+          }
+        };
+      }
       break;
 
     case 'screen-image':
@@ -2519,22 +2522,22 @@ designMode.onPropertyChange = function(element, name, value) {
       var originalSrc = element.src;
       element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
-      element.onload = function () {
-        if (element.src === originalSrc) {
-          return;
-        }
-        // naturalWidth/Height aren't populated until image has loaded.
-        element.style.width = element.naturalWidth + 'px';
-        element.style.height = element.naturalHeight + 'px';
-        if ($(element.parentNode).is('.ui-resizable')) {
-          element.parentNode.style.width = element.naturalWidth + 'px';
-          element.parentNode.style.height = element.naturalHeight + 'px';
-        }
-        // Re-render properties
-        if (currentlyEditedElement === element) {
-          designMode.editElementProperties(element);
-        }
-      };
+
+      if (element.src !== originalSrc) {
+        element.onload = function () {
+          // naturalWidth/Height aren't populated until image has loaded.
+          element.style.width = element.naturalWidth + 'px';
+          element.style.height = element.naturalHeight + 'px';
+          if ($(element.parentNode).is('.ui-resizable')) {
+            element.parentNode.style.width = element.naturalWidth + 'px';
+            element.parentNode.style.height = element.naturalHeight + 'px';
+          }
+          // Re-render properties
+          if (currentlyEditedElement === element) {
+            designMode.editElementProperties(element);
+          }
+        };
+      }
       break;
     case 'hidden':
       // Add a class that shows as 30% opacity in design mode, and invisible
@@ -2883,19 +2886,12 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      // Subtract out the distance between #visualization (which we are
-      // dropping into) and #codeApp (where the coordinates come from).
-      // Assumes the parent of #visualization has a very small offset from #codeApp.
-      var visualization = document.getElementById('visualization');
-      var left = ui.position.left - visualization.offsetLeft;
-      var top = ui.position.top - visualization.offsetTop;
-
       var div = document.getElementById('divApplab');
       var xScale = div.getBoundingClientRect().width / div.offsetWidth;
       var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-      left = left / xScale;
-      top = top / yScale;
+      var left = (ui.helper.offset().left - $('#divApplab').offset().left) / xScale;
+      var top = (ui.helper.offset().top - $('#divApplab').offset().top) / yScale;
 
       // snap top-left corner to nearest location in the grid
       left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -6937,7 +6933,283 @@ var TabType = {
 DesignProperties.TabType = TabType;
 
 
-},{"./designElements/DeleteElementButton.jsx":34,"./designElements/library":48,"./locale":62,"react":649}],48:[function(require,module,exports){
+},{"./designElements/DeleteElementButton.jsx":34,"./designElements/library":48,"./locale":62,"react":649}],34:[function(require,module,exports){
+/* global $ */
+var React = require('react');
+var rowStyle = require('./rowStyle');
+
+/**
+ * A delete button that will also ask for confirmation when shouldConfirm is
+ * true.
+ */
+var DeleteElementButton = React.createClass({displayName: "DeleteElementButton",
+  propTypes: {
+    shouldConfirm: React.PropTypes.bool.isRequired,
+    handleDelete: React.PropTypes.func.isRequired
+  },
+
+  getInitialState: function () {
+    return {
+      confirming: false
+    };
+  },
+
+  handleDeleteInternal: function(event) {
+    if (this.props.shouldConfirm) {
+      this.setState({confirming: true});
+    } else {
+      this.finishDelete();
+    }
+  },
+
+  finishDelete: function () {
+    this.props.handleDelete();
+  },
+
+  abortDelete: function (event) {
+    this.setState({confirming: false});
+  },
+
+  render: function() {
+    var buttonStyle = {
+      paddingTop: '5px',
+      paddingBottom: '5px',
+      fontSize: '14px',
+    };
+
+    var redButtonStyle = $.extend({}, buttonStyle, {
+      backgroundColor: '#c00', // $red
+      color: 'white'
+    });
+
+    var confirm;
+    if (this.state.confirming) {
+      return (
+        React.createElement("div", {style: {marginLeft: 20}}, 
+          "Delete?", 
+          React.createElement("button", {
+            style: buttonStyle, 
+            onClick: this.abortDelete}, 
+            "No"
+          ), 
+          React.createElement("button", {
+            style: redButtonStyle, 
+            onClick: this.finishDelete}, 
+            "Yes"
+          )
+        )
+      );
+    }
+    return (
+      React.createElement("div", {style: {marginLeft: 15}}, 
+        React.createElement("button", {
+          style: redButtonStyle, 
+          onClick: this.handleDeleteInternal}, 
+          "Delete"
+        )
+      )
+    );
+  }
+});
+
+module.exports = DeleteElementButton;
+
+
+},{"./rowStyle":50,"react":649}],14:[function(require,module,exports){
+/* global $ */
+
+var React = require('react');
+var DesignToolboxElement = require('./DesignToolboxElement.jsx');
+var applabMsg = require('./locale');
+
+var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
+
+module.exports = React.createClass({displayName: "exports",
+  propTypes: {
+    handleDragStart: React.PropTypes.func.isRequired,
+    isToolboxVisible: React.PropTypes.bool.isRequired
+  },
+
+  render: function () {
+    var toolboxStyle = {
+      display: this.props.isToolboxVisible ? 'block' : 'none',
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        width: 270,
+        boxSizing: 'border-box',
+        borderRight: '1px solid gray',
+        padding: 10
+    };
+
+    return (
+      React.createElement("div", {id: "design-toolbox", style: toolboxStyle}, 
+        React.createElement("p", null, applabMsg.designToolboxDescription()), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'button.png', 
+            desc: 'Button', 
+            elementType: 'BUTTON', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'input.png', 
+            desc: 'Text Input', 
+            elementType: 'TEXT_INPUT', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'label.png', 
+            desc: 'Label', 
+            elementType: 'LABEL', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'dropdown.png', 
+            desc: 'Dropdown', 
+            elementType: 'DROPDOWN', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'radio.png', 
+            desc: 'Radio Button', 
+            elementType: 'RADIO_BUTTON', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'checkbox.png', 
+            desc: 'Checkbox', 
+            elementType: 'CHECKBOX', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'image.png', 
+            desc: 'Image', 
+            elementType: 'IMAGE', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'canvas.png', 
+            desc: 'Canvas', 
+            elementType: 'CANVAS', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'screen.png', 
+            desc: 'Screen', 
+            elementType: 'SCREEN', 
+            handleDragStart: this.props.handleDragStart}), 
+        React.createElement(DesignToolboxElement, {
+            imageUrl: IMAGE_BASE_URL + 'textarea.png', 
+            desc: 'Text Area', 
+            elementType: 'TEXT_AREA', 
+            handleDragStart: this.props.handleDragStart})
+      )
+    );
+  }
+});
+
+
+},{"./DesignToolboxElement.jsx":15,"./locale":62,"react":649}],15:[function(require,module,exports){
+/* global $ */
+
+var React = require('react');
+var library = require('./designElements/library');
+
+module.exports = React.createClass({displayName: "exports",
+  propTypes: {
+    imageUrl: React.PropTypes.string.isRequired,
+    desc: React.PropTypes.string.isRequired,
+    elementType: React.PropTypes.string.isRequired,
+    handleDragStart: React.PropTypes.func.isRequired
+  },
+
+  render: function() {
+    var styles = {
+      outerContainer: {
+        // The icon images are 120px wide and depend on this width for scaling.
+        width: 120,
+        display: 'inline-block',
+        textAlign: 'center',
+        paddingBottom: 15
+      },
+      innerContainer: {
+        textAlign: 'center'
+      },
+      image: {
+        marginBottom: 5
+      }
+    };
+
+    return (
+      React.createElement("div", {style: styles.outerContainer}, 
+        React.createElement("div", {style: styles.innerContainer, 
+          "data-element-type": this.props.elementType, 
+          className: "new-design-element"}, 
+          React.createElement("img", {src: this.props.imageUrl, 
+              className: "design-element-image", 
+              style: styles.image}
+          ), 
+          React.createElement("div", null, this.props.desc)
+        )
+      )
+    );
+  },
+
+  componentDidMount: function () {
+    this.makeDraggable();
+  },
+
+  componentDidUpdate: function () {
+    this.makeDraggable();
+  },
+
+  /**
+   * Create a draggable item as we drag an item from the toolbox.
+   */
+  makeDraggable: function () {
+    $(this.getDOMNode()).find('.new-design-element').draggable({
+      // Create an item (without an id) for dragging that looks identical to the
+      // element that will ultimately be dropped. Note, this item has no
+      // containment, and doesn't snap to a grid as we drag (but does on drop)
+      helper: function (event) {
+        var elementType = this.getAttribute('data-element-type');
+        if (elementType === library.ElementType.SCREEN) {
+          return $(this).clone();
+        }
+        var element = library.createElement(elementType, 0, 0, true);
+        element.style.position = 'static';
+
+        var div = document.getElementById('divApplab');
+        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+
+        var parent = $('<div/>').addClass('draggingParent');
+
+        parent[0].style.transform = "scale(" + xScale + ", " + yScale + ")";
+        parent[0].style.webkitTransform = "scale(" + xScale + ", " + yScale + ")";
+        parent[0].style.backgroundColor = 'transparent';
+
+        // Have the cursor be in the center of the dragged item.
+        // element.width/height() returns 0 for canvas (probably because it
+        // hasn't actually been renderd yet)
+        var elementWidth = $(element).width() ||
+          parseInt(element.getAttribute('width'), 10);
+        var elementHeight = $(element).height() ||
+          parseInt(element.getAttribute('height'), 10);
+        // phantom/FF seem to not have event.offsetY, so go calculate it
+        var offsetY = (event.offsetY || event.pageY - $(event.target).offset().top);
+        $(this).draggable('option', 'cursorAt', {
+          left: elementWidth / 2,
+          top: Math.min(offsetY, elementHeight)
+        });
+
+        return parent.append(element)[0];
+      },
+      containment: 'document',
+      appendTo: '#codeApp',
+      revert: 'invalid',
+      // Make sure the dragged element appears in front of #belowVisualization,
+      // which has z-index 1.
+      zIndex: 2,
+      start: this.props.handleDragStart
+    });
+  }
+});
+
+
+},{"./designElements/library":48,"react":649}],48:[function(require,module,exports){
 /* global $ */
 
 var utils = require('../../utils');
@@ -7016,8 +7288,9 @@ module.exports = {
    * @param {ElementType} elementType Type of element to create
    * @param {number} left Position from left.
    * @param {number} top Position from top.
+   * @param {boolean} [withoutId] If true, don't generate an id
    */
-  createElement: function (elementType, left, top) {
+  createElement: function (elementType, left, top, withoutId) {
     var elementClass = elements[elementType];
     if (!elementClass) {
       throw new Error('Unknown elementType: ' + elementType);
@@ -7026,7 +7299,9 @@ module.exports = {
     var element = elementClass.create();
 
     // Stuff that's common across all elements
-    element.id = this.getUnusedElementId(elementType.toLowerCase());
+    if (!withoutId) {
+      element.id = this.getUnusedElementId(elementType.toLowerCase());
+    }
 
     if (elementType !== ElementType.SCREEN) {
       element.style.position = 'absolute';
@@ -9993,274 +10268,7 @@ var BooleanPropertyRow = React.createClass({displayName: "BooleanPropertyRow",
 module.exports = BooleanPropertyRow;
 
 
-},{"./rowStyle":50,"react":649}],34:[function(require,module,exports){
-/* global $ */
-var React = require('react');
-var rowStyle = require('./rowStyle');
-
-/**
- * A delete button that will also ask for confirmation when shouldConfirm is
- * true.
- */
-var DeleteElementButton = React.createClass({displayName: "DeleteElementButton",
-  propTypes: {
-    shouldConfirm: React.PropTypes.bool.isRequired,
-    handleDelete: React.PropTypes.func.isRequired
-  },
-
-  getInitialState: function () {
-    return {
-      confirming: false
-    };
-  },
-
-  handleDeleteInternal: function(event) {
-    if (this.props.shouldConfirm) {
-      this.setState({confirming: true});
-    } else {
-      this.finishDelete();
-    }
-  },
-
-  finishDelete: function () {
-    this.props.handleDelete();
-  },
-
-  abortDelete: function (event) {
-    this.setState({confirming: false});
-  },
-
-  render: function() {
-    var buttonStyle = {
-      paddingTop: '5px',
-      paddingBottom: '5px',
-      fontSize: '14px',
-    };
-
-    var redButtonStyle = $.extend({}, buttonStyle, {
-      backgroundColor: '#c00', // $red
-      color: 'white'
-    });
-
-    var confirm;
-    if (this.state.confirming) {
-      return (
-        React.createElement("div", {style: {marginLeft: 20}}, 
-          "Delete?", 
-          React.createElement("button", {
-            style: buttonStyle, 
-            onClick: this.abortDelete}, 
-            "No"
-          ), 
-          React.createElement("button", {
-            style: redButtonStyle, 
-            onClick: this.finishDelete}, 
-            "Yes"
-          )
-        )
-      );
-    }
-    return (
-      React.createElement("div", {style: {marginLeft: 15}}, 
-        React.createElement("button", {
-          style: redButtonStyle, 
-          onClick: this.handleDeleteInternal}, 
-          "Delete"
-        )
-      )
-    );
-  }
-});
-
-module.exports = DeleteElementButton;
-
-
-},{"./rowStyle":50,"react":649}],50:[function(require,module,exports){
-module.exports.input = {
-  display: 'inline-block',
-  height: 20,
-  padding: '4px 6px',
-  marginBottom: 0,
-  marginLeft: 0,
-  fontSize: 14,
-  lineHeight: '20px',
-  color: '#5b6770',
-  WebkitBorderRadius: 4,
-  MozBorderRadius: 4,
-  borderRadius: 4,
-  border: '1px solid #949CA2',
-  verticalAlign: 'middle'
-};
-
-module.exports.container = {
-  paddingLeft: 20,
-  marginBottom: 8
-};
-
-module.exports.maxWidth = {
-  maxWidth: 245
-};
-
-module.exports.description = {
-  paddingLeft: 2
-};
-
-
-},{}],14:[function(require,module,exports){
-/* global $ */
-
-var React = require('react');
-var DesignToolboxElement = require('./DesignToolboxElement.jsx');
-var applabMsg = require('./locale');
-
-var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
-
-module.exports = React.createClass({displayName: "exports",
-  propTypes: {
-    handleDragStart: React.PropTypes.func.isRequired,
-    isToolboxVisible: React.PropTypes.bool.isRequired,
-  },
-
-  render: function () {
-    var toolboxStyle = {
-      display: this.props.isToolboxVisible ? 'block' : 'none',
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        width: 270,
-        boxSizing: 'border-box',
-        borderRight: '1px solid gray',
-        padding: 10
-    };
-
-    return (
-      React.createElement("div", {id: "design-toolbox", style: toolboxStyle}, 
-        React.createElement("p", null, applabMsg.designToolboxDescription()), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'button.png', 
-            desc: 'Button', 
-            elementType: 'BUTTON', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'input.png', 
-            desc: 'Text Input', 
-            elementType: 'TEXT_INPUT', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'label.png', 
-            desc: 'Label', 
-            elementType: 'LABEL', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'dropdown.png', 
-            desc: 'Dropdown', 
-            elementType: 'DROPDOWN', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'radio.png', 
-            desc: 'Radio Button', 
-            elementType: 'RADIO_BUTTON', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'checkbox.png', 
-            desc: 'Checkbox', 
-            elementType: 'CHECKBOX', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'image.png', 
-            desc: 'Image', 
-            elementType: 'IMAGE', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'canvas.png', 
-            desc: 'Canvas', 
-            elementType: 'CANVAS', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'screen.png', 
-            desc: 'Screen', 
-            elementType: 'SCREEN', 
-            handleDragStart: this.props.handleDragStart}), 
-        React.createElement(DesignToolboxElement, {
-            imageUrl: IMAGE_BASE_URL + 'textarea.png', 
-            desc: 'Text Area', 
-            elementType: 'TEXT_AREA', 
-            handleDragStart: this.props.handleDragStart})
-      )
-    );
-  }
-});
-
-
-},{"./DesignToolboxElement.jsx":15,"./locale":62,"react":649}],15:[function(require,module,exports){
-/* global $ */
-
-var React = require('react');
-
-module.exports = React.createClass({displayName: "exports",
-  propTypes: {
-    imageUrl: React.PropTypes.string.isRequired,
-    desc: React.PropTypes.string.isRequired,
-    elementType: React.PropTypes.string.isRequired,
-    handleDragStart: React.PropTypes.func.isRequired
-  },
-
-  render: function() {
-    var styles = {
-      outerContainer: {
-        // The icon images are 120px wide and depend on this width for scaling.
-        width: 120,
-        display: 'inline-block',
-        textAlign: 'center',
-        paddingBottom: 15
-      },
-      innerContainer: {
-        textAlign: 'center'
-      },
-      image: {
-        marginBottom: 5
-      }
-    };
-
-    return (
-      React.createElement("div", {style: styles.outerContainer}, 
-        React.createElement("div", {style: styles.innerContainer, 
-          "data-element-type": this.props.elementType, 
-          className: "new-design-element"}, 
-          React.createElement("img", {src: this.props.imageUrl, 
-              className: "design-element-image", 
-              style: styles.image}
-          ), 
-          React.createElement("div", null, this.props.desc)
-        )
-      )
-    );
-  },
-
-  componentDidMount: function () {
-    this.makeDraggable();
-  },
-
-  componentDidUpdate: function () {
-    this.makeDraggable();
-  },
-
-  makeDraggable: function () {
-    $(this.getDOMNode()).find('.new-design-element').draggable({
-      containment: '#codeApp',
-      helper: 'clone',
-      appendTo: '#codeApp',
-      revert: 'invalid',
-      // Make sure the dragged element appears in front of #belowVisualization,
-      // which has z-index 1.
-      zIndex: 2,
-      start: this.props.handleDragStart
-    });
-  }
-});
-
-
-},{"react":649}],649:[function(require,module,exports){
+},{"./rowStyle":50,"react":649}],649:[function(require,module,exports){
 module.exports = require('./lib/React');
 
 },{"./lib/React":522}],522:[function(require,module,exports){
@@ -29938,7 +29946,38 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
-},{"_process":469}],10:[function(require,module,exports){
+},{"_process":469}],50:[function(require,module,exports){
+module.exports.input = {
+  display: 'inline-block',
+  height: 20,
+  padding: '4px 6px',
+  marginBottom: 0,
+  marginLeft: 0,
+  fontSize: 14,
+  lineHeight: '20px',
+  color: '#5b6770',
+  WebkitBorderRadius: 4,
+  MozBorderRadius: 4,
+  borderRadius: 4,
+  border: '1px solid #949CA2',
+  verticalAlign: 'middle'
+};
+
+module.exports.container = {
+  paddingLeft: 20,
+  marginBottom: 8
+};
+
+module.exports.maxWidth = {
+  maxWidth: 245
+};
+
+module.exports.description = {
+  paddingLeft: 2
+};
+
+
+},{}],10:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
