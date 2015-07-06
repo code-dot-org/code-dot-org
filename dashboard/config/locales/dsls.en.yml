@@ -750,13 +750,26 @@ en:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
         Initial Activity: Initial Activity
+      equity discuss:
+        Leading a Discussion in Equity: Leading a Discussion in Equity
+      equity discussion:
+        Leading an Equity Discussion: Leading an Equity Discussion
+        description here: description here
+      equity expect:
+        Setting Expectations: Setting Expectations
       equity in CS:
         Equity in Computer Science: Equity in Computer Science
       equity is more:
         Equity Is More Than Race and Gender: Equity Is More Than Race and Gender
       equity lead 1: {}
+      equity resources:
+        Resources for Your Discussion: Resources for Your Discussion
+        description here: description here
+        title: title
       equity v equality:
         Equity Vs. Equality: Equity Vs. Equality
+      equity vids:
+        Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
       k5 what next 1: {}
       sciPD Course Overview: {}
