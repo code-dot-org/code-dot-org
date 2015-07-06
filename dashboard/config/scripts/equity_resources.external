@@ -1,0 +1,48 @@
+name 'equity resources'
+title 'Resources for Your Discussion'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Leading a Discussion on Equity in PD >> Resources
+
+<br/><br/>
+
+<img src="https://images.code.org/45f10f61ede9965ca0bcb49d7f5a8aba-image-1435896306420.jpg" class="lefted roundedPic" width="350px"/>Here are some other things to keep in mind:
+
+
+#### Perception is important
+Think of how a group of guys might talk to each other when they're hanging out.  Quips and insults fly around the room, and they look at those with a sense of fondness because it's a sign of a strong friendship. What happens to an outsider in that group?  
+
+How does that outsider feel if the group calls them names and picks on their weak spots?  The group may not be treating that person any differently, but the perception is much different because of the situation.  
+
+Perspective is very important.
+
+
+#### Numbers are more than statistics
+Tech companies are more likely to hire women and people of color when they apply for an engineering position. This may sound like an act of inequality, but the real reason is quite logical.  Minorities are far less likely to apply for technical postions, so when a resume comes in, it is often an indication that the applicant is truly talented and confident.
+
+<br/>
+#### Books for further reading
+
+<a href="http://smile.amazon.com/Courageous-Conversations-About-Race-Achieving/dp/0761988777?sa-no-redirect=1" target="_new">Courageous Conversations about Race: A field guide to achieving equity in schools</a>
+
+<a href="http://smile.amazon.com/Stuck-Shallow-End-Education-Computing/dp/0262514044/ref=sr_1_1?ie=UTF8&qid=1435900078&sr=8-1&keywords=stuck+in+the+shallow+end" target="_new">Stuck in the Shallow End: Education, Race, and Computing</a>
+
+
+<br/>
+#### Web resources
+
+Google’s Report “<a href="http://static.googleusercontent.com/media/www.google.com/en/us/edu/pdf/women-who-choose-what-really.pdf" target="_new">Women who choose computer science—What really matters</a>” Spoiler alert: it’s Social Encouragement, Self Perception, Academic Exposure, and Career Perception.
+
+Made with Code <a href="https://www.madewithcode.com/mentors" target="_new">Mentor examples</a>, <a href="https://www.madewithcode.com/mentors" target="_new">Resources</a>, and <a href="https://www.madewithcode.com/" target="_new">other pieces</a> to encourage girls to code
+
+<a href="http://www.pbs.org/newshour/updates/teaching-coding-kids-key-closing-fields-diversity-gap/" target="_new">Computer Science's Diversity Gap Starts Early</a>
+
+
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN
