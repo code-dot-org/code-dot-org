@@ -1,12 +1,13 @@
 ---
 title: Poste Stats
 ---
-
 - if params[:name].blank?
   %h2
     Please select a message from
     %a{href: 'list'} this list
 - else
+  = view :breadcrumbs, trail: [{text: 'Poste', url: '/poste'}, {text: 'Messages', url: '/poste/list'}, {text: params[:name]}]
+
   :ruby
     message_id = DB[:poste_messages].where(name: params[:name]).first[:id]
 
@@ -14,8 +15,8 @@ title: Poste Stats
 
     opens_count = DB.fetch("
       SELECT poste_opens.id
-      FROM poste_deliveries
-      LEFT JOIN poste_opens ON poste_opens.delivery_id = poste_deliveries.id
+      FROM poste_opens
+      INNER JOIN poste_deliveries ON poste_opens.delivery_id = poste_deliveries.id
       WHERE poste_deliveries.message_id = #{message_id}
      ").count
 
@@ -26,12 +27,7 @@ title: Poste Stats
       WHERE poste_deliveries.message_id = #{message_id} and poste_opens.id is not null
      ").count
 
-    clicks_count = DB.fetch("
-      SELECT poste_clicks.id
-      FROM poste_deliveries
-      LEFT JOIN poste_clicks ON poste_clicks.delivery_id = poste_deliveries.id
-      WHERE poste_deliveries.message_id = #{message_id}
-     ").count
+    clicks_count = DB[:poste_clicks].where(message_id: message_id).count
 
   %h2= params[:name]
 
@@ -39,11 +35,11 @@ title: Poste Stats
   %dl
     %dt Sent:
     %dd= sent_count
-    %dt Opens:
+    %dt Opens (the number of times any instance of this message was opened):
     %dd= opens_count
-    %dt Unique opens:
+    %dt Unique opens (the number of messages of this type that were opened):
     %dd= unique_opens_count
-    %dt Clicks:
+    %dt Clicks (the total number of clicks on any link on any message):
     %dd= clicks_count
 
   :ruby
