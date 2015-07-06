@@ -8,47 +8,43 @@ title: Poste Stats
     %a{href: 'list'} this list
 - else
   :ruby
-    rows = DB.fetch("
-      SELECT
-        poste_messages.name AS message,
-        COUNT(DISTINCT poste_deliveries.id) AS deliveries,
-        COUNT(DISTINCT poste_opens.id) as opens,
-        (COUNT(DISTINCT poste_opens.id) * 100) / COUNT(DISTINCT poste_deliveries.id) AS percent_opened,
-        COUNT(poste_clicks.id) as clicks,
-        (COUNT(poste_clicks.id) * 100) / COUNT(DISTINCT poste_opens.id) AS percent_clicked,
-        (COUNT(poste_clicks.id) * 100) / COUNT(DISTINCT poste_deliveries.id) AS percent_clicked_sent
-      FROM poste_messages
-      LEFT JOIN poste_deliveries ON poste_deliveries.message_id = poste_messages.id
-      LEFT JOIN poste_opens ON poste_opens.delivery_id = poste_deliveries.id
-      LEFT JOIN poste_clicks ON poste_clicks.delivery_id = poste_deliveries.id
-      WHERE poste_messages.name = '#{params[:name]}'
-    ")
+    message_id = DB[:poste_messages].where(name: params[:name]).first[:id]
 
-  %table
-    %tr
-      %th Message
-      %th Sent
-      %th Opens
-      %th Clicks
-    - rows.each do |row|
-      %tr
-        %td
-          %a{:href => "##{row[:message]}"}= row[:message]
-          %a{:name => row[:message]}
-        %td= row[:deliveries]
-        %td
-          = row[:opens]
-          %br/
-          = row[:percent_opened].to_i
-          \% sent
-        %td
-          = row[:clicks]
-          %br/
-          = row[:percent_clicked].to_i
-          \% opened
-          %br/
-          = row[:percent_clicked_sent].to_i
-          \% sent
+    sent_count = DB[:poste_deliveries].where(message_id: message_id).count
+
+    opens_count = DB.fetch("
+      SELECT poste_opens.id
+      FROM poste_deliveries
+      LEFT JOIN poste_opens ON poste_opens.delivery_id = poste_deliveries.id
+      WHERE poste_deliveries.message_id = #{message_id}
+     ").count
+
+    unique_opens_count = DB.fetch("
+      SELECT DISTINCT poste_deliveries.id
+      FROM poste_deliveries
+      LEFT JOIN poste_opens ON poste_opens.delivery_id = poste_deliveries.id
+      WHERE poste_deliveries.message_id = #{message_id} and poste_opens.id is not null
+     ").count
+
+    clicks_count = DB.fetch("
+      SELECT poste_clicks.id
+      FROM poste_deliveries
+      LEFT JOIN poste_clicks ON poste_clicks.delivery_id = poste_deliveries.id
+      WHERE poste_deliveries.message_id = #{message_id}
+     ").count
+
+  %h2= params[:name]
+
+
+  %dl
+    %dt Sent:
+    %dd= sent_count
+    %dt Opens:
+    %dd= opens_count
+    %dt Unique opens:
+    %dd= unique_opens_count
+    %dt Clicks:
+    %dd= clicks_count
 
   :ruby
     click_rows = DB.fetch("
