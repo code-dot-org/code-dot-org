@@ -764,8 +764,6 @@ en:
       equity lead 1: {}
       equity resources:
         Resources for Your Discussion: Resources for Your Discussion
-        description here: description here
-        title: title
       equity v equality:
         Equity Vs. Equality: Equity Vs. Equality
       equity vids:
@@ -3131,11 +3129,13 @@ en:
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 3:
         ((5 < 10 < 15)): ((5 < 10 < 15))
+        ((5 < 10) & (10 < 15)): ((5 < 10) & (10 < 15))
         ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
         ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
         ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
         (5 < 10 < 15): (5 < 10 < 15)
+        (5 < 10) & (10 < 15): (5 < 10) & (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
         (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
@@ -3146,10 +3146,13 @@ en:
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 4:
+        (((1 < x) & (x < 5)) || ((8 < x) & (x < 10))): (((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))
         (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))
         (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))
         (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))
+        ((1 < x) & (x < 5) || (8 < x) & (x < 10)): ((1 < x) & (x < 5) || (8 < x) & (x < 10))
+        ((1 < x) & (x < 5)) || ((8 < x) & (x < 10)): ((1 < x) & (x < 5)) || ((8 < x) & (x < 10))
         ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x) && (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8 < x) && (x < 10))
         ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10)): ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))
@@ -3162,6 +3165,7 @@ en:
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
         (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
+        (1 < x) & (x < 5) || (8 < x) & (x < 10): (1 < x) & (x < 5) || (8 < x) & (x < 10)
         (1 < x) && (x < 5) || (8 < x) && (x < 10): (1 < x) && (x < 5) || (8 < x) && (x < 10)
         (1 < x) AND (x < 5) OR (8 < x) AND (x < 10): (1 < x) AND (x < 5) OR (8 < x) AND (x < 10)
         (1 < x) And (x < 5) Or (8 < x) And (x < 10): (1 < x) And (x < 5) Or (8 < x) And (x < 10)

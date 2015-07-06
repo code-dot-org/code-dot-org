@@ -21,7 +21,15 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "The smallest triangle has 20 pixel sides, the largest has 200 pixel sides, and each triangle is 20 pixels larger than the last.\r\n\r\n<br/>\r\nUpdate the for loop to draw these triangles.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
