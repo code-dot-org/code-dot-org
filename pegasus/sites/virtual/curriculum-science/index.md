@@ -11,7 +11,7 @@ Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking 
 <%= partial('video_grid', :videos => [
   {title: "Curriculum Overview", yt: "iDSluSl9I3o", dl: "https://www.dropbox.com/s/zuzx5m5e5q4r5kj/Welcome%20and%20Curriculum%20overview-SCI_PD-1.mp4", dltext: "Download the video"},  
 
-  {title: "Introduction to StarLogo Nova", yt: "JWEtE8upGnA", dl: "https://www.dropbox.com/s/snkw16zipgyjlvp/Intro%20to%20Starlogo%20Nova%20-%20SCI%20PD%209BB_1.mp4", dltext: "Download the video"},  
+  {title: "Introduction to StarLogo Nova", yt: "QrXe-nCV1xM", dl: "https://www.dropbox.com/s/h6634d3ukpups3y/MS-SCI-PD-Intro-to-Starlogo-Nova-9-2015.mp4", dltext: "Download the video"},  
 
   {title: "Computational Thinking and the NRC Framework", yt: "kP8C6qoUgxs", dl: "https://www.dropbox.com/s/h62bfwe0lrkw3nt/Computational%20Thinking%20and%20NRC%20Framework%20-%20SCI%20PD%208_1.mp4", dltext: "Download the video"},  
 
