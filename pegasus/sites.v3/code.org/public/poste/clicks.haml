@@ -9,31 +9,31 @@ title: Poste Clicks
     text-overflow: ellipsis;
     whitespace: nowrap;
   }
-:ruby
-  rows = DB.fetch('
-  SELECT
-    poste_messages.id as id,
-    poste_messages.name as message,
-    poste_urls.url as url,
-    COUNT(poste_clicks.id) as clicks
-  FROM poste_clicks
-  LEFT JOIN poste_messages ON poste_messages.id = poste_clicks.message_id
-  LEFT JOIN poste_urls ON poste_urls.id = poste_clicks.url_id
-  GROUP BY poste_clicks.message_id, poste_clicks.url_id
-  ORDER BY poste_messages.name
-  ')
 
-%table
-  %tr
-    %th Message
-    %th Link
-    %th Clicks
-  - rows.each do |row|
+- if params[:name].blank?
+  %h2
+    Please select a message from
+    %a{href: 'list'} this list
+- else
+  :ruby
+    rows = DB.fetch("
+    SELECT
+      poste_urls.url as url,
+      COUNT(poste_clicks.id) as clicks
+    FROM poste_clicks
+    LEFT JOIN poste_urls ON poste_urls.id = poste_clicks.url_id
+    WHERE poste_clicks.message_id = (select id from poste_messages where name = '#{params[:name]}')
+    GROUP BY poste_clicks.url_id
+    ")
+
+  %h2 Clicks on links in #{params[:name]}
+  %table
     %tr
-      %td
-        %a{href: "##{ row[:message] }"}= row[:message]
-        %a{name: row[:message]}
-      %td
-        .truncate
-          %a{href: row[:url]}= row[:url]
-      %td= row[:clicks]
+      %th Link
+      %th Clicks
+    - rows.each do |row|
+      %tr
+        %td
+          .truncate
+            %a{href: row[:url]}= row[:url]
+        %td= row[:clicks]
