@@ -78,6 +78,8 @@ Eval.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_display';
   config.enableShowCode = false;
+  config.pinWorkspaceToBottom = true;
+  config.hasVerticalScrollbars = true;
 
   config.html = page({
     assetUrl: studioApp.assetUrl,

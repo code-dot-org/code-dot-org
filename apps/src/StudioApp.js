@@ -634,6 +634,7 @@ StudioApp.prototype.localeDirection = function() {
 * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
 */
 StudioApp.prototype.initReadonly = function(options) {
+  // TODO (bbuchanan): Change readonly scrolling rules here, maybe inherit from level
   Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
@@ -1506,6 +1507,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
+    hasVerticalScrollbars: config.hasVerticalScrollbars,
+    hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
     readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };
