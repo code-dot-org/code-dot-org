@@ -13,14 +13,15 @@ Now that you've taken a look at some of the powerful features of StarLogo Nova, 
 Look at your public gallery and choose at least two projects from each of your completed modules to remix.  Once you do, try to find a way to add all of the features that you have just learned into each model.  
 
 Can you:
-- give an agent the camera?
-- add at least one more procedure?
-- add a couple of extra conditionals?
-- experiment with extreme wiggle?
-- create some alternate breeds?
-- add a slider to quickly modify your environment?
-- detect a collision or proximity of agents?
-
+<ul>
+<li>give an agent the camera?</li>
+<li>add at least one more procedure?</li>
+<li>add a couple of extra conditionals?</li>
+<li>experiment with extreme wiggle?</li>
+<li>create some alternate breeds?</li>
+<li>add a slider to quickly modify your environment?</li>
+<li>detect a collision or proximity of agents?</li>
+</ul>
 
 Upon completion of each remix, head over to the discussion forum on [Expert Remixing](http://forum.code.org/t/expert-remixing/949) and paste the link to the project in your public gallery in this forum and explain what you did, and why the result still makes sense as a scientific model. 
 
