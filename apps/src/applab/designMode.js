@@ -171,23 +171,25 @@ designMode.onPropertyChange = function(element, name, value) {
       var image = new Image();
       var backgroundImage = new Image();
       var originalImage = element.style.backgroundImage;
-      backgroundImage.onload = function() {
-        element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-        if (originalImage === element.style.backgroundImage) {
-          return;
-        }
-        element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
-          backgroundImage.naturalHeight + 'px';
-        element.style.width = backgroundImage.naturalWidth + 'px';
-        element.style.height = backgroundImage.naturalHeight + 'px';
-        // Re-render properties
-        if (currentlyEditedElement === element) {
-          designMode.editElementProperties(element);
-        }
-      };
       backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
-
+      if (backgroundImage.src !== originalImage) {
+        backgroundImage.onload = function() {
+          // remove loader so that API calls dont hit this
+          element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+          if (originalImage === element.style.backgroundImage) {
+            return;
+          }
+          element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
+            backgroundImage.naturalHeight + 'px';
+          element.style.width = backgroundImage.naturalWidth + 'px';
+          element.style.height = backgroundImage.naturalHeight + 'px';
+          // Re-render properties
+          if (currentlyEditedElement === element) {
+            designMode.editElementProperties(element);
+          }
+        };
+      }
       break;
 
     case 'screen-image':
@@ -203,22 +205,22 @@ designMode.onPropertyChange = function(element, name, value) {
       var originalSrc = element.src;
       element.src = Applab.maybeAddAssetPathPrefix(value);
       element.setAttribute('data-canonical-image-url', value);
-      element.onload = function () {
-        if (element.src === originalSrc) {
-          return;
-        }
-        // naturalWidth/Height aren't populated until image has loaded.
-        element.style.width = element.naturalWidth + 'px';
-        element.style.height = element.naturalHeight + 'px';
-        if ($(element.parentNode).is('.ui-resizable')) {
-          element.parentNode.style.width = element.naturalWidth + 'px';
-          element.parentNode.style.height = element.naturalHeight + 'px';
-        }
-        // Re-render properties
-        if (currentlyEditedElement === element) {
-          designMode.editElementProperties(element);
-        }
-      };
+
+      if (element.src !== originalSrc) {
+        element.onload = function () {
+          // naturalWidth/Height aren't populated until image has loaded.
+          element.style.width = element.naturalWidth + 'px';
+          element.style.height = element.naturalHeight + 'px';
+          if ($(element.parentNode).is('.ui-resizable')) {
+            element.parentNode.style.width = element.naturalWidth + 'px';
+            element.parentNode.style.height = element.naturalHeight + 'px';
+          }
+          // Re-render properties
+          if (currentlyEditedElement === element) {
+            designMode.editElementProperties(element);
+          }
+        };
+      }
       break;
     case 'hidden':
       // Add a class that shows as 30% opacity in design mode, and invisible
