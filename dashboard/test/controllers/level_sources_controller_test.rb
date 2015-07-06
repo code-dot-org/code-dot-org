@@ -206,10 +206,11 @@ class LevelSourcesControllerTest < ActionController::TestCase
     get :show, id: @level_source.id
     assert_response :success
 
-    # `app_options` can't be called a second time unless we clear out @view_options (Pivotal #98153794)
-    @controller.instance_variable_set :@view_options, nil
-
-    assert_equal @level_source.id, @controller.app_options[:level_source_id]
+    # Select the first script block containing 'appOptions', then execute it in a JavaScript engine
+    # and return the computed value we want to compare against.
+    element = css('script').select{|x|x.to_s.match(/appOptions/) }.first
+    level_source_id = ExecJS.exec("#{element.child.text};\nreturn appOptions.level_source_id")
+    assert_equal @level_source.id, level_source_id
   end
 
   test 'artist levelsource has sharing meta tags' do

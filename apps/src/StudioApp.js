@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, $, droplet, marked, digestManifest */
+/* global Blockly, ace:true, $, droplet, marked */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -508,7 +508,7 @@ StudioApp.prototype.assetUrl_ = function (path) {
     throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
-  return this.BASE_URL + ((window.digestManifest || {})[path] || path);
+  return this.BASE_URL + path;
 };
 
 /**
