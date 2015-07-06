@@ -19,7 +19,16 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "impressive": "false",
-    "embed": "false"
+    "embed": "false",
+    "markdown_instructions": "Here's the same algorithm that we came up with for the last puzzle - what should you set the `sides` variable to in order to draw this picture of squares?",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
