@@ -567,19 +567,12 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      // Subtract out the distance between #visualization (which we are
-      // dropping into) and #codeApp (where the coordinates come from).
-      // Assumes the parent of #visualization has a very small offset from #codeApp.
-      var visualization = document.getElementById('visualization');
-      var left = ui.position.left - visualization.offsetLeft;
-      var top = ui.position.top - visualization.offsetTop;
-
       var div = document.getElementById('divApplab');
       var xScale = div.getBoundingClientRect().width / div.offsetWidth;
       var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-      left = left / xScale;
-      top = top / yScale;
+      var left = (ui.helper.offset().left - $('#divApplab').offset().left) / xScale;
+      var top = (ui.helper.offset().top - $('#divApplab').offset().top) / yScale;
 
       // snap top-left corner to nearest location in the grid
       left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
