@@ -7,19 +7,22 @@ markdown <<MARKDOWN
 
 ### Implementation Questions and Answers
 
+<br/>
 
-<img src="https://images.code.org/1913b42d18da927d866023403f6a99d6-image-1435775636761.jpg" class="lefted roundedPic" width="450px" style="margin-right:60px;"/>
-
+<img src="https://images.code.org/1913b42d18da927d866023403f6a99d6-image-1435775636761.jpg" class="lefted roundedPic" width="450px" style="margin-right:40px;"/>
+<br/>
 What did you realize while you were completing your implementation document?  
 
-<ul style="margin-left:500px">
+<ul style="margin-left:490px">
 	<li>Are there any areas where you feel completely ready and confident?</li>
 	<li>Are there any areas where you could use more time and experience?</li>
     <li>Is there anywhere that you could use extra help from Code.org?</li>
 </ul>
 
 
-Take some time to discuss your implementation plan (along with your answers to these questions) on the PLC discussion forum, then come back to continue on to the next stage.
+<br/><br/>
+
+Take some time to discuss your implementation plan (along with your answers to these questions) on the PLC discussion forum.
 
 Make sure to read over responses from others and see if you can contribute anything positive to their experience. Remember, if you help your cohorts, there is a greater chance that they will be able to help you as well!
 
@@ -27,6 +30,7 @@ Make sure to read over responses from others and see if you can contribute anyth
 	Visit Implementation Forum >>
 </button></a>
 
-<br/><br/>
+After you have responded to the forum, return here and click "continue" to move on to the next stage.
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
