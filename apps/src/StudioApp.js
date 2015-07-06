@@ -319,6 +319,12 @@ StudioApp.prototype.init = function(config) {
   window.addEventListener('orientationchange', orientationHandler);
   orientationHandler();
 
+  // See Pivotal #98467352. In iOS 8, when URLs entered directly,
+  // innerWidth/Height are inaccurate even after all app initialization
+  // completes. This later call seems to address the issue :/
+  // 1000ms occasionally not enough.
+  setTimeout(orientationHandler, 3000);
+
   if (config.loadAudio) {
     config.loadAudio();
   }
