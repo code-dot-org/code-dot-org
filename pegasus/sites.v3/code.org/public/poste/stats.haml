@@ -11,13 +11,12 @@ title: Poste Stats
     rows = DB.fetch("
       SELECT
         poste_messages.name AS message,
-        COUNT(poste_deliveries.id) AS deliveries,
-        COUNT(poste_deliveries.sent_at) AS sent,
+        COUNT(DISTINCT poste_deliveries.id) AS deliveries,
         COUNT(DISTINCT poste_opens.id) as opens,
-        (COUNT(DISTINCT poste_opens.id) * 100) / COUNT(poste_deliveries.sent_at) AS percent_opened,
+        (COUNT(DISTINCT poste_opens.id) * 100) / COUNT(DISTINCT poste_deliveries.id) AS percent_opened,
         COUNT(poste_clicks.id) as clicks,
         (COUNT(poste_clicks.id) * 100) / COUNT(DISTINCT poste_opens.id) AS percent_clicked,
-        (COUNT(poste_clicks.id) * 100) / COUNT(poste_deliveries.sent_at) AS percent_clicked_sent
+        (COUNT(poste_clicks.id) * 100) / COUNT(DISTINCT poste_deliveries.id) AS percent_clicked_sent
       FROM poste_messages
       LEFT JOIN poste_deliveries ON poste_deliveries.message_id = poste_messages.id
       LEFT JOIN poste_opens ON poste_opens.delivery_id = poste_deliveries.id
@@ -28,7 +27,6 @@ title: Poste Stats
   %table
     %tr
       %th Message
-      %th Members
       %th Sent
       %th Opens
       %th Clicks
@@ -38,7 +36,6 @@ title: Poste Stats
           %a{:href => "##{row[:message]}"}= row[:message]
           %a{:name => row[:message]}
         %td= row[:deliveries]
-        %td= row[:sent]
         %td
           = row[:opens]
           %br/
@@ -52,3 +49,26 @@ title: Poste Stats
           %br/
           = row[:percent_clicked_sent].to_i
           \% sent
+
+  :ruby
+    click_rows = DB.fetch("
+    SELECT
+      poste_urls.url as url,
+      COUNT(poste_clicks.id) as clicks
+    FROM poste_clicks
+    LEFT JOIN poste_urls ON poste_urls.id = poste_clicks.url_id
+    WHERE poste_clicks.message_id = (select id from poste_messages where name = '#{params[:name]}')
+    GROUP BY poste_clicks.url_id
+    ")
+
+  %h2 Click details
+  %table
+    %tr
+      %th Link
+      %th Clicks
+    - click_rows.each do |row|
+      %tr
+        %td
+          .truncate
+            %a{href: row[:url]}= row[:url]
+        %td= row[:clicks]
