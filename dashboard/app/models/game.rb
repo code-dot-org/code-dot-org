@@ -78,7 +78,7 @@ class Game < ActiveRecord::Base
   end
 
   def has_footer?
-    !(app == APPLAB || app == NETSIM || app == 'calc' || app == 'eval')
+    !(app == APPLAB || app == NETSIM || app == 'maze' || app == 'calc' || app == 'eval')
   end
 
   def self.setup
