@@ -11,6 +11,20 @@ nav: about_nav
 
 Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
 
+[col-25]
+
+# Diversity across 6M students in our courses
+
+[/col-25]
+
+[col-75]
+
+![image](/images/infographics/fit-580/diversity-courses.png)
+
+[/col-75]
+
+<br />
+
 [col-50]
 
 **Code.org's work covered by CBS This Morning:**
@@ -34,10 +48,10 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 
 | Code.org Goal | Accomplishment |
 |------|----------------|
+| Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity). |
 | Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(stats['number_served']) %> served. 48% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
-| Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity). |
 | Prep new CS teachers | We've prepared 9,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
 | Change school district curriculum | We've partnered with [70+ of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
