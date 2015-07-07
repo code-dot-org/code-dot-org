@@ -35,8 +35,7 @@ module LevelsHelper
       # we have to load the channel here.
 
       channel_token = ChannelToken.find_by(level: host_level, user: @user)
-      view_options(readonly_workspace: true,
-                   callouts: [])
+      view_options readonly_workspace: true, callouts: []
     else
       # If `create` fails because it was beat by a competing request, a second
       # `find_by` should succeed.
