@@ -4,7 +4,7 @@
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
-* Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-desktop-amd64.iso)
+* Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso)
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
   1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
   1. `cd code-dot-org`
@@ -32,6 +32,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 ### Ubuntu 14.04
 
+1. `sudo apt-get install aptitude`
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
 1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev`
@@ -49,7 +50,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
   1. Option B - Symlinks:
     1. Ruby: `sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby`
     1. Gem: `sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem`
-    1. <code>sudo chown \`whoami\` /usr/bin/gem/</code>`
+    1. <code>sudo chown $(whoami) /usr/bin/gem/</code>`
 1. Install Node.js 0.12.4 and npm 2.10.1
   1. Option A - nodesource repository
     1. `curl -sL https://deb.nodesource.com/setup | sudo bash -`
@@ -60,13 +61,14 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ## Common setup
 
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `gem install bundler -v 1.10.4`
+1. `sudo gem install bundler -v 1.10.4`
 1. `rbenv rehash` (if using rbenv)
 1. `cd code-dot-org/aws`
 1. `bundle install`
 1. `cd ..`
-1. `sudo chown $(whoami) $HOME/.npm`
 1. `rake install`
+1. `sudo chown -R $(whoami) $HOME/.npm`
+
 
 ## Organizational Structure
 
