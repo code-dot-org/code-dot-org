@@ -379,6 +379,11 @@ Blockly.BlockSpaceEditor.prototype.bindMouseEventsTo = function (newTarget) {
   this.mouseDownBindData_ = Blockly.bindEvent_(newTarget, 'mousedown', this, this.onMouseDown_);
   this.mouseMoveBindData_ = Blockly.bindEvent_(newTarget, 'mousemove', this, this.onMouseMove_);
   this.svgContextMenuBindData_ = Blockly.bindEvent_(newTarget, 'contextmenu', null, Blockly.BlockSpaceEditor.onContextMenu_);
+
+  // TODO (bbuchanan): Bind mouseup against document or window, like the comment
+  // TODO              below says, so that we stop dragging or scrolling on
+  // TODO              mouseup even if the mouse moved out of the workspace.
+  // TODO              Needs good cross-browser testing!
   this.mouseUpBindData_ = Blockly.bindEvent_(newTarget, 'mouseup', this, this.onMouseUp_);
   this.mouseEventTarget_ = newTarget;
 };
