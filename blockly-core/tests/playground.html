@@ -43,6 +43,14 @@ function newContractEditor() {
   Blockly.contractEditor.openWithNewFunction();
 }
 
+function newVariableEditor() {
+  Blockly.useContractEditor = true;
+  Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
+    disableExamples: false
+  });
+  Blockly.contractEditor.openWithNewFunction(true);
+}
+
 function newFunctionEditor() {
   Blockly.defaultNumExampleBlocks = 2;
   Blockly.functionEditor = new Blockly.FunctionEditor({
@@ -320,6 +328,8 @@ h1 {
 
       <p>
         <input type="button" value="Create Contract Editor" onclick="newContractEditor()">
+        &nbsp;
+        <input type="button" value="Create Variable Editor" onclick="newVariableEditor()">
         &nbsp;
         <input type="button" value="Create Function Editor" onclick="newFunctionEditor()">
         &nbsp;

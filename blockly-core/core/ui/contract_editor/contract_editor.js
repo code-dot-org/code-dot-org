@@ -206,9 +206,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
       highlightBox: sharedHighlightBox,
       placeContentCallback: goog.bind(function (currentY) {
         if (this.flyout_) {
-          currentY += this.flyout_.getHeight();
-          this.flyout_.customYOffset = currentY;
-          this.flyout_.position_();
+          currentY = this.positionFlyout_(currentY);
         }
 
         currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
@@ -518,12 +516,8 @@ Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function (
 };
 
 Blockly.ContractEditor.prototype.getContractDomTopY_ = function () {
-  return this.getWindowBorderChromeHeight() +
-    this.chromeBottomToContractDivDistance_();
-};
-
-Blockly.ContractEditor.prototype.getBlockSpaceEditorToContractSectionTop_ = function () {
-  return this.getContractDivHeight() + this.chromeBottomToContractDivDistance_();
+  return this.chromeBottomToContractDivDistance_()
+    + this.modalBlockSpace.yOffsetFromView;
 };
 
 /**
