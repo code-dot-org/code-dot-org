@@ -1,0 +1,12 @@
+.navbar-static-top.small-footer
+  = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;') do
+    = hidden_field_tag :return_to, request.url
+    = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
+  %small.dim
+    = link_to t('footer.tos'), CDO.code_org_url('/tos')
+    &nbsp; &nbsp; | &nbsp; &nbsp;
+    = link_to t('footer.privacy'), CDO.code_org_url('/privacy')
+    %br/
+    %br/
+    %br/
+    &copy; Code.org, 2015

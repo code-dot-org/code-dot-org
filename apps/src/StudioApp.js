@@ -298,7 +298,7 @@ StudioApp.prototype.init = function(config) {
       viz.style['max-height'] = (displayWidth * scale) + 'px';
       viz.style.display = 'block';
       vizCol.style.width = '';
-      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      vizCol.style.maxWidth = displayWidth + 'px';
       // Needs to run twice on initialization
       if(!resized) {
         resized = true;
@@ -869,6 +869,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var visualization = document.getElementById('visualization');
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
+  var smallFooter = document.querySelector('.small-footer');
 
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
@@ -905,6 +906,9 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
       'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+  if (smallFooter) {
+    smallFooter.style.maxWidth = newVizWidthString;
   }
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
@@ -1277,6 +1281,10 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
+    var smallFooter = document.querySelector(".small-footer");
+    if (smallFooter) {
+      smallFooter.className += " responsive";
+    }
   }
 };
 
