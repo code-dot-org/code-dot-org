@@ -27,7 +27,19 @@
     "instructions": "Now we're using a variable called \"height\" to control how high the dog can jump. Update the \"height\" variable so that the dog can jump high enough to reach all the flags. Hint: the new flags are 200 pixels high.",
     "embed": "false",
     "use_contract_editor": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Now we're using a variable called `height` to control how high the dog can jump. Update the `height` variable so that the dog can jump high enough to reach all the flags. \r\n\r\n*Hint: the new flags are 200 pixels high.*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

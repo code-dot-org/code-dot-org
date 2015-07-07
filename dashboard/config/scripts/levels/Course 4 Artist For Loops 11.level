@@ -20,7 +20,16 @@
     "ideal": "13",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "embed": "false"
+    "embed": "false",
+    "markdown_instructions": "Remember when we used a variable to control the number of sides in a shape? This pattern starts with a triangle and adds one side at a time until it draws a decagon (10 sides). Each side should be 100 pixels long. \r\n\r\n\r\n*Hint: 360 divided by the number of sides a shape has is the number of degrees you'll need to turn.*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

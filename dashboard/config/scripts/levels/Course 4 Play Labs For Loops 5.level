@@ -21,9 +21,21 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "In the last stage we counted the square of each number. Try changing \"counter ^ 2\" to \"counter ^ 3\" to count the cube of each number (1, 8, 27, 64, 125, 216, 343….)",
+    "instructions": "In the last stage we counted the square of each number. Try changing \"counter ^ 2\" to \"counter ^ 3\" to count the cube of each number (1, 8, 27, 64, 125, 216, 343…)",
     "ideal": "11",
-    "embed": "false"
+    "embed": "false",
+    "markdown_instructions": "In the last stage we counted the square of each number. Try changing `counter ^ 2` to `counter ^ 3` to count the cube of each number (1, 8, 27, 64, 125, 216, 343…)",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "disable_sharing": "false",
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>
