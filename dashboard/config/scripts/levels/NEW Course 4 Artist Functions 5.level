@@ -23,7 +23,15 @@
     "disable_sharing": "false",
     "video_key": "C4_function_edit",
     "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"callout_text\":\"Click here to edit your function.\",\"element_id\":\"#edit_function_qtip > .blocklyIconGroup\",\"on\":\"\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"function_editor_draw_square\",\"callout_text\":\"This is your function definition. These blocks run everytime you use the \\\"draw a square\\\" block\",\"element_id\":\"#function_editor_draw_square_qtip\",\"on\":\"function_editor_opened\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "ideal": "9"
+    "ideal": "9",
+    "markdown_instructions": "How did the `draw a square` block know what commands to run? Click on \"edit\" in the `draw a square` function block. The blocks in the function editor are the definition that make up `draw a square`. \r\n\r\n<br/>\r\nWhen you're done looking around, click \"Save and Close\" and then \"Run.\"",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

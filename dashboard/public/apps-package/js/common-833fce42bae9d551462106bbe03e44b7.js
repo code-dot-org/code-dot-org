@@ -5706,7 +5706,7 @@ function installWhenRun(blockly, skin, isK1) {
 
 
 },{"./locale":150}],5:[function(require,module,exports){
-/* global Blockly, ace:true, $, droplet, marked */
+/* global Blockly, ace:true, $, droplet, marked, digestManifest */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -6216,7 +6216,7 @@ StudioApp.prototype.assetUrl_ = function (path) {
     throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
-  return this.BASE_URL + path;
+  return this.BASE_URL + ((window.digestManifest || {})[path] || path);
 };
 
 /**
@@ -10389,8 +10389,8 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');14; // delay to onload to fix IE9. 
-; buf.push('\n    window.onload = function() {\n      ', escape((16,  app )), 'Main(', (16,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="codeWorkspace"></div>\n</body>\n</html>\n'); })();
+ buf.push('<!DOCTYPE html>\n<html dir="', escape((2,  options.localeDirection )), '">\n<head>\n  <meta charset="utf-8">\n  <title>Blockly</title>\n  <link href="', escape((6,  assetUrl('css/common.css') )), '" media="all" rel="stylesheet">\n  <script type="text/javascript" src="', escape((7,  assetUrl('js/manifest.js') )), '"></script>\n  <script type="text/javascript" src="', escape((8,  assetUrl('js/blockly.js') )), '"></script>\n  <script type="text/javascript" src="', escape((9,  assetUrl('js/' + options.locale + '/blockly_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((10,  assetUrl('js/common.js') )), '"></script>\n  <script type="text/javascript" src="', escape((11,  assetUrl('js/' + options.locale + '/common_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((12,  assetUrl('js/' + options.locale + '/' + app + '_locale.js') )), '"></script>\n  <script type="text/javascript" src="', escape((13,  assetUrl('js/' + app + '.js') )), '"></script>\n  <script type="text/javascript">\n    ');15; // delay to onload to fix IE9. 
+; buf.push('\n    window.onload = function() {\n      ', escape((17,  app )), 'Main(', (17,  JSON.stringify(options) ), ');\n    };\n  </script>\n</head>\n<body class="readonly">\n  <div id="codeWorkspace"></div>\n</body>\n</html>\n'); })();
 } 
 return buf.join('');
 };
