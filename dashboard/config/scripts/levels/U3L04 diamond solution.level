@@ -10,10 +10,16 @@
       "moveForward": {
         "params": [
           ""
+        ],
+        "paletteParams": [
+          ""
         ]
       },
       "turnLeft": {
         "params": [
+          ""
+        ],
+        "paletteParams": [
           ""
         ]
       },
@@ -44,7 +50,11 @@
     "slider_speed": "0.1",
     "start_blocks": "drawDiamond();\r\n\r\nfunction drawDiamond(){\r\n  drawSide();\r\n  drawSide();\r\n  drawSide();\r\n  drawSide();\r\n}\r\n\r\nfunction drawSide(){\r\n  threeSteps();\r\n  positionForNext();\r\n}\r\n\r\nfunction positionForNext(){\r\n  moveForward();\r\n  right();\r\n  turnLeft();\r\n  turnLeft();\r\n}\r\n\r\nfunction threeSteps(){\r\n  step();\r\n  step();\r\n  step();\r\n}\r\n\r\nfunction step(){\r\n  moveForward();\r\n  turnLeft();\r\n  moveForward();\r\n  right();\r\n}\r\n\r\nfunction right(){\r\n  turnLeft();\r\n  turnLeft();\r\n  turnLeft();\r\n}",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false"
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>
