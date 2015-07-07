@@ -59,6 +59,7 @@ if node['cdo-apps']['daemon']
     cronjob at:'*/15 * * * *', do:deploy_dir('bin','activity-monitor')
     cronjob at:'@daily', do:deploy_dir('bin', 'send_workshop_reminder_emails')
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'index-users-in-solr')
+    cronjob at:'@daily', do:deploy_dir('bin', 'update-hoc-map')
   end
 
   cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'process_forms')
