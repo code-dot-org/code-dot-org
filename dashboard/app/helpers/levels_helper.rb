@@ -29,28 +29,35 @@ module LevelsHelper
     # Otherwise the current level.
     host_level = @level.project_template_level || @level
 
-    # If `create` fails because it was beat by a competing request, a second
-    # `find_by` should succeed.
-    channel_token = retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      # your own channel
-      ChannelToken.find_or_create_by!(level: host_level, user: @user || current_user) do |ct|
-        # Get a new channel_id.
-        ct.channel = ChannelsApi.call(request.env.merge(
-                                                        'REQUEST_METHOD' => 'POST',
-                                                        'PATH_INFO' => '/v3/channels',
-                                                        'REQUEST_PATH' => '/v3/channels',
-                                                        'CONTENT_TYPE' => 'application/json;charset=utf-8',
-                                                        'rack.input' => StringIO.new('{"hidden":"true"}')
-                                                       ))[1]['Location'].split('/').last
+    if @user
+      # "answers" are in the channel so instead of doing
+      # set_level_source to load answers when looking at another user,
+      # we have to load the channel here.
+
+      channel_token = ChannelToken.find_by(level: host_level, user: @user)
+      view_options(readonly_workspace: true,
+                   callouts: [])
+    else
+      # If `create` fails because it was beat by a competing request, a second
+      # `find_by` should succeed.
+      channel_token = retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        # your own channel
+        ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
+          # Get a new channel_id.
+          ct.channel = ChannelsApi.call(request.env.merge(
+                                                          'REQUEST_METHOD' => 'POST',
+                                                          'PATH_INFO' => '/v3/channels',
+                                                          'REQUEST_PATH' => '/v3/channels',
+                                                          'CONTENT_TYPE' => 'application/json;charset=utf-8',
+                                                          'rack.input' => StringIO.new('{"hidden":"true"}')
+                                                         ))[1]['Location'].split('/').last
+        end
       end
     end
 
-    if @user
-      view_options(readonly_workspace: true,
-                   callouts: [])
-  end
-
-    view_options channel: channel_token.channel
+    if channel_token
+      view_options channel: channel_token.channel
+    end
   end
 
   def select_and_track_autoplay_video
