@@ -20,7 +20,15 @@
     "impressive": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "Can you recreate these shapes? Drag the `length` parameter into the function definition. ",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

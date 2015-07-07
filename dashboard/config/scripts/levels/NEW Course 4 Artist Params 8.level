@@ -296,8 +296,12 @@
           </mutation>
           <title name="NAME">draw a triangle with length</title>
           <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
+            <block type="controls_repeat_ext" inline="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
               <statement name="DO">
                 <block type="draw_move" inline="true" uservisible="false">
                   <title name="DIR">moveForward</title>
