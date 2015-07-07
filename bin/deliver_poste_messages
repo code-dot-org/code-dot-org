@@ -36,6 +36,11 @@ def poste_url(*parts)
   File.join(POSTE_BASE_URL, *parts)
 end
 
+def log(message)
+  puts message
+  HipChat.log message
+end
+
 module Poste
 
   class Template
@@ -261,16 +266,17 @@ def main()
 
       begin
         deliverer.send delivery
+        POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:DateTime.now)
       rescue Net::SMTPSyntaxError => e
-        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        log "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:0) # error, not retrying
       rescue Net::SMTPFatalError => e
-        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        log "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:0) # error, not retrying
       rescue => e
-        puts "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
-        raise
+        log "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        # unknown error, retry forever
       end
-
-      POSTE_DB[:poste_deliveries].where(id:delivery[:id]).update(sent_at:DateTime.now)
     end
   end
   workers.each(&:join)
