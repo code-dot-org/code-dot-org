@@ -394,6 +394,9 @@ html[dir='rtl'] #codeWorkspace {
   }
   .small-footer.responsive {
     max-width: $width;
+    small {
+      float: left;
+    }
   }
   #codeWorkspace {
     left: $width;
@@ -433,6 +436,9 @@ html[dir='rtl'] #codeWorkspace {
   }
   .small-footer.responsive {
     max-width: $width;
+    small {
+      float: left;
+    }
   }
   #codeWorkspace {
     left: $width;
@@ -472,6 +478,9 @@ html[dir='rtl'] #codeWorkspace {
   }
   .small-footer.responsive {
     max-width: $width;
+    small {
+      float: left;
+    }
   }
   #codeWorkspace {
     left: $width;
