@@ -133,10 +133,10 @@ theme: none
           %a.btn.btn-white.btn-xs{"ng-click" => "confirm_signup_cancel(signup)"} Cancel
 
   .signups-download-link{style: 'margin-top: 1em;'}
-    %a{href: '/manage-professional-development-workshops/workshop-signup-report.csv?workshop={{workshop.secret}}'} Download active signups
+    %a{"ng-href" => '/manage-professional-development-workshops/workshop-signup-report.csv?workshop={{workshop.secret}}'} Download active signups
 
   .collected-emails-trigger{style: 'margin-top: 1em;'}
-    %a{href: "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsActive = !showCollectedSignupEmailsActive'}View collected email addresses (active signups)
+    %a{"ng-href" => "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsActive = !showCollectedSignupEmailsActive'}View collected email addresses (active signups)
   %textarea.collected-emails{'ng-show' => 'showCollectedSignupEmailsActive', style: "width: 100%; height: 100px;"}
     {{active_signups_emails}}
 
@@ -167,6 +167,6 @@ theme: none
       %td{nowrap: true, style: 'white-space: nowrap;'}
 
   .collected-emails-trigger{style: 'margin-top: 1em;'}
-    %a{href: "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsCancelled = !showCollectedSignupEmailsCancelled'}View collected email addresses (cancelled signups)
+    %a{"ng-href" => "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsCancelled = !showCollectedSignupEmailsCancelled'}View collected email addresses (cancelled signups)
   %textarea.collected-emails{'ng-show' => 'showCollectedSignupEmailsCancelled', style: "width: 100%; height: 100px;"}
     {{cancelled_signups_emails}}
