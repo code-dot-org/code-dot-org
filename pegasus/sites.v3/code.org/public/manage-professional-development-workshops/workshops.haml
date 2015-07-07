@@ -2,6 +2,9 @@
 layout: none
 theme: none
 ---
+%a{"ng-href" => "/manage-professional-development-workshops/k5surveys?user_id=#{dashboard_user[:id]}"}
+  %h1
+    View your survey results
 %div{"ng-controller" => "WorkshopsController"}
   %h1 Your workshops
 
@@ -108,6 +111,3 @@ theme: none
             %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/edit"} Edit
             %a.btn.btn-white.btn-xs{"ng-href" => "#/{{workshop.secret}}/clone"} Clone
             %a.btn.btn-white.btn-xs{"ng-click" => "confirm_delete(workshop)"} Delete
-%a{"ng-href" => "/manage-professional-development-workshops/k5surveys?user_id=#{dashboard_user[:id]}"}
-  %h1
-    View your survey results
