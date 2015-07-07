@@ -3,6 +3,7 @@ module ViewOptionsHelper
     full_width
     no_header
     no_footer
+    small_footer
     no_padding
     white_background
     callouts

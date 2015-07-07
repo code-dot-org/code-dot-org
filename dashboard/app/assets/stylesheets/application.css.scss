@@ -251,6 +251,43 @@ html, body {
   }
 }
 
+/* Styling that keeps the small footer consistent with other page elements */
+$codeApp-left-margin: 25px;
+
+.small-footer {
+  height: $footer_height;                 /* A height is required to push this footer to the bottom of the page. */
+  width: 400px;
+  padding-left: $codeApp-left-margin;
+  padding-top: $footer_padding-top;
+  padding-bottom: $footer_padding-bottom;
+  font-size: 14px;
+  background-color: $dark_color;
+  color: $header_text;
+  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+  .container {
+
+  }
+  select {
+    width: auto;
+    font-size:11px;
+    height: 18px;
+    margin-bottom: 4px
+  }
+  .fineprint {
+    a:link {font-family: $gotham-bold; font-weight: normal;}
+    a:visited {font-family: $gotham-bold; font-weight: normal;}
+    a:hover {font-family: $gotham-bold; font-weight: normal;}
+    a:active {font-family: $gotham-bold; font-weight: normal;}
+  }
+  .dim {
+    display: inline-block;
+    opacity: 0.5;
+  }
+}
+
 #locale {
   font-family: sans-serif;
   height: 24px;
@@ -708,7 +745,7 @@ input.header_input {
 #codeApp.pin_bottom {
   position: absolute;
   top: 85px;
-  left: 25px;
+  left: $codeApp-left-margin;
   right: 25px;
   bottom: 10px;
   @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
