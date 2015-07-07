@@ -702,10 +702,10 @@ Blockly.FunctionEditor.prototype.position_ = function() {
           this.closeButton_.firstElementChild.getAttribute('width')) +
       ',19)');
 
+  this.layOutBlockSpaceItems_();
+
   // Move workspace to account for horizontal flyout height
   this.modalBlockSpaceEditor.svgResize();
-
-  this.layOutBlockSpaceItems_();
 };
 
 Blockly.FunctionEditor.prototype.positionClippingRects_ = function () {
