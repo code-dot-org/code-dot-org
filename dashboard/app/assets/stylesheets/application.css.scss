@@ -253,13 +253,18 @@ html, body {
 
 /* Styling that keeps the small footer consistent with other page elements */
 $codeApp-left-margin: 25px;
+$small-footer-horizontal-margin: $codeApp-left-margin;
+$small-footer-padding-top: 10px;
+$small-footer-padding-bottom: 6px;
 
 .small-footer {
-  height: $footer_height;                 /* A height is required to push this footer to the bottom of the page. */
+  position: absolute;
+  bottom: 0;
   width: 400px;
-  padding-left: $codeApp-left-margin;
-  padding-top: $footer_padding-top;
-  padding-bottom: $footer_padding-bottom;
+  overflow: hidden;
+  padding-left: $small-footer-horizontal-margin;
+  padding-top: $small-footer-padding-top;
+  padding-bottom: $small-footer-padding-bottom;
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
@@ -267,8 +272,9 @@ $codeApp-left-margin: 25px;
   a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
   a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
   a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
-  .container {
-
+  form {
+    float: left;
+    margin-right: $small-footer-horizontal-margin;
   }
   select {
     width: auto;
@@ -276,14 +282,14 @@ $codeApp-left-margin: 25px;
     height: 18px;
     margin-bottom: 4px
   }
-  .fineprint {
-    a:link {font-family: $gotham-bold; font-weight: normal;}
-    a:visited {font-family: $gotham-bold; font-weight: normal;}
-    a:hover {font-family: $gotham-bold; font-weight: normal;}
-    a:active {font-family: $gotham-bold; font-weight: normal;}
+  small {
+    display: block;
+    float: right;
+    margin-right: $small-footer-horizontal-margin;
+    padding-top: 3px;
+    white-space: nowrap;
   }
   .dim {
-    display: inline-block;
     opacity: 0.5;
   }
 }
