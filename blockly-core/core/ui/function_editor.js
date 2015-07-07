@@ -431,6 +431,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
           if (self.contractDiv_) {
             self.positionClippingRects_();
             self.positionSizeContractDom_();
+            self.layOutBlockSpaceItems_();
           }
         },
 
@@ -574,16 +575,20 @@ Blockly.FunctionEditor.prototype.readyToBeLaidOut_ = function () {
     this.isOpen();
 };
 
-Blockly.FunctionEditor.prototype.getAboveFlyoutHeight = function () {
-  return this.getContractDivHeight()
-    + this.flyout_.getHeight()
-    + this.modalBlockSpace.yOffsetFromView;
-};
-
+/**
+ * Positions flyout at given editor layout position
+ * @param {number} currentY - current position, relative to the blockspace
+ *  being scrolled
+ * @returns {number} next location to layout
+ * @protected
+ */
 Blockly.FunctionEditor.prototype.positionFlyout_ = function (currentY) {
-  currentY += this.getAboveFlyoutHeight();
-  this.flyout_.customYOffset = currentY;
+  currentY += this.flyout_.getHeight(); // positioned from bottom
+
+  this.flyout_.customYOffset = currentY +
+    this.modalBlockSpace.yOffsetFromView; // positioned in parent coords
   this.flyout_.position_();
+
   return currentY;
 };
 
@@ -595,11 +600,8 @@ Blockly.FunctionEditor.prototype.layOutBlockSpaceItems_ = function () {
   var currentX = Blockly.RTL ?
     this.modalBlockSpace.getMetrics().viewWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
     Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
-  var currentY = 0;
-  currentY += this.positionFlyout_(currentY);
-  // The flyout isn't laid out in block-space coordinates, it factors in
-  // scroll offset, so we have to remove that component
-  currentY -= this.modalBlockSpace.yOffsetFromView;
+  var currentY = this.getContractDivHeight();
+  currentY = this.positionFlyout_(currentY);
 
   currentY += Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
   this.functionDefinitionBlock.moveTo(currentX, currentY);
