@@ -19,7 +19,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "markdown_instructions": "**Free Play Inspiration:** You've now learned everything you need to know to make a pattern like this!  If this picture inspires you, try to make something similar.  Otherwise, create something all your own.\r\n\r\nWant to know how our inspiration pattern was made? Check it out here: https://levelbuilder-studio.code.org/c/8781/edit\r\n\r\n<img src=\"https://images.code.org/1868a5a948865e4df93a3c31c4c98e70-image-1435781583020.27.11.png\" width=\"350px\"/>",
+    "markdown_instructions": "**Free Play Inspiration:** You've now learned everything you need to know to make a pattern like this!  If this picture inspires you, try to make something similar.  Otherwise, create something all your own.\r\n\r\n<br/>\r\nWant to know how our inspiration pattern was made? Check it out here: https://levelbuilder-studio.code.org/c/8781/edit\r\n\r\n<img src=\"https://images.code.org/1868a5a948865e4df93a3c31c4c98e70-image-1435781583020.27.11.png\" width=\"350px\"/>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

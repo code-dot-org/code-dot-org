@@ -30041,6 +30041,10 @@ var DebugArea = module.exports = function (debugAreaRoot, codeTextboxRoot) {
  */
 DebugArea.prototype.bindHandlersForDebugCommandsHeader = function () {
   var header = this.rootDiv_.find('#debug-commands-header');
+  // Element may not exist (if in share mode)
+  if (header.length === 0) {
+    return;
+  }
   header.mouseover(DebugArea.prototype.onCommandsHeaderOver.bind(this));
   header.mouseout(DebugArea.prototype.onCommandsHeaderOut.bind(this));
   dom.addClickTouchEvent(header[0], DebugArea.prototype.slideToggle.bind(this));
@@ -30052,8 +30056,7 @@ DebugArea.prototype.bindHandlersForDebugCommandsHeader = function () {
  * and the :hover effect isn't removed unless the mouse is moved.
  */
 DebugArea.prototype.onCommandsHeaderOver = function () {
-  var header = this.rootDiv_.find('#debug-commands-header');
-  header.addClass('js-hover-hack');
+  this.rootDiv_.find('#debug-commands-header').addClass('js-hover-hack');
 };
 
 /**
@@ -30062,8 +30065,7 @@ DebugArea.prototype.onCommandsHeaderOver = function () {
  * and the :hover effect isn't removed unless the mouse is moved.
  */
 DebugArea.prototype.onCommandsHeaderOut = function () {
-  var header = this.rootDiv_.find('#debug-commands-header');
-  header.removeClass('js-hover-hack');
+  this.rootDiv_.find('#debug-commands-header').removeClass('js-hover-hack');
 };
 
 /** @returns {boolean} */
@@ -30180,7 +30182,8 @@ DebugArea.prototype.slideShut = function () {
   this.codeTextbox_.animate({
     bottom: closedHeight
   },{
-    step: utils.fireResizeEvent
+    step: utils.fireResizeEvent,
+    complete: utils.fireResizeEvent
   });
 
   // Animate the 'clear' button vanishing at the same time
