@@ -83,6 +83,8 @@ Dashboard::Application.routes.draw do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, value|
         get '/' + key.to_s, to: 'levels#show', key: value, as: key.to_s
+        get '/' + key.to_s + '/:channel_id', to: 'levels#show', key: value, as: key.to_s + 'share', share: true
+        get '/' + key.to_s + '/:channel_id/edit', to: 'levels#show', key: value, as: key.to_s + 'edit'
       end
       get '/:template', to: 'projects#template'
     end
