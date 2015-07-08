@@ -12,7 +12,7 @@ var events = {
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
   workspaceChange: 'workspaceChange',
-  hashchange: 'hashchange'
+    hashchange: 'hashchange'
 };
 
 /**
@@ -61,17 +61,13 @@ module.exports = {
   },
 
   init: function () {
+    // TODO - can we do this reload sooner?
+    if (location.href.indexOf('#') !== -1) {
+      location.href = location.href.replace('#', '/');
+      return;
+    }
+
     if (appOptions.level.isProjectLevel || current) {
-
-      $(window).on(events.hashchange, function () {
-        var hashData = parseHash();
-        if ((current &&
-            hashData.channelId !== current.id) ||
-            hashData.isEditingProject !== isEditing) {
-          location.reload();
-        }
-      }.bind(this));
-
       if (current && current.levelHtml) {
         appOptions.level.levelHtml = current.levelHtml;
       }
@@ -267,11 +263,21 @@ module.exports = {
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
+    var PathPart = {
+      START: 0,
+      P: 1,
+      APP: 2,
+      CHANNEL_ID: 3,
+      ACTION: 4
+    };
+
     var deferred;
     if (appOptions.level.isProjectLevel) {
-      var hashData = parseHash();
-      if (hashData.channelId) {
-        if (hashData.isEditingProject) {
+      var channelId = location.pathname.split('/')[PathPart.CHANNEL_ID];
+      var action = location.pathname.split('/')[PathPart.ACTION];
+
+      if (channelId) {
+        if (action === 'edit') {
           isEditing = true;
         } else {
           $('#betainfo').hide();
@@ -279,10 +285,11 @@ module.exports = {
 
         // Load the project ID, if one exists
         deferred = new $.Deferred();
-        channels.fetch(hashData.channelId, function (err, data) {
+        channels.fetch(channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
-            location.href = location.pathname;
+            location.href = location.pathname.split('/')
+              .slice(PathPart.START, PathPart.APP + 1).join('/')
           } else {
             current = data;
             deferred.resolve();
@@ -318,26 +325,6 @@ function executeCallback(callback, data) {
   if (typeof callback === 'function') {
     callback(data);
   }
-}
-
-function parseHash() {
-  // Example paths:
-  // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
-  // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
-  var isEditingProject = false;
-  var channelId = location.hash.slice(1);
-  if (channelId) {
-    // TODO: Use a router.
-    var params = channelId.split("/");
-    if (params.length > 1 && params[1] == "edit") {
-      channelId = params[0];
-      isEditingProject = true;
-    }
-  }
-  return {
-    channelId: channelId,
-    isEditingProject: isEditingProject
-  };
 }
 
 function setAppOptionsForShareMode(hideSource) {
