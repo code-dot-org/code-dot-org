@@ -34,7 +34,7 @@ social:
 
 SEATTLE — Code.org announced today 11 new partnerships with computer science education organizations to help schools where Code.org it isn’t able to work directly. 
 
-Code.org’s new partners are: Amplify Education, Beauty and Joy of Computing, Bootstrap, Codecademy, CodeHS, Globaloria, National Math and Science Initiative, Project Lead the Way, Technology Education And Literacy in Schools, ScratchEd, and Tynker.
+Code.org’s new partners are: Edhesive*, Beauty and Joy of Computing, Bootstrap, Codecademy, CodeHS, Globaloria, National Math and Science Initiative, Project Lead the Way, Technology Education And Literacy in Schools, ScratchEd, and Tynker.
 
 This announcement follows Code.org’s recent partnerships with the National Science Foundation and the College Board, and helps educators choose the best learning resources to their students, in a space with so many options available.
 
@@ -49,7 +49,9 @@ By integrating computer science into the course schedule in K-12 schools — whe
 Choose a CS partner and get started [http://code.org/educate/3rdparty](/educate/3rdparty).
 
 Code.org welcomes new partners:<br />
-[Amplify](http://mooc.amplify.com), [BJC](http://bjc.berkeley.edu/), [Bootstrap](http://www.bootstrapworld.org/), [Codecademy](http://www.codecademy.com/), [CodeHS](https://codehs.com/), [Globaloria](http://globaloria.com/), [NMSI](https://www.nms.org/), [PLTW](https://www.pltw.org/), [TEALS](https://www.tealsk12.org/), [ScratchEd](http://scratched.gse.harvard.edu/guide/), [Tynker](https://www.tynker.com/).
+[Edhesive](http://edhesive.com/), [BJC](http://bjc.berkeley.edu/), [Bootstrap](http://www.bootstrapworld.org/), [Codecademy](http://www.codecademy.com/), [CodeHS](https://codehs.com/), [Globaloria](http://globaloria.com/), [NMSI](https://www.nms.org/), [PLTW](https://www.pltw.org/), [TEALS](https://www.tealsk12.org/), [ScratchEd](http://scratched.gse.harvard.edu/guide/), [Tynker](https://www.tynker.com/).
+
+*Edhesive was formally named Amplify Education.
 
 
 <center>****</center>
