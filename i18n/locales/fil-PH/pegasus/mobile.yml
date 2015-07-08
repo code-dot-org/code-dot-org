@@ -1,7 +1,7 @@
 fil-PH:
   hello: Mabuhay!
   select_language: Piliin ang iyong wika
-  computer_science: Computer Science
+  en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Ang <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> ay parating na. Tinatawagan ang lahat ng guro at mga organizer, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">pagplanuhan ang iyong Hour of Code</a>'
@@ -47,6 +47,7 @@ fil-PH:
     Pagbati
     sa pagkumpleto ng isang Oras ng Code
   get_a_certificate_of_achievement: Kumuha ng certificate of achievement
+  enter_valid_age: Please select a valid age
   enter_valid_email: Paki-pasok ng valid na email address
   get_a_certificate_message: "Kami ay magpapadala sa iyo ng  certificate at inpormasyon tungkol sa paano <a href='/learn/beyond'>Matuto ng lampas sa Isang Oras</a>"
   get_a_certificate_message_after: "I-click ang certificate upang ma-download ma-print ito. Ngayon, ipagpatuloy ang iba na naming <a href='http://studio.code.org'>mga kurso</a>, o kaya tingnan ang iba pang mga option upang <a href='/learn/beyond'>Matuto lampas sa One Hour</a>."

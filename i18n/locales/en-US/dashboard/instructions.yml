@@ -512,6 +512,7 @@ en:
       Course 4 Artist Functions 7_instruction: crwdns34337:0crwdne34337:0
       Course 4 Artist Functions 8_instruction: crwdns34338:0crwdne34338:0
       Course 4 Artist Functions 9_instruction: crwdns34339:0crwdne34339:0
+      Course 4 Artist Inspire_instruction: crwdns43224:0crwdne43224:0
       Course 4 Artist Params 1_instruction: crwdns34340:0crwdne34340:0
       Course 4 Artist Params 10_instruction: crwdns34341:0crwdne34341:0
       Course 4 Artist Params 11_instruction: crwdns34342:0crwdne34342:0
@@ -540,6 +541,7 @@ en:
       Course 4 Artist Vars 7_instruction: crwdns34366:0crwdne34366:0
       Course 4 Artist Vars 8_instruction: crwdns34367:0crwdne34367:0
       Course 4 Artist Vars 9_instruction: crwdns34368:0crwdne34368:0
+      Course 4 Artist Vars Inspire_instruction: crwdns43225:0crwdne43225:0
       Course 4 Bee 1_instruction: crwdns34369:0crwdne34369:0
       Course 4 Bee 2_instruction: crwdns39001:0crwdne39001:0
       Course 4 Bee 3_instruction: crwdns34371:0crwdne34371:0
@@ -613,6 +615,7 @@ en:
       Course 4 Play Labs For Loops 6_instruction: crwdns34442:0crwdne34442:0
       Course 4 Play Labs For Loops 7_instruction: crwdns34443:0crwdne34443:0
       Course 4 Play Labs For Loops 8_instruction: crwdns34444:0crwdne34444:0
+      Course 4 Variables Assessment_instruction: crwdns43226:0crwdne43226:0
       Course1BeePuzzle12_instruction: crwdns30855:0crwdne30855:0
       Course1MazeAssessment1_instruction: crwdns34446:0crwdne34446:0
       Course1MazeAssessment2_instruction: crwdns34447:0crwdne34447:0
@@ -971,6 +974,7 @@ en:
       Standalone_Artist_8_instruction: crwdns34699:0crwdne34699:0
       Standalone_Artist_9_instruction: crwdns34700:0crwdne34700:0
       Standalone_Artist_v2_instruction: crwdns35014:0crwdne35014:0
+      Test Play Lab_instruction: crwdns43227:0crwdne43227:0
       Text Compression Peter Piper_instruction: crwdns36247:0crwdne36247:0
       U1L10 NetSim numbers with decimal_instruction: crwdns41846:0crwdne41846:0
       U1L11 NetSim numbers with Ascii_instruction: crwdns41847:0crwdne41847:0

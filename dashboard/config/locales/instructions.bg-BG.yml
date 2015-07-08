@@ -1312,6 +1312,10 @@
       Course 4 Artist Functions 9_instruction: Направили сме по-голямата част от кода
         за създаване на функция. Обаче, има нещо което липсва. Можете ли да допълните
         този функционален блок?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this!  If this picture\ninspires you,
+        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
+        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Да редактираме функцията, която изчертава
         квадрат от 50 пиксела
       Course 4 Artist Params 10_instruction: 'Можете да извикате функция която се
@@ -1408,6 +1412,7 @@
       Course 4 Artist Vars 9_instruction: Променете алгоритъма, така че да използва
         променливата "страни" вместо статично число за начертаване на триъгълник.
         Заместете числото 3 със "страни" и използвайте блока "задай страните".
+      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Пчелата не може да прецени дали това е цвете или
         медена пита. Провери първо дали е цвете или пита, и вземи нектар, ако е цвете. '
       Course 4 Bee 2_instruction: Проверете всеки обект, за да видите дали това е
@@ -1622,6 +1627,9 @@
       Course 4 Play Labs For Loops 8_instruction: |
         Коя функция ще изрази тази последователност?
         19,27,35,43,51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig"
@@ -1744,7 +1752,7 @@
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
@@ -2617,6 +2625,7 @@
       Standalone_Artist_v2_instruction: Добре дошли при Художника! Първо, нека се
         опитаме да направим прост квадрат с помощта на блок за завъртане надясно и
         блок за преместване напред. Всяка страна трябва да бъде дълга 100 пиксела.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: Това стихотворение е компресирано
         чрез замяна на две общи фрази със символи в речника. Можете ли да посочите
         друг общ модел за допълнително компресиране на поемата?
@@ -3007,9 +3016,8 @@
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid above and to the right of
         the turtle. Try to do so with the fewest number of commands possible. NOTE:
@@ -3017,8 +3025,7 @@
         and tweak it.  You might also consider using pencil and paper to sketch your
         ideas.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Използвай това тестово ниво за да вземеш xml-а за
         unit тестове

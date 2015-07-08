@@ -10,6 +10,7 @@ nl:
           Math Image: Wiskundige afbeelding
           title: Test Cursus
           description: Een interne test cursus.
+          description_short: Een interne test cursus.
         course1:
           "Jigsaw: Learn to drag and drop": 'Puzzel: Leer hoe je kan knippen en plakken'
           "Maze: Sequence": 'Doolhof: Nummering'
@@ -133,55 +134,6 @@ nl:
           Songwriting: Songwriting
           description_audience: Leeftijden 8 + (na cursus 2)
           description_short: Cursus 3 is een vervolg op cursus 2.
-        msm:
-          title: Middelbare School Wiskunde
-          description: Particuliere werk in uitvoering voor Middelbare School Wiskunde.
-          Graph Paper Programming: Programmeren op Ruitjespapier
-          Assessments: Toetsen
-          Unit 1: Eenheid 1
-          Unit 2: Eenheid 2
-          Ninja Cat and the Coordinate Plane: Ninja Kat en het coördinaat vliegtuig
-          "Calc: Circles of Evaluation": 'Calc: Evaluatiekringen'
-          "Artist: Strings and Images": 'Kunstenaar: Tekst en Afbeeldingen'
-          Contracts: Ontwerpen
-          "Artist: Writing Contracts": 'Artiest: Functies ontwerpen'
-          "Calc: Defining Variables": 'Calc: Variabelen definiëren'
-          "Play Lab: Defining Variables": 'Speel Lab: Variabelen definiëren'
-          The Design Recipe: Het ontwerp Recept
-          "Artist: Defining Functions": 'Artiest: Functies Definiëren'
-          "Play Lab: Defining Functions": 'Play Lab: Ontwerp recept'
-          "Artist: Functions": 'Kunstenaar: Functies'
-          "Play Lab: Animation": 'Speel Lab: Animatie'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Speel Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Booleaanse operatoren'
-          "Play Lab: Boolean Operators": 'Speel Lab: Boolean Operatoren'
-          Conditionals and Piecewise Functions: Conditionele en stuksgewijze functies
-          "Artist: Conditionals": 'Artiest: Conditionals'
-          Collision Detection and the Distance Formula: Botsingdetectie en de afstand formule
-          "Play Lab: Collision Detection": 'Speel Lab: Botsingdetectie'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Ninja Kat en het coördinaten vliegtuig'
-          "Eval: Strings and Images": 'Eval: Tekenreeksen en afbeeldingen'
-          "Unplugged: Contracts": 'Unplugged: Functies ontwerpen'
-          "Eval: Writing Contracts": 'Samenvatting: Functies ontwerpen'
-          "Unplugged: The Design Recipe": 'Unplugged: Het ontwerp recept'
-          "Eval: Defining Functions": 'Eval: Snelle functies'
-          "Eval: Functions": 'Eval: Ontwerp recept'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals en stuksgewijze functies'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Botsingdetectie en de afstand formule'
-          "Calc: Evaluation Blocks": 'Calc: Evaluatie blokken'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
-          "Eval: Boolean Operators": 'Eval: Booleaanse operatoren'
-          Blocks to Math: Blokken naar Wiskunde
-          "Play Lab: Defining Variables (Big Game)": 'Speel Lab: Variabelen definiëren (Groot Spel)'
-          "Play Lab: Animation (Big Game)": 'Speel Lab: Animatie (Groot Spel)'
-          "Play Lab: Boolean (Big Game)": 'Speel Lab: Booleans (Groot Spel)'
-          "Play Lab: Collision Detection (Big Game)": 'Speel Lab: Botsingdetectie (Groot Spel)'
-          "Eval: Fast Functions": 'Eval: Snelle functies'
-          "Play Lab: Design Recipe": 'Play Lab: Ontwerp recept'
-          "Eval: Design Recipe": 'Eval: Ontwerp recept'
         playlab:
           title: Speel Lab
           description: Maak een verhaal of een spel met Speel Lab!
@@ -192,11 +144,6 @@ nl:
           description: Teken coole plaatjes en ontwerpen met de Kunstenaar!
           Artist: Kunstenaar
           description_short: Teken coole plaatjes en ontwerpen met de Kunstenaar!
-        scrat:
-          title: Scrat
-          description_short: Scrat korte beschrijving.
-          description: Scrat lange beschrijving
-          "Maze: Sequence": 'Doolhof: Nummering'
         hourofcode:
           Maze: Doolhof
           title: Een Uur Code
@@ -270,23 +217,10 @@ nl:
           description: speciale
           Special: Speciale
           Binary: Binaire
-        usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Bruikbaarheidstests voor MSM
-          Evaluation Blocks: evaluatie blokken
-          Blocks to Math: Blokken naar Wiskunde
-          Strings and Images: Tekenreeksen en afbeeldingen
-          Defining Variables: Variabelen definiëren
-          Defining Functions: Functies definiëren
-          Design Recipe: Ontwerp recept
-          Booleans: Booleans
-          Conditionals: Voorwaardelijke instructies
-          Free Play: Gratis spelen
         algebra:
           title: Informatica in Algebra
           description: Leer functioneel programmeren door Algebra
+          description_short: Leer functioneel programmeren door Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": Tekenreeksen en afbeeldingen
@@ -348,8 +282,8 @@ nl:
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
           title: Internet Simulator
-          description_short: ""
-          description: ""
+          description_short: Learn about how the Internet works
+          description: Learn about how the Internet works
           Internet Simulator: Internet Simulator
           Unit 1: Eenheid 1
           Unit 2: Eenheid 2
@@ -361,11 +295,13 @@ nl:
         pixelation:
           title: Pixelachtig
           description: Maak afbeeldingen met bits en bytes.
+          description_short: Maak afbeeldingen met bits en bytes.
           Pixelation: Pixelachtig
         20-hour:
           title: 20-uur Intro cursus
           description_audience: Leeftijden 10 + (na cursus 3)
           description: Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.
+          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           Introduction to Computer Science: Inleiding Informatica
           The Maze: Het Doolhof
           Computational Thinking: Rekenend Denken
@@ -388,7 +324,8 @@ nl:
           Wrap-up: Einde
         edit-code:
           title: Bewerk de code
-          description: ""
+          description: Bewerk de code
+          description_short: Bewerk de code
           The Maze: Het Doolhof
           Applab: Applab
           The Artist: De Artiest
@@ -396,7 +333,8 @@ nl:
           Play Lab 2015: Play Lab 2015
         events:
           title: Gebeurtenissen
-          description: ""
+          description: Gebeurtenissen
+          description_short: Gebeurtenissen
           Bounce: Stuiter
           Studio: Studio
           Calc: Bereken
@@ -404,18 +342,22 @@ nl:
         flappy:
           title: Flappy Code
           description: Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!
+          description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: Flappy Code
         jigsaw:
           title: Legpuzzel
-          description: ""
+          description: Try our Jigsaw tutorial
+          description_short: Try our Jigsaw tutorial
           Jigsaw: Legpuzzel
         step:
           title: Stap
-          description: ""
+          description: Step tutorial
+          description_short: Step tutorial
           Step: Stap
         Hour of Code:
           title: Uur van Code 2013
-          description: ""
+          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description_short: Probeer de grondbeginselen van de informatica met veel leuke figuren!
           Hour of Code 2013: Uur van Code 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -498,6 +440,7 @@ nl:
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video-Games en Coordinaat Vliegtuigen'
           "Calc: Evaluation Blocks": 'Calc: Evaluatie blokken'
           "Eval: Strings and Images": 'Eval: Tekenreeksen en afbeeldingen'
@@ -540,6 +483,7 @@ nl:
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: evaluatie blokken
           Strings and Images: Tekenreeksen en afbeeldingen
           Rocket-Height: Rocket-Height
@@ -555,12 +499,14 @@ nl:
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
         CSPPD:
           new stage: nieuw niveau
           Introduction to PD: Inleiding tot PD
           title: Computer Science Principles PD
           description: Online Introduction to CSP
+          description_short: Online Introduction to CSP
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -569,7 +515,8 @@ nl:
           Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description_short: lesson samples for csp
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
           Lesson 14: Les 14
           Lesson 15: Les 15
         ECSPD:
@@ -581,11 +528,13 @@ nl:
           reference: reference
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Inleiding tot PD
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -600,8 +549,14 @@ nl:
           Post-Survey: Post-Survey
         rbo-reference:
           reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           description_short: Programming
@@ -654,6 +609,7 @@ nl:
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -666,11 +622,13 @@ nl:
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Inleiding tot PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Inleiding tot PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
         Glenallan Career Day Demo:
@@ -688,6 +646,7 @@ nl:
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Inleiding tot PD
@@ -698,10 +657,12 @@ nl:
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Inleiding tot PD
           Evaluation Blocks: evaluatie blokken
           logo_image: nextech_logo.png
@@ -713,6 +674,7 @@ nl:
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Inleiding tot PD
           Evaluation Blocks: evaluatie blokken
           logo_image: izone_logo.png
@@ -726,6 +688,7 @@ nl:
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -742,6 +705,7 @@ nl:
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -756,11 +720,16 @@ nl:
         ui_tests:
           title: UI Tests
           description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: meerdere
           Big Game: Big Game
+          new stage: nieuw niveau
         sciencePD2:
+          title: Computer Science in Science PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -772,6 +741,9 @@ nl:
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
         sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
           new stage: nieuw niveau
           Welcome: Welcome
           Curricular Modules: Curricular Modules
@@ -780,6 +752,9 @@ nl:
           Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
         cspunit2:
           title: 'CSP Unit 2 - The Internet'
           description_short: Het Internet
@@ -822,6 +797,7 @@ nl:
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Evaluation Blocks: evaluatie blokken
           Strings and Images: Tekenreeksen en afbeeldingen
           Defining Variables: Variabelen definiëren
@@ -858,6 +834,7 @@ nl:
           Online PD: Online PD
           title: Alle dingen!
           description: Alle de level types voor UI testing
+          description_short: Alle de level types voor UI testing
           Odometer: Kilometerteller
           Text Compression: Text Compression
           Pixelation: Pixelachtig
@@ -865,6 +842,7 @@ nl:
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -878,11 +856,10 @@ nl:
           "Eval: Conditionals": 'Eval: Conditionals'
           Next Steps: Volgende stappen
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-        Calc Define Funcs 5 - multiply 1:
-          "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internet Simulator
@@ -893,6 +870,7 @@ nl:
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Welcome!: Welcome!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
@@ -903,6 +881,7 @@ nl:
         K5-OnlinePD:
           title: 'Teaching Courses 1-4: The Basics'
           description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -917,6 +896,7 @@ nl:
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
+          description_short: Blended Summer Study
           Welcome!: Welcome!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -930,6 +910,7 @@ nl:
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
@@ -942,6 +923,7 @@ nl:
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -960,3 +942,31 @@ nl:
           Welcome!: Welcome!
           The Design Recipe: Het ontwerp Recept
           Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Welcome!
+          Wrap-Up: Terugblik
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Welcome!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Terugblik

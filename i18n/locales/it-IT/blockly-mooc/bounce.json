@@ -113,6 +113,6 @@
   "whenWallCollided":"quando la palla colpisce il muro",
   "whenWallCollidedTooltip":"Esegue le azioni qua sotto quando una palla colpisce il muro.",
   "whileMsg":"mentre",
-  "whileTooltip":"Ripeti le azioni incluse per tutto il tempo in cui rimane vera la condizione.",
+  "whileTooltip":"Ripeti le azioni incluse fino a che viene raggiunto il punto finale.",
   "yes":"Sì"
 }

@@ -104,7 +104,7 @@ is:
       2-3 Bee Debugging 3_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r) til að safna öllum blómasafanum og búa til allt hunangið.
       2-3 Bee Debugging 4_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r) til að safna öllum blómasafanum og búa til allt hunangið.
       2-3 Bee Debugging 5_instruction: Þennan kóða þarf að kemba. Lagaðu villu(r) til að safna öllum blómasafanum og búa til allt hunangið. Þú getur nú keyrt í skrefum.
-      2-3 Bee Debugging 6_instruction: 'Þessir kubbar eru lúsugir. Lagaðu villu(r) til að safna öllum blómasafanum og búa til allt hunangið. '
+      2-3 Bee Debugging 6_instruction: Þessir kubbar eru eitthvað lúsugir. Lagaðu villu(r) til að safna öllum blómasafanum og búa til allt hunangið.
       2-3 Bee Debugging 7_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r) til að safna öllum blómasafanum og búa til allt hunangið.
       2-3 Bee Debugging 8_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r) til að safna öllum blómasafanum og búa til allt hunangið.
       2-3 Bee Debugging 9_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r) til að safna öllum blómasafanum og búa til allt hunangið.
@@ -400,7 +400,7 @@ is:
       Big Game Complete_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Final_instruction: Þér tókst þetta! Nú ætti leikurinn að hafa fulla virkni. Taktu þér tíma til að njóta hans og fínpússa ef með þarf. Þegar þú ert ánægð/ur með afraksturinn, skaltu smella á Ljúka og þá færðu tækifæri til að deila tengli á leikinn. Vel gert!
       Big Game Player 1_instruction: Við erum næstum komin með fullbúinn leik! Í síðasta verkefni notaðir þú Boole gildi til að láta markið og hættuna snúa aftur á skjáinn ef þau fóru út af honum. Smelltu á Keyra til að sjá hvernig leikurinn kemur út núna og síðan skulum fara í að láta leikmanninn hreyfast upp og niður.
-      Big Game Player 2_instruction: 'Til að færa leikmanninn upp og niður, munum við þurfa að nota skilyrðiskubb til að greina á hvaða lykil er ýtt og bregðast við því. Þegar ýtt er á lykil, túlkar tölvan það sem tölugildi - örvarlykil upp er 38 og ör niður er 40. Þú getur flett öðrum kóðum upp. Breyttu fallinu "update-player" (uppfæra leikmann) svo að það færi leikmanninn upp þegar ýtt er á örina upp og niður þegar ýtt er á örina niður.'
+      Big Game Player 2_instruction: 'Breyttu fallinu "update-player" (uppfæra leikmann) svo að það færi leikmanninn upp þegar ýtt er á örina upp (lykilkóði 38) og niður þegar ýtt er á örina niður (lykilkóði 40).'
       Big Game Testing_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði í algebru
       Big Game Vars 1 (copy 1)_instruction: 'Byrjum nú á Stórleiknum þínum! Hér sérðu fullt af staðgengilskóða sem þú munt smám saman skipta út með þínum eigin, en fyrst um sinn ætlum við bara að fást við að skilgreina breytur. Smelltu á "Keyra" til að sjá hvernig leikurinn lítur út með upphaflegum gildum.'
       Big Game Vars 1_instruction: 'Byrjum nú á Stórleiknum þínum! Hér sérðu fullt af staðgengilskóða sem þú munt smám saman skipta út með þínum eigin, en fyrst um sinn ætlum við bara að fást við að skilgreina breytur. Smelltu á "Keyra" til að sjá hvernig leikurinn lítur út með upphaflegum gildum.'
@@ -555,6 +555,7 @@ is:
       Course 4 Artist Functions 7_instruction: Getur þú teiknað röð ferninga með ferningsfalli? Hver ferningur er 40 dílar á lengd.
       Course 4 Artist Functions 8_instruction: 'Ertu komin upp á lag með að nota fallkubba? Breytum þessum ferningi svo hann sé 200 dílar á stærð. Vísbending: Smelltu á "breyta" til að opna kubb fallsins "teikna ferning" og breyttu stærðinni. Mundu að "vista og loka" á eftir. '
       Course 4 Artist Functions 9_instruction: Hér færðu mestallan kóðann til að búa til fall. En það virðist vanta eitthvað. Geturðu klárað þennan fallkubb?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Hér breytum við falli sem teiknar ferning með 50 díla hliðar
       Course 4 Artist Params 10_instruction: 'Þú getur kallað á föll innan úr öðrum föllum! Notaðu "form" fallið þitt sem grunn og búðu til 3 hús sem byrja með lengdina 50 og stækka um 20 í hvert sinn. Hér gæti verið gagnlegt að nota lykkju með teljara. '
       Course 4 Artist Params 11_instruction: 'Hvað með nýtt fall "hjól" sem hefur þrjá stika - "hliðar", "lengd" og "fjöldi". Þú getur reiknað út hve mikið þarf að snúa með því að nota gráðurnar í heilum hring og fjölda hliða. Getur þú endurskapað þessa mynd? Hér er vísbending: Hvert form er 100 dílar á lengd.'
@@ -587,6 +588,7 @@ is:
       Course 4 Artist Vars 7_instruction: 'Getur þú stillt breytuna "hliðar" til að teikna þennan sexhyrning?'
       Course 4 Artist Vars 8_instruction: 'Frjáls æfing: Gerðu tilraunir með fjölda hliða á þessu formi. Getur þú breytt algríminu þannig að heildarstærð formsins haldist svipuð sama hversu margar hliðar það hefur? Vísbending: Þú gætir þurft að nota reikningskubba (360 deilt með "hliðar" á tveimur stöðum í þetta sinn) '
       Course 4 Artist Vars 9_instruction: 'Breyttu þessu algrími svo það noti breytuna "hliðar" í stað fastrar tölu til að teikna þríhyrning. Skiptu tölunni 3 út fyrir breytuna "hliðar" og notaðu "stilla hliðar" kubbinn.'
+      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Býflugan veit ekki hvort þetta er blóm eða býflugnabú. Athugaðu fyrst hvort það er blóm eða bú, og safnaðu blómasafa aðeins ef það er blóm. '
       Course 4 Bee 2_instruction: Athugaðu hvern hlut. Ef hann er blóm, á að safna blómasafa, annars ekki!
       Course 4 Bee 3_instruction: 'Þetta óþekkta er annað hvort blóm eða býflugnabú. Notaðu "ef-annars" kubbinn til að safna blómasafa ef það er blóm, annars búa til hunang (því þá er það bú).'
@@ -662,6 +664,9 @@ is:
       Course 4 Play Labs For Loops 6_instruction: 'Þú manst ef vill að prímtala er sérhver heil tala sem er deilanleg aðeins með sjálfri sér og 1. Notaðu fallið "er_prímtala" til að segja aðeins prímtölur frá 1 til 100.'
       Course 4 Play Labs For Loops 7_instruction: 'Gætir þú notað "frá" lykkju til að hjálpa mér að segja röðina 1, 4, 7, 10, 13, 16, 19, 22, 25?'
       Course 4 Play Labs For Loops 8_instruction: 'Hvaða "frá" lykkja mundi láta mig segja 19, 27, 35, 43, 51?'
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Sæktu þrjá blómasafa og búðu svo til tvo hunang
       Course1MazeAssessment1_instruction: "Þetta er próf!\r\nFærðu mig í eina átt, svo í aðra, til að ég nái svíninu"
       Course1MazeAssessment2_instruction: "Þetta er próf!\r\nFærðu mig í eina átt, svo í aðra, til að ég nái svíninu."
@@ -755,12 +760,12 @@ is:
       Infinity_catch_instruction: 'Getur þú látið Elsu ("leikmann 2") ná Önnu með því að nota örvarlyklana?'
       Infinity_finale_instruction: Búðu til hvað sem þú vilt og deildu því!
       Infinity_move_collide_instruction: 'Hiro er "leikmaður 1". Færðu hann til hægri að Baymax og spilaðu hljóð þegar þeir snertast.'
-      Infinity_move_directions_instruction: 'Baymax er "leikmaður 2". Bætta við "færa" kubbum og færðu svo Baymax með örvarlyklunum. Láttu hann snerta tvær aðrar leikverur.'
+      Infinity_move_directions_instruction: 'Baymax er "leikmaður 2". Bættu við "færa" kubbum og færðu svo Baymax með örvarlyklunum. Láttu hann snerta tvær aðrar leikverur.'
       Infinity_move_right_instruction: 'Hiro er "leikmaður 1". Notaðu "færa" kubbinn til að færa Hiro til hægri svo hann snerti Baymax.'
       Infinity_repeat_instruction: 'Notaðu "endurtaka endalaust" kubb til að láta Önnu færast upp og niður um 400 díla.'
       Infinity_say_instruction: 'Láttu Önnu segja "Hi there." með því að nota "segja" kubbinn.'
       Infinity_shoot_instruction: 'Baymax er "leikmaður 2". Láttu Baymax varpa eldflaug að Hiro.'
-      Infinity_shoot_directions_instruction: 'Hiro er "leikmaður 3". Láttu Hiro Senda skeyti á hverja af hinum fjórum leikverunum. Bíddu í eina sekúndu milli sendinga.'
+      Infinity_shoot_directions_instruction: 'Hiro er "leikmaður 3". Láttu Hiro senda skeyti á hverja af hinum fjórum leikverunum. Bíddu í eina sekúndu milli sendinga.'
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Snertu enn fleiri snjókorn!
       Infinity_touch_four_instruction: Færðu Önnu upp, niður, vinstri og hægri til að snerta öll snjókornin fjögur.
@@ -1059,6 +1064,7 @@ is:
       Standalone_Artist_8_instruction: 'Hér er fall sem heitir "teikna form" og við höfum forritað til að teikna sexhyrninga. Keyrðu kóðann til að sjá hvað fallið gerir og gerðu svo tilraunir með það til að sjá áhrifin. Getur þú látið það teikna mynstur úr ferningum, þríhyrningum eða átthyrningum?'
       Standalone_Artist_9_instruction: Teiknaðu nú þína eigin hugmynd! Hér er meira segja tómt fall sem þú getur látið gera hvað sem þú vilt!
       Standalone_Artist_v2_instruction: 'Velkominn til listamannsins! Byrjum á að búa til einfaldan ferning með "snúa hægri" og "færa áfram" kubbunum. Hver hlið á að vera 100 díla löng.'
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: Þessu ljóði hefur verið þjappað með því að skipta út tveimur algengum klausum fyrir tákn í orðabókinni. Getur þú komið auga á annað algengt mynstur til þjappa ljóðinu enn meira?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol

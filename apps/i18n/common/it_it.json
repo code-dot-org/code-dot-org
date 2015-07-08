@@ -137,11 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "Il blocco \"ripeti\" o \"se\" deve avere all'interno altri blocchi per poter funzionare. Assicurati che i blocchi siano inseriti correttamente all'interno del blocco contenente.",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyBlockInFunction": "La funzione {name} ha un input non riempito.",
+  "emptyBlockInVariable": "La variabile {name} è un input non riempito.",
   "emptyFunctionBlocksErrorMsg": "Un blocco funzione deve avere all'interno altri blocchi per poter funzionare.",
   "emptyFunctionalBlock": "C'è un valore mancante in un blocco.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
+  "emptyTopLevelBlock": "Non ci sono blocchi per l'esecuzione. È necessario collegare un blocco al blocco  {topLevelBlockName}.",
   "end": "fine",
   "errorEmptyFunctionBlockModal": "Ci devono essere dei blocchi all'interno della tua funzione. Clicca su \"Modifica\" e trascina dei blocchi all'interno del blocco verde.",
   "errorIncompleteBlockInFunction": "Clicca su \"Modifica\" per essere sicuro di non avere alcun blocco mancante nella tua funzione.",
@@ -213,5 +213,6 @@
   "watchVideo": "Guarda il video",
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
-  "workspaceHeaderShort": "Area di lavoro: "
+  "workspaceHeaderShort": "Area di lavoro: ",
+  "readonlyWorkspaceHeader": "View only: "
 }

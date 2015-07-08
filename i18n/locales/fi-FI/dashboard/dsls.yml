@@ -66,7 +66,6 @@ fi:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'Taiteilija: etsi vastaavat silmukat 1'
         Match the loop to the shape: Yhdistä silmukka muotoon
-        Matching loops: Vastaavat silmukat
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -425,7 +424,7 @@ fi:
         Which blocks work?: Mitkä lohkot toimivat?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
-        Banana: Banana
+        Banana: Banaani
         Brushing your teeth: Brushing your teeth
         Multiple Choice: Monivalinta
         Shopping from a grocery list: Shopping from a grocery list

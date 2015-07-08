@@ -16,543 +16,434 @@ he:
       2-3 Artist 3_instruction: הכובע הזה הוא בגבוה 100 פיקסלים. צייר כובע שיהיה ב70 פיקסלים פחות.
       2-3 Artist 3new_instruction: הכובע האדום בגודל 100 פיקסלים. סיים לצייר כובע שחור שקטן יותר מהכובע האדום ב-70 פיקסלים.
       2-3 Artist 4_instruction: עזור לי להשלים את הבית לחתול.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
+      2-3 Artist 5_instruction: 'שנה את הקוד, השתמש בבלוק של "חזור שוב" על מנת לצייר את הבית בעזרת 3 בלוקים בלבד.'
       2-3 Artist 6_instruction: |
         הבית הזה זקוק לגג! צייר את המשולש. רמז:
         כל שלוש הצלעות באותו אורך.
       2-3 Artist 7_instruction: |
         סיים לצייר את החצי הימני של החלון האחרון.
         כל ריבוע בחלון הוא בגודל 25 פיקסלים. 
-      2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
+      2-3 Artist 8_instruction: השלם את החדרים לכל אחת מהחיות על ידי חלוקה של המלבן לשני ריבועים שוים בגודלם. רוחב המלבן 200 פיקסלים וגובהו 100 פיקסלים.
       2-3 Artist 9_instruction: השלם את העפיפון
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
-      2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
+      2-3 Artist Assessment 1_instruction: 'הערכה: סיים לצייר את השן האחרונה, אורכה 25 פיקסלים וגובהה 25 פיקסלים.'
+      2-3 Artist Debugging 1_instruction: תוכל להכין את הכובע כך שרוחבו מלמעלה יהיה 100?
+      2-3 Artist Debugging 10_instruction: 'משטח הכיוון בבקר המשחק צר מדי. רמז: הרחב אותו ב-10 פיקסלים'
       2-3 Artist Debugging 11_instruction: |
         עזור לי לסיים את פתית השלג היפה שלי.
         כמה פעמים אני צריך לחזור שוב כדי לסיים את זה?
       2-3 Artist Debugging 12_instruction: אני צריך להוסיף גל אוקיינוס לסצנה הזאת. תוכל לעזור לי?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
-      2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
-      2-3 Artist Debugging 4_instruction: |
-        What is the image that we're trying to
-        draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
-      2-3 Artist Debugging 6_instruction: נראה שאני יושבת על כיסא עם רגלחסרב. ערוך בלוקים כדי לצייר את הרגל.
-      2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
-      2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
-      2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
-      2-3 Artist Free Play_instruction: "Free-play! Draw anything you'd like."
+      2-3 Artist Debugging 2_instruction: 'הקוד שצייר את שלושת השפמים שגוי. רמז: רוחבו של כל שפם הוא 75 פיקסלים. תקן את הקוד כדי לצייר את השפמים.'
+      2-3 Artist Debugging 3_instruction: 'בספינה שלי יש חור! תוכל לתקן זאת על ידי שינוי זוית הקו ? רמז: הזוית האחרונה נטויה ב-15 מעלות. '
+      2-3 Artist Debugging 4_instruction: מה התמונה אותה אנו מנסים לצייר? סיים לחבר את הנקודות בעזרת קוים וזויות מתאימים.
+      2-3 Artist Debugging 5_instruction: 'הקוד שמצייר את רגל וכף הרגל שגוי. רמז: כף הרגל ארוכה מדי, אולי תצטרך למחוק צעד  '
+      2-3 Artist Debugging 6_instruction: נראה שאני יושבת על כיסא עם רגל חסרה. ערוך בלוקים כדי לצייר את הרגל.
+      2-3 Artist Debugging 7_instruction: נראה כי ה-C בקוד צויר אחורנית. תוכל לעשות שיראה כמו האות C ?
+      2-3 Artist Debugging 8_instruction: לא סיימתי את השבשבת שלי. כמה חזרות צריך כדי להשלים אותה?
+      2-3 Artist Debugging 9_instruction: 'הקוד עבור גבעול זה שגוי. רמז: לזוית שגיאה של 60 מעלות.'
+      2-3 Artist Debugging Assessment 1_instruction: 'צורה זו קטנה מדי, תוכל להגדילה? רמז: אורכה וגובהה צריכים להיות ארוכים ב-75 פיקסלים.'
+      2-3 Artist Free Play_instruction: משחק חופשי! צייר מה שתרצה.
       2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
+        שלום. אני זומבי אמן. אני אוהב לצייר! 
+        עזור לי לצייר משקפיים מרובעים. רמז: הגשר בין המשקפים קצר 
+        ב-25 פיקסלים מאורך הריבוע.
+      2-3 Artist Functions 10_instruction: לפניך 2 פונקציות, אחת לציור גלגל שיניים גדול ואחת לציור גלגל שיניים קטן. השתמש בהם כדי לצייר מנגנון של מכונה!
+      2-3 Artist Functions 11.5_instruction: 'הינה הפונקציה : "צייר משושה". מה יקרה אם רק תסתובב 60 מעלות בכל חזרה ?'
       2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
+        שינינו את שם הפונקציה "צייר ריבוע" ל"צייר משושה" אבל היא עדיין מציירת רק ריבועים. 
+        תוכל לשנות את "צייר משושה" כך שתצייר משושה בעל צלע של 50 פיקסלים ? 
+        צייר את המשושה בעזרת הפונקציה.
       2-3 Artist Functions 12_instruction: |
-        Functions are really great for drawing
-        complex things multiple times. Can you use the "draw a flower" function
-        to fill the rest of the planter box?(Hint: The plants are all separated by
-        100 pixels length)  
+        פונקציות הן נפלאות לציור דברים מורכבים מספר פעמים רב. 
+        תוכל להשתמש בפונקציה "צייר פרח" כדי למלא את העציץ ? (רמז: המרחק בין 
+        הפרחים הינו 100 פיקסלים)
       2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
+        סיפקנו לך 4 פונקציות. 
+        השתמש בהן בתוך לולאה כדי ליצור תמונות אותן תחלוק עם חבריך.
+        לחץ על הרץ כדי לראות דוגמה.
       2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+        פונקציות מאפשרות לך ליצור בלוקים חדשים!
+        העברנו את הבלוקים המציירים ריבוע לתוך פונקציה הנקראת "צייר ריבוע".
+        תוכל להשתמש ב "צייר ריבוע"רי ליצור את המשקפיים ? 
+        הריבועים מרוחקים 75 פיקסלים אחד מהשני.
       2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: |
-        Use the "repeat" block to draw these
-        3 squares.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
+        ערוך את הפונקציה כך שתצייר ריבוע בעל צלע צד של 115 פיקסלים וצייר את המשקפיים.
+        הריבועים מרוחקים 45 פיקסלים אחד מהשני.
+      2-3 Artist Functions 4_instruction: 'השתמש בבלוק "חזור שוב" כדי לצייר 3 ריבועים.'
+      2-3 Artist Functions 7_instruction: 'השתמש בפונקציה "צייר בית" כדי לצייר 2 בתים בעלי פרמטרים שונים. (רמז: הבית הראשון בגודל 100 פיקסלים).'
       2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
+        הינה פונקציית פתית שלג.
+        השתמש בה כדי ליצור סצינת חורף! זהו שלב משחק חופשי, 
+        אין פזל לפתור. תהנו!
       2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
+        תוכל לצייר משושה העל צלעות של 100 פיקסלים ולסיים את התא ?
+        זכור, זה אומר שתצטרך לפנות אך ורק ב-60 מעלות!
+      2-3 Artist Loops 10_instruction: מה יקרה לעיצוב אם נקצר את הצעד האחרון קדימה לחצי מאורכו ?
       2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
+        עכשיו, בוא נוסיף לולאה נוספת סביב היצירה שלנו.
+        אל תשכח להוסיף זוית בסוף הלולאה החיצונית.
+      2-3 Artist Loops 2_instruction: 'עכשיו השתמש בבלוק "חזור שוב" כדי להפוך את התא לצדף.'
+      2-3 Artist Loops 4_instruction: רוצה לראות מה קורה כשמציירים את הצורה שוב ושוב בעזרת לולאה?
+      2-3 Artist Loops 5_instruction: עכשיו, בוא נעשה שינוי קטן בלולאה ונראה את ההבדל שנוצר בין התמונות.
       2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
+        הוסף מהלך אחד נוסף ופניה נוספת בתוך הלולאה,
+        ראה איך העיצוב שלך משתנה.
       2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: "Let's put both elements inside a loop."
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow we're going to add some distance between them.\r\nUse the same code as\nbefore, but add a step forward at the end of the outer loop."
+        אנחנו יכולים להשתמש בלולאות כדי ליצור מצולעים.
+        תוכל ליצור מעוין בתוך המשושה?
+      2-3 Artist Loops 8_instruction: בוא נוסיף את שני החלקים בתוך לולאה.
+      2-3 Artist Loops 9_instruction: |
+        אנחנו הולכים להשתמש בלולאה כדי ליצור את אותם עצמים, 
+        עכשיו נוסיף מרחק בין העצמים.
+        השתמש באותו קוד בו השתמשת, אך הוסף צעד קדימה בלולאה החיצונית.
       2-3 Artist Loops New 1_instruction: בוא נצייר את הראש של הרובוט הזה! תוכל ליצור ריבוע עם צלעות בגודל 100 פיקסלים?
       2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
+        עכשיו, בוא נחבר קבוצה של V ביחד.
+        צייר אותם בעזרת לולאה.
       2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+        הפעם, בוא נצייר זאת 24 פעמים.
+        הוסף פניה של 30 מעלות לקוד ועטוף את הכל בבלוק של "חזור שוב".
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+        צייר יהלום עם צלעות של 100 פיקסלים.
         
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
+      2-3 Artist Loops New 13_instruction: עכשיו, צייר את היהלום 3 פעמים בעזרת לולאה.
       2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
+        עכשיו, צייר את היהלום 10 פעמים,
+        תסתובב 90 מעלות בין יהלום ליהלום.
       2-3 Artist Loops New 15_instruction: צייר משהו כיפי.
       2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
+        הנה חלק מהקוד בו השתמשת לצייר ריבוע.
+        מה יקרה אם תשתמש בבלוק "חזור שוב" כדי להריץ את הקוד 4 פעמים?
       2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
+        צייר V פשוט שכל צלע שלו באורך 50 פיקסלים 
+        והשלם את החץ.
+      2-3 Artist Match Hex Pic_instruction: 'התאמה: עזור והשלם את המשושה.'
       2-3 Artist Match Rho Pic_instruction: 'משחק: סיים את הקוד החסר.'
       2-3 Artist Match Sq Pic_instruction: 'משחק: השלם את הקוד החסר'
       2-3 Artist Match Tri pic_instruction: 'משחק: מלא את הקוד החסר.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
+      2-3 Artist Nested Loops 1_instruction: |
+        השתמשת כבר בלולאות כדי לצייר צורות,
+        אבל האם ידעת שאפשר להשתמש בלולאה בתוך לולאה ?
+        השתמש בלולאה 3 פעמים כדי לצייר את התבנית.
       2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
+        השתמש בלולאה והרץ קוד זה
+        12 פעמים כדי להשלים את התבנית.
       2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
+        השתמש בלולאת "חזור שוב" 4 פעמים כדי להשלים את התבנית.
+        פנה 90 מעלות לאחר כל עיגול.
       2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
+        השתמש בלולאה 12 פעמים כדי להשלים 
+        את העיגולים.
       2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
+        השתמש בלולאת המשולש 6 פעמים. 
+        אחרי כל משולש תצטרך לפנות 60 מעלות לפני ציור המשולש הבא.
       2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
+        השתמש בלולאת המשולש 12 פעמים כדי לצייר את התבנית.
+        חלק את מספר המעלות בעיגול (360) במספר הצורות אותן (12) אותן אתה מצייר
+        על מנת לדעת כמה לפנות אחרי ציור כל צורה.
       2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
+        השתמש בלולאה כדי לצייא את היהלום 12 פעמים ולצייר פרח.
+        רמז: ציור של 12 יהלומים דומה לציור של 12 משולשים אותם ציירת.
+        באיזו זוית צריך לפנות אחריי ציור כל צורה?
       2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
+        מלא את חלון הבניין בעזרת לולאה. 
+        רוחב החלונות 20 פיקסלים והם מופרדים ב-20 פיקסלים אחד משני.
       2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
+        לדינוזאור 8 קוצים לאורך הזנב שלו.
+        כל קוץ באורך 30 פיקסלים. השתמש בלולאה כדי 
+        לצייר 8 משולשים, הקפד לנוע קדימה אחרי כל משולש.
       2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
+        השתמש בלולאה וצור את השמש בעזרת 10 משולשים.
+        תצטרך לזוז ולפנות אחרי כל משולש.
+        תוכל להבין בכמה לפנות על ידי חלוקת מספר המעלות בעיגול במספר 
+        הצורות שמרכיבות אותו.
       2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
+        עכשיו, בוא נוסיף קצת דשא לתמונה.
+        הגבעולים מופרדים אחד מהשני ב50 פיקסלים.
       2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
+        נסיים את התמונה על ידי הוספת פרח.
+        השתמש בלולאת היהלום 12 פעמים כדי ליצור את הפרח שלך.
       2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
+        משחק חופשי, צייר משהו מגניב
+        בעזרת לולאות מקוננות.
       2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar. Be careful not to collect nectar from a purple flower if it doesn't\nhave any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
+        הי! אני דבורה. עזור לי להשיג צוף
+        מהפרח.
+      2-3 Bee Conditionals 10_instruction: |
+        לפרחים סגולים יכול להיות 0 או 1 צוף.
+        היזהר שלא לאסוף צוץ מפרחים סגולים שאין להם צוף.
+      2-3 Bee Conditionals 11_instruction: אסוף צוץ מכל הפרחים שיש להם צוף.
       2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
+        השתמש בלולאה לבדוק ולאסוף את הצוף
+        מכל הפרחים.
       2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
+        אסוף צוף וצור דבש. רמז:
+        מה יקרה אם תשתמש בתנאי: "אם נקטר" על פרח אדום?
+        תוכל להשלים זאת בעזרת לולאה?
       2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
+        אסוף נקטר וצור דבש. 
+        הזהר לא לאסוף צוף מפרח סגול שאין לו צוף.
+      2-3 Bee Conditionals 15_instruction: אסוף צוף מכל ארבעת הפרחים.
       2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
+        הי, אני דבורה! עזור לי לאסוף את 
+        כל הצוף מכל הפרחים. השתמש בלולאה.
       2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
+        עזור לי לאסוף את כל הצוף מהפרחים
+        ולהכין דבש. השתמש בלולאה.
       2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
+        עזור לי לאסוף את כל הצוף מהפרחים
+        ולהכין את כל הדבש.
       2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
+        לפרחים סגולים יכול להיות 0 או 1 צוף, אבל לא תדע למי יש מה.
+        הזהר לא לאסוף צוף מפרחים סגולים שאין להן צוף.
+        בדוק אם צוף שווה 1 על ידי שימוש בבלוק המתאים.
       2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
+        בדוק, האם לפרח יש צוף.
+        השתמש בבלוק "אם" בשביל הבדיקה.
       2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
+        אסוף צוף מכל הפרחים
+        להם יש צוף.
       2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
+        בשדה פרחים אדומים וסגולים.
+        לפרחים אדומים כמות צוף ידועה, לפרחים סגולים כמות צוף בלתי ידועה.
+        אסוף את כל הצוף.
+      2-3 Bee Conditionals 9_instruction: אסוף את כל הצוף מכל פרח.
       2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
+        הערכה: אסוף את כל הצוף.
+        הזהר לא לאסוף צוף מפרחים סגולים להם אין צוף.
       2-3 Bee Debugging 1_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש.
       2-3 Bee Debugging 10_instruction: |
-        These blocks are really bugging me. Fix
-        the error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את כל הדבש.
       2-3 Bee Debugging 2_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש.
       2-3 Bee Debugging 3_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש.
       2-3 Bee Debugging 4_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש.
       2-3 Bee Debugging 5_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.  You can
-        now use run and step.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את כל הדבש.
+        עכשיו תוכל להשתמש בהרץ וצעד.
       2-3 Bee Debugging 6_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש.
       2-3 Bee Debugging 7_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש.
       2-3 Bee Debugging 8_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש.
       2-3 Bee Debugging 9_instruction: |
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את הדבש.
       2-3 Bee Debugging Assessment 1_instruction: |
-        Assessment:  These blocks are
-        really bugging me. Fix the error(s) to collect all of the nectar and make
-        all of the honey.
+        הערכה: הבלוקים בתוכנית ממש מפריעים לי.
+        תקן את הטעות (או טעויות), אסוף את כל הצוף והכן את כל הדבש.
       2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
+        פונקציות הינן בלוקים של קוד המבצעים משימה.
+        השתמש בפונקציה "תשיג 2 צוף" כדי לאסוף צוף מכל פרח.
       2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
+        בפרחים סגולים יכול להיות 0 או 1 צוף.
+        צור פונקציה שאוספת צוף רק מפרחים סגולים שיש בהם צוף.
       2-3 Bee Functions 2_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
-        use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+        פונקציות הן בלוקים של קוד המבצעים משימה.
+        השתמש בפונקציה "קבל 5" כדי לקבל 5 יחידות צוף בבת אחת.
+        השתמש בלולאה כדי לקבל מספר אידיאלי של בלוקים.
+      2-3 Bee Functions 3_instruction: אסוף את כל הצוף מכל פרח.
       2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
-        the function to collect all of the nectar.
+        הפונקציה "זוז וקח נקטר", מפנה את הדבורה, אוספת צוף
+        ואז מחזירה את הדבורה למקום ממנה התחילה. 
+        השתמש בפונקציה כדי לאסוף את כל הצוף.
       2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
+        עכשיו יש יותר צוף בפרחים, 
+        ערוך את הפונקציה הנתונה כך שתוכל לאסוף 4 יחידות צוף,
+        השתמש בפונקציה כדי לאסוף את כל הצוף מכל הפרחים.
       2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
+        עכשיו, השתמש באותה פונקציה כדי לאסוף 
+        את הצוף משלושה פרחים.
       2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
+        הפרחים עכשיו רחוקים יותר.
+        ערוך את הפונקציה הנתונה והשתמש בה לאסוף צוף מהפרחים.
       2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
+        צור את הפונקציה שלך ש: אוספת 7 יחידות צוף, 
+        נעה קדימה ומכינה 7 יחידות דבש. השתמש בפונקציה כדי לאסוף צוף
+        מכל פרח ולהכין דבש בכל חלת דבש.
       2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: |
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
-      2-3 Bee Loops 1A_instruction: |
-        Hi, I'm a bee. Can you help me collect the
-        nectar from these flowers? 
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 2A_instruction: |
-        Can you do the same task more easily with a
-        loop?
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |
-        Now use the new repeat block to collect all
-        of the nectar and make all of the honey.
+        צור את הפונקציה שלך ש: הולכת לאורך הנתיב, משיגה צוף, 
+        מכינה דבש ואז מחזירה את הדבורה לתחילת המסלול.
+      2-3 Bee Functions Assessment 1_instruction: 'הערכה: השתמש בפונקציה הנתונה כדי לאסוף צוף מכל פרח.'
+      2-3 Bee Functions Assessment 2_instruction: 'הערכה: צור פונקציה שתכין 3 יחידות דבש בבת אחת.'
+      2-3 Bee Loops 1_instruction: כל פרח מכיל יחידת דבש אחת. אסוף צוף מכל פרח.
+      2-3 Bee Loops 10_instruction: 'תוכל להשתמש בלולאת "כל עוד" בתוך שתי לולאות אחרות על מנת לאסוף צוף ?'
+      2-3 Bee Loops 11_instruction: 'השתמש בלולאת "כל עוד" כדי לאסוף את כל הצוף מהפרחים בשדה.'
+      2-3 Bee Loops 12_instruction: 'השתמש בלולאת "כל עוד" כדי לאסוף את כל הצוף מהפרחים בשדה.'
+      2-3 Bee Loops 13_instruction: 'הערכה: השתמש בבלוק "חזור שוב" כדי לאסוף את כל הצוף.'
+      2-3 Bee Loops 1A_instruction: הי, אני דבורה. תוכל לעזור לי לאסוף צוף מהפרחים?
+      2-3 Bee Loops 2_instruction: השתמש בלולאה כדי לאסוף את הצוף ולייצר דבש.
+      2-3 Bee Loops 2A_instruction: תוכל להפוך את התוכנית לפשוטה יותר בעזרת לולאה ?
+      2-3 Bee Loops 3_instruction: אסוף צוף מכל פרח והכן דבש בכל חלת דבש.
+      2-3 Bee Loops 3A_instruction: תוכל להשתמש בלולאה כדי לאסוף את כל הצוף?
+      2-3 Bee Loops 3B_instruction: 'עכשיו, השתמש בבלוק "חזור שוב" כדי לאסוף את כל הצוף ולהכין את כל הדבש.'
       2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
+        השתמש בלולאה דומה לזו מהתרגיל הקודם, 
+        הוסף לה פנייה.
       2-3 Bee Loops 4A_instruction: |
-        What happens if you loop this sequence 3 times?
-        Don't forget to make the honey at the end!
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
+        מה יקרה אם תחזור על הלולאה 3 פעמים?
+        אל תשכח להכין דבש בסוף!
+      2-3 Bee Loops 5_instruction: השתמש בלולאה כדי לרדת במורד המדרגות ולאסוף צוף.
       2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
+        השתמש בלולאה כדי לאסוף את הצוף מכל פרח,
+        הכן דבש בכל חלת דבש.
+      2-3 Bee Loops 7_instruction: סדר את הבלוקים בתוך לולאה ואסוף את הצוף מכל אחד מהפרחים.
       2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
+        בפרחים הסגולים כמות לא ידועה של צוף.
+        השתמש בלולאת "כל עוד צוף" כדי לאסוף את כל הצוף.
+        הלולאה תרוץ כל עוד התנאי נכון, במקרה זה כל עוד צוף > 0.
       2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
-      2-3 Maze 1_instruction: |
-        Can you help me to catch the naughty pig? Stack a
-        couple of "move forward" blocks together and press "Run". 
+        לולאת "כל עוד" יכולה לבצע את אותה פעולה כמו בלוק "אם" בתוך לולאה.
+        הוסף לולאת "כל עוד" לקוד כדי לבצע את אותה משימה.
+      2-3 Bee Loops Assessment 1_instruction: 'הערכב - השתמש בלולאת "כל עוד" כדי לאסוף צוף מכל אחד מהפרחים.'
+      2-3 Maze 1_instruction: 'תוכל לעזור לי לתפוס את החזיר השובב ? השתמש בכמה בלוקים של "לזוז קדימה" ביחד ולחץ על הרץ. '
       2-3 Maze 10_instruction: תוביל אותי לרוע הירוק!(תיזהר מדינמיט)
-      2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
+      2-3 Maze 11_instruction: אני רעב!, הבא אותי אל הפרח. כמה פעמים תצטרך לחזור על הבלוק?
       2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
+        תוכל להחליף את התשובה הקודמת בשני בלוקים בלבד ?
+        (רמז: צור לולאה והשתמש בבלוק "חזור פעמים")
       2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |
-        Get me to the pig, now with the Repeat times
-        block!
+        תוכל להחליף את התשובה הקודמת בשני בלוקים בלבד ?
+        (רמז: צור לולאה והשתמש בבלוק "חזור פעמים")
+      2-3 Maze 12 (old)_instruction: 'תפוס את החזיר, השתמש בבלוק "חזור פעמים"!'
       2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
-      2-3 Maze 13_instruction: Get me to the pig using only two blocks.
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
+        תוכל להחליף את חמשת הבלוקים בשני בלוקים בלבד ?
+        (רמז: השתמש בלולאת "חזור פעמים" )
+      2-3 Maze 13 (old)_instruction: 'הבא אותי אל החזיר, עכשיו עם בלוק "חזור עד"!'
+      2-3 Maze 13_instruction: הבא אותי אל החזיר עם שני בלוקים בלבד.
+      2-3 Maze 14 (old)_instruction: 'הבא אותי אל החזיר עם בלוק "חזור עד"!'
       2-3 Maze 14_instruction: |
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 15_instruction: Use two loops to get to the pig using fewer blocks.
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: Get me to the pig.
-      2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
-      2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
+        הבא אותי אל פרח החמניה! 
+        (איפה הבלוק "חזור עד" כשצריך אותו?)
+      2-3 Maze 15 (old)_instruction: 'הבא אותי אל החזיר עם בלוק "חזור עד"!'
+      2-3 Maze 15_instruction: השתמש בשתי לולאות כדי להגיע לחזיר עם פחות בלוקים.
+      2-3 Maze 16 (old)_instruction: 'הבא אותי אל החזיר עם בלוק "חזור עד"!'
+      2-3 Maze 16 before_instruction: הבא אותי אל החזיר.
+      2-3 Maze 16_instruction: הבא אותי אל החמניה. השתמש בלולאה!
+      2-3 Maze 2_instruction: החזיר הופך את הנוצות שלי. עזור לי להשיג אותו!
       2-3 Maze 3_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+        עקוב אחריי הנתיב והובל אותי אל החזיר הטיפשי.
+        המנע מחומר נפץ או שנוצות יעופו באויר!
       2-3 Maze 4_instruction: תוביל אותי לרוע הירוק!(תיזהר מדינמיט)
       2-3 Maze 5_instruction: תוביל אותי לרוע הירוק!(תיזהר מדינמיט)
       2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+        הרגע ועזור לי למצוא את החזיר הרע.
+        אחרת אתרגז!
       2-3 Maze 7_instruction: תוביל אותי לרוע הירוק!(תיזהר מדינמיט)
-      2-3 Maze 8_instruction: Get me to the pig!
+      2-3 Maze 8_instruction: הבא אותי אל החזיר!
       2-3 Maze 9_instruction: תוביל אותי לרוע הירוק!(תיזהר מדינמיט)
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      2-3 Maze Loops 17_instruction: Get me to the sunflower!
-      2-3 Maze Loops 18_instruction: Get me to the sunflower!
-      2-3 Maze Loops 19_instruction: Get me to the sunflower!
-      2-3 Maze Loops 20_instruction: Get me to the sunflower!
-      2-3 Maze Loops 21_instruction: Get me to the sunflower!
-      2-3 Maze Loops Assessment 1_instruction: |
-        Assessment:  Get me to the sunflower
-        using only 5 blocks! 
+      2-3 Maze Loops 17_instruction: הבא אותי אל החמניה!
+      2-3 Maze Loops 18_instruction: הבא אותי אל החמניה!
+      2-3 Maze Loops 19_instruction: הבא אותי אל החמניה!
+      2-3 Maze Loops 20_instruction: הבא אותי אל החמניה!
+      2-3 Maze Loops 21_instruction: הבא אותי אל החמניה!
+      2-3 Maze Loops Assessment 1_instruction: 'הערכה: הבא אותי אל החמניה בעזרת 5 בלוקים בלבד!'
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
-      2-3 Maze sq10_instruction: Get me to the pig! What blocks got repeated?
-      2-3 Maze sq10v2_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq11_instruction: Get me to the pig! What blocks got repeated?
+      2-3 Maze sq10_instruction: הבא אותי אל החזיר! על איזה בלוקים צריך לחזור?
+      2-3 Maze sq10v2_instruction: הבא אותי אל החזיר! על איזה בלוקים צריך לחזור?
+      2-3 maze sq11_instruction: הבא אותי אל החזיר! על איזה בלוקים צריך לחזור?
       2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
+        תוכל להחליף את התשובה הקודמת בלולאה ? 
+        השתמש בבלוק של לולאת "חזור פעמים" 
       2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
+        בן אדם יקר, אני זומבי. חייב...מגיע...לחמניה.
+        צור לולאה עם בלוק "חזור עד".
+      2-3 maze sq14_instruction: תוכל להגיע לחמניה בעזרת ארבעה בלוקים בלבד ?
+      2-3 maze sq15_instruction: תוכל להגייע לחמניה בעזרת 5 בלוקים בלבד?
       2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
+        בסדר, זה דומה, אבל קצת שונה.
+        תוכל לעשות זאת בעזרת 5 בלוקים בלבד ?
       2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+        עקוב אחרי הנתיב והובל אותי אל החזיר הטיפש. 
+        המנע מחומר נפץ או שנוצות יעופו באויר!
       2-3 Maze sq3_instruction: תוביל אותי לרוע הירוק!(תיזהר מדינמיט)
       2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
+        הרגע ועזור לי למצוא את החזיר הרע.
+        אחרת אתרגז!
+      2-3 Maze sq5_instruction: הבא אותי אל החזיר! כמה פעמים תצטרך לחזור לחזור על הבלוק?
       2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
+        תוכל להחליף את התשובה הקודמת בשני בלוקים בלבד ?
+        (רמז: צור לולאה בעזרת בלוק "חזור פעמים")
+      2-3 Maze sq7_instruction: הבא אותי לפולש הירוק בעזרת שלושה בלוקים בלבד.
       2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
+        הבא אותי לחזיר! (איפה הבלוק "חזור שוב"
+        כשאני צריך אותו?)
+      2-3 Maze sq9_instruction: השתמש בלולאות כדי להגיע לחזיר עם פחות בלוקים.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
+      2-3level1_instruction: עזור לציפור לתפוס את החזיר השובב, הזז את החזיר קדימה
       4-5 Artist 1_instruction: |
-        Help me finish drawing my box. (Each line is 300
-        pixels long) 
+        עזור לי לסיים את הקופסא. 
+        (אורכו של כל קו הוא 300 פיקסלים)
       4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
+        לחץ על "הרץ" כדי לנסות את הקוד.
+        חזור על כך מספיק פעמים עד להשלמת הציור.
+        הצבעים ישתנו בכל פעם.
       4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: Can you loop this code to complete the square?
+        השלם את השורות הירוקות. הקוים באורך 300 פיקסלים
+        ומרוחקים 15 פיקסלים אחד מהשני.
+      4-5 Artist 2_instruction: תוכל להוסיף לולאה לקוד ולהשלים את הריבוע?
       4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+        בסדר, נסה להבין מה יקרה אם תריץ את הקוד. (או שתלחץ "הרץ" כדי לבדוק זאת)
+        חזור על ההרצה מספיק פעמים כדי להשלים את הציור.
+        הצבעים ישתנו מהרצה להרצה (ברוב המקרים).
       4-5 Artist 3_instruction: |
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle.
-      4-5 Artist 4_instruction: |
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
-      4-5 Artist 5_instruction: What angle do you use?
+        לפרח מלבני זה היקף של 600 .
+        הצד הארוך הוא באורך 200. צייר את המלבן.
+      4-5 Artist 4_instruction: כמה מעלות יש בעיגול? השתמש בלולאה כדי ליצור עיגול של צבעים.
+      4-5 Artist 5_instruction: באיזו זוית אתה משתמש ?
       4-5 Artist 6_instruction: |
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length is double the height of 100 pixels. Complete
-        the drawing.
-      4-5 Artist 8_instruction: |
-        The halfway line on a soccer field is perpendicular
-        to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
-        long. How wide is it? Draw the bounds and the halfway line.
-      4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
-      4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
+        במשולש שווה צלעות זה הזוויות הן : 60,60,60 מעלות.
+        כל צלע באורך 200 פיקסלים. השלם את הציור.
+      4-5 Artist 7_instruction: במשולש ישר זוית זה הזוית הן :30, 60 ו-90. אורך הצד המשופע כפול מגובה המשולש שהינו 100 פיקסלים. השלם את הציור.
+      4-5 Artist 8_instruction: קו האמצע במגרש הכדורגל ניצב לקוים הצדדיים, למגרש הכדורגל היקף של 800 פיקסלים ורוחב של 240 פיקסלים. מה רוחב המגרש ? צייר את היקף המגרש ואת קו האמצע.
+      4-5 Artist 9_instruction: צייר את החצי השני כך שהתמונה תהיה סימטרית. המשולשים הינם שויי צלעות ובעלי אורך צלע של 50 פיקסלים.
+      4-5 Artist Assessment 1_instruction: 'הערכה: השתמש בלולאה כדי לצייר משולש שווה צלעות. כל צלע היא באורך 300 פיקסלים.'
+      4-5 Artist For Loops 1_instruction: הזן את המספרים 1 עד 10 לתוך בלוקי הרוחב והרץ את הקוד.
+      4-5 Artist For Loops 11_instruction: 'השלם את לולאת "ספור עם" כך שהיא תספור ...0,20,40,60,80 ועד 200.'
       4-5 Artist For Loops 12_instruction: |
-        What happens if you reverse the "from"
-        and "to" numbers? Complete the "for" block so that it counts 200, 180,
-        160, 140, 120...0. 
+        מה יקרה אם תחליף בלולאה את המספרים שמופיעים ב-"מ" ו-"ל".
+        השלם את הלולאה כך שתספור 0...200,180,160,140,120.
+        
       4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
+        התוכנית נכתבה בלי שהשתמשו בלולאת "ספור עם" והיא ארוכה מדי!
+        השתמש בלולאת "ספור עם" כדי להשלים את הספירלה.
+        רמז: אורך הקו האחרון הוא 250 פיקסלים.
       4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
+        מישהו התחיל לכתוב את הקוד אבל הפסיק כשהבין שחייבת להיות דרך מהירה יותר!
+        השתמש בלולאת "ספור עם" כדי להחליף את הבלוקים והשלם את הספירלה המשולשת.
+        (רמז: אורכה של השורה האחרונה 300 פיקסלים)
       4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.
+        מישהו התחיל לכתוב את הקוד אבל הפסיק כשהבין שחייבת להיות דרך מהירה יותר!
+        השתמש בלולאת "ספור עם" כדי להחליף את הבלוקים והשלם את הספירלה המשושה.
+        (רמז: אורכה של השורה האחרונה 200 פיקסלים).
       4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+        זהו בלוק "ספור עם", במקום להקיש 10.....1,2,3 לולאת ה"ספור עם" 
+        יכולה לחזור על הבלוקים בתוכה ולמנות את המספרים בשבילך.
+        הקש את המספר 10 ב-"ל" שבלולאת ה"ספור עם".
       4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
+        איך נוכל לספור מ-1 ועד 50?
+        ערוך את בלוק ה"ספור עם".
+      4-5 Artist For Loops 4_instruction: 'השלם את בלוק ה"ספור עם" כדי שיספור מ-1 ועד 10 בקפיצות של 1.'
       4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+        צייר ריבועים שונים בעלי צלעות של 50,60,70,80 ו-90 פיקסלים.
+        תצטרך להשתמש בפונקציה "צייר ריבוע" חמש פעמים.
       4-5 Artist For Loops 7_instruction: |
         Draw the same squares but use a "count
         with" block to change the sizes. Place the "counter" block in the "draw
@@ -748,10 +639,10 @@ he:
       4-5 Bee Debugging 1_instruction: |
         These blocks are really bugging me. Can you
         fix them?
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
+      4-5 Bee Debugging 10_instruction: מצא את השגיאות ותקן אותן.
       4-5 Bee Debugging 11_instruction: Does this count correctly?
       4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
+      4-5 Bee Debugging 3_instruction: מצא את השגיאות ותקן אותן.
       4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
       4-5 Bee Debugging 5_instruction: "Something isn't right here..."
       4-5 Bee Debugging 6_instruction: |
@@ -797,12 +688,12 @@ he:
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: תוכל להגיע לחמניה בעזרת ארבעה בלוקים בלבד ?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
         only six blocks?
-      4-5 Maze 13_instruction: Get me to the pig!
+      4-5 Maze 13_instruction: הבא אותי אל החזיר!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |
         Get the zombie to the sunflower, but avoid
@@ -833,10 +724,7 @@ he:
       4-5 Maze Conditionals 1_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
+      4-5 Maze Conditionals 10_instruction: תוכל להוסיף 3 בלוקים על מנת לעזור לי לפתור פזל מורכב יותר? אם תעשה זאת נכון אוכל ללכת בנתיב המפותל ללא קשר לאורכו.
       4-5 Maze Conditionals 2_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
@@ -1382,8 +1270,8 @@ he:
         Can you loop this code to draw the greyed out
         square?
       Course 4 Artist 3_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
+        Try to figure out what happens if you run this
+        code (or press "Run" to test it). Then, repeat it enough times to complete
         the drawing.
       Course 4 Artist 4_instruction: |
         How many degrees are in a circle?  Fill in
@@ -1558,6 +1446,7 @@ he:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1636,8 +1525,9 @@ he:
       Course 4 Artist Vars 12_instruction: |
         Let's set the "sides" variable to
         5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Let's add a new variable called "length" and use that wherever you
-        have a "move forward." Set the "length" variable to 75 for this shape.
+        gets! Notice that there is a new variable called "length". We can now use
+        that wherever we have a "move forward." Set the "length" variable to 75
+        for this shape.
       Course 4 Artist Vars 13_instruction: |
         The more sides a shape has, the shorter
         each side needs to be in order for the whole pattern to fit on the screen.
@@ -1682,10 +1572,11 @@ he:
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Use the "set sides
         to" block.
+      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: |
-        The bee can't tell if this is a flower or a honeycomb.
-        Check first if it is a flower or a honeycomb, and then only gather nectar
-        from it if it is a flower. 
+        The bee can't tell what's under the cloud! First,
+        check if it is a flower or a honeycomb. Then only gather nectar from it if
+        it is a flower. 
       Course 4 Bee 2_instruction: |
         Check each object to see if it's a flower. If
         it is, collect nectar...otherwise, you can ignore it!
@@ -1948,7 +1839,7 @@ he:
       Course 4 Play Labs For Loops 5_instruction: |
         In the last stage we counted the
         square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
-        count the cube of each number (1, 8, 27, 64, 125, 216, 343….)
+        count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
         is any whole number that is only divisible by itself and 1. Use the "is_prime"
@@ -1959,6 +1850,9 @@ he:
       Course 4 Play Labs For Loops 8_instruction: |
         What for loop would make me speak
         19, 27, 35, 43, 51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -2067,7 +1961,7 @@ he:
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
@@ -2264,13 +2158,11 @@ he:
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
-      K-1 Artist 1 Assessment 1_instruction: |
-        Draw a short line up and a long one
-        to the right!
+      K-1 Artist 1 Assessment 1_instruction: צייר קו קצר כלפי מעלה וקו ארוך ימינה!
       K-1 artist 1 level 10_instruction: |
         Draw the dashed line by using both the
         jump and draw blocks
-      K-1 artist 1 level 9_instruction: Draw this using three lines
+      K-1 artist 1 level 9_instruction: צייר זאת בעזרת שלושה קוים
       K-1 Artist Loops 1_instruction: Draw this line by moving East 4 times.
       K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
       K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
@@ -2423,18 +2315,18 @@ he:
       K-1 Maze debug Assessment 1_instruction: |
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
-      K-1 Maze Loops 1_instruction: Get me to the pig!
+      K-1 Maze Loops 1_instruction: הבא אותי אל החזיר!
       K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
       K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 4_instruction: Get me to the pig!
+      K-1 Maze Loops 4_instruction: הבא אותי אל החזיר!
       K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 9_instruction: Get me to the pig!
+      K-1 Maze Loops 9_instruction: הבא אותי אל החזיר!
       K-1 Maze Loops Assessment 1_instruction: |
         Assessment -- Use loops to get me
         to the pig!
@@ -2618,8 +2510,8 @@ he:
         function editor. 
       NEW Course 4 Artist Functions 8_instruction: |
         We have given you most of the
-        code to create a function. However there seems to be something missing. Can
-        you edit the function definition to draw the triangle?
+        code to create a function, but there seems to be something missing. Can you
+        edit the function definition to draw the triangle?
       NEW Course 4 Artist Functions 9_instruction: |
         Which block do you need to add
         to get the triangle to sit on top of the square?
@@ -2641,10 +2533,10 @@ he:
       NEW Course 4 Artist Params 13_instruction: |
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
-        to also add a "sides" parameter. Remember the angle to turn for a given
-        shape is 360 divided by the sides it has. Hint: lengths for each shape are;
-        the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50
-        pixels.
+        to add a "sides" parameter. Remember the angle to turn for a given shape
+        is 360 divided by the number of sides it has. Hint: These are the lengths
+        for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and
+        the square is 50 pixels.
       NEW Course 4 Artist Params 14_instruction: |
         Can you recreate these shapes?
         Drag the "length" parameter into the function definition. 
@@ -2698,8 +2590,8 @@ he:
         hexagon's.
       NEW Course 4 Artist Vars 4_instruction: |
         Let's try it again. Can you set the
-        length variable to make this cool design with with hexagons? Hint: It's a
-        multiple of 10.
+        length variable to make this cool design with hexagons? Hint: It's a multiple
+        of 10.
       NEW Course 4 Artist Vars 6_instruction: |
         Can you help me draw this cool pattern
         by dropping in the "length" variable block into the correct places?
@@ -2734,7 +2626,7 @@ he:
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
       NEW Course 4 Bee For Loops 6_instruction: |
         The last number in your for loop
-        is called the "increment,"  and each time the loop is run the counter variable
+        is called the "increment." Each time the loop is run the counter variable
         changes by the increment. Try collecting these flowers using an increment
         of 2.
       NEW Course 4 Bee For Loops 7_instruction: |
@@ -2792,10 +2684,10 @@ he:
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
       PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+        פונקציות מאפשרות לך ליצור בלוקים חדשים!
+        העברנו את הבלוקים המציירים ריבוע לתוך פונקציה הנקראת "צייר ריבוע".
+        תוכל להשתמש ב "צייר ריבוע"רי ליצור את המשקפיים ? 
+        הריבועים מרוחקים 75 פיקסלים אחד מהשני.
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -2992,6 +2884,7 @@ he:
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: |
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
@@ -3328,17 +3221,10 @@ he:
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
-      U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
+      U3L2_Turtle3by3Grid_instruction: foo
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests
