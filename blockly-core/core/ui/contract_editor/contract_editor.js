@@ -461,7 +461,7 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
  */
 Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div',
-      'blocklyToolboxDiv paramToolbox blocklyText contractEditor');
+      'blocklyToolboxDiv paramToolbox blocklyText contractEditor innerModalDiv');
   if (Blockly.RTL) {
     this.contractDiv_.setAttribute('dir', 'RTL');
   }
