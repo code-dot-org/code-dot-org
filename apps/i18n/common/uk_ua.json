@@ -137,11 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "Блоки \"Повторити\" та \"Якщо\" повинні містити інші блоки. Переконайтесь, що внутрішній блок належно розміщений всередині зовнішнього.",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyBlockInFunction": "Функція {name} має незаповнений вхід.",
+  "emptyBlockInVariable": "Змінна {name} має незаповнений вхід.",
   "emptyFunctionBlocksErrorMsg": "Для функціонування цей блок повинен містити інші блоки.",
   "emptyFunctionalBlock": "У вас є блок з незаповненим вводом.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
+  "emptyTopLevelBlock": "Не має блоків для запуску.  Ви повинні прикласти блок до блоку {topLevelBlockName}",
   "end": "кінець",
   "errorEmptyFunctionBlockModal": "Потрібно розмістити блоки всередині блоку визначення функції. Клацніть \"Редагувати\" та перетягніть блоки всередину зеленого блоку.",
   "errorIncompleteBlockInFunction": "Натисніть кнопку \"Редагувати\", щоб переконатися, що всі потрібні блоки розміщено всередині визначення функції.",
@@ -172,7 +172,7 @@
   "missingBlocksErrorMsg": "Щоб розв'язати завдання, спробуйте один або кілька блоків нижче.",
   "nextLevel": "Вітання! Завершено завдання {puzzleNumber}.",
   "nextLevelTrophies": "Вітання! Ви завершили завдання {puzzleNumber} та виграли  {numTrophies, plural, one {трофей} other {# трофеїв}}.",
-  "nextPuzzle": "Next Puzzle",
+  "nextPuzzle": "Наступна головоломка",
   "nextStage": "Вітаємо! Ви завершили {stageName}.",
   "nextStageTrophies": "Вітаємо! Ви завершили етап {stageName} та виграли {numTrophies, plural, one  {a trophy} other {# trophies}}.",
   "numBlocksNeeded": "Вітаємо! Ви завершили завдання  {puzzleNumber}. (Проте, його можна було вирішити, використавши лише {numBlocks, plural, one {1 блок} other {# блоки}}.)",
@@ -213,5 +213,6 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "коли гра починається",
-  "workspaceHeaderShort": "Робоча область: "
+  "workspaceHeaderShort": "Робоча область: ",
+  "readonlyWorkspaceHeader": "View only: "
 }

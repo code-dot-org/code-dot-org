@@ -69,7 +69,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Potrivire  Bucle Artist Unu
         Match the loop to the shape: Potrivește bucla cu forma
-        Matching loops: Potrivire bucle
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -340,8 +339,8 @@
           dreapta triunghiului
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Începe cu un pătrat<br/>Pune un triunghi în dreapta pătratului<br/>Pune
+          un paralelogram sub pătrat<br/>Pune un triunghi la dreapta paralelogramului
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png

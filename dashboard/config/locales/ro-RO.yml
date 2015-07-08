@@ -270,7 +270,7 @@
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
       label: Salut %{username}
-      stats: Progresul meu
+      stats: Studio-ul Code
       settings: Contul meu
       prizes: Premii
       logout: Deloghează-te
@@ -423,14 +423,14 @@
     test_videos_help: Testează noul nostru video player la şcoala ta
     try_beta_courses: Nou! Încearcă cursurile noastre beta pentru elevi de clasele
       1-5
-    use_as_teacher: Foloseşte acest site drept profesor
-    heading_hoc2014: <h2>Ora de programare pentru</h2><h1>toate vârstele</h1>
+    use_as_teacher: Foloseşte acest site în calitate de profesor
+    heading_hoc2014: <h2>Ora de Cod pentru</h2><h1>toate vârstele</h1>
     heading_elementary: <h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>
     heading_apps: <h2>Distracţie pentru</h2><h1>Toată lumea</h1>
-    heading_legacy: <h2>Cursul nostru general pentru</h2><h1>Toate vârstele</h1>
+    heading_legacy: <h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>
     your_gallery: Galerie
-    no_primary_course: Încercaţi un curs la Studio-ul Code
-    print_certificate: Imprima certificatul
+    no_primary_course: Încearcă un curs la Studio-ul Code
+    print_certificate: Tipărește certificatul
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -440,7 +440,7 @@
     teacher: Profesor
   footer:
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat
-      la creearea acestui tutorial.
+      la crearea acestui tutorial.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
       Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
       Arts Inc. Toate Drepturile Rezervate.
@@ -458,11 +458,11 @@
     teacher: Vezi soluția
     auth_error: Nu ești autorizat pentru a vedea soluția.
     submit: Actualizează locaţia Artistului
-    direction: Direcţia de început (în grade)
+    direction: Direcţia de început (pe grade)
   video:
     tab: Video.
     notes: Nici un video? Arată note.
-    notes_coming_soon: Notiţe pentru acest filmuleţ vin în curând.
+    notes_coming_soon: În curând, notiţe vor fi disponibile pentru acest video.
     autoplay_option: Redare Automată clipuri video
     download: Descarcă Video
   compatability:
@@ -475,48 +475,48 @@
     working:
       header: Momentan efectuăm lucrări de susținere a browser-ului tău.
       message: Code.org folosește tehnologii web moderne. Acest lucru face site-ul
-        mai rapid de utilizat. Browserul pe care îl folosiți nu suportă toate caracteristicile
-        necesare şi este posibil să întâmpinați probleme în timp ce utilizaţi această
-        parte a site-ului. Vă rugăm să ne ajute prin <a href='%{report_issue_url}'>
-        raportarea problemelor întâlnite</a>. Puteţi, de asemenea, <a href='%{supported_browsers_url}'>
-        să faceți upgrade pentru browser la o versiune acceptată</a>.
+        mai rapid de utilizat. Browserul pe care îl folosești nu suportă toate caracteristicile
+        necesare şi este posibil să întâmpini probleme în timp ce utilizezi această
+        parte a site-ului. Te rugăm să ne ajuți prin <a href='%{report_issue_url}'>
+        raportarea oricărei probleme întâlnite</a>. Poți, de asemenea, <a href='%{supported_browsers_url}'>
+        să-ți actualizezi browser-ul la o versiune acceptată</a>.
       hide_this_warning: Ascunde această avertizare
     upgrade:
       header: Te rugăm să-ți actualizezi browser-ul.
       message: Code.org folosește tehnologii web moderne. Acest lucru face site-ul
-        mai rapid de utilizat. Din păcate, browser-ul dumneavoastră nu suportă toate
-        caracteristicile necesare pentru a rula această parte a site-ului. <br/> <br/>Instalaţi
-        un browser de pe lista noastră de browsere acceptate pentru a continua. Aveţi
-        posibilitatea să <a href='#'> încercaţi să vizualizaţi pagina</a>, dar puteți
-        să vă aşteptați la întreruperea funcţionalității.
+        mai rapid de utilizat. Din păcate, browser-ul tău nu suportă toate caracteristicile
+        necesare pentru a rula această parte a site-ului. <br/> <br/>Instalează un
+        browser de pe lista noastră de browsere acceptate pentru a continua. Poți
+        <a href='#'> încerca să vizualizezi pagina</a>, dar așteaptă-te la întreruperi
+        de funcţionalitate.
       button: Du-mă la lista browserelor suportate
   slow_loading: Aceasta durează mai mult decât de obicei...
   try_reloading: Încearcă să reîncarci pagina
   next_stage: Ai terminat! Continuă cu următoarea etapă
   download_pdf: Plan de lecţie deschisă
   lesson_plan: Plan de lecţie
-  view_lesson_plan: Vezi Planul de Lecţii
+  view_lesson_plan: Vezi Planul de Lecţie
   pdf_download: Descarcă PDF
-  download_coming_soon: Activitate de descărcat în curând.
-  video_coming_soon: Video în curând!
+  download_coming_soon: Activitatea se va putea descărca curând.
+  video_coming_soon: Video disponibil în scurt timp!
   share_code:
-    title: Faceţi clic pe 'Run' pentru a vedea programul meu în acţiune
-    bounce_og_title: Verifică jocul meu Bounce
+    title: Fă clic pe 'Rulează' pentru a-mi vedea programul în acţiune
+    bounce_og_title: Aruncă-ți o privire asupra jocului meu Bounce
     flappy_og_title: Aruncă-ți o privire asupra jocului meu Flappy
-    studio_og_title: Verificarea aplicației my Play Lab
-    check_out_what_i_made: Verifică ceea ce am creat
+    studio_og_title: Uită-te la aplicația mea Laboratorul de joc
+    check_out_what_i_made: Uite ce am creat
     og_description: Am scris codul chiar eu cu Code.org
-    phone_number_not_allowed: Se pare că textul conține un număr de telefon. Încercați
-      să îl schimbați.
-    address_not_allowed: Se pare că textul conține o adresă. Încercați să îl modificați.
-    email_not_allowed: Se pare că textul conține o adresă de email. Încercați să îl
-      modificați.
-    profanity_not_allowed: Se pare că textul conține o blasfemie. Încercați să îl
-      schimbați.
+    phone_number_not_allowed: Se pare că textul conține un număr de telefon. Încearcă
+      să îl schimbi.
+    address_not_allowed: Se pare că textul conține o adresă. Încearcă să îl modifici.
+    email_not_allowed: Se pare că textul conține o adresă de email. Încearcă să îl
+      modifici.
+    profanity_not_allowed: Se pare că textul conține o obscenitate. Încearcă să îl
+      schimbi.
   builder:
     created: Ai creat un nou script.
     destroyed: Ai distrus un script.
-    manage: Construiește nivelurile
+    manage: Construiește niveluri
     view: Vizualizare
     back: Înapoi la script-uri
     success: Ai editat cu succes blocurile.
@@ -527,26 +527,25 @@
   upsell:
     hoc:
       title: Oră de Cod
-      body: Încercaţi elementele de bază ale științei calculatoarelor. Milioane de
-        oameni au încercat.
+      body: Încearcă elementele de bază informaticii. Milioane de oameni au încercat.
     flappy:
       title: Codul Flappy
       body: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția
         noastră Codul Floppy!
     20-hour:
-      title: Curs accelerat
+      title: Curs intensiv
       body: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare.
         Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar
         este distractiv de învăţat la toate vârstele.
-      body_short: Învață informatică de bază în cadrul unei versiuni accelerate ale
+      body_short: Învață informatică de bază în cadrul unei versiuni intensive ale
         cursurilor 2-4.
     hoc2014:
-      try_new_tutorial: Încercați noul nostru tutorial Ora de cod în versiune beta
+      try_new_tutorial: Încearcă noul nostru tutorial Ora de cod în versiune beta
       try_frozen: Artist cu Anna și Elsa, din Frozen
     gallery:
       title: Galerie
-      body: Vedeți o galerie de imagini pentru aplicații și artiști, create de utilizatorii
-        noștri
+      body: Vizualizează o galerie de imagini pentru aplicații și artiști, create
+        de utilizatorii noștri
     frozen:
       title: Frozen
     infinity:
@@ -555,27 +554,27 @@
         Disney Infinity.
   gallery:
     students_drew_these_with_code: Elevii au realizat aceste desene prin programare!
-    students_made_these_with_code: Elevii au făcut acestea cu secvențe de cod!
-    picture_count: In ultimele  <b>%{days}</b> zile, studenții au desenat<b>%{count}</b>
-      imagini prin propriile programe pe calculator. Selectează imaginile pentru a
-      vedea fiecare program în acțiune.
-    activity_count: În ultimele <b>%{days}</b> zile, elevii au făcut <b>%{count}</b>
-      aplicații şi imagini scriindu-și propriile programe pentru calculator. Faceţi
-      clic pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune.
-    want_to_make_your_own: Vrei să realizezi propriul tău program?
+    students_made_these_with_code: Elevii au creat acestea cu secvențe de cod!
+    picture_count: În ultimele <b>%{days}</b> zile, studenții au desenat <b>%{count}</b>
+      imagini scriind propriile programe de calculator. Fă clic pe imagini pentru
+      a vedea fiecare program în acțiune.
+    activity_count: În ultimele <b>%{days}</b> zile, elevii au creat <b>%{count}</b>
+      aplicații şi imagini scriindu-și propriile programe pentru calculator. Fă clic
+      pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune.
+    want_to_make_your_own: Vrei să creezi propriul tău program?
     more: Mai mult &rarr;
     caption_by_name_age: de %{name}, vârsta %{age}
-    caption_time_ago: '%{time_ago} în urmă'
+    caption_time_ago: cu %{time_ago} în urmă
     header: Galerie
     header_playlab: Laborator de Joacă
     header_artist: Artist
   landing:
-    prerelease: Acest curs este în <span class='betatext'>beta</span>. Asta înseamnă
-      că aceasta nu este versiunea finală a cursului, şi poate fii revizuit din moment
-      ce orice critică este bine venită şi cursul este îmbunătăţit.
+    prerelease: Acest curs este în <span class='betatext'>versiune beta</span>. Asta
+      înseamnă că aceasta nu este versiunea finală a cursului şi el poate fi revizuit
+      în momentul în care se primește feedback şi se fac îmbunătățiri.
     prerelease_hoc2014: Acest tutorial este în <span class='betatext'> versiune beta</span>.  Acesta
-      este obiectul revizuirii pe măsură ce se primește feedback şi sunt făcute îmbunătăţiri.
-    feedback: Trimiteți feedback
+      face obiectul revizuirii pe măsură ce se primește feedback şi sunt făcute îmbunătăţiri.
+    feedback: Trimite feedback
     report_bug: Raporteazã eroare
     support: Obţine ajutor
     support_url: //support.code.org
@@ -595,20 +594,21 @@
     wrong_title: Răspuns incorect
     badname: Contractul tău are numele greşit.
     badname_case: Numele funcțiilor cad sub incidența caracterelor mici sau mari folosite.
-      Încearcă să schimbi tipul literelor folosite la scrierea contractul tău.
+      Încearcă să schimbi tipul literelor folosite la scrierea numelui contractului
+      tău.
     badrange: Contractul tău este greşit.
     baddomainsize: Contractul tău are un număr incorect de elemente în domeniu.
     baddomainname: Unul sau mai multe elemente din domeniul tău are un nume greșit.
     baddomaintype: Unul sau mai multe elemente ale domeniului tău sunt de tip greșit
-      sau sunt in ordine greșită.
+      sau sunt în ordine greșită.
   text_match:
-    placeholder: Completați răspunsul aici
+    placeholder: Completează răspunsul tău aici
     open_response_title: Mulţumesc
-    open_response_body: Mulţumim pentru răspunsul dumneavoastră!
+    open_response_body: Îți mulţumim pentru răspuns!
   dialog:
     ok: OK
   time:
-    hour: O oră
+    hour: 1 oră
     day: zi
     week: săptămână
   data:
@@ -642,33 +642,35 @@
           title: Pas
           description: '[șir gol]'
         sample_level_builder:
-          title: Constructor de niveluri de probă
+          title: Constructor exemple de niveluri
           description: '[șir gol]'
   age_interstitial:
-    age: Varsta ta
-    header: Actualizarea Informaţiilor Contului
+    age: Vârsta ta
+    header: Actualizare Informaţii Cont
     message: Suntem pe cale de a ne actualiza experienţa pentru a vă oferi o protecţie
-      a informaţiilor private şi mai puternică. Pentru a face aceasta, îi vom ruga
-      pe utilizatorii existenţi să îşi scrie vârsta aici. <br/>Ca întotdeauna, code.org
-      nu va închiria, vinde sau împărtăşi aceste informaţii cu nimeni din exterior.
-    sign_out: Dacă nu doreşti să îţi scrii vârsta, poţi <a href="%{url}">să ieşi</a>.
-  zendesk_too_young_message: Ne pare rău, însă utilizatorii tineri nu ai voie să intre
-    pe site-ul nostru de sprijin. Te poţi uita prin <a href="http://support.code.org">support.code.org</a>
-    fără să te loghezi, sau poţi cere ajutorul unui părinte sau profesor.
+      a informaţiilor private mult mai puternică. Pentru a face aceasta, avem nevoie
+      ca utilizatorii existenţi să îşi introducă vârsta aici.<br/>Ca întotdeauna,
+      code.org nu va închiria, vinde sau distribui aceste informaţii nici unei alte
+      părți terțe.
+    sign_out: Dacă nu doreşti să îţi dezvălui vârsta, poţi să te<a href="%{url}">deloghezi</a>.
+  zendesk_too_young_message: Ne pare rău, însă utilizatorii mai tineri nu au voie
+    să intre pe site-ul nostru de suport. Poți naviga pe <a href="http://support.code.org">support.code.org</a>
+    fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze
+    în numele tău.
   progress:
     not_started: Neînceput
-    in_progress: în progrès
+    in_progress: în curs de desfăşurare
     completed_too_many_blocks: finalizat, prea multe blocuri
     completed_perfect: finalizat, perfect
     furthest_level_attempted: cel mai îndepărtat nivel încercat
     assessment: evaluare
   studio:
-    courses_working_on: Cursurile la care lucrați
-    completed_courses: Curs terminat
+    courses_working_on: Cursurile pe care le studiezi
+    completed_courses: Cursuri terminate
     all_courses: Toate cursurile
   project:
     projects: Proiecte
-    create: Creează proiectul
+    create: Creează proiect
     create_a_project: 'Creează un proiect nou:'
     new: Creează unul nou
     rename: Redenumește

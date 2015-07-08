@@ -1582,6 +1582,10 @@
         A maior parte do código para
         criar uma função foi dada a você. Contudo, parece que algo está faltando. Você consegue
         completar este bloco de função?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this!  If this picture\ninspires you,
+        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
+        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: |
         Vamos editar uma função que desenha um
         quadrado com lados de 50 pixels
@@ -1683,11 +1687,10 @@
         Use a variável "lados" para controlar
         quantas vezes esse laço é executado.
       Course 4 Artist Vars 6_instruction: |
-        Hmm, eu tentei alterar o valor da variável "lados"
-        para 4 a partir do código do último desafio, mas ele ainda está desenhando um triângulo.
-        Você pode usar a variável "lados" (junto com um bloco matemático) para garantir
-        que eu vire a quantidade correta? Dica: 360 dividido pelo número de lados
-        resulta no número de graus a virar.
+        Alterei a variável "lados" para 4 a partir
+        do código do último desafio, você pode usar a variável "lados" (junto com um
+        bloco matemático) para garantir que eu vire a quantidade correta? Para desenhar um polígono regular,
+        devo virar 360 / número de lados cada vez.
       Course 4 Artist Vars 7_instruction: |
         Você pode modificar a variável "lados"
         para me ajudar a desenhar esse hexágono?
@@ -1698,8 +1701,9 @@
         dividido por \"lados\" em dois lugares\ndesta vez) \n"
       Course 4 Artist Vars 9_instruction: |
         Modifique esse algoritmo para que ele use a variável
-        "lados" ao invés de um número fixo para desenhar um triângulo. Substitua o número
-        3 pela variável "lados" e use o bloco "defina os lados para".
+        "lados" ao invés de um número fixo para desenhar um triângulo. Use o bloco
+        "defina os lados para".
+      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: "A abelha não sabe dizer se isso é uma flor ou uma
         colmeia.\nPrimeiro verifique se isso é uma for ou uma colmeia, e então colete
         néctar\napenas se for uma flor. \n"
@@ -1975,6 +1979,9 @@
       Course 4 Play Labs For Loops 8_instruction: |
         Qual laço me faria falar
         19, 27, 35, 43, 51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Obtenha três néctares e então fabrique duas
         unidades de mel
       Course1MazeAssessment1_instruction: "Isso é um teste!\r\nMova-me por um caminho
@@ -2331,7 +2338,7 @@
       K-1 Artist 1 Assessment 1_instruction: |
         Desenhe uma pequena reta para cima e uma
         grande para a direita!
-      K-1 artist 1 level 10_instruction: Desenhe as linhas tracejadas usando os blocos
+      K-1 artist 1 level 10_instruction: Desenhe linhas tracejadas usando os blocos
         pule e desenhe
       K-1 artist 1 level 9_instruction: Faça o desenho usando três retas
       K-1 Artist Loops 1_instruction: Desenhe esta reta usando o movimento para o
@@ -2793,8 +2800,9 @@
         vamos tentar novamente. Desta vez, vamos fazer esse design bacana com hexágonos
         de 60 pixels.
       NEW Course 4 Artist Vars 4_instruction: |
-        Vamos tentar novamente. Agora, vamos fazer
-        esse design bacana com hexágonos de 60 pixels.
+        Vamos tentar novamente. Você consegue definir
+        a variável "comprimento" para fazer este design bacana com hexágonos? Dica: é um
+        múltiplo de 10.
       NEW Course 4 Artist Vars 6_instruction: |
         Você pode me ajudar a desenhar esse padrão
         colocando o bloco da variável "comprimento" nos lugares corretos?
@@ -3099,6 +3107,7 @@
         Bem-vindo ao Artista! Primeiro, vamos tentar
         fazer um quadrado simples usando os blocos "vire à direita" e "avance".
         Cada lado deve medir 100 pixels.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: |
         Esse poema foi comprimido com
         a substituição de duas frases comuns por símbolos do dicionário. Você consegue identificar

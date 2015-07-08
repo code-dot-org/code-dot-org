@@ -137,11 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while-Schleife",
   "emptyBlocksErrorMsg": "Innerhalb der \"Wiederholen\"- oder \"Wenn\"-Blöcke müssen sich andere Blöcke befinden, um zu funktionieren. Achte darauf, dass der innere Block genau in den umfassenden Block passt.",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyBlockInFunction": "Die Funktion {name} hat ein leeres Feld.",
+  "emptyBlockInVariable": "Die Variable {name} hat ein leeres Feld.",
   "emptyFunctionBlocksErrorMsg": "Der Funktionsblock muss andere Blöcke beinhalten, um zu funktionieren.",
   "emptyFunctionalBlock": "Du hast einen Block ohne Eingabe.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
+  "emptyTopLevelBlock": "Es gibt keine Bausteine zum ausführen. Du musst ein Baustein dem {topLevelBlockName} Baustein anhängen.",
   "end": "Ende",
   "errorEmptyFunctionBlockModal": "Es müssen Blöcke innerhalb deiner Funktionsdefinition sein. Klicke auf \"Bearbeiten\", und ziehe die Blöcke in den grünen Block.",
   "errorIncompleteBlockInFunction": "Klicke auf \"Bearbeiten\", um sicherzustellen, dass kein Block innerhalb deiner Funktionsdefinition fehlt.",
@@ -200,7 +200,7 @@
   "stringEquals": "string=?",
   "subtitle": "eine visuelle Programmierumgebung",
   "textVariable": "Text",
-  "toggleBlocksErrorMsg": "Du musst einen Fehler in deinem Programm beheben, bevor es als Bausteine angezeigt werden kann.",
+  "toggleBlocksErrorMsg": "Du musst einen Fehler in deinem Programm beheben, bevor es als Baustein angezeigt werden kann.",
   "tooFewBlocksMsg": "Du verwendest alle nötigen Baustein-Typen. Versuche jedoch mehr von diesen Baustein-Typen zu verwenden, um diese Aufgabe abzuschließen.",
   "tooManyBlocksMsg": "Diese Aufgabe kann mit <x id='START_SPAN'/><x id='END_SPAN'/> Bausteinen gelöst werden.",
   "tooMuchWork": "Du hast mich ganz schön arbeiten lassen! Könntest du versuchen, weniger zu wiederholen?",
@@ -213,5 +213,6 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "wenn ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: "
+  "workspaceHeaderShort": "Arbeitsbereich: ",
+  "readonlyWorkspaceHeader": "View only: "
 }

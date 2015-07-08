@@ -1,7 +1,7 @@
 fi-FI:
   hello: Hei maailma
   select_language: Valitse kieli
-  computer_science: Tietotekniikka
+  en: Computer Science
   computer_science_edweek: Tietotekniikan koulutusviikko
   csedweek_dates: 8. -14. Joulukuuta 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodaustuntisi</a>'
@@ -45,6 +45,7 @@ fi-FI:
   congratulations: Onneksi olkoon!
   congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta
   get_a_certificate_of_achievement: Hanki todistus suorituksesta
+  enter_valid_age: Please select a valid age
   enter_valid_email: Ole hyvä ja syötä toimiva sähköpostiosoite
   get_a_certificate_message: "Me lähetämme sinulle todistuksen ja lisätietoa miten voit  <a href='/learn/beyond'>opiskella lisää Koodaustunnilla oppimasi lisäksi</a>"
   get_a_certificate_message_after: "Napsauta todistusta ladataksesi tai tulostaaksesi sen. Jatka sen jälkeen <a href='http://studio.code.org'>muilla kursseilla</a>, tai katso vaihtoehtoja <a href='/learn/beyond'>Ensimmäisen tunnin jälkeen</a>."
@@ -362,7 +363,7 @@ fi-FI:
   dashboard_students_share_section: 'Jaa tämän ryhmän kirjautumissivu oppilaidesi kanssa:'
   dashboard_students_print_info: Tulosta kortit oppilaidesi kirjautumistiedoista.
   dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: Salainen kuva
+  dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: 'Voit nollata oppilaan salaisen kuvan koska tahansa valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salainen kuva luodaan oppilaalle käytettäväksi sisäänkirjautuessa.'
   dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Salainen sana

@@ -396,8 +396,8 @@ pl:
     download: Pobierz wideo
   compatability:
     https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      header: Proszę włączyć obsługę protokołu HTTPS dla Code.org.
+      message: "Aby zwiększyć bezpieczeństwo, przestawiamy się na https na %{https_date}. Nie będziesz w stanie uzyskać dostęp do Code.org po tej dacie. <a href='%{it_requirements_url}'> Kliknij tutaj</a>, aby dowiedzieć się, jak włączyć HTTPS dla Code.org."
       hide_this_warning: Ukryj to ostrzeżenie
     working:
       header: Pracujemy nad wsparciem dla Twojej przeglądarki.

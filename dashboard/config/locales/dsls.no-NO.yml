@@ -69,7 +69,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Kunstner Løkker Matching En
         Match the loop to the shape: Sett løkka slik at den passer til figuren
-        Matching loops: Matchende løkker
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -320,8 +319,9 @@
           til høyre for trekanten
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Begynn med et kvadrat<br/>Sett inn et triangel til høyre for kvadratet<br/>Sett
+          inn et parallellogram under kvadratet<br/>Sett inn et triangel til høyre
+          for parallellogrammet
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
