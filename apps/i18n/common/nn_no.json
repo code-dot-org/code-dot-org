@@ -174,7 +174,7 @@
   "nextLevelTrophies": "Gratulerer! Du har fullført oppgåve {puzzleNumber} og vunne {numTrophies, plural, one {ein pokal} other {# pokalar}}.",
   "nextPuzzle": "Neste puslespel",
   "nextStage": "Gratulerer! Du fullførte {stageName}.",
-  "nextStageTrophies": "Gratulerer! Du har fullført {stageName} og vunne {numTrophies, flertal, et {ein pokal} andre {# pokalar}}.",
+  "nextStageTrophies": "Gratulerer! Du har fullført {stageName} og vunne {numTrophies, plural, one {ein pokal} other {# pokalar}}.",
   "numBlocksNeeded": "Gratulerer! Du har fullført oppgåve {puzzleNumber}. (Men, du kunne ha brukt berr {numBlocks, plural, one {ei blokk} other {# blokker}}.)",
   "numLinesOfCodeWritten": "Du har akkurat skrive {numLines, plural, one {ei linje} other {# linjer}} med kode!",
   "openWorkspace": "Slik fungerer det",
