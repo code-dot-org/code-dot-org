@@ -1769,9 +1769,8 @@ en:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Choose the best answer.
         Maze Multiple Choice One: Maze Multiple Choice One
-        Which blocks work?: Which blocks work?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
