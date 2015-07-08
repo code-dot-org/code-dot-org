@@ -18,7 +18,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 ### OS X Mavericks / Yosemite
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-1. Run <code>sudo chown -R \`whoami\`:admin /usr/local/</code>
+1. Run <code>sudo chown -R \`whoami\`:admin /usr/local/</code>. (Brew assumes it can write to subdirectories of /usr/local/, which recent versions of OSX apparently do not allow. It is strongly discourage to run brew as root.)
 1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build coreutils`
   1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
