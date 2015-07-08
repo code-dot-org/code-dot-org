@@ -1088,5 +1088,3 @@ Calc.__testonly__ = {
   appState: appState
 };
 /* end-test-block */
-
-//# sourceURL=calc.js
