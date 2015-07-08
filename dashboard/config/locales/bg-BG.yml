@@ -261,7 +261,7 @@
       classroom: Начална страница на учителя
       district_dashboard: Областно табло
       label: Здравейте %{username}
-      stats: Моят напредък
+      stats: Студио по кодиране
       settings: Моят акаунт
       prizes: Награди
       logout: Изход
@@ -416,7 +416,7 @@
     heading_hoc2014: <h2>Часът на кодирането за</h2><h1>Всички възрасти</h1>
     heading_elementary: <h2>20 часа курсове за</h2><h1>Начинаещи (всички възрасти)</h1>
     heading_apps: <h2>Забавление за</h2><h1>Всеки</h1>
-    heading_legacy: <h2>Нашият общ курс за</h2><h1>Всички възрасти</h1>
+    heading_legacy: <h2>Нашият общ курс за</h2><h1>всички възрасти</h1>
     your_gallery: Галерия
     no_primary_course: Опитайте курс в студиото по кодиране
     print_certificate: Печат на сертификат

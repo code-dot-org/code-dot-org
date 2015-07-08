@@ -1,7 +1,7 @@
 id-ID:
   hello: Halo dunia
   select_language: Silahkan pilih bahasa Anda
-  computer_science: Ilmu komputer
+  en: Computer Science
   computer_science_edweek: Minggu pendidikan ilmu komputer
   csedweek_dates: 8-14 Desember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code</a> akan datang. Memanggil semua guru dan penyelenggara, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> rencanakan Hour of Code Anda</a>'
@@ -45,6 +45,7 @@ id-ID:
   congratulations: Selamat!
   congratulations_on_completing_hoc: Selamat atas penyelesaian satu jam dari kode
   get_a_certificate_of_achievement: Ambil sertifikat prestasi
+  enter_valid_age: Please select a valid age
   enter_valid_email: Masukkan alamat email yang valid
   get_a_certificate_message: "Kami akan kirimkan sertifikat dan informasi tentang cara untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>"
   get_a_certificate_message_after: "Klik sertifikat untuk mengunduh atau mencetak. Sekarang, terus berjalan dengan <a href='http://studio.code.org'> kursus lain</a> kami, atau lihat lebih banyak pilihan untuk <a href='/learn/beyond'> belajar melampaui satu jam</a>."
@@ -280,24 +281,24 @@ id-ID:
   dashboard_landing_view_progress: 'Lihat perkembangan untuk %{biggest_section}'
   dashboard_landing_available_title: Latihan-latihan yang tersedia
   dashboard_landing_available_courses: Ini adalah latihan-latihan yang saat ini tersedia untuk Anda dan murid-murid Anda.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
-  dashboard_middle_courses: 20-Hour Middle School Courses
-  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
-  dashboard_high_courses: Year-long High School Courses
-  dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_landing_more_tutorials: Ingin melihat lebih banyak tutorial?
+  dashboard_landing_more_tutorials_desc: 'Ada banyak tutorial yang <a href="/learn/beyond"> ditawarkan oleh mitra kami.</a> Belajar untuk program dengan robot, membuat halaman web, membuat aplikasi Anda sendiri, atau menjelajahi bahasa pemrograman lain seperti C ++, Ruby, atau Python!'
+  dashboard_hoc_courses: The Hour of Code untuk segala usia
+  dashboard_hoc_courses_desc: 'Coba salah satu tutorial pendek 1 jam  ini dengan siswa Anda!'
+  dashboard_k5_courses: 20-jam Kursus untuk K-5
+  dashboard_k5_courses_desc: 'Kursus-kursus ini secara online,bimbingan diri dan tutorial serba diri dengan kegiatan "unplugged"/"dilepas" yang tidak memerlukan komputer sama sekali. Setiap kursus terdiri dari sekitar 20 pelajaran yang dapat diimplementasikan sebagai satu unit atau selama satu semester. Bahkan usia Taman kanak-kanak pra-pembaca dapat berpartisipasi. Untuk membantu Anda memulai, kami menawarkan lokakarya pengembangan profesional berkualitas tinggi di Amerika Serikat secara gratis. <a href="/professional-development-workshops"> Temukan satu di dekat Anda!</a>'
+  dashboard_middle_courses: 20 jam sekolah menengah kursus
+  dashboard_middle_courses_desc: 'Kurikulum sekolah menengah kami menggunakan ilmu komputer dan pemrograman dalam konteks matematika sekolah menengah dan ilmu - sebagai alat untuk mengajarkan konsep-konsep matematika dan ilmu pengetahuan. Untuk mendaftar untuk lokakarya pengembangan profesional, berlaku untuk <a href="/educate/districts"> distrik-lebar kemitraan</a> dengan Code.org.'
+  dashboard_high_courses: Selama tahun sekolah menengah kursus
+  dashboard_high_courses_desc: 'Program sekolah menengah kami membantu sekolah Kabupaten menawarkan kelas-kelas sains komputer tahun penuh dengan menyiapkan ada staf untuk menawarkan bidang ini baru pengajar. Untuk mendaftar untuk lokakarya pengembangan profesional, berlaku untuk <a href="/educate/districts"> distrik-lebar kemitraan</a> dengan Code.org.'
   dashboard_course_csina: Ilmu Komputer dalam Aljabar
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_csina_desc: Code.org telah bermitra dengan Bootstrap untuk mengembangkan kurikulum yang mengajarkan konsep aljabar dan geometrik melalui pemrograman komputer.
+  dashboard_course_csins: Ilmu komputer dalam ilmu pengetahuan
+  dashboard_course_csins_desc: Code.org telah bermitra dengan proyek GUTS untuk memberikan pengenalan konsep-konsep ilmu komputer dalam konteks pemodelan dan simulasi.
   dashboard_course_ecs: Menjelajahi ilmu komputer
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
+  dashboard_course_ecs_desc: 'Menjelajahi ilmu komputer adalah kursus selama setahun terdiri dari 6 unit: interaksi komputer dan manusia, pemecahan masalah, desain Web, pemrograman, Computing dan analisis Data, dan Robotika.'
+  dashboard_course_csp: AP® Prinsip-prinsip ilmu komputer
+  dashboard_course_csp_desc: Code.org telah dirancang ketat, menarik, dan didekati kursus yang menggali ide-ide dasar komputasi.
   dashboard_landing_loading: Memuat...
   dashboard_action_edit: Edit
   dashboard_action_save: Simpan
@@ -364,10 +365,10 @@ id-ID:
   dashboard_students_reset_password: Reset kata sandi
   dashboard_students_share_section: 'Berbagi halaman masuk ini dengan siswa Anda:'
   dashboard_students_print_info: Ctak kartu dengan informasi login siswa Anda.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Gambar rahasia
   dashboard_students_secret_picture: Gambar rahasia
   dashboard_students_reset_picture: 'Anda dapat menyetel ulang gambar rahasia siswa kapan saja dengan memilih <b>Tampilkan rahasia</b> dan kemudian <b>menyetel ulang rahasia</b>. Gambar rahasia baru akan dibuat bagi pelajar tersebut untuk digunakan ketika mereka masuk.'
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: kata Rahasia
   dashboard_students_secret_word: Kata sandi
   dashboard_students_reset_word: 'Anda dapat menyetel ulang kata rahasia siswa kapan saja dengan memilih <b>Tampilkan rahasia</b> dan kemudian <b>menyetel ulang rahasia</b>. Sepasang kata-kata rahasia baru akan dibuat bagi pelajar tersebut untuk digunakan ketika mereka masuk. '
   dashboard_students_join_link: Beritahu siswa Anda untuk membuat akun mereka sendiri dan bergabung dengan Anda di bagian

@@ -754,6 +754,7 @@ bg:
       Course 4 Artist Functions 7_instruction: Можете ли да чертаете линия от квадратчета с помощта на квадратна функция? Всеки квадрат е 40 пиксела дължина.
       Course 4 Artist Functions 8_instruction: 'Разбрахте ли как се използва блока "функция"? Нека да променим квадрата на 200 пиксела. Съвет: щракнете на "Редактиране", за да промените размера в блока "начертай квадрат". Не забравяйте да  щракнете на "запиши и затвори", за да излезете от менюто за редактиране на функции. '
       Course 4 Artist Functions 9_instruction: Направили сме по-голямата част от кода за създаване на функция. Обаче, има нещо което липсва. Можете ли да допълните този функционален блок?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Да редактираме функцията, която изчертава квадрат от 50 пиксела
       Course 4 Artist Params 10_instruction: |-
         Можете да извикате функция която се намира в друга функция! Използвайте функция "фигура' и начертайте 3 къщи, всяка с 20 пиксела по-голяма от предходната, като първата е 50 пиксела. Помогнете си, като използвате цикъл "брояч" . 
@@ -806,6 +807,7 @@ bg:
       Course 4 Artist Vars 7_instruction: 'Променете променливата "страни" и ми помогнете да начертая този шестоъгълник.'
       Course 4 Artist Vars 8_instruction: 'Свободна игра:Експериментирайте със страните на фигурата. Можете ли да промените алгоритъма, така че големината на фигурата да е постоянна независимо от броя на страните? Помощ: Може да използвате математическите  блокове (на две места разделете 360 на блока "страни") '
       Course 4 Artist Vars 9_instruction: 'Променете алгоритъма, така че да използва променливата "страни" вместо статично число за начертаване на триъгълник. Заместете числото 3 със "страни" и използвайте блока "задай страните".'
+      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Пчелата не може да прецени дали това е цвете или медена пита. Провери първо дали е цвете или пита, и вземи нектар, ако е цвете. '
       Course 4 Bee 2_instruction: Проверете всеки обект, за да видите дали това е цвете. Ако е така, съберете нектар... в противен случай, можете да го игнорирате!
       Course 4 Bee 3_instruction: Неизвестния обект е или цвете или медена пита. Използвай блока Ако-Иначе, за да вземеш нектар ако е цвете, иначе направи мед ( защото това значи че е медена пита).
@@ -893,6 +895,9 @@ bg:
       Course 4 Play Labs For Loops 8_instruction: |
         Коя функция ще изрази тази последователност?
         19,27,35,43,51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -998,7 +1003,7 @@ bg:
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
@@ -1641,6 +1646,7 @@ bg:
       Standalone_Artist_8_instruction: 'Това е функция, наречена "начертай фигура", която ние сме програмирани за нарисуване на шестоъгълници. Стартирайте кода, за да видите какво прави той и след това експериментирайте с функцията, за да видите промените. Можете ли да я накарате да чертае модел на квадрати, триъгълници или осмоъгълници?'
       Standalone_Artist_9_instruction: Сега, върви напред и направи картина, каквато искаш! Дори имаш празна функция, която може да направи каквото си поискаш!
       Standalone_Artist_v2_instruction: Добре дошли при Художника! Първо, нека се опитаме да направим прост квадрат с помощта на блок за завъртане надясно и блок за преместване напред. Всяка страна трябва да бъде дълга 100 пиксела.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: Това стихотворение е компресирано чрез замяна на две общи фрази със символи в речника. Можете ли да посочите друг общ модел за допълнително компресиране на поемата?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
@@ -1965,17 +1971,10 @@ bg:
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
-      U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
+      U3L2_Turtle3by3Grid_instruction: foo
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Използвай това тестово ниво за да вземеш xml-а за unit тестове

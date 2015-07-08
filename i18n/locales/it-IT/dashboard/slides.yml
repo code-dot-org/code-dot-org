@@ -229,7 +229,7 @@ it:
       2:
         image: note/stadio9_6.jpg
         text: |-
-          Il blocco "mentre" (while) farà qualunque cosa si trova all'interno di esso PER TUTTO IL TEMPO IN CUI la condizione presente all'inizio è VERA.
+          Il blocco "mentre" (while) farà qualunque cosa si trova all'interno di esso PER TUTTO IL TEMPO IN CUI la condizione scritta accanto a "mentre" è VERA.
       3:
         image: Note/stadio9_7.jpg
         text: |-

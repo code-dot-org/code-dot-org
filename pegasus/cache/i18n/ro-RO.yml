@@ -1,7 +1,7 @@
 "ro-RO":
   hello: Salutare lume
   select_language: Te rugăm selectează limba ta
-  computer_science: Informatică
+  en: Computer Science
   computer_science_edweek: Săptămâna Informaticii
   csedweek_dates: 8-14 Decembrie 2014
   csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white;
@@ -62,6 +62,7 @@
   congratulations: Felicitări!
   congratulations_on_completing_hoc: Felicitări pentru finalizarea unei Ore de Cod
   get_a_certificate_of_achievement: Obţine un certificat de realizare
+  enter_valid_age: Please select a valid age
   enter_valid_email: Te rugăm să introduci o adresă de email validă
   get_a_certificate_message: Îți vom trimite un certificat şi informaţii despre cum
     să <a href='/learn/beyond'> Înveți peste O Oră</a>
@@ -444,12 +445,12 @@
     din cadrul secțiunii:'
   dashboard_students_print_info: Tipărește carduri cu informațiile de logare ale elevilor
     tăi.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Imagine secretă
   dashboard_students_secret_picture: Imagine secretă
   dashboard_students_reset_picture: Poți reseta imaginea secretă pentru un elev în
     orice moment selectând <b>Arată secret</b> și apoi <b>Resetare secret</b>. O nouă
     imagine secretă va fi generată pentru ca elevul să o folosească la logare.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Cuvânt secret
   dashboard_students_secret_word: Cuvânt secret
   dashboard_students_reset_word: 'Poți reseta cuvintele secrete ale unui elev în orice
     moment selectând <b>Arată secret</b> și apoi <b>Resetare secret</b>. O nouă pereche
@@ -499,7 +500,7 @@
   dashboard_login_none: E-mail
   dashboard_new_password: parolă nouă
   dashboard_progress_not_started: Neînceput
-  dashboard_progress_in_progress: în progrès
+  dashboard_progress_in_progress: în curs de desfăşurare
   dashboard_progress_not_completed: nefinalizat
   dashboard_progress_completed_too_many_blocks: finalizat, prea multe blocuri
   dashboard_progress_completed_perfect: finalizat, perfect
@@ -529,8 +530,7 @@
   code_sign_up: Înscrie-te pentru a participa la săptămâna de educație în informatică
   learn_more: Află mai mult
   hoc2014_try_new_tutorials: Încearcă noile noastre tutoriale ale Orei de Cod
-  hoc2014_try_new_tutorial: Încercați noul nostru tutorial Ora de cod în versiune
-    beta
+  hoc2014_try_new_tutorial: Încearcă noul nostru tutorial Ora de cod în versiune beta
   hoc2014_try_scrat: Păsări Supărate, PvZ şi Veverița Scrat
   hoc2014_try_frozen: Artist cu Anna și Elsa, din Frozen
   carousel_heading_international: Tutoriale în limba ta

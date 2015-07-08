@@ -69,7 +69,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'Художник -Цикли: Свързване 1'
         Match the loop to the shape: Свържете цикъла с фигурата
-        Matching loops: Свързване на цикли
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -319,8 +318,8 @@
           отдясно на триъгълника
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Започнете с квадрат<br/>сложете триъгълник отдясно на квадрата<br/>Поставете
-          успоредник под квадрата <br/>Сложете триъгълник отдясно на успоредника
+        : Започнете с квадрат <br/> сложете триъгълник вдясно от квадрата <br/> сложете
+          успоредник под квадрата <br/> сложете триъгълник вдясно на успоредника
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png

@@ -154,7 +154,7 @@ de:
         turtle_1_9: Kannst du herausfinden mit welcher Nummer du das Fragezeichen ersetzen musst, um einen Kreis zu zeichnen?
         turtle_1_10: 'Du hast es geschafft! Jetzt, zeichne was du willst! Hier sind ein paar Ideen: ein Strichmännchen, eine Schneeflocke, oder eine Spirale. Probiere auch den neuen "Setze Breite"-Baustein aus. Viel Spaß!'
         turtle_4_1: 'Kannst du ein Dreieck (mit den Kanten von 100 Pixeln) mit nur 3 Bausteinen zeichnen? Tipp: Verwende einen "Wiederholen"-Baustein.'
-        turtle_4_2: 'Füge einen "nach rechts drehen um 90 Grad" Baustein irgendwo in der Mitte des Programm, welches sich bereits auf dem Arbeitsplatz befindet, um diese Dreiecke zu zeichnen.'
+        turtle_4_2: 'Füge einen "nach rechts drehen um 90 Grad" Baustein irgendwo in der Mitte des Programmes ein, welches sich bereits auf dem Arbeitsplatz befindet, um diese Dreiecke zu zeichnen.'
         turtle_4_3: 'Ok, hier ist das Programm das du geschrieben hast um ein einzelnes Dreieck zu zeichnen. Kannst du einen "Wiederholen"- und "Drehen"-Baustein hinzufügen um eine hübsche Blume zu zeichnen?'
         turtle_4_4: 'Hier ist das gleiche Programm aus der vorherigen Aufgabe, aber diesmal nur 36 Grad drehend nach dem Zeichnen jedes Dreiecks. Wie oft muss das wiederholt werden? (Hinweis: nach 360 Grad wird die Zeichnung zu einem vollen Kreis)'
         turtle_4_5: 'Hier ist das gleiche Programm aus der vorherigen Aufgabe, aber diesmal werden die Drehungen 36 Mal wiederholt. Wie viel Grad müssten die Drehungen sein? (Hinweis: nach 360 Grad wird die Zeichnung zu einem vollen Kreis)'
@@ -203,7 +203,7 @@ de:
         turtle_3_5: 'Erstelle jetzt eine neue "zeichne ein Haus"-Funktion und verwende sie um zwei Katzen unterzubringen. Hinweis: erstelle eine neue Funktion mit Hilfe des "mach etwas"-Bausteins und gib einen Namen für den Baustein ein.'
         turtle_3_6: 'Füge eine Eingabe, die "Länge" heißen soll, zu "zeichne ein Dreieck" hinzu, wie im Beispiel "zeichne ein Quadrat". Anschließend, zeichne verschieden große Dreiecke. (Hinweis: klicke auf den Stern, um bei einer Funktion eine Eingabe hinzu zufügen)'
         turtle_3_7: 'Füge eine Eingabe, die "Höhe" heißen soll, zu "zeichne ein Haus" hinzu und baue ein Haus, das groß genug für den Elefanten ist (die Kanten sollen 150 Pixel lang sein)'
-        turtle_3_8: 'Modify "draw a house" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses.'
+        turtle_3_8: 'Verändere "Male ein Haus" so, dass ich rechts unten in der Ecke stehe, nachdem ich ein neues Haus gemalt habe. Verwende diese geänderte Funktion um drei neue Häuser zu malen.'
         turtle_3_9: 'Kannst du die "zeichne ein Haus"-Funktion ohne Hilfe wieder erstellen? Versuche es und zeichne anschließend eine ganze Reihe von Häusern.'
         turtle_3_10: Glückwunsch, du hast jetzt schon viel gelernt. Jetzt kannst alles zeichnen was dir einfällt. Versuch doch mal einen Stern, ein Spirale, oder eine hübsche Schneeflocke.
         maze_karel_debug_seq_1: 'Willkommen zur "Fehlerbeseitigung"! Mein Code funktioniert nicht richtig. Kannst du das Problem finden und mein Programm reparieren, damit ich mein Feld flach bekomme und es bepflanzt werden kann?'
@@ -407,6 +407,7 @@ de:
         C3_functional_suncatchers: Funktionale Sonnenfänger
         C3_songwriting_with_parameters: Komponieren mit Parametern
         C4_intro: Einführung
+        C4_loops_zombie: Schleifen
         C4_bee_conditional: Biene Bedingungen
         C4_variables_artist: 'Variablen - Künstler'
         C4_variables_playlab: 'Variablen - Spiele Labor'
@@ -418,7 +419,7 @@ de:
         C4_conditionals: Bedingungen
         C4_unplugged_algorithms: Algorithmen mit Tangrammen
         C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variables in Envelopes
+        C4_unplugged_variables: Variablen in Briefumschlägen
         C4_unplugged_forloops: '"For"-Schleifen'
         C4_unplugged_parameters: Komponieren mit Parametern
         C4_unplugged_binary: Binärdatei
@@ -429,9 +430,9 @@ de:
         playlab_events: Spiele Labor Ereignisse
         playlab_repeat_forever: Spiele Labor für immer wiederholen
         tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: 'Play Lab - Introduction'
-        infinity_playlab_events: 'Play Lab - Events'
-        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        infinity_playlab_intro: 'Play Lab - Einführung'
+        infinity_playlab_events: 'Play Lab - Ereignisse'
+        infinity_playlab_repeat_forever: 'Play Lab - Wiederhole ohne Ende'
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -496,7 +497,7 @@ de:
         frozen_diamond_repeat: Nutze den Wiederholen Block um diese Form zu erstellen.
         frozen_circle_function_in_circle_turn: Vergiss nicht zu drehen, nachdem erstellen eines Kreises.
         frozen_circle_function_with_parameter_circle: 'Nutze den "Kreis erstellen" Block und ändere die Größe.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
+        frozen_snowflake_branch: 'Verwende den Block "Erstelle einen Schneeflocken-Zweig"'
         frozen_create_square: Attach more blocks here to create a square
         playlab_drag_say: 'Drag the "say" block here and type "hello"'
         playlab_use_twice: Use this block twice and remember to change the actor number

@@ -172,7 +172,7 @@
   "missingBlocksErrorMsg": "下にあるブロックを使ってこのパズルを解いてみましょう。",
   "nextLevel": "おめでとうございます ！あなたはパズルを {puzzleNumber} 完了しました。",
   "nextLevelTrophies": "おめでとうございます ！あなたはパズル {puzzleNumber} をクリアし、{numTrophies, plural, one {トロフィー} other {# トロフィー}}を獲得しました。",
-  "nextPuzzle": "Next Puzzle",
+  "nextPuzzle": "次のパズル",
   "nextStage": "おめでとうございます ！{stageName}を クリアしました。",
   "nextStageTrophies": "おめでとうございます！ {stageName} をクリアして {numTrophies, plural, one {a trophy} other {# trophies}} を手に入れました。",
   "numBlocksNeeded": "おめでとうございます ！あなたはパズル {puzzleNumber} をクリアしました。 (ヒント： {numBlocks, plural, one {1ブロック} other {#ブロック}} だけで解くこともできました。)",

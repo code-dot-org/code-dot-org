@@ -66,7 +66,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Kunstner Løkker Matching En
         Match the loop to the shape: Sett løkka slik at den passer til figuren
-        Matching loops: Matchende løkker
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -292,7 +291,7 @@
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start med et kvadrat <br/> Sett et parallellogram over firkanten. <br/> Sett en trekant til høyre for parallellogrammet'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start med et kvadrat<br/>Putt en trekant over firkanten<br/>Putt en trekant under kvadratet'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start med et kvadrat <br/> Sett en trekant under kvadratet <br/> Sett et parallellogram til høyre for trekanten'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Begynn med et kvadrat<br/>Sett inn et triangel til høyre for kvadratet<br/>Sett inn et parallellogram under kvadratet<br/>Sett inn et triangel til høyre for parallellogrammet'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png

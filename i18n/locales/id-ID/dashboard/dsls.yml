@@ -66,7 +66,6 @@ id:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Artis berputaran dengan satu yang cocok
         Match the loop to the shape: cocokan putaran dengan bentuk
-        Matching loops: putaran yang cocok
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -292,7 +291,7 @@ id:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Mulailah dengan sebuah persegi <br/> Letakkan suatu jajar genjang di atas persegi <br/> Letakkan sebuah segitiga sebelah kanan jajaran genjang'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Mulailah dengan sebuah persegi<br/>Letakkan sebuah segitiga di atas persegi<br/>Letakkan sebuah segitiga di bawah persegi'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Mulailah dengan sebuah persegi <br/> Letakkan segitiga bawah persegi <br/> Letakkan genjang sebelah kanan segitiga'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Mulailah dengan sebuah persegi <br/> Tempatkan segitiga pada sisi kanan persegi <br/> tempatkan genjang di bawah persegi <br/> menempatkan segitiga  pada sisi kanan genjang'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
