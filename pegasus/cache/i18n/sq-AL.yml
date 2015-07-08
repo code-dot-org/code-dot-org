@@ -1,7 +1,7 @@
 "sq-AL":
   hello: Pershendetje Botë
   select_language: Ju lutem zgjedheni gjuhën tuaj
-  computer_science: Shkenca Kompjuterike
+  en: Computer Science
   computer_science_edweek: Java Edukuese per Shkencat Kompjuterike
   csedweek_dates: Dhjetor 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -61,6 +61,7 @@
   congratulations: Urime!
   congratulations_on_completing_hoc: Urime për përfundimin e një Orë Kodimi
   get_a_certificate_of_achievement: Merr një çertifikatë të arritjes
+  enter_valid_age: Please select a valid age
   enter_valid_email: Ju lutem shkruani një email adresë të vlefshme
   get_a_certificate_message: Ne do tu dergojme nje certifikate dhe informacione se
     si mund te mesoni <a href='/learn/beyond'>pertej Ores se Kodimit</a>

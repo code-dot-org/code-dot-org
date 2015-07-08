@@ -1,7 +1,7 @@
 "cs-CZ":
   hello: Ahoj světe
   select_language: Prosím, zvolte jazyk
-  computer_science: Informatika
+  en: Computer Science
   computer_science_edweek: Týden vzdělávání Informatiky
   csedweek_dates: 8.–14. prosince 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -59,6 +59,7 @@
   congratulations: Blahopřejeme!
   congratulations_on_completing_hoc: Gratulujeme k dokončení jedné Hodiny kódu
   get_a_certificate_of_achievement: Získej osvědčení o účasti
+  enter_valid_age: Please select a valid age
   enter_valid_email: Prosím zadej platnou emailovou adresu
   get_a_certificate_message: Zašleme ti certifikát a informace o tom, jak se <a href='/learn/beyond'>Učit
     po První Hodině</a>
