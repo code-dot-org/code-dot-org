@@ -213,5 +213,6 @@
   "watchVideo": "Guarda il video",
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
-  "workspaceHeaderShort": "Area di lavoro: "
+  "workspaceHeaderShort": "Area di lavoro: ",
+  "readonlyWorkspaceHeader": "View only: "
 }

@@ -213,5 +213,6 @@
   "watchVideo": "Tonton Video",
   "when": "apabila",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "readonlyWorkspaceHeader": "View only: "
 }

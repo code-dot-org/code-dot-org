@@ -11,9 +11,16 @@ nav: educate_nav
 
 [CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [Writing Team](team)
 
-**Invitation to Comment:** 
+**Digital Tools for Unit 1**
 
-*What are these comments doing in these documents?* The lesson plans below are shared as publicly comment-able Google documents.  Some have already gone through field-testing in classrooms. You will see some comments in the docs about how these teachers used them, choices they made, questions they had, and some responses from Code.org staff.  You will also see some ongoing dialogue about the lessons.  Please feel free to add your own comments!  
+Many of the lessons below make use of original digital tools produced by Code.org.  The student view of the unit can be found here: [https://studio.code.org/s/cspunit1](https://studio.code.org/s/cspunit1).  Each "stage" number corresponds to the lesson number. 
+
+A few important notes:
+
+* The course on Code Studio is in beta,so it is subject to revision as feedback is received and improvements are made.
+*  Computer Science Principles lessons on Code Studio are *not* self-guided, and require specific structure and context provided by the classroom teacher through the lesson plan. 
+*  When exploring the curriculum, or preparing for a lesson, start with the lesson plan, which contains all of the necessary details for how and when to use the online tools.
+
 
 | Lesson Description| Lesson Plan | 
 | ------------------|:-----------:|
