@@ -254,19 +254,17 @@ html, body {
 
 /* Styling that keeps the small footer consistent with other page elements */
 $codeApp-left-margin: 25px;
-$small-footer-horizontal-margin: $codeApp-left-margin;
-$small-footer-padding-top: 10px;
-$small-footer-padding-bottom: 6px;
+$small-footer-horizontal-margin: 15px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer, #copyright-flyout {
-  background-color: $dark_color;
-  color: $header_text;
+  background-color: #ddd; /* Matches blockly flyout */
+  color: $dark_charcoal;
   font-size: 14px;
-  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+  a:link {font-family: $gotham-regular; font-weight: normal; color: $dark_charcoal;}
+  a:visited {font-family: $gotham-regular; font-weight: normal; color: $dark_charcoal;}
+  a:hover {font-family: $gotham-regular; font-weight: normal; color:$dark_charcoal; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-regular; font-weight: normal; color:$dark_charcoal; background-color: transparent;}  /* selected link */
 
   .dim {
     opacity: 0.5;
@@ -275,12 +273,13 @@ $small-footer-padding-bottom: 6px;
 
 .small-footer {
   position: absolute;
+  z-index: 3;
   bottom: 0;
   width: 400px;
   overflow: hidden;
-  padding-left: $small-footer-horizontal-margin;
-  padding-top: $small-footer-padding-top;
-  padding-bottom: $small-footer-padding-bottom;
+  padding-left: $codeApp-left-margin;
+  padding-top: 3px;
+  padding-bottom: 3px;
   margin-top: 5px; /* Used in javascript to position #belowVisualization */
 
   form {
@@ -289,10 +288,10 @@ $small-footer-padding-bottom: 6px;
   }
 
   select {
-    width: auto;
+    width: 80px;
     font-size:11px;
     height: 18px;
-    margin-bottom: 4px
+    margin-bottom: 0;
   }
 
   small {
@@ -305,6 +304,7 @@ $small-footer-padding-bottom: 6px;
 }
 
 #copyright-flyout {
+  display: none; /* Invisible until summoned. */
   position: absolute;
   z-index: 2;
   bottom: 0;
