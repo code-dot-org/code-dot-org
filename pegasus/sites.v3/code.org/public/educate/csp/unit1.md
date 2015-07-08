@@ -9,11 +9,18 @@ nav: educate_nav
 
 **Quick Links**
 
-[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [About using these lesson plans](howToUse) | [About the widgets](aboutTheWidgets) |  [Writing Team](team)
+[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [Writing Team](team)
 
-**Invitation to Comment:** 
+**Digital Tools for Unit 1**
 
-*What are these comments doing in these documents?* The lesson plans below are shared as publicly comment-able Google documents.  Some have already gone through field-testing in classrooms. You will see some comments in the docs about how these teachers used them, choices they made, questions they had, and some responses from Code.org staff.  You will also see some ongoing dialogue about the lessons.  Please feel free to add your own comments!  
+Many of the lessons below make use of original digital tools produced by Code.org.  The student view of the unit can be found here: [https://studio.code.org/s/cspunit1](https://studio.code.org/s/cspunit1).  Each "stage" number corresponds to the lesson number. 
+
+A few important notes:
+
+* The course on Code Studio is in beta,so it is subject to revision as feedback is received and improvements are made.
+*  Computer Science Principles lessons on Code Studio are *not* self-guided, and require specific structure and context provided by the classroom teacher through the lesson plan. 
+*  When exploring the curriculum, or preparing for a lesson, start with the lesson plan, which contains all of the necessary details for how and when to use the online tools.
+
 
 | Lesson Description| Lesson Plan | 
 | ------------------|:-----------:|
@@ -40,4 +47,4 @@ nav: educate_nav
 
 | Unit 1 Assessment | Lesson Plan | Student Project Guide |
 | ------------------|:-----------:| :-----------:|
-| **Practice performance task -  Encode a complex piece of information** Students must consider a complex type of information that has not been considered in class and invent a way to encode it in binary.  Students must present their file encoding protocol and respond to reflection prompts in writing.  |  [![U1 Assessment Lesson Plan](images/thumb_lesson1.png)](https://docs.google.com/a/code.org/document/d/1rkVbwb8nJBlnF9t3hkyIyckM6gJGEjcUwyQiyV-Jlu4) | [![U1 Assessment Student Guide](images/thumb_lesson1.png)](https://docs.google.com/document/d/1IPDnC6tKN7yRzog9t7weKISnjXvykTQe3QEpu43uM7c) |
+| **Practice performance task -  Encode a complex piece of information** Students must consider a complex type of information that has not been considered in class and invent a way to encode it in binary.  Students must present their file encoding protocol and respond to reflection prompts in writing.  |  [![U1 Assessment Lesson Plan](images/thumb_lesson1.png)](https://docs.google.com/a/code.org/document/d/1rkVbwb8nJBlnF9t3hkyIyckM6gJGEjcUwyQiyV-Jlu4) | [![U1 Assessment Student Guide](images/thumb_activityGuide.png)](https://docs.google.com/document/d/1IPDnC6tKN7yRzog9t7weKISnjXvykTQe3QEpu43uM7c) |
