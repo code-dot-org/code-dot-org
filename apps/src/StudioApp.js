@@ -432,6 +432,52 @@ StudioApp.prototype.init = function(config) {
 };
 
 /**
+ * Bind click handler for a "show flyout" link in the footer, which, when
+ * clicked, binds a one-time click handler on body to close the flyout no
+ * matter where the next click occurs.  Takes care of appropriate show/hide
+ * toggle when clicking on the "show" link twice in a row.
+ * @param {EventTarget} showClickTarget - the element which should cause the
+ *        flyout to appear on click.
+ * @param {function} showAction - callback that actually shows the flyout
+ * @param {function} hideAction - callback that actually hides the flyout
+ */
+function bindFooterShowHideHandlers(showClickTarget, showAction, hideAction) {
+  var mouseEventName = 'mouseup';
+  var touchEventName = dom.getTouchEventName(mouseEventName);
+  var isShowing = false;
+
+  dom.addMouseUpTouchEvent(showClickTarget, function (showEvent) {
+    // Don't show/add handlers when already showing
+    if (isShowing) {
+      return;
+    }
+
+    var hideFlyout = function (hideEvent) {
+      // Don't hide / remove handlers on same click that shows flyout
+      if (hideEvent === showEvent) {
+        return;
+      }
+      hideAction();
+      isShowing = false;
+      // In handler, unbind one-time listeners
+      document.body.removeEventListener(mouseEventName, hideFlyout);
+      if (touchEventName) {
+        document.body.removeEventListener(touchEventName, hideFlyout);
+      }
+    };
+
+    // Allows a second click on the "show" link to also result in a "hide"
+    showAction();
+    isShowing = true;
+    // Bind one-time listeners
+    document.body.addEventListener(mouseEventName, hideFlyout);
+    if (touchEventName) {
+      document.body.addEventListener(touchEventName, hideFlyout);
+    }
+  });
+}
+
+/**
  * Handle clicks on links in small footer
  * @private
  */
@@ -443,25 +489,18 @@ StudioApp.prototype.bindSmallFooterHandlers_ = function () {
 
   var copyrightLink = smallFooter.querySelector('.copyright-link');
   var copyrightFlyout = document.getElementById('copyright-flyout');
-  dom.addClickTouchEvent(copyrightLink, function () {
+  bindFooterShowHideHandlers(copyrightLink, function () {
     copyrightFlyout.style.display = 'block';
+  }, function () {
+    copyrightFlyout.style.display = 'none';
+  });
 
-    var touchEventName = dom.getTouchEventName('mouseup');
-    var hideCopyrightFlyout = function () {
-      copyrightFlyout.style.display = 'none';
-
-      // In handler, unbind one-time listeners
-      document.body.removeEventListener('mouseup', hideCopyrightFlyout);
-      if (touchEventName) {
-        document.body.removeEventListener(touchEventName, hideCopyrightFlyout);
-      }
-    };
-
-    // Bind one-time listeners.
-    document.body.addEventListener('mouseup', hideCopyrightFlyout);
-    if (touchEventName) {
-      document.body.addEventListener(touchEventName, hideCopyrightFlyout);
-    }
+  var moreLink = smallFooter.querySelector('.more-link');
+  var moreMenu = document.getElementById('more-menu');
+  bindFooterShowHideHandlers(moreLink, function () {
+    moreMenu.style.display = 'block';
+  }, function () {
+    moreMenu.style.display = 'none';
   });
 };
 
