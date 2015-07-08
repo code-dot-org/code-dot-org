@@ -163,7 +163,7 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
 function shareProject() {
   dashboard.project.save(function () {
     var origin = location.protocol + '//' + location.host;
-    var shareUrl = origin + dashboard.project.appToProjectUrl() + '#' + dashboard.project.getCurrentId();
+    var shareUrl = origin + dashboard.project.appToProjectUrl() + '/' + dashboard.project.getCurrentId();
     var encodedShareUrl = encodeURIComponent(shareUrl);
     var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
     + '<div id="project-share" class="modal-content">'

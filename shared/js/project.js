@@ -16,6 +16,22 @@ var events = {
 };
 
 /**
+ * Helper for when we split our pathname by /. channel_id and action may end up
+ * being undefined.
+ * Example paths:
+ * /p/applab
+ * /p/playlab/1U53pYpR8szDgtrGIG5lIg
+ * /p/artist/VyVO-bQaGQ-Cyb7DbpabNQ/edit
+ */
+var PathPart = {
+  START: 0,
+  P: 1,
+  APP: 2,
+  CHANNEL_ID: 3,
+  ACTION: 4
+};
+
+/**
  * @typedef {Object} ProjectInstance
  * @property {string} id
  * @property {string} name
@@ -61,9 +77,7 @@ module.exports = {
   },
 
   init: function () {
-    // TODO - can we do this reload sooner?
-    if (location.href.indexOf('#') !== -1) {
-      location.href = location.href.replace('#', '/');
+    if (location.href.indexOf('#') !== -1 && redirectToNonHashUrl()) {
       return;
     }
 
@@ -98,7 +112,7 @@ module.exports = {
         window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
         if (!current.hidden) {
-          if (current.isOwner || location.hash === '') {
+          if (current.isOwner || !parsePath().channelId) {
             dashboard.header.showProjectHeader();
           } else {
             // Viewing someone else's project - set share mode
@@ -186,7 +200,17 @@ module.exports = {
 
     current = data;
     if (isNewChannel) {
-      location.href = current.level + '#' + current.id + '/edit';
+      // We have a new channel, meaning either we had no channel before, or
+      // we've changed channels.
+
+      if (location.hash || !window.history.pushState) {
+        // We're using a hash route or don't support replace state. Use our hash
+        // based route to ensure we don't have a page load.
+        location.href = current.level + '#' + current.id + '/edit';
+      } else {
+        window.history.pushState(null, document.title,
+          current.level + '/' + current.id + '/edit');
+      }
     }
     this.updateTimestamp();
   },
@@ -263,21 +287,12 @@ module.exports = {
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
-    var PathPart = {
-      START: 0,
-      P: 1,
-      APP: 2,
-      CHANNEL_ID: 3,
-      ACTION: 4
-    };
-
     var deferred;
     if (appOptions.level.isProjectLevel) {
-      var channelId = location.pathname.split('/')[PathPart.CHANNEL_ID];
-      var action = location.pathname.split('/')[PathPart.ACTION];
+      var pathInfo = parsePath();
 
-      if (channelId) {
-        if (action === 'edit') {
+      if (pathInfo.channelId) {
+        if (pathInfo.action === 'edit') {
           isEditing = true;
         } else {
           $('#betainfo').hide();
@@ -285,11 +300,11 @@ module.exports = {
 
         // Load the project ID, if one exists
         deferred = new $.Deferred();
-        channels.fetch(channelId, function (err, data) {
+        channels.fetch(pathInfo.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname.split('/')
-              .slice(PathPart.START, PathPart.APP + 1).join('/')
+              .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
             current = data;
             deferred.resolve();
@@ -365,4 +380,40 @@ function getEditorSource() {
 
 function getLevelHtml() {
   return window.Applab && Applab.getHtml();
+}
+
+/**
+ * Does a redirect to a non-hash based version of the URL. Does this seamlessly
+ * using replaceState on browsers that support this, and does an actual redirect
+ * on those that don't (IE 9).
+ * @returns {boolean} True if we did an actual redirect
+ */
+function redirectToNonHashUrl() {
+  var newUrl = location.href.replace('#', '/');
+
+  if (window.history.replaceState) {
+    window.history.replaceState(null, document.title, newUrl);
+    return false;
+  } else {
+    // do an actual redirect
+    location.href = newUrl;
+    return true;
+  }
+}
+
+/**
+ * Extracts the channelId/action from the pathname, accounting for the fact
+ * that we may have hash based route or not
+ */
+function parsePath() {
+  var pathname = location.pathname;
+  // We have a hash based route. Replace the hash with a slash, and append to
+  // our existing path
+  if (location.hash) {
+    pathname += location.hash.replace('#', '/');
+  }
+  return {
+    channelId: pathname.split('/')[PathPart.CHANNEL_ID],
+    action: pathname.split('/')[PathPart.ACTION]
+  };
 }
