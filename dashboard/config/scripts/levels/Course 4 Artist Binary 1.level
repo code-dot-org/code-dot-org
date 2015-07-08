@@ -19,7 +19,15 @@
     "impressive": "false",
     "instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to turn on the go from left to right, top to bottom, filling in the squares when it sees a 1 and ignoring it when it sees a 0. Run this code to see how the artist uses binary to draw this pattern.",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to turn on the go from left to right, top to bottom. The artist will fill in the squares when it sees a 1, and do nothing when it sees a 0. \r\n\r\n<br/>\r\nRun this code to see how the artist uses binary to draw this pattern.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
