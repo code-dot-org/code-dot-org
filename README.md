@@ -1,17 +1,6 @@
 # Build setup
 
-#### Windows note: use an Ubuntu VM
-
-Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
-
-* Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-desktop-amd64.iso)
-* Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
-  1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
-  1. `cd code-dot-org`
-  1. `vagrant up`
-  1. `vagrant ssh`
-  1. Goto step 2 of the common setup instructions
-* Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
+Below is a guide to setting up your workstation to develop for Code.org.  You can do Code.org development OSX, Unbuntu, or Windows (running Ubuntu in a VM.)  Unless you are strongly committed to Windows, choosing one of the other two platforms is probably a better idea because setup is more complicated and few developers use Windows.
 
 ## Install OS-specific prerequisites
 
@@ -19,14 +8,15 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Run <code>sudo chown -R \`whoami\`:admin /usr/local/</code>. (Brew assumes it can write to subdirectories of /usr/local/, which recent versions of OSX apparently do not allow. It is strongly discourage to run brew as root.)
-1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build coreutils`
+1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick node rbenv ruby-build coreutils`
   1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
-1. Set up [RBENV](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x) and Ruby 2.0
+1. Set up [RBENV](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x), ruby-build, and Ruby 2.0
   1. Add `if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi` to `~/.profile`
   1. source `~/.profile`
+  1. `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
   1. `rbenv install 2.0.0-p451`
   1. `rbenv global 2.0.0-p451`
   1. `rbenv rehash`
@@ -57,6 +47,19 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
     1. `sudo aptitude install -y nodejs`
   1. Option B - Manual install
     1. [Nodejs.org](https://nodejs.org/download/)
+
+### Windows (using an Ubuntu VM)
+
+Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
+
+* Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-desktop-amd64.iso)
+* Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
+  1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
+  1. `cd code-dot-org`
+  1. `vagrant up`
+  1. `vagrant ssh`
+  1. Goto step 2 of the common setup instructions
+* Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Common setup
 
