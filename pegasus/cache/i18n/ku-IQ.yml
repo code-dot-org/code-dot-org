@@ -1,7 +1,7 @@
 "ku-TR":
   hello: چۆنی جیهان
   select_language: تکایە زمانەکەت هەڵبژێرە
-  computer_science: زانستی کۆمپیوتەر
+  en: Computer Science
   computer_science_edweek: هەفتەی فێربوونی زانستی کۆمپیوتەر
   csedweek_dates: لە ٨ تا ١٤ ی مانگی ١٢ ساڵی ٢٠١٢
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -65,6 +65,7 @@
   congratulations: پیرۆزە!
   congratulations_on_completing_hoc: پیرۆزە بۆ تەواوکردنی كاژێری كۆدنووسی
   get_a_certificate_of_achievement: بڕوانامەی سەرکەوتنەکەت وەرگرەد
+  enter_valid_age: Please select a valid age
   enter_valid_email: تكايە ئيمێلێكى دروست دا بنێ
   get_a_certificate_message: ئێمە بڕوانامەو زانیاریت بۆ دەنێرین تا بتوانی <a href='/learn/beyond'>
     زیاتر لە کاژێرێك فێرببی</a>

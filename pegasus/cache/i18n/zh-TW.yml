@@ -1,7 +1,7 @@
 "zh-TW":
   hello: 世界您好
   select_language: 請選擇您的語言
-  computer_science: 電腦科學
+  en: Computer Science
   computer_science_edweek: 電腦科學教育周
   csedweek_dates: 2014 年 12 月 8-14 日
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -53,6 +53,7 @@
   congratulations: 恭喜你！
   congratulations_on_completing_hoc: 恭喜你，你已完成 1 個小時的程式設計課程。
   get_a_certificate_of_achievement: 獲取成就證書
+  enter_valid_age: Please select a valid age
   enter_valid_email: 請輸入一個有效的電子郵件信箱
   get_a_certificate_message: 我們將會寄送給您有關<a href='/learn/beyond'>一小時後的學習</a>的證書和相關訊息。
   get_a_certificate_message_after: 點擊證書以便下載或打印。現在繼續<a href='http://studio.code.org'>其它的課程</a>，或點擊“<a
