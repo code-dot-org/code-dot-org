@@ -411,6 +411,42 @@ StudioApp.prototype.init = function(config) {
       }).bind(this));
     }).bind(this));
   }
+
+  this.bindSmallFooterHandlers_();
+};
+
+/**
+ * Handle clicks on links in small footer
+ * @private
+ */
+StudioApp.prototype.bindSmallFooterHandlers_ = function () {
+  var smallFooter = document.querySelector('.small-footer');
+  if (!smallFooter) {
+    return;
+  }
+
+  var copyrightLink = smallFooter.querySelector('.copyright-link');
+  var copyrightFlyout = document.getElementById('copyright-flyout');
+  dom.addClickTouchEvent(copyrightLink, function () {
+    copyrightFlyout.style.display = 'block';
+
+    var touchEventName = dom.getTouchEventName('mousedown');
+    var hideCopyrightFlyout = function () {
+      copyrightFlyout.style.display = 'none';
+
+      // In handler, unbind one-time listeners
+      document.body.removeEventListener('mousedown', hideCopyrightFlyout);
+      if (touchEventName) {
+        document.body.removeEventListener(touchEventName, hideCopyrightFlyout);
+      }
+    };
+
+    // Bind one-time listeners.
+    document.body.addEventListener('mousedown', hideCopyrightFlyout);
+    if (touchEventName) {
+      document.body.addEventListener(touchEventName, hideCopyrightFlyout);
+    }
+  });
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -888,7 +924,7 @@ StudioApp.prototype.repositionCopyrightFlyout = function () {
   }
 
   copyrightFlyout.style.left = '0';
-  copyrightFlyout.style.bottom = smallFooter.offsetHeight + 'px';
+  copyrightFlyout.style.paddingBottom = smallFooter.offsetHeight + 'px';
 };
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {

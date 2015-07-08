@@ -3,11 +3,14 @@
     = hidden_field_tag :return_to, request.url
     = select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();'
   %small.dim
-    = link_to 'Copyright', '#' # TODO: Localize
-    &nbsp; &nbsp; | &nbsp; &nbsp;
-    = link_to 'More', '#' # TODO: Localize
+    -# TODO: Localize
+    = link_to 'Copyright', '#', class: 'copyright-link'
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    -# TODO: Localize
+    = link_to 'More', '#', class: 'more-link'
 
 #copyright-flyout
+  -# TODO: Localize all of this?
   %p
     We thank our <a href="https://code.org/about/donors">donors</a>,
     <a href="https://code.org/about/partners">partners</a>,
@@ -21,12 +24,11 @@
     <a href="https://github.com/code-dot-org/code-dot-org/graphs/contributors">many others</a>
     who helped create these materials.
   %p
-    Disney &copy; The Walt Disney Company. All Rights Reserved.
-    <br />Ice Age &copy; 20th Century Fox. All Rights Reserved.
-    <br />AngryBirds&#8482; &copy; 2009-2014 Rovio Entertainment Ltd. All Rights Reserved.
-    <br />Plants vs. Zombies &copy; 2014 Electronic Arts Inc. All Rights Reserved
+    Ice Age&#8482; &amp; &copy; #{Time.now.year} 20th Century Fox. All Rights Reserved.
+    <br />AngryBirds&#8482; &amp; &copy; 2009-#{Time.now.year} Rovio Entertainment Ltd. All Rights Reserved.
+    <br />Plants vs. Zombies&#8482; &amp; &copy; #{Time.now.year} Electronic Arts Inc. All Rights Reserved
   %p
     Powered by Amazon Web Services
   %p
-    &copy; Code.org, 2015. Code.org&reg;, the CODE logo and Hour of Code&reg;
+    &copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg;
     are trademarks of Code.org.
