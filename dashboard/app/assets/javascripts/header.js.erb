@@ -253,9 +253,7 @@ function shareProject() {
 
 function remixProject() {
   var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-  dashboard.project.copy(newName, function () {
-    $('.project_name').text(dashboard.project.getCurrentName());
-  });
+  dashboard.project.copy(newName);
 }
 
 // Namespace for manipulating the header DOM.
