@@ -1233,7 +1233,7 @@ StudioApp.prototype.configureDom = function (config) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
-      Blockly.addClass_(codeWorkspace, 'edit');
+      $(codeWorkspace).addClass('edit');
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
@@ -1258,6 +1258,10 @@ StudioApp.prototype.configureDom = function (config) {
       visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
     }
+  }
+
+  if (config.readonlyWorkspace) {
+    $(codeWorkspace).addClass('readonly');
   }
 
   if (config.embed && config.hideSource) {
