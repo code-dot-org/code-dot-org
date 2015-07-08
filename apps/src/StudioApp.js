@@ -833,8 +833,11 @@ StudioApp.prototype.onResize = function() {
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
 
+  // TODO (bbuchanan): At least debounce these operations, since we don't
+  // TODO            : seem to debounce our onResize call.
   // Content below visualization is a resizing scroll area in pinned mode
   this.resizePinnedBelowVisualizationArea();
+  this.repositionCopyrightFlyout();
 };
 
 /**
@@ -844,32 +847,48 @@ StudioApp.prototype.onResize = function() {
 StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
   var pinnedBelowVisualization = document.querySelector(
       '#visualizationColumn.pin_bottom #belowVisualization');
-  if (pinnedBelowVisualization) {
-    var visualization = document.getElementById('visualization');
-    var gameButtons = document.getElementById('gameButtons');
-    var smallFooter = document.querySelector('.small-footer');
-
-    var top = 0;
-    if (visualization) {
-      top += $(visualization).outerHeight(true);
-    }
-
-    if (gameButtons) {
-      top += $(gameButtons).outerHeight(true);
-    }
-
-    var bottom = 0;
-    if (smallFooter) {
-      var codeApp = $('#codeApp');
-      bottom += $(smallFooter).outerHeight(true);
-      // Footer is relative to the document, not codeApp, so we need to
-      // remove the codeApp bottom offset to get the correct margin.
-      bottom -= parseInt(codeApp.css('bottom'), 10);
-    }
-
-    pinnedBelowVisualization.style.top = top + 'px';
-    pinnedBelowVisualization.style.bottom = bottom + 'px';
+  if (!pinnedBelowVisualization) {
+    return;
   }
+
+  var visualization = document.getElementById('visualization');
+  var gameButtons = document.getElementById('gameButtons');
+  var smallFooter = document.querySelector('.small-footer');
+
+  var top = 0;
+  if (visualization) {
+    top += $(visualization).outerHeight(true);
+  }
+
+  if (gameButtons) {
+    top += $(gameButtons).outerHeight(true);
+  }
+
+  var bottom = 0;
+  if (smallFooter) {
+    var codeApp = $('#codeApp');
+    bottom += $(smallFooter).outerHeight(true);
+    // Footer is relative to the document, not codeApp, so we need to
+    // remove the codeApp bottom offset to get the correct margin.
+    bottom -= parseInt(codeApp.css('bottom'), 10);
+  }
+
+  pinnedBelowVisualization.style.top = top + 'px';
+  pinnedBelowVisualization.style.bottom = bottom + 'px';
+};
+
+/**
+ * Sets the copyright flyout to sit exactly above the footer.
+ */
+StudioApp.prototype.repositionCopyrightFlyout = function () {
+  var copyrightFlyout = document.querySelector('#copyright-flyout');
+  var smallFooter = document.querySelector('.small-footer');
+  if (!(copyrightFlyout && smallFooter)) {
+    return;
+  }
+
+  copyrightFlyout.style.left = '0';
+  copyrightFlyout.style.bottom = smallFooter.offsetHeight + 'px';
 };
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
