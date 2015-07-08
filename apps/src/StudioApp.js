@@ -866,6 +866,7 @@ StudioApp.prototype.onResize = function() {
   // Content below visualization is a resizing scroll area in pinned mode
   this.resizePinnedBelowVisualizationArea();
   this.repositionCopyrightFlyout();
+  this.repositionMoreMenu();
 };
 
 /**
@@ -919,6 +920,21 @@ StudioApp.prototype.repositionCopyrightFlyout = function () {
   copyrightFlyout.style.paddingBottom = smallFooter.offsetHeight + 'px';
 };
 
+/**
+ * Sets the more-menu size and position to sit above the footer and
+ * match its full width.
+ */
+StudioApp.prototype.repositionMoreMenu = function () {
+  var smallFooter = document.querySelector('.small-footer');
+  var moreMenu = document.querySelector('#more-menu');
+  if (!(smallFooter && moreMenu)) {
+    return;
+  }
+
+  moreMenu.style.bottom = smallFooter.offsetHeight + 'px';
+  moreMenu.style.width = smallFooter.offsetWidth + 'px';
+};
+
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
 
@@ -954,7 +970,6 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   var visualization = document.getElementById('visualization');
   var visualizationColumn = document.getElementById('visualizationColumn');
   var visualizationEditor = document.getElementById('visualizationEditor');
-  var smallFooter = document.querySelector('.small-footer');
 
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
@@ -992,6 +1007,8 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
+
+  var smallFooter = document.querySelector('.small-footer');
   if (smallFooter) {
     smallFooter.style.maxWidth = newVizWidthString;
 
@@ -1005,6 +1022,7 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
       smallPrint.style.float = 'left';
     }
   }
+
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
 };

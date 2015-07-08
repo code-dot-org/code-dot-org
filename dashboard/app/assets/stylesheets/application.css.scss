@@ -254,9 +254,10 @@ html, body {
 /* Styling that keeps the small footer consistent with other page elements */
 $codeApp-left-margin: 25px;
 $small-footer-horizontal-margin: 15px;
+$small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
-.small-footer, #copyright-flyout {
+.small-footer, #copyright-flyout, #more-menu {
   background-color: #ddd; /* Matches blockly flyout */
   color: $dark_charcoal;
   font-size: 14px;
@@ -274,7 +275,7 @@ $small-footer-horizontal-margin: 15px;
   position: absolute;
   z-index: 3;
   bottom: 0;
-  width: 400px;
+  width: $small-footer-standard-width;
   overflow: hidden;
   padding-left: $codeApp-left-margin;
   padding-top: 3px;
@@ -312,6 +313,22 @@ $small-footer-horizontal-margin: 15px;
   max-width: 50%;
   min-width: 300px;
   padding: 1em;
+}
+
+#more-menu {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  /* Prevent default unordered-list style */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-left: $codeApp-left-margin;
+    padding-right: $small-footer-horizontal-margin;
+  }
 }
 
 #locale {
