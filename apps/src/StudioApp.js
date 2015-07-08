@@ -832,6 +832,44 @@ StudioApp.prototype.onResize = function() {
 
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
+
+  // Content below visualization is a resizing scroll area in pinned mode
+  this.resizePinnedBelowVisualizationArea();
+};
+
+/**
+ * Resizes the content area below the visualization in pinned (viewport height)
+ * view mode.
+ */
+StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
+  var pinnedBelowVisualization = document.querySelector(
+      '#visualizationColumn.pin_bottom #belowVisualization');
+  if (pinnedBelowVisualization) {
+    var visualization = document.getElementById('visualization');
+    var gameButtons = document.getElementById('gameButtons');
+    var smallFooter = document.querySelector('.small-footer');
+
+    var top = 0;
+    if (visualization) {
+      top += $(visualization).outerHeight(true);
+    }
+
+    if (gameButtons) {
+      top += $(gameButtons).outerHeight(true);
+    }
+
+    var bottom = 0;
+    if (smallFooter) {
+      var codeApp = $('#codeApp');
+      bottom += $(smallFooter).outerHeight(true);
+      // Footer is relative to the document, not codeApp, so we need to
+      // remove the codeApp bottom offset to get the correct margin.
+      bottom -= parseInt(codeApp.css('bottom'), 10);
+    }
+
+    pinnedBelowVisualization.style.top = top + 'px';
+    pinnedBelowVisualization.style.bottom = bottom + 'px';
+  }
 };
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {

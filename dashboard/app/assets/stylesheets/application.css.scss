@@ -266,6 +266,7 @@ $small-footer-padding-bottom: 6px;
   padding-left: $small-footer-horizontal-margin;
   padding-top: $small-footer-padding-top;
   padding-bottom: $small-footer-padding-bottom;
+  margin-top: 5px; /* Used in javascript to position #belowVisualization */
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
