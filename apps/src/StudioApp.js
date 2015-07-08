@@ -430,19 +430,19 @@ StudioApp.prototype.bindSmallFooterHandlers_ = function () {
   dom.addClickTouchEvent(copyrightLink, function () {
     copyrightFlyout.style.display = 'block';
 
-    var touchEventName = dom.getTouchEventName('mousedown');
+    var touchEventName = dom.getTouchEventName('mouseup');
     var hideCopyrightFlyout = function () {
       copyrightFlyout.style.display = 'none';
 
       // In handler, unbind one-time listeners
-      document.body.removeEventListener('mousedown', hideCopyrightFlyout);
+      document.body.removeEventListener('mouseup', hideCopyrightFlyout);
       if (touchEventName) {
         document.body.removeEventListener(touchEventName, hideCopyrightFlyout);
       }
     };
 
     // Bind one-time listeners.
-    document.body.addEventListener('mousedown', hideCopyrightFlyout);
+    document.body.addEventListener('mouseup', hideCopyrightFlyout);
     if (touchEventName) {
       document.body.addEventListener(touchEventName, hideCopyrightFlyout);
     }
