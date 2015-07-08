@@ -66,7 +66,6 @@ ro:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'Potrivire  Bucle Artist Unu'
         Match the loop to the shape: Potrivește bucla cu forma
-        Matching loops: Potrivire bucle
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -310,7 +309,7 @@ ro:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Începe cu un pătrat<br/>Pune un paralelogram deasupra pătratului<br/>Pune un triunghi în dreapta paralelogramului'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Începe cu un pătrat<br/>Pune un triunghi deasupra pătratului<br/>Pune un triunghi sub pătrat'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Începe cu un pătrat<br/>Pune un triunghi sub pătrat<br/>Pune un paralelogram în dreapta triunghiului'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Începe cu un pătrat<br/>Pune un triunghi în dreapta pătratului<br/>Pune un paralelogram sub pătrat<br/>Pune un triunghi la dreapta paralelogramului'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png

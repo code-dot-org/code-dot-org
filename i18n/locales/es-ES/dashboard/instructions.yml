@@ -211,8 +211,8 @@ es:
         Utiliza ciclos while para recolectar todo el néctar
         de las flores en este campo.
       2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+        Evaluación: Usa el bloque de repetición para recoger
+        todo el néctar.
       2-3 Bee Loops 1A_instruction: |
         Hola, soy una abeja. ¿Puedes ayudarme a recolectar 
         el néctar de estas flores? 
@@ -1055,6 +1055,7 @@ es:
       Course 4 Artist Functions 7_instruction: ¿Puedes dibujar una línea de cuadrados usando la función de cuadrado? Cada cuadrado es 40 píxeles de longutud.
       Course 4 Artist Functions 8_instruction: '¿Le estás agarrando el tiro de como usar la función de los bloques? Modifiquemos este cuadrado de medida 200 píxeles. Sugerencia: haz click en "edit" para cambiar el tamaño del "draw a square" en la función editor. Recuerda hacer click en "guardar y cerrar" para salir de la función editor.'
       Course 4 Artist Functions 9_instruction: Te hemos dado la mayor parte del código para crear una función. Sin embargo parece que falta algo. ¿Puedes completar esta función de bloques?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Editemos una función que dibuje un cuadrado de 50 píxeles cada lado
       Course 4 Artist Params 10_instruction: '¡Puedes llamar una función dentro de otra función! Utilizando tu función "shape" como base, crea 3 formas de casa cada una de 20 píxeles mas larga que la anterior, empezando con 50 píxeles de longitud. Usar un circuito de contar puede ser útil.'
       Course 4 Artist Params 11_instruction: |
@@ -1097,6 +1098,7 @@ es:
       Course 4 Artist Vars 7_instruction: '¿Puedes modificar la variable "caras" para ayudarme a dibujar este hexágono?'
       Course 4 Artist Vars 8_instruction: 'Juego libre: Experimento con el número de lados de esta forma. ¿Puedes cambiar el algoritmo de modo que el tamaño total de la forma sigue siendo el mismo, no importa cuántos lados tengá? Consejo: Tendrás que usar tus bloques de matemáticas (360 dividido por "caras" en dos lugares esta vez) '
       Course 4 Artist Vars 9_instruction: 'Modificar este algoritmo para utilizar la variable "caras" en lugar de un número fijo para dibujar un triángulo. Reemplazar el número 3 con la variable "caras" y utilizar el bloque de "establecer lados".'
+      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'La abeja no puede decir si se trata de una flor o un panal de miel. Compruebe primero si se trata de una flor o un panal de abejas y entonces sólo recogen néctar de si es una flor. '
       Course 4 Bee 2_instruction: 'Revisa cada objeto para ver si es una flor. Si lo es, colecta el néctar...  De lo contrario, ¡puedes ignorarlo!'
       Course 4 Bee 3_instruction: 'El objeto desconocido es una flor o un panal de miel. Usa el bloque if/else para recoger el néctar, "if" si es una flor, "else" hacer miel (porque entonces sería un panal de abejas).'
@@ -1184,6 +1186,9 @@ es:
       Course 4 Play Labs For Loops 8_instruction: |
         ¿Que enlace me haria dialogar
         19,27,35,43,51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -1292,7 +1297,7 @@ es:
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
@@ -1434,12 +1439,8 @@ es:
       frozen square loop 3x_instruction: Ahora crearemos tres cuadrados, girando al terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un nuevo cuadrado.
       frozen square loop_instruction: '¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado con el bloque de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas veces (???) se deberían repetir los bloques que están dentro del bloque "Repetir" para formar un cuadrado?'
       frozen square snowflake_instruction: '¿Puedes dibujar un copo de nieve utilizando el bloque "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 36 grados entre cada cuadrado?'
-      hoc2015_intro_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_sandbox_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
+      hoc2015_intro_instruction: 'Hiro es "actor 1".  Utiliza el bloque Mover para mover a Hiro hacia la derecha hasta tocar a Baymax.'
+      hoc2015_sandbox_instruction: 'Hiro es "actor 1".  Utiliza el bloque Mover para mover a Hiro hacia la derecha hasta tocar a Baymax.'
       Infinity_catch_instruction: '¿Puedes hacer que Elsa ("actor2") alcance a Anna utilizando las teclas de flecha?'
       Infinity_finale_instruction: ¡Crea cualquier osa que desees compartir!
       Infinity_move_collide_instruction: 'Hiro es el "actor 1".  Muevelo cerca de Baymax y reproduce un sonido cuando se toquen.'
@@ -1457,7 +1458,7 @@ es:
         ¡Dibuja una linea corta hacia arriba y una larga
         a la derecha!
       K-1 artist 1 level 10_instruction: Dibuja una linea punteada utilizando los bloques de dibujar y saltar
-      K-1 artist 1 level 9_instruction: Draw this using three lines
+      K-1 artist 1 level 9_instruction: Dibuja esto utilizando tres líenas
       K-1 Artist Loops 1_instruction: Dibuja esa linea moviendote al este 4 veces
       K-1 Artist Loops 2_instruction: ¿Podrías dibujar la misma linea usando un enlace?
       K-1 Artist Loops 3_instruction: ¿Podrías enlazar estos bloques para dibujar 6 lineas?
@@ -1967,6 +1968,7 @@ es:
       Standalone_Artist_8_instruction: 'Aquí hay una función llamada "Dibuja una figura" que hemos programado para dibujar hexágonos. Ejecuta el código para ver lo que hace y luego experimenta con la función para ver qué pasa. ¿Puedes hacer que dibuje un patrón de cuadrados, triángulos u octágonos?'
       Standalone_Artist_9_instruction: ¡Ahora sigue adelante y haz la imagen que tu quieras! ¡Tu puedes incluso obtener una función vacía con la que puedes hacer lo que quieras!
       Standalone_Artist_v2_instruction: ¡ Bienvenido a Artista! En primer lugar, vamos a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover hacia adelante. Cada lado debe tener 100 píxeles de largo.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: Este poema se ha comprimido mediante la sustitución de dos frases comunes con símbolos en el diccionario. ¿Puedes identificar otro patrón común para comprimir aún más el poema?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
@@ -2300,17 +2302,10 @@ es:
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
-      U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
+      U3L2_Turtle3by3Grid_instruction: foo
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

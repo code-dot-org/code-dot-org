@@ -1,7 +1,7 @@
 el-GR:
   hello: Γεια σου κόσμε
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
-  computer_science: Επιστήμη Υπολογιστών
+  en: Computer Science
   computer_science_edweek: Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών
   csedweek_dates: 8-14 Δεκεμβρίου 2014
   csedweek_banner_hoc: 'H  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ώρα του Κώδικα</a> πλησιάζει!. Καλούμε όλους τους εκπαιδευτικούς και διοργανωτές να σχεδιάσουν τη δική τους, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">  Ώρα του Κώδικα</a>'
@@ -45,6 +45,7 @@ el-GR:
   congratulations: Συγχαρητήρια!
   congratulations_on_completing_hoc: 'Συγχαρητήρια για τη συμπλήρωση του "Μια ώρα κώδικα"'
   get_a_certificate_of_achievement: Πάρε πιστοποιητικό για το επίτευγμα
+  enter_valid_age: Please select a valid age
   enter_valid_email: Παρακαλώ δώσε μια έγκυρη διεύθυνση email
   get_a_certificate_message: "Θα σας στείλουμε ένα πιστοποιητικό και πληροφορίες σχετικά με το πώς να <a href='/learn/beyond'> Συνεχίστε να μαθαίνετε μετά τη Μία Ώρα</a>"
   get_a_certificate_message_after: "Κάντε κλικ στο πιστοποιητικό να κατεβάσετε ή να το τυπώσετε. Τώρα, συνεχίστε με <a href='http://studio.code.org'> άλλα μαθήματα</a>, ή να δείτε περισσότερες επιλογές για να <a href='/learn/beyond'>Μάθετε μετά την πρώτη Ώρα</a>."
@@ -339,7 +340,7 @@ el-GR:
   dashboard_students_share_section: 'Μοιραστείτε την σελίδα σύνδεσης αυτής της ενότητας με τους μαθητές σας:'
   dashboard_students_print_info: Εκτυπώσετε τις κάρτες με τα στοιχεία σύνδεσης των μαθητών σας.
   dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: Μυστική εικόνα
+  dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: 'Μπορείτε να τον επαναφέρετε τη μυστική εικόνα ενός μαθητή ανά πάσα στιγμή επιλέγοντας <b>Εμφάνιση μυστικού</b> και, στη συνέχεια, <b>Επαναφορά μυστικού</b>. Θα δημιουργηθεί μια νέα μυστική εικόνα γι αυτόν τον μαθητή για να την χρησιμοποιήσει στη σύνδεσή του.'
   dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Μυστική λέξη

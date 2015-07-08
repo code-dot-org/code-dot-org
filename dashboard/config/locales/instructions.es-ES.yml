@@ -295,8 +295,8 @@
         Utiliza ciclos while para recolectar todo el néctar
         de las flores en este campo.
       2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+        Evaluación: Usa el bloque de repetición para recoger
+        todo el néctar.
       2-3 Bee Loops 1A_instruction: "Hola, soy una abeja. ¿Puedes ayudarme a recolectar
         \nel néctar de estas flores? \n"
       2-3 Bee Loops 2_instruction: "Usa un ciclo para recolectar el néctar y hacer
@@ -1370,6 +1370,10 @@
       Course 4 Artist Functions 9_instruction: Te hemos dado la mayor parte del código
         para crear una función. Sin embargo parece que falta algo. ¿Puedes completar
         esta función de bloques?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this!  If this picture\ninspires you,
+        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
+        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Editemos una función que dibuje un cuadrado
         de 50 píxeles cada lado
       Course 4 Artist Params 10_instruction: ¡Puedes llamar una función dentro de
@@ -1473,6 +1477,7 @@
       Course 4 Artist Vars 9_instruction: Modificar este algoritmo para utilizar la
         variable "caras" en lugar de un número fijo para dibujar un triángulo. Reemplazar
         el número 3 con la variable "caras" y utilizar el bloque de "establecer lados".
+      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'La abeja no puede decir si se trata de una flor
         o un panal de miel. Compruebe primero si se trata de una flor o un panal de
         abejas y entonces sólo recogen néctar de si es una flor. '
@@ -1699,6 +1704,9 @@
       Course 4 Play Labs For Loops 8_instruction: |
         ¿Que enlace me haria dialogar
         19,27,35,43,51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig"
@@ -1822,7 +1830,7 @@
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
@@ -1994,12 +2002,10 @@
       frozen square snowflake_instruction: ¿Puedes dibujar un copo de nieve utilizando
         el bloque "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar"
         para girar 36 grados entre cada cuadrado?
-      hoc2015_intro_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_sandbox_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
+      hoc2015_intro_instruction: Hiro es "actor 1".  Utiliza el bloque Mover para
+        mover a Hiro hacia la derecha hasta tocar a Baymax.
+      hoc2015_sandbox_instruction: Hiro es "actor 1".  Utiliza el bloque Mover para
+        mover a Hiro hacia la derecha hasta tocar a Baymax.
       Infinity_catch_instruction: ¿Puedes hacer que Elsa ("actor2") alcance a Anna
         utilizando las teclas de flecha?
       Infinity_finale_instruction: ¡Crea cualquier osa que desees compartir!
@@ -2030,7 +2036,7 @@
         a la derecha!
       K-1 artist 1 level 10_instruction: Dibuja una linea punteada utilizando los
         bloques de dibujar y saltar
-      K-1 artist 1 level 9_instruction: Draw this using three lines
+      K-1 artist 1 level 9_instruction: Dibuja esto utilizando tres líenas
       K-1 Artist Loops 1_instruction: Dibuja esa linea moviendote al este 4 veces
       K-1 Artist Loops 2_instruction: ¿Podrías dibujar la misma linea usando un enlace?
       K-1 Artist Loops 3_instruction: ¿Podrías enlazar estos bloques para dibujar
@@ -2700,6 +2706,7 @@
       Standalone_Artist_v2_instruction: ¡ Bienvenido a Artista! En primer lugar, vamos
         a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque
         mover hacia adelante. Cada lado debe tener 100 píxeles de largo.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: Este poema se ha comprimido mediante
         la sustitución de dos frases comunes con símbolos en el diccionario. ¿Puedes
         identificar otro patrón común para comprimir aún más el poema?
@@ -3092,9 +3099,8 @@
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid above and to the right of
         the turtle. Try to do so with the fewest number of commands possible. NOTE:
@@ -3102,7 +3108,6 @@
         and tweak it.  You might also consider using pencil and paper to sketch your
         ideas.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

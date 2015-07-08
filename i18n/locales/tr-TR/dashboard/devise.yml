@@ -57,13 +57,13 @@ tr:
         other: '%{count} hata %{resource} kaynağının kaydedilmesini engelledi:'
     invitations:
       send_instructions: '%{email} adresine davetiye e-postası gönderildi.'
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      invitation_token_invalid: Sağlanan davet belirteci geçerli değil!
+      updated: Parolanız başarıyla değiştirildi. Şimdi giriş yaptınız.
+      no_invitations_remaining: Davet kalmadı
+      invitation_removed: Davetin kaldırıldı.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Davet gönder
+        submit_button: Davetiye gönder
       edit:
         header: şifreni belirle
         submit_button: şifremi belirli
