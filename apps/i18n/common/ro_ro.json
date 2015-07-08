@@ -213,5 +213,6 @@
   "watchVideo": "Urmărește clipul video",
   "when": "când",
   "whenRun": "când rulezi",
-  "workspaceHeaderShort": "Spaţiu de lucru: "
+  "workspaceHeaderShort": "Spaţiu de lucru: ",
+  "readonlyWorkspaceHeader": "View only: "
 }

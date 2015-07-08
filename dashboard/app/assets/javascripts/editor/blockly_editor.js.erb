@@ -7,10 +7,9 @@
 //= require codemirror/modes/xml
 //= require codemirror/modes/javascript
 //= require codemirror.inline-attach
+//= require marked
 //= require_self
 //= require jquery.handsontable.full
-
-$('head').append($('<script src="/blockly/js/marked/marked.js" type="text/javascript"/>'));
 
 function codeMirror(name, mode, callback, attachments) {
   // Code mirror parses html using xml mode
