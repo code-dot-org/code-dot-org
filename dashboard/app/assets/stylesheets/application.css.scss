@@ -325,9 +325,16 @@ $small-footer-standard-width: 400px;
   margin: 0;
   padding: 0;
 
-  li {
-    padding-left: $codeApp-left-margin;
-    padding-right: $small-footer-horizontal-margin;
+  & > li > a {
+    display: block;
+    padding: 3px $small-footer-horizontal-margin 3px $codeApp-left-margin;
+    border-bottom: solid thin $lightest_gray;
+
+    &:hover {
+      background-color: $dark_charcoal;
+      color: $lightest_gray;
+      text-decoration: none;
+    }
   }
 }
 
