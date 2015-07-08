@@ -496,11 +496,14 @@ StudioApp.prototype.bindSmallFooterHandlers_ = function () {
   });
 
   var moreLink = smallFooter.querySelector('.more-link');
+  var faGlyph = moreLink.querySelector('.fa');
   var moreMenu = document.getElementById('more-menu');
   bindFooterShowHideHandlers(moreLink, function () {
     moreMenu.style.display = 'block';
+    faGlyph.className = faGlyph.className.replace('fa-caret-up', 'fa-caret-down');
   }, function () {
     moreMenu.style.display = 'none';
+    faGlyph.className = faGlyph.className.replace('fa-caret-down', 'fa-caret-up');
   });
 };
 
