@@ -213,5 +213,6 @@
   "watchVideo": "Bekijk de video",
   "when": "wanneer",
   "whenRun": "als gestart",
-  "workspaceHeaderShort": "Werkplaats: "
+  "workspaceHeaderShort": "Werkplaats: ",
+  "readonlyWorkspaceHeader": "View only: "
 }

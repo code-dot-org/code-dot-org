@@ -370,7 +370,7 @@ pt-BR:
         image: notes/playlab_events_2.png
         text: 'Alguns exemplos de eventos são: ouvir o clique de mouse, pressionar uma tecla de direção ou tocar a tela.'
       3:
-        image: notes/playlab_events_3.png
+        image: notes/playlab_events_2.png
         text: 'Agora, vamos fazer o robô espacial cumprimentar os terráqueos quando um jogador clicar nele. Nós usaremos o bloco "quando clicado" e conectaremos o bloco "diga" a ele. Quando o jogador clicar no robô espacial, tudo que estiver conectado ao bloco de evento "quando clicado" será realizado. O que seu alienígena diz?'
       4:
         image: notes/playlab_events_4.png

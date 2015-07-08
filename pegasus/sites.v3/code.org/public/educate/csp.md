@@ -35,9 +35,7 @@ Check back often as batches of lessons will be released on a rolling basis from 
 Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
-- [Curriculum overview](/files/CSPCurriculumOverview2015.pdf) (rev. Feb. 2015)
-- [Year-long view of the curriculum](/files/CSPCurriculumMap2015.png)
-- [Unit coverage of the CSP framework](/files/CSPFrameworkCoverage.png)
+- [Curriculum Syllabus and Overview](/files/CSPSyllabusJune2015.pdf) (rev. June. 2015)
 - [Professional development overview](/files/CSPPDoverview.pdf)
 
 

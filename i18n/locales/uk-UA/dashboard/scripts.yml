@@ -10,6 +10,7 @@ uk:
           Math Image: Математичні зображення
           title: Тестовий курс
           description: Просто внутрішній тестовий курс.
+          description_short: Просто внутрішній тестовий курс.
         course1:
           "Jigsaw: Learn to drag and drop": 'Пазли: вчимося перетягувати'
           "Maze: Sequence": 'Лабіринт: послідовність'
@@ -133,55 +134,6 @@ uk:
           Songwriting: Написання пісень
           description_audience: Вік 8 + (після курсу 2)
           description_short: Курс 3 є продовженням Курсу 2.
-        msm:
-          title: Математика середньої школи
-          description: Відбувається робота над розділами математики для середньої школи.
-          Graph Paper Programming: Програмування по клітинках
-          Assessments: Завдання
-          Unit 1: Розділ 1
-          Unit 2: Розділ 2
-          Ninja Cat and the Coordinate Plane: Кіт-ніндзя та координатна площина
-          "Calc: Circles of Evaluation": 'Калькулятор: кола обчислень'
-          "Artist: Strings and Images": 'Художник: рядки та картинки'
-          Contracts: Визначення
-          "Artist: Writing Contracts": 'Художник: написання визначень'
-          "Calc: Defining Variables": 'Калькулятор: визначення змінних'
-          "Play Lab: Defining Variables": 'Ігрова лабораторія: визначення змінних'
-          The Design Recipe: Створення рецепту
-          "Artist: Defining Functions": 'Художник: визначення функцій'
-          "Play Lab: Defining Functions": 'Ігрова лабораторія: Створення рецепту'
-          "Artist: Functions": 'Художник - функції'
-          "Play Lab: Animation": 'Ігрова лабораторія: анімація'
-          Booleans: Логічні вирази
-          "Play Lab: Booleans": 'Ігрова лабораторія: логічні вирази'
-          "Calc: Boolean Operators": 'Калькулятор: логічні вирази'
-          "Play Lab: Boolean Operators": 'Ігрова лабораторія: логічні вирази'
-          Conditionals and Piecewise Functions: Умови та складні функції
-          "Artist: Conditionals": 'Художник: умови'
-          Collision Detection and the Distance Formula: Виявлення зіткнень та формула відстані
-          "Play Lab: Collision Detection": 'Ігрова лабораторія: виявлення зіткнень'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Безмашинна вправа: Кіт-ніндзя та координатна площина'
-          "Eval: Strings and Images": 'Оцінка: рядки та картинки'
-          "Unplugged: Contracts": 'Безмашинна вправа: Визначення'
-          "Eval: Writing Contracts": 'Оцінка: написання визначень'
-          "Unplugged: The Design Recipe": 'Безмашинна вправа: Створення рецепту'
-          "Eval: Defining Functions": 'Оцінка: Швидкі функції'
-          "Eval: Functions": 'Оцінка: Створення рецепту'
-          "Unplugged: Booleans": 'Безмашинна вправа: логічні вирази'
-          "Unplugged: Conditionals and Piecewise Functions": 'Безмашинна вправа: Умови та складні функції'
-          "Eval: Conditionals": 'Оцінка: умови'
-          "Unplugged: Collision Detection and the Distance Formula": 'Безмашинна вправа: Виявлення зіткнень та формула відстані'
-          "Calc: Evaluation Blocks": 'Калькулятор: оцінювання блоків'
-          "Unplugged: Video Games and Coordinate Planes": 'Безмашинна вправа: відео-ігри та координатні площини'
-          "Eval: Boolean Operators": 'Оцінка: логічні вирази'
-          Blocks to Math: Блоки до математики
-          "Play Lab: Defining Variables (Big Game)": 'Ігрова лабораторія: визначення змінних (Велика гра)'
-          "Play Lab: Animation (Big Game)": 'Ігрова лабораторія: анімація (Велика гра)'
-          "Play Lab: Boolean (Big Game)": 'Ігрова лабораторія: логічні значення (Велика гра)'
-          "Play Lab: Collision Detection (Big Game)": 'Ігрова лабораторія: виявлення зіткнень (Велика гра)'
-          "Eval: Fast Functions": 'Оцінка: Швидкі функції'
-          "Play Lab: Design Recipe": 'Ігрова лабораторія: Створення рецепту'
-          "Eval: Design Recipe": 'Оцінка: Створення рецепту'
         playlab:
           title: Ігрова студія
           description: Складіть історію або створіть гру в Ігровій студії!
@@ -192,11 +144,6 @@ uk:
           description: Малюйте картини та узори разом з Художником!
           Artist: Художник
           description_short: Малюйте картини та узори разом з Художником!
-        scrat:
-          title: Скрет
-          description_short: Короткий опис Скрета.
-          description: Докладний опис Скрета
-          "Maze: Sequence": 'Лабіринт: послідовність'
         hourofcode:
           Maze: Лабіринт
           title: Година Коду
@@ -270,23 +217,10 @@ uk:
           description: спеціальні
           Special: Спеціальні
           Binary: Двійкова система
-        usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Юзабіліті-тестування з математикою
-          Evaluation Blocks: Оцінкові блоки
-          Blocks to Math: Блоки до математики
-          Strings and Images: Рядки та зображення
-          Defining Variables: Визначення змінних
-          Defining Functions: Визначення функцій
-          Design Recipe: Створення рецепту
-          Booleans: Логічні вирази
-          Conditionals: Умови
-          Free Play: Вільна гра
         algebra:
           title: Інформатика в алгебрі
           description: Вивчайте функціональне програмування через алгебру
+          description_short: Вивчайте функціональне програмування через алгебру
           "Unplugged: Video Games and Coordinate Planes": 'Безмашинна вправа: відео-ігри та координатні площини'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": Рядки та зображення
@@ -348,8 +282,8 @@ uk:
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
           title: Інтернет симулятор
-          description_short: ""
-          description: ""
+          description_short: Learn about how the Internet works
+          description: Learn about how the Internet works
           Internet Simulator: Інтернет симулятор
           Unit 1: Розділ 1
           Unit 2: Розділ 2
@@ -361,11 +295,13 @@ uk:
         pixelation:
           title: Пікселізаціі
           description: Створити зображення з бітів та байтів.
+          description_short: Створити зображення з бітів та байтів.
           Pixelation: Пікселізаціі
         20-hour:
           title: 20-годинний вступний курс
           description_audience: Вік 10 + (після курсу 3)
           description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
+          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           Introduction to Computer Science: Вступ до інформатики
           The Maze: Лабіринт
           Computational Thinking: Обчислювальне мислення
@@ -388,7 +324,8 @@ uk:
           Wrap-up: Підведення підсумків
         edit-code:
           title: Редагування коду
-          description: ""
+          description: Редагування коду
+          description_short: Редагування коду
           The Maze: Лабіринт
           Applab: Applab
           The Artist: Художник
@@ -396,7 +333,8 @@ uk:
           Play Lab 2015: Гральна лабораторія 2015
         events:
           title: Події
-          description: ""
+          description: Події
+          description_short: Події
           Bounce: Арканоід
           Studio: Studio
           Calc: Calc
@@ -404,18 +342,22 @@ uk:
         flappy:
           title: Код Пурха
           description: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати Пурха!
+          description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: Код Пурха
         jigsaw:
           title: Пазли
-          description: ""
+          description: Try our Jigsaw tutorial
+          description_short: Try our Jigsaw tutorial
           Jigsaw: Пазли
         step:
           title: Крок
-          description: ""
+          description: Step tutorial
+          description_short: Step tutorial
           Step: Крок
         Hour of Code:
           title: Година коду 2013
-          description: ""
+          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description_short: Спробуйте основи інформатики з цікавими персонажами!
           Hour of Code 2013: Година коду 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -498,6 +440,7 @@ uk:
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Безмашинна вправа: відео-ігри та координатні площини'
           "Calc: Evaluation Blocks": 'Калькулятор: оцінювання блоків'
           "Eval: Strings and Images": 'Оцінка: рядки та картинки'
@@ -540,6 +483,7 @@ uk:
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Оцінкові блоки
           Strings and Images: Рядки та зображення
           Rocket-Height: Rocket-Height
@@ -555,12 +499,14 @@ uk:
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
         CSPPD:
           new stage: new stage
           Introduction to PD: Знайомство з профессійним кодуванням
           title: Computer Science Principles PD
           description: Online Introduction to CSP
+          description_short: Online Introduction to CSP
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -569,7 +515,8 @@ uk:
           Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description_short: lesson samples for csp
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
         ECSPD:
@@ -581,11 +528,13 @@ uk:
           reference: reference
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Знайомство з профессійним кодуванням
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -600,8 +549,14 @@ uk:
           Post-Survey: Post-Survey
         rbo-reference:
           reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           description_short: Programming
@@ -654,6 +609,7 @@ uk:
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -666,11 +622,13 @@ uk:
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Знайомство з профессійним кодуванням
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Знайомство з профессійним кодуванням
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
         Glenallan Career Day Demo:
@@ -688,6 +646,7 @@ uk:
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Знайомство з профессійним кодуванням
@@ -698,10 +657,12 @@ uk:
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Знайомство з профессійним кодуванням
           Evaluation Blocks: Оцінкові блоки
           logo_image: nextech_logo.png
@@ -713,6 +674,7 @@ uk:
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Знайомство з профессійним кодуванням
           Evaluation Blocks: Оцінкові блоки
           logo_image: izone_logo.png
@@ -726,6 +688,7 @@ uk:
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -742,6 +705,7 @@ uk:
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -756,11 +720,16 @@ uk:
         ui_tests:
           title: UI Tests
           description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: Множинний вибір
           Big Game: Big Game
+          new stage: new stage
         sciencePD2:
+          title: Computer Science in Science PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -772,6 +741,9 @@ uk:
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
         sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
           new stage: new stage
           Welcome: Welcome
           Curricular Modules: Curricular Modules
@@ -780,6 +752,9 @@ uk:
           Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
         cspunit2:
           title: 'CSP Unit 2 - The Internet'
           description_short: Інтернет
@@ -822,6 +797,7 @@ uk:
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Evaluation Blocks: Оцінкові блоки
           Strings and Images: Рядки та зображення
           Defining Variables: Визначення змінних
@@ -858,6 +834,7 @@ uk:
           Online PD: Online PD
           title: Все!
           description: Всі типи рівнів для тестування інтерфейсу
+          description_short: Всі типи рівнів для тестування інтерфейсу
           Odometer: Одометр
           Text Compression: Text Compression
           Pixelation: Пікселізаціі
@@ -865,6 +842,7 @@ uk:
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -878,22 +856,22 @@ uk:
           "Eval: Conditionals": 'Оцінка: умови'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-        Calc Define Funcs 5 - multiply 1:
-          "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Інтернет симулятор
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Ласкаво просимо!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
-          Welcome!: Welcome!
+          description_short: Online levels for PD workshop
+          Welcome!: Ласкаво просимо!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Інтернет симулятор
@@ -903,6 +881,7 @@ uk:
         K5-OnlinePD:
           title: 'Teaching Courses 1-4: The Basics'
           description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -917,7 +896,8 @@ uk:
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
-          Welcome!: Welcome!
+          description_short: Blended Summer Study
+          Welcome!: Ласкаво просимо!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -930,6 +910,7 @@ uk:
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
@@ -942,6 +923,7 @@ uk:
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -957,6 +939,34 @@ uk:
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: Ласкаво просимо!
           The Design Recipe: Створення рецепту
           Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Ласкаво просимо!
+          Wrap-Up: Підведення підсумків
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Ласкаво просимо!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Підведення підсумків

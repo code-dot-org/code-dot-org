@@ -1,7 +1,7 @@
 bs-BA:
   hello: Pozdrav svijete
   select_language: Odaberi svoj jezik
-  computer_science: Računarska Nauka
+  en: Computer Science
   computer_science_edweek: Obrazovna nedjelja računarskih nauka
   csedweek_dates: Decembar 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Sat Kodiranja</a> dolazi. Pozivamo sve učitelje i organizatore, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planirajte vaš Sat Kodiranja</a>'
@@ -45,6 +45,7 @@ bs-BA:
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
   get_a_certificate_of_achievement: Preuzmi potvrdu o uspjehu
+  enter_valid_age: Please select a valid age
   enter_valid_email: Unesi ispravnu e-mail adresu
   get_a_certificate_message: "Poslati ćemo ti potvrdu i obavještenje o tome kako možeš <a href='/learn/beyond'>Naučiti više nego u jednom Satu Kodiranja</a>"
   get_a_certificate_message_after: "Klikni na certifikat da bi ga snimio ili isprintao. Sada, nastavi sa našim <a href='http://studio.code.org'>drugim kursevima</a>, ili istraži još mogućnosti na<a href='/learn/beyond'>Nauči više nego u jednom Satu Kodiranja</a>."

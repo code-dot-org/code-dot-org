@@ -10,6 +10,7 @@ it:
           Math Image: Immagini Matematiche
           title: Corso di Prova
           description: Solo un corso di prova interno.
+          description_short: Solo un corso di prova interno.
         course1:
           "Jigsaw: Learn to drag and drop": 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
           "Maze: Sequence": 'Labirinto: Sequenze'
@@ -133,55 +134,6 @@ it:
           Songwriting: Composizione di canzoni
           description_audience: Età 8-18 anni
           description_short: Il Corso 3 è la continuazione del Corso 2.
-        msm:
-          title: Matematica per la Scuola Media
-          description: Lavoro privato in corso per la Matematica per la Scuola Media.
-          Graph Paper Programming: Programmazione su carta a quadretti
-          Assessments: Valutazioni
-          Unit 1: Unità 1
-          Unit 2: Unità 2
-          Ninja Cat and the Coordinate Plane: Il Gatto Ninja e il Piano Cartesiano
-          "Calc: Circles of Evaluation": 'Calcolo: Circoli di Valutazione'
-          "Artist: Strings and Images": 'Artista: Stringhe e Immagini'
-          Contracts: Contratti
-          "Artist: Writing Contracts": 'Artista: Scrivere Contratti'
-          "Calc: Defining Variables": 'Calcolo: Definizione di Variabili'
-          "Play Lab: Defining Variables": 'Laboratorio: Definizione di Variabili'
-          The Design Recipe: La Ricetta della Progettazione
-          "Artist: Defining Functions": 'Artista: Definizione di Funzioni'
-          "Play Lab: Defining Functions": 'Laboratorio: La Ricetta della Progettazione'
-          "Artist: Functions": 'Artista: Funzioni'
-          "Play Lab: Animation": 'Laboratorio: Animazione'
-          Booleans: Valori Booleani
-          "Play Lab: Booleans": 'Laboratorio: Valori Booleani'
-          "Calc: Boolean Operators": 'Calcolo: Operatori Booleani'
-          "Play Lab: Boolean Operators": 'Laboratorio: Operatori Booleani'
-          Conditionals and Piecewise Functions: Istruzioni Condizionali e Funzioni a Tratti
-          "Artist: Conditionals": 'Artista: Istruzioni Condizionali'
-          Collision Detection and the Distance Formula: Rilevamento delle Collisioni e Formula per la Distanza
-          "Play Lab: Collision Detection": 'Laboratorio: Rilevamento delle Collisioni'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Senza Rete: Gatto Ninja e il Piano Cartesiano'
-          "Eval: Strings and Images": 'Valutazione: Stringhe e Immagini'
-          "Unplugged: Contracts": 'Senza Rete: Contratti'
-          "Eval: Writing Contracts": 'Valutazione: Scrittura di Contratti'
-          "Unplugged: The Design Recipe": 'Senza rete: La Ricetta della Progettazione'
-          "Eval: Defining Functions": 'Valutazione: Funzioni Veloci'
-          "Eval: Functions": 'Valutazione: La Ricetta della Progettazione'
-          "Unplugged: Booleans": 'Senza Rete: Valori Booleani'
-          "Unplugged: Conditionals and Piecewise Functions": 'Lezione Senza Rete: Istruzioni Condizionali e Funzioni a Tratti'
-          "Eval: Conditionals": 'Valutazione: Istruzioni Condizionali'
-          "Unplugged: Collision Detection and the Distance Formula": 'Senza Rete: Rilevamento delle Collisioni e Formula per la Distanza'
-          "Calc: Evaluation Blocks": 'Calcolo: Blocchi di Valutazione'
-          "Unplugged: Video Games and Coordinate Planes": 'Senza Rete: Videogiochi e Piani Cartesiani'
-          "Eval: Boolean Operators": 'Valutazione: Operatori Booleani'
-          Blocks to Math: Dai Blocchi alla Matematica
-          "Play Lab: Defining Variables (Big Game)": 'Laboratorio: Definizione di Variabili (Big Game)'
-          "Play Lab: Animation (Big Game)": 'Laboratorio: Animazione (Big Game)'
-          "Play Lab: Boolean (Big Game)": 'Laboratorio: Valori Booleani (Big Game)'
-          "Play Lab: Collision Detection (Big Game)": 'Laboratorio: Rilevamento delle Collisioni (Big Game)'
-          "Eval: Fast Functions": 'Valutazione: Funzioni Veloci'
-          "Play Lab: Design Recipe": 'Laboratorio: La Ricetta della Progettazione'
-          "Eval: Design Recipe": 'Valutazione: La Ricetta della Progettazione'
         playlab:
           title: Laboratorio
           description: Crea una storia o inventa un gioco col Laboratorio!
@@ -192,11 +144,6 @@ it:
           description: "Disegna fantastiche immagini e decorazioni con l'artista!"
           Artist: Artista
           description_short: "Disegna fantastiche immagini e decorazioni con l'artista!"
-        scrat:
-          title: Scrat
-          description_short: Descrizione breve di Scrat.
-          description: Descrizione lunga di Scrat
-          "Maze: Sequence": 'Labirinto: Sequenze'
         hourofcode:
           Maze: 'Labirinto: Sequenze e Cicli'
           title: "L'Ora del Codice"
@@ -270,23 +217,10 @@ it:
           description: speciale
           Special: Speciale
           Binary: Binario
-        usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Test di usabilità per MSM
-          Evaluation Blocks: Blocchi di Valutazione
-          Blocks to Math: Dai Blocchi alla Matematica
-          Strings and Images: Stringhe e Immagini
-          Defining Variables: Definizione di Variabili
-          Defining Functions: Definizione di Funzioni
-          Design Recipe: La Ricetta della Progettazione
-          Booleans: Valori Booleani
-          Conditionals: Istruzioni condizionali
-          Free Play: Tempo di giocare
         algebra:
           title: Informatica in Algebra
           description: "Impara la Programmazione Funzionale mediante l'Algebra"
+          description_short: "Impara la Programmazione Funzionale mediante l'Algebra"
           "Unplugged: Video Games and Coordinate Planes": 'Senza Rete: Videogiochi e Piani Cartesiani'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": Stringhe e Immagini
@@ -350,8 +284,8 @@ it:
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
           title: Simulatore di Internet
-          description_short: ""
-          description: ""
+          description_short: Learn about how the Internet works
+          description: Learn about how the Internet works
           Internet Simulator: Simulatore di Internet
           Unit 1: Unità 1
           Unit 2: Unità 2
@@ -363,11 +297,13 @@ it:
         pixelation:
           title: Conversione di pixel
           description: Crea immagini utilizzando bit e byte.
+          description_short: Crea immagini utilizzando bit e byte.
           Pixelation: Conversione di pixel
         20-hour:
           title: Corso introduttivo di 20 ore
           description_audience: Età 10-18 anni
           description: "Questo corso in 20 lezioni introduce i concetti fondamentali dell'informatica e della programmazione. Il corso è progettato per l'uso nelle scuole elementari e medie inferiori, ma è divertente per imparare a qualunque età."
+          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           Introduction to Computer Science: "Cos'è l'informatica"
           The Maze: Il labirinto
           Computational Thinking: Pensiero computazionale
@@ -390,7 +326,8 @@ it:
           Wrap-up: Conclusione
         edit-code:
           title: Modifica il Codice
-          description: ""
+          description: Modifica il Codice
+          description_short: Modifica il Codice
           The Maze: Il labirinto
           Applab: Applab
           The Artist: "L'artista"
@@ -398,7 +335,8 @@ it:
           Play Lab 2015: Laboratorio Play Lab 2015
         events:
           title: Eventi
-          description: ""
+          description: Eventi
+          description_short: Eventi
           Bounce: Ping-Pong
           Studio: Studio
           Calc: Calc
@@ -406,18 +344,22 @@ it:
         flappy:
           title: 'Codice di "Flappy"'
           description: 'Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice di "Flappy"!'
+          description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: 'Codice di "Flappy"'
         jigsaw:
           title: Puzzle
-          description: ""
+          description: Try our Jigsaw tutorial
+          description_short: Try our Jigsaw tutorial
           Jigsaw: Puzzle
         step:
           title: Fai un passo
-          description: ""
+          description: Step tutorial
+          description_short: Step tutorial
           Step: Fai un passo
         Hour of Code:
           title: "L'Ora del Codice 2013"
-          description: ""
+          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description_short: "Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!"
           Hour of Code 2013: "L'Ora del Codice 2013"
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -500,6 +442,7 @@ it:
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Senza Rete: Videogiochi e Piani Cartesiani'
           "Calc: Evaluation Blocks": 'Calcolo: Blocchi di Valutazione'
           "Eval: Strings and Images": 'Valutazione: Stringhe e Immagini'
@@ -542,6 +485,7 @@ it:
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Blocchi di Valutazione
           Strings and Images: Stringhe e Immagini
           Rocket-Height: Rocket-Height
@@ -557,12 +501,14 @@ it:
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
         CSPPD:
           new stage: new stage
           Introduction to PD: Introduzione a PD
           title: Computer Science Principles PD
           description: Online Introduction to CSP
+          description_short: Online Introduction to CSP
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -571,7 +517,8 @@ it:
           Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description_short: lesson samples for csp
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
         ECSPD:
@@ -583,11 +530,13 @@ it:
           reference: reference
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Introduzione a PD
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -602,8 +551,14 @@ it:
           Post-Survey: Post-Survey
         rbo-reference:
           reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           description_short: Programming
@@ -656,6 +611,7 @@ it:
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -668,11 +624,13 @@ it:
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Introduzione a PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Introduzione a PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
         Glenallan Career Day Demo:
@@ -690,6 +648,7 @@ it:
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Introduzione a PD
@@ -700,10 +659,12 @@ it:
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Introduzione a PD
           Evaluation Blocks: Blocchi di Valutazione
           logo_image: nextech_logo.png
@@ -715,6 +676,7 @@ it:
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Introduzione a PD
           Evaluation Blocks: Blocchi di Valutazione
           logo_image: izone_logo.png
@@ -728,6 +690,7 @@ it:
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -744,6 +707,7 @@ it:
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -758,11 +722,16 @@ it:
         ui_tests:
           title: UI Tests
           description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: Risposte Multiple
           Big Game: Big Game
+          new stage: new stage
         sciencePD2:
+          title: Computer Science in Science PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -774,6 +743,9 @@ it:
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
         sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
           new stage: new stage
           Welcome: Welcome
           Curricular Modules: Curricular Modules
@@ -782,6 +754,9 @@ it:
           Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
         cspunit2:
           title: 'CSP Unit 2 - The Internet'
           description_short: Internet
@@ -824,6 +799,7 @@ it:
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Evaluation Blocks: Blocchi di Valutazione
           Strings and Images: Stringhe e Immagini
           Defining Variables: Definizione di Variabili
@@ -860,6 +836,7 @@ it:
           Online PD: Online PD
           title: Tutte le cose!
           description: "Tutte le tipologie di livello per il test dell'interfaccia utente"
+          description_short: "Tutte le tipologie di livello per il test dell'interfaccia utente"
           Odometer: Contachilometri
           Text Compression: Text Compression
           Pixelation: Conversione di pixel
@@ -867,6 +844,7 @@ it:
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -880,11 +858,10 @@ it:
           "Eval: Conditionals": 'Valutazione: Istruzioni Condizionali'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-        Calc Define Funcs 5 - multiply 1:
-          "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Simulatore di Internet
@@ -895,6 +872,7 @@ it:
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Welcome!: Benvenuti!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
@@ -905,6 +883,7 @@ it:
         K5-OnlinePD:
           title: 'Teaching Courses 1-4: The Basics'
           description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -919,6 +898,7 @@ it:
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
+          description_short: Blended Summer Study
           Welcome!: Benvenuti!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -932,6 +912,7 @@ it:
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
@@ -944,6 +925,7 @@ it:
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -962,3 +944,31 @@ it:
           Welcome!: Benvenuti!
           The Design Recipe: La Ricetta della Progettazione
           Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Benvenuti!
+          Wrap-Up: Conclusione
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Benvenuti!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Conclusione

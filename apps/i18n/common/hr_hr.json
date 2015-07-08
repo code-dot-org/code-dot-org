@@ -213,5 +213,6 @@
   "watchVideo": "Pogledaj filmić",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "readonlyWorkspaceHeader": "View only: "
 }
