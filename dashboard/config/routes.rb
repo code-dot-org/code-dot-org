@@ -82,7 +82,7 @@ Dashboard::Application.routes.draw do
   resources :projects, path: '/p/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, value|
-        get '/' + key.to_s, to: 'levels#show', key: value, as: key.to_s
+        get '/' + key.to_s, to: 'levels#show', key: value[:name], as: key.to_s
       end
       get '/:template', to: 'projects#template'
     end

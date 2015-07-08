@@ -93,6 +93,10 @@ class Ability
       can :read, ScriptLevel do |script_level|
         !script_level.script.login_required?
       end
+      levels = ProjectsController::STANDALONE_PROJECTS.select { |key, value| value[:login_required] }.map { |key, value| Level.find_by_key(value[:name]).id }
+      cannot :read, Level do |level|
+        levels.include?(level.id)
+      end
     end
 
     #
