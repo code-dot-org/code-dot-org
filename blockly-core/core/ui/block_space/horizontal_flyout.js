@@ -100,6 +100,9 @@ Blockly.HorizontalFlyout.prototype.position_ = function() {
   if (this.scrollbar_) {
     this.scrollbar_.resize();
   }
+
+  this.svgBackground_.style.pointerEvents =
+    this.scrollbar_ ? 'initial' : 'none';
 };
 
 Blockly.HorizontalFlyout.prototype.getYPosition = function () {
