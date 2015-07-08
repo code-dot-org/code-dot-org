@@ -1,23 +1,22 @@
 "eu-ES":
   hello: Kaixo mundua
-  select_language: Please select your language
-  computer_science: Konputazio zientzia
+  select_language: Aukera ezazu zure hizkuntza, mesedez
+  en: Computer Science
   computer_science_edweek: Konputazio zientzien hezkuntza astea
-  csedweek_dates: December 8-14, 2014
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+  csedweek_dates: 2014-ko abenduaren 8-tik 14-ra
+  csedweek_banner_hoc: <a href="http://hourofcode.com" style="color:wwhite; text-decoration:underline;font-weigt:bold">
+    gerturatzen ari da.  Zure </a> kodearen ordua zehaztu
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>
+    none; font-weight: 400">Informatika irakaslea zara? Informatika Irakaskuntza Asteko
+    (CSEdWeek) beste baliabideak ikusi </a>'
+  n_have_learned_an_hoc: <h1>Kode ordua</h1><h2>probatu dutenak</h2><h3># kopurua</h3>
   anybody_can_learn: Edozeinek ikasi dezake.
   learn_now: Ikasi orain
   petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko
     aukera eduki beharko luke
   petition_sign_message: 'Ados bazaude, idatzi zure izena. Batu beste # hauek.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
-  petition_join_others: 'Join # others'
+  petition_sign_message_support: 'Babesten bagaituzu, izena eman. # besteak gonbidatu.'
+  petition_join_others: '# batu'
   name: Izena
   email: E-posta
   zipcode: Posta kodea edo herrialdea
@@ -28,18 +27,18 @@
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_try: Saiatu
+  hoc2014_teachers: Irakasleak
+  hoc2014_host: Antolatu
+  hoc2014_everyone: Guztiok
+  hoc2014_support: Babestu &#x25BE;
+  hoc2014_whatishoc: Zer da kode ordua?
   twentyhours_trynow: Saiatu orain
   california_heading: Eskatu zure eskolan konputazio zientziak irakasteko
-  california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
-    courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
+  california_text: Edozein irakaslek gure <a href='http://studio.code.org/'> doako
+    ikastaroak</a>. Edozein lehen hezkuntzako eskolak<a href='http://code.org/educate/k5'>
+    irakatsi ditzake konputazio zientziak</a>. Eskatu bigarren hezkuntzako eskolei
+    gurekin <a href='http://code.org/educate/districts'> bazkidetu.
   california_button: Gehiago ikasi
   flappy_heading: Flappy Urtebetetzea Code.org-entzat
   flappy_text: Code.org-ek urtebete bete du. .<br/><br/> Ospatu gurekin zure neurrira
@@ -57,8 +56,9 @@
   go: Joan
   thank_you_: Eskerrik asko!
   congratulations: Zorionak!
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_on_completing_hoc: Zoriondu Code ordua burutzeagatik
   get_a_certificate_of_achievement: Lortu lorpen ziurtagiri bat
+  enter_valid_age: Please select a valid age
   enter_valid_email: Mesedez sartu baliozko e-posta helbide bat
   get_a_certificate_message: Ziurtagiri bat eta <a href='/learn/beyond'>Ikasi ordubetea
     baino gehiago</a>ri informazioa bidaliko dizugu
@@ -86,8 +86,8 @@
   thanks_for_voting: Eskerrik asko bozka emateagatik!
   share_on_facebook: Partekatu Facebooken
   share_on_twitter: Partekatu Twitterren
-  beyond_an_hour: Beyond an Hour of Code
-  get_started: Start
+  beyond_an_hour: Kode ordutik harago
+  get_started: Hasiera
   i_agree: Ados
   participant_select: '- Aukeratu -'
   participant_student: Ikaslea
@@ -95,9 +95,9 @@
   participant_educator: Hezitzailea
   participant_engineer: Software ingeniaria
   participant_other: Goikoetatik bat ere ez
-  print_all: Print all
-  print_ice_art: Print your ice art
-  create_art_with_zombie: or make advanced art with zombie
+  print_all: Guztia inprimatu
+  print_ice_art: Inprimatu zure izotz arte lana
+  create_art_with_zombie: edo zombiearekin arte aurreratua egin
   i_am_a: Ni naiz
   never_spam: Ez dizugu inoiz spamik bidaliko
   enter_country: Sartu zure herrialdea Estatu Batuetatik kanpokoa bazara
@@ -136,31 +136,30 @@
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
     - Michael Clark, Teacher'
   studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explore Code Studio
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
-  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_title_nolink: Code Studio miatu
+  studiobar_elementary_title: Oinarrizko ikastaroak
+  studiobar_elementary_body: '&#8209;rentzako gure hiru ikastaro berriak'
+  studiobar_hoc_title: Programatzeko ordua
+  studiobar_hoc_body: Angry Birds-ekin programatzen ikasi
   studiobar_flappy_title: Flappy Code
   studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Made for teachers
-  studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_teacher_title: Irakasleentzako egina
+  studiobar_teacher_body: Zure ikasgelan Code Studio aurkeztea
   studiobar_frozen_title: Kode ordua
   studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
+  studiobar_donate_title: Diruz lagundu
+  studiobar_donate_body: Ume batek ikasiko du ematen duzun dolar bakoitzagatik
+  studiobar_shop_title: Denda
+  studiobar_shop_body: Estereotipoak apurtu. Jantzi gure logoa harrotasunez.
+  homepage_hero_text_malala: |
+    &ldquo;herrialde guztietako neska guztiei kode ordu bat&rdquo; ikasteko erronka botatzen diet.
+    Malala, Pakearen nobel sariaren irabazlea
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;teknologia aldatu badezakezu, mundua alda dezakezu.&rdquo;
+    Susan, Youtubeko zuzendari exekutiboa
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Ez jolastu bakarrik zure sakelakoan, programatu ezazu.&rdquo;
+    Barack Obama presidentea
   homepage_hero_text_sheryl: |
     &ldquo;Our children &mdash; including our girls &mdash;
     need the opportunity to learn computer science.&rdquo;
@@ -198,12 +197,12 @@
   homepage_hero_text_stat_loc: '#loc lines of code written by students'
   homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
-  homepage_slot_text_hoc: The Hour of Code
+  homepage_slot_text_hoc: Programatzeko ordua
   homepage_slot_text_frozen: Frozen with Anna and Elsa
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
+  homepage_slot_text_shop: Denda
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: Watch the video
   homepage_action_text_teachervideo: ''
@@ -236,7 +235,7 @@
   homepage_header_codestudio: Code Studio student creations
   homepage_header_donors: Code.org thanks its supporters
   homepage_donors_seall: See all
-  homepage_donors_donate: Donate
+  homepage_donors_donate: Diruz lagundu
   contact_form_topic_student: Ikaslea naiz
   contact_form_topic_parent: Gurasoa naiz
   contact_form_topic_teacher: Irakasle edo hezitzailea naiz
@@ -292,7 +291,7 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Software professional
-  petition_age: Age
+  petition_age: Adina
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -417,7 +416,7 @@
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Izena
   dashboard_students_progress: Progress
-  dashboard_students_age: Age
+  dashboard_students_age: Adina
   dashboard_students_gender: Generoa
   dashboard_students_male: Male
   dashboard_students_female: Female

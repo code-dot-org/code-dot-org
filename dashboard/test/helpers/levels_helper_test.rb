@@ -19,7 +19,6 @@ class LevelsHelperTest < ActionView::TestCase
       OpenStruct.new(env: {}, headers: OpenStruct.new('User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) ' \
       'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36'))
     end
-
   end
 
   test "should parse maze level with non string array" do
@@ -33,44 +32,44 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "non-custom level displays localized instruction after locale switch" do
-    DEFAULT_LOCALE = 'en-us'
-    NEW_LOCALE = 'es-es'
+    default_locale = 'en-us'
+    new_locale = 'es-es'
     @level.instructions = nil
     @level.user_id = nil
     @level.level_num = '2_2'
 
-    I18n.locale = DEFAULT_LOCALE
+    I18n.locale = default_locale
     options = blockly_options
-    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: DEFAULT_LOCALE), options[:level]['instructions']
+    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['instructions']
 
-    I18n.locale = NEW_LOCALE
+    I18n.locale = new_locale
     options = blockly_options
-    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: NEW_LOCALE), options[:level]['instructions']
-    I18n.locale = DEFAULT_LOCALE
+    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['instructions']
+    I18n.locale = default_locale
   end
 
   test "custom level displays english instruction" do
-    DEFAULT_LOCALE = 'en-us'
+    default_locale = 'en-us'
     @level.name = 'frozen line'
 
-    I18n.locale = DEFAULT_LOCALE
+    I18n.locale = default_locale
     options = blockly_options
     assert_equal @level.instructions, options[:level]['instructions']
   end
 
   test "custom level displays localized instruction if exists" do
-    DEFAULT_LOCALE = 'en-us'
-    NEW_LOCALE = 'es-es'
+    default_locale = 'en-us'
+    new_locale = 'es-es'
 
-    I18n.locale = NEW_LOCALE
+    I18n.locale = new_locale
     @level.name = 'frozen line'
     options = blockly_options
-    assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: NEW_LOCALE), options[:level]['instructions']
+    assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
 
     @level.name = 'this_level_doesnt_exist'
     options = blockly_options
     assert_equal @level.instructions, options[:level]['instructions']
-    I18n.locale = DEFAULT_LOCALE
+    I18n.locale = default_locale
   end
 
   test "get video choices" do
@@ -161,9 +160,9 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'app_options sets a channel' do
-    @user = create :user
-    sign_in @user
-    self.stubs(:current_user).returns @user
+    user = create :user
+    sign_in user
+    self.stubs(:current_user).returns user
 
     set_channel
     channel = @view_options[:channel]
@@ -178,11 +177,40 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'applab levels should have channels' do
-    @user = create :user
-    sign_in @user
-    self.stubs(:current_user).returns @user
+    user = create :user
+    sign_in user
+    self.stubs(:current_user).returns user
 
     @level = create :applab
+
+    set_channel
+
     assert_not_nil app_options['channel']
   end
+
+  test 'applab levels should not load channel when viewing student solution of a student without a channel' do
+    # two different users
+    @user = create :user
+    self.stubs(:current_user).returns create(:user)
+
+    @level = create :applab
+
+    # channel does not exist
+    set_channel
+    assert_nil app_options['channel']
+  end
+
+  test 'applab levels should load channel when viewing student solution of a student with a channel' do
+    # two different users
+    @user = create :user
+    self.stubs(:current_user).returns create(:user)
+
+    @level = create :applab
+
+    # channel exists
+    ChannelToken.create!(level: @level, user: @user, channel: 'whatever')
+    set_channel
+    assert_equal 'whatever', app_options['channel']
+  end
+
 end
