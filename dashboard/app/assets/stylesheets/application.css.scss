@@ -259,15 +259,35 @@ $small-footer-standard-width: 400px;
 /* Shared styles so flyout looks like footer */
 .small-footer, #copyright-flyout, #more-menu {
   background-color: #ddd; /* Matches blockly flyout */
-  color: $dark_charcoal;
+  color: $light_gray;
   font-size: 14px;
-  a:link {font-family: $gotham-regular; font-weight: normal; color: $dark_charcoal;}
-  a:visited {font-family: $gotham-regular; font-weight: normal; color: $dark_charcoal;}
-  a:hover {font-family: $gotham-regular; font-weight: normal; color:$dark_charcoal; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-regular; font-weight: normal; color:$dark_charcoal; background-color: transparent;}  /* selected link */
-
-  .dim {
-    opacity: 0.5;
+  a {
+    &:link {
+      font-family: $gotham-regular;
+      font-weight: normal;
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:visited {
+      font-family: $gotham-regular;
+      font-weight: normal;
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:hover {
+      font-family: $gotham-regular;
+      font-weight: normal;
+      color:$dark_charcoal;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    &:active {
+      font-family: $gotham-regular;
+      font-weight: normal;
+      color:$light_gray;
+      background-color: transparent;
+      text-decoration: none;
+    }
   }
 }
 
