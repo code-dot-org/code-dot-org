@@ -257,6 +257,21 @@ $small-footer-horizontal-margin: $codeApp-left-margin;
 $small-footer-padding-top: 10px;
 $small-footer-padding-bottom: 6px;
 
+/* Shared styles so flyout looks like footer */
+.small-footer, #copyright-flyout {
+  background-color: $dark_color;
+  color: $header_text;
+  font-size: 14px;
+  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+
+  .dim {
+    opacity: 0.5;
+  }
+}
+
 .small-footer {
   position: absolute;
   bottom: 0;
@@ -266,23 +281,19 @@ $small-footer-padding-bottom: 6px;
   padding-top: $small-footer-padding-top;
   padding-bottom: $small-footer-padding-bottom;
   margin-top: 5px; /* Used in javascript to position #belowVisualization */
-  font-size: 14px;
-  background-color: $dark_color;
-  color: $header_text;
-  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
-  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+
   form {
     float: left;
     margin-right: $small-footer-horizontal-margin;
   }
+
   select {
     width: auto;
     font-size:11px;
     height: 18px;
     margin-bottom: 4px
   }
+
   small {
     display: block;
     float: right;
@@ -290,9 +301,17 @@ $small-footer-padding-bottom: 6px;
     padding-top: 3px;
     white-space: nowrap;
   }
-  .dim {
-    opacity: 0.5;
-  }
+}
+
+#copyright-flyout {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 625px;
+  max-width: 50%;
+  min-width: 300px;
+  padding: 1em;
 }
 
 #locale {
