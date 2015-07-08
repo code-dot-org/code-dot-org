@@ -202,14 +202,18 @@ module.exports = {
     if (isNewChannel) {
       // We have a new channel, meaning either we had no channel before, or
       // we've changed channels.
-
-      if (location.hash || !window.history.pushState) {
-        // We're using a hash route or don't support replace state. Use our hash
-        // based route to ensure we don't have a page load.
-        location.href = current.level + '#' + current.id + '/edit';
+      if (isEditing) {
+        if (location.hash || !window.history.pushState) {
+          // We're using a hash route or don't support replace state. Use our hash
+          // based route to ensure we don't have a page load.
+          location.href = current.level + '#' + current.id + '/edit';
+        } else {
+          window.history.pushState(null, document.title,
+            current.level + '/' + current.id + '/edit');
+        }
       } else {
-        window.history.pushState(null, document.title,
-          current.level + '/' + current.id + '/edit');
+        // We're on a share page, and got a new channel id. Always do a redirect
+        location.href = current.level + '/' + current.id + '/edit';
       }
     }
     this.updateTimestamp();
