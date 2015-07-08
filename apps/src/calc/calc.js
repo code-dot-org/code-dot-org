@@ -154,7 +154,8 @@ Calc.init = function(config) {
       idealBlockNumber : undefined,
       editCode: level.editCode,
       blockCounterClass : 'block-counter-default',
-      inputOutputTable: level.inputOutputTable
+      inputOutputTable: level.inputOutputTable,
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
@@ -1087,3 +1088,5 @@ Calc.__testonly__ = {
   appState: appState
 };
 /* end-test-block */
+
+//# sourceURL=calc.js
