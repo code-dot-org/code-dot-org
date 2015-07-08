@@ -286,7 +286,8 @@ div#visualizationResizeBar {
 
 img#turtleImage {
   position: absolute;
-  height: 24px; }
+  height: 24px;
+  margin: 0px; }
 
 .debugger_button {
   border: 1px solid #0094ca;
