@@ -46,7 +46,7 @@
     "app_width": "200",
     "app_height": "200",
     "callout_json": "[]",
-    "show_turtle_before_run": "true",
+    "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
