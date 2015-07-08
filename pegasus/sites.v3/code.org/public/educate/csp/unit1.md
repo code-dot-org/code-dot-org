@@ -9,7 +9,7 @@ nav: educate_nav
 
 **Quick Links**
 
-[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [About using these lesson plans](howToUse) | [About the widgets](aboutTheWidgets) |  [Writing Team](team)
+[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [Writing Team](team)
 
 **Invitation to Comment:** 
 
@@ -40,4 +40,4 @@ nav: educate_nav
 
 | Unit 1 Assessment | Lesson Plan | Student Project Guide |
 | ------------------|:-----------:| :-----------:|
-| **Practice performance task -  Encode a complex piece of information** Students must consider a complex type of information that has not been considered in class and invent a way to encode it in binary.  Students must present their file encoding protocol and respond to reflection prompts in writing.  |  [![U1 Assessment Lesson Plan](images/thumb_lesson1.png)](https://docs.google.com/a/code.org/document/d/1rkVbwb8nJBlnF9t3hkyIyckM6gJGEjcUwyQiyV-Jlu4) | [![U1 Assessment Student Guide](images/thumb_lesson1.png)](https://docs.google.com/document/d/1IPDnC6tKN7yRzog9t7weKISnjXvykTQe3QEpu43uM7c) |
+| **Practice performance task -  Encode a complex piece of information** Students must consider a complex type of information that has not been considered in class and invent a way to encode it in binary.  Students must present their file encoding protocol and respond to reflection prompts in writing.  |  [![U1 Assessment Lesson Plan](images/thumb_lesson1.png)](https://docs.google.com/a/code.org/document/d/1rkVbwb8nJBlnF9t3hkyIyckM6gJGEjcUwyQiyV-Jlu4) | [![U1 Assessment Student Guide](images/thumb_activityGuide.png)](https://docs.google.com/document/d/1IPDnC6tKN7yRzog9t7weKISnjXvykTQe3QEpu43uM7c) |
