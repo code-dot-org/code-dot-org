@@ -19,6 +19,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick rbenv ruby-build coreutils`
+  1. If brew fails because it is unable to write to `/usr/local`, run <code>sudo chown -R \`whoami\`:admin /usr/local/</code>
   1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
   1. Have launchd start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
