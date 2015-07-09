@@ -51,7 +51,8 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
    */
   this.blockSpace_ = new Blockly.BlockSpace(blockSpaceEditor,
       function() {return flyout.getMetrics_();},
-      function(ratio) {return flyout.setMetrics_(ratio);});
+      function(ratio) {return flyout.setMetrics_(ratio);}
+  );
   this.blockSpace_.isFlyout = true;
 
   /**

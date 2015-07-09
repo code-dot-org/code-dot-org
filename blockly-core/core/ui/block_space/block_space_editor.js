@@ -53,7 +53,8 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
    */
   this.blockSpace = new Blockly.BlockSpace(this,
     goog.bind(this.getBlockSpaceMetrics_, this),
-    goog.bind(this.setBlockSpaceMetrics_, this)
+    goog.bind(this.setBlockSpaceMetrics_, this),
+    container
   );
   this.createDom_(container);
   this.init_();
@@ -361,9 +362,8 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
   this.detectBrokenControlPoints();
 
   // Bind pan-drag handlers
-  this.blockSpace.bindBeginPanDragHandler(this.svg_, goog.bind(function () {
-    this.hideChaff();
-  }, this));
+  this.blockSpace.bindBeginPanDragHandler(this.svg_,
+    goog.bind(this.hideChaff, this));
 
   Blockly.bindEvent_(Blockly.WidgetDiv.DIV, 'contextmenu', null,
     Blockly.blockContextMenu);
