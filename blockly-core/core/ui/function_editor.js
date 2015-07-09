@@ -441,6 +441,10 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.modalBlockSpaceEditor.bindMouseEventsTo(this.container_);
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
   this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
+  this.modalBlockSpace.bindBeginPanDragHandler(this.container_, goog.bind(function () {
+    Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost
+    this.modalBlockSpaceEditor.hideChaff();
+  }, this));
 
   Blockly.modalBlockSpace = this.modalBlockSpace;
   Blockly.modalBlockSpaceEditor = this.modalBlockSpaceEditor;
