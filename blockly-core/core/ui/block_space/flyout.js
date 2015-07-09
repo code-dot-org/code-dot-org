@@ -63,7 +63,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
 
   /**
    * Opaque data that can be passed to removeChangeListener.
-   * @type {Array.<!Array>}
+   * @type {bindData}
    * @private
    */
   this.changeWrapper_ = null;
@@ -116,7 +116,7 @@ Blockly.Flyout.prototype.CORNER_RADIUS = 8;
 
 /**
  * Wrapper function called when a resize occurs.
- * @type {Array.<!Array>}
+ * @type {bindData}
  * @private
  */
 Blockly.Flyout.prototype.onResizeWrapper_ = null;

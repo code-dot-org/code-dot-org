@@ -115,14 +115,14 @@ Blockly.Bubble.ANCHOR_RADIUS = 8;
 
 /**
  * Wrapper function called when a mouseUp occurs during a drag operation.
- * @type {Array.<!Array>}
+ * @type {bindData}
  * @private
  */
 Blockly.Bubble.onMouseUpWrapper_ = null;
 
 /**
  * Wrapper function called when a mouseMove occurs during a drag operation.
- * @type {Array.<!Array>}
+ * @type {bindData}
  * @private
  */
 Blockly.Bubble.onMouseMoveWrapper_ = null;

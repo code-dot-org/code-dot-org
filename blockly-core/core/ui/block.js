@@ -254,14 +254,14 @@ Blockly.Block.isFreelyDragging = function() {
 
 /**
  * Wrapper function called when a mouseUp occurs during a drag operation.
- * @type {Array.<!Array>}
+ * @type {bindData}
  * @private
  */
 Blockly.Block.onMouseUpWrapper_ = null;
 
 /**
  * Wrapper function called when a mouseMove occurs during a drag operation.
- * @type {Array.<!Array>}
+ * @type {bindData}
  * @private
  */
 Blockly.Block.onMouseMoveWrapper_ = null;
