@@ -66,8 +66,23 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   this.events = new goog.events.EventTarget();
 
   /**
+   * @typedef {Object} panDragData
+   * @property {EventTarget} target
+   * @property {function} onTargetMouseDown
+   * @property {!Array.<!Array>} mouseDownKey
+   * @property {!Array.<!Array>} contextMenuBlockKey
+   * @property {!Array.<!Array>} mouseMoveKey
+   * @property {!Array.<!Array>} mouseUpKey
+   * @property {number} startMouseX
+   * @property {number} startMouseY
+   * @property {Object} startMetrics
+   * @property {number} startScrollX
+   * @property {number} startScrollY
+   */
+
+  /**
    * Encapsulates state used to make pan-drag work.
-   * @type {Object}
+   * @type {panDragData}
    * @private
    */
   this.panDragData_ = {};
