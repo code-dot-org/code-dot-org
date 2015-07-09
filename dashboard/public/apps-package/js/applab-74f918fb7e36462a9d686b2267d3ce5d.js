@@ -1472,10 +1472,10 @@ Applab.execute = function() {
     }
   }
 
-  // Set focus on divApplab so key events can be handled right from the start
-  // without requiring the user to adjust focus:
+  // Set focus on the default screen so key events can be handled
+  // right from the start without requiring the user to adjust focus:
   var divApplab = document.getElementById('divApplab');
-  divApplab.focus();
+  divApplab.firstChild.focus();
 
   Applab.running = true;
   queueOnTick();
@@ -3376,6 +3376,10 @@ applabCommands.setScreen = function (opts) {
   // toggle all screens to be visible if equal to given id, hidden otherwise
   $('.screen').each(function () {
     $(this).toggle(this.id === opts.screenId);
+    if (this.id === opts.screenId) {
+      // Allow the active screen to receive keyboard events.
+      this.focus();
+    }
   });
 };
 
@@ -7687,6 +7691,8 @@ var React = require('react');
 var PropertyRow = require('./PropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -7724,8 +7730,42 @@ var ScreenEvents = React.createClass({displayName: "ScreenEvents",
     handleChange: React.PropTypes.func.isRequired
   },
 
+  // The screen click event handler code currently receives clicks to any
+  // other design element. This could be worked around by checking for
+  // event.targetId === "<id>" here, at the expense of added complexity.
+  getClickEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "click", function(event) {\n' +
+      '  console.log("' + id + ' clicked!");\n' +
+      '  moveTo(event.x, event.y);\n' +
+      '});\n';
+    return code;
+  },
+
+  insertClick: function() {
+    this.props.onInsertEvent(this.getClickEventCode());
+  },
+
+  getKeyEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "keydown", function(event) {\n' +
+      '  console.log("Key: " + event.key);\n' +
+      '});\n';
+    return code;
+  },
+
+  insertKey: function() {
+    this.props.onInsertEvent(this.getKeyEventCode());
+  },
+
   render: function () {
     var element = this.props.element;
+    var clickName = 'Click';
+    var clickDesc = 'Triggered when the screen is clicked with a mouse or tapped on a screen.';
+    var keyName = 'Key';
+    var keyDesc = 'Triggered when a key is pressed.';
 
     return (
       React.createElement("div", {id: "eventRowContainer"}, 
@@ -7733,7 +7773,16 @@ var ScreenEvents = React.createClass({displayName: "ScreenEvents",
           desc: 'id', 
           initialValue: element.id, 
           handleChange: this.props.handleChange.bind(this, 'id'), 
-          isIdRow: true})
+          isIdRow: true}), 
+        React.createElement(EventHeaderRow, null), 
+        React.createElement(EventRow, {
+          name: clickName, 
+          desc: clickDesc, 
+          handleInsert: this.insertClick}), 
+        React.createElement(EventRow, {
+          name: keyName, 
+          desc: keyDesc, 
+          handleInsert: this.insertKey})
       )
     );
   }
@@ -7746,6 +7795,7 @@ module.exports = {
   create: function () {
     var element = document.createElement('div');
     element.setAttribute('class', 'screen');
+    element.setAttribute('tabIndex', '1');
     element.style.display = 'block';
     element.style.height = Applab.appHeight + 'px';
     element.style.width = Applab.appWidth + 'px';
@@ -7769,11 +7819,13 @@ module.exports = {
     // Properly position existing screens, so that canvases appear correctly.
     element.style.position = 'absolute';
     element.style.zIndex = 0;
+
+    element.setAttribute('tabIndex', '1');
   }
 };
 
 
-},{"./ColorPickerPropertyRow.jsx":33,"./ImagePickerPropertyRow.jsx":37,"./PropertyRow.jsx":39,"./elementUtils":45,"react":649}],49:[function(require,module,exports){
+},{"./ColorPickerPropertyRow.jsx":33,"./EventHeaderRow.jsx":35,"./EventRow.jsx":36,"./ImagePickerPropertyRow.jsx":37,"./PropertyRow.jsx":39,"./elementUtils":45,"react":649}],49:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
