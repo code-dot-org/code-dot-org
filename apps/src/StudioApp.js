@@ -911,19 +911,15 @@ StudioApp.prototype.onResize = function() {
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
 
-  // TODO (bbuchanan): At least debounce these operations, since we don't
-  // TODO            : seem to debounce our onResize call.
   // Content below visualization is a resizing scroll area in pinned mode
-  this.resizePinnedBelowVisualizationArea();
-  this.repositionCopyrightFlyout();
-  this.repositionMoreMenu();
+  onResizeSmallFooter();
 };
 
 /**
  * Resizes the content area below the visualization in pinned (viewport height)
  * view mode.
  */
-StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
+function resizePinnedBelowVisualizationArea() {
   var pinnedBelowVisualization = document.querySelector(
       '#visualizationColumn.pin_bottom #belowVisualization');
   if (!pinnedBelowVisualization) {
@@ -954,12 +950,12 @@ StudioApp.prototype.resizePinnedBelowVisualizationArea = function () {
 
   pinnedBelowVisualization.style.top = top + 'px';
   pinnedBelowVisualization.style.bottom = bottom + 'px';
-};
+}
 
 /**
  * Sets the copyright flyout to sit exactly above the footer.
  */
-StudioApp.prototype.repositionCopyrightFlyout = function () {
+function repositionCopyrightFlyout() {
   var copyrightFlyout = document.querySelector('#copyright-flyout');
   var smallFooter = document.querySelector('.small-footer');
   if (!(copyrightFlyout && smallFooter)) {
@@ -968,13 +964,13 @@ StudioApp.prototype.repositionCopyrightFlyout = function () {
 
   copyrightFlyout.style.left = '0';
   copyrightFlyout.style.paddingBottom = smallFooter.offsetHeight + 'px';
-};
+}
 
 /**
  * Sets the more-menu size and position to sit above the footer and
  * match its full width.
  */
-StudioApp.prototype.repositionMoreMenu = function () {
+function repositionMoreMenu() {
   var smallFooter = document.querySelector('.small-footer');
   var moreMenu = document.querySelector('#more-menu');
   if (!(smallFooter && moreMenu)) {
@@ -983,7 +979,18 @@ StudioApp.prototype.repositionMoreMenu = function () {
 
   moreMenu.style.bottom = smallFooter.offsetHeight + 'px';
   moreMenu.style.width = smallFooter.offsetWidth + 'px';
-};
+}
+
+/**
+ * Debounced onResize operations that update the layout to support sizing
+ * to viewport height and using the small footer.
+ * @type {Function}
+ */
+var onResizeSmallFooter = _.debounce(function () {
+  resizePinnedBelowVisualizationArea();
+  repositionCopyrightFlyout();
+  repositionMoreMenu();
+}, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
