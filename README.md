@@ -7,7 +7,7 @@ Below is a guide to setting up your workstation to develop for Code.org.  You ca
 ### OS X Mavericks / Yosemite
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-1. Run `sudo chown -R $(whoami):admin /usr/local/`. (Brew assumes it can write to subdirectories of /usr/local/, which recent versions of OSX apparently do not allow. It is strongly discourage to run brew as root.)
+1. Run `sudo chown -R $(whoami):admin /usr/local/`. (Brew assumes it can write to subdirectories of /usr/local/, which not all install of OSX  allow. Running brew as root is strongly discouraged.)
 1. `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql imagemagick node rbenv ruby-build coreutils`
   1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
@@ -25,7 +25,7 @@ Below is a guide to setting up your workstation to develop for Code.org.  You ca
 
 1. `sudo aptitude update`
 1. `sudo aptitude upgrade`
-1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-heawdless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev`
+1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev`
   * **Hit enter and select default options for any configuration popups**
 1. Upgrade npm to 2.0. If `npm -v` says less than 2.0,
   * `sudo add-apt-repository ppa:chris-lea/node.js  `
