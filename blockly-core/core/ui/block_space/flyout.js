@@ -349,7 +349,7 @@ Blockly.Flyout.prototype.hide = function() {
   }
   this.svgGroup_.style.display = 'none';
   // Delete all the event listeners.
-  this.unbindFlyoutDragHandler_();
+  this.unbindBeginPanDragHandler_();
   for (var x = 0, listen; listen = this.listeners_[x]; x++) {
     Blockly.unbindEvent_(listen);
   }
@@ -388,38 +388,78 @@ Blockly.Flyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
   cursor.y += blockHW.height + gap;
 };
 
-Blockly.Flyout.prototype.bindFlyoutDragHandler_ = function (dragTarget) {
-  this.unbindFlyoutDragHandler_();
-  this.dragTarget_ = dragTarget;
-  this.dragMouseDownKey_ = Blockly.bindEvent_(dragTarget, 'mousedown', this, this.onDragTargetMouseDown_);
-  // TODO: Only bind move/up when drag begins?
-  // TODO: Bind move/up against document.body to handle drag scroll anywhere?
-  this.dragMouseMoveKey_ = Blockly.bindEvent_(dragTarget, 'mousemove', this, this.onDragScrollMouseMove_);
-  this.dragMouseUpKey_ = Blockly.bindEvent_(dragTarget, 'mouseup', this, this.onDragScrollMouseUp_);
+/**
+ * Establish a mousedown handler on the given dragTarget that will put the
+ * flyout into a pan-drag mode as long as the mouse is down.
+ * @param {EventTarget} dragTarget - element that will begin pan-drag mode
+ *        when directly clicked.
+ * @private
+ */
+Blockly.Flyout.prototype.bindBeginPanDragHandler_ = function (dragTarget) {
+  this.unbindBeginPanDragHandler_();
+  this.panDragTarget_ = dragTarget;
+  this.panDragMouseDownKey_ = Blockly.bindEvent_(
+      dragTarget, 'mousedown', this, this.onPanDragTargetMouseDown_);
 };
 
-Blockly.Flyout.prototype.unbindFlyoutDragHandler_ = function () {
-  if (this.dragMouseDownKey_) {
-    Blockly.unbindEvent_(this.dragMouseDownKey_);
-    this.dragMouseDownKey_ = null;
+/**
+ * Unbinds previously bound handler to begin pan-drag.  Safe to call if no
+ * such handler is bound.
+ * @private
+ */
+Blockly.Flyout.prototype.unbindBeginPanDragHandler_ = function () {
+  if (this.panDragMouseDownKey_) {
+    Blockly.unbindEvent_(this.panDragMouseDownKey_);
+    this.panDragMouseDownKey_ = null;
   }
-
-  if (this.dragMouseMoveKey_) {
-    Blockly.unbindEvent_(this.dragMouseMoveKey_);
-    this.dragMouseMoveKey_ = null;
-  }
-
-  if (this.dragMouseUpKey_) {
-    Blockly.unbindEvent_(this.dragMouseUpKey_);
-    this.dragMouseUpKey_ = null;
-  }
-  this.dragTarget_ = null;
+  this.panDragTarget_ = null;
 };
 
-Blockly.Flyout.prototype.onDragTargetMouseDown_ = function (e) {
+/**
+ * Binds temporary mousemove and mouseup handlers against document.body,
+ * so that drag behavior and ending the drag work no matter where the cursor
+ * goes after the initial mousedown.
+ * @private
+ */
+Blockly.Flyout.prototype.bindDuringPanDragHandlers_ = function () {
+  this.unbindDuringPanDragHandlers_();
+
+  // We bind against "capture" (instead of the default "bubble") so that we
+  // receive the event before the actual event target - pan-drag mode should
+  // pretty much override everything.
+  var onCapture = true;
+  this.panDragMouseMoveKey_ = Blockly.bindEvent_(
+      document.body, 'mousemove', this, this.onPanDragMouseMove_, onCapture);
+  this.panDragMouseUpKey_ = Blockly.bindEvent_(
+      document.body, 'mouseup', this, this.onPanDragMouseUp_, onCapture);
+};
+
+/**
+ * Unbinds mousemove and mouseup handlers that only apply during pan-drag mode.
+ * @private
+ */
+Blockly.Flyout.prototype.unbindDuringPanDragHandlers_ = function () {
+  if (this.panDragMouseMoveKey_) {
+    Blockly.unbindEvent_(this.panDragMouseMoveKey_);
+    this.panDragMouseMoveKey_ = null;
+  }
+
+  if (this.panDragMouseUpKey_) {
+    Blockly.unbindEvent_(this.panDragMouseUpKey_);
+    this.panDragMouseUpKey_ = null;
+  }
+};
+
+/**
+ * When a mousedown event occurs over the pan-drag target, deselect blocks
+ * and decide whether we can actually begin pan-drag mode.
+ * @param {!Event} e
+ * @private
+ */
+Blockly.Flyout.prototype.onPanDragTargetMouseDown_ = function (e) {
   // this.terminateDrag_(); ??
   // this.hideChaff(); ??
-  var isClickDirectlyOnDragTarget = e.target && e.target === this.dragTarget_;
+  var isClickDirectlyOnDragTarget = e.target && e.target === this.panDragTarget_;
 
   // Clicking on the flyout background clears the global selection
   if (!Blockly.readOnly && Blockly.selected && isClickDirectlyOnDragTarget) {
@@ -440,6 +480,11 @@ Blockly.Flyout.prototype.onDragTargetMouseDown_ = function (e) {
   }
 };
 
+/**
+ * Actually begin pan-drag mode.
+ * @param {!Event} e
+ * @private
+ */
 Blockly.Flyout.prototype.beginDragScroll_ = function (e) {
   this.blockSpace_.dragMode = true;
   // Record the current mouse position.
@@ -448,40 +493,57 @@ Blockly.Flyout.prototype.beginDragScroll_ = function (e) {
   this.startDragMetrics = this.blockSpace_.getMetrics();
   this.startScrollX = this.blockSpace_.xOffsetFromView;
   this.startScrollY = this.blockSpace_.yOffsetFromView;
+
+  this.bindDuringPanDragHandlers_();
 };
 
-Blockly.Flyout.prototype.onDragScrollMouseMove_ = function (e) {
-  if (this.blockSpace_.dragMode) {
-    // Prevent text selection on page
-    Blockly.removeAllRanges();
+/**
+ * Mouse-move handler that is only bound and active during pan-drag mode
+ * for this flyout.  Causes scroll and stops the event.
+ * @param {!Event} e
+ * @private
+ */
+Blockly.Flyout.prototype.onPanDragMouseMove_ = function (e) {
+  // Prevent text selection on page
+  Blockly.removeAllRanges();
 
-    var mouseDx = e.clientX - this.startDragMouseX; // + if mouse right
-    var mouseDy = e.clientY - this.startDragMouseY; // + if mouse down
-    var metrics = this.startDragMetrics;
-    var blockSpaceSize = this.blockSpace_.getScrollableSize(metrics);
+  var mouseDx = e.clientX - this.startDragMouseX; // + if mouse right
+  var mouseDy = e.clientY - this.startDragMouseY; // + if mouse down
+  var metrics = this.startDragMetrics;
+  var blockSpaceSize = this.blockSpace_.getScrollableSize(metrics);
 
-    // New target scroll (x,y) offset
-    var newScrollX = this.startScrollX + mouseDx; // new pan-right (+) position
-    var newScrollY = this.startScrollY + mouseDy; // new pan-down (+) position
+  // New target scroll (x,y) offset
+  var newScrollX = this.startScrollX + mouseDx; // new pan-right (+) position
+  var newScrollY = this.startScrollY + mouseDy; // new pan-down (+) position
 
-    // Don't allow panning past top left
-    newScrollX = Math.min(newScrollX, 0);
-    newScrollY = Math.min(newScrollY, 0);
+  // Don't allow panning past top left
+  newScrollX = Math.min(newScrollX, 0);
+  newScrollY = Math.min(newScrollY, 0);
 
-    // Don't allow panning past bottom or right
-    var furthestScrollAllowedX = -blockSpaceSize.width + metrics.viewWidth;
-    var furthestScrollAllowedY = -blockSpaceSize.height + metrics.viewHeight;
-    newScrollX = Math.max(newScrollX, furthestScrollAllowedX);
-    newScrollY = Math.max(newScrollY, furthestScrollAllowedY);
+  // Don't allow panning past bottom or right
+  var furthestScrollAllowedX = -blockSpaceSize.width + metrics.viewWidth;
+  var furthestScrollAllowedY = -blockSpaceSize.height + metrics.viewHeight;
+  newScrollX = Math.max(newScrollX, furthestScrollAllowedX);
+  newScrollY = Math.max(newScrollY, furthestScrollAllowedY);
 
-    // Set the scrollbar position, which will auto-scroll the canvas
-    this.blockSpace_.scrollbarPair.set(-newScrollX, -newScrollY);
-  }
+  // Set the scrollbar position, which will auto-scroll the canvas
+  this.blockSpace_.scrollbarPair.set(-newScrollX, -newScrollY);
+
+  e.stopPropagation();
+  e.preventDefault();
 };
 
-Blockly.Flyout.prototype.onDragScrollMouseUp_ = function (e) {
-  this.blockSpace_.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN); // Make this available?
+/**
+ * Mouse-up handler that is only bound and active during pan-drag mode
+ * for this flyout.  Ends pan-drag mode.
+ * @param {!Event} e
+ * @private
+ */
+Blockly.Flyout.prototype.onPanDragMouseUp_ = function (e) {
+  this.unbindDuringPanDragHandlers_();
   this.blockSpace_.dragMode = false;
+  e.stopPropagation();
+  e.preventDefault();
 };
 
 /**
@@ -502,7 +564,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   };
 
   // Bind mousedown on the flyout background
-  this.bindFlyoutDragHandler_(this.svgBackground_);
+  this.bindBeginPanDragHandler_(this.svgBackground_);
 
   // Create the blocks to be shown in this flyout.
   var blocks = [];

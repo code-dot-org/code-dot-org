@@ -86,10 +86,14 @@ Blockly.removeClass_ = function(element, className) {
  * @param {string} name Event name to listen to (e.g. 'mousedown').
  * @param {Object} thisObject The value of 'this' in the function.
  * @param {!Function} func Function to call when event is triggered.
+ * @param {boolean} [useCapture=false] If true, bind event against capture
+ *        phase instead of bubble phase.
  * @return {!Array.<!Array>} Opaque data that can be passed to unbindEvent_.
  * @private
  */
-Blockly.bindEvent_ = function(element, name, thisObject, func) {
+Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
+  // Coerce useCapture to boolean
+  useCapture = !!useCapture;
   var bindData = [];
   var wrapFunc;
   if (!element.addEventListener) {
@@ -103,8 +107,8 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
   if (equivTouchEvent) {
     // Also bind the mouse event, unless the browser supports pointer events.
     if (!window.navigator.pointerEnabled && !window.navigator.msPointerEnabled) {
-      element.addEventListener(name, wrapFunc, false);
-      bindData.push([element, name, wrapFunc]);
+      element.addEventListener(name, wrapFunc, useCapture);
+      bindData.push([element, name, wrapFunc, useCapture]);
     }
     wrapFunc = function (e) {
       if (e.target && e.target.style) {
@@ -126,11 +130,11 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
         func.apply(thisObject, arguments);
       }
     };
-    element.addEventListener(equivTouchEvent, wrapFunc, false);
-    bindData.push([element, equivTouchEvent, wrapFunc]);
+    element.addEventListener(equivTouchEvent, wrapFunc, useCapture);
+    bindData.push([element, equivTouchEvent, wrapFunc, useCapture]);
   } else {
-    element.addEventListener(name, wrapFunc, false);
-    bindData.push([element, name, wrapFunc]);
+    element.addEventListener(name, wrapFunc, useCapture);
+    bindData.push([element, name, wrapFunc, useCapture]);
   }
   return bindData;
 };
@@ -174,7 +178,8 @@ Blockly.unbindEvent_ = function(bindData) {
     var element = bindDatum[0];
     var name = bindDatum[1];
     var func = bindDatum[2];
-    element.removeEventListener(name, func, false);
+    var useCapture = bindDatum[3];
+    element.removeEventListener(name, func, useCapture);
   }
   return func;
 };
