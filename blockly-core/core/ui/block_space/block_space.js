@@ -837,6 +837,10 @@ Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (dragTarget,
   this.onDragTargetMouseDown_ = onDragTargetMouseDown;
   this.panDragMouseDownKey_ = Blockly.bindEvent_(
       dragTarget, 'mousedown', this, this.onPanDragTargetMouseDown_);
+
+  // Also block the context menu on the pan-drag target element
+  this.contextMenuBlockKey_ = Blockly.bindEvent_(
+      dragTarget, 'contextmenu', null, Blockly.blockContextMenu);
 };
 
 /**
@@ -848,6 +852,12 @@ Blockly.BlockSpace.prototype.unbindBeginPanDragHandler = function () {
     Blockly.unbindEvent_(this.panDragMouseDownKey_);
     this.panDragMouseDownKey_ = null;
   }
+
+  if (this.contextMenuBlockKey_) {
+    Blockly.unbindEvent_(this.contextMenuBlockKey_);
+    this.contextMenuBlockKey_ = null;
+  }
+
   this.panDragTarget_ = null;
 };
 

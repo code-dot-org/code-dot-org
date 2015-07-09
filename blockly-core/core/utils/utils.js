@@ -578,3 +578,23 @@ Blockly.printerRangeToNumbers = function(rangeString) {
 Blockly.getUID = function() {
   return goog.events.getUniqueId('blocklyUID');
 };
+
+/**
+ * Is this event targeting a text input widget?
+ * @param {!Event} e An event.
+ * @return {boolean} True if text or textarea input.
+ */
+Blockly.isTargetInput = function (e) {
+  return e.target.type == 'textarea' || e.target.type == 'text';
+};
+
+/**
+ * Cancel the native context menu, unless the focus is on an HTML input widget.
+ * @param {!Event} e contextmenu event.
+ * @private
+ */
+Blockly.blockContextMenu = function (e) {
+  if (!Blockly.isTargetInput(e)) {
+    e.preventDefault();
+  }
+};

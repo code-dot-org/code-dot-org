@@ -438,7 +438,6 @@ Blockly.FunctionEditor.prototype.create_ = function() {
         // hideTrashRect:
         true);
 
-  this.modalBlockSpaceEditor.bindMouseEventsTo(this.container_);
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
   this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;
   this.modalBlockSpace.bindBeginPanDragHandler(this.container_, goog.bind(function () {
