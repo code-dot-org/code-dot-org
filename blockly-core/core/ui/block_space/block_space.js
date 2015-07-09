@@ -69,10 +69,10 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
    * @typedef {Object} panDragData
    * @property {EventTarget} target
    * @property {function} onTargetMouseDown
-   * @property {!Array.<!Array>} mouseDownKey
-   * @property {!Array.<!Array>} contextMenuBlockKey
-   * @property {!Array.<!Array>} mouseMoveKey
-   * @property {!Array.<!Array>} mouseUpKey
+   * @property {bindData} mouseDownKey
+   * @property {bindData} contextMenuBlockKey
+   * @property {bindData} mouseMoveKey
+   * @property {bindData} mouseUpKey
    * @property {number} startMouseX
    * @property {number} startMouseY
    * @property {Object} startMetrics
