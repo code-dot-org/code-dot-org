@@ -48,7 +48,7 @@ Below is a guide to setting up your workstation to develop for Code.org.  You ca
   1. Option B - Manual install
     1. [Nodejs.org](https://nodejs.org/download/)
 
-### Windows (using an Ubuntu VM)
+### Windows note: use an Ubuntu VM
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
