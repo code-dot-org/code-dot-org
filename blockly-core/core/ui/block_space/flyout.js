@@ -432,6 +432,11 @@ Blockly.Flyout.prototype.onDragTargetMouseDown_ = function (e) {
       !Blockly.isRightButton(e) &&
       (Blockly.readOnly || isClickDirectlyOnDragTarget)) {
     this.beginDragScroll_(e);
+
+    // Don't click through to the workspace drag handler, or the browser
+    // default drag/scroll handlers.
+    e.stopPropagation();
+    e.preventDefault();
   }
 };
 
@@ -443,9 +448,6 @@ Blockly.Flyout.prototype.beginDragScroll_ = function (e) {
   this.startDragMetrics = this.blockSpace_.getMetrics();
   this.startScrollX = this.blockSpace_.xOffsetFromView;
   this.startScrollY = this.blockSpace_.yOffsetFromView;
-
-  // Stop the browser from scrolling/zooming the page
-  e.preventDefault();
 };
 
 Blockly.Flyout.prototype.onDragScrollMouseMove_ = function (e) {
