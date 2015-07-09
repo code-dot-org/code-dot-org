@@ -827,10 +827,14 @@ Blockly.BlockSpace.prototype.updateScrollableSize = function () {
  * blockspace into a pan-drag mode as long as the mouse is down.
  * @param {EventTarget} dragTarget - element that will begin pan-drag mode
  *        when directly clicked.
+ * @param {function} [onDragTargetMouseDown] - optional function called when
+ *        click on the drag target begins (used for hideChaff by BSE)
  */
-Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (dragTarget) {
+Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (dragTarget,
+    onDragTargetMouseDown) {
   this.unbindBeginPanDragHandler();
   this.panDragTarget_ = dragTarget;
+  this.onDragTargetMouseDown_ = onDragTargetMouseDown;
   this.panDragMouseDownKey_ = Blockly.bindEvent_(
       dragTarget, 'mousedown', this, this.onPanDragTargetMouseDown_);
 };
@@ -889,8 +893,10 @@ Blockly.BlockSpace.prototype.unbindDuringPanDragHandlers_ = function () {
  * @private
  */
 Blockly.BlockSpace.prototype.onPanDragTargetMouseDown_ = function (e) {
-  // this.terminateDrag_(); ??
-  // this.hideChaff(); ??
+  if (this.onDragTargetMouseDown_) {
+    this.onDragTargetMouseDown_();
+  }
+
   var isClickDirectlyOnDragTarget = e.target && e.target === this.panDragTarget_;
 
   // Clicking on the flyout background clears the global selection

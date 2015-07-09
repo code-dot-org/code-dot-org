@@ -364,28 +364,10 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
  * @param {Element} newTarget really ought to be an svg?
  */
 Blockly.BlockSpaceEditor.prototype.bindMouseEventsTo = function (newTarget) {
-  if (this.mouseDownBindData_) {
-    Blockly.unbindEvent_(this.mouseDownBindData_);
-  }
-  if (this.mouseMoveBindData_) {
-    Blockly.unbindEvent_(this.mouseMoveBindData_);
-  }
   if (this.svgContextMenuBindData_) {
     Blockly.unbindEvent_(this.svgContextMenuBindData_);
   }
-  if (this.mouseUpBindData_) {
-    Blockly.unbindEvent_(this.mouseUpBindData_);
-  }
-  this.mouseDownBindData_ = Blockly.bindEvent_(newTarget, 'mousedown', this, this.onMouseDown_);
-  this.mouseMoveBindData_ = Blockly.bindEvent_(newTarget, 'mousemove', this, this.onMouseMove_);
   this.svgContextMenuBindData_ = Blockly.bindEvent_(newTarget, 'contextmenu', null, Blockly.BlockSpaceEditor.onContextMenu_);
-
-  // TODO (bbuchanan): Bind mouseup against document or window, like the comment
-  // TODO              below says, so that we stop dragging or scrolling on
-  // TODO              mouseup even if the mouse moved out of the workspace.
-  // TODO              Needs good cross-browser testing!
-  this.mouseUpBindData_ = Blockly.bindEvent_(newTarget, 'mouseup', this, this.onMouseUp_);
-  this.mouseEventTarget_ = newTarget;
 };
 
 Blockly.BlockSpaceEditor.prototype.init_ = function() {
@@ -398,6 +380,10 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
   // Also, 'keydown' has to be on the whole document since the browser doesn't
   // understand a concept of focus on the SVG image.
   this.bindMouseEventsTo(this.svg_);
+  this.blockSpace.bindBeginPanDragHandler(this.svg_, goog.bind(function () {
+    Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost
+    this.hideChaff();
+  }, this));
   Blockly.bindEvent_(Blockly.WidgetDiv.DIV, 'contextmenu', null,
     Blockly.BlockSpaceEditor.onContextMenu_);
 
@@ -568,83 +554,6 @@ Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
 */
 Blockly.BlockSpaceEditor.prototype.setCursor = function(cursorType) {
   Blockly.Css.setCursor(cursorType, this.svg_);
-};
-
-/**
- * Handle a mouse-down on SVG drawing surface.
- * @param {!Event} e Mouse down event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
-  Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost.
-  this.hideChaff();
-  var isOwnMouseTarget = e.target && e.target === this.mouseEventTarget_;
-  if (!Blockly.readOnly && Blockly.selected && isOwnMouseTarget) {
-    // Clicking on the document clears the selection.
-    Blockly.selected.unselect();
-  }
-  if (Blockly.isRightButton(e)) {
-    // Right-click.
-    // Unlike google Blockly, we don't want to show a context menu
-    // Blockly.showContextMenu_(e);
-  } else if ((Blockly.readOnly || isOwnMouseTarget) &&
-    this.blockSpace.scrollbarPair) {
-    // If the blockSpace is editable, only allow dragging when gripping empty
-    // space.  Otherwise, allow dragging when gripping anywhere.
-    this.blockSpace.dragMode = true;
-    // Record the current mouse position.
-    this.startDragMouseX = e.clientX;
-    this.startDragMouseY = e.clientY;
-    this.startDragMetrics =
-      this.blockSpace.getMetrics();
-    this.startScrollX = this.blockSpace.xOffsetFromView;
-    this.startScrollY = this.blockSpace.yOffsetFromView;
-
-    // Stop the browser from scrolling/zooming the page
-    e.preventDefault();
-  }
-};
-
-/**
- * Handle a mouse-up on SVG drawing surface.
- * @param {!Event} e Mouse up event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseUp_ = function(e) {
-  this.setCursor(Blockly.Css.Cursor.OPEN);
-  this.blockSpace.dragMode = false;
-};
-
-/**
- * Handle a mouse-move on SVG drawing surface (panning).
- * @param {!Event} e Mouse move event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseMove_ = function(e) {
-  if (this.blockSpace.dragMode) {
-    Blockly.removeAllRanges();
-    var mouseDx = e.clientX - this.startDragMouseX; // + if mouse right
-    var mouseDy = e.clientY - this.startDragMouseY; // + if mouse down
-    var metrics = this.startDragMetrics;
-    var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
-
-    // New target scroll (x,y) offset
-    var newScrollX = this.startScrollX + mouseDx; // new pan-right (+) position
-    var newScrollY = this.startScrollY + mouseDy; // new pan-down (+) position
-
-    // Don't allow panning past top left
-    newScrollX = Math.min(newScrollX, 0);
-    newScrollY = Math.min(newScrollY, 0);
-
-    // Don't allow panning past bottom or right
-    var furthestScrollAllowedX = -blockSpaceSize.width + metrics.viewWidth;
-    var furthestScrollAllowedY = -blockSpaceSize.height + metrics.viewHeight;
-    newScrollX = Math.max(newScrollX, furthestScrollAllowedX);
-    newScrollY = Math.max(newScrollY, furthestScrollAllowedY);
-
-    // Set the scrollbar position, which will auto-scroll the canvas
-    this.blockSpace.scrollbarPair.set(-newScrollX, -newScrollY);
-  }
 };
 
 /**
