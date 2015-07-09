@@ -65,6 +65,13 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   /** @type {goog.events.EventTarget} */
   this.events = new goog.events.EventTarget();
 
+  /**
+   * Encapsulates state used to make pan-drag work.
+   * @type {Object}
+   * @private
+   */
+  this.panDragData_ = {};
+
   Blockly.ConnectionDB.init(this);
   if (Blockly.BlockSpace.DEBUG_EVENTS) {
     this.debugLogOnEvents();
@@ -95,12 +102,6 @@ Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
  * See: http://tvtropes.org/pmwiki/pmwiki.php/Main/DiagonalBilling.
  */
 Blockly.BlockSpace.SCAN_ANGLE = 3;
-
-/**
- * Can this blockSpace be dragged around (true) or is it fixed (false)?
- * @type {boolean}
- */
-Blockly.BlockSpace.prototype.dragMode = false;
 
 /**
  * Current horizontal scrolling offset.
@@ -833,13 +834,13 @@ Blockly.BlockSpace.prototype.updateScrollableSize = function () {
 Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (dragTarget,
     onDragTargetMouseDown) {
   this.unbindBeginPanDragHandler();
-  this.panDragTarget_ = dragTarget;
-  this.onDragTargetMouseDown_ = onDragTargetMouseDown;
-  this.panDragMouseDownKey_ = Blockly.bindEvent_(
+  this.panDragData_.target = dragTarget;
+  this.panDragData_.onTargetMouseDown = onDragTargetMouseDown;
+  this.panDragData_.mouseDownKey = Blockly.bindEvent_(
       dragTarget, 'mousedown', this, this.onPanDragTargetMouseDown_);
 
   // Also block the context menu on the pan-drag target element
-  this.contextMenuBlockKey_ = Blockly.bindEvent_(
+  this.panDragData_.contextMenuBlockKey = Blockly.bindEvent_(
       dragTarget, 'contextmenu', null, Blockly.blockContextMenu);
 };
 
@@ -848,17 +849,17 @@ Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (dragTarget,
  * such handler is bound.
  */
 Blockly.BlockSpace.prototype.unbindBeginPanDragHandler = function () {
-  if (this.panDragMouseDownKey_) {
-    Blockly.unbindEvent_(this.panDragMouseDownKey_);
-    this.panDragMouseDownKey_ = null;
+  if (this.panDragData_.mouseDownKey) {
+    Blockly.unbindEvent_(this.panDragData_.mouseDownKey);
+    this.panDragData_.mouseDownKey = null;
   }
 
-  if (this.contextMenuBlockKey_) {
-    Blockly.unbindEvent_(this.contextMenuBlockKey_);
-    this.contextMenuBlockKey_ = null;
+  if (this.panDragData_.contextMenuBlockKey) {
+    Blockly.unbindEvent_(this.panDragData_.contextMenuBlockKey);
+    this.panDragData_.contextMenuBlockKey = null;
   }
 
-  this.panDragTarget_ = null;
+  this.panDragData_.target = null;
 };
 
 /**
@@ -874,9 +875,9 @@ Blockly.BlockSpace.prototype.bindDuringPanDragHandlers_ = function () {
   // receive the event before the actual event target - pan-drag mode should
   // pretty much override everything.
   var onCapture = true;
-  this.panDragMouseMoveKey_ = Blockly.bindEvent_(
+  this.panDragData_.mouseMoveKey = Blockly.bindEvent_(
       window, 'mousemove', this, this.onPanDragMouseMove_, onCapture);
-  this.panDragMouseUpKey_ = Blockly.bindEvent_(
+  this.panDragData_.mouseUpKey = Blockly.bindEvent_(
       window, 'mouseup', this, this.onPanDragMouseUp_, onCapture);
 };
 
@@ -885,14 +886,14 @@ Blockly.BlockSpace.prototype.bindDuringPanDragHandlers_ = function () {
  * @private
  */
 Blockly.BlockSpace.prototype.unbindDuringPanDragHandlers_ = function () {
-  if (this.panDragMouseMoveKey_) {
-    Blockly.unbindEvent_(this.panDragMouseMoveKey_);
-    this.panDragMouseMoveKey_ = null;
+  if (this.panDragData_.mouseMoveKey) {
+    Blockly.unbindEvent_(this.panDragData_.mouseMoveKey);
+    this.panDragData_.mouseMoveKey = null;
   }
 
-  if (this.panDragMouseUpKey_) {
-    Blockly.unbindEvent_(this.panDragMouseUpKey_);
-    this.panDragMouseUpKey_ = null;
+  if (this.panDragData_.mouseUpKey) {
+    Blockly.unbindEvent_(this.panDragData_.mouseUpKey);
+    this.panDragData_.mouseUpKey = null;
   }
 };
 
@@ -903,11 +904,11 @@ Blockly.BlockSpace.prototype.unbindDuringPanDragHandlers_ = function () {
  * @private
  */
 Blockly.BlockSpace.prototype.onPanDragTargetMouseDown_ = function (e) {
-  if (this.onDragTargetMouseDown_) {
-    this.onDragTargetMouseDown_();
+  if (this.panDragData_.onTargetMouseDown) {
+    this.panDragData_.onTargetMouseDown();
   }
 
-  var isClickDirectlyOnDragTarget = e.target && e.target === this.panDragTarget_;
+  var isClickDirectlyOnDragTarget = e.target && e.target === this.panDragData_.target;
 
   // Clicking on the flyout background clears the global selection
   if (Blockly.selected && !Blockly.readOnly && isClickDirectlyOnDragTarget) {
@@ -933,13 +934,12 @@ Blockly.BlockSpace.prototype.onPanDragTargetMouseDown_ = function (e) {
  * @private
  */
 Blockly.BlockSpace.prototype.beginDragScroll_ = function (e) {
-  this.dragMode = true;
   // Record the current mouse position.
-  this.startDragMouseX = e.clientX;
-  this.startDragMouseY = e.clientY;
-  this.startDragMetrics = this.getMetrics();
-  this.startScrollX = this.xOffsetFromView;
-  this.startScrollY = this.yOffsetFromView;
+  this.panDragData_.startMouseX = e.clientX;
+  this.panDragData_.startMouseY = e.clientY;
+  this.panDragData_.startMetrics = this.getMetrics();
+  this.panDragData_.startScrollX = this.xOffsetFromView;
+  this.panDragData_.startScrollY = this.yOffsetFromView;
 
   this.bindDuringPanDragHandlers_();
 };
@@ -954,14 +954,14 @@ Blockly.BlockSpace.prototype.onPanDragMouseMove_ = function (e) {
   // Prevent text selection on page
   Blockly.removeAllRanges();
 
-  var mouseDx = e.clientX - this.startDragMouseX; // + if mouse right
-  var mouseDy = e.clientY - this.startDragMouseY; // + if mouse down
-  var metrics = this.startDragMetrics;
+  var mouseDx = e.clientX - this.panDragData_.startMouseX; // + if mouse right
+  var mouseDy = e.clientY - this.panDragData_.startMouseY; // + if mouse down
+  var metrics = this.panDragData_.startMetrics;
   var blockSpaceSize = this.getScrollableSize(metrics);
 
   // New target scroll (x,y) offset
-  var newScrollX = this.startScrollX + mouseDx; // new pan-right (+) position
-  var newScrollY = this.startScrollY + mouseDy; // new pan-down (+) position
+  var newScrollX = this.panDragData_.startScrollX + mouseDx; // new pan-right (+) position
+  var newScrollY = this.panDragData_.startScrollY + mouseDy; // new pan-down (+) position
 
   // Don't allow panning past top left
   newScrollX = Math.min(newScrollX, 0);
@@ -988,7 +988,6 @@ Blockly.BlockSpace.prototype.onPanDragMouseMove_ = function (e) {
  */
 Blockly.BlockSpace.prototype.onPanDragMouseUp_ = function (e) {
   this.unbindDuringPanDragHandlers_();
-  this.dragMode = false;
   e.stopPropagation();
   e.preventDefault();
 };
