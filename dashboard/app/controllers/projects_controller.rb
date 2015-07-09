@@ -5,10 +5,19 @@ class ProjectsController < ApplicationController
   TEMPLATES = %w(projects)
 
   STANDALONE_PROJECTS = {
-    artist: 'New Artist Project',
-    playlab: 'New Play Lab Project',
-    applab: 'New App Lab Project',
-    algebra_game: 'New Algebra Project',
+    artist: {
+      name: 'New Artist Project'
+    },
+    playlab: {
+      name: 'New Play Lab Project'
+    },
+    applab: {
+      name: 'New App Lab Project',
+      login_required: true
+    },
+    algebra_game: {
+      name: 'New Algebra Project'
+    }
   }
 
   def index
