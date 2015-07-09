@@ -155,6 +155,10 @@ applabCommands.setScreen = function (opts) {
   // toggle all screens to be visible if equal to given id, hidden otherwise
   $('.screen').each(function () {
     $(this).toggle(this.id === opts.screenId);
+    if (this.id === opts.screenId) {
+      // Allow the active screen to receive keyboard events.
+      this.focus();
+    }
   });
 };
 

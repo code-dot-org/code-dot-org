@@ -59,10 +59,25 @@ var ScreenEvents = React.createClass({
     this.props.onInsertEvent(this.getClickEventCode());
   },
 
+  getKeyEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "keydown", function(event) {\n' +
+      '  console.log("Key: " + event.key);\n' +
+      '});\n';
+    return code;
+  },
+
+  insertKey: function() {
+    this.props.onInsertEvent(this.getKeyEventCode());
+  },
+
   render: function () {
     var element = this.props.element;
     var clickName = 'Click';
     var clickDesc = 'Triggered when the screen is clicked with a mouse or tapped on a screen.';
+    var keyName = 'Key';
+    var keyDesc = 'Triggered when a key is pressed.';
 
     return (
       <div id='eventRowContainer'>
@@ -76,6 +91,10 @@ var ScreenEvents = React.createClass({
           name={clickName}
           desc={clickDesc}
           handleInsert={this.insertClick}/>
+        <EventRow
+          name={keyName}
+          desc={keyDesc}
+          handleInsert={this.insertKey}/>
       </div>
     );
   }
@@ -88,6 +107,7 @@ module.exports = {
   create: function () {
     var element = document.createElement('div');
     element.setAttribute('class', 'screen');
+    element.setAttribute('tabIndex', '1');
     element.style.display = 'block';
     element.style.height = Applab.appHeight + 'px';
     element.style.width = Applab.appWidth + 'px';
@@ -111,5 +131,7 @@ module.exports = {
     // Properly position existing screens, so that canvases appear correctly.
     element.style.position = 'absolute';
     element.style.zIndex = 0;
+
+    element.setAttribute('tabIndex', '1');
   }
 };
