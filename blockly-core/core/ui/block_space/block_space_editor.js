@@ -357,35 +357,17 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
   });
 };
 
-/**
- * Bind (or re-bind) "blockspace" mouse events that represent clicking "nowhere"
- * against the given element.  Allows the modal editors to customize which
- * element picks up their 'nowhere' clicks.
- * @param {Element} newTarget really ought to be an svg?
- */
-Blockly.BlockSpaceEditor.prototype.bindMouseEventsTo = function (newTarget) {
-  if (this.svgContextMenuBindData_) {
-    Blockly.unbindEvent_(this.svgContextMenuBindData_);
-  }
-  this.svgContextMenuBindData_ = Blockly.bindEvent_(newTarget, 'contextmenu', null, Blockly.BlockSpaceEditor.onContextMenu_);
-};
-
 Blockly.BlockSpaceEditor.prototype.init_ = function() {
   this.detectBrokenControlPoints();
 
-  // Bind events for scrolling the blockSpace.
-  // Most of these events should be bound to the SVG's surface.
-  // However, 'mouseup' has to be on the whole document so that a block dragged
-  // out of bounds and released will know that it has been released.
-  // Also, 'keydown' has to be on the whole document since the browser doesn't
-  // understand a concept of focus on the SVG image.
-  this.bindMouseEventsTo(this.svg_);
+  // Bind pan-drag handlers
   this.blockSpace.bindBeginPanDragHandler(this.svg_, goog.bind(function () {
     Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost
     this.hideChaff();
   }, this));
+
   Blockly.bindEvent_(Blockly.WidgetDiv.DIV, 'contextmenu', null,
-    Blockly.BlockSpaceEditor.onContextMenu_);
+    Blockly.blockContextMenu);
 
   if (!Blockly.documentEventsBound_) {
     // Only bind the window/document events once.
@@ -562,7 +544,7 @@ Blockly.BlockSpaceEditor.prototype.setCursor = function(cursorType) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
-  if (Blockly.BlockSpaceEditor.isTargetInput_(e)) {
+  if (Blockly.isTargetInput(e)) {
     // When focused on an HTML text input widget, don't trap any keys.
     return;
   }
@@ -684,29 +666,6 @@ Blockly.BlockSpaceEditor.showContextMenu_ = function(e) {
 
   Blockly.ContextMenu.show(e, options);
 };
-
-/**
- * Cancel the native context menu, unless the focus is on an HTML input widget.
- * @param {!Event} e Mouse down event.
- * @private
- */
-Blockly.BlockSpaceEditor.onContextMenu_ = function(e) {
-  if (!Blockly.BlockSpaceEditor.isTargetInput_(e)) {
-    // When focused on an HTML text input widget, don't cancel the context menu.
-    e.preventDefault();
-  }
-};
-
-/**
- * Is this event targeting a text input widget?
- * @param {!Event} e An event.
- * @return {boolean} True if text input.
- * @private
- */
-Blockly.BlockSpaceEditor.isTargetInput_ = function(e) {
-  return e.target.type == 'textarea' || e.target.type == 'text';
-};
-
 
 /**
  * Close tooltips, context menus, dropdown selections, etc.

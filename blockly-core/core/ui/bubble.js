@@ -255,7 +255,7 @@ Blockly.Bubble.prototype.bubbleMouseDown_ = function(e) {
   if (Blockly.isRightButton(e)) {
     // Right-click.
     return;
-  } else if (Blockly.BlockSpaceEditor.isTargetInput_(e)) {
+  } else if (Blockly.isTargetInput(e)) {
     // When focused on an HTML text input widget, don't trap any events.
     return;
   }
