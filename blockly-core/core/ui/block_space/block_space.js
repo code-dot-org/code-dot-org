@@ -230,6 +230,10 @@ Blockly.BlockSpace.prototype.dispose = function() {
     this.trashcan.dispose();
     this.trashcan = null;
   }
+  if (this.scrollbarPair) {
+    this.scrollbarPair.dispose();
+    this.scrollbarPair = null;
+  }
 };
 
 /**
