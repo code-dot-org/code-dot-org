@@ -493,6 +493,9 @@ Flappy.init = function(config) {
 
   config.grayOutUndeletableBlocks = level.grayOutUndeletableBlocks;
 
+  config.pinWorkspaceToBottom = true;
+  config.hasVerticalScrollbars = true;
+
   loadLevel();
 
   config.html = page({
