@@ -40,7 +40,7 @@ Below is a guide to setting up your workstation to develop for Code.org.  You ca
   1. Option B - Symlinks:
     1. Ruby: `sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby`
     1. Gem: `sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem`
-    1. `sudo chown $(whoami) /usr/bin/gem/`
+    1. code>sudo chown \`whoami\` /usr/bin/gem/</code>`
 1. Install Node.js 0.12.4 and npm 2.10.1
   1. Option A - nodesource repository
     1. `curl -sL https://deb.nodesource.com/setup | sudo bash -`
@@ -69,7 +69,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `cd code-dot-org/aws`
 1. `bundle install`
 1. `cd ..`
-1. `sudo chown $(whoami) $HOME/.npm`
+1. `sudo chown $(whoami) $HOME/.npm`  (It is OK if this path doesn't exist.)
 1. `rake install`
 
 ## Organizational Structure
