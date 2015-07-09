@@ -164,10 +164,6 @@ Blockly.Flyout.prototype.dispose = function() {
     Blockly.unbindEvent_(this.changeWrapper_);
     this.changeWrapper_ = null;
   }
-  if (this.scrollbar_) {
-    this.scrollbar_.dispose();
-    this.scrollbar_ = null;
-  }
   this.blockSpace_ = null;
   if (this.svgGroup_) {
     goog.dom.removeNode(this.svgGroup_);
@@ -256,14 +252,17 @@ Blockly.Flyout.prototype.setMetrics_ = function(yRatio) {
  * Initializes the flyout.
  * @param {!Blockly.BlockSpace} blockSpace The blockSpace in which to create new
  *     blocks.
- * @param {boolean} withScrollbar True if a scrollbar should be displayed.
+ * @param {boolean} withScrollbars True if a scrollbar should be displayed.
  */
-Blockly.Flyout.prototype.init = function(blockSpace, withScrollbar) {
+Blockly.Flyout.prototype.init = function(blockSpace, withScrollbars) {
   this.targetBlockSpace_ = blockSpace;
   // Add scrollbars.
   var flyout = this;
-  if (withScrollbar) {
-    this.scrollbar_ = new Blockly.Scrollbar(flyout.blockSpace_, false, false);
+  if (withScrollbars) {
+    var useHorizontalScrollbar = false;
+    var useVerticalScrollbar = true;
+    flyout.blockSpace_.scrollbarPair = new Blockly.ScrollbarPair(
+        flyout.blockSpace_, useHorizontalScrollbar, useVerticalScrollbar);
   }
 
   this.hide();
@@ -322,11 +321,7 @@ Blockly.Flyout.prototype.position_ = function() {
 
   // Record the height for Blockly.Flyout.getMetrics_.
   this.height_ = metrics.viewHeight;
-
-  // Update the scrollbar (if one exists).
-  if (this.scrollbar_) {
-    this.scrollbar_.resize();
-  }
+  this.blockSpace_.updateScrollableSize();
 
   // Center the trashcan
   if (this.svgTrashcan_) {
@@ -354,6 +349,7 @@ Blockly.Flyout.prototype.hide = function() {
   }
   this.svgGroup_.style.display = 'none';
   // Delete all the event listeners.
+  this.unbindFlyoutDragHandler_();
   for (var x = 0, listen; listen = this.listeners_[x]; x++) {
     Blockly.unbindEvent_(listen);
   }
@@ -392,6 +388,100 @@ Blockly.Flyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
   cursor.y += blockHW.height + gap;
 };
 
+Blockly.Flyout.prototype.bindFlyoutDragHandler_ = function (dragTarget) {
+  this.unbindFlyoutDragHandler_();
+  this.dragTarget_ = dragTarget;
+  this.dragMouseDownKey_ = Blockly.bindEvent_(dragTarget, 'mousedown', this, this.onDragTargetMouseDown_);
+  // TODO: Only bind move/up when drag begins?
+  // TODO: Bind move/up against document.body to handle drag scroll anywhere?
+  this.dragMouseMoveKey_ = Blockly.bindEvent_(dragTarget, 'mousemove', this, this.onDragScrollMouseMove_);
+  this.dragMouseUpKey_ = Blockly.bindEvent_(dragTarget, 'mouseup', this, this.onDragScrollMouseUp_);
+};
+
+Blockly.Flyout.prototype.unbindFlyoutDragHandler_ = function () {
+  if (this.dragMouseDownKey_) {
+    Blockly.unbindEvent_(this.dragMouseDownKey_);
+    this.dragMouseDownKey_ = null;
+  }
+
+  if (this.dragMouseMoveKey_) {
+    Blockly.unbindEvent_(this.dragMouseMoveKey_);
+    this.dragMouseMoveKey_ = null;
+  }
+
+  if (this.dragMouseUpKey_) {
+    Blockly.unbindEvent_(this.dragMouseUpKey_);
+    this.dragMouseUpKey_ = null;
+  }
+  this.dragTarget_ = null;
+};
+
+Blockly.Flyout.prototype.onDragTargetMouseDown_ = function (e) {
+  // this.terminateDrag_(); ??
+  // this.hideChaff(); ??
+  var isClickDirectlyOnDragTarget = e.target && e.target === this.dragTarget_;
+
+  // Clicking on the flyout background clears the global selection
+  if (!Blockly.readOnly && Blockly.selected && isClickDirectlyOnDragTarget) {
+    Blockly.selected.unselect();
+  }
+
+  // On left-click on scrollable area, begin scroll-drag
+  // In readonly mode, we scroll-drag when clicking through a block, too.
+  if (this.blockSpace_.scrollbarPair &&
+      !Blockly.isRightButton(e) &&
+      (Blockly.readOnly || isClickDirectlyOnDragTarget)) {
+    this.beginDragScroll_(e);
+  }
+};
+
+Blockly.Flyout.prototype.beginDragScroll_ = function (e) {
+  this.blockSpace_.dragMode = true;
+  // Record the current mouse position.
+  this.startDragMouseX = e.clientX;
+  this.startDragMouseY = e.clientY;
+  this.startDragMetrics = this.blockSpace_.getMetrics();
+  this.startScrollX = this.blockSpace_.xOffsetFromView;
+  this.startScrollY = this.blockSpace_.yOffsetFromView;
+
+  // Stop the browser from scrolling/zooming the page
+  e.preventDefault();
+};
+
+Blockly.Flyout.prototype.onDragScrollMouseMove_ = function (e) {
+  if (this.blockSpace_.dragMode) {
+    // Prevent text selection on page
+    Blockly.removeAllRanges();
+
+    var mouseDx = e.clientX - this.startDragMouseX; // + if mouse right
+    var mouseDy = e.clientY - this.startDragMouseY; // + if mouse down
+    var metrics = this.startDragMetrics;
+    var blockSpaceSize = this.blockSpace_.getScrollableSize(metrics);
+
+    // New target scroll (x,y) offset
+    var newScrollX = this.startScrollX + mouseDx; // new pan-right (+) position
+    var newScrollY = this.startScrollY + mouseDy; // new pan-down (+) position
+
+    // Don't allow panning past top left
+    newScrollX = Math.min(newScrollX, 0);
+    newScrollY = Math.min(newScrollY, 0);
+
+    // Don't allow panning past bottom or right
+    var furthestScrollAllowedX = -blockSpaceSize.width + metrics.viewWidth;
+    var furthestScrollAllowedY = -blockSpaceSize.height + metrics.viewHeight;
+    newScrollX = Math.max(newScrollX, furthestScrollAllowedX);
+    newScrollY = Math.max(newScrollY, furthestScrollAllowedY);
+
+    // Set the scrollbar position, which will auto-scroll the canvas
+    this.blockSpace_.scrollbarPair.set(-newScrollX, -newScrollY);
+  }
+};
+
+Blockly.Flyout.prototype.onDragScrollMouseUp_ = function (e) {
+  this.blockSpace_.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN); // Make this available?
+  this.blockSpace_.dragMode = false;
+};
+
 /**
  * Show and populate the flyout.
  * @param {!Array|string} xmlList List of blocks to show.
@@ -408,6 +498,9 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     x: initialX,
     y: margin
   };
+
+  // Bind mousedown on the flyout background
+  this.bindFlyoutDragHandler_(this.svgBackground_);
 
   // Create the blocks to be shown in this flyout.
   var blocks = [];
