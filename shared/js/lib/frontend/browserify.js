@@ -45,7 +45,7 @@ module.exports = function(options) {
       .bundle()
       // log errors if they happen
       .on('error', function(e){
-        console.log('Browserify Error: ' + e);
+        throw e;
       })
       .pipe(fs.createWriteStream(options.dest));
   }
