@@ -878,7 +878,7 @@ Blockly.BlockSpace.prototype.unbindBeginPanDragHandler = function () {
 };
 
 /**
- * Binds temporary mousemove and mouseup handlers against document.body,
+ * Binds temporary mousemove and mouseup handlers against window,
  * so that drag behavior and ending the drag work no matter where the cursor
  * goes after the initial mousedown.
  * @private
