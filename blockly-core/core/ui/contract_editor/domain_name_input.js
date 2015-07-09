@@ -16,7 +16,7 @@ Blockly.DomainNameInput = function (options) {
 
   /**
    * Array of event keys usable by Blockly.unbindEvent_ to remove listeners
-   * @type {Array.<Array>}
+   * @type {bindData}
    * @private
    */
   this.eventsToUnbind_ = [];
