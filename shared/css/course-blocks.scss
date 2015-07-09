@@ -364,6 +364,29 @@
     border-radius: 4px;
     padding: 0 5px;
   }
+
+  .bottombar {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    margin: 0;
+    bottom: 0;
+    position: absolute;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $gotham-regular;
+    font-weight:normal;
+    color:$charcoal;
+    float: left;
+  }
+  
+  .trynow {
+    background-color: $green;
+    color: white;
+  }
 }
 
 .courseblock-tall + .courseblock-tall {
