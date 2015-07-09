@@ -89,7 +89,7 @@ Blockly.Flyout = function(blockSpaceEditor, opt_static) {
 
   /**
    * List of event listeners.
-   * @type {!Array.<!Array>}
+   * @type {bindData}
    * @private
    */
   this.listeners_ = [];

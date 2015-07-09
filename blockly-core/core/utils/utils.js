@@ -80,6 +80,8 @@ Blockly.removeClass_ = function(element, className) {
   }
 };
 
+/** @typedef {!Array.<!Array>} bindData */
+
 /**
  * Bind an event to a function call.
  * @param {!Element} element Element upon which to listen.
@@ -88,7 +90,7 @@ Blockly.removeClass_ = function(element, className) {
  * @param {!Function} func Function to call when event is triggered.
  * @param {boolean} [useCapture=false] If true, bind event against capture
  *        phase instead of bubble phase.
- * @return {!Array.<!Array>} Opaque data that can be passed to unbindEvent_.
+ * @return {bindData} Opaque data that can be passed to unbindEvent_.
  * @private
  */
 Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
@@ -167,7 +169,7 @@ if ('ontouchstart' in document.documentElement) {
 
 /**
  * Unbind one or more events event from a function call.
- * @param {!Array.<!Array>} bindData Opaque data from bindEvent_.  This list is
+ * @param {bindData} bindData Opaque data from bindEvent_.  This list is
  *     emptied during the course of calling this function.
  * @return {!Function} The function call.
  * @private
@@ -394,8 +396,8 @@ Blockly.convertCoordinates = function(x, y, svg, toSvg) {
  */
 Blockly.mouseToSvg = function(e, opt_svgParent) {
   return Blockly.mouseCoordinatesToSvg(
-    e.clientX, 
-    e.clientY, 
+    e.clientX,
+    e.clientY,
     opt_svgParent || Blockly.topMostSVGParent(e.target));
 };
 

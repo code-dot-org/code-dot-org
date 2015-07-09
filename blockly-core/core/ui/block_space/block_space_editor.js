@@ -362,7 +362,6 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
 
   // Bind pan-drag handlers
   this.blockSpace.bindBeginPanDragHandler(this.svg_, goog.bind(function () {
-    Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost
     this.hideChaff();
   }, this));
 
@@ -803,7 +802,7 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
 /**
  * When something in Blockly's blockSpace changes, call a function.
  * @param {!Function} func Function to call.
- * @return {!Array.<!Array>} Opaque data that can be passed to
+ * @return {bindData} Opaque data that can be passed to
  *     removeChangeListener.
  */
 Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
@@ -813,7 +812,7 @@ Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
 
 /**
  * Stop listening for Blockly's blockSpace changes.
- * @param {!Array.<!Array>} bindData Opaque data from addChangeListener.
+ * @param {bindData} bindData Opaque data from addChangeListener.
  */
 Blockly.removeChangeListener = function(bindData) {
   Blockly.unbindEvent_(bindData);
