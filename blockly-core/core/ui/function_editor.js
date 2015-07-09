@@ -347,8 +347,10 @@ Blockly.FunctionEditor.prototype.hideIfOpen = function() {
  * @protected
  */
 Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
-  this.moveToMainBlockSpace_(this.functionDefinitionBlock);
+  var functionDefinitionBlock = this.functionDefinitionBlock;
+  // Clear block reference to stop re-layout mid-block deletion
   this.functionDefinitionBlock = null;
+  this.moveToMainBlockSpace_(functionDefinitionBlock);
 
   goog.dom.getElement('functionNameText').value = '';
   goog.dom.getElement('functionDescriptionText').value = '';
