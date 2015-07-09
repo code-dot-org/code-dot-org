@@ -85,7 +85,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == MAZE || app == CALC || app == EVAL
+    app == MAZE || app == CALC || app == EVAL || app == ARTIST || app == PLAYLAB
   end
 
   def self.setup
