@@ -1160,10 +1160,10 @@ Applab.execute = function() {
     }
   }
 
-  // Set focus on divApplab so key events can be handled right from the start
-  // without requiring the user to adjust focus:
+  // Set focus on the default screen so key events can be handled
+  // right from the start without requiring the user to adjust focus:
   var divApplab = document.getElementById('divApplab');
-  divApplab.focus();
+  divApplab.firstChild.focus();
 
   Applab.running = true;
   queueOnTick();
