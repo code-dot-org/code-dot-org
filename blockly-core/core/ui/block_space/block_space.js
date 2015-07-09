@@ -865,9 +865,9 @@ Blockly.BlockSpace.prototype.bindDuringPanDragHandlers_ = function () {
   // pretty much override everything.
   var onCapture = true;
   this.panDragMouseMoveKey_ = Blockly.bindEvent_(
-      document.body, 'mousemove', this, this.onPanDragMouseMove_, onCapture);
+      window, 'mousemove', this, this.onPanDragMouseMove_, onCapture);
   this.panDragMouseUpKey_ = Blockly.bindEvent_(
-      document.body, 'mouseup', this, this.onPanDragMouseUp_, onCapture);
+      window, 'mouseup', this, this.onPanDragMouseUp_, onCapture);
 };
 
 /**
