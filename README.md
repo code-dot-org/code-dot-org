@@ -1,6 +1,6 @@
 # Build setup
 
-Below is a guide to setting up your workstation to develop for Code.org.  You can do Code.org development OSX, Unbuntu, or Windows (running Ubuntu in a VM.)  Unless you are strongly committed to Windows, choosing one of the other two platforms is probably a better idea because setup is more complicated and few developers use Windows.
+Below is a guide to setting up your workstation to develop for Code.org.  You can do Code.org development using OSX, Unbuntu, or Windows (running Ubuntu in a VM) Setup for Window is more complicated and relatively few developers use it.
 
 ## Install OS-specific prerequisites
 
