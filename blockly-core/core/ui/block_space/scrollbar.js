@@ -153,6 +153,16 @@ Blockly.ScrollbarPair.prototype.set = function(x, y) {
 };
 
 /**
+ * Set the sliders of the vertical scrollbar to be at a certain position.
+ * @param {number} y Vertical scroll value.
+ */
+Blockly.ScrollbarPair.prototype.setY = function(y) {
+  if (this.vScroll) {
+    this.vScroll.set(y, true);
+  }
+};
+
+/**
  * Class for a pure SVG scrollbar.
  * This technique offers a scrollbar that is guaranteed to work, but may not
  * look or behave like the system's scrollbars.

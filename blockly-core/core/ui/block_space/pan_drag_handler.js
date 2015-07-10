@@ -59,6 +59,19 @@ Blockly.PanDragHandler = function (blockSpace) {
    * @type {BindData}
    * @private
    */
+  this.wheelKey_ = null;
+
+  /**
+   * (for Safari)
+   * @type {BindData}
+   * @private
+   */
+  this.mousewheelKey_ = null;
+
+  /**
+   * @type {BindData}
+   * @private
+   */
   this.contextMenuBlockKey_ = null;
 
   /**
@@ -120,6 +133,12 @@ Blockly.PanDragHandler.prototype.bindBeginPanDragHandler = function (target,
   this.mouseDownKey_ = Blockly.bindEvent_(
       target, 'mousedown', this, this.onPanDragTargetMouseDown_);
 
+  this.wheelKey_ = Blockly.bindEvent_(target, 'wheel', this, this.onWheel_);
+
+  // Safari uses 'mousewheel'
+  this.mousewheelKey_ = Blockly.bindEvent_(
+      target, 'mousewheel', this, this.onWheel_);
+
   // Also block the context menu on the pan-drag target element
   this.contextMenuBlockKey_ = Blockly.bindEvent_(
       target, 'contextmenu', null, Blockly.blockContextMenu);
@@ -133,6 +152,16 @@ Blockly.PanDragHandler.prototype.unbindBeginPanDragHandler = function () {
   if (this.mouseDownKey_) {
     Blockly.unbindEvent_(this.mouseDownKey_);
     this.mouseDownKey_ = null;
+  }
+
+  if (this.wheelKey_) {
+    Blockly.unbindEvent_(this.wheelKey_);
+    this.wheelKey_ = null;
+  }
+
+  if (this.mousewheelKey_) {
+    Blockly.unbindEvent_(this.mousewheelKey_);
+    this.mousewheelKey_ = null;
   }
 
   if (this.contextMenuBlockKey_) {
@@ -211,6 +240,45 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function (e) {
 };
 
 /**
+ * Scroll the blockspace up or down based on wheel scrolling.
+ * @param {!Event} e Mouse wheel scroll event.
+ * @private
+ */
+Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
+  if (!this.blockSpace_.scrollbarPair) {
+    return;
+  }
+
+  // Safari uses wheelDeltaY, everyone else uses deltaY.
+  var delta = e.deltaY || -e.wheelDeltaY;
+  if (delta) {
+    if (goog.userAgent.GECKO) {
+      // Firefox's deltas are a tenth that of Chrome/Safari.
+      delta *= 10;
+    }
+
+    console.log('delta is ' + delta);
+    this.panMove(
+        this.blockSpace_.getMetrics(),
+        this.blockSpace_.xOffsetFromView,
+        this.blockSpace_.yOffsetFromView,
+        0,
+        -delta);
+
+    //var metrics = this.blockSpace_.getMetrics();
+    //var y = metrics.viewTop + delta;
+    //y = Math.min(y, metrics.contentHeight - metrics.viewHeight);
+    //y = Math.max(y, 0);
+    //this.blockSpace_.scrollbarPair.setY(y);
+
+    // Don't scroll the page.
+    e.stopPropagation();
+    e.preventDefault();
+  }
+};
+
+
+/**
  * Actually begin pan-drag mode.
  * @param {!Event} e
  * @private
@@ -226,24 +294,12 @@ Blockly.PanDragHandler.prototype.beginDragScroll_ = function (e) {
   this.bindDuringPanDragHandlers_();
 };
 
-/**
- * Mouse-move handler that is only bound and active during pan-drag mode
- * for this blockspace.  Causes scroll and stops the event.
- * @param {!Event} e
- * @private
- */
-Blockly.PanDragHandler.prototype.onPanDragMouseMove_ = function (e) {
-  // Prevent text selection on page
-  Blockly.removeAllRanges();
-
-  var mouseDx = e.clientX - this.startMouseX_; // + if mouse right
-  var mouseDy = e.clientY - this.startMouseY_; // + if mouse down
-  var metrics = this.startMetrics_;
+Blockly.PanDragHandler.prototype.panMove = function (metrics, xStartOffset, yStartOffset, mouseDx, mouseDy) {
   var blockSpaceSize = this.blockSpace_.getScrollableSize(metrics);
 
   // New target scroll (x,y) offset
-  var newScrollX = this.startScrollX_ + mouseDx; // new pan-right (+) position
-  var newScrollY = this.startScrollY_ + mouseDy; // new pan-down (+) position
+  var newScrollX = xStartOffset + mouseDx; // new pan-right (+) position
+  var newScrollY = yStartOffset + mouseDy; // new pan-down (+) position
 
   // Don't allow panning past top left
   newScrollX = Math.min(newScrollX, 0);
@@ -258,6 +314,22 @@ Blockly.PanDragHandler.prototype.onPanDragMouseMove_ = function (e) {
   // Set the scrollbar position, which will auto-scroll the canvas
   this.blockSpace_.scrollbarPair.set(-newScrollX, -newScrollY);
 
+  console.log('scrolling to Y ' + -newScrollY);
+};
+
+/**
+ * Mouse-move handler that is only bound and active during pan-drag mode
+ * for this blockspace.  Causes scroll and stops the event.
+ * @param {!Event} e
+ * @private
+ */
+Blockly.PanDragHandler.prototype.onPanDragMouseMove_ = function (e) {
+  // Prevent text selection on page
+  Blockly.removeAllRanges();
+
+  var mouseDx = e.clientX - this.startMouseX_; // + if mouse right
+  var mouseDy = e.clientY - this.startMouseY_; // + if mouse down
+  this.panMove(this.startMetrics_, this.startScrollX_, this.startScrollY_, mouseDx, mouseDy);
   e.stopPropagation();
   e.preventDefault();
 };
