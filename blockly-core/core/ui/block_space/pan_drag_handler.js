@@ -264,9 +264,13 @@ Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
         this.blockSpace_.yOffsetFromView,
         0,
         -delta);
-    var realYDelta = this.blockSpace_.yOffsetFromView - yOffsetBefore;
 
+    // If dragging a block too, move the "mouse start position" as if it
+    // had scrolled along with the blockspace.
     if (Blockly.Block.isFreelyDragging() && Blockly.selected) {
+      // We get a "real" delta which is clamped by the panMove operation,
+      // so it doesn't scroll at the edges of the workspace.
+      var realYDelta = this.blockSpace_.yOffsetFromView - yOffsetBefore;
       Blockly.selected.startDragMouseY += realYDelta;
       Blockly.selected.onMouseMove_(e);
     }
