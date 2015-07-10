@@ -80,7 +80,7 @@ Blockly.removeClass_ = function(element, className) {
   }
 };
 
-/** @typedef {!Array.<!Array>} bindData */
+/** @typedef {!Array.<!Array>} BindData */
 
 /**
  * Bind an event to a function call.
@@ -90,7 +90,7 @@ Blockly.removeClass_ = function(element, className) {
  * @param {!Function} func Function to call when event is triggered.
  * @param {boolean} [useCapture=false] If true, bind event against capture
  *        phase instead of bubble phase.
- * @return {bindData} Opaque data that can be passed to unbindEvent_.
+ * @return {BindData} Opaque data that can be passed to unbindEvent_.
  * @private
  */
 Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
@@ -169,7 +169,7 @@ if ('ontouchstart' in document.documentElement) {
 
 /**
  * Unbind one or more events event from a function call.
- * @param {bindData} bindData Opaque data from bindEvent_.  This list is
+ * @param {BindData} BindData Opaque data from bindEvent_.  This list is
  *     emptied during the course of calling this function.
  * @return {!Function} The function call.
  * @private

@@ -50,25 +50,25 @@ Blockly.PanDragHandler = function (blockSpace) {
   this.onTargetMouseDown_ = null;
 
   /**
-   * @type {bindData}
+   * @type {BindData}
    * @private
    */
   this.mouseDownKey_ = null;
 
   /**
-   * @type {bindData}
+   * @type {BindData}
    * @private
    */
   this.contextMenuBlockKey_ = null;
 
   /**
-   * @type {bindData}
+   * @type {BindData}
    * @private
    */
   this.mouseMoveKey_ = null;
 
   /**
-   * @type {bindData}
+   * @type {BindData}
    * @private
    */
   this.mouseUpKey_ = null;
