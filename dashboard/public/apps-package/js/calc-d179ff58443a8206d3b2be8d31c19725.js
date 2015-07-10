@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({98:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({99:[function(require,module,exports){
 var appMain = require('../appMain');
 window.Calc = require('./calc');
 var blocks = require('./blocks');
@@ -12,7 +12,7 @@ window.calcMain = function(options) {
 };
 
 
-},{"../appMain":9,"../skins":268,"./blocks":88,"./calc":89,"./levels":96}],89:[function(require,module,exports){
+},{"../appMain":9,"../skins":269,"./blocks":89,"./calc":90,"./levels":97}],90:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -1105,7 +1105,7 @@ Calc.__testonly__ = {
 /* end-test-block */
 
 
-},{"../StudioApp":5,"../block_utils":76,"../dom":108,"../locale":150,"../skins":268,"../templates/page.html.ejs":296,"../timeoutList":302,"../utils":318,"./controls.html.ejs":90,"./equation":91,"./equationSet":92,"./expressionNode":93,"./inputIterator":94,"./js-numbers/js-numbers.js":95,"./levels":96,"./locale":97,"./token":99,"./visualization.html.ejs":100,"lodash":493}],493:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":77,"../dom":109,"../locale":151,"../skins":269,"../templates/page.html.ejs":297,"../timeoutList":303,"../utils":319,"./controls.html.ejs":91,"./equation":92,"./equationSet":93,"./expressionNode":94,"./inputIterator":95,"./js-numbers/js-numbers.js":96,"./levels":97,"./locale":98,"./token":100,"./visualization.html.ejs":101,"lodash":494}],494:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -7894,7 +7894,7 @@ Calc.__testonly__ = {
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],100:[function(require,module,exports){
+},{}],101:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7914,7 +7914,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":97,"ejs":490}],96:[function(require,module,exports){
+},{"./locale":98,"ejs":491}],97:[function(require,module,exports){
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
@@ -7954,7 +7954,7 @@ module.exports = {
 };
 
 
-},{"../block_utils":76,"./locale":97}],94:[function(require,module,exports){
+},{"../block_utils":77,"./locale":98}],95:[function(require,module,exports){
 /**
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
@@ -8009,7 +8009,7 @@ InputIterator.prototype.remaining = function () {
 };
 
 
-},{}],92:[function(require,module,exports){
+},{}],93:[function(require,module,exports){
 var _ = require('../utils').getLodash();
 var ExpressionNode = require('./expressionNode');
 var Equation = require('./equation');
@@ -8416,7 +8416,7 @@ EquationSet.__testonly__ = {
 /* end-test-block */
 
 
-},{"../utils":318,"./equation":91,"./expressionNode":93,"./js-numbers/js-numbers":95}],93:[function(require,module,exports){
+},{"../utils":319,"./equation":92,"./expressionNode":94,"./js-numbers/js-numbers":96}],94:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var Token = require('./token');
@@ -9030,7 +9030,7 @@ ExpressionNode.stripOuterParensFromTokenList = function (tokenList) {
 };
 
 
-},{"../utils":318,"./js-numbers/js-numbers":95,"./token":99}],99:[function(require,module,exports){
+},{"../utils":319,"./js-numbers/js-numbers":96,"./token":100}],100:[function(require,module,exports){
 var jsnums = require('./js-numbers/js-numbers');
 
 // Unicode character for non-breaking space
@@ -9148,7 +9148,7 @@ Token.numberWithCommas_ = function (x) {
 };
 
 
-},{"./js-numbers/js-numbers":95}],95:[function(require,module,exports){
+},{"./js-numbers/js-numbers":96}],96:[function(require,module,exports){
 // Scheme numbers.
 
 // NOTE: This top bit differs from the version at https://github.com/bootstrapworld/js-numbers/blob/master/src/js-numbers.js
@@ -13481,7 +13481,7 @@ module.exports = jsnums;
 })();
 
 
-},{}],91:[function(require,module,exports){
+},{}],92:[function(require,module,exports){
 /**
  * An equation is an expression attached to a particular name. For example:
  *   f(x) = x + 1
@@ -13522,7 +13522,7 @@ Equation.prototype.clone = function () {
 };
 
 
-},{}],90:[function(require,module,exports){
+},{}],91:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -13545,7 +13545,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"./locale":97,"ejs":490}],88:[function(require,module,exports){
+},{"../locale":151,"./locale":98,"ejs":491}],89:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
@@ -13608,10 +13608,10 @@ function installCompute(blockly, generator, gensym) {
 }
 
 
-},{"../locale":150,"../sharedFunctionalBlocks":267,"./locale":97}],97:[function(require,module,exports){
+},{"../locale":151,"../sharedFunctionalBlocks":268,"./locale":98}],98:[function(require,module,exports){
 // locale for calc
 
 module.exports = window.blockly.calc_locale;
 
 
-},{}]},{},[98]);
+},{}]},{},[99]);
