@@ -1312,7 +1312,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     dom.addClickTouchEvent(openWorkspace, function() {
       // TODO: don't make assumptions about hideSource during init so this works.
       // workspaceDiv.style.display = '';
-      location.href += '/edit';
+      location.href += '/view';
     });
 
     buttonRow.appendChild(openWorkspace);

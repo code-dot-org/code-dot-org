@@ -394,7 +394,7 @@ Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
 
   if redirect_source == 'pushState'
     state = { "modified" => true }
-  elsif redirect_source == 'dashboard'
+  elsif redirect_source == 'dashboard' || redirect_source == 'none'
     state = nil
   end
   @browser.execute_script("return window.history.state").should eq state

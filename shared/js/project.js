@@ -11,9 +11,11 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange',
-    hashchange: 'hashchange'
+  workspaceChange: 'workspaceChange'
 };
+
+// TODO - if on a /view page and we're the owner, pushState to /edit and muck
+// with share/hideSource
 
 /**
  * Helper for when we split our pathname by /. channel_id and action may end up
@@ -71,6 +73,13 @@ module.exports = {
     return current.name;
   },
 
+  getCurrentTimestamp: function () {
+    if (!current) {
+      return;
+    }
+    return current.updatedAt;
+  },
+
   /**
    * @returns {boolean} true if we're editing
    */
@@ -120,14 +129,14 @@ module.exports = {
             // Viewing someone else's project - set share mode
             dashboard.header.showMinimalProjectHeader();
             // URL with /edit - set hideSource to false
-            setAppOptionsForShareMode(false);
+            // setAppOptionsForShareMode(false);
           }
         }
       } else if (current) {
         appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
-        setAppOptionsForShareMode(true);
+        // setAppOptionsForShareMode(true);
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       current = {
@@ -137,16 +146,6 @@ module.exports = {
     }
     if (appOptions.noPadding) {
       $(".full_container").css({"padding":"0px"});
-    }
-  },
-  updateTimestamp: function () {
-    if (current.updatedAt) {
-      // TODO i18n
-      $('.project_updated_at').empty().append("Saved ")  // TODO i18n
-          .append($('<span class="timestamp">').attr('title', current.updatedAt)).show();
-      $('.project_updated_at span.timestamp').timeago();
-    } else {
-      $('.project_updated_at').text("Not saved"); // TODO i18n
     }
   },
   appToProjectUrl: function () {
@@ -211,15 +210,14 @@ module.exports = {
           // based route to ensure we don't have a page load.
           location.href = current.level + '#' + current.id + '/edit';
         } else {
-          window.history.pushState(null, document.title,
-            current.level + '/' + current.id + '/edit');
+          window.history.pushState(null, document.title, this.getPathName('edit'));
         }
       } else {
         // We're on a share page, and got a new channel id. Always do a redirect
-        location.href = current.level + '/' + current.id + '/edit';
+        location.href = this.getPathName('edit');
       }
     }
-    this.updateTimestamp();
+    dashboard.header.updateTimestamp();
   },
   /**
    * Autosave the code if things have changed
@@ -339,6 +337,14 @@ module.exports = {
       });
       return deferred;
     }
+  },
+
+  getPathName: function (action) {
+    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
+    if (action) {
+      pathName += '/' + action;
+    }
+    return pathName;
   }
 };
 
@@ -352,14 +358,15 @@ function executeCallback(callback, data) {
   }
 }
 
-function setAppOptionsForShareMode(hideSource) {
-  appOptions.readonlyWorkspace = true;
-  appOptions.callouts = [];
-  appOptions.share = true;
-  appOptions.hideSource = hideSource;
-  // Important to call determineNoPadding() after setting hideSource value
-  appOptions.noPadding = determineNoPadding();
-}
+// TODO - figure out what bits of this i need
+// function setAppOptionsForShareMode(hideSource) {
+//   appOptions.readonlyWorkspace = true;
+//   appOptions.callouts = [];
+//   appOptions.share = true;
+//   appOptions.hideSource = hideSource;
+//   // Important to call determineNoPadding() after setting hideSource value
+//   appOptions.noPadding = determineNoPadding();
+// }
 
 function determineNoPadding() {
   switch (appOptions.app) {
