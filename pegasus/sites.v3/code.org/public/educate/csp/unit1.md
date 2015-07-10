@@ -9,17 +9,35 @@ nav: educate_nav
 
 **Quick Links**
 
-[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [Writing Team](team)
+[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [CSP Unit 1 in Code Studio](https://studio.code.org/s/cspunit1)  | [Writing Team](team) 
 
-**Digital Tools for Unit 1**
 
-Many of the lessons below make use of original digital tools produced by Code.org.  The student view of the unit can be found here: [https://studio.code.org/s/cspunit1](https://studio.code.org/s/cspunit1).  Each "stage" number corresponds to the lesson number. 
 
-A few important notes:
+<table>
+	<tr>
+		<td width=66% style="padding: 3px; border-color: white">
+		<strong>Important notes about lessons and digital tools</strong>
+		<ul>
+				<li> When you go to <a href="https://studio.code.org/s/cspunit1">Unit 1 in Code Studio</a> each "stage" number corresponds to the lesson number.</li> 
 
-* The course on Code Studio is in beta,so it is subject to revision as feedback is received and improvements are made.
-*  Computer Science Principles lessons on Code Studio are *not* self-guided, and require specific structure and context provided by the classroom teacher through the lesson plan. 
-*  When exploring the curriculum, or preparing for a lesson, start with the lesson plan, which contains all of the necessary details for how and when to use the online tools.
+				<li> Unlike other Code.org courses, lessons for CSP on Code Studio are <strong>not self-guided</strong>. They require specific structure and context provided by the classroom teacher through the lesson plan. 
+
+				<li>  When exploring the curriculum, or preparing for a lesson, <strong>start with the lesson plan</strong>, which contains all of the necessary details and links for how and when to use the online tools.
+
+				<li>The course on Code Studio is in beta, so it is subject to revision as feedback is received and improvements are made.
+				</ul>
+		</td>
+		<td style="padding: 3px; border-color: white" align=center>
+			<a href="https://studio.code.org/s/cspunit1"><img src="images/codeStudioScreenCap.png" align=right width=100%>
+			https://studio.code.org/s/cspunit1</a>
+		</td>
+</tr>
+</table>
+
+<br/><br/>
+
+
+
 
 
 | Lesson Description| Lesson Plan | 
