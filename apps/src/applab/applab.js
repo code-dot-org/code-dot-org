@@ -1457,17 +1457,12 @@ Applab.getAssetDropdown = function (typeFilter) {
 /**
  * Return droplet dropdown options representing a list of ids currently present
  * in the DOM, optionally limiting the result to a certain HTML element tagName.
- * @param {undefined|string} tagFilter Optional HTML element tagName to filter for.
- * @returns {*|Array}
+ * @param {string} [tagFilter] Optional HTML element tagName to filter for.
+ * @returns {Array}
  */
 Applab.getIdDropdown = function (tagFilter) {
-  var elements = [];
-  $('#divApplab').children().each(function () {
-    elements.push(this);
-  });
-  $('#divApplab').children().children().each(function () {
-    elements.push(this);
-  });
+  var elements = $('#divApplab').children().toArray().concat(
+      $('#divApplab').children().children().toArray());
 
   var filteredIds = [];
   elements.forEach(function (element) {
