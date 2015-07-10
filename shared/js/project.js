@@ -88,7 +88,7 @@ module.exports = {
   },
 
   init: function () {
-    if (redirectFromLegacyUrl() || redirectOwnerFromView()) {
+    if (redirectFromLegacyUrl() || redirectEditView()) {
       return;
     }
 
@@ -294,7 +294,7 @@ module.exports = {
   load: function () {
     var deferred;
     if (appOptions.level.isProjectLevel) {
-      if (redirectFromLegacyUrl() || redirectOwnerFromView()) {
+      if (redirectFromLegacyUrl() || redirectEditView()) {
         return;
       }
       var pathInfo = parsePath();
@@ -428,15 +428,22 @@ function redirectFromLegacyUrl() {
  * If the current user is the owner, we want to redirect from the readonly
  * /view route to /edit
  */
-function redirectOwnerFromView() {
-  if (!current || !current.isOwner) {
+function redirectEditView() {
+  var parseInfo = parsePath();
+  if (!parseInfo.action) {
     return;
   }
-
-  // Legacy URLs didn't have /view, so nothing to worry about there
-  var newUrl = location.href.replace(/\/view$/, '/edit');
-  if (newUrl !== location.href) {
+  var newUrl;
+  if (parseInfo.action === 'view' && current && current.isOwner) {
+    // Redirect to /edit without a readonly workspace
+    newUrl = location.href.replace(/\/view$/, '/edit');
     appOptions.readonlyWorkspace = false;
+  } else if (parseInfo.action === 'edit' && (!current || !current.isOwner)) {
+    // Redirect to /view with a readonly workspace
+    newUrl = location.href.replace(/\/edit$/, '/view');
+    appOptions.readonlyWorkspace = true;
+  }
+  if (newUrl && newUrl !== location.href) {
     return redirectToPath(newUrl, true);
   }
   return false;
