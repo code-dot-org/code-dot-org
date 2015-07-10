@@ -46,7 +46,7 @@ Water Bottle
 <br />
 Snacks
 <br />
-Laptop optional, not required
+Laptop required
 
 </br>
 </br>
