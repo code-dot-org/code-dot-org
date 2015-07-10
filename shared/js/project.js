@@ -19,13 +19,13 @@ var events = {
  * Helper for when we split our pathname by /. channel_id and action may end up
  * being undefined.
  * Example paths:
- * /p/applab
- * /p/playlab/1U53pYpR8szDgtrGIG5lIg
- * /p/artist/VyVO-bQaGQ-Cyb7DbpabNQ/edit
+ * /projects/applab
+ * /projects/playlab/1U53pYpR8szDgtrGIG5lIg
+ * /projects/artist/VyVO-bQaGQ-Cyb7DbpabNQ/edit
  */
 var PathPart = {
   START: 0,
-  P: 1,
+  PROJECTS: 1,
   APP: 2,
   CHANNEL_ID: 3,
   ACTION: 4
@@ -45,6 +45,8 @@ var PathPart = {
  */
 var current;
 var isEditing = false;
+
+// TODO - make sure i address going to /edit as a non-owner or /code as an owner
 
 module.exports = {
   /**
@@ -77,7 +79,7 @@ module.exports = {
   },
 
   init: function () {
-    if (location.href.indexOf('#') !== -1 && redirectToNonHashUrl()) {
+    if (redirectFromLegacyUrl()) {
       return;
     }
 
@@ -150,14 +152,14 @@ module.exports = {
   appToProjectUrl: function () {
     switch (appOptions.app) {
       case 'applab':
-        return '/p/applab';
+        return '/projects/applab';
       case 'turtle':
-        return '/p/artist';
+        return '/projects/artist';
       case 'studio':
         if (appOptions.level.useContractEditor) {
-          return '/p/algebra_game';
+          return '/projects/algebra_game';
         }
-        return '/p/playlab';
+        return '/projects/playlab';
     }
   },
   /**
@@ -203,6 +205,7 @@ module.exports = {
       // We have a new channel, meaning either we had no channel before, or
       // we've changed channels.
       if (isEditing) {
+        // TODO - i don think we should hit this now
         if (location.hash || !window.history.pushState) {
           // We're using a hash route or don't support replace state. Use our hash
           // based route to ensure we don't have a page load.
@@ -293,6 +296,9 @@ module.exports = {
   load: function () {
     var deferred;
     if (appOptions.level.isProjectLevel) {
+      if (redirectFromLegacyUrl()) {
+        return;
+      }
       var pathInfo = parsePath();
 
       if (pathInfo.channelId) {
@@ -386,17 +392,32 @@ function getLevelHtml() {
   return window.Applab && Applab.getHtml();
 }
 
+// TODO - make sure comment is up to date
 /**
  * Does a redirect to a non-hash based version of the URL. Does this seamlessly
  * using replaceState on browsers that support this, and does an actual redirect
  * on those that don't (IE 9).
  * @returns {boolean} True if we did an actual redirect
  */
-function redirectToNonHashUrl() {
-  var newUrl = location.href.replace('#', '/');
+function redirectFromLegacyUrl() {
+  var newUrl = location.href.replace('#', '/').replace(/\/p\//, '/projects/');
+  if (newUrl === location.href) {
+    // Nothing changed
+    return false;
+  }
 
-  if (window.history.replaceState) {
-    window.history.replaceState(null, document.title, newUrl);
+  var pathInfo = parsePath();
+  var hardRedirect = false;
+  // We require sign in for /p/applab and /p/applab#channel_id/edit, so we'll
+  // want to actually do the redirect
+  if (pathInfo.appName === 'applab') {
+    hardRedirect = (!pathInfo.channelId || pathInfo.action === 'edit');
+  }
+
+  // TODO - right now i include state just so that our UI tests can detect a
+  // dashboard vs. JS redirect. is there a better way?
+  if (!hardRedirect && window.history.replaceState) {
+    window.history.replaceState({modified: true}, document.title, newUrl);
     return false;
   } else {
     // do an actual redirect
@@ -417,6 +438,7 @@ function parsePath() {
     pathname += location.hash.replace('#', '/');
   }
   return {
+    appName: pathname.split('/')[PathPart.APP],
     channelId: pathname.split('/')[PathPart.CHANNEL_ID],
     action: pathname.split('/')[PathPart.ACTION]
   };
