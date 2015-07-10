@@ -8,6 +8,17 @@ dashboard.createCallouts = function(callouts) {
     $('.cdo-qtips').qtip('hide');
   });
 
+  // Update callout positions when an editor is scrolled.
+  $(window).on('block_space_metrics_set', function() {
+    // Trigger event is not needed in this case.
+    var triggerEvent = null;
+    // Don't animate, snap! (When scrolling, it's sort of already animated)
+    var animate = false;
+    $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
+
+    // TODO (brian + brad): Update callout visibility based on whether target is clipped.
+  });
+
   function reverseCallout(position) {
     position = position.split(/\s+/);
     return reverseDirection(position[0]) + ' ' + reverseDirection(position[1]);
