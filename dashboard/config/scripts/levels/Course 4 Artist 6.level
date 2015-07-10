@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the code to draw these triangles. Hint: 3 triangles in a 360 degree rotation.",
+    "instructions": "Complete the code to draw these triangles. Hint: There are 3 triangles within the 360 degree rotation...how many times does 3 go into 360?",
     "level_num": "custom",
     "x": "200",
     "y": "200",
@@ -30,7 +30,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Complete the code to draw these triangles.  \r\nHint: There are 3 triangles within the 360 degree rotation...how many times does 3 go into 360?"
   }
 }]]></config>
   <blocks>
