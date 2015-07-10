@@ -13,12 +13,11 @@ answer 'Large hard drive, good GPU'
 markdown <<MARKDOWN
 As you are teaching, you may want to bring up some ways that the computer industry has created specialized computers for different types of users. Click on the links below and consider integrating the different computer options into your class discussion. Alternatively, consider using these links to facilitate an additional or companion research project.
 
-[Alienware Gaming Platform](http://www.dell.com/us/p/alienware-area51-r2/pd?p=alienware-area51-r2&oc=dpcwc03h&st=pla&dgc=ST&cid=287189&lid=5499026&acd=1230980731501410&isredir=true)
+<a href="http://www.dell.com/us/p/alienware-area51-r2/pd?p=alienware-area51-r2&oc=dpcwc03h&st=pla&dgc=ST&cid=287189&lid=5499026&acd=1230980731501410&isredir=true" target="_blank">Alienware Gaming Platform</a>
 
-[Chromebook](https://www.google.com/chromebook/about/)
+<a href="https://www.google.com/chromebook/about/" target="_blank">Chromebook</a>
 
-
-Below we have modeled an assessment for use in the classroom. Match the correct answers and click submit to continue.
+Below we have modeled an assessment for use in the classroom. Match the correct answers and click submit to continue. *To access a printable version of the provided assessment questions for this lesson, <a href="https://docs.google.com/document/d/1XNbVx04RLE32gbceb-JGpmg3vyg2evTB_smvxgaiUOY/edit" target="_blank">click here</a>.*
 
 > Question: Match the type of computer or user to the hardware or software 
 MARKDOWN
