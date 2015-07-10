@@ -414,6 +414,10 @@ Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
 end
 
+Then /^I append "([^"]*)" to the URL$/ do |append|
+  @browser.execute_script("location.href += '#{append}';")
+end
+
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
   item = @browser.find_element(:css, selector)
   classes = item.attribute("class")

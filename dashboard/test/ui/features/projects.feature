@@ -1,17 +1,17 @@
 Feature: Projects
 
-Scenario: Save Artist Project
-  Given I am on "http://learn.code.org/p/artist"
-  And I rotate to landscape
-  And element "#runButton" is visible
-  And element ".project_updated_at" has text "Not saved"
-  Then I open the topmost blockly category "Color"
-  And I drag block matching selector "#draw-color" to block matching selector "#when_run"
-  And I press "runButton"
-#  Then element ".project_updated_at" contains text "Saving..." # I think browserstack is too slow to catch this
-  Then I wait until element ".project_updated_at" contains text "Saved"
-  And I reload the page
-  Then element "#draw-color" is a child of element "#when_run"
+# Scenario: Save Artist Project
+#   Given I am on "http://learn.code.org/p/artist"
+#   And I rotate to landscape
+#   And element "#runButton" is visible
+#   And element ".project_updated_at" has text "Not saved"
+#   Then I open the topmost blockly category "Color"
+#   And I drag block matching selector "#draw-color" to block matching selector "#when_run"
+#   And I press "runButton"
+# #  Then element ".project_updated_at" contains text "Saving..." # I think browserstack is too slow to catch this
+#   Then I wait until element ".project_updated_at" contains text "Saved"
+#   And I reload the page
+#   Then element "#draw-color" is a child of element "#when_run"
 
 @dashboard_db_access
 Scenario: Applab Flow
@@ -48,3 +48,15 @@ Scenario: Applab Flow
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "nothing"
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
+
+  # Now view the /edit page as a signed in, non-owner
+  Given I am on "http://studio.code.org/"
+  And I am a teacher
+  And I am on "http://studio.code.org/users/sign_in"
+  And I navigate to the last shared URL
+  Then I append "/edit" to the URL
+  And I get redirected to "/projects/applab/([^\/]*?)/view" via "pushState"
+  And I wait to see "#codeWorkspace"
+  And selector "#codeWorkspace" has class "readonly"
+
+  # TODO - maybe we do a remix and/or create new as well
