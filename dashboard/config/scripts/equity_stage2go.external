@@ -1,0 +1,24 @@
+name 'Equity Stage2Go'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Introduction to Equity > Looking Ahead
+
+<br/><br/>
+<img src="https://images.code.org/c4304ce43e50b4895ece2fded45daaab-image-1436483765820.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+
+<br/><br/>
+By completing this stage, you should have:
+
+- Defined equity 
+- Explored the need for equity in classrooms and in CS education 
+
+In the next stage, we will:
+
+- Identify resources for further discussion and study
+- Develop strategies for meeting your own goals around equity
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
