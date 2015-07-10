@@ -19,7 +19,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "instructions": "Test instructions",
+    "markdown_instructions": "Other test instructions",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
