@@ -12,6 +12,7 @@ var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
+var ChangeEventHandler = require('./ChangeEventHandler');
 
 var OPTIONAL = true;
 
@@ -155,6 +156,10 @@ applabCommands.setScreen = function (opts) {
   // toggle all screens to be visible if equal to given id, hidden otherwise
   $('.screen').each(function () {
     $(this).toggle(this.id === opts.screenId);
+    if (this.id === opts.screenId) {
+      // Allow the active screen to receive keyboard events.
+      this.focus();
+    }
   });
 };
 
@@ -1111,6 +1116,13 @@ applabCommands.onEvent = function (opts) {
   apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
+    if (domElement.contentEditable && opts.eventName === 'change') {
+      // contentEditable divs don't generate a change event, so
+      // synthesize one here.
+      var callback = applabCommands.onEventFired.bind(this, opts);
+      ChangeEventHandler.addChangeEventHandler(domElement, callback);
+      return true;
+    }
     switch (opts.eventName) {
       /*
       Check for a specific set of Hammer v1 event names (full set below) and if
