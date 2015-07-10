@@ -387,3 +387,15 @@ end
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
 end
+
+Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30 )
+  wait.until { @browser.execute_script("return location.pathname") == new_path }
+
+  if redirect_source == 'pushState'
+    state = { "modified" => true }
+  elsif redirect_source == 'dashboard'
+    state = nil
+  end
+  @browser.execute_script("return window.history.state").should eq state
+end
