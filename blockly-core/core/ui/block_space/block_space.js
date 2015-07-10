@@ -44,7 +44,10 @@ goog.require('goog.math.Coordinate');
 Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   this.blockSpaceEditor = blockSpaceEditor;
   this.getMetrics = getMetrics;
-  this.setMetrics = setMetrics;
+  this.setMetrics = function (ratio) {
+    setMetrics(ratio);
+    Blockly.fireUiEvent(window, 'block_space_metrics_set');
+  };
 
   /** @type {boolean} */
   this.isFlyout = false;
