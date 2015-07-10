@@ -257,19 +257,19 @@ Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
       delta *= 10;
     }
 
-    console.log('delta is ' + delta);
+    var yOffsetBefore = this.blockSpace_.yOffsetFromView;
     this.panMove(
         this.blockSpace_.getMetrics(),
         this.blockSpace_.xOffsetFromView,
         this.blockSpace_.yOffsetFromView,
         0,
         -delta);
+    var realYDelta = this.blockSpace_.yOffsetFromView - yOffsetBefore;
 
-    //var metrics = this.blockSpace_.getMetrics();
-    //var y = metrics.viewTop + delta;
-    //y = Math.min(y, metrics.contentHeight - metrics.viewHeight);
-    //y = Math.max(y, 0);
-    //this.blockSpace_.scrollbarPair.setY(y);
+    if (Blockly.Block.isFreelyDragging() && Blockly.selected) {
+      Blockly.selected.startDragMouseY += realYDelta;
+      Blockly.selected.onMouseMove_(e);
+    }
 
     // Don't scroll the page.
     e.stopPropagation();
@@ -313,8 +313,6 @@ Blockly.PanDragHandler.prototype.panMove = function (metrics, xStartOffset, ySta
 
   // Set the scrollbar position, which will auto-scroll the canvas
   this.blockSpace_.scrollbarPair.set(-newScrollX, -newScrollY);
-
-  console.log('scrolling to Y ' + -newScrollY);
 };
 
 /**
