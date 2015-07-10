@@ -53,7 +53,8 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
    */
   this.blockSpace = new Blockly.BlockSpace(this,
     goog.bind(this.getBlockSpaceMetrics_, this),
-    goog.bind(this.setBlockSpaceMetrics_, this)
+    goog.bind(this.setBlockSpaceMetrics_, this),
+    container
   );
   this.createDom_(container);
   this.init_();
@@ -357,49 +358,15 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
   });
 };
 
-/**
- * Bind (or re-bind) "blockspace" mouse events that represent clicking "nowhere"
- * against the given element.  Allows the modal editors to customize which
- * element picks up their 'nowhere' clicks.
- * @param {Element} newTarget really ought to be an svg?
- */
-Blockly.BlockSpaceEditor.prototype.bindMouseEventsTo = function (newTarget) {
-  if (this.mouseDownBindData_) {
-    Blockly.unbindEvent_(this.mouseDownBindData_);
-  }
-  if (this.mouseMoveBindData_) {
-    Blockly.unbindEvent_(this.mouseMoveBindData_);
-  }
-  if (this.svgContextMenuBindData_) {
-    Blockly.unbindEvent_(this.svgContextMenuBindData_);
-  }
-  if (this.mouseUpBindData_) {
-    Blockly.unbindEvent_(this.mouseUpBindData_);
-  }
-  this.mouseDownBindData_ = Blockly.bindEvent_(newTarget, 'mousedown', this, this.onMouseDown_);
-  this.mouseMoveBindData_ = Blockly.bindEvent_(newTarget, 'mousemove', this, this.onMouseMove_);
-  this.svgContextMenuBindData_ = Blockly.bindEvent_(newTarget, 'contextmenu', null, Blockly.BlockSpaceEditor.onContextMenu_);
-
-  // TODO (bbuchanan): Bind mouseup against document or window, like the comment
-  // TODO              below says, so that we stop dragging or scrolling on
-  // TODO              mouseup even if the mouse moved out of the workspace.
-  // TODO              Needs good cross-browser testing!
-  this.mouseUpBindData_ = Blockly.bindEvent_(newTarget, 'mouseup', this, this.onMouseUp_);
-  this.mouseEventTarget_ = newTarget;
-};
-
 Blockly.BlockSpaceEditor.prototype.init_ = function() {
   this.detectBrokenControlPoints();
 
-  // Bind events for scrolling the blockSpace.
-  // Most of these events should be bound to the SVG's surface.
-  // However, 'mouseup' has to be on the whole document so that a block dragged
-  // out of bounds and released will know that it has been released.
-  // Also, 'keydown' has to be on the whole document since the browser doesn't
-  // understand a concept of focus on the SVG image.
-  this.bindMouseEventsTo(this.svg_);
+  // Bind pan-drag handlers
+  this.blockSpace.bindBeginPanDragHandler(this.svg_,
+    goog.bind(this.hideChaff, this));
+
   Blockly.bindEvent_(Blockly.WidgetDiv.DIV, 'contextmenu', null,
-    Blockly.BlockSpaceEditor.onContextMenu_);
+    Blockly.blockContextMenu);
 
   if (!Blockly.documentEventsBound_) {
     // Only bind the window/document events once.
@@ -571,89 +538,12 @@ Blockly.BlockSpaceEditor.prototype.setCursor = function(cursorType) {
 };
 
 /**
- * Handle a mouse-down on SVG drawing surface.
- * @param {!Event} e Mouse down event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
-  Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost.
-  this.hideChaff();
-  var isOwnMouseTarget = e.target && e.target === this.mouseEventTarget_;
-  if (!Blockly.readOnly && Blockly.selected && isOwnMouseTarget) {
-    // Clicking on the document clears the selection.
-    Blockly.selected.unselect();
-  }
-  if (Blockly.isRightButton(e)) {
-    // Right-click.
-    // Unlike google Blockly, we don't want to show a context menu
-    // Blockly.showContextMenu_(e);
-  } else if ((Blockly.readOnly || isOwnMouseTarget) &&
-    this.blockSpace.scrollbarPair) {
-    // If the blockSpace is editable, only allow dragging when gripping empty
-    // space.  Otherwise, allow dragging when gripping anywhere.
-    this.blockSpace.dragMode = true;
-    // Record the current mouse position.
-    this.startDragMouseX = e.clientX;
-    this.startDragMouseY = e.clientY;
-    this.startDragMetrics =
-      this.blockSpace.getMetrics();
-    this.startScrollX = this.blockSpace.xOffsetFromView;
-    this.startScrollY = this.blockSpace.yOffsetFromView;
-
-    // Stop the browser from scrolling/zooming the page
-    e.preventDefault();
-  }
-};
-
-/**
- * Handle a mouse-up on SVG drawing surface.
- * @param {!Event} e Mouse up event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseUp_ = function(e) {
-  this.setCursor(Blockly.Css.Cursor.OPEN);
-  this.blockSpace.dragMode = false;
-};
-
-/**
- * Handle a mouse-move on SVG drawing surface (panning).
- * @param {!Event} e Mouse move event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseMove_ = function(e) {
-  if (this.blockSpace.dragMode) {
-    Blockly.removeAllRanges();
-    var mouseDx = e.clientX - this.startDragMouseX; // + if mouse right
-    var mouseDy = e.clientY - this.startDragMouseY; // + if mouse down
-    var metrics = this.startDragMetrics;
-    var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
-
-    // New target scroll (x,y) offset
-    var newScrollX = this.startScrollX + mouseDx; // new pan-right (+) position
-    var newScrollY = this.startScrollY + mouseDy; // new pan-down (+) position
-
-    // Don't allow panning past top left
-    newScrollX = Math.min(newScrollX, 0);
-    newScrollY = Math.min(newScrollY, 0);
-
-    // Don't allow panning past bottom or right
-    var furthestScrollAllowedX = -blockSpaceSize.width + metrics.viewWidth;
-    var furthestScrollAllowedY = -blockSpaceSize.height + metrics.viewHeight;
-    newScrollX = Math.max(newScrollX, furthestScrollAllowedX);
-    newScrollY = Math.max(newScrollY, furthestScrollAllowedY);
-
-    // Set the scrollbar position, which will auto-scroll the canvas
-    this.blockSpace.scrollbarPair.set(-newScrollX, -newScrollY);
-  }
-};
-
-/**
  * Handle a key-down on SVG drawing surface.
  * @param {!Event} e Key down event.
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
-  if (Blockly.BlockSpaceEditor.isTargetInput_(e)) {
+  if (Blockly.isTargetInput(e)) {
     // When focused on an HTML text input widget, don't trap any keys.
     return;
   }
@@ -775,29 +665,6 @@ Blockly.BlockSpaceEditor.showContextMenu_ = function(e) {
 
   Blockly.ContextMenu.show(e, options);
 };
-
-/**
- * Cancel the native context menu, unless the focus is on an HTML input widget.
- * @param {!Event} e Mouse down event.
- * @private
- */
-Blockly.BlockSpaceEditor.onContextMenu_ = function(e) {
-  if (!Blockly.BlockSpaceEditor.isTargetInput_(e)) {
-    // When focused on an HTML text input widget, don't cancel the context menu.
-    e.preventDefault();
-  }
-};
-
-/**
- * Is this event targeting a text input widget?
- * @param {!Event} e An event.
- * @return {boolean} True if text input.
- * @private
- */
-Blockly.BlockSpaceEditor.isTargetInput_ = function(e) {
-  return e.target.type == 'textarea' || e.target.type == 'text';
-};
-
 
 /**
  * Close tooltips, context menus, dropdown selections, etc.
@@ -935,7 +802,7 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
 /**
  * When something in Blockly's blockSpace changes, call a function.
  * @param {!Function} func Function to call.
- * @return {!Array.<!Array>} Opaque data that can be passed to
+ * @return {BindData} Opaque data that can be passed to
  *     removeChangeListener.
  */
 Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
@@ -945,7 +812,7 @@ Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
 
 /**
  * Stop listening for Blockly's blockSpace changes.
- * @param {!Array.<!Array>} bindData Opaque data from addChangeListener.
+ * @param {BindData} BindData Opaque data from addChangeListener.
  */
 Blockly.removeChangeListener = function(bindData) {
   Blockly.unbindEvent_(bindData);

@@ -29,6 +29,7 @@ goog.provide('Blockly.BlockSpace');
 // goog.require('Blockly.Block');
 goog.require('Blockly.ScrollbarPair');
 goog.require('Blockly.Trashcan');
+goog.require('Blockly.PanDragHandler');
 goog.require('Blockly.Xml');
 goog.require('goog.array');
 goog.require('goog.math.Coordinate');
@@ -65,6 +66,13 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   /** @type {goog.events.EventTarget} */
   this.events = new goog.events.EventTarget();
 
+  /**
+   * Encapsulates state used to make pan-drag work.
+   * @type {Blockly.PanDragHandler}
+   * @private
+   */
+  this.panDragHandler_ = new Blockly.PanDragHandler(this);
+
   Blockly.ConnectionDB.init(this);
   if (Blockly.BlockSpace.DEBUG_EVENTS) {
     this.debugLogOnEvents();
@@ -95,12 +103,6 @@ Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
  * See: http://tvtropes.org/pmwiki/pmwiki.php/Main/DiagonalBilling.
  */
 Blockly.BlockSpace.SCAN_ANGLE = 3;
-
-/**
- * Can this blockSpace be dragged around (true) or is it fixed (false)?
- * @type {boolean}
- */
-Blockly.BlockSpace.prototype.dragMode = false;
 
 /**
  * Current horizontal scrolling offset.
@@ -229,6 +231,10 @@ Blockly.BlockSpace.prototype.dispose = function() {
   if (this.trashcan) {
     this.trashcan.dispose();
     this.trashcan = null;
+  }
+  if (this.scrollbarPair) {
+    this.scrollbarPair.dispose();
+    this.scrollbarPair = null;
   }
 };
 
@@ -816,4 +822,25 @@ Blockly.BlockSpace.prototype.updateScrollableSize = function () {
   if (this.scrollbarPair) {
     this.scrollbarPair.resize();
   }
+};
+
+/**
+ * Establish a mousedown handler on the given dragTarget that will put the
+ * blockspace into a pan-drag mode as long as the mouse is down.
+ * @param {!EventTarget} target - Element which initiates pan-drag mode when
+ *        clicked directly.
+ * @param {function} [onDragTargetMouseDown] - optional function called when
+ *        click on the drag target begins (used for hideChaff by BSE)
+ */
+Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (target,
+                                                                 onDragTargetMouseDown) {
+  this.panDragHandler_.bindBeginPanDragHandler(target, onDragTargetMouseDown);
+};
+
+/**
+ * Unbinds previously bound handler to begin pan-drag.  Safe to call if no
+ * such handler is bound.
+ */
+Blockly.BlockSpace.prototype.unbindBeginPanDragHandler = function () {
+  this.panDragHandler_.unbindBeginPanDragHandler();
 };

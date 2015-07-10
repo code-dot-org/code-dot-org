@@ -80,16 +80,22 @@ Blockly.removeClass_ = function(element, className) {
   }
 };
 
+/** @typedef {!Array.<!Array>} BindData */
+
 /**
  * Bind an event to a function call.
  * @param {!Element} element Element upon which to listen.
  * @param {string} name Event name to listen to (e.g. 'mousedown').
  * @param {Object} thisObject The value of 'this' in the function.
  * @param {!Function} func Function to call when event is triggered.
- * @return {!Array.<!Array>} Opaque data that can be passed to unbindEvent_.
+ * @param {boolean} [useCapture=false] If true, bind event against capture
+ *        phase instead of bubble phase.
+ * @return {BindData} Opaque data that can be passed to unbindEvent_.
  * @private
  */
-Blockly.bindEvent_ = function(element, name, thisObject, func) {
+Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
+  // Coerce useCapture to boolean
+  useCapture = !!useCapture;
   var bindData = [];
   var wrapFunc;
   if (!element.addEventListener) {
@@ -103,8 +109,8 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
   if (equivTouchEvent) {
     // Also bind the mouse event, unless the browser supports pointer events.
     if (!window.navigator.pointerEnabled && !window.navigator.msPointerEnabled) {
-      element.addEventListener(name, wrapFunc, false);
-      bindData.push([element, name, wrapFunc]);
+      element.addEventListener(name, wrapFunc, useCapture);
+      bindData.push([element, name, wrapFunc, useCapture]);
     }
     wrapFunc = function (e) {
       if (e.target && e.target.style) {
@@ -126,11 +132,11 @@ Blockly.bindEvent_ = function(element, name, thisObject, func) {
         func.apply(thisObject, arguments);
       }
     };
-    element.addEventListener(equivTouchEvent, wrapFunc, false);
-    bindData.push([element, equivTouchEvent, wrapFunc]);
+    element.addEventListener(equivTouchEvent, wrapFunc, useCapture);
+    bindData.push([element, equivTouchEvent, wrapFunc, useCapture]);
   } else {
-    element.addEventListener(name, wrapFunc, false);
-    bindData.push([element, name, wrapFunc]);
+    element.addEventListener(name, wrapFunc, useCapture);
+    bindData.push([element, name, wrapFunc, useCapture]);
   }
   return bindData;
 };
@@ -163,7 +169,7 @@ if ('ontouchstart' in document.documentElement) {
 
 /**
  * Unbind one or more events event from a function call.
- * @param {!Array.<!Array>} bindData Opaque data from bindEvent_.  This list is
+ * @param {BindData} BindData Opaque data from bindEvent_.  This list is
  *     emptied during the course of calling this function.
  * @return {!Function} The function call.
  * @private
@@ -174,7 +180,8 @@ Blockly.unbindEvent_ = function(bindData) {
     var element = bindDatum[0];
     var name = bindDatum[1];
     var func = bindDatum[2];
-    element.removeEventListener(name, func, false);
+    var useCapture = bindDatum[3];
+    element.removeEventListener(name, func, useCapture);
   }
   return func;
 };
@@ -389,8 +396,8 @@ Blockly.convertCoordinates = function(x, y, svg, toSvg) {
  */
 Blockly.mouseToSvg = function(e, opt_svgParent) {
   return Blockly.mouseCoordinatesToSvg(
-    e.clientX, 
-    e.clientY, 
+    e.clientX,
+    e.clientY,
     opt_svgParent || Blockly.topMostSVGParent(e.target));
 };
 
@@ -572,4 +579,24 @@ Blockly.printerRangeToNumbers = function(rangeString) {
  */
 Blockly.getUID = function() {
   return goog.events.getUniqueId('blocklyUID');
+};
+
+/**
+ * Is this event targeting a text input widget?
+ * @param {!Event} e An event.
+ * @return {boolean} True if text or textarea input.
+ */
+Blockly.isTargetInput = function (e) {
+  return e.target.type == 'textarea' || e.target.type == 'text';
+};
+
+/**
+ * Cancel the native context menu, unless the focus is on an HTML input widget.
+ * @param {!Event} e contextmenu event.
+ * @private
+ */
+Blockly.blockContextMenu = function (e) {
+  if (!Blockly.isTargetInput(e)) {
+    e.preventDefault();
+  }
 };
