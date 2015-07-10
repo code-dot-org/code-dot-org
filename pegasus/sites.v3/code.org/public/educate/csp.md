@@ -67,8 +67,8 @@ As the units undergo revisions we hope to publish them on an ongoing basis leadi
 
 * Unit 1 - Target July 1 - **done!** see [Unit 1](/educate/csp/unit1)
 * Unit 2 - Target Aug. 1 
-* Unit 3 - Target Sept. 1
-* Unit 4 - Target Oct. 1
+* Unit 3 - Target Early Fall (Sept/Oct)
+* Unit 4 - Target Mid Fall (Oct/Nov)
 
 <br />
 
