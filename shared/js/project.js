@@ -88,7 +88,7 @@ module.exports = {
   },
 
   init: function () {
-    if (redirectFromLegacyUrl()) {
+    if (redirectFromLegacyUrl() || redirectOwnerFromView()) {
       return;
     }
 
@@ -294,7 +294,7 @@ module.exports = {
   load: function () {
     var deferred;
     if (appOptions.level.isProjectLevel) {
-      if (redirectFromLegacyUrl()) {
+      if (redirectFromLegacyUrl() || redirectOwnerFromView()) {
         return;
       }
       var pathInfo = parsePath();
@@ -414,21 +414,47 @@ function redirectFromLegacyUrl() {
   }
 
   var pathInfo = parsePath();
-  var hardRedirect = false;
+  var attemptPushState = true;
   // We require sign in for /p/applab and /p/applab#channel_id/edit, so we'll
   // want to actually do the redirect
   if (pathInfo.appName === 'applab') {
-    hardRedirect = (!pathInfo.channelId || pathInfo.action === 'edit');
+    attemptPushState = pathInfo.channelId && pathInfo.action !== 'edit';
   }
 
-  // TODO - right now i include state just so that our UI tests can detect a
-  // dashboard vs. JS redirect. is there a better way?
-  if (!hardRedirect && window.history.replaceState) {
-    window.history.replaceState({modified: true}, document.title, newUrl);
+  return redirectToPath(newUrl, attemptPushState);
+}
+
+/**
+ * If the current user is the owner, we want to redirect from the readonly
+ * /view route to /edit
+ */
+function redirectOwnerFromView() {
+  if (!current || !current.isOwner) {
+    return;
+  }
+
+  // Legacy URLs didn't have /view, so nothing to worry about there
+  var newUrl = location.href.replace(/\/view$/, '/edit');
+  if (newUrl !== location.href) {
+    appOptions.readonlyWorkspace = false;
+    return redirectToPath(newUrl, true);
+  }
+  return false;
+}
+
+/**
+ * Does a redirect to the given path. If attemptPushState is true, it will
+ * use pushState to just change the browser URL in browsers that support this.
+ * @returns {boolean} True if we did a redirect (vs. pushState)
+ */
+function redirectToPath(path, attemptPushState) {
+  if (attemptPushState && window.history.pushState) {
+    // TODO - right now i include state just so that our UI tests can detect a
+    // dashboard vs. JS redirect. is there a better way?
+    window.history.pushState({modified: true}, document.title, path);
     return false;
   } else {
-    // do an actual redirect
-    location.href = newUrl;
+    location.href = path;
     return true;
   }
 }
