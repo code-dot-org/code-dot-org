@@ -1116,7 +1116,7 @@ applabCommands.onEvent = function (opts) {
   apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
-    if (domElement.contentEditable && opts.eventName === 'change') {
+    if (domElement.tagName.toUpperCase() === 'DIV' && domElement.contentEditable && opts.eventName === 'change') {
       // contentEditable divs don't generate a change event, so
       // synthesize one here.
       var callback = applabCommands.onEventFired.bind(this, opts);
