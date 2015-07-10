@@ -544,11 +544,11 @@
       4-5 Artist For Loops 14_instruction: |
         Alguém começou o código, mas então percebeu que
         deve haver uma forma mais rápida! Use um bloco "para" para substituir os blocos e
-        complete a espiral triangular. (Dica: a última linha tem 300 pixels.
+        complete a espiral triangular. (Dica: a última linha tem 300 pixels).
       4-5 Artist For Loops 15_instruction: |
         Alguém começou o código, mas então percebeu que
         deve haver uma forma mais rápida! Use um bloco "para" para substituir os blocos e
-        complete a espiral hexagonal. (Dica: a última linha tem 200 pixels.
+        complete a espiral hexagonal. (Dica: a última linha tem 200 pixels).
       4-5 Artist For Loops 2_instruction: |
         Este é um bloco "para". Ao invés de digitar
         1, 2, 3... 10, o bloco "para" pode repetir os blocos dentro dele e contar os
@@ -942,6 +942,9 @@
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete o código para desenhar esses triângulos. O
         primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
@@ -1405,11 +1408,21 @@
         (Cada linha tem\n300 pixels de comprimento) \n"
       Course 4 Artist 10_instruction: "Atividade livre! Divirta-se e desenhe\no que
         quiser. \n"
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: |
         Você consegue repetir este código para desenhar
         o quadrado em cinza?
       Course 4 Artist 3_instruction: |
-        Ok, tente descobrir o que acontece se você executar
+        Tente descobrir o que acontece se você executar
         esse código (ou clique em "Executar" para ver). Em seguida, execute-o várias vezes para completar
         o desenho.
       Course 4 Artist 4_instruction: |
@@ -1582,10 +1595,11 @@
         A maior parte do código para
         criar uma função foi dada a você. Contudo, parece que algo está faltando. Você consegue
         completar este bloco de função?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Atividade livre - Inspiração: agora você
+        aprendeu\ntudo o que precisa saber para criar um padrão como esse! Se essa
+        imagem\ninspira você, tente fazer algo similar. Caso contrário, crie algo\nvocê
+        mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi feito? Dê uma\nolhada
+        aqui: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: |
         Vamos editar uma função que desenha um
         quadrado com lados de 50 pixels
@@ -1659,7 +1673,7 @@
       Course 4 Artist Vars 12_instruction: |
         Vamos definir a variável "lados" como
         5. Quanto mais lados adicionarmos a esse algoritmo, maior será o
-        padrão! Vamos adicionar uma nova variável chamada "comprimento" e usá-la onde há
+        padrão! Observe que existe uma nova variável chamada "comprimento". Agora podemos usá-la onde há
         um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
       Course 4 Artist Vars 13_instruction: |
         Quanto mais lados a forma tem, menor
@@ -1703,10 +1717,9 @@
         Modifique esse algoritmo para que ele use a variável
         "lados" ao invés de um número fixo para desenhar um triângulo. Use o bloco
         "defina os lados para".
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
-      Course 4 Bee 1_instruction: "A abelha não sabe dizer se isso é uma flor ou uma
-        colmeia.\nPrimeiro verifique se isso é uma for ou uma colmeia, e então colete
-        néctar\napenas se for uma flor. \n"
+      Course 4 Bee 1_instruction: "A abelha não sabe o que há atrás da nuvem! Primeiro,
+        \nverifique se é uma for ou uma colmeia. Em seguida, colete néctar\napenas
+        se for uma flor. \n"
       Course 4 Bee 2_instruction: |
         Verifique cada objeto para ver se é uma flor. Se for,
         colete o néctar... caso contrário, você pode ignorá-lo!
@@ -1968,7 +1981,7 @@
       Course 4 Play Labs For Loops 5_instruction: |
         Na última etapa contamos o
         quadrado de cada número. Tente alterar "contador ^ 2" para "contador ^ 3" para
-        contar o cubo de cada número (1, 8, 27, 64, 125, 216, 343 ….)
+        contar o cubo de cada número (1, 8, 27, 64, 125, 216, 343…)
       Course 4 Play Labs For Loops 6_instruction: |
         Você deve se lembrar de que um número primo
         é qualquer número inteiro que é divisível apenas por ele mesmo e por 1. Use a função "é_primo"
@@ -1980,8 +1993,8 @@
         Qual laço me faria falar
         19, 27, 35, 43, 51?
       Course 4 Variables Assessment_instruction: |
-        Can you create this image using
-        a variable for sides? Each line should be 50 pixels long.
+        Você consegue criar essa imagem usando
+        uma variável para os lados? Cada linha deve ter 50 pixels de comprimento.
       Course1BeePuzzle12_instruction: Obtenha três néctares e então fabrique duas
         unidades de mel
       Course1MazeAssessment1_instruction: "Isso é um teste!\r\nMova-me por um caminho
@@ -2335,6 +2348,7 @@
       Infinity_touch_score_instruction: |
         Faça Anna marcar um ponto quando ela tocar
         em um floco de neve. Depois clique em "Executar" e faça ela tocar uma vez em cada floco de neve.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Desenhe uma pequena reta para cima e uma
         grande para a direita!
@@ -2754,8 +2768,8 @@
         Atividade livre: aqui estão as funções
         que você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
       NEW Course 4 Artist Params 2_instruction: |
-        Crie uma função "desenhe um triângulo
-        com lados de 50 pixels" desde o início
+        Crie uma função "desenhe um triângulo"
+        com lados de 50 pixels desde o início
       NEW Course 4 Artist Params 3_instruction: "Agora, vamos usar a função para desenhar\n3
         triângulos do último desafio em uma linha. Dica: cada triângulo está separado
         por\n50 pixels.\r\n"

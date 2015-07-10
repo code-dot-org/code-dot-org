@@ -182,6 +182,7 @@
   "play": "jogue",
   "print": "Imprimir",
   "puzzleTitle": "Desafio {puzzle_number} de {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "repita",
   "resetProgram": "Recomeçar",
   "rotateText": "Gire seu dispositivo.",
@@ -213,6 +214,5 @@
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Área de trabalho: "
 }

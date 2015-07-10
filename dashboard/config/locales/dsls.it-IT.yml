@@ -48,8 +48,8 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Trascina i blocchi per associarli.
         Instructions: Istruzioni
-        Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
-          blocchi che mi fa arrivare al girasole.
+        Match the puzzles to the blocks: Associa ad ogni situazione la sequenza di
+          blocchi che mi fa arrivare al maialino.
         Maze Match: Esercizio di Verifica (Associazioni)
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
@@ -114,7 +114,8 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: Hidden - 2-3 maze match 1
+        Match the puzzles to the blocks: Associa ad ogni situazione la sequenza di
+          blocchi che mi fa arrivare al maialino.
         Maze Match One: Esercizio di Verifica (Associazioni)
       4-5 Algorithms Match 1:
         <h4>1)</h4>: <h4>1)</h4>
@@ -128,14 +129,9 @@
         <h4>Player 1 rolls die</h4>: <h4>il Giocatore 1 tira il dado</h4>
         <h4>Set Player 1 score to 0</h4>: <h4>Imposta a 0 il punteggio del Giocatore
           1</h4>
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: |
-          Definisci l'ordine in cui le fasi di una Gara con i Dadi dovrebbero apparire in un algoritmo.
-
-          Nota:
-          Set Player 1 score to 0 = Metti a 0 il punteggio del Giocatore 1.
-          Add Player 1 roll to total score = Aggiungi il risultato del tiro del Giocatore 1 al suo punteggio.
-          Player 1 rolls die = Il Giocatore 1 tira il dado.
-          Compare player scores to see who wins = Confronta il punteggio dei giocatori per vedere chi vince.
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Definisci
+          l'ordine in cui le fasi di una Gara con i Dadi dovrebbero apparire in un
+          algoritmo.
         Matching: Esercizio di Verifica (Associazioni)
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
@@ -179,7 +175,8 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Trascina i blocchi per associarli.
         Instructions: Istruzioni
-        Match the puzzles to the blocks: Hidden -  4-5 maze match 1
+        Match the puzzles to the blocks: Associa ad ogni situazione la sequenza di
+          blocchi che mi fa arrivare al girasole.
         Maze Match: Esercizio di Verifica (Associazioni)
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
@@ -496,25 +493,17 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: Scegli la risposta migliore.
         Maze Multiple Choice One: Esercizio di Verifica (Risposte Multiple)
-        Which blocks work?: Quale sequenza di blocchi è corretta?
+        Which set of blocks is the correct answer?: Quale sequenza di blocchi è corretta?
       4-5 Algorithms Multi 1:
         Baking cookies: Cuocere i biscotti
-        Banana: Banana
+        Banana: ' Una banana (il frutto)'
         Brushing your teeth: Lavarsi i denti
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
-        Shopping from a grocery list: Acquistare gli oggetti contenuti in una lista
-          della spesa
-        Which one of these items is hardest to describe an algorithm for?: |
-          Tra queste situazioni, quale è la più difficile da descrivere con un algoritmo?
-
-          Nota:
-          Brushing your teeth = Lavarti i denti.
-          Baking cookies = Cucinare dolci.
-          Shopping from a grocery list = Acquistare i prodotti in una lista della spesa.
-          Banana = Una banana (il frutto).
+        Shopping from a grocery list: Acquistare i prodotti di una lista della spesa
+        Which one of these items is hardest to describe an algorithm for?: Tra queste
+          situazioni, quale è la più difficile da descrivere con un algoritmo?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene è una città _____.
         0: '? Here are three sentences. Which of the templates below correctly abstracts
@@ -581,28 +570,28 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
           to my Lou, <br/>Skip to my Lou, my darlin.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
-        4: '? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?'
-        5: ': Qual è il pezzo più lungo di questa canzone che puoi definire come "coro",
-          così che il coro si ripeta esattamente ogni volta che viene chiamato?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -921,7 +910,8 @@
           450
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
-        Which blocks spell "JUMP"?: Quali blocchi scrivono "JUMP"?
+        Which blocks spell "JUMP"?: Quale sequenza di blocchi devi scegliere per scrivere
+          le lettere della parola "JUMP"?
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png,
           700
@@ -949,15 +939,6 @@
           di questi ragazzi è il <b>conduttore</b>.  E uno è l' <b>aiutante</b>.
         This time, which boy is the <large>driver</large>?: Questa volta, quale ragazzo
           è il <large>conduttore</large>?
-      Warmup questions:
-        Coding in Racket: Programmazione nel linguaggio Racket
-        Select the best answer to the question.: Scegli la miglior risposta alla domanda.
-        When converting a circle to code, the correct order is: Quando si converte
-          un circolo di valutazione in codice, l'ordine corretto è
-        left top right: sinistra, alto, destra
-        left, right, top: sinistra, destra, alto
-        random: casuale
-        top, left, right: alto, sinistra, destra
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

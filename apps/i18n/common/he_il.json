@@ -182,6 +182,7 @@
   "play": "הפעל",
   "print": "הדפס",
   "puzzleTitle": "חידה {puzzle_number} מ- {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "חזור על",
   "resetProgram": "אפס",
   "rotateText": "סובב את המכשיר שלך.",
@@ -213,6 +214,5 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "מתי לרוץ",
-  "workspaceHeaderShort": "סביבת העבודה: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "סביבת העבודה: "
 }

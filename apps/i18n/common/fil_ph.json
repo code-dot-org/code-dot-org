@@ -182,6 +182,7 @@
   "play": "i-play",
   "print": "I-print",
   "puzzleTitle": "Puzzle {puzzle_number} ng {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ulitin",
   "resetProgram": "Ulitin",
   "rotateText": "Paikutin ang iyong device.",
@@ -213,6 +214,5 @@
   "watchVideo": "Panoorin ang Video",
   "when": "kelan",
   "whenRun": "kapag tumakbo",
-  "workspaceHeaderShort": "Workspace: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Workspace: "
 }

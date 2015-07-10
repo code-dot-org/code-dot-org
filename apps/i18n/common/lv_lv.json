@@ -182,6 +182,7 @@
   "play": "spēlēt",
   "print": "Drukāt",
   "puzzleTitle": "Mīkla {puzzle_number} no {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "atkārtot",
   "resetProgram": "Atiestatīt",
   "rotateText": "Pagriez savu ierīci.",
@@ -213,6 +214,5 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Darba virsma: "
 }

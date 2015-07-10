@@ -182,6 +182,7 @@
   "play": "грати",
   "print": "Друк",
   "puzzleTitle": "Завдання {puzzle_number} з {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "повторити",
   "resetProgram": "Скидання",
   "rotateText": "Повертайте свій пристрій.",
@@ -213,6 +214,5 @@
   "watchVideo": "Переглянути відео",
   "when": "коли",
   "whenRun": "коли гра починається",
-  "workspaceHeaderShort": "Робоча область: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Робоча область: "
 }

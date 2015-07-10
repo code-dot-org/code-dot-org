@@ -261,9 +261,8 @@
         från blommorna på fältet.
       2-3 Bee Loops 12_instruction: Använd medan- loopar för att samla all nektar
         från blommorna på fältet.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      2-3 Bee Loops 13_instruction: 'Uppdrag: Använd upprepablocket för att samla
+        in all nektar.'
       2-3 Bee Loops 1A_instruction: 'Hej, är jag ett bi. Kan du hjälpa mig att samla
         nektar från blommorna? '
       2-3 Bee Loops 2_instruction: Använd en slinga att samla nektar och göra honung.
@@ -421,111 +420,83 @@
         från 1 till 10 med 1-steg.
       4-5 Artist For Loops 6_instruction: Rita fyrkanter med sidor av 50, 60, 70,
         80 och 90 pixlar. Du måste använda funktionen "Rita en fyrkant" fem gånger.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
+      4-5 Artist For Loops 7_instruction: 'Rita samma rutor men använd blocket "Räkna
+        med" för att ändra storlek. Placera blocket "Räknare" i funktionen "Rita en
+        fyrkant". Ledtråd: Det ligger i variabelkategorin.'
+      4-5 Artist For Loops 8_instruction: Kan du avsluta programmet genom att lägga
+        blocken inuti ett block av typen "För" som räknar från 10 till 200 med 10-steg.
+        Du hittar förblock i kategorin loopar.
+      4-5 Artist For Loops 9_instruction: Dessa cirklar har storlekarna 5, 10, 15,
+        20, 25, 30 och 35. Rita cirklarna med hjälp av blocket "För".
+      4-5 Artist Free Draw 1_instruction: Rita själv! Rita någonting som du blir inspirerad
+        att skapa.
+      4-5 Artist Functions 1_instruction: Använd "Upprepa" för att rita triangeln.
+      4-5 Artist Functions 10a_instruction: 'Lägg koden inne i funktionen: Rita en
+        snöflinga och byt ut 50 mot parametern "storlek". Funktionen används redan
+        för att skapa en snöflinga som är 100 pixlar stor.'
+      4-5 Artist Functions 10b_instruction: 'Använd funktionen "Rita en snöflinga"
+        för att skapa olika stora snöflingor. Ledtråd: Den första snöflingan är 25
+        stor och varje snöflinga är dubbelt så stor som den föregående.'
+      4-5 Artist Functions 11_instruction: 'Funktionen "Rita en hexagon" använder
+        funktionen "Rita en triangel". Gör färdigt funktionen "Rita en hexagon". Ledtråd:
+        En hexagon har 6 sidor, var och en är 100 pixlar lång.'
+      4-5 Artist Functions 12_instruction: 'Gör färdigt funktionen "Rita vågor". varje
+        våg består av en övre våg och en undre våg. Ledtråd: Rita 5 blåa vågor.'
       4-5 Artist Functions 13 Free play_instruction: Här är några funktioner för att
         rita planeter, stjärnor, raketer och robotar. Använd dem hur du vill för att
         skapa bilder du kan dela med dina vänner.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
-        and \"draw a large triangle\". The \"draw a small triangle\" function\nis
-        done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
-        150 (large). \n"
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
+      4-5 Artist Functions 14 Free play_instruction: Varsågod, vi har gett dig flera
+        funktioner. Använd dem hur du vill inom en eller flera loopar för att skapa
+        bilder som du kan dela med dina vänner. Klicka på "Kör" för att se exempel.
+      4-5 Artist Functions 15 Assessment_instruction: 'Uppdrag: Använd funktionen
+        "Rita en ruta" för att skapa fyrkanterna. Rutorna är 50, 100 och 150 pixlar.'
+      4-5 Artist Functions 2a_instruction: Sätt ihop de blocken till en ny funktion
+        som, "Rita en liten triangel" och kalla på den.
+      4-5 Artist Functions 2b_instruction: Skapa en funktion som heter "Rita en liten
+        triangel" med hjälp av de block som du har fått.
+      4-5 Artist Functions 3_instruction: 'Skapa funktionerna "Rita en medelstor triangel"
+        och "Rita en stor triangel". Funktionen "Rita en liten triangel" är redan
+        gjord. Trianglarna har sidorna 50 (liten), 100 (medel) och 150 (stor). '
+      4-5 Artist Functions 4_instruction: Den nya funktion "Rita en triangeln" har
+        en parameter och kan göra samma sak som alla de tre tidigare funktionerna.
+        Rita samma trianglar med hjälp av den nya funktionen.
+      4-5 Artist Functions 5_instruction: Kan du ändra funktionen "rita en triangel"
+        till "rita en fyrkant" för att ändra teckningen?
       4-5 Artist Functions 6_instruction: 'Använd "Rita en fyrkant" och "Rita  triangel
         funktioner" för att rita ett hus. (Ledtråd: rutans sidor är 200 pixlar)'
       4-5 Artist Functions 6b_instruction: Använd dra en kvadrat och triangel funktioner
         tillsammans med andra block för att skapa ett hus genom att lägga till dem
         till "rita ett hus" funktionen och kör den.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
+      4-5 Artist Functions 7_instruction: Använd funktionen "Rita ett hus" för att
+        rita hus som är 100X50 pixlar. De två husen ska ha 50 pixlar mellan sig.
+      4-5 Artist Functions 8_instruction: Funktionen "Rita en blomma" har en parameter
+        som låter dig bestämma höjd på stammen. Sätt den till 200 och se vad som händer.
+      4-5 Artist Functions 9_instruction: Rita tre blommor. Den första blomman ska
+        vara 100 hög och de två andra ska vara 50 pixlar högre än föregående blomma.
+        Blommorna ska stå 100 pixlar från varandra.
+      4-5 Artist Patterns 1_instruction: Kan du rita rutan med hjälp av en loop. Varje
+        sida ska vara 20 pixlar.
+      4-5 Artist Patterns 10_instruction: 'Den här koden ritar två rader med hexagoner.
+        Loopa allt fyra gånger för att rita hela honungskakan. Ledtråd: Du behöver
+        hoppa tillbaka 120 pixlar i din yttre loop för att vara säker på att konstnären
+        inte målar utanför skärmen.'
+      4-5 Artist Patterns 11_instruction: 'Hur många gånger behöver du loopa det här
+        för att måla en halvcirkel? Ledtråd: Om det är 360 grader i en cirkel och
+        varje loop flyttar 3 grader, hur många gånger behöver du då loopa för att
+        rita en hel cirkel?'
+      4-5 Artist Patterns 12_instruction: Vad händer om du kopierar loopen och vänder
+        åt vänster i stället för höger? Kan du upprepa för att måla vågen?
+      4-5 Artist Patterns 13_instruction: Låt oss nu köra loppen fyra gånger för att
+        skapa ramen. Tänk på hörnen, du kan inte bara vända 90 grader! Om du behöver
+        loopa en sväng på 3 grader 60 gånger för att få en halvcirkel, vilka av dessa
+        kodblock kommer då att skapa en fjärdedels cirkel för hörnen?
+      4-5 Artist Patterns 2_instruction: Om du lägger en fyrkantsloop inuti en annan
+        loop kallar man det för kapslad loop. Vad behöver du lägga till din yttre
+        look för att se till så att alla 15 fyrkanterna står på rad bredvid varandra?
+      4-5 Artist Patterns 3_instruction: Låt oss nu gå ytterligare en nivå djupare!
+        Vi har kapslat hela kodblocket i en annan loop men du behöver få konstnären
+        tillbaka på plats för att rita nästa linje. Vilket av dessa kodblock kan du
+        lägga i slutet av den yttersta loppen för att rita hela rutnätet?
       4-5 Artist Patterns 4_instruction: |
         This diamond has 50 pixel sides and angles
         of 120 and 60 degrees. Use a loop to draw it.
@@ -602,9 +573,9 @@
         3, 2, or 1 nectars. Complete the "check purple flower" function and use
         it to collect all of the nectar at the flowers.
       4-5 Bee Conditionals 8_instruction: |
-        Write a function inside the block called
-        "check flower make honey." Your function should check how much nectar the
-        purple flower has and collect it, move forward, and then make honey.
+        Write inside the function "check flower
+        make honey". Your function should check if the purple flower has 3, 2, or
+        1 nectar and collect all of the nectar. Then, move forward and make honey.
       4-5 Bee Conditionals Assessment 1_instruction: |
         Assessment: This code is wrong.
         Complete the "get nectar or make honey" function, then call it to collect
@@ -790,6 +761,9 @@
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1237,10 +1211,21 @@
       Course 4 2_instruction: |
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
-      Course 4 Artist 1_instruction: "Help me finish drawing my box. (Each line is\n300
-        pixels long) \n"
-      Course 4 Artist 10_instruction: "It's Free Play time! Have fun and draw anything\nyou
-        would like. \n"
+      Course 4 Artist 1_instruction: "Help me draw a box. (Each line is 200 pixels\nlong)
+        \n"
+      Course 4 Artist 10_instruction: "It's Free Play time! Here is the code for\nan
+        interesting shape.  What happens when you repeat it?  Have fun and draw\nanything
+        you would like. \n"
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: |
         Can you loop this code to draw the greyed out
         square?
@@ -1253,20 +1238,23 @@
         the repeat block with that number to create a circle of colors.
       Course 4 Artist 5_instruction: |
         Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long.
+        symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
+        may have to run the code several times to figure out all of the blocks that
+        need to be added.
       Course 4 Artist 6_instruction: |
         Complete the code to draw these triangles.
-        Hint: 3 triangles in a 360 degree rotation.
+        Hint: There are 3 triangles within the 360 degree rotation...how many times
+        does 3 go into 360?
       Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10
         triangles.  This is called a nested loop.  Hint: All 10 triangles complete\na
         360 degree rotation.  \n"
       Course 4 Artist 8_instruction: |
         Draw this sun by looping this whole block of
-        code 12 times.
+        code multiple times.
       Course 4 Artist 9_instruction: |
         Loop this design 10 times and make sure to
-        turn in between each shape that's drawn. Here's a hint for how much you
-        have to turn: What is 360 divided by 10?
+        turn between each shape that's drawn. Here's a hint for how much you have
+        to turn: What is 360 divided by 10?
       Course 4 Artist Binary 1_instruction: |
         Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to turn on the go from left
@@ -1419,9 +1407,10 @@
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1539,7 +1528,6 @@
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Use the "set sides
         to" block.
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: "The bee can't tell what's under the cloud! First,\ncheck
         if it is a flower or a honeycomb. Then only gather nectar from it if\nit is
         a flower. \n"
@@ -2165,6 +2153,7 @@
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -3290,11 +3279,9 @@
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

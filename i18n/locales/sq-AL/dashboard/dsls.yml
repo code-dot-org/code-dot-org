@@ -421,9 +421,8 @@ sq:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Zgjidh përgjigjen më të mirë.
         Maze Multiple Choice One: Maze me Zgjedhje Të Shumëfishtë Një
-        Which blocks work?: Cili bllok punon?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
@@ -477,15 +476,12 @@ sq:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Miza është në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë,<br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë, <br/>Shoo. fluturo, shoo, <br/>Kalo te Lou im, i dashur.'
-        1: ': Miza është brenda në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është brenda në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë, <br/>Shoo, fluturo, shoo, <br/>Kalo te Lou im, i dashuri im.'
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: Lou, lou, kalo te Lou im,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.'
-        2: '? Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.<br/><br/><p> Miza është në dhallë, <br/> Shoo. fluturo, shoo,'
-        3: ': Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.<br/><br/><p> Miza është në dhallë, <br/> Shoo. fluturo, shoo,'
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Zgjedhje e Shumëfishtë
-        4: ë? Cila është pjesa më e madhe e kësaj kënge që ta përcaktosh si refren, në mënyrë që refreni të përsëritet ekzaktësisht çdo herë që thërritet?
-        5: ': Cila është pjesa më e madhe e kësaj kënge që ta përcaktosh si refren, në mënyrë që refreni të përsëritet ekzaktësisht çdo herë që thërritet?'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -758,14 +754,6 @@ sq:
         Driver and Helper: Shoferi dhe Ndihmësi
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Një nga këta djemtë është <b>shoferi</b>. Dhe tjetri është <b>ndihmësi</b>.'
         This time, which boy is the <large>driver</large>?: 'Këtë herë, cili djalë është <large>shoferi</large>?'
-      Warmup questions:
-        Coding in Racket: Të kodosh në Raketë
-        Select the best answer to the question.: Zgjidh përgjigjen më të mirë për pyetjen.
-        When converting a circle to code, the correct order is: Kur kthen një rreth në kod, rregulli i duhur është
-        left top right: majtas lart djathtas
-        left, right, top: majtas, djathtas, lart
-        random: zakonshem
-        top, left, right: lart, majtas, djathtas
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

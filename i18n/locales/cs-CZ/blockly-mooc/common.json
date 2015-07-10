@@ -182,6 +182,7 @@
   "play":"hrát",
   "print":"Tisk",
   "puzzleTitle":"Hádanka {puzzle_number} z {stage_total}",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"opakuj",
   "resetProgram":"Obnovit",
   "rotateText":"Otoč své zařízení.",

@@ -721,6 +721,9 @@
       4-5 While Loops Assessment 1_instruction: Sada vidim puno rupa i hrpa. Pomozi
         mi da ih popunim i uklonim sve dok se zemlja ne poravna.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: 'Dovrši kod za crtanje ovih trokutova.
         Prvi dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
       Artist - Nested Loops 10_instruction: Nacrtaj zadnji red zvijezda na ovoj zastavi
@@ -1102,6 +1105,16 @@
         linija je duga 300 piksela) '
       Course 4 Artist 10_instruction: 'Vrijeme je za slobodno igranje! Zabavi se i
         nacrtaj šta god želiš. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Možeš li ponavljati ovaj kod u petlji da bi nacrtao/a
         posivjeli kvadrat?
       Course 4 Artist 3_instruction: Ok, pokušaj shvatiti šta se desi ako pokreneš
@@ -1239,9 +1252,10 @@
         funkcije. Međutim, izgleda dan ešto nedostaje. Možeš li kompletirati ovaj
         funkcijski blok?
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Hajde da uredimo funkciju koja crta kvadrat
         sa stranicama od 50 piksela
       Course 4 Artist Params 10_instruction: 'Možeš zvati funkcije unutar drugih funkcija!
@@ -1340,7 +1354,6 @@
       Course 4 Artist Vars 9_instruction: Promijeni ovaj algoritam tako da on koristi
         varijablu "stranice" umjesto fiksnog broja pri crtanju trokuta. Zamijeni broj
         3 sa "stranice" varijablom, i koristi "postavi stranice na" blok.
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Pčela ne može razaznati da li je ovo cvijet ili
         saće meda. Prvo provjeri da li je ovo cvijet ili saće meda, a zatim pokupi
         nektar samo ako je u pitanju cvijet. '
@@ -1843,6 +1856,7 @@
       Infinity_touch_score_instruction: Učini da Anna osvoji bod svaki put kada dotakne
         pahuljicu snijega. Onda klikni na "Pokreni" i upravi Annu da dodatkne svaku
         od pahuljica samo jednom.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Nacrtaj kratku liniju gore i jednu dugačku
         liniju desno!
       K-1 artist 1 level 10_instruction: Nacrtaj isprekidanu liniju koristeći blokove
@@ -2894,11 +2908,9 @@
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

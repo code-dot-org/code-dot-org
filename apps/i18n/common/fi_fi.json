@@ -182,6 +182,7 @@
   "play": "pelaa",
   "print": "Tulosta",
   "puzzleTitle": "Tehtävä {puzzle_number} / {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "toista",
   "resetProgram": "Alusta",
   "rotateText": "Käännä laitettasi.",
@@ -213,6 +214,5 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Työtila: "
 }

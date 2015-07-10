@@ -248,7 +248,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Straumlaust: Videospel
             og kooridinat-plan'
           'Calc: Evaluation Blocks': 'Beregning: Evaluering blokker'
-          'Eval: Strings and Images': 'Evaluere: Tekst og bilder'
+          'Eval: Strings and Images': Strenger og bilder
           'Unplugged: Contracts': 'Frakoblet: kontrakter'
           'Eval: Writing Contracts': 'Evaluering: Skriver kontrakter'
           'Calc: Defining Variables': 'Regning: Definere variabler'
@@ -285,9 +285,9 @@
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Evalueringsblokker
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Definering av variabler
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: Design oppskrifta
         K5PD:
@@ -316,8 +316,8 @@
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
           title: Internett Simulator
-          description_short: ''
-          description: ''
+          description_short: Lær om hvordan Internett fungerer
+          description: Lær om hvordan Internett fungerer
           Internet Simulator: Internett Simulator
           Unit 1: Eining 1
           Unit 2: Eining 2
@@ -337,8 +337,8 @@
           description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
             og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse
             og oppover, men det er morosamt å lære for alle aldersgruppe.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Dette 20-timers kurset dekker fundamentale datavitenskaps-
+            og programmeringskonsepter i kurs 2-4.
           Introduction to Computer Science: Introduksjon til datavitskap (informatikk)
           The Maze: Labyrinten
           Computational Thinking: Programmeringstenking
@@ -380,21 +380,22 @@
           title: Flakse-kode
           description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen
             i Flaksekode!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Lag ditt eget Flappy-spill på mindre enn ti minutter!
           Flappy Code: Flakse-kode
         jigsaw:
           title: Puslespill
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Prøv puslespillguiden vår
+          description_short: Prøv puslespillguiden vår
           Jigsaw: Puslespill
         step:
           title: Tren
-          description: ''
-          description_short: Step tutorial
+          description: Trinnguide
+          description_short: Trinnguide
           Step: Tren
         Hour of Code:
           title: Kodetimen 2013
-          description: ''
+          description: Prøv det grunnleggende om datavitenskap med karakterer fra
+            Angry Birds og Plants vs. Zombies!
           description_short: Prøv grunnleggande programmering med mange morsomme figurar!
           Hour of Code 2013: Kodetimen 2013
         Code Studio Puzzle Challenge:
@@ -507,8 +508,8 @@
             Deteksjon av kollisjonar og distanseformelen'
           'Play Lab: Collision Detection (Big Game)': 'Spel-lab: Detekssjon av kollisjong
             (Stort spel)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
           Contracts: Kontrakter
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
@@ -531,8 +532,8 @@
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -670,9 +671,9 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Evalueringsblokker
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: Strenger og bilder
           The Design Recipe: Design oppskrifta
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -721,7 +722,7 @@
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Evalueringsblokker
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -734,7 +735,7 @@
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Evalueringsblokker
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -866,9 +867,9 @@
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
           description_short: Teach Functional Programming through Algebra
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
+          Defining Variables: Definering av variabler
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           The Design Recipe: Design oppskrifta
@@ -881,7 +882,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Free Play
+          Free Play: Frispill
         allthethings:
           Jigsaw: Puslespill
           Maze: Labyrint
@@ -914,11 +915,11 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Definering av variabler
+          Defining Functions: Definering av funksjoner
           Rocket-Height: Rocket-Height
           Booleans: Boolske verdiar
           'Eval: Conditionals': 'Eval: Vilkår'
@@ -999,11 +1000,11 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Definering av variabler
+          Defining Functions: Definering av funksjoner
           Rocket-Height: Rocket-Height
           Booleans: Boolske verdiar
           'Eval: Conditionals': 'Eval: Vilkår'
@@ -1043,3 +1044,13 @@
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
           Wrap-Up: Oppsummering
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free,
+            self-paced online course.
+          description: Develop strategies for creating equity in your classroom with
+            this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps

@@ -182,6 +182,7 @@
   "play": "jouer",
   "print": "Imprimer",
   "puzzleTitle": "Puzzle {puzzle_number} sur {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "répéter",
   "resetProgram": "Réinitialiser",
   "rotateText": "Tournez votre appareil.",
@@ -213,6 +214,5 @@
   "watchVideo": "Voir la vidéo",
   "when": "lorsque",
   "whenRun": "lors du lancement",
-  "workspaceHeaderShort": "Espace de travail :",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Espace de travail :"
 }

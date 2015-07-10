@@ -182,6 +182,7 @@
   "play": "mängi",
   "print": "Trüki välja",
   "puzzleTitle": "Mõistatus {puzzle_number}/{stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "korda",
   "resetProgram": "Kustuta",
   "rotateText": "Pööra oma seadet.",
@@ -213,6 +214,5 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "kui käib",
-  "workspaceHeaderShort": "Tööruum: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Tööruum: "
 }

@@ -182,6 +182,7 @@
   "play": "играй",
   "print": "Печат",
   "puzzleTitle": "Пъзел {puzzle_number} от {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "повтори",
   "resetProgram": "Начално състояние",
   "rotateText": "Завъртете устройството си.",
@@ -213,6 +214,5 @@
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Работна област: "
 }
