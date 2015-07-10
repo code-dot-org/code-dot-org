@@ -82,13 +82,22 @@ Dashboard::Application.routes.draw do
   resources :projects, path: '/p/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, value|
-        editable_project = value[:login_required] ? 'levels#show_login_required' : 'levels#show'
-        get '/' + key.to_s, to: editable_project, key: value[:name], as: key.to_s
-        get '/' + key.to_s + '/:channel_id', to: 'levels#show', key: value[:name], as: key.to_s + 'share', share: true
-        get '/' + key.to_s + '/:channel_id/edit', to: editable_project, key: value[:name], as: key.to_s + 'edit'
+        get '/' + key.to_s, to: 'levels#show', key: value[:name], as: key.to_s
       end
       get '/:template', to: 'projects#template'
     end
+  end
+
+  resources :projects, path: '/projects/', only: [:index] do
+    collection do
+      ProjectsController::STANDALONE_PROJECTS.each do |key, value|
+        get '/' + key.to_s, to: 'projects#edit', key: key, as: key.to_s + 'project'
+        get '/' + key.to_s + '/:channel_id', to: 'projects#show', key: key, as: key.to_s + 'project_share', share: true
+        get '/' + key.to_s + '/:channel_id/edit', to: 'projects#edit', key: key, as: key.to_s + 'project_edit'
+        get '/' + key.to_s + '/:channel_id/view', to: 'projects#show', key: key, as: key.to_s + 'project_view', readonly: true
+      end
+    end
+    # TODO - do i need template?
   end
 
   post '/locale', to: 'home#set_locale', as: 'locale'
