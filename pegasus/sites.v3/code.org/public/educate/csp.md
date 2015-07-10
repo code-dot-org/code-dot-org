@@ -57,13 +57,24 @@ Several documents describe the overarching themes and direction of the course.
 
 #### When will lessons be published?
 
-Code.org’s CS Principles curriculum will be released publicly on a rolling basis as engineering and field testing of lessons permit. Batches of lessons may be released on a rolling basis from now until Summer 2015. In Summer of 2015 the full curriculum will be available for viewing.  We will be making ongoing modifications (mostly adding supports) during the 2015-16 school year based on feedback from pilot instructors.
+**Summer 2015**
+
+Unit completion is driven primarily by our professional development schedule. Units 1 and 2 are complete for professional development sessions this summer.  Units 3 and 4 are undergoing revisions for delivery in the fall for ongoing professional development sessions.
+
+**Target Dates for publishing unit drafts online**
+
+As the units undergo revisions we hope to publish them on an ongoing basis leading up to and through the beginning of the school year. These are our targets.
+
+* Unit 1 - Target July 1 - **done!** see [Unit 1](/educate/csp/unit1)
+* Unit 2 - Target Aug. 1 
+* Unit 3 - Target Sept. 1
+* Unit 4 - Target Oct. 1
 
 <br />
 
 #### Can I test lessons and give feedback?
 
-Yes, please!  As lessons are published on the website we invite anyone to try them out - both the lessons and any new tools or software - and let us know how it went.  Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by providing comments in the documents themselves.
+Yes, please!  As lessons are published on the website we invite anyone to try them out - both the lessons and any new tools or software - and let us know how it went.  Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CSP forum.
 
 <br />
 

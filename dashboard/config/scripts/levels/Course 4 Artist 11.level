@@ -113,11 +113,6 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-      </xml>
-    </solution_blocks>
-    <predraw_blocks>
-      <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat_dropdown">
@@ -167,6 +162,6 @@
           </next>
         </block>
       </xml>
-    </predraw_blocks>
+    </solution_blocks>
   </blocks>
 </Artist>
