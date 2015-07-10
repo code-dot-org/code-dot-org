@@ -29,6 +29,7 @@ level 'Course 4 Artist 7'
 level 'Course 4 Artist 8'
 level 'Course 4 Artist 9'
 level 'Course 4 Artist 10'
+level 'Course 4 Artist 11'
 
 stage 'Unplugged: Envelope Variables'
 level 'EnvelopeVariables'
@@ -199,4 +200,3 @@ level 'Course 4 Artist Binary Free Play 2'
 #level 'Course 4 Binary 6'
 #level 'Course 4 Binary 7'
 #level 'Course 4 Binary 8'
-

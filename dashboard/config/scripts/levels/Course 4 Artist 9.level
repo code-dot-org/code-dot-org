@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop this design 10 times and make sure to turn in between each shape that's drawn. Here's a hint for how much you have to turn: What is 360 divided by 10?",
+    "instructions": "Loop this design 10 times and make sure to turn between each shape that's drawn. Here's a hint for how much you have to turn: What is 360 divided by 10?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -21,7 +21,14 @@
     "impressive": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
