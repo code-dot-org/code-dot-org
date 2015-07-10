@@ -1453,3 +1453,34 @@ Applab.getAssetDropdown = function (typeFilter) {
   });
   return options;
 };
+
+/**
+ * Return droplet dropdown options representing a list of ids currently present
+ * in the DOM, optionally limiting the result to a certain HTML element tagName.
+ * @param {undefined|string} tagFilter Optional HTML element tagName to filter for.
+ * @returns {*|Array}
+ */
+Applab.getIdDropdown = function (tagFilter) {
+  var elements = [];
+  $('#divApplab').children().each(function () {
+    elements.push(this);
+  });
+  $('#divApplab').children().children().each(function () {
+    elements.push(this);
+  });
+
+  var filteredIds = [];
+  elements.forEach(function (element) {
+    if (!tagFilter || element.tagName.toUpperCase() === tagFilter.toUpperCase()) {
+      filteredIds.push(element.id);
+    }
+  });
+  filteredIds.sort();
+
+  return filteredIds.map(function(id) {
+    return {
+      text: quote(id),
+      display: quote(id)
+    };
+  });
+};
