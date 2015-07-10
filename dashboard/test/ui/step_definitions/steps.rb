@@ -399,3 +399,8 @@ Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
   end
   @browser.execute_script("return window.history.state").should eq state
 end
+
+Then /^I navigate to the share URL$/ do
+  url = @browser.execute_script("return document.getElementById('sharing-input').value")
+  @browser.navigate.to url
+end

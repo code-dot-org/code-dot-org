@@ -1,4 +1,3 @@
-@dashboard_db_access
 Feature: Projects
 
 # TODO - do we need to make sure we have a valid channel
@@ -26,6 +25,7 @@ Examples:
   | http://studio.code.org/projects/playlab/M17JvqZ68AlDVpRfsdUSSw      | /projects/playlab/M17JvqZ68AlDVpRfsdUSSw      | none |
   | http://studio.code.org/projects/playlab/M17JvqZ68AlDVpRfsdUSSw/edit | /projects/playlab/M17JvqZ68AlDVpRfsdUSSw/edit | none |
 
+@dashboard_db_access @stop_after_failure
 Scenario Outline: Proper redirects urls when signed in
   Given I am on "http://studio.code.org/"
   And I am a student
