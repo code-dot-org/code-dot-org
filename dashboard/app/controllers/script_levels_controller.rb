@@ -94,7 +94,7 @@ class ScriptLevelsController < ApplicationController
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       authorize! :manage, :teacher
       level_source = @ideal_level_source
-      reaonly_view_options
+      readonly_view_options
     elsif @user && current_user && @user != current_user
       level_source = @user.last_attempt(@level).try(:level_source)
       readonly_view_options
