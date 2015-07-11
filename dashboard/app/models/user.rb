@@ -586,6 +586,19 @@ SQL
     user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)
   end
 
+  def not_started?(script)
+    !completed?(script) && !a_level_passed?(script)
+  end
+
+  def a_level_passed?(script)
+    user_levels_by_level = user_levels_by_level(script)
+    script.script_levels.detect do |script_level|
+      user_level = user_levels_by_level[script_level.level_id]
+      is_passed = (user_level && user_level.passing?)
+      script_level.valid_progression_level? && is_passed
+    end
+  end
+
   def working_on?(script)
     working_on_scripts.include?(script)
   end
