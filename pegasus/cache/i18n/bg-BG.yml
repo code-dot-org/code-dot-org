@@ -1,7 +1,7 @@
 "bg-BG":
   hello: Здравей, свят
   select_language: Моля, изберете вашия език
-  en: Computer Science
+  en: Компютърни науки
   computer_science_edweek: Седмица на Компютърните Науки
   csedweek_dates: 8-14 Декември 2014 г.
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -64,7 +64,7 @@
   congratulations_on_completing_hoc: Поздравления за завършване на предизвикателството
     Един Час Кодиране
   get_a_certificate_of_achievement: Получете сертификат за постижение
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Моля, изберете валидна възраст
   enter_valid_email: Моля, въведете валиден имейл адрес
   get_a_certificate_message: Ние ще ви изпратим сертификат и информация за това как
     да <a href='/learn/beyond'> учите и след първия час програмиране</a>
@@ -496,7 +496,7 @@
   dashboard_login_picture: Картина
   dashboard_login_none: Имейл
   dashboard_new_password: нова парола
-  dashboard_progress_not_started: не стартира
+  dashboard_progress_not_started: не е стартиран
   dashboard_progress_in_progress: в ход
   dashboard_progress_not_completed: не е завършено
   dashboard_progress_completed_too_many_blocks: завършено, но с повече блокове

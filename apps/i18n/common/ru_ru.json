@@ -182,6 +182,7 @@
   "play": "играть",
   "print": "Печать",
   "puzzleTitle": "Головоломка {puzzle_number} из {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "повторить",
   "resetProgram": "Сбросить",
   "rotateText": "Поверните ваше устройство.",
@@ -213,6 +214,5 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Место сбора блоков: "
 }

@@ -477,9 +477,9 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: Selecciona la mejor respuesta.
         Maze Multiple Choice One: Laberinto de Opción Múltiple Uno
-        Which blocks work?: ¿Cuál bloque funciona?
+        Which set of blocks is the correct answer?: ¿Qué conjunto de bloques forma
+          la respuesta correcta?
       4-5 Algorithms Multi 1:
         Baking cookies: Horneando galletas
         Banana: Plátano
@@ -547,29 +547,27 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Mosca en la leche, <br/> Vete, vuela, vete, <br/>Mosca en la leche,
-          <br/> Vete, vuela, vete, <br/> mosca en la leche, <br/> Vete, vuela, vete,
-          <br/> Saltear a mi Lou, querida.'
-        1: ': Mosca en la leche, <br/> Vete, vuela, vete, <br/>Mosca en la leche,
-          <br/> Vete, vuela, vete, <br/> mosca en la leche, <br/> Vete, vuela, vete,
-          <br/> Saltear a mi Lou, mi querida.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, saltear a mi Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, saltear a mi Lou, <br/>Lou, Lou, saltear a mi Lou, <br/>Lou, Lou, saltear
           a mi Lou, <br/>saltear a mi Lou, mi querida.
-        2: '? Lou, Lou, saltear a mi Lou, <br/> Lou, Lou, saltear a mi Lou, <br/>
-          Lou, Lou, saltear a mi Lou, <br/> Saltear a mi Lou, mi querida. <br/> <br/><p>Mosca
-          en la leche, <br/> Vete, vuela, vete,'
-        3: ': Lou, Lou, saltear a mi Lou, <br/> Lou, Lou, saltear a mi Lou, <br/>
-          Lou, Lou, saltear a mi Lou, <br/> Saltear a mi Lou, mi querida. <br/> <br/><p>Mosca
-          en la leche, <br/> Vete, vuela, vete,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: Opción Múltiple
-        4: '? ¿Cuál es la parte más larga de esta canción que se puede definir como
-          el coro de tal forma que el coro se repita exactamente cada vez que se lo
-          llama?'
-        5: ': ¿Cuál es la parte más larga de esta canción que se puede definir como
-          el coro de tal forma que el coro se repita exactamente cada vez que se lo
-          llama?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -884,16 +882,6 @@
           de estos niños es el <b>conductor</b>.  Y el otro es el <b>ayudante</b>.
         This time, which boy is the <large>driver</large>?: ¿Esta vez, cuál niño es
           el <large>conductor</large>?
-      Warmup questions:
-        Coding in Racket: Programación en Racket
-        Select the best answer to the question.: Selecciona la mejor respuesta a la
-          pregunta.
-        When converting a circle to code, the correct order is: Al convertir un círculo
-          a código, el orden correcto es
-        left top right: izquierda, arriba, derecha
-        left, right, top: izquierda, derecha, arriba
-        random: aleatorio
-        top, left, right: arriba, izquierda, derecha
       test multi text:
         Fred Flintstone: Pedro Picapiedra
         George Jetson: Super Sónico

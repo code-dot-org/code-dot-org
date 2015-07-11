@@ -182,6 +182,7 @@
   "play": "žaisti",
   "print": "Spausdinti",
   "puzzleTitle": "Užduotis {puzzle_number} iš {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "kartok",
   "resetProgram": "Iš naujo",
   "rotateText": "Pasuk savo įrenginį.",
@@ -213,6 +214,5 @@
   "watchVideo": "Peržiūrėk šį vaizdo įrašą",
   "when": "kada",
   "whenRun": "paleidus",
-  "workspaceHeaderShort": "Darbo laukas: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Darbo laukas: "
 }

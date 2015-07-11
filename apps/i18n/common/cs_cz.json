@@ -182,6 +182,7 @@
   "play": "hrát",
   "print": "Tisk",
   "puzzleTitle": "Hádanka {puzzle_number} z {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "opakuj",
   "resetProgram": "Obnovit",
   "rotateText": "Otoč své zařízení.",
@@ -213,6 +214,5 @@
   "watchVideo": "Shlédnout Video",
   "when": "když",
   "whenRun": "po spuštění",
-  "workspaceHeaderShort": "Pracovní prostor: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Pracovní prostor: "
 }

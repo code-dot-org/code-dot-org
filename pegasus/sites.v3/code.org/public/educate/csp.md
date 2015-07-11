@@ -17,8 +17,8 @@ Check back often as batches of lessons will be released on a rolling basis from 
 
 ### <a name="features"></a>Features
 
-- Access the world of web applications using App Lab: Code.org's online, block to text, JavaScript programming environment
-- Build problem solving skills through the use of computational widgets
+- Access the world of web applications using [App Lab](https://code.org/educate/applab): Code.org's online, block to text, JavaScript programming environment
+- Build problem solving skills through the use of [computational widgets](https://staging.code.org/educate/applab)
 - Experience a blend of online, guided tutorials and open-ended, project-based learning
 - Learn from a diverse cast of role models, from well-known tech celebrities to social innovators who are using CS to tackle society's problems
 - Engage all students in constructing their own understanding of computer science concepts through equitable teaching practices and inquiry-based instructional strategies
@@ -66,9 +66,9 @@ Unit completion is driven primarily by our professional development schedule. Un
 As the units undergo revisions we hope to publish them on an ongoing basis leading up to and through the beginning of the school year. These are our targets.
 
 * Unit 1 - Target July 1 - **done!** see [Unit 1](/educate/csp/unit1)
-* Unit 2 - Target Aug. 1 
-* Unit 3 - Target Sept. 1
-* Unit 4 - Target Oct. 1
+* Unit 2 - Target Aug. 1
+* Unit 3 - Target Early Fall (Sept/Oct)
+* Unit 4 - Target Mid Fall (Oct/Nov)
 
 <br />
 

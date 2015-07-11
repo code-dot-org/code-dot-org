@@ -182,6 +182,7 @@
   "play":"afspil",
   "print":"Udskriv",
   "puzzleTitle":"Opgave {puzzle_number} af {stage_total}",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"gentag",
   "resetProgram":"Nulstil",
   "rotateText":"Drej din enhed.",

@@ -182,6 +182,7 @@
   "play":"inizia",
   "print":"Stampa",
   "puzzleTitle":"Esercizio {puzzle_number} di {stage_total}",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"ripeti",
   "resetProgram":"Ricomincia",
   "rotateText":"Ruota il dispositivo.",

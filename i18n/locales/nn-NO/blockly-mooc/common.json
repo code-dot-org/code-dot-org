@@ -182,6 +182,7 @@
   "play":"spel av",
   "print":"Skriv ut",
   "puzzleTitle":"Oppgåve {puzzle_number} av {stage_total}",
+  "readonlyWorkspaceHeader":"Vis bare: ",
   "repeat":"gjenta",
   "resetProgram":"Nullstill",
   "rotateText":"Snu enheten din.",

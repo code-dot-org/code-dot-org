@@ -182,6 +182,7 @@
   "play": "玩",
   "print": "打印",
   "puzzleTitle": "第{stage_total}章的谜题 {puzzle_number} ",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "重复",
   "resetProgram": "重置",
   "rotateText": "旋转您的设备。",
@@ -213,6 +214,5 @@
   "watchVideo": "观看视频",
   "when": "当",
   "whenRun": "当运行时",
-  "workspaceHeaderShort": "工作区域",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "工作区域"
 }

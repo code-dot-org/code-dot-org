@@ -923,6 +923,9 @@ pt:
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1372,6 +1375,12 @@ pt:
       Course 4 Artist 10_instruction: |
         Atividade livre! Divirta-se e desenhe
         o que quiser.
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: |
         Você consegue repetir este código para desenhar
         o quadrado em cinza?
@@ -1547,7 +1556,7 @@ pt:
         A maior parte do código para
         criar uma função foi dada a você. Contudo, parece que algo está faltando. Você consegue
         completar este bloco de função?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Vamos editar uma função que desenha um
         quadrado com lados de 50 pixels
@@ -1670,7 +1679,6 @@ pt:
         Modifique esse algoritmo para que ele use a variável
         "lados" ao invés de um número fixo para desenhar um triângulo. Use o bloco
         "defina os lados para".
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: |
         A abelha não sabe dizer se isso é uma flor ou uma colmeia.
         Primeiro verifique se isso é uma for ou uma colmeia, e então colete néctar
@@ -2288,6 +2296,7 @@ pt:
       Infinity_touch_score_instruction: |
         Faça Anna marcar um ponto quando ela tocar
         em um floco de neve. Depois clique em "Executar" e faça ela tocar uma vez em cada floco de neve.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Desenhe uma pequena reta para cima e uma
         grande para a direita!
@@ -3364,7 +3373,10 @@ pt:
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
-      U3L2_Turtle3by3Grid_instruction: foo
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

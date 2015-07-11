@@ -182,6 +182,7 @@
   "play": "играј",
   "print": "Одштампај",
   "puzzleTitle": "Мозгалица {puzzle_number} од {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "понављај",
   "resetProgram": "Почни поново",
   "rotateText": "Окрените ваш уређај.",
@@ -213,6 +214,5 @@
   "watchVideo": "Погледај видео",
   "when": "када",
   "whenRun": "када се извршава",
-  "workspaceHeaderShort": "Радни простор: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Радни простор: "
 }

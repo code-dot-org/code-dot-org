@@ -343,8 +343,8 @@
           description: Acest curs de 20 de ore prezintă concepte de bază din informatică
             şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru
             clasele K-8, dar este distractiv de învăţat la toate vârstele.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Acest curs de 20 de ore acoperă elementele de bază în
+            informatică și concepte de programare în cadrul cursurile 2-4.
           Introduction to Computer Science: Introducere în Informatică
           The Maze: Labirintul
           Computational Thinking: Gândire de Calcul
@@ -386,7 +386,7 @@
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute?
             Încearcă lecția noastră Codul Floppy!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Creează propriul joc Flappy în mai puțin de 10 minute!
           Flappy Code: Codul Flappy
         jigsaw:
           title: Puzzle
@@ -1052,3 +1052,13 @@
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
           Wrap-Up: Revizuire
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free,
+            self-paced online course.
+          description: Develop strategies for creating equity in your classroom with
+            this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps

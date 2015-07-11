@@ -182,6 +182,7 @@
   "play":"Jolastu",
   "print":"Inprimatu",
   "puzzleTitle":"{stage_total}etik, {puzzle_number} puzlea",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"errepikatu",
   "resetProgram":"Leheneratu",
   "rotateText":"Biratu zure gailua.",

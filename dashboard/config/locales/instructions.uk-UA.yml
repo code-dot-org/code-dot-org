@@ -731,6 +731,9 @@
       4-5 While Loops Assessment 1_instruction: Є багато дірок і паль.  Допоможи мені
         заповнити і видалити їх, щоб зробити землю плоскою.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1178,6 +1181,16 @@
         лінії - 300 пікселів) '
       Course 4 Artist 10_instruction: 'Час гри без правил! Отримуй задоволення і намалюй
         все що ти хотів. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Ви можете петлі цей код, щоб накреслити квадрат
         сірим?
       Course 4 Artist 3_instruction: Гаразд, спробувати з'ясувати, що відбувається,
@@ -1320,10 +1333,11 @@
       Course 4 Artist Functions 9_instruction: Ми дали більшу частину коду, щоб створити
         функцію. Проте видається чогось не вистачає. Ви можете зробити цю функцію
         блокування повний?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Безкоштовно грати натхнення: Ви тепер
+        довідалися, все, що вам потрібно знати, щоб зробити лекало як це!  Якщо ця
+        картина надихає вас, спробуйте зробити щось подібне.  В іншому випадку, створити
+        те, що всі ваші власні. \r \r хочете знати, як наші натхнення модель була
+        зроблена? Перевірити його тут: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Давайте редагувати функція, яка приваблює
         квадрат зі стороною 50 пікселів
       Course 4 Artist Params 10_instruction: 'Ви можете зателефонувати функцій від
@@ -1422,7 +1436,6 @@
       Course 4 Artist Vars 9_instruction: Змінити цей алгоритм, так що він використовує
         змінну "сторони" замість фіксоване число намалювати трикутник. Використовувати
         блок "встановити сторони".
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Бджоли не можу сказати, якщо це квітка або стільники.
         Спочатку перевірте, якщо є квітка або бджолині соти а потім тільки збирати
         нектар з нього якщо це-квітка. '
@@ -1638,9 +1651,8 @@
         22, 25?
       Course 4 Play Labs For Loops 8_instruction: Навіщо петлю зробить мене говорити
         19, 27, 35, 43, 51?
-      Course 4 Variables Assessment_instruction: |
-        Can you create this image using
-        a variable for sides? Each line should be 50 pixels long.
+      Course 4 Variables Assessment_instruction: Ви можете створити цей образ, використовуючи
+        змінну для сторін? Кожна лінія повинна бути 50 пікселів довгий.
       Course1BeePuzzle12_instruction: Збери три нектару, а потім зроби два меду
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig"
@@ -1961,6 +1973,7 @@
         щоб вона торкнулась кожної з чотирьох сніжинок.
       Infinity_touch_score_instruction: Нехай Анна отримує бал щоразу, коли торкається
         сніжинки. Клацни "Запустити" та скеруй її по разу до кожної сніжинки.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Намалюй коротку лінію вгору і довгу направо!
       K-1 artist 1 level 10_instruction: Намалюй пунктирну лінію, використовуючи обидва
         блоки стрибку і малювання
@@ -3022,11 +3035,9 @@
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

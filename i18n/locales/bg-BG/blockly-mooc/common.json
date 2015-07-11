@@ -182,6 +182,7 @@
   "play":"играй",
   "print":"Печат",
   "puzzleTitle":"Пъзел {puzzle_number} от {stage_total}",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"повтори",
   "resetProgram":"Начално състояние",
   "rotateText":"Завъртете устройството си.",

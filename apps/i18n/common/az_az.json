@@ -182,6 +182,7 @@
   "play": "səsləndir",
   "print": "çap",
   "puzzleTitle": "Tapmaca {puzzle_number} (cəmi {stage_total} tapmaca var)",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "təkrar et",
   "resetProgram": "Yenidən başla",
   "rotateText": "Cihazınızı döndərin.",
@@ -213,6 +214,5 @@
   "watchVideo": "Videoya baxın",
   "when": "nə zaman",
   "whenRun": "icra etdikdə",
-  "workspaceHeaderShort": "iş sahəsi: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "iş sahəsi: "
 }

@@ -704,6 +704,9 @@
       4-5 While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar.
         Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: 'Ljúktu við kóðann til að teikna þessa
         þríhyrninga. Sá fyrsti er tilbúinn. Vísbending: 3 þríhyrningar í 360 gráðu
         snúningi.'
@@ -1046,6 +1049,16 @@
         er 300 díla löng) '
       Course 4 Artist 10_instruction: 'Frjáls æfing! Skemmtu þér við að teikna hvað
         sem þér dettur í hug. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Getur þú sett þennan kóða í lykkju til að teikna
         yfir gráa ferninginn?
       Course 4 Artist 3_instruction: Jæja, reyndu nú að greina hvað þessi kóði gerir
@@ -1176,9 +1189,10 @@
       Course 4 Artist Functions 9_instruction: Hér færðu mestallan kóðann til að búa
         til fall. En það virðist vanta eitthvað. Geturðu klárað þennan fallkubb?
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Hér breytum við falli sem teiknar ferning
         með 50 díla hliðar
       Course 4 Artist Params 10_instruction: 'Þú getur kallað á föll innan úr öðrum
@@ -1268,7 +1282,6 @@
       Course 4 Artist Vars 9_instruction: Breyttu þessu algrími svo það noti breytuna
         "hliðar" í stað fastrar tölu til að teikna þríhyrning. Skiptu tölunni 3 út
         fyrir breytuna "hliðar" og notaðu "stilla hliðar" kubbinn.
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Býflugan veit ekki hvort þetta er blóm eða býflugnabú.
         Athugaðu fyrst hvort það er blóm eða bú, og safnaðu blómasafa aðeins ef það
         er blóm. '
@@ -1738,6 +1751,7 @@
         að snerta öll snjókornin fjögur.
       Infinity_touch_score_instruction: Láttu Önnu fá stig þegar hún snertir snjókorn.
         Smelltu svo á "Keyra" og stýrðu henni svo hún snerti hvert snjókorn einu sinni.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Teiknaðu stutta línu upp og langa til
         hægri!
       K-1 artist 1 level 10_instruction: Teiknaðu brotalínuna með því að nota bæði

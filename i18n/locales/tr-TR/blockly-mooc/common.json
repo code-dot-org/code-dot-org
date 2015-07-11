@@ -182,6 +182,7 @@
   "play":"oynat",
   "print":"Yazdır",
   "puzzleTitle":"Bulmaca {puzzle_number} \/ {stage_total}",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"bu işlemleri",
   "resetProgram":"Yeniden başla",
   "rotateText":"Cihazınızı döndürün.",

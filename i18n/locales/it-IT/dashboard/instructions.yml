@@ -418,6 +418,9 @@ it:
       4-5 While Loops 8_instruction: 'Ci sono una buca davvero profonda e un grande mucchio di terra. Quante palate di terra sono necessarie per livellare il terreno? Suggerimento: Usa il blocco "mentre" per entrambi.'
       4-5 While Loops Assessment 1_instruction: 'Questo è un esercizio di verifica -- Ci sono molte buche e mucchi di terra. Aiutami a riempire le buche e a rimuovere i mucchi di terra per rendere livellato il terreno.'
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -857,6 +860,12 @@ it:
       Course 4 2_instruction: "Adesso l'ape vuole solo del nettare. Ricordati che non tutti gli oggetti nascosti sono fiori, quindi controlla in modo da raccogliere il nettare solo quando ci sono fiori."
       Course 4 Artist 1_instruction: Aiutami a disegnare il quadrato. (Ogni linea è lunga 300 pixel)
       Course 4 Artist 10_instruction: 'Tempo di giocare: divertiti a disegnare qualunque cosa ti piaccia.'
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Riesci ad inserire questo codice in un ciclo in modo da contornare di grigio il quadrato?
       Course 4 Artist 3_instruction: 'Cerca di immaginare cosa succede se si esegue questo codice (o premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.'
       Course 4 Artist 4_instruction: 'Quanti gradi ci sono in un cerchio?  Inserisci questo valore nel blocco "ripeti ... volte" in modo da creare un cerchio tutto colorato.'
@@ -911,7 +920,7 @@ it:
       Course 4 Artist Functions 8_instruction: |-
         Stai imparando ad usare le funzioni a blocchi? Modifica questo quadrato così che abbia le dimensioni di 200 pixel. Suggerimento: clicca su "modifica" per cambiare le dimensioni nell'editor della funzione "disegna un quadrato". Ricorda di cliccare su "salva e chiudi" per uscire dall'editor della funzione. 
       Course 4 Artist Functions 9_instruction: Vi abbiamo fornito la maggior parte del codice ncessario per creare una funzione. Tuttavia ci sembra ci sia qualcosa che manca. Riouscite a fare in modo che questa funzione sia completa?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Modifichiamo ora una funzione che disegna un quadrato con lati di 50 pixel
       Course 4 Artist Params 10_instruction: |-
         Puoi chiamare funzioni dall'interno di altre funzioni! Usando la tua funzione "forma" come base, crea 3 forme di una casa, ognuna più larga di 20 pixel rispetto alla precedente, iniziando da una lunghezza di 50 pixel. Può essere utile utilizzare un ciclo contatore. 
@@ -984,7 +993,6 @@ it:
         might have to use your math blocks (360 divided by "sides" in two places
         this time) 
       Course 4 Artist Vars 9_instruction: 'Modificare questo algoritmo in modo che utilizzi la variabile "lati" invece di un numero fisso per disegnare un triangolo. Sostituisci il numero 3 con la variabile "lati" e utilizzare il blocco "imposta i lati".'
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: "L'ape non può sapere cosa si nasconde dietro la nuvola, potrebbe esserci un fiore oppure un favo. Se dietro la nuvola si nasconde un fiore, raccogli il nettare, ma fai attenzione a non raccogliere il nettare da un favo!"
       Course 4 Bee 2_instruction: Controllare ogni oggetto per vedere se sia un fiore. Se lo è, raccolgono il nettare... in caso contrario è possibile ignorarlo!
       Course 4 Bee 3_instruction: |-
@@ -1023,19 +1031,11 @@ it:
         "right" variables to control direction. Fill in the rest of the function
         definition and then click "Save and Close."
       Course 4 Bee Params 4 (copy 1)_instruction: Provare a utilizzare la nuova funzione per raccogliere tutti i fiori. Ricordate, 0 = sinistra e 1 = destra.
-      Course 4 Bee Params 4 backup_instruction: |
-        Wouldn't it be nice if we could
-        collect all of these nectars with the a single function? Try adding a new
-        parameter to your function called "nectars" to control the amount of nectar
-        to collect. You'll probably want to rename the function too!
+      Course 4 Bee Params 4 backup_instruction: 'Non sarebbe bello se avessimo potuto raccogliere tutto il nettare con una singola funzione? Prova ad aggiungere un nuovo parametro alla funzione chiamata "nettari" per controllare la quantità di nettare da raccogliere. Probabilmente conviene rinominare anche la funzione!'
       Course 4 Bee Params 4_instruction: Provate a utilizzare la vostra nuova funzione per raccogliere tutti i fiori. Ricordatevi di usare le variabili sinistra e destra.
       Course 4 Bee Params 5_instruction: 'Partiamo da zero - sai creare una nuova funzione chiamata "raccogli 5 dosi di nettare" con un parametro di direzione?'
       Course 4 Bee Params 6 (copy 1)_instruction: Prova a utilizzare la nuova funzione per raccogliere tutto questo nettare.
-      Course 4 Bee Params 6_instruction: |
-        Wouldn't it be nice if we could collect
-        all of these nectars with the a single function? Try adding a new parameter
-        to your function called "nectars" to control the amount of nectar to collect.
-        You'll probably want to rename the function too!
+      Course 4 Bee Params 6_instruction: 'Non sarebbe bello se avessimo potuto raccogliere tutto il nettare con una singola funzione? Prova ad aggiungere un nuovo parametro alla funzione chiamata "nettari" per controllare la quantità di nettare da raccogliere. Probabilmente conviene rinominare anche la funzione!'
       Course 4 Bee Params 7 (copy 1)_instruction: Prova a utilizzare la nuova funzione per raccogliere tutto questo nettare.
       Course 4 Bee Params 7_instruction: Provate a utilizzare la nuova funzione per raccogliere tutto il nettare.
       Course 4 Bee Params 8_instruction: "Oooh, ora c'è miele di cui occuparsi! Come si potrebbe aggiornare la funzione per ottenere il nettare o fare il miele."
@@ -1435,6 +1435,7 @@ it:
       Infinity_touch_faster_instruction: Tocca ancora più fiocchi di neve!
       Infinity_touch_four_instruction: Muovi Anna su, giù, a sinistra e a destra per toccare ognuno dei quattro fiocchi di neve.
       Infinity_touch_score_instruction: 'Fai in modo che Anna segni un punto quando tocca un fiocco di neve. Poi clicca su "Esegui" e guidala in modo tale da farle toccare ogni fiocco di neve una sola volta.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: "Disegna una linea breve verso l'alto e una lunga verso destra!"
       K-1 artist 1 level 10_instruction: 'Questo è un esercizio di verifica -- Disegna la linea tratteggiata usando sia i blocchi "salta" che quelli per disegnare.'
       K-1 artist 1 level 9_instruction: 'Questo è un esercizio di verifica -- Disegna la figura usando tre linee.'
@@ -1680,11 +1681,8 @@ it:
       New Artist Project_instruction: Disegnare qualcosa di geniale! Il vostro codice viene salvato come un progetto su cui è possibile tornare in qualsiasi momento.
       NEW Course 4 Artist Functions 1_instruction: 'Riesci a disegnare un quadrato con lato di 100 pixels, usando un ciclo ("loop")?'
       NEW Course 4 Artist Functions 10_instruction: 'Premi "modifica" per inserire i blocchi nella definizione della funzione per fare un quadrato di 40 pixel.'
-      NEW Course 4 Artist Functions 11_instruction: |
-        We have a new function called
-        "draw a line of squares." Feel free to take a look inside the function block
-        to see how we built it. Click on "Run" when your are ready for the next
-        puzzle.
+      NEW Course 4 Artist Functions 11_instruction: |-
+        Abbiamo una nuova funzione denominata "disegna un lato del quadrato". Date un'occhiata all'interno al codice della funzione per vedere come l'abbiamo costruita. Fai clic su "Esegui" quando sei pronto per il prossimo puzzle.
       NEW Course 4 Artist Functions 12_instruction: |-
         Utilizzate la funzione di per tracciare una linea dei quadrati, usata dall'ultimo puzzle, per disegnare questo modello."
       NEW Course 4 Artist Functions 13_instruction: 'Riesci a disegnare una stella usando la funzione "disegna una serie di quadrati"? Suggerimento: potrebbe essere necessario andare avanti di 60 pixel e ruotare di 144 gradi'
@@ -1692,12 +1690,7 @@ it:
       NEW Course 4 Artist Functions 2_instruction: 'Sapresti disegnare 3 quadrati ciascuno distanziato di 20 pixels? Suggerimento: ogni quadrato è largo 100 pixels'
       NEW Course 4 Artist Functions 3_instruction: 'Ecco un nuovo tipo di blocco. Si chiama "blocco funzionle". Fai clic su "Esegui" per vedere cosa può fare. '
       NEW Course 4 Artist Functions 4_instruction: 'Utilizza la funzione "disegna un quadrato" per disegnare questo modello. Suggerimento: si dovrà utilizzare un blocco "gira a destra 120 gradi" dopo ogni quadrato.'
-      NEW Course 4 Artist Functions 5_instruction: |
-        How did the "draw a square"
-        block know what commands to run? Click on "edit" in the "draw a square"
-        function block. The blocks in the function editor are the definition that
-        make up "draw a square." When you're done looking around, click "Save
-        and Close" and then "Run."
+      NEW Course 4 Artist Functions 5_instruction: 'Come sapeva il blocco "disegna un quadrato" quali comandi per eseguire? Clicca su "modifica" del blocco della funzione "disegna un quadrato". I diversi blocchi della funzione definiscono come "disegnare un quadrato". Quando hai finito, fai clic su "Salva e Chiudi" e poi su "Esegui".'
       NEW Course 4 Artist Functions 6_instruction: "Utilizzando il blocco funzione \"disegna un quadrato\", potete disegnare questa immagine? Suggerimento: ogni quadrato è separato di 20 pixel.\r\n"
       NEW Course 4 Artist Functions 7_instruction: |-
         Stai imparando ad usare i blocchi di funzione? Modifica questo quadrato in modo che abbia le dimensioni di 200 pixel. Suggerimento: clicca su "modifica" per cambiare le dimensioni nell'editor della funzione "disegna un quadrato". Ricorda di cliccare su "salva e chiudi" per uscire dall'editor della funzione. 
@@ -2300,7 +2293,10 @@ it:
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
-      U3L2_Turtle3by3Grid_instruction: foo
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.
