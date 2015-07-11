@@ -9,7 +9,6 @@ class ReportsController < ApplicationController
 
   before_action :set_script
   include LevelSourceHintsHelper
-  include UsersHelper
 
   def user_stats
     @user = User.find(params[:user_id])

@@ -2,6 +2,8 @@
 
 require_relative '../../dashboard/config/environment'
 require 'cdo/properties'
+include ApplicationHelper
+include UsersHelper
 
 pd_scripts = Script.all.select { |script| !!script.pd }
 pd_scripts.each do |script|
@@ -31,6 +33,6 @@ pd_scripts.each do |script|
     headers ||= row.keys
     row.values
   end
-  locals_options = {headers: headers, data: data, script: script}
+  locals_options = {headers: headers, data: data, script: {name: script.name, id: script.id}}
   Properties.set("pd_progress_#{script.id}", locals_options)
 end
