@@ -1,53 +1,4 @@
-dashboard.createCallouts = function(callouts) {
-  if (!callouts) {
-    return;
-  }
-
-  // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
-  $(window).on('function_editor_closed', function() {
-    $('.cdo-qtips').qtip('hide');
-  });
-
-  /** @typedef {{left: number, top: number, bottom: number, right: number}} ElementRect */
-
-  /**
-   * Creates a rectangle from a given element
-   * @param {jQuery} element
-   * @returns {ElementRect}
-   */
-  function getRect(element) {
-    var left = element.offset().left;
-    var top = element.offset().top;
-    var height = element.outerHeight(true);
-    var width = element.outerWidth(true);
-    var bottom = top + height;
-    var right = left + width;
-    return {left: left, top: top, bottom: bottom, right: right};
-  }
-
-  /**
-   * Check for overlap between two rectangles.
-   * @param {ElementRect} rectA
-   * @param {ElementRect} rectB
-   * @returns {boolean}
-   */
-  function overlap(rectA, rectB) {
-    var notOverlapping = rectA.bottom < rectB.top ||
-      rectA.top > rectB.bottom ||
-      rectA.right < rectB.left ||
-      rectA.left > rectB.right;
-    return !notOverlapping;
-  }
-
-  /**
-   * Check for overlap between two jQuery elements.
-   * @param {jQuery} elementA
-   * @param {jQuery} elementB
-   * @returns {boolean}
-   */
-  function elementsOverlap(elementA, elementB) {
-    return overlap(getRect(elementA), getRect(elementB));
-  }
+(function () {
 
   /**
    * Snap all callouts to their target positions.  Keeps them in
@@ -83,7 +34,7 @@ dashboard.createCallouts = function(callouts) {
           return;
         }
 
-        if (target && elementsOverlap(target, codeWorkspace)) {
+        if (target && target.overlaps('#codeWorkspace').length > 0) {
           if (calloutsHiddenByScrolling[api.id]) {
             api.show();
             delete calloutsHiddenByScrolling[api.id];
@@ -98,12 +49,6 @@ dashboard.createCallouts = function(callouts) {
     };
   })();
 
-  // Update callout positions when an editor is scrolled.
-  $(window).on('block_space_metrics_set', function() {
-    snapCalloutsToTargets();
-    showOrHideCalloutsByTargetVisibility();
-  });
-
   function reverseCallout(position) {
     position = position.split(/\s+/);
     return reverseDirection(position[0]) + ' ' + reverseDirection(position[1]);
@@ -117,64 +62,82 @@ dashboard.createCallouts = function(callouts) {
     }
   }
 
-  $.fn.qtip.zindex = 500;
-  callouts.forEach(function(callout) {
-    var selector = callout.element_id; // jquery selector.
-    if ($(selector).length === 0 && !callout.on) {
+  dashboard.createCallouts = function(callouts) {
+    if (!callouts) {
       return;
     }
 
-    var defaultConfig = {
-      content: {
-        text: callout.localized_text,
-        title: {
-          button: $('<div class="tooltip-x-close"/>')
-        }
-      },
-      style: {
-        classes: "",
-        tip: {
-          width: 20,
-          height: 20
-        }
-      },
-      position: {
-        my: "bottom left",
-        at: "top right"
-      },
-      hide: {
-        event: 'click mousedown touchstart'
-      },
-      show: false // don't show on mouseover
-    };
+    // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
+    $(window).on('function_editor_closed', function() {
+      $('.cdo-qtips').qtip('hide');
+    });
 
-    var customConfig = $.parseJSON(callout.qtip_config);
-    var config = $.extend(true, {}, defaultConfig, customConfig);
-    config.style.classes = config.style.classes.concat(" cdo-qtips");
+    // Update callout positions when an editor is scrolled.
+    $(window).on('block_space_metrics_set', function() {
+      snapCalloutsToTargets();
+      showOrHideCalloutsByTargetVisibility();
+    });
 
-    // Reverse callouts in RTL mode
-    if ($('html[dir=rtl]').length) {
-      config.position.my = reverseCallout(config.position.my);
-      config.position.at = reverseCallout(config.position.at);
-      if (config.position.adjust) {
-        config.position.adjust.x *= -1;
+    $.fn.qtip.zindex = 500;
+    callouts.forEach(function(callout) {
+      var selector = callout.element_id; // jquery selector.
+      if ($(selector).length === 0 && !callout.on) {
+        return;
       }
-    }
 
-    // Flip the close button if it would overlap the qtip
-    if (config.position.my === 'top right' || config.position.my === 'right top') {
-      config.style.classes += ' flip-x-close';
-    }
+      var defaultConfig = {
+        content: {
+          text: callout.localized_text,
+          title: {
+            button: $('<div class="tooltip-x-close"/>')
+          }
+        },
+        style: {
+          classes: "",
+          tip: {
+            width: 20,
+            height: 20
+          }
+        },
+        position: {
+          my: "bottom left",
+          at: "top right"
+        },
+        hide: {
+          event: 'click mousedown touchstart'
+        },
+        show: false // don't show on mouseover
+      };
 
-    if (callout.on) {
-      $(window).on(callout.on, function() {
-        if (!callout.seen && $(selector).length > 0) {
-          callout.seen = true;
-          $(selector).qtip(config).qtip('show');
+      var customConfig = $.parseJSON(callout.qtip_config);
+      var config = $.extend(true, {}, defaultConfig, customConfig);
+      config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+      // Reverse callouts in RTL mode
+      if ($('html[dir=rtl]').length) {
+        config.position.my = reverseCallout(config.position.my);
+        config.position.at = reverseCallout(config.position.at);
+        if (config.position.adjust) {
+          config.position.adjust.x *= -1;
         }
-      });
-    } else {
-      $(selector).qtip(config).qtip('show');
-    }
-  });
-};
+      }
+
+      // Flip the close button if it would overlap the qtip
+      if (config.position.my === 'top right' || config.position.my === 'right top') {
+        config.style.classes += ' flip-x-close';
+      }
+
+      if (callout.on) {
+        $(window).on(callout.on, function() {
+          if (!callout.seen && $(selector).length > 0) {
+            callout.seen = true;
+            $(selector).qtip(config).qtip('show');
+          }
+        });
+      } else {
+        $(selector).qtip(config).qtip('show');
+      }
+    });
+  };
+
+})();
