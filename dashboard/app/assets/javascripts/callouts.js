@@ -8,15 +8,100 @@ dashboard.createCallouts = function(callouts) {
     $('.cdo-qtips').qtip('hide');
   });
 
-  // Update callout positions when an editor is scrolled.
-  $(window).on('block_space_metrics_set', function() {
-    // Trigger event is not needed in this case.
+  /** @typedef {{left: number, top: number, bottom: number, right: number}} ElementRect */
+
+  /**
+   * Creates a rectangle from a given element
+   * @param {jQuery} element
+   * @returns {ElementRect}
+   */
+  function getRect(element) {
+    var left = element.offset().left;
+    var top = element.offset().top;
+    var height = element.outerHeight(true);
+    var width = element.outerWidth(true);
+    var bottom = top + height;
+    var right = left + width;
+    return {left: left, top: top, bottom: bottom, right: right};
+  }
+
+  /**
+   * Check for overlap between two rectangles.
+   * @param {ElementRect} rectA
+   * @param {ElementRect} rectB
+   * @returns {boolean}
+   */
+  function overlap(rectA, rectB) {
+    var notOverlapping = rectA.bottom < rectB.top ||
+      rectA.top > rectB.bottom ||
+      rectA.right < rectB.left ||
+      rectA.left > rectB.right;
+    return !notOverlapping;
+  }
+
+  /**
+   * Check for overlap between two jQuery elements.
+   * @param {jQuery} elementA
+   * @param {jQuery} elementB
+   * @returns {boolean}
+   */
+  function elementsOverlap(elementA, elementB) {
+    return overlap(getRect(elementA), getRect(elementB));
+  }
+
+  /**
+   * Snap all callouts to their target positions.  Keeps them in
+   * position when blockspace is scrolled.
+   */
+  function snapCalloutsToTargets() {
     var triggerEvent = null;
-    // Don't animate, snap! (When scrolling, it's sort of already animated)
     var animate = false;
     $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
+  }
 
-    // TODO (brian + brad): Update callout visibility based on whether target is clipped.
+  /**
+   * For callouts with targets in the codeWorkspace (blockly, flyout elements,
+   * function editor elements, etc) hides callouts with targets that are
+   * scrolled out of view, and shows them again when they are scrolled back in
+   * to view.
+   * @function
+   */
+  var showOrHideCalloutsByTargetVisibility = (function () {
+    // Close around this object, which we use to remember which callouts
+    // were hidden by scrolling and should be shown again when they scroll
+    // back in.
+    /** @type {Object.<string, boolean>} */
+    var calloutsHiddenByScrolling = {};
+    return function () {
+      var codeWorkspace = $('#codeWorkspace');
+      $('.cdo-qtips').each(function () {
+        var api = $(this).qtip('api');
+        var target = $(api.elements.target);
+
+        var isTargetInCodeWorkspace = codeWorkspace.has(target).length > 0;
+        if (!isTargetInCodeWorkspace) {
+          return;
+        }
+
+        if (target && elementsOverlap(target, codeWorkspace)) {
+          if (calloutsHiddenByScrolling[api.id]) {
+            api.show();
+            delete calloutsHiddenByScrolling[api.id];
+          }
+        } else {
+          if ($(this).is(':visible')) {
+            api.hide();
+            calloutsHiddenByScrolling[api.id] = true;
+          }
+        }
+      });
+    };
+  })();
+
+  // Update callout positions when an editor is scrolled.
+  $(window).on('block_space_metrics_set', function() {
+    snapCalloutsToTargets();
+    showOrHideCalloutsByTargetVisibility();
   });
 
   function reverseCallout(position) {
