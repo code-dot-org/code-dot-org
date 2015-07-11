@@ -92,7 +92,7 @@ module.exports = {
           'image("id7", "http://code.org/images/logo.png");\n' +
           'setImageURL("id7", "http://code.org/images/logo.png");\n' +
           'getImageURL("id7");\n' +
-          'playSound("http://soundbible.com/mp3/neck_snap-Vladimir-719669812.mp3");\n' +
+          'playSound("https://studio.code.org/blockly/media/skins/studio/1_goal.mp3");\n' +
           'setPosition("id7", 0, 0, 100, 100);\n' +
           'showElement("id7");\n' +
           'hideElement("id7");\n' +
