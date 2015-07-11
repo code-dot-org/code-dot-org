@@ -9,9 +9,9 @@
     - if current_user.completed?(script)
       %a{href: script_certificate_image_url(current_user, script)}
         .bottombar.bottombartext.printcertificate{style: 'bottom: 0; position: absolute'}= t('home.print_certificate')
-    - elsif current_user.working_on?(script)
+    - elsif current_user.not_started?(script)
+      %a{href: script_url(script.id)}
+        .bottombar.bottombartext.trynow{style: 'bottom: 0; position: absolute'}= t('home.trynow')
+    - else
       %a{href: build_script_level_url(current_user.next_unpassed_progression_level(script))}
         .bottombar.bottombartext.continue{style: 'bottom: 0; position: absolute'}= t('continue')
-    - else
-      %a{href: script_url(script.id)}
-        .bottombar.bottombartext.trynow{style: 'bottom: 0; position: absolute'}= t('home.trynow') 
