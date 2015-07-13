@@ -1,0 +1,27 @@
+name 'Equity Reflection'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### CREATING EQUITABLE LEARNING ENVIRONMENTS > Summarize Your Takeaways
+
+<br/><br/>
+
+>## Reflect
+<br><br>
+After reviewing some of [the resources provided](https://docs.google.com/a/code.org/document/d/1S7bJIAiX7BnXXIE0F-xAxDcDy6LJESjR1KFIWjXfcio/edit?usp=sharing), take a moment to visit [our professional learning community forum](http://forum.code.org/c/plc) to discuss your takeaways:
+<br><br>
+- Which resources did you explore? What did you learn? 
+- What questions do you still have?
+- What additional resources might you suggest?
+- What strategies do you plan to implement next in your classroom? Why?
+<br><br>
+<a href="http://forum.code.org/c/equity" target="blank"><button class="plc">Discuss in the Forums >></button></a><br>
+<br><br>
+
+Then return here and click "Continue" below to move on.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

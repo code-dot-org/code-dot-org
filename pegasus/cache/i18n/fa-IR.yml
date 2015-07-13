@@ -1,7 +1,7 @@
 "fa-IR":
   hello: سلام دنیا
   select_language: لطفا زبان خود را انتخاب کنید
-  computer_science: علوم رایانه
+  en: Computer Science
   computer_science_edweek: هفته‌ی آموزش علوم رایانه
   csedweek_dates: 8-14 دسامبر، 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -64,6 +64,7 @@
   congratulations: آفرین!
   congratulations_on_completing_hoc: تبریک برای کامل کردن یک ساعت کد نویسی
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
+  enter_valid_age: Please select a valid age
   enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
   get_a_certificate_message: ما گواهی تحصیل و اطلاعات در مورد چگونگی <a/> یادگیری
     فراتراز یک ساعت <'a href='/learn/beyond> را برای شما ارسال خواهیم کرد
@@ -327,14 +328,15 @@
   dashboard_landing_available_title: دوره‌های قابل دسترس
   dashboard_landing_available_courses: دوره های که در  حال حاضر در دسترس  هستند برای
     شما و دانش آموزان شما در اینجا هستند.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_landing_more_tutorials: می خواهی بازم هم آموزش های بیشتری را ببینی؟
+  dashboard_landing_more_tutorials_desc: آموزش های بیشتری وجود دارند که <a href="/learn/beyond">توسط
+    مشارکت کنندگان ما ارائه شده اند.</a> برنامه نویسی با استفاده از روبات ها، ساختن
+    صفحات وب و ساختن برنامه شخصی خودتان را یاد بگیرید و در زبان های دیگری مثل C++،
+    Ruby، و Python کاوش کنید.
+  dashboard_hoc_courses: ساعت کدنویسی برای همه سنین
+  dashboard_hoc_courses_desc: این آموزش های کوتاه 1 ساعته را با دانش آموزان خود تمرین
+    کنید!
+  dashboard_k5_courses: دوره های 20 ساعته برای پیش دبستانی
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -342,12 +344,12 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: دوره های 20 ساعته برای راهنمایی
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: دوره های سالانه برای دبیرستان
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
@@ -355,7 +357,7 @@
   dashboard_course_csina: علوم کامپیوتر در جبر
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: علوم کامپیوتر در سایر علوم
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
@@ -363,7 +365,7 @@
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp: مفاهیم AP® علوم کامپیوتر
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: در حال بارگذاری...
@@ -446,11 +448,13 @@
   dashboard_students_share_section: 'صفحه ورود به این بخش را با دانش آموزان خود به
     اشتراک بگذارید:'
   dashboard_students_print_info: کارت های اطلاعات ورود دانش آموزان خود راه چاپ نمایید.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: عکس مخفی
   dashboard_students_reset_picture: شما در هر زمان میتوانید عکس محرمانه هر دانش آموز
     را تغییر دهید با انتخاب <b>نمایش محرمانه</b> و سپس <b>تغییر محرمانه</b>. با انجام
     این کار، یک عکس محرمانه جدید برای استفاده آن دانش آموز در هنگام ورودش به سیستم
     تولید خواهد شد.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: کلمه محرمانه
   dashboard_students_reset_word: 'شما در هر زمان میتوانید کلمات محرمانه هر دانش آموز
     را تغییر دهید با انتخاب <b>نمایش رمز</b> و سپس <b>تغییر رمز</b>. با انجام این

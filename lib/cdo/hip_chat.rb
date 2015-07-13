@@ -12,10 +12,15 @@ class HipChat
   end
 
   def self.log(message, options={})
-    message(CDO.hip_chat_log_room, message, options) if CDO.hip_chat_logging
+    message(CDO.hip_chat_log_room, message, options)
   end
 
   def self.message(room, message, options={})
+    unless CDO.hip_chat_logging
+      # Output to standard log if HipChat isn't configured
+      CDO.log.info("#{room}: #{message}")
+      return
+    end
     uri = URI.parse('http://api.hipchat.com/v1/rooms/message')
     Net::HTTP.post_form(uri, ({
       color: 'gray',
@@ -31,8 +36,6 @@ class HipChat
     channel = '#general' if room.to_s == 'developers'
     channel ||= "\##{room}"
     Slack.message slackify(message.to_s), channel:channel, username:@@name
-
-    #sleep(0.10)
   end
 
   def self.notify(room, message, options={})

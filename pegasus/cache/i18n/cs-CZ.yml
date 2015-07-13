@@ -1,7 +1,7 @@
 "cs-CZ":
   hello: Ahoj světe
   select_language: Prosím, zvolte jazyk
-  computer_science: Informatika
+  en: Computer Science
   computer_science_edweek: Týden vzdělávání Informatiky
   csedweek_dates: 8.–14. prosince 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -59,6 +59,7 @@
   congratulations: Blahopřejeme!
   congratulations_on_completing_hoc: Gratulujeme k dokončení jedné Hodiny kódu
   get_a_certificate_of_achievement: Získej osvědčení o účasti
+  enter_valid_age: Please select a valid age
   enter_valid_email: Prosím zadej platnou emailovou adresu
   get_a_certificate_message: Zašleme ti certifikát a informace o tom, jak se <a href='/learn/beyond'>Učit
     po První Hodině</a>
@@ -419,10 +420,12 @@
   dashboard_students_share_section: 'Sdílejte tuto část přihlašovací stránky se svými
     žáky:'
   dashboard_students_print_info: Vytisknout kartičky s přihlašovacími údaji studentů.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Tajný obrázek
   dashboard_students_reset_picture: Tajný obrázek studenta může kdykoliv obnovit výběrem
     <b>Zobrazit tajné</b> a pak <b>Obnovit tajný klíč</b>. Nový tajný obrázek bude
     pro tohoto studenta vygenerován při dalším přihlášení.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Tajné slovo
   dashboard_students_reset_word: 'Tajná slova studenta může kdykoliv obnovit výběrem
     <b>Zobrazit tajné</b> a pak <b>Obnovit tajný klíč</b>. Nový pár tajných slov bude

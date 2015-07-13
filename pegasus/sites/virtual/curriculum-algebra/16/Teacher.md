@@ -44,6 +44,7 @@ When we last worked on the game, our danger and target were moving off the scree
 
 Once the students correctly implement [on-screen?](../docs/worksheets/onscreen.pdf) (and its sub-parts [safe-left?](../docs/worksheets/safe_left.pdf) and [safe-right?](../docs/worksheets/safe_right.pdf)), the new behavior of target and danger is that once they are off the screen they return to their starting position but with a new y-value.  From this new vertical position they will continue to move across the screen.  If one (or both) of the characters go off the screen and never reappear, the most likely source of the error is that one of the newly implemented boolean statements is incorrect.
 
+
 [/together]
 
 [together]

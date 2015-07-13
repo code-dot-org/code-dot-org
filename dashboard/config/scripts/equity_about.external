@@ -1,0 +1,56 @@
+name 'Equity About'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### GETTING STARTED: About the Course
+
+#### Learning Objectives 
+
+Through completing this online course, participants will:
+
+- Define equity 
+- Summarize the benefits of and challenges with creating equity in computer science classrooms 
+- Identify resources for further discussion and study
+- Develop strategies for meeting your own goals around equity
+
+#### Course Outline
+
+**Stage 1: Getting Started**
+
+- Review the course details
+- Plan your participation in this course
+
+**Stage 2: Introduction to Equity**
+
+- Define equity, equality and diversity
+- Summarize the benefits of and challenges with creating equity in computer science classrooms
+
+**Stage 3: Creating Equitable Learning Environments**
+
+- Identify resources for further discussion and study
+- Develop strategies for meeting your own goals around equity
+
+**Stage 4: Close & Next Steps**
+
+- Summarize your learning
+- Identify next steps
+- Access resources and your digital certificate
+
+#### Pre-requisites
+
+No previous experience with coding or computer science education is assumed. This is a beginner's course.
+<br/><br/>
+
+#### Course Duration
+Completing this online course should take between 1-2 hours, depending on your prior knowledge and how deep you want to dive into the Code.org resources.
+
+#### Course Certification
+
+After completing this course, you'll have access to a digital certificate of completion.
+<br/><br/>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

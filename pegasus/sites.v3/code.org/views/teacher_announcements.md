@@ -2,21 +2,28 @@
 
 # Teacher Announcements
 
-June 15, 2015 &mdash; We've recently made some improvements to the teacher dashboard and added a new answer viewer on Code Studio puzzles. Watch this video for a tour of the new features!
+July 10, 2015 &mdash; Complete a quick survey to help guide the future of Code.org's beginning computer science content.
 
-<!---
-Please uncomment when the teacher tumblr is ready
-[Learn more >](http://codecurriculum.tumblr.com/)
+[Complete the Survey >](https://docs.google.com/forms/d/1Gf74xsRZzsXSHKd_UuuSr5Xr5lj67CRKyYUymb539mQ/viewform?usp=send_form)
 <br/>
-[View all announcements >](http://codecurriculum.tumblr.com/)
---->
+[View all announcements >](http://teachcodeorg.tumblr.com/)
 
 [/text]
+
+[video]
+
+![Online PD](/images/apple-touch-icon-precomposed.png "OnlinePD")
+
+[/video]
+
+<!---
 
 [video]
 
 <%= view :display_video_thumbnail, id: "video1", video_code: "k56Y2MIL9dM", play_button: 'caption', caption: 'Watch the video' %>
 
 [/video]
+
+--->
 
 <div style="clear:both"/>

@@ -1,7 +1,7 @@
 "hy-AM":
   hello: Բարև աշխարհ
   select_language: Please select your language
-  computer_science: Համակարգչային գիտություն
+  en: Computer Science
   computer_science_edweek: Համակարգչային գիտության ուսումնասիրման շաբաթ
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -59,6 +59,7 @@
   congratulations: Շնորհավոր!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Get a certificate of achievement
+  enter_valid_age: Please select a valid age
   enter_valid_email: Please enter a valid email address
   get_a_certificate_message: We'll send you a certificate and information about how
     to <a href='/learn/beyond'>Learn beyond One Hour</a>
@@ -432,10 +433,12 @@
   dashboard_students_share_section: 'Share this section''s sign in page with your
     students:'
   dashboard_students_print_info: Print out cards with your students' login information.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Secret Picture
   dashboard_students_reset_picture: You may reset a student's secret picture at any
     time by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new secret
     picture will be generated for that student to use when they sign in.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Secret Word
   dashboard_students_reset_word: 'You may reset a student''s secret words at any time
     by choosing <b>Show secret</b> and then <b>Reset secret</b>. A new pair of secret

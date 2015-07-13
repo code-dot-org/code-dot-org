@@ -6,14 +6,14 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Draw the other half of this design so it's symmetrical. The triangles are equilateral and are 50 pixels long.",
-    "x": "200",
-    "y": "275",
-    "start_direction": "0",
+    "instructions": "Draw the other half of this design so it's symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You may have to run the code several times to figure out all of the blocks that need to be added.",
+    "x": "125",
+    "y": "200",
+    "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "free_play": "false",
-    "ideal": "12",
+    "ideal": "9",
     "slider_speed": "0.4",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -28,7 +28,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "Draw the other half of this design so it's symmetrical. The triangles are equilateral and are 50 pixels long.  \r\nHint: You may have to run the code several times to figure out all of the blocks that need to be added."
   }
 }]]></config>
   <blocks>

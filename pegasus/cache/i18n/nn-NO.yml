@@ -1,8 +1,8 @@
 "nn-NO":
-  hello: Hei, verden
+  hello: Hallo, verda
   select_language: Vel språk
-  computer_science: Informatikk
-  computer_science_edweek: Computer Science Education Week
+  en: Datavitenskap
+  computer_science_edweek: Computer Science Education Week (CSEdWeek)
   csedweek_dates: Desember 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Kodetimen</a> nærmar seg. Til alle lærarar og arrangørar<a href="http://hourofcode.com"
@@ -11,14 +11,15 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Er du en lærar i IT? Sjå andre CSEdWeek-ressursar</a>'
   n_have_learned_an_hoc: <h1>Prøv en</h1><h2>Time med Kode</h2><h3># served</h3>
-  anybody_can_learn: Hvem som helst kan lære.
-  learn_now: Lær nå
+  anybody_can_learn: Alle kan læra.
+  learn_now: Lær no
   petition_message: Alle elevar på alle skular burde få høve til å lære koding
-  petition_sign_message: 'Om du samtykker, signer med navnet ditt. Bli med # andre.'
+  petition_sign_message: 'Om du er einig, skriv under med namnet ditt. Gå saman med
+    # andre.'
   petition_sign_message_support: 'Signer dette dersom du ønsker å støtte oss. Gjør
     som # andre.'
   petition_join_others: 'Bli med # andre'
-  name: Navn
+  name: Namn
   email: E-post
   zipcode: Postnummer eller land
   submit: Send
@@ -34,7 +35,7 @@
   hoc2014_everyone: Alle
   hoc2014_support: Støtt det &#x25BE;
   hoc2014_whatishoc: Kva er kodetimen?
-  twentyhours_trynow: Prøv nå
+  twentyhours_trynow: Prøv no
   california_heading: Spør skulen din om å undervise koding
   california_text: Alle lærarar kan tilby våre <a href='http://studio.code.org/'>gratiskurs</a>.
     Alle barneskuler kan <a href='http://code.org/educate/k5'>undervise koding</a>.
@@ -44,91 +45,92 @@
   flappy_heading: Gratulerer med dagen til Code.org
   flappy_text: Code.org fylte nettopp 1 år. <br/><br/> Feir med oss ved å lage ditt
     eige <b>Flappy</b> -spel. Kode dine eigne reglar, og del det med vener!
-  view_english_site: Se engelsk side
-  non_english_tutorials: 'Opplæringsmoduler oversatt til flere språk:'
+  view_english_site: Sjå nettstad på engelsk
+  non_english_tutorials: 'Leksjonar omsett til fleire språk:'
   write_your_first_program: Skriv ditt første dataprogram
-  learn_cs_concepts: Lær de grunnleggende begrepene i programmering og informatikk
-    med blokkbasert programmering. Dette er en spill-liknende guide med videoforedrag
-    av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær om løkker,
-    hvis-så-setninger og grunnleggende algoritmer.
-  all_ages: Alle aldre
+  learn_cs_concepts: Lær dei grunnleggande begrepa i programmering og informatikk
+    med "dra og slepp"-programmering. Dette er en spel-liknande leksjon med videoforedrag
+    av Bill Gates, Mark Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær om løkker,
+    hvis-så-setninger og grunnleggande algoritmer.
+  all_ages: Alle aldrar
   beginner: Nybegynner
-  n_participants: '# deltakere'
-  go: Gå
+  n_participants: '# deltakarar'
+  go: Set i gong
   thank_you_: Takk!
   congratulations: Gratulerer!
   congratulations_on_completing_hoc: Gratulerer med å ha fullført Kodetimen
-  get_a_certificate_of_achievement: Hent et diplom for din prestasjon
-  enter_valid_email: Vennligst skriv inn en gyldig e-postadresse
-  get_a_certificate_message: Vi sender deg et sertifikat og informasjon om hvordan
-    Lær <a href='/learn/beyond'> utover en time</a>
+  get_a_certificate_of_achievement: Hent eit diplom for prestasjonen din
+  enter_valid_age: Vennligst velg en gyldig alder
+  enter_valid_email: Vennligst skriv inn ei gyldig e-postadresse
+  get_a_certificate_message: Vi sender deg eit diplom og informasjon om korleis <a
+    href='/learn/beyond'> lære meir etter Kodetimen</a>
   get_a_certificate_message_after: Klikk på diplomet for å laste det ned eller skrive
     det ut. Fortsett med våre <a href='http://studio.code.org'>andre kurs</a>, eller
     finn ut korleis du kan å <a href='/learn/beyond'>lære meir etter Kodetimen</a>.
-  thanks_for_submitting: Takk for at du sender inn!
-  if_you_enjoyed: Hvis du likte opplæringen, kan du be dine venner om å prøve det
-    også!  Vi vil at hele verden skal lære.
-  personalize_certificate: Tilpass sertifikatet
-  share_achievement: Del hva du har oppnådd
+  thanks_for_submitting: Takk for at du sendte inn!
+  if_you_enjoyed: Hvis du likte opplæringa, kan du be venane dine om å prøve det også!  Vi
+    vil at heile verda skal lære.
+  personalize_certificate: Tilpass diplomet
+  share_achievement: Del det du har klart
   beyond_hour_message: Hald fram med dei <a href='http://studio.code.org'>andre kursa
     vååre</a>, eller utforsk muligheitene for å <a href='/learn/beyond'>lære meir
     etter Kodetimen</a>.
-  leaderboards_for_hoc: Resultatliste for kodetimen.
+  leaderboards_for_hoc: Resultatliste for Kodetimen.
   support_url: http://support.code.org/
   country: Land
   city: By
   gender: Kjønn
-  boys: Gutter
+  boys: Gutar
   girls: Jenter
-  give_my_hour: 'Gi min time til:'
+  give_my_hour: 'Gi timen min til:'
   girls_team: Jentelaget
   boys_team: Gutelaget
-  tell_the_world: Fortell verden!
+  tell_the_world: Fortell verda!
   thanks_for_voting: Takk for at du stemte!
   share_on_facebook: Del via Facebook
   share_on_twitter: Del via Twitter
   beyond_an_hour: Etter Kodetimen
   get_started: Start
-  i_agree: Jeg samtykker
-  participant_select: '- Velg -'
-  participant_student: student
+  i_agree: Eg er einig
+  participant_select: '- Vel -'
+  participant_student: Elev
   participant_parent: Forelder
-  participant_educator: Lærer
-  participant_engineer: programmerer
-  participant_other: Ingen av de over
+  participant_educator: Lærar
+  participant_engineer: Programmerar
+  participant_other: Ingen av dei over
   print_all: Skriv ut alt
   print_ice_art: Skriv ut iskunsten din
   create_art_with_zombie: eller lag avansert kunst med zombie
-  i_am_a: Jeg er en
+  i_am_a: Eg er ein
   never_spam: Vi vil aldri sende deg spam
-  enter_country: Angi landet hvis det er utenfor USA
+  enter_country: Oppgi land dersom det er utanfor USA
   used_infrequent_updates: Berre brukt for skjeldne oppdateringar
   privacy_practices_children: Sjå rettningslinene våre for personvern for barn
   petition_thankyou: Takk for at du signerte oppropet
-  continue_learning_header: Fortsett å lære etter denne ene timen
-  continue_learning_body: 'Det er mange muligheter: Du kan lære på nettet, på en kodeklubb,
-    eller en sommerskole.'
+  continue_learning_header: Hald fra med å lære etter Kodetimen
+  continue_learning_body: 'Det er mange muligheteir: Du kan lære på nettet, på ein
+    kodeklubb, eller ein sommarleir.'
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
-  learn_classes: Finn lokale kodeklubber
+  learn_classes: Finn lokale kodeklubbar
   hoc_is_here: '#Kodetimen er her - sjekk den ut! @kidsakoder'
-  just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
+  just_did_hoc: 'Eg har gjennomført #kodetimen - prøv du også! @kidsakoder'
   twitter_teach_cs: Kvifor lærar ikkje fleire skuler informatikk? Vi kan fikse dette.
     http://youtu.be/nKIu9yen5nc. Besøk http://code.org/ for å lære meir.
-  learn_hoc: Lær en Time med Kode
-  beyond_hoc: Utover en time
-  what_gender: Er du jente eller gutt?
+  learn_hoc: Prøv Kodetimen
+  beyond_hoc: Etter Kodetimen
+  what_gender: Er du jente eller gut?
   girl: Jente
-  boy: Gutt
-  help_recruit_coders: Hjelp oss med å finne flere kodere til laget ditt!
-  help_recruit: Hjelp oss med å rekruttere flere kodere!
-  lines_of_code: OVER <b># KODELINJER</b> skrevet HITTIL.
-  lines_of_code_alt: <b>#</b> KODELINJER SKREVET AV ELEVER
-  who_has_done_hoc: 'Hvem har vært med på #kodetimen? #HourOfCode? @codeorg'
-  hoc_leaderboards: Kodetime oversikt
-  students_and_lines: '%{students}, elever har gjort kodentimen og skrevet %{lines}
-    kodelinjer.'
-  start_hoc: Start  kodetimen nå
+  boy: Gut
+  help_recruit_coders: Hjelp oss med å finne fleire kodarar til laget ditt!
+  help_recruit: Hjelp oss med å rekruttere fleire kodarar!
+  lines_of_code: OVER <b># KODELINER</b> SKRIVE HITTIL.
+  lines_of_code_alt: <b>#</b> KODELINER SKRIVE AV ELEVAR
+  who_has_done_hoc: 'Hvem har fullført #kodetimen? #HourOfCode? @codeorg'
+  hoc_leaderboards: Resultatliste for Kodetimen
+  students_and_lines: '%{students} elevar har gjort Kodentimen og skreiv %{lines}
+    kodeliner.'
+  start_hoc: Start  Kodetimen no
   contact_form_topic_press: Media (Intervju eller talar)
   stats_nina: '"Hver eneste dag gav de samme resultatene&mdash; 100% engasjement."
     - Nina Nichols Peery, Lærer'
@@ -142,11 +144,11 @@
   studiobar_elementary_body: Våre tre nye kurs for barnetrinnet
   studiobar_hoc_title: Kodetimen
   studiobar_hoc_body: Lær å kode med Angry Birds
-  studiobar_flappy_title: Flappy kode
+  studiobar_flappy_title: Flakse-kode
   studiobar_flappy_body: Lag og del ditt eige Flappy-spel
   studiobar_teacher_title: Laga for lærerar
   studiobar_teacher_body: Innfør Kode Studio i klasserommet
-  studiobar_frozen_title: Hour of Code (kodetimen)
+  studiobar_frozen_title: Kodetimen
   studiobar_frozen_body: Lag eit vinterlandskap med Anna og Elsa
   studiobar_donate_title: Donèr
   studiobar_donate_body: Eit barn lærer for hver dollar du donerer
@@ -197,7 +199,7 @@
   homepage_slot_text_studio: Alle våre opplæringsprogrammer
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Butikk
-  homepage_slot_text_flappy: Flappy kode
+  homepage_slot_text_flappy: Flakse-kode
   homepage_action_text_codevideo: Sjå videoen
   homepage_action_text_teachervideo: Sjå videoen
   homepage_action_text_learn: Begynne å lære
@@ -206,7 +208,7 @@
   homepage_banner_text_main: Code.org og College Board danner en allianse for å øke
     mangfoldet i informatikk.
   homepage_banner_text_link: Lær mer
-  homepage_slot_text_title_hoc: Hour of Code (kodetimen)
+  homepage_slot_text_title_hoc: Kodetimen
   homepage_slot_text_blurb_hoc: Alle kan lære. Start i dag
   homepage_slot_text_link_hoc: Prøv Kodetimen
   homepage_slot_text_link_host: Bli vertskap for Kodetimen
@@ -300,10 +302,10 @@
     video-kontortid.
   dashboard_landing_print_certificates: Skriv ut diplomar til elevar som fullfører
     dette kurset
-  dashboard_landing_educator_blog: Les om nyheter og oppdateringer til materiellet
+  dashboard_landing_educator_blog: Les om nyheiter og oppdateringar av materiellet
     vårt i lærerbloggen
-  dashboard_landing_smart_hints: Vennligst hjelp oss med å legge inn smarte hint i
-    Code.org-innføringskursene
+  dashboard_landing_smart_hints: Ver snitt og hjelp oss med å legge inn smarte hint
+    i Code.org-innføringskursa
   dashboard_landing_video_player: Prøv den nye videospelaren på skulen din
   dashboard_landing_progress_title: Klassen si framdrift
   dashboard_landing_progress_biggest: Dette er framdrifta for det største avsnittet
@@ -312,45 +314,47 @@
   dashboard_landing_available_title: Tilgjengelege kurs
   dashboard_landing_available_courses: Her er kursa som er tilgjengelege for deg og
     dine elevar.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
-  dashboard_middle_courses_desc: Our middle school curriculum uses computer science
-    and programming within the context of middle school math and science - as a tool
-    to teach math and science concepts. To register for professional development workshops,
-    apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
-  dashboard_high_courses_desc: Our high school program helps school districts offer
-    full-year computer science classes by preparing existing teaching staff to offer
-    this new field. To register for professional development workshops, apply for
-    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_landing_more_tutorials: Ønsker du å se flere opplæringsprogrammer?
+  dashboard_landing_more_tutorials_desc: Det finnes flere opplæringsprogrammer <a
+    href="/learn/beyond">tilbudt av partnerne våre.</a> Lær å programmere med roboter,
+    lage nettsider, lage din egen applikasjon eller utforske andre språk som C++,
+    Ruby eller Python!
+  dashboard_hoc_courses: Kodetimen for alle aldersgrupper
+  dashboard_hoc_courses_desc: Prøv hvilken som helst av disse korte, én times lange
+    opplæringsprogrammene med studentene dine!
+  dashboard_k5_courses: 20-timers kurs for K-5
+  dashboard_k5_courses_desc: Disse kursene blander selvstyrte opplæringsprogram med
+    "uinnpluggede" aktiviteter som ikke krever en datamaskin i det hele tatt. Hvert
+    kurs består av omtrent 20 leksjoner som kan implementeres som én enhet eller spres
+    utover et helt semester. Til og med barnehagealdrede før-lesere kan delta. For
+    å hjelpe deg med å starte, tilbyr vi profesjonelle utviklingsverksted av høy kvalitet
+    rundt om USA helt gratis. <a href="/professional-development-workshops">Finn et
+    nært deg!</a>
+  dashboard_middle_courses: 20-timers midtskolekurs
+  dashboard_middle_courses_desc: Midtskoleplanen vår innarbeider datavitenskap og
+    programmering i midtskolematematikk og -vitenskap - som et verktøy for å lære
+    matemtikk- og vitenskapskonsepter. For å melde deg på de profesjonelle utviklingsverkstedene,
+    søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.
+  dashboard_high_courses: Årslange høyskolekurs
+  dashboard_high_courses_desc: Høyskoleprogrammet vårt hjelper skoledistrikter med
+    å tilby helårige datavitenskapskurs ved å sette eksisterende pedagogisk ansatte
+    i gang med å tilby dette fagområdet. For å melde deg på de profesjonelle utviklingsverkstedene,
+    søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csina_desc: Code.org har inngått et samarbeid med Bootstrap om
+    å utvikle en skoleplan som lærer bort algebraiske og geometriske konsepter gjennom
+    dataprogrammering.
+  dashboard_course_csins: Datavitenskap i Vitenskap
+  dashboard_course_csins_desc: Code.org har inngått et samarbeid med Project GUTS
+    om å levere en introduksjon til datavitenskapskonsepter innenfor modellering-
+    og simuleringsområdene.
   dashboard_course_ecs: Utforsk datavitskap
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
-    of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
-    Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_ecs_desc: 'Utforsk Datavitenskap er et årslangt kurs bestående
+    av seks underfag: Menneskelig datamaskinsamhandling, problemløsing, nettdesign,
+    programmering, databehandling og dataanalyse og robotteknologi.'
+  dashboard_course_csp: AP® Datavitenskapsprinsipper
+  dashboard_course_csp_desc: Code.org har skapt et grundig, engasjerende og omgjengelig
+    kurs som utforsker det grunnleggende om databehandling.
   dashboard_landing_loading: Lastar...
   dashboard_action_edit: Rediger
   dashboard_action_save: Lagre
@@ -408,14 +412,14 @@
   dashboard_students_new_section: Du har laga ei ny seksjon! Legg til elevar ved å
     bruke knappane <b>Legg til elev</b> og <b>Legg til fleire elevar</b> ovenfor.
   dashboard_students_placeholder_name: Elevnamn
-  dashboard_students_name: Navn
+  dashboard_students_name: Namn
   dashboard_students_progress: Fremgang
   dashboard_students_age: Alder
   dashboard_students_gender: Kjønn
   dashboard_students_male: Mann
   dashboard_students_female: Kvinne
   dashboard_students_secret: Løyndom
-  dashboard_students_password: passord
+  dashboard_students_password: Passord
   dashboard_students_username: 'Brukernamn: %{student_username}'
   dashboard_students_email: 'Epost: %{student_email}'
   dashboard_students_completed_levels: Fullførte nivå
@@ -426,10 +430,12 @@
   dashboard_students_reset_password: Tilbakestill passord
   dashboard_students_share_section: 'Del påloggingssida til denne seksjonen med elevane:'
   dashboard_students_print_info: Skriv ut kort med elevane sin påloggingsinformasjon.
+  dashboard_students_secret_picture_title: Hemmelig bilde
   dashboard_students_secret_picture: Hemmeleg bilde
   dashboard_students_reset_picture: Du kan tilbakestille ein elevs hemmelege bilde
     når som helst ved å velje <b>Vis løyndom</b> og så <b>Tilbakestill løyndom</b>.
     Et nytt hemmelig bilde vil bli generert for den eleven når han loggar inn.
+  dashboard_students_secret_word_title: Hemmelig ord
   dashboard_students_secret_word: Hemmeleg ord
   dashboard_students_reset_word: 'Du kan tilbakestille en elevs hemmelege ord når
     som helst ved å velje <b>Vis hemmeleg</b> og så <b>Tilbakestill løyndom</b>. Et
@@ -444,18 +450,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     Klikk her</a> for vårt personverndokument som kan delast digitalt eller skrivast
     ut til elevane.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: K-5 lærerressurser
+  dashboard_curriculum_middle_title: Midtskolelærerressurser
+  dashboard_curriculum_high_title: Høyskolelærerressurser
+  dashboard_lesson_plans: Leksjonsplaner
   dashboard_view_all_lesson_plans: Vis oversikt over alle leksjonar
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_curriculum: Skoleplan
   dashboard_curriculum_overview: Oversikt for barnetrinnet
-  dashboard_overview: Overview
+  dashboard_overview: Oversikt
   dashboard_sequence: Sekvens
   dashboard_framework: Rammeverk
   dashboard_standards: Læreplanmål (amerikansk)
@@ -466,10 +472,10 @@
   dashboard_puzzle_solving: 'Problemløysing:'
   dashboard_student_worksheet: arbeidsark for elevar
   dashboard_teacher_worksheet: arbeidsark for lærarar
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csina: 'Datavitenskap i Algebra:'
+  dashboard_curriculum_csins: 'Datavitenskap i Vitenskap:'
+  dashboard_curriculum_csp: 'AP® Datavitenskapsprinsipper:'
+  dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
   dashboard_grade_k: K
   dashboard_grade_other: Anna
   dashboard_login_word: Ord
@@ -485,7 +491,7 @@
   stats_hoc_2013_heading: 'Utrolig statistikk fra Kodetimen i fjor. På berre ei veke:'
   stats_hoc_2013_image_alt: Statistikk fra Kodetimen 2013
   dashboard_teacher: Lærar
-  dashboard_student: student
+  dashboard_student: Elev
   dashboard_sections_email_question: Har alle elevane ei gyldig epostadresse?
   dashboard_sections_account_creation_question: Kven lagar eleven sin konto?
   dashboard_sections_password_question: Kva bruker elevane som "passord"?
@@ -500,7 +506,7 @@
     kva av disse innloggingsalternativa, <b>bilde, ord, eller e-post</b>, du vil velge
     for ein seksjon.
   dashboard_faq: Ofte stilte spørsmål
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: K-5 Ofte stilte spørsmål
   code_hoc_coming: Kodetimen er her - 8.- 14. desember!
   code_sign_up: Registrer deg for å delta i Kodeveka (CS Education Week)
   learn_more: Lær meir
@@ -508,7 +514,7 @@
   hoc2014_try_new_tutorial: Prøv den nye Kodetime-leksjonen (beta)
   hoc2014_try_scrat: Angry Birds, PvZ og Scrat
   hoc2014_try_frozen: Skap kunst med Anna og Elsa frå Frost
-  carousel_heading_international: Gjennomganger på norsk
+  carousel_heading_international: Leksjonar på ditt språk
   carousel_heading_domestic: Leksjonar tilgjengeleg på engelsk
   carousel_heading_beginners: Leksjonar for nybegynnarar
   carousel_heading_javascript: Leksjonar som lærer deg JavaScript
@@ -584,10 +590,10 @@
   khanpl_gradelevel: Mellomtrinnet
   tynker_gradelevel: Alder 5 til 13
   scratch_gradelevel: Alderen 8+
-  lightbot_gradelevel: Alle aldre
-  thinkersmith_gradelevel: Alle aldre
+  lightbot_gradelevel: Alle aldrar
+  thinkersmith_gradelevel: Alle aldrar
   condcards_gradelevel: Alder 8–12
-  lightbotintl_gradelevel: Alle aldre
+  lightbotintl_gradelevel: Alle aldrar
   codehs_gradelevel: Videregåande
   codecademy_gradelevel: Videregåande
   codecombat_gradelevel: Mellomtrinnet
@@ -606,7 +612,7 @@
   makegameswithus_gradelevel: Videregåande
   touchdevelop_gradelevel: Videregåande
   appinventor_gradelevel: Mellomtrinnet
-  blockly_gradelevel: Alle aldre
+  blockly_gradelevel: Alle aldrar
   thinkersmith2_gradelevel: Alderen 8+
   kodableunplugged_gradelevel: Alderen 8-13
   projguts_gradelevel: Alder 10–13
@@ -893,7 +899,7 @@
   khan_beyond_gradelevel: Mellomtrinnet
   tynker_beyond_gradelevel: Alder 5 til 13
   scratch_beyond_gradelevel: Alderen 8+
-  lightbot_beyond_gradelevel: Alle aldre
+  lightbot_beyond_gradelevel: Alle aldrar
   codecademy_beyond_gradelevel: Videregåande
   kodable_beyond_gradelevel: Grunnskule
   scratchjr_beyond_gradelevel: Grunnskule
