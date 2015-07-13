@@ -15,7 +15,7 @@ pd_scripts.each do |script|
     row.merge!({
                    :'ID' => user.id,
                    :'Ops First Name' => user.ops_first_name,
-                   :'Ops Last name' => user.ops_last_name,
+                   :'Ops Last Name' => user.ops_last_name,
                    :'Email' => user.email,
                    :'District' => user.district.try(:name) || 'None'
                })
