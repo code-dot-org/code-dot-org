@@ -28,7 +28,7 @@ For the new [Computer Science Principles](/educate/csp) high school course, Code
 <div style="float:left; padding:10px; width:49%">
 
 <%=view :display_video_thumbnail, id: "TextCompression", video_code: "g0IDJjdBKw4", caption: "Text Compression Widget", play_button: 'center', download_path: "http://videos.code.org/2015/csp/textcompression.mp4" %>
-[<button>Try Text Compression</button>](https://code.org/textcompression)
+[<button>Try Text Compression</button>](/textcompression)
 </div>
 
 <div style='clear:both'></div>
@@ -36,13 +36,13 @@ For the new [Computer Science Principles](/educate/csp) high school course, Code
 <div style="float:left; padding:10px; width:49%">
 
 <%=view :display_video_thumbnail, id: "BWPixelation", video_code: "rs_xHI3Kubc", caption: "Black & White Pixelation Widget", play_button: 'center', download_path: "http://videos.code.org/2015/csp/pixelation_bw.mp4" %>
-[<button>Try B&W Pixelation</button>](https://code.org/pixelation)
+[<button>Try B&W Pixelation</button>](/pixelation)
 </div>
 
 <div style="float:left; padding:10px; width:49%">
 
 <%=view :display_video_thumbnail, id: "ColorPixelation", video_code: "763E3_Z6Hng", caption: "Color Pixelation Widget", play_button: 'center', download_path: "http://videos.code.org/2015/csp/pixelation_color_1.mp4" %>
-[<button>Try Color Pixelation</button>](https://code.org/pixelation)
+[<button>Try Color Pixelation</button>](/pixelation)
 </div>
 
 <div style='clear:both'></div>
@@ -54,5 +54,5 @@ For the new [Computer Science Principles](/educate/csp) high school course, Code
 
 <div style="float:left; padding:10px; width:49%">
 
-<%=view :display_video_thumbnail, id: "ColorPixelation", video_code: "x_YTEBRnR1U", caption: "Internet Simulator: Routers", play_button: 'center', download_path: "http://videos.code.org/2015/csp/internetsimulator_3.mp4" %>
+<%=view :display_video_thumbnail, id: "NetSimRooms", video_code: "x_YTEBRnR1U", caption: "Internet Simulator: Routers", play_button: 'center', download_path: "http://videos.code.org/2015/csp/internetsimulator_3.mp4" %>
 </div>
