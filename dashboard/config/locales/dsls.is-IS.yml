@@ -35,7 +35,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Tengdu grind við forrit.
+        Match the grid to the program.: Finndu samsvörun reita og forrits.
         Matching: Samsvörun
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -45,10 +45,10 @@
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Dragðu kubbana til að tengja.
+        Drag the blocks to match.: Tengdu samsvarandi kubba.
         Instructions: Leiðbeiningar
-        Match the puzzles to the blocks: Tengdu þrautirnar við kubbana
-        Maze Match: Völundarhús - Samtengingar
+        Match the puzzles to the blocks: Finndu samsvörun þrauta og kubba
+        Maze Match: Völundarhús - Samsvörun
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -56,7 +56,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Tengdu grind við forrit
+        Match the grid to the program: Finndu samsvörun reita og forrits
         Matching: Samsvörun
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
@@ -68,8 +68,7 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Lykkjur listamanns - Samsvörun 1
-        Match the loop to the shape: Tengdu lykkjuna við formið
-        Matching loops: Samsvarandi lykkjur
+        Match the loop to the shape: Tengdu lykkjuna við samsvarandi form
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -94,7 +93,7 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
         Bounce Matching: Skopp - Samsvörun
-        Match the events with the actions: Tengdu atvikin við aðgerðirnar
+        Match the events with the actions: Tengdu atvikin við samsvarandi aðgerðir
         Matching: Samsvörun
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
@@ -104,7 +103,7 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
         Flappy Matching One: Flappy - Samsvörun 1
-        Match the events with the actions: Tengdu atvikin við aðgerðirnar
+        Match the events with the actions: Tengdu atvikin við samsvarandi aðgerðir
         Matching: Samsvörun
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
@@ -114,7 +113,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
         Match the puzzles to the blocks: Tengdu þrautirnar við kubbana
-        Maze Match One: Völundarhús - Samtengingar 1
+        Maze Match One: Völundarhús - Samsvörun 1
       4-5 Algorithms Match 1:
         <h4>1)</h4>: <h4>1)</h4>
         <h4>2)</h4>: <h4>2)</h4>
@@ -144,7 +143,7 @@
           2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Hvert
           þessara farartækja hefur verið tekið sundur í smærri parta. Tengdu hvert
-          farartæki við lista yfir parta.
+          farartæki við samsvarandi lista yfir parta.
         Matching: Samsvörun
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
@@ -171,20 +170,6 @@
         Instructions: Leiðbeiningar
         Match the puzzles to the blocks: Tengdu þrautirnar við kubbana
         Maze Match: Völundarhús - Samtengingar
-      Coordinate Matching:
-        (250, 400): (250, 400)
-        (320, 240): (320, 240)
-        (480, 100): (480, 100)
-        (500, 240): (500, 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
-          1/exercise_3_ninjacat.png
-        Cloud: Ský
-        Coordinates of Ninjacat: Hnit Ninjacat
-        Dog: Hundur
-        Match each character with its correct coordinate!: Tengdu hvern leikmann við
-          rétt hnit hans!
-        Ninjacat: Ninjacat
-        Ruby: Roðasteinn
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -192,8 +177,8 @@
         <br/><br/>above: <br/><br/>ofan við
         <br/><br/>below: <br/><br/>neðan við
         <br/><br/>next to: <br/><br/>til hliðar við
-        Is the square next to, above, or below the ball?: Er ferningurinn til hliðar,
-          ofan eða neðan við boltann?
+        Is the square next to, above, or below the ball?: Er ferningurinn til hliðar
+          við, ofan við eða neðan við boltann?
         Matching: Samsvörun
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -204,7 +189,7 @@
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        Match the shapes based on type.: Tengdu formin eftir gerð þeirra.
+        Match the shapes based on type.: Tengdu samsvarandi form út frá gerð þeirra.
         Matching: Samsvörun
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
@@ -224,7 +209,8 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
-        Match the code to the stairs it draws.: Tengdu kóða við stiga sem hann teiknar.
+        Match the code to the stairs it draws.: Tengdu kóðann við stigann sem hann
+          teiknar.
         Matching: Samsvörun
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
@@ -235,7 +221,7 @@
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: Tengdu saman kubbana
+        Match the blocks: Tengdu samsvarandi kubba
         Matching: Samsvörun
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -264,7 +250,7 @@
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Match the Map to the arrow that gets the Flurb to the treasure: Tengdu kort
+        Match the Map to the arrow that gets the Flurb to the treasure: Tengdu kortið
           við píluna sem kemur Flurb til fjársjóðsins
         Matching: Samsvörun
       K-1 Maze Match 1:
@@ -279,7 +265,7 @@
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Dragðu kubbana til að tengja.
         Instructions: Leiðbeiningar
-        Match the puzzles and blocks: Tengdu saman þrautirnar og kubbana
+        Match the puzzles and blocks: Tengdu samsvarandi þrautir og kubba
         Matching: Samsvörun
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
@@ -289,80 +275,8 @@
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Tengdu
-          kort við algrím sem kemur Flurb til blómanna.
+          kortið við algrímið sem kemur Flurb til blómanna.
         Matching: Samsvörun
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): (+ (- (/ 4 7) 9) 3)
-        (+ (- 9 3) (* 4 7)): (+ (- 9 3) (* 4 7))
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit
-          1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
-          1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit
-          1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit
-          1/Exercise_5_question_4.png
-        Converting Circles to Code: Umbreyta hringjum í kóða
-        Match each circle of evaluation with the correct code!: Tengdu hvern matshring
-          við rétta kóðann!
-      Match example to contract:
-        (big-string? "gigantic" 5): (big-string? "risastórt" 5)
-        (bigger-string "big" "little"): (bigger-string "stór" "lítill")
-        (find-price "cheese"): (find-price "ostur")
-        (find-price 4): (find-price 4)
-        (small-star "blue"): (small-star "blá")
-        (small-star "solid"): (small-star "fyllt")
-        Contracts of Functions: Lýsingar á föllum
-        Match each example with the correct contract!: Tengdu hvert dæmi við rétta
-          lýsingu!
-        'big-string: string number -> boolean': 'big-string: string number -> boolean'
-        'bigger-string: string string -> string': 'bigger-string: string string ->
-          string'
-        'find-price: number -> number': 'find-price: number -> number'
-        'find-price: string -> number': 'find-price: string -> number'
-        'small-star: string -> image': 'small-star: string -> image'
-      Match math to circles:
-        (2 + 3 * 5) / 2: (2 + 3 * 5) / 2
-        (2 + 3) * 5 / 2: (2 + 3) * 5 / 2
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit
-          1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit
-          1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit
-          1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit
-          1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): 2 + 3 * (5 / 2)
-        Converting Math to Circles of Evaluation: Umbreyta reikningi í matshring
-        Match each mathematical expression with the correct circle of evaluation!: Tengdu
-          hverja reikningsformúlu við samsvarandi matshring!
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): (* (+ 15 3) (- 72 19))
-        (+ (- (* 3 15) 72) 19): (+ (- (* 3 15) 72) 19)
-        (+ (3 x 15) (- 72 19)): (+ (3 x 15) (- 72 19))
-        (- (+ 72 3) (* 19 15)): (- (+ 72 3) (* 19 15))
-        (15 + 3) x (72 - 19): (15 + 3) x (72 - 19)
-        3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
-        3 x 15 - 72 + 19: 3 x 15 - 72 + 19
-        72 + 3 - 19 x 15: 72 + 3 - 19 x 15
-        Converting Math to Code: Umbreyta reikningi í kóða
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Tengdu
-          hverja reikningsformúlu við rétta kóðann. Notaðu matshring til að hjálpa
-          þér að finna svarið!
-      parts of contract:
-        (yearbook-picture "Sally" 1992): (mynd "Sally" 1992)
-        Here is a contract for a new function. Match each item with the word that describes it.: Hér
-          er lýsing á nýju falli. Tengdu hvert atriði við orðið sem lýsir því.
-        Parts of a Contract: Hlutar lýsingar
-        domain: Svið
-        example: dæmi
-        function name: heiti falls
-        image: mynd
-        range: svið
-        string numer: tölustafur
-        yearbook-picture: mynd í árbók
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -406,8 +320,8 @@
           hægra megin við þríhyrninginn
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Byrja með ferning<br/>Setja þríhyrning hægra megin við ferninginn<br/>Setja
+          samsíðung neðan við ferninginn<br/>Setja þríhyrning hægra megin við samsíðunginn
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -511,7 +425,7 @@
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
         Artist Loops Multiple Choice: Lykkjur listamanns - Valspurningar
-        Which shape is made by this program?: Hvaða form býr þetta forrit til?
+        Which shape is made by this program?: Hvaða form er búið til með þessu forriti?
       2-3 bee conditionals multi 1:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
@@ -553,17 +467,17 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: Veldu besta svarið.
         Maze Multiple Choice One: Völundarhús - Valspurningar 1
-        Which blocks work?: Hvaða kubbar virka?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct
+          answer?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baka smákökur
+        Baking cookies: Smákökubakstur
         Banana: Banani
         Brushing your teeth: Bursta tennurnar
         Multiple Choice: Valspurningar
         Shopping from a grocery list: Versla með innkaupalista
-        Which one of these items is hardest to describe an algorithm for?: Hvað af
-          þessu er erfiðast að búa til algrím fyrir?
+        Which one of these items is hardest to describe an algorithm for?: Hverju
+          af þessu er erfiðast að lýsa með algrími?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene er _____ borg.
         0: '? Hér eru þrjár setningar. Hvert af eftirfarandi sniðmátum passar best
@@ -594,10 +508,10 @@
         Multiple Choice: Valspurningar
         Which piece of information listed below is okay to share on the internet?: Hverju
           af eftirfarandi er í lagi að deila sem upplýsingum á netinu?
-        Your address: Heimilisfangið þitt
-        Your birthday: Afmælið þitt
-        Your favorite food: Uppáhaldsfæðan þín
-        Your parent's credit card number: Greiðslukortanúmer foreldris
+        Your address: Heimilisfanginu þínu
+        Your birthday: Afmælinu þínu
+        Your favorite food: Uppáhaldsmatnum þínum
+        Your parent's credit card number: Greiðslukortanúmeri foreldris
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -605,13 +519,13 @@
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
         Multiple Choice: Valspurningar
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Hvaða
-          IP tölu er líklegt að DNS hafi látið þig hafa ef þú reynir að skrá þig inn
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Til
+          hvaða IP tölu er líklegt að DNS fari með þig, ef þú reynir að skrá þig inn
           á code.org?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Á
-          hvaða vef ertu, ef DNS hefur sent þig á síðu þar sem IP talan er 100.42.50.110?
+          hvaða vef ertu ef DNS hefur sent þig á síðu þar sem IP talan er 100.42.50.110?
         Multiple Choice: Valspurningar
         code.org: code.org
         csisfun.com: csisfun.com
@@ -619,27 +533,27 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
           to my Lou, <br/>Skip to my Lou, my darlin.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: Valspurningar
-        4: '? Hver er stærsti búturinn úr þessum söng sem þú getur skilgreint sem
-          viðlag, það er eitthvað sem er endurtekið nákvæmlega eins í hvert sinn?'
-        5: ': Hver er stærsti búturinn úr þessum söng sem þú getur skilgreint sem
-          viðlag, það er eitthvað sem er endurtekið nákvæmlega eins í hvert sinn?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -769,22 +683,6 @@
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
           lines of code should be removed so the program will work as intended? Select
           <u>two</u> answers
-      Circle to code:
-        (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): (+ 5 (* (- 6 8) 4))
-        (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
-        (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
-        /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
-        Code from Circle: Kóði frá hring
-        Pick the Racket code that comes from the circle of evaluation!: Veldu Racket
-          kóðann sem verður til út frá matshringnum!
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: The unicorn's x value increases
-        The unicorn's y value changes: The unicorn's y value changes
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -968,81 +866,6 @@
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Einn
           drengurinn er <b>ökumaður</b>. Og annar er <b>aðstoðarmaður</b>.
         This time, which boy is the <large>driver</large>?: Hver er nú <large>ökumaðurinn</large>?
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
-        (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
-        (/ (* 8 2) (+ 5 6)): (/ (* 8 2) (+ 5 6))
-        (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
-        (5 + 6) * 8 / 2: (5 + 6) * 8 / 2
-        0: '? Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu
-          matshring til að hjálpa þér að finna svarið!'
-        1: ': Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu
-          matshring til að hjálpa þér að finna svarið!'
-        Racket Code for Math Expressions: Racket kóði fyrir reikning
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4
-          6))
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
-          2)
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7))
-          2)
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
-        0: '? Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu
-          matshring til að hjálpa þér að finna svarið!'
-        1: ': Veldu Racket kóðann sem passar við reikninginn sem er sýndur. Teiknaðu
-          matshring til að hjálpa þér að finna svarið!'
-        Racket Code for Math Expressions: Racket kóði fyrir reikning
-      Multi Define Funcs 1:
-        3: '3'
-        What is the name of this function?: Hvað heitir þetta fall?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Define Funcs 2:
-        3: '3'
-        What is the name of the parameter?: Hvað heitir stikinn?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Define Funcs 3:
-        5: '5'
-        6: '6'
-        What should g(2) return?: Hvað ætti g(2) að gefa?
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
-          1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
-          1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
-          1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
-          1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: Strengir og myndir - valspurningar
-        Which of these Evaluation Blocks will draw the image on the left?: Which of
-          these Evaluation Blocks will draw the image on the left?
-        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
-      Warmup questions:
-        Coding in Racket: Kóðun með Racket
-        Select the best answer to the question.: Veldu besta svarið við spurningunni.
-        When converting a circle to code, the correct order is: Þegar hring er umbreytt
-          í kóða þá er rétta röðin
-        left top right: vinstri efst hægri
-        left, right, top: vinstri, hægri, efst
-        random: af handahófi
-        top, left, right: efst, vinstri, hægri
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): (rectangle (+ 8 2) (- 7 5) "solid"
-          "red")
-        (rectangle (+ 8 2) (- 7 5) solid red): (rectangle (+ 8 2) (- 7 5) solid red)
-        (rectangle (10) (2) "solid" "red"): (rectangle (10) (2) "solid" "red")
-        (rectangle 10 2 "solid" "red"): (rectangle 10 2 "solid" "red")
-        /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
-        Code from Circle: Kóði frá hring
-        Pick the Racket code that comes from the circle of evaluation!: Veldu Racket
-          kóðann sem verður til út frá matshringnum!
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -1052,14 +875,3 @@
         This multiple choice is all about the presidents of the United States.: Þessi
           valspurning er um alla forseta Bandaríkjanna.
         Who was the first president of the USA?: Hver var fyrsti forseti Bandaríkjanna?
-      valid contracts multi:
-        Pick the best answer to the question.: Veldu besta svarið við spurningunni.
-        Valid Contracts: Gildar lýsingar
-        Which of these is a valid contract for the function circle?: Hver þessara
-          er rétt lýsing út frá greiningarhring fallsins?
-        'circle: 5 solid blue -> circle ': 'hringur: 5 einlitt blátt -> hringur '
-        'circle: number string string -> image': 'hringur: tala strengur strengur
-          -> mynd'
-        'circle: number string string -> shape': 'hringur: tala strengur strengur
-          -> form'
-        'circle: size style color -> image': 'hringur: stærð snið litur -> mynd'

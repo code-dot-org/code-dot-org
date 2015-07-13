@@ -81,6 +81,6 @@ For more information, contact <a href="mailto:press@code.org">press@code.org</a>
 
 ## School districts
  
-If you're a district administrator, [apply for a partnership](http://code.org/educate/districts) to bring computer science to your entire district.
+If you're a district administrator, [apply for a partnership](/educate/districts) to bring computer science to your entire district.
 
 

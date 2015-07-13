@@ -1,7 +1,7 @@
 sl-SI:
   hello: Pozdravljen svet
   select_language: Prosimo izberite vaš jezik
-  computer_science: Računalništvo
+  en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ura za kodo</a> prihaja. Pozivamo vse učitelje in organizatorje, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">organizirajte Uro za kodo</a>'
@@ -45,6 +45,7 @@ sl-SI:
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo za dokončanje Ure za kodo
   get_a_certificate_of_achievement: Dobite potrdilo o dosežku
+  enter_valid_age: Please select a valid age
   enter_valid_email: Vnesite veljaven email naslov
   get_a_certificate_message: "Poslali vam bomo potrdilo in informacije o tem, kako se lahko učite<a href='/learn/beyond'> tudi po Uri za kodo</a>"
   get_a_certificate_message_after: "Kliknite na certifikat za prenos. Nato pa nadaljujte z  <a href='http://studio.code.org'> drugimi tečaje</a>, ali pa si oglejte druge možnost <a href='/learn/beyond'> učenje po Uro za kodo</a>."
@@ -127,97 +128,88 @@ sl-SI:
   studiobar_shop_title: Shop
   studiobar_shop_body: Break stereotypes. Wear our logo with pride.
   homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
+    &ldquo;Pozivam vsa dekleta v vseh državah sveta da sodelujejo pri Hour of Code&rdquo; 
+    Malala, dobitnica Nobelove nagrade za mir
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo;Če lahko spremeniš tehnologijo, lahko spremeniš svet.&rdquo;
+    Susan, generalna direktorica YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo;Ne se le igratiu s telefonom, programirajte ga.&rdquo;
+    Predsednik ZDA, Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo;Naši otroci &mdash; tudi dekleta &mdash;
+    potrebujejo možnost, da se naučijo računalništva.&rdquo;
+    Sheryl, direktorica pri podjetju Facebook
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Računalništvo nam lahko odklene najboljše priložnosti na svetu.&rdquo;
+    Satya, glavni direktor podjetja Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Če znaš programirati, lahko izbereš smer svojega življenja.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;Ta znanja so spremenila mojo prihodnost. In da sploh ne govorimo o tem, kako
+    zabavno je vse skupaj. &rdquo;
+    Luna, 7. razred
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;Še nokoli in nikdar nisem videl svojih učencev
+    tako navdušenih nad učenjem.&rdquo;
+    Michael, učitelj
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo;Računalništvo je področje za katerega ne moreš
+    vedti, če ti je všeč, ne da bi ga preizkusil.&rdquo;
+    Jackson, 6. razred
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;S programiranjem lahko narediš vse, kar si zamisliš.&rdquo; 
+    Maya, 2. razred
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;Računalništvo ni za nekoga drugega. Je zate, tukaj, sedaj.&rdquo; 
+    Geraldo, učitelj
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;Računalništvo razvije kreativnost, navdih in inovacije &mdash; vse to je bitvenega pomena za vsako kariero.&rdquo;
+    Floresa, učiteljica
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo;Ta program je k aktivnemu sodelovanju pritegnil prav vse moje učence .&rdquo;
+    Adam, učitelj
+  homepage_hero_text_stat_loc: 'učenci so napisali #loc vrstic kode'
+  homepage_hero_text_stat_students: 'učenci imajo na Code Studio #student_count računov'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served sodelujočih'
   homepage_slot_text_hoc: Ura za kodo
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Frozen (Ledeno kraljestvo) z Ano in Elso
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Vsi naši vodiči
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Program za Plahutača (Flappyja)
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'I agree &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_action_text_codevideo: Oglej si video
+  homepage_action_text_teachervideo: Oglej si video
+  homepage_action_text_learn: Začni z učenjem
+  homepage_action_text_signpetition: Podpiši peticijo
+  homepage_signpetition_dropdown: 'Strinjam se &#x25BE;'
+  homepage_banner_text_main: Code.org in the College Board sta zaveznika pri izboljšanju raznolikosti računalništva.
+  homepage_banner_text_link: Več o tem
   homepage_slot_text_title_hoc: Ura kode
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_slot_text_blurb_hoc: Vsak se lahko nauči. Začni danes
   homepage_slot_text_link_hoc: Poizkusi Uro za programiranje (Hour to Code)
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Organiziraj Hour of Code
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Učenci
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Razišči vse naše vodiče
+  homepage_slot_text_link_codestudio: Poskusi Code Studio
+  homepage_slot_text_link_local: Poišči razred v bližini
+  homepage_slot_text_link_othercourses: Ostali spletni tečaji
+  homepage_slot_text_title_educators: Učitelji
+  homepage_slot_text_blurb_educators: Nauči svoje učence
+  homepage_slot_text_link_k5: Tečaji za vrtce in nižje razrede osnovne šole
+  homepage_slot_text_link_fullcurriculum: Glej naš celoten učni načrt
+  homepage_slot_text_link_pd: Strokovni razvoj
+  homepage_slot_text_title_advocates: Zagovarja
+  homepage_slot_text_blurb_advocates: Podpri naše delo
+  homepage_slot_text_link_stats: Glej statistične podatke
+  homepage_slot_text_link_buy: Pridruži se
+  homepage_slot_text_link_donate: Prispevaj
+  homepage_header_codestudio: Izdelki učencev v Code Studio
+  homepage_header_donors: Code.org se zahvaljuje podpornikom
+  homepage_donors_seall: Oglejte si vse
   homepage_donors_donate: Doniraj
   contact_form_topic_student: Sem študent
   contact_form_topic_parent: Sem starš
@@ -374,8 +366,10 @@ sl-SI:
   dashboard_students_reset_password: Ponastavi geslo
   dashboard_students_share_section: 'Delite vstopno stran za ta razdelek s svojimi učenci:'
   dashboard_students_print_info: Natisnite kartice s podatki za prijavo učencev.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Skrivna slika
   dashboard_students_reset_picture: 'Skrivno sliko učenca kadarkoli lahko ponastavite tako, da izberete <b>Pokaži skrivnost</b> in nato <b>Ponastavi skrivnost</b>. Novo skrivna slika, bo ustvarjena za učenca, ko se bo prijavil.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Skrivna beseda
   dashboard_students_reset_word: 'Skrivno besedo učenca kadarkoli lahko ponastavite tako, da izberete <b>Pokaži skrivnost</b> in nato <b>Ponastavi skrivnost</b>. Nov par skrivnih besed bo ustvarjen, ko se učenec prijavi. '
   dashboard_students_join_link: Povejte svojim učencem, naj si ustvarite svoje račune in se pridružijo vašemu razdelku na
@@ -415,8 +409,8 @@ sl-SI:
   dashboard_login_picture: Slika
   dashboard_login_none: Elektronska pošta
   dashboard_new_password: Novo geslo
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: ni začeto
+  dashboard_progress_in_progress: v teku
   dashboard_progress_not_completed: ni dokončano
   dashboard_progress_completed_too_many_blocks: dokončano, imate preveč blokov
   dashboard_progress_completed_perfect: dokončano, odlično

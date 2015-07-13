@@ -1,7 +1,7 @@
 he-IL:
   hello: הי עולם
   select_language: אנא בחר את שפתך
-  computer_science: מדעי המחשב
+  en: מדעי המחשב
   computer_science_edweek: שבוע החינוך למדעי המחשב
   csedweek_dates: 8-14 בדצמבר, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">שעה של קוד</a> מגיעה. כל המורים והמארגנים נקראים, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">לתכנן את שעת הקוד שלכם</a>'
@@ -45,6 +45,7 @@ he-IL:
   congratulations: ברכות!
   congratulations_on_completing_hoc: ברכות על השלמת שעה אחת של קוד
   get_a_certificate_of_achievement: קבל תעודה על ההישג
+  enter_valid_age: בבקשה, בחר את גילך
   enter_valid_email: אנא הכנס כתובת דוא״ל תקינה
   get_a_certificate_message: "נשלח לך תעודת סיום ומידע על איך <a href='/learn/beyond'>ללמוד מעבר לשעה</a>"
   get_a_certificate_message_after: "לחץ על האישור כדי להוריד או להדפיס אותו. עכשיו, המשך עם <a href='http://studio.code.org'> קורסים אחרים</a> שלנו, או ראה אפשרויות נוספות כדי <a href='/learn/beyond'> ללמוד מעבר שעה אחת</a>."
@@ -257,10 +258,10 @@ he-IL:
   dashboard_landing_view_progress: 'הצג התקדמות עבור %{biggest_section}'
   dashboard_landing_available_title: קורסים זמינים
   dashboard_landing_available_courses: להלן הקורסים הזמינים כעת עבור התלמידים שלך ולך.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
+  dashboard_landing_more_tutorials: רוצה לראות עוד הדרכות?
+  dashboard_landing_more_tutorials_desc: 'הדרכות נוספות מוצעות על ידי <a href="/learn/beyond">שותפים שלנו.</a>. למד תכנות עם רובוטים, צור דפי אינטרנט, צור אפליקציות משלך או חקור שפות שנות כגון C++, Ruby או Python!'
+  dashboard_hoc_courses: שעה של קוד לכל הגילאים
+  dashboard_hoc_courses_desc: נסה את אחת מההדרכות הקצרות הללו (באורך שעה) עם התלמידים שלך!
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
   dashboard_middle_courses: 20-Hour Middle School Courses
@@ -308,7 +309,7 @@ he-IL:
   dashboard_sections_table_section: Section
   dashboard_sections_table_secret: סוג התחברות
   dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
+  dashboard_sections_table_course: קורס
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
   dashboard_sections_name: שם החלק
@@ -341,8 +342,10 @@ he-IL:
   dashboard_students_reset_password: אפס סיסמה
   dashboard_students_share_section: 'שתף את חלק הכניסה עם התלמידים שלך:'
   dashboard_students_print_info: הדפס כרטיסים עם מידע ההתחברות של התלמידים שלך.
-  dashboard_students_secret_picture: תמונה סודית
+  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: 'תוכל לאפס תמונה סודית של התלמיד בכל עת על-ידי בחירת <b>הצג את סוד</b> ולאחר מכן <b>אפס את הסוד</b>. תמונה סודית חדשה תופק עבור אותו תלמיד בה יוכל להשתמש בעת הכניסה.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: המילה הסודית
   dashboard_students_reset_word: 'תוכל לאפס המילים הסודיות של התלמיד בכל עת על-ידי בחירת <b>הצג את הסוד</b> ולאחר מכן <b>אפס את הסוד</b>. זוג חדש של מילים סודיות יופק עבור אותו תלמיד בהם יוכל להשתמש בעת הכניסה. '
   dashboard_students_join_link: הורה לתלמידיך ליצור חשבונות משלהם ולהצטרף לתחום שלך ב

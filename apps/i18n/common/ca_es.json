@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "La funció bloc ha de tenir altres blocs a dins perquè funcioni.",
   "emptyFunctionalBlock": "Tens un bloc amb una entrada buida.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "final",
   "errorEmptyFunctionBlockModal": "Cal que hi hagi blocs dins de la definició de la teva funció. Fes clic a \"Edita\" i arrossega els blocs que calgui dins del bloc verd.",
   "errorIncompleteBlockInFunction": "Feu clic a \"Edita\" per assegurar-vos que no us falta cap bloc a la definició de funció.",
@@ -179,6 +182,7 @@
   "play": "reprodueix",
   "print": "Imprimeix",
   "puzzleTitle": "Puzzle {puzzle_number} de {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "repeteix",
   "resetProgram": "Reiniciar",
   "rotateText": "Gira el teu dispositiu.",
@@ -210,8 +214,5 @@
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Zona de treball: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Zona de treball: "
 }

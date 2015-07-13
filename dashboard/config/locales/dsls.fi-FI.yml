@@ -69,7 +69,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'Taiteilija: etsi vastaavat silmukat 1'
         Match the loop to the shape: Yhdistä silmukka muotoon
-        Matching loops: Vastaavat silmukat
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -171,20 +170,6 @@
         Instructions: Ohjeet
         Match the puzzles to the blocks: Yhdistä tehtävät lohkoihin
         Maze Match: 'Sokkelo: yhdistely'
-      Coordinate Matching:
-        (250, 400): (250, 400)
-        (320, 240): (320, 240)
-        (480, 100): (480, 100)
-        (500, 240): (500, 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit
-          1/exercise_3_ninjacat.png
-        Cloud: Pilvi
-        Coordinates of Ninjacat: Ninjakissan koordinaatit
-        Dog: Koira
-        Match each character with its correct coordinate!: Yhdistä kukin hahmo oikeisiin
-          koordinaatteihin!
-        Ninjacat: Ninjakissa
-        Ruby: Ruby
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -292,79 +277,6 @@
         Match the Map to the algorithm that gets the Flurb to the flowers.: Yhdistä
           kartta algoritmiin, joka vie Flurbin kukkien luo.
         Matching: Yhdistely
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): (+ (-(/ 4 7) 9) 3)
-        (+ (- 9 3) (* 4 7)): (+ (-9-3) (* 4 7))
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit
-          1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit
-          1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit
-          1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit
-          1/Exercise_5_question_4.png
-        Converting Circles to Code: Ympyröiden muuntaminen koodiksi
-        Match each circle of evaluation with the correct code!: Yhdistä jokainen ratkaisumalli
-          oikealla koodilla!
-      Match example to contract:
-        (big-string? "gigantic" 5): (iso-merkkijono? "jättimäinen" 5)
-        (bigger-string "big" "little"): (isompi-merkkijono "iso" "pieni")
-        (find-price "cheese"): (etsi-hinta "juusto" )
-        (find-price 4): (etsi-hinta 4)
-        (small-star "blue"): (pieni-tähti "sininen")
-        (small-star "solid"): (pieni-tähti "kiinteä")
-        Contracts of Functions: Funktioiden sopimukset
-        Match each example with the correct contract!: Yhdistä jokainen esimerkki
-          oikeaan sopimukseen!
-        'big-string: string number -> boolean': 'Iso-merkkijono: merkkijonon numero
-          -> boolean'
-        'bigger-string: string string -> string': 'Isompi-merkkijono: merkkijono merkkijono  >
-          merkkijono'
-        'find-price: number -> number': 'etsi-hinta: numero-> numero'
-        'find-price: string -> number': 'etsi-hinta: merkkijono-> numero'
-        'small-star: string -> image': 'pieni-tähti: merkkijono-> kuva'
-      Match math to circles:
-        (2 + 3 * 5) / 2: (2 + 3 * 5) / 2
-        (2 + 3) * 5 / 2: (2 + 3) * 5 / 2
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit
-          1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit
-          1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit
-          1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit
-          1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): 2 + 3 * (5 / 2)
-        Converting Math to Circles of Evaluation: Matematiikan kääntäminen ratkaisumalleiksi
-        Match each mathematical expression with the correct circle of evaluation!: Yhdistä
-          jokainen matemaattinen lauseke oikeaan ratkaisumalliin!
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): (* (+ 15-3) (- 72 19))
-        (+ (- (* 3 15) 72) 19): (+ (-(* 3 15) 72) 19)
-        (+ (3 x 15) (- 72 19)): (+ (3 x 15) (- 72 19))
-        (- (+ 72 3) (* 19 15)): (-(+ 72 3) (* 19 15))
-        (15 + 3) x (72 - 19): (15 + 3) x (72-19)
-        3 x 15 + (- 72 19): 3 x 15 + (- 72 19)
-        3 x 15 - 72 + 19: 3 x 15-72 + 19
-        72 + 3 - 19 x 15: 72 + 3-19 x 15
-        Converting Math to Code: Matematiikan muuntaminen koodiksi
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Yhdistä
-          jokainen matemaattinen ilmaisu oikeaan koodiin. Käytä  Ratkaisumallia auttamaan
-          sinua saamaan vastauksen!
-      parts of contract:
-        (yearbook-picture "Sally" 1992): (vuosikirjakuva "Sally" 1992)
-        Here is a contract for a new function. Match each item with the word that describes it.: Tässä
-          on uuden funktion sopimus. Yhdistä kukin asia sanaan, joka kuvaa sitä.
-        Parts of a Contract: Sopimuksen osat
-        domain: Toimialue
-        example: esimerkki
-        function name: funktion nimi
-        image: kuva
-        range: Alue
-        string numer: merkkijono numero
-        yearbook-picture: vuosikirjakuva
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -557,12 +469,12 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: Valitse paras vastaus.
         Maze Multiple Choice One: Sokkelo Monivalintakysymyksiä Yksi
-        Which blocks work?: Mitkä lohkot toimivat?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct
+          answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
-        Banana: Banana
+        Banana: Banaani
         Brushing your teeth: Brushing your teeth
         Multiple Choice: Monivalinta
         Shopping from a grocery list: Shopping from a grocery list
@@ -624,27 +536,27 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
           to my Lou, <br/>Skip to my Lou, my darlin.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: Monivalinta
-        4: '? Mikä on tämän laulun suurin pala, jonka voit määritellä kuoroksi, niin
-          että kuoro toistaa täsmällisesti joka kerta kun se kutsutaan?'
-        5: ': Mikä on tämän laulun suurin pala, jonka voit määritellä kuoroksi, niin
-          että kuoro toistaa täsmällisesti joka kerta kun se kutsutaan?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -774,22 +686,6 @@
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which
           lines of code should be removed so the program will work as intended? Select
           <u>two</u> answers
-      Circle to code:
-        (+ (* (- 8 6) 4) 5): '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): (+ 5 (* (- 6 8) 4))
-        (+ 5 (* (- 8 6) 4)): (+ 5 (* (- 8 6) 4))
-        (+ 5 (* 4 (- 8 6))): (+ 5 (* 4 (- 8 6)))
-        /script_assets/msm/Unit%202/exercise_1.png: /script_assets/msm/Unit%202/exercise_1.png
-        Code from Circle: Ympyräkoodi
-        Pick the Racket code that comes from the circle of evaluation!: Poimi rakettikoodi,
-          joka tulee ratkaisumallista!
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: The unicorn's x value increases
-        The unicorn's y value changes: The unicorn's y value changes
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -973,82 +869,6 @@
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Yksi
           näistä pojista on <b>kuljettaja</b>.  Ja yksi on <b>apulainen</b>.
         This time, which boy is the <large>driver</large>?: Nyt, kuka on <large>kuljettaja</large>?
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): (* (+ 5 6) (/ 8 2))
-        (/ (* (+ 5 6) 8) 2): (/ (* (+ 5 6) 8) 2)
-        (/ (* 8 2) (+ 5 6)): (/ (* 8 2) (+ 5 6))
-        (/ (+ 5 6) (* 8 2)): (/ (+ 5 6) (* 8 2))
-        (5 + 6) * 8 / 2: (5 + 6) * 8 / 2
-        0: '? Poimi rakettikoodi, joka sopii annetulle matemaattiselle ilmaisulle.
-          Piirrä ratkaisumalli, joka auttaa sinua löytämään oikean vastauksen!'
-        1: ': Poimi rakettikoodi, joka sopii annetulle matemaattiselle ilmaisulle.
-          Piirrä ratkaisumalli, joka auttaa sinua löytämään oikean vastauksen!'
-        Racket Code for Math Expressions: Rakettikoodi matemaattisille ilmaisuille
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4
-          6))
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3)
-          2)
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7))
-          2)
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
-        0: '? Poimi rakettikoodi, joka sopii annetulle matemaattiselle ilmaisulle.
-          Piirrä ratkaisumalli, joka auttaa sinua löytämään oikean vastauksen!'
-        1: ': Poimi rakettikoodi, joka sopii annetulle matemaattiselle ilmaisulle.
-          Piirrä ratkaisumalli, joka auttaa sinua löytämään oikean vastauksen!'
-        Racket Code for Math Expressions: Rakettikoodi matemaattisille ilmaisuille
-      Multi Define Funcs 1:
-        3: '3'
-        What is the name of this function?: Mikä on tämän funktion nimi?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Define Funcs 2:
-        3: '3'
-        What is the name of the parameter?: Mikä on parametrin nimi?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Define Funcs 3:
-        5: '5'
-        6: '6'
-        What should g(2) return?: Mitä tulee g(2) :n palauttaa?
-        g(y) = y + 3: g(y) = y + 3
-        y: true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
-          1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
-          1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
-          1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
-          1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: merkkijonoja ja kuvia monivalinta
-        Which of these Evaluation Blocks will draw the image on the left?: Which of
-          these Evaluation Blocks will draw the image on the left?
-        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
-      Warmup questions:
-        Coding in Racket: Racket-koodaus
-        Select the best answer to the question.: Valitse paras vastaus kysymykseen.
-        When converting a circle to code, the correct order is: Kun ympyrän muuntaa
-          koodiksi, oikea järjestys on
-        left top right: vasen, ylös, oikea
-        left, right, top: vasen, oikea, ylös
-        random: satunnainen
-        top, left, right: ylös, vasen, oikea
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): (suorakulmio (+ 8 2) (-7 5) "kiinteä"
-          "punainen")
-        (rectangle (+ 8 2) (- 7 5) solid red): (suorakulmio (+ 8 2) (-7 5) kiinteä
-          punainen)
-        (rectangle (10) (2) "solid" "red"): (suorakulmio (10) (2) "kiinteä" "punainen")
-        (rectangle 10 2 "solid" "red"): (suorakulmio 10 2 "kiinteä" "punainen")
-        /script_assets/msm/Unit%202/exercise_5.png: /script_assets/msm/Unit%202/exercise_5.png
-        Code from Circle: Ympyräkoodi
-        Pick the Racket code that comes from the circle of evaluation!: Poimi rakettikoodi,
-          joka tulee ratkaisumallista!
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -1059,14 +879,3 @@
           monivalintakysymyksessä on kyse Yhdysvaltain presidentesteistä.
         Who was the first president of the USA?: Kuka oli ensimmäinen presidentti
           Yhdysvalloissa?
-      valid contracts multi:
-        Pick the best answer to the question.: Valitse paras vastaus kysymykseen.
-        Valid Contracts: Voimassaolevat sopimukset
-        Which of these is a valid contract for the function circle?: Mikä näistä sopimuksista
-          on voimassa ympyräfunktiolle?
-        'circle: 5 solid blue -> circle ': 'ympyrä: 5 kiinteä sininen -> ympyrä '
-        'circle: number string string -> image': 'ympyrä: numero merkkijono merkkijono
-          -> kuva'
-        'circle: number string string -> shape': 'ympyrä: numero merkkijono merkkijono
-          -> muoto'
-        'circle: size style color -> image': 'ympyrä: koko tyyli väri -> kuva'

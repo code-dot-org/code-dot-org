@@ -14,51 +14,116 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CSP course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
-**Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
+Milestone Complete!
 
-### Save the dates
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-Monday, June 22, 2015 - Friday, June 26, 2015
+In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study.
+
+### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
+
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+
+**Save the Dates:**
+
+Quarter 1: Saturday, September 26, 2015
+
+Quarter 2: Saturday, December 5, 2015
+
+Quarter 3: Saturday, February 6, 2016
+
+Quarter 4: Saturday, March 12, 2016
+
+
+**Location**
+
+TBD
+
+
+
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop
 <br/>
-Mon-Fri: 8:30am - 3:30pm
+ECS green journal and curriculum guide
 <br/>
-Breakfast and lunch will be served. 
-
-### Location
-
-Nova Southeastern University (NSU)
-<br />
-Carl DeSantis Building
-<br />
-Room 3031
-<br />
-3301 College Avenue
-<br />
-Fort-Lauderdale-Davie, FL 33314
-<br />
-
-NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
-
-### What do I bring to Phase 2?
-
-Water Bottle
-<br />
 Snacks
-<br />
-Laptop optional, not required
+<br/>
+Water
 
-</br>
-**Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!  
+More info coming soon!
 
-</br>
-**Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
+[**Back to the top**](#top)
+
+<a id="ecs"></a>
+
+## CS in Algebra ##
+
+### Phase 1: Online Introduction (~2 hours) ###
+
+Milestone complete! 
+
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
+
+In-person milestone complete! More info coming soon on your Phase 2 online portion. 
+
+### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
+
+More info coming soon!
+
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)###
+
+More info coming soon!
+
+[**Back to the top**](#top)
+
+<a id="ecs"></a>
+
+## CS in Science ##
+
+### Phase 1: Online Introduction (~2 hours) 
+
+Milestone complete! 
+
+
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
+
+In-person milestone complete! More info coming soon on your Phase 2 online portion. 
+
+### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
+
+**Save the dates:**
+
+Semester 1: Saturday, September 19, 2015 
+
+Semester 2: Saturday, February 6, 2016 
+
+**Location**
+
+TBD
+
+
+**What to bring to Phase 3 biyearly sessions:**
+
+Laptop
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
+
+
+[**Back to the top**](#top)
+
+
+
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
 More info coming soon!
 
@@ -67,154 +132,50 @@ More info coming soon!
 
 <a id="ecs"></a>
 
-## Exploring Computer Science
+## Exploring Computer Science ##
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-</br>
-</br>
-**Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
+Milestone complete!
 
-### Save the dates
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-Monday, June 8, 2015 - Friday, June 12, 2015
-<br/>
-Mon-Thurs: 8:30am - 3:30pm
-<br />
-Friday: 8:30am - 1:30pm
-<br/>
-Breakfast and lunch will be served. 
-
-### Location
-
-Nova Southeastern University (NSU)
-<br />
-Carl DeSantis Building
-<br />
-Room 3047
-<br />
-3301 College Avenue
-<br />
-Fort-Lauderdale-Davie, FL 33314
-<br />
-
-NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
-
-### What do I bring to Phase 2?
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop optional, not required
+In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study.
 
 </br>
-**Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
+### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)###
 
-More info coming soon!
-
-</br>
-**Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
-
-More info coming soon!
-
-[**Back to the top**](#top)
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-<a id="algebra"></a>
+**Save the dates:**
 
-## CS in Algebra
+Quarter 1: Saturday, September 19, 2015
 
-**Phase 1: Online Introduction (~2 hours)**
+Quarter 2: Saturday, December 5, 2015
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
-**Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
+Quarter 3: Saturday, February 6, 2016
 
-### Save the dates
+Quarter 4: Saturday, April 23, 2016
 
-Wednesday, June 10, 2015 - Friday, June 12, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served. 
+**Location**
 
-### Location
+TBD
 
-Nova Southeastern University (NSU)
-<br />
-Carl DeSantis Building
-<br />
-Room 3049
-<br />
-3301 College Avenue
-<br />
-Fort-Lauderdale-Davie, FL 33314
-<br />
+**What to bring to Phase 3 quarterly sessions:**
 
-NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
-
-### What do I bring to Phase 2?
-Water Bottle
-<br />
-Snacks
-<br />
 Laptop
-
-</br>
-**Phase 3: Academic Year Development (2 days in-person & ~10 hours online)**
-
-More info coming soon!
-
-[**Back to the top**](#top)
-
-<a id="science"></a>
-
-## CS in Science
-
-**Phase 1: Online Introduction (~2 hours)**
-
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Science course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
-**Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
-
-### Save the dates
-
-Monday, June 8, 2015 - Wednesday, June 10, 2015
 <br/>
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served. 
-
-### Location
-
-Nova Southeastern University (NSU)
-<br />
-Carl DeSantis Building
-<br />
-Room 1047
-<br />
-3301 College Avenue
-<br />
-Fort-Lauderdale-Davie, FL 33314
-<br />
-
-NSU is providing free parking to all Code.org PD participants on the 2nd and 3rd floors of the NSU Parking Garage. We will email you a parking pass prior to the event.
-
-### What do I bring to Phase 2?
-Water Bottle
-<br />
+ECS green journal and curriculum guide
+<br/>
 Snacks
-<br />
-Laptop
+<br/>
+Water
 
-</br>
-**Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)**
+
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
 More info coming soon!
-
 
 [**Back to the top**](#top)
 

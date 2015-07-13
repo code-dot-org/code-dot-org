@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "Aby bloky \"Opakuj\" alebo \"Ak\" pracovali, musia byť naplnené ďalšími blokmi. Uistite sa, že vnútorný blok je správne umiestnený vo vnútri týchto blokov.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Aby funkčný blok pracoval správne, musí obsahovať ďalšie bloky.",
   "emptyFunctionalBlock": "Máš blok s nevyplneným vstupom.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "koniec",
   "errorEmptyFunctionBlockModal": "V tvojej definícii funkcie musia byť nejaké bloky. Klikni na \"upraviť\" a presuň bloky do vnútra zeleného bloku.",
   "errorIncompleteBlockInFunction": "Kliknite na tlačidlo \"upraviť\" aby ste sa uistili, že nemáte žiadne chýbajúce bloky vnútri funkcie.",
@@ -179,6 +182,7 @@
   "play": "hrať",
   "print": "Tlačiť",
   "puzzleTitle": "Úloha {puzzle_number} z {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "opakovať",
   "resetProgram": "Obnoviť",
   "rotateText": "Otoč svoj prístroj.",
@@ -210,8 +214,5 @@
   "watchVideo": "Pozrieť video",
   "when": "keď",
   "whenRun": "pri spustení",
-  "workspaceHeaderShort": "Pracovná plocha: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Pracovná plocha: "
 }

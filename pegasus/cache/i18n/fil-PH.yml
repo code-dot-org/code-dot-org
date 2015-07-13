@@ -1,7 +1,7 @@
 "fil-PH":
   hello: Mabuhay!
   select_language: Piliin ang iyong wika
-  computer_science: Computer Science
+  en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Ang <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -65,6 +65,7 @@
     Pagbati
     sa pagkumpleto ng isang Oras ng Code
   get_a_certificate_of_achievement: Kumuha ng certificate of achievement
+  enter_valid_age: Please select a valid age
   enter_valid_email: Paki-pasok ng valid na email address
   get_a_certificate_message: Kami ay magpapadala sa iyo ng  certificate at inpormasyon
     tungkol sa paano <a href='/learn/beyond'>Matuto ng lampas sa Isang Oras</a>
@@ -450,11 +451,13 @@
     estudyante:'
   dashboard_students_print_info: I-print ang mga card na may inpormasyon ng iyong
     mga estudyante.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Sekreto na Picture
   dashboard_students_reset_picture: Maaari mo i-reset ang sekretong picture ng iyong
     estudyante kahit anong oras sa pagpili sa <b>Ipakita ang sekreto</b> at saka <b>I-reset
     ang sekreto</b>. May bagong sekretong picture ang ipapakita upang magamit ito
     ng estudyante upang makapag-sign in.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Sekretong Salita
   dashboard_students_reset_word: 'Maaari mong i-reset ang sikretong salita isang mag-aaral
     sa anumang oras sa pamamagitan ng pagpili ng <b> Ipakita ang secret</b> at pagkatapos

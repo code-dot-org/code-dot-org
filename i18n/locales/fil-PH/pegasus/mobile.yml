@@ -1,7 +1,7 @@
 fil-PH:
   hello: Mabuhay!
   select_language: Piliin ang iyong wika
-  computer_science: Computer Science
+  en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: 'Ang <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> ay parating na. Tinatawagan ang lahat ng guro at mga organizer, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">pagplanuhan ang iyong Hour of Code</a>'
@@ -47,6 +47,7 @@ fil-PH:
     Pagbati
     sa pagkumpleto ng isang Oras ng Code
   get_a_certificate_of_achievement: Kumuha ng certificate of achievement
+  enter_valid_age: Please select a valid age
   enter_valid_email: Paki-pasok ng valid na email address
   get_a_certificate_message: "Kami ay magpapadala sa iyo ng  certificate at inpormasyon tungkol sa paano <a href='/learn/beyond'>Matuto ng lampas sa Isang Oras</a>"
   get_a_certificate_message_after: "I-click ang certificate upang ma-download ma-print ito. Ngayon, ipagpatuloy ang iba na naming <a href='http://studio.code.org'>mga kurso</a>, o kaya tingnan ang iba pang mga option upang <a href='/learn/beyond'>Matuto lampas sa One Hour</a>."
@@ -376,8 +377,10 @@ fil-PH:
   dashboard_students_reset_password: I-reset ang password
   dashboard_students_share_section: 'Ibahagi itong section sign in page sa iyong mga estudyante:'
   dashboard_students_print_info: I-print ang mga card na may inpormasyon ng iyong mga estudyante.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Sekreto na Picture
   dashboard_students_reset_picture: 'Maaari mo i-reset ang sekretong picture ng iyong estudyante kahit anong oras sa pagpili sa <b>Ipakita ang sekreto</b> at saka <b>I-reset ang sekreto</b>. May bagong sekretong picture ang ipapakita upang magamit ito ng estudyante upang makapag-sign in.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Sekretong Salita
   dashboard_students_reset_word: 'Maaari mong i-reset ang sikretong salita isang mag-aaral sa anumang oras sa pamamagitan ng pagpili ng <b> Ipakita ang secret</b> at pagkatapos ay <b> I-reset ang sikreto</b>. Ang isang bagong pares ng mga secret na salita ang mabubuo para sa mag-aaral na gagamitin kapag nag-sign in sila. '
   dashboard_students_join_link: Sabihin sa iyong mga mag-aaral na lumikha ng kanilang sariling mga account at sumali sa iyong seksyon sa

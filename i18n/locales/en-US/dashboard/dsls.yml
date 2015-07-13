@@ -66,7 +66,6 @@ en:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: crwdns39920:0crwdne39920:0
         Artist Loops Matching One: crwdns39921:0crwdne39921:0
         Match the loop to the shape: crwdns39922:0crwdne39922:0
-        Matching loops: crwdns39923:0crwdne39923:0
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: crwdns39924:0crwdne39924:0
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: crwdns39925:0crwdne39925:0
@@ -157,18 +156,6 @@ en:
         Instructions: crwdns40003:0crwdne40003:0
         Match the puzzles to the blocks: crwdns40004:0crwdne40004:0
         Maze Match: crwdns40005:0crwdne40005:0
-      Coordinate Matching:
-        (250, 400): crwdns40034:0crwdne40034:0
-        (320, 240): crwdns40035:0crwdne40035:0
-        (480, 100): crwdns40036:0crwdne40036:0
-        (500, 240): crwdns40037:0crwdne40037:0
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: crwdns40038:0crwdne40038:0
-        Cloud: crwdns40039:0crwdne40039:0
-        Coordinates of Ninjacat: crwdns40040:0crwdne40040:0
-        Dog: crwdns40041:0crwdne40041:0
-        Match each character with its correct coordinate!: crwdns40042:0crwdne40042:0
-        Ninjacat: crwdns40043:0crwdne40043:0
-        Ruby: crwdns40044:0crwdne40044:0
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: crwdns40067:0crwdne40067:0
         /script_assets/k_1_images/artist_images/square_below_ball.png: crwdns40068:0crwdne40068:0
@@ -271,63 +258,6 @@ en:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: crwdns40156:0crwdne40156:0
         Match the Map to the algorithm that gets the Flurb to the flowers.: crwdns40157:0crwdne40157:0
         Matching: crwdns40158:0crwdne40158:0
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): crwdns40159:0crwdne40159:0
-        (+ (- 9 3) (* 4 7)): crwdns40160:0crwdne40160:0
-        (+ 3 (/ 4 7)): crwdns40161:0crwdne40161:0
-        (/ (+ 4 7) 3): crwdns40162:0crwdne40162:0
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: crwdns40163:0crwdne40163:0
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: crwdns40164:0crwdne40164:0
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: crwdns40165:0crwdne40165:0
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: crwdns40166:0crwdne40166:0
-        Converting Circles to Code: crwdns40167:0crwdne40167:0
-        Match each circle of evaluation with the correct code!: crwdns40168:0crwdne40168:0
-      Match example to contract:
-        (big-string? "gigantic" 5): crwdns40169:0crwdne40169:0
-        (bigger-string "big" "little"): crwdns40170:0crwdne40170:0
-        (find-price "cheese"): crwdns40171:0crwdne40171:0
-        (find-price 4): crwdns40172:0crwdne40172:0
-        (small-star "blue"): crwdns40173:0crwdne40173:0
-        (small-star "solid"): crwdns40174:0crwdne40174:0
-        Contracts of Functions: crwdns40175:0crwdne40175:0
-        Match each example with the correct contract!: crwdns40176:0crwdne40176:0
-        "big-string: string number -> boolean": crwdns40177:0crwdne40177:0
-        "bigger-string: string string -> string": crwdns40178:0crwdne40178:0
-        "find-price: number -> number": crwdns40179:0crwdne40179:0
-        "find-price: string -> number": crwdns40180:0crwdne40180:0
-        "small-star: string -> image": crwdns40181:0crwdne40181:0
-      Match math to circles:
-        (2 + 3 * 5) / 2: crwdns40182:0crwdne40182:0
-        (2 + 3) * 5 / 2: crwdns40183:0crwdne40183:0
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: crwdns40184:0crwdne40184:0
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: crwdns40185:0crwdne40185:0
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: crwdns40186:0crwdne40186:0
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: crwdns40187:0crwdne40187:0
-        2 + 3 * (5 / 2): crwdns40188:0crwdne40188:0
-        Converting Math to Circles of Evaluation: crwdns40189:0crwdne40189:0
-        Match each mathematical expression with the correct circle of evaluation!: crwdns40190:0crwdne40190:0
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): crwdns40191:0crwdne40191:0
-        (+ (- (* 3 15) 72) 19): crwdns40192:0crwdne40192:0
-        (+ (3 x 15) (- 72 19)): crwdns40193:0crwdne40193:0
-        (- (+ 72 3) (* 19 15)): crwdns40194:0crwdne40194:0
-        (15 + 3) x (72 - 19): crwdns40195:0crwdne40195:0
-        3 x 15 + (- 72 19): crwdns40196:0crwdne40196:0
-        3 x 15 - 72 + 19: crwdns40197:0crwdne40197:0
-        72 + 3 - 19 x 15: crwdns40198:0crwdne40198:0
-        Converting Math to Code: crwdns40199:0crwdne40199:0
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: crwdns40200:0crwdne40200:0
-      parts of contract:
-        (yearbook-picture "Sally" 1992): crwdns40334:0crwdne40334:0
-        Here is a contract for a new function. Match each item with the word that describes it.: crwdns40335:0crwdne40335:0
-        Parts of a Contract: crwdns40336:0crwdne40336:0
-        domain: crwdns40337:0crwdne40337:0
-        example: crwdns40338:0crwdne40338:0
-        function name: crwdns40339:0crwdne40339:0
-        image: crwdns40340:0crwdne40340:0
-        range: crwdns40341:0crwdne40341:0
-        string numer: crwdns40342:0crwdne40342:0
-        yearbook-picture: crwdns40343:0crwdne40343:0
       test matching image:
         /script_assets/matches/images/a1.jpg: crwdns40353:0crwdne40353:0
         /script_assets/matches/images/a2.jpg: crwdns40354:0crwdne40354:0
@@ -361,7 +291,7 @@ en:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: crwdns40379:0crwdne40379:0
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: crwdns40380:0crwdne40380:0
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: crwdns40381:0crwdne40381:0
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: crwdns41474:0crwdne41474:0
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: crwdns43211:0crwdne43211:0
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: crwdns40384:0crwdne40384:0
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: crwdns40385:0crwdne40385:0
@@ -489,9 +419,8 @@ en:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: crwdns40491:0crwdne40491:0
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: crwdns40492:0crwdne40492:0
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: crwdns40493:0crwdne40493:0
-        Choose the best answer.: crwdns40494:0crwdne40494:0
         Maze Multiple Choice One: crwdns40495:0crwdne40495:0
-        Which blocks work?: crwdns40496:0crwdne40496:0
+        Which set of blocks is the correct answer?: crwdns43307:0crwdne43307:0
       4-5 Algorithms Multi 1:
         Baking cookies: crwdns40516:0crwdne40516:0
         Banana: crwdns40517:0crwdne40517:0
@@ -545,15 +474,12 @@ en:
         thinkersmith.org: crwdns40559:0crwdne40559:0
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: crwdns40560:0crwdne40560:0
-        0: crwdns40561:0crwdne40561:0
-        1: crwdns40562:0crwdne40562:0
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: crwdns43309:0crwdne43309:0
         Lou, Lou, skip to my Lou,: crwdns40563:0crwdne40563:0
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: crwdns40564:0crwdne40564:0
-        2: crwdns40565:0crwdne40565:0
-        3: crwdns40566:0crwdne40566:0
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: crwdns43310:0crwdne43310:0
         Multiple Choice: crwdns40567:0crwdne40567:0
-        4: crwdns40568:0crwdne40568:0
-        5: crwdns40569:0crwdne40569:0
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: crwdns43311:0crwdne43311:0
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: crwdns40570:0crwdne40570:0
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: crwdns40571:0crwdne40571:0
@@ -664,21 +590,6 @@ en:
         Line 4: crwdns40663:0crwdne40663:0
         Line 5: crwdns40664:0crwdne40664:0
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: crwdns40665:0crwdne40665:0
-      Circle to code:
-        (+ (* (- 8 6) 4) 5) : crwdns40666:0crwdne40666:0
-        (+ 5 (* (- 6 8) 4)): crwdns40667:0crwdne40667:0
-        (+ 5 (* (- 8 6) 4)): crwdns40668:0crwdne40668:0
-        (+ 5 (* 4 (- 8 6))): crwdns40669:0crwdne40669:0
-        "/script_assets/msm/Unit%202/exercise_1.png": 'crwdns40670:0%20crwdne40670:0'
-        Code from Circle: crwdns40671:0crwdne40671:0
-        Pick the Racket code that comes from the circle of evaluation!: crwdns40672:0crwdne40672:0
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: crwdns41482:0crwdne41482:0
-        The unicorn moves across the screen: crwdns41483:0crwdne41483:0
-        The unicorn moves to the left: crwdns41484:0crwdne41484:0
-        The unicorn's x value increases: crwdns41485:0crwdne41485:0
-        The unicorn's y value changes: crwdns41486:0crwdne41486:0
-        Video game Coordinates: crwdns41487:0crwdne41487:0
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: crwdns40710:0crwdne40710:0
         /script_assets/k_1_images/artist_images/E|S|S.png: crwdns40711:0crwdne40711:0
@@ -841,66 +752,6 @@ en:
         Driver and Helper: crwdns40847:0crwdne40847:0
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: crwdns40848:0crwdne40848:0
         This time, which boy is the <large>driver</large>?: crwdns40849:0crwdne40849:0
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): crwdns40850:0crwdne40850:0
-        (/ (* (+ 5 6) 8) 2): crwdns40851:0crwdne40851:0
-        (/ (* 8 2) (+ 5 6)): crwdns40852:0crwdne40852:0
-        (/ (+ 5 6) (* 8 2)): crwdns40853:0crwdne40853:0
-        (5 + 6) * 8 / 2: crwdns40854:0crwdne40854:0
-        0: crwdns40855:0crwdne40855:0
-        1: crwdns40856:0crwdne40856:0
-        Racket Code for Math Expressions: crwdns40857:0crwdne40857:0
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): crwdns40858:0crwdne40858:0
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): crwdns40859:0crwdne40859:0
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): crwdns40860:0crwdne40860:0
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): crwdns40861:0crwdne40861:0
-        4 + 6 + 20 / 2 x 3 x 7 + 2: crwdns40862:0crwdne40862:0
-        0: crwdns40863:0crwdne40863:0
-        1: crwdns40864:0crwdne40864:0
-        Racket Code for Math Expressions: crwdns40865:0crwdne40865:0
-      Multi Define Funcs 1:
-        3: crwdns40866:0crwdne40866:0
-        What is the name of this function?: crwdns40867:0crwdne40867:0
-        g: crwdns40868:0crwdne40868:0
-        g(y) = y + 3: crwdns40869:0crwdne40869:0
-        "y": true
-      Multi Define Funcs 2:
-        3: crwdns40870:0crwdne40870:0
-        What is the name of the parameter?: crwdns40871:0crwdne40871:0
-        g: crwdns40872:0crwdne40872:0
-        g(y) = y + 3: crwdns40873:0crwdne40873:0
-        "y": true
-      Multi Define Funcs 3:
-        5: crwdns40874:0crwdne40874:0
-        6: crwdns40875:0crwdne40875:0
-        What should g(2) return?: crwdns40876:0crwdne40876:0
-        g(y) = y + 3: crwdns40877:0crwdne40877:0
-        "y": true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: crwdns40878:0crwdne40878:0
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: crwdns40879:0crwdne40879:0
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: crwdns40880:0crwdne40880:0
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: crwdns40881:0crwdne40881:0
-        Strings and Images Multiple Choice: crwdns40882:0crwdne40882:0
-        Which of these Evaluation Blocks will draw the image on the left?: crwdns40883:0crwdne40883:0
-        "https://studio.code.org/script_assets/msm/green-rect.png": crwdns41774:0crwdne41774:0
-      Warmup questions:
-        Coding in Racket: crwdns41254:0crwdne41254:0
-        Select the best answer to the question.: crwdns41255:0crwdne41255:0
-        When converting a circle to code, the correct order is: crwdns41256:0crwdne41256:0
-        left top right: crwdns41257:0crwdne41257:0
-        left, right, top: crwdns41258:0crwdne41258:0
-        random: crwdns41259:0crwdne41259:0
-        top, left, right: crwdns41260:0crwdne41260:0
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): crwdns41261:0crwdne41261:0
-        (rectangle (+ 8 2) (- 7 5) solid red): crwdns41262:0crwdne41262:0
-        (rectangle (10) (2) "solid" "red"): crwdns41263:0crwdne41263:0
-        (rectangle 10 2 "solid" "red"): crwdns41264:0crwdne41264:0
-        "/script_assets/msm/Unit%202/exercise_5.png": 'crwdns41265:0%20crwdne41265:0'
-        Code from Circle: crwdns41266:0crwdne41266:0
-        Pick the Racket code that comes from the circle of evaluation!: crwdns41267:0crwdne41267:0
       test multi text:
         Fred Flintstone: crwdns41439:0crwdne41439:0
         George Jetson: crwdns41440:0crwdne41440:0
@@ -909,11 +760,3 @@ en:
         Presidents: crwdns41443:0crwdne41443:0
         This multiple choice is all about the presidents of the United States.: crwdns41444:0crwdne41444:0
         Who was the first president of the USA?: crwdns41445:0crwdne41445:0
-      valid contracts multi:
-        Pick the best answer to the question.: crwdns41451:0crwdne41451:0
-        Valid Contracts: crwdns41452:0crwdne41452:0
-        Which of these is a valid contract for the function circle?: crwdns41453:0crwdne41453:0
-        "circle: 5 solid blue -> circle ": crwdns41454:0crwdne41454:0
-        "circle: number string string -> image": crwdns41455:0crwdne41455:0
-        "circle: number string string -> shape": crwdns41456:0crwdne41456:0
-        "circle: size style color -> image": crwdns41457:0crwdne41457:0

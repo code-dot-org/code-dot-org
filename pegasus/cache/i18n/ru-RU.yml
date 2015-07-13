@@ -1,7 +1,7 @@
 "ru-RU":
   hello: Привет, мир!
   select_language: Выберите язык
-  computer_science: Информатика
+  en: Computer Science
   computer_science_edweek: Образовательная неделя компьютерных технологий
   csedweek_dates: 8-14 декабря 2014 года
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -63,6 +63,7 @@
   congratulations: Поздравляем!
   congratulations_on_completing_hoc: Поздравляем с завершением одного Часа программирования
   get_a_certificate_of_achievement: Получить сертификат о результате
+  enter_valid_age: Please select a valid age
   enter_valid_email: Пожалуйста, введите действительный адрес электронной почты
   get_a_certificate_message: Мы вышлем Вам сертификат и информацию о том, как <a href='/learn/beyond'>Учиться
     дальше!</a>
@@ -429,10 +430,12 @@
   dashboard_students_share_section: 'Поделитесь страницей со своими студентами для
     входа в этот раздел:'
   dashboard_students_print_info: Распечатать карточки с данными для доступа учеников.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Секретное изображение
   dashboard_students_reset_picture: Вы может поменять секретное изображение ученика
     в любое время, выберите <b>Показать секрет</b>,  затем <b>Сменить секрет</b>.
     Новое секретное изображение будет сгенерировано для входа этого ученика.
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Секретное слово
   dashboard_students_reset_word: 'Вы можете сбросить секретные слова ученика в любое
     время выбрав <b>Показать секрет</b> и затем <b>Сбросить секрет</b>. Новая пара

@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "Da bi blokovi \"Ponovi\" ili \"Ako\" radili, u njih treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Funkcijski blok treba unutra imati druge blokove da bi mogao raditi.",
   "emptyFunctionalBlock": "Imate blok s neispunjenom ulaznom vrijednosti.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "kraj",
   "errorEmptyFunctionBlockModal": "Mora se staviti blokove unutar definicije funkcije. Klikni na \"uredi\" i dovuci blokove unutar zelenog bloka.",
   "errorIncompleteBlockInFunction": "Klikni na \"uredi\" da budeš siguran da nijedan blok ne nedostaje unutar tvoje definicije funkcije.",
@@ -179,6 +182,7 @@
   "play": "igraj",
   "print": "Piši",
   "puzzleTitle": "Zadatak {puzzle_number} od {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ponovi",
   "resetProgram": "Ispočetka",
   "rotateText": "Okreni svoj uređaj.",
@@ -210,8 +214,5 @@
   "watchVideo": "Pogledaj filmić",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Workspace: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Workspace: "
 }

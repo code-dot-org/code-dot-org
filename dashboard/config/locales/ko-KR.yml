@@ -385,7 +385,7 @@
     heading_legacy: <h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>
     your_gallery: 갤러리
     no_primary_course: Code Studio에서 과정을 시도해보세요
-    print_certificate: Print Certificate
+    print_certificate: 인증서 인쇄
   gender:
     male: 남
     female: 여
@@ -477,11 +477,10 @@
       title: 플래피 코드
       body: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
     20-hour:
-      title: Accelerated Course
+      title: 빠른 과정
       body: 본 20시간 과정은 컴퓨터과학(정보과학)에서의 프로그래밍 기초 개념들을 소개합니다. 유치원~중2(K-8) 학생들을 대상으로 설계되어있지만,
         연령에 상관없이 재미있게 배울 수 있습니다.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: 2-4 과정의 가속 버전에서 기본적인 컴퓨터 과학을 알아보십시오.
     hoc2014:
       try_new_tutorial: 새로운(beta) Hour of Code 튜토리얼 해보기
       try_frozen: 프로즌 왕국에서온 안나와 엘사와 함께하는 예술가 퍼즐

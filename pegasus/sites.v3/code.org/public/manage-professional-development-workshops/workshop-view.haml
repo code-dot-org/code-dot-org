@@ -15,7 +15,7 @@ theme: none
    
 #nav
   #goback
-    %a{href: '#/'} Workshop Dashboard
+    %a{"ng-href" => '#/'} Workshop Dashboard
     %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
     %b{style: "color: #ff8b02;"} {{workshop.name()}}
 
@@ -93,7 +93,7 @@ theme: none
       .panel.panel-default
         .panel-heading Signup URL
         .panel-body
-          %a{href: '/professional-development-workshops/{{ workshop.id }}'}
+          %a{"ng-href" => '/professional-development-workshops/{{ workshop.id }}'}
             http:#{CDO.code_org_url('/professional-development-workshops/{{ workshop.id }}')}
 %div
   %a.btn.btn-default{"ng-href" => "#/{{workshop.secret}}/edit", style: "color: #333;"} Edit
@@ -133,10 +133,10 @@ theme: none
           %a.btn.btn-white.btn-xs{"ng-click" => "confirm_signup_cancel(signup)"} Cancel
 
   .signups-download-link{style: 'margin-top: 1em;'}
-    %a{href: '/manage-professional-development-workshops/workshop-signup-report.csv?workshop={{workshop.secret}}'} Download active signups
+    %a{"ng-href" => '/manage-professional-development-workshops/workshop-signup-report.csv?workshop={{workshop.secret}}'} Download active signups
 
   .collected-emails-trigger{style: 'margin-top: 1em;'}
-    %a{href: "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsActive = !showCollectedSignupEmailsActive'}View collected email addresses (active signups)
+    %a{"ng-href" => "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsActive = !showCollectedSignupEmailsActive'}View collected email addresses (active signups)
   %textarea.collected-emails{'ng-show' => 'showCollectedSignupEmailsActive', style: "width: 100%; height: 100px;"}
     {{active_signups_emails}}
 
@@ -167,6 +167,6 @@ theme: none
       %td{nowrap: true, style: 'white-space: nowrap;'}
 
   .collected-emails-trigger{style: 'margin-top: 1em;'}
-    %a{href: "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsCancelled = !showCollectedSignupEmailsCancelled'}View collected email addresses (cancelled signups)
+    %a{"ng-href" => "#", onclick: "return false;", 'ng-click' => 'showCollectedSignupEmailsCancelled = !showCollectedSignupEmailsCancelled'}View collected email addresses (cancelled signups)
   %textarea.collected-emails{'ng-show' => 'showCollectedSignupEmailsCancelled', style: "width: 100%; height: 100px;"}
     {{cancelled_signups_emails}}

@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "\"ทำซ้ำ\" หรือ \"ถ้า\" บล็อกจำเป็นต้องมีบล็อกอื่น ๆ ภายในจึงจะทำงาน. ตรวจสอบให้แน่ใจว่า บล็อกภายในเข้ากันอย่างถูกต้องแล้ว.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "บล็อกหน้าที่ต้องการให้มีบล็อกอื่นๆอยู่ด้านในถึงจะทำงานได้.",
   "emptyFunctionalBlock": "คุณมีบล็อกที่ไม่ได้เติมข้อมูลเข้า.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "สิ้นสุด",
   "errorEmptyFunctionBlockModal": "มันควรจะมีบล็อกอยู่ภายในความหมายของหน้าการทำงานของโปรแกรม. คลิ่กที่ การแก้ไข และ ลาก บล็อกทั้งหลายภายในบล็อกสีเขียว.",
   "errorIncompleteBlockInFunction": "คลิ่กที่ การแก้ไข เพื่อให้แน่ใจว่า คุณไม่มีบล็อกค้างอยู่ภายในความหมายของหน้าที่การทำงาน.",
@@ -179,6 +182,7 @@
   "play": "เล่น",
   "print": "พิมพ์",
   "puzzleTitle": "ปริศนา {puzzle_number} ของ {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ทำซ้ำ",
   "resetProgram": "ตั้งค่าใหม่",
   "rotateText": "หมุนอุปกรณ์ของคุณ.",
@@ -210,8 +214,5 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "พื้นที่ทำงาน: "
 }

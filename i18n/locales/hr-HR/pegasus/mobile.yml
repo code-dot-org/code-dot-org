@@ -1,7 +1,7 @@
 hr-HR:
   hello: Pozdrav svima
   select_language: Odaberite svoj jezik
-  computer_science: Računalstvo
+  en: Computer Science
   computer_science_edweek: Tjedan podučavanja Računalstva
   csedweek_dates: '8. - 14. prosinca 2014.'
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Sat Kodiranja</a> dolazi. Pozivamo sve učitelje i organizatore, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planirajte vaš Sat Kodiranja</a>'
@@ -45,6 +45,7 @@ hr-HR:
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo na završetku jednog Sata Kodiranja
   get_a_certificate_of_achievement: Preuzmi potvrdu o postignuću
+  enter_valid_age: Please select a valid age
   enter_valid_email: Unesite ispravnu e-mail adresu, molim
   get_a_certificate_message: "Poslat ćemo ti potvrdu i obavijest o tome kako možeš <a href='/learn/beyond'>Naučiti više nakon One Hour</a>"
   get_a_certificate_message_after: "Klikni na certifikat da ga preuzmeš ili ispišeš. Nastavi s našim <a href='http://studio.code.org'>drugim tečajevima</a>, ili istraži više mogućnosti na <a href='/learn/beyond'>Saznaj više od Jednog sata kodiranja</a>."
@@ -129,7 +130,7 @@ hr-HR:
   studiobar_shop_title: Trgovina
   studiobar_shop_body: Razbijmo sterotipe. Nosite naš logo s ponosom.
   homepage_hero_text_malala: |
-    &ldquo;Izazivam djevojke iz svih zemalja da nauče jedan Sat programiranja&rdquo;
+    &ldquo;Izazivam djevojke iz svih zemalja da se pridruže na jedan Sat kodiranja&rdquo;
     Malala, dobitnica Nobelove nagrade za mir
   homepage_hero_text_susan: '&ldquo;Ako možeš promijeniti tehnologiju, možeš promijeniti svijet.&rdquo; Susan, generalna direktorica YouTubea'
   homepage_hero_text_fistbump: |
@@ -153,28 +154,25 @@ hr-HR:
     Michael, učitelj
   homepage_hero_text_student3: '&ldquo;Računarstvo je znanstveno područje za koje ne možete znati da li ga volite dok ga ne probate&rdquo; Jackson, 6th grade'
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo;Sve što zamislite možete isprogramirati.&rdquo; 
+    Maya, 2. razred
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;Računarstvo nije za nekog drugoga. To je za tebe. Ovdje. Sad.&rdquo; 
+    Geraldo, učitelj
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo;Kodiranje potiče kreativnost, inspiraciju i inovacije &mdash; 
+    sve što je bitno u razvoju vaše karijere.&rdquo;
+    Floresa, učiteljica
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo;Ovaj program je potaknuo 100% mojih učenika da se uključe i participiraju.&rdquo;
+    Adam, učitelj
+  homepage_hero_text_stat_loc: '#loc linije koda napisane od učenika'
+  homepage_hero_text_stat_students: '#student_count učeničkih računa na Code Studiu'
+  homepage_hero_text_stat_served: 'The Hour of Code: #served održanih'
   homepage_slot_text_hoc: Sat Kodiranja
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
+  homepage_slot_text_frozen: Snježno kraljevstvo s Anom i Elsom
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_studio: Svi priručnici
   homepage_slot_text_course4: Tečaj 4
   homepage_slot_text_shop: Trgovina
   homepage_slot_text_flappy: Flappy kôd
@@ -183,31 +181,31 @@ hr-HR:
   homepage_action_text_learn: Krenite s učenjem
   homepage_action_text_signpetition: Potpišite peticiju
   homepage_signpetition_dropdown: 'Slažem se &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
+  homepage_banner_text_main: Code.org i College Board udružili su se da poboljšalju raznolikosti u računarstvu.
   homepage_banner_text_link: Doznaj više
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Svatko može naučiti. Započnite danas
   homepage_slot_text_link_hoc: Isprobaj Hour of Code
-  homepage_slot_text_link_host: Host an Hour of Code
+  homepage_slot_text_link_host: Održite Sat kodiranja
   homepage_slot_text_link_hocserved: '# served'
   homepage_slot_text_title_students: Učenici
   homepage_slot_text_blurb_students: Pregledajte naše priručnike
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
+  homepage_slot_text_link_codestudio: Probajte Code Studio
+  homepage_slot_text_link_local: Pronađite tečajeve u susjedstvu
+  homepage_slot_text_link_othercourses: Ostali online tečajevi
+  homepage_slot_text_title_educators: Učitelji
+  homepage_slot_text_blurb_educators: Obučite učenike
+  homepage_slot_text_link_k5: Tečajevi za niže razrede osnovne škole
+  homepage_slot_text_link_fullcurriculum: Pregledajte cijeli program
+  homepage_slot_text_link_pd: Profesionalni razvoj
+  homepage_slot_text_title_advocates: Zagovornici
   homepage_slot_text_blurb_advocates: Podržite naš rad
   homepage_slot_text_link_stats: Pogledajte statistike
-  homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
+  homepage_slot_text_link_buy: Uključite se
+  homepage_slot_text_link_donate: Donirajte
   homepage_header_codestudio: Kode studio, kreacije studenata
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_header_donors: Code.org zahvaljuje na podršci
+  homepage_donors_seall: Prikaži sve
   homepage_donors_donate: Doniraj
   contact_form_topic_student: Ja sam učenik
   contact_form_topic_parent: Ja sam roditelj
@@ -364,8 +362,10 @@ hr-HR:
   dashboard_students_reset_password: Ponovno postavi lozinku
   dashboard_students_share_section: 'Podijelite stranicu za prijavu u ovo odjeljenje svojim učenicima:'
   dashboard_students_print_info: Ispiši kartice za studente s informacijama za prijavljivanje.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Tajna Slika
   dashboard_students_reset_picture: 'Možete bilo kada ponovno postaviti učenikovu tajnu sliku odabirom <b>Prikaži tajnu</b>, a zatim <b>Ponovno postavi tajnu</b>. Tako će se stvoriti nova tajna slika za tog učenika, koju će moći koristiti nakon prijave.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Tajna Riječ
   dashboard_students_reset_word: 'Možete bilo kada ponovno postaviti učenikove tajne riječi odabirom <b>Prikaži tajnu</b>, a zatim <b>Ponovno postavi tajnu</b>. Učenik će moći koristiti novi par tajnih riječi nakon prijave. '
   dashboard_students_join_link: Kažite svojim učenicima da naprave svoje račune i priključe se vašem odjeljenju na

@@ -23,7 +23,7 @@
   "COLOUR_RGB_RED": "rød",
   "COLOUR_RGB_TITLE": "farge med",
   "COLOUR_RGB_TOOLTIP": "Lag en farge med spesifiserte mengder av rød, grønt og blått. Alle mengdene må være mellom 0 og 100.",
-  "CONTRACT_EDITOR_HEADER": "Design Recipe",
+  "CONTRACT_EDITOR_HEADER": "Designoppskrift",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "bryt ut av løkken",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "fortsett med neste gjentakelse av løkken",

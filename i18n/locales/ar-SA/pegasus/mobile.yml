@@ -1,7 +1,7 @@
 ar-SA:
   hello: مرحباً بالعالم
-  select_language: الرجاء تحديد اللغة الخاصة بك
-  computer_science: علوم الكمبيوتر
+  select_language: من فضلك اختر لغتك
+  en: Computer Science
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> قم بتخطيط "ساعة البرمجة" </a>'
@@ -30,7 +30,7 @@ ar-SA:
   twentyhours_trynow: جرب الآن
   california_heading: أطلب من مدرستك لتعليم علوم الحاسب الآلي
   california_text: "أي معلم يمكن أن يقدم لدينا <a href='http://studio.code.org/'>دورات مجانية</a>.  أي مدرسة ابتدائية تستطيع <a href='http://code.org/educate/k5'>تدريس علوم الكومبيوتر</a>. إسأل المدارس الثانوية إلى <a href='http://code.org/educate/districts'>مشاركتنا."
-  california_button: التعرف على المزيد
+  california_button: أعرف المزيد
   flappy_heading: عيد ميلاد flappy إلى Code.org
   flappy_text: 'صار عمرنا 1 سنة في Code.org . <br/><br/> إحتفل معنا بطريقتك الخاصة في لعبة <b>Flappy</b>. دون قواعدك الخاصة و شاركها مع أصدقائك !'
   view_english_site: عرض الموقع باللغة الإنكليزية
@@ -45,6 +45,7 @@ ar-SA:
   congratulations: تهانينا!
   congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
   get_a_certificate_of_achievement: أحصل على شهادة الانجاز
+  enter_valid_age: Please select a valid age
   enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
   get_a_certificate_message: "نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'> تعلم بعد ساعة واحدة من البرمجة</a>"
   get_a_certificate_message_after: "اضغط على الشهادة لتحميلها أو لطباعتها . استمر بالتقدم مع <a href='http://studio.code.org'>دوراتنا الأخرى</a>, أو شاهد خيارات أخرى لـ <a href='/learn/beyond'>تعلم ما وراء ساعة واحدة</a>."
@@ -62,7 +63,7 @@ ar-SA:
   girls: البنات
   give_my_hour: 'التبرع بساعتي لـ:'
   girls_team: فريق البنات
-  boys_team: فريق الأولاد
+  boys_team: فريق البنين
   tell_the_world: 'اخبر  العالم باسره!'
   thanks_for_voting: شكرا للتصويت!
   share_on_facebook: انشرها على الفيس بوك
@@ -149,7 +150,7 @@ ar-SA:
   homepage_slot_text_hoc: الساعة من التعليمات البرمجية
   homepage_slot_text_frozen: ملكة الثلج مع أنّا و إلزا
   homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: جميع برامجنا التعليمية
+  homepage_slot_text_studio: كل دروسنا
   homepage_slot_text_course4: الدورة 4
   homepage_slot_text_shop: تسوق
   homepage_slot_text_flappy: رمز لعبة flappy
@@ -157,7 +158,7 @@ ar-SA:
   homepage_action_text_teachervideo: شاهد الفيديو
   homepage_action_text_learn: ابدأ التعلم
   homepage_action_text_signpetition: وقّع على العريضة
-  homepage_signpetition_dropdown: 'انا موافق &#x25BE;'
+  homepage_signpetition_dropdown: 'أوافق &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: اعرف المزيد
   homepage_slot_text_title_hoc: ساعة من البرمجة
@@ -166,31 +167,31 @@ ar-SA:
   homepage_slot_text_link_host: استضافة ساعة البرمجة
   homepage_slot_text_link_hocserved: '#  خدمة قدمت'
   homepage_slot_text_title_students: الطلاب
-  homepage_slot_text_blurb_students: 'استكشاف جميع برامجنا التعليمية '
+  homepage_slot_text_blurb_students: استكشف جميع دروسنا
   homepage_slot_text_link_codestudio: جرّب ستوديو البرمجة
-  homepage_slot_text_link_local: البحث عن قسم في الجوار
+  homepage_slot_text_link_local: البحث عن فصل في الجوار
   homepage_slot_text_link_othercourses: دورات أخرى على الإنترنت
   homepage_slot_text_title_educators: المتعلمون
   homepage_slot_text_blurb_educators: علم طلّابك
-  homepage_slot_text_link_k5: دورات للصف الخامس K-5
+  homepage_slot_text_link_k5: دورات للروضة حتى الصف الخامس
   homepage_slot_text_link_fullcurriculum: انظر المنهاج الكامل
   homepage_slot_text_link_pd: التنمية المهنية
   homepage_slot_text_title_advocates: دعاة
   homepage_slot_text_blurb_advocates: أدعم عملنا
   homepage_slot_text_link_stats: انظر إلى الإحصائيات
-  homepage_slot_text_link_buy: الانضمام
+  homepage_slot_text_link_buy: إنضم
   homepage_slot_text_link_donate: تبرع
   homepage_header_codestudio: انجازات الطالب بستوديو البرمجة
   homepage_header_donors: 'موقع code.org  يشكر الداعمين له'
   homepage_donors_seall: عرض الكل
   homepage_donors_donate: تبرع
   contact_form_topic_student: أنا طالب
-  contact_form_topic_parent: أنا والد
+  contact_form_topic_parent: أنا والد/والدة
   contact_form_topic_teacher: أنا مدرس/ معلم
   contact_form_topic_outside_us: أنا خارج الولايات المتحدة.
   contact_form_topic_contribution: المساهمة الخيرية
   contact_form_topic_partner: أود أن أكون شريك
-  contact_form_topic_other: الأخرى
+  contact_form_topic_other: أخرى
   contact_form_label_topic: الموضوع
   contact_form_label_email: بريدك الإلكتروني
   contact_form_label_message: الرسالة
@@ -198,10 +199,10 @@ ar-SA:
   class_submission_in_school: في المدرسة
   class_submission_in_school_daily_programming_course: دورة البرمجة اليومية
   class_submission_in_school_ap_computer_science: AP علوم الحاسب الآلي
-  class_submission_in_school_full_university_cs_curriculum: المنهج كامل جامعة CS
+  class_submission_in_school_full_university_cs_curriculum: منهج جامعي كامل لعلوم الحاسب
   class_submission_in_school_robotics_club: نادي الروبوتات
   class_submission_in_school_programming_integrated_in_other_classes: البرمجة المتكاملة مع المواد الدراسية الأخرى (الرياضيات، والعلوم، إلخ)
-  class_submission_in_school_summer_school_cs_program: برنامج المدرسة الصيفية CS
+  class_submission_in_school_summer_school_cs_program: برنامج صيفية لعلوم الحاسب
   class_submission_in_school_exploring_computer_science: استكشاف علوم الحاسب الآلي
   class_submission_in_school_other: الأخرى في المدرسة
   class_submission_out_of_school: الخروج من المدرسة
@@ -211,7 +212,7 @@ ar-SA:
   class_submission_out_of_school_multi-week_workshop: ورشة عمل متعددة في الأسبوع
   class_submission_out_of_school_other: الأخرى خارج المدرسة
   class_submission_online: على الإنترنت
-  class_submission_online_programming_class: فئة البرمجة على الإنترنت
+  class_submission_online_programming_class: فصل برمجة على الإنترنت
   class_submission_online_teacher_resource: الموارد المعلم أون لاين
   class_submission_online_other: الأخرى على الإنترنت
   class_submission_level_preschool: مرحلة ما قبل المدرسة
@@ -256,19 +257,19 @@ ar-SA:
   dashboard_landing_available_title: الدورات التدريبية المتاحة
   dashboard_landing_available_courses: هذة هي الدورات المتاحة حاليا لكم ولطلابكم.
   dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
+  dashboard_landing_more_tutorials_desc: 'هناك المزيد من الدروس <a href="/learn/beyond">المقدمة من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.'
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
   dashboard_k5_courses: 20-Hour Courses for K-5
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: مساقات العشرون ساعة للمدارس المتوسطة / الإعدادية
   dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_high_courses: Year-long High School Courses
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csina_desc: code.org في شراكة مع بوتستراب (Bootstrap) لتطوير منهج لتدريس الجبر و الهندسة من خلال مفهوم برمجة الحاسب.
   dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_csins_desc: code.org في شراكة مع مشروع جي يو تي إس (GUTS) لتوصيل المفاهيم الأساسية لعلوم الحاسب من خلال سياق النمذجة و المحاكاة.
   dashboard_course_ecs: استكشاف علوم الحاسب الآلي
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: AP® Computer Science Principles
@@ -339,8 +340,10 @@ ar-SA:
   dashboard_students_reset_password: إعادة تعيين كلمة المرور
   dashboard_students_share_section: 'مشاركة صفحة تسجيل الدخول هذة مع الطلاب:'
   dashboard_students_print_info: طباعة بطاقات معلومات تسجيل الدخول الخاصة بطلابك.
-  dashboard_students_secret_picture: صورة سرية
+  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: 'يمكنك إعادة تعيين صورة الطالب سرية في أي وقت عن طريق اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول السرية</b>. سيتم إنشاء صورة سرية جديدة لهذا الطالب لاستخدامها عند تسجيل الدخول.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: الكلمة السرية
   dashboard_students_reset_word: 'يمكنك إعادة تعيين كلمات سر الطالب في أي وقت عن طريق اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول السرية</b>. سيتم إنشاء زوج من الكلمات السرية جديدة لهذا الطالب لاستخدامه عند تسجيل الدخول. '
   dashboard_students_join_link: أخبر طلابك لينشئوا حساباتهم الخاصة بهم والانضمام إلى القسم الخاص بك في
@@ -406,7 +409,7 @@ ar-SA:
   dashboard_faq_k5: الأسئلة المتاوترة الطرح في المستوى الخامس K-5
   code_hoc_coming: إرسال رسالة إلكترونية
   code_sign_up: قم بالتسجيل للمشاركة خلال أسبوع تعليم علوم الحاسوب
-  learn_more: التعرف على المزيد
+  learn_more: أعرف المزيد
   hoc2014_try_new_tutorials: جرّب الدروس الجديدة لساعة البرمجة
   hoc2014_try_new_tutorial: 'جرب درس ساعة الكود الجديد ب"بيتا"'
   hoc2014_try_scrat: Angry Birds, PvZ, و Scrat
@@ -737,7 +740,7 @@ ar-SA:
   w3schools_beyond_platformtext: متصفحات الويب الحديثة
   codeavengers_beyond_platformtext: متصفحات الويب الحديثة
   mozilla_beyond_platformtext: متصفحات الويب الحديثة
-  codecombat_beyond_platformtext: القائمة على تكنولوجيا الواب (فايرفوكس، كروم، سفاري، IE9 +)
+  codecombat_beyond_platformtext: القائمة على تكنولوجيا الويب (فايرفوكس، كروم، سفاري، IE9 +)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: شراء روبوت
   finch_beyond_platformtext: شراء روبوت
@@ -792,7 +795,7 @@ ar-SA:
   scratchjr_beyond_longdescription: ScratchJr is an introductory programming language that enables young children to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing
   hopscotch_beyond_longdescription: 'برنامج تعليمي موجه للطالب على الأيباد باستخدام لغة البرمجة "هوب سكوتش". سوف يتمكن الطلاب على بناء ألعاب وتطبيقات للأيباد على الأيباد. يمكن للطلاب العمل بشكل فردي أو مع الأصدقاء (تصل إلى 3 على كل أيباد).'
   pocketcode_beyond_longdescription: Create your own game on your smart phone with Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with friends and other users to try!
-  groklearning_beyond_longdescription: "An introductory course using the programming language Python for people with no programming experience. Our unique mix of introductory content and challenges will bring you to a thorough understanding of Python and programming itself. We've taught this content to students of varying ages from diverse backgrounds and we're sure it'll suit you too."
+  groklearning_beyond_longdescription: مساق تمهيدي يستخدم لغة البرمجة بايثون للأشخاص عديمي الخبرة البرمجية. مزيجنا الفريد من المحتوى التمهيدي و التحديات سوف تقودك إلى فهم دقيق لبايثون و البرمجة بحد ذاتها. لقد درسنا هذا المحتوى لطلبة من مختلف المراحل العمرية و من خلفيات متنوعة، و نحن متأكدون أنها ستناسبك أنت أيضاً.
   hacketyhack_beyond_longdescription: "Hackety Hack will teach you the absolute basics of programming from the ground up. No previous programming experience is needed! With Hackety Hack, you'll learn the Ruby programming language. Ruby is used for all kinds of programs, including desktop applications and websites. [Note: Desktop install required]"
   robomind_beyond_longdescription: 'Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. '
   makegameswithus_beyond_longdescription: "Know some ObjectiveC? Learn to make an iPhone game in an hour! We'll guide you through the process, to code, test, and play your game entirely in the browser and then share it on Facebook for friends to try! No prior iPhone development experience is required. You must understand what variables, methods, and objects are."
@@ -819,6 +822,6 @@ ar-SA:
   processing_beyond_longdescription: المعالجة هي لغة برمجة، وبيئة تطوير، ومجتمع على الإنترنت. منذ عام 2001 شجعت المعالجة في التعلم وخفض مستوى محو الأمية في البرمجيات في الفنون البصرية التكنولوجية. أنشئت في البداية لتكون بمثابة كراسة الرسم للبرمجيات وتعليم أساسيات برمجة الحاسوب في سياق البصرية، وتطورت المعالجة إلى أداة للتنمية للمحترفين. اليوم، هناك عشرات الآلاف من الطلاب والفنانين والمصممين والباحثين والهواة الذين يستخدمون المعالجة للتعلم، والنماذج، والإنتاج.
   alice_beyond_longdescription: باستخدام بيئة البرمجة المبتكرة لدعم إنشاء الرسوم المتحركة 3D، يوفر المشروع أليس الأدوات والمواد اللازمة للتدريس والتعلم التفكير الحسابي، وحل المشكلات، وبرمجة الكمبيوتر عبر مجموعة متنوعة للأعمار والمراحل الدراسية.
   sphero_beyond_longdescription: 'سواء كنت معلم أو أحد الوالدين، "سبرك" تعطي دروس ممتعة للأطفال ببرمجة الروبوتات وبنفس الوقت تحسين مهاراتهم في الرياضيات والعلوم.'
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_header: رجاءً فعل HTTPS لـ code.org.
+  compatibility_https_message: "لزيادة الأمان. اصبحنا نستخدم HTTPS على %{https_date}. لن تستطيع الوصول إلى code.org بعد هذا التاريخ. <a href='%{it_requirements_url}'>اضغط هنا</a> لتعلم كيفية تفعيل HTTPS لـ code.org."
   compatibility_https_hide_this_warning: إخفاء هذا التحذير

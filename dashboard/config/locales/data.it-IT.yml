@@ -101,7 +101,7 @@
         Wordsearch: Ricerca di parole
         Webapp: Laboratorio per le App
         ArtistEC: L'artista
-        TextMatch: 'Testo: Associazioni'
+        TextMatch: Esercizio di Verifica (Associazioni)
         StudioEC: Laboratorio
         Applab: Laboratorio per le App
         NetSim: Simulatore di Internet
@@ -142,7 +142,7 @@
           per 3 volte le azioni che contiene. Prova ad inserire in esso blocchi dei
           tipi "vai avanti" e "gira".
         maze_2_9: Ok, prova ad usare il nuovo blocco "ripeti fino a che". Esso mi
-          farà "ripetere" le azioni "fino a che" ho raggiunto quel fastidioso maiale.
+          farà "ripetere" le azioni "fino a che"  raggiungo quel fastidioso maiale.
         maze_2_10: 'Ok, un''ultima volta per fare pratica: riesci a risolvere questo
           esercizio utilizzando solo 4 blocchi?'
         maze_2_11: Caro umano. Io zombie. Io affamato. Devo ... arrivare ... al girasole.
@@ -486,7 +486,8 @@
         jigsaw_10: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
         jigsaw_11: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
         jigsaw_12: Sistema i blocchi nell'ordine corretto per formare l'immagine indicata
-        jigsaw_13: Correggi la figura!
+        jigsaw_13: Questo è un esercizio di verifica -- Sistema i blocchi nell'ordine
+          corretto per formare l'immagine indicata.
         mazestep_1: Qui c'è la descrizione del passo del labirinto
         mazestep_2: Qui c'è la descrizione del passo del labirinto
         mazestep_3: Qui c'è la descrizione del passo del labirinto
@@ -583,22 +584,22 @@
         studio_k1_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
         studio_k1_6: Crea una storia tutta tua! Sposta il cane e il gatto in tutte
           le direzioni e fai dire loro ciò che desideri.
-        maze_wordsearch_k_1: Spostami per scrivere le lettere della parola EAST
-        maze_wordsearch_k_2: Spostami per scrivere le lettere della parola SOUTH
-        maze_wordsearch_k_3: Spostami per scrivere le lettere della parola WEST
-        maze_wordsearch_k_4: Spostami per scrivere le lettere della parola NORTH
+        maze_wordsearch_k_1: Spostami per scrivere le lettere della parola EAST.
+        maze_wordsearch_k_2: Spostami per scrivere le lettere della parola SOUTH.
+        maze_wordsearch_k_3: Spostami per scrivere le lettere della parola WEST.
+        maze_wordsearch_k_4: Spostami per scrivere le lettere della parola NORTH.
         maze_wordsearch_k_6: Spostami a Est e poi a Sud per scrivere le lettere della
-          parola JUMP
+          parola JUMP.
         maze_wordsearch_k_9: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola CODE
+          le lettere della parola CODE.
         maze_wordsearch_k_13: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola DEBUG
+          le lettere della parola DEBUG.
         maze_wordsearch_k_15: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola ABOVE
+          le lettere della parola ABOVE.
         maze_wordsearch_k_16: Spostami in una direzione e poi in un'altra per scrivere
-          le lettere della parola BELOW
+          le lettere della parola BELOW.
         maze_wordsearch_k_20: Questo è un esercizio di verifica! Spostami in una direzione
-          e poi in un'altra per scrivere le lettere della parola STORY
+          e poi in un'altra per scrivere le lettere della parola STORY.
         applab_ec_simple: Crea la tua App usando i blocchi nella cassetta degli attrezzi.
         turtle_ec_1_2: 'Ora, disegna un quadrato. Suggerimento: usa il tuo colore
           preferito scegliendolo col nuovo blocco "imposta colore".'
@@ -686,6 +687,7 @@
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
         C4_intro: Introduzione
+        C4_loops_zombie: Ripetizioni
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
         C4_variables_artist: 'Artista: Variabili'
         C4_variables_playlab: 'Laboratorio: Variabili'
@@ -849,10 +851,11 @@
         arrows_move_actor: Usa le frecce per muovere il personaggio
         right_arrow_fireball: Usa la freccia a destra per lanciare le palle di fuoco
         name_function: Scrivi qui il nome della tua funzione
-        Infinity_move_right_runbutton: Aggiungi Sposta blocco qui
+        Infinity_move_right_runbutton: Aggiungi qui il blocco "sposta il personaggio"
         Infinity_move_directions_callout: Quale blocco farà spostare Baymax verso
           l'alto quando viene premuta la freccia in su?
-        Infinity_move_directions_callout_arrow: Utilizzare queste frecce per guidare
+        Infinity_move_directions_callout_arrow: Usa le frecce per muovere il personaggio
         Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
           evento.
-        Infinity_repeat_callout: Posiziona Sposta blocchi qui dentro
+        Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
+          blocco di ripetizione

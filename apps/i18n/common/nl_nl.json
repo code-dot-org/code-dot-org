@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Hiermee maak je een lus die bestaat uit een voorwaardelijke expressie en een blok instructies uitgevoerd voor elke iteratie van de lus. De lus gaat door met uitvoeren zolang de gestelde voorwaarde waar is",
   "dropletBlock_whileBlock_signatureOverride": "'while' lus",
   "emptyBlocksErrorMsg": "De \"herhaal\" of \"als\" blokken hebben andere blokken in zich nodig om te werken. Zorg ervoor dat het binnenste blok correct past in het buitenste blok.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Het functie-blok moet andere blokken bevatten om te werken.",
   "emptyFunctionalBlock": "Je hebt een blok zonder waarde.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "einde",
   "errorEmptyFunctionBlockModal": "In je functie-definitie moeten blokken staan . Klik op \"bewerk\" en sleep blokken  het groene blok in.",
   "errorIncompleteBlockInFunction": "Klik \"bewerk\" en zorg ervoor dat je geen blokken mist in je functie-definitie.",
@@ -179,6 +182,7 @@
   "play": "afspelen",
   "print": "Afdrukken",
   "puzzleTitle": "Puzzel {puzzle_number} van {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "herhaal",
   "resetProgram": "Herstellen",
   "rotateText": "Draai je apparaat.",
@@ -210,8 +214,5 @@
   "watchVideo": "Bekijk de video",
   "when": "wanneer",
   "whenRun": "als gestart",
-  "workspaceHeaderShort": "Werkplaats: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Werkplaats: "
 }

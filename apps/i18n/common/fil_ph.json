@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "Ang \"Repeat\" o \"if\" block ay kailangan ng iba pang mga block sa loob nito upang gumana. Siguraduhin na ang block na asa loob ay nakasukat ng maayos sa loob ng naglalaman na block.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Ang function na block ay kailangang magkaroon ng iba pang mga block sa loob nito upang gumana.",
   "emptyFunctionalBlock": "Mayroon kang isang block na walang nailagay na input .",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "tapos",
   "errorEmptyFunctionBlockModal": "Dapat meron mga block sa loob ng iyong kahulugan ng function. I-click ang \"i-edit\" at i-drag ang mga block sa loob ng berdeng block.",
   "errorIncompleteBlockInFunction": "I-click ang \"i-edit\" upang tiyakin na wala kang nawawala sa loob ng iyong kahulugan ng function ng anumang mga block.",
@@ -179,6 +182,7 @@
   "play": "i-play",
   "print": "I-print",
   "puzzleTitle": "Puzzle {puzzle_number} ng {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ulitin",
   "resetProgram": "Ulitin",
   "rotateText": "Paikutin ang iyong device.",
@@ -210,8 +214,5 @@
   "watchVideo": "Panoorin ang Video",
   "when": "kelan",
   "whenRun": "kapag tumakbo",
-  "workspaceHeaderShort": "Workspace: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Workspace: "
 }

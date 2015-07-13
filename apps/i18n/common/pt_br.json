@@ -2,7 +2,7 @@
   "and": "e",
   "backToPreviousLevel": "Voltar ao nível anterior",
   "blocklyMessage": "Blockly",
-  "blocks": "blocos",
+  "blocks": "Blocos",
   "booleanFalse": "falso",
   "booleanTrue": "verdadeiro",
   "catActions": "Ações",
@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Cria um laço que consiste em uma expressão condicional e um bloco de instruções executadas para cada repetição do laço. A execução do laço continua enquanto a condição for verdadeira",
   "dropletBlock_whileBlock_signatureOverride": "laço enquanto",
   "emptyBlocksErrorMsg": "Os blocos \"Repita\" ou \"Se\" precisam de outros blocos para funcionar. Verifique se o bloco de dentro se ajusta corretamente ao bloco principal.",
+  "emptyBlockInFunction": "A função {name} tem uma entrada não preenchida.",
+  "emptyBlockInVariable": "A variável {name} tem uma entrada não preenchida.",
   "emptyFunctionBlocksErrorMsg": "O bloco de função precisa ter outros blocos dentro dele para funcionar.",
   "emptyFunctionalBlock": "Você tem um bloco com uma entrada sem preencher.",
+  "emptyTopLevelBlock": "Não há blocos para executar. Você deve anexar um bloco ao bloco {topLevelBlockName}.",
   "end": "fim",
   "errorEmptyFunctionBlockModal": "Deve haver blocos dentro de sua definição de função. Clique em \"editar\" e arraste os blocos para dentro do bloco verde.",
   "errorIncompleteBlockInFunction": "Clique em \"editar\" para verificar se não faltam blocos em sua definição de função.",
@@ -179,6 +182,7 @@
   "play": "jogue",
   "print": "Imprimir",
   "puzzleTitle": "Desafio {puzzle_number} de {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "repita",
   "resetProgram": "Recomeçar",
   "rotateText": "Gire seu dispositivo.",
@@ -210,8 +214,5 @@
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Área de trabalho: "
 }

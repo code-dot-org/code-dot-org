@@ -66,7 +66,6 @@ fr:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'Artiste : les boucles première correspondance'
         Match the loop to the shape: Assortissez la boucle à la forme
-        Matching loops: Boucles correspondantes
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -157,18 +156,6 @@ fr:
         Instructions: Consignes
         Match the puzzles to the blocks: Assortir les puzzles aux blocs
         Maze Match: Labyrinthe correspondance
-      Coordinate Matching:
-        (250, 400): (250, 400)
-        (320, 240): (320, 240)
-        (480, 100): (480, 100)
-        (500, 240): (500, 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: Nuage
-        Coordinates of Ninjacat: Coordonnées de Ninjacat
-        Dog: Chien
-        Match each character with its correct coordinate!: Associe chaque personnage avec ses coordonnées correctes!
-        Ninjacat: Chat Ninja
-        Ruby: Rubis
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -271,63 +258,6 @@ fr:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: "Associe la carte à l'algorithme qui mène le Flurb aux fleurs."
         Matching: Correspondance
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): (+ (-(/ 4 7) 9) 3)
-        (+ (- 9 3) (* 4 7)): '(+ (-9 3) (* 4 7))'
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
-        Converting Circles to Code: Convertir des Cercles en Code
-        Match each circle of evaluation with the correct code!: "Associes chaque cercle d'évaluation avec le code correcte!"
-      Match example to contract:
-        (big-string? "gigantic" 5): '(grande-chaine? "geant" 5)'
-        (bigger-string "big" "little"): '(immense-chaine "grand" "petit")'
-        (find-price "cheese"): '(trouver-prix "fromage")'
-        (find-price 4): (trouver-prix 4)
-        (small-star "blue"): '(petite-étoile "bleu")'
-        (small-star "solid"): '(petite-étoile "solide")'
-        Contracts of Functions: Contrats de fonctions
-        Match each example with the correct contract!: Associes chaque exemple avec le contrat correcte!
-        "big-string: string number -> boolean": 'grande-chaine: chaine nombre -> booléen'
-        "bigger-string: string string -> string": 'immense-chaine: chaine chaine -> chaine'
-        "find-price: number -> number": Trouver le prix
-        "find-price: string -> number": 'trouver-prix: chaine -> nombre'
-        "small-star: string -> image": 'petite-étoile: chaine -> image'
-      Match math to circles:
-        (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
-        (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit 1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit 1/Exercise_4_question_2.png
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
-        Converting Math to Circles of Evaluation: "Convertir des Maths en Cercles d'Evaluation"
-        Match each mathematical expression with the correct circle of evaluation!: "Associes chaque expression mathématique avec le cercle d'évaluation correcte!"
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (- 72 19))'
-        (+ (- (* 3 15) 72) 19): '(+ (-(* 3 15) 72) 19)'
-        (+ (3 x 15) (- 72 19)): '(+ (3 x 15) (- 72 19))'
-        (- (+ 72 3) (* 19 15)): '(-(+ 72 3) (* 19 15))'
-        (15 + 3) x (72 - 19): (15 + 3) x (72-19)
-        3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
-        3 x 15 - 72 + 19: 3 x 15-72 + 19
-        72 + 3 - 19 x 15: 72 + 3-19 x 15
-        Converting Math to Code: Convertir les Maths en Code
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: "Associes chaque expression mathématique avec le code correcte. Utilises un cercle d'évaluation pour t'aider à obtenir la réponse!"
-      parts of contract:
-        (yearbook-picture "Sally" 1992): '(trombinoscope-photo "Sally" 1992)'
-        Here is a contract for a new function. Match each item with the word that describes it.: Voici un contrat pour une nouvelle fonction. Assortis chaque élément au mot qui le décrit.
-        Parts of a Contract: "Parties d'un Contrat"
-        domain: domaine
-        example: exemple
-        function name: nom de la fonction
-        image: image
-        range: gamme
-        string numer: n° de chaîne
-        yearbook-picture: photo de trombinoscope
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -361,7 +291,7 @@ fr:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Commencer par un carré<br/>Dessiner un parallélogramme au-dessus du carré<br/>Placer un triangle à droite du parallélogramme'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Commencer par un carré<br/>Mettez un triangle au-dessus du carré<br/>Mettez un triangle au-dessous du carré'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Commencer par un carré<br/>Placer un triangle sous le carré<br/>Placer un parallélogramme à droite du triangle'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Commencez avec un carré<br/>Mettez un triangle à droite du carré<br/>Placez un parallélogramme sous le carré<br/>Mettez un triangle à droite du parallélogramme'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -489,9 +419,8 @@ fr:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Choisis la meilleure réponse.
         Maze Multiple Choice One: Labyrinthe Choix multiple Un
-        Which blocks work?: Quels blocs fonctionnent?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Cuisiner des biscuits
         Banana: Banane
@@ -545,15 +474,12 @@ fr:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
-        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
-        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
-        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Questions à choix multiples
-        4: "? Quelle est la plus grande portion de cette chanson qui puisse être définie comme le refrain, de façon à ce que le refrain se répète exactement à chaque fois qu'il est appelé ?"
-        5: ": Quelle est la plus grande portion de cette chanson qui puisse être définie comme le refrain, de façon à ce que le refrain se répète exactement à chaque fois qu'il est appelé ?"
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -664,21 +590,6 @@ fr:
         Line 4: Line 4
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
-      Circle to code:
-        (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
-        (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
-        (+ 5 (* 4 (- 8 6))): '(+ 5 (* 4 (- 8 6)))'
-        "/script_assets/msm/Unit%202/exercise_1.png": '/script_assets/msm/Unit%202/exercise_1.png'
-        Code from Circle: Code du Cercle
-        Pick the Racket code that comes from the circle of evaluation!: "Choisis le code Racket qui vient du cercle d'évaluation!"
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: "The unicorn's x value increases"
-        The unicorn's y value changes: "The unicorn's y value changes"
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -842,66 +753,6 @@ fr:
         Driver and Helper: Pilote et Copilote
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: "Un de ces garçons est le <b>pilote</b>.  Et l'autre est le <b>copilote</b>."
         This time, which boy is the <large>driver</large>?: 'Cette fois, quel garçon est le <large>pilote</large>?'
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): '(* (+ 5 6) (/ 8 2))'
-        (/ (* (+ 5 6) 8) 2): '(/ (* (+ 5 6) 8) 2)'
-        (/ (* 8 2) (+ 5 6)): '(/ (* 8 2) (+ 5 6))'
-        (/ (+ 5 6) (* 8 2)): '(/ (+ 5 6) (* 8 2))'
-        (5 + 6) * 8 / 2: '(5 + 6) * 8 / 2'
-        0: "? Choisis le code source Racket qui correspond à l'expression mathématique proposée. Utilise une roue de Deming pour t'aider à trouver la bonne réponse !"
-        1: "? Choisis le code source Racket qui correspond à l'expression mathématique proposée. Utilise une roue de Deming pour t'aider à trouver la bonne réponse !"
-        Racket Code for Math Expressions: 'Code "Racket" pour les expressions mathématiques'
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): '(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))'
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): '(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)'
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
-        0: "? Choisis le code source Racket qui correspond à l'expression mathématique proposée. Utilise une roue de Deming pour t'aider à trouver la bonne réponse !"
-        1: "? Choisis le code source Racket qui correspond à l'expression mathématique proposée. Utilise une roue de Deming pour t'aider à trouver la bonne réponse !"
-        Racket Code for Math Expressions: 'Code "Racket" pour les expressions mathématiques'
-      Multi Define Funcs 1:
-        3: "3"
-        What is the name of this function?: Quel est le nom de cette fonction ?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 2:
-        3: "3"
-        What is the name of the parameter?: Quel est le nom du paramètre ?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 3:
-        5: "5"
-        6: "6"
-        What should g(2) return?: Que doit retourner g(2) ?
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: "Chaînes et Choix Multiple d'images"
-        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
-      Warmup questions:
-        Coding in Racket: 'Programmation en "Racket"'
-        Select the best answer to the question.: Choisis la meilleure réponse à la question.
-        When converting a circle to code, the correct order is: "Quand tu convertis un cercle en code, l'ordre correct est"
-        left top right: gauche haut droite
-        left, right, top: gauche, droite, haut
-        random: aléatoire
-        top, left, right: haut, gauche, droite
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(rectangle (+ 8 2) (- 7 5) "solide" "rouge")'
-        (rectangle (+ 8 2) (- 7 5) solid red): '(rectangle (+ 8 2) (- 7 5) solide rouge)'
-        (rectangle (10) (2) "solid" "red"): '(rectangle (10) (2) "solide" "rouge")'
-        (rectangle 10 2 "solid" "red"): '(rectangle 10 2 "solide" "rouge")'
-        "/script_assets/msm/Unit%202/exercise_5.png": '/script_assets/msm/Unit%202/exercise_5.png'
-        Code from Circle: Code du Cercle
-        Pick the Racket code that comes from the circle of evaluation!: "Choisis le code Racket qui vient du cercle d'évaluation!"
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -911,11 +762,3 @@ fr:
         This multiple choice is all about the presidents of the United States.: |-
           Le sujet de ce choix multiple est "tout sur les présidents des États-Unis d'Amérique".
         Who was the first president of the USA?: Qui fut le premier président des USA ?
-      valid contracts multi:
-        Pick the best answer to the question.: Choisis la meilleure réponse à la question.
-        Valid Contracts: Contrats Valides
-        Which of these is a valid contract for the function circle?: Lequel de ceux-là est un contrat valide pour le cercle de fonction?
-        "circle: 5 solid blue -> circle ": 'cercle: 5 solide bleu -> cercle '
-        "circle: number string string -> image": 'cercle: nombre corde corde -> image'
-        "circle: number string string -> shape": 'cercle: nombre corde corde -> forme'
-        "circle: size style color -> image": 'cercle: taille style couleur -> image'

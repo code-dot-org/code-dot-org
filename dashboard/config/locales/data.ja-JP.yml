@@ -401,7 +401,7 @@
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: ラップアップ
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: ハッピーマップ
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
@@ -452,7 +452,8 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C4_intro: はじめに
+        C4_loops_zombie: ループ
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab

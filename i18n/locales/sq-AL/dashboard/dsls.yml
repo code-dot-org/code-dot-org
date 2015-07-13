@@ -68,7 +68,6 @@ sq:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Ciklet e Artistit Duke Lidhur Një
         Match the loop to the shape: Lidh ciklin me formën
-        Matching loops: Ciklet e Lidhura
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -159,18 +158,6 @@ sq:
         Instructions: Udhëzimet
         Match the puzzles to the blocks: Koordino puzzle-at tek blloqet
         Maze Match: Koordinimi Maze
-      Coordinate Matching:
-        (250, 400): (250, 400)
-        (320, 240): (320, 240)
-        (480, 100): (480, 100)
-        (500, 240): (500, 240)
-        /script_assets/msm/Unit 1/exercise_3_ninjacat.png: /script_assets/msm/Unit 1/exercise_3_ninjacat.png
-        Cloud: Re
-        Coordinates of Ninjacat: Koordinatat e Ninjacat
-        Dog: Qen
-        Match each character with its correct coordinate!: Bashko çdo karakter me koordinatën e tij të saktë!
-        Ninjacat: Ninjacat
-        Ruby: Rubin
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -273,63 +260,6 @@ sq:
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Koordino Hartën tek algoritmi që çon Flurb-in tek lulet.
         Matching: Koordinimi
-      Match circles to code:
-        (+ (- (/ 4 7) 9) 3): '(+ (- (/ 4 7) 9) 3)'
-        (+ (- 9 3) (* 4 7)): '(+ (- 9 3) (* 4 7))'
-        (+ 3 (/ 4 7)): (+ 3 (/ 4 7))
-        (/ (+ 4 7) 3): (/ (+ 4 7) 3)
-        /script_assets/msm/Unit 1/Exercise_5_question_1.png: /script_assets/msm/Unit 1/Exercise_5_question_1.png
-        /script_assets/msm/Unit 1/Exercise_5_question_2.png: /script_assets/msm/Unit 1/Exercise_5_question_2.png
-        /script_assets/msm/Unit 1/Exercise_5_question_3.png: /script_assets/msm/Unit 1/Exercise_5_question_3.png
-        /script_assets/msm/Unit 1/Exercise_5_question_4.png: /script_assets/msm/Unit 1/Exercise_5_question_4.png
-        Converting Circles to Code: Kthimi i rrathëve në Kod
-        Match each circle of evaluation with the correct code!: Koordino çdo rreth vlerësimi me kodin e duhur!
-      Match example to contract:
-        (big-string? "gigantic" 5): '(string-i madh? "gjigante" 5)'
-        (bigger-string "big" "little"): '(string-më i madh "i madh" "i vogël")'
-        (find-price "cheese"): '(gjej-çmimin "djathë")'
-        (find-price 4): (gjej-çmimin 4)
-        (small-star "blue"): '(yll-i vogël "blu")'
-        (small-star "solid"): '(yll-i vogël "i fortë")'
-        Contracts of Functions: Marrëveshjet e Funksioneve
-        Match each example with the correct contract!: Bashko çdo shembull me marrëveshjen e duhur!
-        "big-string: string number -> boolean": 'string-i madh: numër string -> boolean'
-        "bigger-string: string string -> string": 'string-më i madh: string string -> string'
-        "find-price: number -> number": 'gjej-çmimin: numër -> numër'
-        "find-price: string -> number": 'gjej-çmimin: string -> numër'
-        "small-star: string -> image": 'yll-i vogël: string -> imazh'
-      Match math to circles:
-        (2 + 3 * 5) / 2: '(2 + 3 * 5) / 2'
-        (2 + 3) * 5 / 2: '(2 + 3) * 5 / 2'
-        /script_assets/msm/Unit 1/Exercise_4_question_1.png: /script_assets/msm/Unit 1/Exercise_4_question_1.png
-        /script_assets/msm/Unit 1/Exercise_4_question_2.png: /script_assets/msm/Unit 1/Exercise_4_question_2.pn
-        /script_assets/msm/Unit 1/Exercise_4_question_3.png: /script_assets/msm/Unit 1/Exercise_4_question_3.png
-        /script_assets/msm/Unit 1/Exercise_4_question_4.png: /script_assets/msm/Unit 1/Exercise_4_question_4.png
-        2 + 3 * (5 / 2): '2 + 3 * (5 / 2)'
-        Converting Math to Circles of Evaluation: Kthimi i Matematikës te Rrathët e Vlerësimit
-        Match each mathematical expression with the correct circle of evaluation!: Koordino çdo shprehje matematikore me rrethin e vlerësimit të duhur!
-      Match math to code:
-        (* (+ 15 3) (- 72 19)): '(* (+ 15 3) (- 72 19))'
-        (+ (- (* 3 15) 72) 19): '(+ (- (* 3 15) 72) 19)'
-        (+ (3 x 15) (- 72 19)): '(+ (3 x 15) (- 72 19))'
-        (- (+ 72 3) (* 19 15)): '(- (+ 72 3) (* 19 15))'
-        (15 + 3) x (72 - 19): '(15 + 3) x (72 - 19)'
-        3 x 15 + (- 72 19): '3 x 15 + (- 72 19)'
-        3 x 15 - 72 + 19: '3 x 15 - 72 + 19'
-        72 + 3 - 19 x 15: '72 + 3 - 19 x 15'
-        Converting Math to Code: Të kthesh Matematikën në Kod
-        Match each mathematical expression with the correct code. Use a circle of evaluation to help you get to the answer!: Koordino çdo shprehje matematikore me kodin e duhur. Përdor një rreth vlerësimi për të të ndihmuar ty të gjesh përgjigjen!
-      parts of contract:
-        (yearbook-picture "Sally" 1992): '(libri vitit-figura "Sally" 1992)'
-        Here is a contract for a new function. Match each item with the word that describes it.: Këtu kemi një marrëveshje për një funksion të ri. Lidh çdo send me fjalën që e përshkruan atë.
-        Parts of a Contract: Pjesët e një Marrëveshje
-        domain: domain
-        example: shembull
-        function name: emri funksionit
-        image: figura
-        range: seri
-        string numer: numri string
-        yearbook-picture: figura-librit të vitit
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -491,9 +421,8 @@ sq:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Zgjidh përgjigjen më të mirë.
         Maze Multiple Choice One: Maze me Zgjedhje Të Shumëfishtë Një
-        Which blocks work?: Cili bllok punon?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
@@ -547,15 +476,12 @@ sq:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Miza është në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë,<br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë, <br/>Shoo. fluturo, shoo, <br/>Kalo te Lou im, i dashur.'
-        1: ': Miza është brenda në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është brenda në dhallë, <br/>Shoo, fluturo, shoo, <br/>Miza është në dhallë, <br/>Shoo, fluturo, shoo, <br/>Kalo te Lou im, i dashuri im.'
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: Lou, lou, kalo te Lou im,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.'
-        2: '? Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.<br/><br/><p> Miza është në dhallë, <br/> Shoo. fluturo, shoo,'
-        3: ': Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Kalo te Lou im, i dashur.<br/><br/><p> Miza është në dhallë, <br/> Shoo. fluturo, shoo,'
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Zgjedhje e Shumëfishtë
-        4: ë? Cila është pjesa më e madhe e kësaj kënge që ta përcaktosh si refren, në mënyrë që refreni të përsëritet ekzaktësisht çdo herë që thërritet?
-        5: ': Cila është pjesa më e madhe e kësaj kënge që ta përcaktosh si refren, në mënyrë që refreni të përsëritet ekzaktësisht çdo herë që thërritet?'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -666,21 +592,6 @@ sq:
         Line 4: Line 4
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
-      Circle to code:
-        (+ (* (- 8 6) 4) 5) : '(+ (* (- 8 6) 4) 5) '
-        (+ 5 (* (- 6 8) 4)): '(+ 5 (* (- 6 8) 4))'
-        (+ 5 (* (- 8 6) 4)): '(+ 5 (* (- 8 6) 4))'
-        (+ 5 (* 4 (- 8 6))): '(+ 5 (* 4 (- 8 6)))'
-        "/script_assets/msm/Unit%202/exercise_1.png": '/script_assets/msm/Unit%202/exercise_1.png'
-        Code from Circle: Kodo nga Rrethi
-        Pick the Racket code that comes from the circle of evaluation!: Zgjidh kodin Raketë që vjen nga rrethi i vlerësimeve!
-      Coordinates Multi 1:
-        Ninjacat Demo Embed.level: Ninjacat Demo Embed.level
-        The unicorn moves across the screen: The unicorn moves across the screen
-        The unicorn moves to the left: The unicorn moves to the left
-        The unicorn's x value increases: "The unicorn's x value increases"
-        The unicorn's y value changes: "The unicorn's y value changes"
-        Video game Coordinates: Video game Coordinates
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
         /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
@@ -843,66 +754,6 @@ sq:
         Driver and Helper: Shoferi dhe Ndihmësi
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Një nga këta djemtë është <b>shoferi</b>. Dhe tjetri është <b>ndihmësi</b>.'
         This time, which boy is the <large>driver</large>?: 'Këtë herë, cili djalë është <large>shoferi</large>?'
-      Math to Code 1:
-        (* (+ 5 6) (/ 8 2)): '(* (+ 5 6) (/ 8 2))'
-        (/ (* (+ 5 6) 8) 2): '(/ (* (+ 5 6) 8) 2)'
-        (/ (* 8 2) (+ 5 6)): '(/ (* 8 2) (+ 5 6))'
-        (/ (+ 5 6) (* 8 2)): '(/ (+ 5 6) (* 8 2))'
-        (5 + 6) * 8 / 2: '(5 + 6) * 8 / 2'
-        0: '? Zgjidh kodin Raketë që pështat shprehjen matematikore të dhënë. Vizato një rreth vlerësimesh për të të ndihmuar ty të gjesh përgjigjen e duhur!'
-        1: ': Zgjidh kodin Raketë që pështat shprehjen matematikore të dhënë. Vizato një rreth vlerësimesh për të të ndihmuar ty të gjesh përgjigjen e duhur!'
-        Racket Code for Math Expressions: Kodi Raketë për Shprehjet Matematikore
-      Math to Code 2:
-        (+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6)): '(+ (+ (* (* (/ 20 2) 3) 7) 2) (+ 4 6))'
-        (+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2): '(+ (+ (+ 4 6) (* (* (/ 2 20) 7) 3) 2)'
-        (+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2): '(+ (+ (+ 4 6) (* (* (/ 20 2) 3) 7)) 2)'
-        (+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2)))))): '(+ 4 (+ 6 (/ 20 (* 2 (* 3 (+ 7 2))))))'
-        4 + 6 + 20 / 2 x 3 x 7 + 2: 4 + 6 + 20 / 2 x 3 x 7 + 2
-        0: '? Zgjidh kodin Raketë që pështat shprehjen matematikore të dhënë. Vizato një rreth vlerësimesh për të të ndihmuar ty të gjesh përgjigjen e duhur!'
-        1: ': Zgjidh kodin Raketë që pështat shprehjen matematikore të dhënë. Vizato një rreth vlerësimesh për të të ndihmuar ty të gjesh përgjigjen e duhur!'
-        Racket Code for Math Expressions: Kodi Raketë për Shprehjet Matematikore
-      Multi Define Funcs 1:
-        3: "3"
-        What is the name of this function?: 'Cili është emri i  këtij funksioni?'
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 2:
-        3: "3"
-        What is the name of the parameter?: Cili është emri i parametrit?
-        g: g
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Define Funcs 3:
-        5: "5"
-        6: "6"
-        What should g(2) return?: Çfarë duhet g(2) të kthej?
-        g(y) = y + 3: g(y) = y + 3
-        "y": true
-      Multi Strings Images 1:
-        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
-        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
-        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images 1.blocks3.start_blocks, 350, 100
-        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
-        Strings and Images Multiple Choice: Stringjet dhe Imazhet me Zgjedhje të Shumëfishtë
-        Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
-      Warmup questions:
-        Coding in Racket: Të kodosh në Raketë
-        Select the best answer to the question.: Zgjidh përgjigjen më të mirë për pyetjen.
-        When converting a circle to code, the correct order is: Kur kthen një rreth në kod, rregulli i duhur është
-        left top right: majtas lart djathtas
-        left, right, top: majtas, djathtas, lart
-        random: zakonshem
-        top, left, right: lart, majtas, djathtas
-      image code from circle:
-        (rectangle (+ 8 2) (- 7 5) "solid" "red"): '(drejtkëndësh (+ 8 2) (- 7 5) "solid" "i kuq")'
-        (rectangle (+ 8 2) (- 7 5) solid red): '(drejtkëndësh (+ 8 2) (- 7 5) solid i kuq)'
-        (rectangle (10) (2) "solid" "red"): '(drejtkëndësh (10) (2) "solid" "i kuq")'
-        (rectangle 10 2 "solid" "red"): '(drejtkëndësh 10 2 "solid" "i kuq")'
-        "/script_assets/msm/Unit%202/exercise_5.png": '/script_assets/msm/Unit%202/exercise_5.png'
-        Code from Circle: Kodo nga Rrethi
-        Pick the Racket code that comes from the circle of evaluation!: Zgjidh kodin Raketë që vjen nga rrethi i vlerësimeve!
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson
@@ -911,11 +762,3 @@ sq:
         Presidents: Presidentët
         This multiple choice is all about the presidents of the United States.: Kjo zgjidhje e shumepaleshe eshte e gjitha rreth presidentit te Shteteve Te Bashkuara.
         Who was the first president of the USA?: Kush ishte presidenti i pare i SHBA?
-      valid contracts multi:
-        Pick the best answer to the question.: Zgjidh përgjigjen më të mirë për pyetjen.
-        Valid Contracts: Marrëveshjet e Vlefshme
-        Which of these is a valid contract for the function circle?: Cila nga këto marrëveshje është e vlefshme për rrethin e funksionit?
-        "circle: 5 solid blue -> circle ": 'rrethi: 5 blu të forta -> rrethi '
-        "circle: number string string -> image": 'rrethi: numri string string -> imazh'
-        "circle: number string string -> shape": 'rrethi: numri string string -> forma'
-        "circle: size style color -> image": 'rrethi: madhësia stili ngjyra -> imazhi'

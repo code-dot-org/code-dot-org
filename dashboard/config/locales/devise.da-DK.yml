@@ -71,24 +71,24 @@
         one: '1 fejl forhindrede denne %{resource} i at blive gemt:'
         other: '%{count} fejl forhindrede denne %{resource} i at blive gemt:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: En invitationse-mail er blevet tilsendt %{email}.
+      invitation_token_invalid: Den benyttede invitationspolet er ugyldig!
+      updated: Din adgangskode er indstillet. Du er nu logget ind.
+      no_invitations_remaining: Ingen invitationer resterer
+      invitation_removed: Din invitation blev fjernet.
       new:
         header: Send invitation
-        submit_button: Send an invitation
+        submit_button: Afsend en invitation
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Indstil din adgangskode
+        submit_button: Indstil min adgangskode
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Invitationsinstruktioner
+        hello: Hej %{email}
+        someone_invited_you: Nogen har inviteret dig til %{url}. Du kan acceptere
+          den via linket nedenfor.
+        accept: Acceptér invitation
+        ignore: Ønsker du ikke at acceptere invitationen, ignorér da enligst denne
+          e-mail. <br/>Din konto vil ikke blive oprettet, før du benytter linket ovenfor,
+          og indstiller din adgangskode.

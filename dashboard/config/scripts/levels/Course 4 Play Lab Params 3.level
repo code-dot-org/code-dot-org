@@ -26,7 +26,16 @@
     "callout_json": "[\r\n  {\"localization_key\":\"edit_function\",\"callout_text\":\"Click here to edit your function.\",\"element_id\":\"[block-id='2']>.blocklyIconGroup\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false",
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "markdown_instructions": "Let's add another parameter to the jump function so that we can use it with other actors. Each actor is represented by a number, starting from one. \r\n\r\n<br/>\r\nEdit the `jump` function so that the definition includes the `actor` parameter. ",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

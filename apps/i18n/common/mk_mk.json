@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "На \"Повтори \" или \" Ако \" блокот треба да има и други блокови во него за  да работат. Бидете сигурни дека внатрешниот блок се вклопува правилно во внатрешноста на  блок.",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "Функцијата блок треба да има и други блокови во  него за да работи.",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "Крај",
   "errorEmptyFunctionBlockModal": "Мора да има блока во дефиниција на вашата функција. Притисни \"применувај\" и извлечи блока во зелениот блок.",
   "errorIncompleteBlockInFunction": "Притисни \"уредувај\" за да сте сигурни дека нема блока што фалат од дефиницијата на вашата функција.",
@@ -179,6 +182,7 @@
   "play": "Пушти",
   "print": "Печати",
   "puzzleTitle": "Загатка {puzzle_number} на {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "повтори",
   "resetProgram": "Од почеток ,Ресетирање",
   "rotateText": "Ротација на Вашиот уред.",
@@ -210,8 +214,5 @@
   "watchVideo": "Погледни го видеото",
   "when": "Кога",
   "whenRun": "Кога трча",
-  "workspaceHeaderShort": "Работна површина: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Работна површина: "
 }

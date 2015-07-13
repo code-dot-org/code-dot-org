@@ -40,6 +40,7 @@ var elementLibrary = require('./designElements/library');
 var clientApi = require('./assetManagement/clientApi');
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
+var DebugArea = require('./DebugArea');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -48,6 +49,14 @@ var TestResults = studioApp.TestResults;
  * Create a namespace for the application.
  */
 var Applab = module.exports;
+
+/**
+ * Controller for debug console and controls on page
+ * TODO: Rename to debugArea once other debugArea references are moved out of
+ *       this file.
+ * @type {DebugArea}
+ */
+var debugAreaController = null;
 
 //Debug console history
 Applab.debugConsoleHistory = {
@@ -415,7 +424,16 @@ Applab.getCode = function () {
 };
 
 Applab.getHtml = function () {
+  // This method is called on autosave. If we're about to autosave, let's update
+  // levelHtml to include our current state.
+  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+    designMode.serializeToLevelHtml();
+  }
   return Applab.levelHtml;
+};
+
+Applab.setLevelHtml = function (html) {
+  Applab.levelHtml = designMode.addScreenIfNecessary(html);
 };
 
 Applab.onTick = function() {
@@ -460,6 +478,15 @@ Applab.initReadonly = function(config) {
   studioApp.initReadonly(config);
 };
 
+function extendHandleClearPuzzle() {
+  var orig = studioApp.handleClearPuzzle.bind(studioApp);
+  studioApp.handleClearPuzzle = function (config) {
+    orig(config);
+    Applab.setLevelHtml(config.level.startHtml || '');
+    studioApp.resetButtonClick();
+  };
+}
+
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
  */
@@ -467,6 +494,7 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+  extendHandleClearPuzzle();
 
   // Pre-populate asset list
   if (window.dashboard && dashboard.project.getCurrentId()) {
@@ -528,7 +556,8 @@ Applab.init = function(config) {
       pinWorkspaceToBottom: true,
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
-      hasDesignMode: Applab.user.isAdmin
+      hasDesignMode: Applab.user.isAdmin,
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
@@ -596,7 +625,7 @@ Applab.init = function(config) {
 
   // Applab.initMinimal();
 
-  Applab.levelHtml = designMode.addScreenIfNecessary(level.levelHtml || "");
+  Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
   studioApp.init(config);
 
@@ -615,6 +644,10 @@ Applab.init = function(config) {
     // Use offsetWidth of viz so we can include any possible border width:
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
+
+  debugAreaController = new DebugArea(
+      document.getElementById('debug-area'),
+      document.getElementById('codeTextbox'));
 
   if (level.editCode) {
     // Initialize the slider.
@@ -657,6 +690,7 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
+
     var clearButton = document.getElementById('clear-console-header');
     if (clearButton) {
       dom.addClickTouchEvent(clearButton, clearDebugOutput);
@@ -686,6 +720,37 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    // Prevent the backspace key from navigating back. Make sure it's still
+    // allowed on other elements.
+    // Based on http://stackoverflow.com/a/2768256/2506748
+    $(document).on('keydown', function (event) {
+      var doPrevent = false;
+      if (event.keyCode !== KeyCodes.BACKSPACE) {
+        return;
+      }
+      var d = event.srcElement || event.target;
+      if ((d.tagName.toUpperCase() === 'INPUT' && (
+          d.type.toUpperCase() === 'TEXT' ||
+          d.type.toUpperCase() === 'PASSWORD' ||
+          d.type.toUpperCase() === 'FILE' ||
+          d.type.toUpperCase() === 'EMAIL' ||
+          d.type.toUpperCase() === 'SEARCH' ||
+          d.type.toUpperCase() === 'NUMBER' ||
+          d.type.toUpperCase() === 'DATE' )) ||
+          d.tagName.toUpperCase() === 'TEXTAREA') {
+        doPrevent = d.readOnly || d.disabled;
+      }
+      else {
+        doPrevent = !d.isContentEditable;
+      }
+
+      if (doPrevent) {
+        event.preventDefault();
+      }
+    });
+
+    designMode.addKeyboardHandlers();
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
@@ -694,6 +759,11 @@ Applab.init = function(config) {
 
     designMode.configureDragAndDrop();
   }
+};
+
+Applab.appendToEditor = function(newCode) {
+  var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
+  studioApp.editor.setValue(code);
 };
 
 Applab.onMouseDownDebugResizeBar = function (event) {
@@ -727,6 +797,10 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
   var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
                                 (window.innerHeight - event.pageY) - offset));
+
+  if (debugAreaController.isShut()) {
+    debugAreaController.snapOpen();
+  }
 
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
@@ -824,6 +898,8 @@ Applab.reset = function(first) {
   if (level.showTurtleBeforeRun) {
     applabTurtle.turtleSetVisibility(true);
   }
+
+  designMode.addKeyboardHandlers();
 
   var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
   $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
@@ -1084,10 +1160,10 @@ Applab.execute = function() {
     }
   }
 
-  // Set focus on divApplab so key events can be handled right from the start
-  // without requiring the user to adjust focus:
+  // Set focus on the default screen so key events can be handled
+  // right from the start without requiring the user to adjust focus:
   var divApplab = document.getElementById('divApplab');
-  divApplab.focus();
+  divApplab.firstChild.focus();
 
   Applab.running = true;
   queueOnTick();
@@ -1178,7 +1254,30 @@ Applab.onDesignModeButton = function() {
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
   utils.fireResizeEvent();
-  Applab.serializeAndSave();
+  if (!Applab.isRunning()) {
+    Applab.serializeAndSave();
+  }
+};
+
+/**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+Applab.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1339,7 +1438,7 @@ function quote(str) {
 Applab.getAssetDropdown = function (typeFilter) {
   var options = assetListStore.list(typeFilter).map(function (asset) {
     return {
-      text: quote(clientApi.basePath(asset.filename)),
+      text: quote(asset.filename),
       display: quote(asset.filename)
     };
   });
@@ -1353,4 +1452,30 @@ Applab.getAssetDropdown = function (typeFilter) {
     click: handleChooseClick
   });
   return options;
+};
+
+/**
+ * Return droplet dropdown options representing a list of ids currently present
+ * in the DOM, optionally limiting the result to a certain HTML element tagName.
+ * @param {string} [tagFilter] Optional HTML element tagName to filter for.
+ * @returns {Array}
+ */
+Applab.getIdDropdown = function (tagFilter) {
+  var elements = $('#divApplab').children().toArray().concat(
+      $('#divApplab').children().children().toArray());
+
+  var filteredIds = [];
+  elements.forEach(function (element) {
+    if (!tagFilter || element.tagName.toUpperCase() === tagFilter.toUpperCase()) {
+      filteredIds.push(element.id);
+    }
+  });
+  filteredIds.sort();
+
+  return filteredIds.map(function(id) {
+    return {
+      text: quote(id),
+      display: quote(id)
+    };
+  });
 };

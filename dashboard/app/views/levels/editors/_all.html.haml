@@ -47,22 +47,27 @@
     updateVideoPreview();
   });
 
+:css
+  .required:after {
+    content: ' *';
+    color: #ff0000;
+  }
 .field.callouteditor
-  %div{id: 'callout_template', style: 'display: none;'}
-    %div{class: 'callout_space'}
+  #callout_template{style: 'display: none;'}
+    .callout_space
       %label Callout
       %table
         %tr
-          %td Element ID
-          %td Localization Key
-          %td Callout text
+          %td.required Element ID
+          %td.required Localization Key
+          %td.required Callout text
         %tr
           %td
-            %input{class: 'element_id', type: 'text', placeholder: '#runButton'}
+            %input.element_id{type: 'text', placeholder: '#runButton'}
           %td
-            %input{class: 'localization_key', type: 'text', placeholder: 'level_name_callout1'}
+            %input.localization_key{type: 'text', placeholder: 'level_name_callout1'}
           %td{colspan: 4}
-            %input{class: 'callout_text', type: 'text', placeholder: 'Text of callout', style: 'width: 100%'}
+            %input.callout_text{type: 'text', placeholder: 'Text of callout', style: 'width: 100%'}
         %tr
           %td Qtip on callout
           %td Qtip points to Element
@@ -72,7 +77,7 @@
           %td Classes
         %tr
           %td
-            %select{class: 'my'}
+            %select.my
               %option{value: 'top left'} Top left
               %option{value: 'top center'} Top center
               %option{value: 'top right'} Top right
@@ -86,7 +91,7 @@
               %option{value: 'left center'} Left center
               %option{value: 'left top'} Left top
           %td
-            %select{class: 'at'}
+            %select.at
               %option{value: 'top left'} Top left
               %option{value: 'top center'} Top center
               %option{value: 'top right'} Top right
@@ -100,17 +105,17 @@
               %option{value: 'left center'} Left center
               %option{value: 'left top'} Left top
           %td
-            %input{class: 'on', type: 'text', placeholder: 'function_editor_opened'}
+            %input.on{type: 'text', placeholder: 'function_editor_opened'}
           %td
-            %input{class: 'x' , type: 'number', style: 'width: 80px;'}
+            %input.x{type: 'number', style: 'width: 80px;'}
           %td
-            %input{class: 'y', type: 'number', style: 'width: 80px;'}
+            %input.y{type: 'number', style: 'width: 80px;'}
           %td
-            %input{class: 'classes', type: 'text', placeholder: 'no-tip', style: 'width: 60px;'}
-      %button{class: 'remove_callout', type: 'button'} Remove callout
+            %input.classes{type: 'text', placeholder: 'no-tip', style: 'width: 60px;'}
+      %button.remove_callout{type: 'button'} Remove callout
       %hr
-  %div{id: 'all_callouts_editor'}
-  %button{id: 'add_callout', type: 'button'} Add a callout
+  #all_callouts_editor
+  %button#add_callout{type: 'button'} Add a callout
 .field
   = f.label :callout_json
   %div{style: '-webkit-user-select: text'}

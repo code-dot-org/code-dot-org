@@ -14,6 +14,8 @@ You have canceled your registration for the Code.org K-5 workshop with <%= affil
 
 We’re sorry to hear you can no longer attend. You can sign up for a different workshop [here](http://<%=CDO.canonical_hostname('code.org')%>/professional-development-workshops).
 
+Or check out our free, self-paced [online workshop](https://code.org/educate/professional-development-online) to get started.
+
 If this is a mistake and you did not mean to cancel your workshop registration, contact your facilitator at <%= affiliate[:name] %> - <%= affiliate[:email] %>.
 
 ![](<%= tracking_pixel %>)

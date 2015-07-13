@@ -431,7 +431,7 @@
     heading_legacy: <h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
-    print_certificate: Print Certificate
+    print_certificate: Cetak Sertifikat
   gender:
     male: Laki-laki
     female: Wanita
@@ -530,13 +530,13 @@
       body: Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba
         Tutorial Flappy code kami!
     20-hour:
-      title: Accelerated Course
+      title: Kursus akselerasi
       body: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan
         konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas
         untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk
         semua usia.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: mendapatkan ilmu komputer dasar dalam versi yang dipercepat dari
+        kursus 2-4.
     hoc2014:
       try_new_tutorial: Cobalah pedoman Hour of Code baru kami dalam versi beta
       try_frozen: Seniman bersama Anna dan Elsa, dari Frozen

@@ -137,8 +137,11 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "ប្លុក \"ធ្វើ​ឡើង​វិញ\" ឬ \"ប្រសិន​បើ\" ត្រូវ​ការ​ប្លុក​ដទៃ​ទៀត​នៅ​ក្នុង​វា ដើម្បី​ឲ្យ​អាច​ដើរ​បាន។ អ្នក​ត្រូវ​ប្រាកដ​ថា​ប្លុក​ខាង​ក្នុង​នោះ​ដាក់​ទៅ​សម​ទៅ​នឹង​ប្លុក​ផ្ទុក​ទាំង​នោះ​ដែរ។",
+  "emptyBlockInFunction": "The function {name} has an unfilled input.",
+  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyFunctionBlocksErrorMsg": "ប្លុក \"អនុគមន៍\" ត្រូវ​ការ​ប្លុក​ដទៃ​ទៀត​នៅ​ក្នុង​វា ទើប​វា​អាច​ធ្វើ​ការ​បាន។",
   "emptyFunctionalBlock": "You have a block with an unfilled input.",
+  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
   "end": "end",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
   "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
@@ -179,6 +182,7 @@
   "play": "play",
   "print": "បោះពុម្ព",
   "puzzleTitle": "ល្បែង​ប្រាជ្ញា​ទី {puzzle_number} នៃ {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ធ្វើ​ឡើង​វិញ",
   "resetProgram": "កំណត់​ឡើង​វិញ",
   "rotateText": "បង្វិល​ឧបករណ៍​របស់​អ្នក។",
@@ -210,8 +214,5 @@
   "watchVideo": "មើល​វីដេអូ",
   "when": "នៅ​ពេល",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
-  "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block."
+  "workspaceHeaderShort": "Workspace: "
 }

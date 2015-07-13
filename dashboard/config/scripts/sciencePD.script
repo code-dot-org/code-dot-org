@@ -1,5 +1,6 @@
 title 'Computer Science in Science PD'
 description "In Partnership with Project GUTS"
+description_short "In Partnership with Project GUTS"
 login_required 'true'
 pd 'true'
 
