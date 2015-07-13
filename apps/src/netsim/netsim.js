@@ -204,6 +204,12 @@ NetSim.prototype.init = function(config) {
   this.level = netsimUtils.scrubLevelConfiguration_(config.level);
 
   /**
+   * Current operating environment, used to drive certain configuration.
+   * @type {string} one of "development"|"staging"|"test"|"production"
+   */
+  this.environment = config.rack_env;
+
+  /**
    * Configuration for reporting level completion
    * @type {Object}
    */
