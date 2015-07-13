@@ -4,6 +4,8 @@ class Script < ActiveRecord::Base
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
   has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
+  has_many :users, through: :user_scripts
+  has_many :user_scripts
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
