@@ -1,14 +1,18 @@
 #!/usr/bin/env ruby
 
+# This script runs queries used to generate per-level completion report for PD scripts.
+# It is run daily by Cron, with the results cached in the database-backed Properties object.
+# The final report is generated in ReportsController#pd_progress.
+
 require_relative '../../dashboard/config/environment'
 require 'cdo/properties'
 include ApplicationHelper
 include UsersHelper
 
-pd_scripts = Script.all.select { |script| !!script.pd }
+pd_scripts = Script.all.select(&:pd?)
 pd_scripts.each do |script|
   # Get all users with any activity in the script
-  users = User.joins('left join user_scripts on user_scripts.user_id = users.id').where(user_scripts: {script_id: script})
+  users = script.users
   headers = nil
   data = users.map do |user|
     row = {}
@@ -19,20 +23,21 @@ pd_scripts.each do |script|
                    :'Email' => user.email,
                    :'District' => user.district.try(:name) || 'None'
                })
-    user_progress = summarize_user_progress(script, user)
+    level_progress = summarize_user_progress(script, user)[:levels]
     percent = percent_complete(script, user)
     script.stages.each do |stage|
-      levels = Hash[stage.script_levels.map(&:level).map do |level|
-                      key = level.id.to_s
-                      [key, (progress = user_progress[:levels][level.id]) && progress[:status] == 'perfect' ? '1' : '0']
-                    end]
-      row.merge!(levels)
+      level_hash = {}
+      stage.script_levels.map(&:level).each do |level|
+        progress = level_progress[level.id]
+        level_hash[level.id.to_s] = progress.try(:[], :status) == 'perfect' ? '1' : '0'
+      end
+      row.merge!(level_hash)
       row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
     end
     row.merge!({:'Script Percent Complete' => percent_complete_total(script, user).to_s})
     headers ||= row.keys
     row.values
   end
-  locals_options = {headers: headers, data: data, script: {name: script.name, id: script.id}}
+  locals_options = {headers: headers, data: data, script: {name: script.name, id: script.id}, time: DateTime.now}
   Properties.set("pd_progress_#{script.id}", locals_options)
 end
