@@ -23,6 +23,8 @@ nav: resources_nav
 
 [![image](/images/fit-250/one-pager.png)](/resources/hoc-one-pager.pdf)
 
+<a href="<%= resolve_file('/resources/hoc-one-pager.pdf') %>"><img src="/images/fit-250/one-pager.png"></a>
+
 ## Give this handout to teachers and schools
 [![image](/images/fit-250/schools-handout.png)](/files/schools-handout.pdf)
 
