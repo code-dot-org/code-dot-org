@@ -23,16 +23,7 @@ class LevelsController < ApplicationController
   # GET /levels/1
   # GET /levels/1.json
   def show
-    sharing = params[:share] == true
-    # TODO - callouts?
-    # TODO (brent) - do i still need changes here, or only the changes in the
-    # projects controller
-    level_view_options(
-        hide_source: sharing,
-        share: sharing
-    )
     view_options(
-        readonly_workspace: sharing,
         full_width: true,
         no_footer: !@game.has_footer?
     )

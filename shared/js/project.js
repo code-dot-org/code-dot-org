@@ -310,6 +310,9 @@ module.exports = {
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
             current = data;
+            if (current.isOwner && pathInfo.action === 'view') {
+              isEditing = true;
+            }
             deferred.resolve();
           }
         });
@@ -350,18 +353,6 @@ module.exports = {
 function executeCallback(callback, data) {
   if (typeof callback === 'function') {
     callback(data);
-  }
-}
-
-function determineNoPadding() {
-  switch (appOptions.app) {
-    case 'applab':
-    case 'flappy':
-    case 'studio':
-    case 'bounce':
-      return appOptions.isMobile && appOptions.hideSource;
-    default:
-      return false;
   }
 }
 

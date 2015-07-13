@@ -33,7 +33,6 @@ class ProjectsController < ApplicationController
 
   def show
     sharing = params[:share] == true
-    # TODO - callouts?
     level_view_options(
         hide_source: sharing,
         share: sharing
@@ -41,7 +40,9 @@ class ProjectsController < ApplicationController
     view_options(
         readonly_workspace: sharing || params[:readonly],
         full_width: true,
-        no_footer: !@game.has_footer?
+        no_footer: !@game.has_footer?,
+        callouts: [],
+        no_padding: browser.mobile? && @game.share_mobile_fullscreen?
     )
     render 'levels/show'
   end
