@@ -179,6 +179,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {Object} config
  * @param {Object} config.skin
  * @param {netsimLevelConfiguration} config.level
+ * @param {string} config.rackEnv - development/production/etc.
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  * @param {string} config.html - rendered markup to be created inside this method
@@ -207,7 +208,7 @@ NetSim.prototype.init = function(config) {
    * Current operating environment, used to drive certain configuration.
    * @type {string} one of "development"|"staging"|"test"|"production"
    */
-  this.environment = config.rack_env;
+  this.environment = config.rackEnv;
 
   /**
    * Configuration for reporting level completion
