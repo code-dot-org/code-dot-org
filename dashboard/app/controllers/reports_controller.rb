@@ -274,10 +274,14 @@ SQL
 
   def pd_progress
     authorize! :read, :reports
-    script = Script.find_by(name: params[:script] || 'K5PD').cached
+    script = Script.find_by!(name: params[:script] || 'K5PD').cached
     require 'cdo/properties'
     locals_options = Properties.get("pd_progress_#{script.id}")
-    render locals: locals_options
+    if locals_options
+      render locals: locals_options
+    else
+      render layout: 'application', text: "PD progress data not found for #{script.name}", status: 404
+    end
   end
 
   private
