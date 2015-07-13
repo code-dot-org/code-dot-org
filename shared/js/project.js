@@ -11,8 +11,26 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange',
-  hashchange: 'hashchange'
+  workspaceChange: 'workspaceChange'
+};
+
+// TODO - if on a /view page and we're the owner, pushState to /edit and muck
+// with share/hideSource
+
+/**
+ * Helper for when we split our pathname by /. channel_id and action may end up
+ * being undefined.
+ * Example paths:
+ * /projects/applab
+ * /projects/playlab/1U53pYpR8szDgtrGIG5lIg
+ * /projects/artist/VyVO-bQaGQ-Cyb7DbpabNQ/edit
+ */
+var PathPart = {
+  START: 0,
+  PROJECTS: 1,
+  APP: 2,
+  CHANNEL_ID: 3,
+  ACTION: 4
 };
 
 /**
@@ -29,6 +47,8 @@ var events = {
  */
 var current;
 var isEditing = false;
+
+// TODO - make sure i address going to /edit as a non-owner or /code as an owner
 
 module.exports = {
   /**
@@ -53,6 +73,13 @@ module.exports = {
     return current.name;
   },
 
+  getCurrentTimestamp: function () {
+    if (!current) {
+      return;
+    }
+    return current.updatedAt;
+  },
+
   /**
    * @returns {boolean} true if we're editing
    */
@@ -61,17 +88,11 @@ module.exports = {
   },
 
   init: function () {
+    if (redirectFromLegacyUrl() || redirectEditView()) {
+      return;
+    }
+
     if (appOptions.level.isProjectLevel || current) {
-
-      $(window).on(events.hashchange, function () {
-        var hashData = parseHash();
-        if ((current &&
-            hashData.channelId !== current.id) ||
-            hashData.isEditingProject !== isEditing) {
-          location.reload();
-        }
-      }.bind(this));
-
       if (current && current.levelHtml) {
         appOptions.level.levelHtml = current.levelHtml;
       }
@@ -102,20 +123,20 @@ module.exports = {
         window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
         if (!current.hidden) {
-          if (current.isOwner || location.hash === '') {
+          if (current.isOwner || !parsePath().channelId) {
             dashboard.header.showProjectHeader();
           } else {
             // Viewing someone else's project - set share mode
             dashboard.header.showMinimalProjectHeader();
             // URL with /edit - set hideSource to false
-            setAppOptionsForShareMode(false);
+            // setAppOptionsForShareMode(false);
           }
         }
       } else if (current) {
         appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
-        setAppOptionsForShareMode(true);
+        // setAppOptionsForShareMode(true);
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       current = {
@@ -127,27 +148,17 @@ module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
   },
-  updateTimestamp: function () {
-    if (current.updatedAt) {
-      // TODO i18n
-      $('.project_updated_at').empty().append("Saved ")  // TODO i18n
-          .append($('<span class="timestamp">').attr('title', current.updatedAt)).show();
-      $('.project_updated_at span.timestamp').timeago();
-    } else {
-      $('.project_updated_at').text("Not saved"); // TODO i18n
-    }
-  },
   appToProjectUrl: function () {
     switch (appOptions.app) {
       case 'applab':
-        return '/p/applab';
+        return '/projects/applab';
       case 'turtle':
-        return '/p/artist';
+        return '/projects/artist';
       case 'studio':
         if (appOptions.level.useContractEditor) {
-          return '/p/algebra_game';
+          return '/projects/algebra_game';
         }
-        return '/p/playlab';
+        return '/projects/playlab';
     }
   },
   /**
@@ -190,9 +201,23 @@ module.exports = {
 
     current = data;
     if (isNewChannel) {
-      location.href = current.level + '#' + current.id + '/edit';
+      // We have a new channel, meaning either we had no channel before, or
+      // we've changed channels.
+      if (isEditing) {
+        // TODO - i don think we should hit this now
+        if (location.hash || !window.history.pushState) {
+          // We're using a hash route or don't support replace state. Use our hash
+          // based route to ensure we don't have a page load.
+          location.href = current.level + '#' + current.id + '/edit';
+        } else {
+          window.history.pushState(null, document.title, this.getPathName('edit'));
+        }
+      } else {
+        // We're on a share page, and got a new channel id. Always do a redirect
+        location.href = this.getPathName('edit');
+      }
     }
-    this.updateTimestamp();
+    dashboard.header.updateTimestamp();
   },
   /**
    * Autosave the code if things have changed
@@ -269,9 +294,13 @@ module.exports = {
   load: function () {
     var deferred;
     if (appOptions.level.isProjectLevel) {
-      var hashData = parseHash();
-      if (hashData.channelId) {
-        if (hashData.isEditingProject) {
+      if (redirectFromLegacyUrl() || redirectEditView()) {
+        return;
+      }
+      var pathInfo = parsePath();
+
+      if (pathInfo.channelId) {
+        if (pathInfo.action === 'edit') {
           isEditing = true;
         } else {
           $('#betainfo').hide();
@@ -279,10 +308,11 @@ module.exports = {
 
         // Load the project ID, if one exists
         deferred = new $.Deferred();
-        channels.fetch(hashData.channelId, function (err, data) {
+        channels.fetch(pathInfo.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
-            location.href = location.pathname;
+            location.href = location.pathname.split('/')
+              .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
             current = data;
             deferred.resolve();
@@ -307,6 +337,14 @@ module.exports = {
       });
       return deferred;
     }
+  },
+
+  getPathName: function (action) {
+    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
+    if (action) {
+      pathName += '/' + action;
+    }
+    return pathName;
   }
 };
 
@@ -320,34 +358,15 @@ function executeCallback(callback, data) {
   }
 }
 
-function parseHash() {
-  // Example paths:
-  // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
-  // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
-  var isEditingProject = false;
-  var channelId = location.hash.slice(1);
-  if (channelId) {
-    // TODO: Use a router.
-    var params = channelId.split("/");
-    if (params.length > 1 && params[1] == "edit") {
-      channelId = params[0];
-      isEditingProject = true;
-    }
-  }
-  return {
-    channelId: channelId,
-    isEditingProject: isEditingProject
-  };
-}
-
-function setAppOptionsForShareMode(hideSource) {
-  appOptions.readonlyWorkspace = true;
-  appOptions.callouts = [];
-  appOptions.share = true;
-  appOptions.hideSource = hideSource;
-  // Important to call determineNoPadding() after setting hideSource value
-  appOptions.noPadding = determineNoPadding();
-}
+// TODO - figure out what bits of this i need
+// function setAppOptionsForShareMode(hideSource) {
+//   appOptions.readonlyWorkspace = true;
+//   appOptions.callouts = [];
+//   appOptions.share = true;
+//   appOptions.hideSource = hideSource;
+//   // Important to call determineNoPadding() after setting hideSource value
+//   appOptions.noPadding = determineNoPadding();
+// }
 
 function determineNoPadding() {
   switch (appOptions.app) {
@@ -378,4 +397,89 @@ function getEditorSource() {
 
 function getLevelHtml() {
   return window.Applab && Applab.getHtml();
+}
+
+// TODO - make sure comment is up to date
+/**
+ * Does a redirect to a non-hash based version of the URL. Does this seamlessly
+ * using replaceState on browsers that support this, and does an actual redirect
+ * on those that don't (IE 9).
+ * @returns {boolean} True if we did an actual redirect
+ */
+function redirectFromLegacyUrl() {
+  var newUrl = location.href.replace('#', '/').replace(/\/p\//, '/projects/');
+  if (newUrl === location.href) {
+    // Nothing changed
+    return false;
+  }
+
+  var pathInfo = parsePath();
+  var attemptPushState = true;
+  // We require sign in for /p/applab and /p/applab#channel_id/edit, so we'll
+  // want to actually do the redirect
+  if (pathInfo.appName === 'applab') {
+    attemptPushState = pathInfo.channelId && pathInfo.action !== 'edit';
+  }
+
+  return redirectToPath(newUrl, attemptPushState);
+}
+
+/**
+ * If the current user is the owner, we want to redirect from the readonly
+ * /view route to /edit
+ */
+function redirectEditView() {
+  var parseInfo = parsePath();
+  if (!parseInfo.action) {
+    return;
+  }
+  var newUrl;
+  if (parseInfo.action === 'view' && current && current.isOwner) {
+    // Redirect to /edit without a readonly workspace
+    newUrl = location.href.replace(/\/view$/, '/edit');
+    appOptions.readonlyWorkspace = false;
+  } else if (parseInfo.action === 'edit' && (!current || !current.isOwner)) {
+    // Redirect to /view with a readonly workspace
+    newUrl = location.href.replace(/\/edit$/, '/view');
+    appOptions.readonlyWorkspace = true;
+  }
+  if (newUrl && newUrl !== location.href) {
+    return redirectToPath(newUrl, true);
+  }
+  return false;
+}
+
+/**
+ * Does a redirect to the given path. If attemptPushState is true, it will
+ * use pushState to just change the browser URL in browsers that support this.
+ * @returns {boolean} True if we did a redirect (vs. pushState)
+ */
+function redirectToPath(path, attemptPushState) {
+  if (attemptPushState && window.history.pushState) {
+    // TODO - right now i include state just so that our UI tests can detect a
+    // dashboard vs. JS redirect. is there a better way?
+    window.history.pushState({modified: true}, document.title, path);
+    return false;
+  } else {
+    location.href = path;
+    return true;
+  }
+}
+
+/**
+ * Extracts the channelId/action from the pathname, accounting for the fact
+ * that we may have hash based route or not
+ */
+function parsePath() {
+  var pathname = location.pathname;
+  // We have a hash based route. Replace the hash with a slash, and append to
+  // our existing path
+  if (location.hash) {
+    pathname += location.hash.replace('#', '/');
+  }
+  return {
+    appName: pathname.split('/')[PathPart.APP],
+    channelId: pathname.split('/')[PathPart.CHANNEL_ID],
+    action: pathname.split('/')[PathPart.ACTION]
+  };
 }
