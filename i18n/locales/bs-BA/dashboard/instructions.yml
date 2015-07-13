@@ -353,6 +353,9 @@ bs:
       4-5 While Loops 8_instruction: ' Vidim tamo jako duboku rupu i jako veliku hrpu zemlje. Koliko zahvata lopate mi je potrebno da bi se zemlja poravnala? Savjet: Koristi "dok" petlju za oboje.'
       4-5 While Loops Assessment 1_instruction: Sada vidim puno rupa i hrpa. Pomozi mi da ih popunim i uklonim sve dok se zemlja ne poravna.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: 'Dovrši kod za crtanje ovih trokutova. Prvi dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
       Artist - Nested Loops 10_instruction: Nacrtaj zadnji red zvijezda na ovoj zastavi tako što ćeš staviti u petlju obezbijeđene blokove. Zvijezde su razmaknute za 50 piksela, ali zapamti da su same zvijezde 30 piksela široke.
       Artist - Nested Loops 11_instruction: Možeš li nacrtati ovih 10 kvadrata ovog trotoara koristeći ugniježdenu petlju? Svaki kvadrat ima 30 piksela.
@@ -627,6 +630,12 @@ bs:
       Course 4 2_instruction: Pčela želi nektar ovog trenutka. Sjeti se, nisu svi objekti cvijeće, tako da moraš prvo provjeriti da li je objekat cvijet i tek onda pokupiti nektar.
       Course 4 Artist 1_instruction: 'Pomozi mi da završim crtati moju kutiju. (Svaka linija je duga 300 piksela) '
       Course 4 Artist 10_instruction: 'Vrijeme je za slobodno igranje! Zabavi se i nacrtaj šta god želiš. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Možeš li ponavljati ovaj kod u petlji da bi nacrtao/a posivjeli kvadrat?
       Course 4 Artist 3_instruction: 'Ok, pokušaj shvatiti šta se desi ako pokreneš ovaj kod (ili klikni na "Pokreni" da probaš). Onda ponovi dovoljno mnogo puta da bi se crtež dovršio.'
       Course 4 Artist 4_instruction: Koliko stepeni ima u krugu? Popuni blok ponavljanja sa tim brojem da bi kreirao/la krug boja.
@@ -683,7 +692,7 @@ bs:
       Course 4 Artist Functions 7_instruction: Možeš li nacrtati liniju načinjenu od kvadrata korištenjem Kvadrat funkcije? Svaki kvadrat ima dužinu stranica of 40 piksela.
       Course 4 Artist Functions 8_instruction: 'Jesi se već navikao/la na korištenje funkcijskih blokova? Hajde da promijenimo ovaj kvadrat tako da je veličine 200 piksela. Savjet: klikni na "uredi" da bi promijenio/la veličinu urednika funkcije "nacrtaj kvadrat". Sjeti se da klikneš na "spremi i zatvori" da bi izašao/la i urednika ove funkcije. '
       Course 4 Artist Functions 9_instruction: Dali smo ti većinu koda za kreiranje funkcije. Međutim, izgleda dan ešto nedostaje. Možeš li kompletirati ovaj funkcijski blok?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Hajde da uredimo funkciju koja crta kvadrat sa stranicama od 50 piksela
       Course 4 Artist Params 10_instruction: 'Možeš zvati funkcije unutar drugih funkcija! Koristeći tvoju "oblik" funkciju kao osnovu, kreiraj 3 kuće, svaka za 20 piksela veća nego prethodna, počevši od veličine od 50 piksela.  Korištenje brojač petlje može biti od pomoći. '
       Course 4 Artist Params 11_instruction: 'A šta misliš o funkciji naziva "papirna vjetrenjača" koja uzima tri parametra - "stranice", "dužina" i "ponavljaj". Možeš izračunati za koliko okrenuti nakon svakog oblika koristeći istu matematiku koju si koristio/la da izračunaš okret za oblike "stranice". Možeš li napraviti ovu sliku? Evo savjet: svaki oblik je dužine od 100 piksela.'
@@ -716,7 +725,6 @@ bs:
       Course 4 Artist Vars 7_instruction: 'Možeš li promijeniti varijablu "stranice" da bi se nacrtao šestouganik?'
       Course 4 Artist Vars 8_instruction: 'Vrijeme za slobodno igranje! Eksperimentiši sa brojem stranica koje oblik ima. Možeš li promijeniti algoritam tako da ukupna veličina oblika ostaje nepromijenjena, bez obzira na koliko stranica oblik ima? Savjet: Možda ćeš morati koristiti matematičke blokove (360 podijeljeno sa "stranice" na dva mjesta ovog puta) '
       Course 4 Artist Vars 9_instruction: 'Promijeni ovaj algoritam tako da on koristi varijablu "stranice" umjesto fiksnog broja pri crtanju trokuta. Zamijeni broj 3 sa "stranice" varijablom, i koristi "postavi stranice na" blok.'
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Pčela ne može razaznati da li je ovo cvijet ili saće meda. Prvo provjeri da li je ovo cvijet ili saće meda, a zatim pokupi nektar samo ako je u pitanju cvijet. '
       Course 4 Bee 2_instruction: Provjeri svaki objekat da vidiš je li cvijet. Ako jeste, pokupi nektar ... inače, samo ga ignoriši!
       Course 4 Bee 3_instruction: Nepoznati objekat je ili cvijet ili saće meda. Upotrijebi ako/inače blok za sakupljanje nektra u pitanju cvijeta. Inače napravi med (jer je onda u pitanju saće meda).
@@ -949,6 +957,7 @@ bs:
       Infinity_touch_faster_instruction: Dodirni još više pahuljica!
       Infinity_touch_four_instruction: Pokreni Annu prema gore, dole lijevo, i onda desno da bi dotakla svaku od četiri pahuljice.
       Infinity_touch_score_instruction: 'Učini da Anna osvoji bod svaki put kada dotakne pahuljicu snijega. Onda klikni na "Pokreni" i upravi Annu da dodatkne svaku od pahuljica samo jednom.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Nacrtaj kratku liniju gore i jednu dugačku liniju desno!
       K-1 artist 1 level 10_instruction: Nacrtaj isprekidanu liniju koristeći blokove za skakanje i za crtanje
       K-1 artist 1 level 9_instruction: Nacrtaj ovo koristeći tri linije
@@ -1750,7 +1759,10 @@ bs:
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
-      U3L2_Turtle3by3Grid_instruction: foo
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

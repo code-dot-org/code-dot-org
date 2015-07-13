@@ -182,6 +182,7 @@
   "play": "zagraj",
   "print": "Drukuj",
   "puzzleTitle": "Łamigłówka {puzzle_number} z {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "powtarzaj",
   "resetProgram": "Zresetuj",
   "rotateText": "Obróć swoje urządzenie.",
@@ -213,6 +214,5 @@
   "watchVideo": "Obejrzyj wideo",
   "when": "kiedy",
   "whenRun": "po uruchomieniu",
-  "workspaceHeaderShort": "Obszar roboczy: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Obszar roboczy: "
 }

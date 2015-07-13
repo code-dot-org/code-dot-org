@@ -738,6 +738,9 @@
       4-5 While Loops Assessment 1_instruction: Jest tutaj wiele otworów i stert.  Pomóż
         mi wypełnić otwory i usunąć stery, by wyrównać teren.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1188,6 +1191,16 @@
         (Każda linia ma długość 300 pikseli) '
       Course 4 Artist 10_instruction: 'To czas na zabawę! Baw się rysując cokolwiek
         chcesz. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Czy potrafisz powtórzyć ten kod, aby pomalować
         na szaro obszar poza kwadratem?
       Course 4 Artist 3_instruction: OK, zorientuj się, co się dzieje, jeśli uruchomisz
@@ -1328,9 +1341,10 @@
         funkcję. Jednak wydaje się, że czegoś brakuje. Czy potrafisz zakończyć tworzenie
         tego bloku funkcji?
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Napisz funkcję, która rysuje kwadrat o
         boku 50 pikseli
       Course 4 Artist Params 10_instruction: 'Możesz wywoływać funkcje z wnętrza innych
@@ -1428,7 +1442,6 @@
       Course 4 Artist Vars 9_instruction: Zmodyfikuj ten algorytm, by rysując trójkąt
         używał zmiennej "boki" zamiast ustalonej liczby. Zastąp liczbę 3 zmienną "boki"
         i użyj bloku "ustal boki na".
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Pszczółka nie może stwierdzić, czy to jest kwiat,
         czy plaster miodu. Sprawdź najpierw, czy to jest kwiat czy plaster miodu,
         a następnie zbierz nektar, gdy jest to kwiat. '
@@ -1986,6 +1999,7 @@
       Infinity_touch_score_instruction: Dodaj punkt do wyniku Anny, gdy dotyka płatka
         śniegu.  Następnie kliknij "Uruchom" i pokieruj nią, aby dotknęła każdy płatek
         śniegu raz.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Narysuj krótką linię do góry a długą
         w prawo!
       K-1 artist 1 level 10_instruction: Narysuj przerywaną linię używając obu bloków
@@ -3093,11 +3107,9 @@
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

@@ -748,6 +748,9 @@
       4-5 While Loops Assessment 1_instruction: Er zijn veel gaten en hopen. Help
         me met vullen en verwijderen om de grond gelijk te krijgen.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1198,6 +1201,16 @@
         is 300 pixels lang) '
       Course 4 Artist 10_instruction: 'Vrije speelruimte! Veel plezier, je kan tekenen
         wat je wilt. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Kan je met een lus rond deze code het grijze
         vierkant tekenen?
       Course 4 Artist 3_instruction: Ok. probeer te bedenken wat er gebeurd als je
@@ -1340,9 +1353,10 @@
         Helaas mist er iets....
         Kun jij de functieblok afmaken?
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Laten we een vierkant tekenen
         die 50 pixels breed is
@@ -1445,7 +1459,6 @@
         "zijden" gebruikt in plaats van een vaste waarde om een driehoek te tekenen.
         Vervang de waarde 3 met de variabele "zijden", en gebruik het blok "zet zijden
         op".
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: De bij kan niet zeggen of dit een bloem is of een
         honingraat. Controleer eerst of het een bloem of een honingraat is, en verzamel
         daarna pas nectar als het een bloem is.
@@ -2025,6 +2038,7 @@
       Infinity_touch_score_instruction: Zorg dat Anna een punt scoort wanneer ze een
         sneeuwvlok aanraakt. Klik vervolgens op 'uitvoeren' en bestuur haar om iedere
         sneeuwvlok één keer aan te raken.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Teken een korte lijn omhoog en een lange
         naar rechts!
       K-1 artist 1 level 10_instruction: Teken de onderbroken lijn met behulp van
@@ -3131,11 +3145,9 @@
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

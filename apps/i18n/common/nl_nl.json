@@ -182,6 +182,7 @@
   "play": "afspelen",
   "print": "Afdrukken",
   "puzzleTitle": "Puzzel {puzzle_number} van {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "herhaal",
   "resetProgram": "Herstellen",
   "rotateText": "Draai je apparaat.",
@@ -213,6 +214,5 @@
   "watchVideo": "Bekijk de video",
   "when": "wanneer",
   "whenRun": "als gestart",
-  "workspaceHeaderShort": "Werkplaats: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Werkplaats: "
 }

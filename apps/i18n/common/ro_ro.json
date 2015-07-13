@@ -182,6 +182,7 @@
   "play": "joacă",
   "print": "Tipărire",
   "puzzleTitle": "Puzzle {puzzle_number} din {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "repetă",
   "resetProgram": "Resetează",
   "rotateText": "Rotește dispozitivul tău.",
@@ -213,6 +214,5 @@
   "watchVideo": "Urmărește clipul video",
   "when": "când",
   "whenRun": "când rulezi",
-  "workspaceHeaderShort": "Spaţiu de lucru: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Spaţiu de lucru: "
 }

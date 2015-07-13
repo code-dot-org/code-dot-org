@@ -182,6 +182,7 @@
   "play": "play",
   "print": "Print",
   "puzzleTitle": "Puzzle {puzzle_number} of {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "পুনরাই",
   "resetProgram": "পুনরায় সেট করুন",
   "rotateText": "আপনার ডিভাইস ঘুরান।",
@@ -213,6 +214,5 @@
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Workspace: "
 }

@@ -365,6 +365,9 @@ uk:
       4-5 While Loops 8_instruction: ' Існує дійсно глибокі діри і дійсно велику купу бруду.  Як багато хто shovelfuls бруду необхідно використовувати з зробити землю плоскою?  Підказка: Використання на той час петля для обох сторін.'
       4-5 While Loops Assessment 1_instruction: 'Є багато дірок і паль.  Допоможи мені заповнити і видалити їх, щоб зробити землю плоскою.'
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -788,6 +791,12 @@ uk:
       Course 4 2_instruction: "Бджола тільки хоче нектар прямо зараз. Пам'ятайте, що не всі об'єкти квіти, тому перевірити збирати нектар тільки на квіти."
       Course 4 Artist 1_instruction: 'Допоможи мені домалювати коробку. (Довжина кожної лінії - 300 пікселів) '
       Course 4 Artist 10_instruction: 'Час гри без правил! Отримуй задоволення і намалюй все що ти хотів. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Ви можете петлі цей код, щоб накреслити квадрат сірим?
       Course 4 Artist 3_instruction: |-
         Гаразд, спробувати з'ясувати, що відбувається, якщо ви запустити цей код (або натисніть "Виконати", щоб спробувати його). Повторіть це достатньо часу для завершення креслення.
@@ -840,7 +849,7 @@ uk:
       Course 4 Artist Functions 7_instruction: Ви можете намалювати лінію квадратів за допомогою квадратного функції? Кожен площі складає 40 пікселів у довжину.
       Course 4 Artist Functions 8_instruction: 'Ви отримуєте повісити як використовувати функцію блоки? Давайте змінимо цю площу, так що це 200 pixels у величині. Підказка: натисніть "Редагувати", щоб змінити розмір "намалювати квадрат" функції редактора. Не забудьте натиснути на "Зберегти й закрити" вийти з функції редактора. '
       Course 4 Artist Functions 9_instruction: Ми дали більшу частину коду, щоб створити функцію. Проте видається чогось не вистачає. Ви можете зробити цю функцію блокування повний?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Безкоштовно грати натхнення: Ви тепер довідалися, все, що вам потрібно знати, щоб зробити лекало як це!  Якщо ця картина надихає вас, спробуйте зробити щось подібне.  В іншому випадку, створити те, що всі ваші власні. \r \r хочете знати, як наші натхнення модель була зроблена? Перевірити його тут: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Давайте редагувати функція, яка приваблює квадрат зі стороною 50 пікселів
       Course 4 Artist Params 10_instruction: 'Ви можете зателефонувати функцій від всередині інших функцій! За допомогою "форму" функції як базу, створити 3 будинок фігури кожен 20 пікселів більший ніж останні починаючи з 50 пікселів у довжину. За допомогою лічильник циклу стануть у нагоді. '
       Course 4 Artist Params 11_instruction: |
@@ -878,7 +887,6 @@ uk:
       Course 4 Artist Vars 7_instruction: 'Чи можна змінити змінну "сторони" допомогти мені звернути цього шестикутника?'
       Course 4 Artist Vars 8_instruction: 'Вільна гра: Експериментувати з кількістю сторін має ця фігура. Ви можете переключитися алгоритм, так що загальний розмір фігури залишається незмінною, незалежно від того, скільки сторін, вона має? Підказка: Ви, можливо, використовувати математики блоків (360 розділити на "сторони" в двох місцях на цей раз) '
       Course 4 Artist Vars 9_instruction: 'Змінити цей алгоритм, так що він використовує змінну "сторони" замість фіксоване число намалювати трикутник. Використовувати блок "встановити сторони".'
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Бджоли не можу сказати, якщо це квітка або стільники. Спочатку перевірте, якщо є квітка або бджолині соти а потім тільки збирати нектар з нього якщо це-квітка. '
       Course 4 Bee 2_instruction: "Перевірити кожен об'єкт, щоб побачити, якщо це-квітка. Якщо це так, збирати нектар.. в іншому випадку, ви можете ігнорувати його!"
       Course 4 Bee 3_instruction: "Невідомий об'єкт є квітка або стільники. Використання в якщо/інакше блокувати збирати нектар, якщо це-квітка, ще зробити мед (тому що тоді було б стільники)."
@@ -953,9 +961,7 @@ uk:
       Course 4 Play Labs For Loops 6_instruction: 'Можна нагадати, що просте число є ціле число, що тільки кратною себе і 1. Виступати тільки простих чисел від 1 до 100 використовується функція "is_prime".'
       Course 4 Play Labs For Loops 7_instruction: Ви могли б використовувати це для петлі, щоб допомогти мені говорити послідовність 1, 4, 7, 10, 13, 16, 19, 22, 25?
       Course 4 Play Labs For Loops 8_instruction: Навіщо петлю зробить мене говорити 19, 27, 35, 43, 51?
-      Course 4 Variables Assessment_instruction: |
-        Can you create this image using
-        a variable for sides? Each line should be 50 pixels long.
+      Course 4 Variables Assessment_instruction: Ви можете створити цей образ, використовуючи змінну для сторін? Кожна лінія повинна бути 50 пікселів довгий.
       Course1BeePuzzle12_instruction: Збери три нектару, а потім зроби два меду
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -1221,6 +1227,7 @@ uk:
       Infinity_touch_faster_instruction: Торкнись ще більшої кількості сніжинок!
       Infinity_touch_four_instruction: Перемісти Анну вгору, вниз, ліворуч та праворуч, щоб вона торкнулась кожної з чотирьох сніжинок.
       Infinity_touch_score_instruction: 'Нехай Анна отримує бал щоразу, коли торкається сніжинки. Клацни "Запустити" та скеруй її по разу до кожної сніжинки.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Намалюй коротку лінію вгору і довгу направо!
       K-1 artist 1 level 10_instruction: Намалюй пунктирну лінію, використовуючи обидва блоки стрибку і малювання
       K-1 artist 1 level 9_instruction: Намалюйте це, використавши три лінії
@@ -2046,7 +2053,10 @@ uk:
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
-      U3L2_Turtle3by3Grid_instruction: foo
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

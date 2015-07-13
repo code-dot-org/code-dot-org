@@ -182,6 +182,7 @@
   "play": "玩",
   "print": "列印",
   "puzzleTitle": "階段 {stage_total} 的第{puzzle_number} 關",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "重複",
   "resetProgram": "再試一次",
   "rotateText": "旋轉你的設備。",
@@ -213,6 +214,5 @@
   "watchVideo": "觀看影片",
   "when": "當",
   "whenRun": "當按下\"執行\"時",
-  "workspaceHeaderShort": "工作區:",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "工作區:"
 }

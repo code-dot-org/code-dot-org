@@ -182,6 +182,7 @@
   "play": "παίξε",
   "print": "Εκτύπωσε",
   "puzzleTitle": "Παζλ {puzzle_number} από {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "επανάλαβε",
   "resetProgram": "Επαναφορά",
   "rotateText": "Περιστρέψτε τη συσκευή σας.",
@@ -213,6 +214,5 @@
   "watchVideo": "Δείτε το βίντεο",
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
-  "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Χώρος εργασίας: "
 }

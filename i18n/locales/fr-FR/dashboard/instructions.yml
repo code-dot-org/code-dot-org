@@ -399,6 +399,9 @@ fr:
       4-5 While Loops 8_instruction: ' Voilà un trou vraiment profond et un gros tas de terre. Combien de pelletées de terre doivent être déplacées pour égaliser le sol? Astuce: utilise la boucle "tant que" pour les deux.'
       4-5 While Loops Assessment 1_instruction: Voilà beaucoup de trous et de tas. Aide-moi à déplacer la terre pour rendre le sol plat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -834,6 +837,12 @@ fr:
       Course 4 2_instruction: "L'abeille veut du nectar dès maintenant. N'oublie pas, tous les objets ne sont pas des fleurs, donc vérifie pour ne recueillir le nectar que sur les fleurs."
       Course 4 Artist 1_instruction: 'Aide-moi à finir de dessiner ma boîte. (Chaque ligne fait 300 pixels de long) '
       Course 4 Artist 10_instruction: "C'est l'heure de jouer! Amuse-toi à dessiner ce que tu souhaites. "
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Vous pouvez boucler ce code-ci pour dessiner le carré en gris?
       Course 4 Artist 3_instruction: 'Bon, essayez de comprendre ce qui arrivera si vous faites fonctionner ce code (ou appuyez sur "run" pour essayer). Ensuite, répétez-le suffisamment de fois pour terminer le dessin.'
       Course 4 Artist 4_instruction: 'Il y a combien de degrés dans un cercle? Remplissez le bloc "repeat" (répéter) avec ce numéro pour créer un cercle de couleurs. '
@@ -890,7 +899,7 @@ fr:
       Course 4 Artist Functions 7_instruction: Peux-tu dessiner une ligne de carrés en utilisant une fonction Carré ? Chaque carré a 40 pixels de longueur.
       Course 4 Artist Functions 8_instruction: "Avez-vous compris l'utilisation des blocs de fonction ? Modifions ce carré afin qu'il ait une taille de 200 pixels. Astuce : cliquez sur « modifier » pour modifier la taille dans l'éditeur de la fonction « dessiner un carré ». N'oubliez pas de cliquer sur « enregistrer et fermer » pour sortir de l'éditeur de fonction. "
       Course 4 Artist Functions 9_instruction: Nous vous avons donné presque tout le code pour créer une fonction. Cependant, il semble manquer quelque chose. Pouvez-vous terminer ce bloc fonction ?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Nous allons éditer une fonction qui dessine un carré de côté 50 pixels
       Course 4 Artist Params 10_instruction: "Vous pouvez appeler des fonctions à partir d'autres fonctions ! En utilisant votre fonction Forme comme base, créez trois formes de maison, chacune 20 pixels plus grande que la précédente en commençant à 50 pixels de longueur. Utiliser une boucle avec compteur peut aider. "
       Course 4 Artist Params 11_instruction: |
@@ -947,7 +956,6 @@ fr:
         Jeu gratuit: Fais des essais avec le nombre de côtés que cette forme . Peux-tu changer l'algorithme pour que la taille totale de la forme reste la même, quel que soit le nombre côtés? Indice: Tu devras peut-être utiliser ton bloc de math (360 divisé par "côtés" à deux endroits cette fois) 
       Course 4 Artist Vars 9_instruction: |-
         Modifie cet algorithme afin qu'il utilise la variable "côtés" au lieu d'un nombre fixe pour dessiner un triangle. Remplace le nombre 3 avec la variable "côtés", et utilise le block "set sides to".
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: "L'abeille ne peut pas dire si c'est une fleur ou un nid d'abeilles. Vérifie d'abord si c'est une fleur ou un nid d'abeilles, puis recueille le nectar si c'est une fleur. "
       Course 4 Bee 2_instruction: "Vérifiez chaque objet pour voir si c'est une fleur. Si c'est le cas, butinez... sinon, vous pouvez l'ignorer !"
       Course 4 Bee 3_instruction: "L'objet inconnu est soit une fleur soit un rayon de miel. Utilise le bloc si/sinon pour collecter le nectar si c'est une fleur, sinon pour faire du miel (parce qu'alors ce serait un rayon de miel)."
@@ -1319,6 +1327,7 @@ fr:
       Infinity_touch_faster_instruction: Touchez encore plus de flocons de neige !
       Infinity_touch_four_instruction: Déplace Anna en haut, en bas à gauche et à droite pour toucher chacun des quatre flocons de neige.
       Infinity_touch_score_instruction: 'Fais marquer un point par Anna quand elle touche un flocon de neige.  Puis clique sur « Exécuter » et dirige-la pour toucher une fois chaque flocon de neige.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Dessine une courte ligne vers le haut et une longue ligne vers la droite !
       K-1 artist 1 level 10_instruction: Dessine la ligne pointillée en utilisant les blocs de saut et de dessin
       K-1 artist 1 level 9_instruction: Dessinez en utilisant trois lignes
@@ -2150,7 +2159,10 @@ fr:
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
-      U3L2_Turtle3by3Grid_instruction: foo
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

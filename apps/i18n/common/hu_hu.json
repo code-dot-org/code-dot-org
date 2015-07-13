@@ -182,6 +182,7 @@
   "play": "lejátszás",
   "print": "Nyomtatás",
   "puzzleTitle": "{puzzle_number}/{stage_total}. feladvány",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ismételd",
   "resetProgram": "Visszaállítás",
   "rotateText": "Fordítsd el a készüléked.",
@@ -213,6 +214,5 @@
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Munkaterület: "
 }

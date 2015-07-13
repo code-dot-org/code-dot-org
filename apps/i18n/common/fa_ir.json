@@ -182,6 +182,7 @@
   "play": "بازی کن",
   "print": "چاپ کن",
   "puzzleTitle": "پازل {puzzle_number}  از{stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "تکرار کن",
   "resetProgram": "تنظیم مجدد",
   "rotateText": "دستگاهت  را بچرخان.",
@@ -213,6 +214,5 @@
   "watchVideo": "ویدیو را ببینید",
   "when": "وقتی",
   "whenRun": "زمان اجرا",
-  "workspaceHeaderShort": "محیط کار: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "محیط کار: "
 }

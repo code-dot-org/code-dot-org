@@ -357,6 +357,9 @@ pl:
       4-5 While Loops 8_instruction: ' To naprawdę jest głęboki dół i duża kupa śmieci.  Ile trzeba usunąć szufli śmieci, aby wyrównać teren do poziomu ziemi?  Wskazówka: Użyj pętli "dopóki" (while).'
       4-5 While Loops Assessment 1_instruction: 'Jest tutaj wiele otworów i stert.  Pomóż mi wypełnić otwory i usunąć stery, by wyrównać teren.'
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -798,6 +801,12 @@ pl:
       Course 4 2_instruction: Pszczółka chce nektaru. Pamiętaj, że nie wszystkie obiekty są kwiatami, upewniaj się więc, że nektar jest zbierany tylko z kwiatów.
       Course 4 Artist 1_instruction: 'Pomóż mi ukończyć rysowanie mojego pudełka. (Każda linia ma długość 300 pikseli) '
       Course 4 Artist 10_instruction: 'To czas na zabawę! Baw się rysując cokolwiek chcesz. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Czy potrafisz powtórzyć ten kod, aby pomalować na szaro obszar poza kwadratem?
       Course 4 Artist 3_instruction: 'OK, zorientuj się, co się dzieje, jeśli uruchomisz ten kod (naciśnij przycisk "Uruchom"). Następnie, powtórz to dość razy, aby ukończyć rysunek.'
       Course 4 Artist 4_instruction: 'Ile stopni jest w okręgu?  Uzupełnij blok "powtórz" tą liczbą, by otrzymać koło kolorów.'
@@ -848,7 +857,7 @@ pl:
       Course 4 Artist Functions 7_instruction: Czy potrafisz narysować rząd kwadratów przy użyciu funkcji kwadrat? Każdy kwadrat ma bok o długości 40 pikseli.
       Course 4 Artist Functions 8_instruction: 'Czy poznałeś już, jak używać bloków funkcyjnych? Zmodyfikujmy ten kwadrat tak, aby miał bok o długości 200 pikseli. Wskazówka: Kliknij na "Edytuj", aby zmienić w edytorze funkcji "rysuj kwadrat" rozmiar kwadratu. Pamiętaj, aby kliknąć na "Zapisz i Zamknij" , by wyjść z edytora funkcji. '
       Course 4 Artist Functions 9_instruction: Daliśmy Ci większość kodu, aby utworzyć funkcję. Jednak wydaje się, że czegoś brakuje. Czy potrafisz zakończyć tworzenie tego bloku funkcji?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Napisz funkcję, która rysuje kwadrat o boku 50 pikseli
       Course 4 Artist Params 10_instruction: 'Możesz wywoływać funkcje z wnętrza innych funkcji! Za pomocą swojej funkcji "kształt", utwórz 3 kształty domów, każdy o 20 pikseli większy niż poprzedni, zaczynając od długości 50 pikseli. Pomocne może być użycie pętli licznikowej. '
       Course 4 Artist Params 11_instruction: |
@@ -893,7 +902,6 @@ pl:
       Course 4 Artist Vars 7_instruction: 'Czy potrafisz zmodyfikować zmienną "boki", by mi pomóc narysować ten sześciokąt?'
       Course 4 Artist Vars 8_instruction: 'Dowolna zabawa: Poeksperymentuj z liczbę boków tego kształtu. Czy potrafisz zmienić algorytm tak, aby całkowity rozmiar kształtu pozostał taki sam niezależnie od liczby boków? Wskazówka: Możesz użyć bloków matematycznych (w dwóch miejscach, 360 dzielone przez "boki") '
       Course 4 Artist Vars 9_instruction: 'Zmodyfikuj ten algorytm, by rysując trójkąt używał zmiennej "boki" zamiast ustalonej liczby. Zastąp liczbę 3 zmienną "boki" i użyj bloku "ustal boki na".'
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Pszczółka nie może stwierdzić, czy to jest kwiat, czy plaster miodu. Sprawdź najpierw, czy to jest kwiat czy plaster miodu, a następnie zbierz nektar, gdy jest to kwiat. '
       Course 4 Bee 2_instruction: Sprawdź każdy obiekt, czy jest to kwiat. Jeśli tak, to zbierz nektar, a w przeciwnym razie zignoruj go!
       Course 4 Bee 3_instruction: 'Nieznany obiekt jest kwiatem lub plastrem miodu. Użyj bloku "jeśli/w przeciwnym razie" by zebrać nektar, jeśli jest to kwiat, w przeciwnym razie zrób miód (gdyż jest to plaster miodu).'
@@ -1319,6 +1327,7 @@ pl:
       Infinity_touch_faster_instruction: Dotknij nawet więcej płatków niegu!
       Infinity_touch_four_instruction: Przenieś Annę w górę, do dołu na lewo i na prawo, aby dotknąć każdego z czterech płatków śniegu.
       Infinity_touch_score_instruction: 'Dodaj punkt do wyniku Anny, gdy dotyka płatka śniegu.  Następnie kliknij "Uruchom" i pokieruj nią, aby dotknęła każdy płatek śniegu raz.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Narysuj krótką linię do góry a długą w prawo!
       K-1 artist 1 level 10_instruction: Narysuj przerywaną linię używając obu bloków skocz i rysuj
       K-1 artist 1 level 9_instruction: Narysuj to używając trzech linii
@@ -2306,7 +2315,10 @@ pl:
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
-      U3L2_Turtle3by3Grid_instruction: foo
+      U3L2_Turtle3by3Grid_instruction: |
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

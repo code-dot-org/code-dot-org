@@ -282,8 +282,8 @@ uk:
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
           title: Інтернет симулятор
-          description_short: Learn about how the Internet works
-          description: Learn about how the Internet works
+          description_short: Дізнатися про те, як працює Інтернет
+          description: Дізнатися про те, як працює Інтернет
           Internet Simulator: Інтернет симулятор
           Unit 1: Розділ 1
           Unit 2: Розділ 2
@@ -301,7 +301,7 @@ uk:
           title: 20-годинний вступний курс
           description_audience: Вік 10 + (після курсу 3)
           description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: "Цей 20-годинний курс охоплює core комп'ютерні науки та програмування концепцій в 2-4 курси."
           Introduction to Computer Science: Вступ до інформатики
           The Maze: Лабіринт
           Computational Thinking: Обчислювальне мислення
@@ -342,21 +342,21 @@ uk:
         flappy:
           title: Код Пурха
           description: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати Пурха!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Писати свій власний Flappy гри в менш ніж за 10 хвилин!
           Flappy Code: Код Пурха
         jigsaw:
           title: Пазли
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Спробуйте наші головоломки підручник
+          description_short: Спробуйте наші головоломки підручник
           Jigsaw: Пазли
         step:
           title: Крок
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Кроком підручник
+          description_short: Кроком підручник
           Step: Крок
         Hour of Code:
           title: Година коду 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: Спробуйте основи інформатики з персонажів з сердитися птахів і рослини проти зомбі!
           description_short: Спробуйте основи інформатики з цікавими персонажами!
           Hour of Code 2013: Година коду 2013
         Code Studio Puzzle Challenge:
@@ -970,3 +970,11 @@ uk:
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
           Wrap-Up: Підведення підсумків
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps

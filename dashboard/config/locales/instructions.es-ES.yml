@@ -773,6 +773,9 @@
       4-5 While Loops Assessment 1_instruction: Existen un montón de huecos y pilotes.
         Ayúdame a llenarlos y removerlos para aplanar la tierra.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1224,6 +1227,16 @@
         línea es de 300 píxeles de largo)
       Course 4 Artist 10_instruction: ¡ Es hora de jugar gratis! Diviértete y dibuja
         lo que quieras.
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: ¿Puedes enlazar este código para que dibuje de
         gris el cuadrado?
       Course 4 Artist 3_instruction: Muy bien, trat de averiguar que sucede si ejecutas
@@ -1370,10 +1383,11 @@
       Course 4 Artist Functions 9_instruction: Te hemos dado la mayor parte del código
         para crear una función. Sin embargo parece que falta algo. ¿Puedes completar
         esta función de bloques?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Inspiración para ejercicio libre: ¡Ya
+        has aprendido todo lo que necesitas saber para hacer un patrón como este!
+        \ Si te inspira esta imagen, tratar de hacer algo similar.  Si no, crea algo
+        por tu cuenta \r \r ¿Quieres saber cómo se hizo nuestro modelo de inspiración?
+        Echa un vistazo aquí: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Editemos una función que dibuje un cuadrado
         de 50 píxeles cada lado
       Course 4 Artist Params 10_instruction: ¡Puedes llamar una función dentro de
@@ -1477,7 +1491,6 @@
       Course 4 Artist Vars 9_instruction: Modificar este algoritmo para utilizar la
         variable "caras" en lugar de un número fijo para dibujar un triángulo. Reemplazar
         el número 3 con la variable "caras" y utilizar el bloque de "establecer lados".
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'La abeja no puede decir si se trata de una flor
         o un panal de miel. Compruebe primero si se trata de una flor o un panal de
         abejas y entonces sólo recogen néctar de si es una flor. '
@@ -1704,9 +1717,8 @@
       Course 4 Play Labs For Loops 8_instruction: |
         ¿Que enlace me haria dialogar
         19,27,35,43,51?
-      Course 4 Variables Assessment_instruction: |
-        Can you create this image using
-        a variable for sides? Each line should be 50 pixels long.
+      Course 4 Variables Assessment_instruction: ¿Puedes crear esta imagen utilizando
+        una variable para los lados? Cada línea debe tener 50 píxeles de largo.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig"
@@ -2031,6 +2043,7 @@
       Infinity_touch_score_instruction: Has que Anna anote un punto cuando ella toque
         un copo de nieve.  Después has clic en "Ejecutar" y conducela para tocar una
         vez cada copo de nieve.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         ¡Dibuja una linea corta hacia arriba y una larga
         a la derecha!
@@ -2158,10 +2171,10 @@
         cerdo!
       K-1 Maze 9_instruction: Muveme en una dirección, luego otra para llevarme el
         cerdo!
-      K-1 Maze Assessment 1_instruction: Evaluación, Tráeme al cerdo!
+      K-1 Maze Assessment 1_instruction: Evaluación, ¡Tráeme al cerdo!
       K-1 Maze Assessment 12_instruction: Nivel de evaluación
       K-1 Maze Assessment 13_instruction: Nivel de evaluación
-      K-1 Maze Assessment 2_instruction: Evaluación, Tráeme al cerdo!
+      K-1 Maze Assessment 2_instruction: Evaluación, ¡Tráeme al cerdo!
       K-1 maze debug 1_instruction: Cambie el código para traerme al cerdo!
       K-1 maze debug 10_instruction: Depura este nivel reorganizando y agregando bloques
         para llevarme al cerdo!
@@ -2454,8 +2467,8 @@
         el resto de la miel utilizando este bucle for? '
       NEW Course 4 Bee For Loops 4_instruction: 'Reemplaza el ??? en el bucle for
         con la mayor cantidad de néctar que la abeja debe recoger. '
-      NEW Course 4 Bee For Loops 5 5_instruction: ¿Estás consiguiendole la caída al
-        bucle for? Vamos a ayudar a la abeja a obtener el resto del néctar.
+      NEW Course 4 Bee For Loops 5 5_instruction: ¿Le has pillado el truco al bucle
+        "for"? Vamos a ayudar a la abeja a obtener el resto del néctar.
       NEW Course 4 Bee For Loops 5_instruction: También puedes utilizar un bucle a
         contar hacia atrás. Trata de recoger este néctar por la cuenta regresiva del
         5 al 1 por 1.
@@ -2463,17 +2476,17 @@
         llama el "incremento", y cada vez que el bucle se ejecuta la variable contador
         cambia al incrementarse. Trata de recoger estas flores con un incremento de
         2.
-      NEW Course 4 Bee For Loops 7_instruction: ¿Estás consiguiéndole el golpe a los
-        bucles? Esto es similar al último puzzle, pero tienes que conseguir 2, 4,
-        6, 8,10 de néctar. Está dado el código de arranque excepto para los números
-        en los bucles del contador. ¡Vamos a recoger algo de néctar!
+      NEW Course 4 Bee For Loops 7_instruction: ¿Le estás pillando el truco a los
+        bucles? Esto es parecido al último puzzle, pero tienes que conseguir 2, 4,
+        6, 8,10 de néctar. Ya tienes el código de arranque, excepto los números en
+        los bucles del contador. ¡Vamos a recoger algo de néctar!
       NEW Course 4 Bee For Loops 8_instruction: "Si tu bucle está contando, el incremento
         se agrega a la variable contador en cada ciclo. ¿Cuál debe ser el incremento
         para recoger 3, 6, 9 de néctar? \r\n"
       NEW Course 4 Bee For Loops 9_instruction: Si tu ciclo es regresivo, se resta
         el incremento de la variable contador en cada bucle. Lo que debería ser un
         incremento a recoger néctar 9, luego 6 y 3 ?
-      NEW Course 4 Play Lab Params 11_instruction: '¡Es hora de Juego Gratis! Diviértete
+      NEW Course 4 Play Lab Params 11_instruction: '¡Es hora de jugar! Diviértete
         con todos los bloques en tu caja de herramientas. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Introducir entradas de parámetro
         de actor con los números (1, 2 y 3) para hacer de estos actores patrulla. '
@@ -3102,11 +3115,9 @@
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.
