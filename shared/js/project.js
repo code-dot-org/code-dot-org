@@ -197,8 +197,9 @@ module.exports = {
     current = data;
     if (isNewChannel) {
       // We have a new channel, meaning either we had no channel before, or
-      // we've changed channels.
-      if (isEditing) {
+      // we've changed channels. If we aren't at a /projects/<appname> link,
+      // always do a redirect (i.e. we're remix from inside a script)
+      if (isEditing && parsePath().appName) {
         // TODO - i don think we should hit this now
         if (location.hash || !window.history.pushState) {
           // We're using a hash route or don't support replace state. Use our hash
@@ -448,11 +449,22 @@ function redirectToPath(path, attemptPushState) {
  */
 function parsePath() {
   var pathname = location.pathname;
+
   // We have a hash based route. Replace the hash with a slash, and append to
   // our existing path
   if (location.hash) {
     pathname += location.hash.replace('#', '/');
   }
+
+  if (pathname.split('/')[PathPart.PROJECTS] !== 'p' &&
+      pathname.split('/')[PathPart.PROJECTS] !== 'projects') {
+    return {
+      appName: null,
+      channelId: null,
+      action: null,
+    };
+  }
+
   return {
     appName: pathname.split('/')[PathPart.APP],
     channelId: pathname.split('/')[PathPart.CHANNEL_ID],
