@@ -207,6 +207,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {Object} config
  * @param {Object} config.skin
  * @param {netsimLevelConfiguration} config.level
+ * @param {string} config.rackEnv - development/production/etc.
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  * @param {string} config.html - rendered markup to be created inside this method
@@ -230,6 +231,12 @@ NetSim.prototype.init = function(config) {
    * @type {netsimLevelConfiguration}
    */
   this.level = netsimUtils.scrubLevelConfiguration_(config.level);
+
+  /**
+   * Current operating environment, used to drive certain configuration.
+   * @type {string} one of "development"|"staging"|"test"|"production"
+   */
+  this.environment = config.rackEnv;
 
   /**
    * Configuration for reporting level completion
@@ -4926,23 +4933,8 @@ NetSimShard.prototype.tick = function (clock) {
 
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
-
+var netsimGlobals = require('./netsimGlobals');
 var clientApi = require('@cdo/shared/clientApi');
-
-/**
- * App key, unique to netsim, used for connecting with the storage API.
- * @type {string}
- * @readonly
- */
-// TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
-var CHANNEL_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
-// Ugly null-guards so we can load this file in tests.
-if (window &&
-    window.location &&
-    window.location.hostname &&
-    window.location.hostname.substr(0, 9) === 'localhost') {
-  CHANNEL_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
-}
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -4964,7 +4956,8 @@ var NetSimTable = module.exports = function (tableName) {
    * @type {string}
    * @private
    */
-  this.remoteUrl_ = '/v3/shared-tables/' + CHANNEL_PUBLIC_KEY + '/' + tableName;
+  this.remoteUrl_ = '/v3/shared-tables/' + netsimGlobals.getChannelPublicKey() +
+      '/' + tableName;
 
   /**
    * API object for making remote calls
@@ -5191,7 +5184,7 @@ NetSimTable.prototype.tick = function () {
 };
 
 
-},{"../ObservableEvent":2,"../utils":319,"@cdo/shared/clientApi":321}],321:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":319,"./netsimGlobals":261,"@cdo/shared/clientApi":321}],321:[function(require,module,exports){
 /* global $ */
 
 var base = {
@@ -18355,6 +18348,16 @@ module.exports = {
    */
   getAssetUrlFunction: function () {
     return studioApp_.assetUrl;
+  },
+
+  /**
+   * @returns {string} channels API public key for storage system
+   */
+  getChannelPublicKey: function () {
+    if (netsim_ && netsim_.environment === 'development') {
+      return 'JGW2rHUp_UCMW_fQmRf6iQ==';
+    }
+    return 'HQJ8GCCMGP7Yh8MrtDusIA==';
   },
 
   /**
