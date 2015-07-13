@@ -12,7 +12,7 @@ class LevelsController < ApplicationController
   load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_blocks, :embed_level]
   check_authorization
 
-  before_action :set_level, only: [:show, :show_login_required, :edit, :update, :destroy]
+  before_action :set_level, only: [:show, :edit, :update, :destroy]
 
   # GET /levels
   # GET /levels.json
@@ -25,6 +25,8 @@ class LevelsController < ApplicationController
   def show
     sharing = params[:share] == true
     # TODO - callouts?
+    # TODO (brent) - do i still need changes here, or only the changes in the
+    # projects controller
     level_view_options(
         hide_source: sharing,
         share: sharing
@@ -34,15 +36,6 @@ class LevelsController < ApplicationController
         full_width: true,
         no_footer: !@game.has_footer?
     )
-  end
-
-  # unlike show, this calls authenticate_user
-  # TODO - this prob belongs in projects controller
-  # TODO - the redirect experience causes us to lose the anchor portion. can
-  # we maybe solve this with client redirects?
-  def show_login_required
-    show
-    render :show
   end
 
   # GET /levels/1/edit
