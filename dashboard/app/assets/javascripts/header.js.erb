@@ -364,7 +364,7 @@ dashboard.header.showProjectHeader = function () {
     dialog.show();
     $('#confirm-delete #continue-button').click(function () {
       dashboard.project.delete(function () {
-        location.href = location.pathname;
+        location.href = dashboard.project.appToProjectUrl();
       });
     });
     $('#confirm-delete #again-button').click(function () {
@@ -378,15 +378,15 @@ dashboard.header.showProjectHeader = function () {
     // Save the project if one exists (i.e. isn't just the default one) then navigate.
     if (dashboard.project.getCurrentId()) {
       dashboard.project.save(function () {
-        location.href = location.pathname;
+        location.href = dashboard.project.appToProjectUrl();
       });
     } else {
-      location.href = location.pathname;
+      location.href = dashboard.project.appToProjectUrl();
     }
   });
 
   $(document).on('click', '.project_list', function () {
-    location.href = '/p'; <%# TODO: Can't call project_list_path because it's not in scope %>
+    location.href = '/projects'; <%# TODO: Can't call project_list_path because it's not in scope %>
   });
 };
 

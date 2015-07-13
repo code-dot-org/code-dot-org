@@ -1,7 +1,8 @@
 Feature: Projects
 
-# TODO - do we need to make sure we have a valid channel
-# TODO - IE9
+# TODO - this isnt going to work in other environments (where this channel_id
+#        doesn't exist
+# TODO - IE9 doesnt have push state, and will behave differently
 
 @stop_after_failure
 Scenario Outline: Proper redirects when signed out
