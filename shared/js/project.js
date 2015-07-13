@@ -123,15 +123,11 @@ module.exports = {
           } else {
             // Viewing someone else's project - set share mode
             dashboard.header.showMinimalProjectHeader();
-            // URL with /edit - set hideSource to false
-            // setAppOptionsForShareMode(false);
           }
         }
       } else if (current) {
         appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
-        // URL without /edit - set hideSource to true
-        // setAppOptionsForShareMode(true);
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       current = {
@@ -200,7 +196,6 @@ module.exports = {
       // we've changed channels. If we aren't at a /projects/<appname> link,
       // always do a redirect (i.e. we're remix from inside a script)
       if (isEditing && parsePath().appName) {
-        // TODO - i don think we should hit this now
         if (location.hash || !window.history.pushState) {
           // We're using a hash route or don't support replace state. Use our hash
           // based route to ensure we don't have a page load.
