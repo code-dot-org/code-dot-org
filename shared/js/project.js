@@ -14,9 +14,6 @@ var events = {
   workspaceChange: 'workspaceChange'
 };
 
-// TODO - if on a /view page and we're the owner, pushState to /edit and muck
-// with share/hideSource
-
 /**
  * Helper for when we split our pathname by /. channel_id and action may end up
  * being undefined.
@@ -47,8 +44,6 @@ var PathPart = {
  */
 var current;
 var isEditing = false;
-
-// TODO - make sure i address going to /edit as a non-owner or /code as an owner
 
 module.exports = {
   /**
@@ -358,16 +353,6 @@ function executeCallback(callback, data) {
   }
 }
 
-// TODO - figure out what bits of this i need
-// function setAppOptionsForShareMode(hideSource) {
-//   appOptions.readonlyWorkspace = true;
-//   appOptions.callouts = [];
-//   appOptions.share = true;
-//   appOptions.hideSource = hideSource;
-//   // Important to call determineNoPadding() after setting hideSource value
-//   appOptions.noPadding = determineNoPadding();
-// }
-
 function determineNoPadding() {
   switch (appOptions.app) {
     case 'applab':
@@ -399,11 +384,10 @@ function getLevelHtml() {
   return window.Applab && Applab.getHtml();
 }
 
-// TODO - make sure comment is up to date
 /**
- * Does a redirect to a non-hash based version of the URL. Does this seamlessly
- * using replaceState on browsers that support this, and does an actual redirect
- * on those that don't (IE 9).
+ * Does a redirect to a non-hash based version of the URL. Does a hard redirect
+ * if on legacy browsers (IE 9), or if we're going to an applab route that may
+ * require login
  * @returns {boolean} True if we did an actual redirect
  */
 function redirectFromLegacyUrl() {
@@ -426,7 +410,8 @@ function redirectFromLegacyUrl() {
 
 /**
  * If the current user is the owner, we want to redirect from the readonly
- * /view route to /edit
+ * /view route to /edit. If they are not the owner, we want to redirect from
+ * /edit to /view
  */
 function redirectEditView() {
   var parseInfo = parsePath();
@@ -456,8 +441,8 @@ function redirectEditView() {
  */
 function redirectToPath(path, attemptPushState) {
   if (attemptPushState && window.history.pushState) {
-    // TODO - right now i include state just so that our UI tests can detect a
-    // dashboard vs. JS redirect. is there a better way?
+    // Right now I set modified just so that our UI tests can detect a dashboard
+    // vs. JS redirect. Not sure whether there is a better way
     window.history.pushState({modified: true}, document.title, path);
     return false;
   } else {
