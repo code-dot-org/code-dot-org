@@ -94,7 +94,7 @@ def codeorg_url()
 end
 
 def resolve_url(url)
-  if url.downcase.include? "studio.code.org" 
+  if url.downcase.include? "studio.code.org"
     # if studio.code.org url do nothing
   elsif url.downcase.include? "code.org" # if code.org url, link to partner site
     # TODO: update to use countries.json if partner, show partner site
@@ -112,17 +112,17 @@ def resolve_url(url)
   else # if hoc.com url, keep country and language in URL
     File.join(['/', (@company or @country), @user_language, uri].select{|i| !i.nil_or_empty?})
   end
-end  
+end
 
 def resolve_file(path)
   # TODO: search for localized files or show EN
   return path
-end 
+end
 
 def resolve_image(path)
   # TODO: search for localized files or show EN
   return path
-end 
+end
 
 def campaign_date()
   # TODO: update to use countries.json
