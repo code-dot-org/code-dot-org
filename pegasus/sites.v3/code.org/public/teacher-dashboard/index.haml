@@ -102,6 +102,8 @@ angular: teacherDashboard
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/sections/:id/update'},
+         // TODO: This isn't very restful
+         allStudents: {method:'GET', url:'v2/sections/:id/students', isArray: true},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
@@ -252,6 +254,9 @@ angular: teacherDashboard
 
     $scope.bulk_import = {editing: false, students: ''};
 
+    // TODO: Organize
+    $scope.moving_students = {editing: true};
+
     $scope.edit = function(student) {
       student.editing = true;
     };
@@ -336,6 +341,10 @@ angular: teacherDashboard
       $scope.section.students.unshift({editing: true});
     };
 
+    $scope.showMoveStudentsModal = function() {
+      $('#move-students').modal('show');
+    }
+
     $scope.clear_bulk_import = function() {
       $scope.bulk_import.editing = false;
       $scope.bulk_import.students = '';
@@ -381,6 +390,42 @@ angular: teacherDashboard
       $window.print();
     };
 
+  }]);
+
+  app.controller('MovingStudentsController', ['$scope', '$routeParams', '$q', '$window', 'sectionsService', function($scope, $routeParams, $q, $window, sectionsService) {
+      var self = this;
+
+      // 'Other Section' selected
+      $scope.otherSection = 'Other Section';
+
+      // Query
+      $scope.sections = sectionsService.query();
+      $scope.students = sectionsService.allStudents({id: $routeParams.id});
+
+      $scope.getStudentsToMove = function() {
+        // TODO: Return Value depends on API call
+      };
+
+      $scope.getSectionToMoveTo = function() {
+        if ($scope.selectedSectionCode !== $scope.otherSection) {
+          return $scope.selectedSectionCode;
+        } else {
+          return $scope.manuallySelectedSectionCode;
+        }
+      };
+
+      $scope.showModal = function() {
+        $q.all([$scope.sections.$promise, $scope.students.$promise]).then(function() {
+          $('#move-students').modal('show');
+        })
+      };
+
+      $scope.checkAll = function() {
+        $scope.selectedAll = !$scope.selectedAll;
+        angular.forEach($scope.students, function(student) {
+          student.selected = $scope.selectedAll;
+        });
+      };
   }]);
 
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',

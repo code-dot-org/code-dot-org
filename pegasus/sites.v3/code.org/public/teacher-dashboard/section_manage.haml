@@ -3,6 +3,35 @@
 layout: none
 theme: none
 ---
+-# TODO: Move this into a separate partial
+%div{class: "modal fade", id: "move-students", "ng-controller" => "MovingStudentsController as msCtrl"}
+  %div{class: "modal-dialog", width: "500px"}
+    %div{class: "modal-content"}
+      %div{class: "modal-header"}
+        %button{type: "button", class: "close", :"data-dismiss"=> "modal"}
+          %span{:"aria-hidden"=>"true"} &times;
+          %span{:class=>"sr-only"} Close
+        %ul
+          %li
+            %label
+              %input{type: "checkbox", "ng-model" => "selectedAll", "ng-click" => "checkAll()"}
+              Name
+          %li{"ng-repeat" => "student in students"}
+            %label
+              %input{type: "checkbox", "ng-model" => "student.selected"}
+              {{student.name}}
+        Move to section:
+        {{ getSectionToMoveTo() }}
+        %select{"ng-model" => "selectedSectionCode"}
+          %option{"ng-repeat" => "section in sections", value: "{{section.code}}"}
+            {{section.name}}
+          %option{value: "Other Section"}
+            {{otherSection}}
+        %div{"ng-show" => "selectedSectionCode == 'Other Section'"}
+          %input{class: "text-box", type: 'text', "ng-model" => "manuallySelectedSectionCode", maxLength: 6}
+        %div{class: "modal-buttons"}
+          %button{:type=>"button", :class=>"btn btn-primary", :"data-dismiss"=>"modal"}= "Cancel"
+          %button{:type=>"button", :class=>"btn btn-primary", :"data-dismiss"=>"modal"}= "Move Students"
 
 %div{style: "padding-left:20px"}
 

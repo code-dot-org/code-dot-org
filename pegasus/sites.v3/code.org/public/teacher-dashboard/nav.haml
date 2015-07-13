@@ -9,7 +9,7 @@ theme: none
     %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
     %a{href: '/teacher-dashboard#/sections'}= I18n.t('dashboard_navigation_all_sections')
     %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
-    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}') 
+    %b{style: "color: #ff8b02;"}= I18n.t('dashboard_navigation_section', section_name: '{{section.name}}')
 
   .section-select{style: "float:right"}
     = I18n.t('dashboard_sections_switch_section')
@@ -35,9 +35,12 @@ theme: none
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;
 
-    .managebuttons{"ng-if" => "tab == 'manage' && section.login_type !== 'email'", style: "float:right"}
-      %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
-      %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')
+    .managebuttons{style: "float:right"}
+      %span{"ng-if" => "tab == 'manage' && section.login_type !== 'email'"}
+        %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
+        %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')
+      -# TODO: i18N
+      %button.btn.btn-white{"ng-click" => "showModal()", "ng-controller" => "MovingStudentsController"}= "Move students"
 
 .clear
 
