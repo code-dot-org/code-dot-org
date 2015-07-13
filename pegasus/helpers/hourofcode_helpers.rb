@@ -93,6 +93,46 @@ def codeorg_url()
   end
 end
 
+def resolve_url(url)
+  if url.downcase.include? "studio.code.org" 
+    # if studio.code.org url do nothing
+  elsif url.downcase.include? "code.org" # if code.org url, link to partner site
+    # TODO: update to use countries.json if partner, show partner site
+    if @country == 'ar'
+      return 'ar.code.org'
+    elsif @country == 'br'
+      return 'br.code.org'
+    elsif @country == 'ro'
+      return 'ro.code.org'
+    elsif @country == 'uk'
+      return 'uk.code.org'
+    else
+      return 'code.org'
+    end
+  else # if hoc.com url, keep country and language in URL
+    File.join(['/', (@company or @country), @user_language, uri].select{|i| !i.nil_or_empty?})
+  end
+end  
+
+def resolve_file(path)
+  # TODO: search for localized files or show EN
+  return path
+end 
+
+def resolve_image(path)
+  # TODO: search for localized files or show EN
+  return path
+end 
+
+def campaign_date()
+  # TODO: update to use countries.json
+  if @country == 'la'
+    return "October 5-11"
+  else
+    return "December 7-13"
+  end
+end
+
 def company_count(company)
   company_count = 0;
   DB[:forms].where(kind:'HocSignup2015').each do |i|
