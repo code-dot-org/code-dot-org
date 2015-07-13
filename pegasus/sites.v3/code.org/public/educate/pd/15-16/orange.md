@@ -110,7 +110,7 @@ Milestone complete!
 
 **Save the dates:**
 
-Wednesday, July 27, 2015 - Friday, July 29, 2015
+Monday, July 27, 2015 - Wednesday, July 29, 2015
 <br/>
 8:00am - 4:00pm
 <br />
