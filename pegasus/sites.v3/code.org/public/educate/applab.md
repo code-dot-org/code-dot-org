@@ -9,7 +9,7 @@ For the new [Computer Science Principles](/educate/csp) high school course, Code
 
 <div style="float:left; padding:10px; width:70%">
 
-<%=view :display_video_thumbnail, id: "PIXELS", video_code: "15aqFQQVBWU", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/csp1-pixels-systrom.mp4" %>
+<%=view :display_video_thumbnail, id: "AppLabIntro", video_code: "4wY8JmFzZ8c", play_button: 'center', download_path: "http://videos.code.org/2015/csp/IntroToAppLab.mp4" %>
 
 </div>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -21,7 +21,7 @@ For the new [Computer Science Principles](/educate/csp) high school course, Code
 
 <div style="float:left; padding:10px; width:49%">
 
-<%=view :display_video_thumbnail, id: "AppLabDeepDive", video_code: "fVUL-vzrIcM", caption: "App Lab Deep Dive", play_button: 'center', download_path: "" %>
+<%=view :display_video_thumbnail, id: "AppLabDeepDive", video_code: "4DntNOOYmpo", caption: "App Lab Deep Dive", play_button: 'center', download_path: "http://videos.code.org/2015/csp/AppLabDemo.mp4" %>
 [<button>Try App Lab</button>](https://studio.code.org/p/applab)
 </div>
 
