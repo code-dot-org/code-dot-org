@@ -105,10 +105,11 @@ module LevelsHelper
     # Provide the channel for templated and applab levels.
     set_channel if @level.project_template_level || @level.game == Game.applab
 
+    callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
     # Set videos and callouts.
     view_options(
       autoplay_video: select_and_track_autoplay_video,
-      callouts: select_and_remember_callouts(params[:show_callouts])
+      callouts: callouts
     )
 
     return blockly_options if @level.is_a? Blockly
