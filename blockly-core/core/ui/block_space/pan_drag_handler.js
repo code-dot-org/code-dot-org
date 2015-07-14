@@ -166,7 +166,6 @@ Blockly.PanDragHandler.prototype.unbindBeginPanDragHandler = function () {
   this.target_ = null;
 };
 
-
 /**
  * Binds temporary mousemove and mouseup handlers against window,
  * so that drag behavior and ending the drag work no matter where the cursor
