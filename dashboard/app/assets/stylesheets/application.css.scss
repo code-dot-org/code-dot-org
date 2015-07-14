@@ -299,7 +299,13 @@ $default-modal-width: 640px;
 .modal {
   a:hover {color:$red; background-color: white; }
 
-  &.auto-resize-scrollable {
+  &#block-documentation-lightbox {
+    width: 80% !important;
+  }
+}
+
+.auto-resize-scrollable {
+  &.modal {
     position: absolute;
     top: 50px; // top of the dialog
 
@@ -314,9 +320,8 @@ $default-modal-width: 640px;
 
     z-index: 1050;
   }
-
-  &#block-documentation-lightbox {
-    width: 80% !important;
+  .modal-image {
+    margin-top: -100px;
   }
 }
 
@@ -1669,7 +1674,7 @@ $modal-image-margin-gap: 10px;
 .modal-image {
   width: $modal-image-width;
   height: auto;
-  margin-top: -100px;
+  margin-top: -60px;
   float: left;
   html[dir=rtl] & {
     float: right;
