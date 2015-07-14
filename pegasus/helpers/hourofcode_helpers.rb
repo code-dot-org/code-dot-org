@@ -115,15 +115,15 @@ end
 def campaign_date(format)
   case format
   when "start-short"
-    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_start_short']
+    return HOC_COUNTRIES[@country]['campaign_date_start_short']
   when "start-long"
-    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_start_long']
+    return HOC_COUNTRIES[@country]['campaign_date_start_long']
   when "short"
-    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_short']
+    return HOC_COUNTRIES[@country]['campaign_date_short']
   when "full"
-    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_full']
+    return HOC_COUNTRIES[@country]['campaign_date_full']
   else
-    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_full']
+    return HOC_COUNTRIES[@country]['campaign_date_full']
   end
 end
 
