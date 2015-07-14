@@ -1,4 +1,7 @@
 pd 'true'
+title 'Computer Science in Science PD'
+description 'Phase 3 Professional Development'
+description_short 'Phase 3 Professional Development'
 
 stage 'Welcome'
 level 'sciPD3 intro'

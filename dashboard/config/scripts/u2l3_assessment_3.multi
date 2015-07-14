@@ -1,0 +1,7 @@
+name 'U2L3 Assessment 3'
+title 'Invent an Addressing Protocol: Question 2'
+question 'IP addresses contain information similar to addressing a letter where you need include the state, zip code, street and number. This is called:'
+right 'hierarchy'
+wrong 'abstraction'
+wrong 'protocol'
+wrong 'packet'

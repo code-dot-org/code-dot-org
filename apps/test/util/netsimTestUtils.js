@@ -26,11 +26,44 @@ exports.assertTableSize = function (shard, tableName, size) {
 };
 
 /**
+ * Replace our clientApi with a mock that hits a fakeStorageTable instead of
+ * accessing the server API.
+ */
+exports.overrideClientApi = function (netsimTable) {
+  var table = fakeStorageTable();
+
+  // send client api calls through our fake storage table
+  netsimTable.clientApi_ = {
+    remoteTable: table,
+    all: function (callback) {
+      return table.readAll(callback);
+    },
+    fetch: function (id, callback) {
+      return table.read(id, callback);
+    },
+    create: function (value, callback) {
+      return table.create(value, callback);
+    },
+    update: function (id, value, callback) {
+      return table.update(id, value, callback);
+    },
+    delete: function (id, callback) {
+      return table.delete(id, callback);
+    },
+    log: function () {
+      return table.log();
+    }
+  };
+
+  return netsimTable;
+};
+
+/**
  * Storage table API placeholder for testing, always hits callbacks immediately
  * so tests can be written imperatively.
  * @returns {Object}
  */
-exports.fakeStorageTable = function () {
+var fakeStorageTable = function () {
   var log_ = '';
   var rowIndex_ = 1;
   var tableData_ = [];
@@ -131,26 +164,12 @@ exports.fakeStorageTable = function () {
  * Fake set of storage tables for use in tests.
  */
 exports.fakeShard = function () {
-  var nodeTable_ = exports.fakeStorageTable();
-  var wireTable_ = exports.fakeStorageTable();
-  var messageTable_ = exports.fakeStorageTable();
-  var logTable_ = exports.fakeStorageTable();
-  var heartbeatTable_ = exports.fakeStorageTable();
   return {
-    remoteNodeTable: nodeTable_,
-    nodeTable: new NetSimTable(nodeTable_),
-
-    remoteWireTable: wireTable_,
-    wireTable: new NetSimTable(wireTable_),
-
-    remoteMessageTable: messageTable_,
-    messageTable: new NetSimTable(messageTable_),
-
-    remoteLogTable: logTable_,
-    logTable: new NetSimTable(logTable_),
-
-    remoteHeartbeatTable: heartbeatTable_,
-    heartbeatTable: new NetSimTable(heartbeatTable_)
+    nodeTable: exports.overrideClientApi(new NetSimTable('node')),
+    wireTable: exports.overrideClientApi(new NetSimTable('wire')),
+    messageTable: exports.overrideClientApi(new NetSimTable('message')),
+    logTable: exports.overrideClientApi(new NetSimTable('log')),
+    heartbeatTable: exports.overrideClientApi(new NetSimTable('heartbeat')),
   };
 };
 

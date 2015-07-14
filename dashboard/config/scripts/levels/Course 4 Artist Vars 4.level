@@ -22,7 +22,15 @@
     "impressive": "false",
     "embed": "false",
     "video_key": "C4_math_artist",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "Now I want to make a rectangle that is twice as tall as it is wide. We've got a variable called `width` that is set to 100. Can you use the math blocks to complete the code?",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

@@ -1,0 +1,14 @@
+name 'ECSPD Online Units'
+title 'Units covered'
+css 'unplugged'
+markdown <<MARKDOWN
+## Online PD Units
+
+During the in-person workshop, you spent time planning and experiencing lessons from Unit 1. Here we're going to spend time looking over those lessons that weren't explored during the workshop and consider the resources and materials that will be helpful in planning and delivering Unit 1. 
+
+For review, see the Unit 1 outline below. The highlighted sections indicate the lessons that were covered in PD. You can see that there are 4 chunks of Unit 1 that were not yet covered. We'll explore all of the lessons from Unit 1 in the following levels, but we'll pay special attention to those that weren't covered in PD.
+
+![](https://images.code.org/58519d12c404fffb8b66f909e55c4ce7-image-1434411648907.png)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

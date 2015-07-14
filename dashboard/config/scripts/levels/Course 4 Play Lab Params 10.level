@@ -29,7 +29,18 @@
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "We've added one last function for you to use. \r\n\r\n<br/>\r\nProgram your game to call the `level_up` function if `player_points` > 10. Play the game, and make it past level 4 to move to the next puzzle. ",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

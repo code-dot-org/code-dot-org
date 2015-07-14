@@ -1,0 +1,8 @@
+name 'ECSPD Online U1D5-7 Assessment 1'
+title 'Searching'
+skip_sound 'true'
+question 'In the previous level, you watched a TED talk on filter bubbles. According to Eli Pariser, which of the following explain how the filter bubble can affect search results?'
+wrong 'A. It can cause two people with identical search queries to receive vastly different results'
+wrong 'B. It can cause you to have difficulty finding views or ideas that you do not agree with'
+right 'C. Both A and B'
+wrong 'D. None'

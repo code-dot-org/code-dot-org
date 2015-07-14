@@ -1,10 +1,10 @@
 require 'minitest/autorun'
 require_relative '../../deployment'
-require_relative '../../lib/cdo/aws/s3'
 require_relative '../../lib/cdo/analytics/milestone_parser'
-require 'fileutils'
 
 class MilestoneParser
+  # self.log_debug = true # Uncomment to show debug logs
+
   def stub_fetch(key, path, bytes)
     TestMilestoneParser.instance.fetch(key, path, bytes)
   end
@@ -35,8 +35,8 @@ class TestMilestoneParser < Minitest::Unit::TestCase
     @@instance = self
     @bytes_count = 0
     @fetch_count = 0
-    Aws.config[:stub_responses] = true
-    @s3_client = AWS::S3.connect_v2!
+
+    @s3_client = Aws::S3::Client.new(stub_responses: true)
     @s3_client.stub_responses(:list_objects,
                              {common_prefixes: [{prefix: 'hosts/staging/'}, {prefix: 'hosts/folder_1/'}, {prefix: 'hosts/folder_2/'}, {prefix: 'hosts/folder_3/'}]},
                              {contents: [
@@ -94,8 +94,7 @@ class TestMilestoneParser < Minitest::Unit::TestCase
           'etag' => 'z'
       }
     end
-    parser = MilestoneParser.new(cache, @s3_client)
-    count = parser.count
+    count = MilestoneParser.new(cache, @s3_client).count
     assert_equal 90 + 5, count
     assert_equal 1, @fetch_count
     assert_equal LOG_SIZE, @bytes_count
@@ -110,8 +109,7 @@ class TestMilestoneParser < Minitest::Unit::TestCase
           'etag' => 'z'
       }
     end
-    parser = MilestoneParser.new(cache, @s3_client)
-    count = parser.count
+    count = MilestoneParser.new(cache, @s3_client).count
     assert_equal 90, count
     assert_equal 1, @fetch_count
     assert_equal LOG_SIZE, @bytes_count

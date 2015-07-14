@@ -1,11 +1,10 @@
 name '2-3 maze multi 1' 
 title 'Maze Multiple Choice One'
 content1 '/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500'
-content2 'Choose the best answer.'
 
 height '160'
 
-question 'Which blocks work?'
+question 'Which set of blocks is the correct answer?'
 #wrong '4(F), L, F, L, F'
 wrong '/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png'
 

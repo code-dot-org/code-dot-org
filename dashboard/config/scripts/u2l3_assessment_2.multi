@@ -1,0 +1,7 @@
+name 'U2L3 Assessment 2'
+title 'Invent an Addressing Protocol: Question 1'
+question 'How many users would an fixed-length IP address system using 6 bits support?'
+wrong '6 users'
+wrong '12 users'
+wrong '32 users'
+right '64 users'

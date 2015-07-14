@@ -9,18 +9,30 @@
     %i.fa.fa-warning
     = t("compatability.https.header")
   :javascript
+    function setCookie(key, value, days) {
+      var expires = new Date();
+      expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = key + '=' + value + '; path=/; expires=' + expires.toUTCString();
+    }
+    function getCookie(key) {
+      var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+      return keyValue ? keyValue[2] : null;
+    }
+    function deleteCookie(key) {
+      document.cookie = key + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    }
     var banner = $('#warning-banner-https');
     var collapsed = banner.find(".collapsed");
     var expanded = banner.find(".expanded");
     function showWarning() {
       banner.show();
-      if (document.cookie.indexOf('hide-https-warning') >= 0) {
+      if (getCookie('hide-https-warning')) {
         collapsed.show();
       } else {
         expanded.show();
       }
     }
-    if(document.cookie.indexOf('https-blocked') >= 0) {
+    if(getCookie('https-blocked')) {
       showWarning();
     }
     banner.find("#hide-warning").click(function () {
@@ -32,10 +44,14 @@
       expanded.slideDown('fast');
       collapsed.slideUp('fast');
     });
-    $(window).load(function () {
-      onURLBlocked("#{ CDO.studio_url('test-image.png', 'https:') }", function () {
-        trackEvent("HTTPS Test", "blocked");
+    testImageAccess("#{ CDO.studio_url('test-image.png', 'https:') }",
+      function() {
+        deleteCookie('https-blocked');
+        setCookie('https_ok', '1', 60);
+      },
+      function () {
+        $(window).load(function () { trackEvent("HTTPS Test", "blocked"); });
         showWarning();
         document.cookie = "https-blocked=1; path=/";
-      });
-    });
+      }
+    );

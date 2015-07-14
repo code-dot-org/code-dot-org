@@ -1,5 +1,6 @@
 @import "color";
 @import "font";
+@import "style-constants";
 
 $common_root: '/blockly/media/common_images/';
 
@@ -11,7 +12,22 @@ $common_root: '/blockly/media/common_images/';
   font-family: $gotham-regular, sans-serif;
   font-weight: normal;
 }
-$headers_height: 40px;
+
+@mixin no-transform {
+  -moz-transform: none;
+  -webkit-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+@mixin horizontal-flip {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
 
 body {
   @include font;
@@ -202,10 +218,11 @@ div.droplet-palette-group-header-selected.orange {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: $headers_height;
+  top: $workspace-headers-height;
   bottom: 0px;
   font-size: 14px;
   overflow: hidden;
+  min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
 }
 
 #codeTextbox.pin_bottom {
@@ -236,10 +253,42 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
-.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet-breakpoint {
+#codeWorkspace.readonly:after { /* gray overlay when workspace is read only */
+  content: "";
+  display: block;
+  position: absolute;
+  top: $workspace-headers-height;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
   color: white;
+}
+
+.ace_gutter-cell.ace_error, .droplet-gutter-line.droplet_error {
+  background-image: url('#{$common_root}/gutterError.png');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.droplet-gutter-line.droplet_error, .droplet-gutter-line.droplet_warning {
+  background-position: 2px center;
+}
+
+.ace_gutter-cell.ace_warning, .droplet-gutter-line.droplet_warning {
+  background-image: url('#{$common_root}/gutterWarn.png');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+.ace_gutter-cell.ace_error, .ace_gutter-cell.ace_warning {
+  background-position: 2px 0px;
 }
 
 #visualizationResizeBar {
@@ -760,19 +809,63 @@ $aniGifPreviewHeight: 60px;
   text-align: center;
   white-space: nowrap;
   overflow-x: hidden;
-  height: $headers_height;
+  height: $workspace-headers-height;
   color: white;
   .workspace-header-clickable:hover {
     cursor: pointer;
     color: $yellow;
   }
   span {
-    line-height: $headers_height;
+    line-height: $workspace-headers-height;
+  }
+  .fa {
+    font-size: 18px;
+  }
+}
+
+$workspace-header-button-border-width: 1px;
+$workspace-header-button-height: 22px;
+$workspace-header-button-margin: ($workspace-headers-height -
+    ($workspace-header-button-height + 2 * $workspace-header-button-border-width)
+    ) / 2;
+.workspace-header-button {
+  cursor: pointer;
+  float: right;
+  overflow: hidden;
+  background-color: $light_purple;
+  margin-top: $workspace-header-button-margin;
+  margin-bottom: $workspace-header-button-margin;
+  margin-right: $workspace-header-button-margin;
+  margin-left: 0;
+  border: $workspace-header-button-border-width groove $light_gray;
+  height: $workspace-header-button-height;
+  border-radius: 4px; // TODO: Make mixin
+  font-family: $gotham-bold;
+  &:hover {
+    background-color: $cyan;
+  }
+  span {
+    padding: 0 12px;
+    line-height: $workspace-header-button-height;
+  }
+  .fa {
+    line-height: $workspace-header-button-height;
+    padding-right: 8px;
+    font-size: 15px;
+  }
+  .fa-code {
+    font-weight: bold;
+  }
+  .blocks-glyph {
+    display: none;
+    height: 18px;
+    vertical-align: text-bottom;
+    padding-right: 8px;
   }
 }
 
 #design-headers {
-  height: $headers_height;
+  height: $workspace-headers-height;
   background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
@@ -781,46 +874,63 @@ $aniGifPreviewHeight: 60px;
   user-select: none;
 }
 
+
+.readonly #headers {
+  background-color: $charcoal;
+}
+
 #headers {
-  height: $headers_height;
+  height: $workspace-headers-height;
   background-color: $purple;
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  #show-toolbox-icon, #hide-toolbox-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    line-height: $workspace-headers-height;
+    color: $lighter_purple;
+  }
+
+  #hide-toolbox-icon {
+    @include horizontal-flip;
+  }
+
   #toolbox-header {
     width: 270px;
     border-right: 1px solid gray;
     float: left;
+
+    &.toggleable {
+      cursor: pointer;
+      &:hover .fa {
+        color: $white;
+      }
+    }
   }
   #show-toolbox-header {
     border: 0;
     float: left;
     padding: 0 10px;
+    cursor: pointer;
+    &:hover .fa {
+      color: $white;
+    }
+
+    & > span {
+      margin: auto 18px;
+    }
   }
   #blockCounter, #blockUsed {
     display: inline-block;
   }
-  #clear-puzzle-header, #show-code-header {
-    cursor: pointer;
-    float: right;
-    border-left: 1px solid gray;
-    &:hover {
-      background-color: $cyan;
-    }
-    span {
-      padding: 0 20px;
-    }
-  }
+
   #clear-puzzle-header:hover {
     background-color: $red;
-  }
-  #hide-toolbox, #show-toolbox {
-    cursor: pointer;
-    &:hover {
-      color: $yellow;
-    }
   }
   .block-counter-default {
     color: white;
@@ -834,6 +944,20 @@ $aniGifPreviewHeight: 60px;
   div {
     margin-right: 0;
   }
+
+  #show-toolbox-icon, #hide-toolbox-icon {
+    left: auto;
+    right: 8px;
+  }
+
+  #show-toolbox-icon {
+    @include horizontal-flip;
+  }
+
+  #hide-toolbox-icon {
+    @include no-transform;
+  }
+
   #toolbox-header {
     border-right: 0;
     border-left: 1px solid gray;
@@ -842,10 +966,20 @@ $aniGifPreviewHeight: 60px;
   #show-toolbox-header {
     float: right;
   }
-  #clear-puzzle-header, #show-code-header {
-    border-left: 0;
-    border-right: 1px solid gray;
+  .workspace-header-button {
+    margin-left: $workspace-header-button-margin;
+    margin-right: 0;
     float: left;
+
+    .fa {
+      padding-right: 0;
+      padding-left: 8px;
+    }
+    .blocks-glyph {
+      @include horizontal-flip;
+      padding-right: 0;
+      padding-left: 8px;
+    }
   }
 }
 
@@ -1216,17 +1350,21 @@ $examples-link-font: $gotham-extra-bold;
 
 $see-examples-thick-underline-color: $yellow;
 
-.tooltip-example-link {
+.tooltip-example-link, .tooltip-choose-link {
   margin-top: 5px;
   float: right;
 }
 
-.tooltip-example-link > a {
+.tooltip-example-link > a, .tooltip-choose-link > a {
   &:hover, &:link, &:active, &:visited {
     border-bottom: 3px solid $see-examples-thick-underline-color;
     color: white;
     font-family: $gotham-bold;
   }
+}
+
+.tooltip-choose-link {
+  float: left;
 }
 
 .function-name {

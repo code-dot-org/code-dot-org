@@ -29,22 +29,34 @@ module LevelsHelper
     # Otherwise the current level.
     host_level = @level.project_template_level || @level
 
-    # If `create` fails because it was beat by a competing request, a second
-    # `find_by` should succeed.
-    channel_token = retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
-        # Get a new channel_id.
-        ct.channel = ChannelsApi.call(request.env.merge(
-          'REQUEST_METHOD' => 'POST',
-          'PATH_INFO' => '/v3/channels',
-          'REQUEST_PATH' => '/v3/channels',
-          'CONTENT_TYPE' => 'application/json;charset=utf-8',
-          'rack.input' => StringIO.new('{"hidden":"true"}')
-        ))[1]['Location'].split('/').last
+    if @user
+      # "answers" are in the channel so instead of doing
+      # set_level_source to load answers when looking at another user,
+      # we have to load the channel here.
+
+      channel_token = ChannelToken.find_by(level: host_level, user: @user)
+      view_options readonly_workspace: true, callouts: []
+    else
+      # If `create` fails because it was beat by a competing request, a second
+      # `find_by` should succeed.
+      channel_token = retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+        # your own channel
+        ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
+          # Get a new channel_id.
+          ct.channel = ChannelsApi.call(request.env.merge(
+                                                          'REQUEST_METHOD' => 'POST',
+                                                          'PATH_INFO' => '/v3/channels',
+                                                          'REQUEST_PATH' => '/v3/channels',
+                                                          'CONTENT_TYPE' => 'application/json;charset=utf-8',
+                                                          'rack.input' => StringIO.new('{"hidden":"true"}')
+                                                         ))[1]['Location'].split('/').last
+        end
       end
     end
 
-    view_options channel: channel_token.channel
+    if channel_token
+      view_options channel: channel_token.channel
+    end
   end
 
   def select_and_track_autoplay_video
@@ -141,10 +153,11 @@ module LevelsHelper
     app_options[:send_to_phone_url] = @phone_share_url if @phone_share_url
 
     # Edit blocks-dependent options
-    if level_options['edit_blocks']
+    if level_view_options[:edit_blocks]
       # Pass blockly the edit mode: "<start|toolbox|required>_blocks"
-      level_options['edit_blocks'] = @edit_blocks
+      level_options['edit_blocks'] = level_view_options[:edit_blocks]
       level_options['edit_blocks_success'] = t('builder.success')
+      level_options['toolbox'] = level_view_options[:toolbox_blocks]
     end
 
     # Process level view options
@@ -176,6 +189,7 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && @current_user && @current_user.admin?)
+    app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
         fallback_response: @fallback_response,
         callback: @callback,

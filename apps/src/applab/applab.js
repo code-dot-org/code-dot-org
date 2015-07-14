@@ -8,7 +8,6 @@
 /* global dashboard */
 
 'use strict';
-require('./acemode/mode-javascript_codeorg');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('../locale');
 var applabMsg = require('./locale');
@@ -31,7 +30,7 @@ var KeyCodes = constants.KeyCodes;
 var _ = utils.getLodash();
 // var Hammer = utils.getHammer();
 var apiTimeoutList = require('../timeoutList');
-var annotationList = require('./acemode/annotationList');
+var annotationList = require('../acemode/annotationList');
 var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
@@ -41,6 +40,7 @@ var elementLibrary = require('./designElements/library');
 var clientApi = require('./assetManagement/clientApi');
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
+var DebugArea = require('./DebugArea');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -49,6 +49,20 @@ var TestResults = studioApp.TestResults;
  * Create a namespace for the application.
  */
 var Applab = module.exports;
+
+/**
+ * Controller for debug console and controls on page
+ * TODO: Rename to debugArea once other debugArea references are moved out of
+ *       this file.
+ * @type {DebugArea}
+ */
+var debugAreaController = null;
+
+//Debug console history
+Applab.debugConsoleHistory = {
+  'history': [],
+  'currentHistoryIndex': 0
+};
 
 var errorHandler = require('./errorHandler');
 var outputApplabConsole = errorHandler.outputApplabConsole;
@@ -74,7 +88,7 @@ var twitterOptions = {
   hashtag: "ApplabCode"
 };
 
-var MIN_DEBUG_AREA_HEIGHT = 70;
+var MIN_DEBUG_AREA_HEIGHT = 120;
 var MAX_DEBUG_AREA_HEIGHT = 400;
 
 // The typical width of the visualization area (indepdendent of appWidth)
@@ -281,7 +295,7 @@ var drawDiv = function () {
   divApplab.style.height = Applab.appHeight + "px";
   if (Applab.levelHtml === '') {
     // On clear gives us a fresh start, including our default screen.
-    designMode.onClear();
+    designMode.loadDefaultScreen();
     designMode.serializeToLevelHtml();
   }
 };
@@ -302,9 +316,46 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
+function pushDebugConsoleHistory(commandText) {
+  Applab.debugConsoleHistory.currentHistoryIndex = Applab.debugConsoleHistory.history.length + 1;
+  Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1] = commandText;
+}
+
+function updateDebugConsoleHistory(commandText) {
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] = commandText;
+  }
+}
+
+function moveUpDebugConsoleHistory(currentInput) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex > 0) {
+    Applab.debugConsoleHistory.currentHistoryIndex -= 1;
+  }
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
+  }
+  return currentInput;
+}
+
+function moveDownDebugConsoleHistory(currentInput) {
+  if (Applab.debugConsoleHistory.currentHistoryIndex < Applab.debugConsoleHistory.history.length) {
+    Applab.debugConsoleHistory.currentHistoryIndex += 1;
+  }
+  if (Applab.debugConsoleHistory.currentHistoryIndex == Applab.debugConsoleHistory.history.length &&
+      currentInput == Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1]) {
+    return '';
+  }
+  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
+    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
+  }
+  return currentInput;
+}
+
 function onDebugInputKeyDown(e) {
-  if (e.keyCode == KeyCodes.ENTER) {
-    var input = e.target.textContent;
+  var input = e.target.textContent;
+  if (e.keyCode === KeyCodes.ENTER) {
+    e.preventDefault();
+    pushDebugConsoleHistory(input);
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
     if (Applab.JSInterpreter) {
@@ -339,6 +390,14 @@ function onDebugInputKeyDown(e) {
       outputApplabConsole('< (not running)');
     }
   }
+  if (e.keyCode === KeyCodes.UP) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveUpDebugConsoleHistory(input);
+  }
+  if (e.keyCode === KeyCodes.DOWN) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveDownDebugConsoleHistory(input);
+  }
 }
 
 function handleExecutionError(err, lineNumber) {
@@ -365,7 +424,16 @@ Applab.getCode = function () {
 };
 
 Applab.getHtml = function () {
+  // This method is called on autosave. If we're about to autosave, let's update
+  // levelHtml to include our current state.
+  if (Applab.isInDesignMode() && !Applab.isRunning()) {
+    designMode.serializeToLevelHtml();
+  }
   return Applab.levelHtml;
+};
+
+Applab.setLevelHtml = function (html) {
+  Applab.levelHtml = designMode.addScreenIfNecessary(html);
 };
 
 Applab.onTick = function() {
@@ -402,12 +470,22 @@ Applab.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+  config.appMsg = applabMsg;
   loadLevel();
 
   // Applab.initMinimal();
 
   studioApp.initReadonly(config);
 };
+
+function extendHandleClearPuzzle() {
+  var orig = studioApp.handleClearPuzzle.bind(studioApp);
+  studioApp.handleClearPuzzle = function (config) {
+    orig(config);
+    Applab.setLevelHtml(config.level.startHtml || '');
+    studioApp.resetButtonClick();
+  };
+}
 
 /**
  * Initialize Blockly and the Applab app.  Called on page load.
@@ -416,9 +494,10 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
+  extendHandleClearPuzzle();
 
   // Pre-populate asset list
-  if (window.dashboard && dashboard.project.current) {
+  if (window.dashboard && dashboard.project.getCurrentId()) {
     clientApi.ajax('GET', '', function (xhr) {
       assetListStore.reset(JSON.parse(xhr.responseText));
     }, function () {
@@ -477,7 +556,8 @@ Applab.init = function(config) {
       pinWorkspaceToBottom: true,
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
-      hasDesignMode: Applab.user.isAdmin
+      hasDesignMode: true,
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
@@ -506,31 +586,13 @@ Applab.init = function(config) {
     // ace gutter:
     var aceEditor = studioApp.editor.aceEditor;
 
-    var toggleBreakpoint = function (row) {
-      var bps = aceEditor.session.getBreakpoints();
-      if (bps[row]) {
-        aceEditor.session.clearBreakpoint(row);
-        studioApp.editor.removeGutterDecoration(row, 'droplet-breakpoint');
-      } else {
-        aceEditor.session.setBreakpoint(row);
-        studioApp.editor.addGutterDecoration(row, 'droplet-breakpoint');
-      }
-    };
-
-    if (aceEditor) {
-      aceEditor.on("guttermousedown", function(e) {
-        var target = e.domEvent.target;
-        if (target.className.indexOf("ace_gutter-cell") == -1) {
-          return;
-        }
-        var row = e.getDocumentPosition().row;
-        toggleBreakpoint(row);
-        e.stop();
-      });
-    }
-
     studioApp.editor.on('guttermousedown', function(e) {
-      toggleBreakpoint(e.line);
+      var bps = studioApp.editor.getBreakpoints();
+      if (bps[e.line]) {
+        studioApp.editor.clearBreakpoint(e.line);
+      } else {
+        studioApp.editor.setBreakpoint(e.line);
+      }
     });
 
     if (studioApp.share) {
@@ -555,13 +617,15 @@ Applab.init = function(config) {
   config.vizAspectRatio = Applab.appWidth / Applab.appHeight;
   config.nativeVizWidth = Applab.appWidth;
 
+  config.appMsg = applabMsg;
+
   // Since the app width may not be 400, set this value in the config to
   // ensure that the viewport is set up properly for scaling it up/down
   config.mobileNoPaddingShareWidth = config.level.appWidth;
 
   // Applab.initMinimal();
 
-  Applab.levelHtml = designMode.addScreenIfNecessary(level.levelHtml || "");
+  Applab.setLevelHtml(level.levelHtml || level.startHtml || "");
 
   studioApp.init(config);
 
@@ -581,11 +645,19 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
+  debugAreaController = new DebugArea(
+      document.getElementById('debug-area'),
+      document.getElementById('codeTextbox'));
+
   if (level.editCode) {
     // Initialize the slider.
     var slider = document.getElementById('applab-slider');
     if (slider) {
-      Applab.speedSlider = new Slider(10, 27, 130, slider);
+      var sliderXOffset = 10,
+          sliderYOffset = 22,
+          sliderWidth = 130;
+      Applab.speedSlider = new Slider(sliderXOffset, sliderYOffset, sliderWidth,
+          slider);
 
       // Change default speed (eg Speed up levels that have lots of steps).
       if (config.level.sliderSpeed) {
@@ -618,6 +690,11 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
+
+    var clearButton = document.getElementById('clear-console-header');
+    if (clearButton) {
+      dom.addClickTouchEvent(clearButton, clearDebugOutput);
+    }
     var pauseButton = document.getElementById('pauseButton');
     var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
@@ -630,7 +707,11 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
       dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
     }
-    var viewDataButton = document.getElementById('viewDataButton');
+
+    // This button and handler duplicate a button in DesignToggleRow.jsx
+    // and should be removed once that component is no longer hidden from
+    // regular users.
+    var viewDataButton = document.getElementById('temporaryViewDataButton');
     if (viewDataButton) {
       // Simulate a run button click, to load the channel id.
       var viewDataClick = studioApp.runButtonClickWrapper.bind(
@@ -639,20 +720,50 @@ Applab.init = function(config) {
       dom.addClickTouchEvent(viewDataButton, throttledViewDataClick);
     }
 
+    // Prevent the backspace key from navigating back. Make sure it's still
+    // allowed on other elements.
+    // Based on http://stackoverflow.com/a/2768256/2506748
+    $(document).on('keydown', function (event) {
+      var doPrevent = false;
+      if (event.keyCode !== KeyCodes.BACKSPACE) {
+        return;
+      }
+      var d = event.srcElement || event.target;
+      if ((d.tagName.toUpperCase() === 'INPUT' && (
+          d.type.toUpperCase() === 'TEXT' ||
+          d.type.toUpperCase() === 'PASSWORD' ||
+          d.type.toUpperCase() === 'FILE' ||
+          d.type.toUpperCase() === 'EMAIL' ||
+          d.type.toUpperCase() === 'SEARCH' ||
+          d.type.toUpperCase() === 'NUMBER' ||
+          d.type.toUpperCase() === 'DATE' )) ||
+          d.tagName.toUpperCase() === 'TEXTAREA') {
+        doPrevent = d.readOnly || d.disabled;
+      }
+      else {
+        doPrevent = !d.isContentEditable;
+      }
+
+      if (doPrevent) {
+        event.preventDefault();
+      }
+    });
+
+    designMode.addKeyboardHandlers();
+
     designMode.renderDesignWorkspace();
 
     designMode.configureDesignToggleRow();
 
-    // Start out in regular mode. Eventually likely want this to be a level setting
-    designMode.toggleDesignMode(false);
-
-    var designModeClear = document.getElementById('designModeClear');
-    if (designModeClear) {
-      dom.addClickTouchEvent(designModeClear, designMode.onClear);
-    }
+    designMode.toggleDesignMode(Applab.startInDesignMode());
 
     designMode.configureDragAndDrop();
   }
+};
+
+Applab.appendToEditor = function(newCode) {
+  var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
+  studioApp.editor.setValue(code);
 };
 
 Applab.onMouseDownDebugResizeBar = function (event) {
@@ -687,18 +798,12 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
                                 (window.innerHeight - event.pageY) - offset));
 
+  if (debugAreaController.isShut()) {
+    debugAreaController.snapOpen();
+  }
+
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
-
-  // Prevent the codeTextbox from being shrunk too small vertically
-  // (half for code, half for debug-area, minus half toolbar height + 1px border)
-  //
-  // (we would do this in CSS, but for precedence rules to work properly, if
-  //  we explicitly set bottom/height styles on the elements above, we need to
-  //  do the same for these styles as well)
-
-  codeTextbox.style.minHeight = 'calc(50% - 21px)';
-  debugArea.style.maxHeight = 'calc(50% - 21px)';
 
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
@@ -724,9 +829,14 @@ Applab.clearEventHandlersKillTickLoop = function() {
   Applab.running = false;
   Applab.tickCount = 0;
 
-  var spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('running-spinner');
   if (spinner) {
-    spinner.style.visibility = 'hidden';
+    spinner.style.display = 'none';
+  }
+
+  var pausedIcon = document.getElementById('paused-icon');
+  if (pausedIcon) {
+    pausedIcon.style.display = 'none';
   }
 
   var pauseButton = document.getElementById('pauseButton');
@@ -789,12 +899,15 @@ Applab.reset = function(first) {
     applabTurtle.turtleSetVisibility(true);
   }
 
-  var allowDragging = Applab.isInDesignMode() && !Applab.isRunning();
-  designMode.parseFromLevelHtml(newDivApplab, allowDragging);
-  designMode.changeScreen('screen1');
+  designMode.addKeyboardHandlers();
+
+  var isDesigning = Applab.isInDesignMode() && !Applab.isRunning();
+  $("#divApplab").toggleClass('divApplabDesignMode', isDesigning);
+  designMode.parseFromLevelHtml(newDivApplab, isDesigning);
+  designMode.loadDefaultScreen();
   if (Applab.isInDesignMode()) {
     designMode.clearProperties();
-    designMode.resetElementTray(allowDragging);
+    designMode.resetElementTray(isDesigning);
   }
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
@@ -819,18 +932,16 @@ Applab.reset = function(first) {
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
     }
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('running-spinner');
     if (spinner) {
-      spinner.style.visibility = 'hidden';
+      spinner.style.display = 'none';
     }
-    var debugOutput = document.getElementById('debug-output');
-    if (debugOutput) {
-      debugOutput.textContent = '';
+    var pausedIcon = document.getElementById('paused-icon');
+    if (pausedIcon) {
+      pausedIcon.style.display = 'none';
     }
-    var debugInput = document.getElementById('debug-input');
-    if (debugInput) {
-      debugInput.textContent = '';
-    }
+    clearDebugOutput();
+    clearDebugInput();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -838,6 +949,26 @@ Applab.reset = function(first) {
   Applab.executionError = null;
   Applab.JSInterpreter = null;
 };
+
+/**
+ * Empty the contents of the debug console scrollback area.
+ */
+function clearDebugOutput() {
+  var debugOutput = document.getElementById('debug-output');
+  if (debugOutput) {
+    debugOutput.textContent = '';
+  }
+}
+
+/**
+ * Empty the debug console input area.
+ */
+function clearDebugInput() {
+  var debugInput = document.getElementById('debug-input');
+  if (debugInput) {
+    debugInput.textContent = '';
+  }
+}
 
 // TODO(dave): remove once channel id is passed in appOptions.
 /**
@@ -848,18 +979,18 @@ Applab.reset = function(first) {
  */
 studioApp.runButtonClickWrapper = function (callback) {
   $(window).trigger('run_button_pressed');
-  Applab.serializeAndSave(callback, true);
+  Applab.serializeAndSave(callback);
 };
 
 /**
  * We also want to serialize in save in some other cases (i.e. entering code
  * mode from design mode).
  */
-Applab.serializeAndSave = function (callback, runButtonClick) {
+Applab.serializeAndSave = function (callback) {
   designMode.serializeToLevelHtml();
   // Behave like other apps when not editing a project or channel id is present.
-  if (!window.dashboard || (!dashboard.project.isEditing ||
-      (dashboard.project.current && dashboard.project.current.id))) {
+  if (!window.dashboard || !window.dashboard.project.isEditing() ||
+      window.dashboard.project.getCurrentId()) {
     $(window).trigger('appModeChanged');
     if (callback) {
       callback();
@@ -867,7 +998,7 @@ Applab.serializeAndSave = function (callback, runButtonClick) {
   } else {
     // Otherwise, makes sure we don't hit our callback until after we've created
     // a channel
-    $(window).trigger('appModeChanged', callback());
+    $(window).trigger('appModeChanged', callback);
   }
 };
 
@@ -964,8 +1095,9 @@ Applab.execute = function() {
   var codeWhenRun;
   if (level.editCode) {
     codeWhenRun = studioApp.editor.getValue();
+    // TODO: determine if this is needed (worker also calls attachToSession)
     var session = studioApp.editor.aceEditor.getSession();
-    annotationList.attachToSession(session);
+    annotationList.attachToSession(session, studioApp.editor);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Applab.Globals namespace)
@@ -1018,16 +1150,20 @@ Applab.execute = function() {
       stepOverButton.disabled = true;
       stepOutButton.disabled = true;
     }
-    var spinner = document.getElementById('spinner');
+    var spinner = document.getElementById('running-spinner');
     if (spinner) {
-      spinner.style.visibility = 'visible';
+      spinner.style.display = 'inline-block';
+    }
+    var pausedIcon = document.getElementById('paused-icon');
+    if (pausedIcon) {
+      pausedIcon.style.display = 'none';
     }
   }
 
-  // Set focus on divApplab so key events can be handled right from the start
-  // without requiring the user to adjust focus:
+  // Set focus on the default screen so key events can be handled
+  // right from the start without requiring the user to adjust focus:
   var divApplab = document.getElementById('divApplab');
-  divApplab.focus();
+  divApplab.firstChild.focus();
 
   Applab.running = true;
   queueOnTick();
@@ -1056,18 +1192,21 @@ Applab.onPauseContinueButton = function() {
 Applab.updatePauseUIState = function() {
   var pauseButton = document.getElementById('pauseButton');
   var continueButton = document.getElementById('continueButton');
-  var spinner = document.getElementById('spinner');
+  var spinner = document.getElementById('running-spinner');
+  var pausedIcon = document.getElementById('paused-icon');
 
-  if (pauseButton && continueButton && spinner) {
+  if (pauseButton && continueButton && spinner && pausedIcon) {
     if (Applab.JSInterpreter.paused &&
         Applab.JSInterpreter.nextStep === StepType.RUN) {
       pauseButton.style.display = "none";
       continueButton.style.display = "inline-block";
-      spinner.style.visibility = 'hidden';
+      spinner.style.display = 'none';
+      pausedIcon.style.display = 'inline-block';
     } else {
       pauseButton.style.display = "inline-block";
       continueButton.style.display = "none";
-      spinner.style.visibility = 'visible';
+      spinner.style.display = 'inline-block';
+      pausedIcon.style.display = 'none';
     }
   }
 };
@@ -1114,7 +1253,31 @@ Applab.onDesignModeButton = function() {
 
 Applab.onCodeModeButton = function() {
   designMode.toggleDesignMode(false);
-  Applab.serializeAndSave();
+  utils.fireResizeEvent();
+  if (!Applab.isRunning()) {
+    Applab.serializeAndSave();
+  }
+};
+
+/**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ * @param {string} filename
+ * @returns {string}
+ */
+Applab.maybeAddAssetPathPrefix = function (filename) {
+  filename = filename || '';
+  if (filename.indexOf('/') !== -1) {
+    return filename;
+  }
+
+  var channelId = dashboard && dashboard.project.getCurrentId();
+  // TODO(dave): remove this check once we always have a channel id.
+  if (!channelId) {
+    return filename;
+  }
+
+  return '/v3/assets/' + channelId + '/'  + filename;
 };
 
 Applab.onPuzzleComplete = function() {
@@ -1251,6 +1414,15 @@ var checkFinished = function () {
   return false;
 };
 
+Applab.startInDesignMode = function () {
+  return !!level.designModeAtStart;
+};
+
+Applab.hideDesignModeToggle = function () {
+  return !!level.hideDesignMode;
+};
+
+
 Applab.isInDesignMode = function () {
   return $('#designWorkspace').is(':visible');
 };
@@ -1266,18 +1438,44 @@ function quote(str) {
 Applab.getAssetDropdown = function (typeFilter) {
   var options = assetListStore.list(typeFilter).map(function (asset) {
     return {
-      text: quote(clientApi.basePath(asset.filename)),
+      text: quote(asset.filename),
       display: quote(asset.filename)
     };
   });
   var handleChooseClick = function (callback) {
     showAssetManager(function (filename) {
       callback(quote(filename));
-    }, 'image');
+    }, typeFilter);
   };
   options.push({
     display: '<span class="chooseAssetDropdownOption">Choose...</a>',
     click: handleChooseClick
   });
   return options;
+};
+
+/**
+ * Return droplet dropdown options representing a list of ids currently present
+ * in the DOM, optionally limiting the result to a certain HTML element tagName.
+ * @param {string} [tagFilter] Optional HTML element tagName to filter for.
+ * @returns {Array}
+ */
+Applab.getIdDropdown = function (tagFilter) {
+  var elements = $('#divApplab').children().toArray().concat(
+      $('#divApplab').children().children().toArray());
+
+  var filteredIds = [];
+  elements.forEach(function (element) {
+    if (!tagFilter || element.tagName.toUpperCase() === tagFilter.toUpperCase()) {
+      filteredIds.push(element.id);
+    }
+  });
+  filteredIds.sort();
+
+  return filteredIds.map(function(id) {
+    return {
+      text: quote(id),
+      display: quote(id)
+    };
+  });
 };
