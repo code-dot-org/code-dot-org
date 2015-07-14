@@ -41,6 +41,8 @@ Suite 100
 Durham, NC 27701
 <br />
 
+[Parking Directions For American Undergound](/files/BSU_Parking_Directions_July13.pdf)
+
 **What do I bring to Phase 2?**
 
 Water Bottle
