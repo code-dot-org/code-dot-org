@@ -94,23 +94,11 @@ def codeorg_url()
 end
 
 def resolve_url(url)
-  if url.downcase.include? "studio.code.org"
-    # if studio.code.org url do nothing
-  elsif url.downcase.include? "code.org" # if code.org url, link to partner site
-    # TODO: update to use countries.json if partner, show partner site
-    if @country == 'ar'
-      return 'ar.code.org'
-    elsif @country == 'br'
-      return 'br.code.org'
-    elsif @country == 'ro'
-      return 'ro.code.org'
-    elsif @country == 'uk'
-      return 'uk.code.org'
-    else
-      return 'code.org'
-    end
-  else # if hoc.com url, keep country and language in URL
-    File.join(['/', (@company or @country), @user_language, uri].select{|i| !i.nil_or_empty?})
+  if url.downcase.include? "code.org"
+    partner_page = HOC_COUNTRIES[@country]['partner_page']
+    return url.gsub('code.org', partner_page)
+  else
+    File.join(['/', (@company or @country), @user_language, url].select{|i| !i.nil_or_empty?})
   end
 end
 
@@ -124,12 +112,18 @@ def resolve_image(path)
   return path
 end
 
-def campaign_date()
-  # TODO: update to use countries.json
-  if @country == 'la'
-    return "October 5-11"
+def campaign_date(format)
+  case format
+  when "start-short"
+    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_start_short']
+  when "start-long"
+    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_start_long']
+  when "short"
+    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_short']
+  when "full"
+    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_full']
   else
-    return "December 7-13"
+    return campaign_date = HOC_COUNTRIES[@country]['campaign_date_full']
   end
 end
 
