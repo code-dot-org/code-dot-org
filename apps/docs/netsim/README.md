@@ -157,15 +157,24 @@ the protocol each client follows.
 3. If the connection is rejected, the client destroys the wire and reports a 
    connection failure.
 
-In this way, if two clients simultaneously attempt to fill the router's last seat they will both fail to connect and have to try again.
+In this way, if two clients simultaneously attempt to fill the router's last 
+seat they will both fail to connect and have to try again.
 
 ### Address assignment
 
-Similar to the connection limit, it's possible that two clients will simultaneously try and get a unique local address from the router.  Since both clients are acting as the router on their own behalf, they might both get assigned the same address.  This is not solved yet.  Probably will implement a similar optimistic-assignment and rollback strategy.
+Similar to the connection limit, it's possible that two clients will 
+simultaneously try and get a unique local address from the router.  Since both 
+clients are acting as the router on their own behalf, they might both get 
+assigned the same address.  This is not solved yet.  Probably will implement a 
+similar optimistic-assignment and rollback strategy.
 
 ### Message Routing
 
-The actual work of the router, directing a message to its destination, is always handled by the sending client.  In a network with multiple routers, the sending client would act as each router for messages that it originated.  The recipient only needs to simulate their local node for the final step of receiving the message.
+The actual work of the router, directing a message to its destination, is 
+always handled by the sending client.  In a network with multiple routers, 
+the sending client would act as each router for messages that it originated.  
+The recipient only needs to simulate their local node for the final step of 
+receiving the message.
 
 | Step | Work done by sender | Work done by recipient |
 | ---- | ------------------- | ---------------------- |
@@ -177,13 +186,23 @@ The actual work of the router, directing a message to its destination, is always
 
 ### Shard Cleaning
 
-Sometimes, clients are disconnected without warning, leaving orphaned rows in shared storage.  Since the server doesn't have any special logic to handle this case, clients take turns performing cleanup on the various shard tables themselves.
+Sometimes, clients are disconnected without warning, leaving orphaned rows in 
+shared storage.  Since the server doesn't have any special logic to handle this 
+case, clients take turns performing cleanup on the various shard tables themselves.
 
 1. Each client periodically triggers a cleanup subsystem.
-2. When it starts up, the cleanup subsystem should attempt to get a 'cleaning lock' on the network, similar to how routers enforce connection limits.  Expired cleaning locks can be overwritten.
-3. When a client successfully gets a cleaning lock, it begins checking for invalid rows in the shard tables, such that the cleanup cascades from one table to the next.
+2. When it starts up, the cleanup subsystem should attempt to get a 'cleaning 
+   lock' on the network, similar to how routers enforce connection limits.  
+   Expired cleaning locks can be overwritten.
+3. When a client successfully gets a cleaning lock, it begins checking for 
+   invalid rows in the shard tables, such that the cleanup cascades from one 
+   table to the next.
   1. First, any heartbeats over a certain age may be deleted.
-  2. The nodes table gets cleaned first.  Any node that hasn't had an entry in the heartbeat table in (TIMEOUT) milliseconds can be removed.
-  3. The wires table comes next.  Any wire with an end connected to a missing node is invalid and may be cleaned up.
-  4. The messages table is next. Any message going to a missing node may be cleaned up.
-4. When it's done, the client releases the cleaning lock, letting another client take a turn.
+  2. The nodes table gets cleaned first.  Any node that hasn't had an entry in 
+     the heartbeat table in (TIMEOUT) milliseconds can be removed.
+  3. The wires table comes next.  Any wire with an end connected to a missing 
+     node is invalid and may be cleaned up.
+  4. The messages table is next. Any message going to a missing node may be 
+     cleaned up.
+4. When it's done, the client releases the cleaning lock, letting another 
+   client take a turn.
