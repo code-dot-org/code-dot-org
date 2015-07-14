@@ -313,7 +313,7 @@ dashboard.header.showProjectHeader = function () {
 
   // TODO: Remove this (and the related style) when Applab is no longer in beta.
   if ('applab' === appOptions.app) {
-    $('.project_info').append($('<div class="beta-notice">').text('beta'));
+    $('.project_info').append($('<div class="beta-notice">').text('<%= I18n.t('beta') %>'));
   }
 
   projectNameShow();
