@@ -803,8 +803,8 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
 
   dialog.show({hideOptions: hideOptions});
 
-  if (renderedMarkdown && $.fn.details) {
-    // if available, process markdown with <details> tag polyfill
+  if (renderedMarkdown) {
+    // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
 };
