@@ -1,3 +1,6 @@
+/**
+ * @overview UI table of local subnet, displaying hostname => address map.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

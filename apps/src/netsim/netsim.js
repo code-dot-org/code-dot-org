@@ -1,5 +1,6 @@
 /**
- * @fileoverview Internet Simulator app for Code.org.
+ * @overview Internet Simulator app for Code.org.
+ *           This file is the main entry point for the Internet Simulator.
  */
 
 /* jshint
