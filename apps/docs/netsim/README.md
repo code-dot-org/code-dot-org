@@ -9,6 +9,16 @@ network state, there isn't any intelligence on the server - clients are
 trusted, and distribute work for running the simulation among themselves 
 according to some simple rules.
 
+* [Shared Storage](#shared-storage)
+  * [Shards](#shards)
+  * [Tables](#tables)
+* [Distribution of Responsibility](#distribution-of-responsibility)
+  * [Router Status](#router-status)
+  * [Router Connection Limits](#router-connection-limits)
+  * [Address Assignment](#address-assignment)
+  * [Message Routing](#message-routing)
+  * [Shard Cleaning](#shard-cleaning)
+
 ## Shared Storage
 
 The network simulator has its own app ID within the app storage system, and creates/interacts with shared tables to model a common network state.
