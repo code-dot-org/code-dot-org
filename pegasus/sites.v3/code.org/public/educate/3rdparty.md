@@ -39,7 +39,7 @@ nav: educate_nav
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
-| [Edhesive](edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
+| [Edhesive](https://edhesive.com/) | Year-long AP Computer Science course, FREE | Online PD, community and content/technical/program support available, $2,200 per school |
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
 | [Codecademy](http://www.codecademy.com/learn?utm_campaign=reskillusa) | 6 online courses and 65 projects. FREE | Not provided |

@@ -299,10 +299,15 @@ $default-modal-width: 640px;
 .modal {
   a:hover {color:$red; background-color: white; }
 
-  &.auto-resize-scrollable {
-    background-color: $lightest_gray;
+  &#block-documentation-lightbox {
+    width: 80% !important;
+  }
+}
+
+.auto-resize-scrollable {
+  &.modal {
     position: absolute;
-    top: 44px; // top of the dialog
+    top: 50px; // top of the dialog
 
     // make dialog auto-center regardless of width
     right: 0;
@@ -315,9 +320,8 @@ $default-modal-width: 640px;
 
     z-index: 1050;
   }
-
-  &#block-documentation-lightbox {
-    width: 80% !important;
+  .modal-image {
+    margin-top: -100px;
   }
 }
 
@@ -408,6 +412,17 @@ $default-modal-width: 640px;
   .project_name_wrapper .header_text {
     float: left;
     clear: left;
+  }
+  // TODO: Remove when applab is no longer in beta
+  .beta-notice {
+    float: left;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 7px 0;
+    font-family: $gotham-extra-bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff176;
   }
 }
 
