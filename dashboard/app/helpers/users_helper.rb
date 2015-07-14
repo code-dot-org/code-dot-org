@@ -2,6 +2,12 @@ module UsersHelper
 
   # Summarize the current user's progress within a certain script.
   def summarize_user_progress(script, user = current_user)
+    # Cache the results in an instance variable (per-request)
+    # todo: investigate using Rails.cache with appropriate user+script cache keys instead
+    @user_data ||= {}
+    key = "#{script.id}_#{user.id}"
+    return @user_data[key] if @user_data[key].present?
+
     user_data = {}
     if user
       lines = user.total_lines
@@ -42,6 +48,7 @@ module UsersHelper
       end
     end
 
+    @user_data[key] = user_data
     user_data
   end
 
