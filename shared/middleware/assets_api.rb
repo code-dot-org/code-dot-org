@@ -21,7 +21,7 @@ class AssetsApi < Sinatra::Base
     'mp3'
   ]
 
-  def connect_s3
+  def self.connect_s3
     params = {region: 'us-east-1'}
     if CDO.s3_access_key_id && CDO.s3_secret_access_key
       params[:credentials] = Aws::Credentials.new(CDO.s3_access_key_id, CDO.s3_secret_access_key)
@@ -29,8 +29,8 @@ class AssetsApi < Sinatra::Base
     Aws::S3::Client.new(params)
   end
 
-  def s3
-    @s3 ||= connect_s3
+  def self.s3
+    @@s3 ||= self.connect_s3
   end
 
   #
@@ -44,7 +44,7 @@ class AssetsApi < Sinatra::Base
 
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}"
-    s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:prefix).contents.map do |fileinfo|
+    self.class.s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}/(.+)$}.match(fileinfo.key)[1]
       mime_type = Sinatra::Base.mime_type(filename.split('.').last)
       category = mime_type.split('/').first  # e.g. 'image' or 'audio'
@@ -65,7 +65,7 @@ class AssetsApi < Sinatra::Base
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
     begin
-      s3.get_object(bucket:CDO.assets_s3_bucket, key:key).body
+      self.class.s3.get_object(bucket:CDO.assets_s3_bucket, key:key).body
     rescue Aws::S3::Errors::NoSuchKey
       not_found
     end
@@ -77,21 +77,26 @@ class AssetsApi < Sinatra::Base
   # Copy all files from one channel to another. Return metadata of copied files.
   #
   put %r{/v3/assets/([^/]+)$} do |encrypted_dest_channel_id|
-    src_owner_id, src_channel_id = storage_decrypt_channel_id(request.GET['src'])
-    dest_owner_id, dest_channel_id = storage_decrypt_channel_id(encrypted_dest_channel_id)
+    encrypted_src_channel_id = request.GET['src']
+    self.class.copy_assets(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
+  end
+
+  def self.copy_assets(src_channel, dest_channel)
+    src_owner_id, src_channel_id = storage_decrypt_channel_id(src_channel)
+    dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
 
     src_prefix = "#{CDO.assets_s3_directory}/#{src_owner_id}/#{src_channel_id}"
-    s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:src_prefix).contents.map do |fileinfo|
+    self.s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}/(.+)$}.match(fileinfo.key)[1]
       mime_type = Sinatra::Base.mime_type(filename.split('.').last)
       category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
       src = "#{CDO.assets_s3_bucket}/#{src_prefix}/#{filename}"
       dest = "#{CDO.assets_s3_directory}/#{dest_owner_id}/#{dest_channel_id}/#{filename}"
-      s3.copy_object(bucket:CDO.assets_s3_bucket, key:dest, copy_source:src)
+      self.s3.copy_object(bucket:CDO.assets_s3_bucket, key:dest, copy_source:src)
 
       {filename:filename, category:category, size:fileinfo.size}
-    end.to_json
+    end
   end
 
   #
@@ -116,7 +121,7 @@ class AssetsApi < Sinatra::Base
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
-    s3.put_object(bucket:CDO.assets_s3_bucket, key:key, body:body)
+    self.class.s3.put_object(bucket:CDO.assets_s3_bucket, key:key, body:body)
     content_type :json
     category = mime_type.split('/').first
     {filename:filename, category:category, size:body.length}.to_json
@@ -132,7 +137,7 @@ class AssetsApi < Sinatra::Base
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
 
-    s3.delete_object(bucket:CDO.assets_s3_bucket, key:key)
+    self.class.s3.delete_object(bucket:CDO.assets_s3_bucket, key:key)
     no_content
   end
 
