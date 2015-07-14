@@ -27,7 +27,8 @@ exports.load = function (assetUrl, id) {
 
 },{"../skins":269}],259:[function(require,module,exports){
 /**
- * @fileoverview Internet Simulator app for Code.org.
+ * @overview Internet Simulator app for Code.org.
+ *           This file is the main entry point for the Internet Simulator.
  */
 
 /* jshint
@@ -1338,6 +1339,10 @@ return buf.join('');
 }());
 },{"../locale":151,"ejs":491}],256:[function(require,module,exports){
 /*jshint multistr: true */
+/**
+ * @overview Type documentation for a NetSim level configuration object,
+ *           and default values for that object.
+ */
 
 var netsimConstants = require('./netsimConstants');
 var Packet = require('./Packet');
@@ -1602,6 +1607,9 @@ return buf.join('');
   }
 }());
 },{"ejs":491}],245:[function(require,module,exports){
+/**
+ * @overview Top-level controller for the network visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2528,6 +2536,9 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
 
 
 },{"../utils":319,"./NetSimVizAutoDnsNode":246,"./NetSimVizNode":248,"./NetSimVizSimulationNode":249,"./NetSimVizSimulationWire":250,"./NetSimVizWire":251,"./NetSimWire":252,"./netsimConstants":260,"./netsimGlobals":261,"./netsimNodeFactory":262,"./tweens":266}],250:[function(require,module,exports){
+/**
+ * @overview Wires in the visualization that map to simulation entities.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2618,6 +2629,9 @@ NetSimVizSimulationWire.prototype.kill = function () {
 
 
 },{"../utils":319,"./NetSimVizNode":248,"./NetSimVizWire":251,"./netsimGlobals":261}],251:[function(require,module,exports){
+/**
+ * @overview Wires in the visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2906,6 +2920,9 @@ NetSimVizWire.prototype.getWireCenterPosition = function () {
 
 
 },{"../utils":319,"./NetSimVizElement":247,"./dataConverters":255,"./netsimConstants":260,"./netsimUtils":263,"./tweens":266}],249:[function(require,module,exports){
+/**
+ * @overview Nodes in the visualization that map to simulation entities.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -2996,6 +3013,9 @@ NetSimVizSimulationNode.prototype.kill = function () {
 
 
 },{"../utils":319,"./NetSimVizNode":248,"./netsimConstants":260,"./netsimGlobals":261}],246:[function(require,module,exports){
+/**
+ * @overview Visualization auto-dns node.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3035,6 +3055,9 @@ NetSimVizAutoDnsNode.inherits(NetSimVizNode);
 
 
 },{"../utils":319,"./NetSimVizNode":248,"./netsimGlobals":261}],248:[function(require,module,exports){
+/**
+ * @overview Nodes in the visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3324,6 +3347,9 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
 
 
 },{"../utils":319,"./NetSimVizElement":247,"./netsimConstants":260,"./netsimGlobals":261,"./netsimUtils":263,"./tweens":266}],247:[function(require,module,exports){
+/**
+ * @overview Base type for visible elements in the visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3578,6 +3604,9 @@ NetSimVizElement.prototype.snapToScale = function (newScale) {
 
 
 },{"./netsimUtils":263,"./tweens":266}],266:[function(require,module,exports){
+/**
+ * @overview Tween functions used to animate visualization elements.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -3815,6 +3844,13 @@ exports.DoAfterDelay.prototype.tick = function (clock) {
 
 
 },{"../utils":319}],244:[function(require,module,exports){
+/**
+ * @overview UI controller for tabs area in left column
+ *           Directly controls the instructions tab, others are delegated.
+ * @see NetSimMyDeviceTab
+ * @see NetSimRouterTab
+ * @see NetSimDnsTab
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4141,6 +4177,10 @@ return buf.join('');
   }
 }());
 },{"./locale":257,"./netsimConstants":260,"./netsimUtils":263,"ejs":491}],241:[function(require,module,exports){
+/**
+ * @overview UI component: The small expandable box above the visualization,
+ *           used to show debug and diagnostic information.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4271,6 +4311,9 @@ return buf.join('');
   }
 }());
 },{"./locale":257,"ejs":491}],235:[function(require,module,exports){
+/**
+ * @overview Client-driven clean-up system for old/orphaned rows.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4855,6 +4898,10 @@ CleanLogs.prototype.onBegin_ = function () {
 
 
 },{"../commands":107,"../utils":319,"./NetSimEntity":199,"./NetSimHeartbeat":200,"./NetSimLogEntry":203,"./NetSimLogger":207,"./NetSimMessage":209,"./NetSimNode":214,"./NetSimWire":252}],234:[function(require,module,exports){
+/**
+ * @overview Represents a collection of tables that map to a particular
+ *           class section's simulation, isolated from other class sections.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -4917,6 +4964,9 @@ NetSimShard.prototype.tick = function (clock) {
 
 
 },{"./NetSimTable":242}],242:[function(require,module,exports){
+/**
+ * @overview Wraps remote storage interface and polling behavior.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5282,6 +5332,11 @@ module.exports = {
 };
 
 },{}],233:[function(require,module,exports){
+/**
+ * @overview UI controller for the send panel (the bottom panel on the right)
+ *           which is used to transmit packets.
+ * @see NetSimPacketEditor which is used extensively here.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -5835,6 +5890,9 @@ return buf.join('');
   }
 }());
 },{"./locale":257,"./netsimConstants":260,"ejs":491}],231:[function(require,module,exports){
+/**
+ * @overview UI controller for the "Router" tab in the left column.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6048,6 +6106,9 @@ return buf.join('');
   }
 }());
 },{"./locale":257,"ejs":491}],229:[function(require,module,exports){
+/**
+ * @overview UI component displaying router stats on the "Router" tab.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6385,6 +6446,9 @@ return buf.join('');
   }
 }());
 },{"../utils":319,"./netsimUtils":263,"ejs":491}],226:[function(require,module,exports){
+/**
+ * @overview Router log table UI component on the "Router" tab.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6496,6 +6560,10 @@ return buf.join('');
   }
 }());
 },{"./Packet":253,"./locale":257,"./netsimConstants":260,"./netsimUtils":263,"ejs":491}],224:[function(require,module,exports){
+/**
+ * @overview a modal dialog showing the union of all router logs for the
+ *           current shard.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6731,6 +6799,9 @@ return buf.join('');
   }
 }());
 },{"./Packet":253,"./locale":257,"./netsimGlobals":261,"ejs":491}],217:[function(require,module,exports){
+/**
+ * @overview UI slider used to change maximum packet length.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -6810,6 +6881,11 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
 
 
 },{"./NetSimSlider":239,"./locale":257}],216:[function(require,module,exports){
+/**
+ * @overview UI controller for the packet editor which allows editing multiple
+ *           encodings at once and lives inside the send panel.
+ * @see NetSimSendPanel for how this is used.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -7798,6 +7874,9 @@ return buf.join('');
   }
 }());
 },{"./Packet":253,"./locale":257,"./netsimConstants":260,"./netsimUtils":263,"ejs":491}],213:[function(require,module,exports){
+/**
+ * @overview UI controller for the "My Device" tab in the left column.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8004,6 +8083,11 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
 
 
 },{"./NetSimBitRateControl":186,"./NetSimChunkSizeControl":187,"./NetSimEncodingControl":198,"./NetSimMetronome":211,"./NetSimMyDeviceTab.html.ejs":212,"./NetSimPulseRateControl":220,"./netsimGlobals":261}],220:[function(require,module,exports){
+/**
+ * @overview UI slider for changing the pulse rate (bitrate) of the local device.
+ *           Differs from the bitrate slider in its scale and units.
+ * @see NetSimBitRateControl
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8091,6 +8175,9 @@ return buf.join('');
   }
 }());
 },{"ejs":491}],211:[function(require,module,exports){
+/**
+ * @overview UI component: An animated SVG metronome.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8297,6 +8384,9 @@ return buf.join('');
   }
 }());
 },{"ejs":491}],208:[function(require,module,exports){
+/**
+ * @overview UI slider used to control router memory size.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8350,6 +8440,14 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
 
 
 },{"../utils":319,"./NetSimSlider":239,"./netsimConstants":260,"./netsimUtils":263}],206:[function(require,module,exports){
+/**
+ * @overview UI component, a log panel (used as "Sent Packets" and
+ *           "Received Packets") that is used in the packet-sending
+ *           configurations of the simulator.
+ *
+ * @see INetSimLogPanel for the interface implemented here.
+ * @see NetSimBitLogPanel for the component used in bit-sending mode.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -8948,6 +9046,12 @@ return buf.join('');
   }
 }());
 },{"./Packet":253,"./dataConverters":255,"./locale":257,"./netsimConstants":260,"./netsimGlobals":261,"./netsimUtils":263,"ejs":491}],202:[function(require,module,exports){
+/**
+ * @overview Simulation entity controller reserved for the local client's
+ *           simulation node.
+ * @see NetSimClientNode for the controller used for other client nodes
+ *      in the simulation.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -9753,6 +9857,13 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 
 
 },{"../ObservableEvent":2,"../utils":319,"./NetSimClientNode":188,"./NetSimEntity":199,"./NetSimHeartbeat":200,"./NetSimLogger":207,"./NetSimMessage":209,"./NetSimRouterNode":227,"./netsimConstants":260,"./netsimGlobals":261}],201:[function(require,module,exports){
+/**
+ * @overview UI controller for lobby - handles flow for name entry, section
+ *           selection, and remote node selection.
+ * @see NetSimShardSelectionPanel for name entry and shard selection.
+ * @see NetSimRemoteNodeSelectionPanel for implementation of the actual
+ *      lobby table.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10255,6 +10366,11 @@ NetSimLobby.prototype.getShareLink = function () {
 
 
 },{"../utils":319,"./NetSimClientNode":188,"./NetSimLogger":207,"./NetSimRemoteNodeSelectionPanel":222,"./NetSimRouterNode":227,"./NetSimShardSelectionPanel":237,"./locale":257,"./netsimGlobals":261,"./netsimNodeFactory":262}],237:[function(require,module,exports){
+/**
+ * @overview Lobby UI component used for name entry and selecting a shard/class
+ *           section.
+ * @see NetSimLobby for usage.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -10461,6 +10577,10 @@ return buf.join('');
   }
 }());
 },{"./locale":257,"ejs":491}],227:[function(require,module,exports){
+/**
+ * @overview Router node simulation entity.  Also contains logic for the
+ *           auto-DNS system.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12317,6 +12437,9 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
 
 
 },{"../ObservableEvent":2,"../utils":319,"./NetSimEntity":199,"./NetSimHeartbeat":200,"./NetSimLogEntry":203,"./NetSimLogger":207,"./NetSimMessage":209,"./NetSimNode":214,"./NetSimWire":252,"./Packet":253,"./dataConverters":255,"./locale":257,"./netsimConstants":260,"./netsimGlobals":261,"./netsimNodeFactory":262,"./netsimUtils":263}],209:[function(require,module,exports){
+/**
+ * @overview Simulation entity for a message between two nodes.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12452,6 +12575,9 @@ NetSimMessage.prototype.buildRow = function () {
 
 
 },{"../utils":319,"./NetSimEntity":199}],203:[function(require,module,exports){
+/**
+ * @overview Simulation entity for router log entries.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -15778,6 +15904,10 @@ NetSimLogEntry.prototype.getOriginNode = function () {
 
 }));
 },{}],262:[function(require,module,exports){
+/**
+ * @overview Utility methods for generating the right kinds of node controllers
+ *           from raw node table rows.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -15832,6 +15962,9 @@ netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
 
 
 },{"./NetSimClientNode":188,"./NetSimRouterNode":227,"./netsimConstants":260}],253:[function(require,module,exports){
+/**
+ * @overview Utility class for encoding and decoding simulated packets.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -16194,6 +16327,10 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
 
 
 },{"./dataConverters":255,"./netsimGlobals":261,"./netsimUtils":263}],222:[function(require,module,exports){
+/**
+ * @overview Lobby table UI component.
+ * @see NetSimLobby for usage.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -16677,6 +16814,9 @@ return buf.join('');
   }
 }());
 },{"../utils":319,"./locale":257,"./netsimConstants":260,"./netsimGlobals":261,"ejs":491}],200:[function(require,module,exports){
+/**
+ * @overview Simulation entity representing a client's presence in the simulation.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -16904,6 +17044,9 @@ NetSimHeartbeat.prototype.spoofExpired = function () {
 
 
 },{"../utils":319,"./NetSimEntity":199,"./NetSimLogger":207}],194:[function(require,module,exports){
+/**
+ * @overview UI controller for the DNS tab in the left column.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -16925,7 +17068,7 @@ var NetSimDnsTable = require('./NetSimDnsTable');
 var netsimGlobals = require('./netsimGlobals');
 
 /**
- * Generator and controller for "My Device" tab.
+ * Generator and controller for "DNS" tab.
  * @param {jQuery} rootDiv
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback
@@ -17027,6 +17170,9 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
 
 
 },{"./NetSimDnsManualControl":190,"./NetSimDnsModeControl":192,"./NetSimDnsTab.html.ejs":193,"./NetSimDnsTable":196,"./netsimConstants":260,"./netsimGlobals":261}],196:[function(require,module,exports){
+/**
+ * @overview UI table of local subnet, displaying hostname => address map.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17165,6 +17311,9 @@ return buf.join('');
   }
 }());
 },{"ejs":491}],192:[function(require,module,exports){
+/**
+ * @overview UI component used to select a DNS mode at runtime.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17283,6 +17432,9 @@ return buf.join('');
   }
 }());
 },{"./locale":257,"./netsimConstants":260,"ejs":491}],190:[function(require,module,exports){
+/**
+ * @overview UI button used become the current DNS node in manual DNS mode.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17369,6 +17521,9 @@ return buf.join('');
   }
 }());
 },{"ejs":491}],188:[function(require,module,exports){
+/**
+ * @overview Simulated client node.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17492,6 +17647,9 @@ NetSimClientNode.get = function (nodeID, shard, onComplete) {
 
 
 },{"../utils":319,"./NetSimEntity":199,"./NetSimNode":214,"./NetSimWire":252,"./locale":257,"./netsimConstants":260}],214:[function(require,module,exports){
+/**
+ * @overview A base class for all simulation node entities.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17646,6 +17804,10 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
 };
 
 },{"../utils":319,"./NetSimEntity":199,"./NetSimWire":252,"./locale":257}],252:[function(require,module,exports){
+/**
+ * @overview Simulation Entity: A connection between two nodes and related
+ *           metadata.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17770,6 +17932,9 @@ NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
 
 
 },{"../utils":319,"./NetSimEntity":199}],199:[function(require,module,exports){
+/**
+ * @overview base class for all simulation entities.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17917,6 +18082,10 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
 
 
 },{}],187:[function(require,module,exports){
+/**
+ * @overview UI slider used to change the local device's chunk size, which
+ *           is used when interpreting binary to other formats.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -17977,6 +18146,11 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
 
 
 },{"./NetSimSlider":239,"./locale":257}],186:[function(require,module,exports){
+/**
+ * @overview UI slider used to change the local device's bitrate.
+ *           Differs from the pulse rate slider in scale and units.
+ * @see NetSimPulseRateControl
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -18029,6 +18203,13 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
 
 
 },{"../utils":319,"./NetSimSlider":239,"./netsimUtils":263}],185:[function(require,module,exports){
+/**
+ * @overview UI component, a log panel (used as "Sent Bits" and "Received Bits")
+ *           that is used in the single-bit-sending configurations of the simulator.
+ *
+ * @see INetSimLogPanel for the interface implemented here.
+ * @see NetSimLogPanel for the component used in packet-sending mode.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -18274,6 +18455,14 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
 
 
 },{"../utils":319,"./NetSimBitLogPanel.html.ejs":184,"./NetSimEncodingControl":198,"./NetSimLogger":207,"./NetSimPanel":219,"./locale":257,"./netsimGlobals":261}],261:[function(require,module,exports){
+/**
+ * @overview Global singleton used to simplify certain cross-cutting concerns,
+ *           including:
+ *
+ *           Access to level configuration.
+ *           Access to environment-specific asset URLs.
+ *           Reproducible random number functions for easy testing.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36013,6 +36202,10 @@ if (module && module.exports) {
 
 
 },{}],219:[function(require,module,exports){
+/**
+ * @overview base class for all "panels" (visual boxes) in the NetSim
+ *           interface, provides some common expand/collapse functionality.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36221,6 +36414,9 @@ return buf.join('');
   }
 }());
 },{"ejs":491}],198:[function(require,module,exports){
+/**
+ * @overview UI controller for set of radio buttons used to select display encodings.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36427,6 +36623,12 @@ return buf.join('');
   }
 }());
 },{"./dataConverters":255,"./locale":257,"./netsimConstants":260,"./netsimUtils":263,"ejs":491}],255:[function(require,module,exports){
+/**
+ * @overview Provides utility methods for converting user data between
+ *           different encodings, and formatting those encodings: binary,
+ *           hex, decimal, ASCII.  "A and B" is a special encoding that is
+ *           just binary with "A" sub'd for 0 and "B" sub'd for 1.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36885,6 +37087,9 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
 
 
 },{"../utils":319,"./netsimUtils":263}],183:[function(require,module,exports){
+/**
+ * @overview UI Slider control used for changing simulated router bandwidth.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -36939,6 +37144,9 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
 
 
 },{"../utils":319,"./NetSimSlider":239,"./netsimConstants":260,"./netsimUtils":263}],263:[function(require,module,exports){
+/**
+ * @overview Static helper methods for NetSim.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -37307,6 +37515,11 @@ exports.zeroPadRight = function (string, desiredWidth) {
 
 
 },{"../utils":319,"./NetSimLogger":207,"./locale":257,"./netsimConstants":260}],207:[function(require,module,exports){
+/**
+ * @overview Utility class wrapping more granular log behavior that isn't
+ * available in all browsers.  Also makes it easy to turn logging on and off
+ * in tests.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -37460,6 +37673,9 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
 
 
 },{}],260:[function(require,module,exports){
+/**
+ * @overview Constants and enums used across Internet Simulator.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -37612,6 +37828,9 @@ exports.PacketUIColumnType = {
 
 
 },{}],239:[function(require,module,exports){
+/**
+ * @overview Base implementation of NetSim UI sliders.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -38136,7 +38355,7 @@ return buf.join('');
 }());
 },{"ejs":491}],182:[function(require,module,exports){
 /**
- * @fileoverview Interface to dashboard user data API.
+ * @overview Interface to dashboard user data API.
  */
 
 /* jshint
