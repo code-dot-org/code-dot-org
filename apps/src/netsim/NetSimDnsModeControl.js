@@ -1,3 +1,6 @@
+/**
+ * @overview UI component used to select a DNS mode at runtime.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
