@@ -6,7 +6,8 @@
     "node": "~0.10.18"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "shrinkwrap": "npm-shrinkwrap"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
@@ -64,6 +65,7 @@
     "mochify": "^2.8.1",
     "moment": "^2.10.3",
     "node-sass": "1.2.2",
+    "npm-shrinkwrap": "^5.4.0",
     "npm-which": "^2.0.0",
     "phantomjs": "git://github.com/wjordan/phantomjs",
     "react": "^0.13.2",
