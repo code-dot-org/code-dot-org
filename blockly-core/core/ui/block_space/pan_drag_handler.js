@@ -268,7 +268,6 @@ Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
   }
 };
 
-
 /**
  * Actually begin pan-drag mode.
  * @param {!Event} e
