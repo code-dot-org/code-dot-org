@@ -53,38 +53,38 @@ Blockly.PanDragHandler = function (blockSpace) {
    * @type {BindData}
    * @private
    */
-  this.mouseDownEventKey_ = null;
+  this.mouseDownEventBindData_ = null;
 
   /**
    * @type {BindData}
    * @private
    */
-  this.wheelEventKey_ = null;
+  this.wheelEventBindData_ = null;
 
   /**
    * (for Safari)
    * @type {BindData}
    * @private
    */
-  this.mousewheelEventKey_ = null;
+  this.mousewheelEventBindData_ = null;
 
   /**
    * @type {BindData}
    * @private
    */
-  this.contextMenuBlockEventKey_ = null;
+  this.contextMenuBlockEventBindData_ = null;
 
   /**
    * @type {BindData}
    * @private
    */
-  this.mouseMoveEventKey_ = null;
+  this.mouseMoveEventBindData_ = null;
 
   /**
    * @type {BindData}
    * @private
    */
-  this.mouseUpEventKey_ = null;
+  this.mouseUpEventBindData_ = null;
 
   /**
    * @type {number}
@@ -124,17 +124,17 @@ Blockly.PanDragHandler.prototype.bindBeginPanDragHandler = function (target,
   this.unbindBeginPanDragHandler();
   this.target_ = target;
   this.onTargetMouseDown_ = onDragTargetMouseDown;
-  this.mouseDownEventKey_ = Blockly.bindEvent_(
+  this.mouseDownEventBindData_ = Blockly.bindEvent_(
       target, 'mousedown', this, this.onPanDragTargetMouseDown_);
 
-  this.wheelEventKey_ = Blockly.bindEvent_(target, 'wheel', this, this.onWheel_);
+  this.wheelEventBindData_ = Blockly.bindEvent_(target, 'wheel', this, this.onWheel_);
 
   // Safari uses 'mousewheel'
-  this.mousewheelEventKey_ = Blockly.bindEvent_(
+  this.mousewheelEventBindData_ = Blockly.bindEvent_(
       target, 'mousewheel', this, this.onWheel_);
 
   // Also block the context menu on the pan-drag target element
-  this.contextMenuBlockEventKey_ = Blockly.bindEvent_(
+  this.contextMenuBlockEventBindData_ = Blockly.bindEvent_(
       target, 'contextmenu', null, Blockly.blockContextMenu);
 };
 
@@ -143,24 +143,24 @@ Blockly.PanDragHandler.prototype.bindBeginPanDragHandler = function (target,
  * such handler is bound.
  */
 Blockly.PanDragHandler.prototype.unbindBeginPanDragHandler = function () {
-  if (this.mouseDownEventKey_) {
-    Blockly.unbindEvent_(this.mouseDownEventKey_);
-    this.mouseDownEventKey_ = null;
+  if (this.mouseDownEventBindData_) {
+    Blockly.unbindEvent_(this.mouseDownEventBindData_);
+    this.mouseDownEventBindData_ = null;
   }
 
-  if (this.wheelEventKey_) {
-    Blockly.unbindEvent_(this.wheelEventKey_);
-    this.wheelEventKey_ = null;
+  if (this.wheelEventBindData_) {
+    Blockly.unbindEvent_(this.wheelEventBindData_);
+    this.wheelEventBindData_ = null;
   }
 
-  if (this.mousewheelEventKey_) {
-    Blockly.unbindEvent_(this.mousewheelEventKey_);
-    this.mousewheelEventKey_ = null;
+  if (this.mousewheelEventBindData_) {
+    Blockly.unbindEvent_(this.mousewheelEventBindData_);
+    this.mousewheelEventBindData_ = null;
   }
 
-  if (this.contextMenuBlockEventKey_) {
-    Blockly.unbindEvent_(this.contextMenuBlockEventKey_);
-    this.contextMenuBlockEventKey_ = null;
+  if (this.contextMenuBlockEventBindData_) {
+    Blockly.unbindEvent_(this.contextMenuBlockEventBindData_);
+    this.contextMenuBlockEventBindData_ = null;
   }
 
   this.target_ = null;
@@ -179,9 +179,9 @@ Blockly.PanDragHandler.prototype.bindDuringPanDragHandlers_ = function () {
   // receive the event before the actual event target - pan-drag mode should
   // pretty much override everything.
   var onCapture = true;
-  this.mouseMoveEventKey_ = Blockly.bindEvent_(
+  this.mouseMoveEventBindData_ = Blockly.bindEvent_(
       window, 'mousemove', this, this.onPanDragMouseMove_, onCapture);
-  this.mouseUpEventKey_ = Blockly.bindEvent_(
+  this.mouseUpEventBindData_ = Blockly.bindEvent_(
       window, 'mouseup', this, this.onPanDragMouseUp_, onCapture);
 };
 
@@ -190,14 +190,14 @@ Blockly.PanDragHandler.prototype.bindDuringPanDragHandlers_ = function () {
  * @private
  */
 Blockly.PanDragHandler.prototype.unbindDuringPanDragHandlers_ = function () {
-  if (this.mouseMoveEventKey_) {
-    Blockly.unbindEvent_(this.mouseMoveEventKey_);
-    this.mouseMoveEventKey_ = null;
+  if (this.mouseMoveEventBindData_) {
+    Blockly.unbindEvent_(this.mouseMoveEventBindData_);
+    this.mouseMoveEventBindData_ = null;
   }
 
-  if (this.mouseUpEventKey_) {
-    Blockly.unbindEvent_(this.mouseUpEventKey_);
-    this.mouseUpEventKey_ = null;
+  if (this.mouseUpEventBindData_) {
+    Blockly.unbindEvent_(this.mouseUpEventBindData_);
+    this.mouseUpEventBindData_ = null;
   }
 };
 
