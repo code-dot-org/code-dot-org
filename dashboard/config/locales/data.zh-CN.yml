@@ -416,6 +416,7 @@
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: 介绍
+        C4_loops_zombie: 循环
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 变量 —— 艺术家
         C4_variables_playlab: 变量 — — Play Lab
@@ -450,6 +451,7 @@
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - Introduction
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations

@@ -12,13 +12,13 @@ var ReactTestUtils = React.addons.TestUtils;
 // without too much difficulty
 
 function validatePropertyRow(index, label, value, assert) {
-  var table = $("#design-properties table")[0];
-  assert(table, 'has design properties table');
+  var container = $("#propertyRowContainer")[0];
+  assert(container, 'has design properties container');
 
-  var tableRow = $("#design-properties table tr").eq(index);
-  assert.equal(tableRow.children(0).text(), label);
+  var propertyRow = $("#propertyRowContainer > div").eq(index);
+  assert.equal(propertyRow.children(0).text(), label);
   // second col has an input with val screen 2
-  assert.equal(tableRow.children(1).children(0).val(), value);
+  assert.equal(propertyRow.children(1).children(0).val(), value);
 }
 
 module.exports = {
@@ -36,12 +36,12 @@ module.exports = {
 
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
-        validatePropertyRow(1, 'id', 'button1', assert);
+        validatePropertyRow(0, 'id', 'button1', assert);
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
         var assetUrl = 'http://localhost:8001/apps/static/flappy_promo.png';
-        var imageInput = $("#design-properties input").last()[0];
+        var imageInput = $("#propertyRowContainer input").last()[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
           target: { value: assetUrl }
@@ -118,7 +118,7 @@ module.exports = {
 
         $("#designModeButton").click();
         testUtils.dragToVisualization('BUTTON', 10, 10);
-        validatePropertyRow(1, 'id', 'button1', assert);
+        validatePropertyRow(0, 'id', 'button1', assert);
         shouldBeResizable();
 
         $("#codeModeButton").click();
@@ -142,5 +142,123 @@ module.exports = {
       },
     },
 
+    {
+      description: "hidden items",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        // We don't load our style sheets in mochaTests, so we instead ddepend
+        // on checking classes.
+        // An element will be set to opacity 0.3 if it has the class design-mode-hidden
+        // and divApplab does not have the class divApplabDesignMode
+        var isFaded = function (selector) {
+          var element = $(selector);
+          return element.hasClass('design-mode-hidden') &&
+            $('#divApplab').hasClass('divApplabDesignMode');
+        };
+        var isHidden = function (selector) {
+          var element = $(selector);
+          return element.hasClass('design-mode-hidden') &&
+            !$('#divApplab').hasClass('divApplabDesignMode');
+        };
+
+        $("#designModeButton").click();
+        testUtils.dragToVisualization('BUTTON', 10, 10);
+        validatePropertyRow(0, 'id', 'button1', assert);
+        var toggleHidden = $('.custom-checkbox')[0];
+
+        assert.equal(isFaded('#button1'), false);
+        assert.equal(isHidden('#button1'), false);
+
+        ReactTestUtils.Simulate.click(toggleHidden);
+
+        assert.equal($(toggleHidden).hasClass('fa-check-square-o'), true);
+        assert.equal(isFaded('#button1'), true);
+        assert.equal(isHidden('#button1'), false);
+
+        // Enter code mode
+        $("#codeModeButton").click();
+        assert.equal(isFaded('#button1'), false);
+        assert.equal(isHidden('#button1'), true);
+
+        // Back to design mode
+        $("#designModeButton").click();
+        assert.equal(isFaded('#button1'), true);
+        assert.equal(isHidden('#button1'), false);
+
+        // Enter run mode
+        $("#runButton").click();
+        assert.equal(isFaded('#button1'), false);
+        assert.equal(isHidden('#button1'), true);
+
+        $("#resetButton").click();
+        assert.equal(isFaded('#button1'), true);
+        assert.equal(isHidden('#button1'), false);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "entering design mode while running",
+      editCode: true,
+      xml: 'button("my_button", "text");',
+      runBeforeClick: function (assert) {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          assert.equal($('#my_button').length, 1);
+
+          $("#designModeButton").click();
+
+          assert.equal($('#my_button').length, 0, 'API created element should be gone');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "clear puzzle clears design mode",
+      editCode: true,
+      xml: 'button("my_button", "text");',
+      runBeforeClick: function (assert) {
+        testUtils.runOnAppTick(Applab, 2, function () {
+          // drag a button out
+          $("#designModeButton").click();
+          testUtils.dragToVisualization('BUTTON', 10, 10);
+          validatePropertyRow(0, 'id', 'button1', assert);
+
+          assert.equal($("#divApplab button").length, 1);
+
+          // Enter code mode
+          $("#codeModeButton").click();
+          assert.equal(/<button id="button1"/.test(Applab.levelHtml), true,
+            "levelHtml has added button");
+
+          // hit clear, and click through confirmation dialog
+          // TODO - disable temporarily
+          // $("#clear-puzzle-header").click();
+          // assert.equal($("#continue-button").is(':visible'), true);
+          // $("#continue-button").click();
+          //
+          // assert.equal(Applab.levelHtml, "", "levelHtml was cleared");
+          // assert.equal($("#divApplab button").length, 1, "button is not in play area");
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    }
   ]
 };

@@ -9,7 +9,6 @@ class ReportsController < ApplicationController
 
   before_action :set_script
   include LevelSourceHintsHelper
-  include UsersHelper
 
   def user_stats
     @user = User.find(params[:user_id])
@@ -240,11 +239,24 @@ SQL
 
     page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
 
-    @data_array = output_data.map do |key, value|
+    data_array = output_data.map do |key, value|
       {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
     end
     require 'naturally'
-    @data_array = @data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    headers = [
+      "Puzzle",
+      "Total\nAttempts",
+      "Total Successful\nAttempts",
+      "Avg. Success\nRate",
+      "Avg. #attempts\nper Completion",
+      "Unique\nAttempts",
+      "Unique Successful\nAttempts",
+      "Perceived Dropout",
+      "Avg. Unique\nSuccess Rate",
+      "Avg. Time\non Page"
+    ]
+    render locals: {headers: headers, data: data_array}
   end
 
   def monthly_metrics
@@ -262,35 +274,14 @@ SQL
 
   def pd_progress
     authorize! :read, :reports
-    script = Script.find_by(name: params[:script] || 'K5PD').cached
-    # Get all users with any activity in the script
-    users = User.where(id: UserScript.where(script_id: script.id).pluck(:user_id).uniq)
-
-    headers = nil
-    data = users.map do |user|
-      row = {}
-      row.merge!({
-                     :'ID' => user.id,
-                     :'Ops First Name' => user.ops_first_name,
-                     :'Ops Last name' => user.ops_last_name,
-                     :'Email' => user.email,
-                     :'District' => user.district.try(:name) || 'None'
-                 })
-      user_progress = summarize_user_progress(script, user)
-      percent = percent_complete(script, user)
-      script.stages.each do |stage|
-        levels = Hash[stage.script_levels.map(&:level).map do |level|
-          key = (request.format.csv? ? level.id.to_s : "<a href='#{level_path(level.id)}'>#{level.id}</a>")
-          [key, (progress = user_progress[:levels][level.id]) && progress[:status] == 'perfect' ? '1' : '0']
-        end]
-        row.merge!(levels)
-        row.merge!({:"Stage #{stage.position} Percent Complete" => percent[stage.position - 1].to_s})
-      end
-      row.merge!({:'Script Percent Complete' => percent_complete_total(script, user).to_s})
-      headers ||= row.keys
-      row.values
+    script = Script.find_by!(name: params[:script] || 'K5PD').cached
+    require 'cdo/properties'
+    locals_options = Properties.get("pd_progress_#{script.id}")
+    if locals_options
+      render locals: locals_options
+    else
+      render layout: 'application', text: "PD progress data not found for #{script.name}", status: 404
     end
-    render locals: {headers: headers, data: data, script: script}
   end
 
   private

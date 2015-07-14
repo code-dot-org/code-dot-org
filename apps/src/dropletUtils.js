@@ -124,6 +124,9 @@ standardConfig.categories = {
     'rgb': COLOR_GREEN,
     'blocks': []
   },
+  // create blank category in case level builders want to move all blocks here
+  // (which will cause the palette header to disappear)
+  '' : { 'blocks': [] },
 };
 
 /**
@@ -349,7 +352,7 @@ function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (dropletConfig) {
+exports.generateDropletModeOptions = function (dropletConfig, options) {
   var modeOptions = {
     functions: {
     },
@@ -357,7 +360,10 @@ exports.generateDropletModeOptions = function (dropletConfig) {
       arithmetic: { color: COLOR_ORANGE },
       logic: { color: COLOR_ORANGE },
       conditionals: { color: COLOR_BLUE },
-      loops: { color: COLOR_BLUE },
+      loops: {
+        color: COLOR_BLUE,
+        beginner: options.beginnerMode || false
+      },
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
       comments: { color: COLOR_WHITE },

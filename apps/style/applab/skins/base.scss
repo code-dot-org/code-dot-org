@@ -1,0 +1,63 @@
+// Base styles that apply to all apps
+
+#divApplab, .draggingParent {
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  canvas {
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+
+  img {
+    opacity: 1.0;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  div {
+    overflow: hidden;
+  }
+
+  button {
+    padding: 7px 12px;
+    margin: 2px;
+    font-size: 14px;
+  }
+
+  input, div[contenteditable=true], button, select, img, label {
+    box-sizing: border-box;
+    line-height: 1.2em;
+    margin: 5px;
+  }
+
+  .design-mode-hidden {
+    visibility: hidden;
+  }
+}
+
+#divApplab.divApplabDesignMode, .draggingParent {
+
+  canvas {
+    background-color: #eee;
+  }
+
+  .design-mode-hidden {
+    visibility: visible;
+    opacity: 0.3;
+  }
+}

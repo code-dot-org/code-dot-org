@@ -6,6 +6,8 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -20,15 +22,12 @@ var ImageProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <PropertyRow
           desc={'text'}
           initialValue={$(element).text()}
@@ -37,12 +36,12 @@ var ImageProperties = React.createClass({
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')} />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
@@ -55,7 +54,7 @@ var ImageProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'top')} />
         <ImagePickerPropertyRow
           desc={'picture'}
-          initialValue={element.getAttribute('src')}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')} />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -64,25 +63,75 @@ var ImageProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
 
     // TODO (brent):
     // bold/italics/underline (p2)
     // shape (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // send back/forward
   }
 });
 
+var ImageEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
+  },
+
+  getClickEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "click", function(event) {\n' +
+      '  console.log("' + id + ' clicked!");\n' +
+      '});\n';
+    return code;
+  },
+
+  insertClick: function() {
+    this.props.onInsertEvent(this.getClickEventCode());
+  },
+
+  render: function () {
+    var element = this.props.element;
+    var clickName = 'Click';
+    var clickDesc = 'Triggered when the image is clicked with a mouse or tapped on a screen.';
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={clickName}
+          desc={clickDesc}
+          handleInsert={this.insertClick}/>
+      </div>
+    );
+  }
+});
+
+
 module.exports = {
-  PropertyTable: ImageProperties,
+  PropertyTab: ImageProperties,
+  EventTab: ImageEvents,
+
   create: function () {
     var element = document.createElement('img');
-    element.style.height = '50px';
-    element.style.width = '50px';
+    element.style.height = '100px';
+    element.style.width = '100px';
     element.setAttribute('src', '');
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'picture', url);
+    }
   }
 };

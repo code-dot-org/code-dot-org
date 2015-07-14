@@ -2,25 +2,29 @@ name 'OPD-K5 Stage4Start'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
-# LOOPS > Stage 4 Overview
+### LOOPS > Stage 5 Overview
+<br><br>
 
 This stage builds on your first programming experience by adding the core concept of "loops."
+<br><br>
+<img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+<br><br>
 
-By completing Stage 4, you will:
+By completing Stage 5, you will:
 
 - Define "loops" and explain their importance
 - Practice coding simple loops
 - Reflect on classroom application
+<br><br>
 
-<br/>
-## What to Expect in this Stage:
+>**What to Expect in this Stage:** In the levels that follow, we'll provide you with an example of a program that is not as efficient as it could be. Next, we'll share some video instruction that explains why using loops improves your ability to code efficiently. Then we'll introduce a series of puzzles and ask you to create loops and apply your learning. In order to complete a puzzle, you'll need to write code using visual, block-based programming. We'll close with an opportunity to review resources and reflect. You should spend between 20-45 minutes on this stage.
+<br><br>
 
-In the levels that follow, we'll provide you with an example of a program that is not as efficient as it could be. Next, we'll share some video instruction that explains why using loops improves your ability to code efficiently. Then we'll introduce a series of puzzles and ask you to create loops and apply your learning. In order to complete a puzzle, you'll need to write code using visual, block-based programming. We'll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
+#### Ready? Let's go!
 
-Ready? Let's go!
-
-<br/>
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

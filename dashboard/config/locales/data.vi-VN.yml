@@ -594,7 +594,7 @@
         C1_artist_intro: Artist Intro
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Vòng lặp mê cung
-        C1_bee_loops: các vòng ong
+        C1_bee_loops: Các vòng ong
         C1_maze_loops: Vòng lặp mê cung
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
@@ -605,7 +605,7 @@
         C2_zuck_repeat_loop: Vòng lặp mê cung
         C2_artist_loops: Nghệ sĩ vòng
         C2_artist_debugging: Nghệ sĩ gỡ lỗi
-        C2_bee_loops: các vòng ong
+        C2_bee_loops: Các vòng ong
         C2_bee_debugging: 'Ong: sửa lỗi'
         C2_bee_conditionals: 'Ong: Các điều kiện'
         C2_playlab_createstory: Play Lab - Create a Story
@@ -614,14 +614,14 @@
         C2_binary_bracelets: Vòng đeo tay nhị phân
         C2_relay_programming: Chương trình chuyển tiếp
         C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Dấu chân kỹ thuật số của bạn
-        C2_digital_footprint_v2: Dấu chân kỹ thuật số của bạn
+        C2_digital_footprint: 'Dấu chân kỹ thuật số '
+        C2_digital_footprint_v2: 'Dấu chân kỹ thuật số '
         C3_maze_level_4: Vòng lặp mê cung
         C3_artist_intro: Artist Intro
         C3_artist_functions: 'Nghệ sĩ: chức năng'
         C3_bee_functions: 'Ong: chức năng'
         C3_bee_conditionals: 'Ong: Các điều kiện'
-        C3_maze_conditionals: các quy định mê cung
+        C3_maze_conditionals: Các điều kiện của mê cung
         C3_artist_nested_loops: Nested Loops
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
@@ -629,13 +629,13 @@
         C3_bounce: Bật lại
         C3_playlab_create_game: Play Lab - Create a Game
         C3_computational_thinking: suy nghĩ máy móc
-        C3_dice_race: vòng quay xúc sắc
+        C3_dice_race: Vòng quay xúc sắc
         C3_internet: Kết nối mạng
-        C3_crowdsourcing: |
-          Crowdsourcing
-        C3_functional_suncatchers: Chức năng Suncatchers
+        C3_crowdsourcing: Đa nguồn
+        C3_functional_suncatchers: Chức năng của tấm hứng ánh nắng
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
+        C4_loops_zombie: Vòng lặp
         C4_bee_conditional: 'Ong: Các điều kiện'
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -670,6 +670,7 @@
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - Introduction
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations

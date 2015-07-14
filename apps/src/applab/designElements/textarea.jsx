@@ -5,6 +5,8 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -19,15 +21,12 @@ var TextAreaProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <PropertyRow
           desc={'text'}
           isMultiLine={true}
@@ -38,12 +37,12 @@ var TextAreaProperties = React.createClass({
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
           foo={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')} />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
@@ -75,24 +74,64 @@ var TextAreaProperties = React.createClass({
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
 
-      </table>);
+      </div>);
 
     // TODO:
     // bold/italics/underline (p2)
     // textAlignment (p2)
     // enabled (p2)
-    // send back/forward
+  }
+});
+
+var TextAreaEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
+  getChangeEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "change", function(event) {\n' +
+      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
+      '});\n';
+    return code;
+  },
+
+  insertChange: function() {
+    this.props.onInsertEvent(this.getChangeEventCode());
+  },
+
+  render: function () {
+    var element = this.props.element;
+    var changeName = 'Change';
+    var changeDesc = 'Triggered when the text area loses focus if the text has changed.';
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={changeName}
+          desc={changeDesc}
+          handleInsert={this.insertChange}/>
+      </div>
+    );
   }
 });
 
 module.exports = {
-  PropertyTable: TextAreaProperties,
+  PropertyTab: TextAreaProperties,
+  EventTab: TextAreaEvents,
 
   create: function() {
     var element = document.createElement('div');
     element.setAttribute('contenteditable', true);
-    element.style.border = '1px solid black';
-    element.style.width = '100px';
+    element.style.width = '200px';
     element.style.height = '100px';
     element.style.fontSize = '14px';
     element.style.color = '#000000';

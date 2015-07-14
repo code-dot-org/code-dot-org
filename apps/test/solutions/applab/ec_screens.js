@@ -12,16 +12,16 @@ var ReactTestUtils = React.addons.TestUtils;
 // without too much difficulty
 
 function validatePropertyRow(index, label, value, assert) {
-  var table = $("#design-properties table")[0];
-  assert(table, 'has design properties table');
+  var container = $("#propertyRowContainer")[0];
+  assert(container, 'has design properties container');
 
-  var tableRow = $("#design-properties table tr").eq(index);
-  assert.equal(tableRow.children(0).text(), label);
+  var propertyRow = $("#propertyRowContainer > div").eq(index);
+  assert.equal(propertyRow.children(0).text(), label);
   // second col has an input with val screen 2
-  assert.equal(tableRow.children(1).children(0).val(), value);
+  assert.equal(propertyRow.children(1).children(0).val(), value);
 }
 
-function validationEmptyDesignProperties(assert) {
+function validateEmptyDesignProperties(assert) {
   var designProperties = document.getElementById('design-properties');
   assert.equal(designProperties.children.length, 1);
   assert.equal(designProperties.children[0].tagName, 'P');
@@ -57,21 +57,21 @@ module.exports = {
         // click design mode button
         $(designModeButton).click();
 
-        var lightestGray = 'rgb(231, 232, 234)';
         var orange = 'rgb(255, 160, 0)';
-        assert.equal(lightestGray, $("#designModeButton").css('background-color'),
-          'expected Design button to have lightest gray background.');
-        assert.equal(orange, $("#codeModeButton").css('background-color'),
-          'expected Code button to have orange background.');
+        var white = 'rgb(255, 255, 255)';
+        assert.equal(orange, $("#designModeButton").css('background-color'),
+          'expected Design button (active) to have orange background.');
+        assert.equal(white, $("#codeModeButton").css('background-color'),
+          'expected Code button (inactive) to have white background.');
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
-        assert.equal(screenSelector.options.length, 1, 'expected 1 screen');
+        assert.equal(screenSelector.options.length, 2, 'expected 2 options');
         assert.equal($(screenSelector).val(), 'screen1');
         assert.equal($('#designWorkspace').is(':visible'), true);
 
-        // initially no design properties table
-        assert.equal($("#design-properties table").length, 0,
-            'expected no design properties table');
+        // initially no property row container
+        assert.equal($("#propertyRowContainer").length, 0,
+            'expected no design property row container');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
@@ -97,15 +97,15 @@ module.exports = {
         testUtils.dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
-        assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
+        assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
-        validatePropertyRow(1, 'id', 'screen2', assert);
+        validatePropertyRow(0, 'id', 'screen2', assert);
 
         // drag a button onto our new screen
         testUtils.dragToVisualization('BUTTON', 10, 10);
 
-        validatePropertyRow(1, 'id', 'button1', assert);
+        validatePropertyRow(0, 'id', 'button1', assert);
         var buttonElement = document.getElementById('button1');
         var buttonParent = buttonElement.parentNode;
         assert($(buttonParent).hasClass('ui-draggable'));
@@ -116,7 +116,7 @@ module.exports = {
         ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
           { target: { value: 'screen1' } });
 
-        validatePropertyRow(1, 'id', 'screen1', assert);
+        validatePropertyRow(0, 'id', 'screen1', assert);
         assert(!$('#button1').is(':visible'));
 
         // add a completion on timeout since this is a freeplay level
@@ -143,10 +143,10 @@ module.exports = {
         testUtils.dragToVisualization('SCREEN', 10, 10);
 
         assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
-        assert.equal(screenSelector.options.length, 2, 'has two options in dropdown');
+        assert.equal(screenSelector.options.length, 3, 'has three options in dropdown');
         assert.equal($(screenSelector).val(), 'screen2');
 
-        validatePropertyRow(1, 'id', 'screen2', assert);
+        validatePropertyRow(0, 'id', 'screen2', assert);
 
         var deleteButton = $("#design-properties button").eq(-1);
         assert.equal(deleteButton.text(), 'Delete');
@@ -159,16 +159,26 @@ module.exports = {
 
         ReactTestUtils.Simulate.click($("#design-properties button").eq(-1)[0]);
 
-        validationEmptyDesignProperties(assert);
+        validateEmptyDesignProperties(assert);
         assert.equal($("#divApplab").children().length, 1, 'has one screen divs');
         assert.equal($(screenSelector).val(), 'screen1');
 
         // click on screen 1 (use jquery instead of React since screen1 is not
         // a react component)
         $("#screen1").click();
-        validatePropertyRow(1, 'id', 'screen1', assert);
+        validatePropertyRow(0, 'id', 'screen1', assert);
 
         // One button, and it isn't delete
+        assert.equal($("#design-properties button").length, 1);
+        assert.equal($("#design-properties button").text(), '');
+
+        // Change name
+        var inputId = $('#design-properties input').first();
+        ReactTestUtils.Simulate.change(inputId[0],
+          { target: { value: 'renamed_screen' } });
+        assert(document.getElementById('renamed_screen'));
+
+        // Still can't delete
         assert.equal($("#design-properties button").length, 1);
         assert.equal($("#design-properties button").text(), '');
 
@@ -268,7 +278,6 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       },
     },
-
     {
       description: "return to screen1 when entering code mode",
       editCode: true,
@@ -276,24 +285,24 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         $("#designModeButton").click();
-        var lightestGray = 'rgb(231, 232, 234)';
         var orange = 'rgb(255, 160, 0)';
-        assert.equal(lightestGray, $("#designModeButton").css('background-color'),
-          'expected Design button to have lightest gray background.');
-        assert.equal(orange, $("#codeModeButton").css('background-color'),
-          'expected Code button to have orange background.');
+        var white = 'rgb(255, 255, 255)';
+        assert.equal(orange, $("#designModeButton").css('background-color'),
+          'expected Design button (active) to have orange background.');
+        assert.equal(white, $("#codeModeButton").css('background-color'),
+          'expected Code button (inactive) to have white background.');
         // add a screen
         testUtils.dragToVisualization('SCREEN', 10, 10);
-        validatePropertyRow(1, 'id', 'screen2', assert);
+        validatePropertyRow(0, 'id', 'screen2', assert);
         assert.equal($('#screen1')[0].style.display === 'none', true, 'screen 1 hidden');
         assert.equal($('#screen2')[0].style.display === 'none', false, 'screen 2 visible');
 
         // return to code mode
         $("#codeModeButton").click();
-        assert.equal(orange, $("#designModeButton").css('background-color'),
-          'expected Design button to have orange background.');
-        assert.equal(lightestGray, $("#codeModeButton").css('background-color'),
-          'expected Code button to have lightest gray background.');
+        assert.equal(white, $("#designModeButton").css('background-color'),
+          'expected Design button (inactive) to have white background.');
+        assert.equal(orange, $("#codeModeButton").css('background-color'),
+          'expected Code button (active) to have orange background.');
 
         // should be on screen 1
         assert.equal($('#screen1')[0].style.display === 'none', false, 'screen 1 visible');
@@ -361,7 +370,7 @@ module.exports = {
 
         $("#screen1").click();
 
-        validatePropertyRow(1, 'id', 'screen1', assert);
+        validatePropertyRow(0, 'id', 'screen1', assert);
 
         // take advantage of the fact that we expose the filesystem via
         // localhost:8001
@@ -390,6 +399,38 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-    }
+    },
+
+    {
+      description: "screen dropdown",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        // enter design mode
+        $("#designModeButton").click();
+
+        // drag a new screen in
+        testUtils.dragToVisualization('SCREEN', 10, 10);
+        assert.equal($("#divApplab").children().length, 2, 'has two screen divs');
+        validatePropertyRow(0, 'id', 'screen2', assert);
+
+        assert.equal($("#screenSelector").children().length, 3);
+        assert.equal($("#screenSelector").children().eq(2).text(), "New screen...");
+
+        // New screen via dropdown
+        ReactTestUtils.Simulate.change(document.getElementById('screenSelector'),
+          { target: { value: 'New screen...' } });
+
+        assert.equal($("#divApplab").children().length, 3, 'has three screen divs');
+        assert.equal($("#screenSelector").children().length, 4);
+        validatePropertyRow(0, 'id', 'screen3', assert);
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
   ]
 };

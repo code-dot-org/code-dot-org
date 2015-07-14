@@ -103,6 +103,17 @@ Studio.BLOCK_Y_COORDINATE = 20;
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 200;
 
+var AUTO_HANDLER_MAP = {
+  whenRun: 'whenGameStarts',
+  whenDown: 'when-down',
+  whenUp: 'when-up',
+  whenLeft: 'when-left',
+  whenRight: 'when-right',
+  whenTouchItem: 'whenSpriteCollided-' +
+                  (Studio.protagonistSpriteIndex || 0) +
+                  '-any_item',
+};
+
 // Default Scalings
 Studio.scale = {
   'snapRadius': 1,
@@ -149,6 +160,9 @@ function loadLevel() {
   // Load maps.
   Studio.map = level.map;
   Studio.timeoutFailureTick = level.timeoutFailureTick || Infinity;
+  Studio.slowJsExecutionFactor = level.slowJsExecutionFactor || 1;
+  Studio.ticksBeforeFaceSouth = Studio.slowJsExecutionFactor +
+                                  IDLE_TICKS_BEFORE_FACE_SOUTH;
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
@@ -186,9 +200,11 @@ function loadLevel() {
   Studio.COLS = Studio.map[0].length;
   // Pixel height and width of each maze square (i.e. tile).
   Studio.SQUARE_SIZE = 50;
+  Studio.HALF_SQUARE = Studio.SQUARE_SIZE / 2;
+
   // Height and width of the goal and obstacles.
-  Studio.MARKER_HEIGHT = 100;
-  Studio.MARKER_WIDTH = 100;
+  Studio.MARKER_HEIGHT = level.markerHeight || 100;
+  Studio.MARKER_WIDTH = level.markerWidth || 100;
 
   Studio.MAZE_WIDTH = Studio.SQUARE_SIZE * Studio.COLS;
   Studio.MAZE_HEIGHT = Studio.SQUARE_SIZE * Studio.ROWS;
@@ -588,6 +604,15 @@ function callHandler (name, allowQueueExtension) {
   });
 }
 
+Studio.initAutoHandlers = function (map) {
+  for (var funcName in map) {
+    var func = Studio.JSInterpreter.findGlobalFunction(funcName);
+    if (func) {
+      registerEventHandler(Studio.eventHandlers, map[funcName], func);
+    }
+  }
+};
+
 /**
  * Performs movement on a list of Projectiles or Items. Removes items from the
  * list automatically when they move out of bounds
@@ -621,17 +646,19 @@ Studio.callApiCode = function (name, func) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
+  var animationOnlyFrame = false;
+
   if (Studio.customLogic) {
     Studio.customLogic.onTick();
   }
 
+  if (Studio.tickCount === 1) {
+    callHandler('whenGameStarts');
+  }
+  Studio.executeQueue('whenGameStarts');
+
   if (Studio.JSInterpreter) {
-    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
-  } else {
-    if (Studio.tickCount === 1) {
-      callHandler('whenGameStarts');
-    }
-    Studio.executeQueue('whenGameStarts');
+    animationOnlyFrame = 0 !== (Studio.tickCount - 1) % Studio.slowJsExecutionFactor;
   }
 
   callHandler('repeatForever');
@@ -641,81 +668,89 @@ Studio.onTick = function() {
     Studio.executeQueue('whenSpriteClicked-' + i);
   }
 
-  // Run key event handlers for any keys that are down:
-  for (var key in KeyCodes) {
-    if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] === "keydown") {
-      switch (KeyCodes[key]) {
-        case KeyCodes.LEFT:
+  if (!animationOnlyFrame) {
+    // Run key event handlers for any keys that are down:
+    for (var key in KeyCodes) {
+      if (Studio.keyState[KeyCodes[key]] &&
+          Studio.keyState[KeyCodes[key]] === "keydown") {
+        switch (KeyCodes[key]) {
+          case KeyCodes.LEFT:
+            callHandler('when-left');
+            break;
+          case KeyCodes.UP:
+            callHandler('when-up');
+            break;
+          case KeyCodes.RIGHT:
+            callHandler('when-right');
+            break;
+          case KeyCodes.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var btn in ArrowIds) {
+      if (Studio.btnState[ArrowIds[btn]] &&
+          Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
+        switch (ArrowIds[btn]) {
+          case ArrowIds.LEFT:
+            callHandler('when-left');
+            break;
+          case ArrowIds.UP:
+            callHandler('when-up');
+            break;
+          case ArrowIds.RIGHT:
+            callHandler('when-right');
+            break;
+          case ArrowIds.DOWN:
+            callHandler('when-down');
+            break;
+        }
+      }
+    }
+
+    for (var gesture in Studio.gesturesObserved) {
+      switch (gesture) {
+        case 'left':
           callHandler('when-left');
           break;
-        case KeyCodes.UP:
+        case 'up':
           callHandler('when-up');
           break;
-        case KeyCodes.RIGHT:
+        case 'right':
           callHandler('when-right');
           break;
-        case KeyCodes.DOWN:
+        case 'down':
           callHandler('when-down');
           break;
       }
-    }
-  }
-
-  for (var btn in ArrowIds) {
-    if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
-      switch (ArrowIds[btn]) {
-        case ArrowIds.LEFT:
-          callHandler('when-left');
-          break;
-        case ArrowIds.UP:
-          callHandler('when-up');
-          break;
-        case ArrowIds.RIGHT:
-          callHandler('when-right');
-          break;
-        case ArrowIds.DOWN:
-          callHandler('when-down');
-          break;
+      if (0 === Studio.gesturesObserved[gesture]--) {
+        delete Studio.gesturesObserved[gesture];
       }
     }
-  }
 
-  for (var gesture in Studio.gesturesObserved) {
-    switch (gesture) {
-      case 'left':
-        callHandler('when-left');
-        break;
-      case 'up':
-        callHandler('when-up');
-        break;
-      case 'right':
-        callHandler('when-right');
-        break;
-      case 'down':
-        callHandler('when-down');
-        break;
-    }
-    if (0 === Studio.gesturesObserved[gesture]--) {
-      delete Studio.gesturesObserved[gesture];
-    }
+    Studio.executeQueue('when-left');
+    Studio.executeQueue('when-up');
+    Studio.executeQueue('when-right');
+    Studio.executeQueue('when-down');
   }
-
-  Studio.executeQueue('when-left');
-  Studio.executeQueue('when-up');
-  Studio.executeQueue('when-right');
-  Studio.executeQueue('when-down');
 
   checkForCollisions();
 
+  if (Studio.JSInterpreter && !animationOnlyFrame) {
+    Studio.JSInterpreter.executeInterpreter(Studio.tickCount === 1);
+  }
+
   for (i = 0; i < Studio.spriteCount; i++) {
-    performQueuedMoves(i);
+    if (!animationOnlyFrame) {
+      performQueuedMoves(i);
+    }
 
     var isWalking = true;
 
     // After 5 ticks of no movement, turn sprite forward.
-    if (Studio.tickCount - Studio.sprite[i].lastMove > TICKS_BEFORE_FACE_SOUTH) {
+    if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
       Studio.sprite[i].dir = Direction.SOUTH;
       isWalking = false;
     }
@@ -768,9 +803,11 @@ function edgeCollidableCollisionDistance (collidable, edgeName, yAxis) {
  * executeCollision, which is expected to be called afterwards by the caller.
  */
 function handleActorCollisionsWithCollidableList (
-           spriteIndex, xCenter, yCenter, list)
+           spriteIndex, xCenter, yCenter, list, autoDisappear)
 {
-  for (var i = 0; i < list.length; i++) {
+  // Traverse the list in reverse order because we may remove elements from the
+  // list while inside the loop:
+  for (var i = list.length - 1; i >= 0; i--) {
     var collidable = list[i];
     var next = collidable.getNextPosition();
     if (collisionTest(
@@ -790,6 +827,13 @@ function handleActorCollisionsWithCollidableList (
         // tracked on the collidable in this case
         handleCollision(spriteIndex, collidable.className, true);
         Studio.currentEventParams = null;
+
+        // Make the projectile/item disappear automatically if this parameter
+        // is set:
+        if (autoDisappear) {
+          collidable.removeElement();
+          list.splice(i, 1);
+        }
       }
     } else {
       collidable.endCollision(spriteIndex);
@@ -890,8 +934,15 @@ function checkForCollisions() {
       executeCollision(i, j);
     }
 
-    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.projectiles);
-    handleActorCollisionsWithCollidableList(i, iXCenter, iYCenter, Studio.items);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.projectiles);
+    handleActorCollisionsWithCollidableList(i,
+                                            iXCenter,
+                                            iYCenter,
+                                            Studio.items,
+                                            level.removeItemsWhenActorCollides);
 
     handleEdgeCollisions(
         sprite,
@@ -1142,6 +1193,8 @@ Studio.initReadonly = function(config) {
   level = config.level;
   loadLevel();
 
+  config.appMsg = studioMsg;
+
   Studio.initSprites();
 
   studioApp.initReadonly(config);
@@ -1240,7 +1293,8 @@ Studio.init = function(config) {
       idealBlockNumber: undefined,
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
-      inputOutputTable: level.inputOutputTable
+      inputOutputTable: level.inputOutputTable,
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
@@ -1266,10 +1320,10 @@ Studio.init = function(config) {
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {
-      dom.addClickTouchEvent(document.getElementById(ArrowIds[btn]),
-                             delegate(this,
-                                      Studio.onArrowButtonUp,
-                                      ArrowIds[btn]));
+      dom.addMouseUpTouchEvent(document.getElementById(ArrowIds[btn]),
+                               delegate(this,
+                                        Studio.onArrowButtonUp,
+                                        ArrowIds[btn]));
       dom.addMouseDownTouchEvent(document.getElementById(ArrowIds[btn]),
                                  delegate(this,
                                           Studio.onArrowButtonDown,
@@ -1311,6 +1365,12 @@ Studio.init = function(config) {
   config.varsInGlobals = true;
   config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
+  config.unusedConfig = [];
+  for (var handlerName in AUTO_HANDLER_MAP) {
+    config.unusedConfig.push(handlerName);
+  }
+
+  config.appMsg = studioMsg;
 
   Studio.initSprites();
 
@@ -1467,6 +1527,8 @@ Studio.reset = function(first) {
     Studio.sprite[i] = new Collidable({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
+      displayX: Studio.spriteStart_[i].x,
+      displayY: Studio.spriteStart_[i].y,
       speed: constants.DEFAULT_SPRITE_SPEED,
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
@@ -1495,6 +1557,9 @@ Studio.reset = function(first) {
       explosion.setAttribute('visibility', 'hidden');
     }
   }
+
+  // Create Items that are specified on the map:
+  Studio.createLevelItems(svg);
 
   var goalAsset = skin.goal;
   if (level.goalOverride && level.goalOverride.goal) {
@@ -1555,12 +1620,18 @@ Studio.runButtonClick = function() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function() {
+  var tryAgainText;
+  // For free play, show keep playing, unless it's a big game level
+  if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
+    tryAgainText = commonMsg.keepPlaying();
+  }
+
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
       app: 'studio', //XXX
       skin: skin.id,
       feedbackType: Studio.testResults,
-      tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+      tryAgainText: tryAgainText,
       continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
       response: Studio.response,
       level: level,
@@ -1706,7 +1777,10 @@ Studio.checkForPreExecutionFailure = function () {
   if (studioApp.hasUnfilledFunctionalBlock()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Studio.message = commonMsg.emptyFunctionalBlock();
+    // Some of our levels (i.e. big game) have a different top level block, but
+    // those should be undeletable/unmovable and not hit this. If they do,
+    // they'll still get the generic unfilled block message
+    Studio.message = studioApp.getUnfilledFunctionalBlockError('functional_start_setValue');
     Studio.preExecutionFailure = true;
     return true;
   }
@@ -1825,6 +1899,7 @@ Studio.execute = function() {
       studioApp: studioApp,
       onExecutionError: handleExecutionError,
     });
+    Studio.initAutoHandlers(AUTO_HANDLER_MAP);
   } else {
     // Define any top-level procedures the user may have created
     // (must be after reset(), which resets the Studio.Globals namespace)
@@ -1939,9 +2014,9 @@ frameDirTableWalking[Direction.SOUTHWEST]  = 7;
 var ANIM_RATE = 6;
 var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
 var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
-// Number of ticks between the last time the sprite moved and when we reset them
-// to face south.
-var TICKS_BEFORE_FACE_SOUTH = 5;
+// Number of extra ticks between the last time the sprite moved and when we
+// reset them to face south.
+var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
@@ -2003,6 +2078,17 @@ function spriteTotalFrames (index) {
     sprite.frameCounts.turns + sprite.frameCounts.emotions;
 }
 
+/* Return the frame count for items or projectiles
+*/
+function getFrameCount (className, exceptionList, defaultCount) {
+  if (/.gif$/.test(skin[className])) {
+    return 1;
+  } else if (exceptionList && exceptionList[className]) {
+    return exceptionList[className];
+  }
+  return defaultCount;
+}
+
 function cellId(prefix, row, col) {
   return prefix + '_' + row + '_' + col;
 }
@@ -2039,6 +2125,37 @@ Studio.drawWallTile = function (svg, row, col) {
   text.textContent = 'X';
   group.appendChild(text);
   svg.appendChild(group);
+};
+
+Studio.createLevelItems = function (svg) {
+  for (var row = 0; row < Studio.ROWS; row++) {
+    for (var col = 0; col < Studio.COLS; col++) {
+      var mapVal = Studio.map[row][col];
+      for (var index = 0; index < skin.ItemClassNames.length; index++) {
+        if (constants.squareHasItemClass(index, mapVal)) {
+          var className = skin.ItemClassNames[index];
+          // Create item:
+          var itemOptions = {
+            frames: getFrameCount(className, skin.specialItemFrames, skin.itemFrames),
+            className: className,
+            dir: Direction.NONE,
+            image: skin[className],
+            loop: true,
+            x: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * col,
+            y: Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row,
+          };
+
+          var item = new Item(itemOptions);
+
+          item.createElement(svg);
+          // Display immediately (we can't assume it will be updated in onTick
+          // right away since this is called after 'Reset' as well as 'Run'
+          item.display();
+          Studio.items.push(item);
+        }
+      }
+    }
+  }
 };
 
 Studio.drawMapTiles = function (svg) {
@@ -2145,17 +2262,33 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
-  spriteIcon.setAttribute('x', sprite.x - xOffset);
-  spriteIcon.setAttribute('y', sprite.y - yOffset);
+  if (level.gridAlignedMovement) {
+    if (sprite.x > sprite.displayX) {
+      sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
+    } else if (sprite.x < sprite.displayX) {
+      sprite.displayX -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
+    }
+    if (sprite.y > sprite.displayY) {
+      sprite.displayY += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
+    } else if (sprite.y < sprite.displayY) {
+      sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
+    }
+  } else {
+    sprite.displayX = sprite.x;
+    sprite.displayY = sprite.y;
+  }
 
-  spriteClipRect.setAttribute('x', sprite.x);
-  spriteClipRect.setAttribute('y', sprite.y);
+  spriteIcon.setAttribute('x', sprite.displayX - xOffset);
+  spriteIcon.setAttribute('y', sprite.displayY - yOffset);
+
+  spriteClipRect.setAttribute('x', sprite.displayX);
+  spriteClipRect.setAttribute('y', sprite.displayY);
 
   // Update the other clip rect too, so that calculations involving
   // inter-frame differences (just above, to calculate sprite.dir)
   // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.x);
-  unusedSpriteClipRect.setAttribute('y', sprite.y);
+  unusedSpriteClipRect.setAttribute('x', sprite.displayX);
+  unusedSpriteClipRect.setAttribute('y', sprite.displayY);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2303,6 +2436,34 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.moveSingle(cmd.opts);
       break;
+    case 'moveEast':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.EAST,
+      });
+      break;
+    case 'moveWest':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.WEST,
+      });
+      break;
+    case 'moveNorth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.NORTH,
+      });
+      break;
+    case 'moveSouth':
+      studioApp.highlight(cmd.id);
+      Studio.moveSingle({
+          spriteIndex: Studio.protagonistSpriteIndex || 0,
+          dir: Direction.SOUTH,
+      });
+      break;
     case 'moveDistance':
       if (!cmd.opts.started) {
         studioApp.highlight(cmd.id);
@@ -2355,16 +2516,6 @@ Studio.callCmd = function (cmd) {
 };
 
 Studio.addItemsToScene = function (opts) {
-  var frames;
-
-  if (/.gif$/.test(skin[opts.className])) {
-    frames = 1;
-  } else if (skin.specialItemFrames && skin.specialItemFrames[opts.className]) {
-    frames = skin.specialItemFrames[opts.className];
-  } else {
-    frames = skin.itemFrames;
-  }
-
   var directions = [
     Direction.NORTH,
     Direction.EAST,
@@ -2376,37 +2527,54 @@ Studio.addItemsToScene = function (opts) {
     Direction.NORTHWEST,
   ];
 
-  var halfSquare = Studio.SQUARE_SIZE / 2;
+  // Create stationary, grid-aligned items when level.gridAlignedMovement,
+  // otherwise, create randomly placed items travelling in a random direction
+
+  var generateRandomItemPosition = function () {
+    // TODO (cpirich): check for edge collisions? (currently avoided by placing
+    // the items within the coordinate space (x/y min of Studio.HALF_SQUARE,
+    // max of max - Studio.HALF_SQUARE)
+
+    var pos = {};
+    if (level.gridAlignedMovement) {
+      pos.x = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
+      pos.y = Studio.HALF_SQUARE +
+                Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.ROWS);
+    } else {
+      pos.x = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
+      pos.y = Studio.HALF_SQUARE +
+                Math.floor(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+    }
+    return pos;
+  };
 
   for (var i = 0; i < opts.number; i++) {
+    var direction = level.gridAlignedMovement ? Direction.NONE :
+                      directions[Math.floor(Math.random() * directions.length)];
+    var pos = generateRandomItemPosition();
     var itemOptions = {
-      frames: frames,
+      frames: getFrameCount(opts.className, skin.specialItemFrames, skin.itemFrames),
       className: opts.className,
-      dir: directions[Math.floor(Math.random() * directions.length)],
+      dir: direction,
       image: skin[opts.className],
       loop: true,
-      x: halfSquare +
-        Math.round(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE)),
-      y: halfSquare +
-        Math.round(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE)),
+      x: pos.x,
+      y: pos.y,
     };
 
     var item = new Item(itemOptions);
 
     if (level.blockMovingIntoWalls) {
-      // TODO: just move within the map looking for open spaces instead of
-      // randomly retrying random numbers
-
-      // TODO: check for edge collisions? (currently avoided by placing the
-      // items within the coordinate space (x/y min of halfSquare,
-      // max of max - halfSquare)
+      // TODO (cpirich): just move within the map looking for open spaces instead
+      // of randomly retrying random numbers
 
       var numTries = 0;
       while (Studio.willCollidableTouchWall(item, item.x, item.y)) {
-        item.x = halfSquare +
-          Math.round(Math.random() * (Studio.MAZE_WIDTH - Studio.SQUARE_SIZE));
-        item.y = halfSquare +
-          Math.round(Math.random() * (Studio.MAZE_HEIGHT - Studio.SQUARE_SIZE));
+        var newPos = generateRandomItemPosition();
+        item.x = newPos.x;
+        item.y = newPos.y;
         numTries++;
         if (numTries > 100) {
           break;
@@ -2842,18 +3010,8 @@ Studio.throwProjectile = function (options) {
 
   var preventLoop = skin.preventProjectileLoop && skin.preventProjectileLoop(options.className);
 
-  var frames;
-
-  if (/.gif$/.test(skin[options.className])) {
-    frames = 1;
-  } else if (skin.specialProjectileFrames && skin.specialProjectileFrames[options.className]) {
-    frames = skin.specialProjectileFrames[options.className];
-  } else {
-    frames = skin.projectileFrames;
-  }
-
   var projectileOptions = {
-    frames: frames,
+    frames: getFrameCount(options.className, skin.specialProjectileFrames, skin.projectileFrames),
     className: options.className,
     dir: options.dir,
     image: skin[options.className],
@@ -3117,8 +3275,8 @@ Studio.setSpritePosition = function (opts) {
   // Don't reset collisions inside stop() if we're in the same position
   Studio.stop({'spriteIndex': opts.spriteIndex,
                'dontResetCollisions': samePosition});
-  sprite.x = opts.x;
-  sprite.y = opts.y;
+  sprite.displayX = sprite.x = opts.x;
+  sprite.displayY = sprite.y = opts.y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -3134,8 +3292,8 @@ Studio.setSpriteXY = function (opts) {
     'spriteIndex': opts.spriteIndex,
     'dontResetCollisions': samePosition
   });
-  sprite.x = x;
-  sprite.y = y;
+  sprite.displayX = sprite.x = x;
+  sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.dir = Direction.NONE;
 };
@@ -3187,6 +3345,9 @@ Studio.moveSingle = function (opts) {
         sprite.x = 0;
       }
       break;
+  }
+  if (level.gridAlignedMovement && Studio.JSInterpreter) {
+    Studio.JSInterpreter.yield();
   }
 };
 

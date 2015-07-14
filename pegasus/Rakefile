@@ -5,12 +5,12 @@ def there_can_be_only_one(pidfile)
     oldpid = File.read(pidfile).to_i
     # does that process exist?
 
-    ps = `ps -Af | grep #{oldpid}`
+    ps = `ps -p #{oldpid} -o pid,start,etime,args`
 
     exists = true
     begin
       Process.kill(0, oldpid) # signal is 0, meaning, no signal is sent, but error checking is still performed.
-    rescue Errno::ESRCH
+    rescue Errno::ESRCH # Invalid pid
       File.delete(pidfile)
       exists = false
     rescue ::Exception   # for example on EPERM (process exists but does not belong to us)

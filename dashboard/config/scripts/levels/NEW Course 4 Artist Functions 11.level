@@ -21,7 +21,15 @@
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "We have a new function called 'draw a line of squares'. Feel free to take a look inside the function block to see how we built it. \r\n\r\n<br/>\r\nClick on \"Run\" when your are ready for the next puzzle.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

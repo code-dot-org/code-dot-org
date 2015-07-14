@@ -1,7 +1,7 @@
 "es-ES":
   hello: Hola mundo
   select_language: Por favor seleccione su idioma
-  computer_science: Ciencias de la computación
+  en: Informática
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
   csedweek_dates: 8-14 de diciembre de 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
@@ -19,7 +19,7 @@
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
   petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a #
     otros.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Unete a # otros'
   name: Nombre
   email: Correo electrónico
   zipcode: Código postal o país
@@ -50,10 +50,10 @@
   view_english_site: Ver sitio en inglés
   non_english_tutorials: 'Tutoriales traducidos a múltiples idiomas:'
   write_your_first_program: Codifica tu primer programa de computación
-  learn_cs_concepts: Aprende los conceptos básicos de las Ciencias de la Computación
-    con programación de arrastrar y soltar. Este es un juego-tutorial con videos de
-    Bill Gates, Mark Zuckerberg, Angry Birds y Plants vs. Zombies. Aprende bucles,
-    sentencias condicionales, y conceptos básicos de algorítmica.
+  learn_cs_concepts: Aprende los principios básicos de la informática con programación
+    de arrastrar y soltar. Este es un tutorial en forma de juego con vídeos de Bill
+    Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprende los bucles,
+    las sentencias si-si no y algoritmos básicos.
   all_ages: Todas las edades
   beginner: Principiante
   n_participants: '# de participantes'
@@ -62,6 +62,7 @@
   congratulations: Felicidades!
   congratulations_on_completing_hoc: Felicitaciones por completar una Hora del Código
   get_a_certificate_of_achievement: Recibe un certificado de tu logro
+  enter_valid_age: Por favor, selecciona una edad válida
   enter_valid_email: Por favor ingresa un correo electrónico válido
   get_a_certificate_message: Te enviaremos un certificado e información sobre cómo
     hacer para que <a href='/learn/beyond'> Aprenda más allá de una hora</a>
@@ -192,9 +193,10 @@
   homepage_hero_text_teacher2: |
     &ldquo;Este programa tiene al 100% de mis estudiantes comprometidos, involucrados y participando.&ldquo;
     Adam, profesor
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '# lineas de código escritas por estudiantes'
+  homepage_hero_text_stat_students: '#student_count cuentas del estudiante en Code
+    Studio'
+  homepage_hero_text_stat_served: 'La Hora del Codigo: #Served servidos'
   homepage_slot_text_hoc: La Hora de Programación
   homepage_slot_text_frozen: Congelados con Anna y Elsa
   homepage_slot_text_teacher: Tablero Maestro del Profesor
@@ -322,6 +324,48 @@
   dashboard_landing_available_title: Cursos disponibles
   dashboard_landing_available_courses: Aquí los cursos están disponibles para usted
     y sus alumnos.
+  dashboard_landing_more_tutorials: ¿Quiéres ver aún más tutoriales?
+  dashboard_landing_more_tutorials_desc: Hay más tutoriales <a href="/learn/beyond">
+    ofrecidos por nuestros socios.</a> Aprende a programar con robots, a hacer páginas
+    web, a hacer tu propia app o explora otros lenguajes como C++, Ruby o Python!
+  dashboard_hoc_courses: La Hora de Código para todas las edades
+  dashboard_hoc_courses_desc: Prueba alguno de estos tutoriales de menos de 1 hora
+    con tus alumnos!
+  dashboard_k5_courses: Curso de 20 horas para K-5
+  dashboard_k5_courses_desc: Estos cursos en línea, mezclan tutoriales autoguiados
+    y a realizar a su propio ritmo con actividades  que no requieren el uso de un
+    ordenador. Cada curso consta de aproximadamente 20 lecciones que pueden ser implementadas
+    como una unidad o a lo largo de un semestre. Pueden participar incluso alumnos
+    en edad preescolar que no sepan leer. Para ayudarte a empenzar, ofrecemos talleres
+    de desarrollo profesional de alta calidad  en los Estados Unidos de forma gratuita.
+    <a href="/professional-development-workshops">Encuentra uno cerca!</a>
+  dashboard_middle_courses: Cursos de 20 horas para secundaria
+  dashboard_middle_courses_desc: Nuestro plan de estudios de secundaria utiliza informática
+    y programación en el contexto de las matemáticas y la ciencias a nivel de escuela
+    de secundaria - como una herramienta para enseñar conceptos de matemáticas y ciencias.
+    Para inscribirse en los talleres de desarrollo profesional, realizar una solicitud
+    en <a href="/educate/districts">Centros Asociados</a> de Code.org.
+  dashboard_high_courses: Cursos anuales para bachillerato
+  dashboard_high_courses_desc: Nuestro programa para bachillerato ayuda a los institutos
+    de cara a ofrecer clases anuales de informática preparando al profesorado existente
+    para ofertar este nuevo ámbito de estudio. Para inscribirse en los talleres de
+    desarrollo profesional, realizar una solicitud en <a href="/educate/districts">Institutos
+    Asociados </a> de Code.org.
+  dashboard_course_csina: Ciencias de la computación en álgebra
+  dashboard_course_csina_desc: Code.org se ha asociado con Bootstrap  para desarrollar
+    un currículo para enseñar conceptos algebraicos y geométricos a través de la programación
+    de ordenadores.
+  dashboard_course_csins: Informática en la Ciencia
+  dashboard_course_csins_desc: Code.org se ha asociado con el Protyecto GUTS  para
+    ofrecer una introducción a los conceptos de la informática dentro del contexto
+    del modelado y la simulación.
+  dashboard_course_ecs: Explorando las ciencias de la computación
+  dashboard_course_ecs_desc: 'Explorando la ciencia de la computación es un curso
+    anual que consta de 6 unidades: interacción humano computadora, resolución de
+    problemas, Diseño Web, programación, computación y análisis de datos y robótica.'
+  dashboard_course_csp: Principios informáticos AP®
+  dashboard_course_csp_desc: Code.org ha diseñado un curso riguroso, atractivo y accesible
+    que explora las ideas fundamentales de la informática.
   dashboard_landing_loading: Cargando...
   dashboard_action_edit: Editar
   dashboard_action_save: Guardar
@@ -400,11 +444,16 @@
     con sus alumnos:'
   dashboard_students_print_info: Imprimir tarjetas con la información de registro
     de sus alumnos.
-  dashboard_students_secret_picture: Imagen secreta
+  dashboard_students_secret_picture_title: Imagen secreta
+  dashboard_students_secret_picture: Esta sección utiliza <b>imagenes</b> como tipo
+    de letra secreto.  Esto significa que cada uno de tus alumnos tiene una imagen
+    secreta que utiliza en vez de una contraseña para iniciar la sesión.  Los alumnos
+    deben utilizar la dirección web inidcada arriba para iniciar la sesión.
   dashboard_students_reset_picture: Puedes restablecer la imagen secreta de un alumno
     en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Reiniciar
     secreto</b>. Se generará una nueva imagen secreta para que ese estudiante pueda
     registrarse.
+  dashboard_students_secret_word_title: Palabra secreta
   dashboard_students_secret_word: Palabra secreta
   dashboard_students_reset_word: 'Puedes restablecer las palabras secretas de un alumno
     en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Reiniciar
@@ -420,11 +469,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Haga
     clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse
     o imprimirse para sus alumnos.
-  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_curriculum_k5_title: Recursos del edicador para K-5
+  dashboard_curriculum_middle_title: Recursos del educador para Secundaria
+  dashboard_curriculum_high_title: Recursos del educador para Bachillerato
+  dashboard_lesson_plans: Planes de lecciones
   dashboard_view_all_lesson_plans: Ver todos los planes de estudio
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
+  dashboard_course4: 'Curso 4 (beta): '
+  dashboard_curriculum: Currículum
+  dashboard_curriculum_overview: Resumen de currículo K-5
+  dashboard_overview: Resumen
   dashboard_sequence: Secuencia
   dashboard_framework: Marco de trabajo
   dashboard_standards: Estándares
@@ -435,6 +491,10 @@
   dashboard_puzzle_solving: 'Resolución de rompecabezas:'
   dashboard_student_worksheet: hoja de trabajo del estudiante
   dashboard_teacher_worksheet: hoja de trabajo del maestro
+  dashboard_curriculum_csina: 'Informática en Álgebra:'
+  dashboard_curriculum_csins: 'Informática en Ciencia:'
+  dashboard_curriculum_csp: 'Principios informáticos AP®:'
+  dashboard_curriculum_ecs: 'Explorando la Informática:'
   dashboard_grade_k: K
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
@@ -469,6 +529,7 @@
     tipos de inicio de sesión, <b>imagen, palabra o correo electrónico</b>, querrá
     elegir para una sección.
   dashboard_faq: Preguntas frecuentes
+  dashboard_faq_k5: Preguntas frecuentes sobre K-5
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
@@ -1163,8 +1224,8 @@
   sphero_beyond_longdescription: Si eres un educador o un padre, las lecciones SPRK
     proveen a los niños un divertido curso intensivo de programación de robots, y
     permite mejorar habilidades en matemáticas y ciencias.
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_header: Por favor habilitar HTTPS para Code.org.
+  compatibility_https_message: Para aumentar la seguridad, nos cambio a HTTPS en %{https_date}.
+    Usted no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'>
+    haga clic aquí</a> para aprender cómo activar HTTPS para Code.org.
+  compatibility_https_hide_this_warning: Ocultar esta advertencia

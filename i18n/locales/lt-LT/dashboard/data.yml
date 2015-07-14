@@ -411,6 +411,7 @@ lt:
         C3_functional_suncatchers: Sekų suvokimas
         C3_songwriting_with_parameters: Dainų rašymas su parametrais
         C4_intro: Įvadas
+        C4_loops_zombie: Kartojimas
         C4_bee_conditional: 'Bitė: sąlyginiai sakiniai'
         C4_variables_artist: Menininkas – kintamieji
         C4_variables_playlab: Žaidimų laboratorija – kintamieji
@@ -445,6 +446,7 @@ lt:
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'

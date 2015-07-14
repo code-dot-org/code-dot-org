@@ -376,7 +376,10 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Already registered? %{link}
@@ -420,6 +423,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Lalaki
     female: Babae
@@ -456,6 +460,12 @@
     autoplay_option: I-Autoplay ang mga videos
     download: I-download ang video
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Itago ang babalang ito
     working:
       header: Nagsusumikap kami sa suporta para sa iyong browser.
       message: Code.org ay gumagamit ng modernong teknolohiya sa web . Ginagawa nitong
@@ -516,9 +526,14 @@
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
         tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: 'Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod ng computer
+        science at mga konsepto ng programming. Ang kursong ito ay ginawa para magamit
+        sa loob ng silid-paaralan  ng mga baitang ng K-8, at para na rin sa lahat
+        ng edad. '
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Subukan ang aming bagong Oras ng Code tutorial nasa beta
       try_frozen: Artist with Anna and Elsa, from Frozen

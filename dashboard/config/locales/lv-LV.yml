@@ -364,7 +364,10 @@
     classroom_activity: Atvienota aktivitāte
   home:
     title: Kodu studija
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Pārskats par kursiem, 1, 2 un 3
     lesson_plans: Nodarbību plāni
     signin_message: Jau reģistrējies? %{link}
@@ -407,6 +410,7 @@
     heading_legacy: <h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>
     your_gallery: Galerija
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Vīrietis
     female: Sieviete
@@ -442,6 +446,12 @@
     autoplay_option: Automātiski atskaņot videoklipu
     download: Lejupielādēt videoklipu
   compatability:
+    https:
+      header: Lūdzu iespējo HTTPS priekš Code.org.
+      message: Lai uzlabotu drošību, mēs pāriesim uz HTTPS protokolu no %{https_date}.
+        Pēc šī datuma tu nevarēsi piekļūt code.org. <a href='%{it_requirements_url}'>Spied
+        šeit</a> un izlasi, kā iespējot HTTPS Code.org.
+      hide_this_warning: Nerādīt šo brīdinājumu
     working:
       header: Mēs strādājam pie atbalsta jūsu pārlūkam.
       message: Code.org izmanto mūsdienīgas tīmekļa lapu tehnoloģijas. Tas palīdz
@@ -499,9 +509,13 @@
       title: Flappy kods
       body: Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy
         koda apmācību!
-    20hour:
-      title: Ievadkurss
-      body: Izmēģini mūsu 20 stundu ievadu Datorzinātņu kursā.
+    20-hour:
+      title: Accelerated Course
+      body: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
+        Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās
+        prieku mācīties visos vecumos.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta versijā
       try_frozen: Zīmē kopā ar Annu un Elzu no "Ledus sirds"

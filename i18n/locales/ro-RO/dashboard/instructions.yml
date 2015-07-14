@@ -178,157 +178,115 @@ ro:
       2-3 Bee Functions 9_instruction: |
         Creează-ţi propria funcţie care se duce în jos pe 
         cale, obține nectar, face miere şi, apoi, returnează albina în partea de sus a căii.
-      2-3 Bee Functions Assessment 1_instruction: |
-        Assessment: Use the function given
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |
-        Assessment: Create a function
-        to make 3 honey at a time.
-      2-3 Bee Loops 1_instruction: |
-        Each flower contains one unit of nectar. Collect
-        nectar from each of the flowers. 
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
+      2-3 Bee Functions Assessment 1_instruction: 'Evaluare: Folositi functia data pentru a colecta nectar din fiecare floare.'
+      2-3 Bee Functions Assessment 2_instruction: 'Evaluare: Creează o funcţie pentru a produce 3 miere dintr-o dată.'
+      2-3 Bee Loops 1_instruction: 'Fiecare floare contine o unitate de nectar. Colecteaza nectarul din fiecare floare. '
+      2-3 Bee Loops 10_instruction: Poti folosi o bucla cat timp inauntrul altor doua bucle pentru a colecta tot nectarul?
+      2-3 Bee Loops 11_instruction: Foloseste o bucla cat timp pentru a colecta tot nectarul florilor din acest camp.
+      2-3 Bee Loops 12_instruction: Foloseste o bucla cat timp pentru a colecta tot nectarul florilor din acest camp.
       2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
-      2-3 Bee Loops 1A_instruction: |
-        Hi, I'm a bee. Can you help me collect the
-        nectar from these flowers? 
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
-      2-3 Bee Loops 2A_instruction: |
-        Can you do the same task more easily with a
-        loop?
-      2-3 Bee Loops 3_instruction: |
-        Collect nectar from each flower and make honey
-        at each honeycomb.
-      2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |
-        Now use the new repeat block to collect all
-        of the nectar and make all of the honey.
-      2-3 Bee Loops 4_instruction: |
-        Use a similar loop as the last puzzle, but work
-        a turn into it.
+        Evaluare: Folosește blocul "repetă" pentru a colecta 
+        tot nectarul.
+      2-3 Bee Loops 1A_instruction: 'Hei, eu sunt o albină. Mă poţi ajuta să strâng nectarul din aceste flori? '
+      2-3 Bee Loops 2_instruction: Foloseste o bucla pentru a colecta nectarul si a face miere.
+      2-3 Bee Loops 2A_instruction: Poti face aceasi sarcina mai usor cu o bucla?
+      2-3 Bee Loops 3_instruction: Colecteaza nectarul din fiecare floare si fa miere la fiecare fagure de miere.
+      2-3 Bee Loops 3A_instruction: Poti folosi o bucla pentru a colecta tot nectarul?
+      2-3 Bee Loops 3B_instruction: Acum foloseste noul bloc de repetitie pentru a colecta tot nectarul si a face toata mierea.
+      2-3 Bee Loops 4_instruction: Foloseste o bucla similara ca in puzzleul trecut, dar foloseste un viraj.
       2-3 Bee Loops 4A_instruction: |
-        What happens if you loop this sequence 3 times?
-        Don't forget to make the honey at the end!
-      2-3 Bee Loops 5_instruction: |
-        Use a loop to go down the steps and collect the
-        nectar.
-      2-3 Bee Loops 6_instruction: |
-        Use a loop to collect nectar from each flower
-        and make honey at each honeycomb.
-      2-3 Bee Loops 7_instruction: |
-        Put these blocks into a loop to collect nectar
-        from each flower.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
-      2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
+        Ce se intampla daca repeti aceasi secventa de 3 ori?
+        Nu uita sa faci mierea la sfarsit!
+      2-3 Bee Loops 5_instruction: Foloseste o bucla pentru a merge in jos si colecteaza tot nectarul.
+      2-3 Bee Loops 6_instruction: Foloseste o bucla pentru a colecta nectarul din fiecare floare si a face miere la fiecare fagure de miere.
+      2-3 Bee Loops 7_instruction: Pune aceste blocuri intr-o bucla pentru a colecta nectarul din fiecare floare.
+      2-3 Bee Loops 8_instruction: 'Aceste flori mov au o cantitate necunoscuta de nectar. Foloseste bucla "cat timp nectar" pentru a colecta tot nectarul. Aceasta bucla va merge atat timp cat conditia este indeplinita, in acest caz nectar > 0.'
+      2-3 Bee Loops 9_instruction: Bucla cat timp poate face aceasi actiune ca si declaratia daca intr-o bucla. Adauga o bucla cat timp acestui cod pentru a face aceasi sarcina.
       2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
+        Evaluare - utilizează o buclă "în timp ce" pentru a colecta 
+        tot nectarul din această floare.
       2-3 Maze 1_instruction: |
-        Can you help me to catch the naughty pig? Stack a
-        couple of "move forward" blocks together and press "Run". 
+        Mă poți ajuta să prin porcul buclucaș? Stivează două
+        blocuri "mută înainte" împreună și apasă "Rulează". 
       2-3 Maze 10_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
+        Du-mă la floare, mi-e foame! De căte ori
+        trebuie să repeți un bloc?
       2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
+        Poți înlocui răspunsul anterior cu
+        doar două blocuri? (Sugestie: Creează o buclă folosind un bloc "repetă ori".)
       2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |
-        Get me to the pig, now with the Repeat times
-        block!
+        Poți înlocui răspunsul anterior cu
+        doar două blocuri? (Sugestie: Creează o buclă folosind un bloc "repetă ori".)
+      2-3 Maze 12 (old)_instruction: Du-mă la porc, acum cu blocul Repetă ori!
       2-3 Maze 12_instruction: |
-        Can you replace these five blocks with only two blocks?
-        (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
-      2-3 Maze 13_instruction: Get me to the pig using only two blocks.
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
+        Poți înlocui aceste cinci blocuri cu doar două blocuri?
+        (Sugestie: Creează o buclă folosind un block "repetă ori".)
+      2-3 Maze 13 (old)_instruction: Du-mă la porc, acum cu blocul Repetă până când!
+      2-3 Maze 13_instruction: Du-mă la porc folosind doar două blocuri.
+      2-3 Maze 14 (old)_instruction: Du-mă la porc cu blocul Repetă până când!
       2-3 Maze 14_instruction: |
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 15_instruction: Use two loops to get to the pig using fewer blocks.
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: Get me to the pig.
-      2-3 Maze 16_instruction: Get me to the sunflower. Loop the sequence!
-      2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
+        Du-mă la floarea-soarelui! (Unde este acel bloc "repetă 
+        ori", când am nevoie de el?)
+      2-3 Maze 15 (old)_instruction: Du-mă la porc cu blocul Repetă până când!
+      2-3 Maze 15_instruction: Utilizează două bucle pentru a ajunge la porc folosind mai puține blocuri.
+      2-3 Maze 16 (old)_instruction: Du-mă la porc cu blocul Repetă până când!
+      2-3 Maze 16 before_instruction: Du-mă la porc.
+      2-3 Maze 16_instruction: Du-mă la floarea-soarelui. Buclează secvența!
+      2-3 Maze 2_instruction: Acest porc îmi zbârlește penele. Ajută-mă să-l prind!
       2-3 Maze 3_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+        Trasează calea şi du-mă la porcul buclucaș. Evită 
+        TNT-ul sau penele vor zbura!
       2-3 Maze 4_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze 5_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze 6_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+        Păstrează-ți calmul și ajută-mă să găsesc porcul rău. Altfel
+        s-ar putea să mă supăr!
       2-3 Maze 7_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
-      2-3 Maze 8_instruction: Get me to the pig!
+      2-3 Maze 8_instruction: Du-mă la porc!
       2-3 Maze 9_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
-      2-3 Maze Loops 17_instruction: Get me to the sunflower!
-      2-3 Maze Loops 18_instruction: Get me to the sunflower!
-      2-3 Maze Loops 19_instruction: Get me to the sunflower!
-      2-3 Maze Loops 20_instruction: Get me to the sunflower!
-      2-3 Maze Loops 21_instruction: Get me to the sunflower!
+      2-3 Maze Loops 17_instruction: Du-mă la floarea-soarelui!
+      2-3 Maze Loops 18_instruction: Du-mă la floarea-soarelui!
+      2-3 Maze Loops 19_instruction: Du-mă la floarea-soarelui!
+      2-3 Maze Loops 20_instruction: Du-mă la floarea-soarelui!
+      2-3 Maze Loops 21_instruction: Du-mă la floarea-soarelui!
       2-3 Maze Loops Assessment 1_instruction: |
-        Assessment:  Get me to the sunflower
-        using only 5 blocks! 
+        Evaluare: Du-mă la floarea-soarelui 
+        folosind doar 5 blocuri! 
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
-      2-3 Maze sq10_instruction: Get me to the pig! What blocks got repeated?
-      2-3 Maze sq10v2_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq11_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
+      2-3 Maze sq10_instruction: Du-mă la porc! Ce blocuri au fost repetate?
+      2-3 Maze sq10v2_instruction: Du-mă la porc! Ce blocuri au fost repetate?
+      2-3 maze sq11_instruction: Du-mă la porc! Ce blocuri au fost repetate?
+      2-3 maze sq12_instruction: 'Poți înlocui răspunsul anterior cu o buclă folosinf blocul "repetă ori"?'
       2-3 maze sq13_instruction: |
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
+        Dragă persoană. Eu zombie. Trebuie... să ajung... la floarea-soarelui.
+        Creează o buclă cu blocul "repetă până când".
+      2-3 maze sq14_instruction: Poți ajunge la floarea-soarelui folosind doar patru blocuri?
+      2-3 maze sq15_instruction: Poți ajunge la floarea-soarelui folosind doar cinci blocuri?
       2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
+        Ok, acesta este similar, dar un pic diferit. Poți
+        să faci acest lucru doar în cinci blocuri?
       2-3 Maze sq2_instruction: |
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+        Trasează calea și condu-mă la porcul buclucaș. Evită 
+        TNT-ul sau penele vor zbura!
       2-3 Maze sq3_instruction: Ghidează-mă la răutatea verde! (Atenție la TNT)
       2-3 Maze sq4_instruction: |
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+        Păstrează-ți calmul și ajută-mă să găsesc porcul rău. Altfel
+        s-ar putea să mă supăr!
       2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
+        Du-mă la porc! De câte ori trebuie să 
+        repeți un bloc?
       2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
+        Poți înlocui răspunsul precedent cu doar două
+        blocuri? (Sugestie: Creează o buclă folosind blocul "repetă ori".)
+      2-3 Maze sq7_instruction: Du-mă la intrusul verde utilizând doar trei blocuri.
       2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
+        Du-mă la porc! (Unde este acel bloc "repetă ori" 
+        atunci când am nevoie de el?)
+      2-3 Maze sq9_instruction: Creează bucle pentru a ajunge la porc folosind mai puține blocuri.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
@@ -360,185 +318,139 @@ ro:
          de grade. Lungimea părții înclinate este dublul înălţimii de 100 pixeli. Finalizează desenul.
       4-5 Artist 8_instruction: Linia de la jumătate pe un teren de fotbal este perpendiculară pe tuşă. Acest câmp are un perimetru de 800 pixeli şi este lung de 240 pixeli. Cât de lat este? Trasează limitele şi linia de la jumătatea drumului.
       4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
+        Desenează cealaltă jumătate pentru că design-ul este simetric. 
+        Triunghiurile sunt echilaterale şi au o lungime de 50 pixeli.
       4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
+        Evaluare: Utilizează o buclă pentru a desena triunghiul 
+        echilateral. Fiecare latură are 300 de pixeli.
+      4-5 Artist For Loops 1_instruction: Așează numerele de la 1 până la 10 în blocuri de lățime şi rulează codul.
       4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
+        Completează blocul "pentru" astfel încât acesta 
+        numără 0, 20, 40, 60, 80... 200.
       4-5 Artist For Loops 12_instruction: |
-        What happens if you reverse the "from"
-        and "to" numbers? Complete the "for" block so that it counts 200, 180,
-        160, 140, 120...0. 
+        Ce se întâmplă dacă inversezi numerele "de la" 
+        şi la" numere? Completează blocul "pentru" astfel încât acesta să numere 200, 180, 160, 140, 120... 0. 
       4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
+        Acest model a fost început fără o buclă "pentru" şi conține prea multe blocuri!  Utilizează un bloc "pentru" ca să finalizezi spirala.  Sugestie: 
+        lungimea ultimei linii este de 250 pixeli.
       4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
+        Cineva a început codul, dar apoi și-a dat seama 
+        că trebuie să existe o modalitate mai rapidă! Utilizează un bloc "pentru" cu scopul de a înlocui blocurile şi de a finaliza spirala triunghiulară. (Sugestie: lungimea ultimei linii este de 300 de pixeli.)
       4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.
+        Cineva a început codul, dar apoi și-a dat seama 
+        că trebuie să existe o modalitate mai rapidă! Utilizează un bloc "pentru" cu scopul de a înlocui blocurile şi de a finaliza spirala hexagonală. (Sugestie: lungimea ultimei linii este de 200 de pixeli.)
       4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
+        Acesta este un bloc "pentru". În loc să tastezi 
+        1,2,3... 10, blocul "pentru" poate repeta blocurile în interiorul acestuia şi enumera 
+        numerele pentru tine. Plasează numărul 10 în interiorul secţiunii "la" a blocului 
+        "pentru".
       4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
+        Cum putem număra de la 1 la 50? Editează 
+        blocul "pentru".
+      4-5 Artist For Loops 4_instruction: 'Completează blocul "pentru" astfel încât acesta numără de la 1 la 10 cu câte 1.'
       4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+        Desenează pătrate cu laturi de 50, 60, 70, 
+        80 și 90 de pixeli. Vei avea nevoie să utilizezi funcţia "desenează un pătrat" de cinci ori.
       4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
+        Desenează aceleași patrate, dar folosește un bloc "numără 
+        cu" pentru a modifica dimensiunile. Plasează blocul "numărător" în funcţia "desenează 
+        un pătrat". Sugestie: Este în categoria variabilelor.
       4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+        Poţi finaliza programul prin plasarea 
+        blocurilor în interiorul unui bloc "pentru" care numără de la 10 la 200 cu câte 10? Poţi 
+        găsi blocul "pentru" în categoria de bucle.
       4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
+        Aceste cercuri au diametrul de 5, 10, 15, 20, 
+        25, 30 şi 35. Desenează cercurile folosind un bloc "pentru".
       4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
+        Desen liber!  Desenează orice te simți inspirat 
+        să creezi.
+      4-5 Artist Functions 1_instruction: Utilizează o buclă de repetare pentru a desena acest triunghi.
       4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
+        Pune acest cod în interiorul funcţiei 'desenează un fulg de nea' 
+        şi înlocuiește numărul 50 cu parametrul "dimensiune". Funcţia este deja 
+        apelată pentru a crea un fulg de nea, care este de 100 pixeli.
       4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
+        Utilizează funcţia 'desenează un fulg de nea' 
+        pentru a crea fulgi de diferite dimensiuni.  Indiciu: primul fulg de nea are 25 în lungime 
+        şi fiecare fulg de zăpadă este de două ori mai mare decât cel dinainte.
       4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
+        Această funcţie "desenează un hexagon" foloseşte 
+        funcţia "desenează un triunghi". Completează funcţia hexagonului. (Indiciu: un 
+        hexagon are 6 laturi, fiecare cu lungimea de 100 pixeli)
       4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
+        Completează funcţia "desenează valuri".  Fiecare 
+        val este alcătuit dintr-un val Superior şi un val inferior.   Sugestie: Desenează 5 valuri 
+        albastre.
       4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
+        Aici sunt date unele funcţii care să 
+        deseneze planete, stele, rachete şi roboţi. Folosește-le oricum dorești pentru a crea 
+        poze pe care le poţi distribui prietenilor tăi.
       4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
+        Aici, noi ți-am pus la dispoziție 
+        mai multe funcţii.  Folosește-le oricum dorești în interiorul uneia sau mai multor bucle 
+        pentru a crea fotografii pe care le poți distribui prietenilor tăi. Fă clic pe 'Rulează' pentru a vedea 
+        un exemplu.
       4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
+        Evaluare: Utilizează funcţia "desenează 
+        un pătrat" pentru a crea pătratele.  Pătratele sunt de 50, 100 şi 150 
+        de pixeli.
       4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: |
-        Now create the functions "draw a medium
-        triangle" and "draw a large triangle". The "draw a small triangle" function
-        is done for you. The triangles have side lengths of 50 (small), 100 (medium),
-        and 150 (large). 
+        Acum pune aceste blocuri într-o funcţie nouă, 
+        numită "desenează un triunghi mic" şi apeleaz-o.
+      4-5 Artist Functions 2b_instruction: 'Acum creează o funcţie numită "desenează un triunghi mic" folosind blocurile furnizate.'
+      4-5 Artist Functions 3_instruction: 'Acum creează funcţiile "desenează un triunghi mediu" şi "desenează un triunghi mare". Funcţia "desenează un triunghi mic" este făcută pentru tine. Triunghiurile au laturi cu lungimea de 50 (mici), 100 (mediu) şi 150 (mare). '
       4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
+        Această funcție nouă "desenează un triunghi" 
+        are un parametru şi poate face munca a tuturor celor trei funcţii dinainte. Desenează 
+        aceleaşi triunghiuri folosind această nouă funcţie.
+      4-5 Artist Functions 5_instruction: 'Poţi modifica funcţia "desenează un triunghi" într-o funcţie "desenează un pătrat" pentru a schimba desenul?'
+      4-5 Artist Functions 6_instruction: 'Utilizează funcțiile "desenează un pătrat" şi "desenează un triunghi" pentru a desena o casă. (Sugestie: laturile pătratului sunt de 200 de pixeli)'
       4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
+        Folosește funcțiile "desenează un pătrat" și "desenează un triunghi"
+        împreună cu alte blocuri pentru a crea o casă, adăugându-le pe acestea funcției "desenează o casă"
+        și apoi apelați-o.
       4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
+        Folosește funcția "desenează o casă" pentru a desena 
+        case de 100 de pixeli și de 50 de pixeli. Cele două case sunt separate de
+        50 de pixeli.
       4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
+        Funcția "desenează o floare" are un parametru
+        care îți permite să setezi înalțimea tulpinii. Seteaz-o la 200 și observă ce se întâmplă.
       4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
+        Desenează 3 flori. Prima are o 
+        înălțime de 100 iar următoarea floare are întodeauna o înălțime mai mare cu 50 de pixeli 
+        decât precedenta. Florile se află, de asemenea, la o distanță de 100 de pixeli una față de cealaltă.
       4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
+        Poți desena acest pătrat folosind o buclă?
+        Fiecare latură are o lungime de 20 de pixeli.
       4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
+        Acest cod desenează două rânduri de hexagoane - 
+        buclează totul de 4 ori pentru a realiza întregul fagure de miere. Sugestie: Va trebui 
+        să sari înapoi 120 de pixeli în interiorul buclei tale ultraperiferice pentru a te asigura că artistul nu va
+        iesi cu desenul de pe ecran.
       4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
+        De câte ori trebuie să buclezi aceasta 
+        pentru a desena un semicerc? Sugestie: dacă sunt 360 de grade într-un cerc și fiecare 
+        buclă se mută 3 grade, de cîte ori trebuie să buclezi pentru a desena un cerc întreg?
       4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
+        Dacă vei copia acea buclă și vei vira la stânga în loc de 
+        la dreapta, ce se va întîmpla? Poți repeta acest lucru astfel încât să desenezi acest val?
       4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
+        Haide acum să buclăm tot acel lucru de patru 
+        ori pentru a crea această ramă de tablou. Atenție la colțuri - nu poți 
+        doar să virezi la 90 de grade! Dacă buclarea unui viraj de 3 grade de 60 de ori realizează jumatate de cerc, 
+        care din aceste blocuri de cod va realiza un sfert de cerc pentru colțuri?
+      4-5 Artist Patterns 2_instruction: Dacă plasezi bucla de repetare a unui pătrat în interiorul altei bucle, noi numim aceasta o buclă imbricată. Ce trebuie să adaugi la bucla din exterior pentru a te asigura că toate cele 15 pătrate se aliniază unul lângă celălalt?
+      4-5 Artist Patterns 3_instruction: Acum, hai să mergem încă un nivel în profunzimea problemei?
+      4-5 Artist Patterns 4_instruction: Acest diamant are laturi de 50 de pixeli și unghiuri de 120 și 60 de grade. Folosește o buclă pentru a îl desena.
+      4-5 Artist Patterns 5.5_instruction: De câte ori ai nevoie să repeți acest block pentrua desena întreaga grilă de diamante?
+      4-5 Artist Patterns 5_instruction: 'Hai să repetăm aceasta pentru a face un rând de 6 diamante. Observă ca am schimbat codul nostru pentru diamant să se repete de 3 ori în loc de două - de ce crezi că am procedat așa?'
+      4-5 Artist Patterns 6_instruction: De câte ori trebuie să repeți acest block pentru a desena întreaga grilă de diamante?
+      4-5 Artist Patterns 7_instruction: 'Hai să modificăm codul de la ultimul puzzle pentru a face acest model mai complex. Notează cum diamantele se suprapun acum, încearcă să schimbi primul "săritură înapoi" de la 100 la 50 (jumatate din distanță) - cât de departe ar trebui să meargă artistul cu a doua "săritură înapoi"?'
+      4-5 Artist Patterns 8_instruction: Folosește o buclă pentru a desena acest hexagon cu laturile de 40 de pixeli și unghiuri de 60 de grade.
+      4-5 Artist Patterns 9.5_instruction: Hai să buclăm acest cod pentru a desena două rânduri de hexagoane. Notează cum al doilea rând al nostru este întors spre dreapta.
+      4-5 Artist Patterns 9_instruction: Acum repetă acel cod de 3 ori pentru a desena întregul rând. Sugestie, fiecare hexagon are o lățime de 80 de pixeli de la cele mai depărtate puncte de la stînga la dreapta.
       4-5 Artist Patterns Free Play_instruction: |
         Free play - try your hand at making
         a pattern of your own!
@@ -587,9 +499,9 @@ ro:
         3, 2, or 1 nectars. Complete the "check purple flower" function and use
         it to collect all of the nectar at the flowers.
       4-5 Bee Conditionals 8_instruction: |
-        Write a function inside the block called
-        "check flower make honey." Your function should check how much nectar the
-        purple flower has and collect it, move forward, and then make honey.
+        Write inside the function "check flower
+        make honey". Your function should check if the purple flower has 3, 2, or
+        1 nectar and collect all of the nectar. Then, move forward and make honey.
       4-5 Bee Conditionals Assessment 1_instruction: |
         Assessment: This code is wrong.
         Complete the "get nectar or make honey" function, then call it to collect
@@ -602,7 +514,7 @@ ro:
       4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
       4-5 Bee Debugging 3_instruction: Find the errors and fix them.
       4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
-      4-5 Bee Debugging 5_instruction: "Something isn't right here..."
+      4-5 Bee Debugging 5_instruction: Ceva nu este în regulă aici...
       4-5 Bee Debugging 6_instruction: |
         The purple flower has an unknown amount of
         nectar. Fix the blocks to get all of the nectar from the flower.
@@ -611,7 +523,7 @@ ro:
         This function is fine, but it isn't used
         properly.
       4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
+      4-5 Bee Debugging Assessment 1_instruction: 'Evaluare: Repară codul.'
       4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
       4-5 Bee Nested Loops 2_instruction: |
         Collect all of the nectar from each flower.
@@ -646,12 +558,12 @@ ro:
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: Poți ajunge la floarea-soarelui folosind doar patru blocuri?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
         only six blocks?
-      4-5 Maze 13_instruction: Get me to the pig!
+      4-5 Maze 13_instruction: Du-mă la porc!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |
         Get the zombie to the sunflower, but avoid
@@ -777,6 +689,10 @@ ro:
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1198,10 +1114,6 @@ ro:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      course 1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both
-        the jump and draw blocks
-      course 1 artist 1 level 9_instruction: Draw this using three lines
       Course 2 Bee Loops 1_instruction: |
         Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? 
@@ -1225,38 +1137,48 @@ ro:
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
       Course 4 Artist 1_instruction: |
-        Help me finish drawing my box. (Each line is
-        300 pixels long) 
+        Help me draw a box. (Each line is 200 pixels
+        long) 
       Course 4 Artist 10_instruction: |
-        It's Free Play time! Have fun and draw anything
-        you would like. 
+        It's Free Play time! Here is the code for
+        an interesting shape.  What happens when you repeat it?  Have fun and draw
+        anything you would like. 
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: |
         Can you loop this code to draw the greyed out
         square?
       Course 4 Artist 3_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
+        Try to figure out what happens if you run this
+        code (or press "Run" to test it). Then, repeat it enough times to complete
         the drawing.
       Course 4 Artist 4_instruction: |
         How many degrees are in a circle?  Fill in
         the repeat block with that number to create a circle of colors.
       Course 4 Artist 5_instruction: |
         Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long.
+        symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
+        may have to run the code several times to figure out all of the blocks that
+        need to be added.
       Course 4 Artist 6_instruction: |
         Complete the code to draw these triangles.
-        Hint: 3 triangles in a 360 degree rotation.
+        Hint: There are 3 triangles within the 360 degree rotation...how many times
+        does 3 go into 360?
       Course 4 Artist 7_instruction: |
         Now nest this loop inside another loop to draw
         10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete
         a 360 degree rotation.  
       Course 4 Artist 8_instruction: |
         Draw this sun by looping this whole block of
-        code 12 times.
+        code multiple times.
       Course 4 Artist 9_instruction: |
         Loop this design 10 times and make sure to
-        turn in between each shape that's drawn. Here's a hint for how much you
-        have to turn: What is 360 divided by 10?
+        turn between each shape that's drawn. Here's a hint for how much you have
+        to turn: What is 360 divided by 10?
       Course 4 Artist Binary 1_instruction: |
         Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to turn on the go from left
@@ -1410,6 +1332,7 @@ ro:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1488,8 +1411,9 @@ ro:
       Course 4 Artist Vars 12_instruction: |
         Let's set the "sides" variable to
         5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Let's add a new variable called "length" and use that wherever you
-        have a "move forward." Set the "length" variable to 75 for this shape.
+        gets! Notice that there is a new variable called "length". We can now use
+        that wherever we have a "move forward." Set the "length" variable to 75
+        for this shape.
       Course 4 Artist Vars 13_instruction: |
         The more sides a shape has, the shorter
         each side needs to be in order for the whole pattern to fit on the screen.
@@ -1517,11 +1441,10 @@ ro:
         Use the variable "sides" to control
         how many times this loop gets run.
       Course 4 Artist Vars 6_instruction: |
-        Hmmm, I tried changing the "sides" variable
-        to 4 from the code in the last puzzle, but it's still drawing a triangle.
-        Can you use the "sides" variable (along with a math block) to make sure
-        that I turn the right amount too? Hint: 360 divided by the number of sides
-        will give you the number of degrees to turn.
+        I changed the sides variable to 4 from
+        the code in the last puzzle, can you use the sides variable (along with a
+        math block) to make sure that I turn the right amount? To draw a regular polygon
+        I should turn 360 / sides each time.
       Course 4 Artist Vars 7_instruction: |
         Can you modify the "sides" variable
         to help me draw this hexagon?
@@ -1533,12 +1456,12 @@ ro:
         this time) 
       Course 4 Artist Vars 9_instruction: |
         Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Replace the number
-        3 with the "sides" variable, and use the "set sides to" block.
+        variable instead of a fixed number to draw a triangle. Use the "set sides
+        to" block.
       Course 4 Bee 1_instruction: |
-        The bee can't tell if this is a flower or a honeycomb.
-        Check first if it is a flower or a honeycomb, and then only gather nectar
-        from it if it is a flower. 
+        The bee can't tell what's under the cloud! First,
+        check if it is a flower or a honeycomb. Then only gather nectar from it if
+        it is a flower. 
       Course 4 Bee 2_instruction: |
         Check each object to see if it's a flower. If
         it is, collect nectar...otherwise, you can ignore it!
@@ -1803,7 +1726,7 @@ ro:
       Course 4 Play Labs For Loops 5_instruction: |
         In the last stage we counted the
         square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
-        count the cube of each number (1, 8, 27, 64, 125, 216, 343….)
+        count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
         is any whole number that is only divisible by itself and 1. Use the "is_prime"
@@ -1814,6 +1737,9 @@ ro:
       Course 4 Play Labs For Loops 8_instruction: |
         What for loop would make me speak
         19, 27, 35, 43, 51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -1877,13 +1803,13 @@ ro:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -1922,7 +1848,7 @@ ro:
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
@@ -1938,9 +1864,8 @@ ro:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1991,10 +1916,11 @@ ro:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -2039,8 +1965,8 @@ ro:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -2113,6 +2039,12 @@ ro:
         Can you create a snowflake using the
         “Repeat” block to make a square 10 times, and the “Turn” block to turn 36
         degrees between each square?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -2145,6 +2077,7 @@ ro:
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2304,18 +2237,18 @@ ro:
       K-1 Maze debug Assessment 1_instruction: |
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
-      K-1 Maze Loops 1_instruction: Get me to the pig!
+      K-1 Maze Loops 1_instruction: Du-mă la porc!
       K-1 Maze Loops 10_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 11_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 12_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 2_instruction: Use the Repeat block to get me to the pig!
       K-1 Maze Loops 3_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 4_instruction: Get me to the pig!
+      K-1 Maze Loops 4_instruction: Du-mă la porc!
       K-1 Maze Loops 5_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 6_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 7_instruction: Get me to the pig! Use the repeat loop.
       K-1 Maze Loops 8_instruction: Get me to the pig! Use the repeat loop.
-      K-1 Maze Loops 9_instruction: Get me to the pig!
+      K-1 Maze Loops 9_instruction: Du-mă la porc!
       K-1 Maze Loops Assessment 1_instruction: |
         Assessment -- Use loops to get me
         to the pig!
@@ -2499,8 +2432,8 @@ ro:
         function editor. 
       NEW Course 4 Artist Functions 8_instruction: |
         We have given you most of the
-        code to create a function. However there seems to be something missing. Can
-        you edit the function definition to draw the triangle?
+        code to create a function, but there seems to be something missing. Can you
+        edit the function definition to draw the triangle?
       NEW Course 4 Artist Functions 9_instruction: |
         Which block do you need to add
         to get the triangle to sit on top of the square?
@@ -2522,10 +2455,10 @@ ro:
       NEW Course 4 Artist Params 13_instruction: |
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
-        to also add a "sides" parameter. Remember the angle to turn for a given
-        shape is 360 divided by the sides it has. Hint: lengths for each shape are;
-        the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50
-        pixels.
+        to add a "sides" parameter. Remember the angle to turn for a given shape
+        is 360 divided by the number of sides it has. Hint: These are the lengths
+        for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and
+        the square is 50 pixels.
       NEW Course 4 Artist Params 14_instruction: |
         Can you recreate these shapes?
         Drag the "length" parameter into the function definition. 
@@ -2533,8 +2466,8 @@ ro:
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
       NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
+        Create a “draw a triangle" function
+        with 50 pixels sides from scratch
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3 triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
@@ -2580,8 +2513,9 @@ ro:
         let's try it again this time let's make this cool design with with 60 pixel
         hexagon's.
       NEW Course 4 Artist Vars 4_instruction: |
-        Let's try it again. Now, let's make
-        this cool design with with 60 pixel hexagons.
+        Let's try it again. Can you set the
+        length variable to make this cool design with hexagons? Hint: It's a multiple
+        of 10.
       NEW Course 4 Artist Vars 6_instruction: |
         Can you help me draw this cool pattern
         by dropping in the "length" variable block into the correct places?
@@ -2616,7 +2550,7 @@ ro:
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
       NEW Course 4 Bee For Loops 6_instruction: |
         The last number in your for loop
-        is called the "increment,"  and each time the loop is run the counter variable
+        is called the "increment." Each time the loop is run the counter variable
         changes by the increment. Try collecting these flowers using an increment
         of 2.
       NEW Course 4 Bee For Loops 7_instruction: |
@@ -2777,25 +2711,21 @@ ro:
         always see at least a bit of him, so lets write some functions that help make
         sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
-        and return true if he's inside the left boundary of the yard (x > -25). If
-        your function works, Sam shouldn't be able to leave the yard from the left
-        side.
+        and return true if he's completely visible on screen. If your function works,
+        Sam shouldn't be able to leave the yard from the left side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the safe-right?
-        function to make sure Sam can't go past x = 425.
+        on the left, now let's do the same thing on the right. Complete the safe-right?
+        function to make sure Sam can't go off the right side of the screen.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
         from going either direction? Try using the AND block to program the function
         on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        Free Play: Awesome, we've kept Sam safe
+        on the left and right! Use this free play stage to experiment with your functions
+        and further improve onscreen?
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2885,18 +2815,36 @@ ro:
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: |
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
@@ -3204,17 +3152,13 @@ ro:
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

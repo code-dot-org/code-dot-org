@@ -223,7 +223,7 @@ pt-BR:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
       label: 'Oi, %{username}'
-      stats: Meu progresso
+      stats: Code Studio
       settings: Minha conta
       prizes: Prêmios
       logout: Sair
@@ -302,7 +302,7 @@ pt-BR:
     panel:
       answer_viewer: Visualizador de resposta
       student: Estudante
-      viewing_solution: Viewing Solution
+      viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
       section: Turma
   user:
@@ -325,7 +325,9 @@ pt-BR:
     classroom_activity: Atividade off-line
   home:
     title: Code Studio
+    description: No Code Studio você pode encontrar os cursos on-line criados pela Code.org
     lines_of_code: '%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS'
+    lines_of_code_linebreak: '%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS POR %{students_count} MILHÕES DE ESTUDANTES'
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos de aula
     signin_message: 'Já se registrou? %{link}'
@@ -357,9 +359,10 @@ pt-BR:
     heading_hoc2014: '<h2>A Hora do Código para</h2><h1>Todas as idades</h1>'
     heading_elementary: '<h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as idades)</h1>'
     heading_apps: '<h2>Diversão para</h2><h1>todos</h1>'
-    heading_legacy: '<h2>Nosso curso geral para</h2><h1>todas as idades</h1>'
+    heading_legacy: '<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>'
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
+    print_certificate: Imprimir certificado
   gender:
     male: Masculino
     female: Feminino
@@ -392,6 +395,10 @@ pt-BR:
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
   compatability:
+    https:
+      header: Habilite o HTTPS para Code.org.
+      message: "Para aumentar a segurança, vamos mudar para o HTTPS em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique aqui</a> para aprender a habilitar o HTTPS para a Code.org."
+      hide_this_warning: Ocultar este aviso
     working:
       header: Estamos trabalhando no suporte para seu navegador.
       message: "A Code.org usa tecnologia web moderna, o que torna o site mais rápido para usar. Seu navegador não suporta todos os recursos necessários, e podem ocorrer problemas ao usar esta parte do site. Para nos ajudar, informe os <a href='%{report_issue_url}'>problemas encontrados</a>. Você também pode <a href='%{supported_browsers_url}'>atualizar seu navegador para uma versão compatível</a>."
@@ -438,9 +445,10 @@ pt-BR:
     flappy:
       title: Código do Flappy bird
       body: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
-    20hour:
-      title: Curso Introdutório
-      body: Experimente nossa introdução ao curso de Ciência da Computação de 20 horas.
+    20-hour:
+      title: Curso acelerado
+      body: Este curso de 20 horas apresenta o núcleo da computação e conceitos de programação. O curso é projetado para uso em salas de aula para o Ensino Fundamental, mas é divertido de aprender em todas as idades.
+      body_short: Aprenda os fundamentos da ciência da computação em uma versão acelerada dos cursos 2 a 4.
     hoc2014:
       try_new_tutorial: Experimente nosso novo tutorial da Hora do Código na versão beta
       try_frozen: O Artista com Anna e Elsa, do filme Frozen

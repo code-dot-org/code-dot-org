@@ -6,6 +6,8 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -20,15 +22,12 @@ var TextInputProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <PropertyRow
           desc={'placeholder'}
           initialValue={element.getAttribute('placeholder') || ''}
@@ -37,12 +36,12 @@ var TextInputProperties = React.createClass({
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')} />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
@@ -73,17 +72,81 @@ var TextInputProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
+  }
+});
+
+var TextInputEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
+  },
+
+  getChangeEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "change", function(event) {\n' +
+      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
+      '});\n';
+    return code;
+  },
+
+  insertChange: function() {
+    this.props.onInsertEvent(this.getChangeEventCode());
+  },
+
+  getInputEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "input", function(event) {\n' +
+      '  console.log("' + id + ' current text: " + getText("' + id + '"));\n' +
+      '});\n';
+    return code;
+  },
+
+  insertInput: function() {
+    this.props.onInsertEvent(this.getInputEventCode());
+  },
+
+  render: function () {
+    var element = this.props.element;
+
+    var changeName = 'Change';
+    var changeDesc = 'Triggered when the text input loses focus if the text has changed.';
+
+    var inputName = 'Input';
+    var inputDesc = 'Triggered immediately every time the text input contents change.';
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={changeName}
+          desc={changeDesc}
+          handleInsert={this.insertChange}/>
+        <EventRow
+          name={inputName}
+          desc={inputDesc}
+          handleInsert={this.insertInput}/>
+      </div>
+    );
   }
 });
 
 module.exports = {
-  PropertyTable: TextInputProperties,
+  PropertyTab: TextInputProperties,
+  EventTab: TextInputEvents,
 
   create: function () {
     var element = document.createElement('input');
     element.style.margin = '0px';
-    element.style.width = '236px';
+    element.style.width = '200px';
     element.style.height = '30px';
     element.style.color = '#000000';
     element.style.backgroundColor = '';

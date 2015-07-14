@@ -15,7 +15,8 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
 
 /**
  * Stores a block's tooltip information and helps render it
- * Grabs much of the tooltip's information from the 'common' locale file,
+ * Grabs much of the tooltip's information from either app-specific locale
+ * file (passed in as appMsg) or, if not present, the 'common' locale file,
  * (apps/i18n/common/en_us.json), keyed by the function name.
  *
  * e.g.,
@@ -47,34 +48,50 @@ var DROPLET_BLOCK_I18N_PREFIX = "dropletBlock_";
  *
  * @constructor
  */
-var DropletFunctionTooltip = function (functionName) {
-  /** @type {String} */
-  this.functionName = functionName;
+var DropletFunctionTooltip = function (appMsg, definition) {
+  this.appMsg = appMsg;
 
-  /** @type {String} */
-  this.description = null;
+  /** @type {string} */
+  this.functionName = definition.func;
 
-  if (msg.hasOwnProperty(this.descriptionKey())) {
-    this.description = msg[this.descriptionKey()]();
+  var description = this.getLocalization(this.descriptionKey());
+  if (description) {
+    this.description = description();
   }
 
-  if (msg.hasOwnProperty(this.signatureOverrideKey())) {
-    this.signatureOverride = msg[this.signatureOverrideKey()]();
+  var signatureOverride = this.getLocalization(this.signatureOverrideKey());
+  if (signatureOverride) {
+    this.signatureOverride = signatureOverride();
   }
 
   /** @type {Array.<parameterInfo>} */
   this.parameterInfos = [];
 
-  var paramId = 0;
-  while (msg.hasOwnProperty(this.parameterNameKey(paramId))) {
+  for (var paramId = 0; ; paramId++) {
+    var paramName = this.getLocalization(this.parameterNameKey(paramId));
+    if (!paramName) {
+      break;
+    }
+
     var paramInfo = {};
-    paramInfo.name = msg[this.parameterNameKey(paramId)]();
-    if (msg.hasOwnProperty(this.parameterDescriptionKey(paramId))) {
-      paramInfo.description = msg[this.parameterDescriptionKey(paramId)]();
+    paramInfo.name = paramName();
+    var paramDesc = this.getLocalization(this.parameterDescriptionKey(paramId));
+    if (paramDesc) {
+      paramInfo.description = paramDesc();
+    }
+    if (definition.assetTooltip) {
+      paramInfo.assetTooltip = definition.assetTooltip[paramId];
     }
     this.parameterInfos.push(paramInfo);
-    paramId++;
   }
+};
+
+/**
+ * @param {string} key
+ * @returns {Function}
+ */
+DropletFunctionTooltip.prototype.getLocalization = function (key) {
+  return this.appMsg[key] || msg[key];
 };
 
 /**

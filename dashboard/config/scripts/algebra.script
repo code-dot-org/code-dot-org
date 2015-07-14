@@ -1,5 +1,6 @@
 title 'Computer Science in Algebra'
 description "Learn Functional Programming through Algebra"
+description_short "Learn Functional Programming through Algebra"
 hidden 'false'
 login_required 'true'
 
@@ -126,8 +127,8 @@ level 'Calc Rocket 1'
 level 'Calc Rocket 2'
 level 'Play Lab Rocket 2'
 level 'Play Lab Rocket 3'
-level 'Play Lab Rocket 4'
-level 'Play Lab Rocket 5'
+# level 'Play Lab Rocket 4'
+# level 'Play Lab Rocket 5'
 level 'Play Lab Rocket 6'
 level 'Play Lab Rocket 7'
 level 'Play Lab Rocket 8'

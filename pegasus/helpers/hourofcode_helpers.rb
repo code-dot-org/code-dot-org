@@ -93,9 +93,43 @@ def codeorg_url()
   end
 end
 
+def resolve_url(url)
+  if url.downcase.include? "code.org"
+    partner_page = HOC_COUNTRIES[@country]['partner_page']
+    return url.gsub('code.org', partner_page)
+  else
+    File.join(['/', (@company or @country), @user_language, url].select{|i| !i.nil_or_empty?})
+  end
+end
+
+def resolve_file(path)
+  # TODO: search for localized files or show EN
+  return path
+end
+
+def resolve_image(path)
+  # TODO: search for localized files or show EN
+  return path
+end
+
+def campaign_date(format)
+  case format
+  when "start-short"
+    return HOC_COUNTRIES[@country]['campaign_date_start_short']
+  when "start-long"
+    return HOC_COUNTRIES[@country]['campaign_date_start_long']
+  when "short"
+    return HOC_COUNTRIES[@country]['campaign_date_short']
+  when "full"
+    return HOC_COUNTRIES[@country]['campaign_date_full']
+  else
+    return HOC_COUNTRIES[@country]['campaign_date_full']
+  end
+end
+
 def company_count(company)
   company_count = 0;
-  DB[:forms].where(kind:'HocSignup2014').each do |i|
+  DB[:forms].where(kind:'HocSignup2015').each do |i|
     data = JSON.parse(i[:data])
     if data['hoc_company_s'] == company
       company_count += 1

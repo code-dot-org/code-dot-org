@@ -2,23 +2,26 @@ name 'OPD-K5 Stage7Start'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# EVENTS > Stage Overview
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
+### EVENTS > Stage Overview
+<br><br>
+<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+<br><br>
 Thus far, you’ve learned how to sequence a program, add loops, and use conditionals and functions. You’re almost done! In this stage, we’re going to look at “events”, another core concept in computer science. As we explore events, you will synthesize what you’ve learned so far and write some more complex programs.
-
-By completing Stage 7, you will:
+<br><br>
+By completing Stage 8, you will:
 
 - Define "events" and explain their importance
 - Practice coding simple events
 - Reflect on classroom application
+<br><br>
 
-<br/>
-## What to Expect in this Stage:
+>**What to Expect in this Stage:** We’ll start with a video explaining events. Then, we’ll explore some puzzles that allow you to experiment with events. We’ll close with an opportunity to review resources and reflect. You should spend between 20-45 minutes on this stage.
 
-We’ll start with a video explaining events. Then, we’ll explore some puzzles that allow you to experiment with events. We’ll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
-
-<br/>
+<br><br>
 Ready? Let's go!
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

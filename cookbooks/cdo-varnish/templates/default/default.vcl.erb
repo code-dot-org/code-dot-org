@@ -353,15 +353,29 @@ sub vcl_recv
   if(req.http.Cookie) {
     cookie.parse(req.http.Cookie);
   }
-  # Filter https_ok cookie from incoming request
+  # Filter https-related cookies from incoming request
   if (cookie.isset("https_ok")) {
     cookie.delete("https_ok");
     set req.http.X-Https-Ok = "1";
   }
+  if (cookie.isset("https-blocked")) {
+    cookie.delete("https-blocked");
+    set req.http.X-Https-Blocked = "1";
+  }
 
   # Redirect http to https if 'https_ok' cookie is set
-  if(req.http.X-Forwarded-Proto !~ "(?i)https" && req.http.X-Https-Ok == "1") {
-    error 751 "https://" + req.http.host + req.url;
+  if(req.http.X-Forwarded-Proto !~ "(?i)https") {
+    if(req.http.X-Https-Ok == "1") {
+      error 751 "https://" + req.http.host + req.url;
+    }
+
+    # Render https-test page if neither 'https_ok' nor 'https-blocked' cookies are set
+    if(req.http.X-Https-Ok != "1" && req.http.X-Https-Blocked != "1" &&
+       req.url !~ "(?i)\.(png|gif|jpeg|jpg|ico|swf|css|js)(\?[a-z0-9]+)?$" &&
+       (req.http.Host ~ "studio.code.org" && req.url ~ "/(p|s|hoc|k8intro|editcode|2014|flappy|jigsaw)/")
+      ) {
+      error 752;
+    }
   }
 
   C{
@@ -572,9 +586,9 @@ sub vcl_fetch {
 sub vcl_deliver {
   # Add HTTP Strict Transport Security header and https_ok cookie to response
   if (req.http.X-Forwarded-Proto ~ "(?i)https") {
-    set resp.http.Strict-Transport-Security = "max-age=3600";
+    set resp.http.Strict-Transport-Security = "max-age=2592000";
     if(req.http.X-Https-Ok != "1") {
-      header.append(resp.http.Set-Cookie,"https_ok=1; Path=/; Expires=" + cookie.format_rfc1123(now, 5h) + "; HttpOnly");
+      header.append(resp.http.Set-Cookie,"https_ok=1; Path=/; Expires=" + cookie.format_rfc1123(now, 60d) + "; HttpOnly");
     }
   }
 
@@ -617,6 +631,41 @@ sub vcl_error {
     set obj.http.Location = obj.response;
     set obj.status = 301;
     return(deliver);
+  }
+
+  if(obj.status == 752) {
+    set obj.http.Content-Type = "text/html; charset=utf-8";
+    synthetic {"
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+Redirecting to <a href='https://code.org'>HTTPS</a>..
+<script type="text/javascript" src="/shared/js/url_test/url_test.js"></script>
+<script type='text/javascript'>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + '; path=/; expires=' + expires.toUTCString();
+  }
+
+  var testImage = 'https://' + window.location.hostname + '/test-image.png';
+  testImageAccess(testImage,
+      function () {
+        setCookie('https_ok', '1', 60);
+        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+      },
+      function () {
+        setCookie('https-blocked', '1', 1);
+        document.location.reload(true);
+      },
+      5000
+  );
+</script>
+</body>
+</html>
+"};
+  return (deliver);
   }
 
   # All other error codes get this error page

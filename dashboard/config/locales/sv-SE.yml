@@ -368,7 +368,10 @@
     classroom_activity: Ouppkopplad aktivitet
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} RADER KOD SKRIVEN AV STUDENTER'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Översikt över kurser 1, 2 och 3
     lesson_plans: Lektionsplaneringar
     signin_message: Redan registrerad? %{link}
@@ -412,6 +415,7 @@
     heading_legacy: <h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
+    print_certificate: Skriv ut intyg
   gender:
     male: Man
     female: Kvinna
@@ -447,6 +451,12 @@
     autoplay_option: spela upp automatiskt
     download: Ladda ner video
   compatability:
+    https:
+      header: Aktivera HTTPS för Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Dölj denna varning
     working:
       header: Vi arbetar för stöd till din webbläsare.
       message: Code.org använder modern webbteknik vilket gör webbplatsen snabbare
@@ -508,9 +518,13 @@
       title: Flappy kod
       body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy
         Code övning!
-    20hour:
-      title: Grundkurs
-      body: Prova vår 20-timmars grundkurs i programmering.
+    20-hour:
+      title: Accelerated Course
+      body: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp.
+        Kursen är utformad för användning i klassrummet från förskoleklass till årskurs
+        8, men det är roligt att lära sig i alla åldrar.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Prova vår nya Hour of Code övning i betaversion
       try_frozen: Konstnären, med Anna och Elsa från Frost

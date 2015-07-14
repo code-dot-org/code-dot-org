@@ -11,6 +11,7 @@
           Math Image: Matematik Görseli
           title: Deneme Kursu
           description: Sadece dahili bir deneme kursu.
+          description_short: Sadece dahili bir deneme kursu.
         course1:
           'Jigsaw: Learn to drag and drop': 'Yapboz: Nasıl sürükleyip bırakacağınızı
             öğrenin'
@@ -148,61 +149,6 @@
           Songwriting: Şarkı yazma
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
           description_short: Ders 3, Ders 2'nin devamıdır.
-        msm:
-          title: Ortaokul Matematiği
-          description: Ortaokul Matematiği için özel çalışma sürüyor.
-          Graph Paper Programming: Grafik kağıdı programlama
-          Assessments: Değerlendirmeler
-          Unit 1: Ünite 1
-          Unit 2: İkinci Ünite
-          Ninja Cat and the Coordinate Plane: Ninja Kedi ve Koordinat Düzlemi
-          'Calc: Circles of Evaluation': 'Hesaplama: PUKÖ döngüsü'
-          'Artist: Strings and Images': 'Sanatçı: Diziler ve Görüntüler'
-          Contracts: Teknikler
-          'Artist: Writing Contracts': 'Sanatçı: Teknikleri Yazma'
-          'Calc: Defining Variables': 'Hesaplama: Değişkenleri Tanımlama'
-          'Play Lab: Defining Variables': 'Play Lab: Değişkenleri Tanımlama'
-          The Design Recipe: Tasarım Tarifi
-          'Artist: Defining Functions': 'Sanatçı: Fonksiyonları Tanımlama'
-          'Play Lab: Defining Functions': 'Play Lab: Tasarım Tarifi'
-          'Artist: Functions': 'Aktör: Fonksiyonlar'
-          'Play Lab: Animation': 'Play Lab: Animasyon'
-          Booleans: Boolean Değerleri
-          'Play Lab: Booleans': 'Play Lab: Boolean Değerleri'
-          'Calc: Boolean Operators': 'Hesaplama: Boolean Operatörleri'
-          'Play Lab: Boolean Operators': 'Play Lab: Boolean Operatörleri'
-          Conditionals and Piecewise Functions: Koşullar ve Parçalı Fonksiyonlar
-          'Artist: Conditionals': 'Sanatçı: Koşullar'
-          Collision Detection and the Distance Formula: Kaza algılama ve Uzaklık Formülü
-          'Play Lab: Collision Detection': 'Play Lap: Kaza Algılama'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Unplugged: Ninja Kedi
-            ve Koordinat Düzlemi'
-          'Eval: Strings and Images': 'Eval: Diziler ve Görüntüler'
-          'Unplugged: Contracts': 'Unplugged: Teknikler'
-          'Eval: Writing Contracts': 'Eval: Yazım Teknikleri'
-          'Unplugged: The Design Recipe': 'Unplugged: Tasarım Tarifi'
-          'Eval: Defining Functions': 'Eval: Hızlı Fonksiyonlar'
-          'Eval: Functions': 'Eval: Tasarım Tarifi'
-          'Unplugged: Booleans': 'Unplugged: Boolean Değerleri'
-          'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Şartlar ve
-            Parçalı Fonksiyonlar'
-          'Eval: Conditionals': 'Eval: Şartlar'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Kaza
-            Algılama ve Mesafe Formülü'
-          'Calc: Evaluation Blocks': 'Calc: Değerlendirme Blokları'
-          'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Oyunları
-            ve Koordinat Düzlemleri'
-          'Eval: Boolean Operators': 'Eval: Boolean Operatörleri'
-          Blocks to Math: Matematik için bloklar
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Değişkenleri Tanımlama
-            (Büyük Oyun)'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animasyon (Büyük Oyun)'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Büyük Oyun)'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Kaza Algılama (Büyük
-            Oyun)'
-          'Eval: Fast Functions': 'Eval: Hızlı Fonksiyonlar'
-          'Play Lab: Design Recipe': 'Play Lab: Tasarım Tarifi'
-          'Eval: Design Recipe': 'Eval: Tasarım Tarifi'
         playlab:
           title: Oyun Laboratuvarı
           description: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
@@ -213,11 +159,6 @@
           description: Sanatçı ile harika resimler ve tasarımlar yap!
           Artist: Aktör
           description_short: Sanatçı ile harika resimler ve tasarımlar yap!
-        scrat:
-          title: Scrat
-          description_short: Scrat kısa açıklama.
-          description: Scrat uzun açıklama
-          'Maze: Sequence': 'Labirent: Sıra'
         hourofcode:
           Maze: Labirent
           title: Saat Kodu
@@ -252,7 +193,6 @@
           'Artist: For Loops': 'Sanatçı: For Döngüleri'
           'Play Lab: For Loops': 'Oyun Laboratuvarı: For Döngüleri'
           'Artist: Functions': 'Aktör: Fonksiyonlar'
-          'Artist: Functions with Paraqmeters': 'Sanatçı: Fonksiyonlar ve Parametreler'
           'Unplugged: Tangrams': 'Unplugged: Tangramlar'
           Artist: Aktör
           Bee: Arı
@@ -304,23 +244,10 @@
           description: özel
           Special: Özel
           Binary: İkili
-        usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Ortaokul Matematiği için Kullanılabilirlik Testi
-          Evaluation Blocks: Değerlendirme Blokları
-          Blocks to Math: Matematik için bloklar
-          Strings and Images: Diziler ve Görüntüler
-          Defining Variables: Değişkenler Tanımlama
-          Defining Functions: Fonksiyonlar Tanımlama
-          Design Recipe: Tasarım Tarifi
-          Booleans: Boolean Değerleri
-          Conditionals: Koşullar
-          Free Play: Ücretsiz Oyna
         algebra:
           title: Cebirde Bilgisayar Bilimi
           description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
+          description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Oyunları
             ve Koordinat Düzlemleri'
           'Calc: Evaluation Blocks': 'Calc: Değerlendirme Blokları'
@@ -346,8 +273,10 @@
           'Play Lab: Collision Detection (Big Game)': Büyük oyun - çarpışma algılama
         infinity:
           title: Oyun Laboratuvarı
-          description_short: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
-          description: Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
+          description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun
+            yaratmak için Play Lab'i kullanın.
+          description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak
+            için Play Lab'i kullanın.
           Play Lab: Oyun Laboratuvarı
           Infinity: Sonsuz
         algebrademo:
@@ -401,12 +330,16 @@
         pixelation:
           title: Pikselleşme
           description: Bitler ve baytlar ile görüntüler oluştur.
+          description_short: Bitler ve baytlar ile görüntüler oluştur.
           Pixelation: Pikselleşme
         20-hour:
           title: 20 saat giriş kursu
+          description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
           description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını
             tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama
             her yaştan öğrenmek için eğlencelidir.
+          description_short: This 20-hour course covers the core computer science
+            and programming concepts in courses 2-4.
           Introduction to Computer Science: Bilgisayar Bilimlerine Giriş
           The Maze: Labirent
           Computational Thinking: Sayısal Düşünme
@@ -429,14 +362,17 @@
           Wrap-up: Özet
         edit-code:
           title: Kodu Düzenle
-          description: ''
+          description: Kodu Düzenle
+          description_short: Kodu Düzenle
           The Maze: Labirent
           Applab: Applab
           The Artist: Sanatçı
           Play Lab: Oyun Laboratuvarı
+          Play Lab 2015: Play Lab 2015
         events:
           title: Olaylar
-          description: ''
+          description: Olaylar
+          description_short: Olaylar
           Bounce: Sıçrama
           Studio: Stüdyo
           Calc: Kireç
@@ -445,18 +381,23 @@
           title: Flappy Kod
           description: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister
             misin? Flappy Kod eğitimimizi deneyin!
+          description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: Flappy Kod
         jigsaw:
           title: Yapboz
           description: ''
+          description_short: Try our Jigsaw tutorial
           Jigsaw: Yapboz
         step:
           title: Adım
           description: ''
+          description_short: Step tutorial
           Step: Adım
         Hour of Code:
           title: Kodlama Saati 2013
           description: ''
+          description_short: Birçok eğlenceli karakterler ile birlikte bilgisayar
+            biliminin temel öğelerini dene!
           Hour of Code 2013: Kodlama Saati 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -535,9 +476,12 @@
             Information'
           Encoding B&W Images: Encoding B&W Images
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Oyunları
             ve Koordinat Düzlemleri'
           'Calc: Evaluation Blocks': 'Calc: Değerlendirme Blokları'
@@ -586,6 +530,7 @@
         algPDmiami:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Değerlendirme Blokları
           Strings and Images: Diziler ve Görüntüler
           Rocket-Height: Rocket-Height
@@ -602,12 +547,14 @@
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
         CSPPD:
           new stage: yeni kademe
           Introduction to PD: Kişisel Geliştirme Giriş
           title: Computer Science Principles PD
           description: Online Introduction to CSP
+          description_short: Online Introduction to CSP
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -617,6 +564,7 @@
         CSPLessonSamples:
           title: CSP Lesson Samples
           description_short: lesson samples for csp
+          description: Lesson samples for csp
           Lesson 14: Ders 14
           Lesson 15: Ders 15
         ECSPD:
@@ -628,11 +576,13 @@
           reference: reference
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Kişisel Geliştirme Giriş
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -650,8 +600,14 @@
           Post-Survey: Post-Survey
         rbo-reference:
           reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
           description_short: Programming
@@ -708,6 +664,7 @@
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the
             new Computer Science in Algebra
           Course Overview: Course Overview
@@ -721,11 +678,13 @@
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Kişisel Geliştirme Giriş
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Kişisel Geliştirme Giriş
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -744,6 +703,7 @@
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Kişisel Geliştirme Giriş
@@ -754,10 +714,12 @@
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Kişisel Geliştirme Giriş
           Evaluation Blocks: Değerlendirme Blokları
           logo_image: nextech_logo.png
@@ -770,6 +732,7 @@
         algebraPD-iZone:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Kişisel Geliştirme Giriş
           Evaluation Blocks: Değerlendirme Blokları
           logo_image: izone_logo.png
@@ -784,6 +747,7 @@
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -803,6 +767,7 @@
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -820,11 +785,16 @@
         ui_tests:
           title: UI Tests
           description: Script for test. Careful, don't change level ordering.
+          description_short: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: Çoklu
           Big Game: Big Game
+          new stage: yeni kademe
         sciencePD2:
+          title: Computer Science in Science PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -836,6 +806,9 @@
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
         sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
           new stage: yeni kademe
           Welcome: Welcome
           Curricular Modules: Curricular Modules
@@ -844,6 +817,9 @@
           Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
           description_short: İnternet
@@ -884,9 +860,12 @@
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real
             World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Evaluation Blocks: Değerlendirme Blokları
           Strings and Images: Diziler ve Görüntüler
           Defining Variables: Değişkenler Tanımlama
@@ -921,14 +900,17 @@
           online pd?: online pd?
           AppLab: AppLab
           Online PD: Online PD
-          title: All the Things!
-          description: All the level types for UI testing
-          Odometer: Odometer
+          title: Her şey!
+          description: Kulanıcı arayüzü testi için tüm seviye tipleri
+          description_short: Kulanıcı arayüzü testi için tüm seviye tipleri
+          Odometer: Kilometre sayacı
           Text Compression: Text Compression
           Pixelation: Pikselleşme
+          Multi2: Multi2
         algebraPD2b:
           title: Algebra PD'de Bilgisayar Bilimi
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -941,41 +923,36 @@
           Booleans: Boolean Değerleri
           'Eval: Conditionals': 'Eval: Şartlar'
           Next Steps: Sonraki Adımlar
-        Calc Define Funcs 5 - multiply 1:
-          'Eval: Defining Functions': 'Eval: Defining Functions'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: İnternet Simülatörü
           App Lab: Uygulama Laboratuvarı
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Hoşgeldiniz!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
-          Welcome!: Welcome!
+          description_short: Online levels for PD workshop
+          Welcome!: Hoşgeldiniz!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: İnternet Simülatörü
           App Lab: Uygulama Laboratuvarı
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
-          Introduction to PD: Kişisel Geliştirme Giriş
-          K-5 Courses: K-5 dersleri
-          Writing computer programs: Bilgisayar programları yazma
-          'Programming Concept: Loops': 'Programming Concept: Loops'
-          Unplugged lessons: Bağımsız dersler
-          'Programming Concept: Conditionals': 'Programming Concept: Conditionals'
-          Computer Science Pedagogy: Computer Science Pedagogy
-          'Programming Concept: Functions': 'Programming Concept: Functions'
-          Teacher Dashboard: Teacher Dashboard
-          'Programming Concept: Events': 'Programming Concept: Events'
-          Reflection: Reflection
-          Next Steps: Sonraki Adımlar
+        K5-OnlinePD:
+          title: 'Teaching Kids to Code: The Basics'
+          description: Learn to code and how to teach computer science basics to your
+            students with this free, self-paced online course.
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced
+            online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -986,4 +963,93 @@
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: Mastering the Basics - Sequencing
+          Next Steps: Sonraki Adımlar
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          description_short: Blended Summer Study
+          Welcome!: Hoşgeldiniz!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Özet
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: Kodlama saati 2015
+          description_short: Bir hikaye ya da oyun oluşturmak için Play Lab'i kullanın.
+          description: Bir hikaye ya da oyun oluşturmak için Play Lab'i kullanın.
+          Hour of Code: Saat Kodu
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Değerlendirme Blokları
+          Strings and Images: Diziler ve Görüntüler
+          Writing Contracts: Yazılı sözleşmeler
+          Defining Variables: Değişkenler Tanımlama
+          Defining Functions: Fonksiyonlar Tanımlama
+          Rocket-Height: Rocket-Height
+          Booleans: Boolean Değerleri
+          'Eval: Conditionals': 'Eval: Şartlar'
+          Next Steps: Sonraki Adımlar
+          Best Practices for Teaching Computer Science: Best Practices for Teaching
+            Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Hoşgeldiniz!
+          The Design Recipe: Tasarım Tarifi
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Hoşgeldiniz!
+          Wrap-Up: paketlemek
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Hoşgeldiniz!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: paketlemek
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free,
+            self-paced online course.
+          description: Develop strategies for creating equity in your classroom with
+            this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Sonraki Adımlar

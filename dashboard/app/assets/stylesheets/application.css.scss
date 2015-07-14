@@ -24,6 +24,8 @@
  * Shared
  *= require user-menu
  *= require user-progress
+ *= require user-hero
+ *= require course-blocks
  */
 
 @import "color";
@@ -297,10 +299,15 @@ $default-modal-width: 640px;
 .modal {
   a:hover {color:$red; background-color: white; }
 
-  &.auto-resize-scrollable {
-    background-color: $lightest_gray;
+  &#block-documentation-lightbox {
+    width: 80% !important;
+  }
+}
+
+.auto-resize-scrollable {
+  &.modal {
     position: absolute;
-    top: 44px; // top of the dialog
+    top: 50px; // top of the dialog
 
     // make dialog auto-center regardless of width
     right: 0;
@@ -313,9 +320,8 @@ $default-modal-width: 640px;
 
     z-index: 1050;
   }
-
-  &#block-documentation-lightbox {
-    width: 80% !important;
+  .modal-image {
+    margin-top: -100px;
   }
 }
 
@@ -956,20 +962,51 @@ a.download-video {
 }
 
 #landingpage {
+  .welcome {
+    background-color: $light_purple;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    overflow: hidden;
+  }
+
+  .welcomeleft {
+    float: left;
+    text-align: center;
+    width: 190px;
+    img {
+    padding-left: 50px;
+    }
+  }
+
+  .welcomeright {
+    float: left;
+    text-align: center;
+  }
+
   .lines_of_code_header {
     width: 100%;
-    color: $charcoal;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-size: 30px;
+    color: white;
+    padding-left: 30px;
+    padding-top: 0px;
+    font-size: 24px;
+    line-height: 34px;
   }
 
   a.lines_of_code_link {
-    color: $charcoal;
+    color: white;
     text-decoration: none;
     font-family: $gotham-bold;
     font-weight: normal;
-    line-height: 40px;
+    line-height: 34px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .row#continue {
@@ -1104,14 +1141,6 @@ a.download-video {
       -moz-box-sizing:border-box; box-sizing:border-box; padding:10px;
     }
   }
-  .twolineheader {
-    h2 {
-      font-family: $gotham-regular; font-weight: normal; color: $purple; font-size: 24px; margin-bottom: 0px; line-height: 30px;
-    }
-    h1 {
-      margin-top: 0px; line-height: 30px; font-size: 30px;   font-family: $gotham-bold; font-weight: normal;
-    }
-  }
 
   #edit_teachers {
     background-color: $lightest_gray;
@@ -1124,121 +1153,6 @@ a.download-video {
 
 .course_progress {
   margin: 10px 0;
-}
-
-#landingpage h3 img.logo,
-.course_progress h3 img.logo {
-  height: 40px;
-}
-
-.betatext {
-  color: $realyellow;
-}
-
-.miniblock {
-  background-color:$lightest_gray;
-  height:100px;
-  .heading {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 10px 0px 10px 0px;
-  }
-  h3 {
-    margin: 0;
-    color: $charcoal;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 24px;
-  }
-  .smalltext {
-    font-size:13px;
-    padding-right:10px;
-    font-family: $gotham-regular;
-    font-weight:normal;
-    color:$charcoal;
-  }
-  .whitetext {
-    color:$lightest_gray;
-  }
-  .greytext {
-    color:$charcoal;
-  }
-  .imgspan {
-    margin-left: 0px;
-    text-align: right;
-  }
-  .audience {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom:4px;
-    background-color: $charcoal;
-  }
-}
-
-.miniblock-short {
-  height:150px;
-  h3 {
-    margin-bottom:10px;
-  }
-}
-
-.miniblock-tall {
-  height:232px;
-
-  .heading {
-    padding-left: 10px;
-    padding-right:10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  h3 {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: $gotham-bold;
-    font-weight: normal;
-    display: block;
-    float: left;
-    width: 200px;
-  }
-
-  .beta
-  {
-    .heading {
-      padding-right: 0px;
-    }
-
-    h3 {
-      width: 140px;
-    }
-
-    .betatext {
-      text-align: center;
-      display: block;
-      float: right;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      background-color: $light_gray;
-      padding-left: 5px;
-      padding-right: 5px;
-      font-size: 24px;
-      height: 35px;
-      line-height: 40px;
-      width: 60px;
-    }
-  }
-}
-
-.miniblock-tall-audiencerow {
-  height:258px;
 }
 
 #signin {

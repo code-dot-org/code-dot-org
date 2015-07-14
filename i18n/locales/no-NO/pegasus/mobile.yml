@@ -1,7 +1,7 @@
 no-NO:
   hello: Hei, verden
   select_language: Velg ditt språk
-  computer_science: Informatikk
+  en: Datavitenskap
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: 8-14. Desember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodetimen</a> nærmer seg. Alle lærere og arrangører tilkalles! <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planlegg din kodetime</a>'
@@ -12,7 +12,7 @@ no-NO:
   petition_message: Alle skoleelever burde ha muligheten til å lære koding
   petition_sign_message: 'Om du samtykker, signer med navnet ditt. Bli med # andre.'
   petition_sign_message_support: 'Signer dette dersom du ønsker å støtte oss. Gjør som # andre.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Bli med # andre'
   name: Navn
   email: E-post
   zipcode: Postnummer eller land
@@ -45,6 +45,7 @@ no-NO:
   congratulations: Gratulerer!
   congratulations_on_completing_hoc: Gratulerer med å ha fullført Kodetimen
   get_a_certificate_of_achievement: Hent et diplom for din prestasjon
+  enter_valid_age: Vennligst velg en gyldig alder
   enter_valid_email: Vennligst skriv inn en gyldig e-postadresse
   get_a_certificate_message: "Vi sender deg et sertifikat og informasjon om hvordan Lær <a href='/learn/beyond'> utover en time</a>"
   get_a_certificate_message_after: "Klikk på sertifikatet for å laste ned eller å skrive ut. Fortsett med våre <a href='http://studio.code.org'>andre kurs</a>, eller utforsk mulighetene for å fortsette å <a href='/learn/beyond'>lære videre utenfor Kodetimen</a>."
@@ -160,9 +161,9 @@ no-NO:
     "Dette programmet har fått 100 % av elevene 
     engasjert, involvert og delaktige."
     Adam, lærer
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc linjer med kode skrevet av elever'
+  homepage_hero_text_stat_students: '#student_count studentkontoer på koden Studio'
+  homepage_hero_text_stat_served: 'Time kode: #served servert'
   homepage_slot_text_hoc: Time med Kode
   homepage_slot_text_frozen: Frost med Anna og Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -272,6 +273,24 @@ no-NO:
   dashboard_landing_view_progress: 'Vis fremdrift for %{biggest_section}'
   dashboard_landing_available_title: Tilgjengelige kurs
   dashboard_landing_available_courses: Disse kursene er for tiden tilgjengelig for deg og dine elever.
+  dashboard_landing_more_tutorials: Ønsker du å se flere opplæringsprogrammer?
+  dashboard_landing_more_tutorials_desc: 'Det finnes flere opplæringsprogrammer <a href="/learn/beyond">tilbudt av partnerne våre.</a> Lær å programmere med roboter, lage nettsider, lage din egen applikasjon eller utforske andre språk som C++, Ruby eller Python!'
+  dashboard_hoc_courses: Kodetimen for alle aldersgrupper
+  dashboard_hoc_courses_desc: Prøv hvilken som helst av disse korte, én times lange opplæringsprogrammene med studentene dine!
+  dashboard_k5_courses: 20-timers kurs for K-5
+  dashboard_k5_courses_desc: 'Disse kursene blander selvstyrte opplæringsprogram med "uinnpluggede" aktiviteter som ikke krever en datamaskin i det hele tatt. Hvert kurs består av omtrent 20 leksjoner som kan implementeres som én enhet eller spres utover et helt semester. Til og med barnehagealdrede før-lesere kan delta. For å hjelpe deg med å starte, tilbyr vi profesjonelle utviklingsverksted av høy kvalitet rundt om USA helt gratis. <a href="/professional-development-workshops">Finn et nært deg!</a>'
+  dashboard_middle_courses: 20-timers midtskolekurs
+  dashboard_middle_courses_desc: 'Midtskoleplanen vår innarbeider datavitenskap og programmering i midtskolematematikk og -vitenskap - som et verktøy for å lære matemtikk- og vitenskapskonsepter. For å melde deg på de profesjonelle utviklingsverkstedene, søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.'
+  dashboard_high_courses: Årslange høyskolekurs
+  dashboard_high_courses_desc: 'Høyskoleprogrammet vårt hjelper skoledistrikter med å tilby helårige datavitenskapskurs ved å sette eksisterende pedagogisk ansatte i gang med å tilby dette fagområdet. For å melde deg på de profesjonelle utviklingsverkstedene, søk om <a href="/educate/districts">distriktsdekkende partnerskap</a> med Code.org.'
+  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina_desc: Code.org har inngått et samarbeid med Bootstrap om å utvikle en skoleplan som lærer bort algebraiske og geometriske konsepter gjennom dataprogrammering.
+  dashboard_course_csins: Datavitenskap i Vitenskap
+  dashboard_course_csins_desc: 'Code.org har inngått et samarbeid med Project GUTS om å levere en introduksjon til datavitenskapskonsepter innenfor modellering- og simuleringsområdene.'
+  dashboard_course_ecs: Utforsk koding
+  dashboard_course_ecs_desc: 'Utforsk Datavitenskap er et årslangt kurs bestående av seks underfag: Menneskelig datamaskinsamhandling, problemløsing, nettdesign, programmering, databehandling og dataanalyse og robotteknologi.'
+  dashboard_course_csp: AP® Datavitenskapsprinsipper
+  dashboard_course_csp_desc: Code.org har skapt et grundig, engasjerende og omgjengelig kurs som utforsker det grunnleggende om databehandling.
   dashboard_landing_loading: Laster...
   dashboard_action_edit: Rediger
   dashboard_action_save: Lagre
@@ -338,8 +357,10 @@ no-NO:
   dashboard_students_reset_password: Tilbakestill passord
   dashboard_students_share_section: 'Del denne gruppens påloggingsside med elevene:'
   dashboard_students_print_info: Skriv ut kort med elevenes påloggingsinformasjon.
+  dashboard_students_secret_picture_title: Hemmelig bilde
   dashboard_students_secret_picture: Hemmelig bilde
   dashboard_students_reset_picture: 'Du kan tilbakestille en elevs hemmelige bilde til enhver tid ved å velge <b>Vis hemmelig</b> og så <b>Tilbakestill hemmelig</b>. Et nytt hemmelig bilde vil bli generert for den eleven når den logger inn.'
+  dashboard_students_secret_word_title: Hemmelig ord
   dashboard_students_secret_word: Hemmelig ord
   dashboard_students_reset_word: 'Du kan tilbakestille en elevs hemmelige ord til enhver tid ved å velge <b>Vis hemmelig</b> og så <b>Tilbakestill hemmelig</b>. Et nytt par med hemmelige ord vil bli generert for den eleven når den logger inn.'
   dashboard_students_join_link: Fortell elevene at de skal opprette sin egen konto og bli med i din gruppe på
@@ -347,11 +368,18 @@ no-NO:
   dashboard_students_print_page: Skriv ut denne siden
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Klikk her</a> for vårt personverndokument som kan deles digitalt eller skrives ut til elevene.'
-  dashboard_curriculum_overview: K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)
+  dashboard_curriculum_k5_title: K-5 lærerressurser
+  dashboard_curriculum_middle_title: Midtskolelærerressurser
+  dashboard_curriculum_high_title: Høyskolelærerressurser
+  dashboard_lesson_plans: Leksjonsplaner
   dashboard_view_all_lesson_plans: Vis alle kursplaner
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_curriculum: Skoleplan
+  dashboard_curriculum_overview: K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)
+  dashboard_overview: Oversikt
   dashboard_sequence: Sekvens
   dashboard_framework: Rammeverk
   dashboard_standards: Læreplanmål (amerikansk)
@@ -362,6 +390,10 @@ no-NO:
   dashboard_puzzle_solving: 'Problemløsning:'
   dashboard_student_worksheet: arbeidsark for elever
   dashboard_teacher_worksheet: arbeidsark for lærere
+  dashboard_curriculum_csina: 'Datavitenskap i Algebra:'
+  dashboard_curriculum_csins: 'Datavitenskap i Vitenskap:'
+  dashboard_curriculum_csp: 'AP® Datavitenskapsprinsipper:'
+  dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
   dashboard_grade_k: K
   dashboard_grade_other: Andre
   dashboard_login_word: Ord
@@ -389,6 +421,7 @@ no-NO:
   dashboard_sections_password_account_creation: Elev-opprettet tekstpassord
   dashboard_sections_login_type_explanation: 'Denne tabellen forklarer hvilken av disse innloggingstypene, <b>bilde, ord eller e-post</b>, du bør velge for et avsnitt.'
   dashboard_faq: Ofte stilte spørsmål
+  dashboard_faq_k5: K-5 Ofte stilte spørsmål
   code_hoc_coming: 'Kodetimen er her - 8. til 14. desember!'
   code_sign_up: Registrer deg for å delta under CS Education Week
   learn_more: Lær mer
@@ -804,3 +837,6 @@ no-NO:
   processing_beyond_longdescription: Processing er et programmeringsspråk, utviklingsmiljø, og nettsamfunn. Siden 2001 har Processing fremmet programvareferdighet innenfor visuell kunst og visuell kompetanse innen teknologi. Opprinnelig opprettet for å tjene som en skissebok innen programvare og å lære grunnleggende dataprogrammering innenfor en visuell sammenheng, Processing utviklet seg til et utviklingsverktøy for fagfolk. I dag er det titusener av studenter, kunstnere, designere, forskere og amatører som bruker Processing for læring, prototyper og produksjon.
   alice_beyond_longdescription: Alice Project bruker et nyskapende programmeringsmiljø som støtte til å lage 3D-animasjoner, og tilbyr verktøy og materialer for undervisning i og læring av beregningsorientert tenkning, problemløsning og programmering over et bredt spekter av aldre og klassetrinn.
   sphero_beyond_longdescription: Enten du er lærer eller foresatt, SPRK-leksjoner gir barna et morsomt intensivkurs i å programmere roboter, samtidig som de skjerper sine ferdigheter i matematikk og naturfag.
+  compatibility_https_header: Du må aktivere HTTPS i nettleseren for å bruke Code.org.
+  compatibility_https_message: "For å øke sikkerheten, bytter vi over til HTTPS %{https_date}. Du vil ikke kunne få tilgang til Code.org etter denne datoen uten å benytte HTTPS. <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer HTTPS for Code.org."
+  compatibility_https_hide_this_warning: Skjul denne advarselen

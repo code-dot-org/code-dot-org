@@ -1,0 +1,21 @@
+name 'ECSPD Online Welcome'
+title 'Welcome to ECS PD Online!'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Welcome to ECS PD!
+
+<img src="https://code.org/images/edquote1.png" height="910" width="320" style="float:right; margin-left:30px">
+
+# <i>Phase 2 Blended Summer Study - Online</i>
+
+Welcome to the online portion of your Blended Summer Study! Here you will continue to learn from the community of teachers you started working with during your in-person workshop and spend more time with the curriculum to prepare for teaching the course in the fall. These online activities should take no more than 8 hours, and we recommend spreading that time out between now and the start of the school year. 
+
+> Note: In order for this PD to be considered complete, you must finish this online PD by September 7th (Labor Day)
+
+To complete these activities you'll need your [ECS curriculum book](http://exploringcs.org/wp-content/uploads/2014/02/ExploringComputerScience-v5.0.pdf) and your journal from your in-person workshop. Because these activities are all targeted at helping you prep to teach the first unit of the course, you might consider jotting down notes and suggestions from the forums in your curriculum book or somewhere you can easily access when it comes time to teach the course!
+
+<br/>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

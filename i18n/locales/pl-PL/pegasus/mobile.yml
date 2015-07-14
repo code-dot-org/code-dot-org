@@ -1,7 +1,7 @@
 pl-PL:
   hello: Witaj świecie
   select_language: Wybierz język
-  computer_science: Informatyka
+  en: Computer Science
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 8-14 grudnia 2014
   csedweek_banner_hoc: 'Zbliża się <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Godzina Kodowania (Hour of Code)</a>. Zapraszamy wszystkich nauczycieli i organizatorów, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> zaplanujcie swoją Godzinę Kodowania (Hour of Code)</a>'
@@ -12,7 +12,7 @@ pl-PL:
   petition_message: Każdy uczeń w każdej szkole powinien mieć możliwość nauki informatyki
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do # innych.'
   petition_sign_message_support: 'Jeśli nas wspierasz, wpisz swoje nazwisko. Dołącz do # innych.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Dołącz do # innych'
   name: Imię/Nazwisko
   email: Adres e-mail
   zipcode: Kod pocztowy lub kraj
@@ -46,6 +46,7 @@ pl-PL:
   congratulations: Gratulacje!
   congratulations_on_completing_hoc: Gratulacje z okazji ukończenia godziny programowania (One Hour of Code)
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
+  enter_valid_age: Please select a valid age
   enter_valid_email: Podaj poprawny adres e-mail
   get_a_certificate_message: "Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>Kontynuować naukę po tej godzinie (One Hour)</a>"
   get_a_certificate_message_after: "Kliknij na świadectwie, aby je pobrać lub wydrukować. Dalej, kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną Kodowania</a>."
@@ -165,9 +166,9 @@ pl-PL:
     &ldquo;Ten program zainteresował i zaangażował do 
     uczestnictwa 100% moich uczniów.&rdquo;
     Adam, nauczyciel
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc linii kodu napisanych przez uczniów'
+  homepage_hero_text_stat_students: '#student_count kont uczniów w Studio Kodowania'
+  homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
   homepage_slot_text_teacher: Panel nauczyciela
@@ -179,7 +180,7 @@ pl-PL:
   homepage_action_text_teachervideo: Obejrzyj wideo
   homepage_action_text_learn: Rozpocznij naukę
   homepage_action_text_signpetition: Podpisz petycję
-  homepage_signpetition_dropdown: 'Podpisz naszą petycję &#x25BE;'
+  homepage_signpetition_dropdown: 'Zgadzam się &#x25BE;'
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
   homepage_slot_text_title_hoc: Godzina kodowania (Hour of Code)
@@ -266,7 +267,7 @@ pl-PL:
   dashboard_landing_news_title: Zasoby nauczyciela w K-5 (tylko po angielsku)
   dashboard_landing_new_beta: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5.
   dashboard_landing_new_k5courses: Nowość! Wypróbuj nasze kursy dla uczniów w K-5.
-  dashboard_landing_useful_links: Inne przydatne linki (tylko po angielsku)
+  dashboard_landing_useful_links: Inne przydatne linki
   dashboard_landing_office_hours: Zapytaj osobiście! Odwiedź nasze co miesięczne wideo godziny.
   dashboard_landing_print_certificates: Drukowanie certyfikatów dla uczniów, którzy ukończyli ten kurs
   dashboard_landing_educator_blog: Przeczytaj o nowościach i aktualizacjach materiałów na naszym blogu pedagogicznym
@@ -277,6 +278,24 @@ pl-PL:
   dashboard_landing_view_progress: 'Przejrzyj postęp w %{biggest_section}'
   dashboard_landing_available_title: Dostępne kursy
   dashboard_landing_available_courses: 'Tutaj są kursy dostępne obecnie dla Ciebie i dla  Twoich uczniów.'
+  dashboard_landing_more_tutorials: Chcesz zobaczyć jeszcze więcej poradników/samouczków?
+  dashboard_landing_more_tutorials_desc: 'Dostępnych jest więcej poradników <a href="/learn/beyond"> oferowanych przez naszych partnerów.</a> Naucz się programować z robotami, twórz strony w sieci, utwórz własną aplikację, poznaj inne języki programowania, jak C++, Ruby i Python!'
+  dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
+  dashboard_hoc_courses_desc: Wypróbuj ze swoimi uczniami którykolwiek z jednogodzinnych samouczków!
+  dashboard_k5_courses: 20-godzinne kursy dla K-5
+  dashboard_k5_courses_desc: 'To są mieszane kursy online, poradniki do samodzielnej pracy we własnym tempie, z aktywnościami "unplugged", czyli takimi, które nie wymagają komputera. Każdy kurs składa się z około 20 lekcji, które mogą być zrealizowane jako jedna jednostka lub semestralny kurs. Uczestniczyć mogą nawet dzieci z przedszkola, które nie potrafi czytać. Aby Ci pomóc wystartować, oferujemy wysokiej jakości warsztaty rozwoju zawodowego, bezpłatne w USA. <a href="/professional-development-workshops"> Znajdź w pobliżu!</a>'
+  dashboard_middle_courses: 20-godzinne kursy dla gimnazjum
+  dashboard_middle_courses_desc: 'Nasz program nauczania dla gimnazjum wykorzystuje informatykę i programowanie w kontekście matematyki i przyrody - jako narzędzie nauczania pojęć wywodzących się z matematyki i przyrody. Aby zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href="/educate/districts"> do partnerstwa w Twoim okręgu</a> z Code.org.'
+  dashboard_high_courses: Całoroczne kursy dla liceum
+  dashboard_high_courses_desc: 'Nasz program dla szkół ponadgimnazjalnych pomaga przygotować pracujących nauczycieli do prowadzenia zajęć z informatyki przez cały rok. Aby zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href="/educate/districts"> do partnerstwa w Twoim okregu</a> z Code.org.'
+  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina_desc: Code.org współpracuje z Bootstrap przy opracowaniu programu nauczania, który uczy pojęć algebraicznych i geometrycznych z wykorzystaniem programowania.
+  dashboard_course_csins: Informatyki w przyrodzie
+  dashboard_course_csins_desc: Code.org współpracuje z Project GUTS przy wprowadzeniu pojęć informatycznych z wykorzystaniem modelowania i symulacji.
+  dashboard_course_ecs: Poznawanie informatyki
+  dashboard_course_ecs_desc: 'Poznawanie informatyki jest całoroczny kursem, na który składa się z 6 jednostek: interakcja człowieka z komputerem, rozwiązywanie problemów, projektowanie stron www, programowanie, analiza danych i robotyka.'
+  dashboard_course_csp: AP ® Prawa Informatyki
+  dashboard_course_csp_desc: Code.org zaprojektował rygorystyczny, angażujący i przystępny kurs, służący poznaniu podstawowych idei informatyki.
   dashboard_landing_loading: Trwa pobieranie ...
   dashboard_action_edit: Edytuj
   dashboard_action_save: Zapisz
@@ -343,20 +362,29 @@ pl-PL:
   dashboard_students_reset_password: Resetuj hasło
   dashboard_students_share_section: 'Udostępnij swoim uczniom stronę logowania do tej sekcji:'
   dashboard_students_print_info: Wydrukuj karty z Informacjami o logowaniu dla swoich uczniów.
-  dashboard_students_secret_picture: Tajny Obrazek
+  dashboard_students_secret_picture_title: Tajny Obrazek
+  dashboard_students_secret_picture: 'W tej sekcji <b>słowo</b> jest użyte jako tajny typ.  Oznacza to, że każdy Twój uczeń ma parę tajnych słów użytych zamiast hasła do logowania.  Do zalogowania się, uczniowie powinni używać adresu strony logowania, podanego powyżej.'
   dashboard_students_reset_picture: 'Możesz zresetować tajny obrazek ucznia w dowolnym momencie wybierając <b>Pokaż sekret</b>, a następnie <b>Resetuj sekret</b>. Nowy tajny obrazek zostanie wygenerowane dla tego ucznia, gdy będzie się logował.'
-  dashboard_students_secret_word: Tajne Słowo
+  dashboard_students_secret_word_title: Tajne Słowo
+  dashboard_students_secret_word: 'W tej sekcji <b>słowo</b> jest użyte jako tajny typ.  Oznacza to, że każdy Twój uczeń ma parę tajnych słów użytych zamiast hasła do logowania.  Do zalogowania się, uczniowie powinni używać adresu strony logowania, podanego powyżej.'
   dashboard_students_reset_word: 'Możesz zresetować tajne słowa ucznia w dowolnym momencie wybierając <b>Pokaż sekret</b>, a następnie <b>Resetuj sekret</b>. Nowa para tajnych słów zostanie wygenerowana dla tego ucznia, gdy będzie się logował. '
   dashboard_students_join_link: Powiedz swoim uczniom, by utworzyli własne konta i dołączyli do Twojej sekcji w
   dashboard_students_no_email: 'Jeśli Twoi uczniowie nie mają adresów e-mail lub Ty chcesz utworzyć dla nich konta, to zmień typ tajności dla tej sekcji na <b>słowo</b> lub <b>obrazek</b>.'
   dashboard_students_print_page: Wydrukuj tę stronę
   dashboard_students_url: Adres URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> Kliknij tutaj</a>, aby prywatne dokumenty mogły być udostępnione lub drukowane dla Twoich uczniów.'
-  dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
-  dashboard_view_all_lesson_plans: Zobacz wszystkie plany lekcji
+  dashboard_curriculum_k5_title: Zasoby dla edukatorów w K-5
+  dashboard_curriculum_middle_title: Zasoby dla edukatorów w gimnazjum
+  dashboard_curriculum_high_title: Zasoby dla edukatorów w liceum
+  dashboard_lesson_plans: Plany lekcji
+  dashboard_view_all_lesson_plans: Pobierz kompletne programy nauczania dla Kursów 1-3
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
+  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_curriculum: Program nauczania
+  dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
+  dashboard_overview: Streszczenie
   dashboard_sequence: Sekwencja (ciąg)
   dashboard_framework: Ramy
   dashboard_standards: Standardy
@@ -367,6 +395,10 @@ pl-PL:
   dashboard_puzzle_solving: 'Rozwiązywanie zagadek (łamigłówek):'
   dashboard_student_worksheet: arkusz ucznia
   dashboard_teacher_worksheet: arkusz nauczyciela
+  dashboard_curriculum_csina: 'Informatyka w algebrze:'
+  dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
+  dashboard_curriculum_csp: 'AP ® Prawa Informatyki:'
+  dashboard_curriculum_ecs: 'Poznawanie informatyki:'
   dashboard_grade_k: K
   dashboard_grade_other: Inni/inne
   dashboard_login_word: Słowo
@@ -394,6 +426,7 @@ pl-PL:
   dashboard_sections_password_account_creation: Hasło w postaci tekstu utworzone przez ucznia
   dashboard_sections_login_type_explanation: 'Ta tabela pomaga wyjaśnić, który z tych typów logowania, <b>obrazek, słowo lub e-mail</b>, będziesz chciał wybrać dla sekcji.'
   dashboard_faq: Najczęściej zadawane pytania (FAQ)
+  dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   code_hoc_coming: 'Godzina Kodowania jest tutaj - 8-14 grudnia!'
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej (CS Education Week)
   learn_more: Naucz się więcej
@@ -809,3 +842,6 @@ pl-PL:
   processing_beyond_longdescription: Processing jest językiem programowania, rozwoju środowiska i społeczności online. Od 2001 roku, Processing promuje kompetencje programowania w obrębie sztuk wizualnych i wizualne kompetencje w obrębie technologii. Początkowo służył jako szkicownik oprogramowania w nauce podstaw programowania w kontekście wizualnym, rozwinął się jako narzędzie dla profesjonalistów. Obecnie, dziesiątki tysięcy studentów, artystów, projektantów, naukowców i hobbystów używa Processing dla nauki, prototypowania i produkcji.
   alice_beyond_longdescription: Alice Project, stosując innowacyjne środowisko programowania do wspomagania tworzenia animacji 3D, oferuje narzędzia i materiały do nauczania i uczenia się myślenia komputacyjnego, rozwiązywania problemów i programowania dla spektrum wieków i poziomów kształcenia.
   sphero_beyond_longdescription: Obojętne, czy jesteś pedagogiem czy rodzicem, lekcje z SPRK są kursem programowania robotów dla dzieci, rozwijającym ich umiejętności matematyczne i przyrodnicze.
+  compatibility_https_header: Proszę włączyć obsługę protokołu HTTPS dla Code.org.
+  compatibility_https_message: "Aby zwiększyć bezpieczeństwo, przestawiamy się na https na %{https_date}. Nie będziesz w stanie uzyskać dostęp do Code.org po tej dacie. <a href='%{it_requirements_url}'> Kliknij tutaj</a>, aby dowiedzieć się, jak włączyć HTTPS dla Code.org."
+  compatibility_https_hide_this_warning: Ukryj to ostrzeżenie

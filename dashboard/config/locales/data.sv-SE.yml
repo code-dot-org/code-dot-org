@@ -649,6 +649,7 @@
         C3_functional_suncatchers: Funktionella Solfångare
         C3_songwriting_with_parameters: Låtskrivande Med parametrar
         C4_intro: Introduktion
+        C4_loops_zombie: Loopar
         C4_bee_conditional: Bee Villkorssatser
         C4_variables_artist: Variabler - Konstnär
         C4_variables_playlab: Variabler - Play Lab
@@ -683,6 +684,7 @@
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - Introduction
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations

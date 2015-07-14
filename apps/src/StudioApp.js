@@ -1,5 +1,6 @@
-/* global Blockly, ace:true, $, requirejs, marked */
+/* global Blockly, ace:true, $, droplet, marked, digestManifest */
 
+var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
@@ -351,12 +352,14 @@ StudioApp.prototype.init = function(config) {
     this.handleEditCode_({
       codeFunctions: config.level.codeFunctions,
       dropletConfig: config.dropletConfig,
+      unusedConfig: config.unusedConfig,
       categoryInfo: config.level.categoryInfo,
       startBlocks: config.level.lastAttempt || config.level.startBlocks,
       afterEditorReady: config.afterEditorReady,
       afterInject: config.afterInject,
       readOnly: config.readonlyWorkspace,
       textModeAtStart: config.level.textModeAtStart,
+      beginnerMode: config.level.beginnerMode,
       autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
     });
   }
@@ -404,25 +407,29 @@ StudioApp.prototype.init = function(config) {
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
       this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
-        if (this.isUsingBlockly()) {
-          if (Blockly.functionEditor) {
-            Blockly.functionEditor.hideIfOpen();
-          }
-          Blockly.mainBlockSpace.clear();
-          this.setStartBlocks_(config, false);
-          if (config.level.openFunctionDefinition) {
-            this.openFunctionDefinition_(config);
-          }
-        } else {
-          var resetValue = '';
-          if (config.level.startBlocks) {
-            // Don't pass CRLF pairs to droplet until they fix CR handling:
-            resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
-          }
-          this.editor.setValue(resetValue);
-        }
+        this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
+  }
+};
+
+StudioApp.prototype.handleClearPuzzle = function (config) {
+  if (this.isUsingBlockly()) {
+    if (Blockly.functionEditor) {
+      Blockly.functionEditor.hideIfOpen();
+    }
+    Blockly.mainBlockSpace.clear();
+    this.setStartBlocks_(config, false);
+    if (config.level.openFunctionDefinition) {
+      this.openFunctionDefinition_(config);
+    }
+  } else {
+    var resetValue = '';
+    if (config.level.startBlocks) {
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
+    }
+    this.editor.setValue(resetValue);
   }
 };
 
@@ -501,7 +508,7 @@ StudioApp.prototype.assetUrl_ = function (path) {
     throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
-  return this.BASE_URL + path;
+  return this.BASE_URL + ((window.digestManifest || {})[path] || path);
 };
 
 /**
@@ -1157,6 +1164,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
   }
 
+  this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
@@ -1225,7 +1233,7 @@ StudioApp.prototype.configureDom = function (config) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
-      Blockly.addClass_(codeWorkspace, 'edit');
+      $(codeWorkspace).addClass('edit');
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
@@ -1250,6 +1258,10 @@ StudioApp.prototype.configureDom = function (config) {
       visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
     }
+  }
+
+  if (config.readonlyWorkspace) {
+    $(codeWorkspace).addClass('readonly');
   }
 
   if (config.embed && config.hideSource) {
@@ -1308,104 +1320,102 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 };
 
 StudioApp.prototype.handleEditCode_ = function (options) {
-  requirejs(['droplet'], _.bind(function(droplet) {
-    var displayMessage, examplePrograms, messageElement, onChange, startingText;
+  var displayMessage, examplePrograms, messageElement, onChange, startingText;
 
-    // Ensure global ace variable is the same as window.ace
-    // (important because they can be different in our test environment)
+  // Ensure global ace variable is the same as window.ace
+  // (important because they can be different in our test environment)
 
-    /* jshint ignore:start */
-    ace = window.ace;
-    /* jshint ignore:end */
+  /* jshint ignore:start */
+  ace = window.ace;
+  /* jshint ignore:end */
 
-    var fullDropletPalette = dropletUtils.generateDropletPalette(
-      options.codeFunctions, options.dropletConfig);
-    this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
-      mode: 'javascript',
-      modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig),
-      palette: fullDropletPalette,
-      showPaletteInTextMode: true,
-      enablePaletteAtStart: !options.readOnly,
-      textModeAtStart: options.textModeAtStart
-    });
+  var fullDropletPalette = dropletUtils.generateDropletPalette(
+    options.codeFunctions, options.dropletConfig);
+  this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+    mode: 'javascript',
+    modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig, options),
+    palette: fullDropletPalette,
+    showPaletteInTextMode: true,
+    enablePaletteAtStart: !options.readOnly,
+    textModeAtStart: options.textModeAtStart
+  });
 
-    this.editor.aceEditor.setShowPrintMargin(false);
-    // Note (brent): this mode is currently defined in applab, which means we
-    // dont have it available to us in all apps, and ends up with a 404 as it
-    // tries to hit the network. At some point this should be cleaned up
-    this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
+  this.editor.aceEditor.setShowPrintMargin(false);
 
-    // Add an ace completer for the API functions exposed for this level
-    if (options.dropletConfig) {
-      var functionsFilter = null;
-      if (options.autocompletePaletteApisOnly) {
-         functionsFilter = options.codeFunctions;
+  // Init and define our custom ace mode:
+  aceMode.defineForAce(options.dropletConfig, options.unusedConfig, this.editor);
+  // Now set the editor to that mode:
+  this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
+
+  // Add an ace completer for the API functions exposed for this level
+  if (options.dropletConfig) {
+    var functionsFilter = null;
+    if (options.autocompletePaletteApisOnly) {
+       functionsFilter = options.codeFunctions;
+    }
+    var langTools = window.ace.require("ace/ext/language_tools");
+    langTools.addCompleter(
+      dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
+  }
+
+  this.editor.aceEditor.setOptions({
+    enableBasicAutocompletion: true,
+    enableLiveAutocompletion: true
+  });
+
+  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
+  this.dropletTooltipManager.registerBlocksFromList(
+    dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+
+  // Bind listener to palette/toolbox 'Hide' and 'Show' links
+  var hideToolboxHeader = document.getElementById('toolbox-header');
+  var hideToolboxIcon = document.getElementById('hide-toolbox-icon');
+  var showToolboxHeader = document.getElementById('show-toolbox-header');
+  if (hideToolboxHeader && hideToolboxIcon && showToolboxHeader) {
+    hideToolboxHeader.className += ' toggleable';
+    hideToolboxIcon.style.display = 'inline-block';
+    var handleTogglePalette = (function() {
+      if (this.editor) {
+        this.editor.enablePalette(!this.editor.paletteEnabled);
+        showToolboxHeader.style.display =
+            this.editor.paletteEnabled ? 'none' : 'inline-block';
+        hideToolboxIcon.style.display =
+            !this.editor.paletteEnabled ? 'none' : 'inline-block';
+        this.resizeToolboxHeader();
       }
-      var langTools = window.ace.require("ace/ext/language_tools");
-      langTools.addCompleter(
-        dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
-    }
+    }).bind(this);
+    dom.addClickTouchEvent(hideToolboxHeader, handleTogglePalette);
+    dom.addClickTouchEvent(showToolboxHeader, handleTogglePalette);
+  }
 
-    this.editor.aceEditor.setOptions({
-      enableBasicAutocompletion: true,
-      enableLiveAutocompletion: true
-    });
+  this.resizeToolboxHeader();
 
-    this.dropletTooltipManager = new DropletTooltipManager();
-    this.dropletTooltipManager.registerBlocksFromList(
-      dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+  if (options.startBlocks) {
+    // Don't pass CRLF pairs to droplet until they fix CR handling:
+    this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+    // Reset droplet Undo stack:
+    this.editor.clearUndoStack();
+    // Reset ace Undo stack:
+    var UndoManager = window.ace.require("ace/undomanager").UndoManager;
+    this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
+  }
 
-    // Bind listener to palette/toolbox 'Hide' and 'Show' links
-    var hideToolboxLink = document.getElementById('hide-toolbox');
-    var showToolboxLink = document.getElementById('show-toolbox');
-    var showToolboxHeader = document.getElementById('show-toolbox-header');
-    if (hideToolboxLink && showToolboxLink && showToolboxHeader) {
-      hideToolboxLink.style.display = 'inline-block';
-      var handleTogglePalette = (function() {
-        if (this.editor) {
-          this.editor.enablePalette(!this.editor.paletteEnabled);
-          showToolboxHeader.style.display =
-              this.editor.paletteEnabled ? 'none' : 'inline-block';
-          this.resizeToolboxHeader();
-        }
-      }).bind(this);
-      dom.addClickTouchEvent(hideToolboxLink, handleTogglePalette);
-      dom.addClickTouchEvent(showToolboxLink, handleTogglePalette);
-    }
+  if (options.readOnly) {
+    // When in readOnly mode, show source, but do not allow editing,
+    // disable the palette, and hide the UI to show the palette:
+    this.editor.setReadOnly(true);
+    showToolboxHeader.style.display = 'none';
+  }
 
-    this.resizeToolboxHeader();
+  // droplet may now be in code mode if it couldn't parse the code into
+  // blocks, so update the UI based on the current state:
+  this.onDropletToggle_();
 
-    if (options.startBlocks) {
-      // Don't pass CRLF pairs to droplet until they fix CR handling:
-      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
-      // Reset droplet Undo stack:
-      this.editor.clearUndoStack();
-      // Reset ace Undo stack:
-      var UndoManager = window.ace.require("ace/undomanager").UndoManager;
-      this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
-    }
+  this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
-    if (options.readOnly) {
-      // When in readOnly mode, show source, but do not allow editing,
-      // disable the palette, and hide the UI to show the palette:
-      this.editor.setReadOnly(true);
-      showToolboxHeader.style.display = 'none';
-    }
-
-    // droplet may now be in code mode if it couldn't parse the code into
-    // blocks, so update the UI based on the current state:
-    this.onDropletToggle_();
-
-    this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
-
-    if (options.afterEditorReady) {
-      options.afterEditorReady();
-    }
-
-    // Since the droplet editor loads asynchronously, we must call onInitialize
-    // here once loading is complete.
-    this.onInitialize();
-  }, this));
+  if (options.afterEditorReady) {
+    options.afterEditorReady();
+  }
 
   if (options.afterInject) {
     options.afterInject();
@@ -1529,9 +1539,28 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
   // Update header titles:
   var showCodeHeader = document.getElementById('show-code-header');
-  var newButtonTitle = usingBlocks ? msg.showCodeHeader() :
-    msg.showBlocksHeader();
-  showCodeHeader.firstChild.textContent = newButtonTitle;
+  var contentSpan = showCodeHeader.firstChild;
+  var fontAwesomeGlyph = _.find(contentSpan.childNodes, function (node) {
+    return /\bfa\b/.test(node.className);
+  });
+  var imgBlocksGlyph = _.find(contentSpan.childNodes, function (node) {
+    return /\bblocks-glyph\b/.test(node.className);
+  });
+
+  // Change glyph
+  if (usingBlocks) {
+    if (fontAwesomeGlyph && imgBlocksGlyph) {
+      fontAwesomeGlyph.style.display = 'inline-block';
+      imgBlocksGlyph.style.display = 'none';
+    }
+    contentSpan.lastChild.textContent = msg.showTextHeader();
+  } else {
+    if (fontAwesomeGlyph && imgBlocksGlyph) {
+      fontAwesomeGlyph.style.display = 'none';
+      imgBlocksGlyph.style.display = 'inline-block';
+    }
+    contentSpan.lastChild.textContent = msg.showBlocksHeader();
+  }
 
   var blockCount = document.getElementById('blockCounter');
   if (blockCount) {
@@ -1569,7 +1598,16 @@ StudioApp.prototype.hasQuestionMarksInNumberField = function () {
  * @returns true if any non-example block in the workspace has an unfilled input
  */
 StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
-  return Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
+  return !!this.getUnfilledFunctionalBlock();
+};
+
+/**
+ * @returns {Block} The first block that has an unfilled input, or undefined
+ *   if there isn't one.
+ */
+StudioApp.prototype.getUnfilledFunctionalBlock = function () {
+  var unfilledBlock;
+  Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
 
@@ -1578,8 +1616,45 @@ StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
       return false;
     }
 
-    return block.hasUnfilledFunctionalInput();
+    if (block.hasUnfilledFunctionalInput()) {
+      unfilledBlock = block;
+      return true;
+    }
   });
+
+  return unfilledBlock;
+};
+
+/**
+ * Get the error message when we have an unfilled block
+ * @param {string} topLevelType The block.type For our expected top level block
+ */
+StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
+  var unfilled = this.getUnfilledFunctionalBlock();
+
+  if (!unfilled) {
+    return null;
+  }
+
+  var topParent = unfilled;
+  while (topParent.getParent()) {
+    topParent = topParent.getParent();
+  }
+
+  if (unfilled.type === topLevelType) {
+    return msg.emptyTopLevelBlock({topLevelBlockName: unfilled.getTitleValue()});
+  }
+
+  if (topParent.type !== 'functional_definition') {
+    return msg.emptyFunctionalBlock();
+  }
+
+  var procedureInfo = topParent.getProcedureInfo();
+  if (topParent.isVariable()) {
+    return msg.emptyBlockInVariable({name: procedureInfo.name});
+  } else {
+    return msg.emptyBlockInFunction({name: procedureInfo.name});
+  }
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {

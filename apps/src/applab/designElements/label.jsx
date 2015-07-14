@@ -5,6 +5,8 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -19,15 +21,12 @@ var LabelProperties = React.createClass({
     var element = this.props.element;
 
     return (
-      <table>
-        <tr>
-          <th>name</th>
-          <th>value</th>
-        </tr>
+      <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
           initialValue={element.id}
-          handleChange={this.props.handleChange.bind(this, 'id')} />
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true} />
         <PropertyRow
           desc={'text'}
           initialValue={$(element).text()}
@@ -38,14 +37,14 @@ var LabelProperties = React.createClass({
           lockState={$(element).data('lock-width') || PropertyRow.LockState.UNLOCKED}
           handleLockChange={this.props.handleChange.bind(this, 'lock-width')}
           initialValue={parseInt(element.style.width, 10)}
-          handleChange={this.props.handleChange.bind(this, 'width')} />
+          handleChange={this.props.handleChange.bind(this, 'style-width')} />
         <PropertyRow
           desc={'height (px)'}
           isNumber={true}
           lockState={$(element).data('lock-height') || PropertyRow.LockState.UNLOCKED}
           handleLockChange={this.props.handleChange.bind(this, 'lock-height')}
           initialValue={parseInt(element.style.height, 10)}
-          handleChange={this.props.handleChange.bind(this, 'height')} />
+          handleChange={this.props.handleChange.bind(this, 'style-height')} />
         <PropertyRow
           desc={'x position (px)'}
           isNumber={true}
@@ -76,7 +75,7 @@ var LabelProperties = React.createClass({
         <ZOrderRow
           element={this.props.element}
           onDepthChange={this.props.onDepthChange}/>
-      </table>);
+      </div>);
 
     // TODO:
     // bold/italics/underline (p2)
@@ -85,8 +84,51 @@ var LabelProperties = React.createClass({
   }
 });
 
+var LabelEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
+  },
+
+  getClickEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "click", function(event) {\n' +
+      '  console.log("' + id + ' clicked!");\n' +
+      '});\n';
+    return code;
+  },
+
+  insertClick: function() {
+    this.props.onInsertEvent(this.getClickEventCode());
+  },
+
+  render: function () {
+    var element = this.props.element;
+    var clickName = 'Click';
+    var clickDesc = 'Triggered when the label is clicked with a mouse or tapped on a screen.';
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={clickName}
+          desc={clickDesc}
+          handleInsert={this.insertClick}/>
+      </div>
+    );
+  }
+});
+
 module.exports = {
-  PropertyTable: LabelProperties,
+  PropertyTab: LabelProperties,
+  EventTab: LabelEvents,
 
   create: function () {
     var element = document.createElement('label');
@@ -112,11 +154,13 @@ module.exports = {
       height: 'auto'
     }).appendTo($(document.body));
 
+    var padding = parseInt(element.style.padding, 10);
+
     if ($(element).data('lock-width') !== PropertyRow.LockState.LOCKED) {
-      element.style.width = clone.width() + 1 + 'px';
+      element.style.width = clone.width() + 1 + 2 * padding + 'px';
     }
     if ($(element).data('lock-height') !== PropertyRow.LockState.LOCKED) {
-      element.style.height = clone.height() + 1 + 'px';
+      element.style.height = clone.height() + 1 + 2 * padding + 'px';
     }
 
     clone.remove();

@@ -283,7 +283,7 @@
         desc: شرح درس بدون دستگاه قراردادها
         video: alg_5_contracts
       DesignRecipe:
-        title: دستور العمل طرح
+        title: دستور العمل طراحی
         desc: شرح درس دستور العمل طراحی
         video: alg_8_design_recipe
       Booleans:

@@ -382,7 +382,10 @@
     classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
+    description: Kode Studio adalah rumah untuk kursus online yang dibuat oleh Code.org
     lines_of_code: '%{lines_count} GARIS KODE DITULIS OLEH PELAJAR'
+    lines_of_code_linebreak: '%{lines_count} baris kode <br/> DITULIS oleh %{students_count}
+      jutaan siswa'
     all_courses: Tinjauan Kursus 1, 2, dan 3
     lesson_plans: Rencana pelajaran
     signin_message: Sudah terdaftar? %{link}
@@ -428,6 +431,7 @@
     heading_legacy: <h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
+    print_certificate: Cetak Sertifikat
   gender:
     male: Laki-laki
     female: Wanita
@@ -463,6 +467,12 @@
     autoplay_option: Autoplay video
     download: Ungah Video
   compatability:
+    https:
+      header: Silakan aktifkan HTTPS untuk Code.org.
+      message: Untuk meningkatkan keamanan, kita beralih ke HTTPS pada %{https_date}.
+        Anda tidak akan dapat mengakses Code.org setelah tanggal ini. <a href='%{it_requirements_url}'>
+        Klik di sini</a> untuk belajar bagaimana untuk mengaktifkan HTTPS untuk Code.org.
+      hide_this_warning: Sembunyikan peringatan
     working:
       header: Kami dalam tahap bekerja untuk menyediakan layanan didalam browser Anda.
       message: Code.org menggunakan teknologi modern web. Hal ini membuat situs lebih
@@ -519,9 +529,14 @@
       title: Flappy Code
       body: Ingin membuat game anda sendiri dalam waktu kurang dari 10 menit? Coba
         Tutorial Flappy code kami!
-    20hour:
-      title: Kursus perkenalan
-      body: Mencoba kami Introduksi Kursus ilmu komputer dalam 20 jam.
+    20-hour:
+      title: Kursus akselerasi
+      body: Kursus selama 20 jam ini memperkenalkan ilmu komputer tingkat dasar dan
+        konsep-konsep pemrograman. Kursus ini dirancang untuk digunakan di ruang kelas
+        untuk sekolah dasar dan menengah, tapi tetap menyenangkan dipelajari untuk
+        semua usia.
+      body_short: mendapatkan ilmu komputer dasar dalam versi yang dipercepat dari
+        kursus 2-4.
     hoc2014:
       try_new_tutorial: Cobalah pedoman Hour of Code baru kami dalam versi beta
       try_frozen: Seniman bersama Anna dan Elsa, dari Frozen

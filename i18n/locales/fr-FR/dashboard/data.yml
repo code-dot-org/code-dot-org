@@ -415,6 +415,7 @@ fr:
         C3_functional_suncatchers: Vitraux fonctionnels
         C3_songwriting_with_parameters: Composition de chansons avec réglages
         C4_intro: Introduction
+        C4_loops_zombie: Boucles
         C4_bee_conditional: Abeilles et instructions conditionnelles
         C4_variables_artist: 'Artiste : variables'
         C4_variables_playlab: 'Variables - Labo'
@@ -449,6 +450,7 @@ fr:
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'

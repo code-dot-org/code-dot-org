@@ -1,6 +1,6 @@
 - content_for(:head) do
-  = stylesheet_link_tag    'editor/blockly_editor', media: 'all'
-  = javascript_include_tag 'editor/blockly_editor'
+  = stylesheet_link_tag    'jquery.handsontable.full', media: 'all'
+  = javascript_include_tag 'jquery.handsontable.full'
 %h1 Level Completions
 %h2
   From
@@ -10,6 +10,7 @@
   Filter
   %input#filter
 %a#dateUpdate{style: 'display: none'} Update
+%h2 #{link_to 'Download CSV', {:format => :csv }}
 #completionTable
 :css
   .htNumeric { font-family: monospace; }
@@ -45,7 +46,7 @@
     $('#dateUpdate').attr('href', href);
     $('#dateUpdate').show();
   }
-  var data = eval(#{@data_array.try(:to_json)});
+  var data = eval(#{ data.try(:to_json)});
   function successRateRenderer(instance, td, row, col, prop, value, cellProperties) {
   var conditions = [
     [0.7, '#00FF00'],
@@ -106,51 +107,40 @@
   }
   $("#completionTable").handsontable({
     data: data, startRows: 10, startCols: 9,
-    colHeaders: [
-      'Puzzle',
-      'Total\nAttempts',
-      'Total Successful\nAttempts',
-      'Avg. Success\nRate',
-      'Avg. #attempts\nper Completion',
-      'Unique\nAttempts',
-      'Unique Successful\nAttempts',
-      'Perceived Dropout',
-      'Avg. Unique\nSuccess Rate',
-      'Avg. Time\non Page',
-    ],
+    colHeaders: #{ headers.try(:to_json)},
     colWidths: [200, 100, 100, 100, 100, 100, 100, 100, 100, 100],
     stretchH: 'none',
     columnSorting: true,
     manualColumnResize: true,
     columns: [
       {
-        data: 'Puzzle',
+        data: 'Puzzle'
       },
       {
         data: "TotalAttempt",
-        type: 'numeric',
+        type: 'numeric'
       },
       {
         data: "TotalSuccess",
-        type: 'numeric',
+        type: 'numeric'
       },
       {
         data: "Avg Success Rate",
         type: 'numeric',
-        format: '0.00%',
+        format: '0.00%'
       },
       {
         data: "Avg attempts per completion",
         type: 'numeric',
-        format: '0.00',
+        format: '0.00'
       },
       {
         data: "UniqueAttempt",
-        type: 'numeric',
+        type: 'numeric'
       },
       {
         data: "UniqueSuccess",
-        type: 'numeric',
+        type: 'numeric'
       },
       {
         data: "Perceived Dropout",
@@ -159,11 +149,11 @@
       {
         data: "Avg Unique Success Rate",
         type: 'numeric',
-        format: '0.00%',
+        format: '0.00%'
       },
       {
         data: "timeOnSite"
-      },
+      }
     ],
     cells: function(row, col, prop) {
       if(col == 3) {

@@ -1,0 +1,25 @@
+name 'ECSPD Online U1D5-7 Resources 1'
+title ''
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Searching: Extended Resources
+
+In Unit 1, Day 5-7, students learn good search practices.
+
+#### Suggested Resource
+
+How can you help your students see the consequences of a personalized internet and Web 3.0 and how they affect the way we search for information? Watch Eli Pariser's TED talk (below) about the online "filter bubble" (content goes until minute 9:00). Click "Continue" when you are finished.
+
+<iframe width="850" height="500" src="https://www.youtube.com/embed/EsjQLB_jTBA" frameborder="0" allowfullscreen></iframe>
+
+*[Can't see the video? Click here](http://videos.code.org/ecs-pd2-online/filter-bubbles.mp4).*
+
+
+<br/>
+
+> Consider: How can the "filter bubble" as described by Eli Pariser affect your or your students' search results?
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

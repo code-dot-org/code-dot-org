@@ -33,10 +33,8 @@ module Dashboard
       config.middleware.insert_after SharedResources, PegasusSites
     end
 
-    unless Rails.env.production?
-      require 'cdo/rack/upgrade_insecure_requests'
-      config.middleware.use ::Rack::UpgradeInsecureRequests
-    end
+    require 'cdo/rack/upgrade_insecure_requests'
+    config.middleware.use ::Rack::UpgradeInsecureRequests
 
     config.encoding = 'utf-8'
 

@@ -134,7 +134,7 @@
 
       %{link}
 
-      Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Cukerbergui ir žaidimams Angry Birds ir Plants vs. Zombies! :)
+      Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Zuckerbergui žaisdami su Angry Birds ir Plants vs. Zombies! :)
 
       %{name}
   follower:
@@ -332,7 +332,7 @@
     panel:
       answer_viewer: Atsakymų apžvalga
       student: Mokinys
-      viewing_solution: Viewing Solution
+      viewing_solution: Peržiūrėti sprendimą
       try_it_yourself: Išmėginkite patys
       section: Grupė
   user:
@@ -353,10 +353,13 @@
   user_stats:
     recent_activity: Neseniai atlikta veikla
     show_more: Rodyti daugiau
-    classroom_activity: Vaizdo įrašas mokytojams
+    classroom_activity: Veikla be kompiuterių
   home:
     title: Programavimo kursai
-    lines_of_code: '%{lines_count} KODO EILUČIŲ PARAŠĖ MOKINIAI'
+    description: Code Studio is home to online courses created by Code.org
+    lines_of_code: MOKINIAI PARAŠĖ %{lines_count} KODO EILUČIŲ
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: 1, 2 ir 3 kursų apžvalga
     lesson_plans: Pamokų planai
     signin_message: Jau užsiregistravote? %{link}
@@ -399,6 +402,7 @@
     heading_legacy: <h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>
     your_gallery: Galerija
     no_primary_course: Išmėginkite Kodavimo Studijos kursus
+    print_certificate: Print Certificate
   gender:
     male: Vyras
     female: Moteris
@@ -434,6 +438,12 @@
     autoplay_option: Automatiškas vaizdo įrašų paleidimas
     download: Atsisiųsti vaizdo įrašą
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Slėpti šį įspėjimą
     working:
       header: Mes dirbame, kad būtų palaikoma Jūsų naršyklė.
       message: Code.org naudoja šiuolaikines interneto technologijas, kurios šią svetainę
@@ -491,11 +501,15 @@
       title: Flappy kodas
       body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy
         Code pamokėles!
-    20hour:
-      title: Įvadiniai kursai
-      body: Išmėginkite mūsų 20-ties valandų įvadą į programavimą.
+    20-hour:
+      title: Accelerated Course
+      body: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais.
+        Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet
+        kurioje amžiaus grupėje.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
-      try_new_tutorial: Išbandykite naująsias Programavimo valandos pamokėles beta
+      try_new_tutorial: Išbandykite naująsias „Programavimo valandos“ pamokėles beta
         versijoje
       try_frozen: Piešimas su Ana ir Elze iš "Ledo šalies"
     gallery:

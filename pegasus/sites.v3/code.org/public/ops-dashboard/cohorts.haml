@@ -25,8 +25,8 @@ template: none
             {{program_type.long_name}}
         %select#cohort-filter-district.form-control{"ng-model" => "search.district", "ng-options"=>"district.name for district in districts | orderBy:'name'"}
           %option{value:'', label:'--Filter by district--'}
-  %div.jumbotron{'ng-show' => 'hasCohorts && cohorts.length <= 0'}
-    No cohorts are available.
+  %div.jumbotron{'ng-show' => 'cohorts.length <= 0'}
+    Cohorts are loading...
 
   %div{'ng-show' => 'cohorts.length > 0'}
     %table{style: "width:970px; table-layout:fixed;"}

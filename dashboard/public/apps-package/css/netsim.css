@@ -1,5 +1,8 @@
-#prompt-table {
+.hidden {
   display: none; }
+
+#netsim #prompt-table td {
+  border: none; }
 
 .clearfix {
   clear: both; }
@@ -340,11 +343,15 @@
     user-select: text; }
   #netsim .netsim-log-panel table tbody tr.ascii td.message {
     white-space: pre-wrap; }
-  #netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel, #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress, #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress, #netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
+  #netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel,
+  #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress,
+  #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress,
+  #netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
     text-align: center; }
   #netsim .netsim-log-panel th.encodingLabel, #netsim .netsim-log-panel td.encodingLabel {
     width: 1%; }
-  #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress, #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress {
+  #netsim .netsim-log-panel th.toAddress, #netsim .netsim-log-panel td.toAddress,
+  #netsim .netsim-log-panel th.fromAddress, #netsim .netsim-log-panel td.fromAddress {
     width: 50px; }
   #netsim .netsim-log-panel th.packetInfo, #netsim .netsim-log-panel td.packetInfo {
     width: 121px; }
@@ -390,14 +397,21 @@
       color: #949ca2; }
       #netsim .netsim-send-panel .netsim-packet .bit-counter.oversized {
         color: #c00; }
-    #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel, #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress, #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
+    #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel,
+    #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress,
+    #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress,
+    #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
       text-align: center; }
-      #netsim .netsim-send-panel .netsim-packet th.encodingLabel input, #netsim .netsim-send-panel .netsim-packet td.encodingLabel input, #netsim .netsim-send-panel .netsim-packet th.toAddress input, #netsim .netsim-send-panel .netsim-packet td.toAddress input, #netsim .netsim-send-panel .netsim-packet th.fromAddress input, #netsim .netsim-send-panel .netsim-packet td.fromAddress input, #netsim .netsim-send-panel .netsim-packet th.packetInfo input, #netsim .netsim-send-panel .netsim-packet td.packetInfo input {
+      #netsim .netsim-send-panel .netsim-packet th.encodingLabel input, #netsim .netsim-send-panel .netsim-packet td.encodingLabel input,
+      #netsim .netsim-send-panel .netsim-packet th.toAddress input, #netsim .netsim-send-panel .netsim-packet td.toAddress input,
+      #netsim .netsim-send-panel .netsim-packet th.fromAddress input, #netsim .netsim-send-panel .netsim-packet td.fromAddress input,
+      #netsim .netsim-send-panel .netsim-packet th.packetInfo input, #netsim .netsim-send-panel .netsim-packet td.packetInfo input {
         width: 3em;
         text-align: center; }
     #netsim .netsim-send-panel .netsim-packet th.encodingLabel, #netsim .netsim-send-panel .netsim-packet td.encodingLabel {
       width: 1%; }
-    #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress, #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress {
+    #netsim .netsim-send-panel .netsim-packet th.toAddress, #netsim .netsim-send-panel .netsim-packet td.toAddress,
+    #netsim .netsim-send-panel .netsim-packet th.fromAddress, #netsim .netsim-send-panel .netsim-packet td.fromAddress {
       width: 50px; }
     #netsim .netsim-send-panel .netsim-packet th.packetInfo, #netsim .netsim-send-panel .netsim-packet td.packetInfo {
       width: 121px; }
@@ -416,7 +430,8 @@
           height: 1.5em;
           width: 100%; }
   #netsim .netsim-send-panel .packet-size {
-    width: 400px; }
+    width: 50%;
+    max-width: 400px; }
   #netsim .netsim_packet_size_control label {
     display: inline-block; }
   #netsim .netsim_packet_size_control .slider-inline-wrap {

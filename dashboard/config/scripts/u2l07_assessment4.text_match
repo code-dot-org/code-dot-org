@@ -1,0 +1,6 @@
+name 'U2L07 Assessment4'
+title 'Question 4'
+
+markdown <<MARKDOWN
+If a graph has 10 nodes and 33 edges, how many nodes and edges will be visited/processed as a result of running Dijkstra’s algorithm.
+MARKDOWN

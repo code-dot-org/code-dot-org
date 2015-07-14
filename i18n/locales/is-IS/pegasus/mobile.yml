@@ -1,7 +1,7 @@
 is-IS:
   hello: Halló heimur
   select_language: Vinsamlegast veldu tungumál þitt
-  computer_science: Tölvunarfræði
+  en: Computer Science
   computer_science_edweek: Vika tölvunarfræði
   csedweek_dates: 8.-14. desember 2014
   csedweek_banner_hoc: 'Nú styttist í <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Klukkustund kóðunar</a>. Kennarar og stjórnendur: <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">byrjið að undirbúa ykkar Klukkustund kóðunar</a>'
@@ -12,7 +12,7 @@ is-IS:
   petition_message: Allir nemendur í öllum skólum ættu að fá tækifæri til að læra tölvunarfræði
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
   petition_sign_message_support: 'Styddu okkur með því að skrá nafn þitt. Slástu í hóp með # öðrum.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Slástu í hóp með # öðrum'
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
@@ -47,6 +47,7 @@ is-IS:
   congratulations: Til hamingju!
   congratulations_on_completing_hoc: Til hamingju með að ljúka Klukkustund kóðunar
   get_a_certificate_of_achievement: Fáðu viðurkenningarskjal
+  enter_valid_age: Please select a valid age
   enter_valid_email: Vinsamlega sláðu inn gilt netfang
   get_a_certificate_message: "Við sendum þér viðurkenningarskjal og upplýsingar um hvernig þú getur haldið áfram að læra <a href='/learn'>eftir Klukkustund kóðunar</a>"
   get_a_certificate_message_after: "Smelltu á skírteinið til að hala það niður eða prenta það. Haltu svo áfram með <a href='http://studio.code.org'>önnur námskeið okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>læra eftir Klukkustund kóðunar</a>."
@@ -164,15 +165,15 @@ is-IS:
     &ldquo;Tölvunarfræði er ekki fyrir einhvern annan. Hún er fyrir þig, hér og nú.&rdquo; 
     Geraldo, kennari
   homepage_hero_text_teacher1: |
-    &ldquo;Forritun er neisti til sköpunar, innblásturs og nýbreytni &mdash; 
+    &ldquo;Forritun er kveikja sköpunar, innblásturs og nýbreytni &mdash; 
     sem allt eru ómissandi þættir í hvaða starfsferli sem er.&rdquo;
     Floresa, kennari
   homepage_hero_text_teacher2: |
-    &ldquo;Í þessu verkefni voru 100% nemenda minna virkir, áhugasamir þátttakendur.&rdquo;
+    &ldquo;Í þessu verkefni voru 100% nemendanna virkir, áhugasamir þátttakendur.&rdquo;
     Adam, kennari
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc línur af kóða skrifaðar af nemendum'
+  homepage_hero_text_stat_students: '#student_count nemendur skráðir í Kóðastúdíóið'
+  homepage_hero_text_stat_served: 'Klukkustund kóðunar: miðlað til #served'
   homepage_slot_text_hoc: Klukkustund kóðunar
   homepage_slot_text_frozen: Frozen með Önnu og Elsu
   homepage_slot_text_teacher: Stjórnborð kennara
@@ -186,7 +187,7 @@ is-IS:
   homepage_action_text_signpetition: Skrifaðu undir áskorunina
   homepage_signpetition_dropdown: 'Skrifaðu undir áskorun okkar &#x25BE;'
   homepage_banner_text_main: Code.org og College Board vinna saman að því að auka fjölbreytni í tölvunarfræði.
-  homepage_banner_text_link: Nánar
+  homepage_banner_text_link: Læra meira
   homepage_slot_text_title_hoc: Klukkustund kóðunar
   homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
   homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
@@ -282,6 +283,24 @@ is-IS:
   dashboard_landing_view_progress: 'Skoða framvindu fyrir %{biggest_section}'
   dashboard_landing_available_title: Tiltæk námskeið
   dashboard_landing_available_courses: Þetta eru námskeiðin sem eru nú tiltæk fyrir þig og nemendur þína.
+  dashboard_landing_more_tutorials: Viltu sjá enn meira kennsluefni?
+  dashboard_landing_more_tutorials_desc: 'Það er hægt að nálgast áframhaldandi <a href="/learn/beyond">kennsluefni hjá samstarfsaðilum okkar.</a> Lærðu að forrita með vélmennum, búa til vefsíður, búa til eigið app, eða kynntu þér önnur forritunarmál eins og C++, Ruby eða Python!'
+  dashboard_hoc_courses: Klukkstund kóðunar fyrir alla aldurshópa
+  dashboard_hoc_courses_desc: Prófaðu eitthvað af þessum styttri stöku kennslustundum með nemendum þínum!
+  dashboard_k5_courses: 20 tíma námskeið fyrir 5-11 ára
+  dashboard_k5_courses_desc: 'Þessi námskeið nota netæfingar, sem leiða nemendur áfram á þeirra hraða, ásamt "ótengdum" æfingum sem þurfa ekki aðgang að tölvu. Hvert námskeið er um 20 stundir og getur verið kennt samfellt eða dreift yfir önn. Sumt af efninu krefst jafnvel ekki lestrarkunnáttu. Til að koma kennurum af stað bjóðum við ókeypis verkstæði út um Bandaríkin.  <a href="/professional-development-workshops">Skoðaðu framboðið!</a>'
+  dashboard_middle_courses: 20 stunda miðskólanámskeið
+  dashboard_middle_courses_desc: 'Námsefni okkar fyrir miðskóla setur tölvunarfræði og forritun í samhengi við námsefni miðskóla í stærðfræði og vísindum - sem tæki til að kenna hugtök í stærðfræði og vísindum. Skráning í verkstæði kennara fer fram með því að sækja um <a href="/educate/districts">samstarf skólaumdæmis</a> við Code.org.'
+  dashboard_high_courses: Heilsárs framhaldsskólanámskeið
+  dashboard_high_courses_desc: 'Við hjálpum framhaldsskólum að bjóða heilsárs kennslu í tölvunarfræði með því að undirbúa kennara svo þeir geti boðið upp á þessa nýju grein. Skráning í verkstæði kennara fer fram með því að sækja um <a href="/educate/districts">samstarf skólaumdæmis</a> við Code.org.'
+  dashboard_course_csina: Tölvunarfræði í algebru
+  dashboard_course_csina_desc: Code.org starfar með Bootstrap við að þróa námsefni sem kennir hugtök í algebru og flatarmálsfræði með forritun.
+  dashboard_course_csins: Tölvunarfræði í vísindum
+  dashboard_course_csins_desc: Code.org starfar með Project GUTS við að útbúa kynningu á hugtökum tölvunarfræði i gegnum gerð líkana og herma.
+  dashboard_course_ecs: Tölvunarfræði könnuð
+  dashboard_course_ecs_desc: 'Exploring Computer Science er heilsársnámskeið í 6 einingum: Samspil tölvu og manns, Þrautalausnir, Vefhönnun, Forritun, Tölvun og gagnagreining, og Vélmenni.'
+  dashboard_course_csp: AP® Undirstöðuatriði tölvunarfræði
+  dashboard_course_csp_desc: Code.org hefur hannað ítarlegt, áhugavert og aðgengilegt námskeið þar sem kannaðar eru grundvallarhugmyndir tölvunar.
   dashboard_landing_loading: Hleð...
   dashboard_action_edit: Breyta
   dashboard_action_save: Vista
@@ -350,20 +369,29 @@ is-IS:
   dashboard_students_reset_password: Endurstilla leyniorð
   dashboard_students_share_section: 'Deila innskráningarsíðu þessa hóps með nemendum þínum:'
   dashboard_students_print_info: Prenta út spjöld með innskráningarupplýsingum nemenda þinna.
-  dashboard_students_secret_picture: Leynimynd
+  dashboard_students_secret_picture_title: Leynimynd
+  dashboard_students_secret_picture: 'Þessi hópur notar <b>mynd</b> sem aðgangslykil. Það þýðir að hver nemandi hefur leynilega mynd til að skrá sig inn með í stað leyniorðs. Nemendur ættu að nota vefslóðina hér fyrir ofan til að skrá sig inn.'
   dashboard_students_reset_picture: 'Þú getur endurstillt leynimynd nemanda hvenær sem er með því að velja <b>Sýna leyndarmál</b> og síðan <b>Endurstilla leyndarmál</b>. Ný leynimynd verður búin til sem nemandi notar til að skrá sig inn.'
-  dashboard_students_secret_word: Leyniorð
+  dashboard_students_secret_word_title: Leyniorð
+  dashboard_students_secret_word: 'Þessi hópur notar <b>orð</b> sem aðgangslykil. Það þýðir að hver nemandi hefur tvö leynileg orð til að skrá sig inn með í stað venjulegs aðgangsorðs. Nemendur ættu að nota vefslóðina hér fyrir ofan til að skrá sig inn.'
   dashboard_students_reset_word: 'Þú getur endurstillt leyniorð nemanda hvenær sem er með því að velja <b>Sýna leyndarmál</b> og síðan <b>Endurstilla leyndarmál</b>. Nýtt par leyniorða verður búið til sem nemandi notar til að skrá sig inn. '
   dashboard_students_join_link: Segðu nemendum þínum að búa til eigin aðgang og ganga svo í hópinn á
   dashboard_students_no_email: 'Ef nemendur hafa ekki netföng eða ef þú vilt búa til aðgang fyrir þá, breyttu þá gerð leyndarmáls fyrir þennan hóp í <b>leyniorð</b> eða <b>leynimynd</b>.'
   dashboard_students_print_page: Prenta þessa síðu
   dashboard_students_url: Vefslóð
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Smelltu hér</a> til að sækja persónuverndarskjal okkar sem þú getur deilt eða prentað handa nemendum.'
-  dashboard_curriculum_overview: 'Yfirlit 5 - 10 ára (K-5) námsefnis'
-  dashboard_view_all_lesson_plans: Sjá allar kennsluáætlanir
+  dashboard_curriculum_k5_title: Tilföng fyrir grunnskólakennara
+  dashboard_curriculum_middle_title: Tilföng fyrir miðskólakennara
+  dashboard_curriculum_high_title: Tilföng fyrir framhaldsskólakennara
+  dashboard_lesson_plans: Kennsluáætlanir
+  dashboard_view_all_lesson_plans: Hlaða niður öllum kennsluáætlunum fyrir Námskeið 1-3
   dashboard_course1: 'Námskeið 1:'
   dashboard_course2: 'Námskeið 2:'
   dashboard_course3: 'Námskeið 3:'
+  dashboard_course4: 'Námskeið 4 (beta): '
+  dashboard_curriculum: Námskrá
+  dashboard_curriculum_overview: 'Yfirlit 5 - 10 ára (K-5) námsefnis'
+  dashboard_overview: Yfirlit
   dashboard_sequence: Runa
   dashboard_framework: Umgjörð
   dashboard_standards: Staðlar
@@ -374,6 +402,10 @@ is-IS:
   dashboard_puzzle_solving: 'Þrautalausnir:'
   dashboard_student_worksheet: vinnublað nemanda
   dashboard_teacher_worksheet: vinnublað kennara
+  dashboard_curriculum_csina: 'Tölvunarfræði í algebru:'
+  dashboard_curriculum_csins: 'Tölvunarfræði í vísindum:'
+  dashboard_curriculum_csp: 'AP® Undirstöðuatriði tölvunarfræði:'
+  dashboard_curriculum_ecs: 'Tölvunarfræði könnuð:'
   dashboard_grade_k: K
   dashboard_grade_other: Annað
   dashboard_login_word: Orð
@@ -401,6 +433,7 @@ is-IS:
   dashboard_sections_password_account_creation: Textaaðgangsorð skráð af nemanda
   dashboard_sections_login_type_explanation: 'Þessi tafla á að hjálpa þér að velja hvernig aðgang þú vilt nota fyrir hóp: <b>mynd, orð eða netfang</b>.'
   dashboard_faq: Algengar spurningar
+  dashboard_faq_k5: Algengar spurningar grunnskólastigs
   code_hoc_coming: 'Klukkustund kóðunar er komin - 8. - 14. desember!'
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
   learn_more: Nánar
@@ -816,3 +849,6 @@ is-IS:
   processing_beyond_longdescription: Processing er forritunarmál, þróunarumhverfi og samfélag á netinu. Frá árinu 2001 hefur Processing stuðlað að hugbúnaðarlæsi innan myndlistargeirans og myndlistarlæsi innan tæknigeirans. Processing var upphaflega skapað sem teikniforrit og til að kenna undirstöðuatriði tölvuforritunar í myndrænu umhverfi, en er nú orðið að þróunarumhverfi fyrir atvinnumenn. Í dag er Processing notað af tugum þúsunda nema, listamanna, hönnuða, rannsóknaraðila og áhugamanna við lærdóm, mótun frumgerða og framleiðslu.
   alice_beyond_longdescription: Alice verkefnið notar frumlegt forritunarumhverfi til að styðja gerð hreyfimynda í þrívídd. Alice er með verkfæri og efnivið til að kenna og læra tölvunarmiðaða hugsun, verkefnalausnir og tölvuforritun og hentar fyrir breiðan aldurshóp.
   sphero_beyond_longdescription: Hvort sem þú ert foreldri eða fræðari þá er SPRK kennsluefnið skemmtilegt hraðnámskeið fyrir börn í forritun vélmenna og eflir þau um leið í raungreinum.
+  compatibility_https_header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
+  compatibility_https_message: "Til að auka öryggi erum við að skipta yfir í HTTPS frá og með %{https_date}. Þú munt ekki geta opnað Code.org eftir það nema með HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja HTTPS fyrir Code.org."
+  compatibility_https_hide_this_warning: Fela þessa aðvörun

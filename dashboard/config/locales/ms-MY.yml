@@ -373,8 +373,11 @@
     show_more: Tunjukkan Lagi
     classroom_activity: Cabut aktiviti
   home:
-    title: Code Studio
+    title: Kemajuan saya
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Sudah mendaftar? %{link}
@@ -417,6 +420,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Lelaki
     female: Perempuan
@@ -452,6 +456,12 @@
     autoplay_option: Video AutoMain
     download: Muat turun Video
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Hide this warning
     working:
       header: Kami sedang berusaha menyokong pelayar anda.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -510,9 +520,13 @@
       title: Kod Flappy
       body: ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit?
         Cuba tutorial kod Flappy kami!
-    20hour:
-      title: Kursus Pengenalan
-      body: Cuba 20 jam Pengenalan kepada kursus Sains Komputer kami.
+    20-hour:
+      title: Accelerated Course
+      body: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming.
+        Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia
+        adalah menyeronokkan untuk belajar di semua peringkat umur.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen

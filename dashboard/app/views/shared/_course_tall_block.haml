@@ -1,14 +1,16 @@
-- if id == 'hoc'
+- showState ||= false
+
+- if id == Script::HOC_NAME
   - url = hoc_reset_url
   - title = t('upsell.hoc.title')
   - body = t('upsell.hoc.body')
 
-- elsif id == 'flappy'
+- elsif id == Script::FLAPPY_NAME
   - url = script_reset_url('flappy')
   - title = t('upsell.flappy.title')
   - body = t('upsell.flappy.body')
 
-- elsif id == '20hour'
+- elsif id == Script::TWENTY_HOUR_NAME
   - url = script_url(id)
   - title = t('upsell.20hour.title')
   - body = t('upsell.20hour.body')
@@ -18,12 +20,12 @@
   - title = t('upsell.gallery.title')
   - body = t('upsell.gallery.body')
 
-- elsif %w(course1 course2 course3 course4).include?(id)
+- elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME].include? id
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- elsif %w(artist playlab hourofcode frozen infinity).include?(id)
+- elsif [Script::ARTIST_NAME, Script::PLAYLAB_NAME, Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME].include? id
   - url = script_reset_url(id)
   - if id == 'frozen'
     - title = t('upsell.frozen.title')
@@ -33,38 +35,35 @@
     - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-
 - if %w(course1 course2 course3 course4).include?(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
-  - block_class = 'miniblock-tall miniblock-tall-audiencerow'
-- else
-  - block_class = 'miniblock-tall'
+  
+- block_class = 'courseblock-tall'
 
-.span3.miniblock{class: block_class, style: 'overflow: hidden; position: relative;'}
-  =link_to url, {style:'text-decoration: none;'} do
+- if ! (current_user && showState)
+  - block_class << ' courseblock-noaction'
 
+.courseblock-span3.courseblock-tall{class: block_class}
+  =link_to url do
     .imgspan
-      = image_tag(CDO.shared_image_url("courses/logo_tall_#{id}.jpg"), height: '120', style: 'width: 100%; height: 120px')
-
+      = image_tag(CDO.shared_image_url("courses/logo_tall_#{id}.jpg"), height: '120px')
     .clear
-
     - if Script.beta? id
       .beta
-        .heading
-          %h3
-            = title
-          .betatext
-            = t('beta')
+        %h3
+          = title
+        .betatext
+          = t('beta')
     - else
-      .normal
-        .heading
-          %h3
-            = title
-
+      .heading
+        %h3
+          = title
     .clear
+    .smalltext= body
+    .clear
+    - if audience && current_user
+      .audiencebar.smalltext.audience= audience
+    - elsif audience && !current_user
+      .bottombar.smalltext.audience= audience
 
-    .smalltext.greytext{style: 'padding-left: 10px; padding-right: 10px; padding-top: 0px;'}= body
-
-    - if audience
-      .clear
-      .smalltext.whitetext.audience= audience
+    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }

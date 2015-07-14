@@ -1,7 +1,7 @@
 ru-RU:
   hello: Привет, мир!
   select_language: Выберите язык
-  computer_science: Информатика
+  en: Computer Science
   computer_science_edweek: Образовательная неделя компьютерных технологий
   csedweek_dates: 8-14 декабря 2014 года
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Час Кода</a> приближается. Приглашаем всех преподавателей и организаторов, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">запланируйте свой Час Кода</a>'
@@ -12,7 +12,7 @@ ru-RU:
   petition_message: Каждый ученик в каждой школе должен иметь возможность для изучения информатики
   petition_sign_message: 'Если Вы согласны, впишите свое имя.  Присоединяйтесь к # подписавших.'
   petition_sign_message_support: 'Если вы поддерживаете нас, подпишите свое имя.  Присоединяйтесь к #остальным.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Присоединяйтесь к #остальным'
   name: Имя
   email: Электронная почта
   zipcode: Почтовый индекс или страна
@@ -45,6 +45,7 @@ ru-RU:
   congratulations: Поздравляем!
   congratulations_on_completing_hoc: Поздравляем с завершением одного Часа программирования
   get_a_certificate_of_achievement: Получить сертификат о результате
+  enter_valid_age: Please select a valid age
   enter_valid_email: Пожалуйста, введите действительный адрес электронной почты
   get_a_certificate_message: "Мы вышлем Вам сертификат и информацию о том, как <a href='/learn/beyond'>Учиться дальше!</a>"
   get_a_certificate_message_after: "Нажми на сертификат для его загрузки или отправки на печать. А теперь продолжи <a href='http://studio.code.org'>с другими нашими курсами</a> или посмотри какие еще есть возможности <a href='/learn/beyond'>Научиться За Один Час</a>."
@@ -141,9 +142,9 @@ ru-RU:
   homepage_hero_text_teacher2: |
     &ldquo;Эта программа оказалась привлекательной для 100% моих учеников, они захотели поучаствовать в этом.&ldquo; 
     Адам, учитель
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc строк кода, написанного студентами'
+  homepage_hero_text_stat_students: '#student_count учётных записей студентов в Студии Кода'
+  homepage_hero_text_stat_served: 'Час Кода: #served уже попробовали'
   homepage_slot_text_hoc: Час кода
   homepage_slot_text_frozen: Холодное сердце с Анной и Эльзой
   homepage_slot_text_teacher: Панель управления преподавателя
@@ -253,6 +254,24 @@ ru-RU:
   dashboard_landing_view_progress: 'Просмотр Прогресса %{biggest_section}'
   dashboard_landing_available_title: Доступные курсы
   dashboard_landing_available_courses: Доступные в данный момент курсы для вас и ваших учеников.
+  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
+  dashboard_hoc_courses: The Hour of Code for All Ages
+  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
+  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
+  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_course_csina: Информатика в алгебре
+  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_ecs: Изучение информатики
+  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
+  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
   dashboard_landing_loading: ЗАГРУЗКА...
   dashboard_action_edit: Редактировать
   dashboard_action_save: Сохранить
@@ -319,8 +338,10 @@ ru-RU:
   dashboard_students_reset_password: Сменить пароль
   dashboard_students_share_section: 'Поделитесь страницей со своими студентами для входа в этот раздел:'
   dashboard_students_print_info: Распечатать карточки с данными для доступа учеников.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: Секретное изображение
   dashboard_students_reset_picture: 'Вы может поменять секретное изображение ученика в любое время, выберите <b>Показать секрет</b>,  затем <b>Сменить секрет</b>. Новое секретное изображение будет сгенерировано для входа этого ученика.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: Секретное слово
   dashboard_students_reset_word: 'Вы можете сбросить секретные слова ученика в любое время выбрав <b>Показать секрет</b> и затем <b>Сбросить секрет</b>. Новая пара секретных слов  будет сгенерирована для этого ученика при входе. '
   dashboard_students_join_link: Скажите вашим ученикам создать свои собственные учетные записи и присоединиться к вашему разделу в
@@ -328,11 +349,18 @@ ru-RU:
   dashboard_students_print_page: Распечатать эту страницу
   dashboard_students_url: Ссылка
   dashboard_privacy_document_link: 'Распечатать нашу политику конфиденциальности или поделиться можно<a href="/privacy/student-privacy", target="_blank">здесь</a>.'
-  dashboard_curriculum_overview: Обзор программы для дошкольников и учеников начальной школы
+  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_middle_title: Middle School Educator Resources
+  dashboard_curriculum_high_title: High School Educator Resources
+  dashboard_lesson_plans: Lesson Plans
   dashboard_view_all_lesson_plans: Посмотреть все планы уроков
   dashboard_course1: 'Курс 1:'
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
+  dashboard_course4: 'Course 4 (beta): '
+  dashboard_curriculum: Curriculum
+  dashboard_curriculum_overview: Обзор программы для дошкольников и учеников начальной школы
+  dashboard_overview: Overview
   dashboard_sequence: Последовательность
   dashboard_framework: Структура
   dashboard_standards: Стандарты
@@ -343,6 +371,10 @@ ru-RU:
   dashboard_puzzle_solving: 'Решение головоломок:'
   dashboard_student_worksheet: Рабочий лист студента
   dashboard_teacher_worksheet: Рабочий лист преподавателя
+  dashboard_curriculum_csina: 'Computer Science in Algebra:'
+  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: Детский сад
   dashboard_grade_other: Другое
   dashboard_login_word: Слово
@@ -370,6 +402,7 @@ ru-RU:
   dashboard_sections_password_account_creation: Текстовый пароль, созданный учеником
   dashboard_sections_login_type_explanation: 'Это таблица поможет понять, какой из типов входа, <b>изображение, слово, или email</b> Вам лучше всего использовать, чтобы выбрать раздел.'
   dashboard_faq: ЧАсто задаваемые ВОпросы
+  dashboard_faq_k5: K-5 Frequently Asked Questions
   code_hoc_coming: '"Час кода" наступает - 8-14 декабря!'
   code_sign_up: Зарегистрируйтесь для участия в Неделе Информатики
   learn_more: Подробнее
@@ -789,3 +822,6 @@ ru-RU:
   processing_beyond_longdescription: 'Processing - это язык программирования, среда разработки, и онлайновая сообщество. Начиная с 2001 года, Processing способствует обучению информатике в контексте визуального искусства и технологий. Изначально, он был создан для разработки программных макетов и преподавания основ программирования в графическом аспекте, теперь Processing превратился в инструмент разработки для профессионалов. На сегодняшний день десятки тысяч учеников, студентов, художников, дизайнеров, исследователей, и любителей используют Processing для обучения, создания прототипов, и проектов.'
   alice_beyond_longdescription: Используя инновационную среду программирования для создания 3D-анимации, проект Alice предлагает инструменты и учебные материалы для обучения вычислительному мышлению, навыкам решения задач и программированию для учеников разного возраста и уровней.
   sphero_beyond_longdescription: Неважно, являетесь ли вы педагогом или родителем, уроки SPRK позволят детишкам пройти интенсивный курс по программированию роботов, одновременно улучшая их навыки в математике и точных науках.
+  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_hide_this_warning: Скрыть это предупреждение

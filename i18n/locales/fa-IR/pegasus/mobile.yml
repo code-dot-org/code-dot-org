@@ -1,7 +1,7 @@
 fa-IR:
   hello: سلام دنیا
   select_language: لطفا زبان خود را انتخاب کنید
-  computer_science: علوم رایانه
+  en: Computer Science
   computer_science_edweek: هفته‌ی آموزش علوم رایانه
   csedweek_dates: 8-14 دسامبر، 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی</a> دارد میآید. همه‌ی دبیران و برنامه گزاران را صدا میزند، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی خود را برنامه‌ریزی کنید</a>'
@@ -12,7 +12,7 @@ fa-IR:
   petition_message: هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته باشد
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به پیوندید.'
   petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به #دیگران بپیوندید.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'به #دیگران ملحق شوید'
   name: نام
   email: ایمیل
   zipcode: کدپستی یا کشور
@@ -45,6 +45,7 @@ fa-IR:
   congratulations: آفرین!
   congratulations_on_completing_hoc: تبریک برای کامل کردن یک ساعت کد نویسی
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
+  enter_valid_age: Please select a valid age
   enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
   get_a_certificate_message: "ما گواهی تحصیل و اطلاعات در مورد چگونگی <a/> یادگیری فراتراز یک ساعت <'a href='/learn/beyond> را برای شما ارسال خواهیم کرد"
   get_a_certificate_message_after: "برای دانلود یا چاپ مدرک خودتان روی عکس مدرک کلیک کنید. حالا می توانید  <a href='http://studio.code.org'> بقیه درسها</a>ی ما را ببینید و یا با مراجعه به بخش  <a href='/learn/beyond'> از یک ساعت برنامه نویسی فراتر بروید</a> امکانات دیگر سایت را مشاهده کنید."
@@ -145,36 +146,29 @@ fa-IR:
     &ldquo;اگر شما کد بزنید، می توانید مسیر زندگیتان را مشخص و انتخاب کنید.&rdquo;
     کریس بوش
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo;این مهارت ها آینده ی من را تغییر دادند. لازم به ذکر نیست، این فقط تفریح ساده است.&rdquo;
+    لونا، کلاس هفتم
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo;من هیچ وقت، هرگز بچه هامو درباره ی یادگیری اینقدر هیجان زده ندیده ام.&rdquo;
+    میشل، معلم
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo; علوم کامپیوتر رشته ای است که چه خوشتان بیاید چه نه نمی توانید قبل از امتحان کردنش آن را بشناسید.&rdquo;
+    جکسون، کلاس ششم
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo; شما با برنامه نویسی می توانید هرکاری که ذهنتان می خواهد انجام دهید.&rdquo;
+    مایا، کلاس دوم
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo;علوم کامپیوتر برای کس دیگری نیست. برای شماست، اینجا، حالا.&rdquo;
+    جرالدو، معلم
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo; کد زدن خلاقیت، الهام گرفتن و نوآوری را پرورش می دهد&mdash; که همه ی آن ها در هر شغلی اساسی هستند.&rdquo;
+    فلوریسا، معلم
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo;صد درصد دانش آموزان من در این برنامه درگیر شدند، حضور پیدا و شرکت کردند.&rdquo;
+    آدام، معلم
+  homepage_hero_text_stat_loc: 'خطوط #کد نوشته شده توسط دانش آموزان'
+  homepage_hero_text_stat_students: '#دانش آموز- حساب کاربری نگه دارنده سوابق و اطلاعات دانش آموز در استودیو ی کد'
+  homepage_hero_text_stat_served: 'ساعت کد نویسی: # طی شده گذرانده'
   homepage_slot_text_hoc: ساعتی با کدنویسی
   homepage_slot_text_frozen: کارتون Frozen با آنا و السا
   homepage_slot_text_teacher: Teacher Dashboard
@@ -184,11 +178,11 @@ fa-IR:
   homepage_slot_text_flappy: کدنویسی Flappy
   homepage_action_text_codevideo: فیلم را تماشا کنید
   homepage_action_text_teachervideo: فیلم را تماشا کنید
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: یادگیری را شروع کنید
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: 'درخواست ما را امضا کنید  &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع علوم کامپیوتر را بهبود ببخشند.
+  homepage_banner_text_link: بیشتر بیاموزید
   homepage_slot_text_title_hoc: ساعتی با کد
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
@@ -207,7 +201,7 @@ fa-IR:
   homepage_slot_text_title_advocates: مدافعان
   homepage_slot_text_blurb_advocates: از کار ما حمایت کنید
   homepage_slot_text_link_stats: آمار ها را ببینید
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: شرکت کنید
   homepage_slot_text_link_donate: پولی اهدا کنید
   homepage_header_codestudio: ابداعات دانش آموزان استودیو ی کد
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
@@ -284,6 +278,24 @@ fa-IR:
   dashboard_landing_view_progress: 'مشاهده‌ی پیشرفتِ %{biggest_section}'
   dashboard_landing_available_title: دوره‌های قابل دسترس
   dashboard_landing_available_courses: 'دوره های که در  حال حاضر در دسترس  هستند برای شما و دانش آموزان شما در اینجا هستند.'
+  dashboard_landing_more_tutorials: می خواهی بازم هم آموزش های بیشتری را ببینی؟
+  dashboard_landing_more_tutorials_desc: 'آموزش های بیشتری وجود دارند که <a href="/learn/beyond">توسط مشارکت کنندگان ما ارائه شده اند.</a> برنامه نویسی با استفاده از روبات ها، ساختن صفحات وب و ساختن برنامه شخصی خودتان را یاد بگیرید و در زبان های دیگری مثل C++، Ruby، و Python کاوش کنید.'
+  dashboard_hoc_courses: ساعت کدنویسی برای همه سنین
+  dashboard_hoc_courses_desc: این آموزش های کوتاه 1 ساعته را با دانش آموزان خود تمرین کنید!
+  dashboard_k5_courses: دوره های 20 ساعته برای پیش دبستانی
+  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
+  dashboard_middle_courses: دوره های 20 ساعته برای راهنمایی
+  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_high_courses: دوره های سالانه برای دبیرستان
+  dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_course_csina: علوم کامپیوتر در جبر
+  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csins: علوم کامپیوتر در سایر علوم
+  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_ecs: کاوش در علم کامپیوتر
+  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
+  dashboard_course_csp: مفاهیم AP® علوم کامپیوتر
+  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
   dashboard_landing_loading: در حال بارگذاری...
   dashboard_action_edit: ویرایش
   dashboard_action_save: ذخيره
@@ -350,8 +362,10 @@ fa-IR:
   dashboard_students_reset_password: تنظیم مجدد گذرواژه
   dashboard_students_share_section: 'صفحه ورود به این بخش را با دانش آموزان خود به اشتراک بگذارید:'
   dashboard_students_print_info: کارت های اطلاعات ورود دانش آموزان خود راه چاپ نمایید.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: عکس مخفی
   dashboard_students_reset_picture: 'شما در هر زمان میتوانید عکس محرمانه هر دانش آموز را تغییر دهید با انتخاب <b>نمایش محرمانه</b> و سپس <b>تغییر محرمانه</b>. با انجام این کار، یک عکس محرمانه جدید برای استفاده آن دانش آموز در هنگام ورودش به سیستم تولید خواهد شد.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: کلمه محرمانه
   dashboard_students_reset_word: 'شما در هر زمان میتوانید کلمات محرمانه هر دانش آموز را تغییر دهید با انتخاب <b>نمایش رمز</b> و سپس <b>تغییر رمز</b>. با انجام این کار، یک جفت کلمه محرمانه جدید برای استفاده آن دانش آموز در هنگام ورود به سیستم تولید خواهد شد. '
   dashboard_students_join_link: به دانش آموزان خود بگویید که حساب کاربری خود را ایجاد کنند و بپیوندند به بخش شما در
@@ -359,11 +373,18 @@ fa-IR:
   dashboard_students_print_page: چاپ این صفحه
   dashboard_students_url: آدرس اینترنتی
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank"> اینجا را کلیک کنید</a> برای مشاهده سند حریم خصوصی ما، که می توانید آن رابرای دانش آموزان خود به اشتراک بگذارید یا چاپ نمایید.'
-  dashboard_curriculum_overview: بررسی اجمالی برنامه کلاس پنجمی ها
+  dashboard_curriculum_k5_title: منابع آموزشی پیش از دبستان
+  dashboard_curriculum_middle_title: منابع آموزشی دوره راهنمایی
+  dashboard_curriculum_high_title: منابع آموزشی دوره دبیرستان
+  dashboard_lesson_plans: برنامه های درسی
   dashboard_view_all_lesson_plans: مشاهده تمام برنامه های درسی
   dashboard_course1: 'دوره 1:'
   dashboard_course2: 'دوره 2:'
   dashboard_course3: 'دوره 3:'
+  dashboard_course4: 'درس 4 (بتا): '
+  dashboard_curriculum: برنامه آموزشی
+  dashboard_curriculum_overview: بررسی اجمالی برنامه کلاس پنجمی ها
+  dashboard_overview: بررسی اجمالی
   dashboard_sequence: دنباله
   dashboard_framework: چارچوب کار
   dashboard_standards: استانداردها
@@ -374,6 +395,10 @@ fa-IR:
   dashboard_puzzle_solving: 'حل پازل:'
   dashboard_student_worksheet: ورقه کار دانش آموزان
   dashboard_teacher_worksheet: ورقه کار معلم
+  dashboard_curriculum_csina: 'علوم کامپیوتر در جبر:'
+  dashboard_curriculum_csins: 'علوم کامپیوتر در علم:'
+  dashboard_curriculum_csp: 'مفاهیم ® AP علوم کامپیوتر:'
+  dashboard_curriculum_ecs: 'کاوش در علوم کامپیوتر:'
   dashboard_grade_k: K
   dashboard_grade_other: دیگر
   dashboard_login_word: واژه
@@ -401,6 +426,7 @@ fa-IR:
   dashboard_sections_password_account_creation: کلمه عبور متنی ایجاد شده توسط دانش آموز
   dashboard_sections_login_type_explanation: 'این جدول به توضیح این که شما کدامیک از روش های ورود به سیستم،<b> مثل تصویر، کلمه، یا ایمیل</b>، را می خواهید برای یک بخش انتخاب کنید کمک می کند.'
   dashboard_faq: پرسش و پاسخ‌های متداول
+  dashboard_faq_k5: پرسش های متداول پیش از دبستان
   code_hoc_coming: 'ساعت کد نویسی اینجاست - 8 تا 14 دسامبر!'
   code_sign_up: ثبت نام کنید برای شرکت کردن تو هفته ی آموزش علوم کامپیوتر
   learn_more: بیشتر یاد بگیرید
@@ -816,3 +842,6 @@ fa-IR:
   processing_beyond_longdescription: پردازش کردن یک زبان برنامه نویسی، محیط توسعه، و جامعه ی آنلاین است. از سال 2001، پردازش در تکنولوژی قابلیت نرم افزار را در هنر های تجسمی و شناسایی تصویر ارتقا داده است. پردازش که ابتدا ایجاد شد تا کتاب طراحی نرم افزار باشد و تا اصول برنامه نویسی کامپیوتر را در زمینه تصویری آموزش دهد، به یک ابزار توسعه برای حرفه ای ها ارتقا پیدا کرد. امروزه، ده ها هزار دانش آموز، هنرمند، طراح، محقق، و علاقه مند وجود دارد که از پردازش برای آموختن، نمونه سازی، و تولید استفاده می کند.
   alice_beyond_longdescription: پروژه ی آلیس با استفاده از یک محیط برنامه نویسی جدید برای پشتیبانی تولید انیمیشن های سه بعدی، ابزار ها و مواد برای یاد دادن و یاد گرفتن تفکر حل مساله به روش کامپیوتری، حل مساله، و برنامه نویسی کامپیوتر را برای طیفی از سنین و تحصیلات فراهم میکند.
   sphero_beyond_longdescription: اگر یک آموزگار یا پدر و مادر هستید، درس های SPRK یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی های آن ها در ریاضی و علوم را تقویت می کند.
+  compatibility_https_header: لطفا مرور امن (HTTPS) را برای code.org فعال کنید.
+  compatibility_https_message: "برای افزایش امنیت سایت ما در تاریخ %{https_date} به حالت مرور امن (HTTPS) تغییر می کند. شما بعد از این تاریخ به Code.org دسترسی نخواهید داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>."
+  compatibility_https_hide_this_warning: مخفی کردن هشدار

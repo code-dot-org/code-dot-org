@@ -1,0 +1,35 @@
+name 'OPD-K5 Welcome 2'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### GETTING STARTED > Code.org Courses
+
+<br/>
+The goal of Code.org's professional development program is to prepare teachers like you to integrate computer science into your classroom and support your growth as a teacher. After completing this online course, you'll be ready to teach one or more of the following Code.org courses in your classroom:
+<ul>
+<li> [Course 1](http://studio.code.org/s/course1): approx 20 hours (Ages 4-6)</li>
+<li>[Course 2](http://studio.code.org/s/course2): approx 20 hours (Ages 6-18)</li>
+<li>[Course 3](http://studio.code.org/s/course3): approx 20 hours (Ages 8-18)</li> 
+<li>[Course 4 (BETA)](http://studio.code.org/s/course4): approx 20 hours (Ages 10-18)</li>
+</ul>
+
+
+We'll also point you in the direction of more support in case you're interested in teaching some of our other, more in-depth courses, such as:
+<ul>
+<li>[Computer Science in Algebra](http://code.org/curriculum/algebra/) (Middle School, grades 6-8)</li> 
+<li>[Computer Science in Science](http://code.org/curriculum/science/) (Middle School, grades 6-8)</li> 
+<li>[Exploring Computer Science](http://www.exploringcs.org/) (High School, grades 9-12)</li> 
+<li>[Computer Science Principles](http://code.org/educate/csp)(High School, grades 9-12)</li>
+</ul>
+
+Finally we'll cover some other resources and activities you may consider using in your classroom:
+<ul>
+<li>[Accelerated Course](http://studio.code.org/s/20-hour): approx 20 hours (Ages 10-18)</li>
+<li>[Code Studio Activities](http://code.org/learn) (ages vary)</li> 
+<li>[Other resources](http://code.org/educate/3rdparty) (ages vary)</li>
+</ul>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

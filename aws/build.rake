@@ -31,8 +31,8 @@ def build_task(name, dependencies=[], params={})
       touch path
     rescue => e
       HipChat.log "<b>#{name}</b> FAILED!", color:'red', notify:1
-      HipChat.log "/quote #{e}", message_format:'text'
-      raise
+      HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format:'text'
+      raise $!, $!.message, []
     end
   end
 

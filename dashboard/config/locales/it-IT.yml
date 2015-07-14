@@ -391,7 +391,10 @@
     classroom_activity: Attività "Senza Rete"
   home:
     title: Officina del Codice
+    description: Code Studio è la base di partenza per i corsi online creati da Code.org
     lines_of_code: '%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI'
+    lines_of_code_linebreak: '%{lines_count} linee di codice <br/> scritte da %{students_count}
+      milioni di studenti'
     all_courses: Panoramica dei corsi 1, 2 e 3
     lesson_plans: Piani di lavoro delle lezioni
     signin_message: Già iscritto? %{link}
@@ -436,10 +439,10 @@
     heading_elementary: <h2>Corsi di 20 ore</h2><h1>per principianti (di tutte le
       età)</h1>
     heading_apps: <h2>Divertimento per</h2><h1>tutti</h1>
-    heading_legacy: <h2>Il nostro Corso Introduttivo per </h2><h1>utenti di tutte
-      le età</h1>
+    heading_legacy: <h2> Corso introduttivo per </h2><h1> tutte le età</h1>
     your_gallery: La tua collezione
     no_primary_course: Prova un corso presso Studio Code
+    print_certificate: Stampa il certificato
   gender:
     male: Maschile
     female: Femminile
@@ -475,6 +478,12 @@
     autoplay_option: Avvia automaticamente i video
     download: Scarica il video
   compatability:
+    https:
+      header: Serve abilitare il protocollo HTTPS per Code.org.
+      message: Per aumentare la sicurezza, noi stiamo passando a HTTPS su %{https_date}.
+        Non sarete in grado di accedere Code.org dopo questa data. <a href='%{it_requirements_url}'>
+        Clicca qui</a> per informazioni su come abilitare HTTPS per accedere a Code.org.
+      hide_this_warning: Nascondi questo avviso
     working:
       header: Stiamo lavorando per supportare il tuo browser.
       message: Code.org utilizza una moderna tecnologia web. Questo rende il sito
@@ -537,9 +546,13 @@
       title: Codice di "Flappy"
       body: Vuoi creare il tuo gioco in meno di 10 minuti? Prova il corso sul Codice
         di "Flappy"!
-    20hour:
-      title: Corso Introduttivo
-      body: Prova il nostro corso introduttivo di informatica in 20 lezioni.
+    20-hour:
+      title: Corso accelerato
+      body: Questo corso in 20 lezioni introduce i concetti fondamentali dell'informatica
+        e della programmazione. Il corso è progettato per l'uso nelle scuole elementari
+        e medie inferiori, ma è divertente per imparare a qualunque età.
+      body_short: Acquisici le basi di informatica utilizzando una versione accelerata
+        dei corsi 2-4.
     hoc2014:
       try_new_tutorial: Prova la nuova lezione dell'Ora del Codice in versione provvisoria
       try_frozen: Artista con Anna ed Elsa, da Frozen
@@ -550,7 +563,8 @@
       title: Frozen
     infinity:
       title: Il Laboratorio dell'Infinito
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Utilizzare il laboratorio Play Lab per creare una storia o un gioco con
+        protagonisti i personaggi di Disney Infinity.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
@@ -571,8 +585,8 @@
     prerelease: Questo corso è in <span class='betatext'>versione provvisoria</span>.  Significa
       che non è la versione finale ed è soggetto a revisioni man mano che arrivano
       osservazioni e vengono fatti miglioramenti.
-    prerelease_hoc2014: Questa lezione è in <span class='betatext'>versione provvisoria</span>.
-      È soggetta a revisione man mano che arrivano osservazioni in modo da migliorarla.
+    prerelease_hoc2014: Questo corso è in <span class='betatext'>versione provvisoria</span>.
+      È soggetto a revisione man mano che arrivano osservazioni in modo da migliorarlo.
     feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
@@ -581,14 +595,14 @@
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
     correct_title: Molto bene!
-    correct_body: Questa risposta è corretta.
+    correct_body: Questa è la risposta corretta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Riprova!
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
     correct_title: Molto bene!
-    correct_body: Questa risposta è corretta.
+    correct_body: Questa è la risposta corretta.
   contract_match:
     wrong_title: Risposta non corretta
     badname: Il vostro contratto ha il nome sbagliato.
@@ -662,7 +676,7 @@
     completed_too_many_blocks: completato, ma usando troppi blocchi
     completed_perfect: completato in modo perfetto
     furthest_level_attempted: livello più avanzato che è stato provato
-    assessment: valutazione
+    assessment: verifica
   studio:
     courses_working_on: Corsi su cui stai lavorando
     completed_courses: Corsi completati
@@ -685,9 +699,9 @@
     name: Nome
     updated: Aggiornato
     project_type: Tipo di progetto
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
+    help_text: Fare clic su <strong>Crea una App</strong> o <strong>Disegnaqualcosa</strong>
+      qui sotto per creare un nuovo progetto Play Lab o Artista! <br/> E' possibile
+      tornare a lavorare sui vostri progetti in qualsiasi momento.
     need_help: Hai bisogno di aiuto per iniziare?
     really_delete: Elimina?
     delete_yes: Sì
@@ -695,10 +709,10 @@
     saved: Salvato
     not_saved: Non salvato
     cancel: Annulla
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
+    delete_confirm_title: Sei sicuro di voler rimuovere questo progetto?
+    delete_confirm_text: L'eliminazione del progetto lo rimuoverà in modo permanente
+      dal tuo elenco progetti. Se avete condiviso il link con altri questi non saranno
+      non più in grado di visualizzare il progetto.
     view_all: Mostra i miei progetti
     remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    click_to_remix: Fare clic su 'Remix' per ottenere una tua versione derivata!

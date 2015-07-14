@@ -75,24 +75,24 @@
         one: '1 Fehler verhinderte das Speichern von %{resource}:'
         other: '%{count} Fehler verhinderten das Speichern von %{resource}:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
+      send_instructions: Eine Einladungs-Email wurde an %{email} gesendet.
+      invitation_token_invalid: Das Einladungs-Token ist ungültig!
+      updated: Dein Passwort wurde erfolgreich festgelegt. Du bist jetzt angemeldet.
+      no_invitations_remaining: Keine Einladungen übrig
       invitation_removed: Deine Einladung wurde entfernt.
       new:
         header: Einladung senden
         submit_button: Schicke eine Einladung
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Wähle dein Kennwort
+        submit_button: Mein Kennwort festlegen
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
+        subject: Einladungs-Anweisungen
         hello: Hallo %{email}
         someone_invited_you: Jemand hat sie eingeladen %{url}, Sie können es über
           den Link unten Akzeptieren.
         accept: Einladung Annehmen
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        ignore: Wenn Sie diese Einladung nicht annehmen möchten, ignorieren Sie bitte
+          diese E-Mail. <br /> Ihr Konto wird nicht erstellt werden, bis Sie den obigen
+          Link zugreifen und Ihr Kennwort einstellen.

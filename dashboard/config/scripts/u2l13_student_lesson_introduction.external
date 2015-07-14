@@ -13,13 +13,17 @@ Encryption is a process - an algorithm - for transforming a message so that the 
 
 # Vocabulary
 
-algorithm: a sequential process for solving a problem.
+* **Algorithm**: a sequential process for solving a problem.
 
-encryption: encoding a message with an algorithm so that it is unreadable.
+* **Encryption**: encoding a message with an algorithm so that it is unreadable.
 
-decryption: reversing the encryption process to reveal the original message.
+* **Decryption**: reversing the encryption process to reveal the original message.
 
-locks and keys: common terms for encryption and decryption algorithms.
+* **Locks and keys**: common terms for encryption and decryption algorithms.
+
+* **Caesar Cipher**: an encoding technique that shifts letters of the alphabet by a fixed amount.
+
+* **Random Substitution**: an encoding technique that maps each letter of the alphabet randomly to different letters or characters.
 
 
 # Lesson
@@ -31,7 +35,11 @@ locks and keys: common terms for encryption and decryption algorithms.
 
 # Resources
 
-* Resource: <a href="http://code.org/quotes"target="_blank">Quotes</a>
+* [Encryption Reading and Activity Guide](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/edit)
+
+* [Blown to Bits: Chapter 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)
+
+* [Frequency Analysis Widget](http://cspdashboard-c9-bfranke.c9.io/crypto/)
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

@@ -65,8 +65,8 @@
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} sinh viên đã đăng ký.'
+    teacher_count: '%{count} giáo viên đã đăng ký.'
     overview_student: Đăng ký cho một tài khoản để theo dõi tiến độ của bạn. Email
       của bạn chủ yếu được sử dụng để cho phép bạn đăng nhập vào và phục hồi mật khẩu.
       Để biết thêm chi tiết, xem <a href="http://code.org/privacy">Chính sách bảo
@@ -220,99 +220,101 @@
         not_earned_title: Dạy cho các lớp học, kiếm được lên đến $1,000 trong <a target="_blank"
           href="http://DonorsChoose.org"> DonorsChoose.org</a> (chỉ dành cho giáo
           viên Hoa Kỳ)
-        not_earned: To reward first-time computer science teachers, you can earn up
-          to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits
-          for guiding a classroom through the K-8 intro course. To qualify, you need
-          to successfully host a classroom of at least 15 students through the entire
-          K-8 intro course, with all 15 students (or more) completing all tutorials
-          and earning all %{num_trophies} trophies. If 7 or more of the students who
-          earn all of the trophies are girls, your reward is $1,000 in <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise,
-          your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          credits can only be used by teachers in U.S. public schools.
+        not_earned: Như một phần thưởng cho những giáo viên dạy lập trình lần đầu
+          tiên, bạn có thể nhận được tối đa $1,000 trong khoản tín dụng  <a href="http://DonorsChoose.org">DonorsChoose.org</a>
+          từ việc hướng dẫn một lớp học thông qua khóa học K-8 cơ bản. Để đạt đủ điều
+          kiện, bạn cần hướng dẫn thành công một lớp học K-8 cơ bản với ít nhất 15
+          học sinh, với tất cả 15 học sinh (hoặc nhiều hơn) hoàn thành tất cả bài
+          học và đạt được tất cả  %{num_trophies} danh hiệu. Nếu 7 học sinh hoặc nhiều
+          hơn đạt được tất cả danh hiệu, mà các học sinh này là nữ, phần thưởng của
+          bạn là $1,000 trong   khoản tín dụng <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
+          Nếu không, phần thưởng của bạn là $750 trong khoản tín dụng  <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a>. Khoản tín dụng  <a
+          target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> chỉ
+          có thể sử dụng bởi giáo viên ở các trường công lập tại Mỹ.
         bonus:
           not_earned_title: You can still earn an additional $250 in <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
             only)
           earned: 7 or more of the students who collected all %{num_trophies} trophies
             are girls. You have won a bonus prize! (U.S. teachers only)
-          not_earned: If at least 7 of your students who earn all %{num_trophies}
-            trophies are girls, your reward is an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
-            used by teachers in U.S. public schools.
+          not_earned: Nếu ít nhất 7 học sinh của bạn đạt được tất cả  %{num_trophies}
+            các danh hiệu, mà các học sinh này là nữ, phần thưởng của bạn là $250
+            trong khoản tín dụng <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            credits. Khoản tính dụng  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            chỉ có thể sử dụng bởi giáo viên ở các trường công lập tại Mỹ.
   crud:
-    new_model: New %{model}
+    new_model: Mới %{model}
     show: HIẻn thị
     edit: Chỉnh sửa
-    edit_model: Edit %{model}
+    edit_model: Chỉnh sửa %{model}
     update: Cập nhật
     destroy: Xóa
     back: Quay lại
     confirm: Bạn chắc chứ?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
-    access_denied: You do not have access to this %{model}.
+    created: '%{model} đã được tạo thành công.'
+    updated: '%{model} đã được tạo thành công.'
+    destroyed: '%{model} đã được xóa thành công.'
+    access_denied: Bạn không được quyền truy cập vào %{model} này.
   nav:
     header:
       finished_hoc: Tôi đã hoàn thành giờ mã của tôi
       sign_in_to_save: Đăng nhập để lưu lại những tiến bộ của bạn
       free_play:
-        playlab: Make an App
-        artist: Draw Something
+        playlab: Tạo một ứng dụng
+        artist: Vẽ một cái gì đó
     user:
       classroom: Trang chủ giáo viên
       district_dashboard: District Dashboard
-      label: Hi %{username}
+      label: Chào %{username}
       stats: TIến trình của bạn
       settings: Tài khoản của bạn
       prizes: Giải thưởng
       logout: Đăng xuất
       signin: Đăng nhập
       signup: Đăng ký
-      already_registered: Already registered?
+      already_registered: Bạn đã đăng ký?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: sự tiến bộ của %{name}
       progress: Qua trình của bạn
       lines: 'Tổng số dòng mã: %{lines}'
       close: ĐÓNG
       mastery: Khái niệm
       puzzle_map: Màn
       prizes: Thu thập tất cả  %{total_trophies} cúp và giành giải thưởng!
-      prize_earned: All %{total_trophies} trophies collected. Prize won!
+      prize_earned: Tất cả %{total_trophies} danh hiệu thu thập được. Bạn đã chiến
+        thắng được phần thưởng này!
       prize_us_only: (Chỉ sinh viên Hoa Kỳ)
       prizes_link: Thông tin thêm
   teacher:
     title:
       one: 'Giáo viên của bạn:'
       other: 'Giáo viên của bạn:'
-    remove: (remove teacher)
+    remove: (loại bỏ giáo viên)
     confirm:
       remove: Bạn có chắc bạn muốn loại bỏ giáo viên này không?
     tools: Công cụ dành cho giáo viên
     followers:
-      section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      section: 'Mục:'
+      stages: '(Các) Quá trình để hiển thị:'
+      show_past: 'Hiển thị hoạt động của sinh viên (%{bullet_html}) trong quá khứ:'
       levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: Not tried yet
-      activity: Indicates student activity in the last %{hours} %{plural}
-      no_section: No assigned section
+      perfect: Hoàn thành, hoàn hảo
+      completed: Hoàn thành, nhưng bằng cách sử dụng quá nhiều khối
+      tried: Đã cố gắng, nhưng chưa hoàn thành
+      not_tried: Chưa thử
+      activity: Cho thấy hoạt động của sinh viên trong %{plural} %{hours} cuối
+      no_section: Không có phần được chỉ định
       trophies: những danh hiệu
     students:
       name: Tên
       username: tài khoản
       password: mật khẩu
       manage: Quản lý học sinh
-      dashboard: Go to Teacher Dashboard
+      dashboard: Đi đến bảng điều khiển của giáo viên
       add: Thêm học sinh
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
+      remove: loại bỏ sinh viên
+      confirm_remove: Bạn có chắc muốn loại bỏ sinh viên/học sinh này?
       help_reassign: To divide your class into multiple sections, select students
         to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing
@@ -320,12 +322,12 @@
         Your students will need to choose usernames and passwords, but they WILL NOT
         be required to provide an email address. If a student forgets their password,
         you will be able to reset it for them.
-      register: Ask your students to register themselves
+      register: Yêu cầu học sinh của bạn tự đăng ký
       vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
+      section_code: 'và nhập mã lớp học của họ:'
       first_please: First, please %{add_section}
       for: For
-      enter: 'enter:'
+      enter: 'nhập:'
     sections:
       add: Add section
       manage: Manage sections
@@ -334,8 +336,8 @@
       section_code: Section Code
       add_section_code: Add Students Section-Code
       secret: Secret type
-      grade: Grade
-      course: Course
+      grade: Điểm số
+      course: Khóa học
       rename: đổi tên
       edit: chỉnh sửa
       delete: xóa
@@ -343,30 +345,30 @@
       email: Send in email
     rollup: Bảng tiến trình
     activity: Hoạt động gần đây của lớp
-    user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student
-      because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher
-      because you have not registered an e-mail address'
+    user_not_found: Không thể tìm thấy giáo viên hoặc sinh viên này
+    cant_remove_student_no_email: '%{student_name} không thể được gỡ bỏ khỏi danh
+      sách sinh viên của bạn vì %{student_name} chưa đăng ký với một địa chỉ email'
+    cant_remove_teacher_no_email: '%{teacher_name} không thể được gỡ bỏ khỏi danh
+      sách giáo viên của bạn vì bạn chưa đăng ký địa chỉ email'
     student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
       for %{student_name}'
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Xem câu trả lời
       student: học sinh
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Xem đáp án
+      try_it_yourself: Hãy thử làm bài tập này
       section: Section
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
+    email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
     email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
     current_password_hint: (chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)
     delete: Xóa tài khoản của bạn
     delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
+    delete_text_teacher_note: 'Xin lưu ý: xóa tài khoản của bạn sẽ không xóa tài khoản
+      sinh viên của bạn.'
     delete_confirm: Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?
   user_level:
     completed: Đã hoàn thành
@@ -376,10 +378,13 @@
     show_more: Hiển thị thêm
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    title: TIến trình của bạn
+    description: Code Studio là nơi có các khóa học trực tuyến được tạo bởi Code.org
+    lines_of_code: '%{lines_count} DÒNG MÃ ĐƯỢC VIẾT BỞI HỌC SINH/SINH VIÊN'
+    lines_of_code_linebreak: '%{lines_count} dòng mã <br/> được viết bởi %{students_count}
+      triệu sinh viên'
     all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    lesson_plans: Giáo án
     signin_message: Already registered? %{link}
     student_reg_link: Sinh viên đăng ký
     teacher_reg_link: Giáo viên đăng ký
@@ -388,8 +393,8 @@
     teacher_dashboard: See progress dashboard
     teacher_student_count_one: You have %{count} student.
     teacher_student_count: You have %{count} students.
-    teacher_averages: On average your students have earned %{trophy_average} out of
-      %{trophy_max} "Concept Mastery" trophies.
+    teacher_averages: Bình quân, học sinh của bạn đạt được %{trophy_average} trong
+      tổng số %{trophy_max} danh hiệu "Thành Thạo Khái Niệm".
     teacher_print_certificates: In giấy chứng nhận cho học sinh hoàn thành khóa học
       này
     teacher_read_blog: Đọc về tin tức và cập nhật của chúng tôi tại tài liệu blog
@@ -404,23 +409,25 @@
     local_school: trường học ở địa phương
     online: trực tuyến
     see_details: Xem chi tiết
-    prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
-      $1,000 in classroom rewards.'
+    prize_info: 'Giải thưởng cho sự tham gia (chỉ dành cho giáo viên trường công lập
+      tại Hoa Kỳ): lên đến $1,000 trong lớp học phần thưởng.'
     tryfirst: 'Hoặc, bạn có thể thử nó trước, và đăng ký sau:'
     trynow: Thử ngay bây giờ
-    add_hint_help: Please help us to add smart hints to Code.org tutorials
+    add_hint_help: Xin vui lòng giúp chúng tôi thêm gợi ý thông minh cho các lớp học
+      của Code.org
     20hour_overview: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính
       và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó
       khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
-    test_videos_help: Test our new video player at your school
+    test_videos_help: Kiểm tra video player mới tại trường của bạn
     try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
+    use_as_teacher: Sử dụng trang web này với tư cách là giáo viên
+    heading_hoc2014: <h2>Một Giờ Lập Trình</h2><h1>Mọi lứa tuổi</h1>
     heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
-    your_gallery: Gallery
-    no_primary_course: Try a course at Code Studio
+    heading_apps: <h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>
+    heading_legacy: <h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>
+    your_gallery: Bộ sưu tập
+    no_primary_course: Hãy thử một khóa học ở Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Nam
     female: Nữ
@@ -432,8 +439,8 @@
     help_from_html: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo
       ra hướng dẫn này.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      All Rights Reserved.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. All Rights Reserved.
+      Bản quyền đã được bảo hộ.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
+      Arts Inc. Bản quyền đã được bảo hộ.
     powered_by_aws: Powered by Amazon Web Services
     feedback: Cung cấp thông tin phản hồi
     translate: Giúp chúng tôi dịch sang ngôn ngữ của bạn
@@ -452,18 +459,25 @@
   video:
     tab: Video
     notes: Không xem được video? Hãy xem ghi chú.
-    notes_coming_soon: Notes for this video coming soon.
+    notes_coming_soon: Ghi chú cho video này sẽ được cập nhật sớm.
     autoplay_option: Tự phát video
     download: Tải video xuống
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Ẩn cảnh báo này
     working:
       header: Chúng tôi đang làm việc để hỗ trợ cho trình duyệt của bạn.
-      message: Code.org uses modern web technology. This makes the site faster to
-        use. Your browser doesn't support all the features required, and you may experience
-        issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting
-        any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade
-        your browser to a supported version</a>.
-      hide_this_warning: Hide this warning
+      message: Code.org sử dụng công nghệ web hiện đại. Điều này làm cho việc sử dụng
+        trang web diễn ra nhanh hơn. Trình duyệt của bạn không hỗ trợ tất cả các tính
+        năng cần thiết, và bạn có thể gặp vấn đề trong khi sử dụng phần này của trang
+        web. Xin vui lòng giúp chúng tôi bằng cách <a href='%{report_issue_url}'>
+        báo cáo bất kỳ vấn đề nào bạn tìm thấy</a>. Bạn cũng có thể <a href='%{supported_browsers_url}'>
+        nâng cấp trình duyệt của bạn lên một phiên bản được hỗ trợ</a>.
+      hide_this_warning: Ẩn cảnh báo này
     upgrade:
       header: Hãy nâng cấp trình duyệt của bạn.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -485,23 +499,24 @@
     title: Click 'Run' to see my program in action
     bounce_og_title: Check out my Bounce Game
     flappy_og_title: Hãy kiểm tra Game Flappy của tôi
-    studio_og_title: Check out my Play Lab App
-    check_out_what_i_made: Check out what I made
+    studio_og_title: Hãy xem thử lab tạo ứng dụng trò chơi của tôi
+    check_out_what_i_made: Hãy xem thử ứng dụng tôi vừa tạo
     og_description: Tôi đã viết mã của mình với Code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing
-      the text.
-    address_not_allowed: It looks like there is an address in it. Try changing the
-      text.
-    email_not_allowed: It looks like there is an email in it. Try changing the text.
-    profanity_not_allowed: It looks like there is profanity in it. Try changing the
-      text.
+    phone_number_not_allowed: Chỗ ở này có vẻ như chứa một số điện thoại. Hãy thử
+      thay đổi đoạn văn bản.
+    address_not_allowed: Chỗ ở này có vẻ như chứa một địa chỉ ở trong đó. Hãy thử
+      thay đổi đoạn văn bản.
+    email_not_allowed: Chỗ ở này có vẻ như chứa một email trong đó. Hãy thử thay đổi
+      đoạn văn bản.
+    profanity_not_allowed: Chỗ ở này có vẻ như chứa ngôn từ thô tục.  Hãy thử thay
+      đổi đoạn văn bản.
   builder:
     created: Tạo một kịch bản mới.
     destroyed: Phá hủy một kịch bản.
-    manage: Build Levels
+    manage: Xây dựng các cấp độ
     view: Xem
     back: Quay lại kịch bản
-    success: You successfully edited the blocks.
+    success: Bạn đã chỉnh sửa các khối thành công.
     level:
       create: Tạo ra mức độ mới
       current: Mức hiện tại
@@ -509,83 +524,95 @@
   upsell:
     hoc:
       title: Giờ của mã
-      body: Try the basics of computer science. Millions have given it a shot.
+      body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học
+        các khóa này.
     flappy:
-      title: Flappy Code
-      body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
-        tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+      title: Lập trình Flappy
+      body: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút? Hãy thử
+        lớp học lập trình Flappy của chúng tôi!
+    20-hour:
+      title: Khóa học cấp tốc
+      body: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các
+        khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá
+        thú vị để tìm hiểu ở tất cả các lứa tuổi.
+      body_short: Học những căn bản về khoa học máy tính với phiên bản cấp tốc của
+        các lớp 2-4.
     hoc2014:
-      try_new_tutorial: Try our new Hour of Code tutorial in beta
-      try_frozen: Artist with Anna and Elsa, from Frozen
+      try_new_tutorial: Hãy thử lớp học Một giờ Lập trình phiên bản beta của chúng
+        tôi
+      try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
     gallery:
-      title: Gallery
-      body: View a gallery of app and artist images created by our users
+      title: Bộ sưu tập
+      body: Xem một bộ sưu tập các ứng dụng và họa sĩ thiết kế hình ảnh được tạo bởi
+        người dùng của chúng tôi
     frozen:
-      title: Frozen
+      title: Bộ phim Frozen
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với
+        các nhân vật Disney Infinity nổi tiếng.
   gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
-      pictures by writing their own computer programs. Click on the pictures to see
-      each program in action.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
-    more: More &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
-    header: Gallery
+    students_drew_these_with_code: Các học sinh/sinh viên đã vẽ chúng bằng cách lập
+      trình!
+    students_made_these_with_code: Các học sinh/sinh viên đã tạo ra chúng bằng cách
+      lập trình!
+    picture_count: Trong <b>%{days}</b> ngày vừa qua, các học sinh/sinh viên đã vẽ
+      <b>%{count}</b> bức ảnh bằng cách tự viết các chương trình máy tính. Click vào
+      những bức ảnh này để xem mỗi chương trình.
+    activity_count: Trong <b>%{days}</b> ngày vừa qua, học sinh đã thực hiện <b>%{count}</b>
+      các ứng dụng và hình ảnh bằng cách tự viết các chương trình máy tính. Nhấp vào
+      hình ảnh và ảnh chụp màn hình để xem mỗi chương trình trong hành động.
+    want_to_make_your_own: Bạn muốn tự tạo chương trình này?
+    more: Nhiều &rarr;
+    caption_by_name_age: bởi  %{name}, %{age} tuổi
+    caption_time_ago: '%{time_ago} trước'
+    header: Bộ sưu tập
     header_playlab: Phòng trò chơi
     header_artist: Nghệ sĩ
   landing:
-    prerelease: This course is in <span class='betatext'>beta</span>.  This means
-      it is not the final version of the course, and is subject to revision as feedback
-      is received and improvements are made.
-    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
-      is subject to revision as feedback is received and improvements are made.
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
+    prerelease: Khóa học này là <span class='betatext'> phiên bản beta</span>.  Điều
+      này có nghĩa là nó không phải là phiên bản cuối cùng của khóa học, và có thể
+      sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các cải tiến.
+    prerelease_hoc2014: Lớp học này là  <span class='betatext'>phiên bản beta</span>.
+      Nó có thể được sửa đổi từ việc thu nhận thông tin phản hồi và thực hiện các
+      cải tiến.
+    feedback: Gửi ý kiến phản hồi
+    report_bug: Báo cáo lỗi
+    support: Nhận trợ giúp
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
-    wrong_body: The answer you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Câu trả lời không chính xác
+    wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!
+    correct_title: Chính xác
+    correct_body: Đó là câu trả lời chính xác.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
-    wrong_title: Incorrect solution
-    wrong_body: The solution you've entered is not correct.  Please try again!
-    correct_title: Correct
-    correct_body: That is the correct answer.
+    wrong_title: Cách giải chưa chính xác
+    wrong_body: Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!
+    correct_title: Chính xác
+    correct_body: Đó là câu trả lời chính xác.
   contract_match:
-    wrong_title: Incorrect answer
-    badname: Your contract has the wrong name.
-    badname_case: Function names are case-sensitive. Try changing the case of your
-      contract's name.
-    badrange: Your contract has the wrong range.
-    baddomainsize: Your contract doesn't have the right number of items in the domain.
-    baddomainname: One or more of your domain items has the wrong name.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    wrong_title: Câu trả lời không chính xác
+    badname: Hợp đồng của bạn có tên sai.
+    badname_case: Chức năng tên tùy thuộc vào chữ in hoa hay thường. Hãy thử thay
+      đổi kiểu in hoa/thường cho tên trên hợp đồng của bạn.
+    badrange: Hợp đồng của bạn có khoản sai.
+    baddomainsize: Hợp đồng của bạn không có số lượng khoản mục phù hợp trong tên
+      miền.
+    baddomainname: Một hoặc nhiều mục tên miền của bạn chứa tên sai.
+    baddomaintype: Một hoặc nhiều của các tên miền bạn chứa loại không chính xác,
+      hoặc chúng nằm không đúng thứ tự.
   text_match:
-    placeholder: Enter your answer here
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    placeholder: Nhập câu trả lời của bạn ở đây
+    open_response_title: Xin cảm ơn
+    open_response_body: Cảm ơn câu trả lời của bạn!
   dialog:
     ok: Đồng ý
   time:
-    hour: 1 hour
-    day: day
-    week: week
+    hour: 1 giờ
+    day: ngày
+    week: tuần
   data:
     script:
       name:
@@ -596,7 +623,7 @@
             và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên
             nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
         Hour of Code:
-          title: Giờ của mã
+          title: Một giờ Lập trình 2013
           description: ''
         edit-code:
           title: Hiệu chỉnh mã
@@ -608,9 +635,9 @@
           title: Builder
           description: ''
         flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
+          title: Lập trình Flappy
+          description: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút?
+            Hãy thử lớp học lập trình Flappy của chúng tôi!
         jigsaw:
           title: Ghép hình
           description: ''

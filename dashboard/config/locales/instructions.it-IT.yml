@@ -1,77 +1,78 @@
 "it":
   data:
     instructions:
-      2-3 Artist 1 new_instruction: Ciao, io sono un ARTISTA. Puoi scrivere CODICE
-        per farmi disegnare praticamente qualsiasi cosa. Usa un po' di BLOCCHI per
-        farmi disegnare sulle linee grigie in figura. (Ciascuna riga è lunga 100 PIXEL)
-      2-3 Artist 11_instruction: 'Fai un bordo al segnale di stop creando un ottagono
-        con 8 lati, lunghi 100 PIXEL ciascuno. Di quanti gradi devi GIRARE? (SUGGERIMENTO:
-        Quanto fa 360 diviso 8?) '
-      2-3 Artist 12_instruction: Imposta il blocco "RIPETI ??? volte" in modo che
-        crei un "cerchio" per finire il bulbo oculare. SE ogni movimento gira a destra
-        di un grado, quante volte è necessario RIPETERE per completare il cerchio?
-        180? 360? 500?
-      2-3 Artist 2 new_instruction: 'Questa casa ha un muro a metà. Ogni lato è lungo
-        100, ma il muro a metà è lungo solo 50. Completa la parete. '
-      2-3 Artist 2_instruction: 'Questa casa ha un muro a metà. Ogni lato è lungo
-        100, ma il muro a metà è lungo solo 50. Completa il muro. '
-      2-3 Artist 3.4_instruction: Il BLOCCO salta muove l'ARTISTA senza che disegni.
-        Disegna la linea tratteggiata utilizzando sia il BLOCCO salta sia il BLOCCO
-        disegna.
+      2-3 Artist 1 new_instruction: Ciao, io sono un artista. Puoi scrivere del codice
+        per farmi disegnare quasi qualunque cosa. Usa i blocchi per farmi disegnare
+        lungo le linee grigie dell'immagine. (Ciascuna riga è lunga 100 pixel)
+      2-3 Artist 11_instruction: 'Disegna il bordo del segnale di stop creando un
+        ottagono di 8 lati, ciascun lungo 100 pixel. Di quanti gradi devi girare adesso
+        per completare il bordo del segnale di stop? (Suggerimento: quanto fa 360
+        diviso 8?) '
+      2-3 Artist 12_instruction: Imposta il numero di ripetizioni del blocco "ripeti
+        ??? volte" in modo tale da disegnare il "cerchio" che rappresenta il bulbo
+        oculare. Se ad ogni movimento giri a destra di un grado, quante volte devi
+        ripetere il movimento per completare il cerchio? 180? 360? 500?
+      2-3 Artist 2 new_instruction: 'Questa casa ha una parete lasciata a metà. Ogni
+        parete è lunga 100 pixel, ma della parete a destra ne è stata disegnata solo
+        una metà. Completala. '
+      2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
+        but the half-finished wall is only 50. Complete the wall. \n"
+      2-3 Artist 3.4_instruction: Il blocco "salta" consente di muovere l'artista
+        senza disegnare. Disegna la linea tratteggiata usando sia i blocchi "salta"
+        che quelli per disegnare.
       2-3 Artist 3_instruction: Questo cappello è alto 100 PIXEL. Disegna un cappello
         che sia 70 PIXEL più piccolo.
-      2-3 Artist 3new_instruction: Il cappello rosso è alto 100 pixel. Finisci disegnando
-        un cappello nero che sia più corto di 70 pixel. La larghezza del cappello
-        nero è di 50 pixel.
+      2-3 Artist 3new_instruction: Il cappello rosso ha un'altezza pari a 100 pixel.
+        Completa il disegno con un cappello nero che sia più corto di quello rosso
+        di 70 pixel. Il cappello nero è largo 50 pixel.
       2-3 Artist 4_instruction: Aiutami a completare la casa per questo gatto.
       2-3 Artist 5_instruction: Sostituisci questo codice con un blocco "ripeti ???
         volte" per disegnare la stessa case utilizzando solo 3 blocchi.
-      2-3 Artist 6_instruction: 'Questa casa ha bisogno di un tetto! Disegna il triangolo.
-        Suggerimento: tutti e tre i lati sono della stessa lunghezza.'
-      2-3 Artist 7_instruction: 'Finisci di disegnare la metà a destra dell''ultima
-        finestra. Ciascun riquadro della finestra è grande 25 pixel. '
-      2-3 Artist 8_instruction: Completa le stanze per ciascun animale dividendo il
-        rettangolo in 2 quadrati delle stesse dimensioni. Il rettangolo è largo 200
+      2-3 Artist 6_instruction: 'Questa casa ha bisogno di un tetto! Disegna un triangolo.
+        Suggerimento: tutti e tre i lati hanno la stessa lunghezza.'
+      2-3 Artist 7_instruction: 'Finisci di disegnare la metà destra dell''ultima
+        finestra. Ciascun riquadro della finestra è un quadrato largo 25 pixel. '
+      2-3 Artist 8_instruction: Completa le camere per ciascun animale suddividendo
+        il rettangolo in 2 quadrati di uguale dimensione. Il rettangolo è largo 200
         pixel e alto 100 pixel.
       2-3 Artist 9_instruction: Finisci di disegnare questo aquilone
-      2-3 Artist Assessment 1_instruction: 'Compito: finisci di disegnare l''ultimo
-        dente, largo 25 pixel e alto 25 pixel.'
-      2-3 Artist Debugging 1_instruction: Puoi fare questo cappello con una lunghezza
-        di 100?
-      2-3 Artist Debugging 10_instruction: 'L''area di controllo della direzione sul
-        mio controller di gioco è troppo stretta. Suggerimento: allargala di 10 pixel'
+      2-3 Artist Assessment 1_instruction: Questo è un esercizio di verifica -- Finisci
+        di disegnare l'ultimo dente, è largo 25 pixel e alto 25 pixel.
+      2-3 Artist Debugging 1_instruction: Riesci a disegnare questo cappello facendo
+        in modo che la sua parte superiore sia lunga 100 pixel?
+      2-3 Artist Debugging 10_instruction: 'Il tastierino direzionale del controller
+        del mio gioco è troppo stretto. Suggerimento: allargalo di 10 pixel'
       2-3 Artist Debugging 11_instruction: |
         Aiutami a completare il mio bellissimo fiocco di neve.
-        Quante volte è necessario "ripetere" per completarlo?
+        Quante volte devo eseguire il blocco "ripeti" per completarlo?
       2-3 Artist Debugging 12_instruction: Dovrei aggiungere un'onda dell'oceano a
         questa scena.  Puoi aiutarmi?
-      2-3 Artist Debugging 2_instruction: 'Il codice per i tre baffi che vedi è sbagliato.
-        Suggerimento: ciascun baffo è lungo 75 pixel. Correggi il codice per disegnare
-        i baffi.'
-      2-3 Artist Debugging 3_instruction: 'La mia barca ha un buco! Puoi ripararle
-        cambiando l''angolo della linea? Suggerimento: l''ultimo angolo è sbagliato
-        di 15 gradi.'
+      2-3 Artist Debugging 2_instruction: 'Il codice che disegna i tre baffi a destra
+        è sbagliato, correggilo. Suggerimento: tutti i baffi hanno la stessa lunghezza.'
+      2-3 Artist Debugging 3_instruction: 'La mia barca ha un buco! Riesci a ripararla
+        modificando l''angolazione di una linea? Suggerimento: nell''ultimo angolo
+        c''è un errore di 15 gradi.'
       2-3 Artist Debugging 4_instruction: Qual è l'immagine che stiamo cercando di
         disegnare? Finisci di unire i punti utilizzando le giuste linee ed angoli.
-      2-3 Artist Debugging 5_instruction: 'Il codice che vedi per la gamba e il piede
-        è sbagliato. Suggerimento: Il piede è troppo lungo, potremmo aver bisogno
-        di eliminare un "passo" (gioco di parole voluto)'
-      2-3 Artist Debugging 6_instruction: Sembra che mi sia seduta su una sedia cui
-        manca una gamba. Modifica i blocchi per disegnare la gamba.
-      2-3 Artist Debugging 7_instruction: Sembra che la C nel codice sia disegnata
-        all'indietro. Puoi farla sembrare una C?
+      2-3 Artist Debugging 5_instruction: 'Il codice che disegna la gamba e il piede
+        è sbagliato. Suggerimento: Il piede è troppo lungo, potrebbe essere necessario
+        eliminare un blocco'
+      2-3 Artist Debugging 6_instruction: Sembra che mi sia seduto su una sedia a
+        cui manca una gamba. Modifica i blocchi per disegnare la gamba mancante.
+      2-3 Artist Debugging 7_instruction: Questo codice disegna la C al contrario
+        nella parola "CODE". Riesci a farla disegnare correttamente?
       2-3 Artist Debugging 8_instruction: La mia girandola non è finita. Quante volte
-        devo ripetere per completarla?
-      2-3 Artist Debugging 9_instruction: 'Il codice per questo gambo è errato. Suggerimento:
-        L''angolo è sbagliato di 60 gradi'
+        devo eseguire il blocco "ripeti" per completarla?
+      2-3 Artist Debugging 9_instruction: 'Il codice per disegnare questo gambo non
+        è corretto. Suggerimento: nel primo angolo c''è un errore di 60 gradi.'
       2-3 Artist Debugging Assessment 1_instruction: 'Questa figura è troppo piccola.
         Riesci a farla più grande? Suggerimento: ogni lato dovrebbe essere 75 pixel
-        più lungo.'
+        più lungo della lunghezza attuale.'
       2-3 Artist Free Play_instruction: 'Tempo di giocare: disegna qualunque cosa
         ti piaccia.'
-      2-3 Artist Functions 1_instruction: 'Ciao. Me artista zombie. Me piace disegnare!
-        Aiutami a disegnare gli occhiali quadrati.  Suggerimento: il ponte tra le
-        lenti è 25 pixel più corto della lunghezza del quadrato.'
+      2-3 Artist Functions 1_instruction: 'Ciao. Io artista zombie. Mi piace disegnare!
+        Aiutami a disegnare questi occhiali quadrati. Suggerimento: l''asta tra le
+        lenti è di 25 pixel più corta della lunghezza di ciascuna lente.'
       2-3 Artist Functions 10_instruction: Qui ci sono due funzioni, una per disegnare
         un ingranaggio grande e una per disegnare un ingranaggio piccolo. Usale per
         disegnare l'interno di una macchina!
@@ -79,9 +80,9 @@
         un esagono". Cosa succede se nel ripetere l'esecuzione della funzione come
         nell'esercizio precedente adesso giri ogni volta solo di 60 gradi?
       2-3 Artist Functions 11_instruction: Abbiamo rinominato la funzione "disegna
-        un quadrato" in "disegna un esagono", ma disegna ancora quadrati! Puoi modificare
-        la funzione "disegna un esagono" per disegnare un esagono con i lati lunghi
-        50 pixel, e disegnare la figura usando la nuova funzione?
+        un quadrato" in "disegna un esagono", ma realizza ancora quadrati! Puoi modificare
+        la funzione "disegna un esagono" in modo che produca un esagono con i lati
+        lunghi 50 pixel, e riprodurre poi tutta la figura usando la nuova funzione?
       2-3 Artist Functions 12_instruction: 'Le funzioni sono davvero utili per disegnare
         più volte oggetti complessi. Puoi usare la funzione "disegna un fiore" per
         riempire il resto della fioriera? (Suggerimento: le piante sono tutte distanti
@@ -94,8 +95,8 @@
         di una funzione chiamata "disegna un quadrato". Puoi usare la funzione "disegna
         un quadrato" per creare gli occhiali?  I quadrati sono distanti 75 pixel.
       2-3 Artist Functions 3_instruction: Modifica la funzione in modo da disegnare
-        adesso un quadrato con i lati lunghi 115 e creare occhiali più grandi. I quadrati
-        sono ora distanti 45 pixel.
+        adesso un quadrato con i lati lunghi 115 pixel e creare occhiali più grandi.
+        I quadrati sono ora distanti 45 pixel.
       2-3 Artist Functions 4_instruction: Usa il blocco "ripeti ... volte" per disegnare
         questi tre quadrati.
       2-3 Artist Functions 7_instruction: 'Usa la funzione "disegna una casa" per
@@ -126,64 +127,63 @@
       2-3 Artist Loops 9_instruction: "Stiamo per inserire in un ciclo gli stessi
         elementi, ma ora aggiungeremo un po' di distanza tra loro.\r Usa lo stesso
         codice di prima, ma aggiungi un passo avanti alla fine del ciclo esterno."
-      2-3 Artist Loops New 1_instruction: Disegniamo la testa di questo robot! Puoi
-        fare un quadrato con i lati lunghi 100 pixel?
-      2-3 Artist Loops New 10_instruction: Adesso colleghiamo insieme un gruppo di
-        V, disegnandole mediante un ciclo.
-      2-3 Artist Loops New 11_instruction: Questa volta lo disegniamo 24 volte. Aggiungi
-        a questo codice un giro a sinistra di 30 gradi e metti tutto in un blocco
-        "ripeti".
+      2-3 Artist Loops New 1_instruction: Disegniamo la testa di questo robot! Riesci
+        a disegnare un quadrato i cui lati siano tutti lunghi 100 pixel?
+      2-3 Artist Loops New 10_instruction: 'Adesso cerca di collegare una serie di
+        V: per disegnarle crea un ciclo usando il blocco "ripeti ??? volte".'
+      2-3 Artist Loops New 11_instruction: Questa volta dobbiamo disegnare la V per
+        24 volte. Aggiungi a questo codice un blocco "gira a sinistra di 30 gradi"
+        e metti il tutto in un blocco "ripeti ??? volte".
       2-3 Artist Loops New 12_instruction: |
-        Disegna un rombo con lati lunghi 100 pixel.
+        Disegna un rombo i cui lati siano lunghi 100 pixel.
       2-3 Artist Loops New 13_instruction: Disegna il rombo per 3 volte usando un
         ciclo.
-      2-3 Artist Loops New 14_instruction: Ora disegniamo il rombo 10 volte ma ruotiamo
-        di 90 gradi tra ciascun rombo.
+      2-3 Artist Loops New 14_instruction: Ora disegna il rombo per 10 volte ma, tra
+        un rombo e l'altro, effettua una rotazione di 90 gradi.
       2-3 Artist Loops New 15_instruction: Disegna qualcosa di divertente.
-      2-3 Artist Loops New 2_instruction: Qui c'è un po' di codice che hai usato per
-        disegnare quel quadrato. Cosa succede se si utilizza il blocco "ripeti" per
-        eseguire questo codice 4 volte?
-      2-3 Artist Loops New 9_instruction: Disegna una semplice V con entrambi i lati
-        lunghi 50 pixel per completare la freccia.
+      2-3 Artist Loops New 2_instruction: Ecco una parte del codice che hai usato
+        per disegnare il quadrato. Cosa succede se usi il blocco "ripeti 4 volte"
+        per eseguire questo codice 4 volte?
+      2-3 Artist Loops New 9_instruction: Per completare la freccia disegna semplicemente
+        una V i cui lati siano entrambi di 50 pixel.
       2-3 Artist Match Hex Pic_instruction: 'Sfida: Aiuta a finire l''esagono.'
       2-3 Artist Match Rho Pic_instruction: 'Sfida: Completa il codice mancante.'
       2-3 Artist Match Sq Pic_instruction: 'Sfida: Completa il codice mancante'
-      2-3 Artist Match Tri pic_instruction: 'Esercizio di Verifica (Associazioni):
-        inserisci il codice mancante.'
-      2-3 Artist Nested Loops 1_instruction: "Hai già utilizzato i cicli per disegnare
-        delle forme, ma sapevi che puoi inserire un ciclo all'interno di un altro
-        ciclo?\r Crea un ciclo che esegua 3 volte tutto questo blocco di codice per
-        disegnare il modello."
+      2-3 Artist Match Tri pic_instruction: Esercizio di Verifica (Associazioni)
+      2-3 Artist Nested Loops 1_instruction: "Hai già utilizzato i cicli per disegnare,
+        ma sapevi che puoi inserire un ciclo all'interno di un altro ciclo?\r Crea
+        un ciclo che ripete per 3 volte tutti i blocchi di codice in grigio, allo
+        scopo di disegnare la figura indicata."
       2-3 Artist Nested Loops 10_instruction: Ripeti 12 volte questo codice per completare
         la figura.
       2-3 Artist Nested Loops 11_instruction: Ripeti 4 volte questo codice per completare
         la figura, girando di 90 gradi alla fine di ciascun cerchio.
       2-3 Artist Nested Loops 12_instruction: Ripeti 12 volte questo codice per completare
-        i riccioli.
-      2-3 Artist Nested Loops 2_instruction: Ora ripeti 6 volte il triangolo. Dopo
-        ogni triangolo, dovrai girare di 60 gradi prima di disegnare il successivo.
-      2-3 Artist Nested Loops 3_instruction: Dovrai ripetere il triangolo 12 volte
-        per disegnare questa figura. Dividi il numero di gradi in un cerchio (360)
-        per il numero di forme che stai disegnando (12) per sapere di quanti gradi
-        girare dopo ciascuna forma.
-      2-3 Artist Nested Loops 4_instruction: 'Ripeti 12 volte questo rombo per disegnare
-        un fiore. Suggerimento: i 12 rombi sono come i 12 triangoli che hai già disegnato
-        - di quanti gradi devi girare dopo aver disegnato ciascuna forma?'
+        la figura.
+      2-3 Artist Nested Loops 2_instruction: Ora disegna il triangolo 6 volte. Dopo
+        ogni triangolo, devi girarti di 60 gradi prima di disegnare il successivo.
+      2-3 Artist Nested Loops 3_instruction: Per disegnare questa figura devi ripetere
+        il triangolo 12 volte. Per sapere di quanti gradi girare dopo ciascun triangolo,
+        dividi il numero di gradi in un cerchio (360) per il numero di triangoli che
+        stai disegnando (12).
+      2-3 Artist Nested Loops 4_instruction: 'Per disegnare un fiore devi ripetere
+        il rombo 12 volte. Suggerimento: i 12 rombi sono come i 12 triangoli che hai
+        già disegnato - di quanti gradi devi girare dopo aver disegnato ciascun rombo?'
       2-3 Artist Nested Loops 5_instruction: Riempi le finestre di questo edificio
-        con un ciclo nidificato. Le finestre sono lunghe 20 pixel e distanti 20 pixel
+        con un ciclo annidato. Le finestre sono lunghe 20 pixel e distanti 20 pixel
         l'una dall'altra.
       2-3 Artist Nested Loops 6_instruction: Lungo la coda del dinosauro ci sono 8
-        punte; ogni punta è lunga 30 pixel. Ripeti 8 volte il triangolo, ma assicurati
-        di spostarti in avanti dopo ciascuno.
-      2-3 Artist Nested Loops 7_instruction: Ripeti 10 volte questo triangolo per
-        disegnare il sole. Dopo ogni triangolo devi spostarti e anche girare. Puoi
-        capire di quanto devi girare dividendo il numero di gradi in un cerchio per
+        punte; ogni punta è lunga 30 pixel. Disegna il triangolo 8 volte, ma assicurati
+        di spostarti in avanti dopo aver disegnato ciascun triangolo.
+      2-3 Artist Nested Loops 7_instruction: Per disegnare un sole ripeti 10 volte
+        questo triangolo. Dopo ogni triangolo devi spostarti e anche girarti. Puoi
+        capire di quanto devi girarti dividendo il numero di gradi in un cerchio per
         il numero di figure che compongono il disegno.
-      2-3 Artist Nested Loops 8_instruction: Ora aggiungiamo un po' di erba alla nostra
-        immagine. I ciuffi d'erba sono tra loro distanti 50 pixel.
-      2-3 Artist Nested Loops 9_instruction: Completeremo quest'immagine aggiungendo
-        un fiore. Ripeti il rombo 12 volte per disegnare il tuo fiore.
-      2-3 Artist Nested Loops Free Play_instruction: 'Gioco libero: disegna qualcosa
+      2-3 Artist Nested Loops 8_instruction: Ora aggiungi un po' di erba all'immagine.
+        I ciuffi d'erba distano tra loro 50 pixel.
+      2-3 Artist Nested Loops 9_instruction: Completa quest'immagine aggiungendo un
+        fiore. Per disegnare il tuo fiore devi ripetere il rombo 12 volte.
+      2-3 Artist Nested Loops Free Play_instruction: 'Tempo di giocare: disegna qualcosa
         di carino usando i cicli annidati.'
       2-3 Bee Conditionals 1_instruction: Ciao, sono un'ape. Aiutami a raccogliere
         il nettare dai fiori.
@@ -191,8 +191,8 @@
         dose di nettare. Fai attenzione a non raccogliere il nettare da un fiore viola
         SE non ne ha.
       2-3 Bee Conditionals 11_instruction: Raccogli il nettare dai fiori che ne hanno.
-      2-3 Bee Conditionals 12_instruction: Utilizza un ciclo per assicurarti la raccolta
-        del nettare da tutti questi fiori.
+      2-3 Bee Conditionals 12_instruction: Usa un ciclo per controllare la presenza
+        del nettare e raccoglierlo da tutti questi fiori.
       2-3 Bee Conditionals 13_instruction: 'Raccogli il nettare e fai il miele. Domanda:
         cosa succede se usi un blocco condizionale "se nettare" su un fiore rosso?
         Puoi risolvere questo esercizio usando un ciclo?'
@@ -203,54 +203,66 @@
       2-3 Bee Conditionals 2_instruction: Ciao, sono un'ape! Aiutami a raccogliere
         tutto il nettare dai fiori. Usa un ciclo.
       2-3 Bee Conditionals 3_instruction: Aiutami a raccogliere tutto il nettare dai
-        fiori per produrre del miele. Usa un ciclo.
-      2-3 Bee Conditionals 4_instruction: "Aiutami a cogliere tutto il polline dai
-        fiori \ne trasformarlo in miele.\n"
+        fiori e a produrre tutto il miele. Usa un ciclo.
+      2-3 Bee Conditionals 4_instruction: Aiutami a raccogliere tutto il nettare dai
+        fiori e a produrre tutto il miele.
       2-3 Bee Conditionals 5_instruction: I fiori viola possono avere una quantità
         di nettare pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere
         nettare da un fiore viola se ne ha una quantità pari a 0. Usa il blocco "se"
         per controllare se la quantità è 0 oppure 1.
-      2-3 Bee Conditionals 6_instruction: Scegli questo fiore con un blocco "se" per
-        vedere se ha polline.
+      2-3 Bee Conditionals 6_instruction: Controlla questo fiore con un blocco "se"
+        per verificare se ha del nettare.
       2-3 Bee Conditionals 7_instruction: Raccogli il nettare da ogni fiore, se ne
-        ha una quantità qualsiasi.
+        ha.
       2-3 Bee Conditionals 8_instruction: Su questo campo ci sono fiori rossi e viola.
         I fiori rossi possiedono una quantità nota di nettare, ma la quantità dei
         fiori viola è ignota. Raccogli tutto il nettare.
       2-3 Bee Conditionals 9_instruction: Raccogli tutto il nettare da ogni fiore.
-      2-3 Bee Conditionals Assessment 1_instruction: 'Compito: raccogli tutto il nettare.
-        Fai attenzione a non raccogliere nettare dai fiori viola se non ne hanno.'
-      2-3 Bee Debugging 1_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele.
-      2-3 Bee Debugging 10_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele.
-      2-3 Bee Debugging 2_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele.
-      2-3 Bee Debugging 3_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele.
-      2-3 Bee Debugging 4_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele.
-      2-3 Bee Debugging 5_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele. Ora puoi
-        utilizzare i comandi corri "run" e passo "step".
-      2-3 Bee Debugging 6_instruction: 'Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele. '
-      2-3 Bee Debugging 7_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele.
-      2-3 Bee Debugging 8_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele.
-      2-3 Bee Debugging 9_instruction: Questi blocchi mi stanno "bloccando". Corregi
-        gli errori per raccogliere tutto il polline e trasformarlo in miele.
-      2-3 Bee Debugging Assessment 1_instruction: 'Compito: questi blocchi sono davvero
-        fastidiosi per me. Sistema gli errori che impediscono di raccogliere tutto
-        il nettare e produrre tutto il miele.'
-      2-3 Bee Functions 1_instruction: Una funzione è un insieme di blocchi di codice
+      2-3 Bee Conditionals Assessment 1_instruction: Questo è un esercizio di verifica
+        -- Raccogli tutto il nettare. Fai attenzione a non raccogliere il nettare
+        dai fiori viola se non ne hanno.
+      2-3 Bee Debugging 1_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 10_instruction: Questi blocchi sbagliati mi fanno perdere
+        tempo. Correggi gli errori per raccogliere tutto il nettare e trasformarlo
+        in miele. Clicca su "Fai un passo" per eseguire il programma un blocco alla
+        volta.
+      2-3 Bee Debugging 2_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 3_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 4_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 5_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Da ora in avanti puoi usare, oltre al comando "Fai un passo", anche il comando
+        "Esegui" per eseguire tutti i blocchi.
+      2-3 Bee Debugging 6_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 7_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 8_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 9_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Correggi gli errori per raccogliere tutto il nettare e trasformarlo in miele.
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging Assessment 1_instruction: Questo è un esercizio di verifica
+        -- Questi blocchi sbagliati mi fanno perdere tempo. Correggi gli errori per
+        raccogliere tutto il nettare e trasformarlo in miele.
+      2-3 Bee Functions 1_instruction: Una funzione è una sequenza di blocchi di codice
         che esegue un compito. Usa la funzione "raccogli 2 dosi di nettare" per raccogliere
         il nettare da ogni fiore.
       2-3 Bee Functions 10_instruction: I fiori viola possono avere una quantità di
         nettare pari a 0 oppure 1. Definisci una funzione che raccoglie il nettare
         da un fiore viola solo se ne ha.
-      2-3 Bee Functions 2_instruction: Una funzione è un insieme di blocchi di codice
+      2-3 Bee Functions 2_instruction: Una funzione è una sequenza di blocchi di codice
         che esegue un compito. Usa la funzione "raccogli 5 dosi" per raccogliere ogni
         volta 5 dosi di nettare. Assicurati anche di usare un ciclo per contare nel
         modo migliore.
@@ -276,48 +288,51 @@
         -- Usa la funzione data per raccogliere il nettare da ogni fiore.
       2-3 Bee Functions Assessment 2_instruction: Questo è un esercizio di verifica
         -- Definisci una funzione per fare 3 dosi di miele alla volta.
-      2-3 Bee Loops 1_instruction: 'Ciascun fiore contiene un''unità di nettare. Raccogli
-        il nettare da ogni fiore. '
-      2-3 Bee Loops 10_instruction: Puoi utilizzare un ciclo mentre "while" all'interno
-        degli altri cicli per raccogliere tutto il polline?
+      2-3 Bee Loops 1_instruction: 'Ogni fiore contiene un''unità di nettare. Raccogli
+        il nettare da ciascun fiore. '
+      2-3 Bee Loops 10_instruction: Riesci ad usare un ciclo "mentre" all'interno
+        di altri due cicli per raccogliere tutto il nettare?
       2-3 Bee Loops 11_instruction: Usa un ciclo mentre "while" per raccogliere il
         polline dai fiori in questo campo.
       2-3 Bee Loops 12_instruction: Usa un ciclo mentre "while" per raccogliere il
         polline dai fiori in questo campo.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
-      2-3 Bee Loops 1A_instruction: 'Ciao, sono un''ape. Potresti aiutarmi a raccogliere
+      2-3 Bee Loops 13_instruction: Questo è un esercizio di verifica -- Usa il blocco
+        "ripeti" per raccogliere tutto il nettare.
+      2-3 Bee Loops 1A_instruction: 'Ciao, sono un''ape. Riesci ad aiutarmi a raccogliere
         il nettare da questi fiori? '
       2-3 Bee Loops 2_instruction: Usa un ciclo per raccogliere il nettare e trasformarlo
         in miele.
-      2-3 Bee Loops 2A_instruction: Puoi completare lo stesso compito in maniera più
-        semplice utilizzando un ciclo?
-      2-3 Bee Loops 3_instruction: Raccogli il polline da ciascun fiore e fare miele
-        in ciascun nido d'ape.
-      2-3 Bee Loops 3A_instruction: Puoi usare un ciclo per raccogliere tutto il nettare?
-      2-3 Bee Loops 3B_instruction: Ora usa il nuovo mattoncino 'ripeti' per raccogliere
-        tutto il nettare e produrre tutto il miele.
-      2-3 Bee Loops 4_instruction: Utilizza un ciclo simile all'ultimo puzzle, ma
-        usa l'istruzione gira "turn".
-      2-3 Bee Loops 4A_instruction: Cosa succede se ripeti questa sequenza 3 volte?
-        Non dimenticare di produrre il miele alla fine!
-      2-3 Bee Loops 5_instruction: Usa il ciclo per scendere e raccogliere il polline.
-      2-3 Bee Loops 6_instruction: Usa un ciclo per raccogliere il polline da ciascun
-        fiore e fare miele in ciascun nido d'ape.
-      2-3 Bee Loops 7_instruction: Metti questi blocchi all'interno di un ciclo per
-        raccogliere polline da ciascun fiore.
-      2-3 Bee Loops 8_instruction: Questi fiori viola hanno una quantità sconosciuta
-        di polline. Usa il ciclo mentre  polline "while" per raccoglierlo tutto. Questo
-        ciclo durerà fino a quando la condizione è vera, in questo caso polline >
-        0.
+      2-3 Bee Loops 2A_instruction: Riesci a raccogliere il nettare con meno blocchi,
+        usando un ciclo?
+      2-3 Bee Loops 3_instruction: Raccogli il nettare da ogni fiore e fai il miele
+        ad ogni favo.
+      2-3 Bee Loops 3A_instruction: Riesci ad usare un ciclo per raccogliere tutto
+        il nettare?
+      2-3 Bee Loops 3B_instruction: Adesso usa il blocco "ripeti" sia per raccogliere
+        tutto il nettare che per produrre tutto il miele.
+      2-3 Bee Loops 4_instruction: Usa un ciclo simile a quello del precedente esercizio,
+        ma usa l'istruzione "gira".
+      2-3 Bee Loops 4A_instruction: Cosa succede se ripeti questa sequenza per 3 volte?
+        Non dimenticarti di produrre il miele alla fine!
+      2-3 Bee Loops 5_instruction: Usa un ciclo per scendere la scala e raccogliere
+        tutto il nettare.
+      2-3 Bee Loops 6_instruction: Usa un ciclo per raccogliere il nettare da ciascun
+        fiore e fare miele in ogni favo.
+      2-3 Bee Loops 7_instruction: Metti questi blocchi all'interno di un ciclo in
+        modo tale da raccogliere il nettare da ciascun fiore.
+      2-3 Bee Loops 8_instruction: I fiori viola possiedono una quantità imprecisata
+        di nettare. Usa il ciclo "mentre  nettare" per raccoglierlo tutto. Il blocco
+        "mentre" farà qualunque cosa si trova all'interno di esso PER TUTTO IL TEMPO
+        IN CUI la condizione scritta accanto a "mentre" è VERA, in questo caso per
+        tutto il tempo in cui "nettare > 0".
       2-3 Bee Loops 9_instruction: Il ciclo while può essere usato come un'istruzione
         if all'interno di un ciclo. Aggiungi un ciclo while in questo programma per
         completare lo stesso compito.
-      2-3 Bee Loops Assessment 1_instruction: Valutazione - Usa un ciclo while per
-        raccogliere tutto il nettare da questo fiore.
-      2-3 Maze 1_instruction: 'Puoi aiutarmi a catturare il maiale cattivo? Impila
-        un paio di mattoncini "Vai avanti" e premi "Esegui". '
+      2-3 Bee Loops Assessment 1_instruction: Questo è un esercizio di verifica -
+        Usa un ciclo annidato per raccogliere tutto il nettare da questi fiori.
+      2-3 Maze 1_instruction: 'Puoi aiutarmi a catturare il maialino cattivo? Accosta
+        due blocchi "vai avanti" uno sopra l''altro e poi premi "Esegui" per aiutarmi
+        a raggiungerlo. '
       2-3 Maze 10_instruction: Guidami verso quel cattivone verde! Fai attenzione
         alla dinamite (TNT)
       2-3 Maze 11_instruction: Ho fame, fammi arrivare al fiore! Quante volte devi
@@ -329,8 +344,8 @@
       2-3 Maze 12 (old)_instruction: Portami al maiale, ora con il comando Ripeti
         il blocco "n" volte!
       2-3 Maze 12_instruction: |
-        Riesci a sostituire questi cinque blocchi con solo due blocchi?
-        (Aiuto: Crea un ciclo usando un blocco "ripeti".)
+        Riesci a sostituire questi cinque blocchi con due soli blocchi?
+        (Suggerimento: Crea un ciclo usando il blocco "ripeti 5 volte".)
       2-3 Maze 13 (old)_instruction: Portami al maiale, ora con il blocco "Ripeti
         fino a"!
       2-3 Maze 13_instruction: Fammi arrivare al maialino, usando solo 2 blocchi.
@@ -341,22 +356,21 @@
       2-3 Maze 15 (old)_instruction: Fammi arrivare al maialino con il blocco "ripeti
         ... fino a che"!
       2-3 Maze 15_instruction: Usa due cicli per arrivare al maialino usando meno
-        blocchi.
+        blocchi possibile.
       2-3 Maze 16 (old)_instruction: Fammi arrivare al maialino con il blocco "ripeti
         ... fino a che"!
       2-3 Maze 16 before_instruction: Fammi arrivare al maialino.
       2-3 Maze 16_instruction: Fammi arrivare al girasole. Ripeti la sequenza!
       2-3 Maze 2_instruction: Questo maialino mi fa arricciare le penne. Aiutami a
         prenderlo!
-      2-3 Maze 3_instruction: Traccia il percorso e portami dallo stupido maiale.
-        Evita il TNT o le piume voleranno via!
+      2-3 Maze 3_instruction: Fammi fare il percorso per arrivare a quello sciocco
+        maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
       2-3 Maze 4_instruction: Guidami verso quel cattivone verde! Fai attenzione alla
         dinamite (TNT)
       2-3 Maze 5_instruction: Guidami verso quel cattivone verde! Fai attenzione alla
         dinamite (TNT)
-      2-3 Maze 6_instruction: |
-        Mantieni la calma ed aiutami a trovare il maiale cattivo. Altrimenti
-        potrei arrabbiarmi!
+      2-3 Maze 6_instruction: Mantieni la calma e aiutami a trovare quel cattivone
+        di un maiale. Altrimenti potrei arrabbiarmi!
       2-3 Maze 7_instruction: Guidami verso quel cattivone verde! Fai attenzione alla
         dinamite (TNT)
       2-3 Maze 8_instruction: Fammi arrivare al maialino!
@@ -368,8 +382,8 @@
       2-3 Maze Loops 19_instruction: Fammi arrivare al girasole!
       2-3 Maze Loops 20_instruction: Fammi arrivare al girasole!
       2-3 Maze Loops 21_instruction: Fammi arrivare al girasole!
-      2-3 Maze Loops Assessment 1_instruction: 'Valutazione: Portami dal girasole
-        usando solo 5 blocchi!'
+      2-3 Maze Loops Assessment 1_instruction: 'Questo è un esercizio di verifica
+        -- Fammi arrivare al girasole, usando solo 5 blocchi! '
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
@@ -385,13 +399,12 @@
       2-3 maze sq15_instruction: Puoi arrivare al girasole usando solo cinque blocchi?
       2-3 maze sq16_instruction: Questo esercizio è simile al precedente, ma leggermente
         diverso. Puoi risolverlo usando solo cinque blocchi?
-      2-3 Maze sq2_instruction: Traccia il percorso e portami dallo stupido maiale.
-        Evita il TNT o le piume voleranno via!
+      2-3 Maze sq2_instruction: Fammi fare il percorso per arrivare a quello sciocco
+        maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria!
       2-3 Maze sq3_instruction: Guidami verso quel cattivone verde! Fai attenzione
         alla dinamite (TNT)
-      2-3 Maze sq4_instruction: |
-        Mantieni la calma ed aiutami a trovare il maiale cattivo. Altrimenti
-        potrei arrabbiarmi!
+      2-3 Maze sq4_instruction: Mantieni la calma e aiutami a trovare quel cattivone
+        di un maiale. Altrimenti potrei arrabbiarmi!
       2-3 Maze sq5_instruction: Portami dal maiale! Quante volte devi ripetere un
         blocco?
       2-3 Maze sq6_instruction: 'Puoi sostituire la precedente risposta con solo due
@@ -418,10 +431,10 @@
       4-5 Artist 3.5_instruction: Cerca di immaginare cosa succede se si esegue questo
         codice (o premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di
         volte sufficiente a completare il disegno. I colori saranno diversi ogni volta.
-      4-5 Artist 3_instruction: Questa aiuola rettangolare ha un perimetro di 600.
-        Il lato lungo ha una lunghezza di 200. Disegna il rettangolo.
-      4-5 Artist 4_instruction: Quanti gradi ci sono in un cerchio?  Ripeti i blocchi
-        il numero giusto di volte per creare un cerchio tutto colorato.
+      4-5 Artist 3_instruction: Questa aiuola rettangolare ha un perimetro di 600
+        pixel. Il lato lungo ha una lunghezza di 200. Disegna il rettangolo.
+      4-5 Artist 4_instruction: Quanti gradi ci sono in un cerchio?  Inserisci questo
+        valore nel blocco "ripeti ... volte" in modo da creare un cerchio tutto colorato.
       4-5 Artist 5_instruction: Che angolo devi usare in questo esercizio?
       4-5 Artist 6_instruction: 'Questo triangolo è equilatero: tutti gli angoli sono
         quindi di 60 gradi. Ogni lato è lungo 200 pixel. Completa il disegno.'
@@ -523,121 +536,122 @@
       4-5 Artist Functions 9_instruction: Disegna questi 3 fiori. L'altezza del primo
         è 100 e il successivo sempre 50 pixel più alto del precedente. I fiori sono
         distanti 100 pixel tra di loro.
-      4-5 Artist Patterns 1_instruction: |
-        Riesci a disegnare questo quadrato usando un ciclo?
-        Ogni lato è di 20 pixel.
-      4-5 Artist Patterns 10_instruction: "Questo codice disegna due righe di esagoni
-        - \nesegui 4 volte l'intero codice per disegnare un favo. Suggerimento: Devi
-        tornare indietro di 120 pixel nel ciclo più esterno per essere sicuro che
-        l'artista non disegni fuori dallo schermo.\n"
-      4-5 Artist Patterns 11_instruction: 'Quanti cicli devi eseguire per disegnare
-        un mezzo cerchio? Suggerimento: Se ci sono 360 gradi in un cerchio e ogni
-        ciclo avanza di 3 gradi, quante volte devi usare il ciclo disegna un intero
-        cerchio?'
-      4-5 Artist Patterns 12_instruction: Se copi il ciclo e giri a sinistra invece
-        che a destra, cosa succede? Riesci a ripetere il ciclo per disegnare quest'onda?
-      4-5 Artist Patterns 13_instruction: Ora ripeti il tutto quattro volte per creare
-        questa cornice. Attento agli spigoli - non basta girare di 90 gradi! Se eseguendo
-        60 cicli da 3 gradi crei un mezzo cerchio, quale di questi blocchi di codice
-        crea un quarto di cerchio per gli spigoli?
-      4-5 Artist Patterns 2_instruction: Se posizioni un ciclo per creare un quadrato
-        all'interno di un altro ciclo, lo chiameremo ciclo nidificato. Cosa devi aggiungere
+      4-5 Artist Patterns 1_instruction: Riesci a disegnare questo quadrato usando
+        un ciclo? Ogni lato è lungo 20 pixel.
+      4-5 Artist Patterns 10_instruction: 'Questo codice disegna due righe di esagoni.
+        Per disegnare tutto il favo devi eseguire l''intero codice 4 volte. Suggerimento:
+        per essere sicuro che l''artista non disegni fuori dallo schermo, assicurati
+        di tornare indietro di 120 pixel nel ciclo più esterno.'
+      4-5 Artist Patterns 11_instruction: 'Quante volte devi eseguire questo codice
+        per disegnare un semicerchio? Suggerimento: se in un cerchio ci sono 360 gradi
+        e ogni ciclo avanza di 3 gradi, quante volte dovresti ripetere il ciclo per
+        disegnare un cerchio intero?'
+      4-5 Artist Patterns 12_instruction: Che cosa succede se copi il ciclo che ti
+        è stato dato, ma fai girare l'artista a sinistra invece che a destra? Usando
+        un ciclo annidato riesci a disegnare quest'onda?
+      4-5 Artist Patterns 13_instruction: 'Per creare questa cornice devi ripetere
+        4 volte tutto il codice che ti è stato dato. Attento agli spigoli, non basta
+        girare di 90 gradi! Suggerimento: se, avanzando di 3 gradi per ciclo, hai
+        bisogno di 60 ripetizioni per disegnare mezzo cerchio, quale di questi blocchi
+        di codice ti permette di disegnare un quarto di cerchio per gli spigoli?'
+      4-5 Artist Patterns 2_instruction: Se posizioni il ciclo per disegnare il quadrato
+        all'interno di un altro ciclo, ottieni un ciclo annidato. Cosa devi aggiungere
         al ciclo più esterno per essere sicuro che tutti i 15 quadrati siano allineati
-        uno all'altro?
-      4-5 Artist Patterns 3_instruction: "Addentriamoci ancora più a fondo! \nAbbiamo
-        nidificato un intero blocco all'interno di un altro ciclo, ma devi far tornare
-        l'artista indietro per disegnare la prossima linea. Quale di questi blocchi
-        di codice puoi posizionare alla fine del loop più esterno per disegnare l'intero
-        reticolo?\n"
-      4-5 Artist Patterns 4_instruction: Il diamante è composto da lati di 50 pixel
-        e angoli di 120 e 160 gradi. Usa un ciclo per disegnarne uno.
+        l'uno all'altro?
+      4-5 Artist Patterns 3_instruction: Andiamo ancora più a fondo! Abbiamo annidato
+        il ciclo, che ti consente di disegnare una riga della griglia, all'interno
+        di un altro ciclo. Per completare la griglia, devi far tornare l'artista indietro
+        in modo tale da disegnare le righe successive. Quale sequenza di blocchi devi  posizionare
+        alla fine del ciclo più esterno per disegnare l'intera griglia?
+      4-5 Artist Patterns 4_instruction: 'Questo rombo ha tutti i lati di 50 pixel,
+        e due tipi di angoli: da 120 e da 60 gradi. Usa un ciclo per disegnarlo.'
       4-5 Artist Patterns 5.5_instruction: Quante volte devi ripetere questo blocco
         per disegnare un intero reticolo di diamanti?
-      4-5 Artist Patterns 5_instruction: |
-        Ripetiamolo per fare una fila di 6 diamanti.
-        Nota che abbiamo cambiato il nostro codice del diamante affinché venga ripetuto 3 volte invece di 2 - perché credi che questo sia così?
-      4-5 Artist Patterns 6_instruction: |
-        Quante volte hai bisogno per ripetere questo
-        blocco per disegnare l'intera griglia di diamanti?
+      4-5 Artist Patterns 5_instruction: Ripetiamo il disegno 6 volte per ottenere
+        una fila di rombi. Fai attenzione! Il codice per disegnare il rombo viene
+        ora ripetuto 3 volte invece di 2 - secondo te qual'è il motivo?
+      4-5 Artist Patterns 6_instruction: Quante volte devi ripetere questo codice
+        per disegnare l'intera griglia di rombi?
       4-5 Artist Patterns 7_instruction: Modifichiamo il codice dell'esercizio precedente
-        per costruire questa figura più complessa. Osserva in che modo ora i diamanti
-        si sovrappongono; prova a cambiare il primo "salta indietro" da 100 a 50 (la
-        metà) -  adesso quanto lontano dovrebbe andare l'artista nel secondo "salta
-        indietro"?
-      4-5 Artist Patterns 8_instruction: |
-        Utilizza un ciclo per disegnare questo esagono con 40
-        pixel per lato e angoli di 60 gradi.
-      4-5 Artist Patterns 9.5_instruction: |
-        Facciamo un ciclo in questo codice per disegnare due file
-        di esagoni. Notate come la nostra seconda riga viene spostata verso destra.
-      4-5 Artist Patterns 9_instruction: 'Ripetere ora il codice 3 volte per disegnare
-        l''intera riga. Suggerimento: ogni esagono è largo 80 pixel tra i punti più
-        lontani tra destra e sinistra.'
-      4-5 Artist Patterns Free Play_instruction: Gioco libero - provate a creare un
-        vostro disegno!
+        per disegnare una figura più complessa. Osserva il modo in cui si sovrappongono
+        i rombi in questa figura e prova a dimezzare il primo "salta all'indietro"
+        impostando 50 al posto di 100.  Di quanto deve essere modificato il secondo
+        "salta all'indietro" per completare la figura?
+      4-5 Artist Patterns 8_instruction: Disegna un esagono con lati di 40 pixel e
+        angoli di 60 gradi usando un ciclo.
+      4-5 Artist Patterns 9.5_instruction: Per disegnare due righe di esagoni devi
+        inserire questo codice all'interno di un altro ciclo.  Osserva il modo in
+        cui la seconda riga viene spostata verso destra.
+      4-5 Artist Patterns 9_instruction: 'Ripetiamo il disegno 3 volte per ottenere
+        una fila di esagoni. Suggerimento: gli estremi, sinistro e destro, di ciascun
+        esagono distano 80 pixel.'
+      4-5 Artist Patterns Free Play_instruction: 'Tempo di giocare: prova a fare un
+        disegno tutto tuo!'
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        L'ape non può dire se si tratta di un fiore
-        o un favo. Raccogliere il nettare solo dai fiori, ma prima verificare se si tratta di
-        un fiore o favo.
+      4-5 Bee Conditionals 1_instruction: L'ape non può sapere se dietro la nuvola
+        c'è un fiore oppure un favo. Può raccogliere il nettare solo da un fiore,
+        quindi controlla prima se c'è un fiore oppure un favo!
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: |
-        L'ape vuole solo il nettare in questo momento. Ricordate,
-        non tutti gli oggetti sono i fiori,per questo motivo verificate di raccogliere il nettare solo dai fiori.
-      4-5 Bee Conditionals 3_instruction: |
-        Ora l'ape vuole solo fare il miele.
-        Controllate che il miele venga fatto solo nei favi.
+      4-5 Bee Conditionals 2_instruction: Adesso l'ape vuole solo del nettare. Ricordati
+        che non tutti gli oggetti nascosti sono fiori, quindi controlla in modo da
+        raccogliere il nettare solo quando ci sono fiori.
+      4-5 Bee Conditionals 3_instruction: Ora l'ape vuole solo fare il miele. Quindi
+        controlla, in modo che l'ape faccia il miele solo quando ci sono favi.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: "L'oggetto sconosciuto può essere o un fiore
-        o un favo. \nUtilizzare il blocco if/else per raccogliere il nettare se si
-        tratta di un fiore, else per fare il miele ( perché si tratta di un favo).\n"
-      4-5 Bee Conditionals 5_instruction: Ci potrebbe essere un fiore o un favo sotto
-        quelle nuvole. Usare il blocco if/else per raccogliere il nettare se si tratta
-        di un fiore, else per fare il miele (perché si tratta di un favo).
+      4-5 Bee Conditionals 4_instruction: L'oggetto nascosto può essere un fiore oppure
+        un favo. Usa il blocco "se-altrimenti" per raccogliere il nettare "se" si
+        tratta di un fiore, "altrimenti" per fare il miele (dato che, in questo caso,
+        si tratta sicuramente di un favo).
+      4-5 Bee Conditionals 5_instruction: Potrebbe esserci un fiore oppure un favo
+        dietro quelle nuvole. Usa un blocco "se-altrimenti" per raccogliere il nettare
+        "se" si tratta di un fiore, "altrimenti" per fare il miele (dato che, in questo
+        caso, si tratta sicuramente di un favo).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: "Da questo fiore viola si possono ottenere
-        3,2 o 1 nettari. \nQui un blocco if-else è combinato con un altro blocco if-else
-        per creare un blocco if, else-if, else. completa la soluzione per raccogliere
-        l'ammontare sconosciuto di nettare.\n"
+      4-5 Bee Conditionals 6_instruction: |
+        Un fiore viola può avere 1, 2 o 3 dosi di nettare, ma tu non sai quante ne ha!
+
+        In questo esercizio un blocco "se-altrimenti" viene combinato con un altro blocco "se-altrimenti" per creare un blocco con tre ramificazioni: "se", "altrimenti-se" , "altrimenti". Prova a completare il programma in modo tale da raccogliere tutto il nettare.
       4-5 Bee Conditionals 7_instruction: Ricordati che un fiore viola può avere 1,
         2, 3 dosi di nettare. Completa la funzione "controlla fiore viola" ed usala
         per raccogliere tutto il nettare dai fiori.
-      4-5 Bee Conditionals 8_instruction: "Scrivete una funzione all'interno del blocco
-        chiamato \"controlla il fiore per fare il miele.\"  \nLa vostra funzione deve
-        controllare quanto nettare ha il\nfiore viola e raccoglierlo, andare avanti,
-        e poi fare il miele.\n"
-      4-5 Bee Conditionals Assessment 1_instruction: 'Valutazione: Questo codice è
-        sbagliato. Completa la funzione "ottieni il nettare o produci il miele", poi
-        chiamala per raccogliere tutto il nettare e il miele. Ricorda che i fiori
-        viola possono avere 3, 2 o 1 dosi di nettare.'
-      4-5 Bee Debugging 1_instruction: Questi blocchi sono pieni di errori. Riesci
-        a sistemarli?
+      4-5 Bee Conditionals 8_instruction: Scrivi una funzione "controlla fiore - fai
+        miele". La tua funzione deve controllare quanto nettare c'è nel fiore viola
+        e raccoglierlo TUTTO, poi andare avanti e fare UNA SOLA dose di miele.
+      4-5 Bee Conditionals Assessment 1_instruction: Questo è un esercizio di verifica
+        -- La funzione "raccogli il nettare o fai il miele" è sbagliata e incompleta.
+        Correggila e completala per raccogliere tutto il nettare e fare il miele.
+        Ricorda che i fiori viola possono avere 1, 2 o 3 dosi di nettare.
+      4-5 Bee Debugging 1_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
+        Riesci a correggerli?
       4-5 Bee Debugging 10_instruction: Trova gli errori e correggili.
-      4-5 Bee Debugging 11_instruction: Sta effettuando il conteggio correttamente?
-      4-5 Bee Debugging 2_instruction: Aiuta l'ape a ottenere il nettare e produrre
-        il miele.
+      4-5 Bee Debugging 11_instruction: Stai effettuando il numero di ripetizioni
+        corretto?
+      4-5 Bee Debugging 2_instruction: Aiuta l'ape a raccogliere tutto il nettare
+        dai fiori e a produrre tutto il miele.
       4-5 Bee Debugging 3_instruction: Trova gli errori e correggili.
-      4-5 Bee Debugging 4_instruction: Questi blocchi non funzionano. Qual è la figura?
-      4-5 Bee Debugging 5_instruction: Qualcosa non è corretto qui...
+      4-5 Bee Debugging 4_instruction: Questo sequenza di blocchi è sbagliata. Che
+        tipo di percorso devo fare?
+      4-5 Bee Debugging 5_instruction: C'è qualcosa che non va...
       4-5 Bee Debugging 6_instruction: Il fiore viola ha una quantità imprecisata
-        di nettare. Sistema i blocchi in modo da raccogliere tutto il nettare dal
-        fiore.
-      4-5 Bee Debugging 7_instruction: Alla funzione manca qualcosa...
-      4-5 Bee Debugging 8_instruction: La funzione va bene, ma non è usata correttamente.
-      4-5 Bee Debugging 9_instruction: Perché l'ape non sta producendo abbastanza
+        di nettare. Correggi la sequenza di blocchi in modo da raccogliere tutto il
+        nettare dal fiore.
+      4-5 Bee Debugging 7_instruction: Alla funzione che ti è stata data manca qualcosa...
+      4-5 Bee Debugging 8_instruction: La funzione che ti è stata data è corretta,
+        ma non viene usata nel modo giusto.
+      4-5 Bee Debugging 9_instruction: Perché l'ape non riesce a produrre tutto il
         miele?
       4-5 Bee Debugging Assessment 1_instruction: Questo è un esercizio di verifica
         -- Correggi il codice.
@@ -645,28 +659,30 @@
       4-5 Bee Nested Loops 2_instruction: Raccogli tutto il nettare da ogni fiore.
         Usa un ciclo annidato.
       4-5 Bee Nested Loops 3_instruction: Raccogli tutto il nettare inserendo il codice
-        iniziale all'interno di un ciclo annidato.
+        che trovi già pronto (che contiene un ciclo) all'interno di un ciclo (ciclo
+        annidato).
       4-5 Bee Nested Loops 4_instruction: Raccogli tutto il nettare da ogni fiore
-        e fai il miele ad ogni favo. Usa un ciclo annidato.
-      4-5 Bee Nested Loops 5_instruction: Raccogli tutto il nettare creando un ciclo
-        annidato.
+        e fai il miele in ogni favo. Usa un ciclo annidato.
+      4-5 Bee Nested Loops 5_instruction: Usa un ciclo annidato per raccogliere tutto
+        il nettare.
       4-5 Bee Nested Loops 6_instruction: Raccogli tutto il nettare.
-      4-5 Bee Nested Loops 7_instruction: Inserisci questo CICLO all'interno di un
-        altro ciclo per creare un CICLO NIDIFICATO e raccogliere tutto il nettare
-        dai fiori.
+      4-5 Bee Nested Loops 7_instruction: Raccogli tutto il nettare inserendo il codice
+        che ti è stato dato all'interno di un ciclo annidato.
       4-5 Bee Nested Loops 8_instruction: 'Raccogli tutto il nettare da questi fiori
         utilizzando un ciclo WHILE nidificato. Sostituisci il blocco "Ripeti n Volte"
         interno con un blocco WHILE. '
       4-5 Bee Nested Loops 9_instruction: Raccogli tutto il nettare da questi fiori
-        inserendo (nidificando) un ciclo WHILE (mentre) all'interno di un ciclo REPEAT
-        (ripeti).
-      4-5 Bee Nested Loops Assessment 1_instruction: Valutazione - Raccogli tutto
-        il nettare e produci il miele usando i cicli.
-      4-5 Bee Nested Loops Rows_instruction: Raccogli in nettare dalle file di fiori!
-        Usa un ciclo nidificato.
+        inserendo un ciclo "mentre" all'interno di un ciclo "ripeti".
+      4-5 Bee Nested Loops Assessment 1_instruction: Questo è un esercizio di verifica
+        -- Usa i cicli per raccogliere tutto il nettare e trasformarlo in miele.
+      4-5 Bee Nested Loops Rows_instruction: Raccogli tutto il nettare da questi di
+        fiori! Usa un ciclo annidato.
       4-5 Maze 1 (copy 1)_instruction: Caro umano, me zombie. Devo... arrivare...
         girasole.
-      4-5 Maze 1_instruction: Caro umano, me zombie. Devo... arrivare... girasole.
+      4-5 Maze 1_instruction: |
+        Caro umano, me zombie. Devo... arrivare... girasole.
+
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta, oppure sul comando "Esegui" per eseguire tutti i blocchi.
       4-5 Maze 10_instruction: Puoi arrivare al girasole usando solo quattro blocchi?
       4-5 Maze 11_instruction: Puoi arrivare al girasole usando solo sei blocchi?
       4-5 Maze 12_instruction: Questo esercizio è leggermente diverso. Puoi arrivare
@@ -680,10 +696,14 @@
         tagliola!
       4-5 Maze 3 (copy 1)_instruction: Devo... arrivare... girasole.
       4-5 Maze 3_instruction: Devo... arrivare... girasole.
-      4-5 Maze 4 (copy 1)_instruction: Prova ad usare il blocco "ripeti" per risolvere
-        l'esercizio con meno blocchi...
-      4-5 Maze 4_instruction: Prova ad usare il blocco "ripeti" per risolvere l'esercizio
-        con meno blocchi...
+      4-5 Maze 4 (copy 1)_instruction: |
+        Prova ad usare il blocco "ripeti" per risolvere l'esercizio con meno blocchi...
+
+        Il blocco "ripeti" (detto anche "ciclo") mi farà "ripetere" le azioni all'interno del blocco il numero di volte che hai impostato.
+      4-5 Maze 4_instruction: |
+        Prova ad usare il blocco "ripeti" per risolvere l'esercizio con meno blocchi...
+
+        Il blocco "ripeti" (detto anche "ciclo") mi farà "ripetere" le azioni all'interno del blocco il numero di volte che hai impostato.
       4-5 Maze 5 (copy 1)_instruction: Prova a risolvere questo esercizio usando meno
         blocchi possibile.
       4-5 Maze 5_instruction: Prova a risolvere questo esercizio usando meno blocchi
@@ -692,88 +712,111 @@
         blocchi possibile.
       4-5 Maze 6_instruction: Prova a risolvere questo esercizio usando meno blocchi
         possibile.
-      4-5 Maze 7_instruction: Caro umano, me zombie. Devo... arrivare... girasole.
+      4-5 Maze 7_instruction: |
+        Caro umano, me zombie. Devo... arrivare... girasole.
+
+        Clicca su "Fai un passo" per eseguire il programma un blocco alla volta, oppure sul comando "Esegui" per eseguire tutti i blocchi.
       4-5 Maze 8_instruction: Usa il blocco "ripeti" per far arrivare lo zombie fino
         al girasole. (Evita le tagliole!)
-      4-5 Maze 9_instruction: Crea un ciclo usando il blocco "ripeti fino a che".
+      4-5 Maze 9_instruction: |
+        Crea un ciclo usando il nuovo blocco "ripeti fino a che".
+
+        Esso mi farà "ripetere" le azioni "fino a che" raggiungo il girasole.
       4-5 Maze Assessment 1_instruction: Questo è un esercizio di verifica -- Fammi
         arrivare al girasole.
       4-5 Maze Conditionals 1_instruction: Usa il blocco "ripeti fino a che" per far
         arrivare lo zombie fino al girasole.
-      4-5 Maze Conditionals 10_instruction: Puoi aggiungere 3 blocchi per aiutarmi
-        a risolvere un labirinto più complesso? Se inserisci i blocchi corretti, potrò
-        percorrere qualsiasi percorso curvo indipendentemente dalla sua lunghezza.
+      4-5 Maze Conditionals 10_instruction: Riesci ad aggiungere solo 3 blocchi per
+        farmi uscire da un labirinto più complesso? Se lo fai correttamente, riuscirò
+        a camminare lungo un percorso tortuoso di qualsiasi lunghezza.
       4-5 Maze Conditionals 2_instruction: Usa il blocco "ripeti fino a che" per far
         arrivare lo zombie fino al girasole.
-      4-5 Maze Conditionals 3_instruction: 'Utilizza il blocco "se" per farmi decidere
-        quando svoltare. Suggerimento: hai bisogno di un solo ulteriore blocco, ma
-        impara da come lo abbiamo impostato noi in modo tale che, la prossima volta,
-        tu riesca a farlo per conto tuo.'
-      4-5 Maze Conditionals 4_instruction: OK, questo è come l'ultimo puzzle, ma devi
-        ricordare come hai utilizzato assieme i blocchi SE e RIPETI.
-      4-5 Maze Conditionals 5_instruction: Voglio il Girasole! usa un blocco SE per
-        portarmi la con il minuor numero di blocchi.
-      4-5 Maze Conditionals 6_instruction: Voglio il Girasole! usa un blocco SE per
-        portarmi la con il minuor numero di blocchi.
-      4-5 Maze Conditionals 7_instruction: OK, rifacciamolo per esercitarci - questo
-        non è molto diverso, ma attento ai dentoni!
-      4-5 Maze Conditionals 8_instruction: Il blocco SE-ALTRIMENTI (if-else) verifica
-        una condizione, quindi esegue una procedura OPPURE un'altra. Prova ad usare
-        questo nuovo blocco per portarmi dal Girasole.
-      4-5 Maze Conditionals 9_instruction: Un'altro esercizio con il blocco SE-ALLORA,
-        Ci riesci al primo tentativo?
-      4-5 Maze Conditionals Assessment 1_instruction: Usa il blocco RIPETI FINO (repeat
-        until) ed il blocco SE-ALLORA (if-else) per portarmi dal Girasole con il minor
-        numero di blocchi possibile.
-      4-5 Nested Loops 1_instruction: 'Completa il codice per disegnare questi trangoli.
-        Il primo è già fatto. Suggerimento: 3 triangoli in una rotazione di 360 gradi.'
+      4-5 Maze Conditionals 3_instruction: 'Usa il blocco "se c''è strada" per decidere
+        quando farmi svoltare. Attenzione: in questo caso devi aggiungere solo un
+        blocco! Osserva, però, il modo in cui abbiamo impostato questo programma in
+        modo tale che, la prossima volta, tu riesca a farlo tutto da solo.'
+      4-5 Maze Conditionals 4_instruction: Ok, questo è quasi come l'esercizio precedente,
+        ma devi ricordarti come hai usato insieme i blocchi "se c'è strada" e "ripeti
+        fino a che".
+      4-5 Maze Conditionals 5_instruction: |
+        Me ... volere ... girasole!
+
+        Usa un blocco "se c'è strada" per farmi arrivare là con il minor numero possibile di blocchi.
+      4-5 Maze Conditionals 6_instruction: |
+        Me ... volere ... girasole!
+
+        Usa un blocco "se c'è strada" per farmi arrivare là con il minor numero possibile di blocchi.
+      4-5 Maze Conditionals 7_instruction: 'Ok, esercitiamoci di nuovo per far pratica:
+        questo esercizio non è molto diverso, ma stai attento alle piante carnivore!'
+      4-5 Maze Conditionals 8_instruction: 'Il blocco "se-altrimenti" controlla una
+        condizione: SE è vera fa una cosa ALTRIMENTI ne fa un''altra. Prova ad usare
+        questo nuovo blocco per farmi arrivare al girasole.'
+      4-5 Maze Conditionals 9_instruction: 'Ancora un esercizio con il blocco "se-altrimenti":
+        riesci a risolverlo correttamente al primo tentativo?'
+      4-5 Maze Conditionals Assessment 1_instruction: Questo è un esercizio di verifica
+        -- Usa i blocchi "ripeti fino a che" e "se-altrimenti" per arrivare al girasole
+        usando meno blocchi possibile.
+      4-5 Nested Loops 1_instruction: 'Completa il codice per disegnare questi triangoli.
+        Le istruzioni per disegnare il primo sono già pronte. Suggerimento: il disegno
+        dei 3 triangoli richiede in totale una rotazione complessiva di 360 gradi.'
       4-5 Nested Loops 10_instruction: Disegna l'ultima fila di stelle su questa bandiera
         inserendo i blocchi forniti in un ciclo. Le stelle sono distanti 50 pixels,
         ma ricorda che le stelle sono larghe 30 pixels.
       4-5 Nested Loops 11_instruction: Riesci a disegnare i 10 quadrati di questo
-        marciapiede utilizzando un ciclo nidificato? Ogni quadrato è largo 30 pixels.
+        marciapiede utilizzando un ciclo annidato? Ogni quadrato è largo 30 pixel.
       4-5 Nested Loops 12_instruction: Riesci a disegnare questi 36 triangoli utilizzando
-        un ciclo nidificato?
-      4-5 Nested Loops 2_instruction: 'Ora inserisci (nidifica) questo ciclo all''interno
-        di un altro ciclo per disegnare 10 triangoli. Questo è chiamato CICLO NIDIFICATO.
-        Suggerimento: I 10 triangoli formano una rotazione di 360 gradi.  '
-      4-5 Nested Loops 3_instruction: "Crea un Sole inserendo (nidificando) il codice
-        fornito in un altro Ciclo. Questo è chiamato CICLO NIDIFICATO.\r"
-      4-5 Nested Loops 5_instruction: Inserisci il codice fornito in un CICLO per
-        creare un mulino a vento.
-      4-5 Nested Loops 6_instruction: Riesci a disegnare un esagono inserendo le istruzioni
-        per il triangolo in un ciclo?
-      4-5 Nested Loops 7_instruction: 'Ripeti questo disegno 10 volte. Di quanto devi
-        ruotare ogni volta che ripeti il ciclo? (Suggerimento: quanto fa 360 diviso
-        10?)'
-      4-5 Nested Loops 8_instruction: 'Ripeti questo disegno 6 volte. Di quanto devi
-        ruotare ogni volta che ripeti il ciclo? (Suggerimento: quanto fa 360 diviso
-        6?)'
-      4-5 Nested Loops 9_instruction: Disegna i denti nella bocca del coccordrillo!
-      4-5 Nested Loops Assessment 1_instruction: Usa un CICLO NIDIFICATO per completare
-        il disegno.
-      4-5 While Loops 1_instruction: Portami alla buca e riempila con due badilate
-        di terra usando il blocco RIEMPI (fill).
-      4-5 While Loops 2_instruction: Spostami al cumulo di terra e rimuovilo con 5
-        badilate, usando il blocco RIMUOVI.
-      4-5 While Loops 3_instruction: 'Spostami al cumulo di terra e rimuovilo tutto,
-        poi spostami alla buca e riempila completamente. Suggerimento: Usa il minor
-        numero di blocchi possibile.'
-      4-5 While Loops 4_instruction: 'Wow, ho trovato una buca veramente profonda!
-        Non so quante badilate di terra serviranno per riempirla. Riesci a scrivere
-        un programma che riempie completamente la buca? Suggerimento: Questa volta
-        prova ad usare il ciclo WHILE (mentre).'
-      4-5 While Loops 5_instruction: Wow, ora ci sono due buche profonde! Riesci a
-        scrivere un programma che le riempie entrambe?
-      4-5 While Loops 6_instruction: Wow, c'è una grande montagna di terra! Riesci
-        a scrivere un programma che la rimuove completamente?
-      4-5 While Loops 7_instruction: Wow, ora ci sono 3 montagne di terra! Riesci
-        a scrivere un programma che le rimuove tutte completamente?
-      4-5 While Loops 8_instruction: ' C''è una buca veramente profonda e una grande
-        montagna di terra. Quante badilate di terra devono essere spostate per rendere
-        piatto il terreno? Suggerimento: Usa il ciclo WHILE (mentre) per entrambi.'
-      4-5 While Loops Assessment 1_instruction: Ci sono molte buche e montagne. Aiutami
-        a riempirle e rimuoverle per rendere il terreno piano.
+        un ciclo annidato?
+      4-5 Nested Loops 2_instruction: 'Ora inserisci le istruzioni già presenti (che
+        contengono un ciclo) all''interno di un altro ciclo, in modo da disegnare
+        10 triangoli. Un ciclo inserito all''interno di un altro ciclo viene detto
+        "ciclo annidato". Suggerimento: il disegno dei 10 triangoli richiede in totale
+        una rotazione complessiva di 360 gradi.'
+      4-5 Nested Loops 3_instruction: Disegna un sole inserendo in un ciclo il codice
+        (che è un ciclo) che trovi già pronto. Un ciclo inserito in un altro ciclo
+        si chiama "ciclo annidato".
+      4-5 Nested Loops 5_instruction: Inserisci il codice che ti è stato dato in un
+        ciclo per disegnare un mulino a vento.
+      4-5 Nested Loops 6_instruction: Riesci a disegnare un esagono inserendo in un
+        ciclo le istruzioni per disegnare un triangolo?
+      4-5 Nested Loops 7_instruction: 'Ripeti 10 volte la figura disegnata dal codice
+        che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione? (Suggerimento:
+        quanto fa 360 diviso 10?)'
+      4-5 Nested Loops 8_instruction: 'Ripeti 6 volte la figura disegnata dal codice
+        che trovi già pronto. Di quanti gradi devi ruotare ad ogni ripetizione? (Suggerimento:
+        quanto fa 360 diviso 6?)'
+      4-5 Nested Loops 9_instruction: Finisci di disegnare i denti del coccodrillo!
+      4-5 Nested Loops Assessment 1_instruction: Questo è un esercizio di verifica
+        -- Usa un ciclo annidato per completare il disegno.
+      4-5 While Loops 1_instruction: Spostami verso la buca e riempila con 2 palate
+        di terra, usando il blocco "riempi 1".
+      4-5 While Loops 2_instruction: Spostami verso il mucchio di terra e rimuovilo
+        con 5 palate di terra, usando il blocco "rimuovi 1".
+      4-5 While Loops 3_instruction: 'Spostami verso il mucchio di terra e rimuovilo
+        del tutto, poi spostami verso la buca e riempila completamente. Suggerimento:
+        Usa il minor numero di blocchi possibile.'
+      4-5 While Loops 4_instruction: 'Wow, ho trovato una buca davvero profonda! Non
+        so quante palate di terra saranno necessarie per riempirla completamente.
+        Riesci a scrivere un programma che la riempie fino a quando il terreno è livellato?
+        Suggerimento: usa le opzioni nel menu a discesa del blocco "mentre".'
+      4-5 While Loops 5_instruction: Wow, ora ci sono due buche davvero profonde!
+        Riesci a scrivere un programma che le riempie entrambe fino a quando il terreno
+        è livellato?
+      4-5 While Loops 6_instruction: Wow, c'è un grande mucchio di terra! Riesci a
+        scrivere un programma che lo rimuove completamente fino a quando il terreno
+        è livellato?
+      4-5 While Loops 7_instruction: Wow, ora ci sono 3 grandi mucchi di terra! Riesci
+        a scrivere un programma che li rimuove completamente fino a quando il terreno
+        è livellato?
+      4-5 While Loops 8_instruction: 'Ci sono una buca davvero profonda e un grande
+        mucchio di terra. Quante palate di terra sono necessarie per livellare il
+        terreno? Suggerimento: Usa il blocco "mentre" per entrambi.'
+      4-5 While Loops Assessment 1_instruction: Questo è un esercizio di verifica
+        -- Ci sono molte buche e mucchi di terra. Aiutami a riempire le buche e a
+        rimuovere i mucchi di terra per rendere livellato il terreno.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -803,8 +846,8 @@
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
-      Artist - Nested Loops Assessment 1_instruction: Usa un CICLO NIDIFICATO per
-        completare il disegno.
+      Artist - Nested Loops Assessment 1_instruction: Questo è un esercizio di verifica
+        -- Usa un ciclo annidato per completare il disegno.
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1199,14 +1242,10 @@
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      course 1 artist 1 level 10_instruction: Disegna la linea tratteggiata usando
-        sia i blocchi "salta" che quelli per disegnare
-      course 1 artist 1 level 9_instruction: Disegna la figura usando tre linee
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? \n"
-      Course 2 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      Course 2 Bee Loops 13_instruction: Questo è un esercizio di verifica -- Usa
+        il blocco "ripeti" per raccogliere tutto il nettare.
       Course 2 Bee Loops 2_instruction: |
         Can you do the same task more easily with
         a loop?
@@ -1221,13 +1260,23 @@
         times? Don't forget to make the honey at the end!
       Course 2 Maze Loops 1_instruction: Riesci a farmi arrivare al maialino usando
         5 blocchi?
-      Course 4 2_instruction: L'ape vuole solo il nettare. Verifica, non tutti gli
-        oggetti sono fiori, pertanto verifica per raccogliere il nettare solo dai
-        fiori.
+      Course 4 2_instruction: Adesso l'ape vuole solo del nettare. Ricordati che non
+        tutti gli oggetti nascosti sono fiori, quindi controlla in modo da raccogliere
+        il nettare solo quando ci sono fiori.
       Course 4 Artist 1_instruction: Aiutami a disegnare il quadrato. (Ogni linea
         è lunga 300 pixel)
-      Course 4 Artist 10_instruction: 'Spazio Libero! Divertiti e disegna quello che
-        ti piace. '
+      Course 4 Artist 10_instruction: 'Tempo di giocare: divertiti a disegnare qualunque
+        cosa ti piaccia.'
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Riesci ad inserire questo codice in un ciclo
         in modo da contornare di grigio il quadrato?
       Course 4 Artist 3_instruction: Cerca di immaginare cosa succede se si esegue
@@ -1246,9 +1295,10 @@
         i 10 triangoli formano una rotazione di 360 gradi.  '
       Course 4 Artist 8_instruction: Disegna il Sole inserendo l'intero blocco di
         codice in un ciclo e ripetendolo 12 volte.
-      Course 4 Artist 9_instruction: 'Ripeti questo disegno 10 volte e accertati di
-        ruotare il cursore prima di ogni disegno. Suggerimento per calcolare di quanto
-        devi ruotare: quanto fa 360 diviso 10?'
+      Course 4 Artist 9_instruction: 'Ripeti 10 volte la figura disegnata dal codice
+        che trovi già pronto e assicurati di ruotare un po'' tra una figura e l''altra.
+        Di quanti gradi devi ruotare ad ogni ripetizione? (Suggerimento: quanto fa
+        360 diviso 10?)'
       Course 4 Artist Binary 1_instruction: Ecco una funzione che riceve una stringa
         binaria, cioè fatta di 1 e 0, e istruisce l'artista su come muoversi da sinistra
         a destra e dall'alto al basso riempendo i quadratini quando incontra un 1
@@ -1363,55 +1413,56 @@
         per far si che il triangolo sia posizionato sopra il quadrato?
       Course 4 Artist Functions 7_instruction: Riesci a disegnare una serie di quadrati
         usando una funzione "quadrato"? Ogni quadrato ha il lato di 40 pixel.
-      Course 4 Artist Functions 8_instruction: "Are you getting the hang of how to\nuse
-        function blocks? Let's modify this square so that it is 200 pixels in\nsize.
-        Hint: click on \"edit\" to change the size of the \"draw a square\"\nfunction
-        editor. Remember to click on \"save and close\" to get out of the\nfunction
-        editor. \n"
-      Course 4 Artist Functions 9_instruction: |
-        We have given you most of the code
-        to create a function. However there seems to be something missing. Can you
-        make this function block complete?
-      Course 4 Artist Params 1_instruction: |
-        Let's edit a function that draws a
-        square with 50 pixel sides
-      Course 4 Artist Params 10_instruction: "You can call functions from inside\nother
-        functions! Using your \"shape\" function as a base, create 3 house shapes\neach
-        20 pixels larger than the last starting at 50 pixels in length. Using\na counter
-        loop might be helpful. \n"
+      Course 4 Artist Functions 8_instruction: 'Stai imparando ad usare le funzioni
+        a blocchi? Modifica questo quadrato così che abbia le dimensioni di 200 pixel.
+        Suggerimento: clicca su "modifica" per cambiare le dimensioni nell''editor
+        della funzione "disegna un quadrato". Ricorda di cliccare su "salva e chiudi"
+        per uscire dall''editor della funzione. '
+      Course 4 Artist Functions 9_instruction: Vi abbiamo fornito la maggior parte
+        del codice ncessario per creare una funzione. Tuttavia ci sembra ci sia qualcosa
+        che manca. Riouscite a fare in modo che questa funzione sia completa?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
+      Course 4 Artist Params 1_instruction: Modifichiamo ora una funzione che disegna
+        un quadrato con lati di 50 pixel
+      Course 4 Artist Params 10_instruction: 'Puoi chiamare funzioni dall''interno
+        di altre funzioni! Usando la tua funzione "forma" come base, crea 3 forme
+        di una casa, ognuna più larga di 20 pixel rispetto alla precedente, iniziando
+        da una lunghezza di 50 pixel. Può essere utile utilizzare un ciclo contatore. '
       Course 4 Artist Params 11_instruction: |
         How about a function called "pinwheel"
         that takes three parameters - "sides," "length" and "repeat." You can
         calculate how much to turn after each shape using the same math you used to
         figure out the turns for a shape of "sides". Can you recreate this picture?
         Here's a tip each shape is 100 pixel's in length.
-      Course 4 Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw
-        each of these shapes. The side length for each image is 50.
-      Course 4 Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've
-        written, and some more for you to play with. Draw something awesome!
+      Course 4 Artist Params 12_instruction: Usa la tua funzione "pinwheel" per disegnare
+        ognuna delle forme. La lunghezza del lato per ogni immagine è 50.
+      Course 4 Artist Params 13_instruction: 'Freeplay: Qui ci sono le funzioni che
+        hai scritto e alcune altre con cui puoi giocare. Disegna qualcosa di spettacolare!'
       Course 4 Artist Params 2_instruction: |
         That triangle function would be a whole
         lot more useful if it could draw triangles of different sizes. I've added
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: "Awesome, can you draw each of these\ntriangles
-        with that new function? The first is 25 pixels long, the second\nis 50, and
-        the third is 75. \n"
-      Course 4 Artist Params 4_instruction: |
-        Can you add a new function called square?
-        It should also take a length parameter, just like the triangle. This time
-        draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.
+      Course 4 Artist Params 3_instruction: 'Magnifico, puoi disegnare ognuno di questi
+        triangoli con questa nuova funzione? Il primo è lungo 25 pixel, il secondo
+        50 e il terzo 75. '
+      Course 4 Artist Params 4_instruction: Potete aggiungere una nuova funzione denominata
+        quadrato? La funzione dovrebbe anche prendere un parametro di lunghezza, proprio
+        come per il triangolo. Questa volta disegnate 3 quadrati con lunghezza di
+        25, 50 e 75 pixel e che distano 100 pixel uno dall'altro.
       Course 4 Artist Params 5_instruction: |
-        Use both of your new functions to draw
-        this picture. To make this easier you use a loop with a "counter" parameter.
-      Course 4 Artist Params 6_instruction: "Let's edit this \"draw a shape\" function.\nIt
-        already has a \"length\" parameter. Now, let's edit the function to also\nadd
-        a \"sides\" parameter. Remember the angle to turn for a given shape is\n360
-        divided by the sides it has. Hint: lengths for each shape are the triangle\nis
-        100 pixels, the hexagon is 25 pixels and the square is 50 pixels. \n"
+        Usa ambedue le nuove funzioni per disegnare questa immagine. Per semplificare questa operazione usate un ciclo con un parametro "contatore".
+      Course 4 Artist Params 6_instruction: "Modifichiamo questa funzione: \"disegna
+        una forma\".\nQuesta ha già un parametro \"lunghezza\". Ora modifichiamo la
+        funzione per aggiungere anche un parametro \"lati\". Ricorda che l'angolo
+        per una data forma è 360 diviso i lati che ha. Suggerimento: le lunghezze
+        per ogni forma sono: per il trianogolo 100 pixel, per l'esagono 25 pixel e
+        per il quadrato 50 pixel. \n"
       Course 4 Artist Params 7_instruction: 'Riesci a disegnare queste forme completando
         i "???". Il quadrato e il triangolo sono 100 pixel di dimensioni mentre l''esagono
         è di 75 pixel. '
@@ -1424,28 +1475,26 @@
         shape" function with "sides" and "length" parameters. Can you re create
         these shapes? The square counter should be 5/100/5, the triangle counter should
         be 10/100/10 and the hexagon is 2/100/2.
-      Course 4 Artist Var 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Course 4 Artist Vars 1_instruction: |
-        Can you help me draw a triangle? It's
-        100 pixels long on each side.
-      Course 4 Artist Vars 10_instruction: |
-        Here's an algorithm that draws a triangle
-        out of smaller triangles. Can you modify it so that it uses the "sides"
-        variable to draw each triangle? Look through the code, and every time you
-        see the number 3, replace it with your "sides" variable. Remember to use
-        the "set sides" block.
-      Course 4 Artist Vars 11_instruction: |
-        Here's the same algorithm that we came
-        up with for the last puzzle - what should you set the "sides" variable to
-        in order to draw this picture of squares?
+      Course 4 Artist Var 9_instruction: 'Ecco l''algoritmo per disegnare un triangolo.
+        Modificalo in modo da usare la vriabile "lati". Sostituite il numero 3 con
+        la variabile "lati". Suggerimento: ricordatevi di usare il blocco "imposta
+        i lati a".'
+      Course 4 Artist Vars 1_instruction: Mi aiutate a disegnare un triangolo? Ha
+        i lati tutti da 100 pixel.
+      Course 4 Artist Vars 10_instruction: Questo è un algoritmo che disegna un triangolo
+        all'esterno di triangoli più piccoli. Modificatelo in modo che venga utilizzata
+        la variabile "lati" disegnare ogni triangolo. Studiate il codice e ogni volta
+        che vedete il numero 3, sostituitelo con la variabile "lati". Ricordatevi
+        di utilizzare il blocco che imposta i lati.
+      Course 4 Artist Vars 11_instruction: Questo è lo stesso algoritmo che abbiamo
+        escogitato per l'ultimo puzzle. Quale vaòlore devi assegnare alla variabile
+        "lati" per disegnare questa immagine fatta da quadrati?
       Course 4 Artist Vars 12_instruction: |
         Let's set the "sides" variable to
         5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Let's add a new variable called "length" and use that wherever you
-        have a "move forward." Set the "length" variable to 75 for this shape.
+        gets! Notice that there is a new variable called "length". We can now use
+        that wherever we have a "move forward." Set the "length" variable to 75
+        for this shape.
       Course 4 Artist Vars 13_instruction: |
         The more sides a shape has, the shorter
         each side needs to be in order for the whole pattern to fit on the screen.
@@ -1453,99 +1502,84 @@
         variable and a math block to set the "length." Choose the correct equation
         from the toolbox to set the "length" variable, and also update the "sides"
         variable.
-      Course 4 Artist Vars 14_instruction: |
-        Free Play: Check it out, now your algorithm
-        is nested within one more loop. Experiment with changing the values of the
-        your two variables to draw cool patterns.
-      Course 4 Artist Vars 2_instruction: |
-        Instead of "moving forward by 100,"
-        the "move" block is now referencing the variable "length." Can you set
-        "length" to 150 to draw this new triangle?
-      Course 4 Artist Vars 3_instruction: "Here's a loop that draws a square, but\nsomething's
-        missing. Can you fix it so that it uses the variable \"length\"\nto figure
-        out how long each side should be? \n"
-      Course 4 Artist Vars 4_instruction: |
-        Now I want to make a rectangle that is
-        twice as tall as it is wide. We've got a variable called "width" that is
-        set to 100. Can you use the math blocks to complete the code?
-      Course 4 Artist Vars 5_instruction: |
-        Use the variable "sides" to control
-        how many times this loop gets run.
+      Course 4 Artist Vars 14_instruction: Giochiamo. Verifica ora come l'algoritmo
+        sia nidificato all'interno di un altro ciclo. Esperimenta modificando i valori
+        delle due variabili per disegnare accattivanti modelli.
+      Course 4 Artist Vars 2_instruction: Invece di "sposta in avanti di 100," il
+        blocco muovi fa ora riferimento alla variabile "lunghezza". Imposta la "lunghezza"
+        a 150 per disegnare questo nuovo triangolo?
+      Course 4 Artist Vars 3_instruction: 'Il ciclo proposto disegna un quadrato,
+        ma manca qualcosa. Correggi in modo che utilizzi la variabile "lunghezza"
+        per capire quanto lungo deve essere ogni lato? '
+      Course 4 Artist Vars 4_instruction: Ora voglio fare un rettangolo che sia due
+        volte alto come è largo. Abbiamo una variabile denominata "larghezza" impostata
+        a 100. Puoi utilizzare i blocchi di matematica per completare il codice?
+      Course 4 Artist Vars 5_instruction: Utilizzare la variabile "lati" per controllare
+        quante volte questo ciclo debba essere eseguito.
       Course 4 Artist Vars 6_instruction: 'Hmmm, nell''ultimo esercizio ho provato
         a impostare  la variabile "lati" a 4, ma ha disegnato ancora un triangolo.
         Riesci ad usare la variabile "lati" (insieme a un blocco matematico) per far
         sì che imposti la giusta quantità? Suggerimento: 360 diviso per il numero
         dei lati ti darà il numero di gradi da ruotare.'
-      Course 4 Artist Vars 7_instruction: |
-        Can you modify the "sides" variable
-        to help me draw this hexagon?
+      Course 4 Artist Vars 7_instruction: Potete modificate la variabile "lati" per
+        aiutarmi a disegnare questo esagono?
       Course 4 Artist Vars 8_instruction: "Free Play: Experiment with the number\nof
         sides this shape has. Can you change the algorithm so that the overall\nsize
         of the shape stays the same, no matter how many sides it has? Hint: You\nmight
         have to use your math blocks (360 divided by \"sides\" in two places\nthis
         time) \n"
-      Course 4 Artist Vars 9_instruction: |
-        Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Replace the number
-        3 with the "sides" variable, and use the "set sides to" block.
-      Course 4 Bee 1_instruction: "The bee can't tell if this is a flower or a honeycomb.\nCheck
-        first if it is a flower or a honeycomb, and then only gather nectar\nfrom
-        it if it is a flower. \n"
-      Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
-      Course 4 Bee 3_instruction: |
-        The unknown object is either a flower or a honeycomb.
-        Use the if/else block to collect nectar if it is a flower, else make honey
-        (because then it would be a honeycomb).
+      Course 4 Artist Vars 9_instruction: Modificare questo algoritmo in modo che
+        utilizzi la variabile "lati" invece di un numero fisso per disegnare un triangolo.
+        Sostituisci il numero 3 con la variabile "lati" e utilizzare il blocco "imposta
+        i lati".
+      Course 4 Bee 1_instruction: L'ape non può sapere cosa si nasconde dietro la
+        nuvola, potrebbe esserci un fiore oppure un favo. Se dietro la nuvola si nasconde
+        un fiore, raccogli il nettare, ma fai attenzione a non raccogliere il nettare
+        da un favo!
+      Course 4 Bee 2_instruction: Controllare ogni oggetto per vedere se sia un fiore.
+        Se lo è, raccolgono il nettare... in caso contrario è possibile ignorarlo!
+      Course 4 Bee 3_instruction: L'oggetto nascosto può essere un fiore oppure un
+        favo. Usa il blocco "se-altrimenti" per raccogliere il nettare "se" si tratta
+        di un fiore, "altrimenti" per fare il miele (dato che, in questo caso, si
+        tratta sicuramente di un favo).
       Course 4 Bee 4_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Here an if-else block is combined with another if-else block to create
-        an if, else-if, else block. Complete the solution to collect the unknown amount
-        of nectar.
-      Course 4 Bee For Loops 1_instruction: |
-        Use a loop to collect the nectar from
-        each flower.
-      Course 4 Bee For Loops 10_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
-      Course 4 Bee For Loops 2_instruction: |
-        Here's a new kind of loop, called the
-        "for" loop. This particular for loop will count from 1 to 5 by 1, and run
-        the contents of the loop each time it counts. Help the Bee get the nectar.
-      Course 4 Bee For Loops 3_instruction: |
-        You can solve this puzzle by using a
-        for loop to count from 1 to 3 by 1. Now let's go get some nectar!
-      Course 4 Bee For Loops 4_instruction: |
-        Collect all of the nectar from these
-        flowers. I wonder if there's an easier way to do this...
+        Un fiore viola può avere 1, 2 o 3 dosi di nettare, ma tu non sai quante ne ha!
+
+        In questo esercizio un blocco "se-altrimenti" viene combinato con un altro blocco "se-altrimenti" per creare un blocco con tre ramificazioni: "se", "altrimenti-se" , "altrimenti". Prova a completare il programma in modo tale da raccogliere tutto il nettare.
+      Course 4 Bee For Loops 1_instruction: Usa un ciclo (loop) per raccogliere il
+        nettare da ogni fiore.
+      Course 4 Bee For Loops 10_instruction: Se il ciclo è conto alla rovescia, l'incremento
+        viene sottratto dalla variabile contatore a ogni ciclo. Quale dovrebbe essere
+        l'incremento per raccogliere 9, poi 6 e poi 3 di nettare?
+      Course 4 Bee For Loops 2_instruction: Ecco un nuovo tipo di ciclo, chiamato
+        il ciclo "for". Questo particolare ciclo conta da 1 a 5 di 1 ed esegue il
+        contenuto del ciclo ogni volta che viene eseguito. Aiutate l'ape a ottenere
+        il nettare.
+      Course 4 Bee For Loops 3_instruction: Potete risolvere questo puzzle utilizzando
+        un ciclo "for" per contare da 1 a 3 di 1. Andiamo ora a prendere del nettare!
+      Course 4 Bee For Loops 4_instruction: Raccogliamo tutto il nettare da questi
+        fiori. Mi chiedo se ci sia un modo più semplice per farlo...
       Course 4 Bee For Loops 5_instruction: "Ah, the for loop makes this much easier!\nUsing
         the \"counter\" variable from the for loop to loop the \"get nectar\"\nblock
         the same number of times as the loop. Whew! That's a lot of loops.\nAll the
         code you need it there, take a look at how it is put together then\nclick
         on Run and see how it works. \n"
-      Course 4 Bee For Loops 6_instruction: |
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      Course 4 Bee For Loops 7_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
-      Course 4 Bee For Loops 8_instruction: |
-        Can you use the loop variable to control
-        movement and nectar collection?
-      Course 4 Bee For Loops 9_instruction: |
-        The last number in your for loop is
-        called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
-      Course 4 Bee Params 1_instruction: |
-        Use the function "get 3 nectar" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using "get 3 nectar."
-      Course 4 Bee Params 2_instruction: |
-        Modify the "get 3 nectar" function so
-        it makes me turn right instead of left to the flowers.
+      Course 4 Bee For Loops 6_instruction: È inoltre possibile utilizzare un ciclo
+        "for" per il conto alla rovescia. Provate a raccogliere il nettare con un
+        conto alla rovescia da 5 a 1 di 1.
+      Course 4 Bee For Loops 7_instruction: Usa la variabile "contatore" del ciclo
+        per controllare lo spostamento in senso orizzontale.
+      Course 4 Bee For Loops 8_instruction: È possibile utilizzare la variabile del
+        ciclo per controllare il movimento e la raccolta di nettare?
+      Course 4 Bee For Loops 9_instruction: L'ultimo numero del ciclo indica l'incremento,
+        e ogni volta che il ciclo viene eseguite la variabile contatore aumenta dell'incremento
+        indicato. Provate a raccogliere questi fiori usando un valore 2 per l'incremento.
+      Course 4 Bee Params 1_instruction: Utilizza la funzione "ottieni 3 di nettare"
+        che consnete di ruotare e muoversi per raccogliere il nettare e che alla fine
+        riporta alla posizione originale. Scrivi una sequenza per raccogliere tutto
+        il nettare utilizzando la funzione "ottieni 3 di nettare."
+      Course 4 Bee Params 2_instruction: Modifica la funzione di "ottini 3 di nettare"
+        in modo da girare a destra invece che a sinistra per i fiori.
       Course 4 Bee Params 3 (copy 1)_instruction: |
         Now there are flowers on both
         sides! Maybe you can use a parameter so that the same function works for flowers
@@ -1557,83 +1591,70 @@
         added a parameter called "direction" to the function. Use the "left" and
         "right" variables to control direction. Fill in the rest of the function
         definition and then click "Save and Close."
-      Course 4 Bee Params 4 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of the flowers. Remember, 0 = left and 1 = right.
-      Course 4 Bee Params 4 backup_instruction: |
-        Wouldn't it be nice if we could
-        collect all of these nectars with the a single function? Try adding a new
-        parameter to your function called "nectars" to control the amount of nectar
-        to collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 4_instruction: |
-        Try using your new function to collect
-        all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee Params 4 (copy 1)_instruction: Provare a utilizzare la nuova funzione
+        per raccogliere tutti i fiori. Ricordate, 0 = sinistra e 1 = destra.
+      Course 4 Bee Params 4 backup_instruction: Non sarebbe bello se avessimo potuto
+        raccogliere tutto il nettare con una singola funzione? Prova ad aggiungere
+        un nuovo parametro alla funzione chiamata "nettari" per controllare la quantità
+        di nettare da raccogliere. Probabilmente conviene rinominare anche la funzione!
+      Course 4 Bee Params 4_instruction: Provate a utilizzare la vostra nuova funzione
+        per raccogliere tutti i fiori. Ricordatevi di usare le variabili sinistra
+        e destra.
       Course 4 Bee Params 5_instruction: Partiamo da zero - sai creare una nuova funzione
         chiamata "raccogli 5 dosi di nettare" con un parametro di direzione?
-      Course 4 Bee Params 6 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 6_instruction: |
-        Wouldn't it be nice if we could collect
-        all of these nectars with the a single function? Try adding a new parameter
-        to your function called "nectars" to control the amount of nectar to collect.
-        You'll probably want to rename the function too!
-      Course 4 Bee Params 7 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 7_instruction: |
-        Try using your new function to collect
-        all of this nectar.
-      Course 4 Bee Params 8_instruction: |
-        Oooh, now there's honey to deal with too!
-        How could you update your function to either get nectar or make honey.
+      Course 4 Bee Params 6 (copy 1)_instruction: Prova a utilizzare la nuova funzione
+        per raccogliere tutto questo nettare.
+      Course 4 Bee Params 6_instruction: Non sarebbe bello se avessimo potuto raccogliere
+        tutto il nettare con una singola funzione? Prova ad aggiungere un nuovo parametro
+        alla funzione chiamata "nettari" per controllare la quantità di nettare da
+        raccogliere. Probabilmente conviene rinominare anche la funzione!
+      Course 4 Bee Params 7 (copy 1)_instruction: Prova a utilizzare la nuova funzione
+        per raccogliere tutto questo nettare.
+      Course 4 Bee Params 7_instruction: Provate a utilizzare la nuova funzione per
+        raccogliere tutto il nettare.
+      Course 4 Bee Params 8_instruction: Oooh, ora c'è miele di cui occuparsi! Come
+        si potrebbe aggiornare la funzione per ottenere il nettare o fare il miele.
       Course 4 Binary 1_instruction: |
         Here's a function that takes a binary string
         of 1's and 0's and instructs the farmer to turn on the go from left to right,
         top to bottom, turning on the squares where the number has a zero. Run the
         code provided to see how the farmers uses binary to draw an image.
-      Course 4 Binary 2_instruction: |
-        What binary string could you loop 8 times to
-        draw this image? Hint: the number "1" fills a hole.
-      Course 4 Binary 3_instruction: |
-        Can you draw this pattern by looping a single
-        binary string?
-      Course 4 Binary 5 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 5_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 6 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 6_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 7_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
+      Course 4 Binary 2_instruction: 'Quale stringa binaria potresi ripetere 8 volte
+        per disegnare questa immagine? Suggerimento: il numero "1" consente di riempire
+        un buco.'
+      Course 4 Binary 3_instruction: Potete disegnare questo modello ripetendo una
+        singola stringa binaria?
+      Course 4 Binary 5 (copy 1)_instruction: Quale stringa binaria, ripetuta 10 volte,
+        disegnerà questa immagine?
+      Course 4 Binary 5_instruction: Quale stringa binaria, ripetuta 10 volte, disegnerà
+        questa immagine?
+      Course 4 Binary 6 (copy 1)_instruction: Quale stringa binaria, ripetuta 10 volte,
+        disegnerà questa immagine?
+      Course 4 Binary 6_instruction: Quale stringa binaria, ripetuta 10 volte, disegnerà
+        questa immagine?
+      Course 4 Binary 7_instruction: Quale stringa binaria, ripetuta 10 volte, disegnerà
+        questa immagine?
       Course 4 Binary 8_instruction: Puoi completare la maggior parte di questa immagine
         impostando un ciclo con un numero binario a 5 bit - poi avrai bisogno di un
         altro numero a 4 bit per ottenere l'angolo in basso a destra.
       Course 4 Maze 1_instruction: Fai arrivare l'uccellino arrabbiato (Angry Bird)
         fino al maialino!
-      Course 4 Maze 2_instruction: Avoid the TNT!
+      Course 4 Maze 2_instruction: Evitare il TNT!
       Course 4 Maze 3_instruction: Scrivi il codice per far arrivare l'uccellino arrabbiato
         (Angry Bird) fino al maialino!
-      Course 4 Maze 4_instruction: Prova ad usare il blocco "ripeti" per risolvere
-        l'esercizio con meno blocchi...
+      Course 4 Maze 4_instruction: |
+        Prova ad usare il blocco "ripeti" per risolvere l'esercizio con meno blocchi...
+
+        Il blocco "ripeti" (detto anche "ciclo") mi farà "ripetere" le azioni all'interno del blocco il numero di volte che hai impostato.
       Course 4 Maze 5_instruction: Prova a risolvere questo esercizio usando meno
         blocchi possibile.
       Course 4 Maze 6_instruction: Prova a risolvere questo esercizio usando meno
         blocchi possibile.
-      Course 4 Play Lab For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1_instruction: |
-        Here's a function called "jump"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags.
+      Course 4 Play Lab For Loops 2_instruction: Proviamo ora a contare i numeri dispari
+        da 1 a 100.
+      Course 4 Play Lab Params 1_instruction: Questa funzione chiamata "salto" consente
+        al tuo personaggio principale di saltare di 100 pixel. Utilizzate la funzione
+        di salto per raccogliere tutte le bandiere.
       Course 4 Play Lab Params 10_instruction: Abbiamo aggiunto un'ultima funzione
         che puoi usare. Programma il tuo gioco per chiamare la funzione "su di un
         livello" se "punti_giocatore">10. Gioca e supera il livello 4 per passare
@@ -1659,9 +1680,8 @@
         Add another parameter called "speed"
         to the "patrol" function. Use a "set speed" block with the new "speed"
         parameter.
-      Course 4 Play Lab Params 7_instruction: |
-        Use the arrow keys to control the
-        Dog and collect all of the flags.
+      Course 4 Play Lab Params 7_instruction: Utilizzare i tasti freccia per controllare
+        il movimento del cane e raccogliere tutte le bandiere.
       Course 4 Play Lab Params 8_instruction: |
         Use a "when touching" block to send
         the Dog back to the top-left if the Dog touches any of the other actors.
@@ -1678,17 +1698,17 @@
         That race wasn't very fair! Change
         the "dog_speed" variable to make sure you can collect more flags than the
         Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3_instruction: |
-        Here's a new kind of game! Use the
-        left and right arrows to move, and the up arrow to jump. See if you can collect
-        all of the flags.
+      Course 4 Play Lab Vars 3_instruction: Ecco un nuovo tipo di gioco! Utilizzate
+        i tasti freccia a sinistra e a destra muovervi e il tasto freccia su per saltare.
+        Verificate se sia possibile raccogliere tutte le bandiere.
       Course 4 Play Lab Vars 4_instruction: |
         Now we're using a variable called "height"
         to control how high the dog can jump. Update the "height" variable so that
         the dog can jump high enough to reach all the flags. Hint: the new flags are
         200 pixels high.
-      Course 4 Play Lab Vars 5_instruction: "Let's build a game! First we'll need\na
-        score. Use the \"set points to\" block to set the score to 10. \n"
+      Course 4 Play Lab Vars 5_instruction: 'Costruiamo un gioco! In primo luogo abbiamo
+        bisogno di un punteggio. Utilizzare il blocco di "imposta punteggio a" per
+        impostarlo a 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: |
         Cool, now we've got our score
         variable, but how are we going to make it useful? How about adding to your
@@ -1733,9 +1753,8 @@
         Let's make the dog speak every
         number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
-      Course 4 Play Labs For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Play Labs For Loops 2_instruction: Proviamo ora a contare i numeri
+        dispari da 1 a 100.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
@@ -1748,14 +1767,16 @@
       Course 4 Play Labs For Loops 5_instruction: Nell'ultima fase abbiamo contato
         il quadrato di ogni numero. Prova a cambiare "contatore ^ 2" in "contatore
         ^ 3" per contare il cubo di ogni numero (1, 8, 27, 64, 125, 216, 343….)
-      Course 4 Play Labs For Loops 6_instruction: |
-        You may recall that a prime number
-        is any whole number that is only divisible by itself and 1. Use the "is_prime"
-        function to speak out only the prime numbers from 1 to 100.
+      Course 4 Play Labs For Loops 6_instruction: Ricorda che un numero è primo solo
+        se è divisbile per 1 e per se stesso. Utilizzare la funzione "is_prime" per
+        ottenre solo i numeri primi da 1 a 100.
       Course 4 Play Labs For Loops 7_instruction: Potresti usare un ciclo "per" per
         aiutarmi a dire la sequenza 1, 4, 7, 10, 13, 16, 19, 22, 25?
       Course 4 Play Labs For Loops 8_instruction: Quale ciclo con contatore mi farebbe
         pronunciare la sequenza 19, 27, 35, 43, 51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Prendi tre dosi di nettare e poi fai due dosi
         di miele
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
@@ -1822,13 +1843,13 @@
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin
         the name of a food and produces a String that says how you feel about that\nfood.
         For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic
@@ -1880,7 +1901,7 @@
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
@@ -1892,11 +1913,11 @@
         Let's look inside that green-triangle function
         to see how it works. Can you modify it so that the green-triangle function
         always draws outlined green triangles?
-      Eval Define Funcs 3_instruction: "Here's the start of another new function\ncalled
-        purple-circle with a domain of one Number (the radius) and a range\nof Image.
-        The body of the function is broken though, it always draws a circle\nof 50
-        pixel radius instead of using the radius parameter. Replace the current\nNumber
-        with the radius block from the domain. \n"
+      Eval Define Funcs 3_instruction: |
+        Here's the start of another new function
+        called purple-circle with a domain of one Number (the radius) and a range
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1947,10 +1968,11 @@
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1996,8 +2018,8 @@
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -2051,88 +2073,95 @@
       frozen square snowflake_instruction: Riesci a creare un fiocco di neve usando
         il blocco "ripeti" per fare un quadrato 10 volte, e il blocco "gira" per girare
         di 36 gradi tra un quadrato e l'altro?
-      Infinity_catch_instruction: Riesci a far sì che Elsa ("personaggio 2") raggiunga
-        Anna usando i tasti freccia?
-      Infinity_finale_instruction: Crea qualsiasi cosa desideri e condividilo!
-      Infinity_move_collide_instruction: Hiro è "personaggio 1". Spostalo verso Baymax
-        e riproduci un suono quando si toccano.
-      Infinity_move_directions_instruction: Baymax è "personaggio 2". Aggiungi blocchi
-        di movimento e poi sposta Baymax usando i tasti freccia. Fagli toccare gli
-        altri due personaggi.
-      Infinity_move_right_instruction: Hiro è "personaggio 1". Use il blocco di spostamento
-        per muovere Hiro fino a toccare Baymax.
-      Infinity_repeat_instruction: Usa un blocco "ripeti per sempre" per far muovere
-        Anna su e giù di 400 pixel.
-      Infinity_say_instruction: Fai dire a Anna "Ciao" usando un blocco "dire".
-      Infinity_shoot_instruction: Baymax è "personaggio 2". Fai lanciare a Baymax
-        un razzo a Hiro.
-      Infinity_shoot_directions_instruction: Hiro è "personaggio 3". Fai lanciare
-        a Hiro un proiettile verso ognuno dei quattro personaggi. Aspetta un secondo
-        tra ogni lancio.
+      hoc2015_intro_instruction: Hiro è "attore 1".  Utilizzate il blocco di spostamento
+        per muovere Hiro a destra in modo da toccare Baymax.
+      hoc2015_sandbox_instruction: Hiro è "attore 1".  Utilizzate il blocco di spostamento
+        per muovere Hiro a destra in modo da toccare Baymax.
+      Infinity_catch_instruction: Riesci a fare in modo che Elsa (il "personaggio
+        2") raggiunga Anna usando i tasti freccia?
+      Infinity_finale_instruction: Crea qualunque cosa ti piaccia e condividila!
+      Infinity_move_collide_instruction: Hiro è il "personaggio 1". Spostalo verso
+        Baymax e riproduci un suono quando si toccano.
+      Infinity_move_directions_instruction: Baymax è il "personaggio 2". Puoi far
+        muovere Baymax  aggiungendo i blocchi "sposta il personaggio 2 in alto" e
+        "sposta il personaggio 2 in basso". Clicca sul pulsante "Esegui" e fai toccare
+        a Baymax gli altri due personaggi usando i tasti freccia.
+      Infinity_move_right_instruction: Hiro è il "personaggio 1". Usa il blocco "sposta
+        il personaggio 1" per far spostare Hiro verso destra fino a toccare Baymax.
+      Infinity_repeat_instruction: Usa un blocco "ripeti per sempre" per far spostare
+        Anna in continuazione in su e in giù di 400 pixel.
+      Infinity_say_instruction: Fai dire "Ciao" ad Anna usando un blocco "pronuncia".
+      Infinity_shoot_instruction: Baymax è il "personaggio 2". Fai lanciare a Baymax
+        un razzo contro Hiro.
+      Infinity_shoot_directions_instruction: Hiro è il "personaggio 3". Fai in modo
+        che Hiro scagli qualcosa contro ognuno degli altri quattro personaggi. Tra
+        un lancio e il successivo, aspetta un secondo.
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: Tocca ancora più fiocchi di neve!
       Infinity_touch_four_instruction: Muovi Anna su, giù, a sinistra e a destra per
         toccare ognuno dei quattro fiocchi di neve.
-      Infinity_touch_score_instruction: Fai in modo che Anna faccia un punto quando
-        tocca un fiocco di neve. Poi clicca su "Esegui" e  guidala a toccare una volta
-        ogni fiocco di neve.
+      Infinity_touch_score_instruction: Fai in modo che Anna segni un punto quando
+        tocca un fiocco di neve. Poi clicca su "Esegui" e guidala in modo tale da
+        farle toccare ogni fiocco di neve una sola volta.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Disegna una linea breve verso l'alto
         e una lunga verso destra!
-      K-1 artist 1 level 10_instruction: Disegna la linea tratteggiata usando i blocchi
-        "salta" e "disegna"
-      K-1 artist 1 level 9_instruction: Disegna la figura usando tre linee
+      K-1 artist 1 level 10_instruction: Questo è un esercizio di verifica -- Disegna
+        la linea tratteggiata usando sia i blocchi "salta" che quelli per disegnare.
+      K-1 artist 1 level 9_instruction: Questo è un esercizio di verifica -- Disegna
+        la figura usando tre linee.
       K-1 Artist Loops 1_instruction: Disegna questa linea spostando 4 volte l'artista
         verso Est.
       K-1 Artist Loops 2_instruction: Riesci a disegnare la stessa linea usando un
         blocco "ripeti" (detto anche "ciclo")?
       K-1 Artist Loops 3_instruction: Riesci a ripetere i blocchi già pronti per disegnare
         le 6 linee in grigio?
-      K-1 Artist Loops 4_instruction: Un ciclo potrebbe aiutarci a disegnare la parte
-        superiore di questo castello?
+      K-1 Artist Loops 4_instruction: Un blocco "ripeti", o "ciclo", può aiutarti
+        a disegnare la parte superiore di questo castello?
       K-1 Artist Loops 5_instruction: Che cosa puoi ripetere per 4 volte per disegnare
         gli scalini di questo esercizio?
-      K-1 Artist Loops 6_instruction: 'Questo ha bisogno di due cicli: uno per salire
-        le scale e uno per scenderle.'
+      K-1 Artist Loops 6_instruction: 'Per completare questo disegno hai bisogno di
+        due blocchi "ripeti", o "cicli": uno per salire le scale e l''altro per scenderle.'
       K-1 Artist Loops 7_instruction: Puoi completare questa figura usando due cicli?
       K-1 Artist Loops 8_instruction: La scala di questo esercizio ha i gradini più
         larghi.
-      K-1 Artist Loops 9_instruction: 'Questo è un esercizio di verifica: usa un ciclo
-        per disegnare gli scalini'
+      K-1 Artist Loops 9_instruction: Usa un ciclo per disegnare gli scalini.
       K-1 Artist Loops Free Play_instruction: 'Tempo di giocare: disegna qualcosa
         di divertente!'
-      K-1 Artist1 1_instruction: Disegna il piede della persona con una linea
+      K-1 Artist1 1_instruction: Disegna il piede della persona con una linea.
       K-1 Artist1 10_instruction: Disegna e Salta per costruire la linea tratteggiata
-        fino al tesoro
+        fino al tesoro.
       K-1 Artist1 2_instruction: Disegna il baffo del gatto con due linee!
       K-1 Artist1 3_instruction: Disegna due linee verso est e due linee verso nord
-        per finire la casa!
+        per completare la casa!
       K-1 Artist1 4_instruction: Disegna linee in su, in orizzontale, e in basso per
         completare il castello!
       K-1 Artist1 5.5_instruction: Completa la terza torre del castello usando linee
         brevi
       K-1 Artist1 5_instruction: Disegna il gambo di questo fiore con due linee!
-      K-1 Artist1 6_instruction: Completa il disegno usando il blocco "salta"!
+      K-1 Artist1 6_instruction: Il blocco "salta" ti consente di muoverti senza disegnare.
+        Completa il disegno usando il blocco "salta"!
       K-1 Artist1 7_instruction: Usa il blocco "salta" per muoverti senza disegnare.
         Salta su e disegna una linea.
       K-1 Artist1 8_instruction: Disegna la linea tratteggiata usando sia i blocchi
         "salta" che quelli per disegnare
-      K-1 Artist1 9_instruction: Disegna e Salta per costruire la linea tratteggiata
+      K-1 Artist1 9_instruction: Disegna e Salta per costruire la linea tratteggiata.
       K-1 Artist1 Assessment 1_instruction: Disegna le linee corte e quelle lunghe!
       K-1 Artist1 Assessment 2_instruction: Disegna le linee corte tratteggiate!
       K-1 Artist2 1_instruction: Disegna un quadrato sotto il triangolo.
       K-1 Artist2 2_instruction: Salta e disegna un quadrato accanto alla casa.
-      K-1 Artist2 3_instruction: Disegna un quadrato sopra l'altro quadrato
+      K-1 Artist2 3_instruction: Disegna un quadrato sopra l'altro quadrato.
       K-1 Artist2 4_instruction: Disegna un rettangolo per completare il ponte.
       K-1 Artist2 5_instruction: Disegna un rettangolo per completare i pilastri del
-        ponte
+        ponte.
       K-1 Artist2 6_instruction: Disegna due quadrati per costruire un rettangolo!
-      K-1 Artist2 Assessment1_instruction: 'Esercizio: disegna una quadrato vicino
-        all''altro quadrato.'
+      K-1 Artist2 Assessment1_instruction: Questo è un esercizio di verifica -- Salta
+        e disegna un quadrato vicino all'altro quadrato.
       K-1 Artist2 Free Draw_instruction: Disegna qualunque cosa tu voglia disegnare!
       K-1 Artist2_7_instruction: Disegna un rettangolo per dare alla cassettiera il
         cassetto superiore!
-      K-1 Bee 1_instruction: Spostami sul fiore, prendi il nettare, poi spostami sul
-        nido d'ape e fai il miele
+      K-1 Bee 1_instruction: Spostami sul fiore, prendi il nettare, poi fammi arrivare
+        al favo e fai il miele.
       K-1 Bee 10_instruction: Prendi quattro dosi di nettare e poi fai due dosi di
         miele!
       K-1 Bee 11.5_instruction: Prendi quattro dosi di nettare per fare quattro dosi
@@ -2140,13 +2169,14 @@
       K-1 Bee 11_instruction: Prendi tre dosi di nettare e poi fai una dose di miele!
       K-1 Bee 12_instruction: Prendi tre dosi di nettare e poi fai due dosi di miele!
       K-1 Bee 13_instruction: Prendi tre dosi di nettare e poi fai una dose di miele!
-      K-1 Bee 14_instruction: Portami sul nettare, prendilo, portami sul miele e fai
-        il miele
-      K-1 Bee 15_instruction: Prendi due dosi di nettare e fai due dosi di miele!
-      K-1 Bee 2_instruction: Spostami sul fiore, prendi il nettare, poi spostami sul
-        nido d'ape e fai il miele
-      K-1 Bee 3_instruction: Spostami sul fiore, prendi il nettare, poi spostami sul
-        nido d'ape e fai il miele
+      K-1 Bee 14_instruction: Questo è un esercizio di verifica -- Spostami sul fiore,
+        prendi il nettare, poi fammi arrivare al favo e fai il miele.
+      K-1 Bee 15_instruction: Questo è un esercizio di verifica -- Prendi due dosi
+        di nettare e fai due dosi di miele!
+      K-1 Bee 2_instruction: Spostami sul fiore, prendi il nettare, poi fammi arrivare
+        al favo e fai il miele.
+      K-1 Bee 3_instruction: Spostami sul fiore, prendi il nettare, poi fammi arrivare
+        al favo e fai il miele.
       K-1 Bee 4_instruction: Prendi due dosi di nettare e poi fai due dosi di miele!
       K-1 Bee 5_instruction: Prendi tre dosi di nettare e poi fai tre dosi di miele!
       K-1 Bee 6_instruction: Prendi due dosi di nettare e poi fai due dosi di miele!
@@ -2158,41 +2188,41 @@
       K-1 Bee Loops 1_instruction: Prendi il nettare per fare il miele!
       K-1 Bee Loops 10_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
         prendere il nettare, fare il miele e spostarti!
-      K-1 Bee Loops 11_instruction: 'Esercizio: usa i cicli per prendere il nettare
-        e fare il miele!'
-      K-1 Bee Loops 12_instruction: 'Esercizio: usa i cicli per prendere il nettare,
-        il miele e per muoverti!'
-      K-1 Bee Loops 2_instruction: Usa un ciclo per muoverti e poi prendi il nettare
-        e fai il miele!
+      K-1 Bee Loops 11_instruction: Questo è un esercizio di verifica -- Usa i blocchi
+        "ripeti", o "cicli", per prendere il nettare e fare il miele!
+      K-1 Bee Loops 12_instruction: Questo è un esercizio di verifica -- Usa i blocchi
+        "ripeti", o "cicli", per prendere il nettare, fare il miele e spostarti!
+      K-1 Bee Loops 2_instruction: Usa un blocco "ripeti" (detto anche "ciclo") per
+        muoverti,  quindi raccogli il nettare e fai il miele!
       K-1 Bee Loops 3_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
         prendere il nettare e fare il miele!
-      K-1 Bee Loops 4_instruction: Usa i cicli per prendere il nettare, fare il miele
-        e per muoverti!
-      K-1 Bee Loops 5_instruction: Usa i cicli per prendere il nettare e fare il miele!
+      K-1 Bee Loops 4_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
+        prendere il nettare, fare il miele e spostarti!
+      K-1 Bee Loops 5_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
+        prendere il nettare e fare il miele!
       K-1 Bee Loops 6_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
         prendere il nettare, fare il miele e spostarti!
       K-1 Bee Loops 7_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
         prendere il nettare e fare il miele!
-      K-1 Bee Loops 8_instruction: Usa i cicli per prendere il nettare e fare il miele!
+      K-1 Bee Loops 8_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
+        prendere il nettare e fare il miele!
       K-1 Bee Loops 9_instruction: Usa i blocchi "ripeti" (detti anche "cicli") per
         prendere il nettare, fare il miele e spostarti!
-      K-1 Bee Loops Assessment 1_instruction: |
-        Get nectar to make honey and use loops
-        to move!
+      K-1 Bee Loops Assessment 1_instruction: Prendi il nettare per fare il miele
+        e usa i cicli per spostarti!
       K-1 Bee Loops Assessment 2_instruction: Prendi il nettare per fare il miele
         usando i cicli!
       K-1 Bee Puzzle 12_instruction: Prendi tre dosi di nettare e poi fai due dosi
         di miele
-      K-1 Building a Foundation Assessment_instruction: |
-        Build a three level pyramid,
-        there are no other directions, so just play with the pieces until you get
-        it!
+      K-1 Building a Foundation Assessment_instruction: Costruisci una piramide a
+        tre livelli, non ci sono altre indicazioni. Gioca un po' con i blocchi finché
+        non riesci a costruirla!
       k-1 maze 1_instruction: Riesci a spostarmi verso Ovest per prendere il maialino?
       K-1 Maze 10_instruction: Gira intorno alla dinamite (TNT) per farmi prendere
         il maialino!
-      K-1 Maze 11_instruction: |
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or the feathers will fly! Hint: He's South of me.
+      K-1 Maze 11_instruction: 'Fammi fare il percorso per arrivare a quello sciocco
+        maiale. Evita la dinamite (TNT) o le mie piume salteranno in aria! Suggerimento:
+        è a Sud rispetto a me.'
       K-1 Maze 2_instruction: Spostami verso Est per farmi prendere il maialino!
       K-1 Maze 3_instruction: Spostami verso Sud per farmi prendere il maialino!
       K-1 Maze 4_instruction: Spostami verso Nord per farmi prendere il maialino!
@@ -2212,43 +2242,37 @@
       K-1 Maze Assessment 2_instruction: Questo è un esercizio di verifica -- Fammi
         arrivare al maialino!
       K-1 maze debug 1_instruction: Modifica il codice per farmi arrivare al maialino!
-      K-1 maze debug 10_instruction: |
-        Debug this level by rearranging and adding
-        blocks to get me to the pig!
-      K-1 maze debug 11_instruction: "This is a test!\r\nDebug this level by rearranging\nand
-        adding blocks to get me to the pig"
-      K-1 maze debug 2_instruction: |
-        Figure out what is missing and then add blocks
-        to get me to the pig!
-      K-1 maze debug 3_instruction: |
-        Figure out what is missing and then REMOVE blocks
-        to get me to the pig!
-      K-1 maze debug 4_instruction: |
-        Run through these blocks and fix them! I think
-        I might be going in the wrong direction.
-      K-1 maze debug 5_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 6_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 7_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 8_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 maze debug 9_instruction: |
-        Debug this level by rearranging and adding blocks
-        to get me to the pig!
-      K-1 Maze debug Assessment 1_instruction: |
-        Assessment -- Debug this level by
-        rearranging and adding blocks to get me to the pig!
+      K-1 maze debug 10_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 11_instruction: "Questo è un esercizio di verifica --\r Correggi
+        questo programma riordinando, aggiungendo o cancellando blocchi, per farmi
+        arrivare al maialino!"
+      K-1 maze debug 2_instruction: Cerca di capire che cosa manca, quindi aggiungi
+        i blocchi necessari per farmi arrivare al maialino!
+      K-1 maze debug 3_instruction: Cerca di capire che cosa va eliminato, quindi
+        rimuovi i blocchi necessari per farmi arrivare al maialino!
+      K-1 maze debug 4_instruction: Esegui questi blocchi di codice e poi correggili!
+        Credo che ci sia un errore nel percorso.
+      K-1 maze debug 5_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 6_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 7_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 8_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 maze debug 9_instruction: Correggi questo programma riordinando, aggiungendo
+        o cancellando blocchi, per farmi arrivare al maialino!
+      K-1 Maze debug Assessment 1_instruction: "Questo è un esercizio di verifica
+        --\r Correggi questo programma riordinando, aggiungendo o cancellando blocchi,
+        per farmi arrivare al maialino!"
       K-1 Maze Loops 1_instruction: Fammi arrivare al maialino!
       K-1 Maze Loops 10_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
       K-1 Maze Loops 11_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
       K-1 Maze Loops 12_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
-      K-1 Maze Loops 2_instruction: Usa il blocco "ripeti" per farmi arrivare al maialino!
+      K-1 Maze Loops 2_instruction: Prova ad usare il nuovo blocco "ripeti" (detto
+        anche "ciclo") per farmi arrivare al maialino! Esso mi farà "ripetere", per
+        il numero di volte che hai impostato, tutte le azioni all'interno del blocco.
       K-1 Maze Loops 3_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
       K-1 Maze Loops 4_instruction: Fammi arrivare al maialino!
       K-1 Maze Loops 5_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
@@ -2256,18 +2280,16 @@
       K-1 Maze Loops 7_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
       K-1 Maze Loops 8_instruction: Fammi arrivare al maialino! Usa il blocco "ripeti".
       K-1 Maze Loops 9_instruction: Fammi arrivare al maialino!
-      K-1 Maze Loops Assessment 1_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
-      K-1 Maze Loops Assessment 2_instruction: |
-        Assessment -- Use loops to get me
-        to the pig!
+      K-1 Maze Loops Assessment 1_instruction: Questo è un esercizio di verifica --
+        Usa i blocchi "ripeti", o "cicli", per farmi arrivare al maialino!
+      K-1 Maze Loops Assessment 2_instruction: Questo è un esercizio di verifica --
+        Usa i blocchi "ripeti", o "cicli", per farmi arrivare al maialino!
       K-1 Maze Multi 14_instruction: Esercizio di verifica
       K-1 Maze Multi 15_instruction: Esercizio di verifica
-      K-1 Maze Sequence Assessment 1_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig"
-      K-1 Maze Sequence Assessment 2_instruction: "This is a test!\r\nMove one way,\nthen
-        another to get me to the pig."
+      K-1 Maze Sequence Assessment 1_instruction: "Questo è un esercizio di verifica
+        --\r Spostami in una direzione e poi in un'altra per farmi prendere il maialino."
+      K-1 Maze Sequence Assessment 2_instruction: "Questo è un esercizio di verifica
+        --\r Spostami in una direzione e poi in un'altra per farmi prendere il maialino!"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
         type the name of a topping into the cost function, and we'll return the price
@@ -2394,183 +2416,163 @@
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
-      NEW Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is
-        100 pixels in length, using a loop?
+      New Artist Project_instruction: Disegnare qualcosa di geniale! Il vostro codice
+        viene salvato come un progetto su cui è possibile tornare in qualsiasi momento.
+      NEW Course 4 Artist Functions 1_instruction: Riesci a disegnare un quadrato
+        con lato di 100 pixels, usando un ciclo ("loop")?
       NEW Course 4 Artist Functions 10_instruction: Premi "modifica" per inserire
         i blocchi nella definizione della funzione per fare un quadrato di 40 pixel.
-      NEW Course 4 Artist Functions 11_instruction: |
-        We have a new function called
-        "draw a line of squares." Feel free to take a look inside the function block
-        to see how we built it. Click on "Run" when your are ready for the next
-        puzzle.
-      NEW Course 4 Artist Functions 12_instruction: |
-        Use the "draw a line of squares"
-        function from the last puzzle to draw this pattern."
+      NEW Course 4 Artist Functions 11_instruction: Abbiamo una nuova funzione denominata
+        "disegna un lato del quadrato". Date un'occhiata all'interno al codice della
+        funzione per vedere come l'abbiamo costruita. Fai clic su "Esegui" quando
+        sei pronto per il prossimo puzzle.
+      NEW Course 4 Artist Functions 12_instruction: Utilizzate la funzione di per
+        tracciare una linea dei quadrati, usata dall'ultimo puzzle, per disegnare
+        questo modello."
       NEW Course 4 Artist Functions 13_instruction: 'Riesci a disegnare una stella
         usando la funzione "disegna una serie di quadrati"? Suggerimento: potrebbe
         essere necessario andare avanti di 60 pixel e ruotare di 144 gradi'
-      NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
+      NEW Course 4 Artist Functions 14_instruction: 'Tempo di giocare! '
       NEW Course 4 Artist Functions 2_instruction: 'Sapresti disegnare 3 quadrati
         ciascuno distanziato di 20 pixels? Suggerimento: ogni quadrato è largo 100
         pixels'
-      NEW Course 4 Artist Functions 3_instruction: "Here is a new type of Block.\nIt
-        is called a \"Function block.\" Click \"Run\" to see what it can do. \n"
-      NEW Course 4 Artist Functions 4_instruction: |
-        Use the "draw a square" function
-        to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
-        block after each square.
-      NEW Course 4 Artist Functions 5_instruction: |
-        How did the "draw a square"
-        block know what commands to run? Click on "edit" in the "draw a square"
-        function block. The blocks in the function editor are the definition that
-        make up "draw a square." When you're done looking around, click "Save
-        and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
-      NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
-        use function blocks? Let's modify this square so that it is 200 pixels\nin
-        size. Hint: click on \"edit\" to change the size of the \"draw a square\"\nfunction
-        editor. Remember to click on \"save and close\" to get out of the\nfunction
-        editor. \n"
-      NEW Course 4 Artist Functions 8_instruction: |
-        We have given you most of the
-        code to create a function. However there seems to be something missing. Can
-        you edit the function definition to draw the triangle?
-      NEW Course 4 Artist Functions 9_instruction: |
-        Which block do you need to add
-        to get the triangle to sit on top of the square?
-      New Course 4 Artist Functions Level 4_instruction: |
-        Use the "draw a square"
-        function to draw this pattern.
-      NEW Course 4 Artist Params 1_instruction: |
-        Let's define this function to draw
-        a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: "Create a \"draw a hexagon\" function\nblock
-        with a length parameter. Hint: this hexagon is 100 pixels in size. \n"
-      NEW Course 4 Artist Params 11_instruction: |
-        Can you figure out how to draw
-        this shape? Edit the function to use the "sides" parameter.
-      NEW Course 4 Artist Params 12_instruction: |
-        Can you complete this drawing?
-        The sides of all the shapes are 100 pixels long.
+      NEW Course 4 Artist Functions 3_instruction: 'Ecco un nuovo tipo di blocco.
+        Si chiama "blocco funzionle". Fai clic su "Esegui" per vedere cosa può fare. '
+      NEW Course 4 Artist Functions 4_instruction: 'Utilizza la funzione "disegna
+        un quadrato" per disegnare questo modello. Suggerimento: si dovrà utilizzare
+        un blocco "gira a destra 120 gradi" dopo ogni quadrato.'
+      NEW Course 4 Artist Functions 5_instruction: Come sapeva il blocco "disegna
+        un quadrato" quali comandi per eseguire? Clicca su "modifica" del blocco della
+        funzione "disegna un quadrato". I diversi blocchi della funzione definiscono
+        come "disegnare un quadrato". Quando hai finito, fai clic su "Salva e Chiudi"
+        e poi su "Esegui".
+      NEW Course 4 Artist Functions 6_instruction: "Utilizzando il blocco funzione
+        \"disegna un quadrato\", potete disegnare questa immagine? Suggerimento: ogni
+        quadrato è separato di 20 pixel.\r\n"
+      NEW Course 4 Artist Functions 7_instruction: 'Stai imparando ad usare i blocchi
+        di funzione? Modifica questo quadrato in modo che abbia le dimensioni di 200
+        pixel. Suggerimento: clicca su "modifica" per cambiare le dimensioni nell''editor
+        della funzione "disegna un quadrato". Ricorda di cliccare su "salva e chiudi"
+        per uscire dall''editor della funzione. '
+      NEW Course 4 Artist Functions 8_instruction: Vi abbiamo dato la maggior parte
+        del codice necessario a creare una funzione. Tuttavia sembra esserci qualcosa
+        che manca. Modificate la definizione di funzione per disegnare il triangolo.
+      NEW Course 4 Artist Functions 9_instruction: Quale blocco è necessario aggiungere
+        per ottenere il triangolo posto sopra al quadrato?
+      New Course 4 Artist Functions Level 4_instruction: Utilizzate la funzione "disegna
+        un quadrato" per disegnare questo modello.
+      NEW Course 4 Artist Params 1_instruction: Definiamo ora  una funzione per disegnare
+        un quadrato con lati di 50 pixel. Fare clic su "modifica" per iniziare.
+      NEW Course 4 Artist Params 10_instruction: 'Create un blocco di funzione "disegnare
+        un esagono" con un parametro per la lunghezza. Suggerimento: questo esagono
+        ha il lato di 100 pixel. '
+      NEW Course 4 Artist Params 11_instruction: Riesci a figurarti come disegnare
+        questa forma? Modificare la funzione per utilizzare il parametro "lati".
+      NEW Course 4 Artist Params 12_instruction: E' possibile completare questo disegno?
+        I lati di tutte le forme sono lunghi 100 pixel.
       NEW Course 4 Artist Params 13_instruction: |
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
-        to also add a "sides" parameter. Remember the angle to turn for a given
-        shape is 360 divided by the sides it has. Hint: lengths for each shape are;
-        the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50
-        pixels.
-      NEW Course 4 Artist Params 14_instruction: "Can you recreate these shapes?\nDrag
-        the \"length\" parameter into the function definition. \n"
-      NEW Course 4 Artist Params 15_instruction: |
-        Freeplay: Here are the functions
-        you've written, and some more for you to play with. Draw something awesome!
+        to add a "sides" parameter. Remember the angle to turn for a given shape
+        is 360 divided by the number of sides it has. Hint: These are the lengths
+        for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and
+        the square is 50 pixels.
+      NEW Course 4 Artist Params 14_instruction: 'Riuscite a ricreare queste forme?
+        Trascinare il parametro "lunghezza" nella definizione della funzione. '
+      NEW Course 4 Artist Params 15_instruction: Gioco libero. Ecco sono le funzioni
+        che hai scritto e delle altre con cui poete giocare. Disegnate qualcosa di
+        incredibile!
       NEW Course 4 Artist Params 2_instruction: Crea da zero una funzione "disegna
         un triangolo di 50 pixel di lato"
-      NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3
-        triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
-      NEW Course 4 Artist Params 4_instruction: |
-        Do you notice anything different
-        about these function blocks? Click “Run” to see what happens.
-      NEW Course 4 Artist Params 5_instruction: "Fill in the ??? in the length parameter\ninput
-        block. Hint: The pentagon is 100 pixels in size. \n"
-      NEW Course 4 Artist Params 6_instruction: |
-        Fill in the "length" parameter
-        to draw these shapes by replacing the "???" with the right numbers. The
-        square and triangle are 100 pixels in size while the hexagon is 75 pixels
-        in size.
-      NEW Course 4 Artist Params 7_instruction: |
-        Can you complete this drawing? Hint:
-        each triangle is 25 pixels larger than the last.  The first triangle is 25
-        pixels in size.
-      NEW Course 4 Artist Params 8_instruction: |
-        The code for this triangle function
-        is broken. Can you edit the function to fix it, and then make triangles of
-        length 25, 50, and 75?
+      NEW Course 4 Artist Params 3_instruction: "Ora usiamo la funzione per disegnare
+        3 triangoli dall'ultimo puzzle in fila. Suggerimento: ogni triangolo varia
+        di 50 pixel.\r\n"
+      NEW Course 4 Artist Params 4_instruction: Notate qualcosa di diverso in questi
+        blocchi di funzione? Fare clic su "Esegui" per vedere cosa succede.
+      NEW Course 4 Artist Params 5_instruction: 'Compilare il campo ??? nel blocco
+        di input del parametro lunghezza. Suggerimento: Il pentagono ha dimensioni
+        di 100 pixel. '
+      NEW Course 4 Artist Params 6_instruction: Compilate il parametro "lunghezza"
+        per disegnare queste forme sostituendo a "???" i valori corretti. Il quadrato
+        e il triangolo hanno le dimensioni di 100 pixel e l'esagono è di 75 pixel.
+      NEW Course 4 Artist Params 7_instruction: 'Puoi completare questo disegno? Suggerimento:
+        ogni triangolo è 25 pixel più grande del precedente.  Il primo triangolo ha
+        le dimensioni di 25 pixel.'
+      NEW Course 4 Artist Params 8_instruction: Il codice della funzione per la costrruzione
+        del triangolo non è corretto. Modificate la funzione per risolvere il problema
+        e poi creatye dei triangoli con le misure di 25, 50 e 75.
       NEW Course 4 Artist Params 9_instruction: |
         Click "edit" to fill in the function
         definition of "draw a square" and add a parameter. It should take a length
         parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75
         pixels in length, each 100 pixels apart.
-      NEW Course 4 Artist Vars 1.5_instruction: "Take a look at the code, can you\nsee
-        how the \"set length\" block and \"length\" block works together? Click\non
-        \"Run\" to see it in action. \n"
-      NEW Course 4 Artist Vars 12_instruction: |
-        Modify this algorithm so it uses
-        the "sides" variable instead of a fixed number to draw a pentagon. Replace
-        the number 5 with the "sides" variable, and use the "set sides to" block.
-      NEW Course 4 Artist Vars 2.5_instruction: "Take a look at the code, can you\nsee
-        how the \"set length\" block and \"length\" block works together? Click\non
-        \"Run\" to see it in action. \n"
-      NEW Course 4 Artist Vars 2_instruction: "Drag a number block to the \"set length\"\nblock
-        to draw a set of 50 pixel triangles. \n"
+      NEW Course 4 Artist Vars 1.5_instruction: 'Date un''occhiata al codice. Potete
+        vedere come il blocco "imposta lunghezza" e il blocco "lunghezza" lavorano
+        insieme? Clicca su "Esegui" per vederlo in azione. '
+      NEW Course 4 Artist Vars 12_instruction: Modificare questo algoritmo in modo
+        che utilizzati la variabile "lati" invece di un numero fisso per disegnare
+        un pentagono. Sostituite il numero 5 con la variabile "lati" e utilizzate
+        il blocco "imposta i lati".
+      NEW Course 4 Artist Vars 2.5_instruction: 'Date un''occhiata al codice. Potete
+        vedere come il blocco "imposta lunghezza" e il blocco "lunghezza" lavorano
+        insieme? Clicca su "Esegui" per vederlo in azione. '
+      NEW Course 4 Artist Vars 2_instruction: 'Trascina un blocco numerico sul blocco
+        "imposta lunghezza" in modo da disegnare un insieme di triangoli da 50 pixel. '
       NEW Course 4 Artist Vars 4 5_instruction: Lavoro impressionante sull'ultimo
         puzzle, proviamo di nuovo facendo stavolta questo fenomenale disegno utilizzando
         esagoni di 60 pixel.
       NEW Course 4 Artist Vars 4_instruction: Proviamo di nuovo. Adesso facciamo questo
         fenomenale disegno utilizzando esagoni di 60 pixel.
-      NEW Course 4 Artist Vars 6_instruction: |
-        Can you help me draw this cool pattern
-        by dropping in the "length" variable block into the correct places?
-      NEW Course 4 Bee For Loops 1_instruction: |
-        Use a loop to collect the nectar
-        from each flower.
-      NEW Course 4 Bee For Loops 10_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
-      NEW Course 4 Bee For Loops 11_instruction: |
-        Can you use the loop variable to
-        control movement and nectar collection?
-      NEW Course 4 Bee For Loops 2_instruction: |
-        Add the code necessary to make sure
-        the bee collects all the nectar. Look at how much code you need for this puzzle!
-        (We'll learn a simpler way in the next puzzle.)
-      NEW Course 4 Bee For Loops 3_instruction: "Ah, the for loop makes this much\neasier!
-        All the code you need is there, take a look at how it is put together\nthen
-        click \"Run\" to see how it works. \n"
-      NEW Course 4 Bee For Loops 4 4_instruction: "Can you help the Bee collect the\nrest
-        of the honey using this for loop? \n"
-      NEW Course 4 Bee For Loops 4_instruction: "Replace the ??? in the for loop\nwith
-        the largest amount of nectar the bee has to collect. \n"
+      NEW Course 4 Artist Vars 6_instruction: Mi potete aiutare a disegnare questo
+        modello inserendo il blocco della variabile "lunghezza" nel posto giusto?
+      NEW Course 4 Bee For Loops 1_instruction: Usa un clico ("loop") per raccogliere
+        il nettare da ogni fiore.
+      NEW Course 4 Bee For Loops 10_instruction: Usa la variabile "contatore" del
+        ciclo per controllare lo spostamento in senso orizzontale.
+      NEW Course 4 Bee For Loops 11_instruction: È possibile utilizzare la variabile
+        del ciclo per controllare il movimento e la raccolta di nettare?
+      NEW Course 4 Bee For Loops 2_instruction: Aggiungi il codice necessario per
+        assicurarti che l'ape raccolga tutto il nettare. Guarda la quantità di codice
+        necessaria per questo puzzle! (vedremo una soluzione più semplice nel prossimo
+        puzzle)
+      NEW Course 4 Bee For Loops 3_instruction: 'Grazia all''uso di ciclo (loop) tutto
+        è molto più facile! Il codice necessario è a tua disposizione. Osserva come
+        è stato messo insieme e, quindi, fai clic su "Esegui" per vedere come funziona. '
+      NEW Course 4 Bee For Loops 4 4_instruction: 'Potete aiutare l''ape a raccogliere
+        il resto del miele usando questo ciclo "for"? '
+      NEW Course 4 Bee For Loops 4_instruction: 'Sostituite il ??? nel ciclo con la
+        più grande quantità di nettare l''ape deve raccogliere. '
       NEW Course 4 Bee For Loops 5 5_instruction: |
         Are you getting the hang of using
         the for loop? Let's help the bee get the rest of the nectar.
-      NEW Course 4 Bee For Loops 5_instruction: |
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      NEW Course 4 Bee For Loops 6_instruction: |
-        The last number in your for loop
-        is called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
+      NEW Course 4 Bee For Loops 5_instruction: È inoltre possibile utilizzare un
+        ciclo "for" per il conto alla rovescia. Provate a raccogliere il nettare con
+        un conto alla rovescia da 5 a 1 di 1.
+      NEW Course 4 Bee For Loops 6_instruction: L'ultimo numero del ciclo indica l'incremento
+        e ogni volta che il ciclo viene eseguite la variabile contatore aumenta dell'incremento
+        indicato. Provate a raccogliere questi fiori usando un valore 2 per l'incremento.
       NEW Course 4 Bee For Loops 7_instruction: |
         Are you getting the hang of for
         Loops? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar.
         You’re given the starter code except for the numbers in the counter loops.
         Let's collect some nectar!
-      NEW Course 4 Bee For Loops 8_instruction: "If your loop is counting up, the\nincrement
-        is added to your counter variable each loop. What should your increment\nbe
-        to collect 3, 6, 9 nectar?\r\n"
-      NEW Course 4 Bee For Loops 9_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
-      NEW Course 4 Play Lab Params 11_instruction: "It's Free Play time! Have fun\nwith
-        all the blocks in your tool box. \n"
+      NEW Course 4 Bee For Loops 8_instruction: "Se il ciclo esegue il conteggio,
+        l'incremento viene aggiunto alla variabile contatore a ogni ciclo. Quale dovrebbe
+        essere l'incremento per raccogliere 3, 6, 9 di nettare? \r\n"
+      NEW Course 4 Bee For Loops 9_instruction: Se il ciclo è conto alla rovescia,
+        l'incremento viene sottratto dalla variabile contatore a ogni ciclo. Quale
+        dovrebbe essere l'incremento per raccogliere 9, poi 6 e poi 3 di nettare?
+      NEW Course 4 Play Lab Params 11_instruction: 'È tempo di giocare! Divertiti
+        usando tutti i blocchi presenti nella vostra cassetta degli attrezzi. '
       NEW Course 4 Play Lab Params 5 5_instruction: "Fill in actor parameter inputs\nwith
         numbers (1, 2, and 3) to make these actors patrol. \n"
-      NEW Course 4 Play Lab Vars 4 5_instruction: |
-        “What do you think this code will
-        do? Press “Run” to see what happens.”
-      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "It's Free Play\ntime,
-        have fun with all the blocks in your tool box. \n"
-      New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
+      NEW Course 4 Play Lab Vars 4 5_instruction: '"Che cosa pensi faccia questo codice?
+        Premere "Esegui" per vedere cosa succede."'
+      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'È tempo di giocare.
+        Divertiti con tutti i blocchi della cassetta degli attrezzi. '
+      New Play Lab Project_instruction: Create la vostra storia o il vostro gioco!
+        Il codice viene salvato come un progetto ed è possibile tornarci in qualsiasi
+        momento.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame,
         and then figuring out how it works. You can use the arrow keys\nto move the
         ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n
@@ -2707,25 +2709,21 @@
         always see at least a bit of him, so lets write some functions that help make
         sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
-        and return true if he's inside the left boundary of the yard (x > -25). If
-        your function works, Sam shouldn't be able to leave the yard from the left
-        side.
+        and return true if he's completely visible on screen. If your function works,
+        Sam shouldn't be able to leave the yard from the left side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the safe-right?
-        function to make sure Sam can't go past x = 425.
+        on the left, now let's do the same thing on the right. Complete the safe-right?
+        function to make sure Sam can't go off the right side of the screen.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
         from going either direction? Try using the AND block to program the function
         on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        Free Play: Awesome, we've kept Sam safe
+        on the left and right! Use this free play stage to experiment with your functions
+        and further improve onscreen?
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2753,42 +2751,37 @@
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: Il blocco "se-allora" verifica una condizione, e poi fa
-        una cosa O l'altra. Per farmi arrivare alla ghianda prova ad usare questo
-        nuovo blocco.
+      scrat 18_instruction: 'Il blocco "se-altrimenti" controlla una condizione: SE
+        è vera fa una cosa ALTRIMENTI ne fa un''altra. Prova ad usare questo nuovo
+        blocco per farmi arrivare alla ghianda.'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: Ancora un esercizio con il blocco "se-allora", riesci
-        a farlo bene al primo tentativo?
-      scrat 20_instruction: Riesci ad aggiungere solo 3 blocchi per aiutarmi a risolvere
-        un labirinto più complesso? Se lo fai bene, potrò camminare su qualsiasi percorso
-        a curve, indipendentemente dalla sua lunghezza. Fai in fretta! Il ghiaccio
+      scrat 19_instruction: 'Ancora un esercizio con il blocco "se-altrimenti": riesci
+        a risolverlo correttamente al primo tentativo?'
+      scrat 20_instruction: Riesci ad aggiungere solo 3 blocchi per farmi uscire da
+        un labirinto più complesso? Se lo fai correttamente, riuscirò a camminare
+        lungo un percorso tortuoso di qualsiasi lunghezza. Fai in fretta! Il ghiaccio
         si sta sciogliendo!
       SpecialFrozenLevel_instruction: Sei ufficialmente diventato un mastro artista!
         Crea un meraviglioso paesaggio invernale.
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: |
-        Draw this diamond with 120 and 60 degree
-        angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: |
-        Can you draw this hexagon with 100 pixel
-        sides and 60 degree turns?
-      Standalone_Artist_4_instruction: |
-        Now you've got a new block to play with,
-        the loop. This will repeat a set of commands. What happens if you loop these
-        commands 6 times?
+      Standalone_Artist_1_instruction: Benvenuto all'Artista! Prima di tutto, cerchiamo
+        di fare un semplice quadrato utilizzando il blocco gira a destra e il blocco
+        muovi in avanti. Ogni lato deve essere lungo 100 pixel.
+      Standalone_Artist_2_instruction: Disegna questo diamante che ha gli angoli da
+        120 e 60 gradi e i lati lunghi 100 pixel.
+      Standalone_Artist_3_instruction: È possibile disegnare questo esagono con i
+        lati di 100 pixel e angoli di 60 gradi?
+      Standalone_Artist_4_instruction: Abbiamo ora un nuovo blocco con cui lavorare,
+        il ciclo (loop). Questo blocco ripeterà un insieme di comandi. Cosa succede
+        se si ripetono questi comandi 6 volte?
       Standalone_Artist_5.5_instruction: |
         Notice how we simplified the diamond code
         by turning it into a loop. You can loop that whole sequence 12 times to draw
         the flower. Hint: You'll need to turn 30 degrees after your diamond loop
         so you don't keep drawing over the same diamond.
-      Standalone_Artist_5_instruction: |
-        How many times do you need to loop this diamond
-        to draw the flower?
+      Standalone_Artist_5_instruction: Quante volte è necessario eseguire questo ciclo
+        per disegnare il fiore?
       Standalone_Artist_6_instruction: 'Ripeti 6 volte il codice di questo esagono
         per realizzare la figura. Di quanti gradi dovrai girare ogni volta? Suggerimento:
         dividi il numero di gradi di un cerchio per il numero di volte che stai girando.'
@@ -2797,31 +2790,47 @@
         e potrai usarla ogni volta che vuoi disegnare un fiore. Usala insieme al nuovo
         blocco "salta" per disegnare questi fiori. Suggerimento: i fiori sono distanti
         tra loro 150 pixel'
-      Standalone_Artist_8_instruction: |
-        Here's a function called "Draw a shape"
-        that we've programmed to draw hexagons. Run the code to see what it does
-        and then experiment with the function to see what happens. Can you make it
-        draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9_instruction: |
-        Now go ahead and make whatever picture you'd
-        like! You've even got an empty function that you can make do whatever you
-        want!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
-      U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+      Standalone_Artist_8_instruction: Ecco una funzione chiamata "Disegna una forma"
+        che abbiamo programmato per disegnare degli esagoni. Esegui il codice per
+        vedere che cosa fa e poi fai esperimenti con questa funzione per vedere cosa
+        succede. Potete fare in modo che disegni una composizione di quadrati, triangoli
+        o ottagoni?
+      Standalone_Artist_9_instruction: Ora procedi  e realizza qualsiasi immagine
+        che desideri! Hai anche una funzione vuota con cui puoi fare quello che vuoi!
+      Standalone_Artist_v2_instruction: Benvenuto all'Artista! Prima di tutto, cerchiamo
+        di fare un semplice quadrato utilizzando il blocco gira a destra e il blocco
+        muovi in avanti. Ogni lato deve essere lungo 100 pixel.
+      Test Play Lab_instruction: This is a test play lab level.
+      Text Compression Peter Piper_instruction: Questa poesia è stata compressa sostituendo
+        due frasi comuni con simboli del dizionario. Sei in grado di identificare
+        un altro modello comune per comprimere la poesia ulteriormente?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
+      U1L4 NetSim SendAB_instruction: "Develop, document, and test a protocol that\nallows
+        you to use Internet Simulator to relay a message. See the worksheet\nfor more
+        detailed instructions.  \n"
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor
+        Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly
+        6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay
+        not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
@@ -3184,17 +3193,13 @@
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

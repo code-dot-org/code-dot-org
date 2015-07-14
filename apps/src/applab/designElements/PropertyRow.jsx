@@ -1,4 +1,6 @@
+/* global $ */
 var React = require('react');
+var rowStyle = require('./rowStyle');
 
 var LockState = {
   LOCKED: 'LOCKED',
@@ -16,7 +18,8 @@ var PropertyRow = React.createClass({
     lockState: React.PropTypes.oneOf([LockState.LOCKED, LockState.UNLOCKED, undefined]),
     isMultiLine: React.PropTypes.bool,
     handleChange: React.PropTypes.func,
-    handleLockChange: React.PropTypes.func
+    handleLockChange: React.PropTypes.func,
+    isIdRow: React.PropTypes.bool
   },
 
   getInitialState: function () {
@@ -44,16 +47,22 @@ var PropertyRow = React.createClass({
   },
 
   render: function() {
+    var idRowStyle = $.extend({}, rowStyle.container, rowStyle.maxWidth, {
+      backgroundColor: '#a69bc1',
+      paddingBottom: 10
+    });
+
     var inputElement;
     if (this.props.isMultiLine) {
       inputElement = <textarea
         value={this.state.value}
-        onChange={this.handleChangeInternal}/>;
+        onChange={this.handleChangeInternal} />;
     } else {
       inputElement = <input
         type={this.props.isNumber ? 'number' : undefined}
         value={this.state.value}
-        onChange={this.handleChangeInternal}/>;
+        onChange={this.handleChangeInternal}
+        style={rowStyle.input} />;
     }
 
     var lockStyle = {
@@ -73,13 +82,13 @@ var PropertyRow = React.createClass({
     }
 
     return (
-      <tr>
-        <td>{this.props.desc}</td>
-        <td>
+      <div style={this.props.isIdRow ? idRowStyle : rowStyle.container}>
+        <div style={rowStyle.description}>{this.props.desc}</div>
+        <div>
           {inputElement}
           {lockIcon}
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });

@@ -409,6 +409,7 @@ fi:
         C3_functional_suncatchers: Funktionaaliset auringonkerääjät
         C3_songwriting_with_parameters: Parametroitu laulunkirjoitus
         C4_intro: Johdanto
+        C4_loops_zombie: Silmukat
         C4_bee_conditional: Mehiläisen ehtolauseet
         C4_variables_artist: 'Muuttujat - Taiteilija'
         C4_variables_playlab: 'Muuttujat - Pelilabra'
@@ -443,6 +444,7 @@ fi:
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'

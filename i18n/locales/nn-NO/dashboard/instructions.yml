@@ -135,9 +135,7 @@ nn:
       2-3 Bee Functions Assessment 1_instruction: 'Lekse: bruk funksjonen til å samle inn nektar fra alle blomstene.'
       2-3 Bee Functions Assessment 2_instruction: 'Lekse: Lag en funksjon som lager 3 honning om gangen.'
       2-3 Bee Loops 1_instruction: 'Hver blomst inneholder en enhet med nektar. Samle inn nektar fra alle blomstene. '
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
+      2-3 Bee Loops 10_instruction: Får du til å bruke en mens løkke inni to andre løkker for å samle inn all nektaren?
       2-3 Bee Loops 11_instruction: |
         Use while loops to collect all of the nectar
         from the flowers in this field.
@@ -164,17 +162,12 @@ nn:
       2-3 Bee Loops 5_instruction: Bruk en loop får å gå ned trinnene og samle inn nektaren.
       2-3 Bee Loops 6_instruction: Bruk en loop for å samle inn nektar fra alle blomstene og lag honing i alle bikubene.
       2-3 Bee Loops 7_instruction: Sett disse blokkene i en loop for å samle inn nektar fra alle blomstene.
-      2-3 Bee Loops 8_instruction: |
-        These purple flowers have an unknown amount of
-        nectar. Use the "while nectar" loop to collect all of the nectar. This loop
-        will run as long as the condition is true, in this case Nectar > 0.
+      2-3 Bee Loops 8_instruction: 'De lilla blomstene har en ukjent mengde nektar. Bruk løkken "mens nektar" til å samle inn all nektaren. Denne løkken vil kjøre så lenge betingelsen er sann. I dette tilfellet er det dersom Nektar > 0'
       2-3 Bee Loops 9_instruction: |
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same
         task.
-      2-3 Bee Loops Assessment 1_instruction: |
-        Assessment - Use a while loop to collect
-        all of the nectar from this flower.
+      2-3 Bee Loops Assessment 1_instruction: Lekse – Bruke en mens løkke til å samle inn all nektaren fra denne blomsten.
       2-3 Maze 1_instruction: 'Kan du hjelpe meg å fange den slemme grisen? Sett sammen et par «gå fremover» blokker og trykk "Kjør Program" '
       2-3 Maze 10_instruction: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
       2-3 Maze 11_instruction: |
@@ -279,11 +272,11 @@ nn:
       4-5 Artist For Loops 14_instruction: |
         Someone started the code, but then realized
         there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.
+        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
       4-5 Artist For Loops 15_instruction: |
         Someone started the code, but then realized
         there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.
+        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
       4-5 Artist For Loops 2_instruction: |
         This is a "for" block. Instead of typing
         1,2,3... 10, the "for" block can repeat the blocks inside it and count the
@@ -377,66 +370,26 @@ nn:
         Draw these 3 flowers. The first one's
         height is 100 and the next flower is always 50 pixels more than the height
         of the previous one. The flowers are also 100 pixels apart.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
-      4-5 Artist Patterns 5_instruction: |
-        Let's repeat that to make a row of 6 diamonds.
-        Notice that we changed our diamond code to repeat 3 times instead of 2 - why
-        do you think that is?
+      4-5 Artist Patterns 1_instruction: Får du til å tegne dette kvadratet ved bruk av en løkke? Hver side er 20 piksler lang.
+      4-5 Artist Patterns 10_instruction: 'Denne koden tegner to rader med sekskanter – Repeter hele kodeblokken 4 ganger for å tegne hele bikubemønsteret. Tips: Du må hoppe tilbake 120 piksler i den ytterste løkken for å hindre at artisten ikke tegner på utsiden av skjermen.'
+      4-5 Artist Patterns 11_instruction: 'Hvor mange ganger må du repetere denne koden for å tegne en halvsirkel? Tips: Dersom deter 360 grader i en hel sirkel og hver repetisjon beveger seg 3 grader, hvor mange ganger må du repetere for å tegne en hel sirkel?'
+      4-5 Artist Patterns 12_instruction: Hva skjer dersom du kopierer løkken og snur mot venstre fremfor høyre? Kan du du bruke en gjenta-blokk til å tegne denne bølgen?
+      4-5 Artist Patterns 13_instruction: Nå la oss gjenta det hele fire ganger for å opprette denne bilderammen. Se opp for hjørnene – du kan ikke bare snu 90 grader! Dersom repetering av en 3-graders 60 ganger utgjør en halvsirkel, hvilke av disse kodeblokkene vil utgjøre en kvart-sirkel til hjørnene?
+      4-5 Artist Patterns 2_instruction: Dersom du legger kvadratløkken inni en annen løkke kaller vi det en nestet løkke. Hva må du legge til i den ytre løkken for at alle 15 kvadratene skal være på en linje ved siden av hver andre?
+      4-5 Artist Patterns 3_instruction: Nå skal vi ta det et nivå lenger! Vi har nøstet hele kodeblokken inn in annen løkke, men du må få artisten på riktig plass for å tegne den neste linjen. Hvilke av disse kodeblokkene kan du plassere mot slutten av den ytre løkken for å tegne hele mønsteret.
+      4-5 Artist Patterns 4_instruction: Denne diamanten har sider som er 50 piksler lange og vinkler på 120 og 60 grader. Tegn den ved hjelp av en løkke.
+      4-5 Artist Patterns 5.5_instruction: Hvor mange ganger må vi repetere denne blokken for å tegne hele rutenettet av diamanter?
+      4-5 Artist Patterns 5_instruction: |2
+        Nå skal vi repetere den for å tegne en rekke med 6 diaamanter.
+         Legg merke til at vi har endret på diamantkoden slik at den repeteres 3 ganger istedenfor 2 – Hvorfor tror du vi har gjort det?
       4-5 Artist Patterns 6_instruction: |
         How many times do you need to repeat this
         block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
-      4-5 Artist Patterns 9_instruction: |
-        Now repeat that code 3 times to draw the
-        whole row. Hint, each hexagon is 80 pixels wide from the furthest points left
-        to right.
-      4-5 Artist Patterns Free Play_instruction: |
-        Free play - try your hand at making
-        a pattern of your own!
+      4-5 Artist Patterns 7_instruction: 'Nå skal vi endre koden fra forrige oppgave for å gjøre mønsteret litt mer komplisert. Legg merke til hvordan diamantene nå overlapper hverandre. Forsøk å endre den første "hopp tilbake" fra 100 til 50 (halvparten så langt) – Hvor langt skal artisten nå gå i det andre "hopp tilbake"'
+      4-5 Artist Patterns 8_instruction: Bruk en løkke til å tegne en sekskant der hver side er 40 piksler og vinklene er på 60 grader.
+      4-5 Artist Patterns 9.5_instruction: Nå skal vi repetere denne koden for å tegne to rader med sekskanter. Legg merke til hvordan den andre raden er forskjøvet mot høyre.
+      4-5 Artist Patterns 9_instruction: 'Nå skal vi repetere den koden 3 ganger for å tegne hele rekken. Tips: Hver sekskant er 80 piksler på det bredeste.'
+      4-5 Artist Patterns Free Play_instruction: Frilek – Prøv å lage ditt eget mønster!
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -472,38 +425,24 @@ nn:
       4-5 Bee Debugging 3_instruction: Finn feilene og fiks dem.
       4-5 Bee Debugging 4_instruction: Disse blokkene fungerer ikke. Hva er mønsteret?
       4-5 Bee Debugging 5_instruction: Noe er ikke rett her...
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: "Why isn't the bee making enough honey?"
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
+      4-5 Bee Debugging 6_instruction: De lilla blomstene har en ukjent mengde nektar. Fiks blokkene for å hente ut all nektaren fra blomsten.
+      4-5 Bee Debugging 7_instruction: Denne funksjonen mangler noe...
+      4-5 Bee Debugging 8_instruction: Denne funksjonen er fin, men den er ikke riktig brukt.
+      4-5 Bee Debugging 9_instruction: Hvorfor lager ikke bien nok honning?
+      4-5 Bee Debugging Assessment 1_instruction: 'Lekse: Fiks koden.'
       4-5 Bee Nested Loops 1_instruction: Bruk en løkke til å samle inn all nektaren.
       4-5 Bee Nested Loops 2_instruction: Samle inn all nektaren fra alle blomstene. Bruk løkke i løkke.
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
+      4-5 Bee Nested Loops 3_instruction: Put koden som er lagt til i en nestet løkke til å samle inn alt nektaren.
       4-5 Bee Nested Loops 4_instruction: Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke.
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
+      4-5 Bee Nested Loops 5_instruction: Samle inn all nektaren ved å bruke en nestet løkke.
       4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
+      4-5 Bee Nested Loops 7_instruction: Put denne løkken inni en annen løkke for å opprette en nestet løkke til å samle inn all nektaren fra blomstene.
       4-5 Bee Nested Loops 8_instruction: |
         Collect all of the nectar from these flowers
         by nesting a while loop. Replace the inner repeat times block with a while
         block. 
-      4-5 Bee Nested Loops 9_instruction: |
-        Collect all of the nectar from these flowers
-        by nesting a while loop inside a repeat.
-      4-5 Bee Nested Loops Assessment 1_instruction: |
-        Assessment - Collect all of
-        the nectar and make all the honey by using loops.
+      4-5 Bee Nested Loops 9_instruction: Samle inn all nektaren fra disse blomstene ved å bruke en nøstet mens-løkke ini en gjenta blokk.
+      4-5 Bee Nested Loops Assessment 1_instruction: 'Lekse - Samle inn all nektaren og lag all honningen ved bruk av løkker.'
       4-5 Bee Nested Loops Rows_instruction: |
         Gather nectar from the rows of flowers!
         Use a nested loop.
@@ -533,14 +472,8 @@ nn:
       4-5 Maze Conditionals 1_instruction: 'Bruk "gjenta til" blokk for å få zombien til solsikken.'
       4-5 Maze Conditionals 10_instruction: Klarer du å hjelpe meg igjennom en kompleks labyrint ved bare å legge til 3 blokker? Hvis du gjør det riktig så kan jeg gå en hvilken som helst krokete vei igjennom, uansett lengde.
       4-5 Maze Conditionals 2_instruction: 'Bruk "gjenta til" blokk for å få zombien til solsikken.'
-      4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
+      4-5 Maze Conditionals 3_instruction: 'Bruk "Hvis" blokken for å la meg bestemme jeg skal snu. Tips: du trenger bare en til blokk, men lær hvordan vi sette den opp slik at du kan gjøre det på din egenhånd neste gang.'
+      4-5 Maze Conditionals 4_instruction: 'Ok, denne er helt lik den forrige oppgaven men du må huske hvordan du brukte "hvis"-blokken og deretter "Gjenta"-blokken sammen.'
       4-5 Maze Conditionals 5_instruction: 'Meg vil ha solsikke! Bruk en "Hvis" blokk til å få meg dit med så få blokker som mulig.'
       4-5 Maze Conditionals 6_instruction: 'Meg vil ha solsikke! Bruk en "Hvis" blokk til å få meg dit med så få blokker som mulig.'
       4-5 Maze Conditionals 7_instruction: 'Ok, la oss øve på den en gang til - denne er ikke så forskjellig, men pass deg for de kjøttetende plantene!'
@@ -554,60 +487,29 @@ nn:
         Draw the last row of stars on this flag by
         looping the provided blocks. The stars are 50 pixels apart, but remember that
         the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: |
-        Now nest this loop inside another loop to
-        draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
-        complete a 360 degree rotation.  
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother loop. This is called a nested loop.\r\n"
+      4-5 Nested Loops 11_instruction: Klarer du å tegne de 10 kvadratene på fortauet ved å bruke en nestet løkke? Hvert kvadrat er 30 piksler.
+      4-5 Nested Loops 12_instruction: 'Får du til å tegne disse  36 trianglene ved hjelp av en nestet løkke?'
+      4-5 Nested Loops 2_instruction: 'Nå skal du putte denne løkken inni en annen løkke for å tegne 10 triangler. Dette kalles en nestet løkke. Tips: Alle 10 trianglene utgjør til sammen en rotasjon på 360 grader.  '
+      4-5 Nested Loops 3_instruction: "Tegn en sol ved å nøste koden fra utgangspunktet inni en annen løkke.  Dette kalles en nestet løkke.\r\n"
       4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
+      4-5 Nested Loops 6_instruction: Får til til å tegne en sekskant ved å repetere triangelkoden?
+      4-5 Nested Loops 7_instruction: 'Repeter designet 10 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 10?)'
+      4-5 Nested Loops 8_instruction: 'Repeter designet 6 ganger. Hvor mye må du rotere i hver repetisjon? (Tips: Hva er 360 delt på 6?)'
       4-5 Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
-      4-5 While Loops 1_instruction: |
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
-      4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
-      4-5 While Loops 3_instruction: |
-        Move me to the pile and remove all of it, then
-        move to the hole and fill it completely.  Hint:  Use as few blocks as possible.
-      4-5 While Loops 4_instruction: |
-        Wow, I found a really deep hole! I don't know
-        how many shovelfuls of dirt it needs.  Can you write a program that fills
-        it until the ground is even?  Hint:  Try using the while loop this time.
-      4-5 While Loops 5_instruction: |
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
-      4-5 While Loops 8_instruction: |2
-         There is a really deep hole and a really large
-        pile of dirt.  How many shovelfuls of dirt need to be moved around to make
-        the ground flat?  Hint: Use the while loop for both.
-      4-5 While Loops Assessment 1_instruction: |
-        There are a lot of holes and piles.  Help
-        me to fill and remove them to make the ground flat.
+      4-5 Nested Loops Assessment 1_instruction: Bruk en nøstet løkke for å fullføre designet.
+      4-5 While Loops 1_instruction: 'Flytt meg til hullet og bruk en "fylle"-blokk til å fylle det med to spader med jord.'
+      4-5 While Loops 2_instruction: 'Flytt meg til jordhaugen og bruk "Fjern 1" blokken til å fjern den på fem spadetak.'
+      4-5 While Loops 3_instruction: 'Flytt meg til jordhaugen og fjern alt sammen. Etterpå flytter du meg til hullet og fyller det helt opp. Tips: bruk så få blokker som mulig.'
+      4-5 While Loops 4_instruction: Wow, jeg fant et virkelig dypt hull! Jeg vet ikke hvor mange spadetak med jord det tar å fylle det. Kan du skrive et program som fyller oppi det til bakken er helt jevn? Tips bruk en mens løkke denne gangen.
+      4-5 While Loops 5_instruction: Wow, nå er det to dype hull. Får du til å skrive et program som fyller de begge til bakken er helt jevn?
+      4-5 While Loops 6_instruction: Wow, nå er det en stor jordhaug der! Klarer du å skrive et program som fjerner hele haugen slik at bakken blir helt jevn?
+      4-5 While Loops 7_instruction: Wow, nå er det tre hauger med jord der. Får du til å skrive et program som fjerner alle sammen slik at bakken blir helt jevn?
+      4-5 While Loops 8_instruction: 'Det er et virkelig dypt hull og en virkelig stor haug med jord. Hvor mange spadetak må tas for å gjøre bakken helt flat? Tips: bruk en mens løkke for begge to.'
+      4-5 While Loops Assessment 1_instruction: Det er mange hull og hauger. Hjelp meg og fylle og fjerne de slik at bakken blir helt jevn.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -637,9 +539,7 @@ nn:
         Loop this design 6 times. How much do
         you have to turn each time you loop? (Hint: What is 360 divided by 6?)
       Artist - Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      Artist - Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete
-        the design.
+      Artist - Nested Loops Assessment 1_instruction: Bruk en nøstet løkke for å fullføre designet.
       Big Game Animation 1 (copy 1)_instruction: |
         Now that you've learned to write
         simple linear functions, let's work on using them to add some movement to
@@ -1029,10 +929,6 @@ nn:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      course 1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both
-        the jump and draw blocks
-      course 1 artist 1 level 9_instruction: Draw this using three lines
       Course 2 Bee Loops 1_instruction: 'Hei, jeg er en bie! Kan du hjelpe meg å samle nektar fra disse blomstene? '
       Course 2 Bee Loops 13_instruction: |
         Assessment: Use the repeat block to collect
@@ -1050,31 +946,21 @@ nn:
       Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
       Course 4 2_instruction: Bien vil bare ha nektar akkurat nå. Husk, ikke alle er blomster, så sjekk etter at du bare samler nektar fra blomster.
       Course 4 Artist 1_instruction: Hjelp meg å tegne ferdig boksen. (Hver linje er 300 pixler lang)
-      Course 4 Artist 10_instruction: |
-        It's Free Play time! Have fun and draw anything
-        you would like. 
-      Course 4 Artist 2_instruction: |
-        Can you loop this code to draw the greyed out
-        square?
+      Course 4 Artist 10_instruction: 'Frilek: Ha det gøy og tegn det det du har lyst til. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
+      Course 4 Artist 2_instruction: Kan du repetere denne koden slik at den tegner det nedtonede kvadratet?
       Course 4 Artist 3_instruction: 'Ok, prøv å se hva som kommer til å skje hvis du kjører denne koden (eller kjør den ved å trykke "Kjør"). Deretter, gjentar du dette helt til bildet er ferdig.'
       Course 4 Artist 4_instruction: Hvor mange grader er det i en sirkel? Fyll dette tallet inn i gjenta-blokken for å lage en sirkel av farger.
-      Course 4 Artist 5_instruction: |
-        Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long.
-      Course 4 Artist 6_instruction: |
-        Complete the code to draw these triangles.
-        Hint: 3 triangles in a 360 degree rotation.
-      Course 4 Artist 7_instruction: |
-        Now nest this loop inside another loop to draw
-        10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete
-        a 360 degree rotation.  
-      Course 4 Artist 8_instruction: |
-        Draw this sun by looping this whole block of
-        code 12 times.
-      Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn in between each shape that's drawn. Here's a hint for how much you
-        have to turn: What is 360 divided by 10?
+      Course 4 Artist 5_instruction: Tegn den andre halvparten av dette designet slik at det blir symmetrisk. Trianglene er likesidet med sider på 50 piksler.
+      Course 4 Artist 6_instruction: 'Fullfør koden for å tegne disse triangelen. Tips: 3 triangler rotert til sammen 360 grader.'
+      Course 4 Artist 7_instruction: 'Nå skal du putte denne løkken inni en annen løkke for å tegne 10 triangler. Dette kalles en nestet løkke. Tips: Alle 10 trianglene utgjør til sammen en rotasjon på 360 grader.  '
+      Course 4 Artist 8_instruction: Tegn solen ved å repetere denne kodeblokken 12 ganger.
+      Course 4 Artist 9_instruction: 'Repeter dette designet 10 ganger og pass på at du roterer mellom hver figur som blir tegnet. Her har du et hint angående hvor mye du må snu deg: Hva er 360 delt på 10?'
       Course 4 Artist Binary 1_instruction: |
         Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to turn on the go from left
@@ -1228,6 +1114,7 @@ nn:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1290,76 +1177,22 @@ nn:
         Here's the algorithm to draw a triangle,
         modify it so it uses the "sides" variable instead. Replace the number 3
         with the "sides" variable. Hint: remember to use the "set sides to" block.
-      Course 4 Artist Vars 1_instruction: |
-        Can you help me draw a triangle? It's
-        100 pixels long on each side.
-      Course 4 Artist Vars 10_instruction: |
-        Here's an algorithm that draws a triangle
-        out of smaller triangles. Can you modify it so that it uses the "sides"
-        variable to draw each triangle? Look through the code, and every time you
-        see the number 3, replace it with your "sides" variable. Remember to use
-        the "set sides" block.
-      Course 4 Artist Vars 11_instruction: |
-        Here's the same algorithm that we came
-        up with for the last puzzle - what should you set the "sides" variable to
-        in order to draw this picture of squares?
-      Course 4 Artist Vars 12_instruction: |
-        Let's set the "sides" variable to
-        5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Let's add a new variable called "length" and use that wherever you
-        have a "move forward." Set the "length" variable to 75 for this shape.
-      Course 4 Artist Vars 13_instruction: |
-        The more sides a shape has, the shorter
-        each side needs to be in order for the whole pattern to fit on the screen.
-        Instead of manually setting the "length" variable, let's use the "sides"
-        variable and a math block to set the "length." Choose the correct equation
-        from the toolbox to set the "length" variable, and also update the "sides"
-        variable.
-      Course 4 Artist Vars 14_instruction: |
-        Free Play: Check it out, now your algorithm
-        is nested within one more loop. Experiment with changing the values of the
-        your two variables to draw cool patterns.
-      Course 4 Artist Vars 2_instruction: |
-        Instead of "moving forward by 100,"
-        the "move" block is now referencing the variable "length." Can you set
-        "length" to 150 to draw this new triangle?
-      Course 4 Artist Vars 3_instruction: |
-        Here's a loop that draws a square, but
-        something's missing. Can you fix it so that it uses the variable "length"
-        to figure out how long each side should be? 
-      Course 4 Artist Vars 4_instruction: |
-        Now I want to make a rectangle that is
-        twice as tall as it is wide. We've got a variable called "width" that is
-        set to 100. Can you use the math blocks to complete the code?
-      Course 4 Artist Vars 5_instruction: |
-        Use the variable "sides" to control
-        how many times this loop gets run.
-      Course 4 Artist Vars 6_instruction: |
-        Hmmm, I tried changing the "sides" variable
-        to 4 from the code in the last puzzle, but it's still drawing a triangle.
-        Can you use the "sides" variable (along with a math block) to make sure
-        that I turn the right amount too? Hint: 360 divided by the number of sides
-        will give you the number of degrees to turn.
-      Course 4 Artist Vars 7_instruction: |
-        Can you modify the "sides" variable
-        to help me draw this hexagon?
-      Course 4 Artist Vars 8_instruction: |
-        Free Play: Experiment with the number
-        of sides this shape has. Can you change the algorithm so that the overall
-        size of the shape stays the same, no matter how many sides it has? Hint: You
-        might have to use your math blocks (360 divided by "sides" in two places
-        this time) 
-      Course 4 Artist Vars 9_instruction: |
-        Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Replace the number
-        3 with the "sides" variable, and use the "set sides to" block.
-      Course 4 Bee 1_instruction: |
-        The bee can't tell if this is a flower or a honeycomb.
-        Check first if it is a flower or a honeycomb, and then only gather nectar
-        from it if it is a flower. 
-      Course 4 Bee 2_instruction: |
-        Check each object to see if it's a flower. If
-        it is, collect nectar...otherwise, you can ignore it!
+      Course 4 Artist Vars 1_instruction: Kan du hjelpe meg å tegne et triangel? Det er 100 piksler langt på hver side.
+      Course 4 Artist Vars 10_instruction: 'Her er en algoritme som bruker mindre triangler til å tegne et stort triangel. Kan du endre det slik at det bruker varabelblokken "sider" til å tegne hvert triangel. Se gjennom koden og hver gang du ser tallet 3 erstatter du det med en "sider" variabel. Huske å bruke "set sider" blokken.'
+      Course 4 Artist Vars 11_instruction: 'Her er samme algoritmen som vi kom opp med for den forrige gåten –  hva bør du sette variabelen "sider" til for å tegne dette bildet av kvadrater?'
+      Course 4 Artist Vars 12_instruction: 'La oss sette variabelen "sider" til 5. Dess flere  sidene vi legge til denne algoritmen, dess større blir hele dette mønsteret! La oss legge til en ny variabel kalt "lengde" og bruke det hvor du har en "flytte fremover." Angi variabelen "lengde" til 75 for figuren.'
+      Course 4 Artist Vars 13_instruction: 'Jo flere sider en figur har, jo kortere må hver side være for at hele mønsteret skal passe på skjermen. I stedet for å manuelt sette variabelen "lengde", la oss bruke variabelen "sider" og en matematikk-blokk til å konfigurere "." Velg riktig ligningen verktøykassa Angi variabelen "lengde", og også oppdatere variabelen "sider".'
+      Course 4 Artist Vars 14_instruction: 'Frilek: Sjekk det ut, nå algoritmen er nestet inne i en mer løkke. Eksperimentere med å endre verdiene i de to variablene for å tegne kule mønstre.'
+      Course 4 Artist Vars 2_instruction: 'I stedet for "går fremover med 100," refererer "Flytt" blokken nå variabelen "lengde". Kan du sette "lengde" til 150 for å  tegne den nye trekanten?'
+      Course 4 Artist Vars 3_instruction: 'Her er en løkke som tegner et kvadrat, men noe mangler. Får du til å fikse det slik at den bruker variabelen lengde til å avgjøre hvor lange de ulike sidene skal være? '
+      Course 4 Artist Vars 4_instruction: 'Nå ønsker jeg å lage et rektangel som er dobbelt så høyt som det er bredt. Vi har en variabel kalt "bredde" som er satt til 100. Kan du bruke matematiske blokkene for å fullføre koden?'
+      Course 4 Artist Vars 5_instruction: 'Bruk variabelen "sider" til å styre hvor mange ganger løkken skal kjøre.'
+      Course 4 Artist Vars 6_instruction: 'Hmmm, jeg forsøkt å endre variabelen "sider" til 4 fra koden i den siste gåten, men den tegner fortsatt en trekant. Kan du bruke variabelen "sider" (sammen med en matteblokk) og sørge for at jeg snur akkurat passe? Hint: 360 delt på antall sider vil gi deg hvor mange grader du skal snu.'
+      Course 4 Artist Vars 7_instruction: 'Kan du endre variabelen "sider" for å hjelpe meg trekke denne sekskanten?'
+      Course 4 Artist Vars 8_instruction: 'Frilek: Eksperimenter med antall sider denne figuren har. Kan du endre algoritmen slik at størrelsen på figuren forblir den samme uansett hvor mange sider den har? Tips: Du må kanskje bruke matteblokken din. (360 delt "sider" på to steder nå) '
+      Course 4 Artist Vars 9_instruction: 'Endre denne algoritmen bruker variabelen "sider" i stedet for et for å tegne en trekant. Erstatt nummer 3 med variabelen "sider", og bruk "Angi sider"-blokk.'
+      Course 4 Bee 1_instruction: 'Bien ser ikke forskjell på blomst og bikube.  Sjekk først om det er blomst eller bikube og samle kun inn nektar dersom det er en blomst. '
+      Course 4 Bee 2_instruction: Kontroller hvert objekt for å se om det er en blomst. Dersom det er en blomst så samler du inn nekter,,, hvis ikke kan du overse det!
       Course 4 Bee 3_instruction: 'Det ukjente objektet er enten en blomst eller en bikube. bruk "hvis/ellers" blokk til å samle inn nekter dersom det er en blomst, hvis ikke så lager du honning (fordi det er en bikube).'
       Course 4 Bee 4_instruction: 'Denne lilla blomsten kan ha enten 3, 2 eller 1 nektar. Her er en "hvis/ellers"-blokk kombinert med en annen "hvis/ellers"-blokk for å danne en "Hvis/ellers hvis, ellers"-blokk. fullfør løsningen for å samle inn en ukjent mengde med nektar.'
       Course 4 Bee For Loops 1_instruction: |
@@ -1478,9 +1311,9 @@ nn:
         You can complete the most of this image by
         looping a 5 bit binary number - then you'll need one more 4 bit number to
         get the bottom right-hand corner.
-      Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
-      Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
+      Course 4 Maze 1_instruction: Få den sinte fuglen til grisen!
+      Course 4 Maze 2_instruction: Hold deg unna dynamitten!
+      Course 4 Maze 3_instruction: 'Programmer den sinte fuglen til å komme seg bort til grisen. '
       Course 4 Maze 4_instruction: 'Prøve å bruke "gjenta"-blokk for å bruke færre blokker...'
       Course 4 Maze 5_instruction: Klarer du å løse denne oppgaven ved å bruke så få oppgaver som mulig?
       Course 4 Maze 6_instruction: Klarer du å løse denne oppgaven ved å bruke så få oppgaver som mulig?
@@ -1610,7 +1443,7 @@ nn:
       Course 4 Play Labs For Loops 5_instruction: |
         In the last stage we counted the
         square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
-        count the cube of each number (1, 8, 27, 64, 125, 216, 343….)
+        count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
         is any whole number that is only divisible by itself and 1. Use the "is_prime"
@@ -1621,6 +1454,9 @@ nn:
       Course 4 Play Labs For Loops 8_instruction: |
         What for loop would make me speak
         19, 27, 35, 43, 51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -1684,13 +1520,13 @@ nn:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -1729,7 +1565,7 @@ nn:
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
@@ -1745,9 +1581,8 @@ nn:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1798,10 +1633,11 @@ nn:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1846,8 +1682,8 @@ nn:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -1875,6 +1711,12 @@ nn:
       frozen square loop 3x_instruction: La oss lage tre kvadrater med spissen mot hverandre. Husk å snu 120 grader før hvert nytt kvadrat.
       frozen square loop_instruction: 'Hei, jeg heter Anna av Arendelle! La oss lage et kvadrat ved hjelp av "Gjenta" blokken som bruker færre blokker. Hvor mange ganger trenger "Gjenta" blokken gå gjennom blokkene inni for å lage et kvadrat?'
       frozen square snowflake_instruction: 'Får du til å lage et snøfnugg ved å bruke "repeter"-blokken til å lage 10 kvadrater og "Snu"-blokken for å snu deg 36 grader mellom hvert kvadrat?'
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: 'Kan du få Elsa ("skuespiller 2") til å ta igjen med Anna ved å bruke piltastene?'
       Infinity_finale_instruction: Lag det du har lyst til og del det med andre!
       Infinity_move_collide_instruction: 'Hiro er "skuespiller 1". Flytt han direkte til Baymax og spill en lyd når de berører hverandre.'
@@ -1888,6 +1730,7 @@ nn:
       Infinity_touch_faster_instruction: Touch even more snowflakes!
       Infinity_touch_four_instruction: Flytt Anna opp, ned til venstre og høyre for å ta på hvert av de fire snøfnuggene.
       Infinity_touch_score_instruction: 'Få anna til å score poeng når hun tar på snøfnugg. Deretter trykk på "Kjør" og styr henne for å ta på hvert snøfnugg en gang.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2240,8 +2083,8 @@ nn:
         function editor. 
       NEW Course 4 Artist Functions 8_instruction: |
         We have given you most of the
-        code to create a function. However there seems to be something missing. Can
-        you edit the function definition to draw the triangle?
+        code to create a function, but there seems to be something missing. Can you
+        edit the function definition to draw the triangle?
       NEW Course 4 Artist Functions 9_instruction: |
         Which block do you need to add
         to get the triangle to sit on top of the square?
@@ -2261,10 +2104,10 @@ nn:
       NEW Course 4 Artist Params 13_instruction: |
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
-        to also add a "sides" parameter. Remember the angle to turn for a given
-        shape is 360 divided by the sides it has. Hint: lengths for each shape are;
-        the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50
-        pixels.
+        to add a "sides" parameter. Remember the angle to turn for a given shape
+        is 360 divided by the number of sides it has. Hint: These are the lengths
+        for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and
+        the square is 50 pixels.
       NEW Course 4 Artist Params 14_instruction: |
         Can you recreate these shapes?
         Drag the "length" parameter into the function definition. 
@@ -2272,8 +2115,8 @@ nn:
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
       NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
+        Create a “draw a triangle" function
+        with 50 pixels sides from scratch
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3 triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
         Do you notice anything different
@@ -2303,27 +2146,18 @@ nn:
         Take a look at the code, can you
         see how the "set length" block and "length" block works together? Click
         on "Run" to see it in action. 
-      NEW Course 4 Artist Vars 12_instruction: |
-        Modify this algorithm so it uses
-        the "sides" variable instead of a fixed number to draw a pentagon. Replace
-        the number 5 with the "sides" variable, and use the "set sides to" block.
+      NEW Course 4 Artist Vars 12_instruction: 'Endre denne algoritmen bruker variabelen "sider" i stedet for et for å tegne en trekant. Erstatt nummer 5 med variabelen "sider", og bruk "Angi sider"-blokk.'
       NEW Course 4 Artist Vars 2.5_instruction: |
         Take a look at the code, can you
         see how the "set length" block and "length" block works together? Click
         on "Run" to see it in action. 
-      NEW Course 4 Artist Vars 2_instruction: |
-        Drag a number block to the "set length"
-        block to draw a set of 50 pixel triangles. 
+      NEW Course 4 Artist Vars 2_instruction: 'Dra en nummer blokk til "Angi lengde" blokken får å tegne et sett med 50 pixel store trekanter. '
       NEW Course 4 Artist Vars 4 5_instruction: |
         Awesome job on the last puzzle,
         let's try it again this time let's make this cool design with with 60 pixel
         hexagon's.
-      NEW Course 4 Artist Vars 4_instruction: |
-        Let's try it again. Now, let's make
-        this cool design with with 60 pixel hexagons.
-      NEW Course 4 Artist Vars 6_instruction: |
-        Can you help me draw this cool pattern
-        by dropping in the "length" variable block into the correct places?
+      NEW Course 4 Artist Vars 4_instruction: La oss prøve det igjen. Nå, la oss tegne denne kule design med med 60 piksel store sekskanter.
+      NEW Course 4 Artist Vars 6_instruction: 'Kan du hjelpe meg trekke dette kule mønsteret ved å slippe i den variable blokken "lengde" på de riktige stedene?'
       NEW Course 4 Bee For Loops 1_instruction: |
         Use a loop to collect the nectar
         from each flower.
@@ -2355,7 +2189,7 @@ nn:
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
       NEW Course 4 Bee For Loops 6_instruction: |
         The last number in your for loop
-        is called the "increment,"  and each time the loop is run the counter variable
+        is called the "increment." Each time the loop is run the counter variable
         changes by the increment. Try collecting these flowers using an increment
         of 2.
       NEW Course 4 Bee For Loops 7_instruction: |
@@ -2516,25 +2350,21 @@ nn:
         always see at least a bit of him, so lets write some functions that help make
         sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
-        and return true if he's inside the left boundary of the yard (x > -25). If
-        your function works, Sam shouldn't be able to leave the yard from the left
-        side.
+        and return true if he's completely visible on screen. If your function works,
+        Sam shouldn't be able to leave the yard from the left side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the safe-right?
-        function to make sure Sam can't go past x = 425.
+        on the left, now let's do the same thing on the right. Complete the safe-right?
+        function to make sure Sam can't go off the right side of the screen.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
         from going either direction? Try using the AND block to program the function
         on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        Free Play: Awesome, we've kept Sam safe
+        on the left and right! Use this free play stage to experiment with your functions
+        and further improve onscreen?
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2613,18 +2443,36 @@ nn:
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: |
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
@@ -2932,17 +2780,13 @@ nn:
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

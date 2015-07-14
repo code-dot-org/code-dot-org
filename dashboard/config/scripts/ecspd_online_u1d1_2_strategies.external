@@ -1,0 +1,13 @@
+name 'ECSPD Online U1D1-2 Strategies'
+css 'unplugged'
+markdown <<MARKDOWN
+## Teaching Strategies: What is a computer?
+
+A major part of this lesson is the discussion section. As the first lesson of the course, it sets the tone for student involvement. If students feel comfortable sharing their ideas, and having their ideas criticized, they will be more likely to succeed in this course. Read the short article (linked below) from the University of Oregon on facilitating discussion. Pay special attention to the three techniques for structuring active discussion linked at the bottom of the article.
+
+### [Facilitating Discussion >>](http://tep.uoregon.edu/resources/faqs/presenting/facilitatediscussion.html)
+
+Take notes as you read. When you are finished, click the continue button. You will be asked to share your ideas on the next page.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

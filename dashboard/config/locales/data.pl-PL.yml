@@ -105,7 +105,7 @@
         TextMatch: Dopasowanie tekstu
         StudioEC: Lab Gier
         Applab: App Lab
-        NetSim: Symulator Internetowy
+        NetSim: Symulator internetowy
     trophy:
       name:
         Bronze: Brąz
@@ -625,7 +625,7 @@
         C2_artist_intro: Artysta - wprowadzenie
         C2_zuck_repeat_loop: 'Labirynt: Pętle'
         C2_artist_loops: 'Artysta: Pętle'
-        C2_artist_debugging: 'Artysta: debugowanie'
+        C2_artist_debugging: 'Artysta: Debugowanie'
         C2_bee_loops: 'Pszczółka: Pętle'
         C2_bee_debugging: 'Pszczółka: Debugowanie'
         C2_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
@@ -642,7 +642,7 @@
         C3_artist_functions: Funkcje Artysty
         C3_bee_functions: Funkcje Pszczoły
         C3_bee_conditionals: 'Pszczółka: Wyrażenia warunkowe'
-        C3_maze_conditionals: 'Labirynt: wyrażenia warunkowe'
+        C3_maze_conditionals: 'Labirynt: Wyrażenia warunkowe'
         C3_artist_nested_loops: Zagnieżdżające się  pętle
         C3_farmer_while: Pętle Dopóki (While)
         C3_bee_nested_loops: Zagnieżdżające się  pętle
@@ -656,6 +656,7 @@
         C3_functional_suncatchers: Funkcjonalne Suncatchers
         C3_songwriting_with_parameters: Pisanie Piosenek z parametrami
         C4_intro: Wstęp
+        C4_loops_zombie: Pętle
         C4_bee_conditional: 'Pszczółka: Wyrażenia warunkowe'
         C4_variables_artist: Zmienne - Artysta
         C4_variables_playlab: Zmienne - Play Lab
@@ -669,7 +670,7 @@
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Zmienne w Kopertach
         C4_unplugged_forloops: Pętle dla (for)
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_parameters: Pisanie Piosenek z parametrami
         C4_unplugged_binary: Binarny
         frozen_intro: Wprowadzenie do Godziny Kodowania (Hour of Code)
         frozen_loops: Wprowadzenie do Pętli
@@ -690,6 +691,7 @@
         csp_textcompression: Gadżet do kompresji tekstu
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: Informatyka w algebrze - wprowadzenie
         alg_2_eval_block: Informatyka w algebrze - bloki ewaluacji
         alg_3_pemdas: Informatyka w algebrze -  kolejność operacji
@@ -760,32 +762,33 @@
         edit_draw_square: Użyj tego przycisku, aby edytować funkcję i dodać pętlę.
         edit_get_nectar: Użyj tego przycisku, aby edytować funkcję i zmienić kierunek,
           w którym Pszczoła skręci aby zdobyc nektar.
-        logic_category: Open the "Logic" flyout to find the "if/else" block.
+        logic_category: Otworzyć wysuwane "Logiki" znaleźć "if/else" bloku.
         length_parameter: Czy potrafisz poprawić tę funkcję tak, aby używała parametru
           "długość"?
         frozen_diamond_repeat: Użyj bloku "powtarzaj" aby utworzyć ten kształt.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_circle_function_in_circle_turn: Nie zapomnij włączyć po utworzeniu
+          każdego koła.
+        frozen_circle_function_with_parameter_circle: Używać "Tworzenie koło" bloku
+          i zmieniać jego rozmiar.
+        frozen_snowflake_branch: Użyj bloku "utworzyć oddział śnieżynka"
+        frozen_create_square: Dołączyć więcej bloków tutaj stworzyć kwadrat
         playlab_drag_say: Przeciągnij blok "powiedz" i wpisz "hello"
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: Use the "move right" block to move Tennis Girl
-        playlab_play_sound: Add "play sound" block here
-        playlab_arrow_keys: Remember to use these to move the witch after clicking
-          on Run
-        playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect
-          here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: This is your function definition. These blocks
-          run everytime you use the "draw a square" block
+        playlab_use_twice: Dwa razy użyć tego bloku i pamiętaj, aby zmienić numer
+          aktor
+        playlab_move_girl: Użyj bloku "Przesuń w prawo", aby przenieść dziewczyna
+          tenisu
+        playlab_play_sound: Dodać "Odtwórz dźwięk" blok tutaj
+        playlab_arrow_keys: Pamiętaj, aby korzystać z tych wrzucić czarownica po kliknięciu
+          Uruchom
+        playlab_add_move: Dodać "przenieść" bloki wewnątrz tego powtarzać bloku
+        playlab_add_score: Dodać wynik bloki tutaj
+        playlab_add_blocks: Dodaj tutaj swoje bloki
+        set_variable: Przeciągnij blok numer tutaj ustawić zmienne
+        place_variable: Przeciągnij zmiennej wewnątrz tego bloku
+        bee_for_loop: Przeciągnij największą liczbę nektar chcesz bee zebrać tutaj
+        place_counter_variable: Przeciągnij do counter zmiennej wewnątrz tego bloku
+        function_editor_draw_square: To jest Twoja definicja funkcji. Te bloki uruchamiane
+          za każdym razem używasz bloku "narysuj kwadrat"
         change_here: Popraw tutaj
         write_draw_square_function: Przeciągnij tutaj bloki z przybornika, które narysują
           kwadrat
@@ -809,9 +812,9 @@
         arrows_move_actor: Używaj strzałek, aby poruszać się aktorem
         right_arrow_fireball: Użyj strzałki w prawo, aby strzelać ognistymi kulami
         name_function: Napisz tu nazwę swojej funkcji
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_right_runbutton: Dodaj blok tutaj
+        Infinity_move_directions_callout: Który blok będzie Baymax wrzucic po naciśnięciu
+          strzałki w górę?
+        Infinity_move_directions_callout_arrow: Użyj tych strzałek, aby sterować
+        Infinity_move_collide_callout: Odtwórz dźwięk, gdy tego zdarzenia.
+        Infinity_repeat_callout: Przenieść miejsce bloki wewnątrz tutaj

@@ -1,7 +1,7 @@
 en-US:
   hello: crwdns3593:0crwdne3593:0
   select_language: crwdns21806:0crwdne21806:0
-  computer_science: crwdns3594:0crwdne3594:0
+  en: crwdns43305:0crwdne43305:0
   computer_science_edweek: crwdns3595:0crwdne3595:0
   csedweek_dates: crwdns27832:0crwdne27832:0
   csedweek_banner_hoc: crwdns23438:0crwdne23438:0
@@ -45,6 +45,7 @@ en-US:
   congratulations: crwdns3785:0crwdne3785:0
   congratulations_on_completing_hoc: crwdns25704:0crwdne25704:0
   get_a_certificate_of_achievement: crwdns3615:0crwdne3615:0
+  enter_valid_age: crwdns43306:0crwdne43306:0
   enter_valid_email: crwdns3616:0crwdne3616:0
   get_a_certificate_message: crwdns4468:0crwdne4468:0
   get_a_certificate_message_after: crwdns8840:0crwdne8840:0
@@ -251,6 +252,24 @@ en-US:
   dashboard_landing_view_progress: 'crwdns7781:0%{biggest_section}crwdne7781:0'
   dashboard_landing_available_title: crwdns7782:0crwdne7782:0
   dashboard_landing_available_courses: crwdns7783:0crwdne7783:0
+  dashboard_landing_more_tutorials: crwdns42148:0crwdne42148:0
+  dashboard_landing_more_tutorials_desc: crwdns42149:0crwdne42149:0
+  dashboard_hoc_courses: crwdns42150:0crwdne42150:0
+  dashboard_hoc_courses_desc: crwdns42151:0crwdne42151:0
+  dashboard_k5_courses: crwdns42152:0crwdne42152:0
+  dashboard_k5_courses_desc: crwdns42153:0crwdne42153:0
+  dashboard_middle_courses: crwdns42154:0crwdne42154:0
+  dashboard_middle_courses_desc: crwdns42155:0crwdne42155:0
+  dashboard_high_courses: crwdns42156:0crwdne42156:0
+  dashboard_high_courses_desc: crwdns42157:0crwdne42157:0
+  dashboard_course_csina: crwdns42158:0crwdne42158:0
+  dashboard_course_csina_desc: crwdns42159:0crwdne42159:0
+  dashboard_course_csins: crwdns42160:0crwdne42160:0
+  dashboard_course_csins_desc: crwdns42161:0crwdne42161:0
+  dashboard_course_ecs: crwdns42162:0crwdne42162:0
+  dashboard_course_ecs_desc: crwdns42163:0crwdne42163:0
+  dashboard_course_csp: crwdns42164:0crwdne42164:0
+  dashboard_course_csp_desc: crwdns42165:0crwdne42165:0
   dashboard_landing_loading: crwdns7784:0crwdne7784:0
   dashboard_action_edit: crwdns7785:0crwdne7785:0
   dashboard_action_save: crwdns7786:0crwdne7786:0
@@ -317,8 +336,10 @@ en-US:
   dashboard_students_reset_password: crwdns7830:0crwdne7830:0
   dashboard_students_share_section: crwdns7831:0crwdne7831:0
   dashboard_students_print_info: crwdns7832:0crwdne7832:0
+  dashboard_students_secret_picture_title: crwdns43218:0crwdne43218:0
   dashboard_students_secret_picture: crwdns7833:0crwdne7833:0
   dashboard_students_reset_picture: crwdns7834:0crwdne7834:0
+  dashboard_students_secret_word_title: crwdns43219:0crwdne43219:0
   dashboard_students_secret_word: crwdns7835:0crwdne7835:0
   dashboard_students_reset_word: crwdns7836:0crwdne7836:0
   dashboard_students_join_link: crwdns7837:0crwdne7837:0
@@ -326,11 +347,18 @@ en-US:
   dashboard_students_print_page: crwdns7839:0crwdne7839:0
   dashboard_students_url: crwdns7840:0crwdne7840:0
   dashboard_privacy_document_link: crwdns9003:0crwdne9003:0
-  dashboard_curriculum_overview: crwdns18177:0crwdne18177:0
+  dashboard_curriculum_k5_title: crwdns41876:0crwdne41876:0
+  dashboard_curriculum_middle_title: crwdns41877:0crwdne41877:0
+  dashboard_curriculum_high_title: crwdns41878:0crwdne41878:0
+  dashboard_lesson_plans: crwdns41879:0crwdne41879:0
   dashboard_view_all_lesson_plans: crwdns18178:0crwdne18178:0
   dashboard_course1: crwdns18179:0crwdne18179:0
   dashboard_course2: crwdns18180:0crwdne18180:0
   dashboard_course3: crwdns18181:0crwdne18181:0
+  dashboard_course4: crwdns41880:0crwdne41880:0
+  dashboard_curriculum: crwdns41881:0crwdne41881:0
+  dashboard_curriculum_overview: crwdns18177:0crwdne18177:0
+  dashboard_overview: crwdns41882:0crwdne41882:0
   dashboard_sequence: crwdns18182:0crwdne18182:0
   dashboard_framework: crwdns18183:0crwdne18183:0
   dashboard_standards: crwdns18184:0crwdne18184:0
@@ -341,6 +369,10 @@ en-US:
   dashboard_puzzle_solving: crwdns18189:0crwdne18189:0
   dashboard_student_worksheet: crwdns18190:0crwdne18190:0
   dashboard_teacher_worksheet: crwdns18191:0crwdne18191:0
+  dashboard_curriculum_csina: crwdns41883:0crwdne41883:0
+  dashboard_curriculum_csins: crwdns41884:0crwdne41884:0
+  dashboard_curriculum_csp: crwdns41885:0crwdne41885:0
+  dashboard_curriculum_ecs: crwdns41886:0crwdne41886:0
   dashboard_grade_k: crwdns18192:0crwdne18192:0
   dashboard_grade_other: crwdns18193:0crwdne18193:0
   dashboard_login_word: crwdns20751:0crwdne20751:0
@@ -368,6 +400,7 @@ en-US:
   dashboard_sections_password_account_creation: crwdns20764:0crwdne20764:0
   dashboard_sections_login_type_explanation: crwdns20765:0crwdne20765:0
   dashboard_faq: crwdns23313:0crwdne23313:0
+  dashboard_faq_k5: crwdns41887:0crwdne41887:0
   code_hoc_coming: crwdns25713:0crwdne25713:0
   code_sign_up: crwdns23315:0crwdne23315:0
   learn_more: crwdns23316:0crwdne23316:0
@@ -783,3 +816,6 @@ en-US:
   processing_beyond_longdescription: crwdns21771:0crwdne21771:0
   alice_beyond_longdescription: crwdns21772:0crwdne21772:0
   sphero_beyond_longdescription: crwdns23593:0crwdne23593:0
+  compatibility_https_header: crwdns41674:0crwdne41674:0
+  compatibility_https_message: 'crwdns41675:0%{https_date}crwdnd41675:0%{it_requirements_url}crwdne41675:0'
+  compatibility_https_hide_this_warning: crwdns41676:0crwdne41676:0
