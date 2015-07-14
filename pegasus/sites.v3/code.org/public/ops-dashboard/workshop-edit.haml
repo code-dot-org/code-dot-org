@@ -17,7 +17,10 @@ template: none
 %input.form-control{type: 'text', 'ng-model' => 'workshop.name'}
 %h3
   Workshop Address
-%input.form-control{'ng-model' => 'workshop.cohort_id', type:'text', 'ng-model' => 'workshop.location'}
+%input.form-control{type:'text', 'ng-model' => 'workshop.location'}
+%h3
+  Notes
+%textarea.form-control{'ng-model' => 'workshop.instructions', rows: 3, type:'text'}
 %h3
   Program Type
 %select.form-control{'ng-model' => 'workshop.program_type'}

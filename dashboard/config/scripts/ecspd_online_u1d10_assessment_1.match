@@ -17,7 +17,7 @@ answer 'Difficult for a computer to draw conclusions. Not easily converted to a 
 markdown <<MARKDOWN
 ## Telling a Story with Data
 
-Below are two ways of representing the same data (taken from the ECS book, page 46). Take a look at the image below as well as and the list of objects in the room. Think about the advantages and disadvantages of each method of representing data. What more would you want to learn from the person in the picture? When you have examined both representations, match each method of representing data with its advantages and disadvantages.
+Below are two ways of representing the same data (taken from the ECS book, page 46). Take a look at the image below as well as and the list of objects in the room. Think about the advantages and disadvantages of each method of representing data. What more would you want to learn from the person in the picture? When you have examined both representations, match each method of representing data with its advantages and disadvantages. *For a printable version of the assessments on this stage, <a href="https://docs.google.com/document/d/14qJNQL4AON0WHd5Us7nYF0SnsysuqckOtqh7KoeLzWs/edit" target="_blank">click here</a>.*
 
 <image width="600" height="400" src="https://images.code.org/f03d74b8261018e393c7de78e776156c-image-1434563609202.jpg" frameborder="0" allowfullscreen style="float:left; margin: 0 20px 20px 0"></image>
 <br/>
@@ -58,6 +58,11 @@ Sandwich;
 Goldfish;
 Toy	soldiers	(3);
 Pringles	can;
+
+<br/>
+<br/>
+
+> Question: Match each method of representing data with its advantages and disadvantages.
 
 <div style="clear:both"/>
 
