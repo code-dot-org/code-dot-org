@@ -1,3 +1,7 @@
+/**
+ * @overview UI component: The small expandable box above the visualization,
+ *           used to show debug and diagnostic information.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

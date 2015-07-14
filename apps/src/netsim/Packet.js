@@ -1,3 +1,6 @@
+/**
+ * @overview Utility class for encoding and decoding simulated packets.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
