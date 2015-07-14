@@ -53,38 +53,38 @@ Blockly.PanDragHandler = function (blockSpace) {
    * @type {BindData}
    * @private
    */
-  this.mouseDownKey_ = null;
+  this.mouseDownEventKey_ = null;
 
   /**
    * @type {BindData}
    * @private
    */
-  this.wheelKey_ = null;
+  this.wheelEventKey_ = null;
 
   /**
    * (for Safari)
    * @type {BindData}
    * @private
    */
-  this.mousewheelKey_ = null;
+  this.mousewheelEventKey_ = null;
 
   /**
    * @type {BindData}
    * @private
    */
-  this.contextMenuBlockKey_ = null;
+  this.contextMenuBlockEventKey_ = null;
 
   /**
    * @type {BindData}
    * @private
    */
-  this.mouseMoveKey_ = null;
+  this.mouseMoveEventKey_ = null;
 
   /**
    * @type {BindData}
    * @private
    */
-  this.mouseUpKey_ = null;
+  this.mouseUpEventKey_ = null;
 
   /**
    * @type {number}
@@ -124,17 +124,17 @@ Blockly.PanDragHandler.prototype.bindBeginPanDragHandler = function (target,
   this.unbindBeginPanDragHandler();
   this.target_ = target;
   this.onTargetMouseDown_ = onDragTargetMouseDown;
-  this.mouseDownKey_ = Blockly.bindEvent_(
+  this.mouseDownEventKey_ = Blockly.bindEvent_(
       target, 'mousedown', this, this.onPanDragTargetMouseDown_);
 
-  this.wheelKey_ = Blockly.bindEvent_(target, 'wheel', this, this.onWheel_);
+  this.wheelEventKey_ = Blockly.bindEvent_(target, 'wheel', this, this.onWheel_);
 
   // Safari uses 'mousewheel'
-  this.mousewheelKey_ = Blockly.bindEvent_(
+  this.mousewheelEventKey_ = Blockly.bindEvent_(
       target, 'mousewheel', this, this.onWheel_);
 
   // Also block the context menu on the pan-drag target element
-  this.contextMenuBlockKey_ = Blockly.bindEvent_(
+  this.contextMenuBlockEventKey_ = Blockly.bindEvent_(
       target, 'contextmenu', null, Blockly.blockContextMenu);
 };
 
@@ -143,24 +143,24 @@ Blockly.PanDragHandler.prototype.bindBeginPanDragHandler = function (target,
  * such handler is bound.
  */
 Blockly.PanDragHandler.prototype.unbindBeginPanDragHandler = function () {
-  if (this.mouseDownKey_) {
-    Blockly.unbindEvent_(this.mouseDownKey_);
-    this.mouseDownKey_ = null;
+  if (this.mouseDownEventKey_) {
+    Blockly.unbindEvent_(this.mouseDownEventKey_);
+    this.mouseDownEventKey_ = null;
   }
 
-  if (this.wheelKey_) {
-    Blockly.unbindEvent_(this.wheelKey_);
-    this.wheelKey_ = null;
+  if (this.wheelEventKey_) {
+    Blockly.unbindEvent_(this.wheelEventKey_);
+    this.wheelEventKey_ = null;
   }
 
-  if (this.mousewheelKey_) {
-    Blockly.unbindEvent_(this.mousewheelKey_);
-    this.mousewheelKey_ = null;
+  if (this.mousewheelEventKey_) {
+    Blockly.unbindEvent_(this.mousewheelEventKey_);
+    this.mousewheelEventKey_ = null;
   }
 
-  if (this.contextMenuBlockKey_) {
-    Blockly.unbindEvent_(this.contextMenuBlockKey_);
-    this.contextMenuBlockKey_ = null;
+  if (this.contextMenuBlockEventKey_) {
+    Blockly.unbindEvent_(this.contextMenuBlockEventKey_);
+    this.contextMenuBlockEventKey_ = null;
   }
 
   this.target_ = null;
@@ -179,9 +179,9 @@ Blockly.PanDragHandler.prototype.bindDuringPanDragHandlers_ = function () {
   // receive the event before the actual event target - pan-drag mode should
   // pretty much override everything.
   var onCapture = true;
-  this.mouseMoveKey_ = Blockly.bindEvent_(
+  this.mouseMoveEventKey_ = Blockly.bindEvent_(
       window, 'mousemove', this, this.onPanDragMouseMove_, onCapture);
-  this.mouseUpKey_ = Blockly.bindEvent_(
+  this.mouseUpEventKey_ = Blockly.bindEvent_(
       window, 'mouseup', this, this.onPanDragMouseUp_, onCapture);
 };
 
@@ -190,14 +190,14 @@ Blockly.PanDragHandler.prototype.bindDuringPanDragHandlers_ = function () {
  * @private
  */
 Blockly.PanDragHandler.prototype.unbindDuringPanDragHandlers_ = function () {
-  if (this.mouseMoveKey_) {
-    Blockly.unbindEvent_(this.mouseMoveKey_);
-    this.mouseMoveKey_ = null;
+  if (this.mouseMoveEventKey_) {
+    Blockly.unbindEvent_(this.mouseMoveEventKey_);
+    this.mouseMoveEventKey_ = null;
   }
 
-  if (this.mouseUpKey_) {
-    Blockly.unbindEvent_(this.mouseUpKey_);
-    this.mouseUpKey_ = null;
+  if (this.mouseUpEventKey_) {
+    Blockly.unbindEvent_(this.mouseUpEventKey_);
+    this.mouseUpEventKey_ = null;
   }
 };
 
@@ -239,25 +239,20 @@ Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
     return;
   }
 
-  // Safari uses wheelDeltaY, everyone else uses deltaY.
-  var wheelDeltaY = e.deltaY || -e.wheelDeltaY;
-  if (wheelDeltaY) {
-    if (goog.userAgent.GECKO) {
-      // Firefox's deltas are a tenth that of Chrome/Safari.
-      wheelDeltaY *= 10;
-    }
-
-    var yOffsetBefore = this.blockSpace_.yOffsetFromView;
-    this.scrollTo(this.blockSpace_.xOffsetFromView,
-      this.blockSpace_.yOffsetFromView - wheelDeltaY);
+  // + is down
+  var wheelDelta = Blockly.getNormalizedWheelDeltaY(e);
+  if (wheelDelta) {
+    var yOffsetBefore = this.blockSpace_.scrollbarOffsetY();
+    this.blockSpace_.scrollTo(this.blockSpace_.scrollbarOffsetX(),
+       + this.blockSpace_.scrollbarOffsetY() + wheelDelta);
 
     // If dragging a block too, move the "mouse start position" as if it
-    // had scrolled along with the blockspace.
+    // had scrolled along with any blockspace scrolling, and add the scroll event
+    // delta to the block's movement.
     if (Blockly.Block.isFreelyDragging() && Blockly.selected) {
-      // We get a "real" delta Y which is clamped by the scrollTo operation,
-      // so it doesn't scroll beyond the edges of the workspace.
-      var realDeltaY = this.blockSpace_.yOffsetFromView - yOffsetBefore;
-      Blockly.selected.startDragMouseY += realDeltaY;
+      var scrolledY = this.blockSpace_.scrollbarOffsetY() - yOffsetBefore;
+      Blockly.selected.startDragMouseY -= scrolledY;
+      // Moves block to stay under cursor with e.clientY
       Blockly.selected.onMouseMove_(e);
     }
 
@@ -276,26 +271,10 @@ Blockly.PanDragHandler.prototype.beginDragScroll_ = function (e) {
   // Record the current mouse position.
   this.startMouseX_ = e.clientX;
   this.startMouseY_ = e.clientY;
-  this.startScrollX_ = this.blockSpace_.xOffsetFromView;
-  this.startScrollY_ = this.blockSpace_.yOffsetFromView;
+  this.startScrollX_ = this.blockSpace_.scrollbarOffsetX();
+  this.startScrollY_ = this.blockSpace_.scrollbarOffsetY();
 
   this.bindDuringPanDragHandlers_();
-};
-
-/**
- * Given desired new scrollX and scrollY positions
- * @param {number} newScrollX new target pan-right (+) offset
- * @param {number} newScrollY new target pan-down (+) offset
- */
-Blockly.PanDragHandler.prototype.scrollTo = function (newScrollX, newScrollY) {
-  var maxScrollOffsets = this.blockSpace_.getMaxScrollOffsets();
-
-  // Clamp scrollX and scrollY to within (0, 0) to (maxX, maxY)
-  newScrollX = Math.min(Math.max(newScrollX, maxScrollOffsets.x), 0);
-  newScrollY = Math.min(Math.max(newScrollY, maxScrollOffsets.y), 0);
-
-  // Set the scrollbar position, which will auto-scroll the canvas
-  this.blockSpace_.scrollbarPair.set(-newScrollX, -newScrollY);
 };
 
 /**
@@ -310,7 +289,14 @@ Blockly.PanDragHandler.prototype.onPanDragMouseMove_ = function (e) {
 
   var mouseDx = e.clientX - this.startMouseX_; // + if mouse right
   var mouseDy = e.clientY - this.startMouseY_; // + if mouse down
-  this.scrollTo(this.startScrollX_ + mouseDx, this.startScrollY_ + mouseDy);
+
+  // to pan, scroll opposite direction of drag
+  var scrollDx = -mouseDx; // scroll - (down) if mouse up
+  var scrollDy = -mouseDy; // scroll - (left) if mouse right
+
+  this.blockSpace_.scrollTo(
+    this.startScrollX_ + scrollDx,
+    this.startScrollY_ + scrollDy);
   e.stopPropagation();
   e.preventDefault();
 };
