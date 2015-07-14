@@ -818,6 +818,20 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
 };
 
 /**
+ * Returns the maximum possible scrolling offsets (+x right, +y down) for
+ * this BlockSpace.
+ * @returns {{x: number, y: number}}
+ */
+Blockly.BlockSpace.prototype.getMaxScrollOffsets = function() {
+  var metrics = this.getMetrics();
+  var blockSpaceSize = this.getScrollableSize(metrics);
+  return {
+    x: -blockSpaceSize.width + metrics.viewWidth,
+    y: -blockSpaceSize.height + metrics.viewHeight
+  }
+};
+
+/**
  * Can be called to force an update of scrollbar height/position and usable
  * blockspace size according to the current content.
  */

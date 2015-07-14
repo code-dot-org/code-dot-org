@@ -18,7 +18,7 @@
  */
 
 /**
- * @fileoverview Components for creating connections between blocks.
+ * @fileoverview Panning (click-drag and mousewheel) scroll interaction handler
  * @author fraser@google.com (Neil Fraser)
  */
 'use strict';
@@ -97,12 +97,6 @@ Blockly.PanDragHandler = function (blockSpace) {
    * @private
    */
   this.startMouseY_ = null;
-
-  /**
-   * @type {Object}
-   * @private
-   */
-  this.startMetrics_ = null;
 
   /**
    * @type {number}
@@ -247,28 +241,24 @@ Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
   }
 
   // Safari uses wheelDeltaY, everyone else uses deltaY.
-  var delta = e.deltaY || -e.wheelDeltaY;
-  if (delta) {
+  var wheelDeltaY = e.deltaY || -e.wheelDeltaY;
+  if (wheelDeltaY) {
     if (goog.userAgent.GECKO) {
       // Firefox's deltas are a tenth that of Chrome/Safari.
-      delta *= 10;
+      wheelDeltaY *= 10;
     }
 
     var yOffsetBefore = this.blockSpace_.yOffsetFromView;
-    this.panMove(
-        this.blockSpace_.getMetrics(),
-        this.blockSpace_.xOffsetFromView,
-        this.blockSpace_.yOffsetFromView,
-        0,
-        -delta);
+    this.scrollTo(this.blockSpace_.xOffsetFromView,
+      this.blockSpace_.yOffsetFromView - wheelDeltaY);
 
     // If dragging a block too, move the "mouse start position" as if it
     // had scrolled along with the blockspace.
     if (Blockly.Block.isFreelyDragging() && Blockly.selected) {
-      // We get a "real" delta which is clamped by the panMove operation,
-      // so it doesn't scroll at the edges of the workspace.
-      var realYDelta = this.blockSpace_.yOffsetFromView - yOffsetBefore;
-      Blockly.selected.startDragMouseY += realYDelta;
+      // We get a "real" delta Y which is clamped by the scrollTo operation,
+      // so it doesn't scroll beyond the edges of the workspace.
+      var realDeltaY = this.blockSpace_.yOffsetFromView - yOffsetBefore;
+      Blockly.selected.startDragMouseY += realDeltaY;
       Blockly.selected.onMouseMove_(e);
     }
 
@@ -288,29 +278,23 @@ Blockly.PanDragHandler.prototype.beginDragScroll_ = function (e) {
   // Record the current mouse position.
   this.startMouseX_ = e.clientX;
   this.startMouseY_ = e.clientY;
-  this.startMetrics_ = this.blockSpace_.getMetrics();
   this.startScrollX_ = this.blockSpace_.xOffsetFromView;
   this.startScrollY_ = this.blockSpace_.yOffsetFromView;
 
   this.bindDuringPanDragHandlers_();
 };
 
-Blockly.PanDragHandler.prototype.panMove = function (metrics, xStartOffset, yStartOffset, mouseDx, mouseDy) {
-  var blockSpaceSize = this.blockSpace_.getScrollableSize(metrics);
+/**
+ * Given desired new scrollX and scrollY positions
+ * @param {number} newScrollX new target pan-right (+) offset
+ * @param {number} newScrollY new target pan-down (+) offset
+ */
+Blockly.PanDragHandler.prototype.scrollTo = function (newScrollX, newScrollY) {
+  var maxScrollOffsets = this.blockSpace_.getMaxScrollOffsets();
 
-  // New target scroll (x,y) offset
-  var newScrollX = xStartOffset + mouseDx; // new pan-right (+) position
-  var newScrollY = yStartOffset + mouseDy; // new pan-down (+) position
-
-  // Don't allow panning past top left
-  newScrollX = Math.min(newScrollX, 0);
-  newScrollY = Math.min(newScrollY, 0);
-
-  // Don't allow panning past bottom or right
-  var furthestScrollAllowedX = -blockSpaceSize.width + metrics.viewWidth;
-  var furthestScrollAllowedY = -blockSpaceSize.height + metrics.viewHeight;
-  newScrollX = Math.max(newScrollX, furthestScrollAllowedX);
-  newScrollY = Math.max(newScrollY, furthestScrollAllowedY);
+  // Clamp scrollX and scrollY to within (0, 0) to (maxX, maxY)
+  newScrollX = Math.min(Math.max(newScrollX, maxScrollOffsets.x), 0);
+  newScrollY = Math.min(Math.max(newScrollY, maxScrollOffsets.y), 0);
 
   // Set the scrollbar position, which will auto-scroll the canvas
   this.blockSpace_.scrollbarPair.set(-newScrollX, -newScrollY);
@@ -328,7 +312,7 @@ Blockly.PanDragHandler.prototype.onPanDragMouseMove_ = function (e) {
 
   var mouseDx = e.clientX - this.startMouseX_; // + if mouse right
   var mouseDy = e.clientY - this.startMouseY_; // + if mouse down
-  this.panMove(this.startMetrics_, this.startScrollX_, this.startScrollY_, mouseDx, mouseDy);
+  this.scrollTo(this.startScrollX_ + mouseDx, this.startScrollY_ + mouseDy);
   e.stopPropagation();
   e.preventDefault();
 };
