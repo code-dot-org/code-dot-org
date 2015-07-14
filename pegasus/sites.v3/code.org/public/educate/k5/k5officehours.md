@@ -12,7 +12,7 @@ All sessions will be recorded and available on this page, so if you can't make a
 ## Schedule
 
 **More dates coming for 2015! 
-Follow [@teachcodeorg](http://twitter.com/teachcodeorg) for updates or visit [teacherblog.code.org](http://teacherblog.code.org)**
+Follow [@teachcode](http://twitter.com/TeachCode) for updates or visit [teacherblog.code.org](http://teacherblog.code.org)**
 
 ## Past Events
 Thursday, November 6, 2014 • 5 p.m. *PT* / 1 hr [View Recording](http://youtu.be/Jb2xhFeNvG4)
