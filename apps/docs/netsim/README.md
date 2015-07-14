@@ -21,7 +21,8 @@ according to some simple rules.
 
 ## Shared Storage
 
-The network simulator has its own app ID within the app storage system, and creates/interacts with shared tables to model a common network state.
+The network simulator has its own app ID within the app storage system, and 
+creates/interacts with shared tables to model a common network state.
 
 ### Shards
 
