@@ -90,11 +90,11 @@ Dashboard::Application.routes.draw do
 
   resources :projects, path: '/projects/', only: [:index] do
     collection do
-      ProjectsController::STANDALONE_PROJECTS.each do |key, value|
-        get '/' + key.to_s, to: 'projects#edit', key: key, as: key.to_s + 'project'
-        get '/' + key.to_s + '/:channel_id', to: 'projects#show', key: key, as: key.to_s + 'project_share', share: true
-        get '/' + key.to_s + '/:channel_id/edit', to: 'projects#edit', key: key, as: key.to_s + 'project_edit'
-        get '/' + key.to_s + '/:channel_id/view', to: 'projects#show', key: key, as: key.to_s + 'project_view', readonly: true
+      ProjectsController::STANDALONE_PROJECTS.each do |key, _|
+        get '/' + key.to_s, to: 'projects#edit', key: key, as: "#{key.to_s}_project"
+        get '/' + key.to_s + '/:channel_id', to: 'projects#show', key: key, as: "#{key.to_s}_project_share", share: true
+        get '/' + key.to_s + '/:channel_id/edit', to: 'projects#edit', key: key, as: "#{key.to_s}_project_edit"
+        get '/' + key.to_s + '/:channel_id/view', to: 'projects#show', key: key, as: "#{key.to_s}_project_view", readonly: true
       end
     end
     # TODO - do i need template?
