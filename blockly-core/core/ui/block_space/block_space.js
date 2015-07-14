@@ -33,6 +33,7 @@ goog.require('Blockly.PanDragHandler');
 goog.require('Blockly.Xml');
 goog.require('goog.array');
 goog.require('goog.math.Coordinate');
+goog.require('goog.math');
 
 /**
  * Class for a BlockSpace.
@@ -818,17 +819,47 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
 };
 
 /**
+ * Given desired new scrollX and scrollY positions, scroll to position,
+ * clamping to within allowable scroll boundaries.
+ * @param {number} newScrollX new target pan-right (+) offset
+ * @param {number} newScrollY new target pan-down (+) offset
+ */
+Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
+  var maxScrollOffsets = this.getMaxScrollOffsets();
+
+  newScrollX = goog.math.clamp(newScrollX, 0, maxScrollOffsets.x);
+  newScrollY = goog.math.clamp(newScrollY, 0, maxScrollOffsets.y);
+
+  // Set the scrollbar position, which will auto-scroll the canvas
+  this.scrollbarPair.set(newScrollX, newScrollY);
+};
+
+/**
  * Returns the maximum possible scrolling offsets (+x right, +y down) for
- * this BlockSpace.
+ * this blockspace.
  * @returns {{x: number, y: number}}
  */
 Blockly.BlockSpace.prototype.getMaxScrollOffsets = function() {
   var metrics = this.getMetrics();
   var blockSpaceSize = this.getScrollableSize(metrics);
   return {
-    x: -blockSpaceSize.width + metrics.viewWidth,
-    y: -blockSpaceSize.height + metrics.viewHeight
-  }
+    x: blockSpaceSize.width - metrics.viewWidth,
+    y: blockSpaceSize.height - metrics.viewHeight
+  };
+};
+
+/**
+ * @returns {number} current scroll X offset, + is right
+ */
+Blockly.BlockSpace.prototype.scrollbarOffsetX = function() {
+  return -this.xOffsetFromView;
+};
+
+/**
+ * @returns {number} current scroll Y offset, + is down
+ */
+Blockly.BlockSpace.prototype.scrollbarOffsetY = function() {
+  return -this.yOffsetFromView;
 };
 
 /**
