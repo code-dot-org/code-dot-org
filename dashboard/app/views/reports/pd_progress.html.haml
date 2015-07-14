@@ -1,7 +1,7 @@
 - content_for(:head) do
   = stylesheet_link_tag    'jquery.handsontable.full', media: 'all'
   = javascript_include_tag 'jquery.handsontable.full'
-%h1 Online Course Name: #{script.name}
+%h1 Online Course Name: #{script['name']}
 %h2 #{link_to 'Download CSV', {:format => :csv }}
 %h3 Last updated: #{time.to_formatted_s(:long)}
 #progress
