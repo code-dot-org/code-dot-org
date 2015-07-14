@@ -240,3 +240,72 @@ levels.custom = {
   showDnsModeControl: false,
   defaultDnsMode: DnsMode.NONE
 };
+
+/**
+ * Special level configuration for use with 'grunt dev' standalone mode.
+ * Never used when serving NetSim levels through dashboard.
+ * @type {netsimLevelConfiguration}
+ */
+levels.playground = {
+
+  // Lobby configuration
+  showClientsInLobby: false,
+  showRoutersInLobby: true,
+  canConnectToClients: false,
+  canConnectToRouters: true,
+  showAddRouterButton: true,
+  showLogBrowserButton: true,
+
+  // Simulator-wide setup
+  messageGranularity: MessageGranularity.PACKETS,
+  automaticReceive: true,
+  broadcastMode: false,
+  connectedRouters: false,
+  minimumExtraHops: 0,
+  maximumExtraHops: 0,
+
+  // Packet header specification
+  addressFormat: '4',
+  packetCountBitWidth: 4,
+  routerExpectsPacketHeader: ['toAddress', 'fromAddress'],
+  clientInitialPacketHeader: ['toAddress', 'fromAddress'],
+
+  // Visualization configuration
+  showHostnameInGraph: false,
+
+  // Send widget configuration
+  showAddPacketButton: false,
+  showPacketSizeControl: false,
+  defaultPacketSizeLimit: Infinity,
+
+  // Tab-panel control
+  showTabs: ['instructions', 'my_device', 'router', 'dns'],
+  defaultTabIndex: 0,
+
+  // Instructions tab and its controls
+  // Note: Uses the blockly-standard level.instructions value, which should
+  //       be localized by the time it gets here.
+
+  // "My Device" tab and its controls
+  showPulseRateSlider: false,
+  showMetronome: false,
+  showEncodingControls: ['a_and_b', 'binary', 'hexadecimal', 'decimal', 'ascii'],
+  defaultEnabledEncodings: ['a_and_b', 'binary', 'hexadecimal', 'decimal', 'ascii'],
+  showBitRateControl: true,
+  lockBitRateControl: false,
+  defaultBitRateBitsPerSecond: Infinity,
+  showChunkSizeControl: true,
+  lockChunkSizeControl: false,
+  defaultChunkSizeBits: 8,
+
+  // Router tab and its controls
+  showRouterBandwidthControl: true,
+  defaultRouterBandwidth: Infinity,
+  showRouterMemoryControl: true,
+  defaultRouterMemory: Infinity,
+  defaultRandomDropChance: 0,
+
+  // DNS tab and its controls
+  showDnsModeControl: true,
+  defaultDnsMode: DnsMode.NONE
+};

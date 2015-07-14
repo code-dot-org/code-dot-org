@@ -2,6 +2,7 @@ var url = require('url');
 var express = require('express');
 var ejs = require('ejs');
 var fs = require('fs');
+var httpProxy = require('http-proxy');
 
 var app = express();
 
@@ -81,5 +82,20 @@ app.get('/netsim', function(req, res) {
   renderApp('netsim', req, res);
 });
 
+// Proxy to locally-running dashboard server for channels api and assets
+// (like application.css).  Requires dashboard-server to be running on port 3000.
+var dashboardProxy = httpProxy.createProxyServer();
+
+app.use('/v3', function (req, res) {
+  dashboardProxy.web(req, res, {
+    target: req.protocol + '://' + req.hostname + ':3000/v3'
+  });
+});
+
+app.use('/assets', function (req, res) {
+  dashboardProxy.web(req, res, {
+    target: req.protocol + '://' + req.hostname + ':3000/assets'
+  });
+});
 
 module.exports = app;
