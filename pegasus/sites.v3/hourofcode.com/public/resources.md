@@ -6,8 +6,7 @@ nav: resources_nav
 <div class="row">
     <h1 class="col-sm-12">Resources (2015 resources coming soon)</h1>
 </div>
-
-## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
+## Hosting an Hour of Code? <a href="<%= resolve_url('/resources/how-to') %>">See the how-to guide</a>
 
 <a id="handouts"></a>
 ## Use this handout to spread the word
