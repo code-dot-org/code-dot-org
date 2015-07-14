@@ -1,3 +1,7 @@
+/**
+ * @overview Router node simulation entity.  Also contains logic for the
+ *           auto-DNS system.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

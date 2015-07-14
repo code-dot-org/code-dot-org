@@ -1,3 +1,6 @@
+/**
+ * @overview Wraps remote storage interface and polling behavior.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

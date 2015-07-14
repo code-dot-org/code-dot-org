@@ -1,3 +1,6 @@
+/**
+ * @overview UI Slider control used for changing simulated router bandwidth.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

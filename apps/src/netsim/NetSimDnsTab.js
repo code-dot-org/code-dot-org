@@ -1,3 +1,6 @@
+/**
+ * @overview UI controller for the DNS tab in the left column.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -19,7 +22,7 @@ var NetSimDnsTable = require('./NetSimDnsTable');
 var netsimGlobals = require('./netsimGlobals');
 
 /**
- * Generator and controller for "My Device" tab.
+ * Generator and controller for "DNS" tab.
  * @param {jQuery} rootDiv
  * @param {function} dnsModeChangeCallback
  * @param {function} becomeDnsCallback

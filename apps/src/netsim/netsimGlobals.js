@@ -1,3 +1,11 @@
+/**
+ * @overview Global singleton used to simplify certain cross-cutting concerns,
+ *           including:
+ *
+ *           Access to level configuration.
+ *           Access to environment-specific asset URLs.
+ *           Reproducible random number functions for easy testing.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
