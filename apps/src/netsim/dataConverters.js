@@ -14,6 +14,13 @@
 require('../utils'); // For String.prototype.repeat polyfill
 var netsimUtils = require('./netsimUtils');
 
+// window.{btoa, atob} polyfills
+if (!(window.atob && window.btoa)) {
+    require('./base64');
+    if (!window.btoa) window.btoa = base64.encode
+    if (!window.atob) window.atob = base64.decode
+}
+
 /**
  * @typedef {string} addressHeaderFormat
  * A string indicating the parts of an address field in the packet header,
@@ -352,6 +359,42 @@ exports.binaryToAscii = function (binaryString, byteSize) {
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
+};
+
+/**
+ * Converts binary to a base64 string for more efficient network
+ * transfer. Because base64 expects even bytes, we pad the binary string
+ * to the nearest byte and return the original length. The reverse
+ * conversion expects to be given that original length.
+ * @param {string} binaryString
+ * @returns {object} Object containing the base64 string and the length
+ * of of the original binaryString
+ * @example
+ * // returns { string: "kgA=", len: 7 }
+ * dataConverters.binaryToBase64("1001001");
+ */
+exports.binaryToBase64 = function (binaryString) {
+
+  var len = binaryString.length;
+  var paddedBinaryString = netsimUtils.zeroPadRight(binaryString, len + len%8);
+  var payload = window.btoa(exports.binaryToAscii(paddedBinaryString, 8));
+
+  return { string: payload, len: len };
+
+};
+
+/**
+ * Converts a base64 string back into a binary string of the specified
+ * length.
+ * @param {string} base64string
+ * @param {number} len
+ * @returns {string} binaryString
+ * @example
+ * // returns "1001001"
+ * dataConverters.base64ToBinary("kgA=", 7);
+ */
+exports.base64ToBinary = function (base64string, len) {
+  return exports.asciiToBinary(window.atob(base64string), 8).substr(0, len);
 };
 
 /**
