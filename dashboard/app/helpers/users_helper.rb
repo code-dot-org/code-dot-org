@@ -5,7 +5,7 @@ module UsersHelper
     # Cache the results in an instance variable (per-request)
     # todo: investigate using Rails.cache with appropriate user+script cache keys instead
     @user_data ||= {}
-    key = "#{script.id}_#{user.id}"
+    key = "#{script.id}_#{user.try(:id)}"
     return @user_data[key] if @user_data[key].present?
 
     user_data = {}
