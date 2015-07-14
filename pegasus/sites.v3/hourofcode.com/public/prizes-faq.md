@@ -32,7 +32,7 @@ Due to a small full-time staff, Code.org is unable to handle the logistics of ad
 
 ## When is the deadline to apply for the hardware prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the <a href="<%= hoc_uri('/prizes') %>">Hardware Application form</a> by November 2, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the <a href="<%= hoc_uri('/prizes') %>">Hardware Application form</a> by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
 
 
 ## When is the deadline to be eligible to win a tech chat?
@@ -41,10 +41,10 @@ To qualify, you must register your classroom for the Hour of Code by November 2,
 
 ## When will I be notified if my school or classroom wins a prize?
 
-To qualify, your entire school must register for the Hour of Code as well as complete the <a href="<%= hoc_uri('/prizes') %>">Hardware Application form</a> by November 2, 2015. Code.org will select and notify winners via email by December 1, 2015.
+To qualify, your entire school must register for the Hour of Code as well as complete the <a href="<%= hoc_uri('/prizes') %>">Hardware Application form</a> by November 16, 2015. Code.org will select and notify winners via email by December 1, 2015.
 
-## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 6-12), can I still qualify for prizes?
-Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 1st.
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (Dec. 7-13), can I still qualify for prizes?
+Yes, just be sure to submit a logistics plan that outlines how your whole school is participating over a reasonable length of time and register for the Hour of Code by November 16th.
 
 
 

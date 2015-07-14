@@ -14,15 +14,16 @@ For the new [Computer Science Principles](/educate/csp) high school course, Code
 </div>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-[<button>Try App Lab</button>](https://studio.code.org/p/applab)
+[<button>Try App Lab (BETA)</button>](https://studio.code.org/p/applab)
 
+Note: this is still a preview release, we're improving it many times a week. If something doesn't work, please check back in a bit.
 
 ## More details - App Lab and other tools for CS Principles
 
 <div style="float:left; padding:10px; width:49%">
 
 <%=view :display_video_thumbnail, id: "AppLabDeepDive", video_code: "4DntNOOYmpo", caption: "App Lab Deep Dive", play_button: 'center', download_path: "http://videos.code.org/2015/csp/AppLabDemo.mp4" %>
-[<button>Try App Lab</button>](https://studio.code.org/p/applab)
+[<button>Try App Lab (BETA)</button>](https://studio.code.org/p/applab)
 </div>
 
 <div style="float:left; padding:10px; width:49%">
