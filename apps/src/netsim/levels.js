@@ -1,4 +1,8 @@
 /*jshint multistr: true */
+/**
+ * @overview Type documentation for a NetSim level configuration object,
+ *           and default values for that object.
+ */
 
 var netsimConstants = require('./netsimConstants');
 var Packet = require('./Packet');

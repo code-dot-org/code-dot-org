@@ -1,3 +1,6 @@
+/**
+ * @overview UI component: An animated SVG metronome.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
