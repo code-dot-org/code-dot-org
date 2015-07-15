@@ -9,6 +9,19 @@ require src_dir 'database'
 # HocSignup2014- US ONLY
 # CSEdWeekEvent2013- US ONLY
 
+SOLR = Solr::Server.new(host:'ec2-54-83-22-254.compute-1.amazonaws.com')
+
+def query_contacts(params)
+  fields = params[:fields] if params[:fields]
+
+  [].tap do |results|
+    SOLR.query(params.merge(rows:10000)).each do |i|
+      i = yield(i) if block_given?
+      results << {email:i['email_s'].downcase.strip, name:i['name_s']}.merge(i.slice(*fields)) if i
+    end
+  end
+end
+
 UNSUBSCRIBERS = {}.tap do |results|
   DB[:contacts].where('unsubscribed_at IS NOT NULL').each do |i|
     email = i[:email].downcase.strip
