@@ -609,8 +609,7 @@ Blockly.blockContextMenu = function (e) {
  * @param {!Event} e scrollwheel or wheel event.
  * @return {number|null} wheelDeltaY normalized scroll dy, + is down, or null if
  * no wheel delta present in event
- * @private
- */
+*/
 Blockly.getNormalizedWheelDeltaY = function (e) {
   // Safari uses wheelDeltaY (- is down), others use deltaY (+ is down)
   var wheelDeltaY = e.deltaY || -e.wheelDeltaY; // + is down
