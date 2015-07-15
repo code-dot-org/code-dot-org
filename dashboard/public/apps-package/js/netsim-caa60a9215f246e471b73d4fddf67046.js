@@ -11421,19 +11421,19 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
  */
 NetSimRouterNode.prototype.stopSimulation = function () {
   if (this.nodeChangeKey_ !== undefined) {
-    var nodeChangeEvent = this.shard_.messageTable.tableChange;
+    var nodeChangeEvent = this.shard_.nodeTable.tableChange;
     nodeChangeEvent.unregister(this.nodeChangeKey_);
     this.nodeChangeKey_ = undefined;
   }
   
   if (this.wireChangeKey_ !== undefined) {
-    var wireChangeEvent = this.shard_.messageTable.tableChange;
+    var wireChangeEvent = this.shard_.wireTable.tableChange;
     wireChangeEvent.unregister(this.wireChangeKey_);
     this.wireChangeKey_ = undefined;
   }
 
   if (this.logChangeKey_ !== undefined) {
-    var logChangeEvent = this.shard_.messageTable.tableChange;
+    var logChangeEvent = this.shard_.logTable.tableChange;
     logChangeEvent.unregister(this.logChangeKey_);
     this.logChangeKey_ = undefined;
   }
