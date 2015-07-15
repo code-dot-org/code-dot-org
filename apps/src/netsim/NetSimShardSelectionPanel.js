@@ -1,3 +1,8 @@
+/**
+ * @overview Lobby UI component used for name entry and selecting a shard/class
+ *           section.
+ * @see NetSimLobby for usage.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

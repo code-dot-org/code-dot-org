@@ -1,3 +1,10 @@
+/**
+ * @overview UI controller for tabs area in left column
+ *           Directly controls the instructions tab, others are delegated.
+ * @see NetSimMyDeviceTab
+ * @see NetSimRouterTab
+ * @see NetSimDnsTab
+ */
 /* jshint
  funcscope: true,
  newcap: true,

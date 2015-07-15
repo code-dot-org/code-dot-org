@@ -1,3 +1,6 @@
+/**
+ * @overview Static helper methods for NetSim.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
