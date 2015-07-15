@@ -600,3 +600,30 @@ Blockly.blockContextMenu = function (e) {
     e.preventDefault();
   }
 };
+
+/**
+ * Get normalized wheel scrolling amount from a given wheel or scrollwheel event
+ * - in Safari, processes e.wheelDeltaY instead of e.deltaY, and normalizes
+ *   so + is down
+ * - in Firefox, multiplies event by 10 to account for browser's smaller deltas
+ * @param {!Event} e scrollwheel or wheel event.
+ * @return {number|null} wheelDeltaY normalized scroll dy, + is down, or null if
+ * no wheel delta present in event
+ * @private
+ */
+Blockly.getNormalizedWheelDeltaY = function (e) {
+  // Safari uses wheelDeltaY (- is down), others use deltaY (+ is down)
+  var wheelDeltaY = e.deltaY || -e.wheelDeltaY; // + is down
+
+  if (!wheelDeltaY) {
+    return null;
+  }
+
+  if (goog.userAgent.GECKO) {
+    // Firefox's deltas are a tenth that of Chrome/Safari.
+    wheelDeltaY *= 10;
+  }
+
+  return wheelDeltaY;
+};
+

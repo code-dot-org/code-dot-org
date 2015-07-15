@@ -407,7 +407,7 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   };
 
   // Bind mousedown on the flyout background
-  this.blockSpace_.bindBeginPanDragHandler(this.svgBackground_);
+  this.blockSpace_.bindBeginPanDragHandler(this.svgGroup_);
 
   // Create the blocks to be shown in this flyout.
   var blocks = [];
