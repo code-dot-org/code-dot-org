@@ -1,3 +1,9 @@
+/**
+ * @overview Provides utility methods for converting user data between
+ *           different encodings, and formatting those encodings: binary,
+ *           hex, decimal, ASCII.  "A and B" is a special encoding that is
+ *           just binary with "A" sub'd for 0 and "B" sub'd for 1.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

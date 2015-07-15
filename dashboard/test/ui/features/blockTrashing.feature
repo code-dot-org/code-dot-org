@@ -8,9 +8,9 @@ Background:
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   # In this level's initial setup:
-  And "when_run" refers to block "18"
-  And "gray set_color" refers to block "19"
-  And "turn_right" refers to block "24"
+  And "when_run" refers to block "17"
+  And "gray set_color" refers to block "18"
+  And "turn_right" refers to block "23"
 
 Scenario: Drag-delete a deletable block
   When I drag block "turn_right" to offset "-2000, 0"
@@ -84,7 +84,7 @@ Scenario: Fail to hotkey-delete an undeletable block
 Scenario: Hotkey-delete a deletable block between undeletable blocks
   When I drag block "turn_right" to block "when_run"
   Then block "turn_right" is child of block "when_run"
-  And block "gray set_color" is child of block "24"
+  And block "gray set_color" is child of block "turn_right"
   When I click block "turn_right"
   And I press delete
   Then block "turn_right" has been deleted

@@ -1,3 +1,6 @@
+/**
+ * @overview Base implementation of NetSim UI sliders.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

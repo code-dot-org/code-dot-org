@@ -1,3 +1,6 @@
+/**
+ * @overview Simulation entity for a message between two nodes.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

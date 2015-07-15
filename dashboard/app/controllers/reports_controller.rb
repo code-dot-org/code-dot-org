@@ -278,7 +278,7 @@ SQL
     require 'cdo/properties'
     locals_options = Properties.get("pd_progress_#{script.id}")
     if locals_options
-      render locals: locals_options
+      render locals: locals_options.symbolize_keys
     else
       render layout: 'application', text: "PD progress data not found for #{script.name}", status: 404
     end
