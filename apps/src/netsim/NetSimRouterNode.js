@@ -534,7 +534,7 @@ NetSimRouterNode.prototype.recalculateSchedule = function () {
 NetSimRouterNode.prototype.scheduleRoutingForMessage = function (queuedMessage,
     pessimisticCompletionTime) {
   var scheduleItem = _.find(this.localRoutingSchedule_, function (item) {
-    return item.row.id === queuedMessage.id;
+    return item.id === queuedMessage.id;
   });
 
   if (scheduleItem) {
@@ -598,7 +598,7 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 
   // Filter DNS queue down to requests the local simulation should handle.
   var localSimDnsRequests = this.autoDnsQueue_
-      .filter(this.localSimulationOwnsMessage.bind(this))
+      .filter(this.localSimulationOwnsMessage_.bind(this));
 
   // If there's nothing we can process, we're done.
   if (localSimDnsRequests.length === 0) {
