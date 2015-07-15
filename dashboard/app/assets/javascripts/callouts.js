@@ -1,79 +1,42 @@
-(function () {
+/**
+ * @fileoverview handles creation and updating of dashboard tooltips, aka callouts.
+ *
+ * Assumes existence of jQuery qtip2 plugin.
+ */
+
+(function (dashboard, window, $) {
 
   /**
-   * Snap all callouts to their target positions.  Keeps them in
-   * position when blockspace is scrolled.
+   * A callout definition object, typically defined in the levelbuilder, stored
+   * per-level.
+   * @typedef {Object} CalloutDefinition
+   * @property {string} localized_text - text contents for callout
+   * @property {string} element_id - jQuery selector of element to attach
+   *           callout to (shows relative to element position, callout hides on
+   *           element click)
+   * @property {object} qtip_config - qtip configuration for callout
+   *           @see {@link http://qtip2.com/options} for full list of options
+   * @property {?string} on - optional ID of window event which should trigger
+   *           callout show. Callout starts hidden.
    */
-  function snapCalloutsToTargets() {
-    var triggerEvent = null;
-    var animate = false;
-    $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
-  }
 
   /**
-   * For callouts with targets in the codeWorkspace (blockly, flyout elements,
-   * function editor elements, etc) hides callouts with targets that are
-   * scrolled out of view, and shows them again when they are scrolled back in
-   * to view.
-   * @function
+   * Given a set of callout definitions, installs them on the page
+   * @param {CalloutDefinition[]} callouts
    */
-  var showOrHideCalloutsByTargetVisibility = (function () {
-    // Close around this object, which we use to remember which callouts
-    // were hidden by scrolling and should be shown again when they scroll
-    // back in.
-    /** @type {Object.<string, boolean>} */
-    var calloutsHiddenByScrolling = {};
-    return function () {
-      var codeWorkspace = $('#codeWorkspace');
-      $('.cdo-qtips').each(function () {
-        var api = $(this).qtip('api');
-        var target = $(api.elements.target);
-
-        var isTargetInCodeWorkspace = codeWorkspace.has(target).length > 0;
-        if (!isTargetInCodeWorkspace) {
-          return;
-        }
-
-        if (target && target.overlaps('#codeWorkspace').length > 0) {
-          if (calloutsHiddenByScrolling[api.id]) {
-            api.show();
-            delete calloutsHiddenByScrolling[api.id];
-          }
-        } else {
-          if ($(this).is(':visible')) {
-            api.hide();
-            calloutsHiddenByScrolling[api.id] = true;
-          }
-        }
-      });
-    };
-  })();
-
-  function reverseCallout(position) {
-    position = position.split(/\s+/);
-    return reverseDirection(position[0]) + ' ' + reverseDirection(position[1]);
-  }
-
-  function reverseDirection(token) {
-    switch (token) {
-      case 'left': return 'right';
-      case 'right': return 'left';
-      default: return token;
-    }
-  }
-
-  dashboard.createCallouts = function(callouts) {
+  dashboard.createCallouts = function (callouts) {
     if (!callouts) {
       return;
     }
 
-    // Hide callouts when the function editor is closed (otherwise they jump to the top left corner)
-    $(window).on('function_editor_closed', function() {
+    // Hide callouts when the function editor is closed (otherwise they jump to
+    // the top left corner)
+    $(window).on('function_editor_closed', function () {
       $('.cdo-qtips').qtip('hide');
     });
 
     // Update callout positions when an editor is scrolled.
-    $(window).on('block_space_metrics_set', function() {
+    $(window).on('block_space_metrics_set', function () {
       snapCalloutsToTargets();
       showOrHideCalloutsByTargetVisibility();
     });
@@ -128,7 +91,7 @@
       }
 
       if (callout.on) {
-        $(window).on(callout.on, function() {
+        $(window).on(callout.on, function () {
           if (!callout.seen && $(selector).length > 0) {
             callout.seen = true;
             $(selector).qtip(config).qtip('show');
@@ -140,4 +103,68 @@
     });
   };
 
-})();
+  /**
+   * Snap all callouts to their target positions.  Keeps them in
+   * position when blockspace is scrolled.
+   */
+  function snapCalloutsToTargets() {
+    var triggerEvent = null;
+    var animate = false;
+    $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
+  }
+
+  /**
+   * For callouts with targets in the codeWorkspace (blockly, flyout elements,
+   * function editor elements, etc) hides callouts with targets that are
+   * scrolled out of view, and shows them again when they are scrolled back in
+   * to view.
+   * @function
+   */
+  var showOrHideCalloutsByTargetVisibility = (function () {
+    // Close around this object, which we use to remember which callouts
+    // were hidden by scrolling and should be shown again when they scroll
+    // back in.
+    /**
+     * Remember callouts hidden due to overlap, keyed by qtip id
+     * @type {Object.<string, boolean>}
+     */
+    var calloutsHiddenByScrolling = {};
+    return function () {
+      var codeWorkspace = $('#codeWorkspace');
+      $('.cdo-qtips').each(function () {
+        var api = $(this).qtip('api');
+        var target = $(api.elements.target);
+
+        var isTargetInCodeWorkspace = codeWorkspace.has(target).length > 0;
+        if (!isTargetInCodeWorkspace) {
+          return;
+        }
+
+        if (target && target.overlaps('#codeWorkspace').length > 0) {
+          if (calloutsHiddenByScrolling[api.id]) {
+            api.show();
+            delete calloutsHiddenByScrolling[api.id];
+          }
+        } else {
+          if ($(this).is(':visible')) {
+            api.hide();
+            calloutsHiddenByScrolling[api.id] = true;
+          }
+        }
+      });
+    };
+  })();
+
+  function reverseCallout(position) {
+    position = position.split(/\s+/);
+    return reverseDirection(position[0]) + ' ' + reverseDirection(position[1]);
+  }
+
+  function reverseDirection(token) {
+    switch (token) {
+      case 'left': return 'right';
+      case 'right': return 'left';
+      default: return token;
+    }
+  }
+})(window.dashboard, window, $);
