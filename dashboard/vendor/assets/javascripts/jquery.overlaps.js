@@ -1,3 +1,14 @@
+/**
+ * @fileoverview jQuery plugin which determines whether an element overlaps
+ * other elements.
+ *
+ * Example usage:
+ *
+ * // With .element1 and .element2 which overlap,
+ * $('.element1').overlaps('.element2').length > 0
+ *
+ * @see {@link https://github.com/brandonaaron/jquery-overlaps}
+ */
 /*! Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
  *
