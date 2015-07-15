@@ -35,7 +35,7 @@ describe("NetSimMessage", function () {
     assertOwnProperty(row, 'simulatedBy');
     assertEqual(row.simulatedBy, undefined);
 
-    assertOwnProperty(row, 'payload');
+    assertOwnProperty(row, 'base64Payload');
     assertEqual(row.payload, undefined);
 
     assertOwnProperty(row, 'extraHopsRemaining');
@@ -62,7 +62,10 @@ describe("NetSimMessage", function () {
       var fromNodeID = 1;
       var toNodeID = 2;
       var simulatedBy = 2;
-      var payload = 'xyzzy';
+      var base64Payload = {
+        string: "kgA=",
+        len: 7
+      };
       var extraHopsRemaining = 3;
       var visitedNodeIDs = [4];
 
@@ -72,7 +75,7 @@ describe("NetSimMessage", function () {
             fromNodeID: fromNodeID,
             toNodeID: toNodeID,
             simulatedBy: simulatedBy,
-            payload: payload,
+            base64Payload: base64Payload,
             extraHopsRemaining: extraHopsRemaining,
             visitedNodeIDs: visitedNodeIDs
           },
@@ -83,7 +86,7 @@ describe("NetSimMessage", function () {
         assertEqual(row.fromNodeID, fromNodeID);
         assertEqual(row.toNodeID, toNodeID);
         assertEqual(row.simulatedBy, simulatedBy);
-        assertEqual(row.payload, payload);
+        assertEqual(row.base64Payload, base64Payload);
         assertEqual(row.extraHopsRemaining, extraHopsRemaining);
         assertEqual(row.visitedNodeIDs, visitedNodeIDs);
       });
@@ -104,7 +107,10 @@ describe("NetSimMessage", function () {
       fromNodeID: 1,
       toNodeID: 2,
       simulatedBy: 2,
-      payload: 'xyzzy',
+      base64Payload: {
+        string: "kgA=",
+        len: 7
+      },
       extraHopsRemaining: 3,
       visitedNodeIDs: [4]
     }, function (err, row) {
