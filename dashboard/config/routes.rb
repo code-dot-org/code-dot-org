@@ -95,6 +95,7 @@ Dashboard::Application.routes.draw do
         get '/' + key.to_s + '/:channel_id', to: 'projects#show', key: key, as: "#{key.to_s}_project_share", share: true
         get '/' + key.to_s + '/:channel_id/edit', to: 'projects#edit', key: key, as: "#{key.to_s}_project_edit"
         get '/' + key.to_s + '/:channel_id/view', to: 'projects#show', key: key, as: "#{key.to_s}_project_view", readonly: true
+        get '/' + key.to_s + '/:channel_id/remix', to: 'projects#remix', key: key, as: "#{key.to_s}_project_remix"
       end
     end
     # TODO - do i need template?
