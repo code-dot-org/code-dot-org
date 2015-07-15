@@ -1,21 +1,5 @@
 require 'selenium/webdriver'
 
-require_relative '../../../config/deployment.rb'
-
-def browserstack_username
-  ENV['BROWSERSTACK_USERNAME'] || CDO.browserstack_username
-end
-
-def browserstack_authkey
-  ENV['BROWSERSTACK_AUTHKEY'] || CDO.browserstack_authkey
-end
-
-class Object
-  def nil_or_empty?()
-    self.nil? || self.empty?
-  end
-end
-
 $browser_configs = JSON.load(open("browsers.json"))
 
 if ENV['TEST_LOCAL'] == 'true'
@@ -27,11 +11,11 @@ if ENV['TEST_LOCAL'] == 'true'
     browser.manage.window.resize_to(max_width, max_height)
   end
 else
-  if CDO.saucelabs_username.nil_or_empty?
+  if CDO.saucelabs_username.blank?
     raise "Please define CDO.saucelabs_username"
   end
 
-  if CDO.saucelabs_authkey.nil_or_empty?
+  if CDO.saucelabs_authkey.blank?
     raise "Please define CDO.saucelabs_authkey"
   end
 
@@ -41,33 +25,26 @@ else
   browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG'] }
 
   browser_config.each do |key, value|
-    next if key == 'device'
     capabilities[key] = value
   end
 
-  # capabilities['os'] = ENV['BS_AUTOMATE_OS'] || 'windows'
-  # capabilities['os_version'] = ENV['BS_AUTOMATE_OS_VERSION'] || '7'
-  # capabilities['browser'] = ENV['SELENIUM_BROWSER'] || 'chrome'
-  # capabilities['browser_version'] = ENV['SELENIUM_VERSION'] || '31'
-
-  capabilities['project'] = ENV['BS_AUTOMATE_PROJECT'] if ENV['BS_AUTOMATE_PROJECT']
-  capabilities['build'] = ENV['BS_AUTOMATE_BUILD'] if ENV['BS_AUTOMATE_BUILD']
-
-  # capabilities['rotatable'] = ENV['BS_ROTATABLE'] if ENV['BS_ROTATABLE']
-  # capabilities['deviceOrientation'] = ENV['BS_ORIENTATION'] if ENV['BS_ORIENTATION']
-
-  capabilities['browserstack.tunnel'] = 'true' if ENV['TEST_TUNNEL'] == 'true'
-
-  capabilities["browserstack.debug"] = "true" unless ENV['TEST_REALMOBILE'] == 'true'
-  capabilities["realMobile"] = ENV['TEST_REALMOBILE'] == 'true' ? 'true' : 'false'
-  capabilities["resolution"] = '1280x1024'
   capabilities[:javascript_enabled] = 'true'
   capabilities[:name] = ENV['TEST_RUN_NAME']
 
-  browser = Selenium::WebDriver.for(:remote, :url => url, :desired_capabilities => capabilities)
+  puts "Capabilities: #{capabilities.inspect}"
+
+  Time.now.tap do |start_time|
+    browser = Selenium::WebDriver.for(:remote,
+                                      url: url,
+                                      desired_capabilities: capabilities,
+                                      http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
+    puts "Got browser in #{Time.now - start_time}s"
+  end
+
+  puts "Browser: #{browser}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
-  if ENV['MOBILE'] != "true"
+  unless ENV['MOBILE']
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end

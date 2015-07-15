@@ -96,6 +96,7 @@ $lock = Mutex.new
 $suite_start_time = Time.now
 $suite_success_count = 0
 $suite_fail_count = 0
+$failures = []
 
 if $options.local
   $browsers = [{:browser => "local"}]
@@ -192,19 +193,13 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
 
   ENV['BROWSER_CONFIG'] = browser_name
 
-  ENV['SELENIUM_BROWSER'] = browser['browser']
-  ENV['SELENIUM_VERSION'] = browser['browser_version']
-  ENV['BS_AUTOMATE_OS'] = browser['os']
-  ENV['BS_AUTOMATE_OS_VERSION'] = browser['os_version']
-  ENV['BS_ORIENTATION'] = browser['deviceOrientation']
   ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
   ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
   ENV['TEST_TUNNEL'] = $options.tunnel ? "true" : "false"
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
-  ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
-  ENV['TEST_REALMOBILE'] = ($options.realmobile && browser['mobile'] && browser['realMobile'] != false) ? "true" : "false"
+  ENV['MOBILE'] = browser.delete('mobile') ? "true" : "false"
   ENV['TEST_RUN_NAME'] = test_run_string
 
   if $options.html
@@ -300,8 +295,15 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   result_string = succeeded ? "succeeded".green : "failed".red
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"
 
-  succeeded
-end.each { |result| result ? $suite_success_count += 1 : $suite_fail_count += 1 }
+  [succeeded, test_run_string]
+end.each do |succeeded, test_run_string|
+  if succeeded
+    $suite_success_count += 1
+  else
+    $suite_fail_count += 1
+    $failures << test_run_string
+  end
+end
 
 $logfile.close
 $errfile.close
@@ -310,9 +312,13 @@ $errbrowserfile.close
 $suite_duration = Time.now - $suite_start_time
 $average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
-puts "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed.  " +
+HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed.  " +
   "Test count: #{($suite_success_count + $suite_fail_count)}.  " +
   "Total duration: #{$suite_duration.round(2)} seconds.  " +
   "Average test duration: #{$average_test_duration.round(2)} seconds."
+
+if $suite_fail_count > 0
+  puts "Failed tests: #{$failures.join("\n")}"
+end
 
 exit $suite_fail_count
