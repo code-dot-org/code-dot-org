@@ -34,8 +34,16 @@ Breakfast and lunch will be served.
 **Location**
 
 University of California Irvine
-<br/>
-Building and room information coming soon
+<br />
+Donald Bren Hall
+<br />
+6th Floor, Room 6011
+<br />
+Irvine, CA 92617
+
+For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
+<br />
+Parking is available for $10 per day at the Anteater Parking Structure: [http://tinyurl.com/AnteaterParking](http://tinyurl.com/AnteaterParking)
 
 **What do I bring to Phase 2?**
 
@@ -102,7 +110,7 @@ Milestone complete!
 
 **Save the dates:**
 
-Wednesday, July 27, 2015 - Friday, July 29, 2015
+Monday, July 27, 2015 - Wednesday, July 29, 2015
 <br/>
 8:00am - 4:00pm
 <br />
@@ -111,8 +119,16 @@ Breakfast and lunch will be served.
 **Location**
 
 University of California Irvine
-<br/>
-Building and room information coming soon
+<br />
+Donald Bren Hall
+<br />
+2nd Floor, Room 2011
+<br />
+Irvine, CA 92617
+
+For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
+<br />
+Parking is available for $10 per day at the Anteater Parking Structure: [http://tinyurl.com/AnteaterParking](http://tinyurl.com/AnteaterParking)
 
 **What do I bring to Phase 2?**
 
@@ -180,8 +196,16 @@ Breakfast and lunch will be served.
 **Location**
 
 University of California Irvine
-<br/>
-Building and room information coming soon
+<br />
+Donald Bren Hall
+<br />
+4th Floor, Room 4011
+<br />
+Irvine, CA 92617
+
+For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
+<br />
+Parking is available for $10 per day at the Anteater Parking Structure: [http://tinyurl.com/AnteaterParking](http://tinyurl.com/AnteaterParking)
 
 **What do I bring to Phase 2?**
 

@@ -792,6 +792,9 @@
         Hilf mir, die Löcher zu füllen und die Haufen zu entfernen und den Grund wieder
         zu ebnen.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: 'Vervollständige den Code, damit diese
         Dreiecke gezeichnet werden. Das erste hast du erledigt. Hinweis: 3 Dreiecke
         in einer 360- Grad- Drehung.'
@@ -1242,6 +1245,16 @@
         Linie ist 300 Pixel lang) '
       Course 4 Artist 10_instruction: 'Es ist an der Zeit, frei zu spielen! Viel Spaß
         und zeichne alles, was du möchtest. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Kannst du diesen Code in einer Schleife erstellen,
         um das grau ausgeblendete Quadrat zu zeichnen?
       Course 4 Artist 3_instruction: Ok, versuche herauszufinden was passiert, wenn
@@ -1398,9 +1411,10 @@
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1518,7 +1532,6 @@
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Use the "set sides
         to" block.
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: "The bee can't tell what's under the cloud! First,\ncheck
         if it is a flower or a honeycomb. Then only gather nectar from it if\nit is
         a flower. \n"
@@ -2143,6 +2156,7 @@
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -3273,11 +3287,9 @@
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

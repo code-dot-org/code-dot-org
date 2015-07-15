@@ -1,3 +1,11 @@
+/**
+ * @overview UI component, a log panel (used as "Sent Packets" and
+ *           "Received Packets") that is used in the packet-sending
+ *           configurations of the simulator.
+ *
+ * @see INetSimLogPanel for the interface implemented here.
+ * @see NetSimBitLogPanel for the component used in bit-sending mode.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

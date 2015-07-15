@@ -182,6 +182,7 @@
   "play": "hrať",
   "print": "Tlačiť",
   "puzzleTitle": "Úloha {puzzle_number} z {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "opakovať",
   "resetProgram": "Obnoviť",
   "rotateText": "Otoč svoj prístroj.",
@@ -213,6 +214,5 @@
   "watchVideo": "Pozrieť video",
   "when": "keď",
   "whenRun": "pri spustení",
-  "workspaceHeaderShort": "Pracovná plocha: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Pracovná plocha: "
 }

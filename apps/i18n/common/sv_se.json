@@ -182,6 +182,7 @@
   "play": "spela",
   "print": "Skriv ut",
   "puzzleTitle": "Pussel {puzzle_number} av {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "upprepa",
   "resetProgram": "Återställ",
   "rotateText": "Rotera din enhet.",
@@ -213,6 +214,5 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "när startat",
-  "workspaceHeaderShort": "Arbetsyta: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Arbetsyta: "
 }

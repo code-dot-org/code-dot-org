@@ -825,6 +825,9 @@
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: 'Egészítsd ki a kódot úgy, hogy ezeket
         a háromszögeket rajzolja meg.   Az első már készen is van. Tipp: a 3 db háromszög
         360°-os körben van elforgatva.'
@@ -1263,6 +1266,16 @@
         (Minden vonal 300 pixel hosszú) '
       Course 4 Artist 10_instruction: 'Most szabadon játszhatsz! Rajzolj bármit, amit
         csak szeretnél. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Ciklusba tudnád rakni ezt a kód részletet, hogy
         a szürke négyzet kirajzolódjon?
       Course 4 Artist 3_instruction: Rendben, most próbáld meg kitalálni, hogy mi
@@ -1435,9 +1448,10 @@
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this!  If this picture\ninspires you,
-        try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant
-        to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1555,7 +1569,6 @@
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Use the "set sides
         to" block.
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'A méh nem tudja megmondani, hogy ez egy virág vagy
         egy méhsejt. Először ellenőrizd, hogy vajon virág vagy méhsejt, és csak akkor
         gyűjts nektárt, ha ez egy virág. '
@@ -2140,6 +2153,7 @@
       Infinity_touch_score_instruction: Állítsd be, hogy Anna pontot szerezzen, valahányszor
         megérint egy hópelyhet. Ezután kattints a Futtatásra, és vezesd oda Annát
         mindegyik hópehelyhez.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Rajzolj egy rövid vonalat felfelé és
         egy hosszút jobbra!
       K-1 artist 1 level 10_instruction: Rajzold meg a szaggatott vonalat az "ugorj"
@@ -3258,11 +3272,9 @@
         Draw a square above and to the left
         of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
         of the starting location.

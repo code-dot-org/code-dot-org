@@ -851,10 +851,11 @@
         arrows_move_actor: Usa le frecce per muovere il personaggio
         right_arrow_fireball: Usa la freccia a destra per lanciare le palle di fuoco
         name_function: Scrivi qui il nome della tua funzione
-        Infinity_move_right_runbutton: Aggiungi qui il blocco "sposta personaggio"
+        Infinity_move_right_runbutton: Aggiungi qui il blocco "sposta il personaggio"
         Infinity_move_directions_callout: Quale blocco farà spostare Baymax verso
           l'alto quando viene premuta la freccia in su?
-        Infinity_move_directions_callout_arrow: Utilizzare queste frecce per guidare
+        Infinity_move_directions_callout_arrow: Usa le frecce per muovere il personaggio
         Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
           evento.
-        Infinity_repeat_callout: Posiziona Sposta blocchi qui dentro
+        Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
+          blocco di ripetizione

@@ -358,6 +358,9 @@ is:
       4-5 While Loops 8_instruction: 'Hér er mjög djúp hola og mjög stór moldarhaugur. Hve mörg skóflufylli þarf að flytja til að slétta yfirborðið? Vísbending: Notaðu "meðan" lykkju fyrir bæði.'
       4-5 While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar. Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: 'Ljúktu við kóðann til að teikna þessa þríhyrninga. Sá fyrsti er tilbúinn. Vísbending: 3 þríhyrningar í 360 gráðu snúningi.'
       Artist - Nested Loops 10_instruction: Teiknaðu síðustu röðina af stjörnum á flaggið með því að hafa gefnu kubbana í lykkju. Það eru 50 dílar á milli stjarna, en þær eru sjálfar 30 dílar á breidd.
       Artist - Nested Loops 11_instruction: Getur þú teiknað þessar 10 gangstéttarhellur með faldaðri lykkju? Hver ferningur er 30 dílar.
@@ -505,6 +508,12 @@ is:
       Course 4 2_instruction: Nú vill býflugan bara blómasafa. Gættu þess að hún reyni aðeins að safna safa á blómum.
       Course 4 Artist 1_instruction: 'Hjálpaðu mér að ljúka teikningunni. (Hver lína er 300 díla löng) '
       Course 4 Artist 10_instruction: 'Frjáls æfing! Skemmtu þér við að teikna hvað sem þér dettur í hug. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Getur þú sett þennan kóða í lykkju til að teikna yfir gráa ferninginn?
       Course 4 Artist 3_instruction: 'Jæja, reyndu nú að greina hvað þessi kóði gerir (eða smelltu á "Keyra" til að komast að því). Endurtaktu svo nógu oft til að ljúka teikningunni.'
       Course 4 Artist 4_instruction: 'Hve margar gráður eru í hring? Settu tölu í "endurtaka" kubbinn til að teikna litahring.'
@@ -555,7 +564,7 @@ is:
       Course 4 Artist Functions 7_instruction: Getur þú teiknað röð ferninga með ferningsfalli? Hver ferningur er 40 dílar á lengd.
       Course 4 Artist Functions 8_instruction: 'Ertu komin upp á lag með að nota fallkubba? Breytum þessum ferningi svo hann sé 200 dílar á stærð. Vísbending: Smelltu á "breyta" til að opna kubb fallsins "teikna ferning" og breyttu stærðinni. Mundu að "vista og loka" á eftir. '
       Course 4 Artist Functions 9_instruction: Hér færðu mestallan kóðann til að búa til fall. En það virðist vanta eitthvað. Geturðu klárað þennan fallkubb?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this!  If this picture\ninspires you, try to make something similar.  Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Check\nit out here: https://levelbuilder-studio.code.org/c/8781/edit"
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Hér breytum við falli sem teiknar ferning með 50 díla hliðar
       Course 4 Artist Params 10_instruction: 'Þú getur kallað á föll innan úr öðrum föllum! Notaðu "form" fallið þitt sem grunn og búðu til 3 hús sem byrja með lengdina 50 og stækka um 20 í hvert sinn. Hér gæti verið gagnlegt að nota lykkju með teljara. '
       Course 4 Artist Params 11_instruction: 'Hvað með nýtt fall "hjól" sem hefur þrjá stika - "hliðar", "lengd" og "fjöldi". Þú getur reiknað út hve mikið þarf að snúa með því að nota gráðurnar í heilum hring og fjölda hliða. Getur þú endurskapað þessa mynd? Hér er vísbending: Hvert form er 100 dílar á lengd.'
@@ -588,7 +597,6 @@ is:
       Course 4 Artist Vars 7_instruction: 'Getur þú stillt breytuna "hliðar" til að teikna þennan sexhyrning?'
       Course 4 Artist Vars 8_instruction: 'Frjáls æfing: Gerðu tilraunir með fjölda hliða á þessu formi. Getur þú breytt algríminu þannig að heildarstærð formsins haldist svipuð sama hversu margar hliðar það hefur? Vísbending: Þú gætir þurft að nota reikningskubba (360 deilt með "hliðar" á tveimur stöðum í þetta sinn) '
       Course 4 Artist Vars 9_instruction: 'Breyttu þessu algrími svo það noti breytuna "hliðar" í stað fastrar tölu til að teikna þríhyrning. Skiptu tölunni 3 út fyrir breytuna "hliðar" og notaðu "stilla hliðar" kubbinn.'
-      Course 4 Artist Vars Inspire_instruction: Inspiriational and stuff
       Course 4 Bee 1_instruction: 'Býflugan veit ekki hvort þetta er blóm eða býflugnabú. Athugaðu fyrst hvort það er blóm eða bú, og safnaðu blómasafa aðeins ef það er blóm. '
       Course 4 Bee 2_instruction: Athugaðu hvern hlut. Ef hann er blóm, á að safna blómasafa, annars ekki!
       Course 4 Bee 3_instruction: 'Þetta óþekkta er annað hvort blóm eða býflugnabú. Notaðu "ef-annars" kubbinn til að safna blómasafa ef það er blóm, annars búa til hunang (því þá er það bú).'
@@ -770,6 +778,7 @@ is:
       Infinity_touch_faster_instruction: Snertu enn fleiri snjókorn!
       Infinity_touch_four_instruction: Færðu Önnu upp, niður, vinstri og hægri til að snerta öll snjókornin fjögur.
       Infinity_touch_score_instruction: 'Láttu Önnu fá stig þegar hún snertir snjókorn. Smelltu svo á "Keyra" og stýrðu henni svo hún snerti hvert snjókorn einu sinni.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Teiknaðu stutta línu upp og langa til hægri!
       K-1 artist 1 level 10_instruction: Teiknaðu brotalínuna með því að nota bæði hoppa og færa kubba
       K-1 artist 1 level 9_instruction: Teiknaðu þetta með þremur strikum

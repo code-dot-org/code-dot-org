@@ -55,12 +55,12 @@ bg:
           Bee Conditionals: 'Пчела - условия'
           Flappy: Flappy
           title: Курс 2
-          Bee Loops: Пчела повторения
+          Bee Loops: 'Пчела: цикли'
           Artist Functions: 'Художник: функции'
           The Artist Debugging: 'Художникът: отстраняване на грешки'
-          Bee Debugging: 'Пчела - отстраняване на грешки'
-          Bee Functions: 'Пчела - функции'
-          Maze Loops: Лабиринт повторения
+          Bee Debugging: 'Пчела: отстраняване на грешки'
+          Bee Functions: 'Пчела: функции'
+          Maze Loops: 'Лабиринт: повторения'
           Graph Paper Programming: Програмиране на милиметрова хартия
           "Real-life Algorithms: Paper Planes": 'Реални алгоритми: Хартиени самолети'
           Getting Loopy: Да повтаряме
@@ -282,8 +282,8 @@ bg:
           "Programming Concept: Events": 'Концепции на програмирането: събития'
         netsim:
           title: Интернет симулатор
-          description_short: Learn about how the Internet works
-          description: Learn about how the Internet works
+          description_short: Научете как работи Интернет
+          description: Научете как работи Интернет
           Internet Simulator: Интернет симулатор
           Unit 1: Част 1
           Unit 2: Част 2
@@ -300,8 +300,8 @@ bg:
         20-hour:
           title: 20-часов въвеждащ курс
           description_audience: Възраст 10 + (след курс 3)
-          description: Този 20-часов курс представя основните компютърни науки, концепции и термини в програмирането. Курсът е предназначен най-вече за използване в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description: 'Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3. Курсът е предназначен най-вече за използване  от  учениците на възраст 10 -18 години. Проверете курсове 2-4 за по-задълбочено обучение.'
+          description_short: Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3.
           Introduction to Computer Science: Въведение в компютърните науки
           The Maze: Лабиринт
           Computational Thinking: Изчислително мислене
@@ -342,21 +342,21 @@ bg:
         flappy:
           title: Flappy код
           description: Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте нашите Flappy код уроци!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Напишете своя собствена Flappy игра по-малко от 10 минути!
           Flappy Code: Flappy код
         jigsaw:
           title: Мозайка
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: 'Опитайте нашите уроци тип "мозайка"'
+          description_short: 'Опитайте нашите уроци тип "мозайка"'
           Jigsaw: Мозайка
         step:
           title: Стъпка
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Стъпка от урока
+          description_short: Стъпка от урока
           Step: Стъпка
         Hour of Code:
           title: Час на кодирането 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: Опитайте основите на компютърните науки с герои от Angry Birds и Plants vs. Zombies!
           description_short: Опитайте основите на програмирането с много забавни герои!
           Hour of Code 2013: Час на кодирането 2013
         Code Studio Puzzle Challenge:
@@ -970,3 +970,11 @@ bg:
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
           Wrap-Up: Заключение
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Следващи стъпки

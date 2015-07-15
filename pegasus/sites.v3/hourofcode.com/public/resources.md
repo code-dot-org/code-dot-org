@@ -6,28 +6,17 @@ nav: resources_nav
 <div class="row">
     <h1 class="col-sm-12">Resources (2015 resources coming soon)</h1>
 </div>
-<% if @country == 'ie' %>
+## Hosting an Hour of Code? <a href="<%= resolve_url('/resources/how-to') %>">See the how-to guide</a>
 
-## Hosting an Hour of Code in Ireland? <a href="<%= hoc_uri('/resources/how-to-ireland') %>">See the how-to guide</a>
-
-<% else %>
-
-## 
-
-## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
-
-<% end %>
-
-<a id="handouts">
+<a id="handouts"></a>
 ## Use this handout to spread the word
-
-[![image](/images/fit-250/one-pager.png)](/resources/hoc-one-pager.pdf)
+<a href="<%= resolve_file('/resources/hoc-one-pager.pdf') %>"><img src="/images/fit-250/one-pager.png"></a>
 
 ## Give this handout to teachers and schools
-[![image](/images/fit-250/schools-handout.png)](/files/schools-handout.pdf)
+<a href="<%= resolve_file('/files/schools-handout.pdf') %>"><img src="/images/fit-250/schools-handout.png"></a>
 
 
-<a id="videos">
+<a id="videos"></a>
 ## Show these videos to inspire students
 
 <div style="float:left; padding:10px">
@@ -55,7 +44,7 @@ nav: resources_nav
 <div style="float:left; padding:10px"></div>
 
 <div style='clear:both'></div>
-<a id="posters">
+<a id="posters"></a>
 ## Hang these posters in your school
 
 [![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
@@ -93,7 +82,7 @@ Computers are everywhere, but fewer schools teach computer science than 10 years
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, December 7-13, 2015. 
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
 

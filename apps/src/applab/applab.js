@@ -556,7 +556,7 @@ Applab.init = function(config) {
       pinWorkspaceToBottom: true,
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
-      hasDesignMode: Applab.user.isAdmin,
+      hasDesignMode: true,
       readonlyWorkspace: config.readonlyWorkspace
     }
   });
@@ -1452,4 +1452,30 @@ Applab.getAssetDropdown = function (typeFilter) {
     click: handleChooseClick
   });
   return options;
+};
+
+/**
+ * Return droplet dropdown options representing a list of ids currently present
+ * in the DOM, optionally limiting the result to a certain HTML element tagName.
+ * @param {string} [tagFilter] Optional HTML element tagName to filter for.
+ * @returns {Array}
+ */
+Applab.getIdDropdown = function (tagFilter) {
+  var elements = $('#divApplab').children().toArray().concat(
+      $('#divApplab').children().children().toArray());
+
+  var filteredIds = [];
+  elements.forEach(function (element) {
+    if (!tagFilter || element.tagName.toUpperCase() === tagFilter.toUpperCase()) {
+      filteredIds.push(element.id);
+    }
+  });
+  filteredIds.sort();
+
+  return filteredIds.map(function(id) {
+    return {
+      text: quote(id),
+      display: quote(id)
+    };
+  });
 };

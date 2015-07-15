@@ -182,6 +182,7 @@
   "play": "실행",
   "print": "인쇄",
   "puzzleTitle": "퍼즐 {puzzle_number}/{stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "반복",
   "resetProgram": "처음 상태로",
   "rotateText": "돌리세요.",
@@ -213,6 +214,5 @@
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "작업 영역: "
 }

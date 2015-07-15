@@ -182,6 +182,7 @@
   "play":"再生する",
   "print":"印刷",
   "puzzleTitle":"パズル {puzzle_number} (全 {stage_total} ステージ)",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"繰り返し",
   "resetProgram":"リセット",
   "rotateText":"お使いのデバイスを回転させてください。",

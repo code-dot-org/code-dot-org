@@ -439,9 +439,8 @@ ro:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Alege cel mai bun răspuns.
         Maze Multiple Choice One: Labirint Algere multiplă Unu
-        Which blocks work?: Care blocuri se potrivesc?
+        Which set of blocks is the correct answer?: Care set de blocuri reprezintă răspunsul corect?
       4-5 Algorithms Multi 1:
         Baking cookies: Coacere prijituri
         Banana: Banană
@@ -501,15 +500,12 @@ ro:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: |
           /script_assets/4-
           5_images/unplugged/songwriting_1_q.png
-        0: '? Musca-i în laptele bătut, <br/>Uș, muscă, uș, <br/>Musca-i în laptele bătut, <br/>Uș, muscă, uș, <br/>Musca-i în laptele bătut, <br/>Uș, muscă, uș, <br/>Du-mă la al meu Lou, dragul meu/draga mea.'
-        1: ': Musca e-n laptele bătut,<br/>Shoo, muscă, shoo <br/>Musca e-n laptele bătut,<br/>Shoo, muscă, shoo, <br/>Musca e-n laptele bătut, <br/>Shoo,muscă, shoo, <br/>Du-mă la al meu Lou, dragul meu/draga mea.'
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: Lou, Lou, du-mă la al meu Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul meu/draga mea.'
-        2: '? Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul meu/draga mea.<br/><br/><p>Musca-i în laptele bătut, <br/>Uș, muscă, uș,'
-        3: ': Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> Lou, Lou, du-mă la al meu Lou, <br/> du-mă la al meu Lou, dragul meu/draga mea.<br/><br/><p>Musca e-n laptele bătut, <br/>Shoo, muscă, shoo,'
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Alegere multiplă
-        4: '? Care este cel mai mare fragment din acest cântec pe care îl puteți defini drept refren așa încât corul să îl repete exact de fiecare dată când este apelat?'
-        5: ': Care este cel mai mare fragment din acest cântec pe care îl poți defini astfel încât corul să îl repete exact de fiecare dată când este apelat?'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -782,14 +778,6 @@ ro:
         Driver and Helper: Șofer și ajutor
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Unul dintre acești băieți este <b>șoferul</b>. Și unul este <b>ajutorul</b>.'
         This time, which boy is the <large>driver</large>?: 'De data aceasta, care băiat este <large>şoferul</large>?'
-      Warmup questions:
-        Coding in Racket: Codare în limbaj Racket
-        Select the best answer to the question.: Selectează cel mai bun răspuns la întrebare.
-        When converting a circle to code, the correct order is: La conversia unui cerc în cod, ordinea corectă este
-        left top right: stânga sus dreapta
-        left, right, top: stânga, dreapta, sus
-        random: aleator
-        top, left, right: sus, stânga, dreapta
       test multi text:
         Fred Flintstone: Fred Flinstone
         George Jetson: George Jetson

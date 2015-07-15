@@ -182,6 +182,7 @@
   "play":"грати",
   "print":"Друк",
   "puzzleTitle":"Завдання {puzzle_number} з {stage_total}",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"повторити",
   "resetProgram":"Скидання",
   "rotateText":"Повертайте свій пристрій.",

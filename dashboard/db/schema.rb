@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529230732) do
+ActiveRecord::Schema.define(version: 20150713220709) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -416,6 +416,7 @@ ActiveRecord::Schema.define(version: 20150529230732) do
     t.datetime "updated_at"
   end
 
+  add_index "user_scripts", ["script_id"], name: "index_user_scripts_on_script_id", using: :btree
   add_index "user_scripts", ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true, using: :btree
 
   create_table "user_trophies", force: true do |t|

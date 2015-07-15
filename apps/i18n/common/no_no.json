@@ -182,6 +182,7 @@
   "play": "spill",
   "print": "Skriv ut",
   "puzzleTitle": "Oppgave {puzzle_number} av {stage_total}",
+  "readonlyWorkspaceHeader": "Vis bare: ",
   "repeat": "gjenta",
   "resetProgram": "Nullstill",
   "rotateText": "Roter enheten din.",
@@ -213,6 +214,5 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når den kjører",
-  "workspaceHeaderShort": "Arbeidsområde: ",
-  "readonlyWorkspaceHeader": "View only: "
+  "workspaceHeaderShort": "Arbeidsområde: "
 }

@@ -1,7 +1,7 @@
 nn-NO:
   hello: Hallo, verda
   select_language: Vel språk
-  en: Computer Science
+  en: Datavitenskap
   computer_science_edweek: Computer Science Education Week (CSEdWeek)
   csedweek_dates: Desember 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodetimen</a> nærmar seg. Til alle lærarar og arrangørar<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planlegg kodetimen din</a>'
@@ -45,7 +45,7 @@ nn-NO:
   congratulations: Gratulerer!
   congratulations_on_completing_hoc: Gratulerer med å ha fullført Kodetimen
   get_a_certificate_of_achievement: Hent eit diplom for prestasjonen din
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Vennligst velg en gyldig alder
   enter_valid_email: Vennligst skriv inn ei gyldig e-postadresse
   get_a_certificate_message: "Vi sender deg eit diplom og informasjon om korleis <a href='/learn/beyond'> lære meir etter Kodetimen</a>"
   get_a_certificate_message_after: "Klikk på diplomet for å laste det ned eller skrive det ut. Fortsett med våre <a href='http://studio.code.org'>andre kurs</a>, eller finn ut korleis du kan å <a href='/learn/beyond'>lære meir etter Kodetimen</a>."

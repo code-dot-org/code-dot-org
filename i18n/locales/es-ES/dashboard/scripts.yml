@@ -282,8 +282,8 @@ es:
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
           title: Simulador de internet
-          description_short: Learn about how the Internet works
-          description: Learn about how the Internet works
+          description_short: Aprende cómo funciona Internet
+          description: Aprende cómo funciona Internet
           Internet Simulator: Simulador de internet
           Unit 1: Unidad 1
           Unit 2: Unidad 2
@@ -301,7 +301,7 @@ es:
           title: Curso acelerado de Introducción a CS
           description_audience: Edades de 10 a 18 años
           description: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: Este curso de 20 horas cubre los conceptos básicos de informática y programación de los cursos 2-4.
           Introduction to Computer Science: Introducción al Arte de las Ciencias de la Computación
           The Maze: El laberinto
           Computational Thinking: Pensamiento computacional
@@ -342,21 +342,21 @@ es:
         flappy:
           title: Código Flappy
           description: ¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba nuestro tutorial de Código Flappy!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: ¡Escribe tu propio juego Flappy en menos de 10 minutos!
           Flappy Code: Código Flappy
         jigsaw:
           title: Rompecabezas
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Prueba nuestro tutorial de Jigsaw
+          description_short: Prueba nuestro tutorial de Jigsaw
           Jigsaw: Rompecabezas
         step:
           title: Paso
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Paso de tutorial
+          description_short: Paso de tutorial
           Step: Paso
         Hour of Code:
           title: Hora del código 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: ¡Prueba los fundamentos de la informática con personajes de Angry Birds y Plantas vs. Zombis!
           description_short: ¡Prueba los fundamentos de la informática con muchos personajes divertidos!
           Hour of Code 2013: Hora del código 2013
         Code Studio Puzzle Challenge:
@@ -970,3 +970,11 @@ es:
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
           Wrap-Up: Cierre
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Próximos pasos
