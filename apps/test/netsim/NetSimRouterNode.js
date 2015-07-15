@@ -1271,7 +1271,7 @@ describe("NetSimRouterNode", function () {
         var queueSize = getRows('messageTable').filter(function (m) {
           return m.toNodeID === routerA.entityID;
         }).map(function (m) {
-          return m.payload.length;
+          return m.base64payload.len;
         }).reduce(function (p, c) {
           return p + c;
         }, 0);
