@@ -11,6 +11,20 @@ require src_dir 'database'
 
 SOLR = Solr::Server.new(host:'ec2-54-83-22-254.compute-1.amazonaws.com')
 
+def export_contacts_to_csv(contacts, path)
+  columns = nil
+
+  CSV.open(path, 'wb') do |results|
+    contacts.values.each do |contact|
+      unless columns
+        columns = contact.keys
+        results << columns
+      end
+      results << columns.map{|column| contact[column]}
+    end
+  end
+end
+
 def query_contacts(params)
   fields = params[:fields] if params[:fields]
 
