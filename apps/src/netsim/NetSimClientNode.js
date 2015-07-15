@@ -1,3 +1,6 @@
+/**
+ * @overview Simulated client node.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

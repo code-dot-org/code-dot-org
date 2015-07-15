@@ -1,5 +1,5 @@
 /**
- * @fileoverview Interface to dashboard user data API.
+ * @overview Interface to dashboard user data API.
  */
 
 /* jshint

@@ -1,3 +1,6 @@
+/**
+ * @overview base class for all simulation entities.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

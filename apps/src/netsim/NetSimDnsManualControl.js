@@ -1,3 +1,6 @@
+/**
+ * @overview UI button used become the current DNS node in manual DNS mode.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
