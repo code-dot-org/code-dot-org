@@ -1,3 +1,6 @@
+/**
+ * @overview Tween functions used to animate visualization elements.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
