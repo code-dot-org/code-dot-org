@@ -189,6 +189,7 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && @current_user && @current_user.admin?)
+    app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
         fallback_response: @fallback_response,
         callback: @callback,

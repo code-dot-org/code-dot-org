@@ -1,3 +1,11 @@
+/**
+ * @overview Global singleton used to simplify certain cross-cutting concerns,
+ *           including:
+ *
+ *           Access to level configuration.
+ *           Access to environment-specific asset URLs.
+ *           Reproducible random number functions for easy testing.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -72,6 +80,16 @@ module.exports = {
    */
   getAssetUrlFunction: function () {
     return studioApp_.assetUrl;
+  },
+
+  /**
+   * @returns {string} channels API public key for storage system
+   */
+  getChannelPublicKey: function () {
+    if (netsim_ && netsim_.environment === 'development') {
+      return 'JGW2rHUp_UCMW_fQmRf6iQ==';
+    }
+    return 'HQJ8GCCMGP7Yh8MrtDusIA==';
   },
 
   /**

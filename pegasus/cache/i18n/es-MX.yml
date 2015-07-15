@@ -1,7 +1,7 @@
 "es-MX":
   hello: Hola mundo
   select_language: Por favor seleccione su idioma
-  en: Computer Science
+  en: Informática
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
   csedweek_dates: 8-14 de diciembre de 2014
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color:
@@ -62,7 +62,7 @@
   congratulations: Felicidades!
   congratulations_on_completing_hoc: Felicitaciones por completar una Hora del Código
   get_a_certificate_of_achievement: Recibe un certificado de tu logro
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Por favor, selecciona una edad válida
   enter_valid_email: Por favor ingresa un correo electrónico válido
   get_a_certificate_message: Te enviaremos un certificado e información sobre cómo
     hacer para que <a href='/learn/beyond'> Aprenda más allá de una hora</a>

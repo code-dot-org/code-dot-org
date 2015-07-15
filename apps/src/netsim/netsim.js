@@ -1,5 +1,6 @@
 /**
- * @fileoverview Internet Simulator app for Code.org.
+ * @overview Internet Simulator app for Code.org.
+ *           This file is the main entry point for the Internet Simulator.
  */
 
 /* jshint
@@ -179,6 +180,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * @param {Object} config
  * @param {Object} config.skin
  * @param {netsimLevelConfiguration} config.level
+ * @param {string} config.rackEnv - development/production/etc.
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
  * @param {string} config.html - rendered markup to be created inside this method
@@ -202,6 +204,12 @@ NetSim.prototype.init = function(config) {
    * @type {netsimLevelConfiguration}
    */
   this.level = netsimUtils.scrubLevelConfiguration_(config.level);
+
+  /**
+   * Current operating environment, used to drive certain configuration.
+   * @type {string} one of "development"|"staging"|"test"|"production"
+   */
+  this.environment = config.rackEnv;
 
   /**
    * Configuration for reporting level completion

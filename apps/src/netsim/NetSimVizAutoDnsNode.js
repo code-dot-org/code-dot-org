@@ -1,3 +1,6 @@
+/**
+ * @overview Visualization auto-dns node.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
