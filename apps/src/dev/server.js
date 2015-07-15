@@ -85,6 +85,12 @@ app.get('/netsim', function(req, res) {
 // Proxy to locally-running dashboard server for channels api and assets
 // (like application.css).  Requires dashboard-server to be running on port 3000.
 var dashboardProxy = httpProxy.createProxyServer();
+dashboardProxy.on('error', function(e) {
+  console.log(e);
+  console.log('Use of the dashboard proxy failed.');
+  console.log('Please make sure you have dashboard running on port 3000.');
+  throw e;
+});
 
 app.use('/v3', function (req, res) {
   dashboardProxy.web(req, res, {
