@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+# Prior to https://github.com/code-dot-org/code-dot-org/pull/2442 an
+# emoji character in a channel would cause the channel to become
+# unparsable. We fixed the bug and added error handling, but never
+# cleaned up the broken channels. This script marks unparsable
+# channels as 'deleted'.
+
+require_relative '../../config/environment'
+
+to_delete = []
+PEGASUS_DB[:storage_apps].where(state: 'active').paged_each do |row|
+  begin
+    JSON.parse row[:value]
+  rescue JSON::ParserError
+    to_delete << row[:id]
+    puts row[:id]
+  end
+end
+
+modified = PEGASUS_DB[:storage_apps].where(id: to_delete).update(state: 'deleted')
+puts "Marked #{modified} channels as 'deleted'"
