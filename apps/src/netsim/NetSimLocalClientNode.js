@@ -1,3 +1,9 @@
+/**
+ * @overview Simulation entity controller reserved for the local client's
+ *           simulation node.
+ * @see NetSimClientNode for the controller used for other client nodes
+ *      in the simulation.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
