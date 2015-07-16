@@ -16,8 +16,8 @@
 var utils = require('../utils');
 var NetSimEntity = require('./NetSimEntity');
 var dataConverters = require('./dataConverters');
-var base64ToBinary = dataConverters.base64ToBinary
-var binaryToBase64 = dataConverters.binaryToBase64
+var base64ToBinary = dataConverters.base64ToBinary;
+var binaryToBase64 = dataConverters.binaryToBase64;
 
 /**
  * Local controller for a message that is 'on the wire'
