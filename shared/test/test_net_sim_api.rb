@@ -7,27 +7,8 @@ ENV['RACK_ENV'] = 'test'
 
 class NetSimApiTest < Minitest::Unit::TestCase
 
-  def create_record(record)
-    @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    @net_sim_api.last_response.location.split('/').last
-  end
-
-  def read_records
-    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{@table_name}"
-    JSON.parse(@net_sim_api.last_response.body)
-  end
-
-  def update_record(id, record)
-    @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    JSON.parse(@net_sim_api.last_response.body)
-  end
-
-  def delete_record(id)
-    @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}"
-  end
-
   def test_create_read_update_delete
-    # The Tables API does not need to share a cookie jar with the Channels API.
+    # The NetSim API does not need to share a cookie jar with the Channels API.
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
     @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
     @shard_id = '_testShard'
@@ -50,6 +31,28 @@ class NetSimApiTest < Minitest::Unit::TestCase
       delete_record(record_id)
       assert read_records.first.nil?
     end
+  end
+
+  # Methods below this point are test utilities, not actual tests
+  private
+
+  def create_record(record)
+    @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    @net_sim_api.last_response.location.split('/').last
+  end
+
+  def read_records
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{@table_name}"
+    JSON.parse(@net_sim_api.last_response.body)
+  end
+
+  def update_record(id, record)
+    @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    JSON.parse(@net_sim_api.last_response.body)
+  end
+
+  def delete_record(id)
+    @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}"
   end
 
 end
