@@ -16,6 +16,9 @@
  maxstatements: 200
  */
 'use strict';
+/* global window */
+/* global require */
+/* global exports */
 
 require('../utils'); // For String.prototype.repeat polyfill
 var netsimUtils = require('./netsimUtils');
@@ -381,11 +384,16 @@ exports.binaryToAscii = function (binaryString, byteSize) {
  */
 exports.binaryToBase64 = function (binaryString) {
 
-  var len = binaryString.length;
-  var paddedBinaryString = netsimUtils.zeroPadRight(binaryString, len + len%8);
+  if (/^[01]*$/.test(binaryString) === false) {
+    throw new TypeError("argument binaryString to method binaryToBase64" +
+      "must be a binary string; received \"" + binaryString + "\" instead");
+  }
+
+  var byteLen = Math.ceil(binaryString.length/8.0) * 8;
+  var paddedBinaryString = netsimUtils.zeroPadRight(binaryString, byteLen);
   var payload = window.btoa(exports.binaryToAscii(paddedBinaryString, 8));
 
-  return { string: payload, len: len };
+  return { string: payload, len: binaryString.length };
 
 };
 
