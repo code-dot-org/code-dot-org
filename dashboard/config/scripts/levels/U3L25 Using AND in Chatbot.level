@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-07-15T00:33:56.000Z",
+  "created_at": "2015-07-15T23:51:11.000Z",
   "level_num": "custom",
   "user_id": 112,
   "properties": {
@@ -78,9 +78,7 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false",
-    "markdown_instructions": "Over the next few levels, you will be able to start building a chatbot of your own. Each level will walk through one step of the process and you will add to your work from the previous level. In this level you will need to set up the basic elements of your chat bot.\r\n\r\n### Instructions:\r\n\r\n* Start off by picking a category you want to chat about. Pick something specific that you are interested in.\r\n\r\n* **Using Design Mode**, create the 4 main elements of your bot:\r\n\r\n\t1. Make a header: Add a `Lable` object to your project. Use it to explain the category your bot will chat about.\r\n    \r\n    1. Make an input box: Add a `Text Input` object to your project. This is where the user will input questions or comments for your bot.\r\n    \r\n    1. Make a submit button: Add a `Button` object to your project. The user will click this button to submit text to your bot.\r\n    \r\n    1. Make a text display: Add a `Text Area` object to your project. This is where the conversation will be displayed.\r\n    \r\nWhen you have finished creating these elements, go on to the next page. You will learn how to display the user's input to the screen.",
-    "instructions": "Add a Lable, Text Input, Button, and Text Area object to your project"
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>

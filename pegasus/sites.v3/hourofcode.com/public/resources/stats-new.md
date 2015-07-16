@@ -13,6 +13,8 @@ Computers are everywhere, but fewer schools teach computer science than 10 years
 
 ## Share these infographics:
 
-<%= view :stats-carousel %>
+<%= view :stats_carousel %>
 
 <% end %>
+
+![image](http://code.org/images/fit-8000/Code.org_infographic.png)
