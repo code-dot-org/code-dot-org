@@ -18,14 +18,9 @@ class NetSimApi < Sinatra::Base
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
 
   def get_table(shard_id, table_name)
-    # Environment-dependent channel ID for NetSim.
-    # Will no longer be needed when we detach from the channels API entirely.
-    channel_id = rack_env?(:development) ? 'JGW2rHUp_UCMW_fQmRf6iQ==' : 'HQJ8GCCMGP7Yh8MrtDusIA=='
-
     # Table name within channels API just concatenates shard + table
     api_table_name = "#{shard_id}_#{table_name}"
-
-    TableType.new(channel_id, nil, api_table_name)
+    TableType.new(CDO.netsim_api_publickey, nil, api_table_name)
   end
 
   def has_json_utf8_headers(request)
