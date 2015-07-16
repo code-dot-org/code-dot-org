@@ -1,3 +1,6 @@
+/**
+ * @overview Top-level controller for the network visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

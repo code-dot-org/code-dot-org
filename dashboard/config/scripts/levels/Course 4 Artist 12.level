@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Click on the blue tab to the right and then click the \"see the solution\" button.",
+    "instructions": "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit for the solution.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,7 +21,7 @@
     "impressive": "true",
     "disable_sharing": "false",
     "slider_speed": ".6",
-    "markdown_instructions": "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Click on the blue tab to the right and then click the `see the solution` button.",
+    "markdown_instructions": "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit for the solution.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

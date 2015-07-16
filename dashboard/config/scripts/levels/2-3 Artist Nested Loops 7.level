@@ -14,7 +14,21 @@
     "ideal": "7",
     "slider_speed": ".7",
     "free_play": "false",
-    "instructions": "Loop this triangle 10 times to draw the sun. You'll need to move and turn after each triangle. You can figure out how much to turn by dividing the number of degrees in a circle by the number of shapes that make it up."
+    "instructions": "Loop this triangle 10 times to draw the sun. You'll need to move and turn after each triangle. You can figure out how much to turn by dividing the number of degrees in a circle by the number of shapes that make it up.",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -43,7 +57,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>

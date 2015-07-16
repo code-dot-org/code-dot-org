@@ -116,12 +116,6 @@ Style/ConstantName:
 Style/DefWithParentheses:
   Enabled: false
 
-# Offense count: 14
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/DotPosition:
-  Enabled: false
-
 # Offense count: 4
 Style/EmptyElse:
   Enabled: false

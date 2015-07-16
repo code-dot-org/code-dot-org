@@ -39,7 +39,7 @@
     "can_connect_to_clients": "true",
     "can_connect_to_routers": "false",
     "message_granularity": "packets",
-    "automatic_receive": "false",
+    "automatic_receive": "true",
     "show_metronome": "true",
     "show_hostname_in_graph": "false",
     "show_pulse_rate_slider": "false",
@@ -48,7 +48,10 @@
     "default_bit_rate_bits_per_second": "2",
     "show_chunk_size_control": "true",
     "lock_chunk_size_control": "false",
-    "default_chunk_size_bits": "4"
+    "default_chunk_size_bits": "4",
+    "show_log_browser_button": "false",
+    "broadcast_mode": "false",
+    "connected_routers": "false"
   }
 }]]></config>
   <blocks/>

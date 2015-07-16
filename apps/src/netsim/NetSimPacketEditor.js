@@ -1,3 +1,8 @@
+/**
+ * @overview UI controller for the packet editor which allows editing multiple
+ *           encodings at once and lives inside the send panel.
+ * @see NetSimSendPanel for how this is used.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
