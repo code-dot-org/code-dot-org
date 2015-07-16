@@ -83,16 +83,6 @@ module.exports = {
   },
 
   /**
-   * @returns {string} channels API public key for storage system
-   */
-  getChannelPublicKey: function () {
-    if (netsim_ && netsim_.environment === 'development') {
-      return 'JGW2rHUp_UCMW_fQmRf6iQ==';
-    }
-    return 'HQJ8GCCMGP7Yh8MrtDusIA==';
-  },
-
-  /**
    * Trigger a layout update of the right column, received/sent/send panels.
    */
   updateLayout: function () {
