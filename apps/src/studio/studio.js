@@ -1625,6 +1625,10 @@ var displayFeedback = function() {
   if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
     tryAgainText = commonMsg.keepPlaying();
   }
+  else {
+    tryAgainText = commonMsg.tryAgain();
+  }
+
 
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
