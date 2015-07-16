@@ -444,6 +444,7 @@ function evaluateAnswer() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
+  var tryAgainText;
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
