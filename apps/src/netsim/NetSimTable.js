@@ -40,8 +40,7 @@ var NetSimTable = module.exports = function (tableName) {
    * @type {string}
    * @private
    */
-  this.remoteUrl_ = '/v3/shared-tables/' + netsimGlobals.getChannelPublicKey() +
-      '/' + tableName;
+  this.remoteUrl_ = '/v3/netsim/' + tableName;
 
   /**
    * API object for making remote calls
