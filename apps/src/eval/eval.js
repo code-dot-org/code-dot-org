@@ -460,7 +460,7 @@ var displayFeedback = function(response) {
     saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
     feedbackImage: Eval.feedbackImage,
     appStrings: {
-      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg({backButton: tryAgainText})
     }
   };
   if (Eval.message && !level.edit_blocks) {
