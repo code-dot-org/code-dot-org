@@ -9,6 +9,6 @@
   "scripts": {
   },
   "devDependencies": {
-    "phantomjs": "git://github.com/wjordan/phantomjs"
+    "phantomjs": "wjordan/phantomjs#v2.0.0"
   }
 }
