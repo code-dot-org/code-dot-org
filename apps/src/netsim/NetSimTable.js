@@ -34,8 +34,15 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * @param {!string} shardID - The shard ID specific to this class' NetSim instance.
  * @param {!string} tableName - The name of the remote storage table to wrap.
  * @constructor
+ * @throws {Error} if wrong number of arguments are provided.
  */
 var NetSimTable = module.exports = function (shardID, tableName) {
+  // Require both shardID and tableName to be provided
+  if (!shardID || !tableName) {
+    throw new Error('NetSimTable must be constructed with both arguments. ' +
+        '(got shardID:' + shardID + ' tableName:' + tableName);
+  }
+
   /**
    * Base URL we hit to make our API calls
    * @type {string}

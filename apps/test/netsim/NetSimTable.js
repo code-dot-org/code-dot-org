@@ -1,6 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
+var assertThrows = testUtils.assertThrows;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeStorageTable = netsimTestUtils.fakeStorageTable;
 
@@ -10,12 +11,19 @@ describe("NetSimTable", function () {
   var apiTable, netsimTable, callback, notified;
 
   beforeEach(function () {
-    netsimTable = netsimTestUtils.overrideClientApi(new NetSimTable(apiTable));
+    netsimTable = netsimTestUtils.overrideClientApi(
+        new NetSimTable('testShard', 'testTable'));
     apiTable = netsimTable.clientApi_.remoteTable;
     callback = function () {};
     notified = false;
     netsimTable.tableChange.register(function () {
       notified = true;
+    });
+  });
+
+  it ("throws if constructed with wrong number of arguments", function () {
+    assertThrows(Error, function () {
+      var _ = new NetSimTable('just-one-argument');
     });
   });
 
