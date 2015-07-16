@@ -1,14 +1,14 @@
 {
   "name": "blockly-mooc",
   "version": "0.0.161",
-  "repository": "https://github.com/code-dot-org/blockly.git",
-  "license" : "SEE LICENSE IN LICENSE",
+  "repository": "code-dot-org/code-dot-org",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": "~0.10.18"
+    "node": "~0.12.4"
   },
   "scripts": {
     "test": "grunt test",
-    "shrinkwrap": "npm-shrinkwrap"
+    "shrinkwrap": "npm-shrinkwrap --dev"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@cdo/shared": "file:../shared/js",
-    "browserify": "^8.1.1",
+    "browserify": "^8.1.3",
     "browserify-shim": "^3.8.3",
     "chai": "~1.10.0",
     "connect-livereload": "~0.5.2",
@@ -66,9 +66,8 @@
     "mochify": "^2.8.1",
     "moment": "^2.10.3",
     "node-sass": "1.2.2",
-    "npm-shrinkwrap": "^5.4.0",
     "npm-which": "^2.0.0",
-    "phantomjs": "git://github.com/wjordan/phantomjs",
+    "phantomjs": "wjordan/phantomjs#v2.0.0",
     "react": "^0.13.2",
     "react-tools": "^0.13.3",
     "reactify": "^1.1.0",
