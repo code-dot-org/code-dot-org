@@ -538,7 +538,7 @@ NetSimRouterNode.prototype.recalculateSchedule = function () {
 NetSimRouterNode.prototype.scheduleRoutingForMessage = function (queuedMessage,
     pessimisticCompletionTime) {
   var scheduleItem = _.find(this.localRoutingSchedule_, function (item) {
-    return item.id === queuedMessage.id;
+    return item.message.entityID === queuedMessage.entityID;
   });
 
   if (scheduleItem) {
@@ -581,7 +581,7 @@ NetSimRouterNode.prototype.addMessageToSchedule_ = function (queuedMessage,
 NetSimRouterNode.prototype.removeMessageFromSchedule_ = function (queuedMessage) {
   var scheduleIdx;
   for (var i = 0; i < this.localRoutingSchedule_.length; i++) {
-    if (this.localRoutingSchedule_[i].row.id === queuedMessage.id) {
+    if (this.localRoutingSchedule_[i].message.entityID === queuedMessage.entityID) {
       scheduleIdx = i;
     }
   }
@@ -1465,15 +1465,14 @@ NetSimRouterNode.prototype.enforceMemoryLimit_ = function () {
   }
 
   this.removeMessageFromSchedule_(droppablePacket);
-  var droppableMessage = new NetSimMessage(this.shard_, droppablePacket);
-  droppableMessage.destroy(function (err) {
+  droppablePacket.destroy(function (err) {
     if (err) {
       // Rarely, this could fire twice for one packet and have one drop fail.
       // That's fine; just don't log if we didn't successfully drop.
       return;
     }
 
-    this.log(droppableMessage.payload, NetSimLogEntry.LogStatus.DROPPED);
+    this.log(droppablePacket.payload, NetSimLogEntry.LogStatus.DROPPED);
   }.bind(this));
 };
 
