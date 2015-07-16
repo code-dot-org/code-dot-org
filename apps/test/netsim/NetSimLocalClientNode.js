@@ -13,6 +13,7 @@ var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
@@ -80,13 +81,13 @@ describe("NetSimLocalClientNode", function () {
     });
 
     it ("Generated message has correct payload", function () {
-      var payload;
+      var message;
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('boogaloo', function () {});
+      testLocalNode.sendMessage('1010101010100101010', function () {});
       testShard.messageTable.readAll(function (err, rows) {
-        payload = rows[0].payload;
+        message = new NetSimMessage(testShard, rows[0]);
       });
-      assertEqual('boogaloo', payload);
+      assertEqual('1010101010100101010', message.payload);
     });
   });
 
