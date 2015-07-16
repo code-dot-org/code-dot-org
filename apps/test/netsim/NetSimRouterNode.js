@@ -114,12 +114,12 @@ describe("NetSimRouterNode", function () {
    * @returns {*}
    */
   var getFirstMessageProperty = function (propertyName) {
-    var messages = getRows('messageTable');
-    if (messages.length === 0) {
+    var messageRows = getRows('messageTable');
+    if (messageRows.length === 0) {
       throw new Error("No rows in message table, unable to check first message.");
     }
 
-    return messages[0][propertyName];
+    return new NetSimMessage(testShard, messageRows[0])[propertyName];
   };
 
   /**
@@ -798,7 +798,7 @@ describe("NetSimRouterNode", function () {
       // Construct a message with a timestamp payload, to ensure calls to
       // this method don't conflict with one another.
       var headers = encoder.makeBinaryHeaders({ toAddress: forClient.getAddress()});
-      var payload = encoder.concatenateBinary(headers, new Date().toISOString());
+      var payload = encoder.concatenateBinary(headers, new Date().getTime().toString(2));
       forClient.sendMessage(payload, function () {});
       time = tickUntilLogsStabilize(forClient, time);
       assertEqual(payload, fakeReceivedLog.getLatest());
@@ -1271,7 +1271,7 @@ describe("NetSimRouterNode", function () {
         var queueSize = getRows('messageTable').filter(function (m) {
           return m.toNodeID === routerA.entityID;
         }).map(function (m) {
-          return m.base64payload.len;
+          return m.base64Payload.len;
         }).reduce(function (p, c) {
           return p + c;
         }, 0);
@@ -1449,8 +1449,8 @@ describe("NetSimRouterNode", function () {
           return p + c;
         }, 0);
         assert(droppedPackets === expectedDropCount, "Expected that " +
-        expectedDropCount + " packets would be dropped, " +
-        "but logs only report " + droppedPackets + " dropped packets");
+          expectedDropCount + " packets would be dropped, " +
+          "but logs only report " + droppedPackets + " dropped packets");
       };
 
       beforeEach(function () {
