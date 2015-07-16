@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "blockly-core testrunner dependencies",
   "engines": {
-    "node": "~0.10.18"
+    "node": "~0.12.4",
+    "npm": "^2.10.1"
   },
   "scripts": {
   },
