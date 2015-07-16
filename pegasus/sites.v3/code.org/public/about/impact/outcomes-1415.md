@@ -21,6 +21,7 @@ Here is the number of students who have demonstrated skill in  each concept by c
 
 
 | Since 9/14 | Sequencing | Debugging | Loops | Conditionals | Nested Loops | Event handlers | Functions |
+|---|---|---|---|---|---|---|---|
 | Course 1 | 524,776 | 394,986 | 161,185 | -  | -  |  124,559 | -  |
 | Course 2 | 516,595 | 140,135 | 219,110 | 90,550 | 65,785 | 273,849 | -  |
 | Course 3 | 114,250 | 18,937 | 114,250 | 27,736 | 25,008 | 24,716 | 45,878 |
@@ -36,6 +37,7 @@ Here is the number of students who have demonstrated skill in  each concept by c
 This table shows the "teacher advantage" for completing a given percentage of each course, where teacher advantage is the percent more likely you are to complete that much of the class if you have a teacher. Ex: 26 means you are 26% percent more likely to do 20% of course1 if you have a teacher.
 
 | Course Name | 20% | 30% | 40% | 50% | 60% | 70% | 80% | 90% | 100%|
+|---|---|---|---|---|---|---|---|---|---|
 | 20-hour | 2 | 2 | 6 | 3 | 0 | 0 | -7 | -17 | -44 |
 | Course 1 | 26 | 28 | 22 | 22 | 17 | 11 | 0 | -15 |-25 |
 | Course 2 | 100 | 86 | 82 | 78 | 63 | 67 | 60 |67  | 100 |
@@ -63,6 +65,7 @@ A programming test was designed by Code.org and delivered to about 1,000 ECS stu
 **Table: Programming test results (designed by Code.org, delivered through Code Studio) (N=~1000).** 
 
 |Concept/Task | Success Rate|
+|---|---|
 |Repeat loop with a single command in it | 87%|
 |Repeat loop with multiple commands in it | 95%|
 |If-then statement | 94%|
