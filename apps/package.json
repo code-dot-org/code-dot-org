@@ -1,7 +1,7 @@
 {
   "name": "blockly-mooc",
   "version": "0.0.161",
-  "repository": "https://github.com/code-dot-org/blockly.git",
+  "repository": "code-dot-org/code-dot-org",
   "license" : "SEE LICENSE IN LICENSE",
   "engines": {
     "node": "~0.12.4",
