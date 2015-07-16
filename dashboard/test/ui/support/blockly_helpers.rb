@@ -2,8 +2,8 @@ module BlocklyHelpers
   class Point < Struct.new(:x, :y)
   end
 
-  def dragBlockRelative(blockId, dx, dy)
-    @browser.execute_script("$(\"[block-id='#{blockId}']\").simulate( 'drag', {handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
+  def drag_block_relative(block_id, dx, dy)
+    @browser.execute_script("$(\"[block-id='#{block_id}']\").simulate( 'drag', {handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
   end
 
   def generate_drag_code(from, to, target_dx, target_dy)
@@ -31,18 +31,18 @@ module BlocklyHelpers
   end
 
   # Assign a given string block ID to a given alias
-  def add_block_alias(blockAlias, blockId)
-    if @blockAliases.nil? then
-      @blockAliases = Hash.new
+  def add_block_alias(block_alias, block_id)
+    if @block_aliases.nil? then
+      @block_aliases = Hash.new
     end
-    @blockAliases[blockAlias] = blockId
+    @block_aliases[block_alias] = block_id
   end
 
   # Get the block ID for a given alias
   # Callers expect the returned block ID value to be a string
   def get_block_id(alias_or_id)
-    if @blockAliases && @blockAliases.has_key?(alias_or_id)
-      return @blockAliases[alias_or_id]
+    if @block_aliases && @block_aliases.has_key?(alias_or_id)
+      return @block_aliases[alias_or_id]
     end
     alias_or_id
   end
