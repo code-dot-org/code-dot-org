@@ -75,7 +75,7 @@ describe("NetSimMessage", function () {
             fromNodeID: fromNodeID,
             toNodeID: toNodeID,
             simulatedBy: simulatedBy,
-            base64Payload: base64Payload,
+            payload: '1001001',
             extraHopsRemaining: extraHopsRemaining,
             visitedNodeIDs: visitedNodeIDs
           },
@@ -103,6 +103,7 @@ describe("NetSimMessage", function () {
     var testRow;
 
     // Create a message row in remote table
+    // The source payload that generates this base64Payload is "1001001"
     messageTable.create({
       fromNodeID: 1,
       toNodeID: 2,
@@ -123,7 +124,7 @@ describe("NetSimMessage", function () {
     assertEqual(message.fromNodeID, 1);
     assertEqual(message.toNodeID, 2);
     assertEqual(message.simulatedBy, 2);
-    assertEqual(message.payload, 'xyzzy');
+    assertEqual(message.payload, '1001001');
     assertEqual(message.extraHopsRemaining, 3);
     assertEqual(message.visitedNodeIDs, [4]);
   });
