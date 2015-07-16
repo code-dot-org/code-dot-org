@@ -1643,7 +1643,7 @@ var displayFeedback = function() {
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,
       appStrings: {
-        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
+        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg({backButton: tryAgainText}),
         sharingText: studioMsg.shareGame()
       }
     });
