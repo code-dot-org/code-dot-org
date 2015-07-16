@@ -128,7 +128,7 @@ module ApplicationHelper
     if opts[:level_source].try(:level_source_image).try(:image)
       level_source = opts[:level_source]
       if level_source.level_source_image.s3?
-        if app == Game::ARTIST then
+        if app == Game::ARTIST
           level_source.level_source_image.s3_framed_url
         else
           level_source.level_source_image.s3_url

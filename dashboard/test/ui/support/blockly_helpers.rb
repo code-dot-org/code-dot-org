@@ -32,7 +32,7 @@ module BlocklyHelpers
 
   # Assign a given string block ID to a given alias
   def add_block_alias(block_alias, block_id)
-    if @block_aliases.nil? then
+    if @block_aliases.nil?
       @block_aliases = Hash.new
     end
     @block_aliases[block_alias] = block_id
