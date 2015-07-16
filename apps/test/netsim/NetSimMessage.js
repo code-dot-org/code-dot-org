@@ -63,7 +63,7 @@ describe("NetSimMessage", function () {
       var toNodeID = 2;
       var simulatedBy = 2;
       var base64Payload = {
-        string: "kgA=",
+        string: "kg==",
         len: 7
       };
       var extraHopsRemaining = 3;
@@ -158,7 +158,7 @@ describe("NetSimMessage", function () {
             fromNodeID: 1,
             toNodeID: 2,
             simulatedBy: 2,
-            payload: 'alpha'
+            payload: '001'
           },
           function () {});
       NetSimMessage.send(
@@ -167,7 +167,7 @@ describe("NetSimMessage", function () {
             fromNodeID: 1,
             toNodeID: 2,
             simulatedBy: 2,
-            payload: 'beta'
+            payload: '010'
           },
           function () {});
       NetSimMessage.send(
@@ -176,7 +176,7 @@ describe("NetSimMessage", function () {
             fromNodeID: 1,
             toNodeID: 2,
             simulatedBy: 2,
-            payload: 'gamma'
+            payload: '100'
           },
           function () {});
       assertTableSize(testShard, 'messageTable', 3);

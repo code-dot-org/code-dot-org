@@ -837,7 +837,7 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("ignores messages sent to itself from other clients", function () {
-      clientB.sendMessage('garbage', function () {});
+      clientB.sendMessage('00000', function () {});
       routerA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 0);
       assertFirstMessageProperty('fromNodeID', clientB.entityID);
@@ -853,7 +853,7 @@ describe("NetSimRouterNode", function () {
             fromNodeID: from,
             toNodeID: to,
             simulatedBy: from,
-            payload: 'garbage'
+            payload: '00000'
           },
           function () {});
       routerA.tick({time: 1000});
@@ -866,7 +866,7 @@ describe("NetSimRouterNode", function () {
     it ("does not forward malformed packets", function () {
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
-      clientA.sendMessage('garbage', function () {});
+      clientA.sendMessage('00000', function () {});
       routerA.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 0);
@@ -877,7 +877,7 @@ describe("NetSimRouterNode", function () {
       var payload = encoder.concatenateBinary({
         toAddress: '1111',
         fromAddress: '1111'
-      }, 'messageBody');
+      }, '101010101');
       clientA.sendMessage(payload, function () {});
       routerA.tick({time: 1000});
 
@@ -893,7 +893,7 @@ describe("NetSimRouterNode", function () {
         toAddress: toAddress,
         fromAddress: fromAddress
       });
-      var payload = encoder.concatenateBinary(headers, 'messageBody');
+      var payload = encoder.concatenateBinary(headers, '101010101');
       clientA.sendMessage(payload, function () {});
       routerA.tick({time: 1000});
 
