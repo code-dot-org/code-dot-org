@@ -198,11 +198,6 @@ Style/MethodCallParentheses:
 Style/MethodDefParentheses:
   Enabled: false
 
-# Offense count: 1
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/MethodName:
-  Enabled: false
-
 # Offense count: 3
 Style/MultilineBlockChain:
   Enabled: false
@@ -354,9 +349,4 @@ Style/StringLiteralsInInterpolation:
 
 # Offense count: 1
 Style/StructInheritance:
-  Enabled: false
-
-# Offense count: 3
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/VariableName:
   Enabled: false
