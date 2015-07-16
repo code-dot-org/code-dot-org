@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Code.org shared JS code",
   "engines": {
-    "node": "~0.10.18"
+    "node": "~0.12.4"
   },
   "scripts": {
     "gulp": "gulp",
