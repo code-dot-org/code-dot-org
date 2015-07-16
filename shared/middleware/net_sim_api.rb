@@ -17,14 +17,15 @@ class NetSimApi < Sinatra::Base
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
 
-  # Environment-dependent channel ID for NetSim.
-  # Will no longer be needed when we detach from the channels API entirely.
-  def netsim_channel_id
-    rack_env?(:development) ? 'JGW2rHUp_UCMW_fQmRf6iQ==' : 'HQJ8GCCMGP7Yh8MrtDusIA=='
-  end
+  def get_table(shard_id, table_name)
+    # Environment-dependent channel ID for NetSim.
+    # Will no longer be needed when we detach from the channels API entirely.
+    channel_id = rack_env?(:development) ? 'JGW2rHUp_UCMW_fQmRf6iQ==' : 'HQJ8GCCMGP7Yh8MrtDusIA=='
 
-  def channels_table_name(shard_id, table_name)
-    "#{shard_id}_#{table_name}"
+    # Table name within channels API just concatenates shard + table
+    api_table_name = "#{shard_id}_#{table_name}"
+
+    TableType.new(channel_id, nil, api_table_name)
   end
 
   #
@@ -35,7 +36,7 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).to_a.to_json
+    get_table(shard_id, table_name).to_a.to_json
   end
 
   #
@@ -46,7 +47,7 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     content_type :json
-    TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).fetch(id.to_i).to_json
+    get_table(shard_id, table_name).fetch(id.to_i).to_json
   end
 
   #
@@ -56,7 +57,7 @@ class NetSimApi < Sinatra::Base
   #
   delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-    TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).delete(id.to_i)
+    get_table(shard_id, table_name).delete(id.to_i)
     no_content
   end
 
@@ -78,7 +79,8 @@ class NetSimApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).insert(JSON.parse(request.body.read), request.ip)
+    value = get_table(shard_id, table_name).
+        insert(JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
@@ -95,7 +97,8 @@ class NetSimApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).update(id.to_i, JSON.parse(request.body.read), request.ip)
+    value = get_table(shard_id, table_name).
+        update(id.to_i, JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
