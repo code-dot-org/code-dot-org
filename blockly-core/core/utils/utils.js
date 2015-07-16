@@ -626,3 +626,51 @@ Blockly.getNormalizedWheelDeltaY = function (e) {
   return wheelDeltaY;
 };
 
+/**
+ * Given an outer box, returns a box with the amounts of an inner box's overhang
+ * on each side.
+ * @param {goog.math.Box} outerBox
+ * @param {goog.math.Box} innerBox
+ * @return {goog.math.Box} overhang on each side, (+) is amount hanging off
+ */
+Blockly.getBoxOverhang = function (outerBox, innerBox) {
+  return new goog.math.Box(
+    outerBox.top - innerBox.top,
+    innerBox.right - outerBox.right,
+    innerBox.bottom - outerBox.bottom,
+    outerBox.left - innerBox.left);
+};
+
+/**
+ * @param {goog.math.Box} boxA
+ * @param {goog.math.Box} boxB
+ * @returns {boolean} whether boxA is wider than boxB
+ */
+Blockly.isBoxWiderThan = function (boxA, boxB) {
+  return Blockly.getBoxWidth(boxA) > Blockly.getBoxWidth(boxB);
+};
+
+/**
+ * @param {goog.math.Box} boxA
+ * @param {goog.math.Box} boxB
+ * @returns {boolean} whether boxA is taller than boxB
+ */
+Blockly.isBoxTallerThan = function (boxA, boxB) {
+  return Blockly.getBoxHeight(boxA) > Blockly.getBoxHeight(boxB);
+};
+
+/**
+ * @param {goog.math.Box} box
+ * @return {number} width of box
+ */
+Blockly.getBoxWidth = function (box) {
+  return box.right - box.left;
+};
+
+/**
+ * @param {goog.math.Box} box
+ * @return {number} width of box
+ */
+Blockly.getBoxHeight = function (box) {
+  return box.bottom - box.top;
+};

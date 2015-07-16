@@ -186,3 +186,35 @@ function test_printerRangeToNumbers() {
   assert('Single numbers and a range', goog.array.equals([1,2,3,4,5], Blockly.printerRangeToNumbers('1,2-4,5')));
   assert('Spaces in list', goog.array.equals([1,2,3,4,5], Blockly.printerRangeToNumbers('1, 2-4, 5')));
 }
+
+function test_getBoxOverhang() {
+  // top right bottom left
+  var sameBoxOverhang = Blockly.getBoxOverhang(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Box(0, 0, 0, 0));
+  assertEquals(0, sameBoxOverhang.top);
+  assertEquals(0, sameBoxOverhang.right);
+  assertEquals(0, sameBoxOverhang.bottom);
+  assertEquals(0, sameBoxOverhang.left);
+  var differentOverhangs = Blockly.getBoxOverhang(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Box(-1, 2, 3, -4));
+  assertEquals(1, differentOverhangs.top);
+  assertEquals(2, differentOverhangs.right);
+  assertEquals(3, differentOverhangs.bottom);
+  assertEquals(4, differentOverhangs.left);
+}
+
+function test_isBoxWiderThan() {
+  // top right bottom left
+  assert(!Blockly.isBoxWiderThan(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Box(0, 0, 0, 0)));
+  assert(Blockly.isBoxWiderThan(
+    new goog.math.Box(0, 1, 0, 0),
+    new goog.math.Box(0, 0, 0, 0)));
+  assert(!Blockly.isBoxWiderThan(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Box(0, 1, 0, 0)));
+}
+

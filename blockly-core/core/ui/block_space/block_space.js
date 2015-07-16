@@ -819,6 +819,33 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
 };
 
 /**
+ * @returns {goog.math.Box}
+ */
+Blockly.BlockSpace.prototype.getScrollableBox = function() {
+  var scrollableSize = this.getScrollableSize(this.getMetrics());
+  return new goog.math.Box(0, scrollableSize.width, scrollableSize.height, 0);
+};
+
+/**
+ * [WIP] Pans the blockspace in the direction of a block if it's hanging off the
+ * edge of the blockspace.
+ * Will only expand the blockspace vertically if vertical scrollbars are enabled
+ * Will only expand the blockspace horizontally if horizontal scrollbars are
+ * enabled
+ * @param {Blockly.Block} block
+ */
+Blockly.BlockSpace.prototype.panIfHangingOffEdge = function (block) {
+  var overhangs = Blockly.getBoxOverhang(this.getScrollableBox(),
+    block.getBox());
+
+  if (overhangs.bottom > 0) {
+    if (Blockly.BlockSpaceEditor.SCROLL_DRAG_DEBUG) {
+     console.log("Should scroll down.");
+    }
+  }
+};
+
+/**
  * Given desired new scrollX and scrollY positions, scroll to position,
  * clamping to within allowable scroll boundaries.
  * @param {number} newScrollX new target pan-right (+) offset
@@ -891,4 +918,35 @@ Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (target,
  */
 Blockly.BlockSpace.prototype.unbindBeginPanDragHandler = function () {
   this.panDragHandler_.unbindBeginPanDragHandler();
+};
+
+/**
+ * Cached set of debug rectangles.
+ * @type {{key: string, svgRect: SVGRect}}
+ * @private
+ */
+Blockly.BlockSpace.prototype.debugRects_ = {};
+
+/**
+ * Draws a debug box in the coordindates of this blockspace, in the same
+ * group as blocks are placed. Will re-use boxes based on given key.
+ * @param {string} key - unique key for box
+ * @param {goog.math.Box} box - box definition w.r.t. blockspace coordinates
+ * @param {string} color - color for box outline
+ */
+Blockly.BlockSpace.prototype.drawDebugBox = function (key, box, color) {
+  var rect = goog.math.Rect.createFromBox(box);
+  if (!this.debugRects_[key]) {
+   this. debugRects_[key] = Blockly.createSvgElement('rect', {
+      fill: 'none'
+    }, this.svgBlockCanvas_);
+  }
+  var debugSvgRect = this.debugRects_[key];
+  debugSvgRect.setAttribute('x', rect.left);
+  debugSvgRect.setAttribute('x', rect.left);
+  debugSvgRect.setAttribute('y', rect.top);
+  debugSvgRect.setAttribute('width', rect.width);
+  debugSvgRect.setAttribute('height', rect.height);
+  debugSvgRect.setAttribute('stroke', color);
+  debugSvgRect.setAttribute('stroke-width', 3);
 };

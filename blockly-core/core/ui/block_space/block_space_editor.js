@@ -61,16 +61,42 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
 };
 
 /**
- * Padding (in pixels) within the inside of the block space.
- * Blocks dropped with their top-left origin within this padding (or outside of
- * the block space) will be bumped until their top-left is within the padding.
+ * If enabled, during block bumping the entire block will be bumped into view.
+ *
+ * If disabled, when dragged off the bottom or right of the blockspace, the
+ * block will be bumped until their top or left is within the padding—just
+ * enough block in view to grab.
+ * @type {boolean}
+ */
+Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK = false;
+
+/**
+ * Padding (in pixels) within the inside of the block space for bumping.
  * @type {number}
  * @const
  */
+Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_TOP = 2;
+Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_LEFT = 2;
+Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_BOTTOM = 2;
+Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_RIGHT = 2;
+
 Blockly.BlockSpaceEditor.BUMP_PADDING_TOP = 15;
 Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT = 15;
 Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM = 25;
 Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT = 25;
+
+/**
+ * When enabled, draws debug boxes around blocks and dimensions used in bumping
+ * logic.
+ * @type {boolean}
+ */
+Blockly.BlockSpaceEditor.BUMP_DEBUG = false;
+
+/**
+ * When enabled, outputs debug logging about block bumping.
+ * @type {boolean}
+ */
+Blockly.BlockSpaceEditor.SCROLL_DRAG_DEBUG = false;
 
 /**
  * Create an SVG element containing SVG filter and pattern definitions usable
@@ -226,8 +252,8 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     // blocks.  This cannot be changed later, since the UI is very different.
     this.addToolboxOrFlyout_();
 
-    // Add a handler that allows the workspace to bump undeletable blocks
-    // back into its working area.
+    // Add a handler that allows the workspace to bump blocks back into their
+    // working area.
     this.addChangeListener(this.bumpBlocksIntoBlockSpace_);
   }
 
@@ -318,44 +344,90 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
     return;
   }
 
-  var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
+  if (!Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+    var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
 
-  // Calculate bounds of view, including bump padding
-  var blockSpaceInnerTop = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
-  var blockSpaceInnerLeft = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
-  var blockSpaceInnerBottom = blockSpaceSize.height
-    - Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM;
-  var blockSpaceInnerRight = blockSpaceSize.width
-    - Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT;
-  var blockSpaceInnerWidth = blockSpaceInnerRight - blockSpaceInnerLeft;
-  var blockSpaceInnerHeight = blockSpaceInnerBottom - blockSpaceInnerTop;
+    // Calculate bounds of view, including bump padding
+    var blockSpaceInnerTop = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
+    var blockSpaceInnerLeft = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
+    var blockSpaceInnerBottom = blockSpaceSize.height
+      - Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM;
+    var blockSpaceInnerRight = blockSpaceSize.width
+      - Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT;
+    var blockSpaceInnerWidth = blockSpaceInnerRight - blockSpaceInnerLeft;
+    var blockSpaceInnerHeight = blockSpaceInnerBottom - blockSpaceInnerTop;
+  }
 
   // Check every block, and bump if needed.
   this.blockSpace.getTopBlocks(false, false).forEach(function (block) {
     if (!block.isVisible()) {
       return;
     }
-    // Skip block if it doesn't fit in the view anyway.
-    var blockHW = block.getHeightWidth();
-    if (blockHW.width > blockSpaceInnerWidth || blockHW.height > blockSpaceInnerHeight) {
-      return;
+
+    if (!Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+      // Skip block if it doesn't fit in the view anyway.
+      var blockHW = block.getHeightWidth();
+      if (blockHW.width > blockSpaceInnerWidth || blockHW.height > blockSpaceInnerHeight) {
+        return;
+      }
     }
 
-    // If these values are positive, the block needs to be bumped
-    var blockXY = block.getRelativeToSurfaceXY();
-    var howFarOutsideLeft = Math.max(0, blockSpaceInnerLeft - blockXY.x);
-    var howFarOutsideRight = Math.max(0, blockXY.x - blockSpaceInnerRight);
-    var howFarAboveTop = Math.max(0, blockSpaceInnerTop - blockXY.y);
-    var howFarBelowBottom = Math.max(0, blockXY.y - blockSpaceInnerBottom);
+    var howFarOutsideLeft, howFarOutsideRight, howFarAboveTop, howFarBelowBottom;
+
+    if (!Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+      // If these values are positive, the block needs to be bumped
+      var blockXY = block.getRelativeToSurfaceXY();
+      howFarOutsideLeft = Math.max(0, blockSpaceInnerLeft - blockXY.x);
+      howFarOutsideRight = Math.max(0, blockXY.x - blockSpaceInnerRight);
+      howFarAboveTop = Math.max(0, blockSpaceInnerTop - blockXY.y);
+      howFarBelowBottom = Math.max(0, blockXY.y - blockSpaceInnerBottom);
+    } else {
+      var paddedBlockSpaceBox = this.blockSpace.getScrollableBox()
+        .expand(-Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_TOP,
+        -Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_RIGHT,
+        -Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_BOTTOM,
+        -Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_LEFT);
+      var originalBlockBox = block.getBox();
+      var overhang = Blockly.getBoxOverhang(paddedBlockSpaceBox, originalBlockBox);
+
+      // If overhang values are positive, the block needs to be bumped
+      howFarOutsideLeft = Math.max(0, overhang.left);
+      howFarOutsideRight = Math.max(0, overhang.right);
+      howFarAboveTop = Math.max(0, overhang.top);
+      howFarBelowBottom = Math.max(0, overhang.bottom);
+    }
 
     // Calculate needed bump
     var moveX = howFarOutsideLeft ? howFarOutsideLeft : -howFarOutsideRight;
     var moveY = howFarAboveTop ? howFarAboveTop : -howFarBelowBottom;
 
-    if (moveX || moveY) {
+    if (Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+      // If the block doesn't fit in the view, move, instead, flush to the left
+      // or top.
+      if (Blockly.isBoxWiderThan(originalBlockBox, paddedBlockSpaceBox)) {
+        moveX = overhang.left;
+      }
+      if (Blockly.isBoxTallerThan(originalBlockBox, paddedBlockSpaceBox)) {
+        moveY = overhang.top
+      }
+    }
+
+    var shouldBump = moveX || moveY;
+    if (shouldBump) {
       block.moveBy(moveX, moveY);
     }
-  });
+
+    if (Blockly.BlockSpaceEditor.BUMP_DEBUG) {
+      var afterBumpBlockBox = block.getBox();
+      var originalBlockBoxColor = shouldBump ? "red" : "green";
+      this.blockSpace.drawDebugBox("block box" + block.id,
+        originalBlockBox, originalBlockBoxColor);
+      this.blockSpace.drawDebugBox("block after" + block.id,
+        afterBumpBlockBox, "purple");
+      this.blockSpace.drawDebugBox("block space box" + block.id,
+        paddedBlockSpaceBox, "blue");
+    }
+  }, this);
 };
 
 Blockly.BlockSpaceEditor.prototype.init_ = function() {

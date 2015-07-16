@@ -518,6 +518,26 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
 };
 
 /**
+ * Gets box dimensions of block
+ * @returns {goog.math.Box}
+ */
+Blockly.Block.prototype.getBox = function() {
+  var heightWidth = this.getHeightWidth();
+  var xy = this.getRelativeToSurfaceXY();
+
+  // Account for left notch
+  if (this.outputConnection) {
+    xy.x -= Blockly.BlockSvg.TAB_WIDTH;
+  }
+
+  return new goog.math.Box(
+    xy.y,
+    xy.x + heightWidth.width,
+    xy.y + heightWidth.height,
+    xy.x);
+};
+
+/**
  * Returns a bounding box describing the dimensions of this block.
  * @return {!Object} Object with height and width properties.
  */
@@ -1120,6 +1140,8 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
     if (this.areBlockAndDescendantsDeletable()) {
       this.blockSpace.isDeleteArea(e, this.startDragMouseX);
     }
+
+    this.blockSpace.panIfHangingOffEdge(this);
   }
   // This event has been handled.  No need to bubble up to the document.
   e.stopPropagation();

@@ -34,6 +34,27 @@ function start() {
   }
 }
 
+/**
+ * @param {Element} checkboxElement
+ */
+function toggleFullBump(checkboxElement) {
+  Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK = checkboxElement.checked;
+}
+
+/**
+ * @param {Element} checkboxElement
+ */
+function toggleBumpDebug(checkboxElement) {
+  Blockly.BlockSpaceEditor.BUMP_DEBUG = checkboxElement.checked;
+}
+
+/**
+ * @param {Element} checkboxElement
+ */
+function toggleScrollDragDebug(checkboxElement) {
+  Blockly.BlockSpaceEditor.SCROLL_DRAG_DEBUG = checkboxElement.checked;
+}
+
 function newContractEditor() {
   Blockly.defaultNumExampleBlocks = 2;
   Blockly.useContractEditor = true;
@@ -349,6 +370,18 @@ h1 {
         &nbsp;
         <br>
         <input type="button" value="Size: 95%" onclick="sizeTo('95%')">
+        &nbsp;
+        <br>
+      </p>
+      <hr>
+      <p>
+        Toggle entire block bumping <input type="checkbox" value="false" onclick="toggleFullBump(this)">
+        &nbsp;
+        <br>
+        Toggle bump debug drawing <input type="checkbox" value="false" onclick="toggleBumpDebug(this)">
+        &nbsp;
+        <br>
+        Toggle scroll-on-drag debug drawing <input type="checkbox" value="false" onclick="toggleScrollDragDebug(this)">
         &nbsp;
         <br>
       </p>
