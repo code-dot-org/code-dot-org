@@ -632,6 +632,123 @@ describe("dataConverters", function () {
     });
   });
 
+  describe("binaryToBase64", function () {
+    var binaryToBase64 = dataConverters.binaryToBase64;
+    var base64ToBinary = dataConverters.base64ToBinary;
+
+    /**
+    * Assert if the given base64 results are not equal. Equality is
+    * defined as sharing BOTH their string and their len properties
+    * @param {Object} left
+    * @param {Object} right
+    */
+    var assertBase64NotEqual = function (left, right) {
+      var stringsEqual = (left.string == right.string);
+      var lensEqual = (left.len == right.len);
+      assert(!(stringsEqual && lensEqual), "Expected " + JSON.stringify(left) + " and " +
+        JSON.stringify(right) + " to be not equal, but they are");
+    };
+
+    it ("converts empty string to empty string with length 0", function () {
+      var b64 = binaryToBase64('');
+      assertEqual('', b64.string);
+      assertEqual(0, b64.len);
+    });
+
+    it ("throws an exception when given a non-binary String", function () {
+      assertThrows(TypeError, binaryToBase64.bind(null, 'some non-binary String'));
+    });
+
+    it ("zero-pads on right when binary length doesn't divide into byteSize", function () {
+      var b64 = binaryToBase64('1').string;
+      assertEqual(b64, binaryToBase64('10').string);
+      assertEqual(b64, binaryToBase64('100').string);
+      assertEqual(b64, binaryToBase64('1000').string);
+      assertEqual(b64, binaryToBase64('10000').string);
+      assertEqual(b64, binaryToBase64('100000').string);
+      assertEqual(b64, binaryToBase64('1000000').string);
+      assertEqual(b64, binaryToBase64('10000000').string);
+
+      assert.notEqual(b64, binaryToBase64('11').string);
+      assert.notEqual(b64, binaryToBase64('101').string);
+      assert.notEqual(b64, binaryToBase64('1001').string);
+      assert.notEqual(b64, binaryToBase64('10001').string);
+      assert.notEqual(b64, binaryToBase64('100001').string);
+      assert.notEqual(b64, binaryToBase64('1000001').string);
+      assert.notEqual(b64, binaryToBase64('10000001').string);
+
+      var longerb64 = binaryToBase64('101011010').string;
+      assertEqual(longerb64, binaryToBase64('101011010').string);
+      assertEqual(longerb64, binaryToBase64('1010110100').string);
+      assertEqual(longerb64, binaryToBase64('10101101000').string);
+      assertEqual(longerb64, binaryToBase64('101011010000').string);
+      assertEqual(longerb64, binaryToBase64('1010110100000').string);
+      assertEqual(longerb64, binaryToBase64('10101101000000').string);
+      assertEqual(longerb64, binaryToBase64('101011010000000').string);
+      assertEqual(longerb64, binaryToBase64('1010110100000000').string);
+
+      assert.notEqual(longerb64, binaryToBase64('101011011').string);
+      assert.notEqual(longerb64, binaryToBase64('1010110101').string);
+      assert.notEqual(longerb64, binaryToBase64('10101101001').string);
+      assert.notEqual(longerb64, binaryToBase64('101011010001').string);
+      assert.notEqual(longerb64, binaryToBase64('1010110100001').string);
+      assert.notEqual(longerb64, binaryToBase64('10101101000001').string);
+      assert.notEqual(longerb64, binaryToBase64('101011010000001').string);
+      assert.notEqual(longerb64, binaryToBase64('1010110100000001').string);
+    });
+
+    it ("saves the original string length, even when padding", function() {
+        var binaryString = "1";
+        var binaryStringLen = binaryString.length;
+        var b64 = binaryToBase64(binaryString);
+        do {
+            assertEqual(b64.len, binaryString.length);
+            binaryString += "0";
+            b64 = binaryToBase64(binaryString);
+            assert.notEqual(b64.len, binaryStringLen);
+            binaryStringLen = binaryString.length;
+        } while(binaryString.length <= 32);
+    });
+
+    it ("converts reversably to a base64 value", function() {
+      var binaryString = '10101110101010101010101101011011110100110';
+      var base64 = binaryToBase64(binaryString);
+      assertEqual(binaryString, base64ToBinary(base64.string, base64.len));
+    });
+
+    it ("converts uniquely to a base64 (string, length) pair", function() {
+      var base64Values = [
+        '0',
+        '1',
+        '00',
+        '11',
+        '000',
+        '111',
+        '0000',
+        '1111',
+        '00000',
+        '11111',
+        '000000',
+        '111111',
+        '0000000',
+        '1111111',
+        '00000000',
+        '11111111',
+        '000000000',
+        '111111111'
+      ].map(binaryToBase64);
+      var i,j;
+
+      for (i=0; i < base64Values.length; i+=1) {
+        for (j=i+1; j < base64Values.length; j+=1) {
+          assertBase64NotEqual(base64Values[i], base64Values[j]);
+        }
+      }
+
+    });
+
+  });
+
   describe("binaryToAddressString", function () {
     var binaryToAddressString = dataConverters.binaryToAddressString;
     var ipv4 = '8.8.8.8';
