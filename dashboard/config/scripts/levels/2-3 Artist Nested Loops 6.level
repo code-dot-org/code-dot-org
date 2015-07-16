@@ -14,7 +14,21 @@
     "ideal": "6",
     "slider_speed": ".8",
     "free_play": "false",
-    "instructions": "This dinosaur has 8 spikes running up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but make sure to move forward after each one."
+    "instructions": "This dinosaur has 8 spikes running up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but make sure to move forward after each one.",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>
@@ -43,7 +57,6 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>

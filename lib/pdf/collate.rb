@@ -31,9 +31,9 @@ module PDF
   # Reads collate file, outputs array of fully qualified PDF paths and URLs
   def self.parse_collate_file(collate_file)
     options, body = YAML.parse_yaml_header(IO.read(collate_file))
-    all_paths = body.each_line.map(&:strip)
-      .reject { |s| s.nil? || s == '' }
-      .map do |filename|
+    all_paths = body.each_line.map(&:strip).
+      reject { |s| s.nil? || s == '' }.
+      map do |filename|
         next filename if URI.parse(filename).scheme == 'http'
         File.expand_path(filename, File.dirname(collate_file))
       end

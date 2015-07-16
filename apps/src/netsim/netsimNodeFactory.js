@@ -1,3 +1,7 @@
+/**
+ * @overview Utility methods for generating the right kinds of node controllers
+ *           from raw node table rows.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

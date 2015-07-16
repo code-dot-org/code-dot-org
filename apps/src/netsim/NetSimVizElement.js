@@ -1,3 +1,6 @@
+/**
+ * @overview Base type for visible elements in the visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

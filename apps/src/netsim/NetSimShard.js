@@ -1,3 +1,7 @@
+/**
+ * @overview Represents a collection of tables that map to a particular
+ *           class section's simulation, isolated from other class sections.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

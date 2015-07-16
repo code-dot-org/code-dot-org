@@ -21,7 +21,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "You don't have to write any code, just hit \"run\" to play the game! In this game, you're the Dog who is trying to collect more flags than the Cat. Use the down arrow to control the Dog. Press \"Finish\" when you're done playing.",
+    "instructions": "This time you don't have to write any code, just hit \"Run\" to play the game! In this game, you're the Dog who is trying to collect more flags than the Cat. Use the down arrow to control the Dog. Press \"Finish\" when you're done playing.",
     "predraw_blocks": "<xml><block type=\"studio_whenArrow\" movable=\"false\"><title name=\"VALUE\">right</title><next><block type=\"studio_moveDistance\" movable=\"false\" editable=\"false\"><title name=\"SPRITE\">0</title><title name=\"DIR\">2</title><title name=\"DISTANCE\">25</title></block></next></block><block type=\"studio_repeatForever\"><statement name=\"DO\"><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">1</title><title name=\"DISTANCE\">25</title><next><block type=\"studio_moveDistance\"><title name=\"SPRITE\">1</title><title name=\"DIR\">4</title><title name=\"DISTANCE\">25</title></block></next></block></statement></block></xml>",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
@@ -33,7 +33,7 @@
     "callout_json": "[\r\n  {\"localization_key\":\"arrows_move_actor\",\"callout_text\":\"Use the arrows to move the actor\",\"element_id\":\"#soft-buttons\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"bottom right\",\"at\":\"top center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "You don't have to write any code, just hit \"run\" to play the game! \r\n\r\n<br/>\r\nIn this game, you're the Dog who is trying to collect more flags than the Cat. Use the down arrow to control the Dog. Press \"Finish\" when you're done playing.",
+    "markdown_instructions": "This time you don't have to write any code, just hit `Run` to play the game! \r\n\r\n<br/>\r\nIn this game, you're the Dog who is trying to collect more flags than the Cat. Use the down arrow to control the Dog. Press `Finish` when you're done playing.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
