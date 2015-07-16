@@ -13,10 +13,12 @@ class StorageApps
   end
 
   def create(value, ip_address)
+    timestamp = Time.now
     row = {
       storage_id:@storage_id,
       value:value.to_json,
-      updated_at:DateTime.now,
+      created_at:timestamp,
+      updated_at:timestamp,
       updated_ip:ip_address,
     }
     row[:id] = @table.insert(row)
@@ -42,7 +44,7 @@ class StorageApps
     row = @table.where(id:id).exclude(state:'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id)
+    JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id, createdAt: row[:created_at], updatedAt: row[:updated_at])
   end
 
   def update(channel_id, value, ip_address)
@@ -57,14 +59,14 @@ class StorageApps
     update_count = @table.where(id:id).exclude(state:'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
-    JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id)
+    JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id, createdAt: row[:created_at], updatedAt: row[:updated_at])
   end
 
   def to_a()
     @table.where(storage_id:@storage_id).exclude(state:'deleted').map do |i|
       channel_id = storage_encrypt_channel_id(i[:storage_id], i[:id])
       begin
-        JSON.parse(i[:value]).merge(id: channel_id, isOwner: true)
+        JSON.parse(i[:value]).merge(id: channel_id, isOwner: true, createdAt: i[:created_at], updatedAt: i[:updated_at])
       rescue JSON::ParserError
         nil
       end
