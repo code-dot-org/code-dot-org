@@ -36,7 +36,7 @@ en:
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
           Going Places Safely: Going Places Safely
-          description: Course 1 is designed to allow early readers to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           'Bee: Sequence': 'Bee: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Shapes': 'Artist: Shapes'
@@ -45,7 +45,7 @@ en:
           'Studio: Create a Story': 'Play Lab: Create a Story'
           'Artist: Loops': 'Artist: Loops'
           description_audience: Ages 4-6
-          description_short: Course 1 is designed for early readers.
+          description_short: Start with Course 1 for early readers.
         course2:
           The Maze: The Maze
           Suzi: Suzi
@@ -71,7 +71,7 @@ en:
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
-          description: Course 2 is designed for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           'Maze: Sequence': 'Maze: Sequence'
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
@@ -84,7 +84,7 @@ en:
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
           description_audience: Ages 6-18
-          description_short: Course 2 is designed for students who can read.
+          description_short: Start with Course 2 for students who can read.
         course3:
           The Maze: The Maze
           'Studio: Create a Story': 'Play Lab: Create a Story'
