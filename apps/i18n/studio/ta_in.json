@@ -151,7 +151,7 @@
   "projectileCherry": "cherry",
   "projectileIce": "ice",
   "projectileDuck": "duck",
-  "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to playing your story.",
+  "reinfFeedbackMsg": "You can press the \"Keep Playing\" button to go back to playing your story.",
   "repeatForever": "repeat forever",
   "repeatDo": "செய்க",
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the story is running.",
