@@ -356,8 +356,3 @@ Style/StringLiteralsInInterpolation:
 # Offense count: 1
 Style/StructInheritance:
   Enabled: false
-
-# Offense count: 3
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/VariableName:
-  Enabled: false
