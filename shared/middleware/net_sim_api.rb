@@ -23,84 +23,88 @@ class NetSimApi < Sinatra::Base
     rack_env?(:development) ? 'JGW2rHUp_UCMW_fQmRf6iQ==' : 'HQJ8GCCMGP7Yh8MrtDusIA=='
   end
 
+  def channels_table_name(shard_id, table_name)
+    "#{shard_id}_#{table_name}"
+  end
+
   #
-  # GET /v3/netsim/<table-name>
+  # GET /v3/netsim/<shard-id>/<table-name>
   #
   # Returns all of the rows in the table.
   #
-  get %r{/v3/netsim/([^/]+)$} do |table_name|
+  get %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    TableType.new(netsim_channel_id, storage_id('shared'), table_name).to_a.to_json
+    TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).to_a.to_json
   end
 
   #
-  # GET /v3/netsim/<table-name>/<row-id>
+  # GET /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
   # Returns a single row by id.
   #
-  get %r{/v3/netsim/([^/]+)/(\d+)$} do |table_name, id|
+  get %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     content_type :json
-    TableType.new(netsim_channel_id, storage_id('shared'), table_name).fetch(id.to_i).to_json
+    TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).fetch(id.to_i).to_json
   end
 
   #
-  # DELETE /v3/netsim/<table-name>/<row-id>
+  # DELETE /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
   # Deletes a row by id.
   #
-  delete %r{/v3/netsim/([^/]+)/(\d+)$} do |table_name, id|
+  delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-    TableType.new(netsim_channel_id, storage_id('shared'), table_name).delete(id.to_i)
+    TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).delete(id.to_i)
     no_content
   end
 
   #
-  # POST /v3/netsim/<table-name>/<row-id>/delete
+  # POST /v3/netsim/<shard-id>/<table-name>/<row-id>/delete
   #
   # This mapping exists for older browsers that don't support the DELETE verb.
   #
-  post %r{/v3/netsim/([^/]+)/(\d+)/delete$} do |table_name, id|
+  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)/delete$} do |shard_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
   end
 
   #
-  # POST /v3/netsim/<table-name>
+  # POST /v3/netsim/<shard-id>/<table-name>
   #
   # Insert a new row.
   #
-  post %r{/v3/netsim/([^/]+)$} do |table_name|
+  post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = TableType.new(netsim_channel_id, storage_id('shared'), table_name).insert(JSON.parse(request.body.read), request.ip)
+    value = TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).insert(JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
 
-    redirect "/v3/netsim/#{table_name}/#{value[:id]}", 301
+    redirect "/v3/netsim/#{shard_id}/#{table_name}/#{value[:id]}", 301
   end
 
   #
-  # PATCH (PUT, POST) /v3/netsim/<table-name>/<row-id>
+  # PATCH (PUT, POST) /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
   # Update an existing row.
   #
-  post %r{/v3/netsim/([^/]+)/(\d+)$} do |table_name, id|
+  post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = TableType.new(netsim_channel_id, storage_id('shared'), table_name).update(id.to_i, JSON.parse(request.body.read), request.ip)
+    value = TableType.new(netsim_channel_id, storage_id('shared'), channels_table_name(shard_id, table_name)).update(id.to_i, JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
     value.to_json
   end
-  patch %r{/v3/netsim/([^/]+)/(\d+)$} do |table_name, id|
+  patch %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
-  put %r{/v3/netsim/([^/]+)/(\d+)$} do |table_name, id|
+  put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 

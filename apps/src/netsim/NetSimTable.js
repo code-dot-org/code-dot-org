@@ -31,16 +31,17 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * Wraps the app storage table API in an object with local
  * cacheing and callbacks, which provides a notification API to the rest
  * of the NetSim code.
+ * @param {!string} shardID - The shard ID specific to this class' NetSim instance.
  * @param {!string} tableName - The name of the remote storage table to wrap.
  * @constructor
  */
-var NetSimTable = module.exports = function (tableName) {
+var NetSimTable = module.exports = function (shardID, tableName) {
   /**
    * Base URL we hit to make our API calls
    * @type {string}
    * @private
    */
-  this.remoteUrl_ = '/v3/netsim/' + tableName;
+  this.remoteUrl_ = '/v3/netsim/' + shardID + '/' + tableName;
 
   /**
    * API object for making remote calls
