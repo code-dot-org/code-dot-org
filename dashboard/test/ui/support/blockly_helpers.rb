@@ -2,7 +2,7 @@ module BlocklyHelpers
   class Point < Struct.new(:x, :y)
   end
 
-  def dragBlockRelative(blockId, dx, dy)
+  def drag_block_relative(blockId, dx, dy)
     @browser.execute_script("$(\"[block-id='#{blockId}']\").simulate( 'drag', {handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
   end
 
