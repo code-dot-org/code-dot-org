@@ -28,6 +28,11 @@ class NetSimApi < Sinatra::Base
     TableType.new(channel_id, nil, api_table_name)
   end
 
+  def has_json_utf8_headers(request)
+    request.content_type.to_s.split(';').first == 'application/json' and
+        request.content_charset.to_s.downcase == 'utf-8'
+  end
+
   #
   # GET /v3/netsim/<shard-id>/<table-name>
   #
@@ -76,8 +81,7 @@ class NetSimApi < Sinatra::Base
   # Insert a new row.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
-    unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
-    unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+    unsupported_media_type unless has_json_utf8_headers(request)
 
     value = get_table(shard_id, table_name).
         insert(JSON.parse(request.body.read), request.ip)
@@ -94,8 +98,7 @@ class NetSimApi < Sinatra::Base
   # Update an existing row.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
-    unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
-    unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+    unsupported_media_type unless has_json_utf8_headers(request)
 
     value = get_table(shard_id, table_name).
         update(id.to_i, JSON.parse(request.body.read), request.ip)
