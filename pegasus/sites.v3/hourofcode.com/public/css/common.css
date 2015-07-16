@@ -425,6 +425,7 @@
   background: #ebecec;
   margin: 0;
   padding: 0 60px 10px 60px;
+  max-height: 450px;
 }
 #stats-carousel .slide-img {
   width: 100%;
@@ -455,7 +456,6 @@
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 10px;
 }
 .stats-sources-link {
   float: right;
@@ -464,13 +464,6 @@
 }
 .stats-sources-link a {
   font-weight: normal;
-}
-
-@media screen and (min-width: 970px) {
-  #stats-carousel .slide .slide-img {
-    width: 850px;
-    height: 503px;
-  }
 }
 
 #congress-right {
