@@ -22,9 +22,9 @@ var netsimUtils = require('./netsimUtils');
 
 // window.{btoa, atob} polyfills
 if (!(window.atob && window.btoa)) {
-    require('./base64');
-    if (!window.btoa) window.btoa = base64.encode
-    if (!window.atob) window.atob = base64.decode
+    var base64 = require('./base64');
+    window.btoa = window.btoa || base64.encode;
+    window.atob = window.btoa || base64.decode;
 }
 
 /**

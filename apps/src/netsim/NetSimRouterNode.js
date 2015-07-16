@@ -512,16 +512,16 @@ NetSimRouterNode.prototype.recalculateSchedule = function () {
 
   var queueSizeInBits = 0;
   var pessimisticCompletionTime = this.simulationTime_;
-  var queuedMessage;
+  var queuedMsg;
   for (var i = 0; i < this.routerQueueCache_.length; i++) {
-    queuedMessage = this.routerQueueCache_[i];
-    queueSizeInBits += queuedMessage.payload.length;
-    pessimisticCompletionTime += this.calculateProcessingDurationForMessage_(queuedMessage);
+    queuedMsg = this.routerQueueCache_[i];
+    queueSizeInBits += queuedMsg.payload.length;
+    pessimisticCompletionTime += this.calculateProcessingDurationForMessage_(queuedMsg);
 
     // Don't schedule beyond memory capacity; we're going to drop those packets
-    if (this.localSimulationOwnsMessage_(queuedMessage) &&
+    if (this.localSimulationOwnsMessage_(queuedMsg) &&
         queueSizeInBits <= this.memory) {
-      this.scheduleRoutingForMessage(queuedMessage, pessimisticCompletionTime);
+      this.scheduleRoutingForMessage(queuedMsg, pessimisticCompletionTime);
     }
   }
 };
