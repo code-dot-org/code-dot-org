@@ -83,9 +83,9 @@ module LevelsHelper
   def select_and_remember_callouts(always_show = false)
     session[:callouts_seen] ||= Set.new
     # Filter if already seen (unless always_show)
-    callouts_to_show = @level.available_callouts(@script_level)
-      .reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }
-      .each { |c| session[:callouts_seen].add(c.localization_key) }
+    callouts_to_show = @level.available_callouts(@script_level).
+      reject { |c| !always_show && session[:callouts_seen].include?(c.localization_key) }.
+      each { |c| session[:callouts_seen].add(c.localization_key) }
     # Localize
     callouts_to_show.map do |callout|
       callout_hash = callout.attributes
