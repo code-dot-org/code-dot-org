@@ -127,9 +127,9 @@ module Ops
       teachers = workshop.teacher_ids
       attendances.each do |id, status, notes|
         raise("Teacher id #{id} not in workshop #{workshop.name}. Teachers: #{teachers}") unless teachers.include? id.to_i
-        WorkshopAttendance.create_with(status: status, notes: notes)
-            .find_or_create_by(teacher_id: id, segment_id: @segment.id)
-            .update!(status: status, notes: notes)
+        WorkshopAttendance.create_with(status: status, notes: notes).
+            find_or_create_by(teacher_id: id, segment_id: @segment.id).
+            update!(status: status, notes: notes)
       end
       render text: 'OK'
     end
