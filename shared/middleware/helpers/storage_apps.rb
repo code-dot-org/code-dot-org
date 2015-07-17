@@ -31,7 +31,7 @@ class StorageApps
     delete_count = @table.where(id:id).update(state:'deleted')
     raise NotFound, "channel `#{channel_id}` not found" if delete_count == 0
 
-    # TODO: Delete all storage associated with this channel (e.g. properties and tables)
+    # TODO: Delete all storage associated with this channel (e.g. properties and tables and assets)
 
     true
   end
