@@ -27,9 +27,26 @@ Check back often as batches of lessons will be released on a rolling basis from 
 
 [<button>See App Lab in action</button>](/educate/applab)
 
-### Watch a video from the CS Principles Video Library
+### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
+Check back often.  The video library is growing every week!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/CfczKEzp4kY" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/xOJTUuw62v4" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+### Chat about CSP in the CSP forum
+We have forums for educators to discuss and trade ideas about CSP and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CSP there are two forums that are most useful:
+
+* [General CSP forum](http://forum.code.org/c/csp)
+* [Lesson-Specific Forums](http://forum.code.org/c/csp-feedback)
+	
+
+
 
 
 ## <a name="overview"></a>Overview
