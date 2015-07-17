@@ -1625,6 +1625,10 @@ var displayFeedback = function() {
   if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
     tryAgainText = commonMsg.keepPlaying();
   }
+  else {
+    tryAgainText = commonMsg.tryAgain();
+  }
+
 
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
@@ -1643,7 +1647,7 @@ var displayFeedback = function() {
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,
       appStrings: {
-        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
+        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg({backButton: tryAgainText}),
         sharingText: studioMsg.shareGame()
       }
     });

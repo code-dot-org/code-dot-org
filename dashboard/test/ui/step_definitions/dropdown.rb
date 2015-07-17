@@ -1,5 +1,5 @@
 And /^I drag the play sound block to offset "(\d*), (\d*)"$/ do |dx, dy|
-  dragBlockRelative(2, dx, dy)
+  drag_block_relative(2, dx, dy)
 end
 
 And /^I press the dropdown$/ do

@@ -78,7 +78,10 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false"
+    "beginner_mode": "false",
+    "instructions": "Ask the user the question \"What is your favorite color?\" using the \"prompt\" block. Using the \"if\" block, check if the user's response matches yours. Add a \"write\" block to the body of the \"if\" statement to add the response \"<favorite_color> is my favorite color too!\" to the screen.",
+    "markdown_instructions": "So far, the chatbots aren't very interesting - they just respond \"uh huh.\" Over the next few levels, we are going to learn how to create some basic question/answer functionality.\r\n\r\nAdding an `if` statement to your program will let you execute a section of code only \"if\" something is true. \r\n\r\n**Example** \r\n\r\n\tif (yourResponse == myResponse) {\r\n    \twrite(\"We agree!\")\r\n    }\r\n\r\n### Instructions\r\n\r\n* Fill in the `prompt` block with the question \"What is your favorite color?\" and test how this block works\r\n\r\n* Fill in the condition (between the parentheses) of the `if` block to check if the user's response matches what you would have answered\r\n\r\n* Add a `write` block to the body (between the curly braces) of the `if` statement to write the response \"&lt;favorite_color&gt; is my favorite color too!\" to the screen\r\n\r\n### Goal\r\n\r\n\t// If your favorite color is blue\r\n\r\n\tQuestion: \"What is your favorite color?\"\r\n    Answer: \"Blue\"\r\n    Response: \"Blue is my favorite color too!\"\r\n\t\r\n    // Run is clicked again\r\n    \r\n\tQuestion: \"What is your favorite color?\"\r\n\tAnswer: \"Black\" (or anything besides your favorite color)\r\n\tResponse:",
+    "start_blocks": "var response = prompt(\"What's your favorite ...?\");\r\nif (response == __) {\r\n  \r\n}"
   }
 }]]></config>
   <blocks/>
