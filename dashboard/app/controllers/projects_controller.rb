@@ -58,8 +58,7 @@ class ProjectsController < ApplicationController
     if STANDALONE_PROJECTS[params[:key]][:login_required]
       authenticate_user!
     end
-    new_channel_id = create_new_channel
-    AssetsApi.copy_assets params[:channel_id], new_channel_id
+    new_channel_id = create_channel('', params[:channel_id])
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 

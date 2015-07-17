@@ -20,11 +20,14 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
-  def create_new_channel(data = {})
+  def create_channel(data = {}, src = nil)
+    path = '/v3/channels'
+    path += "?src=#{src}" if src
+
     result = ChannelsApi.call(request.env.merge(
       'REQUEST_METHOD' => 'POST',
-      'PATH_INFO' => '/v3/channels',
-      'REQUEST_PATH' => '/v3/channels',
+      'PATH_INFO' => path,
+      'REQUEST_PATH' => path,
       'CONTENT_TYPE' => 'application/json;charset=utf-8',
       'rack.input' => StringIO.new(data.to_json)
     ))
@@ -57,7 +60,7 @@ module LevelsHelper
         # your own channel
         ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
           # Get a new channel_id.
-          ct.channel = create_new_channel(hidden: true)
+          ct.channel = create_channel(hidden: true)
         end
       end
     end
