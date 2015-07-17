@@ -20,22 +20,27 @@
 <details>
 <summary>Anchor Standard</summary>
 
-### <%= anchor[:family_s] %>
+<h3><%= anchor[:family_s] %></h3>
 
-- **<%= anchor[:id_s] %>**: <%= anchor[:desc_t] %>
+<ul>
+<li><b><%= anchor[:id_s] %></b>: <%= anchor[:desc_t] %></li>
+</ul>
 
-_Additional standards alignment can be found at the end of this lesson_
+<p><i>Additional standards alignment can be found at the end of this lesson</i></p>
+
 </details>
 <% end %>
 
 <% if !lesson[:prereqs_t].nil? %>
 <details>
 <summary>Prerequisite Knowledge</summary>
-### This lesson assumes that students can:
+<h3>This lesson assumes that students can:</h3>
 
+<ul>
 <% lesson[:prereqs_t].split(";").each do |prereq| %>
-- <%= prereq %>
+<li><%= prereq %></li>
 <% end %>
+</ul>
 
 </details>
 <% end %>
