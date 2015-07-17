@@ -41,8 +41,15 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More details coming soon!
+Amazon's Mayday Building 
+<br />
+Suite 700
+<br />
+1220 Howell St.
+<br />
+Seattle, WA 98101
 
+The Mayday parking garage entrance is located near the 24 Hour Fitness on Stewart St. The entrance is West of Yale Ave on your left-hand side. Visitors may park on levels P1 through P6. Go to Amazon reception on level 7 to check in and validate parking. 
 
 **What do I bring to Phase 2?**
 
@@ -114,7 +121,16 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More information coming soon!
+[Talaris Conference Center](http://www.talarisconferencecenter.com/)
+<br />
+Lodge Room
+<br />
+4000 NE 41st Street
+<br />
+Seattle, WA 98105
+<br />
+
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000, ask for Kim Bergsma or Jordan Nemo and let them know you are attending the Code.org event.
 
 
 **What do I bring to Phase 2?**
@@ -153,7 +169,16 @@ Breakfast and lunch will be served.
 
 **Location**
 
-More information coming soon!
+[Talaris Conference Center](http://www.talarisconferencecenter.com/)
+<br />
+Willow Room
+<br />
+4000 NE 41st Street
+<br />
+Seattle, WA 98105
+<br />
+
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000, ask for Kim Bergsma or Jordan Nemo and let them know you are attending the Code.org event.
 
 **What do I bring to Phase 2?**
 
