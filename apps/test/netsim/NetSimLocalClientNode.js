@@ -13,6 +13,7 @@ var assertTableSize = netsimTestUtils.assertTableSize;
 
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
@@ -40,7 +41,7 @@ describe("NetSimLocalClientNode", function () {
   describe("sendMessage", function () {
     it ("fails with error when not connected", function () {
       var error;
-      testLocalNode.sendMessage('1 1 2 3 5 8', function (e, r) {
+      testLocalNode.sendMessage('101010010101', function (e, r) {
         error = e;
       });
       assert(error instanceof Error);
@@ -50,7 +51,7 @@ describe("NetSimLocalClientNode", function () {
 
     it ("puts the message in the messages table", function () {
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('payload', function () {});
+      testLocalNode.sendMessage('10101010101', function () {});
       assertTableSize(testShard, 'messageTable', 1);
     });
 
@@ -59,7 +60,7 @@ describe("NetSimLocalClientNode", function () {
       var err = true;
       var result = true;
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('payload', function (e,r) {
+      testLocalNode.sendMessage('10100110101', function (e,r) {
         err = e;
         result = r;
       });
@@ -70,7 +71,7 @@ describe("NetSimLocalClientNode", function () {
     it ("Generated message has correct from/to node IDs", function () {
       var fromNodeID, toNodeID;
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('payload', function () {});
+      testLocalNode.sendMessage('101001100101', function () {});
       testShard.messageTable.readAll(function (err, rows) {
         fromNodeID = rows[0].fromNodeID;
         toNodeID = rows[0].toNodeID;
@@ -80,18 +81,25 @@ describe("NetSimLocalClientNode", function () {
     });
 
     it ("Generated message has correct payload", function () {
-      var payload;
+      var message;
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('boogaloo', function () {});
+      testLocalNode.sendMessage('1010101010100101010', function () {});
       testShard.messageTable.readAll(function (err, rows) {
-        payload = rows[0].payload;
+        message = new NetSimMessage(testShard, rows[0]);
       });
-      assertEqual('boogaloo', payload);
+      assertEqual('1010101010100101010', message.payload);
     });
   });
 
   describe("sendMessages", function () {
-    var payloads = ['1', '1', '2', '3', '5', '8'];
+    var payloads = [
+      '10100111',
+      '0100110010',
+      '0001100110',
+      '00111000',
+      '1000010100',
+      '1110100110'
+    ];
 
     it ("fails with error when not connected", function () {
       var error;

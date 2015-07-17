@@ -523,7 +523,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":491}],126:[function(require,module,exports){
+},{"ejs":492}],126:[function(require,module,exports){
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
@@ -615,7 +615,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"./locale":127,"ejs":491}],112:[function(require,module,exports){
+},{"../locale":151,"./locale":127,"ejs":492}],112:[function(require,module,exports){
 /**
  * Blockly Demo: Eval Graphics
  *
