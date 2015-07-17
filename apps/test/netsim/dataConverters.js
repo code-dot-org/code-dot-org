@@ -637,11 +637,11 @@ describe("dataConverters", function () {
     var base64ToBinary = dataConverters.base64ToBinary;
 
     /**
-    * Assert if the given base64 results are not equal. Equality is
-    * defined as sharing BOTH their string and their len properties
-    * @param {Object} left
-    * @param {Object} right
-    */
+     * Assert if the given base64 results are not equal. Equality is
+     * defined as sharing BOTH their string and their len properties
+     * @param {base64Payload} left
+     * @param {base64Payload} right
+     */
     var assertBase64NotEqual = function (left, right) {
       var stringsEqual = (left.string == right.string);
       var lensEqual = (left.len == right.len);

@@ -1449,8 +1449,8 @@ describe("NetSimRouterNode", function () {
           return p + c;
         }, 0);
         assert(droppedPackets === expectedDropCount, "Expected that " +
-          expectedDropCount + " packets would be dropped, " +
-          "but logs only report " + droppedPackets + " dropped packets");
+            expectedDropCount + " packets would be dropped, " +
+            "but logs only report " + droppedPackets + " dropped packets");
       };
 
       beforeEach(function () {
