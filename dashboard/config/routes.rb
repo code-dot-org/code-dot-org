@@ -84,7 +84,7 @@ Dashboard::Application.routes.draw do
       ProjectsController::STANDALONE_PROJECTS.each do |key, value|
         get '/' + key.to_s, to: 'levels#show', key: value[:name], as: key.to_s
       end
-      get '/:template', to: 'projects#template'
+      get '/', to: redirect('/projects')
     end
   end
 
@@ -96,8 +96,8 @@ Dashboard::Application.routes.draw do
         get '/' + key.to_s + '/:channel_id/edit', to: 'projects#edit', key: key, as: key.to_s + 'project_edit'
         get '/' + key.to_s + '/:channel_id/view', to: 'projects#show', key: key, as: key.to_s + 'project_view', readonly: true
       end
+      get '/angular', to: 'projects#angular'
     end
-    # TODO - do i need template?
   end
 
   post '/locale', to: 'home#set_locale', as: 'locale'
