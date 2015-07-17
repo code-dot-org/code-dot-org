@@ -62,8 +62,10 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
    * All other message content, including the 'packets' students will send.
    * @type {*}
    */
-  var b64 = messageRow.base64Payload;
-  this.payload = (b64) ? base64ToBinary(b64.string, b64.len) : undefined;
+  var base64Payload = messageRow.base64Payload;
+  this.payload = (base64Payload) ?
+    base64ToBinary(base64Payload.string, base64Payload.len) :
+    undefined;
 
   /**
    * If this is an inter-router message, the number of routers this
@@ -119,8 +121,9 @@ NetSimMessage.prototype.getTable = function () {
  * @property {number} toNodeID - this message in-flight-to node
  * @property {number} simulatedBy - Node ID of the client responsible for
  *           all operations involving this message.
- * @property {string} payload - binary message content, all of which can be
- *           exposed to the student.  May contain headers of its own.
+ * @property {base64Payload} base64Payload - base64-encoded binary
+ *           message content, all of which can be exposed to the
+ *           student.  May contain headers of its own.
  */
 
 /**

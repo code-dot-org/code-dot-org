@@ -512,16 +512,18 @@ NetSimRouterNode.prototype.recalculateSchedule = function () {
 
   var queueSizeInBits = 0;
   var pessimisticCompletionTime = this.simulationTime_;
-  var queuedMsg;
+  var queuedMessage;
+  var processingDuration;
   for (var i = 0; i < this.routerQueueCache_.length; i++) {
-    queuedMsg = this.routerQueueCache_[i];
-    queueSizeInBits += queuedMsg.payload.length;
-    pessimisticCompletionTime += this.calculateProcessingDurationForMessage_(queuedMsg);
+    queuedMessage = this.routerQueueCache_[i];
+    queueSizeInBits += queuedMessage.payload.length;
+    processingDuration = this.calculateProcessingDurationForMessage_(queuedMessage);
+    pessimisticCompletionTime += processingDuration;
 
     // Don't schedule beyond memory capacity; we're going to drop those packets
-    if (this.localSimulationOwnsMessage_(queuedMsg) &&
+    if (this.localSimulationOwnsMessage_(queuedMessage) &&
         queueSizeInBits <= this.memory) {
-      this.scheduleRoutingForMessage(queuedMsg, pessimisticCompletionTime);
+      this.scheduleRoutingForMessage(queuedMessage, pessimisticCompletionTime);
     }
   }
 };
@@ -1407,7 +1409,7 @@ NetSimRouterNode.prototype.getCurrentDataRate = function () {
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
- * @param {message[]} rows
+ * @param {messageRow[]} rows
  * @private
  * @throws if this method is called on a non-simulating router.
  */
