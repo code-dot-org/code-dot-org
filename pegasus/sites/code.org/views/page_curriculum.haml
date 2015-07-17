@@ -5,6 +5,14 @@
 
     %link{href: "/css/curriculum.css", rel: "stylesheet"}
 
+    - if params['pdf_version']
+      %script{src:'/js/jquery.min.js'}
+      %script{src:'/js/curriculum-pdf.js'}
+    - else
+      %link{rel:'stylesheet', type:'text/css', href:'/shared/css/details-polyfill.css'}
+      %script{src:'/shared/js/details-polyfill/jquery.details.min.js'}
+      %script{src:'/shared/js/details-polyfill/details-polyfill.js'}
+
   %body
     .container_nonresponsive{:style=>'width:100%'}
       = body
