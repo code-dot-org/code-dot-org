@@ -21,13 +21,12 @@ module LevelsHelper
   end
 
   def create_channel(data = {}, src = nil)
-    path = '/v3/channels'
-    path += "?src=#{src}" if src
 
     result = ChannelsApi.call(request.env.merge(
       'REQUEST_METHOD' => 'POST',
-      'PATH_INFO' => path,
-      'REQUEST_PATH' => path,
+      'PATH_INFO' => '/v3/channels',
+      'REQUEST_PATH' => '/v3/channels',
+      'QUERY_STRING' => src ? "src=#{src}" : '',
       'CONTENT_TYPE' => 'application/json;charset=utf-8',
       'rack.input' => StringIO.new(data.to_json)
     ))
@@ -196,11 +195,11 @@ module LevelsHelper
     end
 
     # User/session-dependent options
-    app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || app_options[:embed]
+    app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
-    app_options[:isAdmin] = true if (@game == Game.applab && @current_user && @current_user.admin?)
+    app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
     app_options[:report] = {
         fallback_response: @fallback_response,
         callback: @callback,
