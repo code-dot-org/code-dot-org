@@ -10,6 +10,8 @@ require 'ostruct'
 require 'colorize'
 require 'open3'
 
+ENV['BUILD'] = `git rev-parse --short HEAD`
+
 $options = OpenStruct.new
 $options.config = nil
 $options.browser = nil
@@ -295,13 +297,13 @@ Parallel.map(browser_features, :in_processes => $options.parallel_limit) do |bro
   result_string = succeeded ? "succeeded".green : "failed".red
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"
 
-  [succeeded, test_run_string]
-end.each do |succeeded, test_run_string|
+  [succeeded, message]
+end.each do |succeeded, message|
   if succeeded
     $suite_success_count += 1
   else
     $suite_fail_count += 1
-    $failures << test_run_string
+    $failures << message
   end
 end
 
@@ -318,7 +320,7 @@ HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed.  "
   "Average test duration: #{$average_test_duration.round(2)} seconds."
 
 if $suite_fail_count > 0
-  puts "Failed tests: #{$failures.join("\n")}"
+  puts "Failed tests: \n #{$failures.join("\n")}"
 end
 
 exit $suite_fail_count

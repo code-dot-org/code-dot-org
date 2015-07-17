@@ -30,18 +30,19 @@ else
 
   capabilities[:javascript_enabled] = 'true'
   capabilities[:name] = ENV['TEST_RUN_NAME']
+  capabilities[:build] = ENV['BUILD']
 
-  puts "Capabilities: #{capabilities.inspect}"
+  p "Capabilities: #{capabilities.inspect}"
 
   Time.now.tap do |start_time|
     browser = Selenium::WebDriver.for(:remote,
                                       url: url,
                                       desired_capabilities: capabilities,
                                       http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    puts "Got browser in #{Time.now - start_time}s"
+    p "Got browser in #{Time.now - start_time}s"
   end
 
-  puts "Browser: #{browser}"
+  p "Browser: #{browser}"
 
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
@@ -51,14 +52,34 @@ else
 end
 
 # let's allow much longer timeouts when searching for an element
-browser.manage.timeouts.implicit_wait = 25 # seconds
+browser.manage.timeouts.implicit_wait = 2.minutes
+browser.send(:bridge).setScriptTimeout(1.minute * 1000)
 
 Before do
   @browser = browser
   @browser.manage.delete_all_cookies
 
-  sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
-  puts 'visual log on sauce labs: https://saucelabs.com/tests/' + sauce_session_id
+  @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
+  puts 'visual log on sauce labs: https://saucelabs.com/tests/' + @sauce_session_id
+end
+
+def log_result(result)
+  # Do something after each scenario.
+  # The +scenario+ argument is optional, but
+  # if you use it, you can inspect status with
+  # the #failed?, #passed? and #exception methods.
+
+  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
+  result = HTTParty.put(url,
+                        body: {"passed" => result}.to_json,
+                        headers: { 'Content-Type' => 'application/json' } )
+end
+
+all_passed = true
+
+After do |scenario|
+  all_passed = all_passed && scenario.passed?
+  log_result all_passed
 end
 
 at_exit do

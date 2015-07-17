@@ -49,14 +49,16 @@
     "version": "8.2",
     "deviceName": "iPhone Simulator",
     "platform": "OS X 10.10",
-    "mobile": true
+    "mobile": true,
+    "deviceOrientation": "landscape"
   },
   {
     "name": "iPad",
     "browserName": "iphone",
-    "version": "7.0",
+    "version": "8.2",
     "deviceName": "iPad Simulator",
     "platform": "OS X 10.10",
-    "mobile": true
+    "mobile": true,
+    "deviceOrientation": "landscape"
   }
 ]
