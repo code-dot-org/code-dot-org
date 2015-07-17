@@ -13,7 +13,7 @@ end
 
 # Note: this is an offset relative to the current position of the block
 When /^I drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |block_id, dx, dy|
-  dragBlockRelative(get_block_id(block_id), dx, dy)
+  drag_block_relative(get_block_id(block_id), dx, dy)
 end
 
 When /^I begin to drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |from, dx, dy|
