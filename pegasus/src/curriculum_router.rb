@@ -360,6 +360,10 @@ class CurriculumRouter < Pegasus::Base
     redirect "/curriculum/science/#{params['splat'][0]}"
   end
 
+  get '/curriculum/msm*' do
+    redirect "/curriculum/algebra/#{params['splat'][0]}"
+  end
+
   get '/curriculum/:kind' do |kind|
     # Temporarily prevent non K-5/MSM curriculum from appearing on production.
     unless Course::PRODUCTION_COURSES.include? kind
