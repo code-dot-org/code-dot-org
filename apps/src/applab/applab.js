@@ -61,7 +61,8 @@ var debugAreaController = null;
 //Debug console history
 Applab.debugConsoleHistory = {
   'history': [],
-  'currentHistoryIndex': 0
+  'currentHistoryIndex': 0,
+  'maxHistoryEntries': 64
 };
 
 var errorHandler = require('./errorHandler');
@@ -317,8 +318,12 @@ function queueOnTick() {
 }
 
 function pushDebugConsoleHistory(commandText) {
+  if(Applab.debugConsoleHistory.history.length >= Applab.debugConsoleHistory.maxHistoryEntries) {
+    Applab.debugConsoleHistory.history.shift();
+    Applab.debugConsoleHistory.currentHistoryIndex -= 1;
+  }
   Applab.debugConsoleHistory.currentHistoryIndex = Applab.debugConsoleHistory.history.length + 1;
-  Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1] = commandText;
+  Applab.debugConsoleHistory.history.push(commandText);
 }
 
 function updateDebugConsoleHistory(commandText) {
@@ -397,6 +402,13 @@ function onDebugInputKeyDown(e) {
   if (e.keyCode === KeyCodes.DOWN) {
     updateDebugConsoleHistory(input);
     e.target.textContent = moveDownDebugConsoleHistory(input);
+  }
+}
+
+function onDebugOutputClick(e) {
+  var debugInput = document.getElementById('debug-input');
+  if (debugInput) {
+    console.log("click");
   }
 }
 
@@ -668,6 +680,12 @@ Applab.init = function(config) {
     if (debugInput) {
       debugInput.addEventListener('keydown', onDebugInputKeyDown);
     }
+    /*
+    var debugOutput = document.getElementById('debug-output');
+    if (debugOutput) {
+      debugOutput.addEventListener('click', onDebugOutputClick);
+    }
+    */
   }
 
   var debugResizeBar = document.getElementById('debugResizeBar');

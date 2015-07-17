@@ -394,6 +394,9 @@ $debug-input-height: 16px;
   line-height: normal;
   cursor: text;
   white-space: pre-wrap;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
 }
 
 .debug-input {
