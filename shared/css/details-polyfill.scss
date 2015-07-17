@@ -1,0 +1,47 @@
+@import 'color';
+
+details {
+  summary {
+    cursor: pointer;
+    h1 {
+      // Supports
+      // <summary><h1>Title</h1><p>See more</p></summary>
+      // idiom often used by level builders
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+}
+
+details, summary {
+  display: block;
+}
+
+summary {
+  cursor: pointer;
+}
+
+summary:hover {
+  // Include hover effect on mouseover
+  background: $lightest_gray;
+  cursor: pointer;
+}
+
+.no-details details > * {
+  display: none;
+}
+
+.no-details details > summary:before {
+  float: left;
+  width: 20px;
+  content: '► ';
+}
+
+.no-details details.open > summary:before {
+  content: '▼ ';
+}
+
+/* Make sure summary remains visible */
+.no-details details summary {
+  display: block;
+}
