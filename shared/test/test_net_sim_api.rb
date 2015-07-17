@@ -17,12 +17,19 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?
 
     begin
-      record_id = create_record({name:'alice', age:7, male:false})
-      record = read_records.first
-      assert_equal record_id.to_i, record['id'].to_i
-      assert_equal 'alice', record['name']
-      assert_equal 7, record['age']
-      assert_equal false, record['male']
+      # Verify that the CREATE response body and READ response bodies
+      # both return the correct record values
+      record_create_response = create_record({name:'alice', age:7, male:false})
+      record_get_response = read_records.first
+      assert_equal record_create_response['id'].to_i, record_get_response['id'].to_i
+      assert_equal 'alice', record_get_response['name']
+      assert_equal 'alice', record_create_response['name']
+      assert_equal 7, record_get_response['age']
+      assert_equal 7, record_create_response['age']
+      assert_equal false, record_get_response['male']
+      assert_equal false, record_create_response['male']
+
+      record_id = record_get_response['id'].to_i
 
       assert_equal 8, update_record(record_id, {id:record_id, age:8})['age']
       record = read_records.first
@@ -38,7 +45,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def create_record(record)
     @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    @net_sim_api.last_response.location.split('/').last
+    JSON.parse(@net_sim_api.last_response.body)
   end
 
   def read_records

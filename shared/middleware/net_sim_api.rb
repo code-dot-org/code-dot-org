@@ -83,8 +83,8 @@ class NetSimApi < Sinatra::Base
 
     dont_cache
     content_type :json
-
-    redirect "/v3/netsim/#{shard_id}/#{table_name}/#{value[:id]}", 301
+    status 201
+    value.to_json
   end
 
   #
