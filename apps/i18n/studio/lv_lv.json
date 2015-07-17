@@ -151,7 +151,7 @@
   "projectileCherry": "cherry",
   "projectileIce": "ice",
   "projectileDuck": "duck",
-  "reinfFeedbackMsg": "Tu vari nospiest pogu \"Mēģināt vēlreiz\", lai atgrieztos atpakaļ spēlēt savu stāstu.",
+  "reinfFeedbackMsg": "You can press the \"Keep Playing\" button to go back to playing your story.",
   "repeatForever": "mūžīgi atkārtot",
   "repeatDo": "darīt",
   "repeatForeverTooltip": "Izpildīt darbības šī bloka vairākkārt, kamēr notiek stāsts.",
