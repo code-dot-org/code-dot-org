@@ -70,9 +70,9 @@ def log_result(result)
   # the #failed?, #passed? and #exception methods.
 
   url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
-  result = HTTParty.put(url,
-                        body: {"passed" => result}.to_json,
-                        headers: { 'Content-Type' => 'application/json' } )
+  HTTParty.put(url,
+               body: {"passed" => result}.to_json,
+               headers: { 'Content-Type' => 'application/json' } )
 end
 
 all_passed = true
