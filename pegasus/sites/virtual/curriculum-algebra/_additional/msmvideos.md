@@ -23,7 +23,7 @@ The videos introduce teachers to the curriculum materials and tools,  data model
 
   {title: "6. Using the Design Recipe to Solve Word Problems", yt: "ZWdLNtPu6PQ", dl: "https://www.dropbox.com/s/sknc8yn75wg7cep/Math-5_WordProblems_1_06232014_1.mp4", dltext: "Download the video"},  
 
-  {title: "7. Using the Design Recipe to Help Students", yt: "SL2zLs2P-mU", dl: "https://www.dropbox.com/s/sknc8yn75wg7cep/Math-5_WordProblems_1_06232014_1.mp4", dltext: "Download the video"},  
+  {title: "7. Using the Design Recipe to Help Students", yt: "SL2zLs2P-mU", dl: "https://www.dropbox.com/s/y424rgtwklf48px/Math-6_WordProblem_2_06182014_1.mp4?dl=0", dltext: "Download the video"},  
 
   {title: "8. Boolean Logic and Inequalities in the Plane", yt: "OMQO66wWqjk", dl: "https://www.dropbox.com/s/2wpc4qc7tidj4dj/Math-7-BooleanLogic-june9.mp4", dltext: "Download the video"},  
 
