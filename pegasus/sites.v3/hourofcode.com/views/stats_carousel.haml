@@ -16,6 +16,7 @@
   .pagination
     %div{:id=>"stats-carousel-pagination"}
 
+.stats-sources-link
   %a{:href=>'https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub'}<
     Source data
 
@@ -28,9 +29,13 @@
 
     // Define the carousel using the ID.
     $(id + ' .slides').carouFredSel({
-      items :  1,
+      items :  {
+        height : 'variable'
+      },
       auto  : false,
       responsive : true,
+      width : '100%',
+      height : 'variable',
       prev  : id + ' .slide-prev',
       next  : id + ' .slide-next',
       pagination : '#stats-carousel-pagination',
@@ -38,5 +43,5 @@
         onTouch : true,
         onMouse : false
       }
-    });
+    }).trigger(resize);
   });
