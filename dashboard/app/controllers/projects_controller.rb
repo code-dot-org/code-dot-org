@@ -24,6 +24,10 @@ class ProjectsController < ApplicationController
   def index
   end
 
+  def redirect_legacy
+    render layout: nil
+  end
+
   def angular
     render template: "projects/projects", layout: nil
   end
