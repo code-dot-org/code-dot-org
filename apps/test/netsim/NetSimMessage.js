@@ -1,6 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
+var assertThrows = testUtils.assertThrows;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
@@ -43,6 +44,39 @@ describe("NetSimMessage", function () {
 
     assertOwnProperty(row, 'visitedNodeIDs');
     assertEqual(row.visitedNodeIDs, []);
+  });
+
+  it ("converts messageRow.base64Payload to local binary payload", function () {
+    var message = new NetSimMessage(testShard, {
+      fromNodeID: 1,
+      toNodeID: 2,
+      simulatedBy: 2,
+      base64Payload: {
+        string: "kg==",
+        len: 7
+      },
+      extraHopsRemaining: 3,
+      visitedNodeIDs: [4]
+    });
+    assertEqual(message.payload, "1001001");
+  });
+
+  it ("converts local binary payload to base64 before creating row", function () {
+    var base64Payload = {
+      string: "kg==",
+      len: 7
+    };
+    var message = new NetSimMessage(testShard, {
+      fromNodeID: 1,
+      toNodeID: 2,
+      simulatedBy: 2,
+      base64Payload: base64Payload,
+      extraHopsRemaining: 3,
+      visitedNodeIDs: [4]
+    });
+    var row = message.buildRow();
+    assertEqual(row.base64Payload.string, base64Payload.string);
+    assertEqual(row.base64Payload.len, base64Payload.len);
   });
 
   describe("static method send", function () {
@@ -96,6 +130,17 @@ describe("NetSimMessage", function () {
       NetSimMessage.send(testShard, {}, function (err) {
         assert(err === null, "Error is null on success");
       });
+    });
+
+    it ("throws an exception when given a non-binary String as a payload", function () {
+      assertThrows(TypeError, NetSimMessage.send.bind(null, testShard, {
+        fromNodeID: 1,
+        toNodeID: 2,
+        simulatedBy: 2,
+        payload: 'some non-binary payload',
+        extraHopsRemaining: 3,
+        visitedNodeIDs: [4]
+      }, function () {}));
     });
   });
 
