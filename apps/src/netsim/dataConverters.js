@@ -371,15 +371,21 @@ exports.binaryToAscii = function (binaryString, byteSize) {
 };
 
 /**
+ * @typedef {Object} base64Payload
+ * @property {string} string - the base64-encoded payload
+ * @property {number} len - the length of the original binary payload
+ */
+
+/**
  * Converts binary to a base64 string for more efficient network
  * transfer. Because base64 expects even bytes, we pad the binary string
  * to the nearest byte and return the original length. The reverse
  * conversion expects to be given that original length.
  * @param {string} binaryString
- * @returns {object} Object containing the base64 string and the length
- * of of the original binaryString
+ * @returns {base64Payload} Object containing the base64 string and the
+ *          length of of the original binaryString
  * @example
- * // returns { string: "kgA=", len: 7 }
+ * // returns { string: "kg==", len: 7 }
  * dataConverters.binaryToBase64("1001001");
  */
 exports.binaryToBase64 = function (binaryString) {
@@ -405,7 +411,7 @@ exports.binaryToBase64 = function (binaryString) {
  * @returns {string} binaryString
  * @example
  * // returns "1001001"
- * dataConverters.base64ToBinary("kgA=", 7);
+ * dataConverters.base64ToBinary("kg==", 7);
  */
 exports.base64ToBinary = function (base64string, len) {
   return exports.asciiToBinary(window.atob(base64string), 8).substr(0, len);
