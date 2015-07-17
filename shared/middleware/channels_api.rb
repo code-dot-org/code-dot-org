@@ -71,6 +71,10 @@ class ChannelsApi < Sinatra::Base
     timestamp = Time.now
     id = storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
 
+    if src_channel
+      AssetsApi.copy_assets(src_channel, id)
+    end
+
     redirect "/v3/channels/#{id}", 301
   end
 
