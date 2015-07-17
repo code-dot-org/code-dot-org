@@ -269,6 +269,9 @@ module.exports = {
       executeCallback(callback);
     });
   },
+  serverSideRemix: function() {
+    location.href = module.exports.getPathName('remix');
+  },
   delete: function(callback) {
     var channelId = current.id;
     if (channelId) {

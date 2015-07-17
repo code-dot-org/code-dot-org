@@ -251,7 +251,7 @@ function shareProject() {
   });
 }
 
-function remixProject() {
+function remixLegacyShare() {
   var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
   dashboard.project.copy(newName, function() {
     $(".project_name").text(newName)
@@ -261,7 +261,7 @@ function remixProject() {
 // Namespace for manipulating the header DOM.
 dashboard.header = {};
 
-// Minimal project header for legacy /c/ share pages.
+// Minimal project header for viewing channel shares and legacy /c/ share pages.
 dashboard.header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
       .append($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()))
@@ -270,7 +270,13 @@ dashboard.header.showMinimalProjectHeader = function () {
   $('.project_info')
       .append(projectName)
       .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'));
-  $('.project_remix').click(remixProject);
+  if (dashboard.project.getCurrentId()) {
+    // Remix of project-backed level.
+    $('.project_remix').click(dashboard.project.serverSideRemix);
+  } else {
+    // Remix of legacy /c/ share page (that does not yet have a channel).
+    $('.project_remix').click(remixLegacyShare);
+  }
 };
 
 // Project header for levels backed by a channel, with "Share" and "Remix".
@@ -279,7 +285,7 @@ dashboard.header.showProjectLevelHeader = function () {
       .append($('<div class="project_share header_button header_button_light">').text('<%= I18n.t('project.share') %>'))
       .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'));
   $('.project_share').click(shareProject);
-  $('.project_remix').click(remixProject);
+  $('.project_remix').click(dashboard.project.serverSideRemix);
 };
 
 dashboard.header.showProjectHeader = function () {
@@ -333,7 +339,7 @@ dashboard.header.showProjectHeader = function () {
   });
 
   $('.project_share').click(shareProject);
-  $('.project_remix').click(remixProject);
+  $('.project_remix').click(dashboard.project.serverSideRemix);
 
   var $projectMorePopup = $('.project_more_popup');
   function hideProjectMore() {
