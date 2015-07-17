@@ -1,6 +1,7 @@
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
+var assertThrows = testUtils.assertThrows;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
@@ -35,7 +36,7 @@ describe("NetSimMessage", function () {
     assertOwnProperty(row, 'simulatedBy');
     assertEqual(row.simulatedBy, undefined);
 
-    assertOwnProperty(row, 'payload');
+    assertOwnProperty(row, 'base64Payload');
     assertEqual(row.payload, undefined);
 
     assertOwnProperty(row, 'extraHopsRemaining');
@@ -43,6 +44,39 @@ describe("NetSimMessage", function () {
 
     assertOwnProperty(row, 'visitedNodeIDs');
     assertEqual(row.visitedNodeIDs, []);
+  });
+
+  it ("converts messageRow.base64Payload to local binary payload", function () {
+    var message = new NetSimMessage(testShard, {
+      fromNodeID: 1,
+      toNodeID: 2,
+      simulatedBy: 2,
+      base64Payload: {
+        string: "kg==",
+        len: 7
+      },
+      extraHopsRemaining: 3,
+      visitedNodeIDs: [4]
+    });
+    assertEqual(message.payload, "1001001");
+  });
+
+  it ("converts local binary payload to base64 before creating row", function () {
+    var base64Payload = {
+      string: "kg==",
+      len: 7
+    };
+    var message = new NetSimMessage(testShard, {
+      fromNodeID: 1,
+      toNodeID: 2,
+      simulatedBy: 2,
+      base64Payload: base64Payload,
+      extraHopsRemaining: 3,
+      visitedNodeIDs: [4]
+    });
+    var row = message.buildRow();
+    assertEqual(row.base64Payload.string, base64Payload.string);
+    assertEqual(row.base64Payload.len, base64Payload.len);
   });
 
   describe("static method send", function () {
@@ -62,7 +96,10 @@ describe("NetSimMessage", function () {
       var fromNodeID = 1;
       var toNodeID = 2;
       var simulatedBy = 2;
-      var payload = 'xyzzy';
+      var base64Payload = {
+        string: "kg==",
+        len: 7
+      };
       var extraHopsRemaining = 3;
       var visitedNodeIDs = [4];
 
@@ -72,7 +109,7 @@ describe("NetSimMessage", function () {
             fromNodeID: fromNodeID,
             toNodeID: toNodeID,
             simulatedBy: simulatedBy,
-            payload: payload,
+            payload: '1001001',
             extraHopsRemaining: extraHopsRemaining,
             visitedNodeIDs: visitedNodeIDs
           },
@@ -83,7 +120,7 @@ describe("NetSimMessage", function () {
         assertEqual(row.fromNodeID, fromNodeID);
         assertEqual(row.toNodeID, toNodeID);
         assertEqual(row.simulatedBy, simulatedBy);
-        assertEqual(row.payload, payload);
+        assertEqual(row.base64Payload, base64Payload);
         assertEqual(row.extraHopsRemaining, extraHopsRemaining);
         assertEqual(row.visitedNodeIDs, visitedNodeIDs);
       });
@@ -94,17 +131,32 @@ describe("NetSimMessage", function () {
         assert(err === null, "Error is null on success");
       });
     });
+
+    it ("throws an exception when given a non-binary String as a payload", function () {
+      assertThrows(TypeError, NetSimMessage.send.bind(null, testShard, {
+        fromNodeID: 1,
+        toNodeID: 2,
+        simulatedBy: 2,
+        payload: 'some non-binary payload',
+        extraHopsRemaining: 3,
+        visitedNodeIDs: [4]
+      }, function () {}));
+    });
   });
 
   it ("can be instatiated from remote row", function () {
     var testRow;
 
     // Create a message row in remote table
+    // The source payload that generates this base64Payload is "1001001"
     messageTable.create({
       fromNodeID: 1,
       toNodeID: 2,
       simulatedBy: 2,
-      payload: 'xyzzy',
+      base64Payload: {
+        string: "kgA=",
+        len: 7
+      },
       extraHopsRemaining: 3,
       visitedNodeIDs: [4]
     }, function (err, row) {
@@ -117,7 +169,7 @@ describe("NetSimMessage", function () {
     assertEqual(message.fromNodeID, 1);
     assertEqual(message.toNodeID, 2);
     assertEqual(message.simulatedBy, 2);
-    assertEqual(message.payload, 'xyzzy');
+    assertEqual(message.payload, '1001001');
     assertEqual(message.extraHopsRemaining, 3);
     assertEqual(message.visitedNodeIDs, [4]);
   });
@@ -151,7 +203,7 @@ describe("NetSimMessage", function () {
             fromNodeID: 1,
             toNodeID: 2,
             simulatedBy: 2,
-            payload: 'alpha'
+            payload: '001'
           },
           function () {});
       NetSimMessage.send(
@@ -160,7 +212,7 @@ describe("NetSimMessage", function () {
             fromNodeID: 1,
             toNodeID: 2,
             simulatedBy: 2,
-            payload: 'beta'
+            payload: '010'
           },
           function () {});
       NetSimMessage.send(
@@ -169,7 +221,7 @@ describe("NetSimMessage", function () {
             fromNodeID: 1,
             toNodeID: 2,
             simulatedBy: 2,
-            payload: 'gamma'
+            payload: '100'
           },
           function () {});
       assertTableSize(testShard, 'messageTable', 3);
