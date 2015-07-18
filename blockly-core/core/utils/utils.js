@@ -417,6 +417,29 @@ Blockly.mouseCoordinatesToSvg = function(clientX, clientY, target) {
 };
 
 /**
+ * Converts given SVG coordinates to blockspace coordinates
+ * @param {goog.math.Coordinate} coordinates
+ * @param {Blockly.BlockSpace} blockSpace
+ * @returns {goog.math.Coordinate}
+ */
+Blockly.svgCoordinatesToViewport = function(coordinates, blockSpace) {
+  return new goog.math.Coordinate(coordinates.x - blockSpace.getMetrics().absoluteLeft,
+    coordinates.y);
+};
+
+/**
+ * Converts given SVG coordinates to blockspace coordinates
+ * @param {goog.math.Coordinate} coordinates
+ * @param {Blockly.BlockSpace} blockSpace
+ * @returns {goog.math.Coordinate}
+ */
+Blockly.viewportCoordinateToBlockSpace = function(coordinates, blockSpace) {
+  var viewportBox = blockSpace.getViewportBox();
+  return new goog.math.Coordinate(coordinates.x + viewportBox.left,
+    coordinates.y + viewportBox.top);
+};
+
+/**
  * Given an array of strings, return the length of the shortest one.
  * @param {!Array<string>} array Array of strings.
  * @return {number} Length of shortest string.
@@ -635,10 +658,24 @@ Blockly.getNormalizedWheelDeltaY = function (e) {
  */
 Blockly.getBoxOverhang = function (outerBox, innerBox) {
   return new goog.math.Box(
-    outerBox.top - innerBox.top,
-    innerBox.right - outerBox.right,
-    innerBox.bottom - outerBox.bottom,
-    outerBox.left - innerBox.left);
+    Math.max(0, outerBox.top - innerBox.top),
+    Math.max(0, innerBox.right - outerBox.right),
+    Math.max(0, innerBox.bottom - outerBox.bottom),
+    Math.max(0, outerBox.left - innerBox.left));
+};
+
+/**
+ * Gets a point's distances to outer edges of a box.
+ * @param {goog.math.Box} outerBox
+ * @param {goog.math.Coordinate} innerPoint
+ * @return {goog.math.Box} distances to each side, from point's perspective
+ */
+Blockly.getDistancesToBoxSides = function (outerBox, innerPoint) {
+  return new goog.math.Box(
+    outerBox.top - innerPoint.y,
+    outerBox.right - innerPoint.x,
+    outerBox.bottom - innerPoint.y,
+    outerBox.left - innerPoint.x);
 };
 
 /**
@@ -673,4 +710,17 @@ Blockly.getBoxWidth = function (box) {
  */
 Blockly.getBoxHeight = function (box) {
   return box.bottom - box.top;
+};
+
+/**
+ * @param {number} number
+ * @param {number} min
+ * @param {number} max
+ * @param {boolean} inclusive
+ * @return {boolean} whether given number is within range
+ */
+Blockly.numberWithin = function (number, min, max, inclusive) {
+  return inclusive?
+    (number >= min && number <= max) :
+    (number > min && number < max);
 };
