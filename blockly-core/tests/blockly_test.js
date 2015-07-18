@@ -205,6 +205,24 @@ function test_getBoxOverhang() {
   assertEquals(4, differentOverhangs.left);
 }
 
+function test_getDistancesToBox() {
+  // top right bottom left
+  var distances = Blockly.getDistancesToBoxSides(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Coordinate(0, 0));
+  assertEquals(0, distances.top);
+  assertEquals(0, distances.right);
+  assertEquals(0, distances.bottom);
+  assertEquals(0, distances.left);
+  var differentDistances = Blockly.getDistancesToBoxSides(
+    new goog.math.Box(0, 10, 20, 0),
+    new goog.math.Coordinate(5, 5));
+  //assertEquals(-5, differentDistances.top);
+  assertEquals(5, differentDistances.right);
+  assertEquals(15, differentDistances.bottom);
+  //assertEquals(-5, differentDistances.left);
+}
+
 function test_isBoxWiderThan() {
   // top right bottom left
   assert(!Blockly.isBoxWiderThan(
@@ -216,5 +234,27 @@ function test_isBoxWiderThan() {
   assert(!Blockly.isBoxWiderThan(
     new goog.math.Box(0, 0, 0, 0),
     new goog.math.Box(0, 1, 0, 0)));
+}
+
+function test_numberWithin() {
+  // Within inclusive
+  assert(Blockly.numberWithin(1, 1, 5, true));
+  assert(Blockly.numberWithin(5, 1, 5, true));
+  assert(Blockly.numberWithin(4, 1, 5, true));
+
+  // Not within inclusive
+  assert(!Blockly.numberWithin(0, 1, 5, true));
+  assert(!Blockly.numberWithin(6, 1, 5, true));
+  assert(!Blockly.numberWithin(-1, 1, 5, true));
+
+  // Within exclusive
+  assert(Blockly.numberWithin(2, 1, 5, false));
+  assert(Blockly.numberWithin(4, 1, 5, false));
+  assert(Blockly.numberWithin(4.9, 1, 5, false));
+
+  // Not within exclusive
+  assert(!Blockly.numberWithin(1, 1, 5, false));
+  assert(!Blockly.numberWithin(5, 1, 5, false));
+  assert(!Blockly.numberWithin(6, 1, 5, false));
 }
 
