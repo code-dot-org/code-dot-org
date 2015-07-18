@@ -1,16 +1,14 @@
 @import 'color';
+@import 'font';
 
 #user_hero {
-  margin-top:30px;
-  .col-50 {
-    width: 50%;
-    float: left;
-  }
+  margin: 20px 0;
   #welcome {
     left: 0;
     color: $white;
     padding: 10px;
     font-size: 20px;
+    font-family: $gotham-regular;
     text-align: left;
     text-align: center;
     border-top-left-radius: 5px;
