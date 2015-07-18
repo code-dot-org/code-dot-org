@@ -4,7 +4,10 @@
   - role_class = current_user.user_type
 
   #contents
-    #welcome{class: role_class}= t('welcome_back', name: current_user.name)
+    #welcome{class: role_class}
+      = t('welcome_back', name: current_user.name)
+      - if current_user.teacher?
+        %button.primary{style: "margin-left: 20px;"}= t('teacher.students.dashboard')
 
     #body{class: role_class}
       - if current_user.primary_script && script_level
@@ -22,19 +25,5 @@
         = t('home.student_finished', online_link: link_to(t('home.online'), 'http://code.org/learn/beyond'), local_school_link: link_to(t('home.local_school'), 'http://code.org/learn/local'))
       - else
         = link_to t('home.no_primary_course'), root_url
-
-      / - if current_user.teacher?
-      /   #teacherarea.col-50
-      /     #classroom #{t('home.classroom')}:
-      /     #teacher
-      /       %span#student_count
-      /         - if current_user.students.length == 1
-      /           = t('home.teacher_student_count_one', count: current_user.students.length)
-      /         - else
-      /           = t('home.teacher_student_count', count: current_user.students.length)
-      /         &nbsp;
-      /       %a{href: teacher_dashboard_url, style: 'text-decoration:none'}
-      /         %button.btn.btn-primary.button-continue{class: role_class}= t('teacher.students.dashboard')
-      /       %br/
       
     #clearboth{ style: 'clear:both;' }
