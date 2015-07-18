@@ -4,16 +4,16 @@
   - role_class = current_user.user_type
 
   #contents
-    #welcome{class: role_class, style: "padding-left:5px"}= t('welcome_back', name: current_user.name)
+    #welcome{class: role_class}= t('welcome_back', name: current_user.name)
 
     #body{class: role_class}
       - if current_user.primary_script && script_level
-        #student{style: "font-size:16px"}
-          #currentprogress{style: "width: 70%; display:relative; float:left"}
+        #student
+          #currentprogress
             = t("data.script.name.#{current_user.primary_script.name}.title")
             %br
             = script_level.stage.localized_title
-          #coursebuttons{style: "width: 30%; float:right"}
+          #coursebuttons
             = link_to 'http://studio.code.org/#allcourses' do
               %button.btn.btn-primary.button-continue{class: role_class}= t('continue')
             = link_to script_url(current_user.primary_script) do
