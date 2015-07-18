@@ -575,6 +575,12 @@ SQL
     save!
   end
 
+  def all_advertised_scripts_completed?(advertised_scripts)
+    advertised_scripts.all? do |script|
+      script.completed?
+    end
+  end
+
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)
