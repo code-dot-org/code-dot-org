@@ -131,6 +131,7 @@ en:
       CSPPD teaching strategies video:
         CSPPD teaching strategies video: CSPPD teaching strategies video
       CSPPD2 PT: {}
+      CSPPD2 PT forum: {}
       CSPPD2 PT reflection: {}
       CSPPD2 chunk 1: {}
       CSPPD2 chunk 1 lessons: {}
@@ -1176,6 +1177,15 @@ en:
         planning, organizing, and completion of performance tasks: planning, organizing, and completion of performance tasks
         programming principles and JavaScript: programming principles and JavaScript
         structure and design of the internet: structure and design of the internet
+      CSPPD2 PIvideo:
+        Copper Wire: Copper Wire
+        Fiber Optic Cable: Fiber Optic Cable
+        Match the communication method with the description below: Match the communication method with the description below
+        Wireless: Wireless
+        uses electricity, is pretty cheap: uses electricity, is pretty cheap
+        uses light, is expensive: uses light, is expensive
+        uses radio waves, cannot travel very far: uses radio waves, cannot travel very far
+        wires, cables, and wifi video: wires, cables, and wifi video
       Coordinate Matching:
         (250, 400): (250, 400)
         (320, 240): (320, 240)
@@ -1980,6 +1990,19 @@ en:
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
         There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
+      CSPPD2 pixel video 1:
+        How many different light channels make up a single pixel on a standard monitor?: How many different light channels make up a single pixel on a standard monitor?
+        four: four
+        one: one
+        three: three
+        two: two
+      CSPPD2 pixel video 2:
+        ' Monitor 1 has higher density than Monitor 2.': ' Monitor 1 has higher density than Monitor 2.'
+        ? Monitor 1 and Monitor 2 are standard RGB monitors. Monitor 1 has a higher resolution than Monitor 2. Which of the following is true?
+        : Monitor 1 and Monitor 2 are standard RGB monitors. Monitor 1 has a higher resolution than Monitor 2. Which of the following is true?
+        Monitor 1 has the same density as Monitor 2.: Monitor 1 has the same density as Monitor 2.
+        Monitor 2 has higher density than 2: Monitor 2 has higher density than 2
+        There is not enough information to compare the density of the monitors.: There is not enough information to compare the density of the monitors.
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
