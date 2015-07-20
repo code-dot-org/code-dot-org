@@ -21,7 +21,7 @@ Join Code.org for our first monthly meeting of our ECS community! Hear from faci
 <a href="https://www.eventbrite.com/e/ecs-monthly-meeting-september-tickets-17789364468" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=17789364468" alt="Eventbrite - ECS Monthly Meeting: September" /></a>
 <br><br>
 **More dates coming for 2015! 
-Follow [@teachcodeorg](http://twitter.com/teachcodeorg) for updates or visit [teacherblog.code.org](http://teacherblog.code.org)**
+Follow [@teachcode](http://twitter.com/teachcode) for updates or visit [teacherblog.code.org](http://teacherblog.code.org)**
 
 ## Past Events
 Thursday, November 6, 2014 • 5 p.m. *PT* / 1 hr [View Recording](http://youtu.be/Jb2xhFeNvG4)

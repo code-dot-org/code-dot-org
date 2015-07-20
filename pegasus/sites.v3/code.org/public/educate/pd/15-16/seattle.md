@@ -130,7 +130,7 @@ Lodge Room
 Seattle, WA 98105
 <br />
 
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000, ask for Kim Bergsma or Jordan Nemo and let them know you are attending the Code.org event.
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org CS in Algebra event.
 
 
 **What do I bring to Phase 2?**
@@ -178,7 +178,7 @@ Willow Room
 Seattle, WA 98105
 <br />
 
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000, ask for Kim Bergsma or Jordan Nemo and let them know you are attending the Code.org event.
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000and let them know you are attending the Code.org CS in Science event.
 
 **What do I bring to Phase 2?**
 
