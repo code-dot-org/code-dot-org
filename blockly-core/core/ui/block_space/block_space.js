@@ -30,6 +30,7 @@ goog.provide('Blockly.BlockSpace');
 goog.require('Blockly.ScrollbarPair');
 goog.require('Blockly.Trashcan');
 goog.require('Blockly.PanDragHandler');
+goog.require('Blockly.ScrollOnBlockDragHandler');
 goog.require('Blockly.Xml');
 goog.require('goog.array');
 goog.require('goog.math.Coordinate');
@@ -76,6 +77,13 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
    * @private
    */
   this.panDragHandler_ = new Blockly.PanDragHandler(this);
+
+  /**
+   * Encapsulates state used to make scroll-on-block-drag work.
+   * @type {Blockly.ScrollOnBlockDragHandler}
+   * @private
+   */
+  this.scrollOnBlockDragHandler_ = new Blockly.ScrollOnBlockDragHandler(this);
 
   Blockly.ConnectionDB.init(this);
   if (Blockly.BlockSpace.DEBUG_EVENTS) {
@@ -196,6 +204,7 @@ Blockly.BlockSpace.prototype.createDom = function() {
   this.svgBlockCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBlockCanvas'}, this.clippingGroup_);
   this.svgDragCanvas_ = Blockly.createSvgElement('g', {'class': 'svgDragCanvas'}, this.svgGroup_);
   this.svgBubbleCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBubbleCanvas'}, this.svgGroup_);
+  this.svgDebugCanvas_ = Blockly.createSvgElement('g', {'class': 'svgDebugCanvas'}, this.svgGroup_);
   this.fireChangeEvent();
   return this.svgGroup_;
 };
@@ -227,6 +236,7 @@ Blockly.BlockSpace.prototype.dispose = function() {
   }
   this.svgBlockCanvas_ = null;
   this.svgDragCanvas_ = null;
+  this.svgDebugCanvas_ = null;
   this.svgBubbleCanvas_ = null;
   if (this.flyout_) {
     this.flyout_.dispose();
@@ -594,17 +604,19 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 /**
 * Is the mouse event over a delete area?
 * Shows the trash zone as a side effect.
-* @param {!Event} e Mouse move event.
-* @param {integer} startDragX The x coordinate of the drag start.
+* @param {number} mouseX mouse clientX
+* @param {number} mouseY mouse clientY
+* @param {number} startDragX The x coordinate of the drag start.
 * @return {boolean} True if event is in a delete area.
 */
-Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
+Blockly.BlockSpace.prototype.isDeleteArea = function(mouseX, mouseY, startDragX) {
   // If there is no toolbox and no flyout then there is no trash area.
   if (!Blockly.languageTree) {
     return false;
   }
 
-  var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
+  var mouseXY = Blockly.mouseCoordinatesToSvg(
+    mouseX, mouseY, this.blockSpaceEditor.svg_)
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
   var mouseDragStartXY = Blockly.mouseCoordinatesToSvg(
@@ -827,30 +839,50 @@ Blockly.BlockSpace.prototype.getScrollableBox = function() {
 };
 
 /**
- * [WIP] Pans the blockspace in the direction of a block if it's hanging off the
- * edge of the blockspace.
- * Will only expand the blockspace vertically if vertical scrollbars are enabled
- * Will only expand the blockspace horizontally if horizontal scrollbars are
- * enabled
- * @param {Blockly.Block} block
+ * @returns {goog.math.Box}
  */
-Blockly.BlockSpace.prototype.panIfHangingOffEdge = function (block) {
-  var overhangs = Blockly.getBoxOverhang(this.getScrollableBox(),
-    block.getBox());
-
-  if (overhangs.bottom > 0) {
-    if (Blockly.BlockSpaceEditor.SCROLL_DRAG_DEBUG) {
-     console.log("Should scroll down.");
-    }
-  }
+Blockly.BlockSpace.prototype.getViewportBox = function() {
+  var metrics = this.getMetrics();
+  return new goog.math.Box(
+    this.scrollbarOffsetY(),
+    this.scrollbarOffsetX() + metrics.viewWidth,
+    this.scrollbarOffsetY() + metrics.viewHeight,
+    this.scrollbarOffsetX());
 };
 
-/**
- * Given desired new scrollX and scrollY positions, scroll to position,
- * clamping to within allowable scroll boundaries.
- * @param {number} newScrollX new target pan-right (+) offset
- * @param {number} newScrollY new target pan-down (+) offset
- */
+Blockly.BlockSpace.prototype.panIfHangingOffEdge = function (block, mouseX, mouseY) {
+  this.scrollOnBlockDragHandler_.panIfHangingOffEdge(block, mouseX, mouseY);
+};
+
+Blockly.BlockSpace.prototype.stopAutoScrolling = function () {
+  this.scrollOnBlockDragHandler_.stopAutoScrolling();
+};
+
+Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
+  var blockBox = block.getBox();
+  var currentView = this.getViewportBox();
+
+  var boxOverhangs = Blockly.getBoxOverhang(currentView, blockBox);
+
+  this.scrollToDelta(boxOverhangs.right - boxOverhangs.left,
+    boxOverhangs.bottom - boxOverhangs.top);
+  console.log("Scrolling into view");
+};
+
+Blockly.BlockSpace.prototype.scrollDeltaWithAnySelectedBlock = function (scrollDx, scrollDy,
+  mouseX, mouseY) {
+  this.scrollWithAnySelectedBlock(
+    this.scrollbarOffsetX() + scrollDx,
+    this.scrollbarOffsetY() + scrollDy,
+    mouseX,
+    mouseY);
+};
+
+Blockly.BlockSpace.prototype.scrollToDelta = function (scrollDx, scrollDy) {
+  this.scrollTo(this.scrollbarOffsetX() + scrollDx,
+    this.scrollbarOffsetY() + scrollDy);
+};
+
 Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
   var maxScrollOffsets = this.getMaxScrollOffsets();
 
@@ -859,6 +891,36 @@ Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
 
   // Set the scrollbar position, which will auto-scroll the canvas
   this.scrollbarPair.set(newScrollX, newScrollY);
+};
+
+/**
+ * Given desired new scrollX and scrollY positions, scroll to position,
+ * clamping to within allowable scroll boundaries.
+ * @param {number} newScrollX new target pan-right (+) offset
+ * @param {number} newScrollY new target pan-down (+) offset
+ * @param {number} mouseX current mouse clientX position (used for
+ *        currently-dragged block movement syncing)
+ * @param {number} mouseY current mouse clientY position
+ */
+Blockly.BlockSpace.prototype.scrollWithAnySelectedBlock = function (newScrollX,
+                                                                    newScrollY,
+                                                                    mouseX,
+                                                                    mouseY) {
+  var yOffsetBefore = this.scrollbarOffsetY();
+
+  this.scrollTo(newScrollX, newScrollY);
+
+  /**
+   * If dragging a block too, move the "mouse start position" as if it
+   * had scrolled along with any blockspace scrolling, and add the scroll event
+   * delta to the block's movement.
+   */
+  if (Blockly.Block.isFreelyDragging() && Blockly.selected) {
+    var scrolledDy = this.scrollbarOffsetY() - yOffsetBefore;
+    Blockly.selected.startDragMouseY -= scrolledDy;
+    // Moves block to stay under cursor with e.clientY
+    Blockly.selected.moveBlockBeingDragged_(mouseX, mouseY);
+  }
 };
 
 /**
@@ -939,14 +1001,45 @@ Blockly.BlockSpace.prototype.drawDebugBox = function (key, box, color) {
   if (!this.debugRects_[key]) {
    this. debugRects_[key] = Blockly.createSvgElement('rect', {
       fill: 'none'
-    }, this.svgBlockCanvas_);
+    }, this.svgDebugCanvas_);
   }
+  this.svgDebugCanvas_.setAttribute('transform', this.svgBlockCanvas_.getAttribute('transform'));
   var debugSvgRect = this.debugRects_[key];
-  debugSvgRect.setAttribute('x', rect.left);
   debugSvgRect.setAttribute('x', rect.left);
   debugSvgRect.setAttribute('y', rect.top);
   debugSvgRect.setAttribute('width', rect.width);
   debugSvgRect.setAttribute('height', rect.height);
   debugSvgRect.setAttribute('stroke', color);
   debugSvgRect.setAttribute('stroke-width', 3);
+};
+
+/**
+ * Cached set of debug circles.
+ * @type {{key: string, svgRect: SVGRect}}
+ * @private
+ */
+Blockly.BlockSpace.prototype.debugCircles_ = {};
+
+/**
+ * Draws a debug circle in the coordindates of this blockspace, in the same
+ * group as blocks are placed. Will re-use circles based on given key.
+ * @param {string} key
+ * @param {goog.math.Coordinate} coordinate
+ * @param {string} color
+ */
+Blockly.BlockSpace.prototype.drawDebugCircle = function (key, coordinate, color) {
+  var radius = 10;
+  if (!this.debugCircles_[key]) {
+   this.debugCircles_[key] = Blockly.createSvgElement('circle', {
+     cx: "50",
+     cy: "50",
+     r: "50"
+    }, this.svgDebugCanvas_);
+  }
+  this.svgDebugCanvas_.setAttribute('transform', this.svgBlockCanvas_.getAttribute('transform'));
+  var debugSvgRect = this.debugCircles_[key];
+  debugSvgRect.setAttribute('cx', ''+coordinate.x);
+  debugSvgRect.setAttribute('cy', ''+coordinate.y);
+  debugSvgRect.setAttribute('r', radius);
+  debugSvgRect.setAttribute('fill', color);
 };
