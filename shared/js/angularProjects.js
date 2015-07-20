@@ -9,7 +9,7 @@ angular.module('projectsApp', [
   'projectsApp.services'
 ]).config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/',
-      {templateUrl: '/p/projects', controller: 'ProjectsController'});
+      {templateUrl: '/projects/angular', controller: 'ProjectsController'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
