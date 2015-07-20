@@ -31,7 +31,7 @@ class OpsMailer < ActionMailer::Base
 
   def workshop_in_2_weeks_reminder(workshop)
     @workshop = workshop
-    subject = "HEY YOU"
+    subject = "[Reminder] You have a Code.org workshop in 2 weeks."
     mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
   end
 end
