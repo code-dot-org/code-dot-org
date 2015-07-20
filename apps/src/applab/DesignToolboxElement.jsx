@@ -1,6 +1,7 @@
 /* global $ */
 
 var React = require('react');
+var library = require('./designElements/library');
 
 module.exports = React.createClass({
   propTypes: {
@@ -50,10 +51,49 @@ module.exports = React.createClass({
     this.makeDraggable();
   },
 
+  /**
+   * Create a draggable item as we drag an item from the toolbox.
+   */
   makeDraggable: function () {
     $(this.getDOMNode()).find('.new-design-element').draggable({
-      containment: '#codeApp',
-      helper: 'clone',
+      // Create an item (without an id) for dragging that looks identical to the
+      // element that will ultimately be dropped. Note, this item has no
+      // containment, and doesn't snap to a grid as we drag (but does on drop)
+      helper: function (event) {
+        var elementType = this.getAttribute('data-element-type');
+        if (elementType === library.ElementType.SCREEN) {
+          return $(this).clone();
+        }
+        var element = library.createElement(elementType, 0, 0, true);
+        element.style.position = 'static';
+
+        var div = document.getElementById('divApplab');
+        var xScale = div.getBoundingClientRect().width / div.offsetWidth;
+        var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+
+        var parent = $('<div/>').addClass('draggingParent');
+
+        parent[0].style.transform = "scale(" + xScale + ", " + yScale + ")";
+        parent[0].style.webkitTransform = "scale(" + xScale + ", " + yScale + ")";
+        parent[0].style.backgroundColor = 'transparent';
+
+        // Have the cursor be in the center of the dragged item.
+        // element.width/height() returns 0 for canvas (probably because it
+        // hasn't actually been renderd yet)
+        var elementWidth = $(element).width() ||
+          parseInt(element.getAttribute('width'), 10);
+        var elementHeight = $(element).height() ||
+          parseInt(element.getAttribute('height'), 10);
+        // phantom/FF seem to not have event.offsetY, so go calculate it
+        var offsetY = (event.offsetY || event.pageY - $(event.target).offset().top);
+        $(this).draggable('option', 'cursorAt', {
+          left: elementWidth / 2,
+          top: Math.min(offsetY, elementHeight)
+        });
+
+        return parent.append(element)[0];
+      },
+      containment: 'document',
       appendTo: '#codeApp',
       revert: 'invalid',
       // Make sure the dragged element appears in front of #belowVisualization,

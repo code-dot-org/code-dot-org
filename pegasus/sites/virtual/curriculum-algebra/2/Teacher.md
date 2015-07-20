@@ -79,6 +79,7 @@ Before students get started on the computers, you can have them work through the
 
 [/together]
 
+
 [together]
 
 ## Activity: Evaluation Blocks

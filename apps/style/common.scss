@@ -253,6 +253,18 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
+#codeWorkspace.readonly:after { /* gray overlay when workspace is read only */
+  content: "";
+  display: block;
+  position: absolute;
+  top: $workspace-headers-height;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.1);
+}
+
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
   border-radius: 15px 0px 0px 15px;
   box-shadow: 0px 0px 0px 40px rgba(0, 0, 255, 0.5) inset;
@@ -860,6 +872,11 @@ $workspace-header-button-margin: ($workspace-headers-height -
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+
+.readonly #headers {
+  background-color: $charcoal;
 }
 
 #headers {

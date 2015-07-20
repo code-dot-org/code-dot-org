@@ -29,7 +29,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "The more sides a shape has, the shorter each side needs to be in order for the whole pattern to fit on the screen. Instead of manually setting the `length` variable, let's use the `sides` variable and a math block to set the `length.` \r\n\r\n<br/>\r\nChoose the correct equation from the toolbox to set the `length` variable, and also update the `sides` variable."
   }
 }]]></config>
   <blocks>

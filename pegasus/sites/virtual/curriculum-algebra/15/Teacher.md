@@ -70,6 +70,7 @@ Suppose you just built a car, but it’s not working right. What would you do? I
 
 Another reason to define multiple, simple functions is the fact that it lets programmers be lazy. Suppose you have a few characters in a videogame, all of which need to be kept on the screen. Some of them might only need `safe-left?`, others might only need `safe-right?`, and only a few might need `onscreen?`. What happens if the game suddenly needs to run on computers with differently-sized monitors, where the width is 1000 pixels instead of 400? If you have simple and complex functions spread throughout your code, you’ll need to change them all. If your complex functions just use the simpler ones, you’d only need to change them in one place!
 
+
 Badly designed programs can work just fine, but they are hard to read, hard to test, and easy to screw up if things change. As you grow and develop as a programmer, you’ll need to think beyond just "making code work". It’s not good enough if it just works - as artists, we should care about whether or not code is _well designed_, too. This is what functions allow us to do! Everyone from programmers to mathematicians uses functions to carve up complex problems into simpler pieces, which make it possible to design elegant solutions to difficult problems.
 
 [/together]

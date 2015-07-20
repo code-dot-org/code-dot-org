@@ -1,5 +1,5 @@
 name 'ECSPD Online U1D1-2 Assessment 2'
-title 'Suggested Assessment: What is a Computer?'
+title 'Suggested Assessment: What Is a Computer?'
 skip_sound true
 question 'Your students will likely realize that desktops, laptops, and cellphones are computers. They might not realize all the different types of computers around them. This quiz can be used as a tool to facilitate discussion. Answer the question and click "Submit" to move on.'
 
@@ -12,13 +12,15 @@ markdown <<MARKDOWN
 
 ### Which of the following are computers or contain computers?
 
+*Want a printable version of this question? [Click here](https://docs.google.com/document/d/1cu2f-nkHp2RU8Au5VDWVKXAWZPSmj-zDPd0TD-qNnwo/edit).*
+
 A. Desktop Computer
 
 B. Laptop Computer
 
 C. Cell Phone
 
-D. Dish Washer
+D. Dishwasher
 
 E. Washing Machine
 

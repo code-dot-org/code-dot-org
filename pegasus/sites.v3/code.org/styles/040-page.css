@@ -103,6 +103,11 @@ body {
   margin: 0;
 }
 
+li > ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 ul {
   list-style: none;
   padding:0;

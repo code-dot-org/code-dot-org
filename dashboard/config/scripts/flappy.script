@@ -1,6 +1,7 @@
 id '6'
 title 'Flappy Code'
 description "Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!"
+description_short 'Write your own Flappy game in less than 10 minutes!'
 hidden 'false'
 
 stage 'Flappy Code'

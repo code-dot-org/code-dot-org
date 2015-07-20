@@ -1,3 +1,6 @@
+/**
+ * @overview UI component: An animated SVG metronome.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -59,15 +62,14 @@ var NetSimMetronome = module.exports = function (rootDiv, runLoop) {
   this.pulseAge_ = 0;
 
   // Register with run loop
-  runLoop.tick.register(this.tick.bind(this));
   runLoop.render.register(this.render.bind(this));
 };
 
 /**
- * Update internal state as time passes.
+ * Fill the root div with new elements reflecting the current state
  * @param {RunLoop.Clock} clock
  */
-NetSimMetronome.prototype.tick = function (clock) {
+NetSimMetronome.prototype.render = function (clock) {
   if (!this.lastPulseTime_) {
     this.lastPulseTime_ = clock.time;
   }
@@ -77,25 +79,21 @@ NetSimMetronome.prototype.tick = function (clock) {
   if (this.pulseIntervalMillis_ === Infinity) {
     this.progress_ = 0;
     this.pulseAge_ = Infinity;
-    return;
-  }
+  } else {
+    // For a non-infinite interval, update the meter progress value according
+    // to the current time.
+    this.pulseAge_ = clock.time - this.lastPulseTime_;
+    this.progress_ = Math.min(this.pulseAge_ / this.pulseIntervalMillis_, 1);
 
-  this.pulseAge_ = clock.time - this.lastPulseTime_;
-  this.progress_ = Math.min(this.pulseAge_ / this.pulseIntervalMillis_, 1);
-
-  if (this.pulseAge_ >= this.pulseIntervalMillis_) {
-    // Pulse
-    var minimumLastPulseTime = clock.time - this.pulseIntervalMillis_;
-    while (this.lastPulseTime_ < minimumLastPulseTime) {
-      this.lastPulseTime_ += this.pulseIntervalMillis_;
+    if (this.pulseAge_ >= this.pulseIntervalMillis_) {
+      // Pulse
+      var minimumLastPulseTime = clock.time - this.pulseIntervalMillis_;
+      while (this.lastPulseTime_ < minimumLastPulseTime) {
+        this.lastPulseTime_ += this.pulseIntervalMillis_;
+      }
     }
   }
-};
 
-/**
- * Fill the root div with new elements reflecting the current state
- */
-NetSimMetronome.prototype.render = function () {
   var renderedMarkup = $(markup({
     progress: this.progress_,
     pulseAge: this.pulseAge_

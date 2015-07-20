@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw this sun by looping this whole block of code 12 times.",
+    "instructions": "Draw this sun by looping this whole block of code multiple times.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "x": "175",
@@ -21,7 +21,14 @@
     "impressive": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

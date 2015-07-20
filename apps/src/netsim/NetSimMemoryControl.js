@@ -1,3 +1,6 @@
+/**
+ * @overview UI slider used to control router memory size.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

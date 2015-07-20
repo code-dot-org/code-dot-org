@@ -2,6 +2,7 @@ var chai = require('chai');
 chai.config.includeStack = true;
 var assert = chai.assert;
 exports.assert = assert;
+require('require-globify');
 
 var $ = require('jquery');
 
@@ -22,17 +23,10 @@ function setupLocale(app) {
 exports.setupLocale = setupLocale;
 
 function setupLocales() {
-  require('../../build/package/js/en_us/maze_locale');
-  require('../../build/package/js/en_us/turtle_locale');
-  require('../../build/package/js/en_us/bounce_locale');
-  require('../../build/package/js/en_us/flappy_locale');
-  require('../../build/package/js/en_us/studio_locale');
-  require('../../build/package/js/en_us/jigsaw_locale');
-  require('../../build/package/js/en_us/calc_locale');
-  require('../../build/package/js/en_us/applab_locale');
-  require('../../build/package/js/en_us/eval_locale');
-  require('../../build/package/js/en_us/netsim_locale');
-  require('../../build/package/js/en_us/common_locale');
+  // make sure Blockly is loaded
+  require('./frame')();
+  require('../../build/package/js/en_us/*_locale-????????????????????????????????.js', { mode: 'expand'});
+  assert(window.blockly.applab_locale);
 }
 
 exports.setupLocales = setupLocales;

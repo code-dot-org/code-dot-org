@@ -1,3 +1,6 @@
+/**
+ * @overview Top-level controller for the network visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -143,10 +146,11 @@ NetSimVisualization.prototype.tick = function (clock) {
 
 /**
  * Render: Let all vizentities "redraw" (or in our case, touch the DOM)
+ * @param {RunLoop.Clock} clock
  */
-NetSimVisualization.prototype.render = function () {
+NetSimVisualization.prototype.render = function (clock) {
   this.elements_.forEach(function (element) {
-    element.render();
+    element.render(clock);
   });
 };
 

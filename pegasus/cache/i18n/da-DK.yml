@@ -1,7 +1,7 @@
 "da-DK":
   hello: Hej verden
   select_language: Vælg dit sprog
-  computer_science: Datalogi
+  en: Computer Science
   computer_science_edweek: Computer Videnskabs Uddannelses Uge
   csedweek_dates: 8.-14. december 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -60,6 +60,7 @@
   congratulations: Tillykke!
   congratulations_on_completing_hoc: Tillykke med gennemførelsen af Hour of Code
   get_a_certificate_of_achievement: Få et certifikat for gennemførelsen
+  enter_valid_age: Please select a valid age
   enter_valid_email: Angiv en gyldig emailadresse
   get_a_certificate_message: Vi sender dig et certifikat og oplysninger om, hvordan
     man <a href='/learn/beyond'> lærer ud over En Time</a>

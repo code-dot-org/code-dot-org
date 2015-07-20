@@ -1,7 +1,7 @@
 "tr-TR":
   hello: Merhaba dünya
   select_language: Lütfen dilinizi seçiniz
-  computer_science: Bilgisayar Bilimleri
+  en: Computer Science
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
   csedweek_dates: 8-14 Aralık 2014
   csedweek_banner_hoc: 'T<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -62,6 +62,7 @@
   congratulations: Tebrikler!
   congratulations_on_completing_hoc: Bir KOD SAATİ'ni tamamladığınız için tebrikler
   get_a_certificate_of_achievement: Başarı belgesi alın
+  enter_valid_age: Please select a valid age
   enter_valid_email: Lütfen geçerli bir e-posta adresi girin
   get_a_certificate_message: Sana <a href='/learn/beyond'>Bir Saatte Öğren</a> hakkında
     bir belge ve bilgi göndereceğiz
@@ -330,7 +331,7 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: 20 saat Orta okul kursları
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,

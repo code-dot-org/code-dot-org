@@ -1,7 +1,7 @@
 "sl-SI":
   hello: Pozdravljen svet
   select_language: Prosimo izberite vaš jezik
-  computer_science: Računalništvo
+  en: Computer Science
   computer_science_edweek: Computer Science Education Week
   csedweek_dates: December 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -59,6 +59,7 @@
   congratulations: Čestitamo!
   congratulations_on_completing_hoc: Čestitamo za dokončanje Ure za kodo
   get_a_certificate_of_achievement: Dobite potrdilo o dosežku
+  enter_valid_age: Please select a valid age
   enter_valid_email: Vnesite veljaven email naslov
   get_a_certificate_message: Poslali vam bomo potrdilo in informacije o tem, kako
     se lahko učite<a href='/learn/beyond'> tudi po Uri za kodo</a>

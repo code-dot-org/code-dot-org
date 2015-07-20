@@ -55,6 +55,7 @@ Students are not expected to know all the answers here - the goal is for them to
 
 [/together]
 
+
 [together]
 
 ## Activity: Strings and Images

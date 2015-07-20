@@ -1,3 +1,6 @@
+/**
+ * @overview Simulation entity representing a client's presence in the simulation.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13,6 +16,7 @@
 
 require('../utils');
 var NetSimEntity = require('./NetSimEntity');
+var logger = require('./NetSimLogger').getSingleton();
 
 /**
  * How often a heartbeat is sent, in milliseconds
@@ -22,6 +26,13 @@ var NetSimEntity = require('./NetSimEntity');
  * @const
  */
 var DEFAULT_HEARTBEAT_INTERVAL_MS = 6000;
+
+/**
+ * How many consecutive failed heartbeat updates must occur before we call it
+ * and kick the client out of the simulator.
+ * @type {number}
+ */
+var NUM_FAILED_UPDATES_TO_KICK = 3;
 
 /**
  * Sends regular heartbeat messages to the heartbeat table on the given
@@ -70,6 +81,14 @@ var NetSimHeartbeat = module.exports = function (shard, row) {
    * @private
    */
   this.falseAgeMS_ = 0;
+
+  /**
+   * Count of consecutive failed heartbeat updates by this controller.
+   * Used to implement three-strikes rule.
+   * @type {number}
+   * @private
+   */
+  this.consecutiveFailedUpdates_ = 0;
 };
 NetSimHeartbeat.inherits(NetSimEntity);
 
@@ -180,11 +199,19 @@ NetSimHeartbeat.prototype.tick = function () {
     this.time_ = Date.now();
     this.update(function (err) {
       if (err) {
-        // A failed heartbeat update may indicate that we've been disconnected
-        // or kicked from the shard.  We may want to take action.
-        if (this.onFailedHeartbeat !== undefined) {
-          this.onFailedHeartbeat();
+        // Implement a three-strikes rule for failed updates, to be more
+        // resilient against brief service interruptions.
+        this.consecutiveFailedUpdates_++;
+        logger.warn("Heartbeat update failed; strike " + this.consecutiveFailedUpdates_);
+        if (this.consecutiveFailedUpdates_ >= NUM_FAILED_UPDATES_TO_KICK) {
+          // A failed heartbeat update may indicate that we've been disconnected
+          // or kicked from the shard.  We may want to take action.
+          if (this.onFailedHeartbeat !== undefined) {
+            this.onFailedHeartbeat(err);
+          }
         }
+      } else {
+        this.consecutiveFailedUpdates_ = 0;
       }
     }.bind(this));
   }

@@ -34,6 +34,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 ### <a name="Vocab"></a> 1) Vocabulary
 This lesson has three new and important words:<br/>
 
+
 - **Rotate** - to turn a shape about a point.
 - **Scale** - to increase the dimensions of a shape by the same factor in all directions.  Also known as dilate.
 - **Translate** - to move a shape from one location to another.  The **offset** function performed this transformation.

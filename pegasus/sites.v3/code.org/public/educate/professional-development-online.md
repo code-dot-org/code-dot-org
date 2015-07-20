@@ -5,8 +5,8 @@ nav: educate_nav
 # Online, Self-Paced Courses for Teachers
 In addition to our in-person [professional development programs](/educate/professional-development) for Elementary, Middle and High School teachers, Code.org is pleased to offer free, self-paced online courses for teachers who wish to implement computer science curriculum in their classrooms. Below is a list of our current course offerings, which are available free of charge to any educator with a Code Studio account world wide.
 
-## Teaching Courses 1-4: The Basics
-[Teaching Courses 1-4: The Basics](https://studio.code.org/s/K5-OnlinePD) is intended as an introduction to computer science fundamentals and the [Code.org K-5 resources](/educate/k5) for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
+## Teaching Computer Science Basics
+[Teaching Computer Science Basics](https://studio.code.org/s/K5-OnlinePD) is intended as an introduction to computer science fundamentals and the [Code.org K-5 resources](/educate/k5) for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding while preparing to teach computer science in your classroom.
 
 
 **Learning Objectives**
@@ -16,7 +16,7 @@ Through completing this online course, participants will:
 - Learn the basics of computer science
 - Review best practices for teaching these basics to your students
 - Access free curriculum and resources for teachers
-- Plan for how you might get started teaching Courses 1-4
+- Plan for how you might get started teaching Computer Science Basics
 - Connect with a community of fellow educators who are making positive change in their classrooms through coding
 
 

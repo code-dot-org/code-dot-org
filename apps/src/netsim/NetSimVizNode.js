@@ -1,3 +1,6 @@
+/**
+ * @overview Nodes in the visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -204,7 +207,18 @@ NetSimVizNode.prototype.tick = function (clock) {
     var randomX = 300 * Math.random() - 150;
     var randomY = 300 * Math.random() - 150;
     this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
-  } else if (this.isForeground && this.tweens_.length > 0) {
+  }
+};
+
+/**
+ * When visible, runs every frame
+ * @param {RunLoop.Clock} [clock]
+ */
+NetSimVizNode.prototype.render = function (clock) {
+  NetSimVizNode.superPrototype.render.call(this, clock);
+
+  // If currently animating, adjust text box sizes to match
+  if (this.isForeground && this.tweens_.length > 0) {
     this.resizeNameBox_();
     this.resizeAddressBox_();
   }

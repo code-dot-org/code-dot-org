@@ -1,7 +1,7 @@
 "ar-SA":
   hello: مرحباً بالعالم
   select_language: من فضلك اختر لغتك
-  computer_science: علوم الكمبيوتر
+  en: Computer Science
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -57,6 +57,7 @@
   congratulations: تهانينا!
   congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
   get_a_certificate_of_achievement: أحصل على شهادة الانجاز
+  enter_valid_age: Please select a valid age
   enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
   get_a_certificate_message: نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'>
     تعلم بعد ساعة واحدة من البرمجة</a>

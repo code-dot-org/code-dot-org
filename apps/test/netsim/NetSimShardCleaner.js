@@ -39,7 +39,7 @@ var makeHeartbeat = function (shard, nodeID) {
 var makeExpiredHeartbeat = function (shard, nodeID) {
   shard.heartbeatTable.create({
     nodeID: nodeID,
-    time: Date.now() - 60001
+    time: Date.now() - NetSimShardCleaner.HEARTBEAT_TIMEOUT_MS - 1
   }, function () {});
 };
 
@@ -105,10 +105,10 @@ describe("NetSimShardCleaner", function () {
     assert(!cleaner2.hasCleaningLock());
   });
 
-  it ("ignores cleaning locks older than 60 seconds", function () {
+  it ("ignores cleaning locks older than heartbeat timeout", function () {
     testShard.heartbeatTable.create({
       nodeID: 0,
-      time: Date.now() - 60001,
+      time: Date.now() - NetSimShardCleaner.HEARTBEAT_TIMEOUT_MS - 1,
       cleaner: true
     }, function () {});
 
@@ -157,7 +157,7 @@ describe("NetSimShardCleaner", function () {
     assertTableSize(testShard, 'heartbeatTable', 2); // Without lock
   });
 
-  it ("deletes heartbeats older than 60 seconds", function () {
+  it ("deletes heartbeats older than heartbeat timeout", function () {
     makeHeartbeat(testShard, 'valid');
     makeExpiredHeartbeat(testShard, 'invalid');
 

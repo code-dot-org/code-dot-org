@@ -1,7 +1,7 @@
 "hi-IN":
   hello: हैलो वर्ल्ड
   select_language: कृपया अपनी भाषा चुनें
-  computer_science: कंप्यूटर विज्ञान
+  en: Computer Science
   computer_science_edweek: कंप्यूटर विज्ञान शिक्षा सप्ताह
   csedweek_dates: दिसंबर 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -60,6 +60,7 @@
   congratulations: बधाइयाँ!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: उपलब्धि का एक प्रमाण पत्र प्राप्त करे
+  enter_valid_age: Please select a valid age
   enter_valid_email: कृपया एक मान्य ईमेल एड्रेस डाले
   get_a_certificate_message: We'll send you a certificate and information about how
     to <a href='/learn/beyond'>Learn beyond One Hour</a>

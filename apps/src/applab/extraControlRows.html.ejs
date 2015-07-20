@@ -4,12 +4,13 @@
 <div id="debug-area">
   <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
   <div id="debug-area-header">
-    <span>Debug Console</span>
+    <span class="header-text"><%= applabMsg.debugConsoleHeader() %></span>
     <% if (debugButtons) { %>
     <div id="debug-commands-header" class="workspace-header">
+      <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>
       <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>
       <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>
-      <span>Debug Commands</span>
+      <span class="header-text"><%= applabMsg.debugCommandsHeaderWhenOpen() %></span>
     </div>
     <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>
     <div id="slider-cell">

@@ -81,6 +81,7 @@ Head to [CS in Algebra stage 18](http://studio.code.org/s/algebra/stage/18/puzzl
 
 The final puzzle in the Luigi's Pizza sequence is a Free Play puzzle that allows for students to extend the program in a number of different ways. While some of the potential extensions seem simple, they can be deceptively challenging to get working. Allow students to explore extensions individually, or choose one to work through as a whole class.
 
+
 - **Coupon Code**: Write a function `coupon` that takes in a topping and a coupon code and returns the price of a pizza with that topping, with %40 off is the code is correct.
 - **Multiple Toppings**: Write a function `two-toppings` that takes in two toppings and returns the price of a pizza with those toppings.
 - **Picture Menu**: Write a function `pizza-pic` that takes in a topping and returns a simple image representing a pizza with that topping.
