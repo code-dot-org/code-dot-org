@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!, except: [:show, :edit, :readonly]
+  before_filter :authenticate_user!, except: [:show, :edit, :readonly, :redirect_legacy]
   before_action :set_level, only: [:show, :edit, :readonly, :remix]
   include LevelsHelper
 
@@ -24,11 +24,13 @@ class ProjectsController < ApplicationController
   def index
   end
 
-  def template
-    # sanitize user input by whitelisting templates we are willing to render
-    head :not_found and return unless TEMPLATES.include? params[:template]
+  # Renders a <script> tag with JS to redirect /p/:key#:channel_id/:action to /projects/:key/:channel_id/:action.
+  def redirect_legacy
+    render layout: nil
+  end
 
-    render template: "projects/#{params[:template]}", layout: nil
+  def angular
+    render template: "projects/projects", layout: nil
   end
 
   def show
@@ -48,7 +50,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
+    if STANDALONE_PROJECTS[params[:key].to_sym][:login_required]
       authenticate_user!
     end
     show
@@ -63,7 +65,7 @@ class ProjectsController < ApplicationController
   end
 
   def set_level
-    @level = Level.find_by_key STANDALONE_PROJECTS[params[:key]][:name]
+    @level = Level.find_by_key STANDALONE_PROJECTS[params[:key].to_sym][:name]
     @game = @level.game
   end
 end

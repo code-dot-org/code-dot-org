@@ -83,7 +83,7 @@ module.exports = {
   },
 
   init: function () {
-    if (redirectFromLegacyUrl() || redirectEditView()) {
+    if (redirectEditView()) {
       return;
     }
 
@@ -288,7 +288,7 @@ module.exports = {
   load: function () {
     var deferred;
     if (appOptions.level.isProjectLevel) {
-      if (redirectFromLegacyUrl() || redirectEditView()) {
+      if (redirectEditView()) {
         return;
       }
       var pathInfo = parsePath();
@@ -372,30 +372,6 @@ function getEditorSource() {
 
 function getLevelHtml() {
   return window.Applab && Applab.getHtml();
-}
-
-/**
- * Does a redirect to a non-hash based version of the URL. Does a hard redirect
- * if on legacy browsers (IE 9), or if we're going to an applab route that may
- * require login
- * @returns {boolean} True if we did an actual redirect
- */
-function redirectFromLegacyUrl() {
-  var newUrl = location.href.replace('#', '/').replace(/\/p\//, '/projects/');
-  if (newUrl === location.href) {
-    // Nothing changed
-    return false;
-  }
-
-  var pathInfo = parsePath();
-  var attemptPushState = true;
-  // We require sign in for /p/applab and /p/applab#channel_id/edit, so we'll
-  // want to actually do the redirect
-  if (pathInfo.appName === 'applab') {
-    attemptPushState = pathInfo.channelId && pathInfo.action !== 'edit';
-  }
-
-  return redirectToPath(newUrl, attemptPushState);
 }
 
 /**
