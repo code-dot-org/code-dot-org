@@ -404,10 +404,10 @@ Blockly.mouseToSvg = function(e, opt_svgParent) {
 /**
  * Return the converted coordinates of the given mouse coordinates.
  * The origin (0,0) is the top-left corner of the Blockly svg.
- * @param {number} x Mouse client X.
- * @param {number} y Mouse client Y.
- * @param {Element=} Target element.
- * @return {!Object} Object with .x and .y properties.
+ * @param {number} clientX Mouse client X.
+ * @param {number} clientY Mouse client Y.
+ * @param {Element=} target element.
+ * @return {Object} coordinate with .x and .y properties.
  */
 Blockly.mouseCoordinatesToSvg = function(clientX, clientY, target) {
   return Blockly.convertCoordinates(
@@ -423,7 +423,8 @@ Blockly.mouseCoordinatesToSvg = function(clientX, clientY, target) {
  * @returns {goog.math.Coordinate}
  */
 Blockly.svgCoordinatesToViewport = function(coordinates, blockSpace) {
-  return new goog.math.Coordinate(coordinates.x - blockSpace.getMetrics().absoluteLeft,
+  return new goog.math.Coordinate(
+    coordinates.x - blockSpace.getMetrics().absoluteLeft,
     coordinates.y);
 };
 
@@ -665,16 +666,16 @@ Blockly.getBoxOverhang = function (outerBox, innerBox) {
 };
 
 /**
- * Gets a point's distances to outer edges of a box.
+ * Gets a point's distance outside each side (or negative if inside box)
  * @param {goog.math.Box} outerBox
  * @param {goog.math.Coordinate} innerPoint
  * @return {goog.math.Box} distances to each side, from point's perspective
  */
-Blockly.getDistancesToBoxSides = function (outerBox, innerPoint) {
+Blockly.getPointOverhangs = function (outerBox, innerPoint) {
   return new goog.math.Box(
     outerBox.top - innerPoint.y,
-    outerBox.right - innerPoint.x,
-    outerBox.bottom - innerPoint.y,
+    innerPoint.x - outerBox.right,
+    innerPoint.y - outerBox.bottom,
     outerBox.left - innerPoint.x);
 };
 
