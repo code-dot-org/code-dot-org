@@ -29,7 +29,8 @@ class OpsMailer < ActionMailer::Base
     mail content_type: 'text/html', subject: subject
   end
 
-  def phase_2_2_week_reminder()
+  def phase_2_2_week_reminder(workshop)
+    @workshop = workshop
     subject = "HEY YOU"
     mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
   end
