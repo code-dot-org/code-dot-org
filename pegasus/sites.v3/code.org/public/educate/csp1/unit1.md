@@ -9,7 +9,7 @@ nav: educate_nav
 
 **Quick Links**
 
-[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [About using these lesson plans](howToUse) | [About the widgets](aboutTheWidgets) | [Widget Directory](http://cspdashboard-c9-bfranke.c9.io/home.html) |  [Writing Team](team)
+[CSP Forum](http://forum.code.org/c/csp) | [About using these lesson plans](howToUse) | [About the widgets](aboutTheWidgets) | [Widget Directory](http://cspdashboard-c9-bfranke.c9.io/home.html) |  [Writing Team](team)
 
 **Invitation to Comment:** 
 
