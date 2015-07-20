@@ -49,14 +49,14 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
+    if STANDALONE_PROJECTS[params[:key].to_sym][:login_required]
       authenticate_user!
     end
     show
   end
 
   def set_level
-    @level =Level.find_by_key STANDALONE_PROJECTS[params[:key]][:name]
+    @level =Level.find_by_key STANDALONE_PROJECTS[params[:key].to_sym][:name]
     @game = @level.game
   end
 end
