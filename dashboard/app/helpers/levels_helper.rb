@@ -20,6 +20,10 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
+  # Create a new channel.
+  # @param [Hash] data Data to store in the channel.
+  # @param [String] src Optional source channel to copy data from, instead of
+  #   using the value from the `data` param.
   def create_channel(data = {}, src = nil)
 
     result = ChannelsApi.call(request.env.merge(
