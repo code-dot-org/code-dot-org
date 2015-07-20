@@ -2,9 +2,9 @@
 
 # Teacher Announcements
 
-June 26, 2015 &mdash; We're launching online PD for teachers! Learn  how to teach computer science using Code.org’s Courses 1-4 with this free, self-paced online course.
+July 10, 2015 &mdash; Complete a quick survey to help guide the future of Code.org's beginning computer science content.
 
-[Learn more >](/educate/professional-development-online)
+[Complete the Survey >](https://docs.google.com/forms/d/1Gf74xsRZzsXSHKd_UuuSr5Xr5lj67CRKyYUymb539mQ/viewform?usp=send_form)
 <br/>
 [View all announcements >](http://teachcodeorg.tumblr.com/)
 

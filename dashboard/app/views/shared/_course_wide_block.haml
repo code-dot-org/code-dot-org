@@ -4,7 +4,7 @@
   .courseblock-span6.courseblock-wide-small
     =link_to hoc_reset_url do
       .courseblock-span2.imgspan
-        %img{src: '//code.org/images/fit-520/codehoc3.jpg'}
+        %img{src: '//code.org/images/fit-150x100/codehoc3.jpg'}
       .courseblock-span4.heading
         %h3= t('upsell.hoc.title')
         .smalltext= t('upsell.hoc.body')
@@ -23,7 +23,7 @@
   .courseblock-span6.courseblock-wide-large
     =link_to script_url(Script::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
-        %img{src: '//code.org/images/fit-520/code20hr.jpg'}   
+        %img{src: '//code.org/images/fit-150x100/code20hr.jpg'}   
       .courseblock-span4.heading
         %h3= t('upsell.20-hour.title')
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
@@ -32,39 +32,40 @@
 -elsif id == Script::TWENTY_HOUR_NAME && view == 'small'
   - url = script_reset_url(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
-  .courseblock-span6.courseblock-wide-small
-    =link_to script_url(Script::TWENTY_HOUR_NAME) do
-      .courseblock-span2.imgspan
-        %img{src: '//code.org/images/fit-520/code20hr.jpg'}   
-      .courseblock-span4.heading
-        %h3= t('upsell.20-hour.title')
-        .smalltext= t('upsell.20-hour.body_short')
-      - if current_user
-        .audiencebar.smalltext.audience= audience
-      - else
-        .bottombar.smalltext.audience= audience
-      = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
+  - if current_user ? height = 150 : height = 120
+    .courseblock-span6.courseblock-wide-small{style: "min-height: #{height}px;"}
+      =link_to script_url(Script::TWENTY_HOUR_NAME) do
+        .courseblock-span2.imgspan
+          %img{src: '//code.org/images/fit-150x100/code20hr.jpg'}   
+        .courseblock-span4.heading
+          %h3= t('upsell.20-hour.title')
+          .smalltext= t('upsell.20-hour.body_short')
+        - if current_user
+          .audiencebar.smalltext.audience= audience
+        - else
+          .bottombar.smalltext.audience= audience
+        = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 - elsif id == Script::ARTIST_NAME || id == Script::PLAYLAB_NAME
 
   - url = script_reset_url(id)
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
-
-  .courseblock-span6.courseblock-wide-small
+  - current_user && showState ? height = 125 : height = 100
+  .courseblock-span6.courseblock-wide-small{style: "min-height: #{height}px;"}
     =link_to url do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url("/shared/images/courses/fill-240x200/logo_tall_#{id}.jpg")}
+        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x100/logo_tall_#{id}.jpg")}
       .courseblock-span4.heading
         %h3= title
         .smalltext= body
-    = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
+      = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }
 
 -elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME, Script::ALGEBRA_NAME].include? id
   .courseblock-span6.courseblock-wide-large
     =link_to script_url(id) do
       .courseblock-span2.imgspan
-        = image_tag(CDO.shared_image_url("courses/logo_#{id}.jpg"))
+        = image_tag(CDO.shared_image_url("courses/fit-150x100/logo_#{id}.jpg"))
       .courseblock-span4.heading
         %h3
           = data_t_suffix('script.name', id, 'title')

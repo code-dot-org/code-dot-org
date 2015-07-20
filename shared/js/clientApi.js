@@ -68,6 +68,21 @@ var base = {
       var err = new Error('status: ' + status + '; error: ' + error);
       callback(err, false);
     });
+  },
+
+  // Copy to the destination collection, since we expect the destination
+  // to be empty. A true rest API would replace the destination collection:
+  // https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+  copyAll: function(src, dest, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + dest + '?src=' + src,
+      type: "put"
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
   }
 };
 

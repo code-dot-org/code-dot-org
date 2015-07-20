@@ -1,7 +1,7 @@
 et-EE:
   hello: Tere maailm
   select_language: Palun vali oma keel
-  computer_science: Arvutiteadus
+  en: Computer Science
   computer_science_edweek: Informaatika Hariduse Nädal
   csedweek_dates: 8-14 Detsember, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodi Tund</a> on saabumas. Üleskutse kõigile õpetajatele ja korraldajatele,<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planeeri oma Koodi Tund</a>'
@@ -45,6 +45,7 @@ et-EE:
   congratulations: Palju õnne!
   congratulations_on_completing_hoc: Palju õnne, oled lõpetanud Tunni Koodi
   get_a_certificate_of_achievement: Saa tunnistus lõpetamise kohta
+  enter_valid_age: Please select a valid age
   enter_valid_email: Palun sisestage kehtiv e-posti aadress
   get_a_certificate_message: "Me saadame sulle tunnistuse ja info, kuidas <a href='/learn/beyond'>õppida edasi pärast Koodi Tundi</a>"
   get_a_certificate_message_after: "Kliki tunnistusel, et see alla laadida või välja printida. Nüüd jätka meie <a href='http://studio.code.org'>teiste kursustega</a>, või vaata rohkem valikuid <a href='/learn/beyond'>Õpi pärast Ühte Tundi</a> kohta."

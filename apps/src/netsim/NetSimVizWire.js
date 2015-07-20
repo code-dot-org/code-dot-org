@@ -1,3 +1,6 @@
+/**
+ * @overview Wires in the visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

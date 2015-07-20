@@ -182,6 +182,7 @@
   "play":"səsləndir",
   "print":"çap",
   "puzzleTitle":"Tapmaca {puzzle_number} (cəmi {stage_total} tapmaca var)",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"təkrar et",
   "resetProgram":"Yenidən başla",
   "rotateText":"Cihazınızı döndərin.",

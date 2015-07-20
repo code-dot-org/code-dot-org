@@ -23,7 +23,7 @@
   "COLOUR_RGB_RED":"אדום",
   "COLOUR_RGB_TITLE":"צבע ב",
   "COLOUR_RGB_TOOLTIP":"יוצר צבע עם הכמות המצוינת של אדום, ירוק וכחול.  כל הערכים חייבים להיות בין 0 ל- 100.",
-  "CONTRACT_EDITOR_HEADER":"Design Recipe",
+  "CONTRACT_EDITOR_HEADER":"עצב מתכון",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"צא מהלולאה",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"המשך עם החזרה הבאה של הלולאה",

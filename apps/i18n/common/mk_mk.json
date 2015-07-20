@@ -182,6 +182,7 @@
   "play": "Пушти",
   "print": "Печати",
   "puzzleTitle": "Загатка {puzzle_number} на {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "повтори",
   "resetProgram": "Од почеток ,Ресетирање",
   "rotateText": "Ротација на Вашиот уред.",

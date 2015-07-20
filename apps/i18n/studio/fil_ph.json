@@ -151,7 +151,7 @@
   "projectileCherry": "cherry",
   "projectileIce": "ice",
   "projectileDuck": "duck",
-  "reinfFeedbackMsg": "Maaarin mo pindutin ang \"Subukan muli\" na button upang bumalik sa paglalaro.",
+  "reinfFeedbackMsg": "You can press the \"Keep Playing\" button to go back to playing your story.",
   "repeatForever": "ulitin ng walang katapusan",
   "repeatDo": "gawin",
   "repeatForeverTooltip": "Ipatupad ang mga aksyon sa block na ito ng paulit-ulit habang ang kuwento ay tumatakbo.",

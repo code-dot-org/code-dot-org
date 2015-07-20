@@ -182,6 +182,7 @@
   "play": "play",
   "print": "បោះពុម្ព",
   "puzzleTitle": "ល្បែង​ប្រាជ្ញា​ទី {puzzle_number} នៃ {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ធ្វើ​ឡើង​វិញ",
   "resetProgram": "កំណត់​ឡើង​វិញ",
   "rotateText": "បង្វិល​ឧបករណ៍​របស់​អ្នក។",

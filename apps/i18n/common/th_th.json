@@ -182,6 +182,7 @@
   "play": "เล่น",
   "print": "พิมพ์",
   "puzzleTitle": "ปริศนา {puzzle_number} ของ {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ทำซ้ำ",
   "resetProgram": "ตั้งค่าใหม่",
   "rotateText": "หมุนอุปกรณ์ของคุณ.",

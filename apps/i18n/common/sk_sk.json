@@ -182,6 +182,7 @@
   "play": "hrať",
   "print": "Tlačiť",
   "puzzleTitle": "Úloha {puzzle_number} z {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "opakovať",
   "resetProgram": "Obnoviť",
   "rotateText": "Otoč svoj prístroj.",

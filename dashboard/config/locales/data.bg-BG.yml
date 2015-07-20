@@ -629,8 +629,8 @@
         C2_zuck_repeat_loop: Лабиринт- повторения
         C2_artist_loops: Художник - цикли
         C2_artist_debugging: 'Художник: отстраняване на грешки'
-        C2_bee_loops: Пчела повторения
-        C2_bee_debugging: Пчела - отстраняване на грешки
+        C2_bee_loops: 'Пчела: цикли'
+        C2_bee_debugging: 'Пчела: отстраняване на грешки'
         C2_bee_conditionals: Пчела - условия
         C2_playlab_createstory: 'Театрална лаборатория: Създаване на история'
         C2_graph_paper: Програмиране на милиметрова хартия
@@ -640,7 +640,7 @@
         C2_paper_airplanes: Хартиени самолети
         C2_digital_footprint: Вашите дигитални отпечатъци
         C2_digital_footprint_v2: Вашите дигитални отпечатъци
-        C3_maze_level_4: Лабиринт повторения
+        C3_maze_level_4: 'Лабиринт: повторения'
         C3_artist_intro: Художник - въведение
         C3_artist_functions: 'Художник: функции'
         C3_bee_functions: Пчела - функции
@@ -659,6 +659,7 @@
         C3_functional_suncatchers: Функционални ловци на слънце
         C3_songwriting_with_parameters: Композиране на песен с параметри
         C4_intro: Въведение
+        C4_loops_zombie: Цикли
         C4_bee_conditional: Пчела - условия
         C4_variables_artist: Променливи - художник
         C4_variables_playlab: Променливи - Игрална лаборатория

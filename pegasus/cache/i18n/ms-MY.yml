@@ -1,7 +1,7 @@
 "ms-MY":
   hello: Helo dunia
   select_language: Sila pilih bahasa anda
-  computer_science: Sains Komputer
+  en: Computer Science
   computer_science_edweek: Minggu Pendidikan Sains Komputer
   csedweek_dates: 8-12 Disember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -62,6 +62,7 @@
   congratulations_on_completing_hoc: Tahniah kerana telah menyiapkan satu Hour of
     Code
   get_a_certificate_of_achievement: Dapatkan sijil pencapaian
+  enter_valid_age: Please select a valid age
   enter_valid_email: Sila masukkan alamat email yang sah
   get_a_certificate_message: Kami akan menghantar sijil dan maklumat mengenai cara
     untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>

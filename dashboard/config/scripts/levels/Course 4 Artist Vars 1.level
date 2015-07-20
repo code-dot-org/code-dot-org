@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you help me draw a triangle? It's 100 pixels long on each side.",
+    "instructions": "Can you help me draw an equilateral triangle? It has to be exactly 100 pixels long on each side.",
     "x": "150",
     "y": "225",
     "start_direction": "90",
@@ -20,9 +20,16 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"repeat_blocks\",\"callout_text\":\"Use the \\\"Repeat\\\" block and wrap it around the blocks in the workspace\",\"element_id\":\"[block-id='4']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"repeat_blocks\",\r\n  \"callout_text\": \"Use the \\\"Repeat\\\" block and wrap it around the blocks in the workspace\",\r\n  \"element_id\": \"[block-id='4']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

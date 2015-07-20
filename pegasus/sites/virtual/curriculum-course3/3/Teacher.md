@@ -154,9 +154,9 @@ In the Artist levels students are not constrained to 90 degree angles. Having pr
 
 [/standards]
 
-<a href="http://creativecommons.org/"><img src="http://www.thinkersmith.org/images/creativeCommons.png" border="0"></a>  
+<a href="http://creativecommons.org/"><img src="https://code.org/curriculum/docs/k-5/creativeCommons.png" border="0"></a>
 
-<a href="http://thinkersmith.org/"><img src="http://www.thinkersmith.org/images/thinker.png" border="0"></a><br/>
+<a href="http://thinkersmith.org/"><img src="https://code.org/curriculum/docs/k-5/thinker.png" border="0"></a><br/>
 
 [/content]
 

@@ -7,6 +7,8 @@ var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -66,7 +68,7 @@ var ButtonProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <ImagePickerPropertyRow
           desc={'image'}
-          initialValue={element.dataset.canonicalImageUrl || ''}
+          initialValue={element.getAttribute('data-canonical-image-url') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')} />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -85,8 +87,51 @@ var ButtonProperties = React.createClass({
   }
 });
 
+var ButtonEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
+  },
+
+  getClickEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "click", function(event) {\n' +
+      '  console.log("' + id + ' clicked!");\n' +
+      '});\n';
+    return code;
+  },
+
+  insertClick: function() {
+    this.props.onInsertEvent(this.getClickEventCode());
+  },
+
+  render: function () {
+    var element = this.props.element;
+    var clickName = 'Click';
+    var clickDesc = 'Triggered when the button is clicked with a mouse or tapped on a screen.';
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={clickName}
+          desc={clickDesc}
+          handleInsert={this.insertClick}/>
+      </div>
+    );
+  }
+});
+
 module.exports = {
-  PropertyTable: ButtonProperties,
+  PropertyTab: ButtonProperties,
+  EventTab: ButtonEvents,
   create: function () {
     var element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
@@ -99,5 +144,11 @@ module.exports = {
     element.style.backgroundColor = '#1abc9c';
 
     return element;
+  },
+  onDeserialize: function (element, onPropertyChange) {
+    var url = element.getAttribute('data-canonical-image-url');
+    if (url) {
+      onPropertyChange(element, 'image', url);
+    }
   }
 };

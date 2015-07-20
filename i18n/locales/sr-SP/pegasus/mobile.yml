@@ -1,7 +1,7 @@
 sr-SP:
   hello: Здраво свете
   select_language: Молимо изаберите свој језик
-  computer_science: Информатика
+  en: Computer Science
   computer_science_edweek: Едукацијска седмица о информатици
   csedweek_dates: 8-14 Децембар, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Сат програмирања </a>долази. Позивамо све учитеље и организаторе, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">да испланирају свој Сат програмирања</a>'
@@ -45,6 +45,7 @@ sr-SP:
   congratulations: Честитамо!
   congratulations_on_completing_hoc: Честитамо на завршавању 1 Сата Програмирања
   get_a_certificate_of_achievement: Узмите сертификат о достигнућу
+  enter_valid_age: Please select a valid age
   enter_valid_email: Молимо да унесете валидну емаил адресу
   get_a_certificate_message: "Послаћемо Вам сертификат и информације како да <a href='/learn/beyond'> Научите и више од сата кодирања</a>"
   get_a_certificate_message_after: "Кликните на диплому да би је преузели или одштампали. Сада, наставите са нашим <a href='http://studio.code.org'>другим курсевима</a>, или да би видели више могућности идите на <a href='/learn/beyond'>Научите више него у Сату програмирања</a>."

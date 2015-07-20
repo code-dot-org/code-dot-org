@@ -1,7 +1,7 @@
 ru-RU:
   hello: Привет, мир!
   select_language: Выберите язык
-  computer_science: Информатика
+  en: Computer Science
   computer_science_edweek: Образовательная неделя компьютерных технологий
   csedweek_dates: 8-14 декабря 2014 года
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Час Кода</a> приближается. Приглашаем всех преподавателей и организаторов, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">запланируйте свой Час Кода</a>'
@@ -45,6 +45,7 @@ ru-RU:
   congratulations: Поздравляем!
   congratulations_on_completing_hoc: Поздравляем с завершением одного Часа программирования
   get_a_certificate_of_achievement: Получить сертификат о результате
+  enter_valid_age: Please select a valid age
   enter_valid_email: Пожалуйста, введите действительный адрес электронной почты
   get_a_certificate_message: "Мы вышлем Вам сертификат и информацию о том, как <a href='/learn/beyond'>Учиться дальше!</a>"
   get_a_certificate_message_after: "Нажми на сертификат для его загрузки или отправки на печать. А теперь продолжи <a href='http://studio.code.org'>с другими нашими курсами</a> или посмотри какие еще есть возможности <a href='/learn/beyond'>Научиться За Один Час</a>."

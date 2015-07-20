@@ -67,7 +67,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 예술가 반복, 똑같이 그리기1
         Match the loop to the shape: 똑같이 맞춰 그리기
-        Matching loops: 똑같이 그리기
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -452,9 +451,9 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: 가장 적절한 답을 고르세요.
         Maze Multiple Choice One: 미로 퍼즐 객관식1
-        Which blocks work?: 어떤 블럭들이 제대로 동작할까요?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct
+          answer?
       4-5 Algorithms Multi 1:
         Baking cookies: 쿠키를 굽고
         Banana: 바나나
@@ -515,25 +514,27 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
           to my Lou, <br/>Skip to my Lou, my darlin.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: 객관식
-        4: '? 이 노래의 가장 긴 코러스 후렴구로 정의할 수 있는 것은?'
-        5: ': 이 노래의 가장 긴 코러스 후렴구로 정의할 수 있는 것은?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -837,15 +838,6 @@
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 이들
           중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다.
         This time, which boy is the <large>driver</large>?: 이번에는 누가 <large>드라이버</large>일까요?
-      Warmup questions:
-        Coding in Racket: 묶음 단위로 코딩하기
-        Select the best answer to the question.: 주어진 질문에 가장 적절한 답을 고르세요.
-        When converting a circle to code, the correct order is: '원을 코드로 변환할 때, 정확한
-          명령은 '
-        left top right: 왼쪽, 위쪽, 오른쪽
-        left, right, top: 왼쪽, 오른쪽, 위쪽
-        random: random(랜덤)
-        top, left, right: 위쪽, 왼쪽, 오른쪽
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

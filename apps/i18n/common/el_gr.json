@@ -182,6 +182,7 @@
   "play": "παίξε",
   "print": "Εκτύπωσε",
   "puzzleTitle": "Παζλ {puzzle_number} από {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "επανάλαβε",
   "resetProgram": "Επαναφορά",
   "rotateText": "Περιστρέψτε τη συσκευή σας.",

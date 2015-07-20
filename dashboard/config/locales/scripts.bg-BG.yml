@@ -10,6 +10,7 @@
           Math Image: Математическо изображение
           title: Тест
           description: Просто един вътрешен тест за курса.
+          description_short: Просто един вътрешен тест за курса.
         course1:
           'Jigsaw: Learn to drag and drop': 'Мозайката: Научете за плъзгане и пускане'
           'Maze: Sequence': 'Лабиринт: последователност'
@@ -60,12 +61,12 @@
           Bee Conditionals: Пчела - условия
           Flappy: Flappy
           title: Курс 2
-          Bee Loops: Пчела повторения
+          Bee Loops: 'Пчела: цикли'
           Artist Functions: 'Художник: функции'
           The Artist Debugging: 'Художникът: отстраняване на грешки'
-          Bee Debugging: Пчела - отстраняване на грешки
-          Bee Functions: Пчела - функции
-          Maze Loops: Лабиринт повторения
+          Bee Debugging: 'Пчела: отстраняване на грешки'
+          Bee Functions: 'Пчела: функции'
+          Maze Loops: 'Лабиринт: повторения'
           Graph Paper Programming: Програмиране на милиметрова хартия
           'Real-life Algorithms: Paper Planes': 'Реални алгоритми: Хартиени самолети'
           Getting Loopy: Да повтаряме
@@ -147,64 +148,6 @@
           Songwriting: Писане на песен
           description_audience: Възраст 8 + (след курс 2)
           description_short: Курс 3 е продължение на курс 2.
-        msm:
-          title: Математика за Средното училище
-          description: Контролно за отчитане на напредъкът по математика в средното
-            училище.
-          Graph Paper Programming: Програмиране на милиметрова хартия
-          Assessments: Оценки
-          Unit 1: Част 1
-          Unit 2: Част 2
-          Ninja Cat and the Coordinate Plane: Нинджа котката и координатната система
-          'Calc: Circles of Evaluation': 'Изчисление: Кръгове на оценка'
-          'Artist: Strings and Images': 'Художник: Последователности и изображения'
-          Contracts: Договори
-          'Artist: Writing Contracts': 'Художник: Писане на договори'
-          'Calc: Defining Variables': 'Изчисление: Определяне на променливите'
-          'Play Lab: Defining Variables': 'Театрална лаборатория: Определяне на променливите'
-          The Design Recipe: Рецепта за дизайн
-          'Artist: Defining Functions': 'Художник: Дефиниране на функции'
-          'Play Lab: Defining Functions': 'Игрална лаборатория: Рецепта за дизайн'
-          'Artist: Functions': 'Художник: функции'
-          'Play Lab: Animation': 'Театрална лаборатория: анимация'
-          Booleans: Booleans
-          'Play Lab: Booleans': 'Театрална лаборатория: Booleans'
-          'Calc: Boolean Operators': 'Изчисление: Булеви оператори'
-          'Play Lab: Boolean Operators': 'Театрална лаборатория: Булеви оператори'
-          Conditionals and Piecewise Functions: Условни и линейни функции
-          'Artist: Conditionals': 'Артист: Условия'
-          Collision Detection and the Distance Formula: Collision Detection и формула
-            за разстояние
-          'Play Lab: Collision Detection': 'Театрална лаборатория: Collision Detection'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Ънплъгд: Нинджа котката
-            и координатната система'
-          'Eval: Strings and Images': 'Оценка: Низове и изображения'
-          'Unplugged: Contracts': 'Ънплъгд: договори'
-          'Eval: Writing Contracts': 'Оценка: Писане на договори'
-          'Unplugged: The Design Recipe': 'Ънплъгд: Напиши рецепта'
-          'Eval: Defining Functions': 'Оценка: Бързи функции'
-          'Eval: Functions': 'Оценка: Рецепта за дизайн'
-          'Unplugged: Booleans': 'Ънплъгд: Booleans'
-          'Unplugged: Conditionals and Piecewise Functions': 'Ънплъгд: Условия и Piecewise
-            функции'
-          'Eval: Conditionals': 'Оценка: Условия'
-          'Unplugged: Collision Detection and the Distance Formula': 'Ънплъгд: Collision
-            Detection и формула за разстояние'
-          'Calc: Evaluation Blocks': 'Калколиране: Оценка блокове'
-          'Unplugged: Video Games and Coordinate Planes': 'Ънплъгд: видео игрите и
-            координатните системи'
-          'Eval: Boolean Operators': 'Оценка: Булеви оператори'
-          Blocks to Math: Блокове за математика
-          'Play Lab: Defining Variables (Big Game)': 'Игрална лаборатория: Дефиниране
-            на променливи (голямата игра)'
-          'Play Lab: Animation (Big Game)': 'Игрална лаборатория: Анимация (голямата
-            игра)'
-          'Play Lab: Boolean (Big Game)': 'Игрална лаборатория: Boolean(голямата игра)'
-          'Play Lab: Collision Detection (Big Game)': 'Игрална лаборатория: Collision
-            Detection (голямата игра)'
-          'Eval: Fast Functions': 'Оценка: Бързи функции'
-          'Play Lab: Design Recipe': 'Игрална лаборатория: Рецепта за дизайн'
-          'Eval: Design Recipe': 'Оценка: Рецепта за дизайн'
         playlab:
           title: Театрална лаборатория
           description: Създайте история или направете игра с Театрална лаборатория!
@@ -215,11 +158,6 @@
           description: Начертайте готини картинки и дизайни с художника!
           Artist: Художник
           description_short: Начертайте готини картинки и дизайни с художника!
-        scrat:
-          title: Scrat
-          description_short: 'Scrat: кратко описание.'
-          description: 'Scrat: дълго описание'
-          'Maze: Sequence': 'Лабиринт: последователност'
         hourofcode:
           Maze: Лабиринт
           title: Час на Кодирането
@@ -306,23 +244,10 @@
           description: специален
           Special: Специален
           Binary: Двоичен код
-        usabilitymsm:
-          title: Прилагане на математиката в средното училище
-          description_short: Тестване на приложимостта по математика в средното училище
-          description: Тестване на приложимостта по математика в средното училище
-          Usability testing for MSM: Тестиране за ползваемост за MSM
-          Evaluation Blocks: Блокове за оценка
-          Blocks to Math: Блокове за математика
-          Strings and Images: Стрингове и изображения
-          Defining Variables: Дефиниране на променливите
-          Defining Functions: Дефиниране на функции
-          Design Recipe: Рецепта за дизайн
-          Booleans: Booleans
-          Conditionals: Условия
-          Free Play: Свободна игра
         algebra:
           title: Компютърни науки в алгебрата
           description: Научете функционално програмиране чрез алгебра
+          description_short: Научете функционално програмиране чрез алгебра
           'Unplugged: Video Games and Coordinate Planes': 'Ънплъгд: видео игрите и
             координатните системи'
           'Calc: Evaluation Blocks': Блокове за оценка и аритметични изрази
@@ -392,8 +317,8 @@
           'Programming Concept: Events': 'Концепции на програмирането: събития'
         netsim:
           title: Интернет симулатор
-          description_short: ''
-          description: ''
+          description_short: Научете как работи Интернет
+          description: Научете как работи Интернет
           Internet Simulator: Интернет симулатор
           Unit 1: Част 1
           Unit 2: Част 2
@@ -405,13 +330,17 @@
         pixelation:
           title: Пикселизация
           description: Създаване на изображения с битове и байтове.
+          description_short: Създаване на изображения с битове и байтове.
           Pixelation: Пикселизация
         20-hour:
           title: 20-часов въвеждащ курс
           description_audience: Възраст 10 + (след курс 3)
-          description: Този 20-часов курс представя основните компютърни науки, концепции
-            и термини в програмирането. Курсът е предназначен най-вече за използване
-            в класните стаи за учениците в 7-8 клас, но е забавен за всички възрасти.
+          description: Този 20-часов курс покрива основите на Компютърните Науки и
+            концепциите за програмиране от курсове 2-3. Курсът е предназначен най-вече
+            за използване  от  учениците на възраст 10 -18 години. Проверете курсове
+            2-4 за по-задълбочено обучение.
+          description_short: Този 20-часов курс покрива основите на Компютърните Науки
+            и концепциите за програмиране от курсове 2-3.
           Introduction to Computer Science: Въведение в компютърните науки
           The Maze: Лабиринт
           Computational Thinking: Изчислително мислене
@@ -434,7 +363,8 @@
           Wrap-up: Заключение
         edit-code:
           title: Редактиране на кода
-          description: ''
+          description: Редактиране на кода
+          description_short: Редактиране на кода
           The Maze: Лабиринт
           Applab: Лаборатория за приложения
           The Artist: Художникът
@@ -442,7 +372,8 @@
           Play Lab 2015: Игрална лаборатория 2015
         events:
           title: Събития
-          description: ''
+          description: Събития
+          description_short: Събития
           Bounce: Скачане
           Studio: Студио
           Calc: Calc
@@ -451,18 +382,23 @@
           title: Flappy код
           description: Искате ли да напишете своя собствена игра за по-малко от 10
             минути? Опитайте нашите Flappy код уроци!
+          description_short: Напишете своя собствена Flappy игра по-малко от 10 минути!
           Flappy Code: Flappy код
         jigsaw:
           title: Мозайка
-          description: ''
+          description: Опитайте нашите уроци тип "мозайка"
+          description_short: Опитайте нашите уроци тип "мозайка"
           Jigsaw: Мозайка
         step:
           title: Стъпка
-          description: ''
+          description: Стъпка от урока
+          description_short: Стъпка от урока
           Step: Стъпка
         Hour of Code:
           title: Час на кодирането 2013
-          description: ''
+          description: Опитайте основите на компютърните науки с герои от Angry Birds
+            и Plants vs. Zombies!
+          description_short: Опитайте основите на програмирането с много забавни герои!
           Hour of Code 2013: Час на кодирането 2013
         Code Studio Puzzle Challenge:
           title: 'Код студио: Пъзел предизвикателство'
@@ -556,6 +492,7 @@
         algebraPD:
           title: Компютърни науки в алгебрата
           description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           'Unplugged: Video Games and Coordinate Planes': 'Ънплъгд: видео игрите и
             координатните системи'
           'Calc: Evaluation Blocks': 'Калколиране: Оценка блокове'
@@ -605,6 +542,7 @@
         algPDmiami:
           title: Компютърни науки в алгебрата
           description: Научи алгебра чрез функционално програмиране
+          description_short: Научи алгебра чрез функционално програмиране
           Evaluation Blocks: Блокове за оценка
           Strings and Images: Стрингове и изображения
           Rocket-Height: Ракета - височина
@@ -621,12 +559,15 @@
         text-compression:
           title: Компресия на текста
           description: Компресиране на текст чрез идентифициране на повтарящи се модели.
+          description_short: Компресиране на текст чрез идентифициране на повтарящи
+            се модели.
           Text Compression: Компресия на текста
         CSPPD:
           new stage: нов етап
           Introduction to PD: Въведение в PD
           title: ' PD принципите на Компютърни науки'
           description: Онлайн въведение в ECP
+          description_short: Онлайн въведение в ECP
           What is CSP?: Какво е CSP?
           Exploring CSP Instructional Materials: Проучване на CSP учебни материали
           Impact of Computer Science: Въздействието на компютърните науки
@@ -636,6 +577,7 @@
         CSPLessonSamples:
           title: CSP пробни уроци
           description_short: пробни уроци за csp
+          description: пробни уроци за csp
           Lesson 14: Урок 14
           Lesson 15: Урок 15
         ECSPD:
@@ -647,11 +589,13 @@
           reference: препратка
           title: Проучване на компютърни науки PD
           description: Онлайн въведение в ECS
+          description_short: Онлайн въведение в ECS
           Impact of Computer Science: Въздействието на компютърните науки
         sciencePD:
           Introduction to PD: Въведение в PD
           title: Компютърни науки в науката PD
           description: В партньорство с проект КУРАЖ
+          description_short: В партньорство с проект КУРАЖ
           Pre-Workshop Online Component: 'Предварителен онлайн семинар: компонент'
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
@@ -668,8 +612,14 @@
           Post-Survey: След изследването
         rbo-reference:
           reference: препратка
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 интро
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: CSP блок 3 - програмиране
           description_short: Програмиране
@@ -730,6 +680,7 @@
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
+          description_short: Научи алгебра чрез блок базирано функционално програмиране
           Introduction to the new Computer Science in Algebra: Използване на компютърните
             науки в алгебрата
           Course Overview: Преглед на курса
@@ -743,11 +694,13 @@
         sciPD complex adaptive 2:
           title: Компютърни науки в науката PD
           description: В партньорство с проект КУРАЖ
+          description_short: В партньорство с проект КУРАЖ
           Introduction to PD: Въведение в PD
           Pre-Workshop Online Component: 'Предварителен онлайн семинар: компонент'
         sciPD complex adaptive forum:
           title: Компютърни науки в науката PD
           description: В партньорство с проект КУРАЖ
+          description_short: В партньорство с проект КУРАЖ
           Introduction to PD: Въведение в PD
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
         Glenallan Career Day Demo:
@@ -766,6 +719,7 @@
           logo_image: nextech_logo.png
           title: Проучване на компютърни науки PD
           description: Онлайн въведение в ECS
+          description_short: Онлайн въведение в ECS
           Impact of Computer Science: Въздействието на компютърните науки
         ECSPD-iZone:
           Introduction to PD: Въведение в PD
@@ -776,10 +730,12 @@
           logo_image: izone_logo.png
           title: Проучване на компютърни науки PD
           description: Онлайн въведение в ECS
+          description_short: Онлайн въведение в ECS
           Impact of Computer Science: Въздействието на компютърните науки
         algebraPD-NexTech:
           title: Компютърни науки в алгебрата
           description: Научи алгебра чрез функционално програмиране
+          description_short: Научи алгебра чрез функционално програмиране
           Introduction to PD: Въведение в PD
           Evaluation Blocks: Блокове за оценка
           logo_image: nextech_logo.png
@@ -792,6 +748,7 @@
         algebraPD-iZone:
           title: Компютърни науки в алгебрата
           description: Научи алгебра чрез функционално програмиране
+          description_short: Научи алгебра чрез функционално програмиране
           Introduction to PD: Въведение в PD
           Evaluation Blocks: Блокове за оценка
           logo_image: izone_logo.png
@@ -806,6 +763,7 @@
           logo_image: nextech_logo.png
           title: Компютърни науки в науката PD
           description: В партньорство с проект КУРАЖ
+          description_short: В партньорство с проект КУРАЖ
           What to Expect: Какво да очаквате
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
@@ -824,6 +782,7 @@
           logo_image: izone_logo.png
           title: Компютърни науки в науката PD
           description: В партньорство с проект КУРАЖ
+          description_short: В партньорство с проект КУРАЖ
           What to Expect: Какво да очаквате
           Introduction to Complex Adaptive Systems: Въведение в сложни адаптивни системи
           Introduction to Computational Science: Въведение в компютърната наука
@@ -840,11 +799,17 @@
         ui_tests:
           title: Тестове UI
           description: Скрипт за тест. Внимавай, не се препоръчва промяна на нивото.
+          description_short: Скрипт за тест. Внимавай, не се препоръчва промяна на
+            нивото.
           All the Tests: Всички тестове
           Free Response: Свободен отговор
           Multi: Мулти
           Big Game: Голямата игра
+          new stage: нов етап
         sciencePD2:
+          title: Компютърни науки в науката PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: 'Фаза 2: Летен семинар'
           Welcome: Welcome
           Resources: Resources
@@ -856,6 +821,9 @@
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
         sciencePD3:
+          title: Компютърни науки в науката PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
           new stage: нов етап
           Welcome: Welcome
           Curricular Modules: Curricular Modules
@@ -864,6 +832,9 @@
           Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
           description_short: Интернет
@@ -909,6 +880,7 @@
         algebraPD2a:
           title: Компютърни науки в алгебрата
           description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Evaluation Blocks: Блокове за оценка
           Strings and Images: Стрингове и изображения
           Defining Variables: Дефиниране на променливите
@@ -945,6 +917,7 @@
           Online PD: Онлайн PD
           title: Всички неща!
           description: Всички типове нива за тестване на потребителски интерфейс
+          description_short: Всички типове нива за тестване на потребителски интерфейс
           Odometer: Километраж
           Text Compression: Компресия на текста
           Pixelation: Пикселизация
@@ -952,6 +925,7 @@
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
@@ -966,11 +940,10 @@
           Next Steps: Следващи стъпки
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
-        Calc Define Funcs 5 - multiply 1:
-          'Eval: Defining Functions': 'Оценка: Дефиниране на функции'
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Интернет симулатор
@@ -981,6 +954,7 @@
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Welcome!: Добре дошли!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
@@ -992,6 +966,8 @@
           title: 'Teaching Kids to Code: The Basics'
           description: Learn to code and how to teach computer science basics to your
             students with this free, self-paced online course.
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced
+            online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -1007,6 +983,7 @@
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
+          description_short: Blended Summer Study
           Welcome!: Добре дошли!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1020,6 +997,7 @@
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
@@ -1034,6 +1012,7 @@
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Научете функционалното програмиране чрез алгебра
+          description_short: Научете функционалното програмиране чрез алгебра
           Course Overview: Преглед на курса
           Computer Science Pedagogy: Педагогика на Компютърните науки
           Teacher Dashboard: Учителско табло
@@ -1053,3 +1032,41 @@
           Welcome!: Добре дошли!
           The Design Recipe: Рецепта за дизайн
           Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Добре дошли!
+          Wrap-Up: Заключение
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Добре дошли!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Заключение
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free,
+            self-paced online course.
+          description: Develop strategies for creating equity in your classroom with
+            this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Следващи стъпки

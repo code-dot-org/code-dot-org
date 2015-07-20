@@ -14,7 +14,7 @@
         Match the button combination to the dance moves.: Associa ogni sequenza di
           figure alla relativa sequenza di mosse di danza, usando la corrispondenza
           sopra illustrata.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
@@ -26,7 +26,7 @@
         <strong>O</strong>: <strong>O</strong>
         <strong>P</strong>: <strong>P</strong>
         <strong>Q</strong>: <strong>Q</strong>
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
         Use the key to match each code to its letter: Utilizza la chiave qua sopra
           per associare ogni codice alla lettera cui è abbinato.
       2-3 Graph Paper Match 1:
@@ -37,7 +37,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
         Match the grid to the program.: Associa ad ogni figura il programma corretto.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
@@ -48,9 +48,9 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Trascina i blocchi per associarli.
         Instructions: Istruzioni
-        Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
-          blocchi che mi fa arrivare al girasole.
-        Maze Match: Esercizio di Verifica (Corrispondenza)
+        Match the puzzles to the blocks: Associa ad ogni situazione la sequenza di
+          blocchi che mi fa arrivare al maialino.
+        Maze Match: Esercizio di Verifica (Associazioni)
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -59,7 +59,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
         Match the grid to the program: Associa la griglia al programma
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
@@ -69,9 +69,8 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: Esercizio di Verifica (Corrispondenza)
+        Artist Loops Matching One: Esercizio di Verifica (Associazioni)
         Match the loop to the shape: Associa ogni ciclo alla figura che esso disegna
-        Matching loops: Esercizio di Verifica (Corrispondenza)
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -81,7 +80,7 @@
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: Esercizio di Verifica (Corrispondenza)
+        Artist Matching: Esercizio di Verifica (Associazioni)
         Match the shape with the blocks that complete it.: Associa ad ogni figura
           l'insieme dei blocchi che la completa.
       2-3 bounce match 1:
@@ -95,9 +94,9 @@
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: Esercizio di Verifica (Corrispondenza)
+        Bounce Matching: Esercizio di Verifica (Associazioni)
         Match the events with the actions: Associa gli eventi con le azioni
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
@@ -105,9 +104,9 @@
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: Esercizio di Verifica (Corrispondenza)
+        Flappy Matching One: Esercizio di Verifica (Associazioni)
         Match the events with the actions: Associa gli eventi con le azioni
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
@@ -115,9 +114,9 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
+        Match the puzzles to the blocks: Associa ad ogni situazione la sequenza di
           blocchi che mi fa arrivare al maialino.
-        Maze Match One: Esercizio di Verifica (Corrispondenza)
+        Maze Match One: Esercizio di Verifica (Associazioni)
       4-5 Algorithms Match 1:
         <h4>1)</h4>: <h4>1)</h4>
         <h4>2)</h4>: <h4>2)</h4>
@@ -130,9 +129,10 @@
         <h4>Player 1 rolls die</h4>: <h4>il Giocatore 1 tira il dado</h4>
         <h4>Set Player 1 score to 0</h4>: <h4>Imposta a 0 il punteggio del Giocatore
           1</h4>
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Associa
-          i passi della Gara con i Dadi nell'ordine che dovrebbero avere nell'algoritmo.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Definisci
+          l'ordine in cui le fasi di una Gara con i Dadi dovrebbero apparire in un
+          algoritmo.
+        Matching: Esercizio di Verifica (Associazioni)
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
@@ -150,7 +150,7 @@
           di questi veicoli può essere individuato in base al numero di ruote e finestre
           che possiede per ciascun lato. Associa ogni veicolo alla lista di elementi
           che lo rappresenta.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
@@ -164,7 +164,7 @@
         Match each program to the word it makes, using the provided group of skills.: Utilizzando
           i gruppi di istruzioni (o "skill") che vengono forniti, associa ogni programma
           alla parola che esso restituisce.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
@@ -175,9 +175,9 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Trascina i blocchi per associarli.
         Instructions: Istruzioni
-        Match the puzzles to the blocks: Associa ad ogni situazione l'insieme dei
-          blocchi che la risolve
-        Maze Match: Abbinamento labirinto
+        Match the puzzles to the blocks: Associa ad ogni situazione la sequenza di
+          blocchi che mi fa arrivare al girasole.
+        Maze Match: Esercizio di Verifica (Associazioni)
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -187,7 +187,7 @@
         <br/><br/>next to: <br/><br/>vicino a
         Is the square next to, above, or below the ball?: Il quadrato si trova vicino
           a, sopra, o sotto la palla?
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -199,7 +199,7 @@
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
         Match the shapes based on type.: Associa ogni figura a destra con la figura
           a sinistra che è dello stesso tipo.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -210,7 +210,7 @@
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         Match the shapes based on type.: Associa le forme in base al tipo.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Artist Loops Match 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
@@ -219,7 +219,7 @@
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
         Match the code to the stairs it draws.: Associa il codice alle scale che disegna.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
@@ -231,7 +231,7 @@
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
         Match the blocks: Associa ciascun blocco sulla destra con il blocco sulla
           sinistra che esegue le stesse azioni.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
@@ -243,7 +243,7 @@
         Match the button combination to the dance moves.: Associa ogni sequenza di
           figure alla relativa sequenza di mosse di danza, usando la corrispondenza
           sopra illustrata.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
@@ -252,7 +252,7 @@
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
         Match the blocks: Associa i blocchi che fanno le stesse azioni
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Happy Maps Match 1:
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
@@ -262,7 +262,7 @@
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         Match the Map to the arrow that gets the Flurb to the treasure: Associa la
           mappa alla freccia che porta il Flurb al tesoro
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -277,7 +277,7 @@
         Instructions: Istruzioni
         Match the puzzles and blocks: Associa ad ogni situazione l'insieme dei blocchi
           che mi fa arrivare al maialino.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
@@ -287,7 +287,7 @@
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Associa
           la mappa all'algoritmo che porta il Flurb ai fiori.
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -301,12 +301,11 @@
         Drag the images from right to center.: Trascina le immagini da destra al centro.
         Instructions: Istruzioni
         Match up all the flowers by colour!: Associa tutti i fiori in base al colore!
-        Matching Images Two: Esercizio di Verifica (Corrispondenza)
+        Matching Images Two: Esercizio di Verifica (Associazioni)
       test matching text:
-        Matching: Esercizio di Verifica (Corrispondenza)
+        Matching: Esercizio di Verifica (Associazioni)
         Some really easy stuff to match.  Drag it around until you get it.: Alcune
-          cose veramente facili da mettere in corrispondenza.  Provaci fino a che
-          ce la fai.
+          cose veramente facili da associare.  Provaci fino a che ce la fai.
         Sydney: Sydney
         Van Minnen: Van Minnen
         What color is the sky?: Di che colore è il cielo?
@@ -333,8 +332,9 @@
           a destra del triangolo
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Inizia con un quadrato <br/> Disegna un triangolo a destra del quadrato
+          <br/> Disegna un parallelogramma sotto il quadrato <br/> Disegna un triangolo
+          a destra del parallelogramma
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -428,8 +428,9 @@
           500
         Artist Functions Multiple Choice One: Esercizio di Verifica (Risposte Multiple)
         Pick the correct blocks to draw this image using the given functions: Scegli
-          l'insieme di blocchi che disegna correttamente questa figura usando la funzione
-          data
+          la sequenza di blocchi che disegna correttamente la figura qui a fianco
+          usando la funzione "disegna un rettangolo" ("draw a rectangle") illustrata
+          ancora più a sinistra.
       2-3 artist loops multi 1:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500
@@ -465,7 +466,7 @@
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
           500
         Bee Conditionals Multiple Choice Two: Esercizio di Verifica (Risposte Multiple)
-        Choose the best blocks.: Scegli l'insieme di blocchi che risolve l'esercizio.
+        Choose the best blocks.: Scegli la sequenza di blocchi che risolve l'esercizio.
       2-3 bee conditionals multi 3:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
@@ -474,7 +475,7 @@
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/Bee/2-3_beeconditionals_multi_3_q.png,
           500
         Bee Conditionals Multiple Choice Two: Esercizio di Verifica (Risposte Multiple)
-        Choose the best blocks.: Scegli l'insieme di blocchi che risolve l'esercizio.
+        Choose the best blocks.: Scegli la sequenza di blocchi che risolve l'esercizio.
       2-3 bee loops multi 1:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png
@@ -483,7 +484,7 @@
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
           500
         Bee Loops Multiple Choice One: Esercizio di Verifica (Risposte Multiple)
-        Which blocks collect all of the nectar?: Quale sequenza di blocchi ti fa raccogliere
+        Which blocks collect all of the nectar?: Quali blocchi consentono di raccogliere
           tutto il nettare?
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
@@ -492,18 +493,17 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: Scegli la risposta migliore.
         Maze Multiple Choice One: Esercizio di Verifica (Risposte Multiple)
-        Which blocks work?: Quale sequenza di blocchi è corretta?
+        Which set of blocks is the correct answer?: Quale sequenza di blocchi è corretta?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baking cookies
-        Banana: Banana
+        Baking cookies: Cuocere i biscotti
+        Banana: ' Una banana (il frutto)'
         Brushing your teeth: Lavarsi i denti
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
-        Shopping from a grocery list: Shopping da una lista della spesa
-        Which one of these items is hardest to describe an algorithm for?: Per quali
-          di questi elementi è più difficile scrivere un algoritmo?
+        Shopping from a grocery list: Acquistare i prodotti di una lista della spesa
+        Which one of these items is hardest to describe an algorithm for?: Tra queste
+          situazioni, quale è la più difficile da descrivere con un algoritmo?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene è una città _____.
         0: '? Here are three sentences. Which of the templates below correctly abstracts
@@ -514,10 +514,10 @@
           Esercizio di Verifica (Risposte Multiple)
         Seattle _____ a _____ _____.: Seattle _____ una _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Ecco
-          tre frasi: <br/>1. Seattle è una città di grandi dimensioni. <br/>2. Eugene
-          è una città di medie dimensioni. <0/>3. Hillview è una città di piccole
-          dimensioni. <0/>Quale degli schemi di frase qua sotto è un''astrazione in
-          grado di rappresentarle tutte e tre in modo corretto?'
+          tre frasi: <br/>1. Seattle è una città grande. <br/>2. Eugene è una città
+          media. <0/>3. Hillview è una città piccola. <0/>Quale degli schemi di frase
+          qua sotto è un''astrazione in grado di rappresentarle tutte e tre in modo
+          corretto?'
         _____ is _____ a _____.: _____ è _____ una _____.
         _____ is a _____ city.: _____ è una città  _____.
       4-5 Crowdsourcing Multi 1:
@@ -535,7 +535,8 @@
           Esercizio di Verifica (Risposte Multiple)
         Washing your face: Lavarsi il viso
         Which one of these activities would be best for practicing crowdsourcing?: Quale
-          di queste attività sarebbe meglio per esercitare l'intelligenza collettiva?
+          di queste attività sarebbe meglio compiere per esercitare l'intelligenza
+          collettiva?
       4-5 Digital Footprint Multi 1:
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
@@ -569,28 +570,28 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
           to my Lou, <br/>Skip to my Lou, my darlin.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
-        4: '? Qual è il pezzo più lungo di questa canzone che puoi definire come "coro",
-          così che il coro si ripeta esattamente ogni volta che viene chiamato?'
-        5: ': Qual è il pezzo più lungo di questa canzone che puoi definire come "coro",
-          così che il coro si ripeta esattamente ogni volta che viene chiamato?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -599,7 +600,7 @@
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Quale
-          dei programmi qui sotto <em>non</em> rispetta la sequenza di istruzioni
+          dei programmi qui sotto <em>non</em> produce la stessa sequenza di istruzioni
           definita dal programma 1?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
@@ -619,7 +620,8 @@
         /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500
         Artist Loops Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        Which blocks will create the design?: Quali blocchi creerà questo progetto?
+        Which blocks will create the design?: Quale sequenza di blocchi disegna la
+          figura geometrica qui a sinistra?
       4-5 artist loops multi 2:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
@@ -636,28 +638,29 @@
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
         Artist Multiple Choice: Esercizio di Verifica (Risposte Multiple)
         Which blocks draw a rectangle with a perimeter of 100?: Quale sequenza di
-          blocchi ti fa disegnare un rettangolo avente il perimetro pari a 100?
+          blocchi ti fa disegnare un rettangolo avente il perimetro pari a 100 pixel?
       4-5 artist multi 2:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
         Artist Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        Which drawing is symmetric?: Quale disegno è simmetrico?
+        Which drawing is symmetric?: Quale figura è simmetrica (rispetto ad un asse
+          verticale)?
       4-5 bee conditionals multi 1:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
-        0: '? Un fiore viola può avere 1, 2, 3 dosi di nettare ma tu non sai quante.
-          Quali blocchi controllano e raccolgono correttamente tutto il nettare da
-          un fiore viola?'
-        1: '? Un fiore viola può avere 1, 2, 3 dosi di nettare ma tu non sai quante.
-          Quali blocchi controllano e raccolgono correttamente tutto il nettare da
-          un fiore viola?'
+        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?'
+        1: '? Un fiore viola può avere 1, 2 o 3 dosi di nettare ma tu non sai quante
+          ne ha! Quale sequenza di blocchi raccoglie correttamente tutto il nettare
+          da un fiore viola?'
         Bee Conditionals Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        Choose the best blocks.: Scegli l'insieme di blocchi che risolve l'esercizio.
+        Choose the best blocks.: Scegli la sequenza di blocchi che risolve l'esercizio.
       4-5 bee debug multi 1:
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
         /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
@@ -675,7 +678,7 @@
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
         Bee Loops Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        Which blocks will solve the puzzle?: Quali blocchi risolvono l'esercizio?
+        Which blocks will solve the puzzle?: Quale sequenza di blocchi è corretta?
       4-5 farmer loops multi 1:
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
         /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
@@ -693,7 +696,7 @@
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500
         Maze Conditionals Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        Which blocks solve the puzzle?: Quali blocchi risolvono l'esercizio?
+        Which blocks solve the puzzle?: Quale sequenza di blocchi è corretta?
       4-5 maze multi 1:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
@@ -702,7 +705,7 @@
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500
         Maze Multiple Choice: Esercizio di Verifica (Risposte Multiple)
-        Which blocks solve the puzzle?: Quali blocchi risolvono l'esercizio?
+        Which blocks solve the puzzle?: Quale sequenza di blocchi è corretta?
       Baker test of multi can delete:
         2+3: 2+3
         3 - 7: 3 - 7
@@ -829,7 +832,8 @@
         /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
-        Which choice should be the final block?: Quale blocco finale devi scegliere?
+        Which choice should be the final block?: Quale blocco devi aggiungere alla
+          sequenza mostrata qua a sinistra per farmi arrivare al maialino?
       K-1 Maze Loops Multi 1:
         /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png,
           300
@@ -858,7 +862,8 @@
         /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
         Maze: Esercizio di Verifica (Risposte Multiple)
-        Which answer solves this level?: Quale risposta devi scegliere?
+        Which answer solves this level?: Quale sequenza di blocchi mi fa arrivare
+          al maialino?
       K-1 Move It Multi 1:
         /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
         /script_assets/k_1_images/unplugged_images/leftleft.png: /script_assets/k_1_images/unplugged_images/leftleft.png
@@ -905,7 +910,8 @@
           450
         Multiple Choice: |
           Esercizio di Verifica (Risposte Multiple)
-        Which blocks spell "JUMP"?: Quali blocchi scrivono "JUMP"?
+        Which blocks spell "JUMP"?: Quale sequenza di blocchi devi scegliere per scrivere
+          le lettere della parola "JUMP"?
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png,
           700
@@ -933,15 +939,6 @@
           di questi ragazzi è il <b>conduttore</b>.  E uno è l' <b>aiutante</b>.
         This time, which boy is the <large>driver</large>?: Questa volta, quale ragazzo
           è il <large>conduttore</large>?
-      Warmup questions:
-        Coding in Racket: Programmazione nel linguaggio Racket
-        Select the best answer to the question.: Scegli la miglior risposta alla domanda.
-        When converting a circle to code, the correct order is: Quando si converte
-          un circolo di valutazione in codice, l'ordine corretto è
-        left top right: sinistra, alto, destra
-        left, right, top: sinistra, destra, alto
-        random: casuale
-        top, left, right: alto, sinistra, destra
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

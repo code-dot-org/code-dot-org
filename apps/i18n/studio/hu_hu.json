@@ -151,7 +151,7 @@
   "projectileCherry": "cseresznye",
   "projectileIce": "jég",
   "projectileDuck": "kacsa",
-  "reinfFeedbackMsg": "Nyomja meg a \"Játszd újra\" gombot hogy visszatérj a saját játékodhoz.",
+  "reinfFeedbackMsg": "You can press the \"Keep Playing\" button to go back to playing your story.",
   "repeatForever": "ismételd végtelenszer",
   "repeatDo": "csináld",
   "repeatForeverTooltip": "Hajtsd vége a műveleteket a blokkban ismételve miközben a történet zajlik.",

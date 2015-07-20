@@ -79,6 +79,7 @@ module Dashboard
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
     config.assets.paths << Rails.root.join('../shared/css')
+    config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
       editor/blockly_editor.css

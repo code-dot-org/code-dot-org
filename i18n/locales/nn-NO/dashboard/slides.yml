@@ -3,72 +3,72 @@ nn:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Velkommen til din første kodetime! La oss dykke rett inn i ditt første møte med programmering.
+        text: Velkommen til den første timen din med koding! Lat oss dykke rett inn første smak av programmering.
       2:
         image: notes/hoc1_2.jpg
-        text: Vi skal bruke Blockly, et visuelt programmeringsspråk hvor du drar og slipper blokkene for å skrive kode.
+        text: Me skal bruke Blockly, eit visuelt programmeringsspråk der du dreg og slepp blokker for å skrive kode.
       3:
         image: notes/hoc1_3.jpg
-        text: 'De fleste programmeringsspråk bruker tekst, men Blockly er visuelt. Hver blokk tilsvarer en "ekte" kodelinje.'
+        text: 'Det meste av kode vert skrive, men Blockly er visuelt. Kvar blokk tilsvarer ei linje med "ekte" kode.'
       4:
         image: notes/hoc1_4.jpg
-        text: Du vil lære grunnleggende informatikk, med begreper som brukes overalt, helt fra å skrive apper til å lage programmer for å styre Mars-roveren.
+        text: "Du vil lære grunnlaget for datavitskap (informatikk), omgrep som vert nytta til alt frå å lage app'ar til å kontrollere Mars-roboten."
       5:
         image: notes/hoc1_5.jpg
-        text: Et program er et sett med instruksjoner som datamaskinen skal følge.
+        text: Eit program er eit sett med instruksjonar som datamaskina skal følgje.
       6:
         image: notes/hoc1_6.jpg
-        text: 'Målet med det første programmet er å få en "Angry Bird" gjennom en labyrint slik at den treffer en grønn gris.'
+        text: Målet med det første programmet er å få ein sint fugl gjennom ein labyrint for å treffe ein grøn gris.
       7:
         image: notes/hoc1_7.jpg
-        text: Til venstre er labyrinten der programmet kjøres. Instruksjonene for hver oppgave er under labyrinten.
+        text: Til venstre er labyrinten der programmet vert køyrd. Instruksjonane for kvar oppgåve står under labyrinten.
       8:
         image: notes/hoc1_8.jpg
-        text: 'Den midtre verktøykassen har kommandoene for "Angry Bird". Du vil bruke disse for å bygge koden.'
+        text: 'I verktøykassa i midten finn du kommandoane for "Sint fugl". Du vil bruke desse til å bygge koden din.'
       9:
         image: notes/hoc1_9.jpg
-        text: Til høyre er arbeidsområdet hvor du skal trekke blokker fra verktøykassen til å bygge programmet med. Hvis du vil slette en blokk, drar du den til papirkurven i hjørnet.
+        text: Til høgre er arbeidsområdet der du skal dra blokker frå verktøykassa for å bygge programmet. Om du vil slette ei blokk, dreg du ho til papirkorga i hjørnet.
       10:
         image: notes/hoc1_10.jpg
-        text: 'Hver blokk er en instruksjon. Hvis du drar en "fremover" blokk til arbeidsområdet og trykker "Kjør programmet", flyttes fuglen en plass på labyrinten.'
+        text: 'Kvar blokk er ein instruksjon. Om du dreg ei "framover"-blokk til arbeidsområdet og trykker "Køyr programmet", flyttar fuglen seg ein plass i labyrinten.'
       11:
         image: notes/hoc1_11.jpg
         text: For å gjere meir enn ei handling, kan du dra mange blokker til arbeidsområdet og sette dei saman. Fuglen vil utføre kommandoane frå toppen og nedover.
       12:
         image: notes/hoc1_12.jpg
-        text: 'Hvis du kjører et program og ønsker å fikse det for å prøve på nytt, kan du trykke på "Reset"-knappen.'
+        text: 'Om du køyrer eit program og ynskjer å fikse det og prøve på nytt, trykk på knappen "Reset".'
       13:
         image: notes/hoc1_13.jpg
-        text: La oss gå og ta de grisene!
+        text: Lat oss ta dei grisane!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hei, jeg er JR! Alle racerbil-lag må ha programmerere for å vinne. De analyserer data fra bilen for å gjøre den raskere.
+        text: Hei, eg er JR! Alle racerbillag treng dataekspertar for å vinne. Dei analyserer data frå bilen for å få han til å gå raskare.
       2:
         image: notes/stage5_2.jpg
-        text: I disse oppgavene vil du være en kunstner som tegner linjer bak deg når du flytter deg.
+        text: Gjennom desse oppgåvene, vil du vere ein kunstnar som teiknar ei linje bak deg der du går.
       3:
         image: notes/stage5_3.jpg
-        text: 'Denne blokken sier "flytt frem 100 piksler." Piksler er bare veldig små prikker på skjermen.'
+        text: 'Denne blokka seier "flytt fram 100 pikslar." Pikslar er berre veldig små prikkar på skjermen.'
       4:
         image: notes/stage5_4.jpg
-        text: 'Denne blokken sier "sving 90 grader til høyre". Den vil dreie kunstneren like mye som "sving" blokken i labyrintoppgaven gjorde.'
+        text: 'Denne blokka seier "snu 90 grader mot høgre". Blokka vil snu artisten din det gradetalet som står på blokka.'
       5:
         image: notes/stage5_5.jpg
-        text: Klikk på pilen i en av disse blokkene for å endre hvor mye kunstneren går fremover. Lek litt med dette for å bli kjent med de nye blokkene.
+        text: Klikk på pila på ei av desse blokkene for å endre på kor mykje kunstnaren går framover eller snur seg. Leik deg med det for å bli kjend med desse nye blokkene.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Hei, jeg Paola! I disse oppgavene er du en bonde som trenger å gjøre jordet flatt for å kunne dyrke grønnsaker der.
+        text: Hei, eg er Paola! I desse oppgåvene er du ein bonde som må få feltet sitt heilt flatt for å byrje å plante avlingar.
       2:
         image: notes/stage9_2.jpg
-        text: Du må hjelpe henne med å fjerne alle jordhaugene, og fyle alle hullene.
+        text: Du må hjelpe ho med å fjerne alle haugane av skitt og fylle ut alle hola.
       3:
         image: notes/stage9_3.jpg
         text: Dei nye blokkene fjernar 1 skuffe med skitt frå ein haug og fyller ut 1 skuffe med skitt i eit hol.
       4:
         image: notes/stage9_4.jpg
-        text: Hauger og hull har forskjellige størrelse eller dybde, så du må fortelle bonden hvor mange spadetak som det er behov for.
+        text: Haugane og hola er av ulike storleikar, så du må fortelje bonden kor mange skuffer ho skal bruke.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
@@ -103,60 +103,60 @@ nn:
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: Hei, jeg heter Mark! La oss lære om løkker. Med løkker kan du skal be datamaskinen om å gjenta et sett av handlinger igjen og igjen, tusenvis eller milliarder ganger.
+        text: Hei, eg er Mark! Lat oss lære om sløyfer. Ved å bruke sløyfer kan du fortelje ei datamaskin at ho skal repetere eit sett av handlingar om att og om att, tusenarar eller til og med milliardar av gongar.
       2:
         image: notes/hoc2_2.jpg
-        text: I denne oppgaven ønsker vi å flytte fuglen frem 5 plasser for å ta grisen.
+        text: I denne oppgåva ynskjer me å få fuglen til å flytte 5 plassar framover for å komme til grisen.
       3:
         image: notes/hoc2_3.jpg
-        text: 'Vi kan bruke den nye "gjenta" blokken for å hjelpe oss.'
+        text: 'Me kan nytte den nye "gjenta"-blokka for å hjelpe oss.'
       4:
         image: notes/hoc2_4.jpg
-        text: 'I stedet for å dra ut 5 "fremover" blokker...'
+        text: 'I staden for å dra ut 5 "framover"-blokker...'
       5:
         image: notes/hoc2_5.jpg
-        text: 'Vi kan sette "fremover" blokken inne i "gjenta"-blokken og skrive et nummer i blokken å fortelle den hvor mange ganger det skal gjentas.'
+        text: 'Me kan setje "framover"-blokka inne i "gjenta"-blokka og skrive eit nummer i blokka for å fortelje kor mange gonger me vil gjenta.'
       6:
         image: notes/hoc2_6.jpg
-        text: 'Og dette er viktig: Du kan sette mer enn én kommando i en "gjenta"-blokk.'
+        text: 'Og dette er viktig: Du kan setje meir enn ein kommando i ei "gjenta"-blokk.'
       7:
         image: notes/hoc2_7.jpg
-        text: 'Kos deg med å bruke den nye "gjenta" blokken!'
+        text: 'Kos deg med å bruke den nye "gjenta"-blokka!'
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: 'Hei, er jeg Chris. Før jeg startet i Miami Heat, studerte jeg informatikk. La oss prøve våre ny blokk, "Gjenta til" blokken.'
+        text: 'Hei, eg er Chris. Før eg vart med i Miami Heat, gjekk jeg på Georgia Tech for å studere datavitskap. Lat oss prøve den nye blokka vår, "gjenta til"-blokka.'
       2:
         image: notes/hoc3_2.jpg
-        text: Hva hvis vi ikke visste hvor langt fuglen måtte bevege seg for å komme til grisen?
+        text: Kva om me ikkje visste kor langt fuglen måtte flytte for å komme til grisen?
       3:
         image: notes/hoc3_3.jpg
-        text: 'Hvis vi setter en "fremover" blokk inne i en "Gjenta til" blokk, vil fuglen bevege seg fremover til den når grisen (eller krasjer inn i en vegg).'
+        text: 'Viss me sett ei "framover"-blokk inne blokka "gjenta til", vil fuglen gå framover til han kjem TIL grisen (eller krasjar inn i ein vegg).'
       4:
         image: notes/hoc3_4.jpg
-        text: 'Og dette er viktig: Akkurat som før kan vi sette flere blokker inni "Gjenta til" blokken, og de vil alle bli gjentatt.'
+        text: 'Og dette er viktig: Nett som før, kan me setje fleire blokker inni "gjenta til"-blokka, og alle vil bli gjentekne.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: 'Hei, er jeg Bill! La oss lære et nytt grunnleggende konsept: hvis-uttrykk. Dette er hvordan datamaskiner tar beslutninger.'
+        text: 'Hei, eg er  Bill! Lat oss lære eit nytt grunnleggjande konsept: "Viss"-uttrykk. Dette er korleis datamaskiner tek avgjerder.'
       2:
         image: notes/hoc4_2.jpg
-        text: 'Du bruker "hvis"-uttrykk selv hver dag. Før du går ut hver morgen sier du: "HVIS det regner ute må jeg ta på meg jakke".'
+        text: 'Du nyttar sjølv "Viss"-uttrykk kvar dag. Før du går ut om morgonen, seier du VISS det regner ute, må eg bruke jakka mi.'
       3:
         image: notes/hoc4_3.jpg
-        text: Vi kan be zombien om å sjekke om det er en sti til venstre. Hvis han finner en sti der, kan vi be han snu i den retningen.
+        text: Me kan seie at zombien skal sjekke om det er ei bane til venstre, og VISS han finn ei bane til venstre, kan me få han til å snu i den retninga.
       4:
         image: notes/hoc4_4.jpg
-        text: 'For å skrive koden for dette, må vi dra ut "Hvis"-blokken og sette en "venstre"-blokk inni den.'
+        text: 'For å skrive koden for dette, lat oss dra ut "viss"-blokka vår og setje ei "venstre"-blokk inni ho.'
       5:
         image: notes/hoc4_5.jpg
-        text: 'Hvis vi hver gang zombien flytter på seg setter en "fremover" blokk over den, og en "gjenta" blokk rundt alt, vil han nå sjekke om det er en sti til venstre og i så fall snu dit. Kommandoen "gjenta" er viktig for å se etter sti etter hvert skritt.'
+        text: 'Om me sett ei "framover"-blokk over og ei "gjenta"-blokk rundt alt, vil zombien no kvar gong han flyttar seg sjekke om det er ein veg til venstre og i så fall snu dit. Kommandoen "gjenta" er avgjerande for å sjå etter om ein skal snu for kvart steg.'
       6:
         image: notes/hoc4_6.jpg
-        text: Hvis-setninger er veldig viktige i programmering. En av de første programmene jeg skrev, var et tripp-trapp-tresko-spill. Der var det det en hvis-setning som sa hvis den andre personen holdt på å vinne, måtte programmet blokkere posisjonen som ville la han seire.
+        text: Viss-setningar er veldig viktige i programmering. Eit av dei første programma eg skreiv, var eit tripp-trapp-tresko-spel der det var ei viss-setning som sa at VISS den andre personen held på å vinne, blokker posisjonen som let den andre personen vinne.
       7:
         image: notes/hoc4_7.jpg
-        text: Ha det gøy med hvis-blokker!
+        text: 'Ha det gøy med "viss"-blokka!'
     if_else:
       1:
         image: notes/hoc5_1.jpg
@@ -186,84 +186,84 @@ nn:
     function:
       1:
         image: notes/stage13_1.jpg
-        text: Hei, jeg Brina, ingeniør ved Instagram. En funksjon er noen kodelinjer som du vil bruke igjen og igjen, så i stedet for å skrive den samme koden hver gang, kan du bare bruke en blokk.
+        text: Hei, eg er Brina, ingeniør hos Instagram. Ein funksjon er særskilte kodelinjer som du ynskjer å nytte om att og om att, så i staden for å skrive den same koden kvar gong, kan du berre bruke ei blokk.
       2:
         image: notes/stage13_2.jpg
-        text: Vi skal lære å definere funksjoner. Blokker der vi definerer funksjoner har en stjerne i hjørnet. Navnet på funksjonen skrives på øverste linje.
+        text: Me skal lære korleis ein definerer funksjonar. Blokker der me definerer funksjonar har ei stjerne i hjørnet. Namnet på funksjonen vert skrive på øvste linje.
       3:
         image: notes/stage13_3.jpg
-        text: 'Blokkene inne i funksjonen forteller oss hva den gjør. Så denne funksjonen er kalt "fyll 5", og består av en "gjenta" blokk og en "fylle" blokk.'
+        text: 'Blokkene inne i funksjonen fortel oss kva funksjonen gjer. Så denne funksjonsdefinisjonen er kalla "fyll 5", og består av ei "gjenta"-blokk og ei "fyll"-blokk.'
       4:
         image: notes/stage13_4.jpg
-        text: 'Funksjonen finnes på arbeidsområdet, men bonden vil ikke kjøre den før vi drar ut "Fyll 5 funksjon" blokka fra funksjoner-kategorien.'
+        text: 'Funksjonsdefinisjonen finn du i arbeidsområdet, men bonden vil ikke køyre funksjonen før me dreg ut "fyll 5"-blokka frå funksjoner-kategorien.'
       5:
         image: notes/stage13_5.jpg
-        text: La oss ha det gøy med funksjoner!
+        text: Lat oss ha litt FUN med FUNksjonar!
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hei, jeg Makinde! La oss lære om "gjenta så lenge"-blokken '
+        text: 'Hei, eg er Makinde! Lat oss lære om "gjenta så lenge"-blokka.'
       2:
         image: notes/stage9_6.jpg
-        text: '"Gjenta så lenge" blokken vil fortsette å gjøre det som er inne i den så lenge utsagnet på toppen er sant.'
+        text: '"Gjenta så lenge"-blokka vil halde fram med å gjere det som er inne i ho SÅ LENGE utsegna på toppen er SANN.'
       3:
         image: notes/stage9_7.jpg
-        text: For eksempel, hvis bonden står på en haug, vil hun fortsette å fjerne spadetak med jord så lenge det er fortsatt en haug under henne.
+        text: 'Døme: Viss bonden står på ein haug, vil ho harlde fram med å fjerne skuffer med jord SÅ LENGE det er framleis er ein haug under ho.'
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Hei, jeg er Trina, og jeg jobber for Pixar. Jeg har vært med å lage en rekke filmer, inkludert Shrek.
+        text: Hei, eg er Trina, og eg jobbar for Pixar. Eg har vore med og laga ei rekkje filmar, inkludert Shrek.
       2:
         image: notes/stage11_2.jpg
-        text: 'Dette er nye "teller" løkka. Det vil utføre handlingene igjen og igjen, og du kan endre handlingene litt hver gang.'
+        text: 'Dette er den nye "telje"-sløyfa vår. Ho vil gjere at handlingane skjer om att og om att, og du kan endre handlingane litt kvar gong.'
       3:
         image: notes/stage11_3.jpg
-        text: 'Dette eksemplet på en "teller"-løkke sier "Tell med teller fra 50 til 90 med 10" og inni den har vi en "tegn en firkant"-blokk. Dra "teller" blokken fra "Variabler"-seksjonen til "lengde"-stedet.'
+        text: 'I dette dømet seier "telje"-sløyfa "tel frå 50 til 90 med 10 om gongen", og inni sløyfa har me ei "teikn ein firkant"-blokk. Dra "telje"-blokka frå "variablar"-området til "lengde"-plassen.'
       4:
         image: notes/stage11_4.jpg
-        text: Dette betyr at kunstneren vår skal tegne et kvadrat med sidelengde 50 piksler. Så legger vi til 10, og tegner et kvadrat med sidelengde 60 piksler. Slik holder vi på til sidelengden blir 90 piksler. Dermed har vi sidelengdene 50, 60, 70, 80 og 90.
+        text: Dette tyder at kunstnaren vår skal teikne eit kvadrat med sidelengde 50 pikslar. Så legg me til 10 pikslar, og teiknar eit kvadrat med sidelengde 60 piksler. Slik held me fram til sidelengda vert 90 pikslar. Då har me sidelengder på 50, 60, 70, 80 og 90 pikslar.
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: Hei, jeg er Janete, og jeg er en ingeniør ved Zynga.
+        text: Hei, eg er Janete, og eg er ingeniør ved Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: Hva hvis vi ønsker å tegne en haug med trekanter av forskjellig størrelse?
+        text: Kva om me ynskjer å teikne ein haug med trekantar av ulike storleikar?
       3:
         image: notes/stage15_3.jpg
-        text: Vi kan skrive all koden for hånd, eller vi kan bruke en funksjon med parametere.
+        text: Me kunne skrive all koden for hand, eller me kan bruke ein funksjon med parametrar.
       4:
         image: notes/stage15_4.jpg
-        text: 'For å gjøre dette, må du klikke på den blå stjernen i "tegn en trekant" funksjonen. Dra så "Navn på parameter:" inn i "parametre"-blokka til høyre. NB! Ikke skriv navnet først.'
+        text: 'For å gjere dette, må du klikke på den blå stjerna i "teikn ein trekant"-funksjonsdefinisjonen. Så dreg du "namn på parameter" inn i "parametrar"-blokka til høgre. NB! Ikkje skriv namnet først.'
       5:
         image: notes/stage15_5.jpg
-        text: 'Så hvis du skriver "lengde" der det står "x" og så trykker "Enter", vil du opprette et lengde-parameter til funksjonen.'
+        text: 'Viss du så skriv "lengde" der det står "x" og så trykker "Enter", vil du opprette eit lengde-parameter til funksjonen din.'
       6:
         image: notes/stage15_6.jpg
-        text: 'Klikk på stjernen. Så klikker du på "variabler"-kategorien og drar "lengde" inn i "fremover" blokka til funksjonen. Så drar du bort den gamle nummer-blokken.'
+        text: 'Klikk på stjerna. Så klikkar du på "variablar"-kategorien og dreg "lengde" inn i "framover" blokka til funksjonen. Så drar du bort den gamle nummer-blokken.'
       7:
         image: notes/stage15_7.jpg
-        text: 'For å bruke funksjonen med parametere. kan du klikke på kategorien funksjoner og dra ut "tegn en trekant med lengde"-funksjonen.'
+        text: 'For å bruke funksjonen med parametrar, kan du klikke på kategorien funksjonar og dra ut "teikn ein trekant med lengde"-funksjonen din.'
       8:
         image: notes/stage15_8.jpg
-        text: Nå kan du bruke matematikk-blokken for å hente nye tall, og på den måten kan du tegne trekanter av forskjellige størrelse.
+        text: No kan du bruke matematikk-blokka for å sette inn nye tal, og på den måten kan du teikne trekantar av ulik storleik.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Gratulerer! Med den siste oppgaven du løste, skrev du kode som kan fortelle roboter hvordan de finner vei gjennom enkle labyrinter eller tunneler uansett lengde. Dette gjelder uansett om det er en zombie, en fugl, en mars-rover eller om det er deg som kjører bil.
+        text: Gratulerer! Med den siste oppgåva du løyste, skreiv du kode som kan fortelje robotar korleis dei finn vegen gjennom enkle labyrintar eller tunnelar uansett lengde. Dette gjeld uansett om det er ein zombie, ein fugl, ein mars-rover eller om det er ein bil som køyrer utan sjåfør.
       2:
         image: notes/hoc6_2.jpg
-        text: De grunnleggende konseptene som du brukte, danner utgangspunktet for alle programmene eller appene du ser. Vi har lært om gjentagende løkker, hvis-setninger, og hvis-ellers setninger.
+        text: "Dei grunnleggjande konsepta du brukte, er utgangspunktet for alle programma og app'ane du ser rundt deg. Me har lært om gjentakande sløyfer, gjenta til-setningar, viss-setningar og viss-elles-setninger."
       3:
         image: notes/hoc6_3.jpg
-        text: 'Hvis du likte den første kodetimen, kan du gå til code.org for å fortsette å lære programmering! Når du har fullført 20-timers kurset vårt, behersker du grunnleggende programmering. Da kan du begynne å lære å skrive telefon-apper, robotinstruksjoner, spill - ja alt mulig!'
+        text: "Om du likte den første kodetimen, kan du gå til code.org for å fortsetje å lære programmering! Når du har fullført 20-timarskurset vårt, meistrar du grunnleggjande programmering. Då kan du lære korleis du skriv kode til telefon-app'ar, robotinstruksjonar, spel - ja, alt mulig!"
       4:
         image: notes/hoc6_4.jpg
-        text: 'Teknologien forandrer alt vi gjør, og det spiller ingen rolle om du er ung eller gammel: Programmering er morsomt og kreativt, og alle kan lære det!'
+        text: 'Teknologien endrar alt me gjer, og det speler inga rolle om du er ung eller gammal: Programmering er morosamt og kreativt, og alle kan lære det!'
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Video-notater kommer snart!
+        text: Video-notatar kjem snart!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg

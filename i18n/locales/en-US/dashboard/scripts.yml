@@ -10,6 +10,7 @@ en:
           Math Image: crwdns5326:0crwdne5326:0
           title: crwdns5821:0crwdne5821:0
           description: crwdns5822:0crwdne5822:0
+          description_short: crwdns43228:0crwdne43228:0
         course1:
           "Jigsaw: Learn to drag and drop": crwdns5824:0crwdne5824:0
           "Maze: Sequence": crwdns5825:0crwdne5825:0
@@ -133,55 +134,6 @@ en:
           Songwriting: crwdns20430:0crwdne20430:0
           description_audience: crwdns24909:0crwdne24909:0
           description_short: crwdns24910:0crwdne24910:0
-        msm:
-          title: crwdns6645:0crwdne6645:0
-          description: crwdns6646:0crwdne6646:0
-          Graph Paper Programming: crwdns6647:0crwdne6647:0
-          Assessments: crwdns6648:0crwdne6648:0
-          Unit 1: crwdns7457:0crwdne7457:0
-          Unit 2: crwdns7458:0crwdne7458:0
-          Ninja Cat and the Coordinate Plane: crwdns22220:0crwdne22220:0
-          "Calc: Circles of Evaluation": crwdns22221:0crwdne22221:0
-          "Artist: Strings and Images": crwdns22222:0crwdne22222:0
-          Contracts: crwdns22223:0crwdne22223:0
-          "Artist: Writing Contracts": crwdns22224:0crwdne22224:0
-          "Calc: Defining Variables": crwdns22225:0crwdne22225:0
-          "Play Lab: Defining Variables": crwdns22226:0crwdne22226:0
-          The Design Recipe: crwdns22227:0crwdne22227:0
-          "Artist: Defining Functions": crwdns22228:0crwdne22228:0
-          "Play Lab: Defining Functions": crwdns23636:0crwdne23636:0
-          "Artist: Functions": crwdns22230:0crwdne22230:0
-          "Play Lab: Animation": crwdns22231:0crwdne22231:0
-          Booleans: crwdns22232:0crwdne22232:0
-          "Play Lab: Booleans": crwdns22233:0crwdne22233:0
-          "Calc: Boolean Operators": crwdns22234:0crwdne22234:0
-          "Play Lab: Boolean Operators": crwdns22235:0crwdne22235:0
-          Conditionals and Piecewise Functions: crwdns22236:0crwdne22236:0
-          "Artist: Conditionals": crwdns22237:0crwdne22237:0
-          Collision Detection and the Distance Formula: crwdns22238:0crwdne22238:0
-          "Play Lab: Collision Detection": crwdns22239:0crwdne22239:0
-          "Unplugged: Ninja Cat and the Coordinate Plane": crwdns23520:0crwdne23520:0
-          "Eval: Strings and Images": crwdns23521:0crwdne23521:0
-          "Unplugged: Contracts": crwdns23522:0crwdne23522:0
-          "Eval: Writing Contracts": crwdns23523:0crwdne23523:0
-          "Unplugged: The Design Recipe": crwdns23524:0crwdne23524:0
-          "Eval: Defining Functions": crwdns23637:0crwdne23637:0
-          "Eval: Functions": crwdns23638:0crwdne23638:0
-          "Unplugged: Booleans": crwdns23527:0crwdne23527:0
-          "Unplugged: Conditionals and Piecewise Functions": crwdns23528:0crwdne23528:0
-          "Eval: Conditionals": crwdns23529:0crwdne23529:0
-          "Unplugged: Collision Detection and the Distance Formula": crwdns23530:0crwdne23530:0
-          "Calc: Evaluation Blocks": crwdns23531:0crwdne23531:0
-          "Unplugged: Video Games and Coordinate Planes": crwdns23532:0crwdne23532:0
-          "Eval: Boolean Operators": crwdns23639:0crwdne23639:0
-          Blocks to Math: crwdns23640:0crwdne23640:0
-          "Play Lab: Defining Variables (Big Game)": crwdns23641:0crwdne23641:0
-          "Play Lab: Animation (Big Game)": crwdns23642:0crwdne23642:0
-          "Play Lab: Boolean (Big Game)": crwdns23643:0crwdne23643:0
-          "Play Lab: Collision Detection (Big Game)": crwdns23644:0crwdne23644:0
-          "Eval: Fast Functions": crwdns23645:0crwdne23645:0
-          "Play Lab: Design Recipe": crwdns23646:0crwdne23646:0
-          "Eval: Design Recipe": crwdns23647:0crwdne23647:0
         playlab:
           title: crwdns8642:0crwdne8642:0
           description: crwdns8643:0crwdne8643:0
@@ -192,11 +144,6 @@ en:
           description: crwdns8811:0crwdne8811:0
           Artist: crwdns8812:0crwdne8812:0
           description_short: crwdns8823:0crwdne8823:0
-        scrat:
-          title: crwdns23300:0crwdne23300:0
-          description_short: crwdns23301:0crwdne23301:0
-          description: crwdns23302:0crwdne23302:0
-          "Maze: Sequence": crwdns23303:0crwdne23303:0
         hourofcode:
           Maze: crwdns23304:0crwdne23304:0
           title: crwdns23305:0crwdne23305:0
@@ -270,23 +217,10 @@ en:
           description: crwdns25206:0crwdne25206:0
           Special: crwdns25207:0crwdne25207:0
           Binary: crwdns27312:0crwdne27312:0
-        usabilitymsm:
-          title: crwdns35292:0crwdne35292:0
-          description_short: crwdns35293:0crwdne35293:0
-          description: crwdns35294:0crwdne35294:0
-          Usability testing for MSM: crwdns27313:0crwdne27313:0
-          Evaluation Blocks: crwdns27314:0crwdne27314:0
-          Blocks to Math: crwdns27315:0crwdne27315:0
-          Strings and Images: crwdns27316:0crwdne27316:0
-          Defining Variables: crwdns27317:0crwdne27317:0
-          Defining Functions: crwdns27318:0crwdne27318:0
-          Design Recipe: crwdns27319:0crwdne27319:0
-          Booleans: crwdns27320:0crwdne27320:0
-          Conditionals: crwdns27321:0crwdne27321:0
-          Free Play: crwdns27322:0crwdne27322:0
         algebra:
           title: crwdns27323:0crwdne27323:0
           description: crwdns27324:0crwdne27324:0
+          description_short: crwdns43229:0crwdne43229:0
           "Unplugged: Video Games and Coordinate Planes": crwdns27325:0crwdne27325:0
           "Calc: Evaluation Blocks": crwdns35295:0crwdne35295:0
           "Eval: Strings and Images": crwdns35296:0crwdne35296:0
@@ -361,11 +295,13 @@ en:
         pixelation:
           title: crwdns34820:0crwdne34820:0
           description: crwdns34821:0crwdne34821:0
+          description_short: crwdns43230:0crwdne43230:0
           Pixelation: crwdns34822:0crwdne34822:0
         20-hour:
           title: crwdns35335:0crwdne35335:0
           description_audience: crwdns42114:0crwdne42114:0
           description: crwdns34824:0crwdne34824:0
+          description_short: crwdns43231:0crwdne43231:0
           Introduction to Computer Science: crwdns34825:0crwdne34825:0
           The Maze: crwdns34826:0crwdne34826:0
           Computational Thinking: crwdns34827:0crwdne34827:0
@@ -389,6 +325,7 @@ en:
         edit-code:
           title: crwdns35336:0crwdne35336:0
           description: crwdns35337:0crwdne35337:0
+          description_short: crwdns43232:0crwdne43232:0
           The Maze: crwdns35338:0crwdne35338:0
           Applab: crwdns35339:0crwdne35339:0
           The Artist: crwdns35340:0crwdne35340:0
@@ -397,6 +334,7 @@ en:
         events:
           title: crwdns35342:0crwdne35342:0
           description: crwdns35343:0crwdne35343:0
+          description_short: crwdns43233:0crwdne43233:0
           Bounce: crwdns35344:0crwdne35344:0
           Studio: crwdns35345:0crwdne35345:0
           Calc: crwdns35346:0crwdne35346:0
@@ -404,18 +342,22 @@ en:
         flappy:
           title: crwdns35348:0crwdne35348:0
           description: crwdns35349:0crwdne35349:0
+          description_short: crwdns43234:0crwdne43234:0
           Flappy Code: crwdns35350:0crwdne35350:0
         jigsaw:
           title: crwdns35351:0crwdne35351:0
           description: crwdns35352:0crwdne35352:0
+          description_short: crwdns43235:0crwdne43235:0
           Jigsaw: crwdns35353:0crwdne35353:0
         step:
           title: crwdns35354:0crwdne35354:0
           description: crwdns35355:0crwdne35355:0
+          description_short: crwdns43236:0crwdne43236:0
           Step: crwdns35356:0crwdne35356:0
         Hour of Code:
           title: crwdns35357:0crwdne35357:0
           description: crwdns35358:0crwdne35358:0
+          description_short: crwdns43237:0crwdne43237:0
           Hour of Code 2013: crwdns35359:0crwdne35359:0
         Code Studio Puzzle Challenge:
           title: crwdns35360:0crwdne35360:0
@@ -498,6 +440,7 @@ en:
         algebraPD:
           title: crwdns35393:0crwdne35393:0
           description: crwdns35394:0crwdne35394:0
+          description_short: crwdns43238:0crwdne43238:0
           "Unplugged: Video Games and Coordinate Planes": crwdns35395:0crwdne35395:0
           "Calc: Evaluation Blocks": crwdns35396:0crwdne35396:0
           "Eval: Strings and Images": crwdns35397:0crwdne35397:0
@@ -540,6 +483,7 @@ en:
         algPDmiami:
           title: crwdns35428:0crwdne35428:0
           description: crwdns35429:0crwdne35429:0
+          description_short: crwdns43239:0crwdne43239:0
           Evaluation Blocks: crwdns35430:0crwdne35430:0
           Strings and Images: crwdns35431:0crwdne35431:0
           Rocket-Height: crwdns35432:0crwdne35432:0
@@ -555,12 +499,14 @@ en:
         text-compression:
           title: crwdns35939:0crwdne35939:0
           description: crwdns35940:0crwdne35940:0
+          description_short: crwdns43240:0crwdne43240:0
           Text Compression: crwdns35941:0crwdne35941:0
         CSPPD:
           new stage: crwdns36054:0crwdne36054:0
           Introduction to PD: crwdns36055:0crwdne36055:0
           title: crwdns38986:0crwdne38986:0
           description: crwdns38987:0crwdne38987:0
+          description_short: crwdns43241:0crwdne43241:0
           What is CSP?: crwdns38988:0crwdne38988:0
           Exploring CSP Instructional Materials: crwdns38989:0crwdne38989:0
           Impact of Computer Science: crwdns38990:0crwdne38990:0
@@ -570,6 +516,7 @@ en:
         CSPLessonSamples:
           title: crwdns36056:0crwdne36056:0
           description_short: crwdns36057:0crwdne36057:0
+          description: crwdns43242:0crwdne43242:0
           Lesson 14: crwdns36058:0crwdne36058:0
           Lesson 15: crwdns36059:0crwdne36059:0
         ECSPD:
@@ -581,11 +528,13 @@ en:
           reference: crwdns36532:0crwdne36532:0
           title: crwdns37922:0crwdne37922:0
           description: crwdns37923:0crwdne37923:0
+          description_short: crwdns43243:0crwdne43243:0
           Impact of Computer Science: crwdns37924:0crwdne37924:0
         sciencePD:
           Introduction to PD: crwdns36533:0crwdne36533:0
           title: crwdns37925:0crwdne37925:0
           description: crwdns37926:0crwdne37926:0
+          description_short: crwdns43244:0crwdne43244:0
           Pre-Workshop Online Component: crwdns37927:0crwdne37927:0
           Introduction to Complex Adaptive Systems: crwdns37928:0crwdne37928:0
           Introduction to Computational Science: crwdns37929:0crwdne37929:0
@@ -600,8 +549,14 @@ en:
           Post-Survey: crwdns37938:0crwdne37938:0
         rbo-reference:
           reference: crwdns37939:0crwdne37939:0
+          title: crwdns43245:0crwdne43245:0
+          description_short: crwdns43246:0crwdne43246:0
+          description: crwdns43247:0crwdne43247:0
         Test Wednesday:
           PDK5 Intro: crwdns37940:0crwdne37940:0
+          title: crwdns43248:0crwdne43248:0
+          description_short: crwdns43249:0crwdne43249:0
+          description: crwdns43250:0crwdne43250:0
         cspunit3:
           title: crwdns37941:0crwdne37941:0
           description_short: crwdns37942:0crwdne37942:0
@@ -654,6 +609,7 @@ en:
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
+          description_short: crwdns43251:0crwdne43251:0
           Introduction to the new Computer Science in Algebra: crwdns37981:0crwdne37981:0
           Course Overview: crwdns37982:0crwdne37982:0
           Computer Science Pedagogy: crwdns37983:0crwdne37983:0
@@ -666,11 +622,13 @@ en:
         sciPD complex adaptive 2:
           title: crwdns37989:0crwdne37989:0
           description: crwdns37990:0crwdne37990:0
+          description_short: crwdns43252:0crwdne43252:0
           Introduction to PD: crwdns37991:0crwdne37991:0
           Pre-Workshop Online Component: crwdns37992:0crwdne37992:0
         sciPD complex adaptive forum:
           title: crwdns37993:0crwdne37993:0
           description: crwdns37994:0crwdne37994:0
+          description_short: crwdns43253:0crwdne43253:0
           Introduction to PD: crwdns37995:0crwdne37995:0
           Introduction to Complex Adaptive Systems: crwdns37996:0crwdne37996:0
         Glenallan Career Day Demo:
@@ -688,6 +646,7 @@ en:
           logo_image: crwdns38007:0crwdne38007:0
           title: crwdns38008:0crwdne38008:0
           description: crwdns38009:0crwdne38009:0
+          description_short: crwdns43254:0crwdne43254:0
           Impact of Computer Science: crwdns38010:0crwdne38010:0
         ECSPD-iZone:
           Introduction to PD: crwdns38011:0crwdne38011:0
@@ -698,10 +657,12 @@ en:
           logo_image: crwdns38016:0crwdne38016:0
           title: crwdns38017:0crwdne38017:0
           description: crwdns38018:0crwdne38018:0
+          description_short: crwdns43255:0crwdne43255:0
           Impact of Computer Science: crwdns38019:0crwdne38019:0
         algebraPD-NexTech:
           title: crwdns38020:0crwdne38020:0
           description: crwdns38021:0crwdne38021:0
+          description_short: crwdns43256:0crwdne43256:0
           Introduction to PD: crwdns38022:0crwdne38022:0
           Evaluation Blocks: crwdns38023:0crwdne38023:0
           logo_image: crwdns38024:0crwdne38024:0
@@ -713,6 +674,7 @@ en:
         algebraPD-iZone:
           title: crwdns38030:0crwdne38030:0
           description: crwdns38031:0crwdne38031:0
+          description_short: crwdns43257:0crwdne43257:0
           Introduction to PD: crwdns38032:0crwdne38032:0
           Evaluation Blocks: crwdns38033:0crwdne38033:0
           logo_image: crwdns38034:0crwdne38034:0
@@ -726,6 +688,7 @@ en:
           logo_image: crwdns38041:0crwdne38041:0
           title: crwdns38042:0crwdne38042:0
           description: crwdns38043:0crwdne38043:0
+          description_short: crwdns43258:0crwdne43258:0
           What to Expect: crwdns38044:0crwdne38044:0
           Introduction to Complex Adaptive Systems: crwdns38045:0crwdne38045:0
           Introduction to Computational Science: crwdns38046:0crwdne38046:0
@@ -742,6 +705,7 @@ en:
           logo_image: crwdns38056:0crwdne38056:0
           title: crwdns38057:0crwdne38057:0
           description: crwdns38058:0crwdne38058:0
+          description_short: crwdns43259:0crwdne43259:0
           What to Expect: crwdns38059:0crwdne38059:0
           Introduction to Complex Adaptive Systems: crwdns38060:0crwdne38060:0
           Introduction to Computational Science: crwdns38061:0crwdne38061:0
@@ -756,11 +720,16 @@ en:
         ui_tests:
           title: crwdns38070:0crwdne38070:0
           description: crwdns38071:0crwdne38071:0
+          description_short: crwdns43260:0crwdne43260:0
           All the Tests: crwdns38072:0crwdne38072:0
           Free Response: crwdns38073:0crwdne38073:0
           Multi: crwdns38074:0crwdne38074:0
           Big Game: crwdns38398:0crwdne38398:0
+          new stage: crwdns43261:0crwdne43261:0
         sciencePD2:
+          title: crwdns43262:0crwdne43262:0
+          description: crwdns43263:0crwdne43263:0
+          description_short: crwdns43264:0crwdne43264:0
           Phase 2 Summer Workshop: crwdns38075:0crwdne38075:0
           Welcome: crwdns38799:0crwdne38799:0
           Resources: crwdns38800:0crwdne38800:0
@@ -772,6 +741,9 @@ en:
           Common Forms: crwdns38806:0crwdne38806:0
           Guides and Resources: crwdns38807:0crwdne38807:0
         sciencePD3:
+          title: crwdns43265:0crwdne43265:0
+          description: crwdns43266:0crwdne43266:0
+          description_short: crwdns43267:0crwdne43267:0
           new stage: crwdns38076:0crwdne38076:0
           Welcome: crwdns38808:0crwdne38808:0
           Curricular Modules: crwdns38809:0crwdne38809:0
@@ -780,6 +752,9 @@ en:
           Discussion Forums: crwdns38812:0crwdne38812:0
         Testing:
           Testing: crwdns38544:0crwdne38544:0
+          title: crwdns43268:0crwdne43268:0
+          description: crwdns43269:0crwdne43269:0
+          description_short: crwdns43270:0crwdne43270:0
         cspunit2:
           title: crwdns38675:0crwdne38675:0
           description_short: crwdns38676:0crwdne38676:0
@@ -817,6 +792,7 @@ en:
         algebraPD2a:
           title: crwdns38690:0crwdne38690:0
           description: crwdns38691:0crwdne38691:0
+          description_short: crwdns43271:0crwdne43271:0
           Evaluation Blocks: crwdns38692:0crwdne38692:0
           Strings and Images: crwdns38693:0crwdne38693:0
           Defining Variables: crwdns38694:0crwdne38694:0
@@ -853,6 +829,7 @@ en:
           Online PD: crwdns38995:0crwdne38995:0
           title: crwdns38996:0crwdne38996:0
           description: crwdns38997:0crwdne38997:0
+          description_short: crwdns43272:0crwdne43272:0
           Odometer: crwdns38998:0crwdne38998:0
           Text Compression: crwdns38999:0crwdne38999:0
           Pixelation: crwdns39000:0crwdne39000:0
@@ -860,6 +837,7 @@ en:
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
+          description_short: crwdns43273:0crwdne43273:0
           Course Overview: crwdns38832:0crwdne38832:0
           Computer Science Pedagogy: crwdns38833:0crwdne38833:0
           Teacher Dashboard: crwdns38834:0crwdne38834:0
@@ -873,11 +851,10 @@ en:
           "Eval: Conditionals": crwdns38842:0crwdne38842:0
           Next Steps: crwdns38843:0crwdne38843:0
           Best Practices for Teaching Computer Science: crwdns42117:0crwdne42117:0
-        Calc Define Funcs 5 - multiply 1:
-          "Eval: Defining Functions": crwdns38844:0crwdne38844:0
         cspfacilitator:
           title: crwdns41625:0crwdne41625:0
           description: crwdns41626:0crwdne41626:0
+          description_short: crwdns43274:0crwdne43274:0
           Pixelation Widget: crwdns41627:0crwdne41627:0
           Text Compression Widget: crwdns41628:0crwdne41628:0
           Internet Simulator: crwdns41629:0crwdne41629:0
@@ -888,6 +865,7 @@ en:
         CSPfac intro:
           title: crwdns41634:0crwdne41634:0
           description: crwdns41635:0crwdne41635:0
+          description_short: crwdns43275:0crwdne43275:0
           Welcome!: crwdns41636:0crwdne41636:0
           Pixelation Widget: crwdns41637:0crwdne41637:0
           Text Compression Widget: crwdns41638:0crwdne41638:0
@@ -898,6 +876,7 @@ en:
         K5-OnlinePD:
           title: crwdns42120:0crwdne42120:0
           description: crwdns42121:0crwdne42121:0
+          description_short: crwdns43276:0crwdne43276:0
           Getting Started: crwdns42122:0crwdne42122:0
           Computer Science Fundamentals: crwdns42123:0crwdne42123:0
           "Mastering the Basics: Sequencing": crwdns42124:0crwdne42124:0
@@ -912,6 +891,7 @@ en:
         ECSPD2:
           title: crwdns41856:0crwdne41856:0
           description: crwdns41857:0crwdne41857:0
+          description_short: crwdns43277:0crwdne43277:0
           Welcome!: crwdns41858:0crwdne41858:0
           Unit 1, Days 1-2: crwdns41859:0crwdne41859:0
           Unit 1, Days 3-4: crwdns41860:0crwdne41860:0
@@ -925,6 +905,7 @@ en:
         equityPD:
           title: crwdns41867:0crwdne41867:0
           description: crwdns41868:0crwdne41868:0
+          description_short: crwdns43278:0crwdne43278:0
           Introduction to the Equity PD: crwdns41869:0crwdne41869:0
           Equity Vs. Equality: crwdns41870:0crwdne41870:0
           Code.org Equity PD: crwdns41871:0crwdne41871:0
@@ -937,6 +918,7 @@ en:
         algebraPD2:
           title: crwdns42133:0crwdne42133:0
           description: crwdns42134:0crwdne42134:0
+          description_short: crwdns43279:0crwdne43279:0
           Course Overview: crwdns42135:0crwdne42135:0
           Computer Science Pedagogy: crwdns42136:0crwdne42136:0
           Teacher Dashboard: crwdns42137:0crwdne42137:0
@@ -955,3 +937,39 @@ en:
           Welcome!: crwdns43215:0crwdne43215:0
           The Design Recipe: crwdns43216:0crwdne43216:0
           Teaching with Puzzles: crwdns43217:0crwdne43217:0
+        sciencePD2b:
+          title: crwdns43280:0crwdne43280:0
+          description_short: crwdns43281:0crwdne43281:0
+          description: crwdns43282:0crwdne43282:0
+          Welcome!: crwdns43283:0crwdne43283:0
+          Wrap-Up: crwdns43284:0crwdne43284:0
+          Review StarLogo Nova: crwdns43285:0crwdne43285:0
+          Reviewing the Modules: crwdns43286:0crwdne43286:0
+          Advanced StarLogo Nova: crwdns43287:0crwdne43287:0
+          Remixing Phases 1 and 2: crwdns43288:0crwdne43288:0
+          Thinking Ahead to Implementation: crwdns43289:0crwdne43289:0
+        equity-pd:
+          title: crwdns43290:0crwdne43290:0
+          description_short: crwdns43291:0crwdne43291:0
+          description: crwdns43292:0crwdne43292:0
+          Necessary Background: crwdns43293:0crwdne43293:0
+          Code.org Equity PD: crwdns43294:0crwdne43294:0
+        science-PD2:
+          title: crwdns43295:0crwdne43295:0
+          description_short: crwdns43296:0crwdne43296:0
+          description: crwdns43297:0crwdne43297:0
+          Welcome!: crwdns43298:0crwdne43298:0
+          Review StarLogo Nova: crwdns43299:0crwdne43299:0
+          Reviewing the Modules: crwdns43300:0crwdne43300:0
+          Advanced StarLogo Nova: crwdns43301:0crwdne43301:0
+          Remixing Phases 1 and 2: crwdns43302:0crwdne43302:0
+          Thinking Ahead to Implementation: crwdns43303:0crwdne43303:0
+          Wrap-Up: crwdns43304:0crwdne43304:0
+        Equity-OnlinePD:
+          title: crwdns43316:0crwdne43316:0
+          description_short: crwdns43317:0crwdne43317:0
+          description: crwdns43318:0crwdne43318:0
+          Getting Started: crwdns43319:0crwdne43319:0
+          Introduction to Equity: crwdns43320:0crwdne43320:0
+          Creating Equitable Learning Environments: crwdns43321:0crwdne43321:0
+          Next Steps: crwdns43322:0crwdne43322:0

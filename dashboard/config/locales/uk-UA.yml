@@ -419,7 +419,7 @@
     heading_legacy: <h2>Загальний курс</h2><h1>для будь-якого віку</h1>
     your_gallery: Галерея
     no_primary_course: Спробуйте курс Code Studio
-    print_certificate: Print Certificate
+    print_certificate: Друкувати сертифікат
   gender:
     male: Чоловік
     female: Жінка
@@ -516,12 +516,12 @@
       body: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати
         Пурха!
     20-hour:
-      title: Accelerated Course
+      title: Прискорений курс
       body: Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування.
         Цей курс розроблено для використання на заняттях в основній школі, але може
         бути цікавим для будь-якого віку.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: Дізнатися основні номер інформатику в прискореному версії програми
+        навчання 2-4.
     hoc2014:
       try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
       try_frozen: Художник з Анною та Ельзою, із Крижаного серця

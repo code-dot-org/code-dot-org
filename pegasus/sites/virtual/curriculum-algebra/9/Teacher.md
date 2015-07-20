@@ -134,8 +134,5 @@ Once students have worked through the Fast Functions, you can have them use the 
 
 [/together]
 
-[together]
-
-[/together]
 
 <%= partial('../docs/_footer', :lesson => lesson) %>

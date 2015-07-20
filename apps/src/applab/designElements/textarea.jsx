@@ -5,6 +5,8 @@ var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
+var EventHeaderRow = require('./EventHeaderRow.jsx');
+var EventRow = require('./EventRow.jsx');
 
 var elementUtils = require('./elementUtils');
 
@@ -81,8 +83,50 @@ var TextAreaProperties = React.createClass({
   }
 });
 
+var TextAreaEvents = React.createClass({
+  propTypes: {
+    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: React.PropTypes.func.isRequired
+  },
+
+  getChangeEventCode: function() {
+    var id = this.props.element.id;
+    var code =
+      'onEvent("' + id + '", "change", function(event) {\n' +
+      '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
+      '});\n';
+    return code;
+  },
+
+  insertChange: function() {
+    this.props.onInsertEvent(this.getChangeEventCode());
+  },
+
+  render: function () {
+    var element = this.props.element;
+    var changeName = 'Change';
+    var changeDesc = 'Triggered when the text area loses focus if the text has changed.';
+
+    return (
+      <div id='eventRowContainer'>
+        <PropertyRow
+          desc={'id'}
+          initialValue={element.id}
+          handleChange={this.props.handleChange.bind(this, 'id')}
+          isIdRow={true}/>
+        <EventHeaderRow/>
+        <EventRow
+          name={changeName}
+          desc={changeDesc}
+          handleInsert={this.insertChange}/>
+      </div>
+    );
+  }
+});
+
 module.exports = {
-  PropertyTable: TextAreaProperties,
+  PropertyTab: TextAreaProperties,
+  EventTab: TextAreaEvents,
 
   create: function() {
     var element = document.createElement('div');

@@ -1,7 +1,7 @@
 en-US:
   hello: crwdns3593:0crwdne3593:0
   select_language: crwdns21806:0crwdne21806:0
-  computer_science: crwdns3594:0crwdne3594:0
+  en: crwdns43305:0crwdne43305:0
   computer_science_edweek: crwdns3595:0crwdne3595:0
   csedweek_dates: crwdns27832:0crwdne27832:0
   csedweek_banner_hoc: crwdns23438:0crwdne23438:0
@@ -45,6 +45,7 @@ en-US:
   congratulations: crwdns3785:0crwdne3785:0
   congratulations_on_completing_hoc: crwdns25704:0crwdne25704:0
   get_a_certificate_of_achievement: crwdns3615:0crwdne3615:0
+  enter_valid_age: crwdns43306:0crwdne43306:0
   enter_valid_email: crwdns3616:0crwdne3616:0
   get_a_certificate_message: crwdns4468:0crwdne4468:0
   get_a_certificate_message_after: crwdns8840:0crwdne8840:0

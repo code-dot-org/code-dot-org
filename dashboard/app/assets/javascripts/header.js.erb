@@ -311,6 +311,11 @@ dashboard.header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text('<%= I18n.t('project.remix') %>'))
       .append($('<div class="project_more header_button header_button_light" style="position: relative;">').html(moreButton));
 
+  // TODO: Remove this (and the related style) when Applab is no longer in beta.
+  if ('applab' === appOptions.app) {
+    $('.project_info').append($('<div class="beta-notice">').text('<%= I18n.t('beta') %>'));
+  }
+
   projectNameShow();
   $('.freeplay_links').empty().before($('<div class="project_list header_button header_button_light">').text('<%= I18n.t('project.my_projects') %>'));
 

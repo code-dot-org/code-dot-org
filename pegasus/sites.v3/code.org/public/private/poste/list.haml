@@ -1,0 +1,25 @@
+---
+title: Poste Messages
+---
+= view :breadcrumbs, trail: [{text: 'Poste', url: './'}, {text: 'Messages', url: 'list'}]
+%br/
+
+:ruby
+  rows = DB.fetch("
+    SELECT
+      poste_messages.name as message
+    FROM poste_messages
+    ORDER BY id desc
+  ")
+
+%table
+  %tr
+    %th Message
+    %th
+  - rows.each do |row|
+    %tr
+      %td
+        = row[:message]
+      %td
+        %button
+          %a{href: "stats?name=#{row[:message]}"} Stats

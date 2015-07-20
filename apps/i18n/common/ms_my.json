@@ -182,6 +182,7 @@
   "play": "Main",
   "print": "Cetak",
   "puzzleTitle": "Puzzle {puzzle_number} dari {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "Ulang",
   "resetProgram": "Tetapkan semula",
   "rotateText": "Pusingkan peranti anda.",

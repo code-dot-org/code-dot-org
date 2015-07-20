@@ -266,7 +266,7 @@
       classroom: Heimasíða kennara
       district_dashboard: Stjórnborð umdæmis
       label: Hæ %{username}
-      stats: Framvindan mín
+      stats: Kóðastúdíó
       settings: Reikningurinn minn
       prizes: Verðlaun
       logout: Skrá út
@@ -422,10 +422,10 @@
     heading_hoc2014: <h2>Klukkustund kóðunar fyrir</h2><h1>alla aldurshópa</h1>
     heading_elementary: <h2>20 stunda námskeið fyrir</h2><h1>byrjendur (á öllum aldri)</h1>
     heading_apps: <h2>Skemmtun fyrir</h2><h1>alla</h1>
-    heading_legacy: <h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>
+    heading_legacy: <h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>
     your_gallery: Safn
-    no_primary_course: Prófaðu námskeið hjá Code Studio
-    print_certificate: Print Certificate
+    no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
+    print_certificate: Prenta skírteini
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -525,11 +525,11 @@
       body: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna
         með Flappy kóða!
     20-hour:
-      title: Accelerated Course
+      title: Hraðnámskeið
       body: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun.
         Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára,
         en er skemmtilegt fyrir alla aldurshópa.
-      body_short: Learn basic computer science in an accelerated version of courses
+      body_short: Lærðu undirstöðu í tölvunarfræði með hraðaðri útgáfu af námskeiðum
         2-4.
     hoc2014:
       try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
@@ -587,9 +587,9 @@
       í heiti samningsins.
     badrange: Samningurinn þinn hefur rangt svið.
     baddomainsize: Samningurinn þinn hefur ekki réttan fjölda atriða í gildamenginu.
-    baddomainname: Eitt eða fleiri atriði í gildamenginu heitir röngu nafni.
-    baddomaintype: Eitt eða fleiri atriði í gildamenginu hefur ranga gerð eða þau
-      eru í rangri röð.
+    baddomainname: Eitt eða fleiri atriði í gildamenginu heita röngu nafni.
+    baddomaintype: Eitt eða fleiri atriði í gildamenginu hafa ranga gerð eða eru í
+      rangri röð.
   text_match:
     placeholder: Skráðu svar þitt hér
     open_response_title: Þakkir

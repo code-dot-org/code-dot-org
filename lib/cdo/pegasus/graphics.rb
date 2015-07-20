@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'rmagick'
 
 def load_manipulated_image(path,mode,width,height=nil)
   case mode

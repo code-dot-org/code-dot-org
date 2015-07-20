@@ -284,9 +284,8 @@
         aller Blumen auf diesem Feld zu sammeln.
       2-3 Bee Loops 12_instruction: Benutze while- Schleifen, um den ganzen Necktar
         aller Blumen auf diesem Feld zu sammeln.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      2-3 Bee Loops 13_instruction: 'Wissenstest: Benutze den Repeat-Block um den
+        gesamten Nektar einzusammeln.'
       2-3 Bee Loops 1A_instruction: 'Hi, bin ich eine Biene. Hilfst du mir den Blütennektar
         zu sammeln? '
       2-3 Bee Loops 2_instruction: Benutze eine Schleife, um den Necktar zu sammeln
@@ -793,6 +792,9 @@
         Hilf mir, die Löcher zu füllen und die Haufen zu entfernen und den Grund wieder
         zu ebnen.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: 'Vervollständige den Code, damit diese
         Dreiecke gezeichnet werden. Das erste hast du erledigt. Hinweis: 3 Dreiecke
         in einer 360- Grad- Drehung.'
@@ -1243,6 +1245,16 @@
         Linie ist 300 Pixel lang) '
       Course 4 Artist 10_instruction: 'Es ist an der Zeit, frei zu spielen! Viel Spaß
         und zeichne alles, was du möchtest. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Kannst du diesen Code in einer Schleife erstellen,
         um das grau ausgeblendete Quadrat zu zeichnen?
       Course 4 Artist 3_instruction: Ok, versuche herauszufinden was passiert, wenn
@@ -1284,38 +1296,34 @@
         bits!'
       Course 4 Artist Binary Free Play_instruction: 'Freies Spielen: Zeichne mit binären
         Zeichenfolgen, was auch immer du möchtest!'
-      Course 4 Artist For  Functions 10_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For  Functions 11_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
+      Course 4 Artist For  Functions 10_instruction: 'Gehen wir mal einen Schritt
+        weiter: kannst du mit Hilfe der Funktion "Zeichne ein Quadrat" einen Stern
+        zeichnen? Viel Erfolg!'
+      Course 4 Artist For  Functions 11_instruction: 'Gehen wir mal einen Schritt
+        weiter: kannst du mit Hilfe der Funktion "Zeichne ein Quadrat" einen Stern
+        zeichnen? Viel Erfolg!'
       Course 4 Artist For Loops 1_instruction: 'Zeichne dieses Dreieck, das 50 Pixel
         groß ist. Tipp: Benutze einen Wiederholen Baustein.'
       Course 4 Artist For Loops 10_instruction: Zeit zum Freien Spielen! Zeichne,
         was auch immer du möchtest mit den Bausteinen, die du soeben gelernt hast,
         zu benutzen. Viel Spaß!
-      Course 4 Artist For Loops 11_instruction: |
-        Remember when we used a variable
-        to control the number of sides in a shape? This pattern starts with a triangle
-        and adds one side at a time until it draws a decagon (10 sides). Each side
-        should be 100 pixels long. Hint: 360 divided by the number of sides a shape
-        has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
-        like to draw each shape next to the last one. This time each side is\n20 pixels.
-        Use a jump block to jump forward 40 pixels after each shape. \n"
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
+      Course 4 Artist For Loops 11_instruction: 'Weißt du noch, als wir eine Variable
+        verwendet haben, um die Anzahl der Seiten einer Figur zu definieren? Dieses
+        Muster beginnt mit einem Dreieck, und fügt eine weitere Seite hinzu, bis sich
+        ein Dekagon (10 Seiten) ergibt. Jede Seite sollte 100 Pixel lang sein. Hinweis:
+        360 geteilt durch die Anzahl an Seiten einer Figur ergibt den Rotationswinkel.'
+      Course 4 Artist For Loops 12_instruction: 'Das sah ziemlich gut aus. Aber nun
+        würde ich gerne jede Form neben der letzten Form zeichnen. Dieses Mal ist
+        jede Seite 20 Pixel lang. Benutze einen Sprungblock, um nach jeder Figur 40
+        Pixel weiter zu springen. '
+      Course 4 Artist For Loops 13_instruction: Hmm, die Figuren werden jedes Mal
+        größer. Haben wir dieses Problem nicht schonmal mit Variablen gelöst? Wie
+        können wir die Zähler Variable dazu einsetzen, die Seiten kürzer zu machen
+        je mehr Seiten es gibt? Versuche (100 / Zähler) Pixel weiter zu springen,
+        anstatt einen festen Abstand einzuhalten.
+      Course 4 Artist For Loops 14_instruction: Es gibt einen hübschen Effekt, wenn
+        du vom notwendigen Winkel ein wenig abweichst. Verwende mal einen Winkel von
+        89 Grad um diese verdrehte Quadratspirale zu erzeugen.
       Course 4 Artist For Loops 15_instruction: |
         Free Play: Try making some drawings
         of your own using For Loops. We've added a few generic variables for you
@@ -1329,12 +1337,10 @@
         sides, the largest has 200 pixel sides, and each triangle is 20 pixels larger
         than the last. Update the for loop to draw these triangles.
       Course 4 Artist For Loops 4_instruction: |
-        Use a for loop to draw these squares.
-        They start at 50 pixels long, the largest is 300 pixels long, and each square
-        is 25 pixels larger than the last. I have given you almost all the code you
-        will need - you're missing one block, which one is it?
-      Course 4 Artist For Loops 5_instruction: "Good job on the last puzzle! Let's\nuse
-        that \"counter\" variable block again to draw this cool picture. \n"
+        Verwende eine Schleife, um diese Rechtecke zu zeichnen.
+        Das kleinste Rechteck ist 50 Pixel lang, das größte ist 300 Pixel lang, und jedes Rechteck ist 25 Pixel länger als sein Vorgänger. Du hast fast alle Blöcke, die du brauchst, aber ein Block fehlt. Welcher ist es?
+      Course 4 Artist For Loops 5_instruction: 'Gute Arbeit beim letzten Puzzle! Verwende
+        den Variablen-Block "Zähler" nochmals, um dieses tolle Bild zu zeichnen. '
       Course 4 Artist For Loops 6_instruction: Spiel ein Bisschen herum! Benutze eine
         for-Schleife um eine Form Deiner Wahl immer größer werden zu lassen.
       Course 4 Artist For Loops 7_instruction: |
@@ -1404,6 +1410,11 @@
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1476,8 +1487,9 @@
       Course 4 Artist Vars 12_instruction: |
         Let's set the "sides" variable to
         5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Let's add a new variable called "length" and use that wherever you
-        have a "move forward." Set the "length" variable to 75 for this shape.
+        gets! Notice that there is a new variable called "length". We can now use
+        that wherever we have a "move forward." Set the "length" variable to 75
+        for this shape.
       Course 4 Artist Vars 13_instruction: |
         The more sides a shape has, the shorter
         each side needs to be in order for the whole pattern to fit on the screen.
@@ -1520,9 +1532,9 @@
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Use the "set sides
         to" block.
-      Course 4 Bee 1_instruction: "The bee can't tell if this is a flower or a honeycomb.\nCheck
-        first if it is a flower or a honeycomb, and then only gather nectar\nfrom
-        it if it is a flower. \n"
+      Course 4 Bee 1_instruction: "The bee can't tell what's under the cloud! First,\ncheck
+        if it is a flower or a honeycomb. Then only gather nectar from it if\nit is
+        a flower. \n"
       Course 4 Bee 2_instruction: |
         Check each object to see if it's a flower. If
         it is, collect nectar...otherwise, you can ignore it!
@@ -1779,7 +1791,7 @@
       Course 4 Play Labs For Loops 5_instruction: |
         In the last stage we counted the
         square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
-        count the cube of each number (1, 8, 27, 64, 125, 216, 343….)
+        count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
         is any whole number that is only divisible by itself and 1. Use the "is_prime"
@@ -1790,6 +1802,9 @@
       Course 4 Play Labs For Loops 8_instruction: |
         What for loop would make me speak
         19, 27, 35, 43, 51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig"
@@ -1913,7 +1928,7 @@
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
@@ -2141,6 +2156,7 @@
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Draw a short line up and a long one
         to the right!
@@ -2497,8 +2513,8 @@
         editor. \n"
       NEW Course 4 Artist Functions 8_instruction: |
         We have given you most of the
-        code to create a function. However there seems to be something missing. Can
-        you edit the function definition to draw the triangle?
+        code to create a function, but there seems to be something missing. Can you
+        edit the function definition to draw the triangle?
       NEW Course 4 Artist Functions 9_instruction: |
         Which block do you need to add
         to get the triangle to sit on top of the square?
@@ -2519,18 +2535,18 @@
       NEW Course 4 Artist Params 13_instruction: |
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
-        to also add a "sides" parameter. Remember the angle to turn for a given
-        shape is 360 divided by the sides it has. Hint: lengths for each shape are;
-        the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50
-        pixels.
+        to add a "sides" parameter. Remember the angle to turn for a given shape
+        is 360 divided by the number of sides it has. Hint: These are the lengths
+        for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and
+        the square is 50 pixels.
       NEW Course 4 Artist Params 14_instruction: "Can you recreate these shapes?\nDrag
         the \"length\" parameter into the function definition. \n"
       NEW Course 4 Artist Params 15_instruction: |
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
       NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle function
-        with 50 pixels sides” from scratch
+        Create a “draw a triangle" function
+        with 50 pixels sides from scratch
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3
         triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
@@ -2574,8 +2590,8 @@
         hexagon's.
       NEW Course 4 Artist Vars 4_instruction: |
         Let's try it again. Can you set the
-        length variable to make this cool design with with hexagons? Hint: It's a
-        multiple of 10.
+        length variable to make this cool design with hexagons? Hint: It's a multiple
+        of 10.
       NEW Course 4 Artist Vars 6_instruction: |
         Can you help me draw this cool pattern
         by dropping in the "length" variable block into the correct places?
@@ -2607,7 +2623,7 @@
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
       NEW Course 4 Bee For Loops 6_instruction: |
         The last number in your for loop
-        is called the "increment,"  and each time the loop is run the counter variable
+        is called the "increment." Each time the loop is run the counter variable
         changes by the increment. Try collecting these flowers using an increment
         of 2.
       NEW Course 4 Bee For Loops 7_instruction: |
@@ -2874,6 +2890,7 @@
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: |
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
@@ -3267,17 +3284,13 @@
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

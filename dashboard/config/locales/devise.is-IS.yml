@@ -77,7 +77,7 @@
         other: '%{count} villur komu í veg fyrir vistun %{resource}:'
     invitations:
       send_instructions: Tölvupóstur með boði hefur verið sendur á %{email}.
-      invitation_token_invalid: Boðsmerkið, sem gefið var upp, er ógilt!
+      invitation_token_invalid: Uppgefnar boðsupplýsingar passa ekki!
       updated: Stilling lykilorðs tókst. Þú ert nú skráð/ur inn.
       no_invitations_remaining: Engin boð eftir
       invitation_removed: Boðið til þín var fjarlægt.

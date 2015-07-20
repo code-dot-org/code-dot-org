@@ -1,3 +1,6 @@
+/**
+ * @overview Constants and enums used across Internet Simulator.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

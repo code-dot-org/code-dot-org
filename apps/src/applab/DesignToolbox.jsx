@@ -9,7 +9,7 @@ var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 module.exports = React.createClass({
   propTypes: {
     handleDragStart: React.PropTypes.func.isRequired,
-    isToolboxVisible: React.PropTypes.bool.isRequired,
+    isToolboxVisible: React.PropTypes.bool.isRequired
   },
 
   render: function () {

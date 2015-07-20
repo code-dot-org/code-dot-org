@@ -291,7 +291,7 @@ he:
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
-      course: Course
+      course: קורס
       rename: שינוי שם
       edit: עריכה
       delete: מחק

@@ -25,6 +25,12 @@
   - if current_user
     #user_hero
       = render template: 'api/user_hero'
+    - advertised_scripts = [Script::HOC_NAME, Script::FROZEN_NAME, Script::INFINITY_NAME, Script::FLAPPY_NAME, Script::PLAYLAB_NAME, Script::ARTIST_NAME, Script::COURSE1_NAME, Script::COURSE2_NAME, Script::COURSE3_NAME, Script::COURSE4_NAME, Script::TWENTY_HOUR_NAME]
+    - unadvertised_user_scripts = [current_user.working_on_user_scripts, current_user.completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.name.in?(advertised_scripts)}
+    - unadvertised_user_scripts.each_slice(2) do |course_pair|
+      .row
+        - course_pair.each do |user_script|
+          = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
 
   - else # no logged in user
     = render partial: 'home/sign_in_buttons'
@@ -49,13 +55,6 @@
     %br/
     %br/
     %br/
-    - unless current_user.working_on_user_scripts.empty?
-      - current_user.working_on_user_scripts.each do |user_script| 
-        = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }
-
-    - unless current_user.completed_user_scripts.empty?   
-      - current_user.completed_user_scripts.each do |user_script|    
-        = render partial: 'shared/course_progress_block', locals: { script: user_script.script, user_script: user_script }    
     = render partial: 'home/projects'
     - unless @gallery_activities.empty?
       = render partial: 'home/gallery'

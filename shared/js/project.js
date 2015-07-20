@@ -4,6 +4,7 @@
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
+var assets = require('./clientApi').create('/v3/assets');
 var channels = require('./clientApi').create('/v3/channels');
 
 var events = {
@@ -110,7 +111,7 @@ module.exports = {
             setAppOptionsForShareMode(false);
           }
         }
-      } else if (current && current.levelSource) {
+      } else if (current) {
         appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
@@ -231,10 +232,26 @@ module.exports = {
    * copy as the current project.
    */
   copy: function(newName, callback) {
+    var srcChannel = current.id;
+    var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
     delete current.hidden;
     current.name = newName;
-    this.save(callback);
+    this.save(wrappedCallback);
+  },
+  copyAssets: function (srcChannel, callback) {
+    if (!srcChannel) {
+      executeCallback(callback);
+      return;
+    }
+    var destChannel = current.id;
+    assets.copyAll(srcChannel, destChannel, function(err) {
+      if (err) {
+        $('.project_updated_at').text('Error copying files');  // TODO i18n
+        return;
+      }
+      executeCallback(callback);
+    });
   },
   delete: function(callback) {
     var channelId = current.id;
@@ -348,9 +365,15 @@ function determineNoPadding() {
  * @returns {string} The serialized level source from the editor.
  */
 function getEditorSource() {
-  return window.Blockly ?
-    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) :
-    window.Applab && Applab.getCode();
+  var source;
+  if (window.Blockly) {
+    // If we're readOnly, source hasn't changed at all
+    source = Blockly.readOnly ? current.levelSource :
+      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  } else {
+    source = window.Applab && Applab.getCode();
+  }
+  return source;
 }
 
 function getLevelHtml() {

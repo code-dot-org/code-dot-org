@@ -1,6 +1,6 @@
 // Modern skin for applab apps
 
-#divApplab.appModern {
+#divApplab.appModern, .draggingParent {
   color: #333;
 
   button {
@@ -46,7 +46,7 @@
   }
 }
 
-#divApplab.appModern.divApplabDesignMode {
+#divApplab.appModern.divApplabDesignMode, .draggingParent {
 
   img[src=''], canvas {
     border: 5px solid #fff;

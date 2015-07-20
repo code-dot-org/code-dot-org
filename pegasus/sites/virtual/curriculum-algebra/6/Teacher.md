@@ -47,6 +47,7 @@ Even worse, if you decided you wanted fifty blue triangles instead, you'd have t
 
 We can store that red triangle Evaluation Block in a Variable, let's call it "red-triangle." That name "red-triangle" now becomes a shortcut for the blocks inside the variable, and we can use that shortcut over and over in our program. If we decide that we want that red triangle to be 100 pixels instead of 50, we only need to change it in the variable definition.
 
+
 [tip]
 
 # Lesson Tip

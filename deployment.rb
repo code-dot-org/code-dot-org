@@ -175,6 +175,38 @@ class CDOImpl < OpenStruct
   def shared_image_url(path)
     "/shared/images/#{path}"
   end
+
+  # Default logger implementation
+  attr_writer :log
+  def log
+    @log ||= Logger.new(STDOUT).tap do |l|
+      l.level = Logger::INFO
+      l.formatter = proc do |severity, _, _, msg|
+        "#{severity != 'INFO' ? "#{severity}: " : ''}#{msg}\n"
+      end
+    end
+  end
+
+  # Simple backtrace filter
+  FILTER_GEMS = %w(rake)
+
+  def backtrace(exception)
+    filter_backtrace exception.backtrace
+  end
+
+  def filter_backtrace(backtrace)
+    FILTER_GEMS.map do |gem|
+      backtrace.reject!{|b| b =~ /gems\/#{gem}/}
+    end
+    backtrace.each do |b|
+      b.gsub!(CDO.dir, '[CDO]')
+      Gem.path.each do |gem|
+        b.gsub!(gem, '[GEM]')
+      end
+    end
+    backtrace.join("\n")
+  end
+
 end
 
 CDO ||= CDOImpl.new

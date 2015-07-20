@@ -66,7 +66,6 @@ fa:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: حلقه های هنرمند منطبق شده با یک
         Match the loop to the shape: حلقه را با شکل منطبق سازید
-        Matching loops: حلقه های تطابق یافته
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -424,9 +423,8 @@ fa:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: بهترین پاسخ را انتخاب کنید
         Maze Multiple Choice One: چندگزینه ای هزارتوی یک
-        Which blocks work?: کدام بلوک ها کارمیکنند؟
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
@@ -486,15 +484,12 @@ fa:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: |
           /script_assets/4-5_images/unplugged/songwriting_1_q.png
           
-        0: '؟ مگس روی دوغه، <br/>برو, مگس, برو، <br/>مگس روی دوغه، <br/>برو, مگس, برو، <br/>مگس روی دوغه، <br/>برو, مگس, برو، <br/>بپر به لوی من، عزیز من.'
-        1: ': مگس روی دوغه، <br/>برو, مگس, برو، <br/>مگس روی دوغه، <br/>برو, مگس, برو، <br/>مگس روی دوغه، <br/>برو, مگس, برو، <br/>بپر به لوی من، عزیز من.'
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: لو، لو، بپر به لوی من
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>بپر به لوی من، عزیز من.'
-        2: '؟ لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>بپر به لوی من، عزیز من. <br/> <br/><p>مگس توی دوغه، <br/>برو، مگس، برو،'
-        3: ': لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>بپر به لوی من، عزیز من. <br/> <br/><p>مگس توی دوغه، <br/>برو، مگس، برو،'
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: انتخاب چندگانه
-        4: ؟ بزرگترین تکه از این ترانه که می توانید به عنوان ترجیع بند آن را تعریف کنید کدام است به طوری که ترجیع بند هر بار که خوانده میشود کاملاً تکرار شود؟
-        5: ': بزرگترین تکه از این ترانه که می توانید به عنوان ترجیع بند آن را تعریف کنید کدام است به طوری که ترجیع بند هر بار که خوانده میشود کاملاً تکرار شود؟'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -767,14 +762,6 @@ fa:
         Driver and Helper: راننده و کمک راننده
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'یکی از این پسرها <b>راننده</b> است.  و یکی <b>کمک راننده</b> است.'
         This time, which boy is the <large>driver</large>?: 'این دفعه کدام پسر <large>راننده</large> است؟'
-      Warmup questions:
-        Coding in Racket: برنامه نویسی در راکت
-        Select the best answer to the question.: بهترین پاسخ به این سوال را انتخاب کن.
-        When converting a circle to code, the correct order is: هنگام تبدیل کردن یک دایره به کد، ترتیب صحیح .... است
-        left top right: چپ بالا راست
-        left, right, top: چپ، راست، بالا
-        random: در هم
-        top, left, right: بالا، چپ، راست
       test multi text:
         Fred Flintstone: فرد فلینتستون
         George Jetson: جورج جتسون

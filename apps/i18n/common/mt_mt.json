@@ -182,6 +182,7 @@
   "play": "play",
   "print": "Print",
   "puzzleTitle": "Puzzle {puzzle_number} of {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "Irrepeti",
   "resetProgram": "Reset",
   "rotateText": "Rotate your device.",

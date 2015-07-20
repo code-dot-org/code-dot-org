@@ -182,6 +182,7 @@
   "play": "pelaa",
   "print": "Tulosta",
   "puzzleTitle": "Tehtävä {puzzle_number} / {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "toista",
   "resetProgram": "Alusta",
   "rotateText": "Käännä laitettasi.",

@@ -719,7 +719,8 @@ $wide-column-width: 121px;
     }
 
     .packet-size {
-      width: 400px;
+      width: 50%;
+      max-width: 400px;
     }
   }
 

@@ -182,6 +182,7 @@
   "play":"crwdns5858:0crwdne5858:0",
   "print":"crwdns23606:0crwdne23606:0",
   "puzzleTitle":"crwdns2823:0{puzzle_number}crwdnd2823:0{stage_total}crwdne2823:0",
+  "readonlyWorkspaceHeader":"crwdns43323:0crwdne43323:0",
   "repeat":"crwdns5859:0crwdne5859:0",
   "resetProgram":"crwdns2825:0crwdne2825:0",
   "rotateText":"crwdns3707:0crwdne3707:0",

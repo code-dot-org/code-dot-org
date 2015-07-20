@@ -1,3 +1,6 @@
+/**
+ * @overview Wraps remote storage interface and polling behavior.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14,23 +17,8 @@
 
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
-
+var netsimGlobals = require('./netsimGlobals');
 var clientApi = require('@cdo/shared/clientApi');
-
-/**
- * App key, unique to netsim, used for connecting with the storage API.
- * @type {string}
- * @readonly
- */
-// TODO (bbuchanan): remove once we can store ids for each app? (userid:1 apppid:42)
-var CHANNEL_PUBLIC_KEY = 'HQJ8GCCMGP7Yh8MrtDusIA==';
-// Ugly null-guards so we can load this file in tests.
-if (window &&
-    window.location &&
-    window.location.hostname &&
-    window.location.hostname.substr(0, 9) === 'localhost') {
-  CHANNEL_PUBLIC_KEY = 'JGW2rHUp_UCMW_fQmRf6iQ==';
-}
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -52,7 +40,8 @@ var NetSimTable = module.exports = function (tableName) {
    * @type {string}
    * @private
    */
-  this.remoteUrl_ = '/v3/shared-tables/' + CHANNEL_PUBLIC_KEY + '/' + tableName;
+  this.remoteUrl_ = '/v3/shared-tables/' + netsimGlobals.getChannelPublicKey() +
+      '/' + tableName;
 
   /**
    * API object for making remote calls

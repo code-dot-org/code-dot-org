@@ -31,17 +31,13 @@ We are building a growing library of educational videos available for re-use by 
 
 <div style="float:left; padding:10px; width:49%">
  
-<%=view :display_video_thumbnail, id: "BillGatesIF", video_code: "fVUL-vzrIcM", caption: "Bill Gates explains IF/ESLE statements", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/bill-gates-saloni-ifelse-general.mp4" %>
+<%=view :display_video_thumbnail, id: "BillGatesIF", video_code: "fVUL-vzrIcM", caption: "Bill Gates explains IF/ELSE statements", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/bill-gates-saloni-ifelse-general.mp4" %>
             
 </div>
 
 <div style="float:left; padding:10px; width:49%">
 
 <%=view :display_video_thumbnail, id: "PairProgramming", video_code: "vgkahOzFH2Q", caption: "How to use PAIR PROGRAMMING", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/pair-programming.mp4" %>
-
-</div>
-
-<div style="float:left; padding:10px; width:49%">
  
 </div>
 

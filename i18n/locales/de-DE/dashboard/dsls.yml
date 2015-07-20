@@ -66,7 +66,6 @@ de:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Künstler Schleifen übereinstimmen eins
         Match the loop to the shape: Passe die Schleife der Form an
-        Matching loops: Passende Schleifen
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -420,9 +419,8 @@ de:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Wähle die beste Antwort.
         Maze Multiple Choice One: Multiple-Choice Labyrinth Eins
-        Which blocks work?: Welche Bausteine passen?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Kekse backen
         Banana: Banane
@@ -476,15 +474,12 @@ de:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Fliegen in der Buttermilch, <br/> Husch, fliege, Husch, <br/> Fliege in der Buttermilch, <br/> Husch, fliege, Husch, <br/> Fliege in der Buttermilch, <br/> Husch, fliege, Husch, <br/> spring zu my Lou, mein Liebling.'
-        1: ': Fly in der Buttermilch, <br/> Husch, fliegen, Husch, <br/> Fly in der Buttermilch, <br/> Husch, fliegen, Husch, <br/> Fly in der Buttermilch, <br/> Husch, fliegen, Husch, <br/> Skip to my Lou, mein Liebling.'
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: Lou, Lou, spring zu my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/> Lou, Lou, sspring zu Lou <br/> spring zu my Lou, mein Liebling.'
-        2: '? Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu Lou <br/> Lou, Lou, spring zu my Lou <br/> spring zu my Lou, mein Schätzchen. <br/> <br/><p>Fly in der Buttermilch, <br/>Fliege Husch, Husch,'
-        3: ': Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/> Lou, Lou, spring zu my Lou <br/> spring zu my Lou, mein Schätzchen. <br/> <br/><p>Flige in der Buttermilch, <br/>Flieg Husch, Husch,'
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Multiple-Choice
-        4: '? Was ist der größte Brocken dieses Liedes, den Sie als Refrain definieren können, so dass der REfrain genau jedes Mal gleich ist?'
-        5: ': Was ist der größte Brocken dieses Liedes, den Sie als Refrain definieren können, so dass er sich exakt so jedes mal wiederhohlt?'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -757,14 +752,6 @@ de:
         Driver and Helper: Fahrer und Helfer
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Einer dieser Jungs ist der <b>Fahrer</b>. Und einer ist der <b>Helfer</b>.'
         This time, which boy is the <large>driver</large>?: 'Welcher Junge ist dieses Mal der <large>Fahrer</large>?'
-      Warmup questions:
-        Coding in Racket: Programmieren in Racket
-        Select the best answer to the question.: Wähle die beste Antwort auf die Frage.
-        When converting a circle to code, the correct order is: Wenn man den Kreis in Code umschreibt, ist die Richtige Reihenfolge
-        left top right: links oben rechts
-        left, right, top: links, rechts, oben
-        random: zufällig
-        top, left, right: oben, links, rechts
       test multi text:
         Fred Flintstone: Fred Feuerstein
         George Jetson: George Jetson

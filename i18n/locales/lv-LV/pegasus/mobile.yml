@@ -1,7 +1,7 @@
 lv-LV:
   hello: Sveika, pasaule
   select_language: Lūdzu izvēlieties savu valodu
-  computer_science: Datorzinātne
+  en: Computer Science
   computer_science_edweek: Datorzinātnes Izglītības nedēļa
   csedweek_dates: '2014. gada 8. - 14. decembris'
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Programmēšanas stunda</a> tuvojas. Aicinam visus skolotājus un organizatorus, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ieplānot savu Programmēšanas stundu</a>'
@@ -45,6 +45,7 @@ lv-LV:
   congratulations: Apsveicu!
   congratulations_on_completing_hoc: 'Apsveicam tevi ar "Programmēšanas stundas" pabeigšanu'
   get_a_certificate_of_achievement: Iegūsti sasniegumus apliecinošu sertefikātu
+  enter_valid_age: Please select a valid age
   enter_valid_email: Lūdzu, ievadi derīgu e-pasta adresi
   get_a_certificate_message: "Mēs tev nosūtīsim sertifikātu un informāciju kā <a href='/learn/beyond'> apgūt vairāk</a>"
   get_a_certificate_message_after: |-

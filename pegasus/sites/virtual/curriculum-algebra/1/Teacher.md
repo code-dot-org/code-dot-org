@@ -52,6 +52,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 [together]
 
+
 ## Getting Started
 
 ### <a name="Vocab"></a> 1) Vocabulary

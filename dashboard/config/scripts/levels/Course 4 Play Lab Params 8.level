@@ -39,7 +39,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "generate_function_pass_blocks": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "markdown_instructions": "Use a `when touching` block to send the Dog back to the top-left if the Dog touches any of the other actors.",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
