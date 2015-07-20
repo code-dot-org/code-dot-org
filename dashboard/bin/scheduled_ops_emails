@@ -7,7 +7,10 @@ def main
     # for each workshop that's happening 2 weeks from now
     workshops = DASHBOARD_DB.fetch('SELECT * FROM segments JOIN workshops ON workshops.id = workshop_id  GROUP BY workshop_id HAVING DATE(MIN(start)) = (DATE_ADD(CURDATE(), INTERVAL 2 WEEK));')
     workshops.each do |workshop|
-      OpsMailer.workshop_in_2_weeks_reminder(workshop).deliver
+      recipients = DASHBOARD_DB.fetch('SELECT cohorts_users.cohort_id, users.email, users.name FROM users JOIN cohorts_users ON id = user_id JOIN workshop_cohorts ON workshop_cohorts.cohort_id = cohorts_users.cohort_id WHERE workshop_cohorts.workshop_id = 52;')
+      recipients.each do |recipient|
+        OpsMailer.workshop_in_2_weeks_reminder(workshop, recipient).deliver
+      end
     end
   end
 end
