@@ -23,9 +23,6 @@ linters:
   ImplicitDiv:
     enabled: false
 
-  Indentation:
-    enabled: false
-
   LeadingCommentSpace:
     enabled: false
 
