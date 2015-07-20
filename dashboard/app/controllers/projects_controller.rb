@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!, except: [:show, :edit, :readonly]
+  before_filter :authenticate_user!, except: [:show, :edit, :readonly, :redirect_legacy]
   before_action :set_level, only: [:show, :edit, :readonly]
   include LevelsHelper
 
@@ -24,6 +24,7 @@ class ProjectsController < ApplicationController
   def index
   end
 
+  # Renders a <script> tag with JS to redirect /p/:key#:channel_id/:action to /projects/:key/:channel_id/:action.
   def redirect_legacy
     render layout: nil
   end
