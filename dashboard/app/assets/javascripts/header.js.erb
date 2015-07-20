@@ -251,7 +251,7 @@ function shareProject() {
   });
 }
 
-function remixLegacyShare() {
+function remixLevelSourceShare() {
   var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
   dashboard.project.copy(newName, function() {
     $(".project_name").text(newName)
@@ -275,7 +275,7 @@ dashboard.header.showMinimalProjectHeader = function () {
     $('.project_remix').click(dashboard.project.serverSideRemix);
   } else {
     // Remix of legacy /c/ share page (that does not yet have a channel).
-    $('.project_remix').click(remixLegacyShare);
+    $('.project_remix').click(remixLevelSourceShare);
   }
 };
 
