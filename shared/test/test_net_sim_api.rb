@@ -40,12 +40,36 @@ class NetSimApiTest < Minitest::Unit::TestCase
     end
   end
 
+  def test_get_400_on_bad_json_body
+    # The NetSim API does not need to share a cookie jar with the Channels API.
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+    @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
+    @shard_id = '_testShard'
+    @table_name = 'n' # for "node table"
+
+    assert read_records.first.nil?
+
+    # Send malformed JSON with an INSERT operation
+    record_create_response = create_record_malformed({name:'alice', age:7, male:false})
+
+    # Verify that the CREATE response is a 400 BAD REQUEST since we sent malformed JSON
+    assert_equal 400, record_create_response.status
+
+    # Verify that no record was created
+    assert read_records.first.nil?
+  end
+
   # Methods below this point are test utilities, not actual tests
   private
 
   def create_record(record)
     @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     JSON.parse(@net_sim_api.last_response.body)
+  end
+
+  def create_record_malformed(record)
+    @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", '\\' + record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    @net_sim_api.last_response
   end
 
   def read_records
