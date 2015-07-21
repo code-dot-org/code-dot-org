@@ -258,38 +258,41 @@ NetSimVisualization.prototype.getElementByEntityID = function (elementType, enti
 };
 
 /**
- * Gets the set of VizWires directly attached to the given VizNode, (either
- * on the local end or remote end) for which there are also
- * corresponding VizWires coming from the opposite end.
+ * Gets the set of VizWires directly attached to the given VizNode on
+ * the local end for which there are also corresponding VizWires coming
+ * from the opposite end. Note that if the VizNode is a router, we
+ * consider all attached wires to be reciprocated.
  * @param {NetSimVizSimulationNode} vizNode
  * @returns {Array.<NetSimVizSimulationWire>} the attached wires
  */
 NetSimVisualization.prototype.getReciprocatedWiresAttachedToNode = function (vizNode) {
-  var elementIsReciprocatedWire = function (element) {
-    if (element instanceof NetSimVizWire) {
-      if (element.localVizNode === vizNode) {
 
-        // if vizNode is the local node on this wire, check the wires
-        // attached to the wire's remote node to see if any of them
-        // point back at vizNode
-        return this.getWiresAttachedToNode(element.remoteVizNode).filter(function (wire) {
-          return wire.remoteVizNode === vizNode;
-        }).length > 0;
+  if (vizNode.isRouter) {
+    return this.getWiresAttachedToNode(vizNode);
+  }
 
-      } else if (element.remoteVizNode === vizNode) {
+  var localWires = this.getLocalWiresAttachedToNode(vizNode);
 
-        // if vizNode is the remote node on this wire, check the wires
-        // attached to the wire's local node to see if any of them point
-        // back at vizNode
-        return this.getWiresAttachedToNode(element.localVizNode).filter(function (wire) {
-          return wire.localVizNode === vizNode;
-        }).length > 0;
+  return localWires.filter(function (localWire) {
 
-      }
-    }
-    return false;
-  };
-  return this.elements_.filter(elementIsReciprocatedWire.bind(this));
+    if (localWire.remoteVizNode.isRouter) return true;
+
+    return this.getWiresAttachedToNode(localWire.remoteVizNode).filter(function (wire) {
+      return wire.remoteVizNode === vizNode;
+    }).length > 0;
+
+  }.bind(this));
+};
+
+/**
+ * Gets the set of VizWires directly attached to the given VizNode on the local end
+ * @param {NetSimVizSimulationNode} vizNode
+ * @returns {Array.<NetSimVizSimulationWire>} the attached wires
+ */
+NetSimVisualization.prototype.getLocalWiresAttachedToNode = function (vizNode) {
+  return this.elements_.filter(function (element) {
+    return element instanceof NetSimVizWire && element.localVizNode === vizNode;
+  });
 };
 
 /**
