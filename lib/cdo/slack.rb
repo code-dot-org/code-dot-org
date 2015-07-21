@@ -9,6 +9,13 @@ class Slack
     red: 'danger'
   }
 
+  CHANNEL_MAP = {
+    developers: 'general',
+    staging: 'infra-staging',
+    test: 'infra-test',
+    production: 'infra-production'
+  }
+
   def self.message(text, params={})
     return false unless CDO.slack_endpoint
 
@@ -19,13 +26,11 @@ class Slack
           text: text,
           color: COLOR_MAP[params[:color].to_sym] || params[:color]
         }]
-      }
+      }.merge params
     else
       payload = {
         text:text,
-      }.merge(
-        params
-      )
+      }.merge params
     end
 
     url = URI.parse("https://hooks.slack.com/services/#{CDO.slack_endpoint}")
