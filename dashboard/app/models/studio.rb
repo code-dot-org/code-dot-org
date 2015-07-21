@@ -341,6 +341,7 @@ class Studio < Grid
 </category>
 <category name ="Functional Cond">
   <block type="functional_cond" />
+  <block type="functional_cond_number1" />
 </category>
 
 #{k1_blocks(type) if is_k1 == 'true'}
