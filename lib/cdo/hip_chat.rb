@@ -48,6 +48,7 @@ class HipChat
     message.strip!
     message = "```#{message[7..-1]}```" if message =~ /^\/quote /
     message.gsub(/<\/?b>/, '*')
+    message.gsub(/<\/?pre>/, '```')
   end
 
 end

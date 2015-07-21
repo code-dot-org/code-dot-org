@@ -78,9 +78,5 @@ Free curriculum from Google that uses online, project-based tutorials for elemen
 ### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
 Build the next generation of creators using free, open-source Java courseware.
 
-### [AgentCubes](http://sgda.cs.colorado.edu/arcade/?q=hour_of_code)
-Imagine a tool that allows you to turn 2D images into 3D shapes. Use AgentCubes online, the world's first 3D web-based programming & modeling tool, to learn to program by creating and sharing exciting 3D games. Rule your world!
-
-
 <br />
 
