@@ -15,27 +15,17 @@ We’re kicking off a new worldwide community to keep teachers up-to-date on wha
 <br><br>
 [<button style="font-size: 18px; height: 32px">Follow @teachcodeorg on Twitter</button>](http://twitter.com/teachcode.org)  [<button style="font-size: 18px; height: 32px">Follow us on Tumblr</button>](http://teacherblog.code.org)<br />
 
-## Professional Learning Community: Teacher Forums
-The Code.org teahcer forums are a place for teachers who are implementing code.org curriculum. Use this as a space to share best practices, questions, thoughts, ideas and inspiration. We're hoping to build a professional learning community for all of you amazing educators who are making change everyday in your classroom.
+## Join our Professional Learning Community
+
+|What? | Why? | How?|
+|------------ | ------------- | ------------|
+|[Teacher Forums](http://forum.code.org) | The Code.org teacher forums are a place for teachers who are implementing code.org curriculum. Use this as a space to share best practices, questions, thoughts, ideas and inspiration. We're hoping to build a professional learning community for all of you amazing educators who are making change everyday in your classroom.   | [<button style="font-size: 18px; height: 32px">Join the forums</button>](http://forum.code.org/c/plc)|
+|[Technical Support](http://support.code.org) | If you’re in need of technical support with any code.org platform or product, please review our FAQs and refer to our support forums for help. | [<button style="font-size: 18px; height: 32px">Get support</button>](http://support.code.org)|
+| [Online Events](/educate/k5/k5officehours) | Join one of our free monthly online community meet-ups for teachers. | [<button style="font-size: 18px; height: 32px">View Schedule</button>](/educate/k5/k5officehours)|
+| [Professional Development Workshops](/professional-development-workshops) | Code.org is offering high-quality, zero-cost, 1-day workshops to prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). The workshop will cover content for all three courses and teachers will receive the supplies they need to teach the course- at no cost. Workshops are a great way to meet other Code.org teachers and get connected to your local community. | [<button style="font-size: 18px; height: 32px">Find a local workshop</button>](/professional-development-workshops) |
+| [Professional Development Workshops](/professional-development-workshops) | Code.org is offering high-quality, zero-cost, 1-day workshops to prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). The workshop will cover content for all three courses and teachers will receive the supplies they need to teach the course- at no cost. Workshops are a great way to meet other Code.org teachers and get connected to your local community. | [<button style="font-size: 18px; height: 32px">Find a local workshop</button>](/professional-development-workshops) |
+
 <br />
-[<button style="font-size: 18px; height: 32px">Join the forums</button>](http://forum.code.org/c/plc)<br />
-
-## Technical Support & FAQs
-If you’re in need of technical support with any code.org platform or product, please review our FAQs and refer to our support forums for help.
-<br />
-[<button style="font-size: 18px; height: 32px">Get support</button>](http://support.code.org)<br />
-
-## Community Events
-
-### Online Office Hours
-Join one of our monthly online community meet-ups for teachers, or view a recording.
-<br /><br />
-[<button style="font-size: 18px; height: 32px">View Schedule</button>](/educate/k5/k5officehours)<br />
-
-### Professional Development Workshops
-Code.org is offering high-quality, zero-cost, 1-day workshops to prepare educators and content-area teachers (librarians, tech-ed specialists, etc.) to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). The workshop will cover content for all three courses and teachers will receive the supplies they need to teach the course- at no cost. Workshops are a great way to meet other Code.org teachers and get connected to your local community.
-<br /><br />
-[<button style="font-size: 18px; height: 32px">Find a local workshop</button>](/professional-development-workshops)<br />
 
 ## Leadership Opportunities
 ### Become a K-5 Affiliate - for your district or region
