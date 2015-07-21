@@ -19,28 +19,26 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def test_create_read_update_delete
-    begin
-      # Verify that the CREATE response body and READ response bodies
-      # both return the correct record values
-      record_create_response = create_record({name:'alice', age:7, male:false})
-      record_get_response = read_records.first
-      assert_equal record_create_response['id'].to_i, record_get_response['id'].to_i
-      assert_equal 'alice', record_get_response['name']
-      assert_equal 'alice', record_create_response['name']
-      assert_equal 7, record_get_response['age']
-      assert_equal 7, record_create_response['age']
-      assert_equal false, record_get_response['male']
-      assert_equal false, record_create_response['male']
+    # Verify that the CREATE response body and READ response bodies
+    # both return the correct record values
+    record_create_response = create_record({name:'alice', age:7, male:false})
+    record_get_response = read_records.first
+    assert_equal record_create_response['id'].to_i, record_get_response['id'].to_i
+    assert_equal 'alice', record_get_response['name']
+    assert_equal 'alice', record_create_response['name']
+    assert_equal 7, record_get_response['age']
+    assert_equal 7, record_create_response['age']
+    assert_equal false, record_get_response['male']
+    assert_equal false, record_create_response['male']
 
-      record_id = record_get_response['id'].to_i
+    record_id = record_get_response['id'].to_i
 
-      assert_equal 8, update_record(record_id, {id:record_id, age:8})['age']
-      record = read_records.first
-      assert_equal 8, record['age']
-    ensure
-      delete_record(record_id)
-      assert read_records.first.nil?
-    end
+    assert_equal 8, update_record(record_id, {id:record_id, age:8})['age']
+    record = read_records.first
+    assert_equal 8, record['age']
+  ensure
+    delete_record(record_id)
+    assert read_records.first.nil?
   end
 
   def test_get_400_on_bad_json_insert
@@ -55,24 +53,22 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def test_get_400_on_bad_json_update
-    begin
-      # Create a record correctly
-      record_create_response = create_record({name:'alice', age:7, male:false})
-      record_id = record_create_response['id'].to_i
+    # Create a record correctly
+    record_create_response = create_record({name:'alice', age:7, male:false})
+    record_id = record_create_response['id'].to_i
 
-      # Send malformed JSON with an UPDATE operation
-      record_update_response = update_record_malformed(record_id, {id:record_id, age:8})
+    # Send malformed JSON with an UPDATE operation
+    record_update_response = update_record_malformed(record_id, {id:record_id, age:8})
 
-      # Verify that the UPDATE response is a 400 BAD REQUEST since we sent malformed JSON
-      assert_equal 400, record_update_response.status
+    # Verify that the UPDATE response is a 400 BAD REQUEST since we sent malformed JSON
+    assert_equal 400, record_update_response.status
 
-      # Verify that the record was not changed
-      record = read_records.first
-      assert_equal 7, record['age']
-    ensure
-      delete_record(record_id)
-      assert read_records.first.nil?
-    end
+    # Verify that the record was not changed
+    record = read_records.first
+    assert_equal 7, record['age']
+  ensure
+    delete_record(record_id)
+    assert read_records.first.nil?
   end
 
   # Methods below this point are test utilities, not actual tests
