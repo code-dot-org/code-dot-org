@@ -259,6 +259,41 @@ NetSimVisualization.prototype.getElementByEntityID = function (elementType, enti
 
 /**
  * Gets the set of VizWires directly attached to the given VizNode, (either
+ * on the local end or remote end) for which there are also
+ * corresponding VizWires coming from the opposite end.
+ * @param {NetSimVizSimulationNode} vizNode
+ * @returns {Array.<NetSimVizSimulationWire>} the attached wires
+ */
+NetSimVisualization.prototype.getReciprocatedWiresAttachedToNode = function (vizNode) {
+  var elementIsReciprocatedWire = function (element) {
+    if (element instanceof NetSimVizWire) {
+      if (element.localVizNode === vizNode) {
+
+        // if vizNode is the local node on this wire, check the wires
+        // attached to the wire's remote node to see if any of them
+        // point back at vizNode
+        return this.getWiresAttachedToNode(element.remoteVizNode).filter(function (wire) {
+          return wire.remoteVizNode === vizNode;
+        }).length > 0;
+
+      } else if (element.remoteVizNode === vizNode) {
+
+        // if vizNode is the remote node on this wire, check the wires
+        // attached to the wire's local node to see if any of them point
+        // back at vizNode
+        return this.getWiresAttachedToNode(element.localVizNode).filter(function (wire) {
+          return wire.localVizNode === vizNode;
+        }).length > 0;
+
+      }
+    }
+    return false;
+  };
+  return this.elements_.filter(elementIsReciprocatedWire.bind(this));
+};
+
+/**
+ * Gets the set of VizWires directly attached to the given VizNode, (either
  * on the local end or remote end)
  * @param {NetSimVizSimulationNode} vizNode
  * @returns {Array.<NetSimVizSimulationWire>} the attached wires
@@ -561,7 +596,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
   var neighbors = [];
 
   if (vizElement instanceof NetSimVizSimulationNode) {
-    neighbors = this.getWiresAttachedToNode(vizElement);
+    neighbors = this.getReciprocatedWiresAttachedToNode(vizElement);
 
     // Special case: The DNS node fake is a neighbor of a visited router
     if (vizElement.isRouter && this.autoDnsNode_) {
