@@ -7,15 +7,18 @@ ENV['RACK_ENV'] = 'test'
 
 class NetSimApiTest < Minitest::Unit::TestCase
 
-  def test_create_read_update_delete
+  def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
     @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
     @shard_id = '_testShard'
     @table_name = 'n' # for "node table"
 
+    # Every test should start with an empty table
     assert read_records.first.nil?
+  end
 
+  def test_create_read_update_delete
     begin
       # Verify that the CREATE response body and READ response bodies
       # both return the correct record values
@@ -41,14 +44,6 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def test_get_400_on_bad_json_body
-    # The NetSim API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
-    @shard_id = '_testShard'
-    @table_name = 'n' # for "node table"
-
-    assert read_records.first.nil?
-
     # Send malformed JSON with an INSERT operation
     record_create_response = create_record_malformed({name:'alice', age:7, male:false})
 
