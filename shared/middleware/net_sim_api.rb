@@ -99,8 +99,12 @@ class NetSimApi < Sinatra::Base
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     unsupported_media_type unless has_json_utf8_headers(request)
 
-    value = get_table(shard_id, table_name).
-        update(id.to_i, JSON.parse(request.body.read), request.ip)
+    begin
+      value = get_table(shard_id, table_name).
+          update(id.to_i, JSON.parse(request.body.read), request.ip)
+    rescue JSON::ParserError
+      bad_request
+    end
 
     dont_cache
     content_type :json

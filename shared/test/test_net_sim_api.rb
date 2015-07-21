@@ -43,7 +43,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     end
   end
 
-  def test_get_400_on_bad_json_body
+  def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation
     record_create_response = create_record_malformed({name:'alice', age:7, male:false})
 
@@ -52,6 +52,27 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     # Verify that no record was created
     assert read_records.first.nil?
+  end
+
+  def test_get_400_on_bad_json_update
+    begin
+      # Create a record correctly
+      record_create_response = create_record({name:'alice', age:7, male:false})
+      record_id = record_create_response['id'].to_i
+
+      # Send malformed JSON with an UPDATE operation
+      record_update_response = update_record_malformed(record_id, {id:record_id, age:8})
+
+      # Verify that the UPDATE response is a 400 BAD REQUEST since we sent malformed JSON
+      assert_equal 400, record_update_response.status
+
+      # Verify that the record was not changed
+      record = read_records.first
+      assert_equal 7, record['age']
+    ensure
+      delete_record(record_id)
+      assert read_records.first.nil?
+    end
   end
 
   # Methods below this point are test utilities, not actual tests
@@ -75,6 +96,11 @@ class NetSimApiTest < Minitest::Unit::TestCase
   def update_record(id, record)
     @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     JSON.parse(@net_sim_api.last_response.body)
+  end
+
+  def update_record_malformed(id, record)
+    @net_sim_api.put "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}", '\\' + record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    @net_sim_api.last_response
   end
 
   def delete_record(id)
