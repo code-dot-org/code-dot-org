@@ -35,7 +35,7 @@ class HipChat
 
     channel = '#general' if room.to_s == 'developers'
     channel ||= "\##{room}"
-    Slack.message slackify(message.to_s), channel:channel, username:@@name
+    Slack.message slackify(message.to_s), channel:channel, username:@@name, color:options[:color]
   end
 
   def self.notify(room, message, options={})
