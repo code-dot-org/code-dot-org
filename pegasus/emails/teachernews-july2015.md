@@ -1,6 +1,6 @@
 ---
-from: 'Melissa Jones <melissa.jones@code.org>'
-subject: "test test hi teachers"
+from: 'Melissa Jones <mj@code.org>'
+subject: "Welcome to the Code.org Teacher Community!"
 ---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -269,8 +269,8 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 <p class="lead">This past school year, Code.org prepared over 10,000​ teachers across K­12, with over 6 million students engaged in our courses. 
 </p>
  
-<p><img src="assets/july-header.jpg"/></p> 
-<p>Together with you, your teacher community, we’re changing the face of Computer Science education. And we couldn’t be more proud of the work you do.</p>
+<p><img src="images/teachcode/july-header.jpg"/></p> 
+<p>Together with you, our teacher community, we’re changing the face of Computer Science education. We couldn’t be more proud of the work you do.</p>
 </td>
 </tr>
 </table>
@@ -279,9 +279,9 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 <div class="content">
 <table bgcolor="">
 <tr>
-<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="assets/july-b.jpg" width="75px"/></td>
+<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="images/teachcode/july-a.jpg" width="75px"/></td>
 <td>
-<h4>Announcing: The *new* Code.org Professional Learning Community <small></small></h4>
+<h4>Announcing: The new Code.org Professional Learning Community <small></small></h4>
 <p class="">Thousands of teachers just like you have joined the Code.org teacher community from across the globe. Now, you can <a href="http://forum.code.org">connect with others in our forums</a> to share best practices, get support and find inspiration. </p>
 <a class="btn" href="http://forum.code.org/c/plc">Join the conversation &raquo;</a>
 </td>
@@ -291,10 +291,10 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
  
 <div class="content"><table bgcolor="">
 <tr>
-<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="assets/july-b.jpg"/></td>
+<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="images/teachcode/july-b.jpg"/></td>
 <td>
 <h4>Free Online Professional Development </h4>
-<p class="">Learn how to teach computer science using Code.org’s Courses 1-4 with a free, self-paced online course.  </p>
+<p class="">Learn how to teach computer science using Code.org’s Courses 1-4 with a free, self-paced online course. This is a new offering, designed to compliment our <a href="http://code.org/educate/k5">in-person K-5 teacher workshops</a> </p>
 <a class="btn" href="https://studio.code.org/s/K5-OnlinePD">Get started &raquo;</a>
 </td>
 </tr>
@@ -302,11 +302,11 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
  
 <div class="content"><table bgcolor="">
 <tr>
-<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="assets/july-b.jpg"/></td>
+<td class="small" width="20%" style="vertical-align: top; padding-right:10px;"><img src="images/teachcode/july-c.jpg"/></td>
 <td>
-<h4>NEED </h4>
-<p class="">Advocacy/policy Content here </p>
-<a class="btn" href="http://blog.code.org/post/91961669383/ap-computer-science">Learn more &raquo;</a>
+<h4>Computer Science Counts in 26 State Plus DC</h4>
+<p class="">Minnesota now allows computer science to fulfill a high school mathematics graduation requirement, which means the majority of states allow computer science to count!</p>
+<a class="btn" href="http://code.org/promote">View Map &raquo;</a>
 </td>
 </tr>
 </table></div> 
@@ -315,7 +315,7 @@ ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.s
 <tr>
 <td>
  
-<p class="callout">You can learn more about Code.org’s 2014-15 school year results by reviewing our full evaluation report. <a href="#">Learn more &raquo;</a> </p> 
+<p class="callout">You can learn more about Code.org’s 2014-15 school year results by reviewing our year-end status update. <a href="http://blog.code.org/post/124017777158/mid-2015-update">Learn more &raquo;</a> </p> 
 </td>
 </tr>
 </table></div> 
@@ -374,9 +374,8 @@ Visit: <strong><a href="http://code.org/educate">code.org/educate</strong></p>
 <tr>
 <td align="center">
 <p>
-<a href="#">Terms</a> |
-<a href="#">Privacy</a> |
-<a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
+Code.org is a 501c3 non-profit located at 1301 5th Avenue, Suite 1225, Seattle, WA, 98101. You’re receiving this email because you signed up as a teacher on <a href="https://studio.code.org/">Code Studio</a> or hosted an <a href="https://hourofcode.com/">Hour of Code</a>. We’ll send you monthly newsletters like these and occasional updates on ways to get involved and the outcomes of your support. Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a>.
+</small>
 </p>
 </td>
 </tr>
