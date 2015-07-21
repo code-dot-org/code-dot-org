@@ -33,8 +33,7 @@ class HipChat
       message: message.to_s,
     }))
 
-    channel = '#general' if room.to_s == 'developers'
-    channel ||= "\##{room}"
+    channel = "\##{Slack::CHANNEL_MAP[room.to_sym] || room}"
     Slack.message slackify(message.to_s), channel:channel, username:@@name, color:options[:color]
   end
 
