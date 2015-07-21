@@ -18,6 +18,12 @@ class ProjectsController < ApplicationController
     },
     algebra_game: {
       name: 'New Algebra Project'
+    },
+    calc: {
+      name: 'Calc Free Play'
+    },
+    eval: {
+      name: 'Eval Free Play'
     }
   }
 
