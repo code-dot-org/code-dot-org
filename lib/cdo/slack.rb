@@ -24,6 +24,7 @@ class Slack
         attachments: [{
           fallback: text,
           text: text,
+          mrkdwn_in: [:text],
           color: COLOR_MAP[params[:color].to_sym] || params[:color]
         }]
       }.merge params
