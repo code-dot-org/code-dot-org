@@ -62,5 +62,6 @@ Scenario: Applab Flow
   And selector "#codeWorkspace" has class "readonly"
 
   Then I sign out
+  And I am on "http://studio.code.org/"
 
   # TODO - maybe we do a remix and/or create new as well
