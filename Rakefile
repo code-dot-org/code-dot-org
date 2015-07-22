@@ -19,16 +19,33 @@ def create_database(uri)
   system command.join(' ')
 end
 
+##################################################################################################
+##
+##
+## lint
+##
+##
+##################################################################################################
+
 namespace :lint do
   task :ruby do
+    HipChat.log 'Linting ruby...'
     RakeUtils.system 'rubocop'
   end
 
   task :haml do
+    HipChat.log 'Linting haml...'
     RakeUtils.system 'haml-lint dashboard pegasus'
   end
+  
+  task :apps do
+    Dir.chdir(apps_dir) do
+      HipChat.log 'Linting <b>apps</b>...'
+      RakeUtils.system 'grunt jshint'
+    end
+  end
 
-  task all: [:ruby, :haml]
+  task all: [:ruby, :haml, :apps]
 end
 task lint: ['lint:all']
 
@@ -211,8 +228,19 @@ task :build => ['build:all']
 
 namespace :test do
 
+  task :apps do
+    Dir.chdir(apps_dir) do
+      HipChat.log 'Installing <b>apps</b> dependencies...'
+      RakeUtils.npm_install
+
+      HipChat.log 'Testing <b>apps</b>...'
+      RakeUtils.system 'grunt mochaTest'
+    end
+  end
+
   task :blockly_core do
     Dir.chdir(blockly_core_dir) do
+      HipChat.log 'Installing <b>blockly-core</b> dependencies...'
       RakeUtils.npm_install
 
       HipChat.log 'Testing <b>blockly-core</b>...'
@@ -220,7 +248,7 @@ namespace :test do
     end
   end
 
-  task all: [:blockly_core]
+  task all: [:apps, :blockly_core]
 end
 task :test => ['test:all']
 
