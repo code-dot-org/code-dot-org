@@ -17,6 +17,8 @@
 /* global -Blockly */
 /* global $ */
 /* global sendReport */
+/* global repositionCopyrightFlyout */
+/* global repositionMoreMenu */
 'use strict';
 
 var utils = require('../utils');
@@ -233,8 +235,8 @@ NetSim.prototype.init = function(config) {
 
   // Override certain StudioApp methods - netsim does a lot of configuration
   // itself, because of its nonstandard layout.
-  this.studioApp_.configureDom = this.configureDomOverride_.bind(this.studioApp_);
-  this.studioApp_.onResize = this.onResizeOverride_.bind(this.studioApp_);
+  this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
+  this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
 
   this.studioApp_.init(config);
 
@@ -922,7 +924,7 @@ NetSim.prototype.loadAudio_ = function () {
  *   html: Content to put inside #containerId
  * @private
  */
-NetSim.prototype.configureDomOverride_ = function (config) {
+NetSim.configureDomOverride_ = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
 
@@ -940,17 +942,69 @@ NetSim.prototype.configureDomOverride_ = function (config) {
 };
 
 /**
+ * Resize the left column so it pins above the footer.
+ */
+function resizeLeftColumnToSitAboveFooter() {
+  var pinnedLeftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  if (!pinnedLeftColumn) {
+    return;
+  }
+
+  var smallFooter = document.querySelector('.small-footer');
+
+  var bottom = 0;
+  if (smallFooter) {
+    var codeApp = $('#codeApp');
+    bottom += $(smallFooter).outerHeight(true);
+    // Footer is relative to the document, not codeApp, so we need to
+    // remove the codeApp bottom offset to get the correct margin.
+    bottom -= parseInt(codeApp.css('bottom'), 10);
+  }
+
+  pinnedLeftColumn.style.bottom = bottom + 'px';
+}
+
+function resizeFooterToLeftColumnWidth() {
+  var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  var smallFooter = document.querySelector('.small-footer');
+  if (!(leftColumn && smallFooter) || !$(leftColumn).is(':visible')) {
+    return;
+  }
+
+  smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
+
+  // If the small print and language selector are on the same line,
+  // the small print should float right.  Otherwise, it should float left.
+  var languageSelector = smallFooter.querySelector('form');
+  var smallPrint = smallFooter.querySelector('small');
+  if (smallPrint.offsetTop === languageSelector.offsetTop) {
+    smallPrint.style.float = 'right';
+  } else {
+    smallPrint.style.float = 'left';
+  }
+}
+
+var netsimDebouncedResizeFooter = _.debounce(function () {
+  resizeFooterToLeftColumnWidth();
+  resizeLeftColumnToSitAboveFooter();
+  repositionCopyrightFlyout();
+  repositionMoreMenu();
+}, 10);
+
+/**
  * Replaces StudioApp.onResize
  * Should be bound against StudioApp instance.
  * @private
  */
-NetSim.prototype.onResizeOverride_ = function() {
+NetSim.onResizeOverride_ = function() {
   var div = document.getElementById('appcontainer');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
   var parentWidth = parseInt(parentStyle.width, 10);
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
+
+  netsimDebouncedResizeFooter();
 };
 
 /**
@@ -1225,6 +1279,9 @@ NetSim.prototype.updateLayout = function () {
   var rightColumn = $('#netsim-rightcol');
   var sendPanel = $('#netsim-send');
   var logWrap = $('#netsim-logs');
+
+  netsimDebouncedResizeFooter();
+
   if (!rightColumn.is(':visible')) {
     return;
   }
