@@ -37,7 +37,7 @@ namespace :lint do
     HipChat.log 'Linting haml...'
     RakeUtils.system 'haml-lint dashboard pegasus'
   end
-  
+
   task :apps do
     Dir.chdir(apps_dir) do
       HipChat.log 'Linting <b>apps</b>...'
@@ -360,14 +360,19 @@ task :install => ['install:all']
 ##
 ##################################################################################################
 
-namespace :travis
-  task :setup do
+namespace :travis do
+  task :setup_dashboard_db do
     Dir.chdir(dashboard_dir) do
       RakeUtils.system 'rake -t db:create db:schema:load'
     end
   end
+
+  task :lint => ['lint:all']
+  task :dashboard => ['travis:setup_dashboard_db', 'test:dashboard']
+  task :pegasus => ['test:pegasus']
+  task :apps => ['test:apps']
+  task :blockly_core => ['test:blockly_core']
 end
-task :travis => ['travis:setup', :lint, :test]
 
 task :default do
   puts 'List of valid commands:'
