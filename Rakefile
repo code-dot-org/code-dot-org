@@ -225,10 +225,10 @@ namespace :build do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 
 end
-task :build => ['build:all']
+task build: ['build:all']
 
 
 ##################################################################################################
@@ -264,20 +264,20 @@ namespace :test do
   task :dashboard do
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Testing <b>dashboard</b>...'
-      RakeUtils.system 'rake test'
+      RakeUtils.system 'rake -t'
     end
   end
 
   task :pegasus do
     Dir.chdir(pegasus_dir) do
       HipChat.log 'Testing <b>pegasus</b>...'
-      RakeUtils.system 'rake test'
+      RakeUtils.system 'rake -t test'
     end
   end
 
   task all: [:apps, :blockly_core, :dashboard, :pegasus]
 end
-task :test => ['test:all']
+task test: ['test:all']
 
 
 ##################################################################################################
@@ -361,10 +361,10 @@ namespace :install do
   tasks << :shared if CDO.build_shared_js
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 
 end
-task :install => ['install:all']
+task install: ['install:all']
 
 
 ##################################################################################################
@@ -373,6 +373,9 @@ task :install => ['install:all']
 ##
 ##################################################################################################
 
+# Task names in the travis namespace get passed as
+# environment variables to set up our travis "test matrix"
+# See .travis.yml for how this works
 namespace :travis do
   task :setup_dashboard_db do
     Dir.chdir(dashboard_dir) do
@@ -380,11 +383,18 @@ namespace :travis do
     end
   end
 
-  task :lint => ['lint:all']
-  task :dashboard => ['travis:setup_dashboard_db', 'test:dashboard']
-  task :pegasus => ['test:pegasus']
-  task :apps => ['test:apps']
-  task :blockly_core => ['test:blockly_core']
+  # Travis shouldn't lint ruby or haml, since
+  # those are already handled by hound.  However, our
+  # js linting follows a different process and should be checked.
+  task lint: ['lint:js']
+
+  task dashboard: ['travis:setup_dashboard_db', 'test:dashboard']
+
+  task pegasus: ['test:pegasus']
+
+  task apps: ['test:apps']
+
+  task blockly_core: ['test:blockly_core']
 end
 
 task :default do
