@@ -1157,7 +1157,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
     return;
   }
   this.moveBlockBeingDragged_(e.clientX, e.clientY);
-  this.blockSpace.panIfHangingOffEdge(this, e.clientX, e.clientY);
+  this.blockSpace.panIfOverEdge(this, e.clientX, e.clientY);
   // This event has been handled.  No need to bubble up to the document.
   e.stopPropagation();
 };

@@ -22,6 +22,7 @@ function start() {
     path: '../',
     toolbox: toolbox,
     hasVerticalScrollbars: true,
+    hasHorizontalScrollbars: true,
     assetUrl: function(path) { return '../' + path; }
   });
 
@@ -57,7 +58,7 @@ function toggleBumpDebug(checkboxElement) {
  * @param {Element} checkboxElement
  */
 function toggleScrollDragDebug(checkboxElement) {
-  Blockly.BlockSpaceEditor.SCROLL_DRAG_DEBUG = checkboxElement.checked;
+  Blockly.ScrollOnBlockDragHandler.DEBUG = checkboxElement.checked;
 }
 
 function setSpeed(type, newSpeed) {
@@ -395,26 +396,6 @@ h1 {
         <br>
       </p>
       <hr>
-
-      <script type="text/javascript">
-        var controls = document.getElementById('controls');
-
-        Blockly.ScrollOnBlockDragHandler.SCROLLING_RULES.forEach(function (rule) {
-          var control = document.createElement("div");
-          var input = document.createElement("input");
-          controls.appendChild(control);
-          control.appendChild(input);
-          control.appendChild(document.createTextNode(rule.reason));
-          input.type = "text";
-          input.value = rule.speed;
-          input.style.width = '45px';
-          input.style.marginRight = '5px';
-          input.addEventListener('input', function () {
-            rule.speed = input.value;
-          });
-        });
-      </script>
-
       <p>
         Stress test with an <input type="button" value="Airstrike!" onclick="airstrike(100)">
       </p>

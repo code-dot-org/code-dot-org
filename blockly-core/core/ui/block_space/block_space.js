@@ -844,14 +844,14 @@ Blockly.BlockSpace.prototype.getScrollableBox = function() {
 Blockly.BlockSpace.prototype.getViewportBox = function() {
   var metrics = this.getMetrics();
   return new goog.math.Box(
-    this.scrollbarOffsetY(),
-    this.scrollbarOffsetX() + metrics.viewWidth,
-    this.scrollbarOffsetY() + metrics.viewHeight,
-    this.scrollbarOffsetX());
+    this.getScrollOffsetY(),
+    this.getScrollOffsetX() + metrics.viewWidth,
+    this.getScrollOffsetY() + metrics.viewHeight,
+    this.getScrollOffsetX());
 };
 
-Blockly.BlockSpace.prototype.panIfHangingOffEdge = function (block, mouseX, mouseY) {
-  this.scrollOnBlockDragHandler_.panIfHangingOffEdge(block, mouseX, mouseY);
+Blockly.BlockSpace.prototype.panIfOverEdge = function (block, mouseX, mouseY) {
+  this.scrollOnBlockDragHandler_.panIfOverEdge(block, mouseX, mouseY);
 };
 
 Blockly.BlockSpace.prototype.stopAutoScrolling = function () {
@@ -872,15 +872,15 @@ Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
 Blockly.BlockSpace.prototype.scrollDeltaWithAnySelectedBlock = function (scrollDx, scrollDy,
   mouseX, mouseY) {
   this.scrollWithAnySelectedBlock(
-    this.scrollbarOffsetX() + scrollDx,
-    this.scrollbarOffsetY() + scrollDy,
+    this.getScrollOffsetX() + scrollDx,
+    this.getScrollOffsetY() + scrollDy,
     mouseX,
     mouseY);
 };
 
 Blockly.BlockSpace.prototype.scrollToDelta = function (scrollDx, scrollDy) {
-  this.scrollTo(this.scrollbarOffsetX() + scrollDx,
-    this.scrollbarOffsetY() + scrollDy);
+  this.scrollTo(this.getScrollOffsetX() + scrollDx,
+    this.getScrollOffsetY() + scrollDy);
 };
 
 Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
@@ -906,7 +906,8 @@ Blockly.BlockSpace.prototype.scrollWithAnySelectedBlock = function (newScrollX,
                                                                     newScrollY,
                                                                     mouseX,
                                                                     mouseY) {
-  var yOffsetBefore = this.scrollbarOffsetY();
+  /** @type {goog.math.Vec2} */
+  var offsetBefore = this.getScrollOffset();
 
   this.scrollTo(newScrollX, newScrollY);
 
@@ -916,9 +917,10 @@ Blockly.BlockSpace.prototype.scrollWithAnySelectedBlock = function (newScrollX,
    * delta to the block's movement.
    */
   if (Blockly.Block.isFreelyDragging() && Blockly.selected) {
-    var scrolledDy = this.scrollbarOffsetY() - yOffsetBefore;
-    Blockly.selected.startDragMouseY -= scrolledDy;
-    // Moves block to stay under cursor with e.clientY
+    var scrolledAmount = this.getScrollOffset().subtract(offsetBefore);
+    Blockly.selected.startDragMouseX -= scrolledAmount.x;
+    Blockly.selected.startDragMouseY -= scrolledAmount.y;
+    // Moves block to stay under cursor with e.clientX/Y
     Blockly.selected.moveBlockBeingDragged_(mouseX, mouseY);
   }
 };
@@ -938,16 +940,23 @@ Blockly.BlockSpace.prototype.getMaxScrollOffsets = function() {
 };
 
 /**
+ * @returns {goog.math.Vec2} scroll offsets
+ */
+Blockly.BlockSpace.prototype.getScrollOffset = function() {
+  return new goog.math.Vec2(this.getScrollOffsetX(), this.getScrollOffsetY());
+};
+
+/**
  * @returns {number} current scroll X offset, + is right
  */
-Blockly.BlockSpace.prototype.scrollbarOffsetX = function() {
+Blockly.BlockSpace.prototype.getScrollOffsetX = function() {
   return -this.xOffsetFromView;
 };
 
 /**
  * @returns {number} current scroll Y offset, + is down
  */
-Blockly.BlockSpace.prototype.scrollbarOffsetY = function() {
+Blockly.BlockSpace.prototype.getScrollOffsetY = function() {
   return -this.yOffsetFromView;
 };
 

@@ -27,10 +27,10 @@ goog.provide('Blockly.AutoScroll');
 
 /**
  * @param {!Blockly.BlockSpace} blockSpace - blockspace to scroll
- * @param {!Blockly.AutoScroll} startingRule
+ * @param {!goog.math.Vec2} startPanVector
  * @constructor
  */
-Blockly.AutoScroll = function (blockSpace, startingRule) {
+Blockly.AutoScroll = function (blockSpace, startPanVector) {
   /**
    * BlockSpace to scroll
    * @type {!Blockly.BlockSpace}
@@ -50,7 +50,7 @@ Blockly.AutoScroll = function (blockSpace, startingRule) {
    * @type {number}
    * @private
    */
-  this.activePanRule_ = startingRule;
+  this.activePanVector_ = startPanVector;
 
   /**
    * ID of active window.startInterval callback key
@@ -68,10 +68,13 @@ Blockly.AutoScroll = function (blockSpace, startingRule) {
  * dt for scrolling in ms
  * @type {number}
  */
-Blockly.AutoScroll.DT = 1000 / 60;
+Blockly.AutoScroll.DT = 1000 / 60; // 60 updates/sec
+
+Blockly.AutoScroll.ACCEL_START_TIME = 600; // in ms
+Blockly.AutoScroll.ACCELERATION = 1.1;
 
 Blockly.AutoScroll.prototype.stopAndDestroy = function () {
-  this.activePanRule_ = null;
+  this.activePanVector_ = null;
   if (this.activePanningIntervalID_) {
     window.clearInterval(this.activePanningIntervalID_);
   }
@@ -82,15 +85,32 @@ Blockly.AutoScroll.prototype.stopAndDestroy = function () {
 };
 
 Blockly.AutoScroll.prototype.scrollTick_ = function (dt) {
-  var panDy = this.activePanRule_.speed / dt;
-  this.blockSpace_.scrollDeltaWithAnySelectedBlock(0, panDy,
+  //var currentTime = new Date().getTime();
+  //var elapsedTime = currentTime - this.panStart_;
+  //var velocity = this.activePanVector_.speed;
+  //if (elapsedTime > Blockly.AutoScroll.ACCEL_START_TIME) {
+  //  var t = elapsedTime - Blockly.AutoScroll.ACCEL_START_TIME;
+  //  var sign = velocity > 0 ? 1 : -1;
+  //  velocity += sign * Blockly.AutoScroll.ACCELERATION * t;
+  //}
+
+  //var panDy = velocity / dt;
+
+  this.blockSpace_.scrollDeltaWithAnySelectedBlock(
+    this.activePanVector_.x / dt,
+    this.activePanVector_.y / dt,
     this.lastMouseX_, this.lastMouseY_);
 };
 
-Blockly.AutoScroll.prototype.updateScroll = function (rule,
+/**
+ * @param {goog.math.Vec2} scrollVector
+ * @param {number} mouseClientX
+ * @param {number} mouseClientY
+ */
+Blockly.AutoScroll.prototype.updateScroll = function (scrollVector,
                                                        mouseClientX,
                                                        mouseClientY) {
-  this.activePanRule_ = rule;
+  this.activePanVector_ = scrollVector;
   this.lastMouseX_ = mouseClientX;
   this.lastMouseY_ = mouseClientY;
 };
