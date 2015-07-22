@@ -12,6 +12,8 @@ gemfile: Gemfile
 
 bundler_args: --without development --deployment
 
+before_script: "echo npm_use_sudo: false >> locals.yml"
+
 script: "bundle exec rake -t travis:$TEST_TASK"
 
 env:
