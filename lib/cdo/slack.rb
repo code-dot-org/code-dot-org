@@ -31,6 +31,7 @@ class Slack
     else
       payload = {
         text:text,
+        unfurl_links: true
       }.merge params
     end
 
