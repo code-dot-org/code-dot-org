@@ -33,9 +33,8 @@ class HipChat
       message: message.to_s,
     }))
 
-    channel = '#general' if room.to_s == 'developers'
-    channel ||= "\##{room}"
-    Slack.message slackify(message.to_s), channel:channel, username:@@name
+    channel = "\##{Slack::CHANNEL_MAP[room.to_sym] || room}"
+    Slack.message slackify(message.to_s), channel:channel, username:@@name, color:options[:color]
   end
 
   def self.notify(room, message, options={})
@@ -47,7 +46,7 @@ class HipChat
     # https://slack.zendesk.com/hc/en-us/articles/202288908-Formatting-your-messages
     message.strip!
     message = "```#{message[7..-1]}```" if message =~ /^\/quote /
-    message.gsub(/<\/?b>/, '*')
+    message.gsub(/<\/?b>/, '*').gsub(/<\/?pre>/, '```').gsub(/<a href=['"]([^'"]+)['"]>/, '<\1|').gsub(/<\/a>/, '>')
   end
 
 end
