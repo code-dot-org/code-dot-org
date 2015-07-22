@@ -142,7 +142,7 @@ module.exports = React.createClass({
     } else {
       var rows = this.state.assets.map(function (asset) {
         var choose = this.props.assetChosen && this.props.assetChosen.bind(this,
-            AssetsApi.basePath(asset.filename));
+            asset.filename);
 
         return <AssetRow
             key={asset.filename}

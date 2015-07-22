@@ -191,6 +191,14 @@ class LevelTest < ActiveSupport::TestCase
       level.properties['initial_dirt']
   end
 
+  test 'debugging info for exceptions in load_custom_level' do
+    begin
+      LevelLoader.load_custom_level('xxxxx')
+    rescue Exception => e
+      assert_includes e.message, "in level"
+    end
+  end
+
   test 'prioritize property over column data in merged update' do
     level = Level.create(instructions: 'test', type: 'Maze')
     level.update(maze: '', properties: {maze: 'maze'})

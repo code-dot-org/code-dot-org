@@ -1,3 +1,10 @@
+/**
+ * @overview UI controller for lobby - handles flow for name entry, section
+ *           selection, and remote node selection.
+ * @see NetSimShardSelectionPanel for name entry and shard selection.
+ * @see NetSimRemoteNodeSelectionPanel for implementation of the actual
+ *      lobby table.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

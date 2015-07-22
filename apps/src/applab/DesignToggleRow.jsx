@@ -2,6 +2,9 @@
 
 var React = require('react');
 var msg = require('../locale');
+var applabMsg = require('./locale');
+
+var NEW_SCREEN = 'New screen...';
 
 var Mode = {
   CODE: 'CODE',
@@ -10,16 +13,21 @@ var Mode = {
 
 module.exports = React.createClass({
   propTypes: {
+    hideToggle: React.PropTypes.bool.isRequired,
+    startInDesignMode: React.PropTypes.bool.isRequired,
     initialScreen: React.PropTypes.string.isRequired,
     screens: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
-    onScreenChange: React.PropTypes.func.isRequired
+    onViewDataButton: React.PropTypes.func.isRequired,
+    onScreenChange: React.PropTypes.func.isRequired,
+    onScreenCreate: React.PropTypes.func.isRequired
   },
 
   getInitialState: function () {
     return {
-      mode: Mode.CODE
+      mode: this.props.startInDesignMode ? Mode.DESIGN :  Mode.CODE,
+      activeScreen: null
     };
   },
 
@@ -39,7 +47,11 @@ module.exports = React.createClass({
   },
 
   handleScreenChange: function (evt) {
-    this.props.onScreenChange(evt.target.value);
+    var screenId = evt.target.value;
+    if (screenId === NEW_SCREEN) {
+      screenId = this.props.onScreenCreate();
+    }
+    this.props.onScreenChange(screenId);
   },
 
   componentWillReceiveProps: function (newProps) {
@@ -47,6 +59,7 @@ module.exports = React.createClass({
   },
 
   render: function () {
+    var showDataButton;
     var selectDropdown;
     var dropdownStyle = {
       display: 'inline-block',
@@ -62,32 +75,50 @@ module.exports = React.createClass({
       verticalAlign: 'top',
       border: '1px solid #949ca2',
       margin: '0 0 8px 0',
-      padding: '3px 6px',
+      padding: '2px 6px',
       fontSize: 14
     };
-    var buttonPrimary = {
-      backgroundColor: '#ffa000',
-      color: '#fff'
-    };
-    var buttonSecondary = {
-      backgroundColor: '#e7e8ea',
-      color: '#949ca2'
-    };
-
     var codeButtonStyle = $.extend({}, buttonStyle, {
       borderBottomRightRadius: 0,
       borderTopRightRadius: 0,
       borderRightWidth: 0
-    }, (this.state.mode === Mode.CODE ? buttonSecondary : buttonPrimary));
-
+    });
     var designButtonStyle = $.extend({}, buttonStyle, {
       borderBottomLeftRadius: 0,
       borderTopLeftRadius: 0
-    }, (this.state.mode === Mode.CODE ? buttonPrimary : buttonSecondary));
+    });
+    var active = {
+      backgroundColor: '#ffa000',
+      color: '#fff',
+      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3) inset'
+    };
+    var inactive = {
+      backgroundColor: '#fff',
+      color: '#949ca2',
+      boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
+    };
+    var hidden = {
+      visibility: 'hidden'
+    };
 
-    var wrapperStyle = {minHeight: 40};
+    var showDataButtonStyle = $.extend({}, buttonStyle, inactive);
 
-    if (this.state.mode === Mode.DESIGN) {
+    var iconStyle = {
+      margin: '0 0.3em'
+    };
+
+    if (this.state.mode === Mode.CODE) {
+      showDataButton = (
+        <button
+            id='viewDataButton'
+            style={showDataButtonStyle}
+            className='no-outline'
+            onClick={this.props.onViewDataButton}>
+          <i className='fa fa-database' style={iconStyle}></i>
+          {applabMsg.viewData()}
+        </button>
+      );
+    } else if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screens.map(function (item) {
         return <option key={item}>{item}</option>;
       });
@@ -100,28 +131,34 @@ module.exports = React.createClass({
           onChange={this.handleScreenChange}
           disabled={Applab.isRunning()}>
           {options}
+          <option>{NEW_SCREEN}</option>
         </select>
       );
     }
 
     return (
-      <div style={wrapperStyle} className="justify-contents">
+      <div className={this.props.hideToggle ? 'rightalign-contents' : 'justify-contents'}>
         <button
             id='codeModeButton'
-            style={codeButtonStyle}
+            style={$.extend({}, codeButtonStyle,
+                this.state.mode === Mode.CODE ? active : inactive,
+                this.props.hideToggle ? hidden : null)}
             className='no-outline'
             onClick={this.handleSetMode.bind(this, Mode.CODE)}>
           {msg.codeMode()}
         </button>
         <button
             id='designModeButton'
-            style={designButtonStyle}
+            style={$.extend({}, designButtonStyle,
+                this.state.mode === Mode.DESIGN ? active : inactive,
+                this.props.hideToggle ? hidden : null)}
             className='no-outline'
             onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
           {msg.designMode()}
         </button>
         {' ' /* Needed for "text-align: justify;" to work. */ }
         {selectDropdown}
+        {showDataButton}
       </div>
     );
   }

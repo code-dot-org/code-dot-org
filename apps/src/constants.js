@@ -66,6 +66,7 @@ exports.BeeTerminationValue = {
 };
 
 exports.KeyCodes = {
+  BACKSPACE: 8,
   ENTER: 13,
   SPACE: 32,
   LEFT: 37,

@@ -1,0 +1,9 @@
+title 'Hour of Code 2015'
+description_short "Use Play Lab to create a story or game."
+description "Use Play Lab to create a story or game."
+hidden 'true'
+login_required 'true'
+
+stage 'Hour of Code'
+level 'hoc2015_intro'
+level 'hoc2015_sandbox'

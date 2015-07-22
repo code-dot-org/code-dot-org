@@ -2,9 +2,17 @@ name 'OPD-K5 Feedback'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# NEXT STEPS > Share Your Feedback
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-SURVEY HERE
+### NEXT STEPS > Post-Survey
+
+Please complete this brief post-survey to provide your feedback on this professional development course. Your responses will help us better design our learning experiences in the future.
+<br>
+<a href="https://code.org/professional-development-workshop-surveys/online/the-basics/postsurvey" target="blank"><button class="default">Complete the Post-Survey >></button></a><br><br>
+
+After you complete the survey, return here and click below to move on.
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

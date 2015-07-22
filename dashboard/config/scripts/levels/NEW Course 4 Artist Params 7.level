@@ -20,7 +20,15 @@
     "y": "250",
     "impressive": "false",
     "disable_sharing": "false",
-    "slider_speed": ".5"
+    "slider_speed": ".5",
+    "markdown_instructions": "Can you complete this drawing? \r\n\r\n*Hint: each triangle is 25 pixels larger than the last.  The first triangle is 25 pixels in size.*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

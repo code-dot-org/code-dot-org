@@ -89,11 +89,23 @@ Collidable.prototype.bounce = function () {
     case Direction.EAST:
       this.dir = Direction.WEST;
       break;
+    case Direction.NORTHEAST:
+      this.dir = Direction.SOUTHWEST;
+      break;
+    case Direction.SOUTHEAST:
+      this.dir = Direction.NORTHWEST;
+      break;
+    case Direction.SOUTHWEST:
+      this.dir = Direction.NORTHEAST;
+      break;
+    case Direction.NORTHWEST:
+      this.dir = Direction.SOUTHEAST;
+      break;
   }
 };
 
 /**
- * Assumes x/y are center coords (true for projectiles)
+ * Assumes x/y are center coords (true for projectiles and items)
  * outOfBounds() returns true if the object is entirely "off screen"
  */
 Collidable.prototype.outOfBounds = function () {

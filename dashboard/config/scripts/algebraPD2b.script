@@ -1,5 +1,6 @@
 title 'Computer Science in Algebra PD'
 description "Teach Functional Programming through Algebra"
+description_short "Teach Functional Programming through Algebra"
 login_required 'true'
 pd 'true'
 
@@ -11,14 +12,12 @@ level 'PDAlg Scope'
 level 'PDAlg Implementation'
 level 'PDAlg Course Goals'
 
-stage 'Computer Science Pedagogy'
-level 'PDK5 Strategies O'
-level 'PDK5 Pair Programming 1'
+stage 'Best Practices for Teaching Computer Science'
+level 'PDAlg Culture'
+level 'OPD-K5 Pair'
 level 'PDK5 Pair programming match'
-level 'PDK5 Problem solving'
-level 'PDK5 Classroom Culture C'
-level 'PDAlg Classroom Culture 2'
-level 'PDK5 Strategies F'
+level 'OPD-K5 Problem Solving'
+level 'PDAlg Strategy Reflection'
 
 stage 'Teacher Dashboard'
 level 'PDK5 Teacher Dashboard 1'

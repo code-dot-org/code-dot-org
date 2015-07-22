@@ -11,8 +11,3 @@ Maggie Johnson is Director of Education and University Relations for Google. She
 
 Prior to Google, Maggie was a faculty member and Director of Undergraduate Studies in the Department of 
 Computer Science at Stanford University.
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-[This is a test of our broken link checker](/awoijawdawd)

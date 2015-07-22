@@ -1,0 +1,20 @@
+name 'ECSPD Online U1D17-19 Assessment 2'
+title 'What is Intelligence?'
+height '80'
+skip_sound true
+hide_submit true
+
+question 'Artificial Intelligence'
+answer 'The ability of a computer to perform tasks that normally require human intelligence'
+
+question 'Turing Test'
+answer 'Whether a computer can respond to questions in a manner similar enough to humans to be indistinguishable from a human'
+
+question 'Machine Learning'
+answer 'The ability of a computer to recognize patterns and make predictions based on data'
+
+markdown <<MARKDOWN
+Take some time to look through the unplugged activity <a href="http://csunplugged.org/wp-content/uploads/2014/12/unplugged-20-the_turing_test_0.pdf" target="_blank">Conversations With Computers - *The Turing Test*</a>. When you have finished, answer the question on the sample assessment below and click "Submit" to continue. *To view a printable version of this assessment, <a href="https://docs.google.com/document/d/1V0lRZrtjuPbtwRh07W8DQ1vxE0jj1PSqL2gVSnHNz4g/edit?usp=sharing" target="_blank">click here</a>*.
+
+> Question: Match the vocab word to its definition.
+MARKDOWN

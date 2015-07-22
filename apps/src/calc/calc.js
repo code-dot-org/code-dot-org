@@ -154,7 +154,8 @@ Calc.init = function(config) {
       idealBlockNumber : undefined,
       editCode: level.editCode,
       blockCounterClass : 'block-counter-default',
-      inputOutputTable: level.inputOutputTable
+      inputOutputTable: level.inputOutputTable,
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
@@ -699,16 +700,7 @@ Calc.generateResults_ = function () {
   if (studioApp.hasUnfilledFunctionalBlock()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-
-    // Gate message on whether or not it's the compute block that's empty
-    var compute = _.find(Blockly.mainBlockSpace.getTopBlocks(), function (item) {
-      return item.type === 'functional_compute';
-    });
-    if (compute && !compute.getInputTargetBlock('ARG1')) {
-      appState.message = calcMsg.emptyComputeBlock();
-    } else {
-      appState.message = commonMsg.emptyFunctionalBlock();
-    }
+    appState.message = studioApp.getUnfilledFunctionalBlockError('functional_compute');
     return;
   }
 

@@ -1,4 +1,4 @@
----
+	---
 title: Professional Development FAQs
 nav: pd_nav
 ---
@@ -76,20 +76,28 @@ If you were unable to attend a live Hangout, you can still get credit by watchin
 Teachers will be paid their stipend at the completion of the online phase (Phase 1) according to when they finish or after the in-person session date (Phase 2). 
 </br>
 *Note: Phase 1 must be complete in order to receive payment for Phase 2.*
+<br>
+You will be paid either directly by Code.org or indirectly by your district. For further details about how payments will be processed by your district or to you directly, please see the notes below. 
 
-Payments will be made twice a month (these dates apply only to payments by direct deposit):
-
-•Cycle 1: 1st - 15th of each month (payments are pulled the 1st business day after the 15th and are deposited in accounts ~5 business days later)
-
-•Cycle 2: 16th - last day of each month (payments are pulled the 1st business day after the end of the month and are deposited in accounts ~5 business days later)
-
-If, for example, a teacher finishes Phase 1 on Tuesday, May 20, the payment will be processed on Monday, June 2nd and paid by Monday, June 9th. 
+1. Stipend payments are processed by Code.org every two weeks on the **1st** and **15th** of each month.
+<br /> 
+2. Please note that there is a **5-10** business day processing time for your payments to be received directly by you or the district.
+<br /> 
+3. Once the payment has been released to the district, it is up to the **district** to determine when they will distribute the funds. 
 
 
 ### Payment options: ###
+**Additional Information for Teachers Paid Directly by Code.org**
+<br />
+If you are paid directly you will need to fill out our sitpend payment form found at <https://code.org/educate/educatorinfo>. These forms are submitted directly, through an encrypted connection, to our finance department. The information in these forms will allow finance to process your payment automatically when the payment cycle is reached. 
+<br />
+<br />
+As part of the stipend payment form, you will need to fill out both a bank account information section and a W9 form. If either form contain errors, you will be contacted directly by a Code.org staff member who will ask you to resubmitt your form, either electronically or by fax.   
+<br />
+If you do not receive your payment please contact <PD@code.org> and let us know what Code.org PD program you are enrolled in, your school name, your school district, and school email address. 
 
 
-**Direct deposit.** This is the fastest and easiest way to get paid. When registering through the educator information form displayed at the end of phase 1 pd, teachers input the requested bank account information and their stipend will be placed directly into their bank account on the aforementioned day.
+**Direct deposit.** This is the fastest and easiest way to get paid. When registering through the educator information form displayed at the end of phase 1 pd, you will input the requested bank account information and your stipend will be placed directly into your bank account on the aforementioned day.
 
 
 

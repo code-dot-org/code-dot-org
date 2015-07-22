@@ -43,9 +43,12 @@ module.exports = function(options) {
     mkdirp.sync(path.dirname(options.dest));
     return getBundler()
       .bundle()
-      // log errors if they happen
       .on('error', function(e){
-        console.log('Browserify Error: ' + e);
+        if (options.watch) {
+          console.log('Browserify error: ' + e.message);
+        } else {
+          throw e;
+        }
       })
       .pipe(fs.createWriteStream(options.dest));
   }

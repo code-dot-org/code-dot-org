@@ -1,3 +1,6 @@
+/**
+ * @overview Nodes in the visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -13,11 +16,10 @@
 require('../utils');
 var netsimConstants = require('./netsimConstants');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var NetSimVizEntity = require('./NetSimVizEntity');
+var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 
 var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
 
 var netsimGlobals = require('./netsimGlobals');
 
@@ -43,12 +45,11 @@ var TEXT_PADDING_X = 20;
 var TEXT_PADDING_Y = 10;
 
 /**
- * @param {NetSimNode} sourceNode
  * @constructor
- * @augments NetSimVizEntity
+ * @augments NetSimVizElement
  */
-var NetSimVizNode = module.exports = function (sourceNode) {
-  NetSimVizEntity.call(this, sourceNode);
+var NetSimVizNode = module.exports = function () {
+  NetSimVizElement.call(this);
 
   /**
    * @type {string}
@@ -61,11 +62,6 @@ var NetSimVizNode = module.exports = function (sourceNode) {
    * @private
    */
   this.dnsMode_ = undefined;
-
-  /**
-   * @type {number}
-   */
-  this.nodeID = undefined;
 
   /**
    * @type {boolean}
@@ -135,33 +131,8 @@ var NetSimVizNode = module.exports = function (sourceNode) {
   // Set an initial default tween for zooming in from nothing.
   this.snapToScale(0);
   this.tweenToScale(0.5, 800, tweens.easeOutElastic);
-
-  this.configureFrom(sourceNode);
-  this.render();
 };
-NetSimVizNode.inherits(NetSimVizEntity);
-
-/**
- *
- * @param {NetSimNode} sourceNode
- */
-NetSimVizNode.prototype.configureFrom = function (sourceNode) {
-  var levelConfig = netsimGlobals.getLevelConfig();
-  if (levelConfig.showHostnameInGraph) {
-    this.setName(sourceNode.getHostname());
-  } else {
-    this.setName(sourceNode.getShortDisplayName());
-  }
-  this.nodeID = sourceNode.entityID;
-
-  if (sourceNode.getNodeType() === NodeType.ROUTER) {
-    this.isRouter = true;
-    this.getRoot().addClass('router-node');
-    if (levelConfig.broadcastMode) {
-      this.getRoot().css('display', 'none');
-    }
-  }
-};
+NetSimVizNode.inherits(NetSimVizElement);
 
 /**
  * Flag this viz node as the simulation local node.
@@ -236,7 +207,18 @@ NetSimVizNode.prototype.tick = function (clock) {
     var randomX = 300 * Math.random() - 150;
     var randomY = 300 * Math.random() - 150;
     this.tweenToPosition(randomX, randomY, 20000, tweens.easeInOutQuad);
-  } else if (this.isForeground && this.tweens_.length > 0) {
+  }
+};
+
+/**
+ * When visible, runs every frame
+ * @param {RunLoop.Clock} [clock]
+ */
+NetSimVizNode.prototype.render = function (clock) {
+  NetSimVizNode.superPrototype.render.call(this, clock);
+
+  // If currently animating, adjust text box sizes to match
+  if (this.isForeground && this.tweens_.length > 0) {
     this.resizeNameBox_();
     this.resizeAddressBox_();
   }
@@ -247,6 +229,12 @@ NetSimVizNode.prototype.tick = function (clock) {
  */
 NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
+
+  // Don't add tweens if this node has been killed
+  if (this.isDying() || this.isDead()) {
+    return;
+  }
+
   this.tweens_.length = 0;
   if (isForeground) {
     this.tweenToScale(1, 600, tweens.easeOutElastic);

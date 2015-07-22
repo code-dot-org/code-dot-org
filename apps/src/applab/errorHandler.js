@@ -1,4 +1,4 @@
-var annotationList = require('./acemode/annotationList');
+var annotationList = require('../acemode/annotationList');
 
 var ErrorLevel = {
   WARNING: 'WARNING',
@@ -16,7 +16,7 @@ function outputApplabConsole(output) {
     if (debugOutput.textContent.length > 0) {
       debugOutput.textContent += '\n' + output;
     } else {
-      debugOutput.textContent = output;
+      debugOutput.textContent = String(output);
     }
     debugOutput.scrollTop = debugOutput.scrollHeight;
   }

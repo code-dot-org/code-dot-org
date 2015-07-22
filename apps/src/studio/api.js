@@ -117,6 +117,13 @@ exports.changeScore = function(id, value) {
   Studio.queueCmd(id, 'changeScore', {'value': value});
 };
 
+exports.addItemsToScene = function(id, className, number) {
+  Studio.queueCmd(id, 'addItemsToScene', {
+    'className': className,
+    'number': number
+  });
+};
+
 exports.setScoreText = function(id, text) {
   Studio.queueCmd(id, 'setScoreText', {'text': text});
 };

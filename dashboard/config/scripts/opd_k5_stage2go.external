@@ -2,7 +2,8 @@ name 'OPD-K5 Stage2Go'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# CS FUNDAMENTALS > Looking Ahead
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+### CS FUNDAMENTALS > Looking Ahead
 
 We hope this stage gave you a good introduction to computer science.
 
@@ -13,35 +14,10 @@ By completing this stage, you should be able to:
 - Differentiate between "coding" and "computer science"
 - Explain the benefits of beginning to code using visual programming
 
-While computer science can be a rich and complex discipline, at code.org we recognize that teachers and students need to master the basics before diving in to higher-level projects. This online course teaches you, the teacher, those basics so that you can support your students in doing so as well.
+>**Teaching Tip:** While computer science can be a rich and complex discipline, at code.org we recognize that teachers and students need to master the basics before diving in to higher-level projects. This online course teaches you, the teacher, those basics so that you can support your students in doing so as well.
 
-In the stages that follow, you will master the following basic core concepts of computer science:
+In the next stage, we'll briefly introduce you to some frameworks for thinking about the rest of the content in this course. Then, we'll dive right in and start learning computer science.
+<br><br>
 
-- Stage 3: Sequencing
-- Stage 4: Loops
-- Stage 5: Conditionals
-- Stage 6: Functions
-- Stage 7: Events
-
-We define "mastery" as being able to do the following:
-
-- Define and explain what is meant by the core concept, and why it's important in computer science
-- Write simple programs applying the concept (by using visual programming to solve puzzles)
-- Reflect on how you might integrate the concept into your practice
-
-Use this list as your rubric as you work through the course. As you complete each stage, ask yourself:
-
-- Can I define and explain the importance of this particular core concept at a beginner level?
-- Was I able to successfully complete the simple puzzles in this stage?
-- Do I have a few ideas on how I might use this in my classroom?
-
-If you answer yes to each question, proceed to the next stage. If you answer no to any of the questions, consider revisiting the stage or exploring more about the topic in the student side of Code Studio before moving on.
-
-The goal of the next several stages is not to turn you into a computer scientist, but to instead help you feel comfortable enough with the core concepts that you are excited to share your knowledge with your students.
-
-In **Stage 8**, you'll explore code.org's free curricula and resources for teachers. You can choose to use any of these resources or other curricular resources of your choosing. Completing this course will give you the basics you need to understand any beginning CS curriculum.
-
-In **Stages 9 and 10**, we'll point you in the direction of resources you can use to learn more or feel more prepared to teach these concepts in your classroom.
-
-<a class="btn btn-large btn-primary next-stage submitButton">Let's learn to code!</a>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

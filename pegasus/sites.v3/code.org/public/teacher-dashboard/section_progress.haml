@@ -49,7 +49,7 @@ theme: none
         .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (99.9 * stage.length / progress.script.levels_count) + '%'}"}
           &nbsp;
         .studentbar
-          .level_link{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', 'ng-style' => "{width: page.zoom ? '34px' : (99.9 / progress.script.levels_count) + '%'}"}
+          %a.level_link{'ng-repeat' => 'level in student.levels track by $index', title: '{{level.title}}', class: '{{level.class}}', 'ng-style' => "{width: page.zoom ? '34px' : (99.9 / progress.script.levels_count) + '%'}", 'ng-href' => "{{level.url}}"}
             {{level.title}}
         .studentdot{'ng-style' => "{left: (99.9 * (student.highest_level + 0.5) / progress.script.levels_count) + '%'}"}
           .dot{class: '{{student.levels[student.highest_level].class}}'}

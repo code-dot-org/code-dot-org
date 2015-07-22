@@ -1,0 +1,20 @@
+name 'ECSPD Online U1D10 Assessment 2'
+title 'Telling a Story with Data'
+skip_sound true
+hide_submit true
+height "40"
+question 'Here is a short video quiz you could use with your students. Answer the question and click "Submit" to 
+<br/> continue. 
+<br/>
+<br/><strong>Question</strong>: In the previous video, David McCandless made several important points about the representation
+<br/>and use of data. Which of the following was <i>not</i> a main point of his? <i>For a printable version of the assessments 
+<br/>on this stage, <a href="https://docs.google.com/document/d/14qJNQL4AON0WHd5Us7nYF0SnsysuqckOtqh7KoeLzWs/edit" target="_blank">click here</a>.</i>'
+wrong 'Connecting several data sets allows a more accurate representation of the underlying information.'
+wrong 'The way data is represented can help us understand the data by telling a meaningful story.'
+wrong 'Different representations of data can help us draw more meaningful conclusions about it.'
+right 'Data mining is becoming so advanced it may one day be used to automatically generate public policy decisions 
+<br/>for us.'
+
+markdown <<MARKDOWN
+
+MARKDOWN

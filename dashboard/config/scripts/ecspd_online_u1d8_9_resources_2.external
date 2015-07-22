@@ -1,0 +1,30 @@
+name 'ECSPD Online U1D8-9 Resources 2'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Impact of Computers and Communication
+
+#### Privacy: Extended Resources
+
+<img src="https://images.code.org/a7eb655f305cc715b98b037ae694666c-image-1435097269587.png" width=300 style="float:left; margin-right:30px"/>
+
+One topic that may hit home for your students is privacy over the internet. As an extended activity, you may want to use Snapchat as a case study. When the company first started, Snapchat had a bad reputation for its "disappearing" pictures that could actually be recovered. 
+
+<a href="https://gigaom.com/2014/12/31/feds-issue-final-order-over-snapchat-privacy-breach-but-no-fine/" target="_blank">Snapchat Privacy Incident >></a>
+
+As an extended exercise, you may want your students to investigate the parts of the app that caused these problems and how the company improved their reputation. Some key points may include:
+
+<ul style="margin-left:350px">
+  <li>"Deleted" images and files are not removed from a device until they are overwritten</li>
+  <li>Snapchat enabled screenshots on a user's phone, so the sender and receiver knew it could still be accessed</li>
+  <li>Snapchat released a disclaimer stating that the images are not actually deleted</li>
+</ul>
+
+<br/>
+
+> Reflect: What are other ways you can use a case study or other strategy to reinforce the concepts of this lesson with your students?
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+<i>(Photo from: https://commons.wikimedia.org/wiki/File:Snapchat_Logo.png)</i>
+MARKDOWN

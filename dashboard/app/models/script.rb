@@ -4,6 +4,8 @@ class Script < ActiveRecord::Base
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
   has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
+  has_many :users, through: :user_scripts
+  has_many :user_scripts
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
@@ -17,14 +19,14 @@ class Script < ActiveRecord::Base
   EDIT_CODE_NAME = 'edit-code'
   TWENTY_FOURTEEN_NAME = 'events'
   JIGSAW_NAME = 'jigsaw'
-
   HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
   FROZEN_NAME = 'frozen'
   PLAYLAB_NAME = 'playlab'
-
+  INFINITY_NAME = 'infinity'
+  ARTIST_NAME = 'artist'
+  ALGEBRA_NAME = 'algebra'
   FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
-
   COURSE1_NAME = 'course1'
   COURSE2_NAME = 'course2'
   COURSE3_NAME = 'course3'
@@ -177,7 +179,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
   end
 
   def show_freeplay_links?

@@ -4,7 +4,9 @@ nav: translate_nav
 ---
 
 # Translate Video Subtitles
-Translations for video captions are done through Amara. To get started, choose any of the videos below. After completing translations, click "Publish" to save your work and mark as complete. Then e-mail translations@code.org with the title, link to the video, and your language so that we can publish your translation to YouTube. Please check back in 48 hours to verify that your translation was uploaded correctly.
+Translations for video captions are done through Amara. To get started, choose any of the videos below. First check that on YouTube the caption for you language doesn't exist. Sometimes, Amara doesn't sync properly and the captions may already be completed.
+
+If they are not completed, go ahead and Add a New Language and complete translations. Then, click "Publish" to save your work and mark as complete. Finally, e-mail translations@code.org with the title, link to the video, and your language so that we can publish your translation to YouTube. Please check back in 48 hours to verify that your translation was uploaded correctly.
 
 ## How to Use Amara
 

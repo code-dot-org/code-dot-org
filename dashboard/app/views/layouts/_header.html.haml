@@ -7,7 +7,9 @@
   = render partial: 'layouts/unsupported_browser'
 - elsif browser.cdo_partially_supported?
   = render partial: 'layouts/partially_supported_browser'
-- unless request.ssl?
+
+%script{src: '/shared/js/url_test/url_test.js'}
+- unless request.ssl? || (rack_env?(:development) && !CDO.https_development)
   = render partial: 'layouts/http_support'
 
 - show_bug_links = (script_level && script.show_report_bug_link?) || (level && level.try(:is_project_level))
@@ -30,7 +32,10 @@
         .row.header_row
           .header_left
             .header_logo
-              = link_to(image_tag('codeorg-studio-logo.png'), '/')
+              - if current_page?(root_url)
+                = link_to(image_tag('logo.png'), CDO.code_org_url('/'))
+              - else
+                = link_to(image_tag('codeorg-studio-logo.png'), '/')
             %span.project_info
           .header_middle
             - if script_level

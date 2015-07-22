@@ -1,24 +1,17 @@
 - user_script ||= nil
-.course_progress
-  .row#lesson
-    .span9#heading
-      %h3.whitetext{style: 'margin: 0; display: inline-block'}
-        %a.expando{style: 'color: white'}
-          %i.fa.fa-plus-square
-        = image_tag(script.logo_image, class: 'logo') if script.logo_image
-        = data_t_suffix('script.name', script.name, "title")
-      - if script.beta?
-        %span.betatext{style: 'font-size: 24.5px'}
-          != '&nbsp; beta'
-
-    .span3#heading{style: 'text-align: right;'}
-      - if user_script.try(:completed_at)
-        %a{href: script_certificate_image_url(current_user, script)}
-          %button.btn{style: 'background: #0ebe0e; color: white; text-shadow: none'} Print Certificate
-      - elsif current_user.next_unpassed_progression_level(script)
-        = link_to build_script_level_url(current_user.next_unpassed_progression_level(script)) do
-          %button.btn.btn-primary.button-continue#continue_button= t('continue')
-
-  .row#stats{style: 'display: none', 'data-script-id' => "#{script.id}"}
-    .span12.content#rightside{style: 'margin-left: 10px;'}
-      Loading...
+.course_progress{style: 'float: left; position: relative;'}
+  .courseblock-span3.courseblock-wide-small{style: 'width: 460px; height: 120px;'}
+    =link_to script_url(script.id) do
+      %h3= data_t_suffix('script.name', script.name, 'title')
+      .clear
+      .smalltext= data_t_suffix('script.name', script.name, 'description_short')
+      .clear
+    - if current_user.completed?(script)
+      %a{href: script_certificate_image_url(current_user, script)}
+        .bottombar.bottombartext.printcertificate{style: 'bottom: 0; position: absolute'}= t('home.print_certificate')
+    - elsif current_user.not_started?(script)
+      %a{href: script_url(script.id)}
+        .bottombar.bottombartext.trynow{style: 'bottom: 0; position: absolute'}= t('home.trynow')
+    - else
+      %a{href: build_script_level_url(current_user.next_unpassed_progression_level(script))}
+        .bottombar.bottombartext.continue{style: 'bottom: 0; position: absolute'}= t('continue')

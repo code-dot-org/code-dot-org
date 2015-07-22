@@ -1,0 +1,20 @@
+name 'ECSPD Online U1D10 Forum'
+title 'Unit 1 Day 10 Forum'
+description 'Forum Pending'
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Forum for Unit 1 Day 10: Telling a Story with Data
+
+Take a few minutes to respond to this forum (link below). This is a place for you to share teaching strategies and resources with other teachers. Check back here when teaching your lesson to see what other resources and ideas have been posted.
+
+> Question: What aspects of this lesson are you looking forward to? What big take-aways do you anticipate your students having?
+
+### <strong><a href="https://forum.code.org/t/unit-1-day-10-telling-a-story-with-data/746/1" target="_blank">Unit 1 Day 10 Forum >></a></strong>
+
+</br>
+
+After visiting and participating in the forum, return here and click "Continue" below to move on to the next stage.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

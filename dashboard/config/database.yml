@@ -1,8 +1,4 @@
 <%
-deployment_path = File.expand_path('../../deployment.rb', __FILE__)
-deployment_path = File.expand_path('../../../../deployment.rb', __FILE__) unless File.file?(deployment_path)
-require deployment_path
-
 # TODO: Rails 4.1 may be able to be configured with the database url
 # instead of having to parse it here. Actually 4.0 can do that too but
 # it doesn't work with the way seamless_database_pool wants to

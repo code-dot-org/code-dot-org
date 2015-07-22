@@ -17,17 +17,36 @@ Check back often as batches of lessons will be released on a rolling basis from 
 
 ### <a name="features"></a>Features
 
-- Access the world of web applications using App Lab: Code.org's online, block to text, JavaScript programming environment
-- Build problem solving skills through the use of computational widgets
+- Access the world of web applications using [App Lab](/educate/applab): Code.org's online, block to text, JavaScript programming environment
+- Build problem solving skills through the use of [computational widgets](/educate/applab)
 - Experience a blend of online, guided tutorials and open-ended, project-based learning
 - Learn from a diverse cast of role models, from well-known tech celebrities to social innovators who are using CS to tackle society's problems
 - Engage all students in constructing their own understanding of computer science concepts through equitable teaching practices and inquiry-based instructional strategies
 - Prepare for the AP® CS Principles exam through a curriculum intentionally designed around the latest developments in the College Board framework, including built-in preparation for the performance tasks  
 - Use, share, and customize the resources, as they are distributed under a [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-### Watch a video from the CS Principles Video Library
+[<button>See App Lab in action</button>](/educate/applab)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
+### Watch a video from the [CS Principles Video Library](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB)
+Check back often.  The video library is growing every week!
+
+<iframe src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/CfczKEzp4kY" frameborder="0" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/xOJTUuw62v4" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+### Chat about CSP in the CSP forum
+We have forums for educators to discuss and trade ideas about CSP and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CSP there are two forums that are most useful:
+
+* [General CSP forum](http://forum.code.org/c/csp)
+* [Lesson-Specific Forums](http://forum.code.org/c/csp-feedback)
+	
+
+
 
 
 ## <a name="overview"></a>Overview
@@ -35,10 +54,8 @@ Check back often as batches of lessons will be released on a rolling basis from 
 Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
-- [Curriculum overview](/files/CSPCurriculumOverview2015.pdf) (rev. Feb. 2015)
-- [Year-long view of the curriculum](/files/CSPCurriculumMap2015.png)
-- [Unit coverage of the CSP framework](/files/CSPFrameworkCoverage.png)
-
+- [Curriculum Syllabus and Overview](/files/CSPSyllabusJune2015.pdf) (rev. June. 2015)
+- [Professional development overview](/files/CSPPDoverview.pdf)
 
 
 ## <a name="lessons"></a>Lessons
@@ -59,13 +76,24 @@ Several documents describe the overarching themes and direction of the course.
 
 #### When will lessons be published?
 
-Code.org’s CS Principles curriculum will be released publicly on a rolling basis as engineering and field testing of lessons permit. Batches of lessons may be released on a rolling basis from now until Summer 2015. In Summer of 2015 the full curriculum will be available for viewing.  We will be making ongoing modifications (mostly adding supports) during the 2015-16 school year based on feedback from pilot instructors.
+**Summer 2015**
+
+Unit completion is driven primarily by our professional development schedule. Units 1 and 2 are complete for professional development sessions this summer.  Units 3 and 4 are undergoing revisions for delivery in the fall for ongoing professional development sessions.
+
+**Target Dates for publishing unit drafts online**
+
+As the units undergo revisions we hope to publish them on an ongoing basis leading up to and through the beginning of the school year. These are our targets.
+
+* Unit 1 - Target July 1 - **done!** see [Unit 1](/educate/csp/unit1)
+* Unit 2 - Target Aug. 1
+* Unit 3 - Target Early Fall (Sept/Oct)
+* Unit 4 - Target Mid Fall (Oct/Nov)
 
 <br />
 
 #### Can I test lessons and give feedback?
 
-Yes, please!  As lessons are published on the website we invite anyone to try them out - both the lessons and any new tools or software - and let us know how it went.  Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by providing comments in the documents themselves.
+Yes, please!  As lessons are published on the website we invite anyone to try them out - both the lessons and any new tools or software - and let us know how it went.  Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CSP forum.
 
 <br />
 

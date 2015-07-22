@@ -1,4 +1,4 @@
-- if current_user.try(:admin?) && @script_level # TODO: this should change to :teacher? when we want to ship this
+- if current_user.try(:teacher?) && @script_level
 
   .teacher-panel{class: params[:user_id] || params[:section_id] || params[:solution] ? '' : 'hidden'}
     .hide-handle
@@ -54,15 +54,16 @@
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
                 - status = activity_css_class(student.user_level_for(@script_level).try(:best_result))
-                %td.level_link{class: status}
-                  - if @level.unplugged?
-                    %span.puzzle-named
-                      Unplugged
-                  - elsif status == 'passed' || status == 'perfect'
-                    = check_mark_html
-                  - else
-                    %span.puzzle-number
-                      = @script_level.position
+                %td
+                  .level_link{class: status}
+                    - if @level.unplugged?
+                      %span.puzzle-named
+                        Unplugged
+                    - elsif status == 'passed' || status == 'perfect'
+                      = check_mark_html
+                    - else
+                      %span.puzzle-number
+                        = @script_level.position
                 %td.name= link_to student.name, build_script_level_path(@script_level, user_id: student.id, section_id: @section.id)
   :javascript
     function resizeScrollable() {

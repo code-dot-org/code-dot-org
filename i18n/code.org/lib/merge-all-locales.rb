@@ -2,7 +2,7 @@
 
 require 'yaml'
 require 'json'
-require 'FileUtils'
+require 'fileutils'
 
 # Avoids previous translation to be overwritten by English translation.
 # This function iterates through the new_translation, and restore the previous

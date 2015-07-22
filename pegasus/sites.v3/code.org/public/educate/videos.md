@@ -8,61 +8,67 @@ nav: educate_nav
 
 ## Educational videos
 
-As we recruit unique role models to record educational content, we are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. While this library is a work-in-progress, our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos
+We are building a growing library of educational videos available for re-use by educators worldwide, online or in classrooms. Our goal is to enable our efforts to be amplified beyond our own curriculum's reach. Many more videos are coming soon. **Note:** see below for the licensing restrictions on use of these videos.
 
-<div style="float:left; padding:10px">
- 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/fVUL-vzrIcM?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-            
-<p><a href="https://youtu.be/fVUL-vzrIcM"><strong>Bill Gates explains IF/ELSE Statements</strong></a><a href="https://www.dropbox.com/sh/mmlq474q1y572c0/mWiztYFLeR/BillGates-IF%26IFELSE-general.mp4"><img src="/images/download.png" width="30px"></a></p>
+## For high school Computer Science Principles:
+
+### More videos coming soon
+
+<div style="float:left; padding:10px; width:49%">
+
+<%=view :display_video_thumbnail, id: "PIXELS", video_code: "15aqFQQVBWU", caption: "Instagram founder explains PIXELS", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/csp1-pixels-systrom.mp4" %>
+
 </div>
 
-<div style="float:left; padding:10px">
+<div style="float:left; padding:10px; width:49%">
+
+<%=view :display_video_thumbnail, id: "IP", video_code: "xOJTUuw62v4", caption: "Father of internet explains IP ADDRESSES and DNS", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/ip-dns.mp4" %>
+
+</div>
+
+## Other videos:
+
+
+<div style="float:left; padding:10px; width:49%">
  
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/vgkahOzFH2Q?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+<%=view :display_video_thumbnail, id: "BillGatesIF", video_code: "fVUL-vzrIcM", caption: "Bill Gates explains IF/ELSE statements", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/bill-gates-saloni-ifelse-general.mp4" %>
             
-<p><a href="https://youtu.be/vgkahOzFH2Q"><strong>Pair Programming</strong></a><a href="https://www.dropbox.com/s/9nxua1hoyawa5dp/Pair_Programming_09112014.mp4"><img src="/images/download.png" width="30px"></a></p>
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<%=view :display_video_thumbnail, id: "PairProgramming", video_code: "vgkahOzFH2Q", caption: "How to use PAIR PROGRAMMING", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/pair-programming.mp4" %>
+ 
 </div>
 
 <div style='clear:both'></div>
 
-<div style="float:left; padding:10px">
+<div style="float:left; padding:10px; width:49%">
 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/8T5acEwfJbw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+<%=view :display_video_thumbnail, id: "REPEATLOOPS", video_code: "hYvcoRkAkOU", caption: "Mark Zuckerberg explains REPEAT LOOPS", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/zuckerburg-repeat-general.mp4" %>
 
-<p><a href="https://www.youtube.com/watch?v=8T5acEwfJbw"><strong>Chris Bosh explains FUNCTIONS</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/viyVhu0ik7/Bosh-Functions-general.mp4"><img src="/images/download.png" width="30px"></a></p>
 </div>
 
-<div style="float:left; padding:10px">
- 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/15aqFQQVBWU?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-            
-<p><a href="https://youtu.be/15aqFQQVBWU"><strong>Kevin Systrom explains PIXELS</strong></a></p>
+<div style="float:left; padding:10px; width:49%">
+
+<%=view :display_video_thumbnail, id: "FUNCTIONS", video_code: "8T5acEwfJbw", caption: "Chris Bosh explains FUNCTIONS", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/bosh-functions-general.mp4" %>
+
 </div>
 
 <div style='clear:both'></div>
 
-<div style="float:left; padding:10px">
+<div style="float:left; padding:10px; width:49%">
 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/hYvcoRkAkOU?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+<%=view :display_video_thumbnail, id: "REPEATUNTIL", video_code: "jsUN0NV5RfQ", caption: "Chris Bosh explains REPEAT UNTIL", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/bosh-repeat-general.mp4" %>
 
-<p><a href="https://www.youtube.com/watch?v=hYvcoRkAkOU"><strong>Mark Zuckerberg explains REPEAT LOOPS</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/Gb3xnOXsDr/Zuck-repeat-loops.mp4"><img src="/images/download.png" width="30px"></a></p>
-</div>
-         
-
-<div style="float:left; padding:10px">
-
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/jsUN0NV5RfQ?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-
-<p><a href="https://www.youtube.com/watch?v=jsUN0NV5RfQ"><strong>Chris Bosh explains REPEAT UNTIL</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/DsK7LCOiDK/Bosh-repeat-general.mp4"><img src="/images/download.png" width="30px"></a></p>
 </div>
 
-<div style="float:left; padding:10px">
+<div style="float:left; padding:10px; width:49%">
 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/eZqKqI8AvnA?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-            
-            <p><a href="https://youtu.be/eZqKqI8AvnA"><strong>PERSISTENCE and building a foundation</strong></a><a href="https://www.dropbox.com/s/ylzdzcsuh2r7hib/Building_a_Foundation_08_29_2014.mp4"><img src="/images/download.png" width="30px"></a></p>
-          </div>
+<%=view :display_video_thumbnail, id: "PERSISTENCE", video_code: "eZqKqI8AvnA", caption: "PERSISTENCE and building a foundation", play_button: 'center', download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/building-a-foundation.mp4" %>
+
+
+</div>
 
 <div style='clear:both'></div>
 
@@ -71,4 +77,7 @@ As we recruit unique role models to record educational content, we are building 
 Code.org’s library of videos may be redistributed freely on the express conditions that (1) the videos are redistributed AS-IS, (using the embedded video player provided, or download link IF provided) with attribution to Code.org (2) the videos are not incorporated into any mash-ups, (3) the videos are used for computer science education purposes, and (4) the use of the video does not constitute an endorsement of a 3rd party brand, service or product and (5) if access to such redistributed Content or Services is provided free of charge.
 
 The celebrities and video "cast" members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
+
+![image](/images/cc-logo.png)
+
 

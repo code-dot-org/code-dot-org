@@ -72,7 +72,8 @@ module Rack
       end
 
       # Skip if response body is too short
-      if @min_length > headers['Content-Length'].to_i
+      if @min_length && headers['Content-Length'] &&
+          @min_length > headers['Content-Length'].to_i
         return false
       end
 

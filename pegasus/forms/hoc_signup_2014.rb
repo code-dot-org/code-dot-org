@@ -12,6 +12,7 @@ class HocSignup2014
     result[:send_posters_address_s] = stripped data[:send_posters_address_s]
     result[:special_event_flag_b] = stripped data[:special_event_flag_b]
     result[:special_event_details_s] = stripped data[:special_event_details_s]
+    result[:match_volunteer_flag_b] = stripped data[:match_volunteer_flag_b]
     result[:hoc_country_s] = enum(data[:hoc_country_s].to_s.strip.downcase, HOC_COUNTRIES.keys)
     result[:hoc_company_s] = nil_if_empty data[:hoc_company_s]
     result
@@ -32,7 +33,7 @@ class HocSignup2014
     query = '*:*'
 
     fq = []
-    fq.push("kind_s:HocSignup2014")
+    fq.push("kind_s:#{self.name}")
     {
       q:query,
       fq:fq,

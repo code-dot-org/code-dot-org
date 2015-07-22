@@ -1,3 +1,6 @@
+/**
+ * @overview UI controller for the "My Device" tab in the left column.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

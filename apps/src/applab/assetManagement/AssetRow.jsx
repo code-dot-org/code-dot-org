@@ -92,7 +92,7 @@ module.exports = React.createClass({
     var actions, flex;
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
-      flex = <button onClick={this.props.onChoose}>Set as Image</button>;
+      flex = <button onClick={this.props.onChoose}>Choose</button>;
     } else {
       var size = (this.props.size / 1000).toFixed(2);
       flex = size + ' kb';
