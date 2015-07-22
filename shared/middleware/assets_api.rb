@@ -85,13 +85,13 @@ class AssetsApi < Sinatra::Base
     src_owner_id, src_channel_id = storage_decrypt_channel_id(src_channel)
     dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
 
-    src_prefix = "#{CDO.assets_s3_directory}/#{src_owner_id}/#{src_channel_id}"
+    src_prefix = "#{CDO.assets_s3_directory}/#{src_owner_id}/#{src_channel_id}/"
     self.s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}/(.+)$}.match(fileinfo.key)[1]
       mime_type = Sinatra::Base.mime_type(filename.split('.').last)
       category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
-      src = "#{CDO.assets_s3_bucket}/#{src_prefix}/#{filename}"
+      src = "#{CDO.assets_s3_bucket}/#{src_prefix}#{filename}"
       dest = "#{CDO.assets_s3_directory}/#{dest_owner_id}/#{dest_channel_id}/#{filename}"
       self.s3.copy_object(bucket:CDO.assets_s3_bucket, key:dest, copy_source:src)
 
