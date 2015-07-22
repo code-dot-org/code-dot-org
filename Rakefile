@@ -38,14 +38,27 @@ namespace :lint do
     RakeUtils.system 'haml-lint dashboard pegasus'
   end
 
-  task :apps do
-    Dir.chdir(apps_dir) do
-      HipChat.log 'Linting <b>apps</b>...'
-      RakeUtils.system 'grunt jshint'
+  namespace :js do
+    task :apps do
+      Dir.chdir(apps_dir) do
+        HipChat.log 'Linting <b>apps</b>...'
+        RakeUtils.system 'grunt jshint'
+      end
     end
-  end
 
-  task all: [:ruby, :haml, :apps]
+    task :shared do
+      Dir.chdir(shared_js_dir) do
+        HipChat.log 'Linting <b>shared</b> js...'
+        RakeUtils.system 'gulp lint'
+      end
+    end
+
+    task all: [:apps, :shared]
+  end
+  task js: ['js:all']
+
+
+  task all: [:ruby, :haml, :js]
 end
 task lint: ['lint:all']
 
