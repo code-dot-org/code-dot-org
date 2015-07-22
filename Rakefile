@@ -201,6 +201,28 @@ end
 task :build => ['build:all']
 
 
+##################################################################################################
+##
+##
+## test
+##
+##
+##################################################################################################
+
+namespace :test do
+
+  task :blockly_core do
+    Dir.chdir(blockly_core_dir) do
+      RakeUtils.npm_install
+
+      HipChat.log 'Testing <b>blockly-core</b>...'
+      RakeUtils.system './test.sh'
+    end
+  end
+
+  task all: [:blockly_core]
+end
+task :test => ['test:all']
 
 
 ##################################################################################################
