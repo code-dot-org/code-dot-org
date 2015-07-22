@@ -17,7 +17,6 @@
 
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
-var netsimGlobals = require('./netsimGlobals');
 var clientApi = require('@cdo/shared/clientApi');
 
 /**
