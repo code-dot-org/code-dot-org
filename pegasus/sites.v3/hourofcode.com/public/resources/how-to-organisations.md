@@ -8,7 +8,7 @@ nav: resources_nav
     </div>
 </div>
 ## 1) Try the tutorials:
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **All Hour of Code tutorials:**
 

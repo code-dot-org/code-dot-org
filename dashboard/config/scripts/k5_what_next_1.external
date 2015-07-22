@@ -3,25 +3,80 @@ css 'unplugged'
 skip_dialog true
 
 markdown <<MARKDOWN
-## What's Next?
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css" />
+
+### What's Next?
 
 <br/><br/>
 **Code.org highly recommends these third party applications:**
 
-<table>
-<tr>
-<td> <a href="https://levelbuilder-studio.code.org/levels/2621?show_callouts=true" border="0"><img src="https://images.code.org/9df60110a2abe207c581bd35ac2187e3-image-1433886030096.png" width="300px"></a> </td>
 
-<td> <img src="https://images.code.org/1919365edf8613c88b27cbfbdff6d610-image-1433886037445.png" width="300px"> </td>
-</tr>
-</table>
-<br/><br/>
+<div style="background:#fff5e0; border-radius:10px; float:none; height:325px; padding:15px; width:880px;">
+  <a href="https://levelbuilder-studio.code.org/levels/2621?show_callouts=true" border="0"><img src="https://images.code.org/9df60110a2abe207c581bd35ac2187e3-image-1433886030096.png" class="lefted roundedPic" width="300px"></a> 
+  <div style="font-size:1.25em; line-height: 150%; color:#666666; width:880px;">Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.
+
+  <br/><br/>
+  <button style="background:#fca203;" >Download Scratch Jr. Curriculum >></button>
+  <br/>
+  <button style="background:#fca203;" >Visit Scratch Jr. >></button>
+  </div>
+</div>
+
+
+
+<br/>
+<div style="background:#fff5e0; border-radius:10px;  float:none; height:325px; padding:15px; width:880px;"><img src="https://images.code.org/1919365edf8613c88b27cbfbdff6d610-image-1433886037445.png" width="300px" class="lefted roundedPic"><div style="font-size:1.25em; line-height: 150%; color:#666666; width:880px;">Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create. Tynker is available on the Web and on iPad and Android-based tablets.
+  <br/><br/>
+  <button style="background:#fca203;" >Download Tynker Curriculum >></button>
+  <br/>
+  <button style="background:#fca203;" >Visit Tynker >></button>
+  </div>
+</div>
+
+
+
+<br/><br/><br/>
 **Other third party recommendations:**
-<table style="background-color: white; border-collapse: collapse; border-spacing: 0px; box-sizing: border-box; color: dimgrey; font-family: 'Gotham 4r', sans-serif; font-size: 14px; line-height: 22px;"><thead style="box-sizing: border-box;">
-<tr style="box-sizing: border-box;"><th style="background-color: #00b2c0; border-color: rgb(0, 178, 192) rgb(0, 178, 192) white; border-style: solid; border-width: 1px; box-sizing: border-box; color: white; padding: 15px;">Organization</th><th style="background-color: #00b2c0; border-color: rgb(0, 178, 192) rgb(0, 178, 192) white; border-style: solid; border-width: 1px; box-sizing: border-box; color: white; padding: 15px;">Curriculum</th><th style="background-color: #00b2c0; border-color: rgb(0, 178, 192) rgb(0, 178, 192) white; border-style: solid; border-width: 1px; box-sizing: border-box; color: white; padding: 15px;">Professional Development</th></tr>
-</thead><tbody style="box-sizing: border-box;">
-<tr style="box-sizing: border-box;"><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;"><a href="https://code.org/educate/k5" style="background-color: transparent; box-sizing: border-box; color: #7665a0; font-family: 'Gotham 7r', sans-serif; text-decoration: none;">Code Studio</a>(Code.org)</td><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;">4 courses blend online tutorials with “unplugged” activities, FREE</td><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;">1-day weekend workshops across the US, FREE</td></tr>
-<tr style="box-sizing: border-box;"><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;"><a href="https://www.pltw.org/our-programs/pltw-launch" style="background-color: transparent; box-sizing: border-box; color: #7665a0; font-family: 'Gotham 7r', sans-serif; text-decoration: none;">Project Lead The Way</a></td><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;">6 10-hour computer science modules, $750/school</td><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;">Face-to-face and online, $700 for school-level lead teacher</td></tr>
-<tr style="box-sizing: border-box;"><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;"><a href="http://scratched.gse.harvard.edu/guide" style="background-color: transparent; box-sizing: border-box; color: #7665a0; font-family: 'Gotham 7r', sans-serif; text-decoration: none;">ScratchEd</a></td><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;">A 6-unit intro to Scratch, FREE</td><td style="border: 1px solid rgb(141, 138, 138); box-sizing: border-box; padding: 15px;">In-person educator meet-ups and online MOOC, FREE</td></tr>
-</tbody></table>
+
+<table style="background-color: white; border-collapse: collapse; border-spacing: 0px; border-radius:10px; box-sizing: border-box; color: dimgrey; font-family: 'Gotham 4r', sans-serif; font-size: 14px; line-height: 22px; margin-top:0px;">
+	<thead style="background-color: #00b2c0; border-color: rgb(0, 178, 192) rgb(0, 178, 192) white; border-style: solid; border-width: 1px; box-sizing: border-box; color: white; padding: 15px;">
+		<tr>
+    		<th>Organization</th>
+        	<th>Curriculum</th>
+        	<th>Pricing</th>
+        </tr>
+	</thead>
+    
+    <tbody>
+        <tr>
+            <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
+                <a href="https://code.org/educate/k5" style="background-color: transparent; color: #7665a0; font-family: 'Gotham 7r', sans-serif; text-decoration: none;">
+                	Scratch Jr.
+                </a>
+            </td>
+            <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
+                Approximately 10 lessons, geared toward grades K-5
+            </td>	
+            <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
+                Free
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
+                <a href="https://code.org/educate/k5" style="background-color: transparent; color: #7665a0; font-family: 'Gotham 7r', sans-serif; text-decoration: none;">
+                	Tynker
+                </a>
+            </td>
+            <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
+                Dozens of lessons for all grades K-8
+            </td>	
+            <td style="border: 1px solid rgb(141, 138, 138); padding: 15px;">
+                Free to try, $399/classroom, <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css" />
+
+			</td>
+         </tr>
+    </tbody>
+</table>
+
 MARKDOWN

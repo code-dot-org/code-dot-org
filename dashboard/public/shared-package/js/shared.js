@@ -93,7 +93,7 @@ function wrapExistingClipPaths() {
 },{}],2:[function(require,module,exports){
 /* global $ */
 
-module.exports = {
+var base = {
   api_base_url: "/v3/channels",
 
   all: function(callback) {
@@ -102,9 +102,10 @@ module.exports = {
       type: "get",
       dataType: "json",
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(null);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, null);
     });
   },
 
@@ -115,9 +116,10 @@ module.exports = {
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(undefined);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
     });
   },
 
@@ -127,9 +129,10 @@ module.exports = {
       type: "post",
       dataType: "json",
     }).done(function(data, text) {
-      callback(true);
+      callback(null, true);
     }).fail(function(request, status, error) {
-      callback(false);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
     });
   },
 
@@ -139,9 +142,10 @@ module.exports = {
       type: "get",
       dataType: "json",
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(undefined);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
     });
   },
 
@@ -152,98 +156,228 @@ module.exports = {
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
     }).done(function(data, text) {
-      callback(data);
+      callback(null, data);
     }).fail(function(request, status, error) {
-      callback(false);
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
+  },
+
+  // Copy to the destination collection, since we expect the destination
+  // to be empty. A true rest API would replace the destination collection:
+  // https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+  copyAll: function(src, dest, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + dest + '?src=' + src,
+      type: "put"
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
+  }
+};
+
+module.exports = {
+  create: function (url) {
+    return $.extend({}, base, {
+      api_base_url: url,
     });
   }
 };
 
 },{}],3:[function(require,module,exports){
-/* global dashboard, appOptions, $, trackEvent, Applab */
+/* global dashboard, appOptions, $ */
+
+// Attempts to lookup the name in the digest hash, or returns the name if not found.
+function tryDigest(name) {
+  return (window.digestManifest || {})[name] || name;
+}
+
+/**
+ * Returns a function which returns a $.Deferred instance. When executed, the
+ * function loads the given app script.
+ * @param name The name of the module to load.
+ * @param cacheBust{Boolean?} If true, append a random query string to bypass the
+ *   cache.
+ * @returns {Function}
+ */
+function loadSource(name, cacheBust) {
+  return function () {
+    var deferred = new $.Deferred();
+    var param = cacheBust ? '?' + Math.random() : '';
+    document.body.appendChild($('<script>', {
+      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + param
+    }).on('load', function () {
+      deferred.resolve();
+    })[0]);
+    return deferred;
+  };
+}
+
+// Loads the given app stylesheet.
+function loadStyle(name) {
+  $('body').append($('<link>', {
+    rel: 'stylesheet',
+    type: 'text/css',
+    href: appOptions.baseUrl + 'css/' + name + '.css'
+  }));
+}
+
+module.exports = function (callback) {
+  loadStyle('common');
+  loadStyle(appOptions.app);
+  var promise = loadSource('manifest', true)();
+  if (appOptions.droplet) {
+    loadStyle('droplet/droplet.min');
+    loadStyle('tooltipster/tooltipster.min');
+    promise = promise.then(loadSource('jsinterpreter/acorn_interpreter'))
+        .then(loadSource('marked/marked'))
+        .then(loadSource('ace/ace'))
+        .then(loadSource('ace/mode-javascript'))
+        .then(loadSource('ace/ext-language_tools'))
+        .then(loadSource('droplet/droplet-full'))
+        .then(loadSource('tooltipster/jquery.tooltipster'));
+  } else {
+    promise = promise.then(loadSource('blockly'))
+        .then(loadSource('marked/marked'))
+        .then(loadSource(appOptions.locale + '/blockly_locale'));
+  }
+
+  if (window.dashboard && dashboard.project) {
+    promise = promise.then(dashboard.project.load);
+  }
+
+  promise.then(loadSource('common' + appOptions.pretty))
+      .then(loadSource(appOptions.locale + '/common_locale'))
+      .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
+      .then(loadSource(appOptions.app + appOptions.pretty))
+      .then(callback);
+};
+
+},{}],4:[function(require,module,exports){
+/* global dashboard, appOptions, $, trackEvent, Applab, Blockly */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
-var channels = require('./client_api/channels');
+var assets = require('./clientApi').create('/v3/assets');
+var channels = require('./clientApi').create('/v3/channels');
+
+var events = {
+  // Fired when run state changes or we enter/exit design mode
+  appModeChanged: 'appModeChanged',
+  appInitialized: 'appInitialized',
+  workspaceChange: 'workspaceChange',
+  hashchange: 'hashchange'
+};
+
+/**
+ * @typedef {Object} ProjectInstance
+ * @property {string} id
+ * @property {string} name
+ * @property {string} levelHtml
+ * @property {string} levelSource
+ * hidden // unclear when this ever gets set
+ * @property {boolean} isOwner Populated by our update/create callback.
+ * @property {string} updatedAt String representation of a Date. Populated by
+ *   out update/create callback
+ * @property {string} level Path where this particular app type is hosted
+ */
+var current;
+var isEditing = false;
 
 module.exports = {
-  init: function () {
-    if (appOptions.level.isProjectLevel || this.current) {
+  /**
+   * @returns {string} id of the current project, or undefined if we don't have
+   *   a current project.
+   */
+  getCurrentId: function () {
+    if (!current) {
+      return;
+    }
+    return current.id;
+  },
 
-      $(window).on('hashchange', (function () {
+  /**
+   * @returns {string} name of the current project, or undefined if we don't have
+   *   a current project
+   */
+  getCurrentName: function () {
+    if (!current) {
+      return;
+    }
+    return current.name;
+  },
+
+  /**
+   * @returns {boolean} true if we're editing
+   */
+  isEditing: function () {
+    return isEditing;
+  },
+
+  init: function () {
+    if (appOptions.level.isProjectLevel || current) {
+
+      $(window).on(events.hashchange, function () {
         var hashData = parseHash();
-        if ((this.current &&
-            hashData.channelId !== this.current.id) ||
-            hashData.isEditingProject !== this.isEditing) {
+        if ((current &&
+            hashData.channelId !== current.id) ||
+            hashData.isEditingProject !== isEditing) {
           location.reload();
         }
-      }).bind(this));
+      }.bind(this));
 
-      if (this.current && this.current.levelHtml) {
-        appOptions.level.levelHtml = this.current.levelHtml;
+      if (current && current.levelHtml) {
+        appOptions.level.levelHtml = current.levelHtml;
       }
 
-      if (this.isEditing) {
-        if (this.current) {
-          if (this.current.levelSource) {
-            appOptions.level.lastAttempt = this.current.levelSource;
+      if (isEditing) {
+        if (current) {
+          if (current.levelSource) {
+            appOptions.level.lastAttempt = current.levelSource;
           }
         } else {
-          this.current = {
+          current = {
             name: 'My Project'
           };
         }
 
-        $(window).on('run_button_pressed', (function(event, callback) {
+        $(window).on(events.appModeChanged, function(event, callback) {
           this.save(callback);
-        }).bind(this));
+        }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
-        $(window).on('appInitialized', (function () {
+        $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          this.current.levelSource = dashboard.getEditorSource();
-        }).bind(this));
-        $(window).on('workspaceChange', function () {
+          current.levelSource = getEditorSource();
+        }.bind(this));
+        $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
-        window.setInterval((function () {
-          // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-          if (this.current.levelSource === undefined) {
-            return;
-          }
-          // `dashboard.getEditorSource()` is expensive for Blockly so only call if `workspaceChange` fires
-          if (appOptions.droplet || hasProjectChanged) {
-            var source = dashboard.getEditorSource();
-            if (this.current.levelSource !== source) {
-              this.save(function() {
-                hasProjectChanged = false;
-              }, source);
-            } else {
-              hasProjectChanged = false;
-            }
-          }
-        }).bind(this), AUTOSAVE_INTERVAL);
+        window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
-        if (!this.current.hidden) {
-          if (this.current.isOwner || location.hash === '') {
+        if (!current.hidden) {
+          if (current.isOwner || location.hash === '') {
             dashboard.header.showProjectHeader();
           } else {
             // Viewing someone else's project - set share mode
             dashboard.header.showMinimalProjectHeader();
             // URL with /edit - set hideSource to false
-            this.setAppOptionsForShareMode(false);
+            setAppOptionsForShareMode(false);
           }
         }
-      } else if (this.current && this.current.levelSource) {
-        appOptions.level.lastAttempt = this.current.levelSource;
+      } else if (current) {
+        appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
         // URL without /edit - set hideSource to true
-        this.setAppOptionsForShareMode(true);
+        setAppOptionsForShareMode(true);
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
-      this.current = {
+      current = {
         name: 'Untitled Project'
       };
       dashboard.header.showMinimalProjectHeader();
@@ -252,30 +386,11 @@ module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
   },
-  setAppOptionsForShareMode: function (hideSource) {
-    appOptions.readonlyWorkspace = true;
-    appOptions.callouts = [];
-    appOptions.share = true;
-    appOptions.hideSource = hideSource;
-    // Important to call determineNoPadding() after setting hideSource value
-    appOptions.noPadding = this.determineNoPadding();
-  },
-  determineNoPadding: function() {
-    switch (appOptions.app) {
-      case 'applab':
-      case 'flappy':
-      case 'studio':
-      case 'bounce':
-        return appOptions.isMobile && appOptions.hideSource;
-      default:
-        return false;
-    }
-  },
-  updateTimestamp: function() {
-    if (this.current.updatedAt) {
+  updateTimestamp: function () {
+    if (current.updatedAt) {
       // TODO i18n
       $('.project_updated_at').empty().append("Saved ")  // TODO i18n
-          .append($('<span class="timestamp">').attr('title', this.current.updatedAt)).show();
+          .append($('<span class="timestamp">').attr('title', current.updatedAt)).show();
       $('.project_updated_at span.timestamp').timeago();
     } else {
       $('.project_updated_at').text("Not saved"); // TODO i18n
@@ -296,63 +411,115 @@ module.exports = {
   },
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided. If `overrideSource` is set it will save that
-   * string instead of calling `dashboard.getEditorSource()`.
+   * callback function was provided.
+   * @param {string?} source Optional source to be provided, saving us another
+   *   call to getEditorSource
+   * @param {function} callback Fucntion to be called after saving
    */
-  save: function(callback, overrideSource) {
-    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
-    var channelId = this.current.id;
-    this.current.levelSource = overrideSource || dashboard.getEditorSource();
-    this.current.levelHtml = window.Applab && Applab.getHtml();
-    this.current.level = this.appToProjectUrl();
-    if (channelId && this.current.isOwner) {
-      channels.update(channelId, this.current, function(callback, data) {
-        if (data) {
-          this.current = data;
-          this.updateTimestamp();
-          callbackSafe(callback, data);
-        }  else {
-          $('.project_updated_at').text('Error saving project');  // TODO i18n
-        }
-      }.bind(this, callback));
-    } else {
-      channels.create(this.current, function(callback, data) {
-        if (data) {
-          this.current = data;
-          location.href = this.current.level + '#' + this.current.id + '/edit';
-          this.updateTimestamp();
-          callbackSafe(callback, data);
-        } else {
-          $('.project_updated_at').text('Error saving project');  // TODO i18n
-        }
-      }.bind(this, callback));
+  save: function(source, callback) {
+    if (arguments.length === 1) {
+      // If no source is provided, the only argument is our callback and we
+      // ask for the source ourselves
+      callback = arguments[0];
+      source = getEditorSource();
     }
+    $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
+    var channelId = current.id;
+    current.levelSource = source;
+    current.levelHtml = getLevelHtml();
+    current.level = this.appToProjectUrl();
+
+    if (channelId && current.isOwner) {
+      channels.update(channelId, current, function (err, data) {
+        this.updateCurrentData_(err, data, false);
+        executeCallback(callback, data);
+      }.bind(this));
+    } else {
+      channels.create(current, function (err, data) {
+        this.updateCurrentData_(err, data, true);
+        executeCallback(callback, data);
+      }.bind(this));
+    }
+  },
+  updateCurrentData_: function (err, data, isNewChannel) {
+    if (err) {
+      $('.project_updated_at').text('Error saving project');  // TODO i18n
+      return;
+    }
+
+    current = data;
+    if (isNewChannel) {
+      location.href = current.level + '#' + current.id + '/edit';
+    }
+    this.updateTimestamp();
+  },
+  /**
+   * Autosave the code if things have changed
+   */
+  autosave_: function () {
+    // Bail if a baseline levelSource doesn't exist (app not yet initialized)
+    if (current.levelSource === undefined) {
+      return;
+    }
+    // `getEditorSource()` is expensive for Blockly so only call
+    // after `workspaceChange` has fired
+    if (!appOptions.droplet && !hasProjectChanged) {
+      return;
+    }
+
+    var source = getEditorSource();
+    var html = getLevelHtml();
+
+    if (current.levelSource === source && current.levelHtml === html) {
+      hasProjectChanged = false;
+      return;
+    }
+
+    this.save(source, function () {
+      hasProjectChanged = false;
+    });
   },
   /**
    * Renames and saves the project.
    */
   rename: function(newName, callback) {
-    dashboard.project.current.name = newName;
-    dashboard.project.save(callback);
+    current.name = newName;
+    this.save(callback);
   },
   /**
    * Creates a copy of the project, gives it the provided name, and sets the
    * copy as the current project.
    */
   copy: function(newName, callback) {
-    delete dashboard.project.current.id;
-    delete dashboard.project.current.hidden;
-    dashboard.project.current.name = newName;
-    dashboard.project.save(callback);
+    var srcChannel = current.id;
+    var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
+    delete current.id;
+    delete current.hidden;
+    current.name = newName;
+    this.save(wrappedCallback);
+  },
+  copyAssets: function (srcChannel, callback) {
+    if (!srcChannel) {
+      executeCallback(callback);
+      return;
+    }
+    var destChannel = current.id;
+    assets.copyAll(srcChannel, destChannel, function(err) {
+      if (err) {
+        $('.project_updated_at').text('Error copying files');  // TODO i18n
+        return;
+      }
+      executeCallback(callback);
+    });
   },
   delete: function(callback) {
-    var channelId = this.current.id;
+    var channelId = current.id;
     if (channelId) {
-      channels.delete(channelId, function(data) {
-        callbackSafe(callback, data);
+      channels.delete(channelId, function(err, data) {
+        executeCallback(callback, data);
       });
     } else {
-      callbackSafe(callback, false);
+      executeCallback(callback, false);
     }
   },
   /**
@@ -364,37 +531,37 @@ module.exports = {
       var hashData = parseHash();
       if (hashData.channelId) {
         if (hashData.isEditingProject) {
-          module.exports.isEditing = true;
+          isEditing = true;
         } else {
           $('#betainfo').hide();
         }
 
         // Load the project ID, if one exists
         deferred = new $.Deferred();
-        channels.fetch(hashData.channelId, function (data) {
-          if (data) {
-            module.exports.current = data;
-            deferred.resolve();
-          } else {
+        channels.fetch(hashData.channelId, function (err, data) {
+          if (err) {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname;
+          } else {
+            current = data;
+            deferred.resolve();
           }
         });
         return deferred;
       } else {
-        module.exports.isEditing = true;
+        isEditing = true;
       }
     } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
       // this is an embedded project
-      module.exports.isEditing = true;
+      isEditing = true;
       deferred = new $.Deferred();
-      channels.fetch(appOptions.channel, function(data) {
-        if (data) {
-          module.exports.current = data;
+      channels.fetch(appOptions.channel, function(err, data) {
+        if (err) {
+          deferred.reject();
+        } else {
+          current = data;
           dashboard.header.showProjectLevelHeader();
           deferred.resolve();
-        } else {
-          deferred.reject();
         }
       });
       return deferred;
@@ -406,7 +573,7 @@ module.exports = {
  * Only execute the given argument if it is a function.
  * @param callback
  */
-function callbackSafe(callback, data) {
+function executeCallback(callback, data) {
   if (typeof callback === 'function') {
     callback(data);
   }
@@ -432,7 +599,47 @@ function parseHash() {
   };
 }
 
-},{"./client_api/channels":2}],4:[function(require,module,exports){
+function setAppOptionsForShareMode(hideSource) {
+  appOptions.readonlyWorkspace = true;
+  appOptions.callouts = [];
+  appOptions.share = true;
+  appOptions.hideSource = hideSource;
+  // Important to call determineNoPadding() after setting hideSource value
+  appOptions.noPadding = determineNoPadding();
+}
+
+function determineNoPadding() {
+  switch (appOptions.app) {
+    case 'applab':
+    case 'flappy':
+    case 'studio':
+    case 'bounce':
+      return appOptions.isMobile && appOptions.hideSource;
+    default:
+      return false;
+  }
+}
+
+/**
+ * @returns {string} The serialized level source from the editor.
+ */
+function getEditorSource() {
+  var source;
+  if (window.Blockly) {
+    // If we're readOnly, source hasn't changed at all
+    source = Blockly.readOnly ? current.levelSource :
+      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+  } else {
+    source = window.Applab && Applab.getCode();
+  }
+  return source;
+}
+
+function getLevelHtml() {
+  return window.Applab && Applab.getHtml();
+}
+
+},{"./clientApi":2}],5:[function(require,module,exports){
 /* global ga */
 
 var userTimings = {};
@@ -452,173 +659,132 @@ module.exports = {
   }
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 // TODO (brent) - way too many globals
 // TODO (brent) - I wonder if we should sub-namespace dashboard
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Blockly, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
-dashboard.project = require('./project');
+var loadApp = require('./loadApp');
+var project = require('./project');
 
-if (!window.dashboard) {
-  throw new Error('Assume existence of window.dashboard');
-}
+window.apps = {
+  // Loads the dependencies for the current app based on values in `appOptions`.
+  // This function takes a callback which is called once dependencies are ready.
+  load: loadApp,
+  // Legacy Blockly initialization that was moved here from _blockly.html.haml.
+  // Modifies `appOptions` with some default values in `baseOptions`.
+  setup: function () {
 
-// Sets up default options and initializes blockly
-timing.startTiming('Puzzle', script_path, '');
-var baseOptions = {
-  containerId: 'codeApp',
-  Dialog: Dialog,
-  cdoSounds: CDOSounds,
-  position: { blockYCoordinateInterval: 25 },
-  onInitialize: function() {
-    dashboard.createCallouts(this.callouts);
-    if (window.dashboard.isChrome34) {
-      chrome34Fix.fixup();
+    if (!window.dashboard) {
+      throw new Error('Assume existence of window.dashboard');
     }
-    $(document).trigger('appInitialized');
-  },
-  onAttempt: function(report) {
-    if (appOptions.level.isProjectLevel) {
-      return;
-    }
-    if (appOptions.channel) {
-      // Don't send the levelSource or image to Dashboard for channel-backed levels.
-      // (The levelSource is already stored in the channels API.)
-      delete report.program;
-      delete report.image;
-    }
-    report.fallbackResponse = appOptions.report.fallback_response;
-    report.callback = appOptions.report.callback;
-    // Track puzzle attempt event
-    trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
-    if (report.pass) {
-      trackEvent('Puzzle', 'Success', script_path, report.attempt);
-      timing.stopTiming('Puzzle', script_path, '');
-    }
-    trackEvent('Activity', 'Lines of Code', script_path, report.lines);
-    sendReport(report);
-  },
-  onResetPressed: function() {
-    cancelReport();
-  },
-  onContinue: function() {
-    if (lastServerResponse.videoInfo) {
-      showVideoDialog(lastServerResponse.videoInfo);
-    } else if (lastServerResponse.nextRedirect) {
-      window.location.href = lastServerResponse.nextRedirect;
-    }
-  },
-  backToPreviousLevel: function() {
-    if (lastServerResponse.previousLevelRedirect) {
-      window.location.href = lastServerResponse.previousLevelRedirect;
-    }
-  },
-  showInstructionsWrapper: function(showInstructions) {
-    // Always skip all pre-level popups on share levels or when configured thus
-    if (this.share || appOptions.level.skipInstructionsPopup) {
-      return;
-    }
+    dashboard.project = project;
 
-    var hasVideo = !!appOptions.autoplayVideo;
-    var hasInstructions = !!(appOptions.level.instructions || appOptions.level.aniGifURL);
+    timing.startTiming('Puzzle', script_path, '');
 
-    if (hasVideo) {
-      showVideoDialog(appOptions.autoplayVideo);
-      if (hasInstructions) {
-        $('.video-modal').on('hidden.bs.modal', function () {
+    // Sets up default options and initializes blockly
+    var baseOptions = {
+      containerId: 'codeApp',
+      Dialog: Dialog,
+      cdoSounds: CDOSounds,
+      position: {blockYCoordinateInterval: 25},
+      onInitialize: function() {
+        dashboard.createCallouts(this.callouts);
+        if (window.dashboard.isChrome34) {
+          chrome34Fix.fixup();
+        }
+        if (appOptions.level.projectTemplateLevelName) {
+          $('#clear-puzzle-header').hide();
+        }
+        $(document).trigger('appInitialized');
+      },
+      onAttempt: function(report) {
+        if (appOptions.level.isProjectLevel) {
+          return;
+        }
+        if (appOptions.channel) {
+          // Don't send the levelSource or image to Dashboard for channel-backed levels.
+          // (The levelSource is already stored in the channels API.)
+          delete report.program;
+          delete report.image;
+        }
+        report.fallbackResponse = appOptions.report.fallback_response;
+        report.callback = appOptions.report.callback;
+        // Track puzzle attempt event
+        trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
+        if (report.pass) {
+          trackEvent('Puzzle', 'Success', script_path, report.attempt);
+          timing.stopTiming('Puzzle', script_path, '');
+        }
+        trackEvent('Activity', 'Lines of Code', script_path, report.lines);
+        sendReport(report);
+      },
+      onResetPressed: function() {
+        cancelReport();
+      },
+      onContinue: function() {
+        if (lastServerResponse.videoInfo) {
+          showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.nextRedirect) {
+          window.location.href = lastServerResponse.nextRedirect;
+        }
+      },
+      backToPreviousLevel: function() {
+        if (lastServerResponse.previousLevelRedirect) {
+          window.location.href = lastServerResponse.previousLevelRedirect;
+        }
+      },
+      showInstructionsWrapper: function(showInstructions) {
+        // Always skip all pre-level popups on share levels or when configured thus
+        if (this.share || appOptions.level.skipInstructionsPopup) {
+          return;
+        }
+
+        var hasVideo = !!appOptions.autoplayVideo;
+        var hasInstructions = !!(appOptions.level.instructions ||
+        appOptions.level.aniGifURL);
+
+        if (hasVideo) {
+          showVideoDialog(appOptions.autoplayVideo);
+          if (hasInstructions) {
+            $('.video-modal').on('hidden.bs.modal', function() {
+              showInstructions();
+            });
+          }
+        } else if (hasInstructions) {
           showInstructions();
-        });
+        }
       }
-    } else if (hasInstructions) {
-      showInstructions();
-    }
+    };
+    $.extend(true, appOptions, baseOptions);
+
+    // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
+    // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
+    (function fixUpFunctions(node) {
+      if (typeof node !== 'object') {
+        return;
+      }
+      for (var i in node) {
+        if (/^fn_/.test(i)) {
+          try {
+            /* jshint ignore:start */
+            node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
+            /* jshint ignore:end */
+          } catch (e) {
+          }
+        } else {
+          fixUpFunctions(node[i]);
+        }
+      }
+    })(appOptions.level);
+  },
+  // Initialize the Blockly or Droplet app.
+  init: function () {
+    dashboard.project.init();
+    window[appOptions.app + 'Main'](appOptions);
   }
 };
-$.extend(true, appOptions, baseOptions);
 
-// Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
-// E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
-(function fixUpFunctions(node) {
-  if (typeof node !== 'object') {
-    return;
-  }
-  for (var i in node) {
-    if (/^fn_/.test(i)) {
-      try {
-        /* jshint ignore:start */
-        node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
-        /* jshint ignore:end */
-      } catch (e) { }
-    } else {
-      fixUpFunctions(node[i]);
-    }
-  }
-})(appOptions.level);
-
-/**
- * @returns {string} The serialized level source from the editor.
- */
-dashboard.getEditorSource = function() {
-  return window.Blockly ?
-    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)) :
-    window.Applab && Applab.getCode();
-};
-
-function initApp() {
-  dashboard.project.init();
-  window[appOptions.app + 'Main'](appOptions);
-}
-
-// Returns a function which returns a $.Deferred instance. When executed, the
-// function loads the given app script.
-function loadSource(name) {
-  return function () {
-    var deferred = new $.Deferred();
-    document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + 'js/' + name + '.js'
-    }).on('load', function () {
-      deferred.resolve();
-    })[0]);
-    return deferred;
-  };
-}
-
-// Loads the given app stylesheet.
-function loadStyle(name) {
-  $('body').append($('<link>', {
-    rel: 'stylesheet',
-    type: 'text/css',
-    href: appOptions.baseUrl + 'css/' + name + '.css'
-  }));
-}
-
-loadStyle('common');
-loadStyle(appOptions.app);
-var promise;
-if (appOptions.droplet) {
-  loadStyle('droplet/droplet.min');
-  loadStyle('tooltipster/tooltipster.min');
-  promise = loadSource('jsinterpreter/acorn_interpreter')()
-      .then(loadSource('marked/marked'))
-      .then(loadSource('requirejs/require'))
-      .then(loadSource('ace/ace'))
-      .then(loadSource('ace/mode-javascript'))
-      .then(loadSource('ace/ext-language_tools'))
-      .then(loadSource('droplet/droplet-full'))
-      .then(loadSource('tooltipster/jquery.tooltipster'))
-      .then(dashboard.project.load);
-} else {
-  promise = loadSource('blockly')()
-      .then(loadSource('marked/marked'))
-      .then(loadSource(appOptions.locale + '/blockly_locale'))
-      .then(dashboard.project.load);
-}
-promise = promise.then(loadSource('common' + appOptions.pretty))
-  .then(loadSource(appOptions.locale + '/common_locale'))
-  .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
-  .then(loadSource(appOptions.app + appOptions.pretty))
-  .then(initApp);
-
-},{"./chrome34Fix":1,"./project":3,"./timing":4}]},{},[5]);
+},{"./chrome34Fix":1,"./loadApp":3,"./project":4,"./timing":5}]},{},[6]);

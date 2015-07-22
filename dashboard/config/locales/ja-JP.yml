@@ -238,7 +238,7 @@
       classroom: 先生用ホームページ
       district_dashboard: District Dashboard
       label: こんにちは  %{username}
-      stats: 私の進捗状況
+      stats: 進み具合
       settings: 私のアカウント
       prizes: 賞品
       logout: サインアウト
@@ -345,8 +345,11 @@
     show_more: もっと見る
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: 進み具合
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: コース1、2、3の概要
     lesson_plans: 授業計画
     signin_message: 既に登録されていますか？% {リンク}
@@ -384,6 +387,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: 男性
     female: 女性
@@ -418,6 +422,11 @@
     autoplay_option: 動画の自動再生
     download: ビデオのダウンロード
   compatability:
+    https:
+      header: HTTPS を有効にしてください
+      message: Code.org では、セキュリティを強化するため、%{https_date} をもって HTTPS に切り替えます。それ以降は、HTTPS
+        を有効にしない限り Code.org にアクセスできなくなります。HTTPS を有効にする方法については<a href='%{it_requirements_url}'>こちらをクリック</a>してください。
+      hide_this_warning: この警告を非表示
     working:
       header: お使いのブラウザーのサポートに取り組みちゅうです。
       message: Code.org uses modern web technology. This makes the site faster to
@@ -472,9 +481,11 @@
     flappy:
       title: Flappy Code
       body: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
-    20hour:
-      title: 入門コース
-      body: コンピュータサイエンスコースの入門編（20時間）に挑戦する
+    20-hour:
+      title: Accelerated Course
+      body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: 動作試験中の新しい Hour of Code チュートリアルをお試しください。
       try_frozen: Artist with Anna and Elsa, from Frozen

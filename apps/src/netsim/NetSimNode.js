@@ -1,3 +1,6 @@
+/**
+ * @overview A base class for all simulation node entities.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

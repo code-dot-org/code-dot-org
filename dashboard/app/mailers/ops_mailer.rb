@@ -28,4 +28,9 @@ class OpsMailer < ActionMailer::Base
     subject = "[ops notification] #{user.email} has added unexpected teachers to #{workshop.name}"
     mail content_type: 'text/html', subject: subject
   end
+
+  def phase_2_2_week_reminder()
+    subject = "HEY YOU"
+    mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
+  end
 end

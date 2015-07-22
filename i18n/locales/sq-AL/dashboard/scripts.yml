@@ -10,6 +10,7 @@ sq:
           Math Image: Imazhi Matematikës
           title: Kursi i Testit
           description: Vetëm një test kursi i brendshëm.
+          description_short: Vetëm një test kursi i brendshëm.
         course1:
           "Jigsaw: Learn to drag and drop": 'jigsaw: Mëso të lëvizësh mouse-in sa andej këtej'
           "Maze: Sequence": 'Maze: Sekuencë'
@@ -133,55 +134,6 @@ sq:
           Songwriting: Të shkruarit e Këngëve
           description_audience: MOshat 8+ (pas Kursit 2)
           description_short: Kursi 3 është një përforcim njohurish i Kursit 2.
-        msm:
-          title: Matematika e Shkollës 9-vjeçare
-          description: Puna private në progres për Matematikën e Shkollës 9-vjeçare.
-          Graph Paper Programming: Programimi grafik me leter
-          Assessments: Vlerësimet
-          Unit 1: Kapitulli 1
-          Unit 2: Kapitulli 2
-          Ninja Cat and the Coordinate Plane: Macja Ninja dhe Aeroplani i Koordinuar
-          "Calc: Circles of Evaluation": 'Calc: Rrathët e Vlerësimit'
-          "Artist: Strings and Images": 'Artisti: Stringje dhe Imazhe'
-          Contracts: Marrëveshjet
-          "Artist: Writing Contracts": 'Artisti: Të shkruarit e Kontratave'
-          "Calc: Defining Variables": 'Calc: Përcaktimi i Ndryshoreve'
-          "Play Lab: Defining Variables": 'Play Lab: Të Përcaktosh Ndryshoret'
-          The Design Recipe: Receta e Dizenjimit
-          "Artist: Defining Functions": 'Artisti: Përcaktimi i Funksioneve'
-          "Play Lab: Defining Functions": 'Play Lab: Receta Dizajnit'
-          "Artist: Functions": 'Artisti: Funksionet'
-          "Play Lab: Animation": 'Play Lab: Animimi'
-          Booleans: Booleans
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Calc: Boolean Operators": 'Calc: Operatorët Boolean'
-          "Play Lab: Boolean Operators": 'Play lab: Operatorët Boolean'
-          Conditionals and Piecewise Functions: Kushtet dhe Funksionet Piecewise
-          "Artist: Conditionals": 'Artisti: Kushtet'
-          Collision Detection and the Distance Formula: Kapja e Përplasjeve dhe Formula Largësisë
-          "Play Lab: Collision Detection": 'Play Lab: Kapja Përplasjeve'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Unplugged: Macja Ninja dhe Aeroplani i Koordinuar'
-          "Eval: Strings and Images": 'Eval: Stringje dhe Imazhe'
-          "Unplugged: Contracts": 'Unplugged: Kontratat'
-          "Eval: Writing Contracts": 'Eval: Kontratat e Shkruara'
-          "Unplugged: The Design Recipe": 'Unplugged: Receta e Dizenjimit'
-          "Eval: Defining Functions": 'Eval: Funksionet e Shpejta'
-          "Eval: Functions": 'Eval: Receta Dizenjimit'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Kushtet dhe Funksionet Piecewise'
-          "Eval: Conditionals": 'Eval: Kushtet'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Kapja e Përplasjeve dhe Formula Largësisë'
-          "Calc: Evaluation Blocks": 'Calc: Blloqet e Vlerësimit'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
-          "Eval: Boolean Operators": 'Eval: Operatorët Boolean'
-          Blocks to Math: Blloqet te Matematika
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Të përcaktsoh Ndryshoret (Loja e Madhe)'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animimi (Loja e Madhe)'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Loja e Madhe)'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Kapja e përplasjeve (Loja e Madhe)'
-          "Eval: Fast Functions": 'Eval: Funksionet e Shpejta'
-          "Play Lab: Design Recipe": 'Play Lab: Receta Dizajnit'
-          "Eval: Design Recipe": 'Eval: Receta Dizenjimit'
         playlab:
           title: Play Lab
           description: Krijo një histori ose bëj një lojë me Play Lab!
@@ -192,11 +144,6 @@ sq:
           description: Vizato figura të hatashme dhe dizenjo me Artist-in!
           Artist: Artisti
           description_short: Vizato figura të hatashme dhe dizenjo me Artist-in!
-        scrat:
-          title: Kërko
-          description_short: Kërko përshkrim të shkurtër.
-          description: Kërko përshkrim të gjatë
-          "Maze: Sequence": 'Maze: Sekuencë'
         hourofcode:
           Maze: Maze
           title: Ora e Kodimit
@@ -221,7 +168,6 @@ sq:
           "Artist: For Loops": 'Artisti: Ciklet For'
           "Play Lab: For Loops": 'Play Lab: Ciklet For'
           "Artist: Functions": 'Artisti: Funksionet'
-          "Artist: Functions with Paraqmeters": 'Artisti: Funksionet me Parametra'
           "Unplugged: Tangrams": |
             Unplugged: Tangrams
             
@@ -273,23 +219,10 @@ sq:
           description: i/e veçantë
           Special: I/E Veçantë
           Binary: Binare
-        usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Testimi i përdorueshmërisë për MSM
-          Evaluation Blocks: Blloqet e Vlerësimit
-          Blocks to Math: Blloqet te Matematika
-          Strings and Images: Stringjet dhe Imazhet
-          Defining Variables: Përcaktimi i Variablave
-          Defining Functions: Përcaktimi i Funksioneve
-          Design Recipe: Receta Dizenjimit
-          Booleans: Booleans
-          Conditionals: Kushtet
-          Free Play: Lojë Falas
         algebra:
           title: Shkenëa Kompjuterike në Algjebër
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
+          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": Stringjet dhe Imazhet
@@ -353,8 +286,8 @@ sq:
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
           title: Imitues Interneti
-          description_short: ""
-          description: ""
+          description_short: Learn about how the Internet works
+          description: Learn about how the Internet works
           Internet Simulator: Imitues Interneti
           Unit 1: Kapitulli 1
           Unit 2: Kapitulli 2
@@ -366,10 +299,13 @@ sq:
         pixelation:
           title: Pixelation
           description: Krijo imazhe me bite dhe bajte.
+          description_short: Krijo imazhe me bite dhe bajte.
           Pixelation: Pixelation
         20-hour:
-          title: 20-Hour Intro Course
+          title: Accelerated Intro to CS Course
+          description_audience: Moshat 10+ (pas Kursit 3)
           description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
+          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           Introduction to Computer Science: Hyrje ne Informatike
           The Maze: The Maze
           Computational Thinking: Te menduarit si kompjuter
@@ -392,14 +328,17 @@ sq:
           Wrap-up: Mbështjell
         edit-code:
           title: Ndrysho kodin
-          description: ""
+          description: Ndrysho kodin
+          description_short: Ndrysho kodin
           The Maze: The Maze
           Applab: Applab
           The Artist: Artisti
           Play Lab: Play Lab
+          Play Lab 2015: Play Lab 2015
         events:
           title: Ngjarjet
-          description: ""
+          description: Ngjarjet
+          description_short: Ngjarjet
           Bounce: Hidhu
           Studio: Studio
           Calc: Calc
@@ -407,18 +346,22 @@ sq:
         flappy:
           title: Kodi Flappy
           description: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin tonë të Kodit Flappy!
+          description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: Kodi Flappy
         jigsaw:
           title: Jigsaw
-          description: ""
+          description: Try our Jigsaw tutorial
+          description_short: Try our Jigsaw tutorial
           Jigsaw: Jigsaw
         step:
           title: NJë Hap
-          description: ""
+          description: Step tutorial
+          description_short: Step tutorial
           Step: NJë Hap
         Hour of Code:
           title: Ora e Kodit 2013
-          description: ""
+          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
           Hour of Code 2013: Ora e Kodit 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -496,9 +439,12 @@ sq:
           "Assessment: Encoding Complex Information": 'Assessment: Encoding Complex Information'
           Encoding B&W Images: 'Encoding B&W Images'
           Encoding Color Images: Encoding Color Images
+          Lossy Compression and File Formats: Lossy Compression and File Formats
+          "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
           "Calc: Evaluation Blocks": 'Calc: Blloqet e Vlerësimit'
           "Eval: Strings and Images": 'Eval: Stringje dhe Imazhe'
@@ -541,6 +487,7 @@ sq:
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Blloqet e Vlerësimit
           Strings and Images: Stringjet dhe Imazhet
           Rocket-Height: Rocket-Height
@@ -556,12 +503,14 @@ sq:
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
         CSPPD:
           new stage: new stage
           Introduction to PD: Hyrje në PD
           title: Computer Science Principles PD
           description: Online Introduction to CSP
+          description_short: Online Introduction to CSP
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -570,7 +519,8 @@ sq:
           Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description_short: lesson samples for csp
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
         ECSPD:
@@ -582,11 +532,13 @@ sq:
           reference: reference
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Hyrje në PD
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -601,8 +553,14 @@ sq:
           Post-Survey: Post-Survey
         rbo-reference:
           reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           description_short: Programming
@@ -655,6 +613,7 @@ sq:
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -667,11 +626,13 @@ sq:
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Hyrje në PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Hyrje në PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
         Glenallan Career Day Demo:
@@ -689,6 +650,7 @@ sq:
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Hyrje në PD
@@ -699,10 +661,12 @@ sq:
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Hyrje në PD
           Evaluation Blocks: Blloqet e Vlerësimit
           logo_image: nextech_logo.png
@@ -714,6 +678,7 @@ sq:
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Hyrje në PD
           Evaluation Blocks: Blloqet e Vlerësimit
           logo_image: izone_logo.png
@@ -727,6 +692,7 @@ sq:
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -743,6 +709,7 @@ sq:
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -757,11 +724,16 @@ sq:
         ui_tests:
           title: UI Tests
           description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: Shumë
           Big Game: Big Game
+          new stage: new stage
         sciencePD2:
+          title: Computer Science in Science PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -773,6 +745,9 @@ sq:
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
         sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
           new stage: new stage
           Welcome: Welcome
           Curricular Modules: Curricular Modules
@@ -781,6 +756,9 @@ sq:
           Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
         cspunit2:
           title: 'CSP Unit 2 - The Internet'
           description_short: Interneti
@@ -818,9 +796,12 @@ sq:
           One Way Functions - Ice Cream Vans: 'One Way Functions - Ice Cream Vans'
           Public Key Crypto: Public Key Crypto
           Security and Hacking in the Real World: Security and Hacking in the Real World
+          Packets and Making a Reliable Internet: Packets and Making a Reliable Internet
+          Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Evaluation Blocks: Blloqet e Vlerësimit
           Strings and Images: Stringjet dhe Imazhet
           Defining Variables: Përcaktimi i Variablave
@@ -857,12 +838,15 @@ sq:
           Online PD: Online PD
           title: All the Things!
           description: All the level types for UI testing
+          description_short: All the level types for UI testing
           Odometer: Odometer
           Text Compression: Text Compression
           Pixelation: Pixelation
+          Multi2: Multi2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -875,11 +859,11 @@ sq:
           Booleans: Booleans
           "Eval: Conditionals": 'Eval: Kushtet'
           Next Steps: Next Steps
-        Calc Define Funcs 5 - multiply 1:
-          "Eval: Defining Functions": 'Eval: Defining Functions'
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Imitues Interneti
@@ -890,6 +874,7 @@ sq:
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Welcome!: Welcome!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
@@ -897,19 +882,10 @@ sq:
           App Lab: Laboratori i Aplikacionit
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-        OnlinePD-K5:
-          Introduction to PD: Hyrje në PD
-          K-5 Courses: K-5 Courses
-          Writing computer programs: Duke shkruar programe kompjuterike
-          "Programming Concept: Loops": 'Programming Concept: Loops'
-          Unplugged lessons: Mësimet unplugged
-          "Programming Concept: Conditionals": 'Programming Concept: Conditionals'
-          Computer Science Pedagogy: Computer Science Pedagogy
-          "Programming Concept: Functions": 'Programming Concept: Functions'
-          Teacher Dashboard: Teacher Dashboard
-          "Programming Concept: Events": 'Programming Concept: Events'
-          Reflection: Reflection
-          Next Steps: Next Steps
+        K5-OnlinePD:
+          title: 'Teaching Courses 1-4: The Basics'
+          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -919,4 +895,90 @@ sq:
           "Mastering the Basics: Events": 'Mastering the Basics: Events'
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Planning: Planning
-          Mastering the Basics - Sequencing: 'Mastering the Basics - Sequencing'
+          Next Steps: Next Steps
+          Looking Ahead: Looking Ahead
+        ECSPD2:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description: Blended Summer Study
+          description_short: Blended Summer Study
+          Welcome!: Welcome!
+          Unit 1, Days 1-2: Unit 1, Days 1-2
+          Unit 1, Days 3-4: Unit 1, Days 3-4
+          Unit 1, Days 5-7: Unit 1, Days 5-7
+          Unit 1, Days 8-9: Unit 1, Days 8-9
+          Unit 1, Day 10: Unit 1, Day 10
+          Unit 1, Day 11-14: Unit 1, Day 11-14
+          Unit 1, Day 15-16: Unit 1, Day 15-16
+          Unit 1, Day 17-19: Unit 1, Day 17-19
+          Wrap-up: Mbështjell
+        equityPD:
+          title: Leading a Discussion on Equity
+          description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
+          Introduction to the Equity PD: Introduction to the Equity PD
+          Equity Vs. Equality: Equity Vs. Equality
+          Code.org Equity PD: Code.org Equity PD
+          Necessary Background: Necessary Background
+        hoc2015:
+          title: Hour of Code 2015
+          description_short: Use Play Lab to create a story or game.
+          description: Use Play Lab to create a story or game.
+          Hour of Code: Ora e Kodit
+        algebraPD2:
+          title: Computer Science in Algebra PD Phase 2
+          description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
+          Course Overview: Course Overview
+          Computer Science Pedagogy: Computer Science Pedagogy
+          Teacher Dashboard: Teacher Dashboard
+          Evaluation Blocks: Blloqet e Vlerësimit
+          Strings and Images: Stringjet dhe Imazhet
+          Writing Contracts: Writing Contracts
+          Defining Variables: Përcaktimi i Variablave
+          Defining Functions: Përcaktimi i Funksioneve
+          Rocket-Height: Rocket-Height
+          Booleans: Booleans
+          "Eval: Conditionals": 'Eval: Kushtet'
+          Next Steps: Next Steps
+          Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
+          Teaching with the Design Recipe: Teaching with the Design Recipe
+          Practice with Puzzles: Practice with Puzzles
+          Welcome!: Welcome!
+          The Design Recipe: Receta e Dizenjimit
+          Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Welcome!
+          Wrap-Up: Mbyll
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Welcome!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Mbyll
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps

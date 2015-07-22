@@ -10,10 +10,16 @@
       "moveForward": {
         "params": [
           ""
+        ],
+        "paletteParams": [
+          ""
         ]
       },
       "turnLeft": {
         "params": [
+          ""
+        ],
+        "paletteParams": [
           ""
         ]
       },
@@ -44,7 +50,11 @@
     "slider_speed": "0.1",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L03-ThreeSteps.gif",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false"
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>

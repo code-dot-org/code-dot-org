@@ -1,0 +1,36 @@
+name 'ECSPD Online U1D8-9 Resources'
+title ''
+css 'unplugged'
+
+markdown <<MARKDOWN
+## Impact of Computers and Communication
+
+In Unit 1, Day 8-9, students investigate the effects of digital communication.
+
+#### Suggested Resources
+
+Remember the old iPhone commercials? "There's an App for That" was a line we heard all the time when the iPhone was first coming out. Although your students will likely not remember a time before digital communication, they will likely be able to describe how smart phones affected their lives. The discussion by talking about smartphones may help your students draw clearer conclusions about the effect of digital communication.
+
+Watch the video and read the short articles linked below.
+
+<iframe width="800" height="430" src="https://www.youtube.com/embed/LamtBiGLzI8" frameborder="0" allowfullscreen></iframe>
+
+*[Can't see the video? Click here](http://videos.code.org/ecs-pd2-online/iphone-commercial-family.mp4).*
+
+*Like the old video better? You can find it <a href="https://www.youtube.com/watch?v=szrsfeyLzyg" target="_blank">on YouTube</a> or [here](http://videos.code.org/ecs-pd2-online/iphone-commercial-app.mp4)*
+
+#### Additional Resources:
+
+Here are three short articles that investigate some issues and ideas regarding internet communication that might be brought up by your students during the journaling and discussion sections of this lesson. As you read through them, think about techniques you could use to facilitate discussion in your class. When you are finished, click "Continue" to move on to the next level.
+
+* <a href="http://www.cnbc.com/id/100646197" target="_blank">False Rumor of Explosion at White House Causes Stocks to Briefly Plunge; AP Confirms Its Twitter Feed Was Hacked</a>
+
+* <a href="http://www.psmag.com/nature-and-technology/networks-changed-social-media-internet-communication-82554" target="_blank">Don't Fear the Network: The Internet Is Changing the Way We Communicate for the Better</a> 
+
+* <a href="http://www.npr.org/sections/alltechconsidered/2014/04/11/301791749/cant-ask-that-some-job-interviewers-go-to-social-media-instead" target="_blank">Can't Ask That? Some Job Interviewers Go To Social Media Instead</a>
+
+> Reflect: How can you help your students understand the effects of digital communication?
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

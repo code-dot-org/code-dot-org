@@ -132,9 +132,7 @@ ru:
       2-3 Bee Loops 10_instruction: Можешь ли ты использовать цикл с условием внутри двух других циклов, чтобы собрать весь нектар?
       2-3 Bee Loops 11_instruction: Используй цикл с условием, чтобы собрать весь нектар с цветов на этом поле.
       2-3 Bee Loops 12_instruction: Используй цикл с условием, чтобы собрать весь нектар с цветов на этом поле.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      2-3 Bee Loops 13_instruction: 'Оценка: Используйте блок повтора, чтобы собрать весь нектар.'
       2-3 Bee Loops 1A_instruction: 'Привет, я пчелка. Поможешь мне собрать нектар с этих цветов? '
       2-3 Bee Loops 2_instruction: Используй цикл, чтобы собрать нектар и сделать мед.
       2-3 Bee Loops 2A_instruction: Можешь ли ты упростить задание с помощью цикла?
@@ -265,11 +263,7 @@ ru:
       4-5 Artist Patterns 5.5_instruction: Сколько Вам нужно повторять этот блок, чтобы нарисовать полную сетку алмазов?
       4-5 Artist Patterns 5_instruction: 'Давайте повторим это, чтобы создать строку из 6 бриллиантов. Обратите внимание: мы изменили код "повторить" на 3 раза вместо 2. Как Вы думаете, почему?'
       4-5 Artist Patterns 6_instruction: Сколько раз Вам нужно повторить этот блок, чтобы нарисовать полную сетку алмазов?
-      4-5 Artist Patterns 7_instruction: |
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
+      4-5 Artist Patterns 7_instruction: 'Давайте изменим код последней головоломки так, чтобы усложнить узор. Обратите внимание, как алмазы частично перекрывают друг друга. Попробуйте поменять первую команду «перейти назад» со 100 на 50 (т.е. уменьшить прыжок наполовину) - теперь как далеко должен «перейти назад» художник во время второго прыжка?'
       4-5 Artist Patterns 8_instruction: Используйте цикл, чтобы нарисовать шестиугольник со стороной 40 пикселей и углами в 60 градусов.
       4-5 Artist Patterns 9.5_instruction: Зациклите этот участок программы, чтобы нарисовать два ряда шестиугольников. Обратите внимание на то, как второй ряд сдвинут вправо.
       4-5 Artist Patterns 9_instruction: 'Теперь повторите этот участок 3 раза, чтобы нарисовать полный ряд. Подсказка: расстояние между крайними точками каждого шестиугольника равно 80-ти пикселам.'
@@ -278,18 +272,13 @@ ru:
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |
-        The bee can't tell if this is a flower
-        or a honeycomb. Gather nectar only from flowers, but first check if it is
-        a flower or a honeycomb.
+      4-5 Bee Conditionals 1_instruction: Пчелы не знают, что они нашли, поэтому сначала проверьте, цветок это или пчелиные соты. Собирайте нектар только с цветов.
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
       4-5 Bee Conditionals 2_instruction: Пчела хочет только нектар сейчас. Помните, не все объекты являются цветами, поэтому проверьте, чтобы собирать нектар только с цветов.
-      4-5 Bee Conditionals 3_instruction: |
-        Now the bee just wants to make honey.
-        Check to make honey only at honeycombs.
+      4-5 Bee Conditionals 3_instruction: А теперь пчела хочет сделать мед. Проверяйте чтобы делать мед только в сотах.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
@@ -301,54 +290,29 @@ ru:
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
-      4-5 Bee Conditionals 6_instruction: |
-        This purple flower may have either 3,
-        2, or 1 nectar. Here an if-else block is combined with another if-else block
-        to create an if, else-if, else block. Complete the solution to collect the
-        unknown amount of nectar.
-      4-5 Bee Conditionals 7_instruction: |
-        Remember that purple flowers can have
-        3, 2, or 1 nectars. Complete the "check purple flower" function and use
-        it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write a function inside the block called
-        "check flower make honey." Your function should check how much nectar the
-        purple flower has and collect it, move forward, and then make honey.
-      4-5 Bee Conditionals Assessment 1_instruction: |
-        Assessment: This code is wrong.
-        Complete the "get nectar or make honey" function, then call it to collect
-        all nectar and honey. Remember that purple flowers can have 3, 2, or 1 nectars.
+      4-5 Bee Conditionals 6_instruction: 'У этого фиолетового цветка может быть 3, 2 или 1 нектар. Здесь блок если-иначе сочетается с другим блоком если-иначе для создания блока если, иначе если, иначе. Полное решение  - это собрать неизвестное количество нектара.'
+      4-5 Bee Conditionals 7_instruction: Помните, что фиолетовый цветы могут иметь 3, 2 или 1 нектар. Закончите функцию «Проверка фиолетового цветка» и используйте её, чтобы собрать все нектары на цветах.
+      4-5 Bee Conditionals 8_instruction: Напишите функцию внутри блока, под названием «проверить цветок сделать мед». Ваша функция должна проверить сколько нектара у фиолетового цветка и собрать его, походить вперед и затем сделать мед.
+      4-5 Bee Conditionals Assessment 1_instruction: 'Проверка: Это неправильный код. Доделайте функцию «получить нектар или сделать мед», а затем вызовите её для сбора нектара и меда. Помните, что фиолетовые цветы могут иметь 3, 2 или 1 нектар.'
       4-5 Bee Debugging 1_instruction: Эти блоки не дают мне покоя. Можете их исправить?
       4-5 Bee Debugging 10_instruction: Найдите ошибки и исправьте их.
       4-5 Bee Debugging 11_instruction: Это считается верно?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
+      4-5 Bee Debugging 2_instruction: Помогите пчеле собрать нектар и сделать мёд.
       4-5 Bee Debugging 3_instruction: Найдите ошибки и исправьте их.
-      4-5 Bee Debugging 4_instruction: "These blocks don't work. What's the pattern?"
+      4-5 Bee Debugging 4_instruction: Эти блоки не работают. Какая закономерность?
       4-5 Bee Debugging 5_instruction: Что-то пошло не так...
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
+      4-5 Bee Debugging 6_instruction: Фиолетовый цветок имеет неизвестное количество нектара. Исправьте блоки, чтобы получить весь нектар из цветка.
       4-5 Bee Debugging 7_instruction: В функции что-то отсутствует...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
+      4-5 Bee Debugging 8_instruction: Эта функция правильная, но она не используются надлежащим образом.
       4-5 Bee Debugging 9_instruction: Почему пчела делает недостаточно мёда?
       4-5 Bee Debugging Assessment 1_instruction: 'Оценка: Исправьте код.'
       4-5 Bee Nested Loops 1_instruction: Используйте цикл, чтобы собрать весь нектар.
       4-5 Bee Nested Loops 2_instruction: 'Собери весь нектар с каждого цветка. Используй вложенный цикл. '
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: |
-        Collect all of the nectar from each flower
-        and make honey at each honeycomb. Use a nested loop. 
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
+      4-5 Bee Nested Loops 3_instruction: Соберите весь нектар, переместив стартовый код внутрь вложенного цикла.
+      4-5 Bee Nested Loops 4_instruction: 'Соберите  все нектар из каждого цветка и сделайте мед в каждой соте. Используйте вложенные циклы. '
+      4-5 Bee Nested Loops 5_instruction: Соберите весь нектар путем создания вложенного цикла.
       4-5 Bee Nested Loops 6_instruction: Соберите нектар.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
+      4-5 Bee Nested Loops 7_instruction: Поместите этот цикл внутрь другого цикла для создания вложенного цикла и соберите весь нектар с цветов.
       4-5 Bee Nested Loops 8_instruction: |
         Collect all of the nectar from these flowers
         by nesting a while loop. Replace the inner repeat times block with a while
@@ -438,9 +402,7 @@ ru:
       4-5 Nested Loops 11_instruction: |
         Can you draw these 10 squares of this sidewalk
         using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
+      4-5 Nested Loops 12_instruction: Можете нарисовать 36 этих треугольников, используя вложенный цикл?
       4-5 Nested Loops 2_instruction: |
         Now nest this loop inside another loop to
         draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
@@ -489,6 +451,10 @@ ru:
       4-5 While Loops Assessment 1_instruction: |
         There are a lot of holes and piles.  Help
         me to fill and remove them to make the ground flat.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -910,10 +876,6 @@ ru:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      course 1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both
-        the jump and draw blocks
-      course 1 artist 1 level 9_instruction: Draw this using three lines
       Course 2 Bee Loops 1_instruction: |
         Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? 
@@ -937,9 +899,13 @@ ru:
         The bee only wants nectar right now. Remember, not
         all objects are flowers, so check to gather nectar only at flowers.
       Course 4 Artist 1_instruction: 'Помоги мне дорисовать мою коробку. (длина каждой стороны - 300 пикселей) '
-      Course 4 Artist 10_instruction: |
-        It's Free Play time! Have fun and draw anything
-        you would like. 
+      Course 4 Artist 10_instruction: 'Настало время свободной игры! Получайте удовольствие и рисуйте всё, что захочется. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: |
         Can you loop this code to draw the greyed out
         square?
@@ -949,21 +915,24 @@ ru:
         the repeat block with that number to create a circle of colors.
       Course 4 Artist 5_instruction: |
         Draw the other half of this design so it's
-        symmetrical. The triangles are equilateral and are 50 pixels long.
+        symmetrical. The triangles are equilateral and are 50 pixels long. Hint: You
+        may have to run the code several times to figure out all of the blocks that
+        need to be added.
       Course 4 Artist 6_instruction: |
         Complete the code to draw these triangles.
-        Hint: 3 triangles in a 360 degree rotation.
+        Hint: There are 3 triangles within the 360 degree rotation...how many times
+        does 3 go into 360?
       Course 4 Artist 7_instruction: |
         Now nest this loop inside another loop to draw
         10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete
         a 360 degree rotation.  
       Course 4 Artist 8_instruction: |
         Draw this sun by looping this whole block of
-        code 12 times.
+        code multiple times.
       Course 4 Artist 9_instruction: |
         Loop this design 10 times and make sure to
-        turn in between each shape that's drawn. Here's a hint for how much you
-        have to turn: What is 360 divided by 10?
+        turn between each shape that's drawn. Here's a hint for how much you have
+        to turn: What is 360 divided by 10?
       Course 4 Artist Binary 1_instruction: |
         Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to turn on the go from left
@@ -1115,6 +1084,7 @@ ru:
         We have given you most of the code
         to create a function. However there seems to be something missing. Can you
         make this function block complete?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
         square with 50 pixel sides
@@ -1193,8 +1163,9 @@ ru:
       Course 4 Artist Vars 12_instruction: |
         Let's set the "sides" variable to
         5. The more sides we add to this algorithm, the bigger this whole pattern
-        gets! Let's add a new variable called "length" and use that wherever you
-        have a "move forward." Set the "length" variable to 75 for this shape.
+        gets! Notice that there is a new variable called "length". We can now use
+        that wherever we have a "move forward." Set the "length" variable to 75
+        for this shape.
       Course 4 Artist Vars 13_instruction: |
         The more sides a shape has, the shorter
         each side needs to be in order for the whole pattern to fit on the screen.
@@ -1222,11 +1193,10 @@ ru:
         Use the variable "sides" to control
         how many times this loop gets run.
       Course 4 Artist Vars 6_instruction: |
-        Hmmm, I tried changing the "sides" variable
-        to 4 from the code in the last puzzle, but it's still drawing a triangle.
-        Can you use the "sides" variable (along with a math block) to make sure
-        that I turn the right amount too? Hint: 360 divided by the number of sides
-        will give you the number of degrees to turn.
+        I changed the sides variable to 4 from
+        the code in the last puzzle, can you use the sides variable (along with a
+        math block) to make sure that I turn the right amount? To draw a regular polygon
+        I should turn 360 / sides each time.
       Course 4 Artist Vars 7_instruction: |
         Can you modify the "sides" variable
         to help me draw this hexagon?
@@ -1238,12 +1208,12 @@ ru:
         this time) 
       Course 4 Artist Vars 9_instruction: |
         Modify this algorithm so it uses the "sides"
-        variable instead of a fixed number to draw a triangle. Replace the number
-        3 with the "sides" variable, and use the "set sides to" block.
+        variable instead of a fixed number to draw a triangle. Use the "set sides
+        to" block.
       Course 4 Bee 1_instruction: |
-        The bee can't tell if this is a flower or a honeycomb.
-        Check first if it is a flower or a honeycomb, and then only gather nectar
-        from it if it is a flower. 
+        The bee can't tell what's under the cloud! First,
+        check if it is a flower or a honeycomb. Then only gather nectar from it if
+        it is a flower. 
       Course 4 Bee 2_instruction: |
         Check each object to see if it's a flower. If
         it is, collect nectar...otherwise, you can ignore it!
@@ -1502,7 +1472,7 @@ ru:
       Course 4 Play Labs For Loops 5_instruction: |
         In the last stage we counted the
         square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
-        count the cube of each number (1, 8, 27, 64, 125, 216, 343….)
+        count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
         is any whole number that is only divisible by itself and 1. Use the "is_prime"
@@ -1513,6 +1483,9 @@ ru:
       Course 4 Play Labs For Loops 8_instruction: |
         What for loop would make me speak
         19, 27, 35, 43, 51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Получите три нектара и затем сделайте два мёда
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -1576,13 +1549,13 @@ ru:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -1621,7 +1594,7 @@ ru:
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
@@ -1637,9 +1610,8 @@ ru:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1690,10 +1662,11 @@ ru:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1738,8 +1711,8 @@ ru:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -1763,6 +1736,12 @@ ru:
       frozen square loop 3x_instruction: Давайте создадим три квадрата. Поворачивайте на 120 градусов после каждого квадрата.
       frozen square loop_instruction: Привет, я Анна из Эренделла! Давайте сделаем квадрат используя блок «Повторить», в который вложим другие блоки. Какое число (???) надо указать в блоке «Повторить», чтобы получился квадрат?
       frozen square snowflake_instruction: Вы можете создать снежинку, используя блок «Повторить», чтобы сделать квадрат 10 раз, и блок «Повернуть», чтобы повернуть на 36 градусов после каждого квадрата?
+      hoc2015_intro_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
+      hoc2015_sandbox_instruction: |
+        Hiro is "actor 1".  Use the Move block to move
+        Hiro right to touch Baymax.
       Infinity_catch_instruction: 'Используя клавиши со стрелками, можете сделать так, чтобы Эльза ("персонаж 2") догнала Анну?'
       Infinity_finale_instruction: Создайте что хотите и поделитесь этим с друзьями!
       Infinity_move_collide_instruction: 'Хиро это "персонаж 1". Подвиньте его вправо к Баймаксу и воспроизведите звук, когда они соприкоснутся.'
@@ -1776,6 +1755,7 @@ ru:
       Infinity_touch_faster_instruction: Прикоснитесь ещё к нескольким снежинкам!
       Infinity_touch_four_instruction: Передвиньте Анну вверх, вниз, влево, и вправо, чтобы она дотронулась до каждой из четырёх снежинок.
       Infinity_touch_score_instruction: 'Зарабатывайте очки, когда Анна коснётся снежинок. Нажмите "Выполнить" и коснитесь каждой снежинки по одному разу.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Нарисуйте короткую линию вверх и длинную вправо!
       K-1 artist 1 level 10_instruction: Нарисуйте пунктирную линию с помощью блоков рисования и прыжка
       K-1 artist 1 level 9_instruction: Draw this using three lines
@@ -2096,8 +2076,8 @@ ru:
         function editor. 
       NEW Course 4 Artist Functions 8_instruction: |
         We have given you most of the
-        code to create a function. However there seems to be something missing. Can
-        you edit the function definition to draw the triangle?
+        code to create a function, but there seems to be something missing. Can you
+        edit the function definition to draw the triangle?
       NEW Course 4 Artist Functions 9_instruction: |
         Which block do you need to add
         to get the triangle to sit on top of the square?
@@ -2111,10 +2091,10 @@ ru:
       NEW Course 4 Artist Params 13_instruction: |
         Let's edit this "draw a shape"
         function. It already has a "length" parameter. Now, let's edit the function
-        to also add a "sides" parameter. Remember the angle to turn for a given
-        shape is 360 divided by the sides it has. Hint: lengths for each shape are;
-        the triangle is 100 pixels, the hexagon is 25 pixels and the square is 50
-        pixels.
+        to add a "sides" parameter. Remember the angle to turn for a given shape
+        is 360 divided by the number of sides it has. Hint: These are the lengths
+        for each shape: the triangle is 100 pixels, the hexagon is 25 pixels, and
+        the square is 50 pixels.
       NEW Course 4 Artist Params 14_instruction: |
         Can you recreate these shapes?
         Drag the "length" parameter into the function definition. 
@@ -2164,8 +2144,9 @@ ru:
         block to draw a set of 50 pixel triangles. 
       NEW Course 4 Artist Vars 4 5_instruction: Вы замечательно справились в прошлый раз, давайте попробуем ещё раз! На этот раз создадим крутой дизайн с 60-ти пиксельными шестиугольниками.
       NEW Course 4 Artist Vars 4_instruction: |
-        Let's try it again. Now, let's make
-        this cool design with with 60 pixel hexagons.
+        Let's try it again. Can you set the
+        length variable to make this cool design with hexagons? Hint: It's a multiple
+        of 10.
       NEW Course 4 Artist Vars 6_instruction: |
         Can you help me draw this cool pattern
         by dropping in the "length" variable block into the correct places?
@@ -2200,7 +2181,7 @@ ru:
         down. Try gathering this nectar by counting down from 5 to 1 by 1.
       NEW Course 4 Bee For Loops 6_instruction: |
         The last number in your for loop
-        is called the "increment,"  and each time the loop is run the counter variable
+        is called the "increment." Each time the loop is run the counter variable
         changes by the increment. Try collecting these flowers using an increment
         of 2.
       NEW Course 4 Bee For Loops 7_instruction: |
@@ -2361,25 +2342,21 @@ ru:
         always see at least a bit of him, so lets write some functions that help make
         sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
-        and return true if he's inside the left boundary of the yard (x > -25). If
-        your function works, Sam shouldn't be able to leave the yard from the left
-        side.
+        and return true if he's completely visible on screen. If your function works,
+        Sam shouldn't be able to leave the yard from the left side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the safe-right?
-        function to make sure Sam can't go past x = 425.
+        on the left, now let's do the same thing on the right. Complete the safe-right?
+        function to make sure Sam can't go off the right side of the screen.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
         from going either direction? Try using the AND block to program the function
         on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        Free Play: Awesome, we've kept Sam safe
+        on the left and right! Use this free play stage to experiment with your functions
+        and further improve onscreen?
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -2449,18 +2426,36 @@ ru:
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: |
         This poem has been compressed by
         replacing two common phrases with symbols in the dictionary. Can you identify
         another common pattern to compress the poem further?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
@@ -2768,17 +2763,13 @@ ru:
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Используйте этот тест, чтовы создать xml для модульного тестирования

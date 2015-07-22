@@ -1,0 +1,19 @@
+title 'Leading a Discussion on Equity'
+description "How to lead a discussion on equity in a Code.org PD"
+description_short "How to lead a discussion on equity in a Code.org PD"
+login_required 'true'
+pd 'true'
+
+stage 'Necessary Background'
+level 'equity Intro'
+level 'equity v equality'
+level 'equity is more'
+level 'equity in CS'
+
+stage 'Code.org Equity PD'
+level 'equity lead 1'
+level 'equity activity'
+level 'equity vids'
+level 'equity expect'
+level 'equity discuss'
+level 'equity resources'

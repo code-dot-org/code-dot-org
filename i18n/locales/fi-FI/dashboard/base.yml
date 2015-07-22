@@ -312,7 +312,7 @@ fi:
       answer_viewer: Answer Viewer
       student: Oppilas
       viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      try_it_yourself: Kokeile itse
       section: Ryhmä
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
@@ -334,7 +334,9 @@ fi:
     classroom_activity: Tietokoneeton tekeminen
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Katsaus kursseihin 1, 2 ja 3
     lesson_plans: Tuntisuunnitelmat
     signin_message: 'Jo rekisteröitynyt? %{link}'
@@ -369,6 +371,7 @@ fi:
     heading_legacy: '<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>'
     your_gallery: Galleria
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Mies
     female: Nainen
@@ -401,6 +404,10 @@ fi:
     autoplay_option: Toista videot automaattisesti
     download: Lataa video
   compatability:
+    https:
+      header: Ota HTTPS käyttöön sivulla Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Piilota varoitus
     working:
       header: Emme juuri nyt tue käyttämääsi selainta.
       message: "Code.org käyttää modernia webteknologiaa. Tämä tekee sivustosta nopeamman käyttää. Selaimesi ei tue kaikkia vaadittavia ominaisuuksia, ja saatat kokea ongelmia käyttäessäsi sivuston tätä osaa. Auta meitä <a href='%{report_issue_url}'>raportoimalla löytämäsi ongelmat</a>. Voit myös <a href='%{supported_browsers_url}'>päivittää selaimesi tuettuun versioon</a>."
@@ -447,9 +454,10 @@ fi:
     flappy:
       title: Flappy Code
       body: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!
-    20hour:
-      title: Johdantokurssi
-      body: Kokeile 20 tunnin kurssia Johdanto tietojenkäsittelytieteeseen.
+    20-hour:
+      title: Accelerated Course
+      body: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
       try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
@@ -502,8 +510,8 @@ fi:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: Kirjoita vastauksesi tähän
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    open_response_title: Kiitos
+    open_response_body: Kiitos vastauksestasi!
   dialog:
     ok: OK
   time:

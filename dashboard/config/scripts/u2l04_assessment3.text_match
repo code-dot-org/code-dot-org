@@ -1,6 +1,6 @@
 name 'U2L04 Assessment3'
-title 'Routers and Addresses: Question 3'
+title 'Routers and Redundancy: Question 5'
 
 markdown <<MARKDOWN
-Why was the Internet changed from IPv4 to IPv6? How did this change affect IP addresses?
+Can you know in advance the path a message will take between you and another computer on the Internet? Justify your answer.
 MARKDOWN

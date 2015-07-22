@@ -44,7 +44,7 @@ et:
           Jigsaw: Etapp 1
         Step Levels:
           desc: Labürint (beeta)
-          MazeStep: Stage Step
+          MazeStep: Etapi samm
         edit-code:
           desc: Muuda koodi (beeta)
           MazeEC: Etapp 1
@@ -66,7 +66,7 @@ et:
           Jigsaw: Etapp 1
         step:
           desc: Labürint (beeta)
-          MazeStep: Stage Step
+          MazeStep: Etapi samm
         wordsearch:
           desc: Spelling Bee (beta)
           WordSearch: Etapp 1
@@ -87,21 +87,21 @@ et:
         Unplug7: Laulu kirjutamine
         Farmer2: Talunik tase 2
         Unplug8: Abstraction
-        Artist4: The Artist 4
+        Artist4: Artist 4
         Unplug9: Relay Programming
         Farmer3: The Farmer 3
         Unplug10: Internet
-        Artist5: The Artist 5
+        Artist5: Artist 5
         Unplug11: Kokkuvõte
         MazeEC: Labürint
-        Bounce: Bounce
+        Bounce: Põrkama
         Flappy: Flappy Bird
-        Jigsaw: Jigsaw
+        Jigsaw: Pusle
         MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
+        Wordsearch: Sõnaotsing
         Webapp: Rakenduste labor
         ArtistEC: Kunstnik
-        TextMatch: Text Match
+        TextMatch: Teksti vaste
         StudioEC: Play Lab
         Applab: Rakenduste labor
         NetSim: Interneti simulaator
@@ -116,34 +116,33 @@ et:
         if: '"kui" plokk'
         if_else: If-else block
         loop_times: Repeat times block
-        loop_until: Repeat until block
+        loop_until: Korda kuni plokk
         loop_while: While block
         loop_for: Counter block
         function: Funktsioonid
         parameters: Functions with parameters
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get angry!
-        maze_2_5: "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?"
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: 'Help me banish this bad piggy using the fewest number of blocks. Try using more than one "repeat times" block.'
-        maze_2_8: |-
-          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
-        maze_2_9: 'Ok, try the new "repeat until" block - it will repeat until I reach the annoying pig.'
-        maze_2_10: 'Ok, one last time for practice - can you solve this one using only 4 blocks?'
-        maze_2_11: 'Dear person.  Me zombie. Me hungry. Must... get... to sunflower... Can you get me there with only 5 blocks?'
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only 5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time.'
-        maze_2_14: 'Ok, this is just like the last puzzle, but you need to remember how you used the "if" block and the "repeat" block together.'
-        maze_2_15: 'Me want sunflower! Use an "if" block to get me there with the fewest number of blocks.'
-        maze_2_16: "Ok, let's do that again for practice - this isn't very different, but watch out for the chompers!"
-        maze_2_17: 'The "If-else" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.'
-        maze_2_18: 'One more practice of the "if-else" block, can you get it right on your first try?'
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.
+        maze_2_2: 'Kas sa saad aidata mul ulakas siga kinni püüda? Sea paar "liigu edasi" plokki kokku ja vajuta "Käivita" et mind sinna aidata. '
+        maze_2_1: See siga ajab mu suled turri. Aita mul ta leida!
+        maze_2_2_5: Jälgi rada ja juhi mind rumala sea juurde. Väldi dünamiiti või suled lendavad!
+        maze_2_3: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
+        maze_2_4: Ole rahulik ja aita mul paha siga leida. Muidu ma võin vihaseks saada!
+        maze_2_5: On viis, kasutades ainult 2 plokki, jõudmiseks sea juurde. Kas saad sellele pihta?
+        maze_2_6: Püüa mind aidata rohelise sissetungija juurde, kasutades ainult kolme plokki.
+        maze_2_7: 'Aita mul see paha siga pagendada, kasutades miinimum arv plokke. Proovi kasutada "korda" plokki rohkem kui üks kord.'
+        maze_2_8: 'Kui plokk on hall, tähendab see seda, et sa ei saa seda kustutada. Lahenda see pusle kasutades "korda" plokki mis kordab 3 korda. Proovi asetada need 3 plokki: liigu, liigu, keera,  halli "korda" ploki sisse.'
+        maze_2_9: 'Hea küll, proovi uut "korda kuni" plokki - see jätkab kordamist kuni ma jõuan tüütu seani.'
+        maze_2_10: 'Hea küll, viimane kord harjutada - kas sa saad lahendada selle kasutades ainult 4 plokki?'
+        maze_2_11: Kallis inimene. Mina zombi. Mina näljane. Pean... saama... päevalillele...Kas sa saad mind sinna ainult 5 plokiga?
+        maze_2_12: Hea küll, see on sarnane, kuid siiski veidike erinev. Kas sa saad seda teha ainult 5 plokiga?
+        maze_2_13: 'Kasuta uut "kui" plokki, et lasta mul otsustada kuna keerama peab. Vihje: sa vajad ainult ühte lisaplokki agaõpi kuidas me selle sätime, nii et sa suudad seda järgmine kord ise teha.'
+        maze_2_14: 'Hea küll, see on nagu viimane mõistatus aga sa pead meelde jätma kuidas sa kasutasid "kui" plokki ja "korda" plokki koos.'
+        maze_2_15: 'Ma tahtma päevalille! Kasuta "kui" plokki et saada mind vähima plokkide arvuga sinna.'
+        maze_2_16: 'Hea küll, teeme seda harjutamiseks uuesti - see ei ole väga erinev, kuid taimede eest!'
+        maze_2_17: '"Kui-teine" plokid kontrollivad tingimust ja siis teeb vastavalt ühte või teist asja. Et saada mind päevalilleni kasuta seda uut plokki.'
+        maze_2_18: 'Üks harjutamine veel "kui-teine" plokiga, kas sa saad esimese korraga õigesti?'
+        maze_2_19: Kas sa saad lisada 3 plokki et aidata mul lahendada veel keerulisem labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu, ükskõik kui pikk see on.
         turtle_1_1: "Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture."
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking it in the new "set color" block.'
         turtle_1_3: Make a square using only 3 blocks.
@@ -418,7 +417,7 @@ et:
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
+        C3_bounce: Põrkama
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: Arvutuslik mõtlemine
         C3_dice_race: Dice Race
@@ -427,6 +426,7 @@ et:
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
+        C4_loops_zombie: Tsüklid
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
@@ -442,16 +442,16 @@ et:
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        frozen_intro: Kooditunni sissejuhatus
+        frozen_loops: Sissejuhatus loops
+        frozen_functions: Funktsioonide tutvustus
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
         tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: 'Play Lab - Introduction'
-        infinity_playlab_events: 'Play Lab - Events'
-        infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
+        infinity_playlab_intro: 'Mängu Labor - sissejuhatus'
+        infinity_playlab_events: 'Mängu Labor - Üritused'
+        infinity_playlab_repeat_forever: 'Mängu Labor - Korda Igavesti'
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: 'Color pixelation widget - Part 1'
         csp_pixelation_color_2: 'Color pixelation widget - Part 2'
@@ -461,6 +461,7 @@ et:
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'
@@ -512,11 +513,11 @@ et:
         edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
         logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
         length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: Kasuta kordus plokki et see kujund luua.
+        frozen_circle_function_in_circle_turn: Ära unusta peale igat ringi loomist keerata.
+        frozen_circle_function_with_parameter_circle: 'Kasuta " loo ring" plokki ja muuda suurus.'
+        frozen_snowflake_branch: 'Kasuta "joonista lumehelbe võrestik" plokki'
+        frozen_create_square: Lisa rohkem plokke, et luua ruut
         playlab_drag_say: 'Drag the "say" block here and type "hello"'
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
@@ -545,8 +546,8 @@ et:
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_right_runbutton: Lisa liigutamise plokk siia
+        Infinity_move_directions_callout: Milline plokk paneb Baymaxi üles liikuma kui üles noole klahvile on vajutatud?
+        Infinity_move_directions_callout_arrow: Noolte abil saate juhtida
+        Infinity_move_collide_callout: Mängi heli, kui sündmus juhtub.
+        Infinity_repeat_callout: Aseta Liigu plokid siia sisse

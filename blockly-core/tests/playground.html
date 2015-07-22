@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <title>Blockly Playground</title>
 <script type="text/javascript" src="../closure-library-read-only/closure/goog/base.js"></script>
-<script type="text/javascript" src="../core/initialization/deps.js"></script>
+<script type="text/javascript" src="./test_dependency_map.js"></script>
 <script type="text/javascript">
 'use strict';
-goog.require('Blockly');
+goog.require('Blockly.Playground');
 goog.require('goog.tweak');
 // Depending on the URL argument, render as LTR or RTL.
 var rtl = (document.location.search == '?rtl');
@@ -23,6 +23,20 @@ function start() {
     toolbox: toolbox,
     assetUrl: function(path) { return '../' + path; }
   });
+
+  goog.tweak.registerBoolean('openContract', 'pre-opens contract editor', false);
+  if (goog.tweak.getBoolean('openContract')) {
+    newContractEditor();
+  }
+}
+
+function newContractEditor() {
+  Blockly.defaultNumExampleBlocks = 2;
+  Blockly.useContractEditor = true;
+  Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
+    disableExamples: false
+  });
+  Blockly.contractEditor.openWithNewFunction();
 }
 
 function toXml() {
@@ -279,7 +293,11 @@ h1 {
     </category>
     <!--<category name="Variables" custom="VARIABLE"></category>-->
     <category name="Functions" custom="PROCEDURE"></category>
+<<<<<<< HEAD
     <category name="Variables" custom="FUNCTIONAL_VARIABLE" />
+=======
+    <category name="CSinA Vars" custom="FUNCTIONAL_VARIABLE" />
+>>>>>>> staging
   </xml>
 
   <h1>Blockly Playground</h1>

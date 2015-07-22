@@ -79,8 +79,31 @@ exports.move = function(spriteIndex, dir) {
   });
 };
 
+exports.moveEast = function() {
+  Studio.queueCmd(null, 'moveEast');
+};
+
+exports.moveWest = function() {
+  Studio.queueCmd(null, 'moveWest');
+};
+
+exports.moveNorth = function() {
+  Studio.queueCmd(null, 'moveNorth');
+};
+
+exports.moveSouth = function() {
+  Studio.queueCmd(null, 'moveSouth');
+};
+
 exports.changeScore = function(value) {
   Studio.queueCmd(null, 'changeScore', {'value': value});
+};
+
+exports.addItemsToScene = function(className, number) {
+  Studio.queueCmd(null, 'addItemsToScene', {
+    'className': className,
+    'number': number
+  });
 };
 
 /*

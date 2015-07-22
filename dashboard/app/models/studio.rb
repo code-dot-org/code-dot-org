@@ -19,6 +19,14 @@ class Studio < Grid
     custom_game_type
     complete_on_success_condition_not_goals
     input_output_table
+    code_functions
+    wall_map_collisions
+    block_moving_into_walls
+    grid_aligned_movement
+    remove_items_when_actor_collides
+    slow_js_execution_factor
+    marker_height
+    marker_width
   )
 
   def self.create_from_level_builder(params, level_params)

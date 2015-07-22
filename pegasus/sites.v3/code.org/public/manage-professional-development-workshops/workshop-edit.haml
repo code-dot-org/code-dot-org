@@ -12,7 +12,7 @@ theme: none
 
 #nav
   #goback
-    %a{href: '#/'} Workshop Dashboard
+    %a{"ng-href" => '#/'} Workshop Dashboard
     %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
     %b{style: "color: #ff8b02;"}
       %span{"ng-show" => "action == 'edit'"} Edit {{workshop.name()}}

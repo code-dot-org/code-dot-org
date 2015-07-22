@@ -8,9 +8,9 @@
 
 <% if @country == 'us' %>
 
-## ¡Un aula ganará un viaje a Washington D.C. para una Hora de Código, histórica y super secreta! {#dc}
+## ¡Un aula ganará un viaje a Washington D.C. para una Hora del Código, histórica y super secreta! {#dc}
 
-Code.org seleccionará un aula afortunada para asistir a un evento muy especial de la Hora de Código en la capital del país — ¡tan especial que todos los detalles están en secreto! Los estudiantes ganadores (con acompañantes) podrán disfrutar de un viaje con todos los gastos cubiertos a Washington, D.C. Los estudiantes participarán en un día lleno de actividades secretas el lunes 8 de diciembre.
+Code.org seleccionará un aula afortunada para asistir a un evento muy especial de la Hora del Código en la capital del país — ¡tan especial que todos los detalles están en secreto! Los estudiantes ganadores (con acompañantes) podrán disfrutar de un viaje con todos los gastos cubiertos a Washington, D.C. Los estudiantes participarán en un día lleno de actividades secretas el lunes 8 de diciembre.
 
 <% end %>
 
@@ -28,7 +28,7 @@ Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) gana
 
 ## ¡Aulas con suerte ganan una videoconferencia con un invitado! {#video_chat}
 
-20 aulas afortunadas serán invitadas a participar de un video chat para celebrar la Hora de Código el 8 de diciembre del 2014. Tus estudiantes podrán hacer preguntas y hablar con líderes en la industria de la tecnología. **El periodo de inscripción ha terminado. Los ganadores serán anunciados pronto.**
+20 aulas afortunadas serán invitadas a participar de un video chat para celebrar la Hora del Código el 8 de diciembre del 2014. Tus estudiantes podrán hacer preguntas y hablar con líderes en la industria de la tecnología. **El periodo de inscripción ha terminado. Los ganadores serán anunciados pronto.**
 
 <% end %>
 
@@ -36,7 +36,7 @@ Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) gana
 
 ## ¡100 aulas ganan un video chat con un invitado! {#video_chat}
 
-100 aulas afortunadas serán invitadas a participar en la cámara en vivo Q&As con titanes de la tecnología y famosos amantes de la tecnología. Los estudiantes podrán hacer preguntas y conversar con estos interesantes modelos a seguir para poner en marcha su Hora de Código.
+100 aulas afortunadas serán invitadas a participar en la cámara en vivo Q&As con titanes de la tecnología y famosos amantes de la tecnología. Los estudiantes podrán hacer preguntas y conversar con estos interesantes modelos a seguir para poner en marcha su Hora del Código.
 
 ### Sintoniza a los chats en vivo, o ve los videos archivados:
 
@@ -71,9 +71,9 @@ Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) gana
 
 <% end %>
 
-## Cada organizador gana un código de regalo en agradecimiento {#gift_code}
+## Cada organizador gana un código de regalo en agradecimiento
 
-¡Cada educador que sea anfitrión de una Hora de Código para sus estudiantes recibirá 10 GB en Dropbox o $10 de crédito en Skype como regalo de agradecimiento!
+¡Cada educador que sea anfitrión de una Hora del Código para sus estudiantes recibirá 10 GB en Dropbox o $10 de crédito en Skype como regalo de agradecimiento!
 
 <% if @country == 'ca' %>
 
@@ -101,7 +101,7 @@ Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) gana
 
 <% end %>
 
-## ¿Más preguntas sobre los premios? {#more_questions}
+## ¿Más preguntas sobre los premios?
 
 Revisa los [Términos y Condiciones](<%= hoc_uri('/prizes-terms') %>) o visita nuestro foro para leer las [Preguntas Frecuentes (FAQs)](http://support.code.org) y hacer tus propias preguntas.
 
@@ -145,6 +145,6 @@ Para calificar, debes registrar tu aula para la Hora de Programación a más tar
 
 Para calificar, toda tu escuela debe registrarse para la Hora de Programación y completar el [formulario de Aplicación a Hardware](<%= hoc_uri('/prizes') %>) a más tardar el 14 de Noviembre de 2014. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
 
-## Si toda mi escuela no puede participar en la Hora de Programación durante la semana de la educación en ciencias de la computación (8-14 de diciembre), ¿Puedo aún calificar para los premios?
+## Si toda mi escuela no puede participar en la Hora de Programación durante la semana de la educación en ciencias de la computación (7-13 de diciembre), ¿Puedo aún calificar para los premios?
 
 Sí, sólo asegúrate de enviar un plan logístico que muestre cómo toda tu escuela está participando en un periodo de tiempo razonable y regístrate para la Hora de Programación el 14 de noviembre.<% end %>

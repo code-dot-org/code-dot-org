@@ -3,9 +3,9 @@
     unplugged:
       Unplug1:
         title: Giới thiệu về khoa học máy tính
-        desc: Bài học này sẽ giới thiệu cho các bạn khái niệm về Khoa Học Máy tính
+        desc: Bài học này sẽ giới thiệu cho các bạn khái niệm về Khoa Học Máy Tính
           và giải thích công việc của nhà khoa học máy tính là gì. Đó là một cơ hội
-          cho học sinh sinh viên xem xét về vai trò của một nhà khoa học máy tính.
+          cho học sinh-sinh viên xem xét về vai trò của một nhà khoa học máy tính.
           Cuối mỗi hoạt động, mỗi học sinh cần ghi nhớ những gì các em đã được học.
           Bạn có thể bỏ qua dạy trẻ những từ mới liên quan đến bài sau, nhưng diễn
           đạt chúng theo cách sinh động và thú vị sẽ có hiệu quả hơn là việc chờ những
@@ -40,26 +40,26 @@
         video: Unplug3
       Unplug4:
         title: các bước lập trình
-        desc: Bài này bao gồm thuật toán. Sử dụng hình ảnh tangram và giấy vẽ sơ đồ,
-          bài tập đầu tiên sẽ thể hiện mức độ quan trọng của việc tạo ra những hướng
-          dẫn rõ ràng nhất có thể, Sau đó, lớp sẽ khám phá ra nhiều cách để gấp tờ
-          giấy thành hình chữ nhật, chú ý một vài cách có thể cần nhiều hoặc ít nếp
-          gấp hơn những cái khác.
+        desc: Bài này bao gồm những thuật toán. Sử dụng hình ảnh tangram và giấy vẽ
+          sơ đồ, bài tập đầu tiên sẽ chỉ ra mức độ quan trọng của việc tạo ra mỗi
+          hướng dẫn sao cho rõ ràng nhất có thể. Sau đó, lớp sẽ khám phá ra nhiều
+          cách để gấp tờ giấy thành hình chữ nhật, chú ý một vài cách có thể cần nhiều
+          hoặc ít nếp gấp hơn những cái khác.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
         title: Các hàm
         desc: Trong bài học này, học sinh sẽ làm một cái vợt mặt trời (suncatcher)
-          từ những sợi dây, hạt, và một thứ xinh xắn đặc biệt. Các em sẽ làm theo
-          một loạt những bước lặp đi lặp lại, sau đó được yêu cầu xác định một số
-          kĩ năng đã được lặp lại nhiều lần. Một khi những kỹ năng này được xác định,
-          chúng sẽ  được gọi từ một chương trình chính và quá trình sáng tạo tuyệt
-          vời sẽ được ghi lại trên một tờ giấy duy nhất. Chương trình cuối cùng sẽ
-          được hướng về toàn bộ lớp học, bất kể loại chuỗi hay hạt nào. Để có hiệu
-          quả, các bạn sẽ cần phải tóm tắt ra chi tiết những tài liệu cụ thể của họ
-          và tạo ra những thuật ngữ mơ hồ cho nguồn cung cấp của một cá nhân. Sử dụng
-          những điểm chung này là một sự giới thiệu biến tuyệt vời.
+          từ những sợi dây, hạt và một thứ xinh xắn đặc biệt. Các em sẽ làm theo một
+          loạt những bước lặp đi lặp lại, sau đó được yêu cầu xác định một số kĩ năng
+          đã được lặp lại nhiều lần. Một khi những kỹ năng này được xác định, chúng
+          sẽ  được gọi từ một chương trình chính và quá trình sáng tạo tuyệt vời sẽ
+          được ghi lại trên một tờ giấy duy nhất. Chương trình cuối cùng sẽ được hướng
+          về toàn bộ lớp học, bất kể loại chuỗi hay hạt nào. Để có hiệu quả, các bạn
+          sẽ cần phải tóm tắt ra chi tiết những tài liệu cụ thể của họ và tạo ra những
+          thuật ngữ mơ hồ cho nguồn cung cấp của một cá nhân. Sử dụng những điểm chung
+          này là một sự giới thiệu biến tuyệt vời.
         pdfs:
         - unplug5
         video: Unplug5
@@ -107,10 +107,10 @@
         video: Unplug10
       Unplug11:
         title: Tổng hợp
-        desc: Bước tổng hợp cuối cùng trong loạt 20 giờ đầu tiên sẽ giúp lớp học sống
-          lại những khoảnh khắc yêu thích của họ, hướng dẫn các em rằng bước tiếp
-          theo các em có thể tự mình thực hiện nếu các em học sinh thực sự có hứng
-          thú với khoa học máy tính.
+        desc: Bước tổng hợp cuối cùng trong loạt 20 giờ đầu tiên sẽ giúp lớp học tái
+          hiện lại những khoảnh khắc yêu thích của họ, hướng dẫn các em rằng bước
+          tiếp theo các em có thể tự mình thực hiện nếu các em học sinh thực sự có
+          hứng thú với khoa học máy tính.
         pdfs:
         - unplug11
         video: Unplug11
@@ -128,13 +128,13 @@
         title: 'Thuật toán đời sống: Trồng một hạt giống'
         desc: Bài học này nêu lên cách chúng ta sử dụng thuật toán trong cuộc sống
           hàng ngày, lấy ví dụ là hoạt động gieo hạt. Nó cũng tập trung vào bức tranh
-          lớn của khoa học máy tính và làm thế nào thuật toán đóng một vai trò thiết
-          yếu.
+          lớn của khoa học máy tính và làm thế nào để các thuật toán đóng một vai
+          trò thiết yếu.
         video: C1_planting_seed
       BuildingAFoundation:
         title: Xây dựng nền tảng
         desc: Học sinh xây dựng một cấu trúc chỉ sử dụng những nguồn đã được cung
-          cấp. Cấu trúc phải hoàn thành một nhiệm vụ (đạt được mức độ cao cao nhất
+          cấp. Các cấu trúc phải hoàn thành một nhiệm vụ (đạt được mức độ cao nhất
           định hoặc chịu được một trọng lượng nhất định), khi mọi thứ trở nên phức
           tạp học sinh sẽ thảo luận về những ý tưởng liên tục.
         video: C1_building_foundation
@@ -172,38 +172,38 @@
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: lập trình đồ thị trên giấy
-        desc: Sinh viên viết một thuật toán (một tập hợp các hướng dẫn) bằng cách
-          sử dụng tập hợp các lệnh đã được định nghĩa sẵn để trực tiếp tái hiện một
-          bản vẽ.
+        desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
+          dụng tập hợp các lệnh đã được định nghĩa sẵn để chỉ dẫn các bạn cùng lớp
+          tái hiện một bản vẽ.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Thuật toán đời sống: Máy bay giấy'
-        desc: Bài học này chỉ  ra cách chúng ta sử dụng thuật toán trong cuộc sống
-          hàng ngày của, cụ thể cách tạo máy bay giấy. Đồng thời tập trung vào hình
-          ảnh lớn hơn của khoa học máy tính và làm thế nào thuật toán đóng một phần
-          quan trọng.
+        title: 'Thuật toán trong đời sống: Máy bay giấy'
+        desc: Bài học này chỉ ra cách chúng ta sử dụng các thuật toán trong cuộc sống
+          hàng ngày, như cách gấp máy bay giấy. Đồng thời tập trung vào hình ảnh lớn
+          của khoa học máy tính và cách các thuật toán đóng một phần quan trọng.
         video: C2_paper_airplanes
       BinaryBracelets:
         title: Vòng đeo tay nhị phân
-        desc: Học sinh tạo ra vòng xuyến bằng số 0-9 đại diện cho chữ cái đầu của
-          tên của họ. Học sinh được học nhiều cách đại diện và lưu trữ dữ liệu.
+        desc: Học sinh tạo ra vòng tay như là một đại diện nhị phân của chữ cái đầu
+          của tên của họ. Học sinh tìm hiểu rằng dữ liệu có thể được đại diện và lưu
+          trữ theo nhiều hơn một cách.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Dấu chân kỹ thuật số của bạn
+        title: 'Dấu chân kỹ thuật số '
         desc: Giáo viên giới thiệu cho sinh viên việc đưa thông tin cá  nhân lên mạng
           sẽ tạo ra dấu chân hoặc "vệt dài" có hậu quả.
         video: C2_digital_footprint
       ComputationalThinking:
         title: suy nghĩ máy móc
         desc: Học sinh sử dụng các bước suy nghĩ tính toán (phân tích, tạo mô hình,
-          trừu tượng, thuật toán) để tìm ra làm thế nào để chơi một trò chơi  không
-          có hướng dẫn.
+          trừu tượng, thuật toán) để tìm ra cách để chơi một trò chơi không có sự
+          hướng dẫn.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Chức năng Suncatchers
-        desc: Học sinh tạo ra một thuật toán với biến và chức năng (phần của mã mà
-          bạn dùng đi dùng lại) để tạo ra miếng chắn nắng bằng cách sử dụng chuỗi
-          và hạt.
+        title: Chức năng của tấm hứng ánh nắng
+        desc: Học sinh tạo ra một thuật toán với biến số và chức năng (các phần của
+          mã hóa mà bạn dùng đi dùng lại) để tạo ra các suncatcher bằng cách sử dụng
+          chuỗi và hạt.
         video: C3_functional_suncatchers
       SongwritingParameters:
         title: Sáng tác với tham số
@@ -212,7 +212,7 @@
           lại toàn bộ biến chức năng).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Thuật toán trong thực tế: chơi xúc sắc'
+        title: 'Thuật toán trong thực tế: Chơi xúc sắc'
         desc: Bài học này chỉ ra cách chúng tôi sử dụng thuật toán trong cuộc sống
           hàng ngày. Là một phần trong đó, học sinh sẽ nhận biết và viết các thuật
           toán cho một trò chơi xúc xắc.
@@ -223,8 +223,7 @@
           bưu thiếp .
         video: C3_internet
       Crowdsourcing:
-        title: |
-          Crowdsourcing
+        title: Đa nguồn
         desc: Học sinh sử dụng đa nguồn, kỹ thuật giải quyết vấn đề phổ biến trong
           khoa học máy tính, để hoàn thành một nhiệm vụ với nhau như một lớp học hiệu
           quả hơn hơn cố làm nó một mình.
@@ -232,8 +231,8 @@
       DigitalCitizenship:
         title: Dân kỹ thuật số
         desc: Sinh viên khám phá sự khác biệt giữa thông tin cá nhân và thông tin
-          riêng tư, để phân biệt những gì là an toàn và không an toàn để chia sẻ trực
-          tuyến.
+          riêng tư, để phân biệt những gì là an toàn và không an toàn khi chia sẻ
+          trực tuyến.
       TangramAlgorithms:
         title: Thuật toán Tangram
         desc: Bài học này cho chúng ta thấy một điều quan trọng về thuật toán. Nếu
@@ -242,78 +241,82 @@
           cần viết rất chi tiết.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: 'Biến phong bì '
-        desc: Biến tự do cho phép dùng rất nhiều trong khoa học máy tính.  Bài học
-          này sẽ giúp để giải thích biến là gì và làm thế nào chúng tôi có thể sử
-          dụng chúng trong nhiều cách khác nhau. Sử dụng hoạt động này trước (hoặc
-          kết hợp với) bài học về trừu tượng để thực sự hiểu ý tưởng.
+        title: Các biến phong bì
+        desc: Biến số kể đến rất nhiều đặc quyền trong khoa học máy tính.  Bài học
+          này sẽ giúp giải thích biến là gì và làm thế nào chúng ta có thể sử dụng
+          chúng trong nhiều cách khác nhau. Sử dụng hoạt động này trước (hoặc kết
+          hợp với) bài học về trừu tượng để thực sự hiểu ý tưởng.
         video: C4_unplugged_variables
       MadGlibs:
-        title: sự say mê dịu dàng
-        desc: Hiểu một cách trừu tượng là một trong những kỹ năng quan trọng nhất
-          của một nhà khoa học máy tính.  Hoạt động này cho phép học sinh phân tích
-          câu chuyện theo nhiều hướng để có thể trừu tượng hóa. Những câu chuyện trừu
-          tượng sẽ thành mẫu chuyện mới vui vẻ và điên khùng.
+        title: Sự say mê dịu dàng
+        desc: Sự trừu tượng là một trong những kỹ năng quan trọng nhất của một nhà
+          khoa học máy tính.  Hoạt động này cho phép học sinh phân tích các câu chuyện
+          theo nhiều hướng để có thể trừu tượng hóa. Những câu chuyện trừu tượng sẽ
+          thành mẫu chuyện mới vui vẻ và điên khùng.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: Cho vòng lặp vui
-        desc: Chúng tôi biết rằng vòng cho phép chúng tôi làm đ làm lại, nhưng bây
-          giờ chúng ta sẽ tìm hiểu làm thế nào để sử dụng vòng với cấu trúc phụ được
-          xây dựng ngay bên trong.
+        title: Cho vòng lặp vui vẻ
+        desc: Chúng ta biết rằng vòng lặp cho phép chúng ta làm đi làm lại sự việc,
+          nhưng bây giờ chúng ta sẽ tìm hiểu cách sử dụng vòng lặp với cấu trúc phụ
+          được xây dựng ngay bên trong.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Songwriting With Parameters
         desc: 'Một trong các cấu trúc tuyệt vời nhất trong thế giới khoa học máy tính
-          là chức năng.  Chức năng (đôi khi được gọi là quy trình) là chương trình
+          là chức năng.  Chức năng (đôi khi được gọi là quy trình) là các chương trình
           nhỏ mà bạn có thể sử dụng lặp đi lặp lại bên trong của chương trình lớn
-          hơn. Bài học này sẽ giúp trực giác của sinh viên hiểu tại sao kết hợp khối
-          mã vào chức năng rất hữu ích trong thực tế.  '
+          hơn. Bài học này sẽ giúp trực giác của sinh viên hiểu tại sao kết hợp các
+          khối mã hóa thành các chức năng là rất hữu ích trong thực tế.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Nhị phân hình ảnh
-        desc: |
-          Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 có thực hoặc số 1có thực, các khóa học trước đó giảng dạy sinh viên thông tin có thể được biểu diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+        title: Hình ảnh Nhị phân
+        desc: Mặc dù nhiều người nghĩ rằng số nhị phân như số 0 hoặc số 1 có thực,
+          các khóa học trước đó giảng dạy sinh viên rằng thông tin có thể được biểu
+          diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
+          xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
+          tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Trò chơi điện tử và mặt phẳng tọa độ
-        desc: Khám phá làm thế nào trò chơi video mà bạn thích thực sự được điều khiển
-          bởi số học! Khám phá cách thể hiện số học và mặt phẳng tọa độ có thể giúp
-          chúng tôi hiểu như thế nào trò chơi điện tử làm việc, và sau đó bắt đầu
-          lập kế hoạch tạo ra trò chơi của bạn.
+        desc: Phát hiện cách mà các trò chơi video bạn yêu thích thực sự được điều
+          khiển bởi số học! Thăm dò cách thể hiện số học và mặt phẳng tọa độ có thể
+          giúp chúng ta hiểu cách trò chơi điện tử làm việc và sau đó bắt đầu lập
+          kế hoạch tạo ra trò chơi của bạn.
         video: alg_11_coordinate_plane
       Contracts:
-        title: giao ước, miền và phạm vi
+        title: Giao ước, Miền và Khoảng
         desc: Giao ước cung cấp cho chúng tôi một cách để hiểu và thảo luận về chức
           năng. Trong bài học này, chúng tôi sẽ xem xét làm thế nào để giáo ước có
           ý nghĩa trong ngôn ngữ lập trình mới và chức năng (quy trình)
         video: alg_5_contracts
       DesignRecipe:
         title: The Design Recipe
-        desc: Trong giai đoạn sinh viên đã viết một số chức năng rất đơn giản - nhưng
-          chức năng phức tạp hơn yêu cầu một cách tiếp cận thêm chu đáo. Các công
-          thức thiết kế là một cách tiếp cận có cấu trúc để viết các chức năng bao
-          gồm viết trường hợp kiểm tra để đảm bảo rằng các chức năng hoạt động như
-          mong đợi.
+        desc: Trong giai đoạn cuối, sinh viên đã viết một số chức năng rất đơn giản
+          - nhưng chức năng phức tạp hơn yêu cầu một cách tiếp cận thêm chu đáo. Các
+          công thức thiết kế là một cách tiếp cận có cấu trúc để viết các chức năng
+          bao gồm viết trường hợp kiểm tra để đảm bảo rằng các chức năng hoạt động
+          như mong đợi cuối cùng.
         video: alg_8_design_recipe
       Booleans:
         title: Phép toán luận và Logic
         desc: Phép toán luận là các loại dữ liệu thứ tư và cuối cùng bạn sẽ học về
           trong khóa học này. Trong hoạt động này, bạn sẽ tìm hiểu về phép toán luận
-          là gì, và làm thế nào họ có thể giúp chúng tôi viết chức năng suy nghĩ logic
+          là gì, và làm thế nào chúng có thể giúp chúng ta viết các chức năng tư duy
+          logic
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
-        desc: Các thông số chúng tôi vượt qua để chức năng gây ra kết quả đầu ra thay
+        desc: Các thông số chúng ta vượt qua để chức năng gây ra kết quả đầu ra thay
           đổi dựa trên một mô hình rất cứng nhắc. Giả sử chúng ta muốn các tham số
           với một số giá trị để tạo ra kết quả đầu ra bằng cách sử dụng một mô hình
-          nhưng các giá trị khác để sử dụng một mô hình khác nhau. Đó là các điều
-          kiện cần thiết...
+          nhưng các giá trị khác lại sử dụng một mô hình khác. Đó là các điều kiện
+          cần thiết...
         video: alg_10_conditionals
       CollisionDetection:
         title: Phát hiện sự va chạm và định lý Pythagore
         desc: Xác định các đối tượng trên màn hình cảm ứng là một khía cạnh quan trọng
-          của hầu hết các trò chơi. Trong bài học này, chúng tôi sẽ xem cách định
-          lý Pythagore và công thức khoảng cách được sử dụng để đo khoảng cách giữa
-          hai điểm trên mặt phẳng, và tính xem khi nào hai điểm (hoặc trò chơi nhân
-          vật)bị  chạm vào.
+          của hầu hết các trò chơi. Trong bài học này, chúng ta sẽ xem cách định lý
+          Pythagore và công thức Khoảng cách được sử dụng để đo khoảng cách giữa hai
+          điểm trên mặt phẳng, và tính xem khi nào hai điểm đó (hoặc các nhân vật
+          điện tử) chạm vào nhau.
         video: alg_16_biggame_collision_detection

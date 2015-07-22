@@ -32,9 +32,9 @@ goog.require('goog.style');
  * Handles constructing a top-level SVG element, and positioning, sizing,
  * and certain focus/mouse handling operations for itself.
  * @constructor
- * @param {boolean} opt_hideTrashRect The trash rectangle is a dark grey 
- * rectangle covering the entire toolbox area, and is faded in when the user 
- * drags a block towards the toolbox to delete it.  However, when creating a 
+ * @param {boolean} opt_hideTrashRect The trash rectangle is a dark grey
+ * rectangle covering the entire toolbox area, and is faded in when the user
+ * drags a block towards the toolbox to delete it.  However, when creating a
  * blockspace for something like the function editor, we don't want to create
  * an additional one, relying on the main blockspace editor's one instead.
  */
@@ -448,14 +448,14 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var svgStyle = window.getComputedStyle(svg);
   var svgBorderWidth = 0;
   if (svgStyle) {
-    svgBorderWidth = parseInt(svgStyle.borderLeftWidth, 10) +
-      parseInt(svgStyle.borderRightWidth, 10);
+    svgBorderWidth = (parseInt(svgStyle.borderLeftWidth, 10) || 0) +
+      (parseInt(svgStyle.borderRightWidth, 10) || 0);
   }
 
   // Subtract any pixels present above the svg element from the available height
   var containerDiv = svg.parentNode;
   var containerStyle = window.getComputedStyle(containerDiv);
-  var containerTopBorder = containerStyle ? parseInt(containerStyle.borderTopWidth, 10) : 0;
+  var containerTopBorder = containerStyle ? (parseInt(containerStyle.borderTopWidth, 10) || 0) : 0;
   var headerHeight = goog.style.getPageOffsetTop(svg)
     - (goog.style.getPageOffsetTop(containerDiv) + containerTopBorder);
 

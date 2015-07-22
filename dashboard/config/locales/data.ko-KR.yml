@@ -489,6 +489,7 @@
         C3_functional_suncatchers: 기능성 색유리
         C3_songwriting_with_parameters: 매개변수를 사용한 음악 작곡
         C4_intro: 소개
+        C4_loops_zombie: 반복
         C4_bee_conditional: 꿀벌 조건선택
         C4_variables_artist: 변수 - 예술가
         C4_variables_playlab: 변수 - 플레이 랩
@@ -523,6 +524,7 @@
         csp_textcompression: 텍스트 압축 도구
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: 대수학 CS - 소개
         alg_2_eval_block: 대수학 CS - 블록 평가
         alg_3_pemdas: 대수학 CS - 작업 순서

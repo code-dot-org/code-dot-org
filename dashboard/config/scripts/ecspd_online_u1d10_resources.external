@@ -1,0 +1,22 @@
+name 'ECSPD Online U1D10 Resources'
+css 'unplugged'
+markdown <<MARKDOWN
+## Telling a Story with Data
+
+In Unit 1, Day 10, students learn how data can be used in different ways based on the way it is represented.
+
+#### Extended Resources
+
+Below is a TED talk by David McCandless on ways of representing data. This could be used to extend the lesson for your students and help them dig deeper into the concepts. On the next level, we will present you with a short video quiz you could give to your students.
+
+<iframe width="860" height="500" src="https://www.youtube.com/embed/5Zg-C8AAIGg" frameborder="0" allowfullscreen></iframe>
+
+*[Can't see the video? Click here](http://videos.code.org/ecs-pd2-online/beauty-of-data.mp4).*
+
+<br/>
+
+> Reflect: How do different ways of representating data change our perceptions of that data?
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

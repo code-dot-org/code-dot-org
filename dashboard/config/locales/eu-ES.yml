@@ -1,21 +1,21 @@
 "eu":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Zuzendu hurrengo akatsak mesedez:'
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: beharrezkoa da
     attributes:
       user:
-        name: Display Name
+        name: Izena Erakutsi
         email: E-posta
         username: Erabiltzaile-izena
         password: Pasahitza
         password_confirmation: Pasahitza errepikatu
         current_password: Uneko pasahitza
         locale: Hizkuntza
-        age: Age
+        age: Adina
         gender: Generoa
         edit_header: Aldatu kontuaren xehetasunak
         error:
@@ -25,15 +25,15 @@
   submit: Bidali
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
-      placeholder: Section Code (ABCDEF)
+      label: 'Irakaslea gehitu:'
+      placeholder: Atal Kodea (ABCDEF)
     submit: Gehitu irakaslea
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista
     submit: Gehitu pista
   appname: Code.org
   stage: Maila
-  stage_number: Stage %{number}
+  stage_number: Maila %{number}
   puzzle: Puzlea
   trophies: garaikurrak
   courses: Mailak
@@ -47,26 +47,26 @@
   already_started: 'Jadanik hasia? Jarraitu hemen >> '
   demos: 'Kudeatzailea: erakustaldi guztiak'
   continue: Jarraitu
-  prize: prize
+  prize: Saria
   more_info: Informazio gehiago
   auth:
     sign_in_with: Sartu  %{provider}ekin
     signed_in: Barruan zaude!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: Saioa amaitu duzu  <a href="%{url}">Code.org</a>-n.
+    sign_out_of: '%{provider} erabili duzu. <a href="%{url}">Klikatu hemen</a> saioa
+      amaitzeko %{provider}.'
     already_signedup: Dagoeneko izena eman duzu?
     notyet_signedup: Ez zara batu oraindik?
-    google_oauth2: Google Account
+    google_oauth2: Google kontua
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft Account
+    windowslive: Microsoft kontua
     forgot_password: Pasahitza ahaztu duzu?
     need_confirmation: Ez dituzu konfirmazio argibideak jaso?
     need_unlock: Ez dituzu lokatze argibideak jaso?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} ikasleek izena eman dute.'
+    teacher_count: '%{count} irakasleek izena eman dute.'
     overview_student: Sign up for an account to track your progress. Your email is
       primarily used to allow you to log in and for password recovery. For more information,
       see our <a href="http://code.org/privacy">Privacy Policy</a>.
@@ -77,41 +77,40 @@
       gordetzeko.
     teacher_educator_guide: Ikusi hezitzailearen gida
     teacher_pitch: Teacher sign up for Code.org
-    teacher_title: Teacher sign up
-    student_pitch: Student sign up for Code.org
-    student_title: Student sign up
-    school_name: School Name (optional)
-    school_address: School Address (optional)
-    address_placeholder: address, city, state, zip
-    gender: Gender (optional)
-    birthday: Birthday (optional)
-    age: Age
-    user_type: Are you a student or teacher?
+    teacher_title: Irakasle bezala sartu
+    student_pitch: Ikasle bezala sartu Code.org-n
+    student_title: Ikasle bezala sartu
+    school_name: Ikastetxearen izena (Hautazkoa)
+    school_address: Ikastetxearen helbidea (aukerakoa)
+    address_placeholder: Helbidea, hiria, herrialdea, postal kodea
+    gender: Generoa (Hautazkoa)
+    birthday: Urtebetetzea (aukerakoa)
+    age: Adina
+    user_type: Ikaslea edo irakaslea zara?
     submit: Sign up
-    teacher: Are you a teacher?
-    valid_username: Available!
-    invalid_username: Username must be at least 5 characters
-    taken_username: Username is already taken
-    valid_password: Valid password!
-    invalid_password: Password must be at least 6 characters
-    mismatch_password: The two passwords you entered do not match
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/>For users under 13, email addresses are not stored in a form that
-      allows us to contact them.
-    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>.
-    additional_information: We need some additional information to continue signing
-      you up.
+    teacher: Irakaslea al zara?
+    valid_username: Erabilgarri!
+    invalid_username: Erabiltzailearen izenak gutxienez 5 karaktere izan behar ditu
+    taken_username: Erabiltzailea hartuta dago
+    valid_password: Pasahitza zuzena!
+    invalid_password: Pasahitzak gutxienez 6 karaktere izan behar ditu
+    mismatch_password: Idatzitako bi pasahitzak ez dira berdinak
+    student_terms: Ados nago Code.org-k <a href='http://code.org/tos'> ezarrita dituen
+      zerbitzu baldintzekin</a>. 13 urte azpikoa banaiz, Code.org-k <br/> ematen dituen
+      zerbitzuak erabiltzeko, gurasoen edota legezko tutorearen baimena dudala egiaztatzen
+      dut. 13 urte azpikoen e-mail helbideak gordeta dauden eran, ezingo dugu haiekin
+      harremanetan jarri.
+    teacher_terms: Ados nago eta onartzen ditut Code.org <a href='http://code.org/tos'>
+      erabiltzeko baldintzak </a>.
+    additional_information: Informazio gehiago behar dugu izen-ematearekin jarraitzeko.
   signin_form:
-    title: Have an account already? Sign in
-    login: Email or username
+    title: Kontua daukazu ? Hasi saioa
+    login: Emaila edo erabiltzailea
     password: Pasahitza
-    remember: Remember me
+    remember: Gogoratu nazazu
     submit: Sign in
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Saioa hasi gabe kodetu nahi duzu ?
     try_hoc: Try one Hour of Code first
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
@@ -372,7 +371,10 @@
     classroom_activity: Unplugged Activity
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Already registered? %{link}
@@ -415,6 +417,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Male
     female: Female
@@ -450,6 +453,12 @@
     autoplay_option: Autoplay videos
     download: Download Video
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Hide this warning
     working:
       header: We are working on support for your browser.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -508,9 +517,13 @@
       title: Flappy Code
       body: Wanna write your own game in less than 10 minutes? Try our Flappy Code
         tutorial!
-    20hour:
-      title: Intro Course
-      body: Try our 20-hour Intro to Computer Science course.
+    20-hour:
+      title: Accelerated Course
+      body: This 20-hour course covers the core computer science and programming concepts
+        in courses 2-4. The course is designed for use with ages 10-18. Check out
+        courses 2-4 for a more complete experience!
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen

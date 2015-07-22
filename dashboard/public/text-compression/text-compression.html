@@ -168,10 +168,10 @@
     function showWriteYourOwnDialog() {
       var dialog = new Dialog({
         body: '<div id="enter-your-own" class="modal-content">'
-        + '<p class="dialog-title">Enter your own poem text</p>'
+        + '<p class="dialog-title">Enter your own text</p>'
         + '<textarea id="selfEnteredPoem" placeholder="Write or paste your text here." rows="7"></textarea>'
         + '<button id="again-button" style="margin: 0;">Cancel</button>'
-        + '<button id="continue-button" style="float: right; margin: 0;">Add Poem</button>'
+        + '<button id="continue-button" style="float: right; margin: 0;">Add</button>'
         + '</div>'
       });
       dialog.show();
@@ -223,10 +223,10 @@
         }
         compression += '%';
       }
-      document.getElementById("data").innerHTML =  "Compressed poem size: " + compressedPoemSize + " bytes\n"
+      document.getElementById("data").innerHTML =  "Compressed text size: " + compressedPoemSize + " bytes\n"
           + "     Dictionary size: " + dictSize + " bytes\n"
           + "               Total: " + total + " bytes\n"
-          + "  Original poem size: " + poemText.length + " bytes\n"
+          + "  Original text size: " + poemText.length + " bytes\n"
           + "         Compression: <span class='" + compressionClass + "'>" + compression + "</span>\n";
     }
 
@@ -266,10 +266,10 @@
 </head>
 <body>
   <div id="widgetTop">
-    <p id="widgetInstructions">Look at the poem for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the poem in place of the pattern.</p>
+    <p id="widgetInstructions">Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.</p>
     <div id="reference_area_target" data-minimal="true"></div>
     <div id="menu">
-      <label for="poemsList" class="choosePoem">Choose a poem:</label>
+      <label for="poemsList" class="choosePoem">Choose text:</label>
       <select id="poemsList" class="choosePoem" onChange="poemChanged();"></select>
       <button id="writeYourOwn" class="btn choosePoem">Write your own</button>
       <button id="finished" class="btn btn-primary submitButton">Finished! Continue to next stage</button>

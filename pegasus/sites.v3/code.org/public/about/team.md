@@ -8,7 +8,11 @@ nav: about_nav
 
 <a id="extended"></a>
 ## Extended Team
-
-<%= view :about_people, people:DB[:cdo_team].where(kind_s:'extended') %>
+<%= view :about_people, people:DB[:cdo_team].where(kind_s:'extended_active') %>
 
 ### Thank you to our extended team of [Lead Translators](http://code.org/translators)!
+
+## Special Thanks to
+<%= view :about_people, people:DB[:cdo_team].where(kind_s:'extended_inactive') %>
+
+

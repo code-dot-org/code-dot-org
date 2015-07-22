@@ -411,6 +411,7 @@ fa:
         C3_functional_suncatchers: نورگیرهای کاربردی
         C3_songwriting_with_parameters: ترانه سرایی با متغیر ها
         C4_intro: مقدمه
+        C4_loops_zombie: حلقه ها
         C4_bee_conditional: شرطی های زنبور عسل
         C4_variables_artist: 'متغیرها - هنرمند'
         C4_variables_playlab: 'متغیرها - آزمایشگاه بازی'
@@ -445,6 +446,7 @@ fa:
         csp_textcompression: نرم افزار فشرده سازی متن
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS در جبر - مقدمه'
         alg_2_eval_block: 'CS در جبر - بلوک های ارزیابی'
         alg_3_pemdas: 'CS در جبر - ترتیب عملیات'

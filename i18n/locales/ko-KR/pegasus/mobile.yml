@@ -1,18 +1,18 @@
 ko-KR:
   hello: Hello world
   select_language: 언어를 선택하세요.
-  computer_science: 컴퓨터과학(Computer Science, 정보과학)
+  en: Computer Science
   computer_science_edweek: 컴퓨터과학(Computer Science, 정보과학) 교육 주간
-  csedweek_dates: 2014년 12월 8-14일
+  csedweek_dates: 2014년 12월 8일-14일
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> 가 곧 시작됩니다. 모든 선생님들과 운영자들에게 알립니다.  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> 여러분의 Hour of Code 행사를 준비하세요.'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.</a>'
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  n_have_learned_an_hoc: '<h1>Hour of Code를</h1> <h2>체험하세요</h2> <h3># served</h3>'
   anybody_can_learn: 누구나 배울 수 있습니다.
   learn_now: 지금 배워보세요.
   petition_message: 모든 학교의 모든 학생은 컴퓨터과학(정보과학)을 배울 기회가 있어야 합니다.
   petition_sign_message: '동의하시면 이름을 서명해 주세요. 지금까지 # 명이 서명하였습니다.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
-  petition_join_others: 'Join # others'
+  petition_sign_message_support: '우리를 지지하는 분들은 자신의 이름을 적어 서명하세요. 지금까지 #명이 참여했습니다.'
+  petition_join_others: '가입 # others'
   name: 이름
   email: Email
   zipcode: 우편번호 또는 국가
@@ -45,6 +45,7 @@ ko-KR:
   congratulations: 축하합니다!
   congratulations_on_completing_hoc: 축하합니다! One Hour of Code 를 완료하셨습니다.
   get_a_certificate_of_achievement: 인증서 받기
+  enter_valid_age: Please select a valid age
   enter_valid_email: 이메일을 정확히 입력해 주세요
   get_a_certificate_message: "인증서와 <a href='/learn'>Learn beyond One Hour</a> 에 대한 정보를 보내드립니다"
   get_a_certificate_message_after: "다운로드 하거나 인쇄 하려면 증명서를 누르세요. 이제, 우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택을 둘러보세요."
@@ -107,9 +108,9 @@ ko-KR:
   students_and_lines: '%{students}명의 학생들이 Hour of Code 를 수행하였고, %{lines}의 코드를 작성하였습니다.'
   start_hoc: Hour of Code 를 지금 바로! 시작해 보세요!
   contact_form_topic_press: 보도/언론 (인터뷰, 발표)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_nina: '"매일 100% 참여라는 놀라운 경험을 하였습니다.&mdash;" - 니나 니콜스 피어리, 교사'
   stats_student: '"저는 이것이 <b>평생에 단 한번뿐인</b> 기회라는 것을 알았습니다." - Mariana Alzate, 5학년'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Michael Clark, Teacher'
+  stats_michael: '"저는 학생들이 이렇게 배우는 것에 열광하는 것을 <b>결코</b> 본적이 없습니다." - 마이클 클락, 교사'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> 살펴보기"
   studiobar_title_nolink: Code Studio 살펴보기
   studiobar_elementary_title: 초등학생 코스
@@ -126,63 +127,24 @@ ko-KR:
   studiobar_donate_body: 여러분이 기부할 때 마다 더 많은 학생들이 배울 수 있습니다.
   studiobar_shop_title: 상점
   studiobar_shop_body: 고정관념을 깨고, 우리의 로고와 긍지를 입어보세요.
-  homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
-  homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
-  homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
-  homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
-    Chris Bosh
-  homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
-  homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
-  homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
-  homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
-  homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
-  homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
-  homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_malala: '&ldquo;나는 모든 국가의 소녀들이 한 시간의 코드를 배우길 바란다.&rdquo; 마랄라, 노벨 평화상 수상자'
+  homepage_hero_text_susan: '&ldquo;당신이 기술을 변경할 수 있다면, 당신은 세계도 변경시킬 수 있습니다.&rdquo; 수잔, YouTube CEO'
+  homepage_hero_text_fistbump: '&ldquo;휴대폰으로 놀기만 하지마세요, 그것을 직접 프로그램하세요.&rdquo; 대통령 바락 오바마'
+  homepage_hero_text_sheryl: '&ldquo;우리 아이들은 &mdash; 여자 아이를 포함한 &mdash; 컴퓨터 과학을 배울 기회가 필요합니다.&rdquo; 셰릴, Facebook COO'
+  homepage_hero_text_satya: '&ldquo;컴퓨터 과학은 세상의 가장 큰 기회를 열 수 있다.&rdquo; 사티아, 마이크로소프트 CEO'
+  homepage_hero_text_bosh: '&ldquo;코딩을 하면, 당신은 삶의 방향을 꼼꼼하게 선택할 수 있게된다.&rdquo; 크리스 보쉬'
+  homepage_hero_text_student1: '&ldquo; 이 기술들은 나의 미래를 바꿨습니다. 그 재미는 더 할 나위 없어요.&rdquo; 루나 중학교 1학년'
+  homepage_hero_text_student2: '&ldquo; 나는 우리 아이들이 이렇게 배우는 것에 흥미를 보이는 것을 본 적이 없습니다.&rdquo; 마이클, 교사'
+  homepage_hero_text_student3: '&ldquo;컴퓨터 과학은 해보기전에는 알 수 없는 분야입니다.&rdquo; 잭슨, 초등학교 6학년'
+  homepage_hero_text_student4: '&ldquo;프로그래밍으로는 마음속에 그리는 어떤 것도 할 수 있어요.&rdquo; 마야, 초등학교 2학년'
+  homepage_hero_text_student5: '&ldquo;컴퓨터 과학은 지금, 바로 당신을 위한 것 입니다.&rdquo; 제랄도, 교사'
+  homepage_hero_text_teacher1: '&ldquo;코딩은 창의성, 영감 그리고 혁신에 불꽃을 일으킨다 &mdash; 이 모든 것은 어떠한 경력에도 필수적이다&rdquo; 플로레사, 교사'
+  homepage_hero_text_teacher2: '&ldquo;이 프로그램은 내 학생들이 100% 사로잡혀, 몰두하고, 참가하도록 만들었다.&rdquo; 아담, 교사'
+  homepage_hero_text_stat_loc: '#loc 학생들에 의해서 작성된 코드의 줄'
+  homepage_hero_text_stat_students: '#student_count Code Studio에 등록된 학생 계정'
+  homepage_hero_text_stat_served: 'Hour of Code: # 제공'
   homepage_slot_text_hoc: The Hour of Code
-  homepage_slot_text_frozen: 안나, 엘사와 함께 하는 겨울왕국
+  homepage_slot_text_frozen: 안나와 엘사가 함께 하는 겨울왕국
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: 모든 튜토리얼
   homepage_slot_text_course4: 과정4
@@ -193,29 +155,29 @@ ko-KR:
   homepage_action_text_learn: 학습 시작
   homepage_action_text_signpetition: 청원서에 서명하세요
   homepage_signpetition_dropdown: 청원서에 서명하세요
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
+  homepage_banner_text_main: Code.org와 College Board는 컴퓨터 과학 분야에서 다양성을 개선하기 위해 동맹을 형성 한다.
   homepage_banner_text_link: 더 알아보기
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: 누구든지 배울 수 있습니다. 오늘 시작하세요.
   homepage_slot_text_link_hoc: Hour of Code 해보기
   homepage_slot_text_link_host: Hour of Code의 주인
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_hocserved: '# 명에게 제공하였습니다'
   homepage_slot_text_title_students: 학생들
-  homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_blurb_students: 우리의 모든 튜토리얼을 탐구해 보세요.
   homepage_slot_text_link_codestudio: 코드 스튜디오를 사용해 보세요.
   homepage_slot_text_link_local: 현지 수업 찾기
   homepage_slot_text_link_othercourses: 다른 온라인 코스
   homepage_slot_text_title_educators: 교육자
   homepage_slot_text_blurb_educators: 당신의 학생들을 가르치세요.
   homepage_slot_text_link_k5: 초등학교 4학년 학생을 위한 과정
-  homepage_slot_text_link_fullcurriculum: 우리의 전체 커리큘럼을 참고하세요
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: 우리의 작업을 지원
+  homepage_slot_text_link_fullcurriculum: 전체 커리큘럼 한눈에 보기
+  homepage_slot_text_link_pd: 전문 개발
+  homepage_slot_text_title_advocates: 지지자
+  homepage_slot_text_blurb_advocates: 우리를 지지합니다
   homepage_slot_text_link_stats: 통계 보기
-  homepage_slot_text_link_buy: 함께 참여하세요!
+  homepage_slot_text_link_buy: 함께 참여하세요
   homepage_slot_text_link_donate: 기부하기
-  homepage_header_codestudio: Code Studio 학생들의 작품
+  homepage_header_codestudio: 코드 스튜디오 학생들의 작품
   homepage_header_donors: Code.org는 후원자 여러분에게 감사의 인사를 드립니다.
   homepage_donors_seall: 모두 보기
   homepage_donors_donate: 기부하기
@@ -290,6 +252,24 @@ ko-KR:
   dashboard_landing_view_progress: '%{biggest_section} 진도 살펴보기'
   dashboard_landing_available_title: 가능한 코스
   dashboard_landing_available_courses: 선생님과 학생들에게 현재 가능한 코스
+  dashboard_landing_more_tutorials: 더 많은 튜토리얼을 보고 싶습니까?
+  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
+  dashboard_hoc_courses: 모든 연령대를 위한 Hour of Code
+  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
+  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
+  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_course_csina: Computer Science in Algebra
+  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
+  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_ecs: 컴퓨터과학(정보과학) 살펴보기
+  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
+  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
   dashboard_action_edit: 편집
   dashboard_action_save: 저장
@@ -356,8 +336,10 @@ ko-KR:
   dashboard_students_reset_password: 비밀번호 재설정
   dashboard_students_share_section: '이 섹션의 로그인 페이지를 학생들에게 공유하기:'
   dashboard_students_print_info: 학생 로그인 정보와 함께 카드 출력하기.
+  dashboard_students_secret_picture_title: Secret Picture
   dashboard_students_secret_picture: 비밀그림
   dashboard_students_reset_picture: '학생들의 비밀그림을 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b> 할 수 있습니다. 새로운 비밀그림은 학생이 로그인하면 생성될 것입니다.'
+  dashboard_students_secret_word_title: Secret Word
   dashboard_students_secret_word: 비밀단어
   dashboard_students_reset_word: '학생들의 비밀단어를 <b>비밀보호 보기</b>를 누른 후 <b>비밀보호 재설정</b> 할 수 있습니다. 새로운 비밀단어는 학생이 로그인하면 생성될 것입니다.'
   dashboard_students_join_link: '학생들에게 계정을 만들고 섹션에 참여하라고 하세요:'
@@ -365,11 +347,18 @@ ko-KR:
   dashboard_students_print_page: 이 페이지 인쇄
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">학생들을 위한 개인정보보호 정책 문서</a>'
-  dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
+  dashboard_curriculum_k5_title: K-5(초등학교 5학년) 교육자 리소스
+  dashboard_curriculum_middle_title: 중학교 교육자 리소스
+  dashboard_curriculum_high_title: 고등학교 교육자 리소스
+  dashboard_lesson_plans: 수업 계획
   dashboard_view_all_lesson_plans: 모든 레슨 계획 살펴보기
   dashboard_course1: '코스1:'
   dashboard_course2: '코스2:'
   dashboard_course3: '코스3:'
+  dashboard_course4: '코스 4(베타):'
+  dashboard_curriculum: 교과 과정
+  dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
+  dashboard_overview: 개요
   dashboard_sequence: 순차
   dashboard_framework: 구성
   dashboard_standards: 기준
@@ -380,6 +369,10 @@ ko-KR:
   dashboard_puzzle_solving: '퍼즐-해결:'
   dashboard_student_worksheet: 학생 활동지
   dashboard_teacher_worksheet: 교사 활동지
+  dashboard_curriculum_csina: '대수학 영역의 컴퓨터 과학:'
+  dashboard_curriculum_csins: '과학 영역의 컴퓨터 과학:'
+  dashboard_curriculum_csp: 'AP ® 컴퓨터 과학 원리:'
+  dashboard_curriculum_ecs: 컴퓨터과학 살펴보기
   dashboard_grade_k: K
   dashboard_grade_other: 기타
   dashboard_login_word: 단어
@@ -407,6 +400,7 @@ ko-KR:
   dashboard_sections_password_account_creation: 학생이 만든 텍스트 암호
   dashboard_sections_login_type_explanation: '이 표는 로그인 유형, <b>그림, 문자, 이메일</b> 등에 대한 내용입니다. 수업에 필요한 경우 선택적으로 사용할 수 있습니다.'
   dashboard_faq: 자주 묻는 질문
+  dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   code_hoc_coming: 'Hour of Code 가 여기있습니다. - 12월8일-14일!'
   code_sign_up: CS Education Week 기간 동안의 활동을 신청하세요.
   learn_more: 더 알아보기
@@ -822,3 +816,6 @@ ko-KR:
   processing_beyond_longdescription: 프로세싱(Processing) 은 프로그래밍 언어이며, 개발 환경이며, 온라인 커뮤니티 입니다. 2001년부터 프로세싱은 비주얼 아트와 기술에서의 비주얼 계몽을 이루는데 앞장서 왔습니다. 처음에는 마치 소프트웨어 스케치북처럼, 비주얼적인 요소들로 컴퓨터 프로그래밍을 교육하기위해 만들어졌습니다. 이후 프로세싱은 전문가들을 위한 개발 도구로서 진화했습니다. 요즘에는 수많은 학생, 예술가, 디자이너, 연구자, 취미가들이 학습, 프로토타잎만들기, 제품만들기 등을 위해 사용하고 있습니다.
   alice_beyond_longdescription: 3D 애니메이션 제작에 도움이되는 혁신적인 프로그래밍 환경을 사용하여, 앨리스(Alice) 프로젝트는 모든 연령과 남녀노소수준과 상관없이 컴퓨터과학적 사고(정보과학적 사고, computational thingking), 문제 해결(problem solving), 컴퓨터 프로그래밍을 교육하고 배울 수 있습니다.
   sphero_beyond_longdescription: SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을 통해 수학 과학 능력을 향상시킬 수 있습니다.
+  compatibility_https_header: Code.org가 HTTPS를 사용할 수 있도록 활성화 해주세요
+  compatibility_https_message: "보안을 강화하기 위해서, %{https_date}부터 HTTPS방식으로 변경됩니다. 이 날짜 이후로는 Code.org에  들어올 수 없을 수도 있습니다. Code.org에서 HTTPS를 사용하도록 설정하는 방법은 <a href='%{it_requirements_url}'>여기</a> 를 클릭하여 알아볼 수 있습니다."
+  compatibility_https_hide_this_warning: 경고창 숨기기

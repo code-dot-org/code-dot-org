@@ -223,7 +223,7 @@ is:
       classroom: Heimasíða kennara
       district_dashboard: Stjórnborð umdæmis
       label: 'Hæ %{username}'
-      stats: Framvindan mín
+      stats: Kóðastúdíó
       settings: Reikningurinn minn
       prizes: Verðlaun
       logout: Skrá út
@@ -325,7 +325,9 @@ is:
     classroom_activity: Verkefni án tölvu
   home:
     title: Kóðastúdíó
+    description: Í Kóðastúdíóinu er að finna netnámskeið frá Code.org
     lines_of_code: '%{lines_count} LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM'
+    lines_of_code_linebreak: '%{lines_count} LÍNUR AF KÓÐA<br/>SKRIFAÐAR AF %{students_count} MILJÓNUM NEMENDA'
     all_courses: Yfirlit yfir námskeið 1, 2 og 3
     lesson_plans: Námsáætlun
     signin_message: 'Þegar skráð(ur)? %{link}'
@@ -357,9 +359,10 @@ is:
     heading_hoc2014: '<h2>Klukkustund kóðunar fyrir</h2><h1>alla aldurshópa</h1>'
     heading_elementary: '<h2>20 stunda námskeið fyrir</h2><h1>byrjendur (á öllum aldri)</h1>'
     heading_apps: '<h2>Skemmtun fyrir</h2><h1>alla</h1>'
-    heading_legacy: '<h2>Almenna námskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>'
+    heading_legacy: '<h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>'
     your_gallery: Safn
-    no_primary_course: Prófaðu námskeið hjá Code Studio
+    no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
+    print_certificate: Prenta skírteini
   gender:
     male: Karlkyns
     female: Kvenkyns
@@ -392,6 +395,10 @@ is:
     autoplay_option: Spila myndbönd sjálfvirkt
     download: Hala niður myndband
   compatability:
+    https:
+      header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
+      message: "Til að auka öryggi erum við að skipta yfir í HTTPS frá og með %{https_date}. Þú munt ekki geta opnað Code.org eftir það nema með HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja HTTPS fyrir Code.org."
+      hide_this_warning: Fela þessa aðvörun
     working:
       header: Við erum að vinna í stuðningi við vafrann sem þú notar.
       message: "Code.org notar nútíma veftækni. Þetta gerir vefinn hraðvirkari. Vafrinn þinn ræður ekki við alla tækni sem er notuð og því geta komið upp vandamál þegar þú notar þennan hluta vefsins. Vinsamlegast hjálpaðu okkur með því að  <a href='%{report_issue_url}'>tilkynna vandamál sem upp koma</a>. Þú getur líka <a href='%{supported_browsers_url}'>uppfært vafrann þinn í studda útgáfu</a>."
@@ -438,9 +445,10 @@ is:
     flappy:
       title: Flappy kóði
       body: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!
-    20hour:
-      title: Kynningarnámskeið
-      body: Prófaðu 20 klst. námskeiðið Kynning á tölvunarfræði.
+    20-hour:
+      title: Hraðnámskeið
+      body: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
+      body_short: Lærðu undirstöðu í tölvunarfræði með hraðaðri útgáfu af námskeiðum 2-4.
     hoc2014:
       try_new_tutorial: Prófaðu nýjustu Klukkustund kóðunar (beta)
       try_frozen: Listamaður með Önnu og Elsu úr Frozen
@@ -489,8 +497,8 @@ is:
     badname_case: Heiti falla þurfa að vera stafrétt. Prófaðu að breyta hástöfum/lágstöfum í heiti samningsins.
     badrange: Samningurinn þinn hefur rangt svið.
     baddomainsize: Samningurinn þinn hefur ekki réttan fjölda atriða í gildamenginu.
-    baddomainname: Eitt eða fleiri atriði í gildamenginu heitir röngu nafni.
-    baddomaintype: Eitt eða fleiri atriði í gildamenginu hefur ranga gerð eða þau eru í rangri röð.
+    baddomainname: Eitt eða fleiri atriði í gildamenginu heita röngu nafni.
+    baddomaintype: Eitt eða fleiri atriði í gildamenginu hafa ranga gerð eða eru í rangri röð.
   text_match:
     placeholder: Skráðu svar þitt hér
     open_response_title: Þakkir

@@ -1,11 +1,13 @@
 class ApiController < ApplicationController
   layout false
+  include LevelsHelper
 
   def user_menu
     render partial: 'shared/user_header'
   end
 
   def user_hero
+    head :not_found if not current_user
   end
 
   def section_progress
@@ -23,7 +25,7 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(@script)
       student_levels = @script.script_levels.map do |script_level|
         user_level = level_map[script_level.level_id]
-        {class: activity_css_class(user_level.try(:best_result)), title: script_level.position}
+        {class: activity_css_class(user_level.try(:best_result)), title: script_level.position, url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)}
       end
       {id: student.id, levels: student_levels}
     end
@@ -39,10 +41,7 @@ class ApiController < ApplicationController
                     }
            }
 
-    render text: data.to_json
-    # This really should be:
-    # render json: data
-    # but it doesn't work because we have some CSRF "protection" thing
+    render json: data
   end
 
   def student_progress
@@ -62,7 +61,7 @@ class ApiController < ApplicationController
       progressHtml: render_to_string(partial: 'shared/user_stats', locals: { user: @student})
     }
 
-    render text: data.to_json
+    render json: data
   end
 
   private

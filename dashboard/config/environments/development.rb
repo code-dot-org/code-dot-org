@@ -45,8 +45,11 @@ Dashboard::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # Whether or not to display pretty blockly.
+  # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
+
+  # Whether or not to display pretty shared js assets
+  config.pretty_sharedjs = true
 
   # disable this for developers by default, it won't make much sense because we have our own db
   CDO.disable_s3_image_uploads = true

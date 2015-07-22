@@ -99,12 +99,12 @@ he:
         Jigsaw: פאזל
         MazeStep: מצב שלב מבוך
         Wordsearch: תפזורת
-        Webapp: App Lab
+        Webapp: מעבדת היישומים
         ArtistEC: האמן
-        TextMatch: Text Match
+        TextMatch: התאמת טקסט
         StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: מעבדת היישומים
+        NetSim: מדמה אינטרנט
     trophy:
       name:
         Bronze: ארד
@@ -131,8 +131,7 @@ he:
         maze_2_5: יש דרך בה אני אוכל להגיע לחזיר הטפשי כשאני אשתמש רק ב2 בלוקים. אתם יכולים למצוא אותה?
         maze_2_6: נסה להביא אותי לפולש הירוק תוך שימוש רק בשלושה בלוקים.
         maze_2_7: 'עזור לי לגרש את החזרזיר הרע באמצעות כמה שפחות בלוקים. נסה להשתמש בבלוק "חזור על הפקודה" יותר מפעם אחת.'
-        maze_2_8: |-
-          When a block is grey, that means you can't delete it. Solve this puzzle using the "repeat" block that repeats 3 times. Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
+        maze_2_8: 'כאשר בלוק אפור, פירוש הדבר הוא שאסור למחוק אותו. פיתרו את החידה באמצעות הבלוק "חזור", אשר חוזר על עצמו 3 פעמים. נסו לשים את 3 הבלוקים הבאים בתוך הבלוק "חזור" האפור: קדימה, קדימה, פנה.'
         maze_2_9: 'נסה להשתמש בבלוק החדש: "חזור עד ש" -  הוא יחזור על עצמו עד שאגיע לחזרזיר המעצבן.'
         maze_2_10: 'טוב, בפעם האחרונה לאימון - האם אתה יכול לפתור זאת באמצעות רק 4 בלוקים?'
         maze_2_11: איש יקר. אני זומבי. אני רעב. חייב... להגיע.... אל החמנית... אתה יכול להוביל אותי לשם באמצעות 5 בלוקים בלבד?
@@ -227,20 +226,19 @@ he:
         maze_3_2: כתוב לי תוכנה כדי שאוכל להגיע עד לחזיר.
         maze_3_3: איך אני אגיע לחזיר? תזהר שאני לא יתקל בTNT!
         maze_3_4: אוף! כתוב לי תוכנה שעוזרת לי לעבור מסביב לTNT ולהגיע לחזיר.
-        bounce_1: 'Attach a block to the "when left arrow" block and press "Run". Move the paddle using the left arrow to reach the finish target.'
-        bounce_2: 'Attach a block to the "when right arrow" and "when left arrow" blocks. Move the paddle to reach both finish targets.'
+        bounce_1: 'צרף בלוק לבלוק "כאשר לוחצים על החץ שמאלה" ולאחר מכן לחץ על "הפעל". הזז את המשוט בעזרת החץ שמאלה כדי להגיע ליעד.'
+        bounce_2: 'צרף בלוק לבלוק "כאשר לוחצים על החץ ימינה" ול-"כאשר לוחצים על החץ שמאלה". הזז את המשוט כדי להגיע לשני היעדים.'
         bounce_3: 'עכשיו נסה משהו דומה עם הבלוק "כאשר חץ למעלה". הזז את המשוט כדי להגיע למטרת הסיום בלמעלה.'
         bounce_4: הפעם תצטרך להוסיף ארבע בלוקים. הזז את המשוט לכל ארבע מטרות הסיום כדי לסיים את החידה הזה.
         bounce_5: 'אנחנו הולכים לשלוח כדור לכיוון המשוט. הוסף בלוק לבלוק "כאשר כדור פוגע במשוט" כדי לוודע שהכדור מגיע למטרת הסיום.'
         bounce_6: 'עכשיו מטרת הסיום היא למעלה. אתה צריך להוסיף בלוקים לשני הבלוקים "כאשר כדור פוגע" כדי לפתור את החידה הזאת.'
-        bounce_7: 'Attach blocks to each of the "when" blocks. Bounce the ball until it hits the finish target.'
+        bounce_7: 'צרפו בלוקים לכל אחד מבלוקים ה-"כאשר...". תקפיצו את הכדור עד שהוא פוגע במטרת הסיום.'
         bounce_10: 'There is a now a goal at the top. Attach the "score point" and "score opponent point" blocks to the "when ball in goal" and "when ball misses paddle" blocks to make a game. See how many points you can score before your opponent scores twice.'
         bounce_11: 'You can now attach blocks to the "when run" block. You have to attach the new "launch new ball" block in more than one place. Also, try changing the scene or the speed of the paddle and the ball and see how many points you can score before your opponent scores twice.'
         bounce_12: "Create your own Bounce game. You can change all the visuals and the rules. When you're done, click Finish to let friends try your game on their phones."
         Custom_builder: 'Drag blocks from the toolbox to the workspace to draw the level you wish to create. Press "Run" when you are ready.'
-        flappy_1: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_2: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
+        flappy_1: 'צרפו בלוק לבלוק "כאשר לוחצים" ולאחר מכן לחץ על "הפעל". לחץ או הקש על המסך כדי להעביר את פלאפי אל המטרה.'
+        flappy_2: 'כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע בקרקע". התוכנית שבניתם זקוקה ל-"סוף משחק" כאשר פלאפי מתרסק.'
         flappy_3: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
         flappy_4: |-
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
@@ -250,11 +248,10 @@ he:
         flappy_7: 'Next, try changing the scene by attaching another block to the "when run" block.'
         flappy_8: You can set visuals anytime, not just when the game starts. Try setting a RANDOM scene when other events happen, for example, when passing an obstacle.
         flappy_9: To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.
-        flappy_11: "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: 'Attach a block to the "when click" block, then press "Run". Click or tap the screen to move Flappy to the target.'
-        flappy_k1_3: |-
-          Now we've added some ground.  Attach a block to the "when hit the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
+        flappy_11: 'צרו משחק "פלאפי" משלכם. אתם יכולים לשנות את הדמויות ואת כל החוקים, אפילו את כוח המשיכה. כשתסיימו, הקליקו על "סיים" כדי לאפשר לחברים שלכם לנסות את המשחק שבניתם על המכשירים הניידים שלהם.'
+        flappy_k1_1: לשחק Flappy
+        flappy_k1_2: 'צרפו בלוק לבלוק "כאשר לוחצים" ולאחר מכן לחץ על "הפעל". לחץ או הקש על המסך כדי להעביר את פלאפי אל המטרה.'
+        flappy_k1_3: 'כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע בקרקע". התוכנית שבניתם זקוקה ל-"סוף משחק" כאשר פלאפי מתרסק.'
         flappy_k1_4: 'The "when run" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.'
         flappy_k1_5: |-
           Flappy will fly through obstacles unless you write code to make him crash. Attach a block to the "when hit an obstacle" block. Your code needs to 'END GAME' when Flappy crashes into the first set of pipes.
@@ -415,6 +412,7 @@ he:
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
+        C4_loops_zombie: לולאות
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
@@ -449,6 +447,7 @@ he:
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'CS in Algebra - Introduction'
         alg_2_eval_block: 'CS in Algebra - Evaluation Blocks'
         alg_3_pemdas: 'CS in Algebra - Order of Operations'

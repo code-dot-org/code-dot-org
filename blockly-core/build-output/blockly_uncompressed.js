@@ -1611,7 +1611,6 @@ Blockly.BlockSvg.prototype.renderDrawTop_ = function(renderInfo, rightEdge, conn
   renderInfo.curX = rightEdge
 };
 Blockly.BlockSvg.prototype.renderDrawRight_ = function(renderInfo, connectionsXY, inputRows, iconWidth) {
-  var connectionX, connectionY;
   for(var i = 0, row;row = inputRows[i];i++) {
     renderInfo.curX = BS.SEP_SPACE_X;
     if(i === 0) {
@@ -1665,6 +1664,7 @@ Blockly.BlockSvg.prototype.renderDrawRightCollapsed_ = function(renderInfo, row)
   }
 };
 Blockly.BlockSvg.prototype.renderDrawRightInputValue_ = function(renderInfo, inputRows, rowIndex, connectionsXY) {
+  var connectionX, connectionY;
   var row = inputRows[rowIndex];
   var input = row[0];
   var titleX = renderInfo.curX;
@@ -1718,6 +1718,7 @@ Blockly.BlockSvg.prototype.renderDrawRightDummyInput_ = function(renderInfo, inp
   }
 };
 Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo, inputRows, rowIndex, connectionsXY) {
+  var connectionX, connectionY;
   var row = inputRows[rowIndex];
   var input = row[0];
   if(rowIndex === 0) {
@@ -1773,6 +1774,7 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo, 
   }
 };
 Blockly.BlockSvg.prototype.renderDrawRightInline_ = function(renderInfo, inputRows, rowIndex, connectionsXY) {
+  var connectionX, connectionY;
   var row = inputRows[rowIndex];
   var hasFunctionalInput = false;
   var align = row[0].align;
@@ -10187,10 +10189,10 @@ Blockly.BlockSvgFramed.prototype.initChildren = function() {
   this.frameHeader_ = Blockly.createSvgElement("rect", {x:-FRAME_MARGIN_SIDE, y:-(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT), fill:"#aaaaaa", rx:15, ry:15, "clip-path":"url(#frameClip" + this.block_.id + ")"}, this.svgGroup_);
   this.frameText_ = Blockly.createSvgElement("text", {"class":"blocklyText", style:"font-size: 12pt"}, this.svgGroup_);
   this.frameText_.appendChild(document.createTextNode(Blockly.Msg.FUNCTION_HEADER));
-  goog.base(this, "initChildren")
+  Blockly.BlockSvgFramed.superClass_.initChildren.call(this)
 };
 Blockly.BlockSvgFramed.prototype.renderDraw_ = function(iconWidth, inputRows) {
-  goog.base(this, "renderDraw_", iconWidth, inputRows);
+  Blockly.BlockSvgFramed.superClass_.renderDraw_.call(this, iconWidth, inputRows);
   var groupRect = this.svgPath_.getBoundingClientRect();
   var width = groupRect.width + 2 * FRAME_MARGIN_SIDE;
   var height = groupRect.height + FRAME_MARGIN_TOP + FRAME_MARGIN_BOTTOM + FRAME_HEADER_HEIGHT;
@@ -10210,7 +10212,7 @@ Blockly.BlockSvgFramed.prototype.renderDraw_ = function(iconWidth, inputRows) {
   }
 };
 Blockly.BlockSvgFramed.prototype.dispose = function() {
-  goog.base(this, "dispose");
+  Blockly.BlockSvgFramed.superClass_.dispose.call(this);
   this.frameClipRect_ = null;
   this.frameBase_ = null;
   this.frameHeader_ = null;
@@ -13606,7 +13608,7 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function() {
   var rgb = Blockly.makeColour(this.block_.getColour(), this.block_.getSaturation(), this.block_.getValue());
   var lightColor = goog.color.lighten(goog.color.hexToRgb(rgb), 0.3);
   var lighterColor = goog.color.lighten(goog.color.hexToRgb(rgb), 0.8);
-  goog.base(this, "initChildren");
+  Blockly.BlockSvgFunctional.superClass_.initChildren.call(this);
   var clip = Blockly.createSvgElement("clipPath", {id:"blockClip" + this.block_.id}, this.svgGroup_);
   this.blockClipRect_ = Blockly.createSvgElement("path", {}, clip);
   this.divider_ = Blockly.createSvgElement("rect", {x:1, y:this.headerHeight, height:3, width:0, fill:goog.color.rgbArrayToHex(lightColor), "clip-path":"url(#blockClip" + this.block_.id + ")", visibility:this.headerHeight > 0 ? "visible" : "hidden"}, this.svgGroup_);
@@ -13614,7 +13616,7 @@ Blockly.BlockSvgFunctional.prototype.initChildren = function() {
 };
 Blockly.BlockSvgFunctional.prototype.renderDraw_ = function(iconWidth, inputRows) {
   this.createFunctionalMarkers_();
-  goog.base(this, "renderDraw_", iconWidth, inputRows);
+  Blockly.BlockSvgFunctional.superClass_.renderDraw_.call(this, iconWidth, inputRows);
   this.blockClipRect_.setAttribute("d", this.svgPath_.getAttribute("d"));
   try {
     var rect = this.svgPath_.getBBox();
@@ -13692,7 +13694,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRight_ = function(renderInfo, con
     renderInfo.core.push("v", this.rowBuffer);
     renderInfo.curY += this.rowBuffer
   }
-  goog.base(this, "renderDrawRight_", renderInfo, connectionsXY, inputRows, iconWidth)
+  Blockly.BlockSvgFunctional.superClass_.renderDrawRight_.call(this, renderInfo, connectionsXY, inputRows, iconWidth)
 };
 Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function(renderInfo, input, connectionsXY) {
   var inputTopLeft = {x:renderInfo.curX, y:renderInfo.curY + BS.INLINE_PADDING_Y};
@@ -13724,7 +13726,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ = function
   }
 };
 Blockly.BlockSvgFunctional.prototype.updateToColour_ = function(hexColour) {
-  goog.base(this, "updateToColour_", hexColour);
+  Blockly.BlockSvgFunctional.superClass_.updateToColour_.call(this, hexColour);
   if(!this.divider_) {
     return
   }
@@ -13732,7 +13734,7 @@ Blockly.BlockSvgFunctional.prototype.updateToColour_ = function(hexColour) {
   this.divider_.setAttribute("fill", goog.color.rgbArrayToHex(lightColor))
 };
 Blockly.BlockSvgFunctional.prototype.dispose = function() {
-  goog.base(this, "dispose");
+  Blockly.BlockSvgFunctional.superClass_.dispose.call(this);
   this.blockClipRect_ = null;
   this.divider_ = null
 };
@@ -19345,11 +19347,11 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   var svgStyle = window.getComputedStyle(svg);
   var svgBorderWidth = 0;
   if(svgStyle) {
-    svgBorderWidth = parseInt(svgStyle.borderLeftWidth, 10) + parseInt(svgStyle.borderRightWidth, 10)
+    svgBorderWidth = (parseInt(svgStyle.borderLeftWidth, 10) || 0) + (parseInt(svgStyle.borderRightWidth, 10) || 0)
   }
   var containerDiv = svg.parentNode;
   var containerStyle = window.getComputedStyle(containerDiv);
-  var containerTopBorder = containerStyle ? parseInt(containerStyle.borderTopWidth, 10) : 0;
+  var containerTopBorder = containerStyle ? parseInt(containerStyle.borderTopWidth, 10) || 0 : 0;
   var headerHeight = goog.style.getPageOffsetTop(svg) - (goog.style.getPageOffsetTop(containerDiv) + containerTopBorder);
   var svgWidth = containerDiv.clientWidth - svgBorderWidth;
   var svgHeight = containerDiv.clientHeight - headerHeight;
@@ -24321,7 +24323,7 @@ Blockly.Css.CONTENT = [".blocklyDraggable {", "}", "#%CONTAINER_ID% {", "  borde
 "  display: none;", "  overflow-x: visible;", "  overflow-y: auto;", "  position: absolute;", "}", ".blocklyTreeRoot {", "  padding: 4px 0;", "}", ".blocklyTreeRoot:focus {", "  outline: none;", "}", ".blocklyTreeRow {", "  line-height: 22px;", "  height: 22px;", "  padding-right: 1em;", "  white-space: nowrap;", "}", '.blocklyToolboxDiv[dir="RTL"] .blocklyTreeRow {', "  padding-right: 0;", "  padding-left: 1em !important;", "}", ".blocklyTreeRow:hover {", "  background-color: #e4e4e4;", "}", ".blocklyTreeIcon {", 
 "  height: 16px;", "  width: 16px;", "  vertical-align: middle;", "  background-image: url(%TREE_PATH%);", "}", ".blocklyTreeIconClosedLtr {", "  background-position: -32px -1px;", "}", ".blocklyTreeIconClosedRtl {", "  background-position: 0px -1px;", "}", ".blocklyTreeIconOpen {", "  background-position: -16px -1px;", "}", ".blocklyTreeIconNone {", "  background-position: -48px -1px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedLtr {", "  background-position: -32px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconClosedRtl {", 
 "  background-position: 0px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconOpen {", "  background-position: -16px -17px;", "}", ".blocklyTreeSelected>.blocklyTreeIconNone {", "  background-position: -48px -17px;", "}", ".blocklyTreeLabel {", "  cursor: default;", "  font-family: sans-serif;", "  font-size: 16px;", "  padding: 0 3px;", "  vertical-align: middle;", "}", ".blocklyTreeSelected {", "  background-color: #57e !important;", "}", ".blocklyTreeSelected .blocklyTreeLabel {", "  color: #fff;", 
-"}", ".blocklyArrow {", "  font-size: 80%;", "}", ".paramToolbox {", "  padding: 0 0 5px 0;", "}", ".paramToolbox input, .paramToolbox textarea {", "  box-sizing: border-box;", "  width: 100%;", "  margin: 0;", "  resize: none;", "}", ".paramToolbox input, .paramToolbox button {", "  height: 30px;", "  margin: 0;", "}", ".paramToolbox div {", "  margin: 4px 10px;", "}", "#modalContainer {", "  position: absolute;", "  top: 40px;", "  width: 100%;", "  bottom: 0;", "}", "#modalContainer > svg {", 
+"}", ".blocklyArrow {", "  font-size: 80%;", "}", ".paramToolbox {", "  padding: 0 0 5px 0;", "}", ".paramToolbox input, .paramToolbox textarea {", "  box-sizing: border-box;", "  width: 100%;", "  margin: 0;", "  resize: none;", "}", ".paramToolbox input, .paramToolbox button {", "  height: 30px;", "  margin: 0;", "}", ".paramToolbox div {", "  margin: 4px 10px;", "}", "#modalContainer {", "  position: absolute;", "  top: 30px;", "  width: 100%;", "  bottom: 0;", "}", "#modalContainer > svg {", 
 "  position: absolute;", "  top: 0;", "  left: 0;", "  background: transparent;", "  pointer-events: none;", "}", "#modalContainer > svg * {", "  pointer-events: visiblePainted;", "}", "/*", " * Copyright 2007 The Closure Library Authors. All Rights Reserved.", " *", " * Use of this source code is governed by the Apache License, Version 2.0.", " * See the COPYING file for details.", " */", "/* Author: pupius@google.com (Daniel Pupius) */", "/*", " Styles to make the colorpicker look like the old gmail color picker", 
 " NOTE: without CSS scoping this will override styles defined in palette.css", "*/", ".goog-palette {", "  outline: none;", "  cursor: default;", "}", ".goog-palette-table {", "  border: 1px solid #666;", "  border-collapse: collapse;", "}", ".goog-palette-cell {", "  height: 25px;", "  width: 25px;", "  margin: 0;", "  border: 0;", "  text-align: center;", "  vertical-align: middle;", "  border-right: 1px solid #666;", "  font-size: 1px;", "}", ".goog-palette-colorswatch {", "  position: relative;", 
 "  height: 25px;", "  width: 25px;", "  border: 1px solid #666;", "}", ".goog-palette-cell-hover .goog-palette-colorswatch {", "  border: 1px solid #FFF;", "}", ".goog-palette-cell-selected .goog-palette-colorswatch {", "  border: 1px solid #000;", "  color: #fff;", "}", ".goog-menu {", "  background: #fff;", "  border-color: #ccc #666 #666 #ccc;", "  border-style: solid;", "  border-width: 1px;", "  cursor: default;", "  font: normal 13px Arial, sans-serif;", "  margin: 0;", "  outline: none;", 

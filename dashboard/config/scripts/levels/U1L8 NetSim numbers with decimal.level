@@ -46,7 +46,12 @@
     "show_router_bandwidth_control": "false",
     "show_router_memory_control": "false",
     "show_dns_mode_control": "false",
-    "default_dns_mode": "none"
+    "default_dns_mode": "none",
+    "markdown_instructions": "## Sending Numbers Activity\r\n\r\n**Challenge:** Develop a protocol or set of rules for communicating a drawing to your partners using only bits.\r\n\r\n**Challenge Rules:**\r\nThe image will be a line drawing created by connecting points on a grid, like the one seen here.\r\nYou can discuss and agree on a protocol ahead of time, but the image exchange must happen without communication between the two parties other than through using the Internet Simulator.\r\n\r\n**Things to Consider:**\r\n- How will your points be formatted?\r\n- How does the recipient know when one number ends and the next begins?\r\n\r\n**Your Protocol:** Write the steps of your protocol on the worksheet provided by your teacher.\r\n\r\n![](https://images.code.org/d79263f7a6e129962f830ce0af2ed3cc-image-1434414362601.PNG)",
+    "show_log_browser_button": "false",
+    "connected_routers": "false",
+    "instructions": "With your partner, develop a protocol or set of rules for communicating a drawing using only bits. See the worksheet handed out by your teacher for more detailed instructions!",
+    "video_key": "csp_internetsimulator_2"
   }
 }]]></config>
   <blocks/>

@@ -20,6 +20,7 @@ function loadInfinity(skin, assetUrl) {
 
   skin.defaultBackground = 'leafy';
   skin.projectileFrames = 10;
+  skin.itemFrames = 10;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
@@ -38,6 +39,24 @@ function loadInfinity(skin, assetUrl) {
     'projectile_cherry': 13,
     'projectile_ice': 12,
     'projectile_duck': 12
+  };
+
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_hiro',
+    'item_anna',
+    'item_elsa',
+    'item_baymax',
+    'item_rapunzel',
+    'item_cherry',
+    'item_ice',
+    'item_duck'
+  ];
+
+  skin.specialItemFrames = {
+    'item_cherry': 13,
+    'item_ice': 12,
+    'item_duck': 12
   };
 
   skin.explosion = skin.assetUrl('vanish.png');
@@ -67,6 +86,10 @@ function loadInfinity(skin, assetUrl) {
     return className === 'projectile_hiro';
   };
 
+  skin.preventItemLoop = function (className) {
+    return className === 'item_hiro';
+  };
+
   skin.projectile_hiro = skin.assetUrl('projectile_hiro.png');
   skin.projectile_anna = skin.assetUrl('projectile_anna.png');
   skin.projectile_elsa = skin.assetUrl('projectile_elsa.png');
@@ -75,6 +98,16 @@ function loadInfinity(skin, assetUrl) {
   skin.projectile_cherry = skin.assetUrl('projectile_cherry.png');
   skin.projectile_ice = skin.assetUrl('projectile_ice.png');
   skin.projectile_duck = skin.assetUrl('projectile_duck.png');
+
+  // TODO: Create actual item choices
+  skin.item_hiro = skin.assetUrl('projectile_hiro.png');
+  skin.item_anna = skin.assetUrl('projectile_anna.png');
+  skin.item_elsa = skin.assetUrl('projectile_elsa.png');
+  skin.item_baymax = skin.assetUrl('projectile_baymax.png');
+  skin.item_rapunzel = skin.assetUrl('projectile_rapunzel.png');
+  skin.item_cherry = skin.assetUrl('projectile_cherry.png');
+  skin.item_ice = skin.assetUrl('projectile_ice.png');
+  skin.item_duck = skin.assetUrl('projectile_duck.png');
 
   skin.leafy = {
     background: skin.assetUrl('background_leafy.jpg')
@@ -135,11 +168,24 @@ function loadInfinity(skin, assetUrl) {
     [msg.projectileIce(), '"projectile_ice"'],
     [msg.projectileDuck(), '"projectile_duck"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  skin.itemChoices = [
+    [msg.itemHiro(), '"item_hiro"'],
+    [msg.itemAnna(), '"item_anna"'],
+    [msg.itemElsa(), '"item_elsa"'],
+    [msg.itemBaymax(), '"item_baymax"'],
+    [msg.itemRapunzel(), '"item_rapunzel"'],
+    [msg.itemCherry(), '"item_cherry"'],
+    [msg.itemIce(), '"item_ice"'],
+    [msg.itemDuck(), '"item_duck"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
 }
 
 function loadStudio(skin, assetUrl) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
+  skin.itemFrames = 8;
 
   skin.explosion = skin.assetUrl('explosion.gif');
   skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
@@ -284,6 +330,16 @@ function loadStudio(skin, assetUrl) {
     [msg.projectilePurpleHearts(), '"purple_hearts"'],
     [msg.projectileRedHearts(), '"red_hearts"'],
     [msg.projectileRandom(), RANDOM_VALUE]];
+
+  // TODO: Create actual item choices
+  skin.itemChoices = [
+    [msg.itemBlueFireball(), '"item_blue_fireball"'],
+    [msg.itemPurpleFireball(), '"item_purple_fireball"'],
+    [msg.itemRedFireball(), '"item_red_fireball"'],
+    [msg.itemYellowHearts(), '"item_yellow_hearts"'],
+    [msg.itemPurpleHearts(), '"item_purple_hearts"'],
+    [msg.itemRedHearts(), '"item_red_hearts"'],
+    [msg.itemRandom(), RANDOM_VALUE]];
 }
 
 
@@ -300,6 +356,15 @@ exports.load = function(assetUrl, id) {
     'red_hearts',
     'yellow_hearts',
   ];
+  // TODO: proper item class names
+  skin.ItemClassNames = [
+    'item_blue_fireball',
+    'item_purple_fireball',
+    'item_red_fireball',
+    'item_purple_hearts',
+    'item_red_hearts',
+    'item_yellow_hearts',
+  ];
 
   // Images
   skin.yellow_hearts = skin.assetUrl('yellow_hearts.gif');
@@ -308,6 +373,14 @@ exports.load = function(assetUrl, id) {
   skin.blue_fireball = skin.assetUrl('blue_fireball.png');
   skin.purple_fireball = skin.assetUrl('purple_fireball.png');
   skin.red_fireball = skin.assetUrl('red_fireball.png');
+
+  // TODO: proper item class names
+  skin.item_yellow_hearts = skin.assetUrl('yellow_hearts.gif');
+  skin.item_purple_hearts = skin.assetUrl('purple_hearts.gif');
+  skin.item_red_hearts = skin.assetUrl('red_hearts.gif');
+  skin.item_blue_fireball = skin.assetUrl('blue_fireball.png');
+  skin.item_purple_fireball = skin.assetUrl('purple_fireball.png');
+  skin.item_red_fireball = skin.assetUrl('red_fireball.png');
 
   skin.whenUp = skin.assetUrl('when-up.png');
   skin.whenDown = skin.assetUrl('when-down.png');

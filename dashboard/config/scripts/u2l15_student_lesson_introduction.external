@@ -13,13 +13,20 @@ The more complicated a key is, the harder it is to crack. Encryption algorithms 
 
 # Vocabulary
 
-Vigenère (Vee-zha-nair) cipher: a method of encrypting text by applying a series of Caesar ciphers based on the letters of a keyword.
+* **Vigenère cipher** (Vee-zha-nair): a method of encrypting text by applying a series of Caesar ciphers based on the letters of a keyword.
 
 # Lesson
 
 * Write an algorithm for a Vigenere cipher.
 * Explain the factors that ensure strong encryption and secure data.
 
+# Resources
+
+* [Reading and Activity Guide: Keys and Passwords](https://docs.google.com/document/d/11ZCb8XHSWwMrzx10ADLdfcYlB7hSSfv_RjF0JD9v420/edit)
+
+* [Blown to Bits Ch. 5](http://www.google.com/url?q=http%3A%2F%2Fwww.bitsbook.com%2Fwp-content%2Fuploads%2F2008%2F12%2Fchapter5.pdf&sa=D&sntz=1&usg=AFQjCNFlwUTQTxeZ_TyR1brGDslVNaFMCg)
+
+* [How Secure is my Password](https://www.google.com/url?q=https%3A%2F%2Fhowsecureismypassword.net%2F&sa=D&sntz=1&usg=AFQjCNHJbG8AV-IKqmbB9XNFyUzzeHixng)
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

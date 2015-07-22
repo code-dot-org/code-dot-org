@@ -2,42 +2,40 @@ name 'OPD-K5 Welcome'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# GETTING STARTED > Welcome!
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
+
+### GETTING STARTED > Welcome!
+
+
+
+<br/>
 As an educator, you know [how important it is for your students to learn the basics of computer science](https://youtu.be/nKIu9yen5nc). But how do you start teaching kids to code if you have no coding background yourself?
+<br/>
+<br/>
 
-Launched in 2013, [Code.org®](http://code.org/about) is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
-
-With this free online course, we've made it easy for anyone to get started teaching computer science. Whether you teach in a public school or a private school, in a formal classroom or an informal after-school or summer school setting, this course will help you:
+Launched in 2013, [Code.org&reg;](http://code.org/about) is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
+<br/>
+<br/>
+<img src="https://images.code.org/2dfd5e8e9ccd8f755b46efd28d28c915-image-1434145432009.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+<br/>
+<br/>
+With this free, self-paced online course, we've made it easy for anyone to get started teaching [Code.org's Computer Science Basics](https://code.org/educate/k5). Whether you teach in a public school or a private school, in a formal classroom or an informal after-school or summer school setting, this course will help you:
 
 - Learn the basics of computer science 
 - Review best practices for teaching these basics to your students 
 - Access free curriculum and resources for teachers 
-- Plan for how you might get started teaching computer science 
+- Plan for how you might get started teaching Computer Science Basics
 - Connect with a community of fellow educators who are making positive change in their classrooms through coding 
 
-The goal of Code.org's professional development program is to prepare teachers like you to integrate computer science into your classroom and support your growth as a teacher. After completing this online course, you'll be ready to teach one or more of the following Code.org courses in your classroom:
-
-- [Course 1](http://studio.code.org/s/course1): approx 20 hours (Ages 4-6) 
-- [Course 2](http://studio.code.org/s/course2): approx 20 hours (Ages 6-18) 
-- [Course 3](http://studio.code.org/s/course3): approx 20 hours (Ages 8-18) 
-- [Course 4](http://studio.code.org/s/course4): approx 20 hours (Ages 10-18) 
-- [Intro to CS](http://studio.code.org/s/20-hour): approx 20 hours (Ages 10-18) 
-
-We'll also point you in the direction of more support in case you're interested in teaching some of our other, more in-depth courses, such as:
-
-- [Computer Science in Algebra](http://code.org/curriculum/algebra/) (Middle School, grades 6-8) 
-- [Computer Science in Science](http://code.org/curriculum/science/) (Middle School, grades 6-8) 
-- [Exploring Computer Science](http://www.exploringcs.org/) (High School, grades 9-12) 
-- [Computer Science Principles (](http://code.org/educate/csp)High School, grades 9-12) 
-
-Finally we'll cover some other resources and activities you may consider using in your classroom:
-
-- [Code Studio Activities](http://code.org/learn) (ages vary) 
-- [Other resources](http://code.org/educate/3rdparty) (ages vary) 
+* * *
 
 We are so pleased you've chosen to start this journey with us, and look forward to learning with you!
+<br/>
+<br/>
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
 MARKDOWN

@@ -344,7 +344,7 @@
     panel:
       answer_viewer: cevap gözlemleyicisi
       student: öğrenci
-      viewing_solution: Viewing Solution
+      viewing_solution: Çözüme Bak
       try_it_yourself: kendini dene
       section: Bölüm
   user:
@@ -368,7 +368,10 @@
     classroom_activity: Bağlantısız Etkinlik
   home:
     title: Code Studio
+    description: Code.org tarafından Code Studio evinizde online kurslar oluşturur
     lines_of_code: '%{lines_count}öğrenci tarafından yazılan kod satırları'
+    lines_of_code_linebreak: KOD SATIRLARI %{lines_count}<br/> %{students_count} milyon
+      öğrenci tarafından yazıldı
     all_courses: 1, 2 ve 3 nolu derslerine genel bakış
     lesson_plans: Ders planları
     signin_message: Zaten üye misiniz? % {link}
@@ -412,6 +415,7 @@
     heading_legacy: <h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>
     your_gallery: Galeri
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
+    print_certificate: Sertifikayı Yazdır
   gender:
     male: Erkek
     female: Kadın
@@ -447,6 +451,12 @@
     autoplay_option: Otomatik oynayan video
     download: Videoyu indir
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Bu uyarıyı gizle
     working:
       header: Tarayıcı desteği üzerinde çalışıyoruz.
       message: Code.org modern web teknolojilerini kullanır. Bu sitenin kullanımının
@@ -505,9 +515,13 @@
       title: Flappy Kod
       body: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy
         Kod eğitimimizi deneyin!
-    20hour:
-      title: Giriş Kursu
-      body: 20 saatlik Bilişim Teknolojilerine Giriş kursumuzu deneyin.
+    20-hour:
+      title: Hızlandırılmış Kurs
+      body: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını
+        tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her
+        yaştan öğrenmek için eğlencelidir.
+      body_short: Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış bir sürümünde
+        öğrenin.
     hoc2014:
       try_new_tutorial: Yeni Kodlama Saati öğreticimizi beta halinde deneyin
       try_frozen: Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı
@@ -519,7 +533,8 @@
       title: Donmuş
     infinity:
       title: Sınırsız oyun laboratuarı
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play
+        Lab'i kullanın.
   gallery:
     students_drew_these_with_code: Öğrenciler kod ile bunu çizdiler!
     students_made_these_with_code: Öğrenciler bunları kod ile yaptı!
@@ -565,8 +580,8 @@
     badrange: Senin sözleşmen yanlış bir diziye sahip.
     baddomainsize: sözleşmeniz içerikteki elemanların doğru numaralarını içermiyor.
     baddomainname: 1 veya daha fazla senin öğelerin hatalı.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    baddomaintype: Bir veya daha fazla etki alanı yanlış öğe türüne sahip, ya da yanlış
+      sırada.
   text_match:
     placeholder: Cevabınızı buraya girin
     open_response_title: teşekkürler

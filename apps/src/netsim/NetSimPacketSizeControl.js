@@ -1,3 +1,6 @@
+/**
+ * @overview UI slider used to change maximum packet length.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

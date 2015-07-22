@@ -23,7 +23,7 @@
   "COLOUR_RGB_RED":"roşu",
   "COLOUR_RGB_TITLE":"colorează cu",
   "COLOUR_RGB_TOOLTIP":"Creează o culoare cu cantitatea specificată de roşu, verde şi albastru.  Toate valorile trebuie să fie între 0 şi 100.",
-  "CONTRACT_EDITOR_HEADER":"Rețetă de proiectare",
+  "CONTRACT_EDITOR_HEADER":"Rețetă de design",
   "CONTROLS_FLOW_STATEMENTS_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK":"ieşi din buclă",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE":"continuă cu următoarea iterație a buclei",

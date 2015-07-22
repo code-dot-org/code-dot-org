@@ -134,7 +134,7 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#left_off', 0
   end
 
-  Script.all.each do |script|
+  Script.all.where("name IN (?)", ['hourofcode', 'artist', 'flappy', 'course1']).each do |script|
     next if script.hidden? # only test public facing scripts
     test "logged in user sees resume info and progress for course #{script.name}" do
       user = create(:user)
@@ -150,9 +150,8 @@ class HomeControllerTest < ActionController::TestCase
       else
         url = "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
       end
-      assert_select "#continue a[href^=#{url}]" # continue link
+      assert_select "a[href^=#{url}]" # continue link
       assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
-      assert_select "div[data-script-id=#{script.id}]" # div for loading script progress
     end
   end
 

@@ -124,4 +124,14 @@ class LevelSource < ActiveRecord::Base
       get_hint_from_source_internal(including: source)
     end
   end
+
+  # Old flappy levels used a different block type as their when run. Migrate
+  # these as we try to access them
+  def replace_old_when_run_blocks()
+    if level.game.name == 'Flappy' and data.include?('flappy_whenRunButtonClick')
+      self.data = data.gsub('flappy_whenRunButtonClick', 'when_run')
+      self.md5 = Digest::MD5.hexdigest(data)
+      self.save!
+    end
+  end
 end

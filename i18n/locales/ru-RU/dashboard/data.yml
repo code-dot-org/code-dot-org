@@ -409,6 +409,7 @@ ru:
         C3_functional_suncatchers: Функциональные витражи
         C3_songwriting_with_parameters: Написание песен, используя параметры
         C4_intro: Введение
+        C4_loops_zombie: Циклы
         C4_bee_conditional: 'Пчела: Условные команды'
         C4_variables_artist: 'Переменные: Художник'
         C4_variables_playlab: 'Переменные: Лаборатория игр'
@@ -443,6 +444,7 @@ ru:
         csp_textcompression: Виджет сжатия текста
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'Информатика в Алгебре - Введение'
         alg_2_eval_block: 'Информатика в Алгебре - Блоки Оценивания'
         alg_3_pemdas: 'Информатика в Алгебре - Порядок Операций'

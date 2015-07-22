@@ -325,7 +325,7 @@
       add_section_code: Add Students Section-Code
       secret: Secret type
       grade: Grade
-      course: Course
+      course: קורס
       rename: שינוי שם
       edit: עריכה
       delete: מחק
@@ -366,8 +366,11 @@
     show_more: הצג יותר
     classroom_activity: פעילות לא מחוברת
   home:
-    title: Code Studio
+    title: ההתקדמות שלי
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: כבר רשום?  %{link}
@@ -406,6 +409,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: גלריה
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: גבר
     female: אישה
@@ -441,6 +445,12 @@
     autoplay_option: הפעלה אוטומטית של סרטונים
     download: הורד סרטון
   compatability:
+    https:
+      header: אנא אפשרו שימוש בHTTPS בCode.org.
+      message: כדי להגביר את בטיחות הגלישה, אנו עוברים לשימוש בHTTPS בתאריך  %{https_date}.
+        לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו
+        כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org.
+      hide_this_warning: הסתר את האזהרה הזו
     working:
       header: אנחנו עובדים על תמיכה עבור הדפדפן שלך.
       message: Code.org uses modern web technology. This makes the site faster to
@@ -498,9 +508,12 @@
     flappy:
       title: קוד מתנופף
       body: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
-    20hour:
-      title: קורס מבוא
-      body: נסה את קורס מדעי המחשב בן 20 השעות שלנו.
+    20-hour:
+      title: Accelerated Course
+      body: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס
+        מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: Artist with Anna and Elsa, from Frozen

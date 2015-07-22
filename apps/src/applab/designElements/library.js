@@ -76,8 +76,9 @@ module.exports = {
    * @param {ElementType} elementType Type of element to create
    * @param {number} left Position from left.
    * @param {number} top Position from top.
+   * @param {boolean} [withoutId] If true, don't generate an id
    */
-  createElement: function (elementType, left, top) {
+  createElement: function (elementType, left, top, withoutId) {
     var elementClass = elements[elementType];
     if (!elementClass) {
       throw new Error('Unknown elementType: ' + elementType);
@@ -86,19 +87,26 @@ module.exports = {
     var element = elementClass.create();
 
     // Stuff that's common across all elements
-    element.id = this.getUnusedElementId(elementType.toLowerCase());
+    if (!withoutId) {
+      element.id = this.getUnusedElementId(elementType.toLowerCase());
+    }
 
     if (elementType !== ElementType.SCREEN) {
       element.style.position = 'absolute';
       element.style.left = left + 'px';
       element.style.top = top + 'px';
+      element.style.margin = '0px';
     }
 
     return element;
   },
 
-  getElementPropertyTable: function (elementType) {
-    return elements[elementType].PropertyTable;
+  getElementPropertyTab: function (elementType) {
+    return elements[elementType].PropertyTab;
+  },
+
+  getElementEventTab: function(elementType) {
+    return elements[elementType].EventTab;
   },
 
   /**
@@ -142,10 +150,10 @@ module.exports = {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function (element) {
+  onDeserialize: function (element, onPropertyChange) {
     var elementType = this.getElementType(element);
-    if (elements[elementType].onDeserialize) {
-      elements[elementType].onDeserialize(element);
+    if (elements[elementType] && elements[elementType].onDeserialize) {
+      elements[elementType].onDeserialize(element, onPropertyChange);
     }
   },
 

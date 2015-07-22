@@ -407,6 +407,7 @@ is:
         C3_functional_suncatchers: Sólarskraut með föllum
         C3_songwriting_with_parameters: Lagasmíð með stikum
         C4_intro: Kynning
+        C4_loops_zombie: Lykkjur
         C4_bee_conditional: Skilyrði býflugu
         C4_variables_artist: 'Breytur - Listamaður'
         C4_variables_playlab: 'Breytur - Leikjasmiðja'
@@ -441,6 +442,7 @@ is:
         csp_textcompression: Textaþjöppunargræja
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
+        csp_internetsimulator_3: 'Internet Simulator - Part 3'
         alg_1_intro: 'Tölvunarfræði (TF) í Algebru - Inngangur'
         alg_2_eval_block: 'TF í Algebru - Matskubbar'
         alg_3_pemdas: 'TF í Algebru - Röð aðgerða'

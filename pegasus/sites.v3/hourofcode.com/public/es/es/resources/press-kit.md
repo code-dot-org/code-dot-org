@@ -1,6 +1,6 @@
 
 
-## Cómo atraer los medios a tú evento "Hora de Código"
+## Cómo atraer los medios a tú evento "Hora del Código"
 
 *For all press and media inquiries, contact <press@code.org>*
 
@@ -8,14 +8,14 @@
 
   * Llegar a los medios de comunicación dos semanas antes de su evento por correo electrónico. Reitere por email y teléfono si no recibe una respuesta inicial.
   * Pide a un miembro del personal escolar o voluntario que tome fotos para compartirla en línea o enviar a la prensa.
-  * Escribe sobre la Hora de Código en la página principal de tu sitio web y en el periódico de la escuela. Pública los detalles de tu evento y fotos de las actividades de tus estudiantes.
+  * Escribe sobre la Hora del Código en la página principal de tu sitio web y en el periódico de la escuela. Pública los detalles de tu evento y fotos de las actividades de tus estudiantes.
   * En Facebook y Twitter, comparte información actualizada sobre tus planes, anuncia tus eventos y publica las fotos del 8 al 14 de Diciembre. Usa el hashtag **#HourOfCode** para que Code.org pueda ver y promover sus eventos.
 
 ### Guía paso a paso:
 
 **1. Plan your event**
 
-  * Haz una reunión para iniciar la Hora de Código.
+  * Haz una reunión para iniciar la Hora del Código.
   * Envía [una carta](<%= hoc_uri('/resources/#sample-emails') %>) a los padres. Pídeles que corran la voz.
   * Envía [una carta](<%= hoc_uri('/resources/#sample-emails') %>) para invitar a tu alcalde, diputado, gobernador o un empresario influyente a asistir y conversar con tus estudiantes.
   * Organiza actividades grupales (como una demostración de una actividad de programación 'fuera de línea'), o muestra lo que han hecho los estudiantes y guía las actividades.

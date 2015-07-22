@@ -15,7 +15,7 @@
     width: 200px;
     margin: 0 auto;
   }
-    
+
 </style>
 
 <h1>Meet Your facilitators</h1>
@@ -51,7 +51,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Emmanuel Schanzer</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/nopic.gif">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/nopic.gif">
     <h4>Program Director</h4>
   </div>
   <div class="bio">
@@ -63,7 +63,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Emma Youndtsmith</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/emma.jpg">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/emma.jpg">
     <h4>MA Regional Manager</h4>
   </div>
   <div class="bio">
@@ -75,7 +75,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Rosanna Sobota</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/rosanna.jpg">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/rosanna.jpg">
     <h4>NY Regional Manager</h4>
   </div>
   <div class="bio">
@@ -89,7 +89,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Casey Cleary</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/nopic.gif">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/nopic.gif">
     <h4>Charles County, MD</h4>
   </div>
   <div class="bio">
@@ -101,7 +101,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Corey Morrison</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/corey.png">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/corey.png">
     <h4>Chicago, IL</h4>
   </div>
   <div class="bio">
@@ -114,7 +114,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Jeanni Kim</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/nopic.gif">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/nopic.gif">
     <h4>Montgomery County, MD</h4>
   </div>
   <div class="bio">
@@ -126,7 +126,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Joan O'Brien</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/nopic.gif">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/nopic.gif">
     <h4>Broward County, FL</h4>
   </div>
   <div class="bio">
@@ -138,7 +138,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Pedro Uribe</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/nopic.gif">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/nopic.gif">
     <h4>Broward County, FL</h4>
   </div>
   <div class="bio">
@@ -150,7 +150,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Rick Jennings</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/rick.jpg">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/rick.jpg">
     <h4>Charles County, MD</h4>
   </div>
   <div class="bio">
@@ -162,7 +162,7 @@
 <div class="facilitator">
   <div class="headshot">
     <h1>Rodney Weems</h1>
-    <img src="http://staging.studio.code.org/script_assets/pd/facilitators/rodney.jpg">
+    <img src="https://studio.code.org/script_assets/pd/facilitators/rodney.jpg">
     <h4>Chicago, IL</h4>
   </div>
   <div class="bio">

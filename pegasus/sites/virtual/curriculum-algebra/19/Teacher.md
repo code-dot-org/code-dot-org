@@ -46,7 +46,6 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 - Cutouts of Pythagorean Theorem packets ( [1](pythag1.png), [2](pythag2.png) ) - 1 per group of students working together
 
 
-
 [/together]
 
 [together]

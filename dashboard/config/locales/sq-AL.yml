@@ -369,7 +369,10 @@
     classroom_activity: Aktiviteti Unplugged
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} RRESHTA KODIMI TË SHKRUARA NGA NXËNËSIT'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Pamja e përgjithshme e Kurseve 1,2 dhe 3
     lesson_plans: Planet e mësimeve
     signin_message: Je i rregjistruar? %{link}
@@ -414,6 +417,7 @@
     heading_legacy: <h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>
     your_gallery: Galeria
     no_primary_course: Bëj një kurs ne Studion e Kodimit
+    print_certificate: Print Certificate
   gender:
     male: Mashkull
     female: Femër
@@ -449,6 +453,12 @@
     autoplay_option: Videot Autoplay
     download: Shkarko Video
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Fshih këtë paralajmërim
     working:
       header: Ne po punojmë në suportin e browserit tuaj.
       message: Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të lehtë
@@ -506,9 +516,13 @@
       title: Kodi Flappy
       body: Dëshiron të shkruash lojën tënde në më pak se 10 minuta? Provo tutorialin
         tonë të Kodit Flappy!
-    20hour:
-      title: Kursi hyrës
-      body: Provo kursin tonë 20-orë në Hyrje në Shkencën Kompjuterike.
+    20-hour:
+      title: Accelerated Course
+      body: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe
+        konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit
+        K-8, por është argetuese të mësohet nga të gjitha moshat.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Provo tutorialin tonë të ri Ora e Kodimit në beta
       try_frozen: Artistët me Anna dhe Elsa, nga Frozen

@@ -49,7 +49,12 @@
     "app_height": "480",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L06-challenge3.png",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false"
+    "autocomplete_palette_apis_only": "false",
+    "markdown_instructions": "Now let's try to fill in the entire background of the screen. To make it a little easier for you, we can tell you the color we chose is one of the 140 named colors.  If you don't know what the named colors are, take a closer look at the documentation for penColor() again. Hint: you need to use dot().\r\n\r\n![](https://images.code.org/bc364a5bb28f1d98d0682c0f16e3a2ed-image-1436480662423.png)",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>

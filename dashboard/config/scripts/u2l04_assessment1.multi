@@ -1,11 +1,11 @@
 name 'U2L04 Assessment1'
-title 'Routers and Addresses: Question 1'
+title 'Routers and Redundancy: Question 1'
 
-question 'What does IP stand for?'
-wrong 'Internet Processing'
-right 'Internet Protocol'
-wrong 'Information Processing'   
-wrong 'Interstate Protocol'
+question 'In the Internet Simulator, your router knows to send your message to a different router because:'
+wrong 'You set the “other router” bit in the message.'
+wrong 'Everyone is on the same router.'
+right 'The first 4 bits of the address specify the router number that your friend is on.'   
+wrong 'Messages are routed over different paths.'
 
 markdown <<MARKDOWN
 

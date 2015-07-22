@@ -122,9 +122,4 @@ class ApiControllerTest < ActionController::TestCase
                       {method: "get", path: "/api/whatevvv"})
 
   end
-
-  test 'courses' do
-    get :courses
-    assert_response :success
-  end
 end

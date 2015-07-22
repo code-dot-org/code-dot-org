@@ -128,7 +128,7 @@ module ApplicationHelper
     if opts[:level_source].try(:level_source_image).try(:image)
       level_source = opts[:level_source]
       if level_source.level_source_image.s3?
-        if app == Game::ARTIST then
+        if app == Game::ARTIST
           level_source.level_source_image.s3_framed_url
         else
           level_source.level_source_image.s3_url
@@ -187,5 +187,10 @@ module ApplicationHelper
       script_name = data_t_suffix('script.name', script.name, "title")
     end
     certificate_image_url(name: user.name, course: script_name)
+  end
+
+  def minifiable_shared_path(path)
+    return path if Rails.configuration.pretty_sharedjs
+    path.sub(/\.js$/, '.min.js')
   end
 end

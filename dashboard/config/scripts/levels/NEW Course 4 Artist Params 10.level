@@ -22,7 +22,15 @@
     "x": "150",
     "y": "275",
     "callout_json": "[\r\n  {\"localization_key\":\"create_function\",\"callout_text\":\"Click here to open the \\\"Functions\\\" flyout, then click the \\\"Create a Function\\\" button.\",\"element_id\":\".blocklyTreeLabel:contains(Functions)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "ideal": "12"
+    "ideal": "12",
+    "markdown_instructions": "Create a `draw a hexagon` function block with a length parameter. \r\n\r\n*Hint: this hexagon is 100 pixels in size.*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

@@ -20,13 +20,13 @@
     ],
     "answers": [
       {
-        "text": "http://staging.studio.code.org/script_assets/pd/blue.png"
+        "text": "https://studio.code.org/script_assets/pd/blue.png"
       },
       {
-        "text": "http://staging.studio.code.org/script_assets/pd/teal.png"
+        "text": "https://studio.code.org/script_assets/pd/teal.png"
       },
       {
-        "text": "http://staging.studio.code.org/script_assets/pd/purple.png"
+        "text": "https://studio.code.org/script_assets/pd/purple.png"
       }
     ],
     "title": "Intro to Data Types",

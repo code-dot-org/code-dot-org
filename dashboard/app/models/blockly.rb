@@ -211,11 +211,12 @@ class Blockly < Level
       app_options[:skinId] = level.skin if level.is_a?(Blockly)
 
       # Set some values that Blockly expects on the root of its options string
+      non_nil_level_prop = level_prop.reject!{|_, value| value.nil?}
       app_options.merge!({
                              baseUrl: "#{ActionController::Base.asset_host}/blockly/",
                              app: level.game.try(:app),
                              levelId: level.level_num,
-                             level: level_prop.reject!{|_, value| value.nil?},
+                             level: non_nil_level_prop,
                              cacheBust: level.class.cache_bust,
                              droplet: level.game.try(:uses_droplet?),
                              pretty: Rails.configuration.pretty_apps ? '' : '.min',

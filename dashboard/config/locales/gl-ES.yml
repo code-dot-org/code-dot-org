@@ -382,7 +382,10 @@
     classroom_activity: Actividad fuera de línea
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Resumen de los cursos 1, 2 y 3
     lesson_plans: Plan de estudio
     signin_message: ¿Ya estás registrado? %{link}
@@ -429,6 +432,7 @@
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Varón
     female: Mujer
@@ -464,6 +468,12 @@
     autoplay_option: Reproducir videos automáticamente
     download: Descargar video
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Hide this warning
     working:
       header: Estamos trabajando en dar soporte para tu navegador.
       message: Code.org utiliza moderna tecnología web. Esto permite que el sitio
@@ -524,10 +534,13 @@
       title: Código Flappy
       body: ¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba nuestro
         tutorial de Código Flappy!
-    20hour:
-      title: Curso introductorio
-      body: Prueba nuestro curso de 20 horas de introducción a las ciencias de la
-        computación.
+    20-hour:
+      title: Accelerated Course
+      body: This 20-hour course covers the core computer science and programming concepts
+        in courses 2-4. The course is designed for use with ages 10-18. Check out
+        courses 2-4 for a more complete experience!
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Prueba nuestro nuevo tutorial de la hora del código en beta
       try_frozen: Artista con Anna y Elsa de "Frozen"

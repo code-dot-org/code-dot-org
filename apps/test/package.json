@@ -2,22 +2,11 @@
   "name": "@cdo/apps/test",
   "version": "0.0.1",
   "description": "Tests for cdo apps",
-  "browser": {
-    "blockly": "../build/package/js/blockly.js",
-    "requirejs": "../lib/requirejs/full/require.js"
-  },
   "browserify": {
     "transform": [
       "require-globify",
       "browserify-shim"
     ]
   },
-  "browserify-shim": {
-    "blockly": {
-      "exports": "Blockly"
-    },
-    "requirejs": {
-      "exports": "requirejs"
-    }
-  }
+  "browserify-shim": "./util/browserifyShim.config.js"
 }

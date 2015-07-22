@@ -1,3 +1,6 @@
+/**
+ * @overview Wires in the visualization.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12,12 +15,10 @@
 
 require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
-var NetSimVizEntity = require('./NetSimVizEntity');
-var NetSimVizNode = require('./NetSimVizNode');
+var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 
@@ -31,15 +32,13 @@ var binaryToAB = dataConverters.binaryToAB;
 var TEXT_FINAL_VERTICAL_OFFSET = -10;
 
 /**
- *
- * @param sourceWire
- * @param {function} getEntityByID - Allows this wire to search
- *        for other entities in the simulation
+ * @param {NetSimVizNode} localNode
+ * @param {NetSimVizNode} remoteNode
  * @constructor
- * @augments NetSimVizEntity
+ * @augments NetSimVizElement
  */
-var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
-  NetSimVizEntity.call(this, sourceWire);
+var NetSimVizWire = module.exports = function (localNode, remoteNode) {
+  NetSimVizElement.call(this);
 
   var root = this.getRoot();
   root.addClass('viz-wire');
@@ -89,41 +88,12 @@ var NetSimVizWire = module.exports = function (sourceWire, getEntityByID) {
    */
   this.encodings_ = [];
 
-  /**
-   * Bound getEntityByID method from vizualization controller.
-   * @type {Function}
-   * @private
-   */
-  this.getEntityByID_ = getEntityByID;
+  this.localVizNode = localNode;
+  this.remoteVizNode = remoteNode;
 
-  this.localVizNode = null;
-  this.remoteVizNode = null;
-
-  this.configureFrom(sourceWire);
   this.render();
 };
-NetSimVizWire.inherits(NetSimVizEntity);
-
-/**
- * Configuring a wire means looking up the viz nodes that will be its endpoints.
- * @param {NetSimWire} sourceWire
- */
-NetSimVizWire.prototype.configureFrom = function (sourceWire) {
-  this.localVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.localNodeID);
-  this.remoteVizNode = this.getEntityByID_(NetSimVizNode, sourceWire.remoteNodeID);
-
-  if (this.localVizNode) {
-    this.localVizNode.setAddress(sourceWire.localAddress);
-  }
-
-  if (this.remoteVizNode) {
-    this.remoteVizNode.setAddress(sourceWire.remoteAddress);
-  }
-
-  if (netsimGlobals.getLevelConfig().broadcastMode) {
-    this.getRoot().css('display', 'none');
-  }
-};
+NetSimVizWire.inherits(NetSimVizElement);
 
 /**
  * Update path data for wire.

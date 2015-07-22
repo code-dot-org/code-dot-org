@@ -1,3 +1,6 @@
+/**
+ * @overview UI controller for set of radio buttons used to select display encodings.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

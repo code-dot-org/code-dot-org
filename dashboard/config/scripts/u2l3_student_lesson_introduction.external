@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 # Background
 
-A communication protocol is encoded in binary. The protocol must be efficient in the number of bits required and flexible enough to handle various situations. An addressing protocol typically includes the sender and recipient’s identifying information and perhaps the size of the message and the date sent. IP addresses must be of a fixed length.
+What kinds of information do you need to send when you send a message over the internet? You would probably want to include some control information, such as sender and receiver addresses, along with the message itself. How long should this control information be and how long should the message be? More importantly, if a message and its control information are sent as a string of bits, how does the receiver know where the information ends and where the actual message begins? In computing, the control information and its message are called a "packet" and the rules that define where the control information ends and the message begins are part of a "protocol." For this lesson, you will implement an addressing protocol for the battleship game.
 
 # Vocabulary
 * **Protocol:** A well-known set of rules and standards used to communicate between machines
