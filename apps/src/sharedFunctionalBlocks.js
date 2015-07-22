@@ -374,8 +374,27 @@ function installSquared(blockly, generator) {
  */
 function installCond(blockly, generator) {
   // TODO(brent) - rtl
+  var types = [Blockly.BlockValueType.NONE, Blockly.BlockValueType.NUMBER,
+    Blockly.BlockValueType.STRING, Blockly.BlockValueType.IMAGE,
+    Blockly.BlockValueType.BOOLEAN];
 
+  // Generates the following blocks:
+  // functional_cond (deprecated)
+  // functional_cond_number
+  // functional_cond_string
+  // functional_cond_boolean
+  // functional_cond_image
+  types.forEach(function (type) {
+    installCondForType(blockly, generator, type);
+  });
+}
+
+function installCondForType(blockly, generator, type) {
   var blockName = 'functional_cond';
+  if (type !== Blockly.BlockValueType.NONE) {
+    blockName += '_' + type.toLowerCase();
+  }
+
   blockly.Blocks[blockName] = {
     helpUrl: '',
     init: function() {
@@ -388,7 +407,7 @@ function installCond(blockly, generator) {
         fixedSize: { height: 35 }
       };
 
-      this.setHSV.apply(this, Blockly.FunctionalTypeColors.None);
+      this.setHSV.apply(this, Blockly.FunctionalTypeColors[type]);
 
       var plusField = new Blockly.FieldIcon('+');
       Blockly.bindEvent_(plusField.getRootElement(), 'mousedown',
@@ -402,13 +421,14 @@ function installCond(blockly, generator) {
         .appendTitle(new Blockly.FieldLabel('else', options));
       var defaultInput = this.appendFunctionalInput('DEFAULT')
         .setInline(true);
-      defaultInput.setHSV.apply(defaultInput, Blockly.FunctionalTypeColors.None);
+      defaultInput.setHSV.apply(defaultInput, Blockly.FunctionalTypeColors[type]);
 
       this.appendDummyInput('PLUS')
         .appendTitle(plusField)
         .setInline(true);
 
-      this.setFunctionalOutput(true);
+      this.setFunctionalOutput(true, type === Blockly.BlockValueType.NONE ?
+        undefined : type);
 
       this.addConditionalRow();
     },
@@ -429,7 +449,7 @@ function installCond(blockly, generator) {
 
       var input = this.appendFunctionalInput('VALUE' + id)
         .setInline(true);
-      input.setHSV.apply(input, Blockly.FunctionalTypeColors.None);
+      input.setHSV.apply(input, Blockly.FunctionalTypeColors[type]);
       this.moveInputBefore('VALUE' + id, 'ELSE');
 
       var minusInput = this.appendDummyInput('MINUS' + id)
