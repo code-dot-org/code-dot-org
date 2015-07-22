@@ -59,4 +59,6 @@ Scenario: Applab Flow
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
 
+  Then I sign out
+
   # TODO - maybe we do a remix and/or create new as well
