@@ -60,6 +60,7 @@ class ChannelsApi < Sinatra::Base
     if src_channel
       data = storage_app.get(src_channel)
       data['name'] = "Remix: #{data['name']}"
+      data['hidden'] = false
     else
       begin
         data = JSON.parse(request.body.read)
