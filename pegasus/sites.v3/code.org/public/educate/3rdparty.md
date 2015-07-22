@@ -78,5 +78,6 @@ Free curriculum from Google that uses online, project-based tutorials for elemen
 ### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
 Build the next generation of creators using free, open-source Java courseware.
 
-<br />
+<br /><br/><br/>
+Wish your organization were listed on this page? [See the criteria](https://docs.google.com/document/d/1Q4J-mSzbrV_arujtOnIARVyIU9tc9jUog4i_1DWAD3s/pub)
 
