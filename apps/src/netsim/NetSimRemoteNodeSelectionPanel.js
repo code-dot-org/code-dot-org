@@ -1,3 +1,7 @@
+/**
+ * @overview Lobby table UI component.
+ * @see NetSimLobby for usage.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

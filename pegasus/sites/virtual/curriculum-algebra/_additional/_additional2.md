@@ -1,4 +1,6 @@
 ## Additional Support Documents
+[Teacher Manual](/curriculum/docs/algebra/teacher_manual.pdf)<br/>
+[Student Workbook](/curriculum/docs/algebra/student_workbook.pdf)<br/>
 [Course Overview](/curriculum/docs/algebra/overview)<br/>
 [Course Framework](/curriculum/docs/algebra/framework)<br/>
 [Standards Alignment](/curriculum/docs/algebra/standards)

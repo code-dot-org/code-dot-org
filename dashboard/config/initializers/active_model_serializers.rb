@@ -20,9 +20,9 @@ module ActiveModel
       if resource.respond_to?(:to_ary)
         config.array_serializer
       else
-        options
-            .fetch(:association_options, {})
-            .fetch(:serializer, get_serializer_for(resource.class))
+        options.
+            fetch(:association_options, {}).
+            fetch(:serializer, get_serializer_for(resource.class))
       end.tap{|serializer| raise "ActiveModel serializer not found for #{resource.class}, options: #{options}" if serializer.nil? }
     end
   end

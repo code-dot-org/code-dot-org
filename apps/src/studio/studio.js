@@ -1363,7 +1363,6 @@ Studio.init = function(config) {
   // Note - if turned back on, be sure it remains hidden when config.level.embed
   config.enableShowCode = utils.valueOr(studioApp.editCode, false);
   config.varsInGlobals = true;
-  config.generateFunctionPassBlocks = !!config.level.generateFunctionPassBlocks;
   config.dropletConfig = dropletConfig;
   config.unusedConfig = [];
   for (var handlerName in AUTO_HANDLER_MAP) {
@@ -1625,6 +1624,10 @@ var displayFeedback = function() {
   if (level.freePlay && !Studio.customLogic instanceof BigGameLogic) {
     tryAgainText = commonMsg.keepPlaying();
   }
+  else {
+    tryAgainText = commonMsg.tryAgain();
+  }
+
 
   if (!Studio.waitingForReport) {
     studioApp.displayFeedback({
@@ -1643,7 +1646,7 @@ var displayFeedback = function() {
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,
       appStrings: {
-        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg(),
+        reinfFeedbackMsg: studioMsg.reinfFeedbackMsg({backButton: tryAgainText}),
         sharingText: studioMsg.shareGame()
       }
     });

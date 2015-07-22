@@ -1,41 +1,17 @@
 ---
-title: Office Hours for Teachers
+title: Live Events for Teachers
 
 ---
 
-# Office Hours for Teachers
+# Live Events for Teachers
 
-Do you have a question about Code.org's curricula that you'd like answered by a Code.org staff member or teacher that has used Code.org courses with their students? Visit Code.org's Office Hours, which is a monthly, 1-hour videochat to help you use our curriculum with your students. Hope to see you there!
-
-All sessions will be recorded and available on this page, so if you can't make a session, you can still watch a session afterwards. 
-
-## Schedule
-
-**More dates coming for 2015! 
-Follow [@teachcodeorg](http://twitter.com/teachcodeorg) for updates or visit [teacherblog.code.org](http://teacherblog.code.org)**
-
-## Past Events
-Thursday, November 6, 2014 • 5 p.m. *PT* / 1 hr [View Recording](http://youtu.be/Jb2xhFeNvG4)
-
-Thursday, December 4, 2014 • 5 p.m. *PT* / 1 hr [View Recording](https://www.youtube.com/watch?v=Lmr5Sfhk8rM&feature=youtu.be)
-
-Wednesday, March 11, 2015 • 5 p.m. *PT* / 1 hr *Recording Coming Soon*
-
-Wednesday, April 8, 2015 • 5 p.m. *PT* / 1 hr * *Recording Coming Soon*
-
-Wednesday, May 6, 2015 • 5 p.m. *PT* / 1 hr *Recording Coming Soon*
-
-## FAQ: Office Hours 
-**Do I need a special account or login to join?**
-
-No. You don't need to create an account to join our office hours. You don't have to pre-register. 
-
-To join:
-
-- Click the link of the office hours you'd like to attend; try to arrive 5-10 minutes before the session begins.  
--  Download a plug-in if necessary (you'll be prompted to do this if necessary)
-- Enter Name
-- Unblock plug-ins (see image below)
-- Click "Enter Meeting"
-
-<img src="/images/joinbluejeans.png" width=1000px />
+<p>Code.org hosts regular, free virtual events for our community. Check the calendar below for upcoming events.</p>
+## Upcoming Events
+<p><iframe frameborder="0" height="509" marginheight="0" marginwidth="0" scrolling="no" src="https://www.eventbrite.com/calendar-widget?eid=17789364468" width="195" style="line-height: 1.4; text-align: center;"></iframe></p>
+<div style="width: 195px; text-align: center;">
+<div style="font-family: Helvetica, Arial; font-size: 10px; padding: 5px 0 5px; margin: 2px; width: 195px; text-align: center;"><a class="powered-by-eb" href="http://www.eventbrite.com/r/ecal" target="_blank" style="color: #dddddd; text-decoration: none;">Powered by Eventbrite</a></div>
+</div></p>
+<br>
+Can’t make a particular event that interests you? Don’t worry! All events are recorded and archived. Anyone who registers will receive an email with a link to the recording after the session ends.
+<br><br>
+<p><a href="http://www.eventbrite.com/o/codeorg-teacher-community-8317327577" target="_blank">Find a complete list of our upcoming and past events here &gt;&gt;</a></p>

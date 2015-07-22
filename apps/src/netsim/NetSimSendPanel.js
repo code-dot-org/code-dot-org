@@ -1,3 +1,8 @@
+/**
+ * @overview UI controller for the send panel (the bottom panel on the right)
+ *           which is used to transmit packets.
+ * @see NetSimPacketEditor which is used extensively here.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

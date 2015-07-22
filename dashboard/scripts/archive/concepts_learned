@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+
+# Concepts learned approximation
+
+# Concepts learned (broken down by male/female (if reported) and all)
+
+# For each course (course 1-4, K8, HOC of courses):
+# Finished 100% of puzzles in the course
+# Finished 90% of puzzles in the course
+# Finished 80% of the puzzles in the course
+# …
+# Finished 10% of the puzzles
+# Started the course
+
+# And also by stage or HOC class (specific concepts)
+# Stage 1:
+# Number of students who had optimal solutions to all puzzles
+# Number of students who finished all puzzles
+# Number of students who finished 80%
+# Stage 2:
+# etc.
+# etc.
+require_relative '../../config/environment'
+connection = ActiveRecord::Base.connection
+
+# Filter on students with/without teacher
+def filter_teacher(with_teacher)
+  "and #{with_teacher ? '' : 'not'} exists (select null from followers f where ul.user_id = f.student_user_id)"
+end
+
+# Per-script
+by_having_teacher_data = [true, false].map do |with_teacher|
+  script_data = Script.where(id: [1,2,6,17,18,19,21,22,23,25,26,30,34]).to_a.map do |script|
+    sql = "select q, count(*) from (SELECT count(*) as q from user_levels ul where script_id = #{script.id} #{filter_teacher with_teacher} group by user_id) as subquery group by q"
+    {id: script.id, data: connection.execute(sql)}.tap{|x|puts x.to_json}
+  end
+  {with_teacher: with_teacher, script_data: script_data}.tap{|x|puts x.to_json}
+end
+puts by_having_teacher_data.to_json
+
+# Per-stage
+# script_data = Script.where(id: [1,2,6,17,18,19,21,22,23,25,26,30,34]).to_a.map do |script|
+#   stage_data = script.stages.map do |stage|
+#     sql = "select query, count(*) from (SELECT count(*) as query from user_levels join script_levels as sl on (sl.level_id = user_levels.level_id and sl.stage_id = #{stage.id}) where user_levels.script_id = #{script.id} and sl.script_id = #{script.id} group by user_id) as derived_table group by query"
+#     {stage_id: stage.id, data: connection.execute(sql)}.tap{|x|puts x.to_json}
+#   end
+#   {script_id: script.id, stage_data: stage_data}
+# end
+# puts script_data.to_json

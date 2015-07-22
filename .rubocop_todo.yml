@@ -116,12 +116,6 @@ Style/ConstantName:
 Style/DefWithParentheses:
   Enabled: false
 
-# Offense count: 14
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/DotPosition:
-  Enabled: false
-
 # Offense count: 4
 Style/EmptyElse:
   Enabled: false
@@ -204,11 +198,6 @@ Style/MethodCallParentheses:
 Style/MethodDefParentheses:
   Enabled: false
 
-# Offense count: 1
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/MethodName:
-  Enabled: false
-
 # Offense count: 3
 Style/MultilineBlockChain:
   Enabled: false
@@ -216,11 +205,6 @@ Style/MultilineBlockChain:
 # Offense count: 3
 # Cop supports --auto-correct.
 Style/MultilineBlockLayout:
-  Enabled: false
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/MultilineIfThen:
   Enabled: false
 
 # Offense count: 109
@@ -360,9 +344,4 @@ Style/StringLiteralsInInterpolation:
 
 # Offense count: 1
 Style/StructInheritance:
-  Enabled: false
-
-# Offense count: 3
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/VariableName:
   Enabled: false

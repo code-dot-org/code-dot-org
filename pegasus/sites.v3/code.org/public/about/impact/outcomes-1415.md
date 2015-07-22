@@ -21,6 +21,7 @@ Here is the number of students who have demonstrated skill in  each concept by c
 
 
 | Since 9/14 | Sequencing | Debugging | Loops | Conditionals | Nested Loops | Event handlers | Functions |
+|---|---|---|---|---|---|---|---|
 | Course 1 | 524,776 | 394,986 | 161,185 | -  | -  |  124,559 | -  |
 | Course 2 | 516,595 | 140,135 | 219,110 | 90,550 | 65,785 | 273,849 | -  |
 | Course 3 | 114,250 | 18,937 | 114,250 | 27,736 | 25,008 | 24,716 | 45,878 |
@@ -29,13 +30,14 @@ Here is the number of students who have demonstrated skill in  each concept by c
 <br/>
 
 - In looking at our completion data for Courses 1-3 versus our hour long tutorials, we see unsurprisingly **a higher completion rate** for shorter tutorials than we do for courses which require more time and expertise to complete. 
-- However, the completion rate of our longer courses averages **around 10%**, which compares well with completion rates for other online learning courses such as Coursera and EdX. This is interesting given the fact that our courses target **a much younger audience**. Note: “completion” means solving every single puzzle in the entire course. We don’t believe this is nearly as relevant as the table of concepts demonstrated.
+- However, the completion rate of our longer courses averages **around 10%**, which compares well with completion rates for other online learning courses such as Coursera and EdX. This is interesting given the fact that our courses target **a much younger audience**. Note: “completion” means solving every single puzzle in the entire course. We don’t believe this is as relevant as the table of concepts demonstrated.
 - One potential explanation for our high completion rate among young learners is the impact of teachers. Students working on Code Studio courses 2-4 with a teacher’s guidance **are more likely to complete** the course than students working on their own, outside of a classroom setting. This shows the advantage for a student of having an adult ally in terms of their overall persistence in learning CS, as well as the benefit to Code.org of focusing on teacher support and professional development.
 
 **Table: With Teacher vs. Without**
 This table shows the "teacher advantage" for completing a given percentage of each course, where teacher advantage is the percent more likely you are to complete that much of the class if you have a teacher. Ex: 26 means you are 26% percent more likely to do 20% of course1 if you have a teacher.
 
 | Course Name | 20% | 30% | 40% | 50% | 60% | 70% | 80% | 90% | 100%|
+|---|---|---|---|---|---|---|---|---|---|
 | 20-hour | 2 | 2 | 6 | 3 | 0 | 0 | -7 | -17 | -44 |
 | Course 1 | 26 | 28 | 22 | 22 | 17 | 11 | 0 | -15 |-25 |
 | Course 2 | 100 | 86 | 82 | 78 | 63 | 67 | 60 |67  | 100 |
@@ -63,6 +65,7 @@ A programming test was designed by Code.org and delivered to about 1,000 ECS stu
 **Table: Programming test results (designed by Code.org, delivered through Code Studio) (N=~1000).** 
 
 |Concept/Task | Success Rate|
+|---|---|
 |Repeat loop with a single command in it | 87%|
 |Repeat loop with multiple commands in it | 95%|
 |If-then statement | 94%|
