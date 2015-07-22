@@ -8,38 +8,6 @@ ENV['RACK_ENV'] = 'test'
 
 class PropertiesTest < Minitest::Unit::TestCase
 
-  def test_get_set_delete
-    # The Properties API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @properties = Rack::Test::Session.new(Rack::MockSession.new(PropertiesApi, "studio.code.org"))
-
-    create_channel
-
-    key = '_testKey'
-    value_string = "one".to_json
-    value_num = 2.to_json
-    value_boolean = true.to_json
-
-    set_key_value(key, value_string)
-    assert_equal value_string, get_key_value(key)
-
-    set_key_value(key, value_num)
-    assert_equal value_num, get_key_value(key)
-
-    set_key_value(key, value_boolean)
-    assert_equal value_boolean, get_key_value(key)
-
-    delete_key_value(key)
-
-    get_key_value(key)
-    assert @properties.last_response.not_found?
-
-    delete_channel
-  end
-
-  # Methods below this line are test utilities, not actual tests
-  private
-
   def create_channel
     @channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     @channel_id = @channels.last_response.location.split('/').last
@@ -62,6 +30,35 @@ class PropertiesTest < Minitest::Unit::TestCase
   def delete_key_value(key)
     @properties.delete "/v3/shared-properties/#{@channel_id}/#{key}"
     assert @properties.last_response.successful?
+  end
+
+  def test_get_set_delete
+    # The Properties API does not need to share a cookie jar with the Channels API.
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+    @properties = Rack::Test::Session.new(Rack::MockSession.new(PropertiesApi, "studio.code.org"))
+
+    self.create_channel
+
+    key = '_testKey'
+    value_string = "one".to_json
+    value_num = 2.to_json
+    value_boolean = true.to_json
+
+    set_key_value(key, value_string)
+    assert_equal value_string, get_key_value(key)
+
+    set_key_value(key, value_num)
+    assert_equal value_num, get_key_value(key)
+
+    set_key_value(key, value_boolean)
+    assert_equal value_boolean, get_key_value(key)
+
+    delete_key_value(key)
+
+    get_key_value(key)
+    assert @properties.last_response.not_found?
+
+    self.delete_channel
   end
 
 end

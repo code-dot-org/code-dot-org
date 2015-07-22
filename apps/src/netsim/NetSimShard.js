@@ -32,21 +32,21 @@ var NetSimShard = module.exports = function (shardID) {
   this.id = shardID;
 
   /** @type {NetSimTable} */
-  this.nodeTable = new NetSimTable(shardID, 'n');
+  this.nodeTable = new NetSimTable(shardID + '_n');
 
   /** @type {NetSimTable} */
-  this.wireTable = new NetSimTable(shardID, 'w');
+  this.wireTable = new NetSimTable(shardID + '_w');
 
   /** @type {NetSimTable} */
-  this.messageTable = new NetSimTable(shardID, 'm');
+  this.messageTable = new NetSimTable(shardID + '_m');
   this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
-  this.logTable = new NetSimTable(shardID, 'l');
+  this.logTable = new NetSimTable(shardID + '_l');
   this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
-  this.heartbeatTable = new NetSimTable(shardID, 'h');
+  this.heartbeatTable = new NetSimTable(shardID + '_h');
 };
 
 /**

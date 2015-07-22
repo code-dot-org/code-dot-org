@@ -11,7 +11,6 @@ require 'channels_api'
 require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
-require 'net_sim_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -29,7 +28,6 @@ module Dashboard
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
-    config.middleware.insert_after SharedResources, NetSimApi
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after SharedResources, PegasusSites
