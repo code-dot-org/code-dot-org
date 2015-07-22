@@ -5001,21 +5001,21 @@ var NetSimShard = module.exports = function (shardID) {
   this.id = shardID;
 
   /** @type {NetSimTable} */
-  this.nodeTable = new NetSimTable(shardID + '_n');
+  this.nodeTable = new NetSimTable(shardID, 'n');
 
   /** @type {NetSimTable} */
-  this.wireTable = new NetSimTable(shardID + '_w');
+  this.wireTable = new NetSimTable(shardID, 'w');
 
   /** @type {NetSimTable} */
-  this.messageTable = new NetSimTable(shardID + '_m');
+  this.messageTable = new NetSimTable(shardID, 'm');
   this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
-  this.logTable = new NetSimTable(shardID + '_l');
+  this.logTable = new NetSimTable(shardID, 'l');
   this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
-  this.heartbeatTable = new NetSimTable(shardID + '_h');
+  this.heartbeatTable = new NetSimTable(shardID, 'h');
 };
 
 /**
@@ -5052,7 +5052,6 @@ NetSimShard.prototype.tick = function (clock) {
 
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
-var netsimGlobals = require('./netsimGlobals');
 var clientApi = require('@cdo/shared/clientApi');
 
 /**
@@ -5066,17 +5065,24 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * Wraps the app storage table API in an object with local
  * cacheing and callbacks, which provides a notification API to the rest
  * of the NetSim code.
+ * @param {!string} shardID - The shard ID specific to this class' NetSim instance.
  * @param {!string} tableName - The name of the remote storage table to wrap.
  * @constructor
+ * @throws {Error} if wrong number of arguments are provided.
  */
-var NetSimTable = module.exports = function (tableName) {
+var NetSimTable = module.exports = function (shardID, tableName) {
+  // Require both shardID and tableName to be provided
+  if (!shardID || !tableName) {
+    throw new Error('NetSimTable must be constructed with both arguments. ' +
+        '(got shardID:' + shardID + ' tableName:' + tableName);
+  }
+
   /**
    * Base URL we hit to make our API calls
    * @type {string}
    * @private
    */
-  this.remoteUrl_ = '/v3/shared-tables/' + netsimGlobals.getChannelPublicKey() +
-      '/' + tableName;
+  this.remoteUrl_ = '/v3/netsim/' + shardID + '/' + tableName;
 
   /**
    * API object for making remote calls
@@ -5303,7 +5309,7 @@ NetSimTable.prototype.tick = function () {
 };
 
 
-},{"../ObservableEvent":2,"../utils":319,"./netsimGlobals":261,"@cdo/shared/clientApi":321}],321:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":319,"@cdo/shared/clientApi":321}],321:[function(require,module,exports){
 /* global $ */
 
 var base = {
@@ -18607,16 +18613,6 @@ module.exports = {
    */
   getAssetUrlFunction: function () {
     return studioApp_.assetUrl;
-  },
-
-  /**
-   * @returns {string} channels API public key for storage system
-   */
-  getChannelPublicKey: function () {
-    if (netsim_ && netsim_.environment === 'development') {
-      return 'JGW2rHUp_UCMW_fQmRf6iQ==';
-    }
-    return 'HQJ8GCCMGP7Yh8MrtDusIA==';
   },
 
   /**
