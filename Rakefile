@@ -248,7 +248,21 @@ namespace :test do
     end
   end
 
-  task all: [:apps, :blockly_core]
+  task :dashboard do
+    Dir.chdir(dashboard_dir) do
+      HipChat.log 'Testing <b>dashboard</b>...'
+      RakeUtils.system 'rake test'
+    end
+  end
+
+  task :pegasus do
+    Dir.chdir(pegasus_dir) do
+      HipChat.log 'Testing <b>pegasus</b>...'
+      RakeUtils.system 'rake test'
+    end
+  end
+
+  task all: [:apps, :blockly_core, :dashboard, :pegasus]
 end
 task :test => ['test:all']
 
