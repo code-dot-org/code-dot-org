@@ -39,13 +39,6 @@ Blockly.AutoScroll = function (blockSpace, startPanVector) {
   this.blockSpace_ = blockSpace;
 
   /**
-   * Time of most recent pan start in ms since epoch
-   * @type {number}
-   * @private
-   */
-  this.panStart_ = new Date().getTime();
-
-  /**
    * Current active auto-pan rule
    * @type {number}
    * @private
@@ -70,9 +63,6 @@ Blockly.AutoScroll = function (blockSpace, startPanVector) {
  */
 Blockly.AutoScroll.DT = 1000 / 60; // 60 updates/sec
 
-Blockly.AutoScroll.ACCEL_START_TIME = 600; // in ms
-Blockly.AutoScroll.ACCELERATION = 1.1;
-
 Blockly.AutoScroll.prototype.stopAndDestroy = function () {
   this.activePanVector_ = null;
   if (this.activePanningIntervalID_) {
@@ -81,21 +71,9 @@ Blockly.AutoScroll.prototype.stopAndDestroy = function () {
   this.activePanningIntervalID_ = null;
   this.lastMouseX_ = null;
   this.lastMouseY_ = null;
-  this.panStart_ = null;
 };
 
 Blockly.AutoScroll.prototype.scrollTick_ = function (dt) {
-  //var currentTime = new Date().getTime();
-  //var elapsedTime = currentTime - this.panStart_;
-  //var velocity = this.activePanVector_.speed;
-  //if (elapsedTime > Blockly.AutoScroll.ACCEL_START_TIME) {
-  //  var t = elapsedTime - Blockly.AutoScroll.ACCEL_START_TIME;
-  //  var sign = velocity > 0 ? 1 : -1;
-  //  velocity += sign * Blockly.AutoScroll.ACCELERATION * t;
-  //}
-
-  //var panDy = velocity / dt;
-
   this.blockSpace_.scrollDeltaWithAnySelectedBlock(
     this.activePanVector_.x / dt,
     this.activePanVector_.y / dt,
