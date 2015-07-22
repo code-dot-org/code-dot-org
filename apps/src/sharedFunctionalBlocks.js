@@ -427,11 +427,8 @@ function installCondForType(blockly, generator, type) {
         .appendTitle(plusField)
         .setInline(true);
 
-      if (type !== Blockly.BlockValueType.NONE) {
-        this.setFunctionalOutput(true);
-      } else {
-        this.setFunctionalOutput(true, type);
-      }
+      this.setFunctionalOutput(true, type === Blockly.BlockValueType.NONE ?
+        undefined : type);
 
       this.addConditionalRow();
     },
