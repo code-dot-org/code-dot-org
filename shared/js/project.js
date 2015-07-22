@@ -45,7 +45,7 @@ var PathPart = {
 var current;
 var isEditing = false;
 
-module.exports = {
+var projects = module.exports = {
   /**
    * @returns {string} id of the current project, or undefined if we don't have
    *   a current project.
@@ -268,6 +268,9 @@ module.exports = {
       }
       executeCallback(callback);
     });
+  },
+  serverSideRemix: function() {
+    location.href = projects.getPathName('remix');
   },
   delete: function(callback) {
     var channelId = current.id;
