@@ -8,6 +8,36 @@ ENV['RACK_ENV'] = 'test'
 
 class TablesTest < Minitest::Unit::TestCase
 
+  def test_create_read_update_delete
+    # The Tables API does not need to share a cookie jar with the Channels API.
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+    @tables = Rack::Test::Session.new(Rack::MockSession.new(TablesApi, "studio.code.org"))
+    @table_name = '_testTable'
+
+    create_channel
+
+    assert read_records.first.nil?
+
+    record_id = create_record({name:'alice', age:7, male:false})
+    record = read_records.first
+    assert_equal record_id.to_i, record['id'].to_i
+    assert_equal 'alice', record['name']
+    assert_equal 7, record['age']
+    assert_equal false, record['male']
+
+    assert_equal 8, update_record(record_id, {id:record_id, age:8})['age']
+    record = read_records.first
+    assert_equal 8, record['age']
+
+    delete_record(record_id)
+    assert read_records.first.nil?
+
+    delete_channel
+  end
+
+  # Methods below this line are test utilities, not actual tests
+  private
+
   def create_channel
     @channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     @channel_id = @channels.last_response.location.split('/').last
@@ -35,33 +65,6 @@ class TablesTest < Minitest::Unit::TestCase
 
   def delete_record(id)
     @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}"
-  end
-
-  def test_create_read_update_delete
-    # The Tables API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @tables = Rack::Test::Session.new(Rack::MockSession.new(TablesApi, "studio.code.org"))
-    @table_name = '_testTable'
-
-    self.create_channel
-
-    assert read_records.first.nil?
-
-    record_id = create_record({name:'alice', age:7, male:false})
-    record = read_records.first
-    assert_equal record_id.to_i, record['id'].to_i
-    assert_equal 'alice', record['name']
-    assert_equal 7, record['age']
-    assert_equal false, record['male']
-
-    assert_equal 8, update_record(record_id, {id:record_id, age:8})['age']
-    record = read_records.first
-    assert_equal 8, record['age']
-
-    delete_record(record_id)
-    assert read_records.first.nil?
-
-    self.delete_channel
   end
 
 end
