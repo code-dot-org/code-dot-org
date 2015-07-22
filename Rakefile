@@ -19,16 +19,50 @@ def create_database(uri)
   system command.join(' ')
 end
 
+##################################################################################################
+##
+##
+## lint
+##
+##
+##################################################################################################
+
 namespace :lint do
   task :ruby do
+    HipChat.log 'Linting ruby...'
     RakeUtils.system 'rubocop'
   end
 
   task :haml do
+    HipChat.log 'Linting haml...'
     RakeUtils.system 'haml-lint dashboard pegasus'
   end
 
-  task all: [:ruby, :haml]
+  namespace :js do
+    task :apps do
+      Dir.chdir(apps_dir) do
+        RakeUtils.npm_install
+
+        HipChat.log 'Linting <b>apps</b>...'
+        RakeUtils.system 'grunt jshint'
+      end
+    end
+
+    task :shared do
+      Dir.chdir(shared_js_dir) do
+        RakeUtils.npm_install
+
+        HipChat.log 'Linting <b>shared</b> js...'
+        RakeUtils.system 'gulp lint'
+      end
+    end
+
+    task all: [:apps, :shared]
+  end
+  task js: ['js:all']
+
+
+  task all: [:ruby, :haml, :js]
 end
 task lint: ['lint:all']
 
@@ -79,7 +113,6 @@ namespace :build do
 
   task :apps do
     Dir.chdir(apps_dir) do
-      HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
       HipChat.log 'Updating <b>apps</b> i18n strings...'
@@ -96,7 +129,6 @@ namespace :build do
 
   task :shared do
     Dir.chdir(shared_js_dir) do
-      HipChat.log 'Installing <b>shared js</b> dependencies...'
       RakeUtils.npm_install
 
       HipChat.log 'Building <b>shared js</b>...'
@@ -195,12 +227,57 @@ namespace :build do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 
 end
-task :build => ['build:all']
+task build: ['build:all']
 
 
+##################################################################################################
+##
+##
+## test
+##
+##
+##################################################################################################
+
+namespace :test do
+
+  task :apps do
+    Dir.chdir(apps_dir) do
+      RakeUtils.npm_install
+
+      HipChat.log 'Testing <b>apps</b>...'
+      RakeUtils.system 'grunt mochaTest'
+    end
+  end
+
+  task :blockly_core do
+    Dir.chdir(blockly_core_dir) do
+      RakeUtils.npm_install
+
+      HipChat.log 'Testing <b>blockly-core</b>...'
+      RakeUtils.system './test.sh'
+    end
+  end
+
+  task :dashboard do
+    Dir.chdir(dashboard_dir) do
+      HipChat.log 'Testing <b>dashboard</b>...'
+      RakeUtils.system 'bundle exec rake -t'
+    end
+  end
+
+  task :pegasus do
+    Dir.chdir(pegasus_dir) do
+      HipChat.log 'Testing <b>pegasus</b>...'
+      RakeUtils.system 'bundle exec rake -t test'
+    end
+  end
+
+  task all: [:apps, :blockly_core, :dashboard, :pegasus]
+end
+task test: ['test:all']
 
 
 ##################################################################################################
@@ -284,10 +361,41 @@ namespace :install do
   tasks << :shared if CDO.build_shared_js
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 
 end
-task :install => ['install:all']
+task install: ['install:all']
+
+
+##################################################################################################
+##
+## travis - only for TravisCI
+##
+##################################################################################################
+
+# Task names in the travis namespace get passed as
+# environment variables to set up our travis "test matrix"
+# See .travis.yml for how this works
+namespace :travis do
+  task :setup_dashboard_db do
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.system 'bundle exec rake -t db:create db:schema:load'
+    end
+  end
+
+  # Travis shouldn't lint ruby or haml, since
+  # those are already handled by hound.  However, our
+  # js linting follows a different process and should be checked.
+  task lint: ['lint:js']
+
+  task dashboard: ['setup_dashboard_db', 'test:dashboard']
+
+  task pegasus: ['test:pegasus']
+
+  task apps: ['test:apps']
+
+  task blockly_core: ['test:blockly_core']
+end
 
 task :default do
   puts 'List of valid commands:'

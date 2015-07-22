@@ -12,12 +12,14 @@ gemfile: Gemfile
 
 bundler_args: --without development --deployment
 
-before_script:
-  - cd dashboard
-  - bundle exec rake -t db:create db:schema:load
+before_script: "echo npm_use_sudo: false >> locals.yml"
 
-script: bundle exec rake -t
+script: "bundle exec rake -t travis:$TEST_TASK"
 
 env:
-  - DB=mysql
+  - DB=mysql TEST_TASK=lint
+  - DB=mysql TEST_TASK=dashboard
+  - DB=mysql TEST_TASK=pegasus
+    #- DB=mysql TEST_TASK=apps
+    #- DB=mysql TEST_TASK=blockly_core
 
