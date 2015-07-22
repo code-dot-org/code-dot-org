@@ -1,0 +1,20 @@
+name 'CSPPD2 pixel video 1'
+answer_line true
+skip_sound true
+hide_submit true
+
+question 'How many different light channels make up a single pixel on a standard monitor?'
+wrong 'one'
+wrong 'two'
+right 'three'
+wrong 'four'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Lesson Chunk 4: Compressing and Storing Information > Pixels and RGB Video
+
+#### Understanding the Content
+This video is shown in Lesson 15 as a way to make sense of the work students have done with the pixelation widget. If you haven't already, watch the video now and answer the question below 
+<br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/15aqFQQVBWU?rel=0" frameborder="0" allowfullscreen></iframe>
+MARKDOWN

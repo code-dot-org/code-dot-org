@@ -1,3 +1,6 @@
+/**
+ * @overview UI component displaying router stats on the "Router" tab.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

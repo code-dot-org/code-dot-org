@@ -47,10 +47,6 @@
 .field
   = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
-.field
-  = f.label :generate_function_pass_blocks, 'Generate function pass blocks'
-  %p If set, this custom functions will get both a call and a pass block
-  = boolean_check_box f, :generate_function_pass_blocks
 
 :javascript
   CodeMirror.fromTextArea($('#level_success_condition').get(0), {

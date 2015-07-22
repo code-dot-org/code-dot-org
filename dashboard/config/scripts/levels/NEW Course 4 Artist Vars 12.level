@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "artist",
-    "instructions": "Modify this algorithm so it uses the \"sides\" variable instead of a fixed number to draw a pentagon. Replace the number 5 with the \"sides\" variable, and use the \"set sides to\" block.",
+    "instructions": "Now, modify the code from the last level to create a pentagon with sides of 100.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Modify this algorithm so it uses the `sides` variable instead of a fixed number to draw a pentagon. Replace the number 5 with the `sides` variable, and use the `set sides to` block."
+    "markdown_instructions": "Now, modify the code from the last level to create a pentagon with sides of 100."
   }
 }]]></config>
   <blocks>
@@ -37,42 +37,52 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
+            <block type="variables_set" inline="false">
+              <title name="VAR">sides</title>
+              <value name="VALUE">
                 <block type="math_number">
                   <title name="NUM">3</title>
                 </block>
               </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true">
-                  <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">100</title>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                    <block type="variables_get">
+                      <title name="VAR">sides</title>
                     </block>
                   </value>
-                  <next>
-                    <block type="draw_turn" inline="true">
-                      <title name="DIR">turnLeft</title>
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="math_arithmetic" inline="true">
-                          <title name="OP">DIVIDE</title>
-                          <value name="A">
-                            <block type="math_number">
-                              <title name="NUM">360</title>
-                            </block>
-                          </value>
-                          <value name="B">
-                            <block type="math_number">
-                              <title name="NUM">3</title>
+                        <block type="math_number">
+                          <title name="NUM">200</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
                             </block>
                           </value>
                         </block>
-                      </value>
+                      </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>

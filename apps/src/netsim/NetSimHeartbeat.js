@@ -1,3 +1,6 @@
+/**
+ * @overview Simulation entity representing a client's presence in the simulation.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
