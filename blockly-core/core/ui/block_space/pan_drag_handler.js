@@ -243,8 +243,8 @@ Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
   var wheelDelta = Blockly.getNormalizedWheelDeltaY(e);
   if (wheelDelta) {
     this.blockSpace_.scrollWithAnySelectedBlock(
-      this.blockSpace_.scrollbarOffsetX(),
-      this.blockSpace_.scrollbarOffsetY() + wheelDelta,
+      this.blockSpace_.getScrollOffsetX(),
+      this.blockSpace_.getScrollOffsetY() + wheelDelta,
       e.clientX, e.clientY);
 
     // Don't scroll the page.
@@ -262,8 +262,8 @@ Blockly.PanDragHandler.prototype.beginDragScroll_ = function (e) {
   // Record the current mouse position.
   this.startMouseX_ = e.clientX;
   this.startMouseY_ = e.clientY;
-  this.startScrollX_ = this.blockSpace_.scrollbarOffsetX();
-  this.startScrollY_ = this.blockSpace_.scrollbarOffsetY();
+  this.startScrollX_ = this.blockSpace_.getScrollOffsetX();
+  this.startScrollY_ = this.blockSpace_.getScrollOffsetY();
 
   this.bindDuringPanDragHandlers_();
 };

@@ -789,10 +789,10 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   // content*: Bounding rect on actual blocks, relative to workspace 0,0
   // absolute*: Blockspace origin offset from the SVG element origin
   //            (top right of toolbox in LTR, top left of SVG in RTL)
-  var viewLeft = -this.blockSpace.xOffsetFromView;
+  var viewLeft = this.blockSpace.getScrollOffsetX();
   var viewWidth = svgSize.width;
   var viewHeight = svgSize.height;
-  var viewTop = -this.blockSpace.yOffsetFromView;
+  var viewTop = this.blockSpace.getScrollOffsetY();
 
   return {
     viewHeight: viewHeight,
