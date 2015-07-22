@@ -80,7 +80,6 @@ def load_configuration()
     'lint'                        => rack_env == :staging || rack_env == :development,
     'assets_s3_bucket'             => "cdo-v3-assets",
     'assets_s3_directory'          => rack_env == :production ? 'assets' : "assets_#{rack_env}",
-    'netsim_api_publickey'        => [:development].include?(rack_env) ? 'JGW2rHUp_UCMW_fQmRf6iQ==' : 'HQJ8GCCMGP7Yh8MrtDusIA==',
 
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
