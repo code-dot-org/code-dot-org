@@ -1,4 +1,6 @@
 /* global Blockly, ace:true, $, droplet, marked, digestManifest */
+/* global repositionCopyrightFlyout */
+/* global repositionMoreMenu */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -950,35 +952,6 @@ function resizePinnedBelowVisualizationArea() {
 
   pinnedBelowVisualization.style.top = top + 'px';
   pinnedBelowVisualization.style.bottom = bottom + 'px';
-}
-
-/**
- * Sets the copyright flyout to sit exactly above the footer.
- */
-function repositionCopyrightFlyout() {
-  var copyrightFlyout = document.querySelector('#copyright-flyout');
-  var smallFooter = document.querySelector('.small-footer');
-  if (!(copyrightFlyout && smallFooter)) {
-    return;
-  }
-
-  copyrightFlyout.style.left = '0';
-  copyrightFlyout.style.paddingBottom = smallFooter.offsetHeight + 'px';
-}
-
-/**
- * Sets the more-menu size and position to sit above the footer and
- * match its full width.
- */
-function repositionMoreMenu() {
-  var smallFooter = document.querySelector('.small-footer');
-  var moreMenu = document.querySelector('#more-menu');
-  if (!(smallFooter && moreMenu)) {
-    return;
-  }
-
-  moreMenu.style.bottom = smallFooter.offsetHeight + 'px';
-  moreMenu.style.width = smallFooter.offsetWidth + 'px';
 }
 
 /**
