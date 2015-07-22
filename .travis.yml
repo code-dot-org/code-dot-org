@@ -12,11 +12,7 @@ gemfile: Gemfile
 
 bundler_args: --without development --deployment
 
-before_script:
-  - cd dashboard
-  - bundle exec rake -t db:create db:schema:load
-
-script: bundle exec rake -t
+script: bundle exec rake -t travis
 
 env:
   - DB=mysql

@@ -353,6 +353,22 @@ namespace :install do
 end
 task :install => ['install:all']
 
+
+##################################################################################################
+##
+## travis - only for TravisCI
+##
+##################################################################################################
+
+namespace :travis
+  task :setup do
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.system 'rake -t db:create db:schema:load'
+    end
+  end
+end
+task :travis => ['travis:setup', :lint, :test]
+
 task :default do
   puts 'List of valid commands:'
   system 'rake -P'
