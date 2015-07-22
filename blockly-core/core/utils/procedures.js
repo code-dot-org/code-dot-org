@@ -218,7 +218,8 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace, o
     blocks.push(newCallBlock);
     gaps.push(margin * 2);
 
-    if (Blockly.generateFunctionPassBlocks) {
+    if (!!Blockly.editBlocks) {
+      // Generate function passing blocks if we're level editing
       var newPassBlock = Blockly.Procedures.createFunctionPassingBlock(blockSpace,
         procedureDefinitionInfo);
       blocks.push(newPassBlock);

@@ -1180,12 +1180,10 @@ en:
       CSPPD2 PIvideo:
         Copper Wire: Copper Wire
         Fiber Optic Cable: Fiber Optic Cable
-        Match the communication method with the description below: Match the communication method with the description below
         Wireless: Wireless
         uses electricity, is pretty cheap: uses electricity, is pretty cheap
         uses light, is expensive: uses light, is expensive
         uses radio waves, cannot travel very far: uses radio waves, cannot travel very far
-        wires, cables, and wifi video: wires, cables, and wifi video
       Coordinate Matching:
         (250, 400): (250, 400)
         (320, 240): (320, 240)

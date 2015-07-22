@@ -496,6 +496,11 @@ Blockly.Blocks.functional_pass = {
     }
 
     this.setFunctional(true);
+    // functional_pass blocks are immovable, unless we're level editing
+    this.setMovable(!!Blockly.editBlocks);
+    this.setColorFromName_();
+    this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE,
+      this.setColorFromName_, false, this);
 
     this.changeFunctionalOutput(Blockly.BlockValueType.FUNCTION);
   },
@@ -506,7 +511,21 @@ Blockly.Blocks.functional_pass = {
   renameProcedure: function(oldName, newName) {
     if (Blockly.Names.equals(oldName, this.getTitleValue('NAME'))) {
       this.setTitleValue(newName, 'NAME');
+      this.setColorFromName_();
     }
+  },
+
+  setColorFromName_: function () {
+    var name = this.getTitleValue('NAME');
+    if (!name) {
+      return;
+    }
+    var functionBlock = Blockly.mainBlockSpace.findFunction(name);
+    if (!functionBlock) {
+      return;
+    }
+    var type = functionBlock.getOutputType();
+    this.setHSV.apply(this, Blockly.FunctionalTypeColors[type]);
   },
 
   mutationToDom: function() {
@@ -522,6 +541,7 @@ Blockly.Blocks.functional_pass = {
     this.setTooltip(
       (this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP
         : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace('%1', name));
+    this.setColorFromName_();
   }
 };
 
