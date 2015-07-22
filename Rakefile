@@ -41,6 +41,8 @@ namespace :lint do
   namespace :js do
     task :apps do
       Dir.chdir(apps_dir) do
+        RakeUtils.npm_install
+
         HipChat.log 'Linting <b>apps</b>...'
         RakeUtils.system 'grunt jshint'
       end
@@ -48,6 +50,8 @@ namespace :lint do
 
     task :shared do
       Dir.chdir(shared_js_dir) do
+        RakeUtils.npm_install
+
         HipChat.log 'Linting <b>shared</b> js...'
         RakeUtils.system 'gulp lint'
       end
@@ -109,7 +113,6 @@ namespace :build do
 
   task :apps do
     Dir.chdir(apps_dir) do
-      HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
       HipChat.log 'Updating <b>apps</b> i18n strings...'
@@ -126,7 +129,6 @@ namespace :build do
 
   task :shared do
     Dir.chdir(shared_js_dir) do
-      HipChat.log 'Installing <b>shared js</b> dependencies...'
       RakeUtils.npm_install
 
       HipChat.log 'Building <b>shared js</b>...'
@@ -243,7 +245,6 @@ namespace :test do
 
   task :apps do
     Dir.chdir(apps_dir) do
-      HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
       HipChat.log 'Testing <b>apps</b>...'
@@ -253,7 +254,6 @@ namespace :test do
 
   task :blockly_core do
     Dir.chdir(blockly_core_dir) do
-      HipChat.log 'Installing <b>blockly-core</b> dependencies...'
       RakeUtils.npm_install
 
       HipChat.log 'Testing <b>blockly-core</b>...'
@@ -264,14 +264,14 @@ namespace :test do
   task :dashboard do
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Testing <b>dashboard</b>...'
-      RakeUtils.system 'rake -t'
+      RakeUtils.system 'bundle exec rake -t'
     end
   end
 
   task :pegasus do
     Dir.chdir(pegasus_dir) do
       HipChat.log 'Testing <b>pegasus</b>...'
-      RakeUtils.system 'rake -t test'
+      RakeUtils.system 'bundle exec rake -t test'
     end
   end
 
@@ -379,7 +379,7 @@ task install: ['install:all']
 namespace :travis do
   task :setup_dashboard_db do
     Dir.chdir(dashboard_dir) do
-      RakeUtils.system 'rake -t db:create db:schema:load'
+      RakeUtils.system 'bundle exec rake -t db:create db:schema:load'
     end
   end
 
@@ -388,7 +388,7 @@ namespace :travis do
   # js linting follows a different process and should be checked.
   task lint: ['lint:js']
 
-  task dashboard: ['travis:setup_dashboard_db', 'test:dashboard']
+  task dashboard: ['setup_dashboard_db', 'test:dashboard']
 
   task pegasus: ['test:pegasus']
 

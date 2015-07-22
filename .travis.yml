@@ -20,6 +20,6 @@ env:
   - DB=mysql TEST_TASK=lint
   - DB=mysql TEST_TASK=dashboard
   - DB=mysql TEST_TASK=pegasus
-  - DB=mysql TEST_TASK=apps
-  - DB=mysql TEST_TASK=blockly_core
+    #- DB=mysql TEST_TASK=apps
+    #- DB=mysql TEST_TASK=blockly_core
 
