@@ -404,6 +404,10 @@ var projects = module.exports = {
         return '/projects/applab';
       case 'turtle':
         return '/projects/artist';
+      case 'calc':
+        return '/projects/calc';
+      case 'eval':
+        return '/projects/eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return '/projects/algebra_game';

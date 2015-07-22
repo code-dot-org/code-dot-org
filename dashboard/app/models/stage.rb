@@ -54,7 +54,7 @@ class Stage < ActiveRecord::Base
         script_id: script.id,
         script_name: script.name,
         script_stages: script.stages.to_a.count,
-        show_freeplay_links: script.show_freeplay_links?,
+        freeplay_links: script.freeplay_links,
         id: id,
         position: position,
         name: localized_name,

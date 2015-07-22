@@ -18,6 +18,12 @@ class ProjectsController < ApplicationController
     },
     algebra_game: {
       name: 'New Algebra Project'
+    },
+    calc: {
+      name: 'Calc Free Play'
+    },
+    eval: {
+      name: 'Eval Free Play'
     }
   }
 
@@ -57,7 +63,7 @@ class ProjectsController < ApplicationController
   end
 
   def remix
-    if STANDALONE_PROJECTS[params[:key]][:login_required]
+    if STANDALONE_PROJECTS[params[:key].to_sym][:login_required]
       authenticate_user!
     end
     new_channel_id = create_channel(nil, params[:channel_id])
