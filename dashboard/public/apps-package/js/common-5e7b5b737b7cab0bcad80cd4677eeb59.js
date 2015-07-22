@@ -7231,7 +7231,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
-    'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
+    'disableParamEditing'].forEach(
     function (prop) {
       if (config[prop] !== undefined) {
         options[prop] = config[prop];
