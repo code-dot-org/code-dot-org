@@ -15,7 +15,8 @@ def generate_professional_development_workshop_payment_report(from=nil, to=nil)
      name: row[:name],
      user_id: row[:user_id],
      email: row[:email],
-     section_url: "http://code.org/teacher-dashboard#/sections/#{data['section_id_s']}",
+     type: data["type_s"],
+     section_url: "https://code.org/teacher-dashboard#/sections/#{data['section_id_s']}",
      stopped_at: stopped_at.to_s,
      total_attendee_count: processed_data['total_attendee_count_i'],
      qualifying_attendee_count: processed_data['qualifying_attendee_count_i']

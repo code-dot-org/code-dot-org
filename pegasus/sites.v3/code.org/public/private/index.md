@@ -29,5 +29,5 @@
 
 
 ## See also
-- [studio home page admin box](<%= CDO.studio_url -%>)
-- [studio admin/stats](<%= CDO.studio_url('admin/stats') -%>)
+- [studio home page admin box](<%= CDO.studio_url %>)
+- [studio admin/stats](<%= CDO.studio_url('admin/stats') %>)
