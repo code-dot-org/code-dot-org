@@ -313,23 +313,6 @@ h1 {
     }
   </script>
 
-  <script type="text/javascript">
-    goog.tweak.registerBoolean('openContract', 'pre-opens contract editor', false);
-    if(goog.tweak.getBoolean('openContract')) {
-      setTimeout(function() {
-        window.newContractEditor();
-        Blockly.contractEditor.exampleBlocks[0].getInputTargetBlock('ACTUAL').dispose();
-        Blockly.contractEditor.addNewExampleBlock_();
-        Blockly.contractEditor.addParameter('test');
-        Blockly.contractEditor.addParameter('test2');
-        Blockly.contractEditor.refreshParamsEverywhere();
-        Blockly.contractEditor.examplesSectionView_.toggleCollapse();
-        Blockly.contractEditor.examplesSectionView_.toggleCollapse();
-      }, 500); // TODO(bjordan): remove
-
-    }
-  </script>
-
   <p>
     <input type="button" value="Create Contract Editor" onclick="newContractEditor()">
     &nbsp;
