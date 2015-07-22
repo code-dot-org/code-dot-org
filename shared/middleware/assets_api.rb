@@ -87,7 +87,7 @@ class AssetsApi < Sinatra::Base
 
     src_prefix = "#{CDO.assets_s3_directory}/#{src_owner_id}/#{src_channel_id}/"
     self.s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:src_prefix).contents.map do |fileinfo|
-      filename = %r{#{src_prefix}/(.+)$}.match(fileinfo.key)[1]
+      filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
       mime_type = Sinatra::Base.mime_type(filename.split('.').last)
       category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
