@@ -53,7 +53,7 @@ if node['cdo-apps']['daemon']
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs'), notify:'brian@code.org'
     cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev@code.org'
 
-    cronjob at:'*/30 * * * *', do:dashboard_dir('bin','scheduled_ops_emails')
+    # cronjob at:'*/60 * * * *', do:dashboard_dir('bin','scheduled_ops_emails')
 
     cronjob at:'*/5 * * * *', do:deploy_dir('bin','fetch-external-resources'), notify:'dev@code.org'
   end
