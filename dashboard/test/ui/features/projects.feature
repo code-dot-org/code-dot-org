@@ -13,7 +13,9 @@ Scenario: Save Artist Project
   And I reload the page
   Then element "#draw-color" is a child of element "#when_run"
 
-@dashboard_db_access
+# dashboard_db_access for sign in
+# no_mobile because we don't end up with open-workspace on mobile
+@dashboard_db_access @no_mobile
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/"
   And I am a student
