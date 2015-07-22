@@ -18842,7 +18842,7 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace, o
     var newCallBlock = Blockly.Procedures.createCallerBlock(blockSpace, procedureDefinitionInfo);
     blocks.push(newCallBlock);
     gaps.push(margin * 2);
-    if(Blockly.generateFunctionPassBlocks) {
+    if(!!Blockly.editBlocks) {
       var newPassBlock = Blockly.Procedures.createFunctionPassingBlock(blockSpace, procedureDefinitionInfo);
       blocks.push(newPassBlock);
       gaps.push(margin * 2)
@@ -24526,8 +24526,8 @@ Blockly.parseOptions_ = function(options) {
   }
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
-  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, generateFunctionPassBlocks:options["generateFunctionPassBlocks"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, disableExamples:options["disableExamples"] || 
-  false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
+  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, disableExamples:options["disableExamples"] || false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 
+  0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
 };
 Blockly.registerUISounds_ = function(audioPlayer) {
   audioPlayer.register({id:"click", mp3:Blockly.assetUrl("media/click.mp3"), wav:Blockly.assetUrl("media/click.wav"), ogg:Blockly.assetUrl("media/click.ogg")});

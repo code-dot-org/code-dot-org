@@ -284,7 +284,7 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
 
     if $options.html
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
-      message += " <a href='#{link}'>&#x2601; html output</a>"
+      message += " <a href='#{link}'>☁ html output</a>"
     end
     HipChat.log message, color:'red'
     HipChat.developers message, color:'red' if CDO.hip_chat_logging
