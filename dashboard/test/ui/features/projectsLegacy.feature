@@ -12,12 +12,12 @@ Examples:
   | url                                                                 | redirected                                    | redirect_source |
   | http://studio.code.org/p/applab                                     | /users/sign_in                                | dashboard |
   | http://studio.code.org/p/applab#M17JvqZ68AlDVpRfsdUSSw/edit         | /users/sign_in                                | dashboard |
-  | http://studio.code.org/p/applab#M17JvqZ68AlDVpRfsdUSSw              | /projects/applab/M17JvqZ68AlDVpRfsdUSSw       | pushState |
-  | http://studio.code.org/p/playlab                                    | /projects/playlab                             | pushState |
-  | http://studio.code.org/p/playlab#M17JvqZ68AlDVpRfsdUSSw             | /projects/playlab/M17JvqZ68AlDVpRfsdUSSw      | pushState |
+  | http://studio.code.org/p/applab#M17JvqZ68AlDVpRfsdUSSw              | /projects/applab/M17JvqZ68AlDVpRfsdUSSw       | dashboard |
+  | http://studio.code.org/p/playlab                                    | /projects/playlab                             | dashboard |
+  | http://studio.code.org/p/playlab#M17JvqZ68AlDVpRfsdUSSw             | /projects/playlab/M17JvqZ68AlDVpRfsdUSSw      | dashboard |
   | http://studio.code.org/p/playlab#M17JvqZ68AlDVpRfsdUSSw/edit        | /projects/playlab/M17JvqZ68AlDVpRfsdUSSw/view | pushState |
-  | http://studio.code.org/p/artist                                     | /projects/artist                              | pushState |
-  | http://studio.code.org/p/artist#M17JvqZ68AlDVpRfsdUSSw              | /projects/artist/M17JvqZ68AlDVpRfsdUSSw       | pushState |
+  | http://studio.code.org/p/artist                                     | /projects/artist                              | dashboard |
+  | http://studio.code.org/p/artist#M17JvqZ68AlDVpRfsdUSSw              | /projects/artist/M17JvqZ68AlDVpRfsdUSSw       | dashboard |
   | http://studio.code.org/p/artist#M17JvqZ68AlDVpRfsdUSSw/edit         | /projects/artist/M17JvqZ68AlDVpRfsdUSSw/view  | pushState |
   | http://studio.code.org/projects/applab                              | /users/sign_in                                | dashboard |
   | http://studio.code.org/projects/applab/M17JvqZ68AlDVpRfsdUSSw/edit  | /users/sign_in                                | dashboard |
@@ -39,12 +39,12 @@ Examples:
   # Ideally we would test that for the owner, /edit pages end up on /edit instead of /view
   # For this example in particular, we do a dashboard based redirect to /edit, and then a pushState to /view
   | http://studio.code.org/p/applab#M17JvqZ68AlDVpRfsdUSSw/edit         | /projects/applab/M17JvqZ68AlDVpRfsdUSSw/view  | pushState |
-  | http://studio.code.org/p/applab#M17JvqZ68AlDVpRfsdUSSw              | /projects/applab/M17JvqZ68AlDVpRfsdUSSw       | pushState |
-  | http://studio.code.org/p/playlab                                    | /projects/playlab                             | pushState |
-  | http://studio.code.org/p/playlab#M17JvqZ68AlDVpRfsdUSSw             | /projects/playlab/M17JvqZ68AlDVpRfsdUSSw      | pushState |
+  | http://studio.code.org/p/applab#M17JvqZ68AlDVpRfsdUSSw              | /projects/applab/M17JvqZ68AlDVpRfsdUSSw       | dashboard |
+  | http://studio.code.org/p/playlab                                    | /projects/playlab                             | dashboard |
+  | http://studio.code.org/p/playlab#M17JvqZ68AlDVpRfsdUSSw             | /projects/playlab/M17JvqZ68AlDVpRfsdUSSw      | dashboard |
   | http://studio.code.org/p/playlab#M17JvqZ68AlDVpRfsdUSSw/edit        | /projects/playlab/M17JvqZ68AlDVpRfsdUSSw/view | pushState |
-  | http://studio.code.org/p/artist                                     | /projects/artist                              | pushState |
-  | http://studio.code.org/p/artist#M17JvqZ68AlDVpRfsdUSSw              | /projects/artist/M17JvqZ68AlDVpRfsdUSSw       | pushState |
+  | http://studio.code.org/p/artist                                     | /projects/artist                              | dashboard |
+  | http://studio.code.org/p/artist#M17JvqZ68AlDVpRfsdUSSw              | /projects/artist/M17JvqZ68AlDVpRfsdUSSw       | dashboard |
   | http://studio.code.org/p/artist#M17JvqZ68AlDVpRfsdUSSw/edit         | /projects/artist/M17JvqZ68AlDVpRfsdUSSw/view  | pushState |
   | http://studio.code.org/projects/applab                              | /projects/applab                              | dashboard |
   | http://studio.code.org/projects/applab/M17JvqZ68AlDVpRfsdUSSw/edit  | /projects/applab/M17JvqZ68AlDVpRfsdUSSw/view  | pushState |

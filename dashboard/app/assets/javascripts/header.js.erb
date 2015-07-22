@@ -373,7 +373,6 @@ dashboard.header.showProjectHeader = function () {
   });
 
   $('.project_new').click(function (e) {
-    // TODO - this is currently broken
     e.preventDefault(); // Don't change the hash.
     // Save the project if one exists (i.e. isn't just the default one) then navigate.
     if (dashboard.project.getCurrentId()) {
