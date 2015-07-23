@@ -388,13 +388,13 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
         -Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_BOTTOM,
         -Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_LEFT);
       var originalBlockBox = block.getBox();
-      var overhang = Blockly.getBoxOverhang(paddedBlockSpaceBox, originalBlockBox);
+      var overflow = Blockly.getBoxOverflow(paddedBlockSpaceBox, originalBlockBox);
 
-      // If overhang values are positive, the block needs to be bumped
-      howFarOutsideLeft = Math.max(0, overhang.left);
-      howFarOutsideRight = Math.max(0, overhang.right);
-      howFarAboveTop = Math.max(0, overhang.top);
-      howFarBelowBottom = Math.max(0, overhang.bottom);
+      // If overflow values are positive, the block needs to be bumped
+      howFarOutsideLeft = Math.max(0, overflow.left);
+      howFarOutsideRight = Math.max(0, overflow.right);
+      howFarAboveTop = Math.max(0, overflow.top);
+      howFarBelowBottom = Math.max(0, overflow.bottom);
     }
 
     // Calculate needed bump
@@ -405,10 +405,10 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
       // If the block doesn't fit in the view, move, instead, flush to the left
       // or top.
       if (Blockly.isBoxWiderThan(originalBlockBox, paddedBlockSpaceBox)) {
-        moveX = overhang.left;
+        moveX = overflow.left;
       }
       if (Blockly.isBoxTallerThan(originalBlockBox, paddedBlockSpaceBox)) {
-        moveY = overhang.top
+        moveY = overflow.top
       }
     }
 

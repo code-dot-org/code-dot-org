@@ -139,7 +139,7 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
 
   var viewportBox = this.blockSpace_.getViewportBox();
   var blockBox = block.getBox();
-  var blockOverhangs = Blockly.getBoxOverhang(viewportBox, blockBox);
+  var blockOverflows = Blockly.getBoxOverflow(viewportBox, blockBox);
   var mouseSvg = Blockly.mouseCoordinatesToSvg(
     mouseClientX, mouseClientY, this.blockSpace_.blockSpaceEditor.svg_);
   var mouseViewport = Blockly.svgCoordinatesToViewport(
@@ -147,7 +147,7 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
   var mouseBlockSpace = Blockly.viewportCoordinateToBlockSpace(
     mouseViewport, this.blockSpace_);
 
-  var mouseOverhangs = Blockly.getPointOverhangs(viewportBox,
+  var mouseOverflows = Blockly.getPointBoxOverflow(viewportBox,
     new goog.math.Coordinate(mouseBlockSpace.x, mouseBlockSpace.y));
 
   if (Blockly.ScrollOnBlockDragHandler.DEBUG) {
@@ -161,27 +161,27 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
   var overallScrollVector = new goog.math.Vec2(0, 0);
 
   SCROLLABLE_DIRECTIONS.forEach(function (direction) {
-    var mouseOverhang = mouseOverhangs[direction];
-    var blockOverhang = blockOverhangs[direction];
+    var mouseOverflow = mouseOverflows[direction];
+    var blockOverflow = blockOverflows[direction];
     var scrollVector = this.SCROLL_DIRECTION_VECTORS[direction];
 
     var candidateScrolls = [];
 
-    if (Blockly.numberWithin(blockOverhang,
+    if (Blockly.numberWithin(blockOverflow,
         BLOCK_START_DISTANCE, BLOCK_START_FAST_DISTANCE, false)) {
       candidateScrolls.push(scrollVector.clone().scale(BLOCK_SPEED_SLOW));
     }
 
-    if (blockOverhang > BLOCK_START_FAST_DISTANCE) {
+    if (blockOverflow > BLOCK_START_FAST_DISTANCE) {
       candidateScrolls.push(scrollVector.clone().scale(BLOCK_SPEED_FAST));
     }
 
-    if (Blockly.numberWithin(mouseOverhang,
+    if (Blockly.numberWithin(mouseOverflow,
         MOUSE_START_DISTANCE, MOUSE_START_FAST_DISTANCE, false)) {
       candidateScrolls.push(scrollVector.clone().scale(MOUSE_SPEED_SLOW));
     }
 
-    if (mouseOverhang > MOUSE_START_FAST_DISTANCE) {
+    if (mouseOverflow > MOUSE_START_FAST_DISTANCE) {
       candidateScrolls.push(scrollVector.clone().scale(MOUSE_SPEED_FAST));
     }
 

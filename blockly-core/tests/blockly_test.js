@@ -187,40 +187,22 @@ function test_printerRangeToNumbers() {
   assert('Spaces in list', goog.array.equals([1,2,3,4,5], Blockly.printerRangeToNumbers('1, 2-4, 5')));
 }
 
-function test_getBoxOverhang() {
+function test_getBoxOverflow() {
   // top right bottom left
-  var sameBoxOverhang = Blockly.getBoxOverhang(
+  var sameBoxOverflow = Blockly.getBoxOverflow(
     new goog.math.Box(0, 0, 0, 0),
     new goog.math.Box(0, 0, 0, 0));
-  assertEquals(0, sameBoxOverhang.top);
-  assertEquals(0, sameBoxOverhang.right);
-  assertEquals(0, sameBoxOverhang.bottom);
-  assertEquals(0, sameBoxOverhang.left);
-  var differentOverhangs = Blockly.getBoxOverhang(
+  assertEquals(0, sameBoxOverflow.top);
+  assertEquals(0, sameBoxOverflow.right);
+  assertEquals(0, sameBoxOverflow.bottom);
+  assertEquals(0, sameBoxOverflow.left);
+  var differentBoxesOverflow = Blockly.getBoxOverflow(
     new goog.math.Box(0, 0, 0, 0),
     new goog.math.Box(-1, 2, 3, -4));
-  assertEquals(1, differentOverhangs.top);
-  assertEquals(2, differentOverhangs.right);
-  assertEquals(3, differentOverhangs.bottom);
-  assertEquals(4, differentOverhangs.left);
-}
-
-function test_getDistancesToBox() {
-  // top right bottom left
-  var distances = Blockly.getDistancesToBoxSides(
-    new goog.math.Box(0, 0, 0, 0),
-    new goog.math.Coordinate(0, 0));
-  assertEquals(0, distances.top);
-  assertEquals(0, distances.right);
-  assertEquals(0, distances.bottom);
-  assertEquals(0, distances.left);
-  var differentDistances = Blockly.getDistancesToBoxSides(
-    new goog.math.Box(0, 10, 20, 0),
-    new goog.math.Coordinate(5, 5));
-  //assertEquals(-5, differentDistances.top);
-  assertEquals(5, differentDistances.right);
-  assertEquals(15, differentDistances.bottom);
-  //assertEquals(-5, differentDistances.left);
+  assertEquals(1, differentBoxesOverflow.top);
+  assertEquals(2, differentBoxesOverflow.right);
+  assertEquals(3, differentBoxesOverflow.bottom);
+  assertEquals(4, differentBoxesOverflow.left);
 }
 
 function test_isBoxWiderThan() {
