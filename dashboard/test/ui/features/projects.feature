@@ -24,6 +24,7 @@ Scenario: Applab Flow
   And I rotate to landscape
   # TODO  ideally we should probably create some code and/or design elements here
   # looks like we have add_code_to_editor
+  And I wait to see "#runButton"
   And element "#runButton" is visible
   And element ".project_updated_at" has text "Not saved"
   Then I click selector ".project_share"
