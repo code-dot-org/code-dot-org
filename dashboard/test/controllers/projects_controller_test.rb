@@ -12,47 +12,22 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "get projects template" do
-    get :angular
+    get :template, template: 'projects'
 
     assert_response :success
     assert_template 'projects/projects'
   end
 
-  test 'artist project level has sharing meta tags' do
-    get :edit, key: :artist
+  test "template won't let you get index" do
+    get :template, template: 'index'
 
-    assert_response :success
-    assert_sharing_meta_tags(
-      url: 'http://test.host/projects/artist',
-      image: 'http://test.host/assets/sharing_drawing.png',
-      image_width: 500,
-      image_height: 261
-    )
+    assert_response 404
   end
 
-  test 'applab project level has sharing meta tags' do
-    get :edit, key: :applab
+  test "template won't let you get files outside app/views" do
+    get :template, template: '../../controllers/activities_controller.rb'
 
-    assert_response :success
-    assert_sharing_meta_tags(
-      url: 'http://test.host/projects/applab',
-      image: 'http://test.host/assets/sharing_drawing.png',
-      image_width: 400,
-      image_height: 400,
-      apple_mobile_web_app: true
-    )
+    assert_response 404
   end
 
-  test 'playlab project level has sharing meta tags' do
-    get :edit, key: :playlab
-
-    assert_response :success
-    assert_sharing_meta_tags(
-      url: 'http://test.host/projects/playlab',
-      image: 'http://test.host/assets/sharing_drawing.png',
-      image_width: 400,
-      image_height: 400,
-      apple_mobile_web_app: true
-    )
-  end
 end
