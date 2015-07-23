@@ -270,23 +270,8 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange'
-};
-
-/**
- * Helper for when we split our pathname by /. channel_id and action may end up
- * being undefined.
- * Example paths:
- * /projects/applab
- * /projects/playlab/1U53pYpR8szDgtrGIG5lIg
- * /projects/artist/VyVO-bQaGQ-Cyb7DbpabNQ/edit
- */
-var PathPart = {
-  START: 0,
-  PROJECTS: 1,
-  APP: 2,
-  CHANNEL_ID: 3,
-  ACTION: 4
+  workspaceChange: 'workspaceChange',
+  hashchange: 'hashchange'
 };
 
 /**
@@ -304,7 +289,7 @@ var PathPart = {
 var current;
 var isEditing = false;
 
-var projects = module.exports = {
+module.exports = {
   /**
    * @returns {string} id of the current project, or undefined if we don't have
    *   a current project.
@@ -327,13 +312,6 @@ var projects = module.exports = {
     return current.name;
   },
 
-  getCurrentTimestamp: function () {
-    if (!current) {
-      return;
-    }
-    return current.updatedAt;
-  },
-
   /**
    * @returns {boolean} true if we're editing
    */
@@ -342,11 +320,17 @@ var projects = module.exports = {
   },
 
   init: function () {
-    if (redirectFromHashUrl() || redirectEditView()) {
-      return;
-    }
-
     if (appOptions.level.isProjectLevel || current) {
+
+      $(window).on(events.hashchange, function () {
+        var hashData = parseHash();
+        if ((current &&
+            hashData.channelId !== current.id) ||
+            hashData.isEditingProject !== isEditing) {
+          location.reload();
+        }
+      }.bind(this));
+
       if (current && current.levelHtml) {
         appOptions.level.levelHtml = current.levelHtml;
       }
@@ -377,16 +361,20 @@ var projects = module.exports = {
         window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
         if (!current.hidden) {
-          if (current.isOwner || !parsePath().channelId) {
+          if (current.isOwner || location.hash === '') {
             dashboard.header.showProjectHeader();
           } else {
             // Viewing someone else's project - set share mode
             dashboard.header.showMinimalProjectHeader();
+            // URL with /edit - set hideSource to false
+            setAppOptionsForShareMode(false);
           }
         }
       } else if (current) {
         appOptions.level.lastAttempt = current.levelSource;
         dashboard.header.showMinimalProjectHeader();
+        // URL without /edit - set hideSource to true
+        setAppOptionsForShareMode(true);
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       current = {
@@ -398,21 +386,31 @@ var projects = module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
   },
+  updateTimestamp: function () {
+    if (current.updatedAt) {
+      // TODO i18n
+      $('.project_updated_at').empty().append("Saved ")  // TODO i18n
+          .append($('<span class="timestamp">').attr('title', current.updatedAt)).show();
+      $('.project_updated_at span.timestamp').timeago();
+    } else {
+      $('.project_updated_at').text("Not saved"); // TODO i18n
+    }
+  },
   appToProjectUrl: function () {
     switch (appOptions.app) {
       case 'applab':
-        return '/projects/applab';
+        return '/p/applab';
       case 'turtle':
-        return '/projects/artist';
+        return '/p/artist';
       case 'calc':
-        return '/projects/calc';
+        return '/p/calc';
       case 'eval':
-        return '/projects/eval';
+        return '/p/eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
-          return '/projects/algebra_game';
+          return '/p/algebra_game';
         }
-        return '/projects/playlab';
+        return '/p/playlab';
     }
   },
   /**
@@ -455,23 +453,9 @@ var projects = module.exports = {
 
     current = data;
     if (isNewChannel) {
-      // We have a new channel, meaning either we had no channel before, or
-      // we've changed channels. If we aren't at a /projects/<appname> link,
-      // always do a redirect (i.e. we're remix from inside a script)
-      if (isEditing && parsePath().appName) {
-        if (location.hash || !window.history.pushState) {
-          // We're using a hash route or don't support replace state. Use our hash
-          // based route to ensure we don't have a page load.
-          location.href = current.level + '#' + current.id + '/edit';
-        } else {
-          window.history.pushState(null, document.title, this.getPathName('edit'));
-        }
-      } else {
-        // We're on a share page, and got a new channel id. Always do a redirect
-        location.href = this.getPathName('edit');
-      }
+      location.href = current.level + '#' + current.id + '/edit';
     }
-    dashboard.header.updateTimestamp();
+    this.updateTimestamp();
   },
   /**
    * Autosave the code if things have changed
@@ -532,9 +516,6 @@ var projects = module.exports = {
       executeCallback(callback);
     });
   },
-  serverSideRemix: function() {
-    location.href = projects.getPathName('remix');
-  },
   delete: function(callback) {
     var channelId = current.id;
     if (channelId) {
@@ -551,13 +532,9 @@ var projects = module.exports = {
   load: function () {
     var deferred;
     if (appOptions.level.isProjectLevel) {
-      if (redirectFromHashUrl() || redirectEditView()) {
-        return;
-      }
-      var pathInfo = parsePath();
-
-      if (pathInfo.channelId) {
-        if (pathInfo.action === 'edit') {
+      var hashData = parseHash();
+      if (hashData.channelId) {
+        if (hashData.isEditingProject) {
           isEditing = true;
         } else {
           $('#betainfo').hide();
@@ -565,16 +542,12 @@ var projects = module.exports = {
 
         // Load the project ID, if one exists
         deferred = new $.Deferred();
-        channels.fetch(pathInfo.channelId, function (err, data) {
+        channels.fetch(hashData.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
-            location.href = location.pathname.split('/')
-              .slice(PathPart.START, PathPart.APP + 1).join('/');
+            location.href = location.pathname;
           } else {
             current = data;
-            if (current.isOwner && pathInfo.action === 'view') {
-              isEditing = true;
-            }
             deferred.resolve();
           }
         });
@@ -597,14 +570,6 @@ var projects = module.exports = {
       });
       return deferred;
     }
-  },
-
-  getPathName: function (action) {
-    var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
-    if (action) {
-      pathName += '/' + action;
-    }
-    return pathName;
   }
 };
 
@@ -615,6 +580,47 @@ var projects = module.exports = {
 function executeCallback(callback, data) {
   if (typeof callback === 'function') {
     callback(data);
+  }
+}
+
+function parseHash() {
+  // Example paths:
+  // edit: /p/artist#7uscayNy-OEfVERwJg0xqQ==/edit
+  // view: /p/artist#7uscayNy-OEfVERwJg0xqQ==
+  var isEditingProject = false;
+  var channelId = location.hash.slice(1);
+  if (channelId) {
+    // TODO: Use a router.
+    var params = channelId.split("/");
+    if (params.length > 1 && params[1] == "edit") {
+      channelId = params[0];
+      isEditingProject = true;
+    }
+  }
+  return {
+    channelId: channelId,
+    isEditingProject: isEditingProject
+  };
+}
+
+function setAppOptionsForShareMode(hideSource) {
+  appOptions.readonlyWorkspace = true;
+  appOptions.callouts = [];
+  appOptions.share = true;
+  appOptions.hideSource = hideSource;
+  // Important to call determineNoPadding() after setting hideSource value
+  appOptions.noPadding = determineNoPadding();
+}
+
+function determineNoPadding() {
+  switch (appOptions.app) {
+    case 'applab':
+    case 'flappy':
+    case 'studio':
+    case 'bounce':
+      return appOptions.isMobile && appOptions.hideSource;
+    default:
+      return false;
   }
 }
 
@@ -635,94 +641,6 @@ function getEditorSource() {
 
 function getLevelHtml() {
   return window.Applab && Applab.getHtml();
-}
-
-/**
- * If the current user is the owner, we want to redirect from the readonly
- * /view route to /edit. If they are not the owner, we want to redirect from
- * /edit to /view
- */
-function redirectEditView() {
-  var parseInfo = parsePath();
-  if (!parseInfo.action) {
-    return;
-  }
-  var newUrl;
-  if (parseInfo.action === 'view' && current && current.isOwner) {
-    // Redirect to /edit without a readonly workspace
-    newUrl = location.href.replace(/\/view$/, '/edit');
-    appOptions.readonlyWorkspace = false;
-  } else if (parseInfo.action === 'edit' && (!current || !current.isOwner)) {
-    // Redirect to /view with a readonly workspace
-    newUrl = location.href.replace(/\/edit$/, '/view');
-    appOptions.readonlyWorkspace = true;
-  }
-  if (newUrl && newUrl !== location.href) {
-    return redirectToPath(newUrl, true);
-  }
-  return false;
-}
-
-/**
- * Does a hard redirect if we end up with a hash based projects url. This can
- * happen on IE9, when we save a new project for hte first time.
- * @returns {boolean} True if we did an actual redirect
- */
-function redirectFromHashUrl() {
-  var newUrl = location.href.replace('#', '/');
-  if (newUrl === location.href) {
-    // Nothing changed
-    return false;
-  }
-
-  var pathInfo = parsePath();
-  return redirectToPath(newUrl, false);
-}
-
-/**
- * Does a redirect to the given path. If attemptPushState is true, it will
- * use pushState to just change the browser URL in browsers that support this.
- * @returns {boolean} True if we did a redirect (vs. pushState)
- */
-function redirectToPath(path, attemptPushState) {
-  if (attemptPushState && window.history.pushState) {
-    // Right now I set modified just so that our UI tests can detect a dashboard
-    // vs. JS redirect. Not sure whether there is a better way
-    window.history.pushState({modified: true}, document.title, path);
-    return false;
-  } else {
-    location.href = path;
-    return true;
-  }
-}
-
-/**
- * Extracts the channelId/action from the pathname, accounting for the fact
- * that we may have hash based route or not
- */
-function parsePath() {
-  var pathname = location.pathname;
-
-  // We have a hash based route. Replace the hash with a slash, and append to
-  // our existing path
-  if (location.hash) {
-    pathname += location.hash.replace('#', '/');
-  }
-
-  if (pathname.split('/')[PathPart.PROJECTS] !== 'p' &&
-      pathname.split('/')[PathPart.PROJECTS] !== 'projects') {
-    return {
-      appName: null,
-      channelId: null,
-      action: null,
-    };
-  }
-
-  return {
-    appName: pathname.split('/')[PathPart.APP],
-    channelId: pathname.split('/')[PathPart.CHANNEL_ID],
-    action: pathname.split('/')[PathPart.ACTION]
-  };
 }
 
 },{"./clientApi":2}],5:[function(require,module,exports){
