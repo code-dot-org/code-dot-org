@@ -47,35 +47,19 @@ class ChannelsApi < Sinatra::Base
   #
   # Create a channel.
   #
-  # Optional query string param: ?src=<src-channel-id> creates the channel as
-  # a copy of the given src channel.
-  #
   post '/v3/channels' do
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    src_channel = request.GET['src']
-    storage_app = StorageApps.new(storage_id('user'))
-
-    if src_channel
-      data = storage_app.get(src_channel)
-      data['name'] = "Remix: #{data['name']}"
-      data['hidden'] = false
-    else
-      begin
-        data = JSON.parse(request.body.read)
-      rescue JSON::ParserError
-        bad_request
-      end
-      bad_request unless data.is_a? Hash
+    begin
+      data = JSON.parse(request.body.read)
+    rescue JSON::ParserError
+      bad_request
     end
+    bad_request unless data.is_a? Hash
 
     timestamp = Time.now
-    id = storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
-
-    if src_channel
-      AssetsApi.copy_assets(src_channel, id)
-    end
+    id = StorageApps.new(storage_id('user')).create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
 
     redirect "/v3/channels/#{id}", 301
   end
