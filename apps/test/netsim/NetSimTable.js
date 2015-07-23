@@ -11,8 +11,11 @@ describe("NetSimTable", function () {
   var apiTable, netsimTable, callback, notified;
 
   beforeEach(function () {
+    var fakeChannel = {
+      subscribe: function () {}
+    };
     netsimTable = netsimTestUtils.overrideClientApi(
-        new NetSimTable('testShard', 'testTable'));
+        new NetSimTable(fakeChannel, 'testShard', 'testTable'));
     apiTable = netsimTable.clientApi_.remoteTable;
     callback = function () {};
     notified = false;
@@ -21,9 +24,13 @@ describe("NetSimTable", function () {
     });
   });
 
-  it ("throws if constructed with wrong number of arguments", function () {
+  it ("throws if constructed with missing arguments", function () {
     assertThrows(Error, function () {
       var _ = new NetSimTable('just-one-argument');
+    });
+
+    assertThrows(Error, function () {
+      var _ = new NetSimTable('just-two', 'arguments');
     });
   });
 
