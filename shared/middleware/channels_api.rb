@@ -59,6 +59,9 @@ class ChannelsApi < Sinatra::Base
 
     if src_channel
       data = storage_app.get(src_channel)
+      if data['name'].nil? and data['level'] == '/projects/algebra_game'
+        data['name'] = 'Big Game Template'
+      end
       data['name'] = "Remix: #{data['name']}"
       data['hidden'] = false
     else
