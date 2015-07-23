@@ -38,31 +38,3 @@
   %li= link_to 'Help us translate to your language', 'http://eepurl.com/lm_ln'
   %li= link_to 'Terms of service', 'https://code.org/tos'
   %li= link_to 'Privacy policy', 'https://code.org/privacy'
-
-%script
-  \/**
-  \ * Sets the copyright flyout to sit exactly above the footer.
-  \ */
-  \function repositionCopyrightFlyout() {
-  \  var copyrightFlyout = document.querySelector('#copyright-flyout');
-  \  var smallFooter = document.querySelector('.small-footer');
-  \  if (!(copyrightFlyout && smallFooter)) {
-  \    return;
-  \  }
-  \  copyrightFlyout.style.left = '0';
-  \  copyrightFlyout.style.paddingBottom = smallFooter.offsetHeight + 'px';
-  \}
-
-  \/**
-  \ * Sets the more-menu size and position to sit above the footer and
-  \ * match its full width.
-  \ */
-  \function repositionMoreMenu() {
-  \  var smallFooter = document.querySelector('.small-footer');
-  \  var moreMenu = document.querySelector('#more-menu');
-  \  if (!(smallFooter && moreMenu)) {
-  \    return;
-  \  }
-  \  moreMenu.style.bottom = smallFooter.offsetHeight + 'px';
-  \  moreMenu.style.width = smallFooter.offsetWidth + 'px';
-  \}

@@ -17,13 +17,12 @@
 /* global -Blockly */
 /* global $ */
 /* global sendReport */
-/* global repositionCopyrightFlyout */
-/* global repositionMoreMenu */
 'use strict';
 
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
+var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
@@ -987,8 +986,8 @@ function resizeFooterToLeftColumnWidth() {
 var netsimDebouncedResizeFooter = _.debounce(function () {
   resizeFooterToLeftColumnWidth();
   resizeLeftColumnToSitAboveFooter();
-  repositionCopyrightFlyout();
-  repositionMoreMenu();
+  smallFooterUtils.repositionCopyrightFlyout();
+  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 /**

@@ -1,6 +1,4 @@
 /* global Blockly, ace:true, $, droplet, marked, digestManifest */
-/* global repositionCopyrightFlyout */
-/* global repositionMoreMenu */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -14,6 +12,7 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
+var smallFooterUtils = require('@cdo/shared/smallFooter');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -414,83 +413,7 @@ StudioApp.prototype.init = function(config) {
     }).bind(this));
   }
 
-  this.bindSmallFooterHandlers_();
-};
-
-/**
- * Bind click handler for a "show flyout" link in the footer, which, when
- * clicked, binds a one-time click handler on body to close the flyout no
- * matter where the next click occurs.  Takes care of appropriate show/hide
- * toggle when clicking on the "show" link twice in a row.
- * @param {EventTarget} showClickTarget - the element which should cause the
- *        flyout to appear on click.
- * @param {function} showAction - callback that actually shows the flyout
- * @param {function} hideAction - callback that actually hides the flyout
- */
-function bindFooterShowHideHandlers(showClickTarget, showAction, hideAction) {
-  var mouseEventName = 'mouseup';
-  var touchEventName = dom.getTouchEventName(mouseEventName);
-  var isShowing = false;
-
-  dom.addMouseUpTouchEvent(showClickTarget, function (showEvent) {
-    // Don't show/add handlers when already showing
-    if (isShowing) {
-      return;
-    }
-
-    var hideFlyout = function (hideEvent) {
-      // Don't hide / remove handlers on same click that shows flyout
-      if (hideEvent === showEvent) {
-        return;
-      }
-      hideAction();
-      isShowing = false;
-      // In handler, unbind one-time listeners
-      document.body.removeEventListener(mouseEventName, hideFlyout);
-      if (touchEventName) {
-        document.body.removeEventListener(touchEventName, hideFlyout);
-      }
-    };
-
-    // Allows a second click on the "show" link to also result in a "hide"
-    showAction();
-    isShowing = true;
-    // Bind one-time listeners
-    document.body.addEventListener(mouseEventName, hideFlyout);
-    if (touchEventName) {
-      document.body.addEventListener(touchEventName, hideFlyout);
-    }
-  });
-}
-
-/**
- * Handle clicks on links in small footer
- * @private
- */
-StudioApp.prototype.bindSmallFooterHandlers_ = function () {
-  var smallFooter = document.querySelector('.small-footer');
-  if (!smallFooter) {
-    return;
-  }
-
-  var copyrightLink = smallFooter.querySelector('.copyright-link');
-  var copyrightFlyout = document.getElementById('copyright-flyout');
-  bindFooterShowHideHandlers(copyrightLink, function () {
-    copyrightFlyout.style.display = 'block';
-  }, function () {
-    copyrightFlyout.style.display = 'none';
-  });
-
-  var moreLink = smallFooter.querySelector('.more-link');
-  var faGlyph = moreLink.querySelector('.fa');
-  var moreMenu = document.getElementById('more-menu');
-  bindFooterShowHideHandlers(moreLink, function () {
-    moreMenu.style.display = 'block';
-    faGlyph.className = faGlyph.className.replace('fa-caret-up', 'fa-caret-down');
-  }, function () {
-    moreMenu.style.display = 'none';
-    faGlyph.className = faGlyph.className.replace('fa-caret-down', 'fa-caret-up');
-  });
+  smallFooterUtils.bindHandlers();
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -961,8 +884,8 @@ function resizePinnedBelowVisualizationArea() {
  */
 var onResizeSmallFooter = _.debounce(function () {
   resizePinnedBelowVisualizationArea();
-  repositionCopyrightFlyout();
-  repositionMoreMenu();
+  smallFooterUtils.repositionCopyrightFlyout();
+  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
