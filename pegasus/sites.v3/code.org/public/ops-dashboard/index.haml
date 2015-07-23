@@ -5,6 +5,7 @@ title: "Ops Dashboard"
 ---
 - authentication_required!
 - forbidden! unless have_permission?('district_contact') || have_permission?('facilitator') || dashboard_user[:admin]
+- require 'cdo/activity_constants'
 
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
@@ -70,11 +71,11 @@ title: "Ops Dashboard"
   services.factory('programTypesService', [
     function() {
       var program_types = {
-        1: {id: 1, short_name: 'CS in Science', long_name: 'Computer Science in Science'},
-        2: {id: 2, short_name: 'CS in Algebra', long_name: 'Computer Science in Algebra'},
-        3: {id: 3, short_name: 'ECS', long_name: 'Exploring Computer Science'},
-        4: {id: 4, short_name: 'CSP', long_name: 'Computer Science Principles'},
-        5: {id: 5, short_name: 'K5', long_name: 'Computer Science in K5'}
+        1: {id: 1, short_name: "#{ Activity::PROGRAM_TYPES[1][:short_name]}", long_name: "#{ Activity::PROGRAM_TYPES[1][:long_name]}"},
+        2: {id: 2, short_name: "#{ Activity::PROGRAM_TYPES[2][:short_name]}", long_name: "#{ Activity::PROGRAM_TYPES[2][:long_name]}"},
+        3: {id: 3, short_name: "#{ Activity::PROGRAM_TYPES[3][:short_name]}", long_name: "#{ Activity::PROGRAM_TYPES[3][:long_name]}"},
+        4: {id: 4, short_name: "#{ Activity::PROGRAM_TYPES[4][:short_name]}", long_name: "#{ Activity::PROGRAM_TYPES[4][:long_name]}"},
+        5: {id: 5, short_name: "#{ Activity::PROGRAM_TYPES[5][:short_name]}", long_name: "#{ Activity::PROGRAM_TYPES[5][:long_name]}"}
       };
 
       return program_types;
