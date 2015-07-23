@@ -342,7 +342,7 @@ var projects = module.exports = {
   },
 
   init: function () {
-    if (redirectEditView()) {
+    if (redirectFromHashUrl || redirectEditView()) {
       return;
     }
 
@@ -551,7 +551,7 @@ var projects = module.exports = {
   load: function () {
     var deferred;
     if (appOptions.level.isProjectLevel) {
-      if (redirectEditView()) {
+      if (redirectFromHashUrl() || redirectEditView()) {
         return;
       }
       var pathInfo = parsePath();
@@ -591,6 +591,9 @@ var projects = module.exports = {
           deferred.reject();
         } else {
           current = data;
+          if (!current.name && appOptions.level.projectTemplateLevelName) {
+            current.name = appOptions.level.projectTemplateLevelName;
+          }
           dashboard.header.showProjectLevelHeader();
           deferred.resolve();
         }
@@ -661,6 +664,22 @@ function redirectEditView() {
     return redirectToPath(newUrl, true);
   }
   return false;
+}
+
+/**
+ * Does a hard redirect if we end up with a hash based projects url. This can
+ * happen on IE9, when we save a new project for hte first time.
+ * @returns {boolean} True if we did an actual redirect
+ */
+function redirectFromHashUrl() {
+  var newUrl = location.href.replace('#', '/');
+  if (newUrl === location.href) {
+    // Nothing changed
+    return false;
+  }
+
+  var pathInfo = parsePath();
+  return redirectToPath(newUrl, false);
 }
 
 /**
