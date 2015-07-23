@@ -342,7 +342,7 @@ var projects = module.exports = {
   },
 
   init: function () {
-    if (redirectFromHashUrl || redirectEditView()) {
+    if (redirectFromHashUrl() || redirectEditView()) {
       return;
     }
 
