@@ -862,10 +862,10 @@ Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
   var blockBox = block.getBox();
   var currentView = this.getViewportBox();
 
-  var boxOverhangs = Blockly.getBoxOverhang(currentView, blockBox);
+  var boxOverflows = Blockly.getBoxOverflow(currentView, blockBox);
 
-  this.scrollToDelta(boxOverhangs.right - boxOverhangs.left,
-    boxOverhangs.bottom - boxOverhangs.top);
+  this.scrollToDelta(boxOverflows.right - boxOverflows.left,
+    boxOverflows.bottom - boxOverflows.top);
   console.log("Scrolling into view");
 };
 

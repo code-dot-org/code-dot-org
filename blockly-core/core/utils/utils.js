@@ -651,13 +651,13 @@ Blockly.getNormalizedWheelDeltaY = function (e) {
 };
 
 /**
- * Given an outer box, returns a box with the amounts of an inner box's overhang
+ * Given an outer box, returns a box with the amounts of an inner box's overflow
  * on each side.
  * @param {goog.math.Box} outerBox
  * @param {goog.math.Box} innerBox
- * @return {goog.math.Box} overhang on each side, (+) is amount hanging off
+ * @return {goog.math.Box} overflow on each side, (+) is amount hanging off
  */
-Blockly.getBoxOverhang = function (outerBox, innerBox) {
+Blockly.getBoxOverflow = function (outerBox, innerBox) {
   return new goog.math.Box(
     Math.max(0, outerBox.top - innerBox.top),
     Math.max(0, innerBox.right - outerBox.right),
@@ -671,7 +671,7 @@ Blockly.getBoxOverhang = function (outerBox, innerBox) {
  * @param {goog.math.Coordinate} innerPoint
  * @return {goog.math.Box} distances to each side, from point's perspective
  */
-Blockly.getPointOverhangs = function (outerBox, innerPoint) {
+Blockly.getPointBoxOverflow = function (outerBox, innerPoint) {
   return new goog.math.Box(
     outerBox.top - innerPoint.y,
     innerPoint.x - outerBox.right,
