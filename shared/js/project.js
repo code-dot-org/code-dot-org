@@ -332,9 +332,6 @@ var projects = module.exports = {
           deferred.reject();
         } else {
           current = data;
-          if (!current.name && appOptions.level.projectTemplateLevelName) {
-            current.name = appOptions.level.projectTemplateLevelName;
-          }
           dashboard.header.showProjectLevelHeader();
           deferred.resolve();
         }
