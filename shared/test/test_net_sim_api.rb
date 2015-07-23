@@ -15,7 +15,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @table_name = 'n' # for "node table"
 
     # Every test should start with an empty table
-    assert read_records.first.nil?
+    assert read_records.first.nil?, "Table was not empty"
   end
 
   def test_create_read_update_delete
@@ -37,24 +37,24 @@ class NetSimApiTest < Minitest::Unit::TestCase
     record = read_records.first
     assert_equal 8, record['age']
   ensure
-    delete_record(record_id)
-    assert read_records.first.nil?
+    delete_record(record_id || 1)
+    assert read_records.first.nil?, "Table was not empty"
   end
 
   def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation
-    record_create_response = create_record_malformed({name:'alice', age:7, male:false})
+    record_create_response = create_record_malformed({name:'bob', age:7, male:false})
 
     # Verify that the CREATE response is a 400 BAD REQUEST since we sent malformed JSON
     assert_equal 400, record_create_response.status
 
     # Verify that no record was created
-    assert read_records.first.nil?
+    assert read_records.first.nil?, "Table was not empty"
   end
 
   def test_get_400_on_bad_json_update
     # Create a record correctly
-    record_create_response = create_record({name:'alice', age:7, male:false})
+    record_create_response = create_record({name:'charles', age:7, male:false})
     record_id = record_create_response['id'].to_i
 
     # Send malformed JSON with an UPDATE operation
@@ -67,8 +67,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     record = read_records.first
     assert_equal 7, record['age']
   ensure
-    delete_record(record_id)
-    assert read_records.first.nil?
+    delete_record(record_id || 1)
+    assert read_records.first.nil?, "Table was not empty"
   end
 
   # Methods below this point are test utilities, not actual tests

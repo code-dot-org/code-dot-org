@@ -6,16 +6,23 @@ require 'csv'
 class NetSimApi < Sinatra::Base
 
   helpers do
-    [
-        'core.rb',
-        'storage_id.rb',
-        'table.rb',
-    ].each do |file|
+    %w{
+      core.rb
+      storage_id.rb
+      table.rb
+      null_pub_sub_api.rb
+      pusher_api.rb
+    }.each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
+
   end
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+
+  # Pick a PubSub API based on configuration
+  PUB_SUB_API = CDO.netsim_use_pusher ? PusherApi : NullPubSubApi
+  PUB_SUB_API.configure_keys
 
   def get_table(shard_id, table_name)
     # Table name within channels API just concatenates shard + table
@@ -57,7 +64,10 @@ class NetSimApi < Sinatra::Base
   #
   delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-    get_table(shard_id, table_name).delete(id.to_i)
+    table = get_table(shard_id, table_name)
+    int_id = id.to_i
+    table.delete(int_id)
+    PUB_SUB_API.trigger(shard_id, table_name, {:action => 'delete', :id => int_id})
     no_content
   end
 
@@ -81,6 +91,7 @@ class NetSimApi < Sinatra::Base
     begin
       value = get_table(shard_id, table_name).
           insert(JSON.parse(request.body.read), request.ip)
+      PUB_SUB_API.trigger(shard_id, table_name, {:action => 'insert', :id => value[:id]})
     rescue JSON::ParserError
       bad_request
     end
@@ -100,8 +111,10 @@ class NetSimApi < Sinatra::Base
     unsupported_media_type unless has_json_utf8_headers(request)
 
     begin
-      value = get_table(shard_id, table_name).
-          update(id.to_i, JSON.parse(request.body.read), request.ip)
+      table = get_table(shard_id, table_name)
+      int_id = id.to_i
+      value = table.update(int_id, JSON.parse(request.body.read), request.ip)
+      PUB_SUB_API.trigger(shard_id, table_name, {:action => 'update', :id => int_id})
     rescue JSON::ParserError
       bad_request
     end
