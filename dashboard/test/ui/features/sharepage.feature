@@ -10,9 +10,9 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   When I close the dialog
   Then I press "runButton"
   Then I press "rightButton"
-  And I wait to see "#x-close"
+  And I wait for 1 seconds
   Then I navigate to the share URL
-  
+
   Then ensure Flappy gameState is WAITING
   Then I press "runButton"
   And ensure Flappy gameState is WAITING

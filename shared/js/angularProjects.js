@@ -9,7 +9,7 @@ angular.module('projectsApp', [
   'projectsApp.services'
 ]).config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/',
-      {templateUrl: '/projects/angular', controller: 'ProjectsController'});
+      {templateUrl: '/p/projects', controller: 'ProjectsController'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
@@ -31,7 +31,7 @@ services.factory('projectsService', ['$resource',
 
     Project.prototype.url = function() {
       if (this.level && this.id) {
-        return this.level.replace(/\/p\//, '/projects/') + '/' + this.id;
+        return this.level + '#' + this.id;
       } else {
         return null;
       }
