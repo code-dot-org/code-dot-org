@@ -7045,14 +7045,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     dom.addClickTouchEvent(openWorkspace, function() {
       // TODO: don't make assumptions about hideSource during init so this works.
       // workspaceDiv.style.display = '';
-
-      // /c/ URLs go to /edit when we click open workspace.
-      // /project/ URLs we want to go to /view (which doesnt require login)
-      if (/^\/c\//.test(location.pathname)) {
-        location.href += '/edit';
-      } else {
-        location.href += '/view';
-      }
+      location.href += '/edit';
     });
 
     buttonRow.appendChild(openWorkspace);
