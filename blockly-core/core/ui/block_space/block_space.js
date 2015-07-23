@@ -831,6 +831,7 @@ Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
 };
 
 /**
+ * Returns a box representing the size of the underlying editable canvas
  * @returns {goog.math.Box}
  */
 Blockly.BlockSpace.prototype.getScrollableBox = function() {
@@ -839,6 +840,8 @@ Blockly.BlockSpace.prototype.getScrollableBox = function() {
 };
 
 /**
+ * Returns a box representing the position of the viewport in the coordinate
+ * space of the underlying canvas.
  * @returns {goog.math.Box}
  */
 Blockly.BlockSpace.prototype.getViewportBox = function() {
@@ -866,7 +869,6 @@ Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
 
   this.scrollToDelta(boxOverflows.right - boxOverflows.left,
     boxOverflows.bottom - boxOverflows.top);
-  console.log("Scrolling into view");
 };
 
 Blockly.BlockSpace.prototype.scrollDeltaWithAnySelectedBlock = function (scrollDx, scrollDy,
@@ -896,6 +898,10 @@ Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
 /**
  * Given desired new scrollX and scrollY positions, scroll to position,
  * clamping to within allowable scroll boundaries.
+ *
+ * If a block is selected, this will also move it to stay under the current
+ * mouse position after scroll (otherwise it would appear to scroll with the
+ * entire blockspace).
  * @param {number} newScrollX new target pan-right (+) offset
  * @param {number} newScrollY new target pan-down (+) offset
  * @param {number} mouseX current mouse clientX position (used for
