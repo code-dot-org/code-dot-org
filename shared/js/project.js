@@ -274,7 +274,14 @@ var projects = module.exports = {
     });
   },
   serverSideRemix: function() {
-    location.href = projects.getPathName('remix');
+    if (current && !current.name &&
+        projects.appToProjectUrl() === '/projects/algebra_game') {
+      current.name = 'Big Game Template';
+    }
+    // Save, then do our remix on the server
+    projects.save(function () {
+      location.href = projects.getPathName('remix');
+    });
   },
   delete: function(callback) {
     var channelId = current.id;
