@@ -398,8 +398,10 @@ function redirectEditView() {
     newUrl = location.href.replace(/\/edit$/, '/view');
     appOptions.readonlyWorkspace = true;
   }
-  if (newUrl && newUrl !== location.href) {
-    return redirectToPath(newUrl, true);
+
+  // PushState to the new Url if we can, otherwise do nothing.
+  if (newUrl && newUrl !== location.href && window.history.pushState) {
+    window.history.pushState({modified: true}, document.title, newUrl);
   }
   return false;
 }
@@ -417,24 +419,8 @@ function redirectFromHashUrl() {
   }
 
   var pathInfo = parsePath();
-  return redirectToPath(newUrl, false);
-}
-
-/**
- * Does a redirect to the given path. If attemptPushState is true, it will
- * use pushState to just change the browser URL in browsers that support this.
- * @returns {boolean} True if we did a redirect (vs. pushState)
- */
-function redirectToPath(path, attemptPushState) {
-  if (attemptPushState && window.history.pushState) {
-    // Right now I set modified just so that our UI tests can detect a dashboard
-    // vs. JS redirect. Not sure whether there is a better way
-    window.history.pushState({modified: true}, document.title, path);
-    return false;
-  } else {
-    location.href = path;
-    return true;
-  }
+  location.href = newUrl;
+  return true;
 }
 
 /**
