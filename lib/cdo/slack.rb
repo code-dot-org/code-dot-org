@@ -6,7 +6,8 @@ class Slack
   COLOR_MAP = {
     green: 'good',
     yellow: 'warning',
-    red: 'danger'
+    red: 'danger',
+    purple: '#7665a0'
   }
 
   CHANNEL_MAP = {
