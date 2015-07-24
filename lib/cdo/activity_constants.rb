@@ -11,4 +11,11 @@ module ActivityConstants
   FREE_PLAY_RESULT = 30
   BEST_PASS_RESULT = 100
   SUBMITTED_RESULT = 1000
+  PROGRAM_TYPES = {
+      1 => {short_name: 'CS in Science', long_name: 'Computer Science in Science'},
+      2 => {short_name: 'CS in Algebra', long_name: 'Computer Science in Algebra'},
+      3 => {short_name: 'ECS', long_name: 'Exploring Computer Science'},
+      4 => {short_name: 'CSP', long_name: 'Computer Science Principles'},
+      5 => {short_name: 'K5', long_name: 'Computer Science in K5'}
+  }
 end
