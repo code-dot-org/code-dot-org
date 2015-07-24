@@ -6,7 +6,7 @@
   "browserify": {
     "transform": [
       "ejsify",
-      "reactify"
+      ["babelify", {"compact": false}]
     ]
   }
 }

@@ -288,7 +288,7 @@ APPS.forEach(function (app) {
 
 // Use command-line tools to run browserify (faster/more stable this way)
 var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' +
-  '-t reactify --extension=.jsx ' + allFilesSrc.join(' ') +
+  '-t [ babelify --compact=false ] --extension=.jsx ' + allFilesSrc.join(' ') +
   (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
   ' -o ' + allFilesDest[0]);
 

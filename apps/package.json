@@ -25,6 +25,7 @@
   "devDependencies": {
     "@cdo/apps": "file:src",
     "@cdo/shared": "file:../shared/js",
+    "babelify": "^6.1.2",
     "browserify": "^8.1.1",
     "browserify-shim": "^3.8.3",
     "chai": "~1.10.0",
@@ -68,7 +69,6 @@
     "phantomjs": "git://github.com/wjordan/phantomjs",
     "react": "^0.13.2",
     "react-tools": "^0.13.3",
-    "reactify": "^1.1.0",
     "require-globify": "^1.1.0",
     "rfile": "~1.0.0",
     "seedrandom": "^2.4.0",
