@@ -143,6 +143,10 @@ module.exports = {
         return '/p/applab';
       case 'turtle':
         return '/p/artist';
+      case 'calc':
+        return '/p/calc';
+      case 'eval':
+        return '/p/eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return '/p/algebra_game';

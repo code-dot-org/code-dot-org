@@ -26,7 +26,7 @@ Through our district partnerships, we are helping districts increase the priorit
 
 ### What learning outcomes have Code.org students achieved?
 
-Students are using Code Studio to learn about a number of key CS concepts at a scale previously unseen in K-12 education. <br /><br/>
+Students are using Code Studio to learn about a number of key CS concepts at large scale. <br /><br/>
 
 [<button>See learning outcomes</button>](/about/impact/outcomes-1415)<br /><br/>
 
