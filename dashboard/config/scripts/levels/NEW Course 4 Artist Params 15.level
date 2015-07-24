@@ -556,6 +556,9 @@
               </block>
             </value>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
@@ -575,15 +578,12 @@
             </value>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">counter</title>
+        <category name="Variable">
+          <block type="variables_set" inline="false">
+            <title name="VAR">i</title>
           </block>
           <block type="variables_get">
-            <title name="VAR">sides</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">length</title>
+            <title name="VAR">i</title>
           </block>
         </category>
       </xml>
