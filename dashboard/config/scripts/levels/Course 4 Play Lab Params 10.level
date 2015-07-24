@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "We've added one last function for you to use. Program your game to call the \"level_up\" function if \"player_points\" > 10. Play the game, and make it past level 4 to move to the next puzzle. ",
+    "instructions": "We've added one last function for you to use. \r\n\r\nProgram your game to call the \"level_up\" function if \"player_points\" > 10.  \r\n\r\nPlay the game, and make it past level 4 to move to the next puzzle. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "We've added one last function for you to use. \r\n\r\n<br/>\r\nProgram your game to call the `level_up` function if `player_points` > 10. Play the game, and make it past level 4 to move to the next puzzle. ",
+    "markdown_instructions": "We've added one last function for you to use. \r\n\r\nProgram your game to call the `level_up` function if `player_points` > 10. \r\n\r\nPlay the game, and make it past level 4 to move to the next puzzle. ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
