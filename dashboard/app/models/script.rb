@@ -182,8 +182,13 @@ class Script < ActiveRecord::Base
     k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
   end
 
-  def show_freeplay_links?
-    name != 'algebra'
+  def freeplay_links
+    if name == 'algebra'
+      ['calc', 'eval']
+    else
+      ['playlab', 'artist']
+    end
+
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)
