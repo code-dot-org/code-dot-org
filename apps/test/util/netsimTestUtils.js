@@ -28,6 +28,7 @@ exports.assertTableSize = function (shard, tableName, size) {
 /**
  * Replace our clientApi with a mock that hits a fakeStorageTable instead of
  * accessing the server API.
+ * @param {NetSimTable} netsimTable
  */
 exports.overrideClientApi = function (netsimTable) {
   var table = fakeStorageTable();
@@ -165,11 +166,11 @@ var fakeStorageTable = function () {
  */
 exports.fakeShard = function () {
   return {
-    nodeTable: exports.overrideClientApi(new NetSimTable('node')),
-    wireTable: exports.overrideClientApi(new NetSimTable('wire')),
-    messageTable: exports.overrideClientApi(new NetSimTable('message')),
-    logTable: exports.overrideClientApi(new NetSimTable('log')),
-    heartbeatTable: exports.overrideClientApi(new NetSimTable('heartbeat')),
+    nodeTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'node')),
+    wireTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'wire')),
+    messageTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'message')),
+    logTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'log')),
+    heartbeatTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'heartbeat')),
   };
 };
 

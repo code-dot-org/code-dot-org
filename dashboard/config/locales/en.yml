@@ -242,6 +242,7 @@ en:
       free_play:
         playlab: 'Make an App'
         artist: 'Draw Something'
+        calculate: 'Calculate Something'
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
