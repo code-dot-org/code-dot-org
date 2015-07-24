@@ -219,7 +219,7 @@ def main()
       if sl
         level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
       end
-      log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">&#x2708; Repro It</a>]
+      log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
       HipChat.notify('ActivityMonitor', log_string, color:'red', notify:1)
       HipChat.log log_string, color:'red'
     end

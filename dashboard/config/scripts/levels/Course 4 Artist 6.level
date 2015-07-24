@@ -31,7 +31,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Complete the code to draw these triangles.  \r\nHint: There are 3 triangles within the 360 degree rotation...how many times does 3 go into 360?"
+    "markdown_instructions": "Complete the code to draw these triangles.  \r\n*Hint: There are 3 triangles within the 360 degree rotation...how many times does 3 go into 360?*"
   }
 }]]></config>
   <blocks>
