@@ -71,4 +71,7 @@ class StorageApps
     end.compact
   end
 
+  def most_recent
+    @table.where(storage_id:@storage_id).exclude(state:'deleted').order(:id).last
+  end
 end

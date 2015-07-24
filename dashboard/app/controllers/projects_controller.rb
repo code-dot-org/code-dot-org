@@ -39,6 +39,12 @@ class ProjectsController < ApplicationController
     render template: "projects/projects", layout: nil
   end
 
+  def load
+    if current_user
+      StorageApps.new(request.user_id).most_recent
+    end
+  end
+
   def show
     sharing = params[:share] == true
     level_view_options(
