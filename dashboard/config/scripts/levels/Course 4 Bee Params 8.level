@@ -18,7 +18,7 @@
     "nectar_goal": "5",
     "flower_type": "redWithNectar",
     "ideal": "49",
-    "instructions": "Oooh, now there's honey to deal with too! How could you update your function to either get nectar or make honey.",
+    "instructions": "Challenge: Now there's honey to deal with too! Rewrite your function to take in both the number of honey units and the number of nectar units.  How would you use those numbers to decide what you should do?",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "open_function_definition": "get nectar make honey",
@@ -29,18 +29,39 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false">
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="variables_set" inline="false" deletable="false" movable="false">
+              <title name="VAR">left</title>
+              <value name="VALUE">
+                <block type="math_number" deletable="false" movable="false" editable="false">
+                  <title name="NUM">0</title>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" inline="false" deletable="false" movable="false">
+                  <title name="VAR">right</title>
+                  <value name="VALUE">
+                    <block type="math_number" deletable="false" movable="false" editable="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
           <mutation>
             <arg name="direction"/>
-            <arg name="nectars"/>
-            <arg name="honey"/>
+            <arg name="nectar units"/>
+            <arg name="honey units"/>
             <description>Move in a direction to either collect nectar or make honey.</description>
           </mutation>
           <title name="NAME">get nectar make honey</title>
@@ -82,7 +103,7 @@
                         <block type="controls_repeat_ext" inline="true">
                           <value name="TIMES">
                             <block type="parameters_get">
-                              <title name="VAR">nectars</title>
+                              <title name="VAR">nectar units</title>
                             </block>
                           </value>
                           <statement name="DO">
@@ -136,28 +157,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="variables_set" inline="false" deletable="false" movable="false">
-              <title name="VAR">left</title>
-              <value name="VALUE">
-                <block type="math_number" deletable="false" movable="false" editable="false">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set" inline="false" deletable="false" movable="false">
-                  <title name="VAR">right</title>
-                  <value name="VALUE">
-                    <block type="math_number" deletable="false" movable="false" editable="false">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
       </xml>
     </start_blocks>
