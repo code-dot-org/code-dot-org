@@ -21,7 +21,15 @@
     "y": "200",
     "impressive": "false",
     "disable_sharing": "false",
-    "ideal": "13"
+    "ideal": "13",
+    "markdown_instructions": "Use the `draw a square` function to draw this pattern. \r\n\r\n*Hint: You will have to use a `turn right by 120 degrees` block after each square.*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

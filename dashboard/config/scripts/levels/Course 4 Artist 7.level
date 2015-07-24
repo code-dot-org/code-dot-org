@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Now nest this loop inside another loop to draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles complete a 360 degree rotation.  ",
+    "instructions": "Now nest this loop inside another loop to draw 10 triangles. This is called a nested loop. Hint: All 10 triangles complete a 360 degree rotation.  ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "270",
@@ -22,7 +22,15 @@
     "use_contract_editor": "false",
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"repeat_blocks\",\"callout_text\":\"Use the \\\"Repeat\\\" block and wrap it around the blocks in the workspace\",\"element_id\":\"#repeat_blocks_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "slider_speed": ".7"
+    "slider_speed": ".7",
+    "markdown_instructions": "Now nest this loop inside another loop to draw 10 triangles. This is called a nested loop.  \r\n*Hint: All 10 triangles complete a 360 degree rotation.*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

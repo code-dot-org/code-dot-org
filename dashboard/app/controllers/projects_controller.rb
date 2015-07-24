@@ -9,6 +9,8 @@ class ProjectsController < ApplicationController
     playlab: 'New Play Lab Project',
     applab: 'New App Lab Project',
     algebra_game: 'New Algebra Project',
+    calc: 'Calc Free Play',
+    eval: 'Eval Free Play'
   }
 
   def index
