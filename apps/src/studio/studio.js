@@ -646,6 +646,8 @@ Studio.callApiCode = function (name, func) {
 Studio.onTick = function() {
   Studio.tickCount++;
 
+  Studio.clearDebugRects();
+
   var animationOnlyFrame = false;
 
   if (Studio.customLogic) {
@@ -1051,6 +1053,8 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
  */
 
 Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
+  xCenter += skin.wallCollisionRectOffsetX;
+  yCenter += skin.wallCollisionRectOffsetY;
   var colsOffset = Math.floor(xCenter) + 1;
   var rowsOffset = Math.floor(yCenter) + 1;
   var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
@@ -1062,12 +1066,15 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
       if (Studio.map[row][col] & SquareType.WALL) {
+        var collidableHeight = skin.wallCollisionRectHeight || collidable.height;
+        var collidableWidth = skin.wallCollisionRectWidth || collidable.width;
+        Studio.drawDebugRect("avatarCollision", xCenter, yCenter, collidableWidth, collidableHeight);
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + collidable.width / 2,
+                            Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
                             yCenter,
                             (row + 0.5) * Studio.SQUARE_SIZE,
-                            Studio.SQUARE_SIZE / 2 + collidable.height / 2)) {
+                            Studio.SQUARE_SIZE / 2 + collidableHeight / 2)) {
           return true;
         }
       }
@@ -2095,6 +2102,49 @@ function getFrameCount (className, exceptionList, defaultCount) {
 function cellId(prefix, row, col) {
   return prefix + '_' + row + '_' + col;
 }
+
+/**
+ * Draw a debug rectangle centered on the given location, using the given
+ * CSS class name.
+ */
+
+Studio.drawDebugRect = function(className, x, y, width, height) {
+  //return;
+
+  var svg = document.getElementById('svgStudio');
+  var group = document.createElementNS(SVG_NS, 'g');
+  var background = document.createElementNS(SVG_NS, 'rect');
+  background.setAttribute('class', className);
+  background.setAttribute('width', width);
+  background.setAttribute('height', height);
+  background.setAttribute('x', x - width/2);
+  background.setAttribute('y', y - height/2);
+  background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
+  background.setAttribute('stroke', '#000000');
+  background.setAttribute('stroke-width', 1);
+  group.appendChild(background);
+  svg.appendChild(group);
+};
+
+/**
+ * Clear the debug rectangles.
+ */
+
+Studio.clearDebugRects = function() {
+  $(".avatarCollision").remove();
+  $(".wallCollision").remove();
+  $(".itemCollision").remove();
+  $(".spriteCollision").remove();
+  $(".chaseFreeCollision").remove();
+  $(".spriteForDistance").remove();
+  $(".itemForDistance").remove();
+  $(".spriteForChaseFree").remove();
+  $(".itemForChaseFree").remove();
+  $(".roamGridDest").remove();
+  $(".itemCenter").remove();
+  $(".roamGridPossibleDest").remove();
+}
+
 
 Studio.drawWallTile = function (svg, row, col) {
 
