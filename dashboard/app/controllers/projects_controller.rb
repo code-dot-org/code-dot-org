@@ -49,7 +49,10 @@ class ProjectsController < ApplicationController
   end
 
   def create_new
-    redirect_to action: 'edit', channel_id: create_channel
+    redirect_to action: 'edit', channel_id: create_channel({
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key], 'project_projects'])
+    })
   end
 
   def show

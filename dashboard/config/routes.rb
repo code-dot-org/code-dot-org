@@ -79,6 +79,7 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
+  # TODO: should be `resources :p` so other parts of the code stop linking here
   resources :projects, path: '/p/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, value|
