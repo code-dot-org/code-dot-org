@@ -91,7 +91,7 @@ Dashboard::Application.routes.draw do
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
-        get "/#{key}", to: 'projects#edit', key: key.to_s, as: "#{key}_project"
+        get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
         get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true

@@ -71,7 +71,12 @@ class StorageApps
     end.compact
   end
 
-  def most_recent
-    @table.where(storage_id:@storage_id).exclude(state:'deleted').order(:id).last
+  # Find the encrypted channel token for most recent project of the given type.
+  def most_recent(key)
+    row = @table.where(storage_id:@storage_id).exclude(state:'deleted').order(Sequel.desc(:updated_at)).find do |i|
+      JSON.parse(i[:value])['level'].split('/').last == key
+    end
+
+    storage_encrypt_channel_id(row[:storage_id], row[:id])
   end
 end
