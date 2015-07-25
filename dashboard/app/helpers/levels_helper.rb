@@ -24,7 +24,7 @@ module LevelsHelper
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def create_channel(data = {}, src = nil)
+  def create_channel(data = {name: 'Untitled Project'}, src = nil)
 
     result = ChannelsApi.call(request.env.merge(
       'REQUEST_METHOD' => 'POST',

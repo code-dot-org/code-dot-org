@@ -48,6 +48,10 @@ class ProjectsController < ApplicationController
     redirect_to action: 'edit', channel_id: channel
   end
 
+  def create_new
+    redirect_to action: 'edit', channel_id: create_channel
+  end
+
   def show
     sharing = params[:share] == true
     level_view_options(
