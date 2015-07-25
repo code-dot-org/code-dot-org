@@ -768,7 +768,8 @@ Blockly.BlockSpaceEditor.prototype.hideChaff = function(opt_allowToolbox) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
-  var blockBox;
+  /** @type {goog.math.Rect} */
+  var blockBoundingRect;
 
   var svgSize = this.svgSize(); // includes toolbox
   var toolboxWidth = 0;
@@ -777,7 +778,12 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
   }
   svgSize.width -= toolboxWidth;
   try {
-    blockBox = this.getCanvasBBox(this.blockSpace.getCanvas());
+    var mainCanvasBBox = this.getCanvasBBox(this.blockSpace.getCanvas());
+    blockBoundingRect = Blockly.svgRectToRect(mainCanvasBBox);
+    if (this.blockSpace.pickedUpBlockOrigin_) {
+      // Expand the blockBoundingRect to include origin of block being dragged
+      blockBoundingRect.boundingRect(this.blockSpace.pickedUpBlockOrigin_);
+    }
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     return null;
@@ -799,10 +805,10 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
     viewWidth: viewWidth,
     viewTop: viewTop,
     viewLeft: viewLeft,
-    contentHeight: blockBox.height,
-    contentWidth: blockBox.width,
-    contentTop: blockBox.y,
-    contentLeft: blockBox.x,
+    contentHeight: blockBoundingRect.height,
+    contentWidth: blockBoundingRect.width,
+    contentTop: blockBoundingRect.top,
+    contentLeft: blockBoundingRect.left,
     absoluteTop: 0,
     absoluteLeft: absoluteLeft
   };

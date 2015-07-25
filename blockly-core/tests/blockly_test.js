@@ -240,3 +240,26 @@ function test_numberWithin() {
   assert(!Blockly.numberWithin(6, 1, 5, false));
 }
 
+
+function test_svgRectToRect() {
+  /** @type SVGRect */
+  var fakeSvgRect = {
+    x: 0,
+    y: 1,
+    width: 2,
+    height: 3
+  };
+  var googRect = Blockly.svgRectToRect(fakeSvgRect);
+  assertEquals(0, googRect.left);
+  assertEquals(1, googRect.top);
+  assertEquals(2, googRect.width);
+  assertEquals(3, googRect.height);
+}
+
+function test_addToNonZeroSides() {
+  var actualBox = new goog.math.Box(1, 0, 0, 0);
+  Blockly.addToNonZeroSides(actualBox, 1);
+  var expectedBox = new goog.math.Box(2, 0, 0, 0);
+  assert(goog.math.Box.equals(expectedBox, actualBox));
+}
+
