@@ -283,6 +283,7 @@ Blockly.Block.terminateDrag_ = function() {
   if (Blockly.Block.isFreelyDragging()) {
     // Terminate a drag operation.
     if (selected) {
+      selected.blockSpace.clearPickedUpBlockOrigin();
       // Update the connection locations.
       var xy = selected.getRelativeToSurfaceXY();
       var dx = xy.x - selected.startDragX;
@@ -1086,6 +1087,7 @@ Blockly.Block.prototype.moveBlockBeingDragged_ = function (mouseX, mouseY) {
       this.setParent(null);
       this.setDraggingHandleImmovable_(true, firstImmovableBlockHandler);
       this.moveToDragCanvas_();
+      this.blockSpace.recordPickedUpBlockOrigin();
       this.blockSpace.recordDeleteAreas();
     }
   }

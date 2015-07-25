@@ -29,6 +29,7 @@ goog.provide('Blockly.utils');
 goog.require('goog.array');
 goog.require('goog.memoize');
 goog.require('goog.events');
+goog.require('goog.math.Rect');
 
 /**
  * Add a CSS class to a element.
@@ -724,4 +725,28 @@ Blockly.numberWithin = function (number, min, max, inclusive) {
   return inclusive?
     (number >= min && number <= max) :
     (number > min && number < max);
+};
+
+/**
+ * @param {SVGRect} svgRect
+ * @returns {goog.math.Rect}
+ */
+Blockly.svgRectToRect = function (svgRect) {
+  return new goog.math.Rect(svgRect.x, svgRect.y, svgRect.width,
+    svgRect.height);
+};
+
+Blockly.BOX_DIRECTIONS = ['top', 'right', 'bottom', 'left'];
+
+/**
+ * Given a box, adds a given amount to any non-zero side.
+ * @param {goog.math.Box} box
+ * @param {number} amount
+ */
+Blockly.addToNonZeroSides = function (box, amount) {
+  Blockly.BOX_DIRECTIONS.forEach(function (direction) {
+    if (box[direction] !== 0) {
+      box[direction] += amount;
+    }
+  });
 };

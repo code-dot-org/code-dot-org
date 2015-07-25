@@ -65,6 +65,13 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
    */
   this.deleteAreas_ = [];
 
+  /**
+   * The original position of the currently being dragged block.
+   * Used to avoid changing scroll size until block is dropped.
+   * @private {goog.math.Rect}
+   */
+  this.pickedUpBlockOrigin_ = null;
+
   /** @type {number} */
   this.maxBlocks = Infinity;
 
@@ -115,6 +122,13 @@ Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
  * See: http://tvtropes.org/pmwiki/pmwiki.php/Main/DiagonalBilling.
  */
 Blockly.BlockSpace.SCAN_ANGLE = 3;
+
+/**
+ * Margin (in pixels) to over-scroll when auto-panning viewport after a block
+ * is dragged out of view.
+ * @type {number}
+ */
+Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 10;
 
 /**
  * Current horizontal scrolling offset.
@@ -579,6 +593,19 @@ Blockly.BlockSpace.prototype.remainingCapacity = function() {
 };
 
 /**
+ * Records the bounding box of the currently dragged block to avoid changing
+ * scrolling size until drop.
+ */
+Blockly.BlockSpace.prototype.recordPickedUpBlockOrigin = function() {
+  var canvasBBox = this.blockSpaceEditor.getCanvasBBox(this.getDragCanvas());
+  this.pickedUpBlockOrigin_ = Blockly.svgRectToRect(canvasBBox);
+};
+
+Blockly.BlockSpace.prototype.clearPickedUpBlockOrigin = function() {
+  this.pickedUpBlockOrigin_ = null;
+};
+
+/**
 * Make a list of all the delete areas for this blockSpace.
 */
 Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
@@ -861,12 +888,18 @@ Blockly.BlockSpace.prototype.stopAutoScrolling = function () {
   this.scrollOnBlockDragHandler_.stopAutoScrolling();
 };
 
+/**
+ * Given a block, scrolls the viewport to contain the block (plus a small
+ * margin).
+ * @param {Blockly.Block} block
+ */
 Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
   var blockBox = block.getBox();
   var currentView = this.getViewportBox();
 
   var boxOverflows = Blockly.getBoxOverflow(currentView, blockBox);
-
+  Blockly.addToNonZeroSides(boxOverflows,
+    Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN);
   this.scrollToDelta(boxOverflows.right - boxOverflows.left,
     boxOverflows.bottom - boxOverflows.top);
 };
