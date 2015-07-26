@@ -4,6 +4,7 @@
 .DS_Store
 .dropbox
 .idea/
+.vagrant
 /.bundle
 /.gdrive_session
 /crontab
