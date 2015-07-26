@@ -405,10 +405,18 @@ function onDebugInputKeyDown(e) {
   }
 }
 
-function onDebugOutputClick(e) {
+function onDebugOutputMouseUp(e) {
   var debugInput = document.getElementById('debug-input');
   if (debugInput) {
-    console.log("click");
+    if (e.target.tagName === "DIV" && window.getSelection().toString().length === 0) {
+      debugInput.focus();
+    }
+  }
+}
+function onDebugOutputMouseDown(e) {
+  var debugInput = document.getElementById('debug-input');
+  if (debugInput) {
+    debugInput.focus();
   }
 }
 
@@ -680,12 +688,12 @@ Applab.init = function(config) {
     if (debugInput) {
       debugInput.addEventListener('keydown', onDebugInputKeyDown);
     }
-    /*
+    
     var debugOutput = document.getElementById('debug-output');
     if (debugOutput) {
-      debugOutput.addEventListener('click', onDebugOutputClick);
+      debugOutput.addEventListener('mouseup', onDebugOutputMouseUp);
+      debugOutput.addEventListener('mousedown', onDebugOutputMouseDown);
     }
-    */
   }
 
   var debugResizeBar = document.getElementById('debugResizeBar');
