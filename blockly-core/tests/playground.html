@@ -60,10 +60,6 @@ function toggleScrollDragDebug(checkboxElement) {
   Blockly.ScrollOnBlockDragHandler.DEBUG = checkboxElement.checked;
 }
 
-function setSpeed(type, newSpeed) {
-  Blockly.BlockSpace[type] = newSpeed;
-}
-
 function newContractEditor() {
   Blockly.defaultNumExampleBlocks = 2;
   Blockly.useContractEditor = true;
