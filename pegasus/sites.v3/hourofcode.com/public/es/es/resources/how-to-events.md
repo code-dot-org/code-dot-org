@@ -1,8 +1,8 @@
 
 
-# Guía del evento "Hora de Código"
+# Guía del evento "Hora del Código"
 
-Organiza un evento de la "Hora de Código" durante la Semana de la Educación en Ciencias de la Computación (Dic. 8 al 14) e inspira a más estudiantes a probrarlo. Cualquiera, en cualquier lugar puede organizar un evento de la "Hora de Código".
+Organiza un evento de la "Hora del Código" durante la Semana de la Educación en Ciencias de la Computación (Dic. 8 al 14) e inspira a más estudiantes a probrarlo. Cualquiera, en cualquier lugar puede organizar un evento de la "Hora del Código".
 
 ## 1) Prepárate para tu evento.
 
@@ -19,7 +19,7 @@ Organiza un evento de la "Hora de Código" durante la Semana de la Educación en
   * Otras ideas para el evento: 
       * Invita a un líder de la industria local para discutir su trabajo en ciencias de la computación.
       * Invita a un político local y haz que los estudiantes le o la enseñen a cómo codificar.
-      * Mira una de las Q&A sesiones con uno de los embajadores de la Hora de Código. Todas serán grabadas y colocadas en la página de Code.org en YouTube. ¡Los participantes de este año incluyen a Bill Gates, Sheryl Sandberg, Ashton Kutcher y otros más!
+      * Mira una de las Q&A sesiones con uno de los embajadores de la Hora del Código. Todas serán grabadas y colocadas en la página de Code.org en YouTube. ¡Los participantes de este año incluyen a Bill Gates, Sheryl Sandberg, Ashton Kutcher y otros más!
       * Haz que un grupo de estudiantes demuestren una actividad desconectada.
       * Haz que un grupo de estudiantes enseñen al director o a un grupo de profesores a como códificar
       * Si tu escuela ya enseña ciencias de la computación haz que los estudiantes presenten demostraciones.
@@ -93,7 +93,7 @@ Organiza un evento de la "Hora de Código" durante la Semana de la Educación en
   </td>
   
   <td>
-    Los estudiantes hacen una demostración de la Hora de Código para la escuela. Como actividad divertida, haz que los estudiantes le enseñen al director, político o a otros estudiantes.
+    Los estudiantes hacen una demostración de la Hora del Código para la escuela. Como actividad divertida, haz que los estudiantes le enseñen al director, político o a otros estudiantes.
   </td></tr> 
   
   <td>

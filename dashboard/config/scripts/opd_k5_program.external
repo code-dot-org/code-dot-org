@@ -2,7 +2,9 @@ name 'OPD-K5 Program'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# SEQUENCING > Writing your first computer program
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
+
+### SEQUENCING > Writing your first computer program
 
 At its base, this style of computer science is about sequence. We want to find the right sequence of instructions to tell the computer what to do. Watch this video below, which explains the very first program that young students will write in [Course 1](http://code.org/educate/k5) of our free code.org curriculum. On the next page, you'll get to write a similar program of your own!
 <br/><br/>
@@ -11,7 +13,7 @@ At its base, this style of computer science is about sequence. We want to find t
 
 <br>
 
-**[Can't see the video? Click here.](https://www.dropbox.com/sh/mw4r6l3vk8pg7em/AAAN0RieajnIMWXhANNUe68-a/maze%20intro-HD.mp4)**
+**[Can't see the video? Click here.](https://www.dropbox.com/s/uusewqoz5lrb8jn/c1-maze%20intro-HD.mp4?dl=0)**
 
 <br>
 

@@ -1,8 +1,8 @@
 name 'U2L14 Free Response Wrap Up'
-title 'Cracking the Code: Wrap Up'
+title 'Assessment: Question 2'
 
 markdown <<MARKDOWN
-Would you feel comfortable sending your password over the Internet using a substitution cipher? 
+Knowing what you know now about frequency analysis, would you feel comfortable sending your password over the Internet using a substitution cipher?
 
 Why or why not?
 MARKDOWN

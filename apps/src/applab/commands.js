@@ -12,6 +12,7 @@ var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
+var ChangeEventHandler = require('./ChangeEventHandler');
 
 var OPTIONAL = true;
 
@@ -155,6 +156,10 @@ applabCommands.setScreen = function (opts) {
   // toggle all screens to be visible if equal to given id, hidden otherwise
   $('.screen').each(function () {
     $(this).toggle(this.id === opts.screenId);
+    if (this.id === opts.screenId) {
+      // Allow the active screen to receive keyboard events.
+      this.focus();
+    }
   });
 };
 
@@ -193,7 +198,7 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = opts.src;
+  newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
@@ -473,9 +478,11 @@ applabCommands.createCanvas = function (opts) {
     var height = opts.height || Applab.appHeight;
     newElement.width = width;
     newElement.height = height;
-    newElement.style.width = width + 'px';
-    newElement.style.height = height + 'px';
-    newElement.style.position = 'relative';
+    newElement.setAttribute('width', width + 'px');
+    newElement.setAttribute('height', height + 'px');
+    // Unlike other elements, we use absolute position, otherwise our z-index
+    // doesn't work
+    newElement.style.position = 'absolute';
     if (!opts.turtleCanvas) {
       // set transparent fill by default (unless it is the turtle canvas):
       ctx.fillStyle = "rgba(255, 255, 255, 0)";
@@ -858,7 +865,7 @@ applabCommands.setImageURL = function (opts) {
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = opts.src;
+    element.src = Applab.maybeAddAssetPathPrefix(opts.src);
     return true;
   }
   return false;
@@ -868,7 +875,8 @@ applabCommands.playSound = function (opts) {
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
-    studioApp.cdoSounds.playURL(opts.url,
+    var url = Applab.maybeAddAssetPathPrefix(opts.url);
+    studioApp.cdoSounds.playURL(url,
                                {volume: 1.0,
                                 forceHTML5: true,
                                 allowHTML5Mobile: true
@@ -1108,6 +1116,13 @@ applabCommands.onEvent = function (opts) {
   apiValidateType(opts, 'onEvent', 'callback', opts.func, 'function');
   var domElement = document.getElementById(opts.elementId);
   if (divApplab.contains(domElement)) {
+    if (domElement.tagName.toUpperCase() === 'DIV' && domElement.contentEditable && opts.eventName === 'change') {
+      // contentEditable divs don't generate a change event, so
+      // synthesize one here.
+      var callback = applabCommands.onEventFired.bind(this, opts);
+      ChangeEventHandler.addChangeEventHandler(domElement, callback);
+      return true;
+    }
     switch (opts.eventName) {
       /*
       Check for a specific set of Hammer v1 event names (full set below) and if

@@ -34,8 +34,7 @@
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag(tracking_pixel_url(@script))
 
-- if current_user.try(:admin?)
-  = render partial: 'levels/admin'
+= render partial: 'levels/admin'
 
 - if @script && !@script.pd? && current_user.try(:teacher?)
   = render partial: 'levels/teacher'

@@ -1,0 +1,29 @@
+name 'sciPD2 StarLogoNova'
+title 'Reviewing StarLogo Nova'
+css 'unplugged'
+skip_dialog true
+
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Introduction to StarLogo Nova
+
+<br/>
+
+Now, for a quick refresher of StarLogo Nova.  Hopefully you already feel more comfortable with it than you did at the beginning of the summer. This PD will encourage you to play with StarLogo Nova on your own, and give you practice troubleshooting without extra facilitators around.
+
+<br/>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QrXe-nCV1xM" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](https://www.dropbox.com/s/h6634d3ukpups3y/MS-SCI-PD-Intro-to-Starlogo-Nova-9-2015.mp4)**
+
+<br>
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+MARKDOWN

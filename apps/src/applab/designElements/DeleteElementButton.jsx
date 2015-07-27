@@ -1,5 +1,6 @@
 /* global $ */
 var React = require('react');
+var rowStyle = require('./rowStyle');
 
 /**
  * A delete button that will also ask for confirmation when shouldConfirm is
@@ -37,7 +38,7 @@ var DeleteElementButton = React.createClass({
     var buttonStyle = {
       paddingTop: '5px',
       paddingBottom: '5px',
-      fontSize: '14px'
+      fontSize: '14px',
     };
 
     var redButtonStyle = $.extend({}, buttonStyle, {
@@ -48,23 +49,23 @@ var DeleteElementButton = React.createClass({
     var confirm;
     if (this.state.confirming) {
       return (
-        <div>
+        <div style={{marginLeft: 20}}>
           Delete?
-          <button
-            style={redButtonStyle}
-            onClick={this.finishDelete}>
-            Yes
-          </button>
           <button
             style={buttonStyle}
             onClick={this.abortDelete}>
             No
           </button>
+          <button
+            style={redButtonStyle}
+            onClick={this.finishDelete}>
+            Yes
+          </button>
         </div>
       );
     }
     return (
-      <div>
+      <div style={{marginLeft: 15}}>
         <button
           style={redButtonStyle}
           onClick={this.handleDeleteInternal}>

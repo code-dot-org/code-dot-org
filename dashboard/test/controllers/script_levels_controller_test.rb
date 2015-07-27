@@ -424,7 +424,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should render title for puzzle in default script' do
     get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
-    assert_equal 'Code.org - 20-Hour Intro Course: The Maze #4',
+    assert_equal 'Code.org - Accelerated Intro to CS Course: The Maze #4',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
@@ -575,8 +575,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'shows expanded teacher panel when student is chosen' do
-    @teacher.update admin: true # TODO don't need this when feature is shipped
-
     sign_in @teacher
 
     last_attempt_data = 'test'
@@ -593,8 +591,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'shows expanded teacher panel when section is chosen but student is not' do
-    @teacher.update admin: true # TODO don't need this when feature is shipped
-
     sign_in @teacher
 
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position, section_id: @section.id
@@ -607,8 +603,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'shows collapsed teacher panel when student not chosen, chooses section when teacher has one section' do
-    @teacher.update admin: true # TODO don't need this when feature is shipped
-
     sign_in @teacher
 
     get :show, script_id: @custom_script, stage_id: @custom_stage_1.position, id: @custom_s1_l1.position
@@ -620,7 +614,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'shows collapsed teacher panel when student not chosen, does not choose section when teacher has multiple sections' do
-    @teacher.update admin: true # TODO don't need this when feature is shipped
     create :section, user: @teacher
 
     sign_in @teacher
@@ -634,8 +627,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'does not show teacher panel for pd scripts' do
-    @teacher.update admin: true # TODO don't need this when feature is shipped
-
     sign_in @teacher
 
     script = Script.find_by_name('ECSPD')
@@ -654,7 +645,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                    {},
                    {solution: true})
 
-    @teacher.update admin: true # TODO don't need this when feature is shipped
     sign_in @teacher
 
     get :show, script_id: sl.script, stage_id: sl.stage, id: sl, solution: true

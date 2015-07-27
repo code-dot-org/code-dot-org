@@ -62,6 +62,7 @@ exec(command, function (err, stdout, stderr) {
   mochify(globs.join(' '), {
     grep: process.env.mocha_grep,
     debug: process.env.mocha_debug,
+    invert: process.env.mocha_invert,
     reporter : 'spec',
     timeout: 10000,
     phantomjs: which('phantomjs'),

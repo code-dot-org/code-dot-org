@@ -69,12 +69,7 @@ module.exports = function(app, levels, options) {
     } else {
       app.init(options);
       if (options.onInitialize) {
-        if (studioApp.editCode) {
-          // for editCode levels, we can't call the onInitialize callback
-          // immediately. it will be called when the droplet editor has loaded.
-        } else {
-          options.onInitialize();
-        }
+        options.onInitialize();
       }
     }
   });

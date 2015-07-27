@@ -1,5 +1,7 @@
 $root: '/blockly/media/flappy/'; //TODO: Parameterize for asset pipeline
 
+@import 'font';
+
 #svgFlappy {
   overflow: hidden;
 }
@@ -61,7 +63,7 @@ $root: '/blockly/media/flappy/'; //TODO: Parameterize for asset pipeline
 .flappy-score {
   text-anchor: middle;
   font-size: xx-large;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   fill: white;
   stroke: black;
   stroke-width: 2;

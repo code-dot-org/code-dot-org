@@ -11,7 +11,7 @@
 ## 1) Mira este video de "Cómo hacer" <iframe width="560" height="315" src="//www.youtube.com/embed/tQeSke4hIds" frameborder="0" allowfullscreen></iframe>
 ## 2) Prueba los tutoriales:
 
-We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 8-14.
+We’ll host a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before December 7-13.
 
 **All Hour of Code tutorials:**
 
@@ -42,7 +42,7 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * El vídeo de lanzamiento de [la Hora de Código 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o de <% if @country == 'uk' %> [la Hora de Código 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [la Hora de Código 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
+  * El vídeo de lanzamiento de [la Hora del Código 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), o de <% if @country == 'uk' %> [la Hora del Código 2014](https://www.youtube.com/watch?v=96B5-JGA9EQ) <% else %> [la Hora del Código 2014](https://www.youtube.com/watch?v=rH7AjDMz_dc&index=2&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q) <% end %>
   * [El llamado del presidente Obama a que todos los estudiantes aprendan Ciencias de la Computación](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
 **Get your students excited - give them a short intro**
@@ -54,7 +54,7 @@ Most kids don’t know what computer science is. Here are some ideas:
   * O: "Las Ciencias de la Computación son el arte de combinar ideas humanas y herramientas digitales para incrementar nuestro poder. Los expertos en informática trabajan en muchas áreas diferentes: escriben aplicaciones para teléfonos, curan enfermedades, crean películas animadas, trabajan en redes sociales, construyen robots que exploran otros planetas y muchas cosas más."
   * Ver consejos para interesar a las chicas en Ciencias de la Computación [Aquí](http://<%= codeorg_url() %>/chicas). 
 
-## 7) Empieza tu Hora de Código
+## 7) Empieza tu Hora del Código
 
 **Direct students to the activity**
 
@@ -69,7 +69,7 @@ Most kids don’t know what computer science is. Here are some ideas:
 
 **What to do if a student finishes early?**
 
-  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora de Código en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
+  * Los estudiantes pueden ver todos los tutoriales e intentar otra actividad de la Hora del Código en [<%= codeorg_url() %>/learn](http://<%= codeorg_url() %>/learn)
   * O pide a los estudiantes que terminen primero que ayuden a los que tegan problemas con la actividad.
 
 **How do I print certificates for my students?**

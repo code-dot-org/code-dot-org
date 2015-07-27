@@ -2,18 +2,44 @@ name 'OPD-K5 Stage7Go'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# EVENTS > Reflection
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
-In this stage, you solved some pretty complex puzzles, combining all the core concepts and really demonstrating your learning. By allowing us to trigger actions based on other parts of our program, events allow us to really stretch our coding muscles.
+### EVENTS > Reflection
+<br><br>
+In this stage, you solved some pretty complex puzzles, combining all the core concepts and really demonstrating your learning. By allowing us to trigger actions based on other parts of our program, events allow us to really stretch our coding muscles. **Take a moment now to review how events are introduced in the code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
 
+#### Unplugged Lesson Plans
+**1. Review "The Big Event"Lesson Plan: [Course 1](https://code.org/curriculum/course1/15/Teacher), [Course 2](https://code.org/curriculum/course2/15/Teacher)**
+<br><br>
+**2. Watch the student video: The Big Event**
+<iframe width="640" height="390" src="https://www.youtube.com/embed/u0WV9shCoak" frameborder="0" allowfullscreen></iframe>
+<br><br>
+[Can't see the video? Click here](http://videos.code.org/2014/C1-bigevent-unplugged.mp4)
+<br><br>
 
-## Reflect
+**3. Watch the teacher video: How to facilitate "The Big Event"**
+<iframe width="640" height="390" src="https://www.youtube.com/embed/aYECW6V8nQA" frameborder="0" allowfullscreen></iframe>
+<br><br>
 
-How would you explain the concept of events to your students? Share your thoughts in <a href="http://forum.code.org/t/teaching-events/409/1">our Professional Learning Community (PLC) forum</a>.
+#### Code Studio Activities
+Explore Course 1 stages:
 
-<a href="http://forum.code.org/t/teaching-events/409/1"><button>Discuss >></button></a>
+- [Stage 15](https://studio.code.org/s/course1/stage/15/puzzle/1)
+- [Stage 16](https://studio.code.org/s/course1/stage/16/puzzle/1)
+
+Explore Course 2 stages:
+
+- [Stage 15](https://studio.code.org/s/course2/stage/15/puzzle/1)
+- [Stage 16](https://studio.code.org/s/course2/stage/16/puzzle/1)
+- [Stage 17](https://studio.code.org/s/course2/stage/17/puzzle/1)
+
+>## Reflect
+How would you explain the concept of events to your students? Share your thoughts in <a href="http://forum.code.org/t/teaching-events/409/1">our Professional Learning Community (PLC) forum</a>.<br><br>
+<a href="http://forum.code.org/t/teaching-events/409/1" target="blank"><button class="plc">Discuss in the forums >></button></a><br>
+<br><br>
 
 After commenting in the forum, return here and click below to move on.
+<br><br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

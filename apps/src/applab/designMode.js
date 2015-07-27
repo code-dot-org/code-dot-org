@@ -1,4 +1,4 @@
-/* global $, Applab */
+/* global $, Applab, dashboard */
 
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
@@ -9,6 +9,7 @@ var showAssetManager = require('./assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var studioApp = require('../StudioApp').singleton;
 var _ = require('../utils').getLodash();
+var KeyCodes = require('../constants').KeyCodes;
 
 var designMode = module.exports;
 
@@ -38,6 +39,8 @@ designMode.onDivApplabClick = function (event) {
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
   }
+  // give the div focus so that we can listen for keyboard events
+  $("#divApplab").focus();
   designMode.editElementProperties(element);
 };
 
@@ -95,18 +98,13 @@ designMode.clearProperties = function () {
 };
 
 /**
- * Enable (or disable) dragging of new elements from the element tray,
- * and show (or hide) the 'Clear' button.
+ * Enable (or disable) dragging of new elements from the element tray
  * @param allowEditing {boolean}
  */
 designMode.resetElementTray = function (allowEditing) {
   $('#design-toolbox .new-design-element').each(function() {
     $(this).draggable(allowEditing ? 'enable' : 'disable');
   });
-  var designModeClear = document.getElementById('designModeClear');
-  if (designModeClear) {
-    designModeClear.style.display = allowEditing ? 'inline-block' : 'none';
-  }
 };
 
 /**
@@ -133,6 +131,12 @@ designMode.onPropertyChange = function(element, name, value) {
       element.parentNode.style.top = value + 'px';
       break;
     case 'width':
+      element.setAttribute('width', value + 'px');
+      break;
+    case 'height':
+      element.setAttribute('height', value + 'px');
+      break;
+    case 'style-width':
       element.style.width = value + 'px';
       element.parentNode.style.width = value + 'px';
 
@@ -141,7 +145,7 @@ designMode.onPropertyChange = function(element, name, value) {
           element.style.height;
       }
       break;
-    case 'height':
+    case 'style-height':
       element.style.height = value + 'px';
       element.parentNode.style.height = value + 'px';
 
@@ -166,39 +170,57 @@ designMode.onPropertyChange = function(element, name, value) {
     case 'image':
       var image = new Image();
       var backgroundImage = new Image();
-      backgroundImage.onload = function(){
-        element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
-        element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
-          backgroundImage.naturalHeight + 'px';
-        element.style.width = backgroundImage.naturalWidth + 'px';
-        element.style.height = backgroundImage.naturalHeight + 'px';
-        // Re-render properties
-        if (currentlyEditedElement === element) {
-          designMode.editElementProperties(element);
-        }
-      };
-      backgroundImage.src = value;
+      var originalImage = element.style.backgroundImage;
+      backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
+      element.setAttribute('data-canonical-image-url', value);
+      if (backgroundImage.src !== originalImage) {
+        backgroundImage.onload = function() {
+          // remove loader so that API calls dont hit this
+          element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
+          if (originalImage === element.style.backgroundImage) {
+            return;
+          }
+          element.style.backgroundSize = backgroundImage.naturalWidth + 'px ' +
+            backgroundImage.naturalHeight + 'px';
+          element.style.width = backgroundImage.naturalWidth + 'px';
+          element.style.height = backgroundImage.naturalHeight + 'px';
+          // Re-render properties
+          if (currentlyEditedElement === element) {
+            designMode.editElementProperties(element);
+          }
+        };
+      }
       break;
 
     case 'screen-image':
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + value + ')';
+      element.style.backgroundImage = 'url(' + Applab.maybeAddAssetPathPrefix(value) + ')';
+      element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
-      element.src = value;
-      element.onload = function () {
-        // naturalWidth/Height aren't populated until image has loaded.
-        element.style.width = element.naturalWidth + 'px';
-        element.style.height = element.naturalHeight + 'px';
-        // Re-render properties
-        if (currentlyEditedElement === element) {
-          designMode.editElementProperties(element);
-        }
-      };
+      var originalSrc = element.src;
+      element.src = Applab.maybeAddAssetPathPrefix(value);
+      element.setAttribute('data-canonical-image-url', value);
+
+      if (element.src !== originalSrc) {
+        element.onload = function () {
+          // naturalWidth/Height aren't populated until image has loaded.
+          element.style.width = element.naturalWidth + 'px';
+          element.style.height = element.naturalHeight + 'px';
+          if ($(element.parentNode).is('.ui-resizable')) {
+            element.parentNode.style.width = element.naturalWidth + 'px';
+            element.parentNode.style.height = element.naturalHeight + 'px';
+          }
+          // Re-render properties
+          if (currentlyEditedElement === element) {
+            designMode.editElementProperties(element);
+          }
+        };
+      }
       break;
     case 'hidden':
       // Add a class that shows as 30% opacity in design mode, and invisible
@@ -260,13 +282,14 @@ designMode.onPropertyChange = function(element, name, value) {
   }
 
   if (elementLibrary.typeSpecificPropertyChange(element, name, value)) {
-    designMode.editElementProperties(element);
     handled = true;
   }
 
   if (!handled) {
     throw "unknown property name " + name;
   }
+
+  designMode.editElementProperties(element);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -277,7 +300,7 @@ designMode.onDeletePropertiesButton = function(element, event) {
   $(element).remove();
 
   if (isScreen) {
-    designMode.changeScreen('screen1');
+    designMode.loadDefaultScreen();
   }
 
   designMode.clearProperties();
@@ -335,13 +358,20 @@ designMode.onDepthChange = function (element, depthDirection) {
   designMode.editElementProperties(element);
 };
 
+designMode.onInsertEvent = function(code) {
+  Applab.appendToEditor(code);
+  $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
+};
+
 designMode.serializeToLevelHtml = function () {
   var divApplab = $('#divApplab');
   // Children are screens. Want to operate on grandchildren
-  makeUndraggable(divApplab.children().children());
-  var s = new XMLSerializer().serializeToString(divApplab[0]);
-  makeDraggable(divApplab.children().children());
-  Applab.levelHtml = s;
+  var madeUndraggable = makeUndraggable(divApplab.children().children());
+  var serialization = new XMLSerializer().serializeToString(divApplab[0]);
+  if (madeUndraggable) {
+    makeDraggable(divApplab.children().children());
+  }
+  Applab.levelHtml = serialization;
 };
 
 /**
@@ -362,18 +392,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging) {
   }
 
   children.each(function () {
-    elementLibrary.onDeserialize($(this)[0]);
+    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
   });
-};
-
-designMode.onClear = function() {
-  // TODO (brent) - have this clear just the current screen instead of everything
-  // (along with a confirmation experience). Consider the case where this gets
-  // called on load too - might need to two separate funcs
-  document.getElementById('divApplab').innerHTML = Applab.levelHtml = "";
-  elementLibrary.resetIds();
-  designMode.createElement(elementLibrary.ElementType.SCREEN, 0, 0);
-  designMode.changeScreen('screen1');
+  children.children().each(function() {
+    elementLibrary.onDeserialize($(this)[0], designMode.onPropertyChange.bind(this));
+  });
 };
 
 function toggleDragging (enable) {
@@ -403,7 +426,7 @@ designMode.toggleDesignMode = function(enable) {
   $("#divApplab").toggleClass('divApplabDesignMode', enable);
 
   toggleDragging(enable);
-  designMode.changeScreen('screen1');
+  designMode.loadDefaultScreen();
 };
 
 /**
@@ -417,23 +440,34 @@ function getInnerElement(outerElement) {
 
 /**
  *
- * @param {jQuery} jq jQuery object containing DOM elements to make draggable.
+ * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
+ *   draggable.
  */
-function makeDraggable (jq) {
+function makeDraggable (jqueryElements) {
   // For a non-div to be draggable & resizable it needs to be wrapped in a div.
-  jq.each(function () {
+  jqueryElements.each(function () {
     var elm = $(this);
     var wrapper = elm.wrap('<div>').parent().resizable({
-      alsoResize: elm,
       create: function () {
         // resizable sets z-index to 90, which we don't want
         $(this).children().css('z-index', '');
       },
       resize: function () {
+        elm.outerWidth(wrapper.width());
+        elm.outerHeight(wrapper.height());
         var element = elm[0];
-        designMode.onPropertyChange(element, 'width', element.style.width);
-        designMode.onPropertyChange(element, 'height', element.style.height);
-      }
+        // canvas uses width/height. other elements use style.width/style.height
+        var widthProperty = 'style-width';
+        var heightProperty = 'style-height';
+        if (element.hasAttribute('width') || element.hasAttribute('height')) {
+          widthProperty = 'width';
+          heightProperty = 'height';
+        }
+        designMode.onPropertyChange(element, widthProperty, element.style.width);
+        designMode.onPropertyChange(element, heightProperty, element.style.height);
+      },
+      grid: [GRID_SIZE, GRID_SIZE],
+      containment: 'parent'
     }).draggable({
       cancel: false,  // allow buttons and inputs to be dragged
       drag: function (event, ui) {
@@ -472,20 +506,29 @@ function makeDraggable (jq) {
 
         designMode.renderDesignWorkspace(elm[0]);
       }
-    }).css('position', 'absolute');
+    }).css({
+      position: 'absolute',
+      lineHeight: '0px'
+    });
 
     wrapper.css({
       top: elm.css('top'),
       left: elm.css('left')
     });
 
-    // Chrome has a nasty bug where when we wrap the element in a div, it
-    // occasionally chooses not to rerender our element for some reason. This
-    // is a hacky that causes Chrome to rerender the parent, thus not causing
-    // our element to disappear.
+    // Chrome/Safari both have issues where they don't properly render the
+    // wrapper if the inner element is a div. This is a hack that causes a
+    // rerender to happen in chrome
     var currHeight = wrapper.parent().height();
     wrapper.parent().height(currHeight + 1);
     wrapper.parent().height(currHeight);
+
+    // And a hack for Safari
+    if (this.tagName === 'DIV') {
+      setTimeout(function () {
+        wrapper.hide().show(0);
+      }, 0);
+    }
 
     elm.css('position', 'static');
   });
@@ -493,22 +536,29 @@ function makeDraggable (jq) {
 
 /**
  * Inverse of `makeDraggable`.
- * @param {jQuery} jq jQuery object containing DOM elements to make undraggable.
+ * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
+ *   undraggable.
+ * @returns {boolean} True if we made something undraggable
  */
-function makeUndraggable(jq) {
-  jq.each(function () {
+function makeUndraggable(jqueryElements) {
+  var foundOne = false;
+  jqueryElements.each(function () {
     var wrapper = $(this);
     var elm = $(getInnerElement(this));
 
     // Don't unwrap elements that aren't wrapped with a draggable div.
-    if (!wrapper.data('uiDraggable')) {
+    if (!wrapper.hasClass('ui-draggable')) {
       return;
     }
+
+    foundOne = true;
 
     wrapper.resizable('destroy').draggable('destroy');
     elm.css('position', 'absolute');
     elm.unwrap();
   });
+
+  return foundOne;
 }
 
 designMode.configureDragAndDrop = function () {
@@ -517,14 +567,14 @@ designMode.configureDragAndDrop = function () {
   $('#visualization').droppable({
     accept: '.new-design-element',
     drop: function (event, ui) {
-      var elementType = ui.draggable[0].dataset.elementType;
+      var elementType = ui.draggable[0].getAttribute('data-element-type');
 
       var div = document.getElementById('divApplab');
       var xScale = div.getBoundingClientRect().width / div.offsetWidth;
       var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-      var left = ui.position.left / xScale;
-      var top = ui.position.top / yScale;
+      var left = (ui.helper.offset().left - $('#divApplab').offset().left) / xScale;
+      var top = (ui.helper.offset().top - $('#divApplab').offset().top) / yScale;
 
       // snap top-left corner to nearest location in the grid
       left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
@@ -549,6 +599,17 @@ designMode.configureDesignToggleRow = function () {
 };
 
 /**
+ * Create a new screen
+ * @returns {string} The id of the newly created screen
+ */
+designMode.createScreen = function () {
+  var newScreen = elementLibrary.createElement('SCREEN', 0, 0);
+  $("#divApplab").append(newScreen);
+
+  return newScreen.getAttribute('id');
+};
+
+/**
  * Changes the active screen by toggling all screens to be non-visible, unless
  * they match the provided screenId. Also updates our dropdown to reflect the
  * change, and opens the element property editor for the new screen.
@@ -562,24 +623,45 @@ designMode.changeScreen = function (screenId) {
 
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
-    // Simulate a run button click, to load the channel id.
-    var designModeClick = studioApp.runButtonClickWrapper.bind(
-        studioApp, Applab.onDesignModeButton);
+    var designModeClick = Applab.onDesignModeButton;
     var throttledDesignModeClick = _.debounce(designModeClick, 250, true);
+
+    // View Data must simulate a run button click, to load the channel id.
+    var viewDataClick = studioApp.runButtonClickWrapper.bind(
+        studioApp, Applab.onViewData);
+    var throttledViewDataClick = _.debounce(viewDataClick, 250, true);
 
     React.render(
       React.createElement(DesignToggleRow, {
+        hideToggle: Applab.hideDesignModeToggle(),
+        startInDesignMode: Applab.startInDesignMode(),
         initialScreen: screenId,
         screens: screenIds,
         onDesignModeButton: throttledDesignModeClick,
         onCodeModeButton: Applab.onCodeModeButton,
-        onScreenChange: designMode.changeScreen
+        onViewDataButton: throttledViewDataClick,
+        onScreenChange: designMode.changeScreen,
+        onScreenCreate: designMode.createScreen
       }),
       designToggleRow
     );
   }
 
   designMode.editElementProperties(document.getElementById(screenId));
+};
+
+/**
+ * Load our default screen (ie. the first one in the DOM), creating a screen
+ * if we have none.
+ */
+designMode.loadDefaultScreen = function () {
+  var defaultScreen;
+  if ($('.screen').length === 0) {
+    defaultScreen = designMode.createScreen();
+  } else {
+    defaultScreen = $('.screen').first().attr('id');
+  }
+  designMode.changeScreen(defaultScreen);
 };
 
 designMode.renderDesignWorkspace = function(element) {
@@ -598,6 +680,7 @@ designMode.renderDesignWorkspace = function(element) {
     handleChange: designMode.onPropertyChange.bind(this, element),
     onDepthChange: designMode.onDepthChange,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
+    onInsertEvent: designMode.onInsertEvent.bind(this),
     handleManageAssets: showAssetManager
   };
   React.render(React.createElement(DesignWorkspace, props), designWorkspace);
@@ -622,4 +705,43 @@ designMode.addScreenIfNecessary = function(html) {
   rootDiv.append(screenElement);
 
   return rootDiv[0].outerHTML;
+};
+
+designMode.addKeyboardHandlers = function () {
+  $('#divApplab').keydown(function (event) {
+    if (!Applab.isInDesignMode() || Applab.isRunning()) {
+      return;
+    }
+    if (!currentlyEditedElement || $(currentlyEditedElement).hasClass('screen')) {
+      return;
+    }
+
+    var current, property, newValue;
+
+    switch (event.which) {
+      case KeyCodes.LEFT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current - 1;
+        property = 'left';
+        break;
+      case KeyCodes.RIGHT:
+        current = parseInt(currentlyEditedElement.style.left, 10);
+        newValue = current + 1;
+        property = 'left';
+        break;
+      case KeyCodes.UP:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current - 1;
+        property = 'top';
+        break;
+      case KeyCodes.DOWN:
+        current = parseInt(currentlyEditedElement.style.top, 10);
+        newValue = current + 1;
+        property = 'top';
+        break;
+      default:
+        return;
+    }
+    designMode.onPropertyChange(currentlyEditedElement, property, newValue);
+  });
 };

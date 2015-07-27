@@ -1,3 +1,6 @@
+/**
+ * @overview Client-driven clean-up system for old/orphaned rows.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -46,7 +49,7 @@ var CLEANING_SUCCESS_INTERVAL_MS = 600000; // 10 minutes
  * @type {number}
  * @const
  */
-var HEARTBEAT_TIMEOUT_MS = 60000; // 1 minute
+var HEARTBEAT_TIMEOUT_MS = 180000; // 3 minutes
 
 /**
  * Special heartbeat type that acts as a cleaning lock across the shard
@@ -157,6 +160,13 @@ var NetSimShardCleaner = module.exports = function (shard, initialCleaningDelayM
 };
 
 /**
+ * Expose heartbeat timeout for flexible tests.
+ * @type {number}
+ * @const
+ */
+NetSimShardCleaner.HEARTBEAT_TIMEOUT_MS = HEARTBEAT_TIMEOUT_MS;
+
+/**
  * Check whether enough time has passed since our last cleaning
  * attempt, and if so try to start a cleaning routine.
  * @param {RunLoop.Clock} clock
@@ -174,9 +184,9 @@ NetSimShardCleaner.prototype.tick = function (clock) {
   if (this.steps_){
     this.steps_.tick(clock);
     if (this.steps_.isFinished()){
+      this.steps_ = undefined;
       this.releaseCleaningLock(function () {
-        this.steps_ = undefined;
-      }.bind(this));
+      });
     }
   }
 };

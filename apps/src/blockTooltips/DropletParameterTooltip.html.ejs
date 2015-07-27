@@ -11,6 +11,11 @@
   <% } %>
 </div>
 <% if (parameters[currentParameterIndex] && parameters[currentParameterIndex].description) { %><div><%= parameters[currentParameterIndex].description %></div><% } %>
+<% if (parameters[currentParameterIndex] && parameters[currentParameterIndex].assetTooltip) { %>
+  <div class="tooltip-choose-link">
+    <a href="javascript:void(0);">Choose...</a>
+  </div>
+<% } %>
 <div class="tooltip-example-link">
   <a href="javascript:void(0);">See examples</a>
 </div>

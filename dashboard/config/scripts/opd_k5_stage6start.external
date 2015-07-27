@@ -2,23 +2,27 @@ name 'OPD-K5 Stage6Start'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# FUNCTIONS > Stage Overview
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 
+### FUNCTIONS > Stage Overview
+<br><br>
+<img src="https://images.code.org/2e9501ead380f7a6e57a896659de2aad-image-1434397564207.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+<br><br>
 In the first few stages, you’ve learned how to write a program, add loops and use conditionals. In this stage, we’ll introduce the concept of “functions.”
-
-By completing Stage 6, you will:
+<br><br>
+By completing Stage 7, you will:
 
 - Define "functions" and explain their importance
 - Practice coding simple functions
 - Reflect on classroom application
+<br><br>
 
-## What to Expect in this Stage:
+> **What to Expect in this Stage:** As in previous stages, expect to practice with a program that does not include a function. Then you’ll learn about functions through video, and practice using functions in a variety of puzzles. We'll take a look at resources on reflect on your practice. You should spend between 20-45 minutes on this stage.
 
-As in previous stages, expect to practice with a program that does not include a function. Then you’ll learn about functions through video, and practice using functions in a variety of puzzles. You should spend between 20-45 minutes on this stage.
+<br><br>
 
 Ready? Let's go!
-
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
 
 MARKDOWN

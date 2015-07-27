@@ -10,10 +10,16 @@
       "moveForward": {
         "params": [
           ""
+        ],
+        "paletteParams": [
+          ""
         ]
       },
       "turnLeft": {
         "params": [
+          ""
+        ],
+        "paletteParams": [
           ""
         ]
       },
@@ -23,7 +29,7 @@
     "edit_code": true,
     "embed": "false",
     "is_k1": "false",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "slider_speed": "0.1",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -39,9 +45,15 @@
     "free_play": "true",
     "app_width": "200",
     "app_height": "200",
-    "instructions": "Draw a 3x3 grid above and to the right of the turtle. Try to do so with the fewest number of commands possible. NOTE: This is a very challenging problem.  You may need to play with it for a while and tweak it.  You might also consider using pencil and paper to sketch your ideas.",
     "callout_json": "[]",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-3by3grid.png"
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "markdown_instructions": "### Challenge\r\nDraw a 3x3 grid to the *front* and *right* of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction.\r\n\r\n![](https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png)\r\n\r\n**HINT:** This problem presents some subtle challenges. Work with your partner to discuss possible solutions. Try more than one path. Testing your ideas on paper might be a faster way to brainstorm.\r\n\r\n",
+    "instructions": "Draw a 3x3 grid to the front and right of the turtle as efficiently as possible. The turtle should end at its original location, facing its original direction. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

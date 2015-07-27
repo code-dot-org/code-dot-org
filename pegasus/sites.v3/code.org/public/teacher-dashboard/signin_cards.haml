@@ -19,12 +19,12 @@ theme: none
       %dt= I18n.t('dashboard_students_name')
       %dd {{student.name}}
     %dl{"ng-if" => "section.login_type === 'picture'"}
-      %dt= I18n.t('dashboard_students_secret_picture')
+      %dt= I18n.t('dashboard_students_secret_picture_title')
       %dd  
         %img{"ng-src" => "/images/{{student.secret_picture_path}}",
              alt: "{{student.secret_picture_name}}",
              title: "{{student.secret_picture_name}}",
              height: 100}
     %dl{"ng-if" => "section.login_type === 'word'"}
-      %dt= I18n.t('dashboard_students_secret_word')
+      %dt= I18n.t('dashboard_students_secret_word_title')
       %dd {{student.secret_words}}

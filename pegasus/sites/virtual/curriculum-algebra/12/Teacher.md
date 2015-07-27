@@ -48,6 +48,7 @@ One new thing the students should notice is that their modifications from stage 
 
 It should also be noted that if a student returns to a previous level, or even a previous stage, that the MOST RECENT changes which they made will be the ones that they will see.  Backing up to a previous level does NOT restore the previous state of the student's Big Game. Students are always looking at their most recent changes no matter which puzzle they are in. 
 
+
 [tip]
 
 # Lesson Tip

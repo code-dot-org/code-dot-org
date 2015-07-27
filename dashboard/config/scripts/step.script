@@ -1,5 +1,6 @@
 title 'Step'
-description ""
+description 'Step tutorial'
+description_short 'Step tutorial'
 hidden 'true'
 
 stage 'Step'

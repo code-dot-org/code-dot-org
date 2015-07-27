@@ -1,0 +1,13 @@
+name 'U2L14 Assessment4'
+title 'Assessment: Question 5'
+description 'Given the original plaintext: “SECRET MESSAGE SHHHH”
+Match the encryption method to the output:'
+
+question 'TEMVVU WIITAQIQTHRLY'
+answer 'Vigenere Cipher'
+
+question 'AMKZMB UMAAIOM APPPP'
+answer 'Caesar Shift Cipher(of 18)'
+
+question 'GBRXBN MBGGEFB GTTTT'
+answer 'Random Substitution Cipher'

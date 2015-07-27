@@ -10,52 +10,48 @@ nav: pd2_nav
 
 ## Exploring Computer Science
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-</br>
-</br>
+Milestone complete! 
 
-**Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-### Save the dates
+In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study. 
 
-Monday, June 22, 2015 - Friday, June 26, 2015
+### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
+
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+
+**Save the dates:**
+
+Quarter 1: Saturday, October 10, 2015
+
+Quarter 2: Saturday, November 7, 2015
+
+Quarter 3: Saturday, February 20, 2015
+
+Quarter 4: Saturday, April 9, 2015
+
+8:30am - 3:30pm
 <br/>
-Mon - Thurs: 8:30am - 3:30pm
+Breakfast and lunch will be served.
+
+**Location**
+
+TBD
+
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop
 <br/>
-Friday: 8:30am - 1:30pm
+ECS green journal and curriculum guide
 <br/>
-Breakfast and lunch will be served. 
-
-### Location
-
-Applications and Research Laboratory (ARL)
-<br />
-Room: A8
-<br />
-10920 Clarksville Pike
-<br />
-Ellicott City, MD 21042
-<br />
-
-### What do I bring to Phase 2?
-
-Water Bottle
-<br />
 Snacks
-<br />
-Laptop optional, not required
+<br/>
+Water
 
-</br>
-</br>
-**Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)**
-
-More info coming soon!
-
-</br>
-</br>
-**Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
 More info coming soon!
 

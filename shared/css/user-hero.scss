@@ -1,0 +1,53 @@
+@import 'color';
+
+#user_hero {
+  margin-top:30px;
+  .col-50 {
+    width: 50%;
+    float: left;
+  }
+  #welcome {
+    left: 0;
+    color: $white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    &.teacher {
+      background-color: $cyan;
+    }
+    &.student {
+      background-color: $purple;
+    }
+  }
+  #body {
+    color: white;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &.teacher {
+      background-color: $light_cyan;
+    }
+    &.student {
+      background-color: $light_purple;
+    }
+  }
+  #student_progress {
+    width: 175px;
+    display: inline-block;
+  }
+  #left_off {
+    width: 175px;
+    display: inline-block;
+  }
+  #student_count {
+    width: 175px;
+    display: inline-block;
+  }
+  a {
+    color: white;
+  }
+}

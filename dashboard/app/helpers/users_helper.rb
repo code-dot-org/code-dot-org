@@ -13,7 +13,7 @@ module UsersHelper
         progress = user.progress(script)
         user_data[:trophies] = {
             current: progress['current_trophies'],
-            of: t(:of),
+            of: I18n.t(:of),
             max: progress['max_trophies'],
         }
 
@@ -28,7 +28,7 @@ module UsersHelper
 
     user_data.merge!(
         linesOfCode: lines,
-        linesOfCodeText: t('nav.popup.lines', lines: lines),
+        linesOfCodeText: I18n.t('nav.popup.lines', lines: lines),
     )
 
     user_data[:levels] = {}

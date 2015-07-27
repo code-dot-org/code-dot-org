@@ -46,6 +46,22 @@ Fallback: https://github.com/styleguide/ruby
   # good
   'Single quotes for normal strings'
   ```
+  
+* <a name="ruby-trailing-dot"></a>
+  When breaking lines while method chaining, prefer trailing dot on first line
+  to leading dot on second line.
+  <sup>[[link](#ruby-trailing-dot)]</sup>
+  ```ruby
+  # bad
+  my_object
+    .first_method
+    .second_method
+
+  # good
+  my_object.
+    first_method.
+    second_method
+  ```
 
 ### Rails
 

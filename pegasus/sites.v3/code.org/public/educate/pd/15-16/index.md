@@ -36,6 +36,8 @@ nav: pd2_nav
 <br />
 [IL - Chicago](/educate/pd/15-16/chicago)
 <br />
+[IN - Nextech](/educate/pd/15-16/nextech)
+<br />
 [MA - Boston](/educate/pd/15-16/boston)
 <br />
 [MD - Charles](/educate/pd/15-16/charles)
@@ -55,6 +57,8 @@ nav: pd2_nav
 [OH - Columbus](/educate/pd/15-16/ohio)
 <br />
 [TX - Houston](/educate/pd/15-16/houston)
+<br />
+[VA - CodeVA](/educate/pd/15-16/codeva)
 <br />
 [WA - Seattle](/educate/pd/15-16/seattle)
 <br />

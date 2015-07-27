@@ -1,6 +1,7 @@
 pd 'true'
 title 'Computer Science Principles PD'
 description 'Online Introduction to CSP'
+description_short 'Online Introduction to CSP'
 login_required 'true'
 
 stage 'Introduction to PD'

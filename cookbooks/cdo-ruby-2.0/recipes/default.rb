@@ -43,7 +43,10 @@ execute "pristine-gems" do
   action :nothing
 end
 
-gem_package "bundler"
+gem_package "bundler" do
+  action :upgrade
+  version '1.10.4'
+end
 
 # These packages are used by Gems we install via Bundler later.
 apt_package 'libxslt1-dev'

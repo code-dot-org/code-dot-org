@@ -9,8 +9,3 @@ module.exports.rgb2hex = function (rgb) {
   }
   return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 };
-
-module.exports.extractImageUrl = function (str) {
-  var inner = str.match(/^url\((.*)\)$/);
-  return inner ? inner[1] : str;
-};

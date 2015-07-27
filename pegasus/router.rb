@@ -60,7 +60,7 @@ class Documents < Sinatra::Base
   use Honeybadger::Rack if rack_env?(:production)
   use Rack::Locale
   use Rack::CdoDeflater
-  use Rack::UpgradeInsecureRequests unless rack_env?(:production)
+  use Rack::UpgradeInsecureRequests
 
   configure do
     dir = pegasus_dir('sites.v3')

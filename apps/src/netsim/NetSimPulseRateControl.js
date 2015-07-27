@@ -1,3 +1,8 @@
+/**
+ * @overview UI slider for changing the pulse rate (bitrate) of the local device.
+ *           Differs from the bitrate slider in its scale and units.
+ * @see NetSimBitRateControl
+ */
 /* jshint
  funcscope: true,
  newcap: true,

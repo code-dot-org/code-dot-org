@@ -19,9 +19,18 @@ def create_database(uri)
   system command.join(' ')
 end
 
-task :lint do
-  RakeUtils.system 'rubocop'
+namespace :lint do
+  task :ruby do
+    RakeUtils.system 'rubocop'
+  end
+
+  task :haml do
+    RakeUtils.system 'haml-lint dashboard pegasus'
+  end
+
+  task all: [:ruby, :haml]
 end
+task lint: ['lint:all']
 
 ##################################################################################################
 ##
@@ -49,6 +58,8 @@ namespace :build do
 
   task :blockly_core do
     Dir.chdir(blockly_core_dir) do
+      RakeUtils.npm_install
+
       HipChat.log 'Building <b>blockly-core</b> debug...'
       RakeUtils.system './deploy.sh', 'debug'
 
@@ -70,6 +81,9 @@ namespace :build do
     Dir.chdir(apps_dir) do
       HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
+
+      HipChat.log 'Updating <b>apps</b> i18n strings...'
+      RakeUtils.system './sync-apps.sh'
 
       HipChat.log 'Building <b>apps</b>...'
       if CDO.localize_apps
@@ -112,7 +126,7 @@ namespace :build do
         RakeUtils.rake 'db:migrate'
 
         HipChat.log 'Seeding <b>dashboard</b>...'
-        RakeUtils.rake 'seed:incremental'
+        RakeUtils.rake 'seed:all'
       end
 
       unless rack_env?(:development)
@@ -142,14 +156,14 @@ namespace :build do
         begin
           RakeUtils.rake 'db:migrate'
         rescue => e
-          HipChat.log "/quote #{e.message} #{e.backtrace.join("\n")}", message_format: 'text'
+          HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
         end
 
         HipChat.log 'Seeding <b>pegasus</b>...'
         begin
           RakeUtils.rake 'seed:migrate'
         rescue => e
-          HipChat.log "/quote #{e.message} #{e.backtrace.join("\n")}", message_format: 'text'
+          HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
         end
       end
 
@@ -199,13 +213,19 @@ task :build => ['build:all']
 
 namespace :install do
 
-  task :apps do
+  # Create a symlink in the public directory that points at the appropriate blockly
+  # code (either the static blockly or the built version, depending on CDO.use_my_apps).
+  task :blockly_symlink do
     if rack_env?(:development) && !CDO.chef_managed
       Dir.chdir(apps_dir) do
         apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
         RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
       end
+    end
+  end
 
+  task :apps do
+    if rack_env?(:development) && !CDO.chef_managed
       if OS.linux?
         RakeUtils.npm_update_g 'npm'
         RakeUtils.npm_install_g 'grunt-cli'
@@ -259,6 +279,7 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
+  tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :shared if CDO.build_shared_js
   tasks << :dashboard if CDO.build_dashboard

@@ -5,9 +5,11 @@
 
     %form#petition_form{:onsubmit=>"return petition.signPetition()"}
 
-      #email_error{style: "color:red; font-family: 'Gotham 7r', sans-serif; display: none"}
+      #email_error{style: "color:rgb(255, 128, 0); font-family: 'Gotham 7r', sans-serif; display: none"}
         =I18n.t :enter_valid_email
-      #email_okay{style: "color:red; font-family: 'Gotham 7r', sans-serif;"}
+      #age_error{style: "color:rgb(255, 128, 0); font-family: 'Gotham 7r', sans-serif; display: none"}
+        =I18n.t :enter_valid_age
+      #no_error{style: "color:rgb(255, 128, 0); font-family: 'Gotham 7r', sans-serif;"}
         &nbsp;
 
       #fields
@@ -22,7 +24,7 @@
         .col-18
           %span
             =I18n.t :petition_age
-            %select.dropdown{:name=>"age_i", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px'}
+            %select#age.dropdown{:name=>"age_i", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px'}
               %option{value:0}= '-'
               -(1..100).each do |age|
                 %option{value:age}= age
@@ -57,11 +59,21 @@
     $('input[type=email], textarea').placeholder();
   }
 
+  Petition.prototype.showAgeError = function(error)
+  {
+    $("input#age").toggleClass("input_error", error);
+    $("#age_error").toggle(error);
+  }
+
   Petition.prototype.showEmailError = function(error)
   {
     $("input#email").toggleClass("input_error", error);
     $("#email_error").toggle(error);
-    $("#email_okay").toggle(!error);
+  }
+
+  Petition.prototype.showNoError = function(noError)
+  {
+    $("#no_error").toggle(noError);
   }
 
   Petition.prototype.processResponse = function(data)
@@ -94,7 +106,11 @@
 
     var badEmail = (data.status == 400 && data.responseJSON.email_s !== undefined);
 
+    var badAge = !badEmail && (data.status == 400 && data.responseJSON.age_i !== undefined);
+
+    Petition.prototype.showAgeError(badAge);
     Petition.prototype.showEmailError(badEmail);
+    Petition.prototype.showNoError(!badAge && !badEmail);
   }
 
   Petition.prototype.signPetition = function()
@@ -102,7 +118,9 @@
     $("#gobutton").attr('disabled','disabled');
     $("#gobutton").removeClass("button_enabled").addClass("button_disabled");
 
+    this.showAgeError(false);
     this.showEmailError(false);
+    this.showNoError(true);
 
     $.ajax({
       url: "/forms/Petition",

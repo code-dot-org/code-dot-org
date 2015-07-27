@@ -21,7 +21,15 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "The smallest line of this square spiral is 10, the largest is 200, and each line is 10 pixels longer than the last. \r\n\r\n<br/>\r\nCan you fill in the missing blocks to complete this awesome picture?",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

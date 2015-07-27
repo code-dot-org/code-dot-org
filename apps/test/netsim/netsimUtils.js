@@ -1,9 +1,14 @@
 var testUtils = require('../util/testUtils');
+var netsimTestUtils = require('../util/netsimTestUtils');
 var assertEqual = testUtils.assertEqual;
 
 var netsimUtils = require('@cdo/apps/netsim/netsimUtils');
 
 describe("netsimUtils", function () {
+
+  beforeEach(function () {
+    netsimTestUtils.initializeGlobalsToDefaultValues();
+  });
 
   describe("serializeNumber", function () {
     var serializeNumber = netsimUtils.serializeNumber;

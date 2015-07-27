@@ -1,6 +1,7 @@
 id '2'
 title 'Hour of Code 2013'
-description ""
+description 'Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!'
+description_short 'Try the basics of computer science with many fun characters!'
 wrapup_video 'hoc_wrapup'
 hidden 'true'
 

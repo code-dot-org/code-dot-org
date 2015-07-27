@@ -79,7 +79,7 @@ git push
 
 ### Apps
 1. Make changes in `apps/i18n/<app>/en_us.json`
-2. From home directory, run `cd i18n/code.org && ./sync-apps.sh`
+2. From apps directory, run `./sync-apps.sh`
 3. Commit all .json files in i18n/locales and apps/i18n
 
 ### Dashboard
@@ -99,8 +99,9 @@ git push
 1. Add target language to ALL projects on Crowdin-in
 2. Add the language's name and key to the following files:
 * i18n/code.org/lib/fix-crowdin-codes.rb
-* dashboard/config/locales.yml w/ debug: true until translation is complete
+* i18n/code.org/lib/copy-untranslated-apps.rb
 * pegasus/sites.v3/code.org/views/target_languages.haml
+* dashboard/config/locales.yml w/ debug: true until translation is complete
 3. Run sync scripts to generate all language files
 
 

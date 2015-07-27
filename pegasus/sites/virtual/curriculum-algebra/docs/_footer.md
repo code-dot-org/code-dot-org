@@ -6,19 +6,20 @@
 <summary>Standards Alignment</summary>
 
 <% standards.each do |family| %>
-### <%= family[0] %>
+<h3><%= family[0] %></h3>
+<ul>
 <% family[1].each do |standard| %>
-- **<%= standard[:id_s] %>** - <%= standard[:desc_t] %>
+<li><b><%= standard[:id_s] %></b> - <%= standard[:desc_t] %></li>
 <% end %>
+</ul>
 <% end %>
-
 </details>
 
 [/standards]
 
 <a href="//code.org"><img src="../docs/codelogo.png" style="float:left; height: 80px;"></a>
 
-<span style="float:right">Powered by and derived from</span>
+<span style="float:right">Derived from</span>
 <a href="http://www.bootstrapworld.org" target="_blank"><img src="../docs/bootstraplogo.png" style="float:right; height: 60px; clear: right;"></a>
 </div>
 

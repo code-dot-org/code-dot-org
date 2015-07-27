@@ -31,14 +31,18 @@ exports.Direction = {
 var Dir = exports.Direction;
 
 /**
- * Given a direction, returns the unit vector for it. Currently only supports
- * cardinal directions.
+ * Given a direction, returns the unit vector for it.
  */
 var UNIT_VECTOR = {};
+UNIT_VECTOR[Dir.NONE] =  { x: 0, y: 0};
 UNIT_VECTOR[Dir.NORTH] = { x: 0, y:-1};
 UNIT_VECTOR[Dir.EAST]  = { x: 1, y: 0};
 UNIT_VECTOR[Dir.SOUTH] = { x: 0, y: 1};
 UNIT_VECTOR[Dir.WEST]  = { x:-1, y: 0};
+UNIT_VECTOR[Dir.NORTHEAST] = { x: 1, y:-1};
+UNIT_VECTOR[Dir.SOUTHEAST] = { x: 1, y: 1};
+UNIT_VECTOR[Dir.SOUTHWEST] = { x:-1, y: 1};
+UNIT_VECTOR[Dir.NORTHWEST] = { x:-1, y:-1};
 exports.Direction.getUnitVector = function (dir) {
   return UNIT_VECTOR[dir];
 };
@@ -179,12 +183,39 @@ exports.DEFAULT_SPRITE_SIZE = 1;
  * @enum {number}
  */
 exports.SquareType = {
-  OPEN: 0,
+  OPEN:         0,
   SPRITEFINISH: 1,
-  WALL: 4,
-  SPRITESTART: 16
+  NOT_USED_2:   2,
+  WALL:         4,
+  NOT_USED_8:   8,
+  SPRITESTART:  16,
+  ITEM_CLASS_0: 32, // Must stay in sync with SquareItemClassShift below
+  ITEM_CLASS_1: 64,
+  ITEM_CLASS_2: 128,
+  ITEM_CLASS_3: 256,
+  ITEM_CLASS_4: 512,
+  ITEM_CLASS_5: 1024,
+  ITEM_CLASS_6: 2048,
+  ITEM_CLASS_7: 4096,
 };
 
+exports.SquareItemClassMask =
+  exports.SquareType.ITEM_CLASS_0 |
+  exports.SquareType.ITEM_CLASS_1 |
+  exports.SquareType.ITEM_CLASS_2 |
+  exports.SquareType.ITEM_CLASS_3 |
+  exports.SquareType.ITEM_CLASS_4 |
+  exports.SquareType.ITEM_CLASS_5 |
+  exports.SquareType.ITEM_CLASS_6 |
+  exports.SquareType.ITEM_CLASS_7;
+
+exports.SquareItemClassShift = 5;
+
+exports.squareHasItemClass = function (itemClassIndex, squareValue) {
+  var classesEnabled =
+    (squareValue & exports.SquareItemClassMask) >>> exports.SquareItemClassShift;
+  return Math.pow(2, itemClassIndex) & classesEnabled;
+};
 
 exports.RANDOM_VALUE = 'random';
 exports.HIDDEN_VALUE = '"hidden"';

@@ -2,18 +2,20 @@ name 'OPD-K5 Keep Learning'
 css 'k5pd'
 skip_dialog true
 markdown <<MARKDOWN
-# NEXT STEPS > Keep Learning
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css"/>
 
+### NEXT STEPS > Keep Learning
+<br><br>
 If you enjoyed this course, here are some ways you can continue your learning after completion:
+<br><br>
 
-**Sign up for an in-person workshop:**
-[Sign up now](http://code.org/professional-development-workshops) to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
+>**Sign up for an in-person workshop:** [Sign up now](http://code.org/professional-development-workshops) to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
+<br><br>
 
-**Go through as much of Code Studio as you can:** 
-Head over to [Code Studio](http://studio.code.org) to check out the courses for yourself. Exploring the flow of puzzles and unplugged lessons in each course will help you lead students in their journey of learning computer science.
+>**Go through as much of Code Studio as you can:** Head over to [Code Studio](http://studio.code.org) to check out the courses for yourself. Exploring the flow of puzzles and unplugged lessons in each course will help you lead students in their journey of learning computer science.
+<br><br>
 
-**Check out more of Code.org's resources:**
-[http://code.org/learn](http://code.org/learn) is a series of short computer science activities from the Hour of Code. Longer curriculum experiences are listed at here. These are great places for you to learn more about computer science and also somewhere you can send students who are looking for more varied or advanced materials.
+>**Check out more of Code.org's resources:** [http://code.org/learn](http://code.org/learn) is a series of short computer science activities from the Hour of Code. Longer curriculum experiences are listed at here. These are great places for you to learn more about computer science and also somewhere you can send students who are looking for more varied or advanced materials.
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

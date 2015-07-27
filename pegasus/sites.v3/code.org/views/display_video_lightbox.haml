@@ -25,7 +25,7 @@
   {
     $("#showVideo_#{id}").modal('show');
     setupPopupWindows();
-    playVideo(true);
+    window["playVideo_#{id}"](true);
 
     ga('send', 'event', 'showvideo', 'click', {'id': "#{id}"});
   };
@@ -33,10 +33,10 @@
   $("#showVideo_#{id}").on('hidden.bs.modal', function () 
   {
     // Pause the video.
-    playVideo(false);
+    window["playVideo_#{id}"](false);
   });
 
-  function playVideo(play)
+  window["playVideo_#{id}"] = function(play)
   {
     var div = $("#showVideo_#{id} .videodiv")[0];
     var iframe = div.getElementsByTagName("iframe")[0].contentWindow;

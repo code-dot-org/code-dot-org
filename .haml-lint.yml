@@ -1,0 +1,51 @@
+skip_frontmatter: true
+
+# Linters which don't succeed on the current codebase are disabled.
+linters:
+  ClassAttributeWithStaticValue:
+    enabled: false
+
+  ClassesBeforeIds:
+    enabled: false
+
+  ConsecutiveComments:
+    enabled: false
+
+  ConsecutiveSilentScripts:
+    enabled: false
+
+  FinalNewline:
+    enabled: false
+
+  HtmlAttributes:
+    enabled: false
+
+  ImplicitDiv:
+    enabled: false
+
+  LeadingCommentSpace:
+    enabled: false
+
+  LineLength:
+    enabled: false
+
+  RuboCop:
+    enabled: false
+
+  RubyComments:
+    enabled: false
+
+  SpaceBeforeScript:
+    enabled: false
+
+  SpaceInsideHashAttributes:
+    enabled: false
+
+  TrailingWhitespace:
+    enabled: false
+
+  UnnecessaryInterpolation:
+    enabled: false
+
+  UnnecessaryStringOutput:
+    enabled: false

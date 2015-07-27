@@ -1,5 +1,6 @@
 title 'All the Things!'
 description 'All the level types for UI testing'
+description_short 'All the level types for UI testing'
 
 stage 'Jigsaw'
 level 'blockly:Jigsaw:3'
@@ -91,3 +92,7 @@ level 'U3L16 - use images'
 stage 'Online PD'
 level 'PDK5 Intro C'
 level 'PDK5 Foundations F'
+
+stage 'Markdown Details'
+level 'Test External Markdown'
+

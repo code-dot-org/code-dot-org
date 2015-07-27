@@ -5,12 +5,18 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-# How the Internet Works
+## Video: The Internet: Wires, Cables, and WiFi
 
-# THIS VIDEO URL MUST BE REPLACED
+**<a href="https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit" target="_blank">Video guide and questions</a>**
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dubPPv_ECPA" frameborder="0" allowfullscreen></iframe>
-</br>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/CfczKEzp4kY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+
+**[Can't see the video? Click here.](http://videos.code.org/2015/csp/concept_wires_cables_wifi.mp4)**
+
+<br>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

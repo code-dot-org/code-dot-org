@@ -1,0 +1,6 @@
+name 'U2L07 Assessment5'
+title 'Question 5'
+
+markdown <<MARKDOWN
+When analyzing algorithms why doesn't the amount of real time (clock time) tell us very much about the algorithm's "efficiency"?
+MARKDOWN
