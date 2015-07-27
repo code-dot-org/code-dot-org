@@ -18,15 +18,28 @@ class NetSimApi < Sinatra::Base
 
   end
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  # For test, make it possible to override the usual configured API choice
+  @@overridden_pub_sub_api = nil
 
-  # Pick a PubSub API based on configuration
-  PUB_SUB_API = CDO.use_pusher ? PusherApi : NullPubSubApi
+  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
 
   def get_table(shard_id, table_name)
     # Table name within channels API just concatenates shard + table
     api_table_name = "#{shard_id}_#{table_name}"
     TableType.new(CDO.netsim_api_publickey, nil, api_table_name)
+  end
+
+  # Get the Pub/Sub API interface for the current configuration
+  def get_pub_sub_api
+    return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
+    CDO.use_pusher ? PusherApi : NullPubSubApi
+  end
+
+  # Set a particular Pub/Sub API interface to use - for use in tests.
+  #
+  # @param [PubSubApi] override_api
+  def self.override_pub_sub_api(override_api)
+    @@overridden_pub_sub_api = override_api
   end
 
   def has_json_utf8_headers(request)
@@ -66,7 +79,7 @@ class NetSimApi < Sinatra::Base
     table = get_table(shard_id, table_name)
     int_id = id.to_i
     table.delete(int_id)
-    PUB_SUB_API.publish(shard_id, table_name, {:action => 'delete', :id => int_id})
+    get_pub_sub_api.publish(shard_id, table_name, {:action => 'delete', :id => int_id})
     no_content
   end
 
@@ -90,7 +103,7 @@ class NetSimApi < Sinatra::Base
     begin
       value = get_table(shard_id, table_name).
           insert(JSON.parse(request.body.read), request.ip)
-      PUB_SUB_API.publish(shard_id, table_name, {:action => 'insert', :id => value[:id]})
+      get_pub_sub_api.publish(shard_id, table_name, {:action => 'insert', :id => value[:id]})
     rescue JSON::ParserError
       bad_request
     end
@@ -113,7 +126,7 @@ class NetSimApi < Sinatra::Base
       table = get_table(shard_id, table_name)
       int_id = id.to_i
       value = table.update(int_id, JSON.parse(request.body.read), request.ip)
-      PUB_SUB_API.publish(shard_id, table_name, {:action => 'update', :id => int_id})
+      get_pub_sub_api.publish(shard_id, table_name, {:action => 'update', :id => int_id})
     rescue JSON::ParserError
       bad_request
     end

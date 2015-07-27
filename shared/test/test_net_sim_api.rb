@@ -71,6 +71,67 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?, "Table was not empty"
   end
 
+  def test_no_publish_on_read
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api(test_spy)
+
+    read_records
+
+    assert test_spy.publish_history.empty?
+  end
+
+  def test_publish_on_insert
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api(test_spy)
+
+    record_create_response = create_record({name:'dave', age:7, male:false})
+    record_id = record_create_response['id'].to_i
+
+    assert_equal 1, test_spy.publish_history.length
+    assert_equal @shard_id, test_spy.publish_history.first[:channel]
+    assert_equal @table_name, test_spy.publish_history.first[:event]
+    assert_equal 'insert', test_spy.publish_history.first[:data][:action]
+    assert_equal record_id, test_spy.publish_history.first[:data][:id]
+  ensure
+    delete_record(record_id || 1)
+    assert read_records.first.nil?, "Table was not empty"
+  end
+
+  def test_publish_on_update
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api(test_spy)
+
+    record_create_response = create_record({name:'eliza', age:7, male:false})
+    record_id = record_create_response['id'].to_i
+    update_record(record_id, {id:record_id, age:8})
+
+    assert_equal 2, test_spy.publish_history.length
+    assert_equal @shard_id, test_spy.publish_history.last[:channel]
+    assert_equal @table_name, test_spy.publish_history.last[:event]
+    assert_equal 'update', test_spy.publish_history.last[:data][:action]
+    assert_equal record_id, test_spy.publish_history.last[:data][:id]
+  ensure
+    delete_record(record_id || 1)
+    assert read_records.first.nil?, "Table was not empty"
+  end
+
+  def test_publish_on_delete
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api(test_spy)
+
+    record_create_response = create_record({name:'franklin', age:7, male:false})
+    record_id = record_create_response['id'].to_i
+    delete_record(record_id)
+
+    assert_equal 2, test_spy.publish_history.length
+    assert_equal @shard_id, test_spy.publish_history.last[:channel]
+    assert_equal @table_name, test_spy.publish_history.last[:event]
+    assert_equal 'delete', test_spy.publish_history.last[:data][:action]
+    assert_equal record_id, test_spy.publish_history.last[:data][:id]
+  ensure
+    assert read_records.first.nil?, "Table was not empty"
+  end
+
   # Methods below this point are test utilities, not actual tests
   private
 
@@ -103,4 +164,23 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}"
   end
 
+end
+
+# Test-only pub/sub API that sense whether events have been published without
+# actually contacting a remote service.
+class SpyPubSubApi
+  attr_reader :publish_history
+
+  def initialize
+    @publish_history = []
+  end
+
+  # Pretends to publish an event to a a channel using the Pub/Sub system.
+  #
+  # @param [String] channel a single channel name that the event is to be published on
+  # @param [String] event - the name of the event to be triggered
+  # @param [Hash] data - the data to be sent with the event
+  def publish(channel, event, data)
+    @publish_history.push({ :channel => channel, :event => event, :data => data })
+  end
 end
