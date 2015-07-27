@@ -330,7 +330,11 @@ StudioApp.prototype.init = function(config) {
 
   if (config.level.instructions || config.level.aniGifURL) {
     var promptIcon = document.getElementById('prompt-icon');
-    promptIcon.src = this.smallIcon;
+    if (this.smallIcon) {
+      promptIcon.src = this.smallIcon;
+    } else {
+      $('#prompt-icon-cell').hide();
+    }
 
     var bubble = document.getElementById('bubble');
     dom.addClickTouchEvent(bubble, _.bind(function() {
@@ -723,8 +727,8 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
-StudioApp.prototype.createModalDialogWithIcon = function(options) {
-  return this.feedback_.createModalDialogWithIcon(options);
+StudioApp.prototype.createModalDialog = function(options) {
+  return this.feedback_.createModalDialog(options);
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
@@ -743,6 +747,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text';
     headerElement.innerHTML = puzzleTitle;
+    if (!this.icon) {
+      headerElement.className += ' no-modal-icon';
+    }
   }
 
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
@@ -780,7 +787,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     };
   }
 
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
     Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
@@ -1002,7 +1009,7 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
 StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
   builderDetails.innerHTML = require('./templates/builder.html.ejs')();
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
     Dialog: this.Dialog,
     contentDiv: builderDetails,
     icon: this.icon
