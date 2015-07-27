@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw a star shape using the \"draw a line of squares\" function? Hint: you may have to move forward 60 pixels and  turn 144 degrees",
+    "instructions": "Can you draw a star shape using the \"draw a line of squares\" function? Hint: Each iteration, you'll have to move forward a certain number of pixels and turn 144 degrees.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you draw a star shape using the `draw a line of squares` function? *Hint: you may have to move forward 60 pixels and  turn 144 degrees*",
+    "markdown_instructions": "Can you draw a star shape using the `draw a line of squares` function? *Hint: Each iteration, you'll have to move forward a certain number of pixels and turn 144 degrees.*",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
