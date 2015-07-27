@@ -9,6 +9,7 @@
 require 'cdo/aws/s3'
 require 'digest'
 require 'parallel'
+require 'fileutils'
 
 class MilestoneParser
   # Ignore milestone logs in these host paths
@@ -20,15 +21,16 @@ class MilestoneParser
   COMPARE_BYTE_LENGTH = 1024
 
   attr_accessor :cache, :s3_client, :s3_resource
+  cattr_accessor :log_debug
 
   def debug(msg)
-    puts msg unless rack_env? :production
+    puts msg if self.log_debug
   end
 
   def self.count
     # Load v2 cache
     cache_file = MILESTONE_CACHE_V2
-    File.copy(MILESTONE_CACHE, cache_file) unless File.file?(cache_file)
+    FileUtils.cp(MILESTONE_CACHE, cache_file) unless File.file?(cache_file)
     cache = File.file?(cache_file) ? JSON.parse(IO.read(cache_file)) : {}
     parser = self.new(cache, AWS::S3::connect_v2!)
     parser.count.tap{|_|IO.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}

@@ -90,7 +90,8 @@ Eval.init = function(config) {
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: level.editCode,
-      blockCounterClass : 'block-counter-default'
+      blockCounterClass : 'block-counter-default',
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
@@ -376,7 +377,7 @@ Eval.execute = function() {
   if (studioApp.hasUnfilledFunctionalBlock()) {
     Eval.result = false;
     Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
-    Eval.message = commonMsg.emptyFunctionalBlock();
+    Eval.message = studioApp.getUnfilledFunctionalBlockError('functional_display');
   } else if (studioApp.hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
@@ -492,6 +493,7 @@ function canvasesMatch(canvasA, canvasB) {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
+  var tryAgainText;
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
@@ -508,7 +510,7 @@ var displayFeedback = function(response) {
     saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
     feedbackImage: Eval.feedbackImage,
     appStrings: {
-      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg({backButton: tryAgainText})
     }
   };
   if (Eval.message && !level.edit_blocks) {

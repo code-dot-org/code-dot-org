@@ -392,7 +392,10 @@
     classroom_activity: Αποσυνδεδεμένη Δραστηριότητα
   home:
     title: Στούντιο Κώδικα
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} ΓΡΑΜΜΕΣ ΚΩΔΙΚΑ ΓΡΑΜΜΕΝΕΣ ΑΠΟ ΜΑΘΗΤΕΣ'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS'
     all_courses: Επισκόπηση των μαθημάτων 1, 2 και 3
     lesson_plans: Σχέδια μαθήματος
     signin_message: Ήδη εγγεγραμμένος; %{link}
@@ -437,6 +440,7 @@
     heading_legacy: <h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>
     your_gallery: Συλλογή φωτογραφιών
     no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
+    print_certificate: Print Certificate
   gender:
     male: Αγόρι
     female: Κορίτσι
@@ -472,6 +476,12 @@
     autoplay_option: Αυτόματη αναπαραγωγή βίντεο
     download: Κατεβάστε το βίντεο
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: To increase security, we are switching to HTTPS on %{https_date}. You
+        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
+        here</a> to learn how to enable HTTPS for Code.org.
+      hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
     working:
       header: Εργαζόμαστε για την υποστήριξη του προγράμματος περιήγησης που χρησιμοποιείτε.
       message: Code.org χρησιμοποιεί σύγχρονες web τεχνολογίες. Αυτό κάνει τον ιστότοπο
@@ -534,9 +544,13 @@
       title: Flappy κώδικα
       body: θέλετε να γράψετε το δικό σας παιχνίδι σε λιγότερο από 10 λεπτά; Δοκιμάστε
         το σεμινάριο μας για τον Flappy κώδικα!
-    20hour:
-      title: Εισαγωγικό Μάθημα
-      body: Δοκιμάστε το εισαγωγικό 20 ωρών μάθημα στην  επιστήμη των  υπολογιστών.
+    20-hour:
+      title: Accelerated Course
+      body: Αυτό το 20ωρο μάθημα εισάγει σε θεμελιώδης έννοιες Πληροφορικής και προγραμματισμού
+        . Το μάθημα έχει σχεδιαστεί για χρήση από τις τελευταίες τάξεις του δημοτικού,
+        αλλά η μάθηση είναι διασκεδαστική σε κάθε ηλικία.
+      body_short: Learn basic computer science in an accelerated version of courses
+        2-4.
     hoc2014:
       try_new_tutorial: Δοκιμάστε μας νέο σεμινάριο για την ώρα του κώδικα σε δοκιμαστική
         μορφή

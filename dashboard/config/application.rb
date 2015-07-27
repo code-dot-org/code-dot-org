@@ -33,10 +33,8 @@ module Dashboard
       config.middleware.insert_after SharedResources, PegasusSites
     end
 
-    unless Rails.env.production?
-      require 'cdo/rack/upgrade_insecure_requests'
-      config.middleware.use ::Rack::UpgradeInsecureRequests
-    end
+    require 'cdo/rack/upgrade_insecure_requests'
+    config.middleware.use ::Rack::UpgradeInsecureRequests
 
     config.encoding = 'utf-8'
 
@@ -81,6 +79,7 @@ module Dashboard
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
     config.assets.paths << Rails.root.join('../shared/css')
+    config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
       editor/blockly_editor.css

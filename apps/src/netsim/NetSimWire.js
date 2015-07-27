@@ -1,3 +1,7 @@
+/**
+ * @overview Simulation Entity: A connection between two nodes and related
+ *           metadata.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

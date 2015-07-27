@@ -20,9 +20,9 @@
     "default_tab_index": "0",
     "show_encoding_controls": "[\"binary\", \"hexadecimal\", \"decimal\", \"ascii\"]",
     "default_enabled_encodings": "[\"binary\", \"ascii\"]",
-    "show_router_bandwidth_control": "true",
-    "default_router_bandwidth": "Infinity",
-    "show_router_memory_control": "true",
+    "show_router_bandwidth_control": "false",
+    "default_router_bandwidth": "32",
+    "show_router_memory_control": "false",
     "default_router_memory": "Infinity",
     "show_dns_mode_control": "false",
     "default_dns_mode": "none",
@@ -52,13 +52,13 @@
     "show_log_browser_button": "true",
     "broadcast_mode": "false",
     "connected_routers": "true",
-    "minimum_extra_hops": "1",
-    "maximum_extra_hops": "2",
+    "minimum_extra_hops": "0",
+    "maximum_extra_hops": "3",
     "address_format": "4.4",
     "packet_count_bit_width": "4",
     "show_hostname_in_graph": "false",
     "show_pulse_rate_slider": "false",
-    "default_random_drop_chance": "0.01"
+    "default_random_drop_chance": "0.10"
   }
 }]]></config>
   <blocks/>

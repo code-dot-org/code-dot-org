@@ -56,21 +56,21 @@ it:
         one: '1 errore impedisce di salvare questo % {resource}:'
         other: '%{count} errori impediscono di salvare questo % {resource}:'
     invitations:
-      send_instructions: 'An invitation email has been sent to %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: 'Una email di invito è stata inviata a %{email}.'
+      invitation_token_invalid: Il token di invito fornito non è valido!
+      updated: La tua password è stata impostata correttamente. Avete ora accesso alle risorse.
+      no_invitations_remaining: Nessun invito restante
+      invitation_removed: Il tuo invito è stato rimosso.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Invia invito
+        submit_button: Invia un invito
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Imposta la tua password
+        submit_button: Imposta la mia password
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: 'Hello %{email}'
-        someone_invited_you: 'Someone has invited you to %{url}, you can accept it through the link below.'
-        accept: Accept invitation
-        ignore: "If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password."
+        subject: Istruzioni di invito
+        hello: 'Ciao %{email}'
+        someone_invited_you: "Qualcuno ti ha invitato su %{url}, è possibile accettare l'invito attraverso il link sottostante."
+        accept: "Accetta l'invito"
+        ignore: "Se non volete accettare l'invito, siete pregati di ignorare questa email.< br />Il tuo account non verrà creato fino a quando non accederete al link inviato e impostato la vostra password."

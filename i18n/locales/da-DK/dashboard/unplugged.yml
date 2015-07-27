@@ -2,7 +2,7 @@ da:
   data:
     unplugged:
       Unplug1:
-        title: Introduktion til Computer Videnskab
+        title: Introduktion til programmering
         desc: 'Denne lektion vil indføre begrebet datalogi og forklare hvad en programmør gør.  Det vil også give de eleverne en mulighed for at påtage sig rollen som en programmør.  Ved udgangen af aktiviteten, vil hver elev har en tag-med-hjem oplevelse om, hvad han eller hun har lært.  Du kan være fristet til at springe undervisningen med forklaringen af computerord  over, men hvis du præsentere dem for eleverne, på en sjov og legende måde, vil det være langt mere produktivt, end at vente på mere avancerede muligheder.'
         pdfs:
           - unplug1

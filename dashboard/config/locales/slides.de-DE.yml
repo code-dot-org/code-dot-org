@@ -489,10 +489,11 @@
           neuen Wörter aus diesen Bausteinen zu bauen.
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: Hast du deinem Computer erst einmal beigebracht, eine Aktion auszuführen,
+          indem du diese Befehlssequenz verwendet hast, kannst du dieser Aktion einen
+          eigenen Namen geben, sodass es leicht ist, sie später zu wiederholen. Definierst
+          du einen eigenen Befehl, und gibst ihm einen Namen, nennt man das eine Funktion
+          (engl. function).
       4:
         image: notes/frozen3_4.jpg
         text: Hi, ich bin Jess. Beim Programmieren mit Blöcken, nutzt man Funktionen,
@@ -507,20 +508,21 @@
           mehrere Quadrate zu zeichnen.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns.
-          In the next puzzle, the code you recently wrote to make a circle is available
-          to you as a new function that can make circles of different sizes. Can you
-          use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Viele einfache Formen können verwendet werden, um komplexere Muster
+          zu erstellen. Im nächsten Schritt ist der Code, den du vorhin geschrieben
+          hast, um einen Kreis zu erstellen, als neue Funktion verfügbar, um weitere,
+          verschieden große Kreise zu machen. Kannst du Elsa so helfen, komplizierte
+          und schöne Muster im Schnee zu erschaffen?
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
-        text: So far you've been making an animation or a story that does the exact
-          same thing every time you run it. Now you can make an interactive game that
-          you can actually play.
+        text: Bisher hast du eine Animation oder eine Geschichte geschaffen, die jedes
+          Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein interaktives
+          Spiel erstellen, das man tatsächlich spielen kann.
       2:
         image: notes/playlab_2.png
-        text: There's the "when arrow" block and the "move actor" block. You can put
-          these blocks together to move the actors around with the arrow keys.
+        text: Es gibt den "Pfeil"-Baustein und den "Figur bewegen"-Baustein. Du kannst
+          diese Bausteine zusammenfügen und so deine Figuren mit den Pfeiltasten bewegen.
       3:
         image: notes/playlab_3.png
         text: Und es gibt einige Blöcke, die etwas tun, wenn Figuren zusammenstoßen
@@ -528,72 +530,78 @@
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: Wir werden Spiele mit dem Play Lab erstellen. Gute Spiele haben eine
+          Story und jede Story hat Hauptcharaktere. Wir werden lernen, wie wir unsere
+          Charaktere - wie Hexen, Aliens und Tiere - dazu bringen, zu sprechen, sich
+          zu bewegen und miteinander zu kommunizieren. Am Ende dieses Tutorials, kannst
+          du ein Spiel von Grund auf erstellen und es mit deinen Freunden teilen.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space
-          where your program will run. The instructions for each level are written
-          below.
+        text: Dein Bildschirm gliedert sich in drei Hauptteile. Auf der linken Seite
+          ist der Spiel-Bereich, in dem dein Programm ausgeführt wird. Die Anweisungen
+          für die einzelnen Levels stehen darunter.
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: Der mittlere Bereich ist die Toolbox, und jeder dieser Blöcke ist ein
+          Code-Teil. Den weißen Bereich rechts nennt man Arbeitsplatz (engl. workspace)
+          und hier werden wir unser Programm erstellen.
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: Um zu beginnen, musst du deine Blöcke mit dem orangen "Ausführung"-Block
+          verknüpfen. Du kannst mehrere Blöcke miteinander verbinden, indem du sie
+          herausziehst bis die gelbe Linie zu sehen ist, und sie werden sich von selbst
+          zusammenfügen.
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: Im ersten Schritt ist unser Charakter ein Pinguin, und wir werden ihn
+          dazu bringen, "Hallo" zu sagen, indem wir den "Sagen"-Baustein herausziehen,
+          ihn mit dem "Ausführung"-Baustein verknüpfen, und "Hallo" tippen. Wir können
+          den Pinguin mit den "Nach links bewegen" und "Nach rechts bewegen" Bausteinen
+          auch dazu bringen, sich umherzubewegen. Hast du erst einmal alle deine Bausteine
+          am richtigen Platz, drück den "Ausführung"-Block um zu sehen, was zu programmiert
+          hast.
       6:
         image: notes/playlab_intro_6.png
-        text: Get started and by the end, you'll be able to create your own game with
-          all kinds of players that can interact, turn happy or sad, score points,
-          or throw fireballs, or even vanish each other. It's all up to you and the
-          game you want to make.
+        text: Beginn einfach mal, und am Ende kannst du dein eigenes Spiel erstellen,
+          mit allen möglichen Arten von Spielern, die miteinander interagieren können,
+          glücklich oder traurig sein, Punkte erzielen, oder einander sogar verschwinden
+          lassen können. Es liegt allein an dir und dem Spiel, das du erstellen willst.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: Nun werden wir etwas lernen, das alle Programmierer jeden Tag verwenden,
+          nämlich Ereignisse (engl. Events). Ein Ereignis bringt dein Programm dazu,
+          darauf zu achten, ob etwas passiert. Wenn etwas geschieht, führt es eine
+          Aktion aus.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: Einige Beispiele für Ereignisse sind etwa, auf Mausklicks, Pfeiltasten
+          oder ein Antippen den Bildschirms zu achten.
       3:
         image: notes/playlab_events_3.png
-        text: Here, we're going to make the space bot greet the earthlings when a
-          player clicks on him. We'll use the "when clicked" block and attach the
-          "say" block to it. When the player clicks on the space bot, everything attached
-          to this "when clicked" event block will be performed. What does your alien
-          say?
+        text: Hier werden wir den Spacebot die Erdlinge begrüßen lassen, wenn ein
+          Spieler auf ihn klickt. Wir werden den "Wenn angeklickt"-Baustein verwenden
+          und den "Sagen"-Baustein mit ihm verbinden. Klickt ein Spieler auf den Spacebot,
+          wird jede Handlung, die mit dem "Wenn angeklickt" Ereignis-Block verbunden
+          ist, ausgeführt. Was wird dein Alien sagen?
       4:
         image: notes/playlab_events_4.png
-        text: There are also "when arrow" blocks. If you link the "move" blocks to
-          these, you can start to move your actors up, down, left, or right. Step
-          by step, your game is getting more interactive.
+        text: Es gibt auch "Pfeil"-Blöcke. Verbindest du die "Bewegungs"-Blöcke mit
+          ihnen, kannst du deine Akteure nach oben, unten, links oder rechts bewegen.
+          Schritt für Schritt wird dein Spiel immer interaktiver.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Dies ist der "Ewig Wiederholen"-Block. Alles innerhalb dieses Blocks
+          wird immer wieder im Spiel passiern, für immer.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Willst du einen Akteur dazu bringen, etwas immer wieder zu wiederholen,
+          ohne dass der Spieler etwas dazu machen soll, setzen wir die Bausteine in
+          den "Ewig Wiederholen"-Block.
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: In this next puzzle, our goal is to help the wizard patrol the boundaries
-          of the kingdom, left and right continuously. Learning how the repeat commands
-          works, will save you a ton of time later when you build your own game.
+        text: In diesem nächsten Schritt, ist es unser Ziel, dem Zauberer zu helfen,
+          der die Grenzen des Königreiches bewacht, links und rechts, ohne Unterlass.
+          Zu lernen, wie der Wiederholungsbefehl funktioniert, wird dir später eine
+          Menge Zeit ersparen, wenn du dein Spiel aufbaust.

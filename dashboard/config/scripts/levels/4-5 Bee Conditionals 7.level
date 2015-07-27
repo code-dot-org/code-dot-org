@@ -16,7 +16,18 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,\"P\",\"P\",\"P\",2,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,3,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "12"
+    "ideal": "12",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -58,15 +69,10 @@
         <block type="procedures_callnoreturn">
           <mutation name="check purple flower"/>
         </block>
-        <block type="bee_ifelseNectarAmount" inline="true">
+        <block type="bee_ifelseNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">==</title>
           <title name="ARG2">3</title>
-        </block>
-        <block type="bee_ifelseNectarAmount" inline="true">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">==</title>
-          <title name="ARG2">2</title>
         </block>
         <block type="maze_nectar"/>
       </xml>

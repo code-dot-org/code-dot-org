@@ -1,0 +1,71 @@
+h2 {
+	color: #7665a0;
+}
+
+h3 {
+	color: #7665a0;
+}
+
+h4 {
+	font-weight: bolder;
+    color: #ffa400;
+}
+h5 {
+	font-weight: bolder;
+    color: #00adbb;
+}
+blockquote{
+	background: rgba(255, 242, 185, .35);
+    border-radius: 10px;
+    font-size: .8em;
+    font-weight: lighter;
+    font-style: italic;
+    padding: 15px;
+    
+}
+p{
+	margin: 0 0 15px 15px;
+}
+ul{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	padding: 0 0 0 20px;
+}
+
+li{
+	margin-left: 20px;
+	padding: 0 0 0 20px;
+}
+
+ol ul li {
+	color: #666666;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+
+.plc{
+	background: rgba(119, 100, 160, 1);
+    color: white;
+    font-weight: bold;
+}
+
+button{
+	background: rgba(0, 173, 187, 1);
+    color: white;
+    font-weight: bold;
+}
+
+.roundedPic {
+	border-radius: 10px;
+}
+
+.lefted {
+	float: left;
+	margin: 0 40px 0 0;
+}
+
+.righted {
+	float: right;
+	margin: 0 0 0 40px;
+}

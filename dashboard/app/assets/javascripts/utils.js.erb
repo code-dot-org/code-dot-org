@@ -9,18 +9,6 @@ var addClickTouchEvent = function(element, handler) {
   });
 };
 
-function onURLBlocked(base_url, callback) {
-  $('<img width=1 height=1>')
-      .on("error", callback)
-      .attr("src", base_url + "?" + Math.random())
-      .css("position", "absolute")
-      .css("bottom", 0)
-      .css("width", 1)
-      .css("height", 1)
-      .css("visibility", "hidden")
-      .appendTo("body");
-}
-
 /**
  * Wrap a function so that it will only be executed a certain amount of time
  * after it's originally called, to avoid multiple calls in quick succession.

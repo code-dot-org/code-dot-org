@@ -9,8 +9,7 @@ markdown <<MARKDOWN
 
 # Background
 
-On a network, computers send requests to other computers and those computers send back data to answer those requests. There are potential drawbacks of using a “broadcast” system to communicate over the Internet – including security concerns. A system is needed to make it clear who is sending the message and the intended recipient. 
-
+How are computers able to access so much information on the internet? Computers send messages to and from each other through a network. One computer broadcasts a request to the network. Another sees the request and responds with information. How can we ensure the request and response get to the intended recipient? Over this lesson, you will begin to investigate how a message is broadcast over a network and how we can ensure a message is delivered to the right person.
 
 
 # Lesson
@@ -22,8 +21,7 @@ On a network, computers send requests to other computers and those computers sen
 
 # Resources
 
-* Resource: <a href="https://docs.google.com/document/d/1WX5N1ASxeumlTUvREbzyYBG1NpEFWlgH_386y9JM6Ls/edit" target="_blank"> Battleship Rules </a>
-* Handout: <a href="https://docs.google.com/document/d/1ORSPjpWEPeJR0Ctwqug44vdPO5d7Mq0A5JF8rntgpWc/edit?usp=sharing" target="_blank"> Battleship Board </a>
+* Handout: <a href="https://docs.google.com/document/d/1WX5N1ASxeumlTUvREbzyYBG1NpEFWlgH_386y9JM6Ls/edit" target="_blank"> Battleship Board and Rules </a>
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

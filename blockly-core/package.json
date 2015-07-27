@@ -1,0 +1,13 @@
+{
+  "name": "@cdo/blockly-core",
+  "version": "0.0.1",
+  "description": "blockly-core testrunner dependencies",
+  "engines": {
+    "node": "~0.10.18"
+  },
+  "scripts": {
+  },
+  "devDependencies": {
+    "phantomjs": "git://github.com/wjordan/phantomjs"
+  }
+}

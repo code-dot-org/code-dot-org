@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <title>Blockly Playground</title>
 <script type="text/javascript" src="../closure-library-read-only/closure/goog/base.js"></script>
-<script type="text/javascript" src="../core/initialization/deps.js"></script>
+<script type="text/javascript" src="./test_dependency_map.js"></script>
 <script type="text/javascript">
 'use strict';
-goog.require('Blockly');
+goog.require('Blockly.Playground');
 goog.require('goog.tweak');
 // Depending on the URL argument, render as LTR or RTL.
 var rtl = (document.location.search == '?rtl');
@@ -23,6 +23,20 @@ function start() {
     toolbox: toolbox,
     assetUrl: function(path) { return '../' + path; }
   });
+
+  goog.tweak.registerBoolean('openContract', 'pre-opens contract editor', false);
+  if (goog.tweak.getBoolean('openContract')) {
+    newContractEditor();
+  }
+}
+
+function newContractEditor() {
+  Blockly.defaultNumExampleBlocks = 2;
+  Blockly.useContractEditor = true;
+  Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
+    disableExamples: false
+  });
+  Blockly.contractEditor.openWithNewFunction();
 }
 
 function toXml() {
@@ -31,31 +45,6 @@ function toXml() {
   output.value = Blockly.Xml.domToText(xml);
   output.focus();
   output.select();
-}
-
-
-/**
- * Initializes an instance of Blockly with a contract editor open
- * @returns {HTMLElement}
- */
-function initializeWithContractEditor(xmlString) {
-    Blockly.assetUrl = function () {
-        return ''
-    };
-    Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
-    Blockly.hasTrashcan = true;
-    var xml = Blockly.Xml.textToDom(xmlString);
-    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
-    Blockly.useModalFunctionEditor = true;
-    Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
-        disableExamples: false
-    });
-}
-
-function newContractEditor() {
-    Blockly.defaultNumExampleBlocks = 2;
-    var container = initializeWithContractEditor('<xml/>');
-    Blockly.contractEditor.openWithNewFunction();
 }
 
 function fromXml() {
@@ -277,9 +266,9 @@ h1 {
       <block type="colour_rgb"></block>
       <block type="colour_blend"></block>
     </category>
-    <!--<category name="Variables" custom="VARIABLE"></category>-->
+    <category name="Variables" custom="VARIABLE"></category>
     <category name="Functions" custom="PROCEDURE"></category>
-    <category name="Variables" custom="FUNCTIONAL_VARIABLE" />
+    <category name="CSinA Vars" custom="FUNCTIONAL_VARIABLE" />
   </xml>
 
   <h1>Blockly Playground</h1>
@@ -292,23 +281,6 @@ h1 {
       document.write('[ &larr; RTL. Switch to <A HREF="?ltr">LTR</A>. ]');
     } else {
       document.write('[ &rarr; LTR. Switch to <A HREF="?rtl">RTL</A>. ]');
-    }
-  </script>
-
-  <script type="text/javascript">
-    goog.tweak.registerBoolean('openContract', 'pre-opens contract editor', false);
-    if(goog.tweak.getBoolean('openContract')) {
-      setTimeout(function() {
-        window.newContractEditor();
-        Blockly.contractEditor.exampleBlocks[0].getInputTargetBlock('ACTUAL').dispose();
-        Blockly.contractEditor.addNewExampleBlock_();
-        Blockly.contractEditor.addParameter('test');
-        Blockly.contractEditor.addParameter('test2');
-        Blockly.contractEditor.refreshParamsEverywhere();
-        Blockly.contractEditor.examplesSectionView_.toggleCollapse();
-        Blockly.contractEditor.examplesSectionView_.toggleCollapse();
-      }, 500); // TODO(bjordan): remove
-
     }
   </script>
 

@@ -10,10 +10,16 @@
       "moveForward": {
         "params": [
           ""
+        ],
+        "paletteParams": [
+          ""
         ]
       },
       "turnLeft": {
         "params": [
+          ""
+        ],
+        "paletteParams": [
           ""
         ]
       },
@@ -43,7 +49,13 @@
     "app_height": "300",
     "instructions": "Let's revisit the 3x3 grid problem you did a few lessons ago.  This time the challenge is to program the solution \"as efficiently as possible.\"  Now that you know how to write functions, it should be easier to break the problem down, and your code should be easier to read and debug.  See the rubric for more details about requirements and expectations.",
     "callout_json": "[]",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-3by3grid.png"
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-3by3grid.png",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>

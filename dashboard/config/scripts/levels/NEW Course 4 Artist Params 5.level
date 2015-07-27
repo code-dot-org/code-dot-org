@@ -21,7 +21,15 @@
     "impressive": "false",
     "disable_sharing": "false",
     "ideal": "10",
-    "slider_speed": ".5"
+    "slider_speed": ".5",
+    "markdown_instructions": "Fill in the ??? in the length parameter input block. \r\n\r\n*Hint: The pentagon is 100 pixels in size.*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

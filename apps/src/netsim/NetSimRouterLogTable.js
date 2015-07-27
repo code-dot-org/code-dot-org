@@ -1,3 +1,6 @@
+/**
+ * @overview Router log table UI component on the "Router" tab.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

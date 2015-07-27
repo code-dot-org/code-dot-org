@@ -1,5 +1,6 @@
 title 'Test Course'
 description "Just an internal test course."
+description_short "Just an internal test course."
 
 stage 'Multi' 
 level 'test multi text'

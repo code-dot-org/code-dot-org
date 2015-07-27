@@ -1,0 +1,36 @@
+name 'sciPD2 implement2'
+title 'Implementation Questions and Answers'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Implementation Questions and Answers
+
+<br/>
+
+<img src="https://images.code.org/1913b42d18da927d866023403f6a99d6-image-1435775636761.jpg" class="lefted roundedPic" width="450px" style="margin-right:40px;"/>
+<br/>
+What did you realize while you were completing your implementation document?  
+
+<ul style="margin-left:490px">
+	<li>Are there any areas where you feel completely ready and confident?</li>
+	<li>Are there any areas where you could use more time and experience?</li>
+    <li>Is there anywhere that you could use extra help from Code.org?</li>
+</ul>
+
+
+<br/><br/>
+
+Take some time to discuss your implementation plan (along with your answers to these questions) on the PLC discussion forum.
+
+Make sure to read over responses from others and see if you can contribute anything positive to their experience. Remember, if you help your cohorts, there is a greater chance that they will be able to help you as well!
+
+<a href="http://forum.code.org/t/implementation-planning/957" target="_new"><button>
+	Visit Implementation Forum >>
+</button></a>
+
+After you have responded to the forum, return here and click "continue" to move on to the next stage.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -322,7 +322,9 @@ hr:
     classroom_activity: Izvanmrežna aktivnost
   home:
     title: Code Studio
+    description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Pregled tečajeva 1, 2 i 3
     lesson_plans: Nastavni planovi
     signin_message: 'Jeste li već registrirani? %{link}'
@@ -357,6 +359,7 @@ hr:
     heading_legacy: '<h2>Naš općeniti tečaj za</h2><h1>sve uzraste</h1>'
     your_gallery: Galerija
     no_primary_course: Try a course at Code Studio
+    print_certificate: Print Certificate
   gender:
     male: Muško
     female: Žensko
@@ -389,6 +392,10 @@ hr:
     autoplay_option: Automatska reprodukcija videozapisa
     download: Preuzimanje videa
   compatability:
+    https:
+      header: Please enable HTTPS for Code.org.
+      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      hide_this_warning: Sakrij ovo upozorenje
     working:
       header: Radimo na podršci za vaš preglednik.
       message: "Code.org koristi moderne web tehnologije. To čini ovo sjedište bržim. Vaš preglednik ne podržava sve potrebne značajke i mogu se pojaviti problemi dok koristite ovaj dio sjedišta. Molimo vas da nam pomognete tako da nas <a href='%{report_issue_url}'>izvijestite o problemima na koje ste naišli</a>. Također možete <a href='%{supported_browsers_url}'>nadograditi svoj preglednik na podržanu verziju</a>."
@@ -435,9 +442,10 @@ hr:
     flappy:
       title: Flappy kôd
       body: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!
-    20hour:
-      title: Uvodni tečaj
-      body: Isprobajte naš 20-satni tečaj Uvod u informatiku.
+    20-hour:
+      title: Accelerated Course
+      body: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.
+      body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
       try_new_tutorial: Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji
       try_frozen: Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva

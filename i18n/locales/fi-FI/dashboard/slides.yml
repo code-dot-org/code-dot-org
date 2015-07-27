@@ -320,7 +320,7 @@ fi:
         text: Yksi tietojenkäsittelytieteen tärkeimmistä käsitteistä on uusien komentojen luominen. Suurimmassa osassa ohjelmointikieliä on vain 100 käskysanaa tai komentoa. Ohjelmoinnin taika onkin omien uusien sanojen määrittely ja rakentaminen näistä rakennuspalikoista.
       3:
         image: notes/frozen3_3.jpg
-        text: Opetettuasi tietokoneen tekemään toiminnon käyttäen tätä toimintosarjaa, voit keksiä sille nimen ja sillä tavalla tehdä sen toistamisesta helpompaa. Kun määritellet oman käskysi ja antanet sille nimen, sitä kutsutaan funktioksi.
+        text: Kun olet kerran opettanut tietokoneen tekemään toiminnon käyttäen tätä toimintosarjaa, voit keksiä oman nimesi toiminnolle niin että sen toistamisen myöhemmin on helppoa. Voit myös määritellä oman käskysi ja antaa sille nimen, tätä kutsutaan funktioksi.
       4:
         image: notes/frozen3_4.jpg
         text: Hei, olen Jess. Ohjelmoidessasi lohkoilla, voit käyttää funktioita kun on joukko toimintoja, jotka haluaisit tehdä monta kertaa. Esimerkiksi, olet kirjoittanut koodia luodaksesi neliön.

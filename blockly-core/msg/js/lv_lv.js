@@ -1,4 +1,4 @@
-Blockly.Msg.ACTUAL = "zvanīt";
+Blockly.Msg.ACTUAL = "izsaukt";
 Blockly.Msg.ADD = "Pievienot";
 Blockly.Msg.ADD_COMMENT = "Pievienot komentāru";
 Blockly.Msg.ADD_PARAMETER = "Pievienot parametru";

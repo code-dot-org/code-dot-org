@@ -4,24 +4,19 @@ layout: wide
 nav: resources_nav
 ---
 <div class="row">
-    <h1 class="col-sm-6">Resources</h1>
+    <h1 class="col-sm-12">Resources (2015 resources coming soon)</h1>
 </div>
-<% if @country == 'ie' %>
-## Hosting an Hour of Code in Ireland? <a href="<%= hoc_uri('/resources/how-to-ireland') %>">See the how-to guide</a>
-<% else %>
-## Hosting an Hour of Code? <a href="<%= hoc_uri('/resources/how-to') %>">See the how-to guide</a>
-<% end %>
+## Hosting an Hour of Code? <a href="<%= resolve_url('/resources/how-to') %>">See the how-to guide</a>
 
-<a id="handouts">
+<a id="handouts"></a>
 ## Use this handout to spread the word
-
-[![image](/images/fit-250/one-pager.png)](/resources/hoc-one-pager.pdf)
+<a href="<%= resolve_file('/resources/hoc-one-pager.pdf') %>"><img src="/images/fit-250/one-pager.png"></a>
 
 ## Give this handout to teachers and schools
-[![image](/images/fit-250/schools-handout.png)](/files/schools-handout.pdf)
+<a href="<%= resolve_file('/files/schools-handout.pdf') %>"><img src="/images/fit-250/schools-handout.png"></a>
 
 
-<a id="videos">
+<a id="videos"></a>
 ## Show these videos to inspire students
 
 <div style="float:left; padding:10px">
@@ -49,7 +44,7 @@ nav: resources_nav
 <div style="float:left; padding:10px"></div>
 
 <div style='clear:both'></div>
-<a id="posters">
+<a id="posters"></a>
 ## Hang these posters in your school
 
 [![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
@@ -83,11 +78,11 @@ nav: resources_nav
 <a id="email"></a>
 ## Ask your school, employer or friends to sign up:
 
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. More than 100 million students have tried an Hour of Code. 
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Good news is, we’re on our way to change this. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code. 
 
-Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, December 7-13, 2015. 
+This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2015. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself -- everyone can benefit from learning the basics.
 
@@ -100,7 +95,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and minorities are severely underrepresented. Good news is, we’re on our way to change this.
 
-More than 100 million students worldwide have tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! and Disney. Over 100 partners joined together to support this movement. Last year, every Apple Store in the world hosted an Hour of Code and even President Obama wrote his first line of code as part of the campaign.  
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Dec. 7-13.
 
@@ -124,9 +119,9 @@ Dear Parents,
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly hinge on understanding how technology works. But only a tiny fraction of us are learning computer science, and less students are studying it than a decade ago.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 7-13). More than 100 million students worldwide already have tried an Hour of Code.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
 
-Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on your social media channels and consider hosting additional Hour of Code events in the community.
+Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
@@ -143,7 +138,7 @@ Your principal
 
 Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for *every* industry today. Yet 90% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that. 
+Did you know that in today’s economy, computing jobs outnumber students graduating into the field by 3-to-1? And, computer science is foundational for *every* industry today. Yet most of schools don’t teach it. At [SCHOOL NAME], we are trying to change that. 
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (Dec. 7-13). More than 100 million students worldwide have already tried an Hour of Code.
 

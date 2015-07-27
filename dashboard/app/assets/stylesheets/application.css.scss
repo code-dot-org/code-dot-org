@@ -24,12 +24,16 @@
  * Shared
  *= require user-menu
  *= require user-progress
+ *= require user-hero
+ *= require course-blocks
+ *= require details-polyfill
  */
 
 @import "color";
+@import "font";
 @import "mixins";
 
-$baseFontFamily: 'Gotham 4r', sans-serif;
+$baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
@@ -49,13 +53,13 @@ body {
 }
 
 h1 {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
   color: $purple;
 }
 
 h2 {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
 }
 
@@ -70,24 +74,24 @@ th {
   border: 1px solid white;
   text-align: left;
   font-size: 120%;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
   padding: 5px;
 }
 
 strong {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
 }
 
 em {
-  font-family: 'Gotham 4i', sans-serif;
+  font-family: $gotham-italics;
   font-style: normal;
 }
 
 strong em,
 em strong {
-  font-family: 'Gotham 7i', sans-serif;
+  font-family: $gotham-extra-bold-italics;
 }
 
 .center {
@@ -196,10 +200,10 @@ a.header_status_bar:hover {
 
 .main {
   padding: 10px;
-  a:link {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
-  a:visited {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color;}
-  a:hover {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: 'Gotham 7r', sans-serif; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
+  a:link {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
+  a:visited {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color;}
+  a:hover {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-extra-bold; font-weight: normal; color:$dark_color; background-color: transparent;}  /* selected link */
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {font-family: FontAwesome;}
 }
 
@@ -226,10 +230,10 @@ html, body {
   font-size: 14px;
   background-color: $dark_color;
   color: $header_text;
-  a:link {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: white;}
-  a:visited {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: white;}
-  a:hover {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
-  a:active {font-family: 'Gotham 4r', sans-serif; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
+  a:link {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:visited {font-family: $gotham-regular; font-weight: normal; color: white;}
+  a:hover {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;   text-decoration: underline; }  /* mouse over link */
+  a:active {font-family: $gotham-regular; font-weight: normal; color:white; background-color: transparent;}  /* selected link */
   select {
     width: auto;
     font-size:11px;
@@ -237,10 +241,10 @@ html, body {
     margin-bottom: 4px
     }
   .fineprint {
-    a:link {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:visited {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:hover {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
-    a:active {font-family: 'Gotham 5r', sans-serif; font-weight: normal;}
+    a:link {font-family: $gotham-bold; font-weight: normal;}
+    a:visited {font-family: $gotham-bold; font-weight: normal;}
+    a:hover {font-family: $gotham-bold; font-weight: normal;}
+    a:active {font-family: $gotham-bold; font-weight: normal;}
   }
   .dim {
     display: inline-block;
@@ -296,10 +300,15 @@ $default-modal-width: 640px;
 .modal {
   a:hover {color:$red; background-color: white; }
 
-  &.auto-resize-scrollable {
-    background-color: $lightest_gray;
+  &#block-documentation-lightbox {
+    width: 80% !important;
+  }
+}
+
+.auto-resize-scrollable {
+  &.modal {
     position: absolute;
-    top: 44px; // top of the dialog
+    top: 50px; // top of the dialog
 
     // make dialog auto-center regardless of width
     right: 0;
@@ -312,9 +321,8 @@ $default-modal-width: 640px;
 
     z-index: 1050;
   }
-
-  &#block-documentation-lightbox {
-    width: 80% !important;
+  .modal-image {
+    margin-top: -100px;
   }
 }
 
@@ -405,6 +413,17 @@ $default-modal-width: 640px;
   .project_name_wrapper .header_text {
     float: left;
     clear: left;
+  }
+  // TODO: Remove when applab is no longer in beta
+  .beta-notice {
+    float: left;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 7px 0;
+    font-family: $gotham-extra-bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff176;
   }
 }
 
@@ -718,7 +737,7 @@ input.header_input {
 
   .help_title {
     color: $cyan;
-    font-family: 'Gotham 7r', sans-serif;
+    font-family: $gotham-extra-bold;
     font-weight: normal;
     font-size: 17.5px;
     display: inline-block;
@@ -856,7 +875,7 @@ input.header_input {
   font-size: 20px;
   line-height: 28px;
   color: $purple;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   font-weight: normal;
 }
 
@@ -944,7 +963,7 @@ a.download-video {
 }
 
 .quiet_links {
-  a:link { font-family: 'Gotham 4r', sans-serif; font-weight: normal; }
+  a:link { font-family: $gotham-regular; font-weight: normal; }
 }
 
 .fixed_width_cell {
@@ -955,20 +974,51 @@ a.download-video {
 }
 
 #landingpage {
+  .welcome {
+    background-color: $light_purple;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    overflow: hidden;
+  }
+
+  .welcomeleft {
+    float: left;
+    text-align: center;
+    width: 190px;
+    img {
+    padding-left: 50px;
+    }
+  }
+
+  .welcomeright {
+    float: left;
+    text-align: center;
+  }
+
   .lines_of_code_header {
     width: 100%;
-    color: $charcoal;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-size: 30px;
+    color: white;
+    padding-left: 30px;
+    padding-top: 0px;
+    font-size: 24px;
+    line-height: 34px;
   }
 
   a.lines_of_code_link {
-    color: $charcoal;
+    color: white;
     text-decoration: none;
-    font-family: 'Gotham 5r', sans-serif;
+    font-family: $gotham-bold;
     font-weight: normal;
-    line-height: 40px;
+    line-height: 34px;
+    text-transform: uppercase;
+  }
+
+  .description {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .row#continue {
@@ -977,7 +1027,7 @@ a.download-video {
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+      font-family: $gotham-extra-bold; font-weight: normal;
     }
     .btn {
       height: 32px;
@@ -1084,7 +1134,7 @@ a.download-video {
       }
       a {
         color: $lightest_gray;
-        font-family: 'Gotham 4r', sans-serif; font-weight: normal;
+        font-family: $gotham-regular; font-weight: normal;
       }
       .white {
         color:white;
@@ -1103,14 +1153,6 @@ a.download-video {
       -moz-box-sizing:border-box; box-sizing:border-box; padding:10px;
     }
   }
-  .twolineheader {
-    h2 {
-      font-family: 'Gotham 4r', sans-serif; font-weight: normal; color: $purple; font-size: 24px; margin-bottom: 0px; line-height: 30px;
-    }
-    h1 {
-      margin-top: 0px; line-height: 30px; font-size: 30px;   font-family: 'Gotham 5r', sans-serif; font-weight: normal;
-    }
-  }
 
   #edit_teachers {
     background-color: $lightest_gray;
@@ -1125,127 +1167,12 @@ a.download-video {
   margin: 10px 0;
 }
 
-#landingpage h3 img.logo,
-.course_progress h3 img.logo {
-  height: 40px;
-}
-
-.betatext {
-  color: $realyellow;
-}
-
-.miniblock {
-  background-color:$lightest_gray;
-  height:100px;
-  .heading {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 10px 0px 10px 0px;
-  }
-  h3 {
-    margin: 0;
-    color: $charcoal;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 24px;
-  }
-  .smalltext {
-    font-size:13px;
-    padding-right:10px;
-    font-family: 'Gotham 4r', sans-serif;
-    font-weight:normal;
-    color:$charcoal;
-  }
-  .whitetext {
-    color:$lightest_gray;
-  }
-  .greytext {
-    color:$charcoal;
-  }
-  .imgspan {
-    margin-left: 0px;
-    text-align: right;
-  }
-  .audience {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom:4px;
-    background-color: $charcoal;
-  }
-}
-
-.miniblock-short {
-  height:150px;
-  h3 {
-    margin-bottom:10px;
-  }
-}
-
-.miniblock-tall {
-  height:232px;
-
-  .heading {
-    padding-left: 10px;
-    padding-right:10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  h3 {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: 'Gotham 5r', sans-serif;
-    font-weight: normal;
-    display: block;
-    float: left;
-    width: 200px;
-  }
-
-  .beta
-  {
-    .heading {
-      padding-right: 0px;
-    }
-
-    h3 {
-      width: 140px;
-    }
-
-    .betatext {
-      text-align: center;
-      display: block;
-      float: right;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      background-color: $light_gray;
-      padding-left: 5px;
-      padding-right: 5px;
-      font-size: 24px;
-      height: 35px;
-      line-height: 40px;
-      width: 60px;
-    }
-  }
-}
-
-.miniblock-tall-audiencerow {
-  height:258px;
-}
-
 #signin {
   .tryfirst {
     margin-bottom:10px;
     a {
       font-size:18px;
-      font-family: 'Gotham 4r', sans-serif;
+      font-family: $gotham-regular;
       font-weight: normal;
     }
   }
@@ -1394,7 +1321,7 @@ a.download-video {
       .giantmark {
         .text {
           opacity: 0.8;
-          font-family: 'Gotham 5r', sans-serif; font-weight: normal;
+          font-family: $gotham-bold; font-weight: normal;
         }
       }
     }
@@ -1551,7 +1478,7 @@ div.mini_gallery_activity {
   color: white;
   font-size: 13px;
   padding-right: 10px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: $gotham-regular;
   font-weight: normal;
   padding: 10px;
 }
@@ -1712,7 +1639,7 @@ $modal-image-margin-gap: 10px;
     }
 
     .hint-header {
-      font-family: 'Gotham 7r', sans-serif;
+      font-family: $gotham-extra-bold;
       font-weight: normal;
     }
 
@@ -1731,7 +1658,7 @@ $modal-image-margin-gap: 10px;
 }
 
 .dialog-title {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   font-weight: normal;
 }
 

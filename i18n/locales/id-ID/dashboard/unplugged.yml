@@ -188,9 +188,9 @@ id:
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Kondisional dan fungsi Piecewise
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: Parameter kami lolos ke fungsi menyebabkan output untuk bervariasi berdasarkan pola yang sangat kaku. Misalkan kita ingin parameter dengan beberapa nilai untuk membuat output menggunakan satu pola tetapi nilai-nilai lain untuk menggunakan pola yang berbeda. Di sinilah conditional diperlukan ...
         video: alg_10_conditionals
       CollisionDetection:
         title: Pendeteksian Benturan dan Teorema Pythagoras
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        desc: Menentukan kapan objek pada layar sentuh merupakan aspek penting dari sebagian besar permainan. Dalam pelajaran ini kita akan melihat bagaimana Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau karakter game) yang menyentuh.
         video: alg_16_biggame_collision_detection

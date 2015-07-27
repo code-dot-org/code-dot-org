@@ -1,0 +1,8 @@
+name 'U2L08 Free Response 3'
+title 'Router Table: Reflection'
+
+
+markdown <<MARKDOWN
+Why does a router keep track of the cost to a destination through multiple routers instead of only the fastest one?
+
+MARKDOWN

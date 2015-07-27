@@ -1,4 +1,7 @@
 var path = require('path');
+var crypto = require('crypto');
+var fs = require('fs');
+var mkdirp = require('mkdirp');
 
 var config = {};
 
@@ -90,12 +93,12 @@ if (process.env.MOOC_LOCALE) {
 }
 
 config.clean = {
-  all: ['build']
+  all: ['build'],
+  digest: ['build/package/js/**/*-????????????????????????????????.js']
 };
 
 var ace_suffix = DEV ? '' : '-min';
 var dotMinIfNotDev = DEV ? '' : '.min';
-var requirejs_dir = DEV ? 'full' : 'min';
 
 config.copy = {
   src: {
@@ -152,12 +155,6 @@ config.copy = {
       },
       {
         expand: true,
-        cwd: 'lib/requirejs/' + requirejs_dir + '/',
-        src: ['require.js'],
-        dest: 'build/package/js/requirejs/'
-      },
-      {
-        expand: true,
         cwd: 'lib/droplet',
         src: ['droplet-full' + dotMinIfNotDev + '.js'],
         dest: 'build/package/js/droplet/',
@@ -205,6 +202,15 @@ config.copy = {
         dest: 'build/package/js/jsinterpreter/'
       }
     ]
+  }
+};
+
+config.digest = {
+  options: {
+    out: 'build/package/js/manifest.js'
+  },
+  files: {
+    src: ['build/package/js/**/*.js', '!build/package/js/ace/**/*.js']
   }
 };
 
@@ -428,10 +434,30 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
   grunt.registerTask('noop', function () {});
 
+  // Add md5 digest to filenames
+  grunt.registerMultiTask('digest', function () {
+    var manifest = {};
+    var manifestFile = this.options().out;
+
+    this.filesSrc.forEach(function (file) {
+
+      // Don't add a digest to the manifest
+      if (file === manifestFile) {
+        return;
+      }
+
+      var data = grunt.file.read(file);
+      var digest = crypto.createHash('md5').update(data).digest('hex');
+      var oldName = path.relative('build/package', file);
+      var newName = oldName.replace(/\.js$/, '-' + digest + '.js');
+      fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
+      manifest[oldName] = newName;
+    });
+    grunt.file.write(manifestFile, 'window.digestManifest = ' + JSON.stringify(manifest));
+  });
+
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function() {
-    var fs = require('fs');
-    var mkdirp = require('mkdirp');
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
     APPS.concat('common').map(function (item) {
@@ -461,7 +487,9 @@ module.exports = function(grunt) {
     'exec:browserify',
     // Skip minification in development environment.
     DEV ? 'noop' : ('concurrent:uglify'),
-    'postbuild'
+    'postbuild',
+    'clean:digest',
+    'digest'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
@@ -489,4 +517,5 @@ module.exports = function(grunt) {
   process.env.mocha_grep = grunt.option('grep') || '';
   process.env.mocha_debug = grunt.option('debug') || '';
   process.env.mocha_entry = grunt.option('entry') || '';
+  process.env.mocha_invert = grunt.option('invert') || '';
 };

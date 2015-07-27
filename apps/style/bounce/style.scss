@@ -1,5 +1,7 @@
 $root: '/blockly/media/bounce/'; //TODO: Parameterize for asset pipeline
 
+@import 'font';
+
 #svgBounce {
   overflow: hidden;
 }
@@ -110,7 +112,7 @@ button.arrow:focus {
 .bounce-score {
   text-anchor: middle;
   font-size: xx-large;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: $gotham-extra-bold;
   fill: white;
   stroke: black;
   stroke-width: 2;

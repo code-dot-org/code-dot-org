@@ -112,7 +112,7 @@ function runLevel (app, skinId, level, onAttempt, testData) {
   var studioApp = require('@cdo/apps/StudioApp').singleton;
 
   if (level.editCode) {
-    assert(window.requirejs);
+    assert(window.droplet);
   }
   setAppSpecificGlobals(app);
 
@@ -132,19 +132,23 @@ function runLevel (app, skinId, level, onAttempt, testData) {
     Dialog: StubDialog,
     isAdmin: true,
     onInitialize: function() {
-      // Click the run button!
-      if (testData.runBeforeClick) {
-        testData.runBeforeClick(assert);
-      }
-
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already
       var timeout = 0;
       if (level.editCode && !studioApp.editor) {
         timeout = 500;
       }
+
       setTimeout(function () {
-        studioApp.runButtonClick();
+        assert(window.droplet, 'droplet is in global');
+
+        // Click the run button!
+        if (testData.runBeforeClick) {
+          testData.runBeforeClick(assert);
+        }
+
+        studioApp.runButtonClickWrapper.call(studioApp, studioApp.runButtonClick);
+
       }, timeout);
       // waitLong();
     },

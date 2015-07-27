@@ -11,6 +11,7 @@ module.exports = React.createClass({
     handleChange: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
   },
 
   getInitialState: function() {
@@ -37,6 +38,7 @@ module.exports = React.createClass({
         handleChange={this.props.handleChange}
         onDepthChange={this.props.onDepthChange}
         onDelete={this.props.onDelete}
+        onInsertEvent={this.props.onInsertEvent}
         isToolboxVisible={this.state.isToolboxVisible} />
     </div>;
   }

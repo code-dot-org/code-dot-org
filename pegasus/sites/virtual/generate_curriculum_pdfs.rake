@@ -13,7 +13,7 @@ def pdf_conversions_for_files(file_pattern, url_extension)
       extname = File.extname(file)
       file_path_without_extension = file[0...-(extname.length)]
       url_path_from_curriculum_without_extension = file_path_without_extension.match(/curriculum-(.*)/)[1]
-      url_path = 'curriculum/' + url_path_from_curriculum_without_extension + url_extension
+      url_path = 'curriculum/' + url_path_from_curriculum_without_extension + url_extension + '?pdf_version=true'
       conversion_infos << PDFConversionInfo.new(url_path, [file], file_path_without_extension + '.pdf')
     end
   end

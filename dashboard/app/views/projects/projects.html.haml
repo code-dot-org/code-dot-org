@@ -61,6 +61,4 @@
       = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
       = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
 
-
-- if current_user.try(:admin?)
-  = render partial: 'projects/admin'
+= render partial: 'projects/admin'

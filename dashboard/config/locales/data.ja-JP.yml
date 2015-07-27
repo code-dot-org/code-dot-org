@@ -117,8 +117,8 @@
     concept:
       description:
         sequence: シークエンス
-        if: もしもブロック
-        if_else: If else ブロック
+        if: もしブロック
+        if_else: もし/でなければブロック
         loop_times: 回ブロックを繰り返す
         loop_until: までブロックを繰り返します
         loop_while: の間にブロック
@@ -138,14 +138,14 @@
         maze_2_8: 灰色のブロックを消すことはできません。「繰り返し」ブロックを使い、3回繰り返し、このパズルを解きましょう。「動く」「動く」「曲がる」の3つのブロックを灰色の「繰り返し」ブロックにいれてみましょう
         maze_2_9: OK。新しい「まで繰り返す(Repeat until)」ブロックを試しましょう。いらいらさせるブタにたどりつくまで繰り返します
         maze_2_10: 最後の問題です。4つのブロックだけを使いパズルを解けますか？
-        maze_2_11: 人間のあなた。わたしはzmbie。おなかが減っています。。。ヒマワリが必要です。5つの ブロックだけでわたしを連れていけますか？
+        maze_2_11: 人間のあなた。わたしはゾンビ。おなかが減っています。。。ヒマワリが必要です。5つのブロックだけでわたしを連れていけますか？
         maze_2_12: OK。似ていますが、ちょっと違います。ブロック5つだけでできますか？
-        maze_2_13: '新しい"if"ブロックを使い、いつ曲がるかを決めてください。ヒント: あともう１つのブロックが必要です、どう設定しているかを学べば、次はひとりでできるようになります'
-        maze_2_14: OK。さっきのパズルと同じです、でもどうやって"if"ブロックと"repeat"ブロックを一緒に使ったかをもう一度思い出してみましょう
-        maze_2_15: ヒマワリがほしい！一番小さいk座右のの"if"ブロックを使いそこまで連れていってください
+        maze_2_13: '新しい"もし"ブロックを使い、いつ曲がるかを決めてください。ヒント: あともう１つのブロックが必要です、どう設定しているかを学べば、次はひとりでできるようになります'
+        maze_2_14: OK。さっきのパズルと同じです、でもどうやって"もし"ブロックと"繰り返し"ブロックを一緒に使ったかをもう一度思い出してみましょう
+        maze_2_15: ヒマワリがほしい！"もし"ブロックを使って最小限のブロック数で私をそこまで連れていってください。
         maze_2_16: OK 練習のためにもう一度。 ー　それほど違いはないけれど、 チャンパーたちに気をつけて！
-        maze_2_17: '"If-else"ブロックは条件をきめて、なにかしらのことをします。ヒマワリをとってくるために、新しいブロックを試しましょう'
-        maze_2_18: '"if-else"ブロックをもう一度練習。一度でちゃんとできるでしょうか？'
+        maze_2_17: '"もし/でなければ"ブロックは条件を確かめて、あること、あるいは別のあることをします。ヒマワリをとってくるためにこの新しいブロックを試しましょう。'
+        maze_2_18: '"もし/でなければ"ブロックをもう一度練習。一度でちゃんとできるでしょうか？'
         maze_2_19: ブロックをあと3つ足して、難しい迷路を解くのをたすけてくれますか？もしそれができれば、どんな長くカーブした道でも歩けるようになります
         turtle_1_1: こんにちは、はアーティストです。プログラムを作ればどんな形でも描くことができます。ブロックをいくつか使い、灰色の線をなぞらせてください
         turtle_1_2: '四角形を描きます。注: 新しい「色の設定」ブロックで選択して、好きな色を使用する'
@@ -182,7 +182,7 @@
         maze_karel_1_8: できる限り少ない数のブロックで、畑のはじの穴を埋めるのを手伝ってください。
         maze_karel_1_9: これらすべての泥山をなくしましょう。できる限り少ない数のブロックを使ってください。ヒント："while"ブロックを使ってみてください
         maze_karel_1_10: 遅くまで仕事をしていたので外は真っ暗、積み上がった山がどのくらい大きいのかわかりません。whileブロックにあったようなオプションはもうありません。畑にそって私を移動させ、山があれば移動させます
-        maze_karel_1_11: 外はまだ暗いです。私を田んぼにそって移動してください。山があったら移動し、穴があったら埋めます。ヒント:"if"ブロックでオプションのドロップ
+        maze_karel_1_11: 外はまだ暗いです。私を田んぼにそって移動してください。山があったら移動し、穴があったら埋めます。ヒント:"もし"ブロックでオプションのドロップ
           ダウン メニューを使います
         turtle_2_1: 'こんにちは。私、zombieアーティスト。私、描くのが大好き ！特別な色で四角形を描くのを手伝ってください。重要: ブロックはみんな同じですが、カテゴリーに分かれています'
         turtle_2_2: 新しいブロックを定義させてくれる機能を使いましょう！「機能」カテゴリにある、新しい「四角形を描く」ブロックを試して、小さな
@@ -265,9 +265,9 @@
         flappy_1: 「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます
         flappy_2: いくつかの面を追加します。「面にヒットしたとき」ブロックに接続します。Flappyがクラッシュしたとき「ゲームオーバー」のコードが必要です
         flappy_3: 「実行時」ブロック同士をくっつけておくと、ゲームがはじまったときにそのブロックのとおりにうごきます。スピードとはねのうごきのレベルをセットしてみてください
-        flappy_4: もしクラッシュさせるコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されtパイプにクラッシュするときに「ゲーム終了」のコードが必要になります
+        flappy_4: もしクラッシュさせるコードを書かない場合、Flappyは障害物を通り抜けて飛びます。「障害物にヒットしたとき」ブロックにブロックを接続します。フラッピーが最初に設置されたパイプにクラッシュするときに「ゲーム終了」のコードが必要になります。
         flappy_5: とくてんひょうをつくり、Flappyがどかんをとおりぬけたときのてんすうをかぞえましょう。「どかんをとおりぬけたとき」のブロックにぶろっくをくっつけて、とんでいるFlappyがどかんのあいだをとおりぬけたときにてんすうがふえるようにしてください
-        flappy_6: Flappyがふらふら飛ぶ量を小さくしたり大きくした後、まだ得点しているかどうか見てください
+        flappy_6: フラッピーのふらふら飛ぶ量を小さくや大きくした後、まだ得点しているかどうか見てください。
         flappy_7: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください
         flappy_8: |
           ゲームが開始した以外にもいつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などの状況が起こるランダムな状況を設定するようにしてください
@@ -382,9 +382,9 @@
         flappy_intro: Flappy入門編
         loop_times: 回ブロックを繰り返す
         loop_until: までブロックを繰り返します
-        if: もしもブロック
-        if_else: もしも/他にブロック
-        if_else_scrat: もしも/他にブロック
+        if: もしブロック
+        if_else: もし/でなければブロック
+        if_else_scrat: もし/でなければブロック
         function: 関数
         loop_while: の間にブロック
         loop_for: 数える ブロック
@@ -401,7 +401,7 @@
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: ラップアップ
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: ハッピーマップ
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
         C1_getting_loopy: Getting Loopy
@@ -452,7 +452,8 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C4_intro: はじめに
+        C4_loops_zombie: ループ
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -487,6 +488,7 @@
         csp_textcompression: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
+        csp_internetsimulator_3: Internet Simulator - Part 3
         alg_1_intro: CS in Algebra - Introduction
         alg_2_eval_block: CS in Algebra - Evaluation Blocks
         alg_3_pemdas: CS in Algebra - Order of Operations
@@ -508,10 +510,10 @@
       text:
         drag_blocks: 「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。
         run: 「実行」ボタンをおして、プログラムをうごかしてみてください。
-        watch_again: Click here to watch the video again
+        watch_again: ここをクリックするともう一度ビデオを見られます
         gray_block_explanation: 灰色のブロックは消すことができません。それでもパズルをとくことができるでしょうか？
         show_code_explanation: 自分で書いたプログラムコードを表示する
-        instructions_repeat_explanation: それぞれのパズルについてのプログラムはくりかえしになります。
+        instructions_repeat_explanation: 各パズルの説明はここに再度表示されます
         category_explanation: 前と同じブロックがすべてそろっていますが、種類別になっています
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
@@ -525,7 +527,7 @@
           workspace
         repeat_blocks_1: (1)このブロックを使います。作業領域にある灰色のブロック達のあたりに置いてください
         repeat_blocks_2: (2)"繰り返し"ブロックをここに移動させて、灰色のブロック達を内側に置いてください
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
+        snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
         degrees_per_side: Divide 360 by the number of sides to get the size of each
           angle in degrees.
         set_sides: Use this block to set "sides" to the number needed to complete
@@ -589,9 +591,8 @@
         arrows_move_actor: Use the arrows to move the actor
         right_arrow_fireball: Use the right arrow to shoot fireballs
         name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_right_runbutton: うごかすブロックをここに足してください。
+        Infinity_move_directions_callout: どのブロックが上矢印を押したときにベイマックスを上に動かすでしょうか。
+        Infinity_move_directions_callout_arrow: これらの矢印を使って操縦してください。
+        Infinity_move_collide_callout: このイベントが起きたときに音を鳴らしてください。
+        Infinity_repeat_callout: 移動ブロックをこの中に置いてください

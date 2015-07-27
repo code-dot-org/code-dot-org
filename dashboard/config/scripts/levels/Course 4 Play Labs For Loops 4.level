@@ -25,7 +25,15 @@
     "use_contract_editor": "false",
     "coordinate_grid_background": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "Changing the increment can be helpful, but we're still counting linearly (each number is the same distance from the last) What if I wanted to count exponentially? \r\n\r\n<br/>\r\nWithout changing the settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

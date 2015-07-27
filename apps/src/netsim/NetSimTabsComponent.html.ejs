@@ -8,8 +8,6 @@
   var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);
   var showRouter = shouldShowTab(level, NetSimTabType.ROUTER);
   var showDns = shouldShowTab(level, NetSimTabType.DNS);
-
-  var instructionsContent = level.instructions || '';
 %>
 <div class="netsim-tabs">
   <ul>
@@ -28,7 +26,6 @@
   </ul>
   <% if (showInstructions) { %>
     <div id="tab_instructions">
-      <p><%= instructionsContent %></p>
       <button id="finished" class="btn btn-primary submitButton"><%= i18n.continueButton() %></button>
     </div>
   <% } %>

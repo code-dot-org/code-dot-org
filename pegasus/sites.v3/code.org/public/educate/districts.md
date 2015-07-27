@@ -13,6 +13,10 @@ social:
 ---
 # Partner with Code.org to bring K-12 computer science to your district
 
+*"Computer programming has become far more accessible to teach and learn, and our country needs more students to learn it."* - Randi Weingarten, President, American Federation of Teachers
+
+
+
 ## Existing partners (including all 7 of the largest US school districts)
 
 [col-50]
@@ -40,10 +44,12 @@ social:
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-
 ## What does a K-12 district partnership look like?
 
-We have two goals for a district partnership: 
+<%= view :pd_quotes %>
+<br />
+
+### We have two goals for a district partnership: 
 
 - Expanding *access* to high-quality computer science education to all students;
 - Establishing a computer science program that will grow and be sustained within the district beyond the term of our partnership.

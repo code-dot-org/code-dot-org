@@ -4,6 +4,13 @@ class ProjectsController < ApplicationController
 
   TEMPLATES = %w(projects)
 
+  STANDALONE_PROJECTS = {
+    artist: 'New Artist Project',
+    playlab: 'New Play Lab Project',
+    applab: 'New App Lab Project',
+    algebra_game: 'New Algebra Project',
+  }
+
   def index
   end
 

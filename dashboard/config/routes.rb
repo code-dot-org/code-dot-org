@@ -81,10 +81,9 @@ Dashboard::Application.routes.draw do
 
   resources :projects, path: '/p/', only: [:index] do
     collection do
-      get '/artist', to: 'levels#show', key: 'New Artist Project', as: 'artist'
-      get '/playlab', to: 'levels#show', key: 'New Play Lab Project', as: 'playlab'
-      get '/applab', to: 'levels#show', key: 'New App Lab Project', as: 'applab'
-      get '/algebra_game', to: 'levels#show', key: 'New Algebra Project', as: 'algebra_game'
+      ProjectsController::STANDALONE_PROJECTS.each do |key, value|
+        get '/' + key.to_s, to: 'levels#show', key: value, as: key.to_s
+      end
       get '/:template', to: 'projects#template'
     end
   end

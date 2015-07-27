@@ -315,9 +315,16 @@
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Kondisional dan fungsi Piecewise
-        desc: Conditionals and Piecewise Functions lesson description
+        desc: Parameter kami lolos ke fungsi menyebabkan output untuk bervariasi berdasarkan
+          pola yang sangat kaku. Misalkan kita ingin parameter dengan beberapa nilai
+          untuk membuat output menggunakan satu pola tetapi nilai-nilai lain untuk
+          menggunakan pola yang berbeda. Di sinilah conditional diperlukan ...
         video: alg_10_conditionals
       CollisionDetection:
         title: Pendeteksian Benturan dan Teorema Pythagoras
-        desc: Collision Detection lesson description
+        desc: Menentukan kapan objek pada layar sentuh merupakan aspek penting dari
+          sebagian besar permainan. Dalam pelajaran ini kita akan melihat bagaimana
+          Teorema Pythagoras dan Formula Jarak dapat digunakan untuk mengukur jarak
+          antara dua titik di pesawat, dan kemudian memutuskan apakah dua poin (atau
+          karakter game) yang menyentuh.
         video: alg_16_biggame_collision_detection

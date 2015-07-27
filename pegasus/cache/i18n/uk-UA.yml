@@ -1,7 +1,7 @@
 "uk-UA":
   hello: Привіт, світ!
   select_language: Будь ласка, виберіть мову
-  computer_science: Інформатика
+  en: Інформатика
   computer_science_edweek: Тиждень інформатичної освіти
   csedweek_dates: 8-14 грудня 2014 року
   csedweek_banner_hoc: 'Наближається <a href="http://hourofcode.com" style="color:
@@ -18,7 +18,7 @@
     # інших.'
   petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я.
     Приєднайтесь до # інших.'
-  petition_join_others: 'Join # others'
+  petition_join_others: 'Приєднатися до # інших'
   name: Ім’я
   email: Електронна пошта
   zipcode: Поштовий індекс або країна
@@ -61,6 +61,7 @@
   congratulations: Вітання!
   congratulations_on_completing_hoc: Вітаємо із завершенням першої Години коду
   get_a_certificate_of_achievement: Отримати сертифікат досягнень
+  enter_valid_age: Будь ласка, виберіть припустимі віку
   enter_valid_email: Будь ласка, введіть електронну адресу
   get_a_certificate_message: Ми надішлемо вам сертифікат та інформацію про те, як
     <a href='/learn/beyond'>вчитися далі після однієї години коду</a>
@@ -200,9 +201,10 @@
     &ldquo;Ця програма спонукала 100% моїх учнів
     до активної участі та залучення.&rdquo;
     Адам, вчитель
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_loc: '#loc линий кода, які написані учнями'
+  homepage_hero_text_stat_students: '#student_count облікові записи учнів на Code
+    Studio'
+  homepage_hero_text_stat_served: 'Година код: #served надана'
   homepage_slot_text_hoc: Година Коду
   homepage_slot_text_frozen: Крижане серце з Анною і Ельзою
   homepage_slot_text_teacher: Teacher Dashboard
@@ -326,6 +328,48 @@
   dashboard_landing_available_title: Доступні курси
   dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні
     для Вас і Ваших учнів.
+  dashboard_landing_more_tutorials: Хочите побачити більше уроків?
+  dashboard_landing_more_tutorials_desc: Є й інші навчальні посібники <a href="/learn/beyond">
+    від наших партнерів.</a> Навчіться програмувати з роботами, зробити веб-сторінки,
+    зробити свій власний app або вивчити інші мови, як C++, Ruby, Python або!
+  dashboard_hoc_courses: Година код для людей різного віку
+  dashboard_hoc_courses_desc: Спробуйте один із цих коротше 1 годину підручники з
+    вашими студентами!
+  dashboard_k5_courses: 20-годинні курси для К-5
+  dashboard_k5_courses_desc: Ці курси онлайн, суміш самонавідними і самопідготовки
+    підручники з "unplugged" діяльності, які вимагають без комп'ютера на всіх. Кожний
+    курс складається з близько 20 уроків, які можуть бути реалізовані як одну одиницю
+    або протягом семестру. Попередньо читачів навіть дитячий садок віку можуть взяти
+    участь. Щоб допомогти вам почати роботу, ми пропонуємо високу якість професійних
+    семінарах розвитку навколо США безкоштовно. <a href="/professional-development-workshops">
+    знайти найближчий до вас!</a>
+  dashboard_middle_courses: 20-годинні курси для середньої школи
+  dashboard_middle_courses_desc: Наші навчальні програми середня школа використовує
+    інформатики та програмування у контексті математики середньої школи і науки -
+    як інструмент, щоб навчити математичних і наукових понять. Зареєструватися для
+    професійних семінарах розвитку, подати заяву на <a href="/educate/districts">
+    районних широкий партнерство</a> з Code.org.
+  dashboard_high_courses: Річні курси середньої школи
+  dashboard_high_courses_desc: Наші програми середня школа допомагає шкільних округів
+    пропонують повний рік комп'ютерні науки класи з підготовки існуючих педагогічного
+    колективу пропонувати це нове поле. Зареєструватися для професійних семінарах
+    розвитку, подати заяву на <a href="/educate/districts"> районних широкий партнерство</a>
+    з Code.org.
+  dashboard_course_csina: Інформатика в алгебрі
+  dashboard_course_csina_desc: Code.org має партнерські відносини з початкового завантаження
+    розробити навчальні програми, яка навчає алгебраїчних і геометричні концепції
+    через програмування.
+  dashboard_course_csins: Інформатика в науці
+  dashboard_course_csins_desc: Code.org має партнерські відносини з проекту МУЖНІСТЬ,
+    щоб доставити введення в комп'ютерні науки поняття у контексті моделювання та
+    симуляції.
+  dashboard_course_ecs: Відкриваючи інформатику
+  dashboard_course_ecs_desc: 'Вивчення інформатики, річної курс, який складається
+    з 6 блоків: Human Computer Interaction, вирішення проблем, веб-дизайн, програмування,
+    обчислювальним та аналізу даних і робототехніка.'
+  dashboard_course_csp: AP® принципи комп'ютерної науки
+  dashboard_course_csp_desc: Code.org розробив суворі, чарівна і доступним курс, який
+    досліджує основоположної ідеї обчислень.
   dashboard_landing_loading: Завантаження...
   dashboard_action_edit: Редагувати
   dashboard_action_save: зберегти
@@ -401,10 +445,12 @@
   dashboard_students_reset_password: Скинути пароль
   dashboard_students_share_section: 'Надайте адресу сторінки входу для своїх учнів:'
   dashboard_students_print_info: Роздрукуйте картки з вхідною інформацією своїх учнів.
+  dashboard_students_secret_picture_title: Таємне зображення
   dashboard_students_secret_picture: Таємне зображення
   dashboard_students_reset_picture: Можете скинути таємне зображення у будь-який момент,
     обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створено
     нове таємне зображення, яке потрібно використати для наступного входу цього учня.
+  dashboard_students_secret_word_title: Таємне слово
   dashboard_students_secret_word: Таємне слово
   dashboard_students_reset_word: 'Можете скинути таємне слово у будь-який момент,
     обираючи <b> Показати таємний код </b> та <b> Скинути таємний код</b> . Буде створена
@@ -419,11 +465,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Клацніть
     тут</a> щоб переглянути угоду конфіденційності, яку можна роздрукувати та обговорити
     з учнями.
-  dashboard_curriculum_overview: Огляд навчальної програми
+  dashboard_curriculum_k5_title: K-5 ресурси педагога
+  dashboard_curriculum_middle_title: Середня школа ресурси педагога
+  dashboard_curriculum_high_title: Вища школа  ресурси педагога
+  dashboard_lesson_plans: Плани уроків
   dashboard_view_all_lesson_plans: Переглянути всі конспекти уроків
   dashboard_course1: 'Курс 1:'
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
+  dashboard_course4: 'Курс 4 (beta): '
+  dashboard_curriculum: Навчальний план
+  dashboard_curriculum_overview: Огляд навчальної програми
+  dashboard_overview: Огляд
   dashboard_sequence: Послідовність
   dashboard_framework: Програма
   dashboard_standards: Стандарти
@@ -434,6 +487,10 @@
   dashboard_puzzle_solving: 'Розв''язання задач:'
   dashboard_student_worksheet: інструкція для учня
   dashboard_teacher_worksheet: інструкція для вчителя
+  dashboard_curriculum_csina: 'Інформатика в алгебрі:'
+  dashboard_curriculum_csins: 'Інформатика в науці:'
+  dashboard_curriculum_csp: 'AP® принципи інформатики:'
+  dashboard_curriculum_ecs: 'Відкриваючи інформатику:'
   dashboard_grade_k: Kлас
   dashboard_grade_other: Інше
   dashboard_login_word: Слово
@@ -465,6 +522,7 @@
     логінів, <b>зображень, слів та електронних скриньок</b>, які можна обрати для
     групи.
   dashboard_faq: Запитання й відповіді
+  dashboard_faq_k5: K-5 запитання й відповіді
   code_hoc_coming: Година коду вже тут - 8-14 грудня!
   code_sign_up: Зареєструватися для участі протягом тижня інформатики
   learn_more: Дізнатися більше
@@ -1125,8 +1183,8 @@
   sphero_beyond_longdescription: Чи ви є педагогом чи батьком, уроки SPRK пропонують
     цікавий прискорений курс програмування роботів, водночас розвиваючи математичні
     та природничі знання та навики.
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: To increase security, we are switching to HTTPS on
-    %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-    here</a> to learn how to enable HTTPS for Code.org.
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_header: Будь ласка, увімкніть HTTPS для Code.org.
+  compatibility_https_message: Для підвищення безпеки, ми перейшли до HTTPS на %{https_date}.
+    Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'>
+    натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org.
+  compatibility_https_hide_this_warning: Сховати попередження

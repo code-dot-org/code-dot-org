@@ -179,7 +179,7 @@ fa-AF:
         desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
         video: alg_5_contracts
       DesignRecipe:
-        title: دستور العمل طرح
+        title: دستور العمل طراحی
         desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
         video: alg_8_design_recipe
       Booleans:

@@ -948,7 +948,6 @@ Blockly.BlockSvg.prototype.renderDrawTop_ = function(renderInfo, rightEdge,
  */
 Blockly.BlockSvg.prototype.renderDrawRight_ = function(renderInfo, connectionsXY,
     inputRows, iconWidth) {
-  var connectionX, connectionY;
   for (var i = 0, row; row = inputRows[i]; i++) {
     renderInfo.curX = BS.SEP_SPACE_X;
     if (i === 0) {
@@ -998,6 +997,7 @@ Blockly.BlockSvg.prototype.renderDrawRightCollapsed_ = function (renderInfo, row
 
 Blockly.BlockSvg.prototype.renderDrawRightInputValue_ = function (renderInfo,
   inputRows, rowIndex, connectionsXY) {
+  var connectionX, connectionY;
   // External input.
   var connectionX, connectionY;
   var row = inputRows[rowIndex];
@@ -1064,6 +1064,7 @@ Blockly.BlockSvg.prototype.renderDrawRightDummyInput_ = function (renderInfo,
 
 Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo,
   inputRows, rowIndex, connectionsXY) {
+  var connectionX, connectionY;
   // Nested statement.
   var connectionX, connectionY;
   var row = inputRows[rowIndex];
@@ -1131,6 +1132,7 @@ Blockly.BlockSvg.prototype.renderDrawRightNextStatement_ = function(renderInfo,
 
 Blockly.BlockSvg.prototype.renderDrawRightInline_ = function (renderInfo, inputRows,
   rowIndex, connectionsXY) {
+  var connectionX, connectionY;
   // Inline inputs.
   var row = inputRows[rowIndex];
   var hasFunctionalInput = false;

@@ -211,8 +211,8 @@ es:
         Utiliza ciclos while para recolectar todo el néctar
         de las flores en este campo.
       2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+        Evaluación: Usa el bloque de repetición para recoger
+        todo el néctar.
       2-3 Bee Loops 1A_instruction: |
         Hola, soy una abeja. ¿Puedes ayudarme a recolectar 
         el néctar de estas flores? 
@@ -561,6 +561,10 @@ es:
       4-5 While Loops 7_instruction: ¡Wow, ahora hay tres montones de tierra! ¿Puedes escribir un programa que elimine cada uno de ellos hasta que la tierre quede plana?
       4-5 While Loops 8_instruction: ' Hay un hueco muy profundo y mucha tierra amontonada. ¿Cúantas paladas son necesarias para aplanar la tierra? Sugerencia: Utiliza el circuito de bloque "while" para ambas.'
       4-5 While Loops Assessment 1_instruction: Existen un montón de huecos y pilotes. Ayúdame a llenarlos y removerlos para aplanar la tierra.
+      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -980,10 +984,6 @@ es:
       Code Studio Puzzle Challenge Var - Artist_instruction: |
         Draw a line by using
         a variable "length" set to 180.
-      course 1 artist 1 level 10_instruction: |
-        Draw the dashed line by using both
-        the jump and draw blocks
-      course 1 artist 1 level 9_instruction: Draw this using three lines
       Course 2 Bee Loops 1_instruction: |
         Hi, I'm a bee. Can you help me collect
         the nectar from these flowers? 
@@ -1006,6 +1006,12 @@ es:
       Course 4 2_instruction: La abeja solo quiere néctar ahora mismo. Recuerda, no todos los objetos son flores, así que chequea, para solo recoger néctar de las flores.
       Course 4 Artist 1_instruction: Ayúdame a terminar de dibujar mi caja. (Cada línea es de 300 píxeles de largo)
       Course 4 Artist 10_instruction: ¡ Es hora de jugar gratis! Diviértete y dibuja lo que quieras.
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: ¿Puedes enlazar este código para que dibuje de gris el cuadrado?
       Course 4 Artist 3_instruction: 'Muy bien, trat de averiguar que sucede si ejecutas este código (o presionas "Run" para comprobarlo). Entonces repítelo varias veces hasta completar el dibujo.'
       Course 4 Artist 4_instruction: ¿Cúantos grados tiene un círculo? Rellena el bloque de repetición con ese número para crear un círculo de colores.
@@ -1058,6 +1064,7 @@ es:
       Course 4 Artist Functions 7_instruction: ¿Puedes dibujar una línea de cuadrados usando la función de cuadrado? Cada cuadrado es 40 píxeles de longutud.
       Course 4 Artist Functions 8_instruction: '¿Le estás agarrando el tiro de como usar la función de los bloques? Modifiquemos este cuadrado de medida 200 píxeles. Sugerencia: haz click en "edit" para cambiar el tamaño del "draw a square" en la función editor. Recuerda hacer click en "guardar y cerrar" para salir de la función editor.'
       Course 4 Artist Functions 9_instruction: Te hemos dado la mayor parte del código para crear una función. Sin embargo parece que falta algo. ¿Puedes completar esta función de bloques?
+      Course 4 Artist Inspire_instruction: "Inspiración para ejercicio libre: ¡Ya has aprendido todo lo que necesitas saber para hacer un patrón como este!  Si te inspira esta imagen, tratar de hacer algo similar.  Si no, crea algo por tu cuenta \r \r ¿Quieres saber cómo se hizo nuestro modelo de inspiración? Echa un vistazo aquí: https://levelbuilder-studio.code.org/c/8781/edit"
       Course 4 Artist Params 1_instruction: Editemos una función que dibuje un cuadrado de 50 píxeles cada lado
       Course 4 Artist Params 10_instruction: '¡Puedes llamar una función dentro de otra función! Utilizando tu función "shape" como base, crea 3 formas de casa cada una de 20 píxeles mas larga que la anterior, empezando con 50 píxeles de longitud. Usar un circuito de contar puede ser útil.'
       Course 4 Artist Params 11_instruction: |
@@ -1187,6 +1194,7 @@ es:
       Course 4 Play Labs For Loops 8_instruction: |
         ¿Que enlace me haria dialogar
         19,27,35,43,51?
+      Course 4 Variables Assessment_instruction: ¿Puedes crear esta imagen utilizando una variable para los lados? Cada línea debe tener 50 píxeles de largo.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig"
       Course1MazeAssessment2_instruction: "This is a test!\r\nMove one way, then\nanother to get me to the pig."
@@ -1250,13 +1258,13 @@ es:
       Eval Cond 4_instruction: |
         We can use the string=? function to make conditionals
         that respond to text input. Here's a function called green shape that takes
-        a string parameter for the shape. Complete the conditions so that the correct
-        shape is drawn when the function is run with circle, triangle, square, or
-        rectangle.
+        a string for the type of shape. Complete the conditions so that the correct
+        solid green shape is returned when the function is run with "circle", "triangle",
+        "square", or "rectangle".
       Eval Cond 5_instruction: |
         Here's a similar function red shape with an additional
-        parameter for size. Complete the conditionals so the correct image is drawn
-        for circle, triangle, and star.
+        variable for size. Complete the conditionals so the correct solid red image
+        of a given size is drawn for "circle", "triangle", and "star".
       Eval Cond 6_instruction: "Write a function called food-critic, which takes\nin the name of a food and produces a String that says how you feel about that\nfood. For example, (food-critic “pizza”) might evaluate to “delicious”, but\n(food-critic “rotten eggs”) might evaluate to “gross!”. Choose at least two\nfoods to review, but you can you write more if you like!  Don’t forget to\nadd an “else” clause!\r\nOne example - and part of the definition -  has already\nbeen done for you!"
       Eval Cond 7_instruction: "Free Play: Write a function called green-shape, which\ntakes in the name of a shape and produces a solid green shape. Your function\nshould work with at least “circle”, “star” and “rectangle”, but you can add\nother shapes if you like. You can choose the size of each shape. Don’t forget\nto add an “else” clause!\r\nOne example - and part of the definition -  has\nalready been done for you!\r\n"
       Eval Cond 8_instruction: "Free Play: Suppose you want to own a car at 21, or\nhave your own business by 30. Write a function called life-goals, which takes\nin an age and produces a string that describes your life goals by then. Don’t\nforget to add an “else” clause!\r\n"
@@ -1295,7 +1303,7 @@ es:
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: |
         Can you complete this image using the "shrink"
@@ -1311,9 +1319,8 @@ es:
       Eval Define Funcs 3_instruction: |
         Here's the start of another new function
         called purple-circle with a domain of one Number (the radius) and a range
-        of Image. The body of the function is broken though, it always draws a circle
-        of 50 pixel radius instead of using the radius parameter. Replace the current
-        Number with the radius block from the domain. 
+        of Image. The body of the function is broken though - fix it and then make
+        a purple circle with 150 pixel radius
       Eval Define Funcs 4_instruction: |
         Create a new function called aqua-star that
         has a Domain of a single Number for radius and returns an aqua star of the
@@ -1364,10 +1371,11 @@ es:
         in the order color2, color1, color2.
       Eval Design Recipe 6_instruction: |
         Using the Design Recipe, write a function
-        large-polygon that should output a polygon of given sides and color that takes
-        up most of the window, regardless of the number of sides. To make sure that
-        the polygon doesn't get too large as you increase the number of sides, side
-        length should be inversely proportional to side number, with a length of (800/sides).
+        large-polygon that should output a solid polygon of given sides and color
+        that takes up most of the window, regardless of the number of sides. To make
+        sure that the polygon doesn't get too large as you increase the number of
+        sides, side length should be inversely proportional to side number, with a
+        length of (800/sides).
       Eval Design Recipe Free Play_instruction: |
         Free Play: Use the design recipe
         to create some functions of your own design
@@ -1412,8 +1420,8 @@ es:
       Eval Strings Images 8_instruction: |
         Here's a different kind of star block
         - it's called radial-star and it allows you to draw stars with any number
-        of points! Use it to create a solid orange star with an inner radius of 75
-        pixels and an outer radius of 175 pixels.
+        of points! Use it to create a 7 point solid orange star with an inner radius
+        of 75 pixels and an outer radius of 175 pixels.
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
@@ -1437,6 +1445,8 @@ es:
       frozen square loop 3x_instruction: Ahora crearemos tres cuadrados, girando al terminar cada cuadrado. Asegúrate de girar 120 grados antes de iniciar un nuevo cuadrado.
       frozen square loop_instruction: '¡Hola! Soy Anna de Arandelle. Dibujemos un cuadrado con el bloque de "Repetir", lo que nos permitirá utilizar menos bloques. ¿Cuántas veces (???) se deberían repetir los bloques que están dentro del bloque "Repetir" para formar un cuadrado?'
       frozen square snowflake_instruction: '¿Puedes dibujar un copo de nieve utilizando el bloque "Repetir" para dibujar un cuadrado 10 veces y el bloque "Girar" para girar 36 grados entre cada cuadrado?'
+      hoc2015_intro_instruction: 'Hiro es "actor 1".  Utiliza el bloque Mover para mover a Hiro hacia la derecha hasta tocar a Baymax.'
+      hoc2015_sandbox_instruction: 'Hiro es "actor 1".  Utiliza el bloque Mover para mover a Hiro hacia la derecha hasta tocar a Baymax.'
       Infinity_catch_instruction: '¿Puedes hacer que Elsa ("actor2") alcance a Anna utilizando las teclas de flecha?'
       Infinity_finale_instruction: ¡Crea cualquier osa que desees compartir!
       Infinity_move_collide_instruction: 'Hiro es el "actor 1".  Muevelo cerca de Baymax y reproduce un sonido cuando se toquen.'
@@ -1450,11 +1460,12 @@ es:
       Infinity_touch_faster_instruction: ¡Toca aún más copos de nieve!
       Infinity_touch_four_instruction: Mueve a Anna hacia arriba, abajo a la izquierda y a la derecha para tocar cada uno de los cuatro copos de nieve.
       Infinity_touch_score_instruction: 'Has que Anna anote un punto cuando ella toque un copo de nieve.  Después has clic en "Ejecutar" y conducela para tocar una vez cada copo de nieve.'
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         ¡Dibuja una linea corta hacia arriba y una larga
         a la derecha!
       K-1 artist 1 level 10_instruction: Dibuja una linea punteada utilizando los bloques de dibujar y saltar
-      K-1 artist 1 level 9_instruction: Draw this using three lines
+      K-1 artist 1 level 9_instruction: Dibuja esto utilizando tres líenas
       K-1 Artist Loops 1_instruction: Dibuja esa linea moviendote al este 4 veces
       K-1 Artist Loops 2_instruction: ¿Podrías dibujar la misma linea usando un enlace?
       K-1 Artist Loops 3_instruction: ¿Podrías enlazar estos bloques para dibujar 6 lineas?
@@ -1554,10 +1565,10 @@ es:
       K-1 Maze 7_instruction: Muveme en una dirección, luego otra para llevarme el cerdo!
       K-1 Maze 8_instruction: Muveme en una dirección, luego otra para llevarme el cerdo!
       K-1 Maze 9_instruction: Muveme en una dirección, luego otra para llevarme el cerdo!
-      K-1 Maze Assessment 1_instruction: Evaluación, Tráeme al cerdo!
+      K-1 Maze Assessment 1_instruction: Evaluación, ¡Tráeme al cerdo!
       K-1 Maze Assessment 12_instruction: Nivel de evaluación
       K-1 Maze Assessment 13_instruction: Nivel de evaluación
-      K-1 Maze Assessment 2_instruction: Evaluación, Tráeme al cerdo!
+      K-1 Maze Assessment 2_instruction: Evaluación, ¡Tráeme al cerdo!
       K-1 maze debug 1_instruction: Cambie el código para traerme al cerdo!
       K-1 maze debug 10_instruction: Depura este nivel reorganizando y agregando bloques para llevarme al cerdo!
       K-1 maze debug 11_instruction: "Esta es una prueba!\r\nDepura este nivel reorganizando y agregando bloques para llevarme al cerdo"
@@ -1763,25 +1774,21 @@ es:
       NEW Course 4 Bee For Loops 3_instruction: '¡Ah, el de bucle for hace esto mucho más fácil! Todo el código que necesitas está allí, echa un vistazo a cómo se colocan juntos luego haz clic en "Ejecutar" para ver cómo funciona. '
       NEW Course 4 Bee For Loops 4 4_instruction: '¿Puedes ayudar a la abeja a recolectar el resto de la miel utilizando este bucle for? '
       NEW Course 4 Bee For Loops 4_instruction: 'Reemplaza el ??? en el bucle for con la mayor cantidad de néctar que la abeja debe recoger. '
-      NEW Course 4 Bee For Loops 5 5_instruction: ¿Estás consiguiendole la caída al bucle for? Vamos a ayudar a la abeja a obtener el resto del néctar.
+      NEW Course 4 Bee For Loops 5 5_instruction: '¿Le has pillado el truco al bucle "for"? Vamos a ayudar a la abeja a obtener el resto del néctar.'
       NEW Course 4 Bee For Loops 5_instruction: También puedes utilizar un bucle a contar hacia atrás. Trata de recoger este néctar por la cuenta regresiva del 5 al 1 por 1.
       NEW Course 4 Bee For Loops 6_instruction: 'El último número en tu bucle for se llama el "incremento", y cada vez que el bucle se ejecuta la variable contador cambia al incrementarse. Trata de recoger estas flores con un incremento de 2.'
-      NEW Course 4 Bee For Loops 7_instruction: ¿Estás consiguiéndole el golpe a los bucles? Esto es similar al último puzzle, pero tienes que conseguir 2, 4, 6, 8,10 de néctar. Está dado el código de arranque excepto para los números en los bucles del contador. ¡Vamos a recoger algo de néctar!
+      NEW Course 4 Bee For Loops 7_instruction: ¿Le estás pillando el truco a los bucles? Esto es parecido al último puzzle, pero tienes que conseguir 2, 4, 6, 8,10 de néctar. Ya tienes el código de arranque, excepto los números en los bucles del contador. ¡Vamos a recoger algo de néctar!
       NEW Course 4 Bee For Loops 8_instruction: "Si tu bucle está contando, el incremento se agrega a la variable contador en cada ciclo. ¿Cuál debe ser el incremento para recoger 3, 6, 9 de néctar? \r\n"
       NEW Course 4 Bee For Loops 9_instruction: Si tu ciclo es regresivo, se resta el incremento de la variable contador en cada bucle. Lo que debería ser un incremento a recoger néctar 9, luego 6 y 3 ?
-      NEW Course 4 Play Lab Params 11_instruction: '¡Es hora de Juego Gratis! Diviértete con todos los bloques en tu caja de herramientas. '
-      NEW Course 4 Play Lab Params 5 5_instruction: |
-        Fill in actor parameter inputs
-        with numbers (1, 2, and 3) to make these actors patrol. 
-      NEW Course 4 Play Lab Vars 4 5_instruction: |
-        “What do you think this code will
-        do? Press “Run” to see what happens.”
+      NEW Course 4 Play Lab Params 11_instruction: '¡Es hora de jugar! Diviértete con todos los bloques en tu caja de herramientas. '
+      NEW Course 4 Play Lab Params 5 5_instruction: 'Introducir entradas de parámetro de actor con los números (1, 2 y 3) para hacer de estos actores patrulla. '
+      NEW Course 4 Play Lab Vars 4 5_instruction: '"Que piensas que este código realizara? Presiona "Ejecutar" para ver que ocurre."'
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
-        It's Free Play
-        time, have fun with all the blocks in your tool box. 
+        Es hora de Jugar libremente, 
+        diviértete con todos los bloques de tu caja de herramientas.
       New Play Lab Project_instruction: |
-        Create your own story or game! Your code
-        is saved as a project you can return to at any time.
+        Crea tu propia historia o juego! Tu código
+        es guardado como un proyecto al cual tu puedes acceder en cualquier momento.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
         Let’s begin by exploring a simple videogame,
@@ -1915,25 +1922,21 @@ es:
         always see at least a bit of him, so lets write some functions that help make
         sure he doesn't go too far out of the yard. Here's a function called safe-left?
         - it should take a Number for its domain that represents Sam's x-coordinates
-        and return true if he's inside the left boundary of the yard (x > -25). If
-        your function works, Sam shouldn't be able to leave the yard from the left
-        side.
+        and return true if he's completely visible on screen. If your function works,
+        Sam shouldn't be able to leave the yard from the left side.
       Sam the Butterfly 3_instruction: |
         In the last puzzle we kept Sam from leaving
-        on the left, now let's do the same thing on the right. Fill out the safe-right?
-        function to make sure Sam can't go past x = 425.
+        on the left, now let's do the same thing on the right. Complete the safe-right?
+        function to make sure Sam can't go off the right side of the screen.
       Sam the Butterfly 4_instruction: |
         Huh, we can keep Sam from leaving on the
         left, or we can keep him from leaving on the right, but how can we keep him
         from going either direction? Try using the AND block to program the function
         on-screen? to check if Sam is safe-left? AND safe-right?
       Sam the Butterfly 5_instruction: |
-        Free Play: Awesome, now Sam can't leave
-        the yard from the left or the right, but what about up and down? We've added
-        an additional parameter y to the onscreen? function. Can you update your program
-        so Sam can't leave from the top (y = 425) or bottom (y = -25) either? Test
-        your program by moving Sam as far as he can go in all four directions. Click
-        Finish when Sam is completely protected.
+        Free Play: Awesome, we've kept Sam safe
+        on the left and right! Use this free play stage to experiment with your functions
+        and further improve onscreen?
       Sam the Butterfly 6_instruction: |
         We've added a new parameter "y" to the
         "on-screen?" function. Update the function so that it checks that "safe-left?"
@@ -1961,59 +1964,44 @@ es:
       scrat 19_instruction: 'Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien en tu primer intento?'
       scrat 20_instruction: ¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto más complejo? Si lo haces correctamente puedo caminar cualquier camino curvo sin importar su longitud. !Date prisa! ¡El hielo se está derritiendo!
       SpecialFrozenLevel_instruction: ¡Te has convertido oficialmente en un artista maestro! Crea un paraíso invernal.
-      Standalone_Artist_1_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
-      Standalone_Artist_2_instruction: |
-        Draw this diamond with 120 and 60 degree
-        angles and 150 pixel long sides.
-      Standalone_Artist_3_instruction: |
-        Can you draw this hexagon with 100 pixel
-        sides and 60 degree turns?
-      Standalone_Artist_4_instruction: |
-        Now you've got a new block to play with,
-        the loop. This will repeat a set of commands. What happens if you loop these
-        commands 6 times?
-      Standalone_Artist_5.5_instruction: |
-        Notice how we simplified the diamond code
-        by turning it into a loop. You can loop that whole sequence 12 times to draw
-        the flower. Hint: You'll need to turn 30 degrees after your diamond loop
-        so you don't keep drawing over the same diamond.
-      Standalone_Artist_5_instruction: |
-        How many times do you need to loop this diamond
-        to draw the flower?
-      Standalone_Artist_6_instruction: |
-        Loop this hexagon code 6 times to create
-        the design. How many degrees will you need to turn each time? Hint: divide
-        the number of degrees in a circle by the number of times you are looping.
-      Standalone_Artist_7_instruction: |
-        A function is another programming tool to
-        help you avoid repeating yourself. This function draws a flower, so you can
-        use it any time you want to draw a flower. Use this and the new jump block
-        to draw these flowers. Hint: The flowers are 150 pixels apart
-      Standalone_Artist_8_instruction: |
-        Here's a function called "Draw a shape"
-        that we've programmed to draw hexagons. Run the code to see what it does
-        and then experiment with the function to see what happens. Can you make it
-        draw a pattern of squares, triangles, or octagons?
-      Standalone_Artist_9_instruction: |
-        Now go ahead and make whatever picture you'd
-        like! You've even got an empty function that you can make do whatever you
-        want!
-      Standalone_Artist_v2_instruction: |
-        Welcome to Artist! First off, let's try
-        to make a simple square using the turn right block and move forward block.
-        Each side should be 100 pixels long.
+      Standalone_Artist_1_instruction: ¡ Bienvenido a Artista! En primer lugar, vamos a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover hacia adelante. Cada lado debe tener 100 píxeles de largo.
+      Standalone_Artist_2_instruction: Dibuja este diamante con 120 y 60 grados de ángulo y lados largos de 150 píxeles.
+      Standalone_Artist_3_instruction: ¿Puede dibujar este hexágono con lados de 100 píxeles y vueltas de 60 grados?
+      Standalone_Artist_4_instruction: Ahora tienes un nuevo bloque para poder jugar, el bucle. Este repetirá un conjunto de comandos. ¿Qué sucede si realizar un bucle de estos comandos 6 veces?
+      Standalone_Artist_5.5_instruction: 'Nota que simplificamos el código del diamante convirtiéndolo en una repetición. Puedes repetir toda la secuencia 12 veces para dibujar la flor. Pista: Necesitas girar 30 grados después de dibujar el diamante, para que no sigas dibujando sobre el mismo diamante.'
+      Standalone_Artist_5_instruction: '¿Cuántas veces necesitas repetir  este diamante para dibujar la flor?'
+      Standalone_Artist_6_instruction: 'Repite este código de hexagono 6 veces para crear el diseño. ¿Cuantos grados necesitarás girar cada vez? Pista: Divide el numero de grados en un circulo por el numero de veces que estás repitiendo.'
+      Standalone_Artist_7_instruction: 'Una función es otra herramienta de programación que te ayuda a evitar repetir código. Esta función dibuja una flor, para que la puedes utilizar en cualquier momento para dibujar una flor. Utiliza esto y el nuevo bloque de salto para dibujar estas flores. Pista: Hay 150 pixeles de espacio entre cada flor'
+      Standalone_Artist_8_instruction: 'Aquí hay una función llamada "Dibuja una figura" que hemos programado para dibujar hexágonos. Ejecuta el código para ver lo que hace y luego experimenta con la función para ver qué pasa. ¿Puedes hacer que dibuje un patrón de cuadrados, triángulos u octágonos?'
+      Standalone_Artist_9_instruction: ¡Ahora sigue adelante y haz la imagen que tu quieras! ¡Tu puedes incluso obtener una función vacía con la que puedes hacer lo que quieras!
+      Standalone_Artist_v2_instruction: ¡ Bienvenido a Artista! En primer lugar, vamos a intentar hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover hacia adelante. Cada lado debe tener 100 píxeles de largo.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: Este poema se ha comprimido mediante la sustitución de dos frases comunes con símbolos en el diccionario. ¿Puedes identificar otro patrón común para comprimir aún más el poema?
+      U1L10 NetSim numbers with decimal_instruction: |
+        Invent and test a protocol
+        for encoding and sending text messages. Your protocol must include the letters
+        a-z, spaces, and common punctuation marks. You may add additional characters
+        if you wish. See the worksheet handed out by your teacher for more detailed
+        instructions!
+      U1L11 NetSim numbers with Ascii_instruction: |
+        Work with a partner or in a small
+        team to develop a protocol that allows you to send formatted text. See the
+        worksheet handed out by your teacher for more detailed instructions!
       U1L4 NetSim SendAB_instruction: |
-        Send a message by setting the state of the
-        wire to A or B.
+        Develop, document, and test a protocol that
+        allows you to use Internet Simulator to relay a message. See the worksheet
+        for more detailed instructions.  
       U1L8 NetSim numbers no decimal_instruction: Default instructions
+      U1L8 NetSim numbers with decimal_instruction: |
+        With your partner, develop a
+        protocol or set of rules for communicating a drawing using only bits. See
+        the worksheet handed out by your teacher for more detailed instructions!
+      U2L05 - NetSim - Packets and Building TCP_instruction: "Develop a Protocol\nfor Reliably Sending a Message.\r\n\r\nConstraints:\r\n- Packets may contain\nonly 6 characters\r\n- Packets may drop with small probability\r\n- Packets\nmay not arrive in order"
       U2L10 NetSim Automatic DNS_instruction: |
-        In this version of the simulator a
-        DNS service is provided for you. Send a message in the form GET [hostname]
-        to the DNS service at address 15 to get a student's address.
+        In this version of the Internet Simulator,
+        a Domain Name System (DNS) is provided for you and knows the IP addresses
+        of all connected computers. Send a message in the form GET [hostname] to the
+        DNS service at address <yourRouterNumber>.15 to get a student's address.
       U2L10 NetSim Manual DNS_instruction: |
         In this version of the simulator you
         can't see the other students' addresses.  Instead, one of you must act as
@@ -2321,17 +2309,13 @@ es:
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

@@ -372,7 +372,10 @@
     classroom_activity: Frakoblet Aktivitet
   home:
     title: Kodestudio
+    description: Code Studio er hjemmet til nettbaserte kurs av Code.org
     lines_of_code: '%{lines_count} LINJER MED KODE SKREVET AV ELEVER'
+    lines_of_code_linebreak: '%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count}
+      MILLIONER STUDENTER'
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Leksjonsplaner
     signin_message: Allerede registrert? %{link}
@@ -413,6 +416,7 @@
     heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
+    print_certificate: Utskrivingssertifikat
   gender:
     male: Mann
     female: Kvinne
@@ -448,6 +452,13 @@
     autoplay_option: Autovisning av videoer
     download: Last ned video
   compatability:
+    https:
+      header: Du må aktivere HTTPS i nettleseren for å bruke Code.org.
+      message: For å øke sikkerheten, bytter vi over til HTTPS %{https_date}. Du vil
+        ikke kunne få tilgang til Code.org etter denne datoen uten å benytte HTTPS.
+        <a href='%{it_requirements_url}'> Klikk her</a> for å lære hvordan du aktiverer
+        HTTPS for Code.org.
+      hide_this_warning: Skjul denne advarselen
     working:
       header: Vi arbeider med å lage støtte for din nettleser.
       message: Code.org bruker moderne web-teknologi. Dette gjør nettstedet raskere
@@ -506,9 +517,13 @@
       title: Flappy kode
       body: Vil du lage ditt eget spill på mindre enn 10 minutter? Prøv opplæringen
         i Flaksekode!
-    20hour:
-      title: Introduksjonskurs
-      body: Prøv vårt 20-timers introduksjonskurs i data!
+    20-hour:
+      title: Framskyndet kurs
+      body: Denne 20-timers kurset introduserer kjernebegreper innen informatikk og
+        programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men det
+        er morsomt å lære for alle aldersgrupper.
+      body_short: Lær grunnleggende datavitenskap i en framskyndet versjon av kursene
+        2-4.
     hoc2014:
       try_new_tutorial: Prøv den nye Kodetime veiledningen i beta
       try_frozen: Kunstner med Anna og Elsa fra Frost

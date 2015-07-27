@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Instead of \"moving forward by 100,\" the \"move\" block is now referencing the variable \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
+    "instructions": "Instead of using \"move forward by 100,\" the \"move\" block is now referencing a variable called \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
     "x": "125",
     "y": "250",
     "start_direction": "90",
@@ -23,7 +23,15 @@
     "embed": "false",
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"set_length\",\"callout_text\":\"Use this block to set \\\"length\\\" to the correct value.\",\"element_id\":\"#variable_set_qtip > .blocklyPath\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "video_key": "C4_variables_artist"
+    "video_key": "C4_variables_artist",
+    "markdown_instructions": "Instead of using `move forward by 100`, the `move` block is now referencing a variable called `length`. Can you set `length` to 150 to draw this new triangle?",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -33,11 +41,6 @@
           <next>
             <block type="variables_set" inline="false" movable="false">
               <title name="VAR">length</title>
-              <value name="VALUE">
-                <block type="math_number" id="variable_set_qtip">
-                  <title name="NUM">???</title>
-                </block>
-              </value>
               <next>
                 <block type="controls_repeat" deletable="false" movable="false" editable="false">
                   <title name="TIMES">3</title>
@@ -66,7 +69,16 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-</xml>
+        <block type="math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">length</title>
+        </block>
+      </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>

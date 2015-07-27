@@ -318,7 +318,9 @@ en:
     classroom_activity: crwdns5090:0crwdne5090:0
   home:
     title: crwdns8814:0crwdne8814:0
+    description: crwdns41699:0crwdne41699:0
     lines_of_code: 'crwdns37546:0%{lines_count}crwdne37546:0'
+    lines_of_code_linebreak: 'crwdns41700:0%{lines_count}crwdnd41700:0%{students_count}crwdne41700:0'
     all_courses: crwdns19023:0crwdne19023:0
     lesson_plans: crwdns19024:0crwdne19024:0
     signin_message: 'crwdns4633:0%{link}crwdne4633:0'
@@ -353,6 +355,7 @@ en:
     heading_legacy: crwdns8843:0crwdne8843:0
     your_gallery: crwdns23431:0crwdne23431:0
     no_primary_course: crwdns36301:0crwdne36301:0
+    print_certificate: crwdns41905:0crwdne41905:0
   gender:
     male: crwdns2618:0crwdne2618:0
     female: crwdns2619:0crwdne2619:0
@@ -385,6 +388,10 @@ en:
     autoplay_option: crwdns3091:0crwdne3091:0
     download: crwdns4163:0crwdne4163:0
   compatability:
+    https:
+      header: crwdns41701:0crwdne41701:0
+      message: 'crwdns41702:0%{https_date}crwdnd41702:0%{it_requirements_url}crwdne41702:0'
+      hide_this_warning: crwdns41703:0crwdne41703:0
     working:
       header: crwdns18133:0crwdne18133:0
       message: 'crwdns18134:0%{report_issue_url}crwdnd18134:0%{supported_browsers_url}crwdne18134:0'
@@ -431,9 +438,10 @@ en:
     flappy:
       title: crwdns4902:0crwdne4902:0
       body: crwdns4903:0crwdne4903:0
-    20hour:
-      title: crwdns4904:0crwdne4904:0
-      body: crwdns4905:0crwdne4905:0
+    20-hour:
+      title: crwdns41906:0crwdne41906:0
+      body: crwdns41907:0crwdne41907:0
+      body_short: crwdns41908:0crwdne41908:0
     hoc2014:
       try_new_tutorial: crwdns23500:0crwdne23500:0
       try_frozen: crwdns23501:0crwdne23501:0

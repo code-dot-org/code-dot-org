@@ -19,7 +19,16 @@
     "step_mode": "0",
     "nectar_goal": "30",
     "flower_type": "redWithNectar",
-    "instructions": "Are you getting the hang of for Loops? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar. You’re given the starter code except for the numbers in the counter loops. Let's collect some nectar!"
+    "instructions": "Are you getting the hang of \"for loops\"? This is similar to last puzzle, but you have to get 2,4,6,8,10 nectar. \r\nWe will give you all of the starter code except for the numbers in the counter loops. Let's collect some nectar!",
+    "markdown_instructions": "Are you getting the hang of `for loops`? \r\n\r\nThis is similar to last puzzle, but you have to get 2,4,6,8,10 nectar. \r\n\r\nWe will give you all of the starter code except for the numbers in the counter loops. Let's collect some nectar!",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

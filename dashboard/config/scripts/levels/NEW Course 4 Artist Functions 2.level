@@ -21,7 +21,15 @@
     "free_play": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "ideal": "23"
+    "ideal": "23",
+    "markdown_instructions": "Can you draw 3 squares 20 pixels apart from one another? \r\n\r\n*Hint: each square is 100 pixels in size*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

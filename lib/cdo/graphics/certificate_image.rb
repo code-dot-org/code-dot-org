@@ -1,4 +1,4 @@
-require 'RMagick'
+require 'rmagick'
 
 def create_certificate_image2(image_path, name, params={})
   name = name.to_s.gsub(/@/,'\@').strip

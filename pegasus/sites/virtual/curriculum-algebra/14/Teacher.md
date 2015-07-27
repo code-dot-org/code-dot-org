@@ -35,6 +35,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ## Getting Started
 
+
 ### <a name="GetStarted"></a> 1) Introduction
 
 Creating some sample boolean expressions - both simple and complex - is an excellent warm-up activity before the puzzle stages.  Some examples have been included in the slide deck.  The slide deck also has extra practice related to expressions that the students will have seen in the puzzles.

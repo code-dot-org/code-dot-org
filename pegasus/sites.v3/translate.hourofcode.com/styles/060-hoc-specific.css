@@ -20,10 +20,12 @@
 }
 
 .front-header-banner {
-    text-transform: uppercase;
-    font-size: 24px;
-    text-align: center;
-    color: #000;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+  line-height:28px;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 .front-header-banner h1 {

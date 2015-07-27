@@ -7,7 +7,7 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "false",
-    "instructions": "Send a message by setting the state of the wire to A or B.",
+    "instructions": "Develop, document, and test a protocol that allows you to use Internet Simulator to relay a message. See the worksheet for more detailed instructions.  ",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",
@@ -50,7 +50,8 @@
     "default_bit_rate_bits_per_second": "0.5",
     "video_key": "csp_internetsimulator_1",
     "show_log_browser_button": "false",
-    "connected_routers": "false"
+    "connected_routers": "false",
+    "markdown_instructions": "##Coordination and Binary Messages Activity\r\n\r\n**Develop your Protocol**\r\nDevelop a protocol that allows you to use Internet Simulator to relay a message, i.e. one member sends a message and the other member sends the same message back. You or a teacher will say “Go” to begin the exchange but otherwise all communication must be through the widget. As you’re working, consider:\r\n\r\n- How will you know when the exchange is supposed to begin?\r\n- How will you know whose turn it is to send or receive the message?\r\n- How will you coordinate your actions?\r\n\r\nDocument your protocol on the worksheet provided, and test your protocol using the Internet Simulator"
   }
 }]]></config>
   <blocks/>
