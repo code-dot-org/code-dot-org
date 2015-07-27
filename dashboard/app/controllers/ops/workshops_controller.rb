@@ -74,6 +74,8 @@ module Ops
         :program_type,
         :location,
         :instructions,
+        :link,
+        :phase,
         cohorts: [:id, :_destroy],
         facilitators: [:ops_first_name, :ops_last_name, :email],
         unexpected_teachers: [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
