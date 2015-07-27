@@ -7,7 +7,8 @@
     #welcome{class: role_class}
       = t('welcome_back', name: current_user.name)
       - if current_user.teacher?
-        %button.primary{style: "margin-left: 20px;"}= t('teacher.students.dashboard')
+        = link_to teacher_dashboard_url do
+          %button.primary{style: "margin-left: 20px;"}= t('teacher.students.dashboard')
 
     #body{class: role_class}
       - if current_user.primary_script && script_level
@@ -17,7 +18,7 @@
             %br
             .smalltext= script_level.stage.localized_title
           #coursebuttons
-            = link_to 'http://studio.code.org/#allcourses' do
+            = link_to build_script_level_url(script_level) do
               %button.primary= t('continue')
             = link_to script_url(current_user.primary_script) do
               %button.primary= t('home.view_course')
