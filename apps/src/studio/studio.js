@@ -488,17 +488,19 @@ var performQueuedMoves = function (i) {
     sprite.x = nextX;
     sprite.y = nextY;
   } else {
+    var playspaceBoundaries = Studio.getPlayspaceBoundaries(sprite);
+
     // Clamp nextX to boundaries as newX:
-    var newX = Math.min(Studio.MAZE_WIDTH - sprite.width,
-                        Math.max(0, nextX));
+    var newX = Math.min(playspaceBoundaries.right,
+                        Math.max(playspaceBoundaries.left, nextX));
     if (nextX != newX) {
       cancelQueuedMovements(i, false);
     }
     sprite.x = newX;
 
     // Clamp nextY to boundaries as newY:
-    var newY = Math.min(Studio.MAZE_HEIGHT - sprite.height,
-                        Math.max(0, nextY));
+    var newY = Math.min(playspaceBoundaries.bottom,
+                        Math.max(playspaceBoundaries.top, nextY));
     if (nextY != newY) {
       cancelQueuedMovements(i, true);
     }
@@ -767,6 +769,8 @@ Studio.onTick = function() {
 
     // Display sprite:
     Studio.displaySprite(i, isWalking);
+
+    Studio.drawDebugRect("spriteCenter", Studio.sprite[i].x, Studio.sprite[i].y, 5, 5);
   }
 
   performItemOrProjectileMoves(Studio.projectiles);
@@ -2109,7 +2113,7 @@ function cellId(prefix, row, col) {
  */
 
 Studio.drawDebugRect = function(className, x, y, width, height) {
-  //return;
+  return;
 
   var svg = document.getElementById('svgStudio');
   var group = document.createElementNS(SVG_NS, 'g');
@@ -2131,6 +2135,8 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
  */
 
 Studio.clearDebugRects = function() {
+  $(".spriteCenter").remove();
+
   $(".avatarCollision").remove();
   $(".wallCollision").remove();
   $(".itemCollision").remove();
@@ -3351,6 +3357,30 @@ Studio.setSpriteXY = function (opts) {
   sprite.dir = Direction.NONE;
 };
 
+Studio.getPlayspaceBoundaries = function(sprite)
+{
+  var boundaries;
+
+  if (skin.wallCollisionRectWidth && skin.wallCollisionRectHeight) {
+    boundaries = {
+      top:    0 - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
+      right:  Studio.MAZE_WIDTH - skin.wallCollisionRectWidth - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX,
+      bottom: Studio.MAZE_HEIGHT - skin.wallCollisionRectHeight - (sprite.height - skin.wallCollisionRectHeight)/2 - skin.wallCollisionRectOffsetY,
+      left:   0 - (sprite.width - skin.wallCollisionRectWidth)/2 - skin.wallCollisionRectOffsetX
+    }
+  } else {
+    boundaries = {
+      top: 0,
+      right: Studio.MAZE_WIDTH - sprite.width,
+      bottom: Studio.MAZE_HEIGHT - sprite.height,
+      left: 0
+    }
+  };
+
+  return boundaries;
+}
+
+
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
   sprite.lastMove = Studio.tickCount;
@@ -3362,8 +3392,9 @@ Studio.moveSingle = function (opts) {
         break;
       }
       sprite.y -= distance;
-      if (sprite.y < 0 && !level.allowSpritesOutsidePlayspace) {
-        sprite.y = 0;
+      var topBoundary = Studio.getPlayspaceBoundaries(sprite).top;
+      if (sprite.y < topBoundary && !level.allowSpritesOutsidePlayspace) {
+        sprite.y = topBoundary;
       }
       break;
     case Direction.EAST:
@@ -3372,7 +3403,7 @@ Studio.moveSingle = function (opts) {
         break;
       }
       sprite.x += distance;
-      var rightBoundary = Studio.MAZE_WIDTH - sprite.width;
+      var rightBoundary = Studio.getPlayspaceBoundaries(sprite).right;
       if (sprite.x > rightBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.x = rightBoundary;
       }
@@ -3383,7 +3414,7 @@ Studio.moveSingle = function (opts) {
         break;
       }
       sprite.y += distance;
-      var bottomBoundary = Studio.MAZE_HEIGHT - sprite.height;
+      var bottomBoundary = Studio.getPlayspaceBoundaries(sprite).bottom;
       if (sprite.y > bottomBoundary && !level.allowSpritesOutsidePlayspace) {
         sprite.y = bottomBoundary;
       }
@@ -3394,8 +3425,9 @@ Studio.moveSingle = function (opts) {
         break;
       }
       sprite.x -= distance;
-      if (sprite.x < 0 && !level.allowSpritesOutsidePlayspace) {
-        sprite.x = 0;
+      var leftBoundary = Studio.getPlayspaceBoundaries(sprite).left;
+      if (sprite.x < leftBoundary && !level.allowSpritesOutsidePlayspace) {
+        sprite.x = leftBoundary;
       }
       break;
   }
