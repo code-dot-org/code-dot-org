@@ -277,11 +277,11 @@ NetSimVisualization.prototype.getReciprocatedWiresAttachedToNode = function (viz
 
     if (localWire.remoteVizNode.isRouter) return true;
 
-    return this.getWiresAttachedToNode(localWire.remoteVizNode).filter(function (wire) {
+    return this.getWiresAttachedToNode(localWire.remoteVizNode).some(function (wire) {
       return wire.remoteVizNode === vizNode;
-    }).length > 0;
+    });
 
-  }.bind(this));
+  }, this);
 };
 
 /**
@@ -337,7 +337,7 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
   var tableWires = rows.map(function (row) {
     return new NetSimWire(this.shard_, row);
-  }.bind(this));
+  }, this);
 
   // Update collection of VizWires from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationWire, tableWires, function (wire) {
