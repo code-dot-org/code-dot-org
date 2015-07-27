@@ -1,11 +1,8 @@
-# Interface to fake interactions with a PubSub system, like Pusher
-# Should respond to same messages as PusherApi
+# Base class that defines an interface for publishing messages to a Pubsub
+# system. This class does nothing, derived classes should override publish
+# with actual behavior
 
 class NullPubSubApi
-  def self.configure_keys
-
-  end
-
   def self.trigger(channels, event, data)
   end
 end
