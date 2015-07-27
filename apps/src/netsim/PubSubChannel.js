@@ -25,10 +25,13 @@ var PubSubChannel = exports;
  * event occurs.
  * @function
  * @name PubSubChannel#subscribe
- * @param {string} eventName - The name of the event to bind to
- * @param {function} callback - A function to be called whenever the event is triggered.
+ * @param {string} eventName - The name of the event to bind to.
+ * @param {function} callback - A function to be called whenever the event is
+ *        triggered.
  */
 
+// Disable "unused variable" errors for null implementation declarations
+/* jshint unused:false */
 /**
  * @constructor
  * @implements PubSubChannel
@@ -37,19 +40,23 @@ PubSubChannel.NullChannel = function () { };
 
 /**
  * Subscribe to an event so the given callback is called when the event occurs.
+ * @param {string} eventName - The name of the event to bind to.
+ * @param {function} callback - A function to be called whenever the event is
+ *        triggered.
  */
-PubSubChannel.NullChannel.prototype.subscribe = function () { };
+PubSubChannel.NullChannel.prototype.subscribe = function (eventName, callback) { };
+
+// Re-enable "unused variable" error
+/* jshint unused:true */
 
 /**
- *
  * @constructor
  * @implements PubSubChannel
  */
 PubSubChannel.PusherChannel = function (pusherApiChannel) {
  /**
   * The actual Pusher API's channel.
-  * @type {Channel}
-  * @private
+  * @private {Channel}
   */
  this.pusherChannel_ = pusherApiChannel;
 };

@@ -165,9 +165,12 @@ var fakeStorageTable = function () {
  * Fake set of storage tables for use in tests.
  */
 exports.fakeShard = function () {
+  /* jshint unused:false */
+  /** @implements {PubSubChannel} */
   var fakeChannel = {
-    subscribe: function () {}
+    subscribe: function (eventName, callback) {}
   };
+  /* jshint unused:true */
 
   return {
     nodeTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'node')),
