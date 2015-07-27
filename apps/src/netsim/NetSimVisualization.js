@@ -258,6 +258,44 @@ NetSimVisualization.prototype.getElementByEntityID = function (elementType, enti
 };
 
 /**
+ * Gets the set of VizWires directly attached to the given VizNode on
+ * the local end for which there are also corresponding VizWires coming
+ * from the opposite end. Note that if the VizNode is a router, we
+ * consider all attached wires to be reciprocated.
+ * @param {NetSimVizSimulationNode} vizNode
+ * @returns {Array.<NetSimVizSimulationWire>} the attached wires
+ */
+NetSimVisualization.prototype.getReciprocatedWiresAttachedToNode = function (vizNode) {
+
+  if (vizNode.isRouter) {
+    return this.getWiresAttachedToNode(vizNode);
+  }
+
+  var localWires = this.getLocalWiresAttachedToNode(vizNode);
+
+  return localWires.filter(function (localWire) {
+
+    if (localWire.remoteVizNode.isRouter) return true;
+
+    return this.getWiresAttachedToNode(localWire.remoteVizNode).some(function (wire) {
+      return wire.remoteVizNode === vizNode;
+    });
+
+  }, this);
+};
+
+/**
+ * Gets the set of VizWires directly attached to the given VizNode on the local end
+ * @param {NetSimVizSimulationNode} vizNode
+ * @returns {Array.<NetSimVizSimulationWire>} the attached wires
+ */
+NetSimVisualization.prototype.getLocalWiresAttachedToNode = function (vizNode) {
+  return this.elements_.filter(function (element) {
+    return element instanceof NetSimVizWire && element.localVizNode === vizNode;
+  });
+};
+
+/**
  * Gets the set of VizWires directly attached to the given VizNode, (either
  * on the local end or remote end)
  * @param {NetSimVizSimulationNode} vizNode
@@ -299,7 +337,7 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
   var tableWires = rows.map(function (row) {
     return new NetSimWire(this.shard_, row);
-  }.bind(this));
+  }, this);
 
   // Update collection of VizWires from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationWire, tableWires, function (wire) {
@@ -561,7 +599,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
   var neighbors = [];
 
   if (vizElement instanceof NetSimVizSimulationNode) {
-    neighbors = this.getWiresAttachedToNode(vizElement);
+    neighbors = this.getReciprocatedWiresAttachedToNode(vizElement);
 
     // Special case: The DNS node fake is a neighbor of a visited router
     if (vizElement.isRouter && this.autoDnsNode_) {
