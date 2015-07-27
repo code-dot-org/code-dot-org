@@ -21,7 +21,7 @@ class NetSimApi < Sinatra::Base
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
 
   # Pick a PubSub API based on configuration
-  PUB_SUB_API = CDO.netsim_use_pusher ? PusherApi : NullPubSubApi
+  PUB_SUB_API = CDO.use_pusher ? PusherApi : NullPubSubApi
   PUB_SUB_API.configure_keys
 
   def get_table(shard_id, table_name)
