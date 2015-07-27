@@ -89,6 +89,7 @@ describe("NetSimVisualization", function () {
     * 2) n -> N <- n
     *    (two nodes trying to connect to a third node)
     */
+  /*
   beforeEach(function () {
     netsimTestUtils.initializeGlobalsToDefaultValues();
     testShard = fakeShard();
@@ -157,5 +158,5 @@ describe("NetSimVisualization", function () {
     });
 
   });
-
+  */
 });
