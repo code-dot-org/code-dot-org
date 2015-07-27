@@ -12,7 +12,7 @@ def main
       recipients = DASHBOARD_DB.fetch("SELECT * FROM users JOIN cohorts_users ON id = user_id JOIN workshop_cohorts ON workshop_cohorts.cohort_id = cohorts_users.cohort_id WHERE workshop_cohorts.workshop_id = #{workshop[:id]};")
       recipients.each do |recipient|
         # recipient_ops_data = JSON.parse(recipient[:properties])
-        puts(Activity::PROGRAM_TYPES[1][:long_name])
+        puts(ActivityConstants::PROGRAM_TYPES[1][:long_name])
         OpsMailer.workshop_in_2_weeks_reminder(workshop, recipient).deliver
       end
     end
