@@ -708,7 +708,7 @@ Blockly.getBoxWidth = function (box) {
 
 /**
  * @param {goog.math.Box} box
- * @return {number} width of box
+ * @return {number} height of box
  */
 Blockly.getBoxHeight = function (box) {
   return box.bottom - box.top;
@@ -736,6 +736,10 @@ Blockly.svgRectToRect = function (svgRect) {
     svgRect.height);
 };
 
+/**
+ * Direction properties for goog.math.Boxes
+ * @type {string[]}
+ */
 Blockly.BOX_DIRECTIONS = ['top', 'right', 'bottom', 'left'];
 
 /**
