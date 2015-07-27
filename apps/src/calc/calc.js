@@ -208,11 +208,11 @@ Calc.init = function(config) {
           var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
 
           var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
-          var actualEquation = EquationSet.__testonly__.getEquationFromBlock(actualBlock);
+          var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
           var actual = entireSet.evaluateWithExpression(actualEquation.expression);
 
           var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
-          var expectedEquation = EquationSet.__testonly__.getEquationFromBlock(expectedBlock);
+          var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
           var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
 
           var areEqual = expected.result.equals(actual.result);
