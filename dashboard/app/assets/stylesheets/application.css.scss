@@ -264,26 +264,26 @@ $small-footer-standard-width: 400px;
   font-size: 14px;
   a {
     &:link {
-      font-family: $gotham-regular;
+      font-family: $gotham-bold;
       font-weight: normal;
       color: $light_gray;
       text-decoration: none;
     }
     &:visited {
-      font-family: $gotham-regular;
+      font-family: $gotham-bold;
       font-weight: normal;
       color: $light_gray;
       text-decoration: none;
     }
     &:hover {
-      font-family: $gotham-regular;
+      font-family: $gotham-bold;
       font-weight: normal;
       color:$dark_charcoal;
       background-color: transparent;
       text-decoration: underline;
     }
     &:active {
-      font-family: $gotham-regular;
+      font-family: $gotham-bold;
       font-weight: normal;
       color:$light_gray;
       background-color: transparent;
