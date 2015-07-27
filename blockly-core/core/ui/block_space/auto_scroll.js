@@ -42,7 +42,7 @@ Blockly.AutoScroll = function (blockSpace, startPanVector) {
   this.blockSpace_ = blockSpace;
 
   /**
-   * Current active auto-pan rule
+   * Current active auto-pan vector in x/y pixels per second
    * @type {goog.math.Vec2}
    * @private
    */
@@ -54,7 +54,7 @@ Blockly.AutoScroll = function (blockSpace, startPanVector) {
    * @private
    */
   this.animationDelay_ = new goog.async.AnimationDelay(
-    this.handleDelay_.bind(this), window);
+    this.handleAnimationDelay_.bind(this), window);
   this.lastTime_ = Date.now();
   this.animationDelay_.start();
 };
@@ -72,7 +72,7 @@ Blockly.AutoScroll.prototype.stopAndDestroy = function () {
  * @param {number} now - current time in ms
  * @private
  */
-Blockly.AutoScroll.prototype.handleDelay_ = function (now) {
+Blockly.AutoScroll.prototype.handleAnimationDelay_ = function (now) {
   var dt = now - this.lastTime_;
   this.lastTime_ = now;
   this.scrollTick_(dt);
@@ -89,13 +89,15 @@ Blockly.AutoScroll.prototype.scrollTick_ = function (msPassed) {
 };
 
 /**
+ * Updates properties of the current scroll, e.g. changing movement vector
+ * or updating mouse position.
  * @param {goog.math.Vec2} scrollVector
  * @param {number} mouseClientX
  * @param {number} mouseClientY
  */
-Blockly.AutoScroll.prototype.updateScroll = function (scrollVector,
-                                                      mouseClientX,
-                                                      mouseClientY) {
+Blockly.AutoScroll.prototype.updateProperties = function (scrollVector,
+                                                          mouseClientX,
+                                                          mouseClientY) {
   this.activePanVector_ = scrollVector;
   this.lastMouseX_ = mouseClientX;
   this.lastMouseY_ = mouseClientY;
