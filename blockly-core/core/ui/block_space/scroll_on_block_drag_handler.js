@@ -63,15 +63,15 @@ Blockly.ScrollOnBlockDragHandler.prototype.stopAutoScrolling = function () {
  * Pixels per second scrolling speeds for mouse-location triggered scrolling
  * @type {number}
  */
-var MOUSE_SPEED_SLOW = 200;
-var MOUSE_SPEED_FAST = 700;
+var MOUSE_SPEED_SLOW = 500;
+var MOUSE_SPEED_FAST = 1600;
 
 /**
  * Pixels per second scrolling speeds for block-location triggered scrolling
  * @type {number}
  */
-var BLOCK_SPEED_SLOW = 70;
-var BLOCK_SPEED_FAST = 200;
+var BLOCK_SPEED_SLOW = 280;
+var BLOCK_SPEED_FAST = 1400;
 
 /**
  * Mouse distance from side when to start slow scrolling
@@ -94,7 +94,7 @@ var BLOCK_START_DISTANCE = 0;
  * Distance from block edge to side when to start fast scrolling
  * @type {number}
  */
-var BLOCK_START_FAST_DISTANCE = 30;
+var BLOCK_START_FAST_DISTANCE = 50;
 
 /**
  * Enables debug drawing of various block drag scrolling operations
