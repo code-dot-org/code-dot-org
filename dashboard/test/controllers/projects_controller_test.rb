@@ -19,11 +19,12 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'artist project level has sharing meta tags' do
-    get :edit, key: :artist
+    channel = 'fake-channel'
+    get :show, key: :artist, channel_id: channel, share: true
 
     assert_response :success
     assert_sharing_meta_tags(
-      url: 'http://test.host/projects/artist',
+      url: "http://test.host/projects/artist/#{channel}",
       image: 'http://test.host/assets/sharing_drawing.png',
       image_width: 500,
       image_height: 261
@@ -31,11 +32,12 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab project level has sharing meta tags' do
-    get :edit, key: :applab
+    channel = 'fake-channel'
+    get :show, key: :applab, channel_id: channel, share: true
 
     assert_response :success
     assert_sharing_meta_tags(
-      url: 'http://test.host/projects/applab',
+      url: "http://test.host/projects/applab/#{channel}",
       image: 'http://test.host/assets/sharing_drawing.png',
       image_width: 400,
       image_height: 400,
@@ -44,11 +46,12 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'playlab project level has sharing meta tags' do
-    get :edit, key: :playlab
+    channel = 'fake-channel'
+    get :show, key: :playlab, channel_id: channel, share: true
 
     assert_response :success
     assert_sharing_meta_tags(
-      url: 'http://test.host/projects/playlab',
+      url: "http://test.host/projects/playlab/#{channel}",
       image: 'http://test.host/assets/sharing_drawing.png',
       image_width: 400,
       image_height: 400,

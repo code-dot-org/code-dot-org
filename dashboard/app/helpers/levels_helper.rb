@@ -117,7 +117,7 @@ module LevelsHelper
   # Options hash for all level types
   def app_options
     # Provide the channel for templated and applab levels.
-    set_channel if @level.project_template_level || @level.game == Game.applab
+    set_channel if @level.project_template_level || (@level.game == Game.applab && !@level.is_project_level)
 
     unless params[:share]
       # Set videos and callouts.
