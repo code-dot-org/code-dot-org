@@ -76,9 +76,9 @@ module.exports = {
   },
 
   /**
-   * @returns {{usePusher: boolean, pusherApplicationKey: string}}
+   * @returns {PubSubConfig}
    */
-  getPubSubServiceInfo: function () {
+  getPubSubConfig: function () {
     return {
       usePusher: netsim_.usePusher,
       pusherApplicationKey: netsim_.pusherApplicationKey

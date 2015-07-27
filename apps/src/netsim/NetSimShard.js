@@ -26,14 +26,15 @@ var PubSubService = require('./PubSubService');
  * the same App ID.
  *
  * @param {!string} shardID
+ * @param {!PubSubConfig} pubSubConfig
  * @constructor
  */
-var NetSimShard = module.exports = function (shardID) {
+var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   /** @type {string} */
   this.id = shardID;
 
   /** @type {PubSubService} */
-  this.pubSub = PubSubService.create();
+  this.pubSub = PubSubService.create(pubSubConfig);
   var channel = this.pubSub.subscribe(shardID);
 
   /** @type {NetSimTable} */
