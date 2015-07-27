@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit  for the solution.",
+    "instructions": "Free Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit https://studio.code.org/c/106387530 for the solution.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".6",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "**Free Play Inspiration:** You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit  for the solution."
+    "markdown_instructions": "**Free Play Inspiration:** You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit https://studio.code.org/c/106387530 for the solution."
   }
 }]]></config>
   <blocks>
@@ -152,6 +152,9 @@
               </block>
             </value>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
@@ -171,15 +174,12 @@
             </value>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">counter</title>
+        <category name="Variable">
+          <block type="variables_set" inline="false">
+            <title name="VAR">i</title>
           </block>
           <block type="variables_get">
-            <title name="VAR">sides</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">length</title>
+            <title name="VAR">i</title>
           </block>
         </category>
       </xml>
