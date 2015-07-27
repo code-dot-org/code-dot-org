@@ -66,7 +66,7 @@ class NetSimApi < Sinatra::Base
     table = get_table(shard_id, table_name)
     int_id = id.to_i
     table.delete(int_id)
-    PUB_SUB_API.trigger(shard_id, table_name, {:action => 'delete', :id => int_id})
+    PUB_SUB_API.publish(shard_id, table_name, {:action => 'delete', :id => int_id})
     no_content
   end
 
@@ -90,7 +90,7 @@ class NetSimApi < Sinatra::Base
     begin
       value = get_table(shard_id, table_name).
           insert(JSON.parse(request.body.read), request.ip)
-      PUB_SUB_API.trigger(shard_id, table_name, {:action => 'insert', :id => value[:id]})
+      PUB_SUB_API.publish(shard_id, table_name, {:action => 'insert', :id => value[:id]})
     rescue JSON::ParserError
       bad_request
     end
@@ -113,7 +113,7 @@ class NetSimApi < Sinatra::Base
       table = get_table(shard_id, table_name)
       int_id = id.to_i
       value = table.update(int_id, JSON.parse(request.body.read), request.ip)
-      PUB_SUB_API.trigger(shard_id, table_name, {:action => 'update', :id => int_id})
+      PUB_SUB_API.publish(shard_id, table_name, {:action => 'update', :id => int_id})
     rescue JSON::ParserError
       bad_request
     end
