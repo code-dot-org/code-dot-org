@@ -143,7 +143,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   var icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
   var defaultBtnSelector = onlyContinue ? '#continue-button' : '#again-button';
 
-  var feedbackDialog = this.createModalDialogWithIcon({
+  var feedbackDialog = this.createModalDialog({
     Dialog: options.Dialog,
     contentDiv: feedback,
     icon: icon,
@@ -746,7 +746,7 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
   });
   codeDiv.appendChild(buttons);
 
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
       Dialog: Dialog,
       contentDiv: codeDiv,
       icon: this.studioApp_.icon,
@@ -781,7 +781,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
   });
   codeDiv.appendChild(buttons);
 
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
     Dialog: Dialog,
     contentDiv: codeDiv,
     icon: this.studioApp_.icon,
@@ -821,7 +821,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function(Dialog) {
   });
   contentDiv.appendChild(buttons);
 
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
       Dialog: Dialog,
       contentDiv: contentDiv,
       icon: this.studioApp_.icon,
@@ -1080,24 +1080,21 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
 };
 
 /**
- * Show a modal dialog with an icon.
- */
-FeedbackUtils.prototype.createModalDialogWithIcon = function(options) {
-  var imageDiv = document.createElement('img');
-  imageDiv.className = "modal-image";
-  imageDiv.src = options.icon;
-  return this.createModalDialog(options, imageDiv);
-};
-
-/**
  * Show a modal dialog without an icon.
+ * @param {Object} options
  */
-FeedbackUtils.prototype.createModalDialog = function(options, icon) {
+FeedbackUtils.prototype.createModalDialog = function(options) {
   var modalBody = document.createElement('div');
-  if (icon) {
-    modalBody.appendChild(icon);
-    options.contentDiv.className += ' modal-content';
+  if (options.icon) {
+    var imageDiv;
+    imageDiv = document.createElement('img');
+    imageDiv.className = "modal-image";
+    imageDiv.src = options.icon;
+    modalBody.appendChild(imageDiv);
+  } else {
+    options.contentDiv.className += ' no-modal-icon';
   }
+  options.contentDiv.className += ' modal-content';
   modalBody.appendChild(options.contentDiv);
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
