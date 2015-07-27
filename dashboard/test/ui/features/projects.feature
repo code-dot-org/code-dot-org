@@ -1,7 +1,7 @@
 Feature: Projects
 
 Scenario: Save Artist Project
-  Given I am on "http://learn.code.org/p/artist"
+  Given I am on "http://learn.code.org/projects/artist"
   And I rotate to landscape
   And element "#runButton" is visible
   And element ".project_updated_at" has text "Not saved"
