@@ -42,9 +42,8 @@ class ProjectsController < ApplicationController
   def load
     if current_user
       channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
-    else
-      channel = create_channel
     end
+    channel ||= create_channel
     redirect_to action: 'edit', channel_id: channel
   end
 
