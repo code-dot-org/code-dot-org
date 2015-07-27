@@ -139,22 +139,25 @@ var projects = module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
   },
-  appToProjectUrl: function () {
+  getCurrentApp: function () {
     switch (appOptions.app) {
       case 'applab':
-        return '/projects/applab';
+        return 'applab';
       case 'turtle':
-        return '/projects/artist';
+        return 'artist';
       case 'calc':
-        return '/projects/calc';
+        return 'calc';
       case 'eval':
-        return '/projects/eval';
+        return 'eval';
       case 'studio':
         if (appOptions.level.useContractEditor) {
-          return '/projects/algebra_game';
+          return 'algebra_game';
         }
-        return '/projects/playlab';
+        return 'playlab';
     }
+  },
+  appToProjectUrl: function () {
+    return '/projects/' + projects.getCurrentApp();
   },
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
