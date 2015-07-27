@@ -210,6 +210,6 @@ Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
   this.activeAutoScroll_ = this.activeAutoScroll_ ||
     new Blockly.AutoScroll(this.blockSpace_, overallScrollVector);
 
-  this.activeAutoScroll_.updateScroll(overallScrollVector, mouseClientX,
+  this.activeAutoScroll_.updateProperties(overallScrollVector, mouseClientX,
     mouseClientY);
 };
