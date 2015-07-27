@@ -193,6 +193,10 @@ NetSim.prototype.init = function(config) {
   // Set up global singleton for easy access to simulator-wide settings
   netsimGlobals.setRootControllers(this.studioApp_, this);
 
+  // Remove icon from all NetSim instructions dialogs
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+
   /**
    * Skin for the loaded level
    * @type {Object}
