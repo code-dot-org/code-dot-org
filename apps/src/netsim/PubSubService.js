@@ -15,7 +15,6 @@
 /* global Pusher */
 'use strict';
 
-var NetSimLogger = require('./NetSimLogger');
 var PubSubChannel = require('./PubSubChannel');
 
 /**
@@ -80,11 +79,6 @@ PubSubService.PusherService = function (applicationKey) {
    * @private
    */
   this.api_ = new Pusher(applicationKey, { encrypted: true });
-
-  // TODO: Don't ship with logging enabled.
-  Pusher.log = function (message) {
-    NetSimLogger.getSingleton().info(message);
-  };
 };
 
 /**
