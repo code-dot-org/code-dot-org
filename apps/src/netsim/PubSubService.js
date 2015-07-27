@@ -17,7 +17,6 @@
 
 var NetSimLogger = require('./NetSimLogger');
 var PubSubChannel = require('./PubSubChannel');
-var netsimGlobals = require('./netsimGlobals');
 
 /**
  * JavaScript interface for a publish/subscribe service provider.
@@ -27,11 +26,19 @@ var netsimGlobals = require('./netsimGlobals');
 var PubSubService = exports;
 
 /**
+ * @typedef {Object} PubSubConfig
+ * @property {boolean} usePusher - Whether to use Pusher's API, or a null
+ *           implementation.
+ * @property {string} pusherApplicationKey - If using Pusher, the public key
+ *           required to initialize the Pusher API.
+ */
+
+/**
  * Create an API instance appropriate to the current configuration.
+ * @param {!PubSubConfig} pubSubConfig
  * @returns {PubSubService}
  */
-PubSubService.create = function () {
-  var pubSubConfig = netsimGlobals.getPubSubServiceInfo();
+PubSubService.create = function (pubSubConfig) {
   if (pubSubConfig.usePusher) {
     return new PubSubService.PusherService(pubSubConfig.pusherApplicationKey);
   }
