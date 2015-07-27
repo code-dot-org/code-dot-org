@@ -312,13 +312,10 @@ Blockly.Block.terminateDrag_ = function() {
     Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, null);
   }
 
-  var wasDragging = Blockly.Block.isDragging();
-
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
 
-  if (wasDragging) {
-    // bumpBlocksIntoBlockSpace_ requires us to not be dragging
-    // we want to bump and then scroll the block into view
+  if (selected) {
+    // Bump block if necessary and ensure scrolled into view
     selected.blockSpace.blockSpaceEditor.bumpBlocksIntoBlockSpace_();
     selected.blockSpace.scrollIntoView(selected);
   }
