@@ -215,7 +215,7 @@ NetSim.prototype.init = function(config) {
    * Whether NetSim should subscribe to events using Pusher.
    * @type {boolean}
    */
-  this.usePusher = config.netsimUsePusher;
+  this.usePusher = config.usePusher;
 
   /**
    * The public application key for the Pusher service. (Not used if not using

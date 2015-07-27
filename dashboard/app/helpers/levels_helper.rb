@@ -160,9 +160,8 @@ module LevelsHelper
       level_options['toolbox'] = level_view_options[:toolbox_blocks]
     end
 
-    # NetSim-specific option
-    if @level.game == Game.netsim
-      app_options['netsimUsePusher'] = CDO.netsim_use_pusher
+    if @level.game.uses_pusher?
+      app_options['usePusher'] = CDO.use_pusher
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 

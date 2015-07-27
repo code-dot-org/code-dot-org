@@ -81,7 +81,7 @@ def load_configuration()
     'assets_s3_bucket'             => "cdo-v3-assets",
     'assets_s3_directory'          => rack_env == :production ? 'assets' : "assets_#{rack_env}",
     'netsim_api_publickey'        => [:development].include?(rack_env) ? 'JGW2rHUp_UCMW_fQmRf6iQ==' : 'HQJ8GCCMGP7Yh8MrtDusIA==',
-    'netsim_use_pusher'           => false,
+    'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
     'pusher_application_secret'   => 'fake_application_secret'
