@@ -26,7 +26,8 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "images": "[{\"filename\":\"binary_grid.svg\",\"position\":[0,0]}]"
   }
 }]]></config>
   <blocks>
@@ -204,23 +205,32 @@
           <mutation/>
           <title name="NAME">draw bit</title>
           <statement name="STACK">
-            <block type="draw_width_inline" uservisible="false">
-              <title name="WIDTH">12.5</title>
+            <block type="draw_colour" inline="true" uservisible="false" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker" uservisible="false">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
               <next>
-                <block type="controls_repeat" uservisible="false">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-                    <block type="draw_move_by_constant" uservisible="false">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">12.5</title>
-                      <next>
-                        <block type="draw_turn_by_constant" uservisible="false">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE">90</title>
+                <block type="draw_width_inline" uservisible="false">
+                  <title name="WIDTH">12.5</title>
+                  <next>
+                    <block type="controls_repeat" uservisible="false">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant" uservisible="false">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">12.5</title>
+                          <next>
+                            <block type="draw_turn_by_constant" uservisible="false">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">90</title>
+                            </block>
+                          </next>
                         </block>
-                      </next>
+                      </statement>
                     </block>
-                  </statement>
+                  </next>
                 </block>
               </next>
             </block>
@@ -274,7 +284,7 @@
                             <block type="draw_colour" inline="true">
                               <value name="COLOUR">
                                 <block type="colour_picker">
-                                  <title name="COLOUR">#808080</title>
+                                  <title name="COLOUR">#ffffff</title>
                                 </block>
                               </value>
                               <next>
