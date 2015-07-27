@@ -225,7 +225,7 @@ function shareProject() {
         submitButton.click(function() {
           var phone = $("#project-share #phone");
           var params = jQuery.param({
-            type: location.pathname.match(/^\/p\/(\w+)/)[1],
+            type: dashboard.project.getCurrentApp(),
             channel_id: dashboard.project.getCurrentId(),
             phone: phone.val()
           });
