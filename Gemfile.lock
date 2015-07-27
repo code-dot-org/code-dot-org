@@ -416,7 +416,7 @@ GEM
       multi_json
       nokogiri
       progressbar
-    videojs_rails (4.5.2)
+    videojs_rails (4.12.6)
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)

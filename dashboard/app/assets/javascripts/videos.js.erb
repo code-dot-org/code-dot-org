@@ -135,7 +135,11 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
   }
 
   if (videoInfo['force_fallback']) {
-    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
+    // this and the below setTimeout wrapper work around a load-ordering issue, see detailed comment:
+    // https://github.com/code-dot-org/code-dot-org/pull/3260#discussion_r35707401
+    setTimeout(function() {
+      addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
+    }, 0);
     return;
   }
 
@@ -143,7 +147,9 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
     if (!shouldStillAddCallback()) {
       return;
     }
-    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
+    setTimeout(function() {
+      addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
+    }, 0);
   });
 }
 
