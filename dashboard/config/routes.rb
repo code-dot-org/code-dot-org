@@ -79,7 +79,7 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
-  resources :projects, path: '/p/', only: [:index] do
+  resources :p, path: '/p/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, value|
         get '/' + key.to_s, to: 'projects#redirect_legacy', key: value[:name], as: key.to_s
