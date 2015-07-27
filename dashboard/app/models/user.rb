@@ -576,7 +576,7 @@ SQL
   end
 
   def all_advertised_scripts_completed?(advertised_scripts)
-    advertised_scripts.all?.completed?
+    advertised_scripts.all?(&:completed?)
   end
 
   def completed?(script)
