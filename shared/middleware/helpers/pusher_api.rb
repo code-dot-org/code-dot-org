@@ -4,11 +4,9 @@
 require 'pusher'
 
 class PusherApi
-  def self.configure_keys
-    Pusher.app_id = CDO.pusher_app_id
-    Pusher.key = CDO.pusher_application_key
-    Pusher.secret = CDO.pusher_application_secret
-  end
+  Pusher.app_id = CDO.pusher_app_id
+  Pusher.key = CDO.pusher_application_key
+  Pusher.secret = CDO.pusher_application_secret
 
   def self.trigger(channels, event, data)
     Pusher.trigger(channels, event, data)

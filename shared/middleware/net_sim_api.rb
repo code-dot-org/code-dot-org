@@ -22,7 +22,6 @@ class NetSimApi < Sinatra::Base
 
   # Pick a PubSub API based on configuration
   PUB_SUB_API = CDO.use_pusher ? PusherApi : NullPubSubApi
-  PUB_SUB_API.configure_keys
 
   def get_table(shard_id, table_name)
     # Table name within channels API just concatenates shard + table
