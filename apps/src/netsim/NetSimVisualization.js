@@ -275,7 +275,9 @@ NetSimVisualization.prototype.getReciprocatedWiresAttachedToNode = function (viz
 
   return localWires.filter(function (localWire) {
 
-    if (localWire.remoteVizNode.isRouter) return true;
+    if (localWire.remoteVizNode.isRouter) {
+      return true;
+    }
 
     return this.getWiresAttachedToNode(localWire.remoteVizNode).some(function (wire) {
       return wire.remoteVizNode === vizNode;
