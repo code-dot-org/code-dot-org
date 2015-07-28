@@ -398,7 +398,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
   }
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
+  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
@@ -1082,6 +1082,8 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   }
 
   // Shard changes almost ALWAYS require a re-render
+  this.visualization_.setShard(shard);
+  this.visualization_.setLocalNode(localNode);
   this.render();
 };
 
@@ -1732,22 +1734,14 @@ var NodeType = netsimConstants.NodeType;
  *        will be created.
  * @param {RunLoop} runLoop - Loop providing tick and render events that the
  *        visualization can hook up to and respond to.
- * @param {NetSim} netsim - core app controller, provides access to change
- *        events and connection information.
  * @constructor
  */
-var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
+var NetSimVisualization = module.exports = function (svgRoot, runLoop) {
   /**
    * @type {jQuery}
    * @private
    */
   this.svgRoot_ = svgRoot;
-
-  /**
-   * @type {NetSim}
-   * @private
-   */
-  this.netsim_ = netsim;
 
   /**
    * The shard currently being represented.
@@ -1757,7 +1751,6 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
    * @private
    */
   this.shard_ = null;
-  netsim.shardChange.register(this.onShardChange_.bind(this));
 
   /**
    * List of VizEntities, which are all the elements that will actually show up
@@ -1786,6 +1779,13 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
   this.visualizationHeight = 300;
 
   /**
+  * Last known DNS mode, so that new elements can be created with the
+  * correct default
+  * @type {DnsMode}
+  */
+  this.dnsMode_ = null;
+
+  /**
    * Reference to visualized auto-DNS node, a fake node (not mapped to the
    * simulation in a normal way) that also lives in our elements_ collection.
    * @type {NetSimVizAutoDnsNode}
@@ -1807,6 +1807,13 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
    * @type {Object}
    */
   this.eventKeys = {};
+
+  /**
+   * Last known encodings set, so that new elements can be created with
+   * the correct default
+   * @type {EncodingType[]}
+   */
+  this.encodings_ = [];
 
   // Hook up tick and render methods
   runLoop.tick.register(this.tick.bind(this));
@@ -1843,18 +1850,6 @@ NetSimVisualization.prototype.render = function (clock) {
   this.elements_.forEach(function (element) {
     element.render(clock);
   });
-};
-
-/**
- * Called whenever the connection notifies us that we've connected to,
- * or disconnected from, a shard.
- * @param {?NetSimShard} newShard - null if disconnected.
- * @param {?NetSimLocalClientNode} localNode - null if disconnected
- * @private
- */
-NetSimVisualization.prototype.onShardChange_= function (newShard, localNode) {
-  this.setShard(newShard);
-  this.setLocalNode(localNode);
 };
 
 /**
@@ -2013,7 +2008,7 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
     var newVizNode = new NetSimVizSimulationNode(node);
-    newVizNode.setDnsMode(this.netsim_.getDnsMode());
+    newVizNode.setDnsMode(this.dnsMode_);
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
         Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
@@ -2036,7 +2031,7 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   this.updateVizEntitiesOfType_(NetSimVizSimulationWire, tableWires, function (wire) {
     var newVizWire = new NetSimVizSimulationWire(wire,
         this.getElementByEntityID.bind(this));
-    newVizWire.setEncodings(this.netsim_.getEncodings());
+    newVizWire.setEncodings(this.encodings_);
     return newVizWire;
   }.bind(this));
 
@@ -2232,28 +2227,19 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
     vizElement.visited = false;
   });
 
-  if (this.netsim_.isConnectedToRemote()) {
-    // Use a simple stack for our list of nodes that need visiting.
-    // If we have a local node, push it onto the stack as our starting point.
-    // (If we don't have a local node, the next step is REALLY EASY)
-    var toExplore = [];
-    if (this.localNode) {
-      toExplore.push(this.localNode);
-    }
+  var toExplore = [];
+  if (this.localNode) {
+    toExplore.push(this.localNode);
+  }
 
-    // While there are still nodes that need visiting,
-    // visit the next node, marking it as "foreground/visited" and
-    // pushing all of its unvisited connections onto the stack.
-    var currentVizElement;
-    while (toExplore.length > 0) {
-      currentVizElement = toExplore.pop();
-      currentVizElement.visited = true;
-      toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizElement));
-    }
-  } else if (this.localNode) {
-    // ONLY pull the local node to the foreground if we don't have a connection
-    // yet.
-    this.localNode.visited = true;
+  // While there are still nodes that need visiting,
+  // visit the next node, marking it as "foreground/visited" and
+  // pushing all of its unvisited connections onto the stack.
+  var currentVizElement;
+  while (toExplore.length > 0) {
+    currentVizElement = toExplore.pop();
+    currentVizElement.visited = true;
+    toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizElement));
   }
 
   // Now, visited nodes belong in the foreground.
@@ -2297,6 +2283,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
     // Special case: The DNS node fake is a neighbor of a visited router
     if (vizElement.isRouter && this.autoDnsNode_) {
       neighbors.push(this.autoDnsNode_);
+      neighbors.push(this.autoDnsWire_);
     }
   } else if (vizElement instanceof NetSimVizWire) {
     if (vizElement.localVizNode) {
@@ -2470,6 +2457,9 @@ NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function 
  * @param {DnsMode} newDnsMode
  */
 NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
+
+  this.dnsMode_ = newDnsMode;
+
   // Show/hide the auto-DNS node according to the new state
   if (newDnsMode === DnsMode.AUTOMATIC) {
     this.makeAutoDnsNode();
@@ -2560,6 +2550,7 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
  * @param {EncodingType[]} newEncodings
  */
 NetSimVisualization.prototype.setEncodings = function (newEncodings) {
+  this.encodings_ = newEncodings;
   this.elements_.forEach(function (vizElement) {
     if (vizElement instanceof NetSimVizSimulationWire) {
       vizElement.setEncodings(newEncodings);
