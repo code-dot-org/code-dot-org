@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-07-16T18:59:11.000Z",
+  "created_at": "2015-07-28T21:37:12.000Z",
   "level_num": "custom",
   "user_id": 112,
   "properties": {
@@ -79,8 +79,8 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "instructions": "Adjust the \"if\" block to make the bot respond \"That's the color of the sky!\" if the user inputs the color \"blue\".",
-    "markdown_instructions": "## If statement warm-up\r\n\r\nSo far, the personal assistants aren't very interesting - they respond with the same message no matter what the user types. Over the next few levels, we are going to learn how to create some basic question/answer functionality.\r\n\r\nAdding an `if` statement to your program will let you execute a section of code only \"if\" something is true. \r\n\r\n**Example** \r\n\r\n\tif (yourResponse == myResponse) {\r\n    \twrite(\"We agree!\")\r\n    }\r\n\r\n### Instructions\r\n\r\n* Adjust the `if` statement to make the color bot respond to the color \"blue.\" If the user types \"blue\" the bot should respond \"That's the color of the sky!\""
+    "instructions": "Use the function \"userInput.indexOf(<food>)\" to check if the strings \"pizza\" or \"soup\" are anywhere in the user's response.",
+    "markdown_instructions": "## String Parsing\r\n\r\nYour personal assistant can now respond to many key words. Unfortunately, it doesn't understand any keyword if it is in the middle of a sentence. We can solve this problem by using the `str.indexOf(searchValue)` function. \r\n\r\n> <i>**Note:** str.indexOf(searchValue) will return a non-negative number if the searchValue is somewhere in str. Otherwise, it will return -1.</i>\r\n\r\n### Instructions\r\n\r\n* Adjust the chained conditional to use `indexOf()`\r\n* The chef's assistant should respond to a sentence that contains the word pizza or the word soup\r\n\r\n**Example** \r\n\r\n\tif (sentence.indexOf(\"word\") >= 0) {\r\n    \twrite(\"'word' is in the sentence!\")\r\n    }"
   }
 }]]></config>
   <blocks/>
