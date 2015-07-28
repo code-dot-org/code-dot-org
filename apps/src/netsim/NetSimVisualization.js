@@ -41,8 +41,6 @@ var NodeType = netsimConstants.NodeType;
  *        will be created.
  * @param {RunLoop} runLoop - Loop providing tick and render events that the
  *        visualization can hook up to and respond to.
- * @param {NetSim} netsim - core app controller, provides access to change
- *        events and connection information.
  * @constructor
  */
 var NetSimVisualization = module.exports = function (svgRoot, runLoop) {
