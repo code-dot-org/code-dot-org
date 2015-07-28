@@ -36,6 +36,45 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
+  def Script.hoc_2014_script
+    Script.get_from_cache(Script::HOC_NAME)
+  end
+
+  def Script.frozen_script
+    Script.get_from_cache(Script::FROZEN_NAME)
+  end
+
+  def Script.course1_script
+    Script.get_from_cache(Script::COURSE1_NAME)
+  end
+
+  def Script.course2_script
+    Script.get_from_cache(Script::COURSE2_NAME)
+  end
+
+  def Script.course3_script
+    Script.get_from_cache(Script::COURSE3_NAME)
+  end
+
+  def Script.course4_script
+    Script.get_from_cache(Script::COURSE4_NAME)
+  end
+
+  def Script.infinity_script
+    Script.get_from_cache(Script::INFINITY_NAME)
+  end
+
+  def Script.flappy_script
+    Script.get_from_cache(Script::FLAPPY_NAME)
+  end
+
+  def Script.playlab_script
+    Script.get_from_cache(Script::PLAYLAB_NAME)
+  end
+
+  def Script.artist_script
+    Script.get_from_cache(Script::ARTIST_NAME)
+  end
 
   def starting_level
     raise "Script #{name} has no level to start at" if script_levels.empty?
