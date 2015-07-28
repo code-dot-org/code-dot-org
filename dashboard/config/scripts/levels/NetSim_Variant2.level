@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "skip_instructions_popup": "true",
+    "skip_instructions_popup": "false",
     "instructions": "NetSim: Variant 2: Students connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
@@ -46,7 +46,14 @@
     "default_bit_rate_bits_per_second": "Infinity",
     "show_chunk_size_control": "true",
     "lock_chunk_size_control": "false",
-    "default_chunk_size_bits": "8"
+    "default_chunk_size_bits": "8",
+    "video_key": "csp_internetsimulator_2",
+    "markdown_instructions": "##NetSim: Variant 2\r\n\r\nStudents connect directly to one another and send entire packets back and forth, exploring systems of encoding data.",
+    "show_log_browser_button": "false",
+    "broadcast_mode": "false",
+    "connected_routers": "false",
+    "show_hostname_in_graph": "false",
+    "show_pulse_rate_slider": "false"
   }
 }]]></config>
   <blocks/>
