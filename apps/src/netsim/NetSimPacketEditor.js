@@ -814,12 +814,14 @@ NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
 };
 
 /**
- * Get just the first bit of the packet binary, for single-bit sending mode.
- * @returns {string} a single bit, as "0" or "1"
+ * Get just the first bit of the packet binary if it exists, for
+ * single-bit sending mode.
+ * @returns {string|undefined} a single bit if it exists, as "0" or "1",
+ * or undefined if none does.
  */
 NetSimPacketEditor.prototype.getFirstBit = function () {
   var binary = this.getPacketBinary();
-  return binary.length > 0 ? binary.substr(0, 1) : '0';
+  return binary.length > 0 ? binary.substr(0, 1) : undefined;
 };
 
 /** @param {number} fromAddress */
