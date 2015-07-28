@@ -95,6 +95,10 @@ Eval.init = function(config) {
   config.forceInsertTopBlock = 'functional_display';
   config.enableShowCode = false;
 
+  // We don't want icons in instructions
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+
   config.html = page({
     assetUrl: studioApp.assetUrl,
     data: {
