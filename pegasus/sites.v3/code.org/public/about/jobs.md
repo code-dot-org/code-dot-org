@@ -167,7 +167,7 @@ Code.org is recruiting for an experienced Product Manager who can help us identi
 Responsibilities of the position include:
 
 - Defining the scope of these projects
-- Designing user experience and working with engineers and other teams at Code.org to implement them
+- Designing user experience and working with engineers, education experts, and other teams at Code.org to implement them
 
 This person must be able to work in a fast paced environment with continuous release to customers.
 
@@ -181,6 +181,11 @@ The ideal candidate has the following qualifications:
 - Strong technical background
 - Strong communication and collaboration skills
 
+Additional skills that would be valuable in this role:
+
+- Visual or interaction design
+- Teaching in K-12 classrooms
+- Curriculum design or partnering with educators on curriculum design
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
