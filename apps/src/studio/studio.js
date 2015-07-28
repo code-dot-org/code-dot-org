@@ -2623,25 +2623,28 @@ Studio.vanishActor = function (opts) {
   explosion.setAttribute('visibility', 'visible');
 
   var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
-  var baseY;
   var numFrames = skin.explosionFrames;
   explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
   explosion.setAttribute('width', numFrames * 100);
+
+  if (!skin.fadeExplosion) {
+    Studio.setSprite({
+      spriteIndex: opts.spriteIndex,
+      value: 'hidden'
+    });
+  }
+
   _.range(0, numFrames).forEach(function (i) {
     Studio.perExecutionTimeouts.push(setTimeout(function () {
+      explosion.setAttribute('x', baseX - i * 100);
       if (i === 0) {
+        // Sometimes the spriteClipRect still moves a bit before our explosion
+        // starts, so wait until first frame to set y.
         explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
       }
-      explosion.setAttribute('x', baseX - i * 100);
 
       if (skin.fadeExplosion) {
         sprite.setAttribute('opacity', (numFrames - i) / numFrames);
-      } else if (i === 0) {
-        // hide the sprite
-        Studio.setSprite({
-          spriteIndex: opts.spriteIndex,
-          value: 'hidden'
-        });
       }
     }, i * skin.timePerExplosionFrame));
   });
