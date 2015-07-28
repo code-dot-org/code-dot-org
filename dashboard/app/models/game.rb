@@ -80,6 +80,10 @@ class Game < ActiveRecord::Base
     name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC"
   end
 
+  def uses_pusher?
+    app == NETSIM
+  end
+
   def has_footer?
     !(app == APPLAB)
   end
