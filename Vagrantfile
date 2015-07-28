@@ -34,7 +34,7 @@ Vagrant.configure(2) do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
   config.vm.provision "chef_apply", recipe: <<-RECIPE1
-    execute 'updateAndUpgradePackages' do
+    execute 'update-and-upgrade-packages' do
       command 'aptitude update && aptitude upgrade -y'
       retries 5
       retry_delay 5
@@ -54,11 +54,11 @@ Vagrant.configure(2) do |config|
       to "/usr/bin/gem2.0"
     end
 
-    execute 'chownGemDirectories' do
+    execute 'chown-gem-directories' do
       command 'chown vagrant /usr/bin/gem; chown -R vagrant /usr/local/bin; [ ! -d /var/lib/gems ] && mkdir /var/lib/gems; chown -R vagrant /var/lib/gems'
     end
 
-    execute 'downloadAndInstallNode' do
+    execute 'download-and-install-node' do
       command 'curl -sSL https://deb.nodesource.com/setup | bash - && aptitude install -y nodejs'
       retries 5
       retry_delay 5
