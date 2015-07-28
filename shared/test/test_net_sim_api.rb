@@ -14,6 +14,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @shard_id = '_testShard'
     @table_name = 'n' # for "node table"
 
+    # Never ever let tests hit the real Pusher API, even if our locals.yml says so.
+    NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
+
     # Every test should start with an empty table
     assert read_records.first.nil?, "Table was not empty"
   end
@@ -73,7 +76,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_no_publish_on_read
     test_spy = SpyPubSubApi.new
-    NetSimApi.override_pub_sub_api(test_spy)
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
 
     read_records
 
@@ -82,7 +85,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_publish_on_insert
     test_spy = SpyPubSubApi.new
-    NetSimApi.override_pub_sub_api(test_spy)
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
 
     record_create_response = create_record({name:'dave', age:7, male:false})
     record_id = record_create_response['id'].to_i
@@ -99,7 +102,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_publish_on_update
     test_spy = SpyPubSubApi.new
-    NetSimApi.override_pub_sub_api(test_spy)
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
 
     record_create_response = create_record({name:'eliza', age:7, male:false})
     record_id = record_create_response['id'].to_i
@@ -117,7 +120,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_publish_on_delete
     test_spy = SpyPubSubApi.new
-    NetSimApi.override_pub_sub_api(test_spy)
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
 
     record_create_response = create_record({name:'franklin', age:7, male:false})
     record_id = record_create_response['id'].to_i
