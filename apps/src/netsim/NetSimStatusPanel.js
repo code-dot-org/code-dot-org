@@ -40,6 +40,7 @@ var NetSimStatusPanel = module.exports = function (rootDiv, callbacks) {
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim_status_panel',
     panelTitle: 'Status',
+    userToggleable: false,
     beginMinimized: true
   });
 };

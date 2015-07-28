@@ -30,7 +30,7 @@ var markup = require('./NetSimPanel.html.ejs');
  *        Defaults to no class, so only the 'netsim-panel' class will be used.
  * @param {string} [options.panelTitle] - Localized initial panel title.
  *        Defaults to empty string.
- * @param {boolean} [options.canMinimize] - Whether this panel can be minimized
+ * @param {boolean} [options.userToggleable] - Whether this panel can be minimized
  *        (closed) by clicking on the title. Defaults to TRUE.
  * @param {boolean} [options.beginMinimized] - Whether this panel should be
  *        minimized (closed) when it is initially created.  Defaults to FALSE.
@@ -73,7 +73,7 @@ var NetSimPanel = module.exports = function (rootDiv, options) {
    * @type {boolean}
    * @private
    */
-  this.canMinimize_ = utils.valueOr(options.canMinimize, true);
+  this.userToggleable_ = utils.valueOr(options.userToggleable, true);
 
   /**
    * Whether the component is minimized, for consistent
@@ -102,17 +102,14 @@ NetSimPanel.prototype.render = function () {
     instanceID: this.instanceID_,
     className: this.className_,
     panelTitle: this.panelTitle_,
-    canMinimize: this.canMinimize_
-
+    userToggleable: this.userToggleable_
   }));
   this.rootDiv_.html(newMarkup);
 
-  if (this.canMinimize_) {
+  if (this.userToggleable_) {
     this.rootDiv_.find('.minimizer').click(this.onMinimizerClick_.bind(this));
-    this.setMinimized(this.isMinimized_);
-  } else {
-    this.setMinimized(false);
   }
+  this.setMinimized(this.isMinimized_);
 };
 
 /**
