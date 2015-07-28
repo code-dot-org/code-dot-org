@@ -37,7 +37,6 @@ var NetSimRouterLogModal = require('./NetSimRouterLogModal');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimShard = require('./NetSimShard');
-var NetSimShardCleaner = require('./NetSimShardCleaner');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimVisualization = require('./NetSimVisualization');
@@ -47,13 +46,6 @@ var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
 var netsimGlobals = require('./netsimGlobals');
-
-/**
- * Initial time between connecting to the shard and starting
- * the first cleaning cycle.
- * @type {number}
- */
-var INITIAL_CLEANING_DELAY_MS = 10000; // 10 seconds
 
 /**
  * The top-level Internet Simulator controller.
@@ -95,12 +87,6 @@ var NetSim = module.exports = function () {
    * @private
    */
   this.shard_ = null;
-
-  /**
-   * @type {NetSimShardCleaner}
-   * @private
-   */
-  this.shardCleaner_ = null;
 
   /**
    * The local client's node representation within the shard.
@@ -268,10 +254,6 @@ NetSim.prototype.tick = function (clock) {
   if (this.isConnectedToShard()) {
     this.myNode.tick(clock);
     this.shard_.tick(clock);
-
-    if (this.shardCleaner_) {
-      this.shardCleaner_.tick(clock);
-    }
   }
 };
 
@@ -302,13 +284,6 @@ NetSim.prototype.getOverrideShardID = function () {
     }
   });
   return shardID;
-};
-
-/** 
- * @returns {boolean} TRUE if the "enableCleaning" flag is found in the URL
- */
-NetSim.prototype.shouldEnableCleanup = function () {
-  return location.search.match(/enableCleaning/i);
 };
 
 /**
@@ -493,10 +468,6 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
   }
 
   this.shard_ = new NetSimShard(shardID, netsimGlobals.getPubSubConfig());
-  if (this.shouldEnableCleanup()) {
-    this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
-        INITIAL_CLEANING_DELAY_MS);
-  }
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
     this.shardChange.notifyObservers(this.shard_, this.myNode);
