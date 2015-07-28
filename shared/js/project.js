@@ -277,9 +277,12 @@ var projects = module.exports = {
     });
   },
   serverSideRemix: function() {
-    if (current && !current.name &&
-        projects.appToProjectUrl() === '/projects/algebra_game') {
-      current.name = 'Big Game Template';
+    if (current && !current.name) {
+      if (projects.appToProjectUrl() === '/projects/algebra_game') {
+        current.name = 'Big Game Template';
+      } else if (projects.appToProjectUrl() === '/projects/applab') {
+        current.name = 'My Project';
+      }
     }
     // Save, then do our remix on the server
     projects.save(function () {
