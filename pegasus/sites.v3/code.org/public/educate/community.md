@@ -13,7 +13,7 @@ We believe anybody can learn computer science - but that our students won't reac
 ## Get Connected
 We’re kicking off a new worldwide community to keep teachers up-to-date on what’s new with Code.org, and to help connect our teachers around the globe.
 <br><br>
-[<button class="font-size: 18px; height: 32px">Follow @teachcodeorg on Twitter</button>](http://twitter.com/teachcode.org)    [<button style="font-size: 18px; height: 32px">Follow us on Tumblr</button>](http://teacherblog.code.org)<br />
+[<button class="font-size: 18px; height: 32px">Follow @TeachCode on Twitter</button>](http://twitter.com/TeachCode)    [<button style="font-size: 18px; height: 32px">Follow us on Tumblr</button>](http://teacherblog.code.org)<br />
 
 ## Join our Professional Learning Community
 There are many ways to get involved in our community. Review the options below and choose how you’d like to participate.
@@ -39,5 +39,5 @@ Looking for other ways to get connected to computer science teachers around the 
 - **[CS10K](http://cs10kcommunity.org):** A nation-wide virtual community for CS educators, [CS10K](http://cs10kcommunity.org) offers opportunities for sharing resources, developing leadership and connecting with peers.
 - **[Computer Science Teacher's Association](http://csta.acm.org/index.html):** The [CSTA](http://csta.acm.org/index.html) is an engaged community of educators across the nation that is committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.
 
-*Don't see your local CS community listed? Connect with [@teachcodeorg](http://twitter.com/teachcodeorg) on Twitter so we can get to know you!*
+*Don't see your local CS community listed? Connect with [@TeachCode](http://twitter.com/TeachCode) on Twitter so we can get to know you!*
 

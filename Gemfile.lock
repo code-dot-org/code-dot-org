@@ -83,7 +83,7 @@ GEM
     chunky_png (1.3.3)
     codeclimate-test-reporter (0.3.0)
       simplecov (>= 0.7.1, < 1.0.0)
-    codemirror-rails (4.2)
+    codemirror-rails (5.5)
       railties (>= 3.0, < 5)
     coderay (1.1.0)
     coffee-script-source (1.9.1)

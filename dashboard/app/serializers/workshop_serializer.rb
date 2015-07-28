@@ -1,5 +1,5 @@
 class WorkshopSerializer < ActiveModel::Serializer
-  attributes :id, :name, :program_type, :location, :instructions, :cohorts
+  attributes :id, :name, :program_type, :location, :instructions, :phase, :cohorts
   has_many :segments
   has_many :facilitators, serializer: UserSerializer
   has_many :teachers

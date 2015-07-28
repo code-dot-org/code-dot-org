@@ -19,7 +19,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "use_modal_function_editor": "true",
-    "instructions": "Now we've got flags that are too high for our current jump! Let's add a parameter to our jump function called \"height.\" The up arrow should jump 200 pixels, but the down arrow should jump 100 pixels. Click \"edit\" on the jump function and update it so that it uses the height parameter instead of just jumping 100 pixels.",
+    "instructions": "Now we've got flags that are too high for our current jump! Let's use both the \"up\" and \"down\" arrows so that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter to our jump function called \"height\".  The up arrow should cause the dog to jump 200 pixels and the down arrow should make it jump only 100 pixels. \r\n\r\nHint: You will need to click \"edit\" on the jump function and update it so that it uses the \"height\" parameter.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -39,7 +39,7 @@
     "definition_collapse": "false",
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Now we've got flags that are too high for our current jump! \r\n\r\n<br/>\r\nLet's add a parameter to our jump function called `height`. The up arrow should jump 200 pixels, but the down arrow should jump 100 pixels. Click \"edit\" on the jump function and update it so that it uses the `height` parameter instead of just jumping 100 pixels.",
+    "markdown_instructions": "Now we've got flags that are too high for our current jump! Let's use both the \"up\" and \"down\" arrows so that we can have multiple jump heights.  \r\n\r\nWe need to add a parameter to our jump function called `height`.  The up arrow should cause the dog to jump 200 pixels and the down arrow should make it jump only 100 pixels. \r\n\r\n*Hint: You will need to click \"edit\" on the jump function and update it so that it uses the `height` parameter.*",
     "disable_examples": "false",
     "maze_data": null
   }
