@@ -20,6 +20,26 @@ module LevelsHelper
     "#{root_url.chomp('/')}#{path}"
   end
 
+  # Create a new channel.
+  # @param [Hash] data Data to store in the channel.
+  # @param [String] src Optional source channel to copy data from, instead of
+  #   using the value from the `data` param.
+  def create_channel(data = {}, src = nil)
+
+    result = ChannelsApi.call(request.env.merge(
+      'REQUEST_METHOD' => 'POST',
+      'PATH_INFO' => '/v3/channels',
+      'REQUEST_PATH' => '/v3/channels',
+      'QUERY_STRING' => src ? "src=#{src}" : '',
+      'CONTENT_TYPE' => 'application/json;charset=utf-8',
+      'rack.input' => StringIO.new(data.to_json)
+    ))
+    headers = result[1]
+
+    # Return the newly created channel ID.
+    headers['Location'].split('/').last
+  end
+
   def set_channel
     # This only works for logged-in users because the storage_id cookie is not
     # sent back to the client if it is modified by ChannelsApi.
@@ -43,13 +63,7 @@ module LevelsHelper
         # your own channel
         ChannelToken.find_or_create_by!(level: host_level, user: current_user) do |ct|
           # Get a new channel_id.
-          ct.channel = ChannelsApi.call(request.env.merge(
-                                                          'REQUEST_METHOD' => 'POST',
-                                                          'PATH_INFO' => '/v3/channels',
-                                                          'REQUEST_PATH' => '/v3/channels',
-                                                          'CONTENT_TYPE' => 'application/json;charset=utf-8',
-                                                          'rack.input' => StringIO.new('{"hidden":"true"}')
-                                                         ))[1]['Location'].split('/').last
+          ct.channel = create_channel(hidden: true)
         end
       end
     end
@@ -105,10 +119,11 @@ module LevelsHelper
     # Provide the channel for templated and applab levels.
     set_channel if @level.project_template_level || @level.game == Game.applab
 
+    callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
     # Set videos and callouts.
     view_options(
       autoplay_video: select_and_track_autoplay_video,
-      callouts: select_and_remember_callouts(params[:show_callouts])
+      callouts: callouts
     )
 
     return blockly_options if @level.is_a? Blockly
@@ -189,11 +204,11 @@ module LevelsHelper
     end
 
     # User/session-dependent options
-    app_options[:disableSocialShare] = true if (@current_user && @current_user.under_13?) || app_options[:embed]
+    app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
-    app_options[:isAdmin] = true if (@game == Game.applab && @current_user && @current_user.admin?)
+    app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
         fallback_response: @fallback_response,
