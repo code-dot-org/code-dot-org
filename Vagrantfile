@@ -33,29 +33,70 @@ Vagrant.configure(2) do |config|
 
   # View the documentation for the provider you are using for more
   # information on available options.
+  config.vm.provision "chef_apply", recipe: <<-RECIPE1
+    execute 'updateAndUpgradePackages' do
+      command 'aptitude update && aptitude upgrade -y'
+      retries 5
+      retry_delay 5
+    end
 
-  # Enable provisioning with a shell script. Additional provisioners such as
-  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-  # documentation for more information about their specific syntax and use.
+    package ["git", "mysql-server", "mysql-client", "libmysqlclient-dev", "libxslt1-dev", "libssl-dev", "zlib1g-dev", "imagemagick", "libmagickcore-dev", "libmagickwand-dev", "openjdk-7-jre-headless", "libcairo2-dev", "libjpeg8-dev", "libpango1.0-dev", "libgif-dev", "curl", "pdftk", "ruby2.0", "ruby2.0-dev"] do
+      action :install
+      retries 5
+      retry_delay 5
+    end
+
+    link "/usr/bin/ruby" do
+      to "/usr/bin/ruby2.0"
+    end
+
+    link "/usr/bin/gem" do
+      to "/usr/bin/gem2.0"
+    end
+
+    execute 'chownGemDirectories' do
+      command 'chown vagrant /usr/bin/gem; chown -R vagrant /usr/local/bin; [ ! -d /var/lib/gems ] && mkdir /var/lib/gems; chown -R vagrant /var/lib/gems'
+    end
+
+    execute 'downloadAndInstallNode' do
+      command 'curl -sSL https://deb.nodesource.com/setup | bash - && aptitude install -y nodejs'
+      retries 5
+      retry_delay 5
+    end
+
+    gem_package "bundler" do
+      action :upgrade
+      version '1.10.4'
+      options "--no-user-install"
+      retries 5
+      retry_delay 5
+    end
+
+    git "/home/vagrant/code-dot-org" do
+      repository "https://github.com/code-dot-org/code-dot-org.git"
+      action :sync
+      user 'vagrant'
+      group 'vagrant'
+      timeout 12000
+      retries 5
+      retry_delay 5
+      notifies :run, "execute[bundle-install]", :immediately
+    end
+
+    execute 'bundle-install' do
+      command 'HOME=/home/vagrant/ bundle install'
+      cwd '/home/vagrant/code-dot-org/aws'
+      retries 5
+      retry_delay 5
+      user 'vagrant'
+      group 'vagrant'
+      action :nothing
+    end
+  RECIPE1
+
   config.vm.provision "shell", privileged: false, inline: <<-SHELL1
-    sudo aptitude update
-    sudo aptitude upgrade
-    DEBIAN_FRONTEND=noninteractive sudo -E aptitude install -q -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev
-    sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby
-    sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem
-    sudo chown $(whoami) /usr/bin/gem/
-    curl -sL https://deb.nodesource.com/setup | sudo bash -
-    sudo aptitude install -y nodejs
-    git clone https://github.com/code-dot-org/code-dot-org.git
-
-    [ ! -d /var/lib/gems ] && sudo mkdir /var/lib/gems
-    sudo chown $(whoami) /var/lib/gems
-    sudo chown $(whoami) /usr/local/bin
-    gem install bundler -v 1.10.4
-    cd code-dot-org/aws
-    bundle install
-    cd ..
-    sudo chown $(whoami) $HOME/.npm
+    cd code-dot-org
+    sudo chown vagrant /home/vagrant/.npm
     rake install
   SHELL1
 

@@ -28,10 +28,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `sudo aptitude upgrade`
 1. `sudo aptitude install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk ruby2.0 ruby2.0-dev`
   * **Hit enter and select default options for any configuration popups**
-1. Upgrade npm to 2.0. If `npm -v` says less than 2.0,
-  * `sudo add-apt-repository ppa:chris-lea/node.js  `
-  * `sudo apt-get update`
-  * `sudo apt-get install nodejs`
 1. Either setup RBENV or configure your default ruby and gem version to 2.0
   1. Option A - RBENV: ([instructions](https://github.com/sstephenson/rbenv#installation))
     1. Install RBENV and ruby-build
@@ -41,7 +37,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Option B - Symlinks:
     1. Ruby: `sudo ln -sf /usr/bin/ruby2.0 /usr/bin/ruby`
     1. Gem: `sudo ln -sf /usr/bin/gem2.0 /usr/bin/gem`
-    1. <code>sudo chown \`whoami\` /usr/bin/gem/</code>`
+    1. To install gems without sudo you will also need to do the following:
+      1. `sudo chown $(whoami) /usr/bin/gem/`
+      1. Create the gems directory if it doesn't already exist: `[ ! -d /var/lib/gems ] && sudo mkdir /var/lib/gems`
+      1. `sudo chown $(whoami) /var/lib/gems/`
+      1. `sudo chown $(whoami) /usr/local/bin/`
 1. Install Node.js 0.12.4 and npm 2.10.1
   1. Option A - nodesource repository
     1. `curl -sL https://deb.nodesource.com/setup | sudo bash -`
@@ -55,17 +55,20 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 * Option A: Use [VMWare Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/4_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.1/ubuntu-14.04.1-desktop-amd64.iso)
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
-  1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
-  1. `cd code-dot-org`
-  1. `vagrant up`
-  1. `vagrant ssh`
-  1. Goto step 2 of the common setup instructions
+  1. Just download the project's [Vagrantfile](https://github.com/code-dot-org/code-dot-org/raw/staging/Vagrantfile) (you will be able to skip all Ubuntu and common setup instructions) to your desired code-dot-org project directory
+  1. In the directory where you downloaded the Vagrantfile:
+    1. `vagrant up`
+    1. `vagrant ssh`
+    1. Dashboard and Pegasus are setup/built by default, to run them both in the development environment execute the following in the Vagrant SSH session:
+      1. `cd code-dot-org`
+      1. `bin/dashboard-server`
+  1. On your host machine you can now visit [Dashboard](http://localhost.studio.code.org:3000/) and [Pegasus](http://localhost.code.org:3000/)
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Common setup
 
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `gem install bundler -v 1.10.4`
+1. `gem install bundler -v 1.10.4` (if you have permission issues you can use sudo or take ownership of the gem directories)
 1. `rbenv rehash` (if using rbenv)
 1. `cd code-dot-org/aws`
 1. `bundle install`
@@ -92,7 +95,7 @@ Our code is segmented into four parts:
 1. `cd code-dot-org`
 2. `rake build:dashboard` (Generally, do this after each pull)
 3. `bin/dashboard-server`
-4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/)
+4. Visit [http://localhost.studio.code.org:3000/](http://localhost.studio.code.org:3000/) (note that in the development environment, by default Pegasus will also be running and can be reached at [http://localhost.code.org:3000/](http://localhost.code.org:3000/))
 
 ## Running Pegasus
 
