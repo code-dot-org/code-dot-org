@@ -8,7 +8,7 @@ class AssetsApi < Sinatra::Base
   ALLOWED_FILE_TYPES = %w(.jpg .jpeg .gif .png .mp3)
 
   helpers do
-    %w(core.rb assets.rb storage_id.rb).each do |file|
+    %w(core.rb asset_bucket.rb storage_id.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
