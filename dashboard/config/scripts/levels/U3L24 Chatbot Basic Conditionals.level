@@ -148,7 +148,9 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
-    "beginner_mode": "false"
+    "beginner_mode": "false",
+    "instructions": "Add a chained conditional with at least 3 \"else if\" statements to your personal assistant.",
+    "markdown_instructions": "Here's your personal assistant again! Time to make it a little smarter.\r\n\r\n###Instructions\r\n\r\n* Add a chained conditional to your personal assistant\r\n* Your chained conditional should include at least 3 `else if` statements.\r\n\r\nDon't stay here too long. We still have lots to do!"
   }
 }]]></config>
   <blocks/>

@@ -1,0 +1,27 @@
+name 'U3L24 Warm-up Quiz 2'
+title 'Warm-up Quiz 2'
+question 'Which of the following will print "Hello World!" to the screen?'
+right 'I'
+wrong 'II'
+wrong 'III'
+wrong 'I & III'
+markdown <<MARKDOWN
+	I.
+    	if ("blue" == "blue") {
+    		write("Hello World!");
+    	}
+    
+    
+    II. 
+    	if ("blue" == "green") {
+        	write("Hello World!");
+        }
+        
+        
+    III. 
+    	if ("blue" == "Blue") {
+        	write("Hello World!");
+        }
+    
+	
+MARKDOWN
