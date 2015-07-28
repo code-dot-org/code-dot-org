@@ -2616,8 +2616,9 @@ Studio.vanishActor = function (opts) {
 
   var spriteClipRect = document.getElementById('spriteClipRect' + opts.spriteIndex);
 
+  var frameWidth = Studio.sprite[opts.spriteIndex].width;
+
   explosion.setAttribute('height', Studio.sprite[opts.spriteIndex].height);
-  explosion.setAttribute('width', Studio.sprite[opts.spriteIndex].width);
   explosion.setAttribute('x', spriteClipRect.getAttribute('x'));
 
   explosion.setAttribute('visibility', 'visible');
@@ -2625,7 +2626,7 @@ Studio.vanishActor = function (opts) {
   var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
   var numFrames = skin.explosionFrames;
   explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
-  explosion.setAttribute('width', numFrames * 100);
+  explosion.setAttribute('width', numFrames * frameWidth);
 
   if (!skin.fadeExplosion) {
     Studio.setSprite({
@@ -2636,7 +2637,7 @@ Studio.vanishActor = function (opts) {
 
   _.range(0, numFrames).forEach(function (i) {
     Studio.perExecutionTimeouts.push(setTimeout(function () {
-      explosion.setAttribute('x', baseX - i * 100);
+      explosion.setAttribute('x', baseX - i * frameWidth);
       if (i === 0) {
         // Sometimes the spriteClipRect still moves a bit before our explosion
         // starts, so wait until first frame to set y.
