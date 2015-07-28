@@ -11,10 +11,12 @@ nav: about_nav
 - [Data Engineer](#data-engineer)
 - [District Manager (Seattle, New York City)](#reg-PM)
 - [Evaluation Manager](#Eval)
+- [Operations Coordinator](#opscoord)
 - [Technical Product Manager](#techpm)
 - [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
+
 
 ## <a name="support" href="#support">Customer Support Associate (Seattle, WA)</a>
 
@@ -147,6 +149,14 @@ The ideal candidate has the following qualifications:
 - A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must, especially spreadsheets.
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="opscoord" href="#opscoord">Operations Coordinator (Seattle, WA)</a>
+
+**Job Summary:**
+
+
+**Skills and Qualifications:**
+
 
 ## <a name="techpm" href="#techpm">Technical Product Manager (Seattle, WA)</a>
 
