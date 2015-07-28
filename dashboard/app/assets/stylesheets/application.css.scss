@@ -294,7 +294,12 @@ $small-footer-standard-width: 400px;
   padding-left: $codeApp-left-margin;
   padding-top: 3px;
   padding-bottom: 3px;
-  margin-top: 5px; /* Used in javascript to position #belowVisualization */
+
+  /*
+   * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
+   * fit between the visualization above and the .small-footer
+   */
+  margin-top: 5px;
 
   form {
     float: left;
