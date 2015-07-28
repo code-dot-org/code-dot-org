@@ -16,7 +16,7 @@
     }
 
     var data = response.getDataTable();
-    var chart = new google.visualization.ColumnChart(document.getElementById('chart_#{id}'));
+    var chart = new google.visualization["#{type}"](document.getElementById("chart_#{id}"));
     chart.draw(data, {width: "#{width}", height: "#{height}", is3D: true});
   }
 
