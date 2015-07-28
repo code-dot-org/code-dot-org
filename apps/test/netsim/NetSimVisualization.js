@@ -2,6 +2,7 @@
 /* global describe */
 /* global beforeEach */
 /* global it */
+/* global $ */
 
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
@@ -10,6 +11,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
+var NetSim = require('@cdo/apps/netsim/netsim');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
@@ -104,7 +106,17 @@ describe("NetSimVisualization", function () {
     deltaToAlphaWire = makeRemoteWire(deltaNode, alphaNode, elements);
     elements = elements.concat([alphaToRouterWire, betaToRouterWire, deltaToAlphaWire]);
 
-    netSimVis = new NetSimVisualization();
+    // Create an empty NetSim for the runLoop and an svg placeholder so
+    // that NetSimVisualization's foreground and background searches
+    // work.
+    var netsim = new NetSim();
+    var svg = $("<svg version=\"1.1\" width=\"298\" height=\"298\" xmlns=\"http://www.w3.org/2000/svg\">" +
+        "<g id=\"centered-group\">" +
+          "<g id=\"background-group\"></g>" +
+          "<g id=\"foreground-group\"></g>" +
+        "</g>" +
+      "</svg>");
+    netSimVis = new NetSimVisualization(svg, netsim.runLoop_);
     netSimVis.elements_ = elements;
     netSimVis.localNode = alphaNode;
   });
@@ -113,32 +125,32 @@ describe("NetSimVisualization", function () {
 
     it("correctly retrieves all attached wires", function () {
       var alphaWires = netSimVis.getWiresAttachedToNode(alphaNode);
-      assert.sameDeepMembers(alphaWires, [alphaToRouterWire, deltaToAlphaWire]);
+      assert.sameMembers(alphaWires, [alphaToRouterWire, deltaToAlphaWire]);
 
       var routerWires = netSimVis.getWiresAttachedToNode(router);
-      assert.sameDeepMembers(routerWires, [alphaToRouterWire, betaToRouterWire]);
+      assert.sameMembers(routerWires, [alphaToRouterWire, betaToRouterWire]);
     });
 
     it("correctly retrieves all locally attached wires", function () {
       var alphaWires = netSimVis.getLocalWiresAttachedToNode(alphaNode);
-      assert.sameDeepMembers(alphaWires, [alphaToRouterWire]);
+      assert.sameMembers(alphaWires, [alphaToRouterWire]);
 
       var routerWires = netSimVis.getLocalWiresAttachedToNode(router);
-      assert.sameDeepMembers(routerWires, []);
+      assert.sameMembers(routerWires, []);
     });
 
     it("correctly retrieves all reciprocated wires", function () {
       var alphaWires = netSimVis.getReciprocatedWiresAttachedToNode(alphaNode);
-      assert.sameDeepMembers(alphaWires, [alphaToRouterWire]);
+      assert.sameMembers(alphaWires, [alphaToRouterWire]);
 
       var betaWires = netSimVis.getReciprocatedWiresAttachedToNode(betaNode);
-      assert.sameDeepMembers(betaWires, [betaToRouterWire]);
+      assert.sameMembers(betaWires, [betaToRouterWire]);
 
       var deltaWires = netSimVis.getReciprocatedWiresAttachedToNode(deltaNode);
-      assert.sameDeepMembers(deltaWires, []);
+      assert.sameMembers(deltaWires, []);
 
       var routerWires = netSimVis.getReciprocatedWiresAttachedToNode(router);
-      assert.sameDeepMembers(routerWires, [alphaToRouterWire, betaToRouterWire]);
+      assert.sameMembers(routerWires, [alphaToRouterWire, betaToRouterWire]);
     });
 
     it("pulls the correct elements to the foreground", function () {
