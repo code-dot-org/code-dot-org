@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150724232749) do
+ActiveRecord::Schema.define(version: 20150727190540) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
@@ -532,7 +532,6 @@ ActiveRecord::Schema.define(version: 20150724232749) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "phase"
-    t.text     "link"
   end
 
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
