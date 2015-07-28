@@ -41,12 +41,9 @@
   %tr
     %td
       %ul
-        %li
-          Monday, June 22, 2015 - Friday, June 26, 2015
-        %li
-          Mon - Thurs: 8:30am - 3:30pm
-        %li
-          Friday: 8:30am - 1:30pm
+        - @workshop[:segments].each do |segment|
+          %li
+            #{segment}
         %li
           Breakfast and lunch will be served.
     %td
