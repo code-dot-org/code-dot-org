@@ -1,10 +1,14 @@
-- # require_relative '../../../cdo/activity_constants'
 %h2
-  - #{ActivityConstants::PROGRAM_TYPES[@workshop[:program_type]][:long_name]}
-%h3
-  It's time to finish Phase 1 and RSVP for your Phase 2 in-person workshop!
+  #{@workshop[:program_type][:long_name]} (#{@workshop[:program_type][:short_name]})
+- if @workshop[:phase] == "Phase 2"
+  %h3
+    It's time to finish Phase 1 and RSVP for your Phase 2 in-person workshop!
+- elsif @workshop[:phase] == "Phase 4"
+  %h3
+    Please RSVP for your Phase 4: Summer Wrap Up PD
+
 %p
-  Dear #{@recipient[:name]},
+  Dear #{@recipient_ops_data["ops_first_name"]},
 
 %p
   It's time to complete ECS Phase 1: Online Introduction and RSVP for your Phase 2: Blended Summer Study in-person workshop on Monday, June 22 through Friday, June 26 at the Applications Research Laboratory.
@@ -37,12 +41,9 @@
   %tr
     %td
       %ul
-        %li
-          Monday, June 22, 2015 - Friday, June 26, 2015
-        %li
-          Mon - Thurs: 8:30am - 3:30pm
-        %li
-          Friday: 8:30am - 1:30pm
+        - @workshop[:segments].each do |segment|
+          %li
+            #{segment}
         %li
           Breakfast and lunch will be served.
     %td

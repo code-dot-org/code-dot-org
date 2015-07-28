@@ -179,6 +179,10 @@ When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
   @browser.execute_script("$('" + selector + "').change()")
 end
 
+When /^I set text compression dictionary to "([^"]*)"$/ do |inputText|
+  @browser.execute_script("editor.setValue('#{inputText}')")
+end
+
 Then /^I should see title "([^"]*)"$/ do |title|
   @browser.title.should eq title
 end
@@ -386,4 +390,43 @@ end
 
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
+
+Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30 )
+  wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+
+  if redirect_source == 'pushState'
+    state = { "modified" => true }
+  elsif redirect_source == 'dashboard' || redirect_source == 'none'
+    state = nil
+  end
+  @browser.execute_script("return window.history.state").should eq state
+end
+
+last_shared_url = nil
+Then /^I navigate to the share URL$/ do
+  last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
+  @browser.navigate.to last_shared_url
+end
+
+Then /^I navigate to the last shared URL$/ do
+  @browser.navigate.to last_shared_url
+end
+
+Then /^I append "([^"]*)" to the URL$/ do |append|
+  url = @browser.current_url + append
+  @browser.navigate.to "#{url}"
+end
+
+Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
+  item = @browser.find_element(:css, selector)
+  classes = item.attribute("class")
+  classes.include?(className).should eq true
+end
+
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+  item = @browser.find_element(:css, selector)
+  classes = item.attribute("class")
+  classes.include?(className).should eq false
 end
