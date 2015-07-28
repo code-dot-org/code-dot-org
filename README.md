@@ -57,7 +57,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
   1. Just download the project's [Vagrantfile](https://github.com/code-dot-org/code-dot-org/raw/staging/Vagrantfile) (you will be able to skip all Ubuntu and common setup instructions) to your desired code-dot-org project directory
   1. In the directory where you downloaded the Vagrantfile:
-    1. `vagrant up`
+    1. `vagrant up` (Note that on first run this could take up to an hour depending on connection bandwidth and machine speed; subsequent runs should be very much faster)
     1. `vagrant ssh`
     1. Dashboard and Pegasus are setup/built by default, to run them both in the development environment execute the following in the Vagrant SSH session:
       1. `cd code-dot-org`
