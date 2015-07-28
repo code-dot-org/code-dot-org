@@ -151,3 +151,6 @@ gem 'lograge'
 
 # Enforce SSL
 gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
+
+# PubSub for NetSim
+gem 'pusher', '~> 0.14.5'

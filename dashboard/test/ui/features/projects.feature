@@ -15,7 +15,9 @@ Scenario: Save Artist Project
 
 # dashboard_db_access for sign in
 # no_mobile because we don't end up with open-workspace on mobile
-@dashboard_db_access @no_mobile
+# no_ie because applab is broken on IE9, and on IE10 this test crashes when we
+#   try to execute any JS after our redirect on line 42
+@dashboard_db_access @no_mobile @no_ie
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/"
   And I am a student
@@ -41,7 +43,7 @@ Scenario: Applab Flow
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" doesn't have class "readonly"
 
-  Then I sign out
+  Then I am on "http://studio.code.org/users/sign_out"
   And I navigate to the last shared URL
   And I wait to see "#open-workspace"
   And element "#codeWorkspace" is hidden
@@ -62,7 +64,7 @@ Scenario: Applab Flow
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
 
-  Then I sign out
+  Then I am on "http://studio.code.org/users/sign_out"
   And I am on "http://studio.code.org/"
 
   # TODO - maybe we do a remix and/or create new as well

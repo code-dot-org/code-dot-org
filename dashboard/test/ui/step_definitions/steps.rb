@@ -367,10 +367,6 @@ Given(/^I am a student$/) do
   log_in_as(@student)
 end
 
-And /^I sign out$/ do
-  @browser.manage.delete_cookie "_learn_session_#{Rails.env}"
-end
-
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
@@ -419,7 +415,8 @@ Then /^I navigate to the last shared URL$/ do
 end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
-  @browser.execute_script("location.href += '#{append}';")
+  url = @browser.current_url + append
+  @browser.navigate.to "#{url}"
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
