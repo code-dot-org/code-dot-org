@@ -45,18 +45,12 @@ var NodeType = netsimConstants.NodeType;
  *        events and connection information.
  * @constructor
  */
-var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
+var NetSimVisualization = module.exports = function (svgRoot, runLoop) {
   /**
    * @type {jQuery}
    * @private
    */
   this.svgRoot_ = svgRoot;
-
-  /**
-   * @type {NetSim}
-   * @private
-   */
-  this.netsim_ = netsim;
 
   /**
    * The shard currently being represented.
@@ -66,7 +60,6 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop, netsim) {
    * @private
    */
   this.shard_ = null;
-  netsim.shardChange.register(this.onShardChange_.bind(this));
 
   /**
    * List of VizEntities, which are all the elements that will actually show up
@@ -152,18 +145,6 @@ NetSimVisualization.prototype.render = function (clock) {
   this.elements_.forEach(function (element) {
     element.render(clock);
   });
-};
-
-/**
- * Called whenever the connection notifies us that we've connected to,
- * or disconnected from, a shard.
- * @param {?NetSimShard} newShard - null if disconnected.
- * @param {?NetSimLocalClientNode} localNode - null if disconnected
- * @private
- */
-NetSimVisualization.prototype.onShardChange_= function (newShard, localNode) {
-  this.setShard(newShard);
-  this.setLocalNode(localNode);
 };
 
 /**
@@ -322,7 +303,6 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
     var newVizNode = new NetSimVizSimulationNode(node);
-    newVizNode.setDnsMode(this.netsim_.getDnsMode());
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
         Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
@@ -345,7 +325,6 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   this.updateVizEntitiesOfType_(NetSimVizSimulationWire, tableWires, function (wire) {
     var newVizWire = new NetSimVizSimulationWire(wire,
         this.getElementByEntityID.bind(this));
-    newVizWire.setEncodings(this.netsim_.getEncodings());
     return newVizWire;
   }.bind(this));
 
@@ -541,28 +520,19 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
     vizElement.visited = false;
   });
 
-  if (this.netsim_.isConnectedToRemote()) {
-    // Use a simple stack for our list of nodes that need visiting.
-    // If we have a local node, push it onto the stack as our starting point.
-    // (If we don't have a local node, the next step is REALLY EASY)
-    var toExplore = [];
-    if (this.localNode) {
-      toExplore.push(this.localNode);
-    }
+  var toExplore = [];
+  if (this.localNode) {
+    toExplore.push(this.localNode);
+  }
 
-    // While there are still nodes that need visiting,
-    // visit the next node, marking it as "foreground/visited" and
-    // pushing all of its unvisited connections onto the stack.
-    var currentVizElement;
-    while (toExplore.length > 0) {
-      currentVizElement = toExplore.pop();
-      currentVizElement.visited = true;
-      toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizElement));
-    }
-  } else if (this.localNode) {
-    // ONLY pull the local node to the foreground if we don't have a connection
-    // yet.
-    this.localNode.visited = true;
+  // While there are still nodes that need visiting,
+  // visit the next node, marking it as "foreground/visited" and
+  // pushing all of its unvisited connections onto the stack.
+  var currentVizElement;
+  while (toExplore.length > 0) {
+    currentVizElement = toExplore.pop();
+    currentVizElement.visited = true;
+    toExplore = toExplore.concat(this.getUnvisitedNeighborsOf_(currentVizElement));
   }
 
   // Now, visited nodes belong in the foreground.
@@ -606,6 +576,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
     // Special case: The DNS node fake is a neighbor of a visited router
     if (vizElement.isRouter && this.autoDnsNode_) {
       neighbors.push(this.autoDnsNode_);
+      neighbors.push(this.autoDnsWire_);
     }
   } else if (vizElement instanceof NetSimVizWire) {
     if (vizElement.localVizNode) {
