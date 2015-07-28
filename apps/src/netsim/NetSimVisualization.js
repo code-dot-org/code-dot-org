@@ -88,6 +88,13 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop) {
   this.visualizationHeight = 300;
 
   /**
+  * Last known DNS mode, so that new elements can be created with the
+  * correct default
+  * @type {DnsMode}
+  */
+  this.dnsMode_ = null;
+
+  /**
    * Reference to visualized auto-DNS node, a fake node (not mapped to the
    * simulation in a normal way) that also lives in our elements_ collection.
    * @type {NetSimVizAutoDnsNode}
@@ -109,6 +116,13 @@ var NetSimVisualization = module.exports = function (svgRoot, runLoop) {
    * @type {Object}
    */
   this.eventKeys = {};
+
+  /**
+   * Last known encodings set, so that new elements can be created with
+   * the correct default
+   * @type {EncodingType[]}
+   */
+  this.encodings_ = [];
 
   // Hook up tick and render methods
   runLoop.tick.register(this.tick.bind(this));
@@ -303,6 +317,7 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
     var newVizNode = new NetSimVizSimulationNode(node);
+    newVizNode.setDnsMode(this.dnsMode_);
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
         Math.random() * this.visualizationHeight - (this.visualizationHeight / 2));
@@ -325,6 +340,7 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   this.updateVizEntitiesOfType_(NetSimVizSimulationWire, tableWires, function (wire) {
     var newVizWire = new NetSimVizSimulationWire(wire,
         this.getElementByEntityID.bind(this));
+    newVizWire.setEncodings(this.encodings_);
     return newVizWire;
   }.bind(this));
 
@@ -750,6 +766,9 @@ NetSimVisualization.prototype.distributeForegroundNodesForBroadcast_ = function 
  * @param {DnsMode} newDnsMode
  */
 NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
+
+  this.dnsMode_ = newDnsMode;
+
   // Show/hide the auto-DNS node according to the new state
   if (newDnsMode === DnsMode.AUTOMATIC) {
     this.makeAutoDnsNode();
@@ -840,6 +859,7 @@ NetSimVisualization.prototype.setDnsNodeID = function (dnsNodeID) {
  * @param {EncodingType[]} newEncodings
  */
 NetSimVisualization.prototype.setEncodings = function (newEncodings) {
+  this.encodings_ = newEncodings;
   this.elements_.forEach(function (vizElement) {
     if (vizElement instanceof NetSimVizSimulationWire) {
       vizElement.setEncodings(newEncodings);
