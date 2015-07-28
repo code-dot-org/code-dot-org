@@ -38,7 +38,7 @@ class NetSimApi < Sinatra::Base
   # Set a particular Pub/Sub API interface to use - for use in tests.
   #
   # @param [PubSubApi] override_api
-  def self.override_pub_sub_api(override_api)
+  def self.override_pub_sub_api_for_test(override_api)
     @@overridden_pub_sub_api = override_api
   end
 
