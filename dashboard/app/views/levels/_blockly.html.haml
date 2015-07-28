@@ -11,7 +11,8 @@
     = t(:slow_loading)
     %br
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
-
+  - if @level.game == Game.netsim
+    %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
   %script{src: minifiable_shared_path('/shared/js/shared.js')}
   :javascript
     //<![CDATA[

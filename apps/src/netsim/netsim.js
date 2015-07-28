@@ -212,6 +212,19 @@ NetSim.prototype.init = function(config) {
   this.environment = config.rackEnv;
 
   /**
+   * Whether NetSim should subscribe to events using Pusher.
+   * @type {boolean}
+   */
+  this.usePusher = config.usePusher;
+
+  /**
+   * The public application key for the Pusher service. (Not used if not using
+   * Pusher).
+   * @type {string}
+   */
+  this.pusherApplicationKey = config.pusherApplicationKey;
+
+  /**
    * Configuration for reporting level completion
    * @type {Object}
    */
@@ -481,7 +494,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
     return;
   }
 
-  this.shard_ = new NetSimShard(shardID);
+  this.shard_ = new NetSimShard(shardID, netsimGlobals.getPubSubConfig());
   if (this.shouldEnableCleanup()) {
     this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
         INITIAL_CLEANING_DELAY_MS);
