@@ -179,6 +179,10 @@ When /^I type "([^"]*)" into "([^"]*)"$/ do |inputText, selector|
   @browser.execute_script("$('" + selector + "').change()")
 end
 
+When /^I set text compression dictionary to "([^"]*)"$/ do |inputText|
+  @browser.execute_script("editor.setValue('#{inputText}')")
+end
+
 Then /^I should see title "([^"]*)"$/ do |title|
   @browser.title.should eq title
 end
