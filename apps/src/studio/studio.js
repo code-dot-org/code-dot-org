@@ -180,6 +180,11 @@ function loadLevel() {
     case 'Sam the Bat':
       Studio.customLogic = new SamBatLogic(Studio);
       break;
+    case 'Ninja Cat':
+      Studio.customLogic = new BigGameLogic(Studio, {
+        staticPlayer: true
+      });
+
   }
   blocks.registerCustomGameLogic(Studio.customLogic);
 
