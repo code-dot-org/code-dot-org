@@ -44,10 +44,6 @@
     #currentprogress {
       width: 70%;
       float: left;
-
-      .smalltext {
-        font-size: 14px;
-      }
     }
     #coursebuttons {
       width: 30%;
@@ -57,5 +53,9 @@
   }
   a {
     color: white;
+    font-family: $gotham-regular;
+  }
+  .smalltext {
+    font-size: 14px;
   }
 }

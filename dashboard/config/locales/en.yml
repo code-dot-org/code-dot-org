@@ -386,6 +386,7 @@ en:
     heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: "Try a Code Studio course!"
+    choose_next_course: "Try a Code Studio course by choosing one below!"
     print_certificate: "Print Certificate"
   gender:
     male: 'Male'
