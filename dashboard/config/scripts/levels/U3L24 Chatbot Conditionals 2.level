@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-07-16T18:59:11.000Z",
+  "created_at": "2015-07-28T18:25:27.000Z",
   "level_num": "custom",
   "user_id": 112,
   "properties": {
@@ -79,8 +79,8 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "instructions": "Adjust the \"if\" block to make the bot respond \"That's the color of the sky!\" if the user inputs the color \"blue\".",
-    "markdown_instructions": "## If statement warm-up\r\n\r\nSo far, the personal assistants aren't very interesting - they respond with the same message no matter what the user types. Over the next few levels, we are going to learn how to create some basic question/answer functionality.\r\n\r\nAdding an `if` statement to your program will let you execute a section of code only \"if\" something is true. \r\n\r\n**Example** \r\n\r\n\tif (yourResponse == myResponse) {\r\n    \twrite(\"We agree!\")\r\n    }\r\n\r\n### Instructions\r\n\r\n* Adjust the `if` statement to make the color bot respond to the color \"blue.\" If the user types \"blue\" the bot should respond \"That's the color of the sky!\""
+    "instructions": "Adjust the \"if\" block to make the bot respond \"Hmm I don't know that one. What's another color you want to know about?\" if the user types anything besides \"blue\"",
+    "markdown_instructions": "## If/else statement warm-up\r\n\r\nNow the Color Bot only responds to the input blue! This isn't really an improvement from the bot that always had a default response for anything. Luckily, we can add that default response back in by using an `else` statement.\r\n\r\n### Instructions\r\n\r\n* Turn the `if` statement into an `if/else` statement to make the bot respond \"Hmm I don't know that one. What's another color you want to know about?\" if the user types anything besides blue."
   }
 }]]></config>
   <blocks/>

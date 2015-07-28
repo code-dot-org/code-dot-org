@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-07-16T18:59:11.000Z",
+  "created_at": "2015-07-28T18:26:46.000Z",
   "level_num": "custom",
   "user_id": 112,
   "properties": {
@@ -79,8 +79,8 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "instructions": "Adjust the \"if\" block to make the bot respond \"That's the color of the sky!\" if the user inputs the color \"blue\".",
-    "markdown_instructions": "## If statement warm-up\r\n\r\nSo far, the personal assistants aren't very interesting - they respond with the same message no matter what the user types. Over the next few levels, we are going to learn how to create some basic question/answer functionality.\r\n\r\nAdding an `if` statement to your program will let you execute a section of code only \"if\" something is true. \r\n\r\n**Example** \r\n\r\n\tif (yourResponse == myResponse) {\r\n    \twrite(\"We agree!\")\r\n    }\r\n\r\n### Instructions\r\n\r\n* Adjust the `if` statement to make the color bot respond to the color \"blue.\" If the user types \"blue\" the bot should respond \"That's the color of the sky!\""
+    "instructions": "Adjust the \"if/else\" block to make the bot respond to the colors blue, red, and green, and to two additional colors.",
+    "markdown_instructions": "## Chained Conditionals\r\n\r\nNow we have a bot that responds to anything and has a special response to the color blue. How can we add a special response for more colors? By using an `if`/`else if`/`else` statement (read \"if\" ... \"else if\" ... \"else\"). By adding an `else if` statement, we create a chained conditional. \r\n\r\nWe can chain as many `else if`'s together as we want. A chained conditional could look like `if`/`else if`/`else if`/.../`else if`/`else`. The chain always starts with an `if`, ends with and `else`, and has only `else if`'s in between.\r\n\r\n**Example** \r\n\r\n\tif (yourResponse == myResponse) {\r\n    \twrite(\"We agree!\")\r\n    } else if (yourResponse == mySecondResponse) {\r\n    \twrite(\"We agree again!\")\r\n    } else {\r\n    \twrite(\"We don't agree :(\")\r\n    }\r\n\r\n### Instructions\r\n\r\n* Adjust the `if`/`else` statement to make an `if`/`else if`/`else` statement.\r\n* Chain multiple `else if` statements together to create unique responses for at least 5 different colors.\r\n\t* Your color bot must have a unique response for the colors blue, red, and green, and for two additional colors of your choice.\r\n    \r\n<br/>\r\n"
   }
 }]]></config>
   <blocks/>
