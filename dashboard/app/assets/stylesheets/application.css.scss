@@ -1578,6 +1578,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
 
 $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
+$modal-no-icon-gap: 22px;
 
 .modal-content {
   margin-left: $modal-image-width + $modal-image-margin-gap;
@@ -1585,6 +1586,10 @@ $modal-image-margin-gap: 10px;
     margin-left: 0;
     margin-right: $modal-image-width + $modal-image-margin-gap;
   }
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
+
   p, pre {
     line-height: 27px;
     font-size: 24px;
@@ -1705,15 +1710,15 @@ $modal-image-margin-gap: 10px;
 }
 
 .modal-content.markdown-instructions-container {
-  margin-left: 0;
+  margin-left: $modal-no-icon-gap;
+  margin-right: $modal-no-icon-gap;
   margin-top: 10px;
   margin-bottom: 15px;
   float: left;
-  $padding-side: 22px;
-  padding: 0 $padding-side 15px;
+  padding: 0 0 15px;
   background-color: white;
   $outside-margin-side: 15px;
-  width: $default-modal-width - ($padding-side * 2) - ($outside-margin-side * 2);
+  width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
 }
 
 .instructions-markdown {
@@ -1731,6 +1736,10 @@ $modal-image-margin-gap: 10px;
   line-height: 27px;
   font-size: 24px;
   color: #7665a0;
+
+  &.no-modal-icon {
+    margin-left: $modal-no-icon-gap;
+  }
 }
 
 #feedbackBlocks {

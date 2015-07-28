@@ -52,6 +52,13 @@ Scenario:
   And I see no difference for "simple substitution"
   And I close my eyes
 
+Scenario:
+  When I open my eyes to test "pixelation with range"
+  Given I am on "http://learn.code.org/s/allthethings/stage/17/puzzle/2?noautoplay=true"
+  And I rotate to landscape
+  And I see no difference for "level load"
+  And I close my eyes
+
 @dashboard_db_access
 Scenario:
   Given I am on "http://learn.code.org/"
