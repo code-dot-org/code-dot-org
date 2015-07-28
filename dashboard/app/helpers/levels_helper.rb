@@ -175,6 +175,11 @@ module LevelsHelper
       level_options['toolbox'] = level_view_options[:toolbox_blocks]
     end
 
+    if @level.game.uses_pusher?
+      app_options['usePusher'] = CDO.use_pusher
+      app_options['pusherApplicationKey'] = CDO.pusher_application_key
+    end
+
     # Process level view options
     level_overrides = level_view_options.dup
     if level_options['embed'] || level_overrides[:embed]

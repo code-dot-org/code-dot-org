@@ -31,10 +31,13 @@ class OpsMailer < ActionMailer::Base
     mail content_type: 'text/html', subject: subject
   end
 
-  def workshop_in_2_weeks_reminder(workshop, recipient)
+  def workshop_in_2_weeks_reminder(workshop, recipient, recipient_ops_data)
     @workshop = workshop
-    @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type]]
+    # program_type was originally stored as a string in the db, but was later changed to an id that maps to activity_constants.
+    # The datatype in MySql was never changed, so for now you have to coerce it to an integer
+    @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type].to_i]
     @recipient = recipient
+    @recipient_ops_data = recipient_ops_data
     subject = "[Reminder] You have a Code.org workshop in 2 weeks."
     mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
   end
