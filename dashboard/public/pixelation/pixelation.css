@@ -102,9 +102,3 @@ input[type=range] {
 .label_group label {
   display: inline-block;
 }
-
-/* IE9 rewrites input type "range" as type "text".
- * Hide the range input in this case. */
-input[type="text"].rangeInput {
-  display: none;
-}
