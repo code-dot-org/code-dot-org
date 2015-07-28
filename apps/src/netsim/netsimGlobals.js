@@ -76,6 +76,16 @@ module.exports = {
   },
 
   /**
+   * @returns {PubSubConfig}
+   */
+  getPubSubConfig: function () {
+    return {
+      usePusher: netsim_.usePusher,
+      pusherApplicationKey: netsim_.pusherApplicationKey
+    };
+  },
+
+  /**
    * @returns {function}
    */
   getAssetUrlFunction: function () {
