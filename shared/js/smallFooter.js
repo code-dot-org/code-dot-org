@@ -1,3 +1,7 @@
+/**
+ * @fileoverview Provides a secondary "small" footer for pages without
+ * the default, full-size footer.
+ */
 /* global $ */
 var smallFooter = exports;
 
@@ -21,8 +25,8 @@ function areSameEvent(eventA, eventB) {
  * toggle when clicking on the "show" link twice in a row.
  * @param {EventTarget} showClickTarget - the element which should cause the
  *        flyout to appear on click.
- * @param {function} showAction - callback that actually shows the flyout
- * @param {function} hideAction - callback that actually hides the flyout
+ * @param {function} showAction - callback that actually shows the flyout.
+ * @param {function} hideAction - callback that actually hides the flyout.
  */
 function bindFooterShowHideHandlers(showClickTarget, showAction, hideAction) {
   var isShowing = false;
@@ -107,5 +111,4 @@ smallFooter.repositionMoreMenu = function () {
   moreMenu.style.bottom = smallFooter.offsetHeight + 'px';
   moreMenu.style.width = smallFooter.offsetWidth + 'px';
 };
-
 
