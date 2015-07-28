@@ -216,6 +216,19 @@ NetSim.prototype.init = function(config) {
   this.environment = config.rackEnv;
 
   /**
+   * Whether NetSim should subscribe to events using Pusher.
+   * @type {boolean}
+   */
+  this.usePusher = config.usePusher;
+
+  /**
+   * The public application key for the Pusher service. (Not used if not using
+   * Pusher).
+   * @type {string}
+   */
+  this.pusherApplicationKey = config.pusherApplicationKey;
+
+  /**
    * Configuration for reporting level completion
    * @type {Object}
    */
@@ -295,11 +308,11 @@ NetSim.prototype.getOverrideShardID = function () {
   return shardID;
 };
 
-/**
- * @returns {boolean} TRUE if the "disableCleaning" flag is found in the URL
+/** 
+ * @returns {boolean} TRUE if the "enableCleaning" flag is found in the URL
  */
 NetSim.prototype.shouldEnableCleanup = function () {
-  return !location.search.match(/disableCleaning/i);
+  return location.search.match(/enableCleaning/i);
 };
 
 /**
@@ -361,7 +374,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
   }
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
+  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
@@ -485,7 +498,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
     return;
   }
 
-  this.shard_ = new NetSimShard(shardID);
+  this.shard_ = new NetSimShard(shardID, netsimGlobals.getPubSubConfig());
   if (this.shouldEnableCleanup()) {
     this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
         INITIAL_CLEANING_DELAY_MS);
@@ -1045,6 +1058,8 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   }
 
   // Shard changes almost ALWAYS require a re-render
+  this.visualization_.setShard(shard);
+  this.visualization_.setLocalNode(localNode);
   this.render();
 };
 

@@ -14,7 +14,7 @@
     "start_direction": "90",
     "x": "150",
     "y": "325",
-    "free_play": "false",
+    "free_play": "true",
     "impressive": "false",
     "slider_speed": ".8",
     "ideal": "19",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Free Play Inspiration:** You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit  for the solution.",
+    "markdown_instructions": "**Free Play Inspiration:** You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit https://studio.code.org/c/106387801 for the solution.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -35,38 +35,38 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn" editable="false">
           <mutation>
             <description>draw a 6 squares next to one another 6 squares long</description>
           </mutation>
           <title name="NAME">draw a square line</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true" uservisible="false">
+            <block type="controls_repeat_ext" inline="true">
               <value name="TIMES">
-                <block type="math_number" uservisible="false">
-                  <title name="NUM">6</title>
+                <block type="math_number">
+                  <title name="NUM">3</title>
                 </block>
               </value>
               <statement name="DO">
-                <block type="controls_repeat_ext" inline="true" uservisible="false">
+                <block type="controls_repeat_ext" inline="true">
                   <value name="TIMES">
-                    <block type="math_number" uservisible="false">
+                    <block type="math_number">
                       <title name="NUM">4</title>
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="draw_move" inline="true" uservisible="false">
+                    <block type="draw_move" inline="true">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="math_number" uservisible="false">
+                        <block type="math_number">
                           <title name="NUM">40</title>
                         </block>
                       </value>
                       <next>
-                        <block type="draw_turn" inline="true" uservisible="false">
+                        <block type="draw_turn" inline="true">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
-                            <block type="math_number" uservisible="false">
+                            <block type="math_number">
                               <title name="NUM">90</title>
                             </block>
                           </value>
@@ -75,10 +75,10 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="draw_move" inline="true" uservisible="false">
+                    <block type="draw_move" inline="true">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="math_number" uservisible="false">
+                        <block type="math_number">
                           <title name="NUM">40</title>
                         </block>
                       </value>
@@ -91,8 +91,27 @@
         </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="draw a square line"/>
+            <block type="controls_repeat_ext" inline="true">
+              <value name="TIMES">
+                <block type="math_number">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a square line"/>
+                  <next>
+                    <block type="draw_turn" inline="true">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">60</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
             </block>
           </next>
         </block>
@@ -165,14 +184,6 @@
           <title name="DIR">moveForward</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">60</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-            <block type="math_number">
               <title name="NUM">40</title>
             </block>
           </value>
@@ -185,32 +196,32 @@
             </block>
           </value>
         </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_turn" inline="true">
-              <title name="DIR">turnLeft</title>
-              <value name="VALUE">
-                <block type="math_number">
-                  <title name="NUM">144</title>
-                </block>
-              </value>
-              <next>
-                <block type="draw_turn" inline="true">
-                  <title name="DIR">turnRight</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">216</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">4</title>
             </block>
-          </statement>
+          </value>
         </block>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="math_number">
-              <title name="NUM">5</title>
+              <title name="NUM">3</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+            <block type="math_number">
+              <title name="NUM">6</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">60</title>
             </block>
           </value>
         </block>

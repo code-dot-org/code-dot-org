@@ -165,12 +165,19 @@ var fakeStorageTable = function () {
  * Fake set of storage tables for use in tests.
  */
 exports.fakeShard = function () {
+  /* jshint unused:false */
+  /** @implements {PubSubChannel} */
+  var fakeChannel = {
+    subscribe: function (eventName, callback) {}
+  };
+  /* jshint unused:true */
+
   return {
-    nodeTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'node')),
-    wireTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'wire')),
-    messageTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'message')),
-    logTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'log')),
-    heartbeatTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'heartbeat')),
+    nodeTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'node')),
+    wireTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
+    messageTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'message')),
+    logTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'log')),
+    heartbeatTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'heartbeat')),
   };
 };
 
