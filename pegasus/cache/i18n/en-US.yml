@@ -167,7 +167,7 @@ en-US:
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_loc: "2.5 million girls are enrolled to learn on Code Studio"
   homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: "The Hour of Code"
@@ -200,7 +200,7 @@ en-US:
   homepage_slot_text_link_fullcurriculum: "See our full curriculum"
   homepage_slot_text_link_pd: "Professional development"
   homepage_slot_text_title_advocates: "Advocates"
-  homepage_slot_text_blurb_advocates: "Support our work"
+  homepage_slot_text_blurb_advocates: "Support diversity in computing"
   homepage_slot_text_link_stats: "See the stats"
   homepage_slot_text_link_buy: "Get involved"
   homepage_slot_text_link_donate: "Make a donation"

@@ -39,7 +39,8 @@
     "step_speed": "50",
     "custom_game_type": "Big Game",
     "disable_examples": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Ninjacat Demo B\",\r\n  \"callout_text\": \"Click `Run` to try out the game\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Ninjacat Demo B\",\r\n  \"callout_text\": \"Click `Run` to try out the game\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
