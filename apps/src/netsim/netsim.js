@@ -304,11 +304,11 @@ NetSim.prototype.getOverrideShardID = function () {
   return shardID;
 };
 
-/**
- * @returns {boolean} TRUE if the "disableCleaning" flag is found in the URL
+/** 
+ * @returns {boolean} TRUE if the "enableCleaning" flag is found in the URL
  */
 NetSim.prototype.shouldEnableCleanup = function () {
-  return !location.search.match(/disableCleaning/i);
+  return location.search.match(/enableCleaning/i);
 };
 
 /**
