@@ -1710,15 +1710,15 @@ $modal-no-icon-gap: 22px;
 }
 
 .modal-content.markdown-instructions-container {
-  margin-left: 0;
+  margin-left: $modal-no-icon-gap;
+  margin-right: $modal-no-icon-gap;
   margin-top: 10px;
   margin-bottom: 15px;
   float: left;
-  $padding-side: $modal-no-icon-gap;
-  padding: 0 $padding-side 15px;
+  padding: 0 0 15px;
   background-color: white;
   $outside-margin-side: 15px;
-  width: $default-modal-width - ($padding-side * 2) - ($outside-margin-side * 2);
+  width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
 }
 
 .instructions-markdown {
