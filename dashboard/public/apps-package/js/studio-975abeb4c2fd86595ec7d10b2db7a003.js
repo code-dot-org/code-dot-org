@@ -1490,6 +1490,10 @@ Studio.reset = function(first) {
   Studio.clearEventHandlersKillTickLoop();
   var svg = document.getElementById('svgStudio');
 
+  if (Studio.customLogic) {
+    Studio.customLogic.reset();
+  }
+
   // Soft buttons
   var softButtonCount = 0;
   for (i = 0; i < Studio.softButtons_.length; i++) {
@@ -2632,40 +2636,50 @@ Studio.vanishActor = function (opts) {
 
   var spriteClipRect = document.getElementById('spriteClipRect' + opts.spriteIndex);
 
+  var frameWidth = Studio.sprite[opts.spriteIndex].width;
+
   explosion.setAttribute('height', Studio.sprite[opts.spriteIndex].height);
-  explosion.setAttribute('width', Studio.sprite[opts.spriteIndex].width);
   explosion.setAttribute('x', spriteClipRect.getAttribute('x'));
-  explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
+
   explosion.setAttribute('visibility', 'visible');
 
   var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
   var numFrames = skin.explosionFrames;
-  if (numFrames && numFrames > 1) {
-    explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
-    explosion.setAttribute('width', numFrames * 100);
-    _.range(0, numFrames).forEach(function (i) {
-      Studio.perExecutionTimeouts.push(setTimeout(function () {
-        explosion.setAttribute('x', baseX - i * 100);
-        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
-      }, i * 100));
+  explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
+  explosion.setAttribute('width', numFrames * frameWidth);
+
+  if (!skin.fadeExplosion) {
+    Studio.setSprite({
+      spriteIndex: opts.spriteIndex,
+      value: 'hidden'
     });
+  }
+
+  _.range(0, numFrames).forEach(function (i) {
     Studio.perExecutionTimeouts.push(setTimeout(function () {
-      explosion.setAttribute('visibility', 'hidden');
+      explosion.setAttribute('x', baseX - i * frameWidth);
+      if (i === 0) {
+        // Sometimes the spriteClipRect still moves a bit before our explosion
+        // starts, so wait until first frame to set y.
+        explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
+      }
+
+      if (skin.fadeExplosion) {
+        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
+      }
+    }, i * skin.timePerExplosionFrame));
+  });
+  Studio.perExecutionTimeouts.push(setTimeout(function () {
+    explosion.setAttribute('visibility', 'hidden');
+    if (skin.fadeAnimation) {
       // hide the sprite
       Studio.setSprite({
         spriteIndex: opts.spriteIndex,
         value: 'hidden'
       });
       sprite.removeAttribute('opacity');
-
-    }, 100 * (numFrames + 1)));
-  } else {
-    // hide the sprite
-    Studio.setSprite({
-      spriteIndex: opts.spriteIndex,
-      value: 'hidden'
-    });
-  }
+    }
+  }, skin.timePerExplosionFrame * (numFrames + 1)));
 
   // we append the url with the spriteIndex so that each sprites explosion gets
   // treated as being different, otherwise chrome will animate all existing
@@ -4037,6 +4051,8 @@ function loadInfinity(skin, assetUrl) {
 
   skin.explosion = skin.assetUrl('vanish.png');
   skin.explosionFrames = 17;
+  skin.fadeExplosion = true;
+  skin.timePerExplosionFrame = 100;
 
   skin.projectileSpriteWidth = 70;
   skin.projectileSpriteHeight = 70;
@@ -4163,8 +4179,11 @@ function loadStudio(skin, assetUrl) {
   skin.projectileFrames = 8;
   skin.itemFrames = 8;
 
-  skin.explosion = skin.assetUrl('explosion.gif');
+  skin.explosion = skin.assetUrl('explosion.png');
   skin.explosionThumbnail = skin.assetUrl('explosion_thumb.png');
+  skin.explosionFrames = 20;
+  skin.fadeExplosion = false;
+  skin.timePerExplosionFrame = 40;
 
   skin.hardcourt = {
     background: skin.assetUrl('background.png'),
@@ -8158,6 +8177,8 @@ var BigGameLogic = function (studio) {
   this.playerSpriteIndex = 0;
   this.targetSpriteIndex = 1;
   this.dangerSpriteIndex = 2;
+
+  this.finished = false;
 };
 BigGameLogic.inherits(CustomGameLogic);
 
@@ -8165,6 +8186,10 @@ BigGameLogic.prototype.onTick = function () {
   if (this.studio_.tickCount === 1) {
     this.onFirstTick_();
     this.studio_.playerScore = 100;
+    return;
+  }
+
+  if (this.finished) {
     return;
   }
 
@@ -8213,7 +8238,7 @@ BigGameLogic.prototype.onTick = function () {
         spriteIndex: this.playerSpriteIndex,
         value:"visible"
       });
-    }).bind(this), 500);
+    }).bind(this), 20 * 40 + 50); // 40ms for each of 20 frames, plus some buffer
     this.studio_.playerScore -= 20;
 
     // send sprite back offscreen
@@ -8234,11 +8259,19 @@ BigGameLogic.prototype.onTick = function () {
     score.setAttribute('visibility', 'hidden');
     this.studio_.showTitleScreen({title:'Game Over', text:'Click Reset to Play Again'});
     for (var i = 0; i < this.studio_.spriteCount; i++) {
-      this.studio_.vanishActor({spriteIndex:i});
+      this.studio_.setSprite({
+        spriteIndex: i,
+        value:"hidden"
+      });
     }
+    this.finished = true;
   } else {
     this.studio_.displayScore();
   }
+};
+
+BigGameLogic.prototype.reset = function () {
+  this.finished = false;
 };
 
 /**
@@ -8281,7 +8314,8 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
     // sprite has returned to screen, make it visible again
     this.studio_.setSprite({
       spriteIndex: this.studio_.sprite.indexOf(sprite),
-      value:"visible"});
+      value:"visible"
+    });
   }
 };
 
@@ -8290,10 +8324,13 @@ BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
  */
 BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
+  if (!playerSprite.visible) {
+    return;
+  }
 
   // sprite.y is the top. get the center
   var centerY = playerSprite.y + playerSprite.height / 2;
-  
+
   // invert Y
   var userSpaceY = this.studio_.MAZE_HEIGHT - centerY;
 
@@ -8312,11 +8349,12 @@ BigGameLogic.prototype.resetSprite_ = function (sprite) {
   } else {
     sprite.x = this.studio_.MAZE_WIDTH;
   }
-  
+
   sprite.y = Math.floor(Math.random() * (this.studio_.MAZE_HEIGHT - sprite.height));
   this.studio_.setSprite({
     spriteIndex: this.studio_.sprite.indexOf(sprite),
-    value:"hidden"});
+    value:"hidden"
+  });
 };
 
 /**
@@ -8398,6 +8436,12 @@ var CustomGameLogic = function (studio) {
 
 CustomGameLogic.prototype.onTick = function () {
   throw new Error('should be overridden by child');
+};
+
+/**
+ * Logic to be run when game is reset
+ */
+CustomGameLogic.prototype.reset = function () {
 };
 
 /**
