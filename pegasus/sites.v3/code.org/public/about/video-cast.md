@@ -5,6 +5,6 @@ title: Video Cast
 
 Code.org would like to thank the cast of all of our videos.
 
-<%= view :video_cast, people:DB[:cdo_video_cast] %>
+Updated list coming soon!
 
 There is [an archived Film Cast page here](//code.org/film-cast).
