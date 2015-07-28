@@ -330,16 +330,19 @@ NetSimSendPanel.prototype.resetPackets_ = function () {
 NetSimSendPanel.prototype.onContentChange_ = function () {
   var nextBit = this.getNextBit_();
 
-  // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
-  // format this button label using the "A/B" convention
-  if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
-      !this.isEncodingEnabled_(EncodingType.BINARY)) {
-    nextBit = binaryToAB(nextBit);
-  }
+  if (nextBit === undefined) {
+    // If there are no bits queued up, disable the button
+    this.conditionallyToggleSetWireButton().text(i18n.setWire());
+  } else {
+    // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
+    // format this button label using the "A/B" convention
+    if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
+        !this.isEncodingEnabled_(EncodingType.BINARY)) {
+      nextBit = binaryToAB(nextBit);
+    }
 
-  this.getBody()
-      .find('#set-wire-button')
-      .text(i18n.setWireToValue({ value: nextBit }));
+    this.conditionallyToggleSetWireButton().text(i18n.setWireToValue({ value: nextBit }));
+  }
 };
 
 /**
@@ -415,29 +418,36 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
     throw new Error("Tried to set wire state when no connection is established.");
   }
 
-  // Find the first bit of the first packet.  Set the wire to 0/off if
-  // there is no first bit.
-  this.disableEverything();
-  this.netsim_.animateSetWireState(this.getNextBit_());
-  myNode.setSimplexWireState(this.getNextBit_(), function (err) {
-    if (err) {
-      logger.warn(err.message);
-      return;
-    }
+  // Find the first bit of the first packet. Disallow setting the wire
+  // if there is no first bit.
+  var nextBit = this.getNextBit_();
+  if (nextBit === undefined) {
+    throw new Error("Tried to set wire state when no bit is queued.");
+  } else {
+    this.disableEverything();
+    this.netsim_.animateSetWireState(nextBit);
+    myNode.setSimplexWireState(nextBit, function (err) {
+      if (err) {
+        logger.warn(err.message);
+        return;
+      }
 
-    this.consumeFirstBit();
-    this.enableEverything();
-  }.bind(this));
+      this.consumeFirstBit();
+      this.enableEverything();
+      this.conditionallyToggleSetWireButton();
+    }.bind(this));
+  }
 };
 
 /**
  * Get the next bit that would be sent, if sending the entered message one
  * bit at a time.
- * @returns {string} single bit as a "0" or "1"
+ * @returns {string|undefined} single bit as a "0" or "1" if there are
+ * bits to be sent, or undefined otherwise
  * @private
  */
 NetSimSendPanel.prototype.getNextBit_ = function () {
-  return this.packets_.length > 0 ? this.packets_[0].getFirstBit() : '0';
+  return this.packets_.length > 0 ? this.packets_[0].getFirstBit() : undefined;
 };
 
 /** Disable all controls in this panel, usually during network activity. */
@@ -447,6 +457,16 @@ NetSimSendPanel.prototype.disableEverything = function () {
   if (this.packetSizeControl_) {
     this.packetSizeControl_.disable();
   }
+};
+
+NetSimSendPanel.prototype.conditionallyToggleSetWireButton = function () {
+  var setWireButton = this.getBody().find('#set-wire-button');
+  if (this.getNextBit_() === undefined) {
+    setWireButton.attr('disabled', 'disabled');
+  } else {
+    setWireButton.removeAttr('disabled');
+  }
+  return setWireButton;
 };
 
 /** Enable all controls in this panel, usually after network activity. */
