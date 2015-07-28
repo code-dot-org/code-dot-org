@@ -367,6 +367,10 @@ Given(/^I am a student$/) do
   log_in_as(@student)
 end
 
+And /^I sign out$/ do
+  @browser.manage.delete_cookie "_learn_session_#{Rails.env}"
+end
+
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
@@ -390,4 +394,42 @@ end
 
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
+end
+
+Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30 )
+  wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+
+  if redirect_source == 'pushState'
+    state = { "modified" => true }
+  elsif redirect_source == 'dashboard' || redirect_source == 'none'
+    state = nil
+  end
+  @browser.execute_script("return window.history.state").should eq state
+end
+
+last_shared_url = nil
+Then /^I navigate to the share URL$/ do
+  last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
+  @browser.navigate.to last_shared_url
+end
+
+Then /^I navigate to the last shared URL$/ do
+  @browser.navigate.to last_shared_url
+end
+
+Then /^I append "([^"]*)" to the URL$/ do |append|
+  @browser.execute_script("location.href += '#{append}';")
+end
+
+Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, className|
+  item = @browser.find_element(:css, selector)
+  classes = item.attribute("class")
+  classes.include?(className).should eq true
+end
+
+Then /^selector "([^"]*)" doesn't have class "(.*?)"$/ do |selector, className|
+  item = @browser.find_element(:css, selector)
+  classes = item.attribute("class")
+  classes.include?(className).should eq false
 end
