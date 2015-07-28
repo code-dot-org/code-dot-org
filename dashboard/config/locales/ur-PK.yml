@@ -1,7 +1,7 @@
 "ur":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'براے مہربانی نیچے دی گئی غلطیاں درست کیجئے:'
   activerecord:
     errors:
       messages:
@@ -21,7 +21,7 @@
         error:
           future: can't be in the future
   hello: hello dunia
-  welcome_back: Welcome back, %{name}
+  welcome_back: خوش آمدید، %{name}
   submit: جمع کرائیں
   add_teacher_form:
     code:
@@ -29,53 +29,53 @@
       placeholder: Section Code (ABCDEF)
     submit: Add teacher
   add_hint_form:
-    placeholder: Please enter your hint here
+    placeholder: براے مہربانی اپنا اشارہ یہاں enter کریں
     submit: Add hint
   appname: Code.org
-  stage: Stage
+  stage: اسٹیج
   stage_number: Stage %{number}
   puzzle: Puzzle
-  trophies: Trophies
-  courses: Courses
+  trophies: ٹرافیاں
+  courses: کورسز
   of: of
-  more: MORE
-  less: LESS
+  more: مزید دیکھیے
+  less: کم دیکھیے
   beta: beta
-  try_hoc: 'Try the Hour of Code, click here >> '
-  try_k8intro: Try our K-8 Intro to Computer Science Course (15-25 hours)
-  k8intro: K-8 Intro to Computer Science Course (15-25 hours)
-  already_started: 'Already started? Resume here >> '
+  try_hoc: 'آور اف کوڈ کھیلنے کے لئے یہاں کلک کریں>> '
+  try_k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس  (١٥ سے ٢٥ گھنٹے) کا تعارف
+    دیکھیے
+  k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)
+  already_started: 'شروع کر چکے ہیں؟ جاری رکھیے>> '
   demos: 'Admin: All Demos'
   continue: Continue
-  prize: prize
-  more_info: More info
+  prize: انعام
+  more_info: مزید معلومات
   auth:
     sign_in_with: Sign in with %{provider}
-    signed_in: Signed in!
+    signed_in: '!!Signed in'
     signed_out: You have signed out of <a href="%{url}">Code.org</a>.
     sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
       to sign out of %{provider}.
     already_signedup: Already signed up?
     notyet_signedup: Haven't joined yet?
-    google_oauth2: Google Account
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft Account
-    forgot_password: Forgot your password?
-    need_confirmation: Didn't receive confirmation instructions?
-    need_unlock: Didn't receive unlock instructions?
+    google_oauth2: گوگل اکاؤنٹ
+    twitter: ٹوئٹر
+    facebook: فیس بک
+    windowslive: Microsoft اکاؤنٹ
+    forgot_password: password یاد نہیں؟
+    need_confirmation: کنفرمیشن کی ہدایات موصول نہیں ہویں؟
+    need_unlock: ' Unlock کی ہدایات موصول نہیں ہویں؟  '
   signup_form:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
+    overview_student: اپنی کارکردگی جاننے کے لئے sign up کریں. آپ کا ای میل آپ کو
+      login کرنے اور password  جاننے میں آپکی  مدد کرے گا .مزید معلومات کے لئے دیکھئے،
     overview_teacher: Teach computer science in your classroom by signing up for an
       account.<p/> You'll be able to add your students and track their progress.
     no_signup_message: You can <a target="_blank" href="http://learn.code.org">browse
       the various stages and puzzles</a>, but you will need to sign up to save your
       progress.
-    teacher_educator_guide: See educator guide
+    teacher_educator_guide: اساتذہ کے لئے ہدایت نامہ دیکھئے
     teacher_pitch: Teacher sign up for Code.org
     teacher_title: Teacher sign up
     student_pitch: Student sign up for Code.org
@@ -122,7 +122,7 @@
     login: Sign in
   password:
     reset_form:
-      title: Forgot your password?
+      title: password یاد نہیں؟
       email: Email address
       submit: Send me reset password instructions
     change_form:
@@ -257,6 +257,7 @@
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -298,7 +299,7 @@
       not_tried: Not tried yet
       activity: Indicates student activity in the last %{hours} %{plural}
       no_section: No assigned section
-      trophies: Trophies
+      trophies: ٹرافیاں
     students:
       name: نام
       username: یوزر کا نام
@@ -413,7 +414,8 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
@@ -598,7 +600,7 @@
     script:
       name:
         20-hour:
-          title: K-8 Intro to Computer Science Course (15-25 hours)
+          title: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.

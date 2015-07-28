@@ -337,6 +337,13 @@
           description: Create images with bits and bytes.
           description_short: Create images with bits and bytes.
           Pixelation: Pixelation / pikselasi
+          Black & White Pixelation Widget: Black & White Pixelation Widget
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: Black & White Pixelation Tutorial
+          Black & White Pixelation Freeplay: Black & White Pixelation Freeplay
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Pengenalan Kursus 20 jam
           description_audience: Usia 10 + (setelah Kursus 3)
@@ -569,8 +576,8 @@
           new stage: tahap baru
           Introduction to PD: Pengantar PD
           title: Computer Science Principles PD
-          description: Online Introduction to CSP
-          description_short: Online Introduction to CSP
+          description: 'Phase 1: Online Introduction for CSP'
+          description_short: 'Phase 1: Online Introduction for CSP'
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Dampak dari Ilmu Komputer
@@ -591,14 +598,14 @@
           Preparing for in-person PD: Bersiap-siap untuk di-orang PD
           reference: referensi
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Impact of Computer Science: Dampak dari Ilmu Komputer
         sciencePD:
           Introduction to PD: Pengantar PD
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -693,14 +700,14 @@
           Next Steps: Langkah berikutnya
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Introduction to PD: Pengantar PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Introduction to PD: Pengantar PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -719,8 +726,8 @@
           Preparing for in-person PD: Bersiap-siap untuk di-orang PD
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Impact of Computer Science: Dampak dari Ilmu Komputer
         ECSPD-iZone:
           Introduction to PD: Pengantar PD
@@ -730,13 +737,13 @@
           Preparing for in-person PD: Bersiap-siap untuk di-orang PD
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Impact of Computer Science: Dampak dari Ilmu Komputer
         algebraPD-NexTech:
           title: Ilmu komputer dalam aljabar PD
-          description: Mengajarkan aljabar melalui pemrograman fungsional
-          description_short: Mengajarkan aljabar melalui pemrograman fungsional
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Introduction to PD: Pengantar PD
           Evaluation Blocks: Blok Evaluasi
           logo_image: nextech_logo.png
@@ -748,8 +755,8 @@
           Preparing for in-person PD: Bersiap-siap untuk di-orang PD
         algebraPD-iZone:
           title: Ilmu komputer dalam aljabar PD
-          description: Mengajarkan aljabar melalui pemrograman fungsional
-          description_short: Mengajarkan aljabar melalui pemrograman fungsional
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Introduction to PD: Pengantar PD
           Evaluation Blocks: Blok Evaluasi
           logo_image: izone_logo.png
@@ -763,8 +770,8 @@
           Introduction to PD: Pengantar PD
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -783,8 +790,8 @@
           Introduction to PD: Pengantar PD
           logo_image: izone_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -810,8 +817,8 @@
           new stage: tahap baru
         sciencePD2:
           title: Computer Science in Science PD
-          description: Phase 2 Online Blended Summer Study
-          description_short: Phase 2 Online Blended Summer Study
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -924,6 +931,7 @@
           Text Compression: kompresi Teks
           Pixelation: Pixelation / pikselasi
           Multi2: Multi2
+          Markdown Details: Markdown Details
         algebraPD2b:
           title: Ilmu komputer dalam aljabar PD
           description: Mengajarkan pemrograman fungsional melalui aljabar
@@ -965,11 +973,11 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your
-            students with this free, self-paced online course.
-          description_short: Learn how to teach Courses 1-4 with this free, self-paced
-            online course.
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer
+            Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's
+            Computer Science Fundamentals with this free, self-paced online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -984,8 +992,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Blended Summer Study
-          description_short: Blended Summer Study
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
           Welcome!: Selamat Datang!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -996,6 +1004,40 @@
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
           Wrap-up: Penutupan
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
+            Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9.
+            Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story
+            with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling
+            and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day
+            15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web
+            2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1035,8 +1077,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: Mengajarkan pemrograman fungsional melalui aljabar
           Welcome!: Selamat Datang!
           Wrap-Up: Bungkus
           Review StarLogo Nova: Review StarLogo Nova
@@ -1052,8 +1094,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: Mengajarkan pemrograman fungsional melalui aljabar
           Welcome!: Selamat Datang!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1071,3 +1113,86 @@
           Introduction to Equity: Introduction to Equity
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Langkah berikutnya
+        sciencePD2b-iZone:
+          Welcome!: Selamat Datang!
+          title: Computer Science in Science PD Phase 2b
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Bungkus
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          Welcome!: Selamat Datang!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Penutupan
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: Mengajarkan pemrograman fungsional melalui aljabar
+          description: Mengajarkan pemrograman fungsional melalui aljabar
+          Welcome!: Selamat Datang!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Penutupan
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience
+            and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          'Lesson Chunk 1: Sending Binary Messages': 'Lesson Chunk 1: Sending Binary
+            Messages'
+          'Lesson Chunk 2: Encoding and Sending Numbers': 'Lesson Chunk 2: Encoding
+            and Sending Numbers'
+          'Lesson Chunk 3: Encoding and Sending Text': 'Lesson Chunk 3: Encoding and
+            Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: Lesson Chunk 1- Sending Binary
+            Messages
+          Lesson Chunk 2- Encoding and Sending Numbers: Lesson Chunk 2- Encoding and
+            Sending Numbers
+          Lesson Chunk 3- Encoding and Sending Text: Lesson Chunk 3- Encoding and
+            Sending Text
+          Lesson Chunk 4- Compressing and Storing Information: Lesson Chunk 4- Compressing
+            and Storing Information
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps

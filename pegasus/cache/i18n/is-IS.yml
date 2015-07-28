@@ -1,7 +1,7 @@
 "is-IS":
   hello: Halló heimur
   select_language: Vinsamlegast veldu tungumál þitt
-  en: Computer Science
+  en: Tölvunarfræði
   computer_science_edweek: Vika tölvunarfræði
   csedweek_dates: 8.-14. desember 2014
   csedweek_banner_hoc: 'Nú styttist í <a href="http://hourofcode.com" style="color:
@@ -63,7 +63,7 @@
   congratulations: Til hamingju!
   congratulations_on_completing_hoc: Til hamingju með að ljúka Klukkustund kóðunar
   get_a_certificate_of_achievement: Fáðu viðurkenningarskjal
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Vinsamlegast veldu gildan aldur
   enter_valid_email: Vinsamlega sláðu inn gilt netfang
   get_a_certificate_message: Við sendum þér viðurkenningarskjal og upplýsingar um
     hvernig þú getur haldið áfram að læra <a href='/learn'>eftir Klukkustund kóðunar</a>
