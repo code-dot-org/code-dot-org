@@ -22,6 +22,7 @@ var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
 
 var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
 var DnsMode = netsimConstants.DnsMode;
+var EncodingType = netsimConstants.EncodingType;
 
 describe("NetSimVisualization", function () {
   
@@ -180,6 +181,7 @@ describe("NetSimVisualization", function () {
       assert.equal(DnsMode.AUTOMATIC, alphaNode.dnsMode_);
       assert.equal(DnsMode.AUTOMATIC, betaNode.dnsMode_);
       assert.equal(DnsMode.AUTOMATIC, deltaNode.dnsMode_);
+
       netSimVis.setDnsMode(DnsMode.MANUAL);
       assert.equal(DnsMode.MANUAL, alphaNode.dnsMode_);
       assert.equal(DnsMode.MANUAL, betaNode.dnsMode_);
@@ -188,13 +190,56 @@ describe("NetSimVisualization", function () {
 
     it ("creates new viznodes with the current DNS mode", function () {
       netSimVis.setDnsMode(DnsMode.AUTOMATIC);
-      var gammaNode = makeRemoteClient('gamma');
+      var newNode = makeRemoteClient('gamma');
 
-      // Synchronous in tests.
+      // Trigger visualization update, synchronous in tests.
       testShard.nodeTable.readAll(function (_, data) {
         netSimVis.onNodeTableChange_(data);
       });
+
+      // Check that newly created node has correct DNS mode.
+      var gammaNode = netSimVis.getElementByEntityID(NetSimVizSimulationNode,
+          newNode.getCorrespondingEntityID());
       assert.equal(DnsMode.AUTOMATIC, gammaNode.dnsMode_);
+    });
+
+  });
+
+  describe ("Encodings", function () {
+    var DECIMAL_ONLY = [EncodingType.DECIMAL];
+    var BINARY_AND_ASCII = [EncodingType.BINARY, EncodingType.ASCII];
+
+    it ("updates all vizwires when encodings change", function () {
+      netSimVis.setEncodings(DECIMAL_ONLY);
+      assert.sameMembers(DECIMAL_ONLY, alphaToRouterWire.encodings_);
+      assert.sameMembers(DECIMAL_ONLY, betaToRouterWire.encodings_);
+      assert.sameMembers(DECIMAL_ONLY, deltaToAlphaWire.encodings_);
+
+      netSimVis.setEncodings(BINARY_AND_ASCII);
+      assert.sameMembers(BINARY_AND_ASCII, alphaToRouterWire.encodings_);
+      assert.sameMembers(BINARY_AND_ASCII, betaToRouterWire.encodings_);
+      assert.sameMembers(BINARY_AND_ASCII, deltaToAlphaWire.encodings_);
+    });
+
+    it ("creates new vizwires with the current encodings", function () {
+      netSimVis.setEncodings(DECIMAL_ONLY);
+
+      // Confirm that delta has no reciprocal wires.
+      var oldWires = netSimVis.getReciprocatedWiresAttachedToNode(deltaNode);
+      assert.equal(0, oldWires.length);
+
+      // Connect delta to the router
+      makeRemoteWire(deltaNode, router, [deltaNode, router]);
+
+      // Trigger visualization update, synchronous in tests.
+      testShard.wireTable.readAll(function (_, data) {
+        netSimVis.onWireTableChange_(data);
+      });
+
+      // Check that newly created wire has the encodings we originally set.
+      var newWires = netSimVis.getReciprocatedWiresAttachedToNode(deltaNode);
+      assert.equal(1, newWires.length);
+      assert.sameMembers(DECIMAL_ONLY, newWires[0].encodings_);
     });
 
   });
