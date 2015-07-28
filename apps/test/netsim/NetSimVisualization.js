@@ -20,6 +20,9 @@ var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode'
 var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
 
+var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
+var DnsMode = netsimConstants.DnsMode;
+
 describe("NetSimVisualization", function () {
   
   var testShard, alphaNode, betaNode, deltaNode, router,
@@ -166,6 +169,32 @@ describe("NetSimVisualization", function () {
       // background elements
       assert.isFalse(deltaNode.isForeground);
       assert.isFalse(deltaToAlphaWire.isForeground);
+    });
+
+  });
+
+  describe ("DNS Mode", function () {
+
+    it ("updates all viznodes when DNS mode changes", function () {
+      netSimVis.setDnsMode(DnsMode.AUTOMATIC);
+      assert.equal(DnsMode.AUTOMATIC, alphaNode.dnsMode_);
+      assert.equal(DnsMode.AUTOMATIC, betaNode.dnsMode_);
+      assert.equal(DnsMode.AUTOMATIC, deltaNode.dnsMode_);
+      netSimVis.setDnsMode(DnsMode.MANUAL);
+      assert.equal(DnsMode.MANUAL, alphaNode.dnsMode_);
+      assert.equal(DnsMode.MANUAL, betaNode.dnsMode_);
+      assert.equal(DnsMode.MANUAL, deltaNode.dnsMode_);
+    });
+
+    it ("creates new viznodes with the current DNS mode", function () {
+      netSimVis.setDnsMode(DnsMode.AUTOMATIC);
+      var gammaNode = makeRemoteClient('gamma');
+
+      // Synchronous in tests.
+      testShard.nodeTable.readAll(function (_, data) {
+        netSimVis.onNodeTableChange_(data);
+      });
+      assert.equal(DnsMode.AUTOMATIC, gammaNode.dnsMode_);
     });
 
   });
