@@ -60,7 +60,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":269}],145:[function(require,module,exports){
+},{"../skins":271}],145:[function(require,module,exports){
 /**
  * Blockly App: Jigsaw
  *
@@ -317,7 +317,7 @@ Jigsaw.onPuzzleComplete = function() {
 };
 
 
-},{"../StudioApp":5,"../dom":109,"../skins":269,"../templates/page.html.ejs":297,"./controls.html.ejs":144}],144:[function(require,module,exports){
+},{"../StudioApp":5,"../dom":109,"../skins":271,"../templates/page.html.ejs":299,"./controls.html.ejs":144}],144:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -337,7 +337,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":147,"ejs":492}],143:[function(require,module,exports){
+},{"./locale":147,"ejs":494}],143:[function(require,module,exports){
 /**
  * Blockly App: Jigsaw
  *
