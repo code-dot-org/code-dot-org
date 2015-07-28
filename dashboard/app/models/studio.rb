@@ -340,7 +340,10 @@ class Studio < Grid
   <block type="functional_background_dropdown" />
 </category>
 <category name ="Functional Cond">
-  <block type="functional_cond" />
+  <block type="functional_cond_number" />
+  <block type="functional_cond_string" />
+  <block type="functional_cond_image" />
+  <block type="functional_cond_boolean" />
 </category>
 
 #{k1_blocks(type) if is_k1 == 'true'}
