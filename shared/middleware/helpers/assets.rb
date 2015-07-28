@@ -1,9 +1,7 @@
 #
-# Assets
+# AssetBucket
 #
 class AssetBucket
-
-  ALLOWED_FILE_TYPES = %w(jpg jpeg gif png mp3)
 
   def initialize
     params = {region: 'us-east-1'}
@@ -18,7 +16,7 @@ class AssetBucket
     prefix = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}"
     @s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}/(.+)$}.match(fileinfo.key)[1]
-      mime_type = Sinatra::Base.mime_type(filename.split('.').last)
+      mime_type = Sinatra::Base.mime_type(File.extname(filename))
       category = mime_type.split('/').first  # e.g. 'image' or 'audio'
       {filename:filename, category:category, size:fileinfo.size}
     end
@@ -41,7 +39,7 @@ class AssetBucket
     src_prefix = "#{CDO.assets_s3_directory}/#{src_owner_id}/#{src_channel_id}/"
     @s3.list_objects(bucket:CDO.assets_s3_bucket, prefix:src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
-      mime_type = Sinatra::Base.mime_type(filename.split('.').last)
+      mime_type = Sinatra::Base.mime_type(File.extname(filename))
       category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
       src = "#{CDO.assets_s3_bucket}/#{src_prefix}#{filename}"
@@ -52,7 +50,7 @@ class AssetBucket
     end
   end
 
-  def create(encrypted_channel_id, filename, body)
+  def create_or_replace(encrypted_channel_id, filename, body)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
