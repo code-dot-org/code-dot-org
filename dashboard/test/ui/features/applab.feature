@@ -1,6 +1,7 @@
 @eyes
 Feature: Applab Stuff
 
+@dashboard_db_access
 Scenario: Button shows up on top of canvas
   Given I am on "http://learn.code.org/"
   And I am a student
