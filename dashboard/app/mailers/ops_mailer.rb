@@ -1,3 +1,5 @@
+require_relative '../../../lib/cdo/activity_constants'
+
 class OpsMailer < ActionMailer::Base
   default from: 'noreply@code.org'
   default to: 'ops@code.org'
@@ -31,6 +33,7 @@ class OpsMailer < ActionMailer::Base
 
   def workshop_in_2_weeks_reminder(workshop, recipient)
     @workshop = workshop
+    @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type]]
     @recipient = recipient
     subject = "[Reminder] You have a Code.org workshop in 2 weeks."
     mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
