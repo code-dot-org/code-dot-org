@@ -1,6 +1,7 @@
 # Unit tests for the RedisPropertyBag.
 # This uses a fake Redis service by default, but can be configured to use a
-# a real instance on localhost by setting the USE_REAL_REDIS environment variable.
+# a real instance on localhost by setting the USE_REAL_REDIS environment variable;
+# e.g.
 
 require 'minitest/autorun'
 require 'rack/test'
@@ -12,7 +13,10 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
   def test_property_bags
     redis = create_redis()
 
+    # A uniquifier to ensure that repeated runs do not collide on property bag
+    # names when running against real Redis.
     uniquifier = Random.rand()
+
     bag1 = RedisPropertyBag.new(redis, "bag1_#{uniquifier}")
     bag2 = RedisPropertyBag.new(redis, "bag2_#{uniquifier}}")
 
@@ -52,7 +56,7 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
       bag1.delete("added")
       raise "Should have thrown"
     rescue RedisPropertyBag::NotFound
-      # Expected
+      # Expected.
     end
 
   end
@@ -61,9 +65,12 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
   # If the USE_REAL_REDIS environment variable is true, creates a real cient running
   # aainst localhost, otherwise creates a fake client.
   def create_redis
-    return ENV["USE_REAL_REDIS"] ? Redis.new({host: "localhost"}) : FakeRedisClient.new()
+    if ENV["USE_REAL_REDIS"]
+      return Redis.new({host: "localhost"})
+    else
+      return FakeRedisClient.new()
+    end
   end
-
 end
 
 # A fake redis client implementation that uses a local hash.
