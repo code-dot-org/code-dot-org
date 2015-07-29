@@ -291,7 +291,7 @@ en:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: crwdns40379:0crwdne40379:0
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: crwdns40380:0crwdne40380:0
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: crwdns40381:0crwdne40381:0
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: crwdns43211:0crwdne43211:0
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: crwdns43449:0crwdne43449:0
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: crwdns40384:0crwdne40384:0
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: crwdns40385:0crwdne40385:0
@@ -474,12 +474,15 @@ en:
         thinkersmith.org: crwdns40559:0crwdne40559:0
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: crwdns40560:0crwdne40560:0
-        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: crwdns43309:0crwdne43309:0
+        0: crwdns43327:0crwdne43327:0
+        1: crwdns43328:0crwdne43328:0
         Lou, Lou, skip to my Lou,: crwdns40563:0crwdne40563:0
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: crwdns40564:0crwdne40564:0
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: crwdns43310:0crwdne43310:0
+        2: crwdns43329:0crwdne43329:0
+        3: crwdns43330:0crwdne43330:0
         Multiple Choice: crwdns40567:0crwdne40567:0
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: crwdns43311:0crwdne43311:0
+        4: crwdns43331:0crwdne43331:0
+        5: crwdns43332:0crwdne43332:0
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: crwdns40570:0crwdne40570:0
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: crwdns40571:0crwdne40571:0
@@ -752,6 +755,22 @@ en:
         Driver and Helper: crwdns40847:0crwdne40847:0
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: crwdns40848:0crwdne40848:0
         This time, which boy is the <large>driver</large>?: crwdns40849:0crwdne40849:0
+      Multi Strings Images 1:
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: crwdns43333:0crwdne43333:0
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: crwdns43334:0crwdne43334:0
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: crwdns43335:0crwdne43335:0
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: crwdns43336:0crwdne43336:0
+        Strings and Images Multiple Choice: crwdns43337:0crwdne43337:0
+        Which of these Evaluation Blocks will draw the image on the left?: crwdns43338:0crwdne43338:0
+        "https://studio.code.org/script_assets/msm/green-rect.png": crwdns43339:0crwdne43339:0
+      Warmup questions:
+        Coding in Racket: crwdns43340:0crwdne43340:0
+        Select the best answer to the question.: crwdns43341:0crwdne43341:0
+        When converting a circle to code, the correct order is: crwdns43342:0crwdne43342:0
+        left top right: crwdns43343:0crwdne43343:0
+        left, right, top: crwdns43344:0crwdne43344:0
+        random: crwdns43345:0crwdne43345:0
+        top, left, right: crwdns43346:0crwdne43346:0
       test multi text:
         Fred Flintstone: crwdns41439:0crwdne41439:0
         George Jetson: crwdns41440:0crwdne41440:0

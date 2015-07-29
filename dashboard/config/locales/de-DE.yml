@@ -266,6 +266,7 @@
       free_play:
         playlab: Eine App erstellen
         artist: Zeichne etwas
+        calculate: Calculate Something
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Dashboard

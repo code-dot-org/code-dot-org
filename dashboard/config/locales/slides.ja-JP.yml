@@ -325,8 +325,7 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: ピクセルと角度はとなりの矢印をクリックすれば変えられますよ。
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
