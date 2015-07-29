@@ -79,15 +79,15 @@ class NetSimApi < Sinatra::Base
     table = get_table(shard_id, table_name)
     int_id = id.to_i
 
-    if table_name == 'n' then
+    if table_name == 'n'
       # Cascade!
       # remove wires
-      wireTable = get_table(shard_id, 'w')
-      wires = wireTable.to_a().select do |wire|
-        wire[:localNodeID] == int_id or wire[:remoteNodeID] == int_id
+      wire_table = get_table(shard_id, 'w')
+      wires = wire_table.to_a.select do |wire|
+        wire['localNodeID'] == int_id or wire['remoteNodeID'] == int_id
       end
       wires.each do |wire|
-        wireTable.delete(wire[:id])
+        wire_table.delete(wire['id'])
       end
 
       # remove messages
