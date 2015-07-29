@@ -1,15 +1,10 @@
 #!/usr/bin/env ruby
 
-# This class processes and uploads a video to s3,
-# making it available for viewing through Code.org's fallback video player.
+# Command-line wrapper script for Youtube#process.
+# See Youtube#process for description.
 
 # Usage:
-# upload-video [youtube id] [video filename]
-#
-# Dependency requirements:
-#
-# ffmpeg (`brew install ffmpeg` / `apt-get install ffmpeg`) - for transcoding manually-provided video files
-# s3_access_key_id and s3_secret_access_key defined (e.g. in `locals.yml`)
+# upload-video youtube_id [video_filename]
 
 # To use this script to process all YouTube video tags in custom levels, run this command from the root folder (between =begin and =end):
 =begin
@@ -30,17 +25,17 @@ require 'cdo/video/youtube'
 VIDEO_BUCKET = 'videos.code.org'
 
 def usage
-  puts 'Usage: upload-video [youtube id] [video filename]'
+  puts 'Usage: upload-video youtube_id [video_filename]'
 end
 
 def main
   if ARGV.length < 1
-    return usage
+    usage and return
   end
   id = ARGV[0]
   filename = ARGV[1]
   if id.nil?
-    return usage
+    usage and return
   end
   Youtube.process(id, filename)
 end
