@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
-require '../../shared/middleware/helpers/redis_property_bag'
+require '../shared/middleware/helpers/redis_property_bag'
 
 class NetSimApi < Sinatra::Base
 
@@ -22,7 +22,8 @@ class NetSimApi < Sinatra::Base
   # For test, make it possible to override the usual configured API choice
   @@overridden_pub_sub_api = nil
 
-  def initialize
+  def initialize(app = nil)
+    super(app)
     @redis = create_redis_client
   end
 
@@ -123,7 +124,7 @@ class NetSimApi < Sinatra::Base
     dont_cache
     content_type :json
     status 201
-    value.to_json
+    new_row_id.to_json
   end
 
   #
