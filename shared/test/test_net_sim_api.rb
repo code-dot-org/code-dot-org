@@ -137,6 +137,45 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?, "Table was not empty"
   end
 
+  def test_publish_on_cascading_delete
+    node_a = create_node({name:'nodeA'})
+    node_b = create_node({name:'nodeB'})
+    wire_ab = create_wire(node_a['id'], node_b['id'])
+    message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
+
+    assert_equal 2, read_records(TABLE_NAMES[:node]).count, "Didn't create 2 nodes"
+    assert_equal 1, read_records(TABLE_NAMES[:wire]).count, "Didn't create 1 wire"
+    assert_equal 1, read_records(TABLE_NAMES[:message]).count, "Didn't create 1 message"
+
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    delete_node(node_a['id'])
+
+    assert_equal 3, test_spy.publish_history.length
+
+    test_spy.publish_history.each do |history|
+      assert_equal @shard_id, history[:channel]
+    end
+
+    wire_event, message_event, node_event = test_spy.publish_history
+
+    assert_equal TABLE_NAMES[:wire], wire_event[:event]
+    assert_equal 'delete_many', wire_event[:data][:action]
+    assert_equal [wire_ab['id']], wire_event[:data][:ids]
+
+    assert_equal TABLE_NAMES[:message], message_event[:event]
+    assert_equal 'delete_many', message_event[:data][:action]
+    assert_equal [message_b_to_a['id']], message_event[:data][:ids]
+
+    assert_equal TABLE_NAMES[:node], node_event[:event]
+    assert_equal 'delete', node_event[:data][:action]
+    assert_equal node_a['id'], node_event[:data][:id]
+  ensure
+    delete_node(node_b['id'])
+    assert read_records.first.nil?, "Table was not empty"
+  end
+
   def test_node_delete_cascades_to_node_wires
 
     node_a = create_node({name:'nodeA'})

@@ -82,12 +82,15 @@ class NetSimApi < Sinatra::Base
   # @param [Integer] node_id
   def delete_wires_for_node(shard_id, node_id)
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
-    wires = wire_table.to_a.select do |wire|
+    wire_ids = wire_table.to_a.select do |wire|
       wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+    end.map do |wire|
+      wire['id']
     end
-    wires.each do |wire|
-      wire_table.delete(wire['id'])
+    wire_ids.each do |wire_id|
+      wire_table.delete(wire_id)
     end
+    wire_ids
   end
 
   # Delete all messages simulated by a given node_id
@@ -96,12 +99,15 @@ class NetSimApi < Sinatra::Base
   # @param [Integer] node_id
   def delete_messages_for_node(shard_id, node_id)
     message_table = get_table(shard_id, TABLE_NAMES[:message])
-    messages = message_table.to_a.select do |message|
+    message_ids = message_table.to_a.select do |message|
       message['simulatedBy'] == node_id
+    end.map do |message|
+      message['id']
     end
-    messages.each do |message|
-      message_table.delete(message['id'])
+    message_ids.each do |message_id|
+      message_table.delete(message_id)
     end
+    message_ids
   end
 
   #
@@ -116,8 +122,16 @@ class NetSimApi < Sinatra::Base
 
     if table_name == TABLE_NAMES[:node]
       # Cascade deletions
-      delete_wires_for_node(shard_id, int_id)
-      delete_messages_for_node(shard_id, int_id)
+      wire_ids = delete_wires_for_node(shard_id, int_id)
+      message_ids = delete_messages_for_node(shard_id, int_id)
+
+      unless wire_ids.empty?
+        get_pub_sub_api.publish(shard_id, TABLE_NAMES[:wire], {:action => 'delete_many', :ids => wire_ids})
+      end
+
+      unless message_ids.empty?
+        get_pub_sub_api.publish(shard_id, TABLE_NAMES[:message], {:action => 'delete_many', :ids => message_ids})
+      end
     end
 
     table.delete(int_id)
