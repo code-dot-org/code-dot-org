@@ -178,12 +178,12 @@ class ClassSubmission
     } unless params['school_level_ss'].nil_or_empty?
 
     {
-      q:query,
-      fq:fq,
-      facet:true,
+      q: query,
+      fq: fq,
+      facet: true,
       'facet.field'=>['class_format_category_s', 'class_languages_all_ss', 'school_level_ss', 'school_tuition_s'],
-      rows:rows,
-      sort:"school_name_s asc"
+      rows: rows,
+      sort: "school_name_s asc"
     }
   end
 

@@ -14,11 +14,11 @@ def authentication_required!(url=request.url)
 end
 
 def dont_cache()
-  cache_control(:private, :must_revalidate, max_age:0)
+  cache_control(:private, :must_revalidate, max_age: 0)
 end
 
 def dashboard_user()
-  @dashboard_user ||= DASHBOARD_DB[:users][id:dashboard_user_id]
+  @dashboard_user ||= DASHBOARD_DB[:users][id: dashboard_user_id]
 end
 
 def dashboard_user_id()
@@ -48,7 +48,7 @@ def have_permission?(permission)
     return user[:user_type] == 'teacher'
   end
 
-  !!DASHBOARD_DB[:user_permissions].where(user_id:user[:id]).and(permission:permission).first
+  !!DASHBOARD_DB[:user_permissions].where(user_id: user[:id]).and(permission: permission).first
 end
 
 def no_content!()

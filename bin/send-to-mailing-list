@@ -16,7 +16,7 @@ def load_recipients(path, params={})
   limit = params[:limit] || -1
 
   Queue.new.tap do |queue|
-    CSV.foreach(path, headers:true) do |row|
+    CSV.foreach(path, headers: true) do |row|
       row = params[:filter][row] if params[:filter]
       next unless row
 
@@ -34,11 +34,11 @@ end
 
 def process_command_line(argv=ARGV)
   {
-    csv:nil,
-    limit:20000,
-    start:0,
-    template:nil,
-    threads:4,
+    csv: nil,
+    limit: 20000,
+    start: 0,
+    template: nil,
+    threads: 4,
   }.tap do |params|
     i = 0
     c = argv.count
@@ -83,9 +83,9 @@ def send_message(template, item)
 
     recipient_id = @contacts_cache[item['email']] if @contacts_cache
     if recipient_id
-      recipient = {id:recipient_id, email:item['email'], name:item['name'].to_s, ip_address:ip_address}
+      recipient = {id: recipient_id, email: item['email'], name: item['name'].to_s, ip_address: ip_address}
     else
-      recipient = Poste2.ensure_recipient(item['email'], name:item['name'].to_s, ip_address:ip_address)
+      recipient = Poste2.ensure_recipient(item['email'], name: item['name'].to_s, ip_address: ip_address)
       @contacts_cache[item['email']] = recipient[:id] if @contacts_cache
     end
 
@@ -110,7 +110,7 @@ def main()
 
   raise ArgumentError, "'#{params[:template]}' not found." unless Poste.resolve_template(params[:template])
 
-  queue = load_recipients params[:csv], start:params[:start], limit:params[:limit]
+  queue = load_recipients params[:csv], start: params[:start], limit: params[:limit]
   puts "#{queue.length} messages to send."
 
   workers = []
