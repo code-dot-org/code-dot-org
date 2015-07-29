@@ -81,4 +81,3 @@ class RedisPropertyBag
   end
 
 end
-
