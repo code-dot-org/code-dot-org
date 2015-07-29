@@ -9,6 +9,9 @@ require 'redis'
 
 class RedisPropertyBag
 
+  # A unique prefix for Redis property bag keys.
+  PROPERTY_BAG_KEY_PREFIX = "_pbag__"
+
   class NotFound < Sinatra::NotFound
   end
 
@@ -19,7 +22,7 @@ class RedisPropertyBag
   def initialize(redis_client, id)
     @redis = redis_client
     # The redis key for storing the table.
-    @key = "_pbag_#{id}"
+    @key = "#{PROPERTY_BAG_KEY_PREFIX}#{id}"
   end
 
   # Get all the fields and values in a hash.
