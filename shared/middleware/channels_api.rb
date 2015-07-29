@@ -16,7 +16,7 @@ class ChannelsApi < Sinatra::Base
       dont_cache
       content_type :json
       JSON.pretty_generate({
-        storage_id:storage_id('user'),
+        storage_id: storage_id('user'),
       })
     end
   end

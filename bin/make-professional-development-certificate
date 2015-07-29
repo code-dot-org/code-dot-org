@@ -7,7 +7,7 @@ def main()
 
   image_path = pegasus_dir 'sites.v3', 'code.org', 'public', 'images', 'k5-professional-development-certificate-2014.png'
 
-  image = create_certificate_image2(image_path, name, y:444, height:100)
+  image = create_certificate_image2(image_path, name, y: 444, height: 100)
   image.format = 'jpg'
   image.write 'certificate.jpg'
 end
