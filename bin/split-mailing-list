@@ -2,8 +2,8 @@
 
 def main()
   params = {
-    csv:'domestic.csv',
-    groups:[
+    csv: 'domestic.csv',
+    groups: [
       'donate-100-million-megans.csv',
       'donate-historic-crowdfunding.csv',
       'donate-push-us-over.csv',
@@ -11,7 +11,7 @@ def main()
       'donate-your-donation-today.csv',
       'remaining.csv'
     ],
-    size:10000,
+    size: 10000,
   }
 
   columns = nil

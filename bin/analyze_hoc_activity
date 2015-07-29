@@ -168,19 +168,19 @@ def main()
     csedweek_entire_schools:  12754,
     csedweek_students:        4875091,
     csedweek_countries:       356,
-    petition_signatures:      DB[:forms].where(kind:'Petition').count,
+    petition_signatures:      DB[:forms].where(kind: 'Petition').count,
     lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
   }
 
-  total_females = DASHBOARD_DB[:users].where(gender:'f').count;
-  total_males = DASHBOARD_DB[:users].where(gender:'m').count;
+  total_females = DASHBOARD_DB[:users].where(gender: 'f').count;
+  total_males = DASHBOARD_DB[:users].where(gender: 'm').count;
   total_with_gender = total_females + total_males
   total_with_gender = 1 if total_with_gender == 0
 
   Properties.set :about_stats, {
     number_served: total_started,
-    number_students: DASHBOARD_DB[:users].where(user_type:'student').count,
-    number_teachers: DASHBOARD_DB[:users].where(user_type:'teacher').count,
+    number_students: DASHBOARD_DB[:users].where(user_type: 'student').count,
+    number_teachers: DASHBOARD_DB[:users].where(user_type: 'teacher').count,
     percent_female: ((100 * total_females) / total_with_gender).to_i,
   }
 end

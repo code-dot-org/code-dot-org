@@ -10,7 +10,7 @@ post '/v2/sections' do
   only_for 'code.org'
   dont_cache
   unsupported_media_type! unless payload = request.json_body
-  forbidden! unless section_id = DashboardSection.create(payload.merge(user:dashboard_user))
+  forbidden! unless section_id = DashboardSection.create(payload.merge(user: dashboard_user))
   redirect "/v2/sections/#{section_id}"#, 201 #BUGBUG: JQuery is barfing on the 201
 end
 
@@ -44,7 +44,7 @@ patch '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
   unsupported_media_type! unless payload = request.json_body
-  forbidden! unless section = DashboardSection::update_if_owner(payload.merge(id:id, user:dashboard_user))
+  forbidden! unless section = DashboardSection::update_if_owner(payload.merge(id: id, user: dashboard_user))
   content_type :json
   JSON.pretty_generate(section.to_owner_hash)
 end

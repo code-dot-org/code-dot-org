@@ -4,7 +4,7 @@ require 'cdo/hip_chat'
 require 'cdo/solr'
 require src_dir 'forms'
 
-SOLR = CDO.solr_server ? Solr::Server.new(host:CDO.solr_server) : nil
+SOLR = CDO.solr_server ? Solr::Server.new(host: CDO.solr_server) : nil
 
 # load helpers
 load pegasus_dir('helpers.rb')
@@ -14,9 +14,9 @@ def send_receipts(kind, form)
   return 0 if receipts.empty?
   return 0 if form[:email] == 'anonymous@code.org'
 
-  recipient = Poste2.create_recipient(form[:email], name:form[:name], ip_address:form[:updated_ip])
+  recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
   receipts.each do |template|
-    Poste2.send_message(template, recipient, form_id:form[:id])
+    Poste2.send_message(template, recipient, form_id: form[:id])
   end
   receipts.count
 end
@@ -24,11 +24,11 @@ end
 def send_batch_of_receipts(batch_size)
   count = 0
 
-  DB[:forms].where(notified_at:nil).exclude(processed_at:nil).limit(batch_size).each do |form|
+  DB[:forms].where(notified_at: nil).exclude(processed_at: nil).limit(batch_size).each do |form|
     kind = Object.const_get(form[:kind])
 
     count += send_receipts(kind, form)
-    DB[:forms].where(id:form[:id]).update(notified_at:DateTime.now)
+    DB[:forms].where(id: form[:id]).update(notified_at: DateTime.now)
   end
 
   count
@@ -37,7 +37,7 @@ end
 def process_batch_of_forms(batch_size)
   count = 0
 
-  DB[:forms].where(processed_at:nil).limit(batch_size).each do |form|
+  DB[:forms].where(processed_at: nil).limit(batch_size).each do |form|
     kind = Object.const_get(form[:kind])
 
     processed_data = {}
@@ -47,7 +47,7 @@ def process_batch_of_forms(batch_size)
       processed_data = kind.process(JSON.load(form[:data]))
     end
 
-    DB[:forms].where(id:form[:id]).update(processed_data:processed_data.to_json, processed_at:DateTime.now)
+    DB[:forms].where(id: form[:id]).update(processed_data: processed_data.to_json, processed_at: DateTime.now)
 
     count += 1
   end
@@ -59,7 +59,7 @@ def index_batch_of_forms(batch_size)
   documents = []
 
   DB.transaction do
-    DB[:forms].where(indexed_at:nil).exclude(processed_at:nil).limit(batch_size).each do |form|
+    DB[:forms].where(indexed_at: nil).exclude(processed_at: nil).limit(batch_size).each do |form|
       kind = Object.const_get(form[:kind])
 
       begin
@@ -82,11 +82,11 @@ def index_batch_of_forms(batch_size)
 
         documents << index_data
       rescue
-        HipChat.log "Form #{form[:id]} couldn't be indexed.", color:'red', notify:1
+        HipChat.log "Form #{form[:id]} couldn't be indexed.", color: 'red', notify: 1
         raise
       end
 
-      DB[:forms].where(id:form[:id]).update(indexed_at:DateTime.now)
+      DB[:forms].where(id: form[:id]).update(indexed_at: DateTime.now)
     end
 
     begin
@@ -96,7 +96,7 @@ def index_batch_of_forms(batch_size)
         begin
           SOLR.update([document])
         rescue => e
-          HipChat.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color:'red', notify:1
+          HipChat.log "Unable to index form #{document['kind_s']} #{document['id']}: #{e}", color: 'red', notify: 1
           raise
         end
       end
@@ -120,7 +120,7 @@ def main()
   count = index_batch_of_forms(limit)
   messages << "#{count} form(s) indexed" if count > 0
 
-  remaining = DB[:forms].where(processed_at:nil).count
+  remaining = DB[:forms].where(processed_at: nil).count
   messages << "#{remaining} forms(s) remaining." if remaining > 0
 
 #  HipChat.log messages.join('; ') unless messages.empty?

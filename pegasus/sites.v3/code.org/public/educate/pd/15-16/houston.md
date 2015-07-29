@@ -126,7 +126,33 @@ Laptop
 </br>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-More info coming soon!
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+
+**Save the dates:**
+
+Semester 1: Saturday, December 12, 2015 
+
+Semester 2: Saturday, February 27, 2016 
+
+8:00am - 4:00pm
+</br>
+<br/>
+Breakfast and lunch will be served. 
+
+**Location**
+
+TBD
+
+**What to bring to Phase 3 bi-yearly sessions:**
+
+Laptop
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

@@ -15,7 +15,7 @@ def main()
     exit 1
   end
 
-  unless user = USERS.where(email:email).first
+  unless user = USERS.where(email: email).first
     puts "#{email} not a user."
     exit 1
   end
@@ -35,13 +35,13 @@ def main()
     exit 1
   end
 
-  if PERMISSIONS.where(id:user[:id], permission:permission_name).first
+  if PERMISSIONS.where(id: user[:id], permission: permission_name).first
     puts "#{email} already has '#{permission_name}'"
     exit 0
   end
 
   created_at = DateTime.now
-  PERMISSIONS.insert(user_id:user[:id], permission:permission_name, created_at:created_at, updated_at:created_at)
+  PERMISSIONS.insert(user_id: user[:id], permission: permission_name, created_at: created_at, updated_at: created_at)
   puts "#{email} granted '#{permission_name}'"
 end
 
