@@ -968,11 +968,16 @@ Blockly.BlockSpace.prototype.scrollToDelta = function (scrollDx, scrollDy) {
 };
 
 /**
- * Scrolls scrollbars to given offset coordinates
+ * If possible, scrolls scrollbars to given offset coordinates.
+ * Clamps desired values between zero and max scroll values.
  * @param {number} newScrollX new pan-right (+) offset
  * @param {number} newScrollY new pan-down (+) offset
  */
 Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
+  if (!this.scrollbarPair) {
+    return;
+  }
+
   var maxScrollOffsets = this.getMaxScrollOffsets();
 
   newScrollX = goog.math.clamp(newScrollX, 0, maxScrollOffsets.x);
