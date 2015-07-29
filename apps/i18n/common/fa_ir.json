@@ -208,7 +208,7 @@
   "toolboxHeader": "بلوک ها",
   "toolboxHeaderDroplet": "جعبه ابزار",
   "totalNumLinesOfCodeWritten": "در مجموع: {numLines, plural, one {یک خط} other {# خط}} کد.",
-  "tryAgain": "دوباره تلاش کن",
+  "tryAgain": "دوباره تلاش کنید",
   "tryHOC": "ساعتِ کد نویسی را امتحان کنید",
   "wantToLearn": "آیا می‌خواهید کد نویسی را یاد بگیرید؟",
   "watchVideo": "ویدیو را ببینید",

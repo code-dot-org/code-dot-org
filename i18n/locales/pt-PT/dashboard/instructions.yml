@@ -1380,10 +1380,16 @@ pt:
         uses only blocks that you have already been shown.  Can you figure out how
         to recreate it without any extra information?  Hint:  Feel free to use trial
         and error. You are not expected to get it perfect the first time.
-      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit\nfor the solution."
+      Course 4 Artist 13_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can design anything you want!
       Course 4 Artist 2_instruction: |
         Você consegue repetir este código para desenhar
         o quadrado em cinza?
+      Course 4 Artist 20_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can create whatever you want!
       Course 4 Artist 3_instruction: |
         Ok, tente descobrir o que acontece se você executar
         esse código (ou clique em "Executar" para ver). Em seguida, execute-o várias vezes para completar
@@ -1457,6 +1463,7 @@ pt:
         e adiciona um lado por vez, até que seja desenhado um decágono (10 lados). Cada lado
         deve ter 100 pixels de comprimento. Dica: 360 dividido pelo número de lados de uma forma
         é o número de graus que você vai precisar virar.
+      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
       Course 4 Artist For Loops 12_instruction: |
         Isso foi muito legal, mas agora
         eu gostaria de desenhar uma forma do lado da outra. Desta vez, cada lado tem
@@ -1505,6 +1512,7 @@ pt:
       Course 4 Artist For Loops 9_instruction: |
         Você consegue fazer uma espiral? Avance
         de 1 a 75 pixels, aumentando 1 pixel de cada vez.
+      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604 for the solution."
       Course 4 Artist Functions 1_instruction: |
         Você consegue desenhar um quadrado com 100
         pixels de comprimento usando um laço?
@@ -1556,7 +1564,7 @@ pt:
         A maior parte do código para
         criar uma função foi dada a você. Contudo, parece que algo está faltando. Você consegue
         completar este bloco de função?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made?  Visit https://studio.code.org/c/105765376/edit\nfor the solution."
       Course 4 Artist Params 1_instruction: |
         Vamos editar uma função que desenha um
         quadrado com lados de 50 pixels
@@ -1695,6 +1703,17 @@ pt:
         néctares. Aqui um bloco se-senão é combinado com outro bloco se-senão para criar
         um bloco se, senão-se, senão. Complete a solução para coletar a quantidade desconhecida
         de néctar.
+      Course 4 Bee 5_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Add an if-else block to create an if, else-if, else block. Complete
+        the solution to collect the unknown amount of nectar.
+      Course 4 Bee 6_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Create an if, else-if, else block to collect the unknown amount of
+        nectar.
+      Course 4 Bee 7_instruction: |
+        Use everything you have learned so far to collect
+        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
       Course 4 Bee For Loops 1_instruction: |
         Use um laço para coletar o néctar de
         todas as flores.
@@ -1702,6 +1721,9 @@ pt:
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
         seu incremento para coletar 9, então 6, e então 3 néctares?
+      Course 4 Bee For Loops 11_instruction: |
+        What's wrong with this loop? See if
+        you can fix it and make the bee collect all the nectar.
       Course 4 Bee For Loops 2_instruction: |
         Temos aqui um novo tipo de laço, chamado de
         laço "para". Esse laço para em particular vai contar de 1 até 5, de 1 em 1, e executar
@@ -2296,6 +2318,7 @@ pt:
       Infinity_touch_score_instruction: |
         Faça Anna marcar um ponto quando ela tocar
         em um floco de neve. Depois clique em "Executar" e faça ela tocar uma vez em cada floco de neve.
+      jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         Desenhe uma pequena reta para cima e uma
@@ -2654,6 +2677,7 @@ pt:
       NEW Course 4 Artist Functions 9_instruction: |
         Qual bloco você precisa adicionar
         para que o triângulo fique em cima do quadrado?
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit for the solution."
       New Course 4 Artist Functions Level 4_instruction: |
         Use a função "desenhe um quadrado"
         para desenhar esse padrão.
@@ -2669,6 +2693,9 @@ pt:
       NEW Course 4 Artist Params 12_instruction: |
         Você consegue completar esse desenho?
         Os lados de todas as formas têm 100 pixels de comprimento.
+      NEW Course 4 Artist Params 12a_instruction: |
+        This image is similar to the last.
+        Can you use a "for loop" with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: |
         Vamos editar essa função "desenhe uma forma".
         Ela já tem um parâmetro "comprimento". Agora, vamos editar a função
@@ -2709,6 +2736,7 @@ pt:
         da função "desenhe um quadrado" e adicionar um parâmetro. Ela deve receber um parâmetro
         comprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75
         pixels de comprimento e separados por 100 pixels cada.
+      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530 for the solution."
       NEW Course 4 Artist Vars 1.5_instruction: |
         Dê uma olhada no código. Você consegue
         ver como o bloco "defina o comprimento" e o bloco "comprimento" funcionam juntos? Clique
@@ -2778,6 +2806,10 @@ pt:
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
         seu incremento para coletar 9, então 6, e então 3 néctares?
+      NEW Course 4 Bee For Loops 95_instruction: |
+        Take a look at each piece of the
+        "for loop" that you have just created.  Can you figure out which numbers
+        you need to double to solve this puzzle? Why does it work?
       NEW Course 4 Play Lab Params 11_instruction: |
         É hora da atividade livre! Divirta-se
         com todos os blocos da sua caixa de ferramentas.
@@ -2787,9 +2819,16 @@ pt:
       NEW Course 4 Play Lab Vars 4 5_instruction: |
         "O que você acha que esse código vai
         fazer? Pressione "Executar" para ver o que acontece".
+      NEW Course 4 Play Labs For Loops 7a_instruction: |
+        Using what you learned so
+        far, can you have Dinosaur take a step forward every time Penguin counts?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: |
         É hora da atividade livre,
         divirta-se com todos os blocos da sua caixa de ferramentas.
+      NEW Course 4 Play Labs For Loops 8a_instruction: |
+        Challenge: How would you
+        use the "for loop" to get every actor to go around and say their actor number,
+        then vanish from the screen? 
       New Play Lab Project_instruction: |
         Crie sua própria história ou jogo! Seu código
         está salvo como um projeto para o qual você pode retornar a qualquer hora.
@@ -3372,12 +3411,38 @@ pt:
         an explanation.
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
-        of the turtle's starting position. [Click to see full instructions]
+        of the turtle's starting position. Click to see full instructions.
+      U3L23 Chatbot Conditionals 1_instruction: |
+        Ask the user the question "What
+        is your favorite color?" using the "prompt" block. Using the "if" block,
+        check if the user's response matches yours. Add a "write" block to the
+        body of the "if" statement to add the response "<favorite_color> is my
+        favorite color too!" to the screen.
+      U3L23 Chatbot Conditionals 2_instruction: |
+        Replace the "if" block with an
+        "if/else" block to make your chatbot respond in all circumstances.
+      U3L23 Chatbot Conditionals 3_instruction: |
+        In text mode, add several "else
+        if" statements to your program.
+      U3L23 Chatbot Intro 2_instruction: |
+        Create a click event for your button. Create
+        a conversation variable and store the user's input in it. You may need the
+        "getText," "setText," and "+" blocks in your code.
+      U3L23 Chatbot Intro 3_instruction: |
+        Add the response "uh huh" by using the
+        "+" operator. Add newline characters (\
+        ) where appropriate.
+      U3L23 Chatbot Intro 4_instruction: |
+        Use this level to make your chatbot look
+        and work better!
+      U3L23 Chatbot Intro_instruction: |
+        Add a Lable, Text Input, Button, and Text
+        Area object to your project
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid to the *front* and *right*
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction.
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
-        of the starting location.
+        of the starting location. (Click to show full instructions)
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

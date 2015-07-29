@@ -151,7 +151,7 @@
   "projectileCherry":"trešnja",
   "projectileIce":"led",
   "projectileDuck":"patka",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to go back to playing your story.",
+  "reinfFeedbackMsg":"You can press the \"{backButton}\" button to go back to playing your story.",
   "repeatForever":"ponavljaj zauvijek",
   "repeatDo":"napravi",
   "repeatForeverTooltip":"Opetovano izvršava akcije u bloku, dok god se program izvršava.",
