@@ -1343,7 +1343,7 @@ Studio.init = function(config) {
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
 
       if (Blockly.contractEditor) {
-        Blockly.contractEditor.registerTestHandlers(Studio.runTest, function () {});
+        Blockly.contractEditor.registerTestHandler(Studio.runTest);
       }
     }
 
