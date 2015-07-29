@@ -344,7 +344,7 @@
     panel:
       answer_viewer: cevap gözlemleyicisi
       student: öğrenci
-      viewing_solution: Viewing Solution
+      viewing_solution: Çözüme Bak
       try_it_yourself: kendini dene
       section: Bölüm
   user:
@@ -368,10 +368,10 @@
     classroom_activity: Bağlantısız Etkinlik
   home:
     title: Code Studio
-    description: Code Studio is home to online courses created by Code.org
+    description: Code.org tarafından Code Studio evinizde online kurslar oluşturur
     lines_of_code: '%{lines_count}öğrenci tarafından yazılan kod satırları'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code_linebreak: KOD SATIRLARI %{lines_count}<br/> %{students_count} milyon
+      öğrenci tarafından yazıldı
     all_courses: 1, 2 ve 3 nolu derslerine genel bakış
     lesson_plans: Ders planları
     signin_message: Zaten üye misiniz? % {link}
@@ -415,7 +415,7 @@
     heading_legacy: <h1>Tüm yaş</h1> grupları için <h2>genel kurslarımız</h2>
     your_gallery: Galeri
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
-    print_certificate: Print Certificate
+    print_certificate: Sertifikayı Yazdır
   gender:
     male: Erkek
     female: Kadın
@@ -516,12 +516,12 @@
       body: 10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy
         Kod eğitimimizi deneyin!
     20-hour:
-      title: Accelerated Course
+      title: Hızlandırılmış Kurs
       body: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını
         tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her
         yaştan öğrenmek için eğlencelidir.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış bir sürümünde
+        öğrenin.
     hoc2014:
       try_new_tutorial: Yeni Kodlama Saati öğreticimizi beta halinde deneyin
       try_frozen: Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı
@@ -580,8 +580,8 @@
     badrange: Senin sözleşmen yanlış bir diziye sahip.
     baddomainsize: sözleşmeniz içerikteki elemanların doğru numaralarını içermiyor.
     baddomainname: 1 veya daha fazla senin öğelerin hatalı.
-    baddomaintype: One or more of your domain items has the wrong type, or they are
-      in the wrong order.
+    baddomaintype: Bir veya daha fazla etki alanı yanlış öğe türüne sahip, ya da yanlış
+      sırada.
   text_match:
     placeholder: Cevabınızı buraya girin
     open_response_title: teşekkürler

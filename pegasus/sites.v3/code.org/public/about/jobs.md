@@ -8,11 +8,11 @@ nav: about_nav
 **We are currently hiring for:**
 
 - [Customer Support Associate](#support)	
+- [Curriculum Writer](#writer)
 - [Data Engineer](#data-engineer)
 - [District Manager (Seattle, New York City)](#reg-PM)
 - [Evaluation Manager](#Eval)
 - [Software Engineer](#engineer)
-- [Video Production](#video)
 
 **[Working at Code.org](#info)**
 
@@ -20,7 +20,7 @@ nav: about_nav
 
 **Job Summary:**
 
-Code.org is recruiting for a tech-savvy customer support associate who is passionate about helping others. This is a full-time position for a candidate who can effectively solve customer issues and positively represent Code.org. 
+Code.org is looking for for a tech-savvy customer support associate who is passionate about helping others. This is a full-time position for a candidate who can effectively solve customer issues and positively represent Code.org. 
 
 Responsibilities of the position include:
 
@@ -28,8 +28,6 @@ Responsibilities of the position include:
 - Answering forum questions and providing clear, friendly guidance on behalf of Code.org
 - Trouble shooting and reproducing customer bugs; escalating issues to the development, education, or operations teams when necessary
 - Providing additional support to the operations team (i.e. helping with workshop planning, coordination and communications) as needed 
-
-This person must be able to work in a fast paced environment while maintaining our excellent standard for customer service.
 
 **Skills & Qualifications:**
 
@@ -42,10 +40,39 @@ The ideal candidate has the following qualifications:
 - Background in education and communicating with educators preferred
 - Experience managing online forums a plus
 
-In addition, candidates:
+This person must be able to work in a fast paced environment while maintaining our excellent standard for customer service.
 
-- Must be a U.S. Citizen or Permanent Resident
-- Must pass a pre-employment background check
+Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="support" href="#writer">Curriculum Writer (Seattle, WA)</a>
+
+
+**Job Summary:**
+
+Code.org is looking for an experienced Curriculum Writer to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. We are looking for someone to help develop curriculum as a full-time, long-term assignment (a one-to-two year term). While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway. 
+
+Responsibilities of the position include:
+
+- Working closely with the Education team to design, develop, write, and “go to market” with original curricular materials (lesson plans, formative/summative assessments, and videos).
+- Planning for evaluating the effectiveness of curriculum (from both student and teacher perspectives) and making programmatic improvements.
+- Collaborating with the Product team to develop curriculum-specific technology tools and using the tools to create tutorials and projects.
+
+**Skills & Qualifications:**
+
+The ideal candidate has experience designing, developing, and writing computer science curriculum to standards; has strong leadership, writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure.
+
+The candidate should also have: 
+
+- Comprehensive knowledge of computer science (required) 
+- Prior curriculum writing experience / activity design (required)
+- a Bachelor’s degree or higher in Education or Computer Science (preferred)
+- Recent computer science or STEM teaching experience in high school field (preferred)
+- Experience using the Understanding by Design curriculum framework (preferred)  
+- Experience/familiarity with the CS Principles Framework (preferred) 
+- Experience/familiarity with Exploring Computer Science curriculum/PD (preferred) 
+- Proficiency in working with Microsoft Office and Google Docs (required) 
+
+Ability and willingness to travel up to 10% of time is required. 
 
 Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -124,7 +151,7 @@ Must be a self-starter, multi-tasker, excel under pressure, and work independent
 
 Ability and willingness to travel up to 25% of the time is required.
 
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="Eval"href="#Eval">Evaluation Manager (Seattle,WA or Chicago,IL preferred)</a>
 
@@ -151,8 +178,7 @@ The ideal candidate has the following qualifications:
 - Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. 
 - A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must, especially spreadsheets.
 
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
@@ -168,42 +194,18 @@ Code.org is building interactive tutorials for computer science courses starting
 - Deep expertise in either JavaScript or Ruby preferred 
 - Experience with startup culture preferred 
 
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="video"href="#video">Videographer (Seattle,WA)</a>
-
-
-**Job Summary:**
-
-Code.org is recruiting for a videographer who can collaborate with our education team to produce professional development for K-12 teachers learning to teach computer science.  Ideal candidate will have experience both as a producer and an editor.
-
-Full-time, long-term contract position (approximately 6 months). 
-
-Responsibilities of the position include:
-
-Working closely with other teams at Code.org to determine the video needs for various courses (aimed at K-12 students)
-Managing the production of the videos from start to finish.
-Brainstorming and story boarding ideas for each video, tailored to it’s audience and purpose 
-Skills in order of priority are: editing, producing/managing, animated graphics, shooting. 
-
-**Skills and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Bachelors degree in film, digital media, graphic design or related field
-- 4+ years work experience in producing videos either as a generalist or as an producer / editor.
-- Prefer experience in all stages of video production is helpful i.e: conception and story-boarding, shooting, media management, editing, animating needed graphics, and exporting appropriate format for YouTube; however our most urgent need is for a highly organized individual who can act as a producer to schedule shoots, prepare scripts and edit footage.  
-- Extensive experience with Adobe products (we use these exclusively for our video production)
-- A strong sense of design and story is key, as is a can-do / self-starter attitude
-- Excellent professional references
-
-Email resumes or LinkedIn profiles to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="info" href="#info">Working at Code.org</a>
 
+**Company Profile**
 
+Code.org is a non-profit organization dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
+
+We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
+
+**Working for us**
 
 Code.org offers a comprehensive employee benefits package that includes:
 

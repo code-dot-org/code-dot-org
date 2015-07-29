@@ -31,7 +31,18 @@
     "min_workspace_height": "2000",
     "scrollbars": "true",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "Free Play time! Here are all of the variables we've played with so far, as well as a few more in case you want them. \r\n\r\n<br/>\r\nMake a game or story that uses these variables. \r\n\r\n*Hint: scroll down to see all the commands in the work space.*",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

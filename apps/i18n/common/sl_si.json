@@ -182,6 +182,7 @@
   "play": "igraj",
   "print": "Natisni",
   "puzzleTitle": "Uganka {puzzle_number} od {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "ponovi",
   "resetProgram": "resetiraj",
   "rotateText": "Zasukaj tvojo napravo.",

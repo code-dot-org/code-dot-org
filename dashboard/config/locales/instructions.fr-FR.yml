@@ -296,9 +296,8 @@
         l'ensemble du nectar des fleurs dans ce terrain.
       2-3 Bee Loops 12_instruction: Utilise des boucles "Tant que" pour recueillir
         l'ensemble du nectar des fleurs dans ce terrain.
-      2-3 Bee Loops 13_instruction: |
-        Assessment: Use the repeat block to collect
-        all of the nectar.
+      2-3 Bee Loops 13_instruction: 'Évaluation : Utiliser le bloc "répéter" pour
+        recueillir l''ensemble du nectar.'
       2-3 Bee Loops 1A_instruction: 'Salut, Je suis une abeille. Peut-tu m''aider
         à récolter le nectar de ces fleurs ? '
       2-3 Bee Loops 2_instruction: Utilise une boucle pour recueillir le nectar et
@@ -800,6 +799,9 @@
       4-5 While Loops Assessment 1_instruction: Voilà beaucoup de trous et de tas.
         Aide-moi à déplacer la terre pour rendre le sol plat.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1250,6 +1252,16 @@
         ligne fait 300 pixels de long) '
       Course 4 Artist 10_instruction: 'C''est l''heure de jouer! Amuse-toi à dessiner
         ce que tu souhaites. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Vous pouvez boucler ce code-ci pour dessiner
         le carré en gris?
       Course 4 Artist 3_instruction: Bon, essayez de comprendre ce qui arrivera si
@@ -1396,6 +1408,11 @@
       Course 4 Artist Functions 9_instruction: Nous vous avons donné presque tout
         le code pour créer une fonction. Cependant, il semble manquer quelque chose.
         Pouvez-vous terminer ce bloc fonction ?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Nous allons éditer une fonction qui dessine
         un carré de côté 50 pixels
       Course 4 Artist Params 10_instruction: 'Vous pouvez appeler des fonctions à
@@ -1723,6 +1740,9 @@
         ?
       Course 4 Play Labs For Loops 8_instruction: Quelle boucle « Répéter » me ferais
         dire 19, 27, 35, 43, 51 ?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
         to get me to the pig"
@@ -1846,7 +1866,7 @@
         Check out the rotate function - can you use
         it to rotate this 90 pixel green square by 45 degrees?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: "Can you complete this image using the \"shrink\"\nfunction
         block? The radius is 20. \n"
@@ -2021,12 +2041,10 @@
       frozen square snowflake_instruction: Peux-tu créer un flocon de neige en utilisant
         le bloc « Répéter » pour faire un carré 10 fois et le bloc « Tourner » pour
         tourner de 36 degrés entre chaque carré ?
-      hoc2015_intro_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
-      hoc2015_sandbox_instruction: |
-        Hiro is "actor 1".  Use the Move block to move
-        Hiro right to touch Baymax.
+      hoc2015_intro_instruction: Hiro est "acteur 1". Utilisez le bloc "Déplacer"
+        pour déplacer Hiro vers la droite afin de toucher Baymax.
+      hoc2015_sandbox_instruction: Hiro est "acteur 1". Utilisez le bloc "Déplacer"
+        pour déplacer Hiro vers la droite afin de toucher Baymax.
       Infinity_catch_instruction: Pouvez-vous aider Elsa ("acteur 2") à rattraper
         Anna en utilisant les touches fléchées ?
       Infinity_finale_instruction: Créer ce que vous voulez et partagez-le !
@@ -2053,11 +2071,12 @@
       Infinity_touch_score_instruction: Fais marquer un point par Anna quand elle
         touche un flocon de neige.  Puis clique sur « Exécuter » et dirige-la pour
         toucher une fois chaque flocon de neige.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Dessine une courte ligne vers le haut
         et une longue ligne vers la droite !
       K-1 artist 1 level 10_instruction: Dessine la ligne pointillée en utilisant
         les blocs de saut et de dessin
-      K-1 artist 1 level 9_instruction: Draw this using three lines
+      K-1 artist 1 level 9_instruction: Dessinez en utilisant trois lignes
       K-1 Artist Loops 1_instruction: Trace cette ligne en allant vers l'est 4 fois.
       K-1 Artist Loops 2_instruction: Peux-tu dessiner la même ligne à l'aide d'une
         boucle ?
@@ -2745,6 +2764,7 @@
       Standalone_Artist_v2_instruction: Bienvenue à l'artiste ! Tout d'abord, nous
         allons essayer de faire un simple carré à l'aide du bloc tourner à droite
         et du bloc déplacer vers l'avant. Chaque côté doit être de 100 pixels de long.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: Ce poème a été compressé en remplaçant
         deux phrases identiques par des symboles dans le dictionnaire. Pouvez-vous
         identifier une autre partie répétée pour compresser encore plus le poème ?
@@ -3137,17 +3157,13 @@
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

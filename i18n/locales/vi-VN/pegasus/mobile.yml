@@ -1,7 +1,7 @@
 vi-VN:
   hello: Xin chào thế giới
   select_language: Vui lòng chọn ngôn ngữ của bạn
-  computer_science: Khoa học máy tính
+  en: Computer Science
   computer_science_edweek: Tuần giáo dục khoa học máy tính
   csedweek_dates: 'Từ ngày 8-14 tháng  12 năm 2014'
   csedweek_banner_hoc: |-
@@ -46,6 +46,7 @@ vi-VN:
   congratulations: Chúc mừng!
   congratulations_on_completing_hoc: Chúc mừng bạn đã hoàn thành khóa học Một giờ lập trình
   get_a_certificate_of_achievement: Lấy chứng nhận thành tích
+  enter_valid_age: Please select a valid age
   enter_valid_email: Vui lòng nhập một địa chỉ email hợp lệ
   get_a_certificate_message: "Chúng tôi sẽ gửi cho bạn một Giấy Chứng Nhận và Thông Tin về việc làm thế nào để <a href='/learn/beyond'>Học Trong Vòng Một Giờ</a>"
   get_a_certificate_message_after: "Click vào phần certificate để tải về hoặc in ra. Bây giờ, tiếp tục với <a href='http://studio.code.org'>other courses</a>, hoặc tham khảo thêm một vài lựa chọn ở <a href='/learn/beyond'>Learn beyond One Hour</a>."

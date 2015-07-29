@@ -30,7 +30,8 @@ gulp.task('lint', function () {
       browser: true,
       undef: true
     }))
-    .pipe(jshint.reporter('default'));
+    .pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter('fail')); // report error code on failure
 });
 
 gulp.task('enable-watch', function () {

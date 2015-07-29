@@ -36,9 +36,7 @@ title: Register for a workshop
   .col-sm-8
     -if (signup_count >= data['capacity_s'].to_i) || (first_date < Time.now)
       .alert.alert-danger{role: "alert"}
-        This workshop is no longer accepting signups. Please choose another one or
-        %a{href: "https://docs.google.com/a/code.org/forms/d/1QoWzKV5n2Fxx-W90LmmMWxY7qndMo1IE0QWZcxY9OTI/viewform"} sign up
-        to be notified when workshops near you are announced.
+        This workshop is no longer accepting signups. Please choose another one or contact the facilitator (email below) to be notified when additional workshops are announced.
     %p Taught by Code.org Affiliates who are experienced computer science educators, our free workshops will prepare you to teach the Code Studio courses for grades K-5.
 
   .col-sm-6

@@ -1,7 +1,7 @@
 az-AZ:
   hello: Salam, dünya
   select_language: Zəhmət olmazsa, dilinizi seçin
-  computer_science: İnformatika
+  en: Computer Science
   computer_science_edweek: İnformatika təhsili həftəsi
   csedweek_dates: 8-14 dekabr 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kod Saatı</a> gəlir. Bütün müəllim və təşkilaçıları səsləyirik, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">öz Kod Saatınızı planlaşdırın</a>'
@@ -45,6 +45,7 @@ az-AZ:
   congratulations: Təbriklər!
   congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
   get_a_certificate_of_achievement: Nailiyyət sertifikatı əldə edin
+  enter_valid_age: Please select a valid age
   enter_valid_email: Zəhmət olmasa, düzgün e-poçt ünvanı daxil edin
   get_a_certificate_message: "Biz sizə sertifikat və <a href='/learn/beyond'>Kod Saatından sonra da öyrən</a>məyin yolları barədə məlumat göndərəcəyik"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond One Hour</a>."

@@ -1,7 +1,7 @@
 "pt-BR":
   hello: Olá, mundo
   select_language: Selecione seu idioma
-  computer_science: Ciência da Computação
+  en: Ciência da Computação
   computer_science_edweek: Semana de Educação em Ciência da Computação
   csedweek_dates: De 8 a 14 de dezembro de 2014
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -62,6 +62,7 @@
   congratulations: Parabéns!
   congratulations_on_completing_hoc: Parabéns, você concluiu a Hora do Código
   get_a_certificate_of_achievement: Obter um certificado de conclusão
+  enter_valid_age: Selecione uma idade válida
   enter_valid_email: Informe um endereço de email válido
   get_a_certificate_message: Vamos enviar-lhe um certificado e informações sobre como
     <a href='/learn/beyond'>aprender além de Uma Hora</a>
@@ -451,12 +452,18 @@
   dashboard_students_print_info: Imprima cartões com as informações de login de seus
     alunos.
   dashboard_students_secret_picture_title: Imagem secreta
-  dashboard_students_secret_picture: Imagem secreta
+  dashboard_students_secret_picture: Esta seção usa <b>imagem</b> como seu tipo secreto.
+    Isso significa que cada um dos seus alunos tem uma imagem secreta ao invés de
+    uma senha para se conectar. Os alunos devem usar o endereço de acesso acima para
+    se conectarem.
   dashboard_students_reset_picture: Você pode redefinir a imagem secreta de um aluno
     a qualquer hora usando <b>Mostrar segredo</b>, e então <b>Redefinir o segredo</b>.
     Uma nova imagem secreta vai ser gerada para o aluno quando ele entrar.
   dashboard_students_secret_word_title: Palavra secreta
-  dashboard_students_secret_word: Palavra secreta
+  dashboard_students_secret_word: Esta seção usa <b>palavra</b> como seu tipo secreto.
+    Isso significa que cada um dos seus alunos tem um par de palavras secretas ao
+    invés de uma senha para se conectar. Os alunos devem usar o endereço de acesso
+    acima para se conectarem.
   dashboard_students_reset_word: 'Você pode redefinir a palavra secreta de um aluno
     a qualquer hora, usando <b>Mostrar segredo</b>, e então <b>Redefinir o segredo</b>.
     Um novo par de palavras secretas vai ser gerado para o aluno quando ele entrar. '

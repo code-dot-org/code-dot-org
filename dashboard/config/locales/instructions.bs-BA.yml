@@ -721,6 +721,9 @@
       4-5 While Loops Assessment 1_instruction: Sada vidim puno rupa i hrpa. Pomozi
         mi da ih popunim i uklonim sve dok se zemlja ne poravna.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
+      AppLab_test02_instruction: |
+        One sentence summary of the activity. Click to
+        view full instructions.
       Artist - Nested Loops 1_instruction: 'Dovrši kod za crtanje ovih trokutova.
         Prvi dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
       Artist - Nested Loops 10_instruction: Nacrtaj zadnji red zvijezda na ovoj zastavi
@@ -1102,6 +1105,16 @@
         linija je duga 300 piksela) '
       Course 4 Artist 10_instruction: 'Vrijeme je za slobodno igranje! Zabavi se i
         nacrtaj šta god želiš. '
+      Course 4 Artist 11_instruction: |
+        Now for a challenge!  Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it without any extra information?  Hint:  Feel free to use trial
+        and error. You are not expected to get it perfect the first time.
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the \"see the solution\" button."
       Course 4 Artist 2_instruction: Možeš li ponavljati ovaj kod u petlji da bi nacrtao/a
         posivjeli kvadrat?
       Course 4 Artist 3_instruction: Ok, pokušaj shvatiti šta se desi ako pokreneš
@@ -1238,6 +1251,11 @@
       Course 4 Artist Functions 9_instruction: Dali smo ti većinu koda za kreiranje
         funkcije. Međutim, izgleda dan ešto nedostaje. Možeš li kompletirati ovaj
         funkcijski blok?
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
+        you need to know to make a pattern like this! If this picture inspires\nyou,
+        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
+        to know how our inspiration pattern was made? Click on the blue tab\nto the
+        right and then click the `see the solution` button."
       Course 4 Artist Params 1_instruction: Hajde da uredimo funkciju koja crta kvadrat
         sa stranicama od 50 piksela
       Course 4 Artist Params 10_instruction: 'Možeš zvati funkcije unutar drugih funkcija!
@@ -1550,6 +1568,9 @@
         da bi mi pomogao izgovoriti niz 1, 4, 7, 10, 13, 16, 19, 22, 25?
       Course 4 Play Labs For Loops 8_instruction: Koja "od-do" petlja bi učinila da
         ja izgovaram 19, 27, 35, 43, 51?
+      Course 4 Variables Assessment_instruction: |
+        Can you create this image using
+        a variable for sides? Each line should be 50 pixels long.
       Course1BeePuzzle12_instruction: Sakupi tri nektara i onda napravi dva meda
       Course1MazeAssessment1_instruction: "Ovo je test!\r\nKreći se u jednom smjeru,
         a zatim u drugom da bi me doveo/la do svinje"
@@ -1655,7 +1676,7 @@
       Eval Contracts C_instruction: Provjeri ovu "rotiraj" funkciju. Možeš li je upotrijebiti
         da zarotiraš ovaj zeleni kvadrat od 90 piksela veličine za 45 stepeni?
       Eval Contracts E_instruction: |
-        Try using the text function to write this "Hello,
+        Try using the text function to write "Hello,
         world!" in teal at size 40.
       Eval Contracts shrink_instruction: 'Možeš li dovršiti ovu sliku koristeći "smanji"
         funkciju? Prečnik je 20. '
@@ -1835,6 +1856,7 @@
       Infinity_touch_score_instruction: Učini da Anna osvoji bod svaki put kada dotakne
         pahuljicu snijega. Onda klikni na "Pokreni" i upravi Annu da dodatkne svaku
         od pahuljica samo jednom.
+      Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Nacrtaj kratku liniju gore i jednu dugačku
         liniju desno!
       K-1 artist 1 level 10_instruction: Nacrtaj isprekidanu liniju koristeći blokove
@@ -2490,6 +2512,7 @@
       Standalone_Artist_v2_instruction: Dobrodošao u Umjetnik! Kao prvo, hajde da
         pokušamo napraviti jednostavan kvadrat koristeći blok za skretanje u desno
         i blok za kretanje naprijed. Svaka stranica bi trebala biti 100 piksela duga.
+      Test Play Lab_instruction: This is a test play lab level.
       Text Compression Peter Piper_instruction: Ova pjesma je sažeta tako što su dvije
         uobičajene fraze zamijenjene simbolima iz rječnika. Možeš li pronaći još neke
         uobičajene uzorke da bi se pjesma još više mogla sažeti?
@@ -2882,18 +2905,14 @@
         run the code, mess with it if you like, and continue to the next page for
         an explanation.
       U3L2 Using Simple Commands_instruction: |
-        Draw a square using only moveForward
-        and turnLeft.  The square should be drawn above and to the left of the turtle's
-        starting position.
+        Draw a square above and to the left
+        of the turtle's starting position. [Click to see full instructions]
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid above and to the right of
-        the turtle. Try to do so with the fewest number of commands possible. NOTE:
-        This is a very challenging problem.  You may need to play with it for a while
-        and tweak it.  You might also consider using pencil and paper to sketch your
-        ideas.
+        Draw a 3x3 grid to the *front* and *right*
+        of the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction.
       U3L2_TurtleSquare_right_instruction: |
-        Draw a square using only moveForward
-        and turnLeft, but this time, make the square appear ABOVE and to the RIGHT
+        Draw a square ABOVE and to the RIGHT
         of the starting location.
       XML Scratchpad_instruction: Koristeći ovaj test nivo za dohvatanje xml-a za
         jedinični test

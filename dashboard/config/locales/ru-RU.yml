@@ -365,10 +365,10 @@
     classroom_activity: Урок без компьютера
   home:
     title: Студия кода
-    description: Code Studio is home to online courses created by Code.org
+    description: Code Studio является домом для онлайн курсов, созданных Code.org
     lines_of_code: '%{lines_count} СТРОК КОДА НАПИСАНО УЧЕНИКАМИ'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code_linebreak: '%{lines_count} строк кода <br/> НАПИСАНЫ %{students_count}
+      миллионами студентов'
     all_courses: Обзор курсов 1, 2 и 3
     lesson_plans: Планы уроков
     signin_message: Уже зарегистрированы? %{link}
@@ -413,7 +413,7 @@
     heading_legacy: <h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>
     your_gallery: Галерея
     no_primary_course: Попробуйте курс Студии Кода
-    print_certificate: Print Certificate
+    print_certificate: Распечатать сертификат
   gender:
     male: Мужской
     female: Женский
@@ -514,12 +514,11 @@
       body: Хотите написать собственную игру меньше, чем за 10 минут? Попробуйте наш
         учебник "Порхающий  код"!
     20-hour:
-      title: Accelerated Course
+      title: Ускоренный курс
       body: Этот 20-часовой курс является введением в основы информатики. Курс предназначен
         для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен
         для всех возрастов.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: Освойте азы программирования по ускоренной версии курсов 2-4.
     hoc2014:
       try_new_tutorial: Попробуй наше новое пособие "Час кода" в бета-версии
       try_frozen: Рисуй вместе с Анной и Эльзой из "Холодного сердца"

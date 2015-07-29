@@ -507,7 +507,8 @@ Flappy.init = function(config) {
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
-      blockCounterClass: 'block-counter-default'
+      blockCounterClass: 'block-counter-default',
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 

@@ -1,7 +1,7 @@
 fa-IR:
   hello: سلام دنیا
   select_language: لطفا زبان خود را انتخاب کنید
-  computer_science: علوم رایانه
+  en: Computer Science
   computer_science_edweek: هفته‌ی آموزش علوم رایانه
   csedweek_dates: 8-14 دسامبر، 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی</a> دارد میآید. همه‌ی دبیران و برنامه گزاران را صدا میزند، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی خود را برنامه‌ریزی کنید</a>'
@@ -45,6 +45,7 @@ fa-IR:
   congratulations: آفرین!
   congratulations_on_completing_hoc: تبریک برای کامل کردن یک ساعت کد نویسی
   get_a_certificate_of_achievement: دریافت گواهی موفقیت
+  enter_valid_age: Please select a valid age
   enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
   get_a_certificate_message: "ما گواهی تحصیل و اطلاعات در مورد چگونگی <a/> یادگیری فراتراز یک ساعت <'a href='/learn/beyond> را برای شما ارسال خواهیم کرد"
   get_a_certificate_message_after: "برای دانلود یا چاپ مدرک خودتان روی عکس مدرک کلیک کنید. حالا می توانید  <a href='http://studio.code.org'> بقیه درسها</a>ی ما را ببینید و یا با مراجعه به بخش  <a href='/learn/beyond'> از یک ساعت برنامه نویسی فراتر بروید</a> امکانات دیگر سایت را مشاهده کنید."

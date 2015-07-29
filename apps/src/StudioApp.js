@@ -1,4 +1,4 @@
-/* global Blockly, ace:true, $, droplet, marked */
+/* global Blockly, ace:true, $, droplet, marked, digestManifest */
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -407,23 +407,7 @@ StudioApp.prototype.init = function(config) {
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
       this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
-        if (this.isUsingBlockly()) {
-          if (Blockly.functionEditor) {
-            Blockly.functionEditor.hideIfOpen();
-          }
-          Blockly.mainBlockSpace.clear();
-          this.setStartBlocks_(config, false);
-          if (config.level.openFunctionDefinition) {
-            this.openFunctionDefinition_(config);
-          }
-        } else {
-          var resetValue = '';
-          if (config.level.startBlocks) {
-            // Don't pass CRLF pairs to droplet until they fix CR handling:
-            resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
-          }
-          this.editor.setValue(resetValue);
-        }
+        this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
   }
@@ -507,6 +491,26 @@ StudioApp.prototype.bindSmallFooterHandlers_ = function () {
   });
 };
 
+StudioApp.prototype.handleClearPuzzle = function (config) {
+  if (this.isUsingBlockly()) {
+    if (Blockly.functionEditor) {
+      Blockly.functionEditor.hideIfOpen();
+    }
+    Blockly.mainBlockSpace.clear();
+    this.setStartBlocks_(config, false);
+    if (config.level.openFunctionDefinition) {
+      this.openFunctionDefinition_(config);
+    }
+  } else {
+    var resetValue = '';
+    if (config.level.startBlocks) {
+      // Don't pass CRLF pairs to droplet until they fix CR handling:
+      resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
+    }
+    this.editor.setValue(resetValue);
+  }
+};
+
 /**
  * TRUE if the current app uses blockly (as opposed to editCode or another
  * editor)
@@ -582,7 +586,7 @@ StudioApp.prototype.assetUrl_ = function (path) {
     throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
-  return this.BASE_URL + path;
+  return this.BASE_URL + ((window.digestManifest || {})[path] || path);
 };
 
 /**
@@ -1404,7 +1408,7 @@ StudioApp.prototype.configureDom = function (config) {
     var vizHeight = this.MIN_WORKSPACE_HEIGHT;
     if (this.isUsingBlockly() && config.level.edit_blocks) {
       // Set a class on the main blockly div so CSS can style blocks differently
-      Blockly.addClass_(codeWorkspace, 'edit');
+      $(codeWorkspace).addClass('edit');
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
@@ -1429,6 +1433,10 @@ StudioApp.prototype.configureDom = function (config) {
       visualizationColumn.style.minHeight = vizHeight + 'px';
       container.style.minHeight = vizHeight + 'px';
     }
+  }
+
+  if (config.readonlyWorkspace) {
+    $(codeWorkspace).addClass('readonly');
   }
 
   if (config.embed && config.hideSource) {

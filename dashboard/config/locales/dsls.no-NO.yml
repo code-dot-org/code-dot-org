@@ -69,7 +69,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Kunstner Løkker Matching En
         Match the loop to the shape: Sett løkka slik at den passer til figuren
-        Matching loops: Matchende løkker
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -320,8 +319,9 @@
           til høyre for trekanten
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Begynn med et kvadrat<br/>Sett inn et triangel til høyre for kvadratet<br/>Sett
+          inn et parallellogram under kvadratet<br/>Sett inn et triangel til høyre
+          for parallellogrammet
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -468,9 +468,9 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: Velg det beste svaret.
         Maze Multiple Choice One: Labyrint Flervalg En
-        Which blocks work?: Hvilke blokker virker?
+        Which set of blocks is the correct answer?: Hvilket sett blokker er det riktige
+          svaret?
       4-5 Algorithms Multi 1:
         Baking cookies: Bake kaker
         Banana: Banan
@@ -536,25 +536,27 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Flyr i melka, <br/>Sjo, fly, sjo,<br/>Flyr i melka, <br/>Sjo, fly, sjo,<br/>Flyr
-          i melka, <br/>Sjo, fly, sjo,<br/> Gå til min Lou, min kjære.'
-        1: ':Flyr i melka, <br/>Sjo, fly, sjo,<br/>Flyr i melka, <br/>Sjo, fly, sjo,<br/>Flyr
-          i melka, <br/>Sjo, fly, sjo,<br/> Gå til min Lou, min kjære.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Flua er i kjernemelka, <br/>Vekk, flue, vekk, <br/>Flua er i kjernemelka,
+          <br/>Vekk, flue, vekk, <br/>Flua er i kjernemelka, <br/>Vekk, flue, vekk,
+          <br/>Dra til Lou, min kjære.
         Lou, Lou, skip to my Lou,: Lou, Lou, gå til min Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, gå til min Lou, <br/>Lou, Lou, gå til min Lou, <br/>Lou, Lou, gå til
           min Lou,  <br/>Gå til min Lou, min kjære.
-        2: '? Lou, Lou, gå til min Lou, <br/> Lou, Lou, gå til min Lou, <br/> Lou,
-          Lou, gå til min Lou, <br/> gå til min Lou, min kjære. <br/> <br/><p>Flyr
-          i melka, <br/>Sjo, fly, sjo,'
-        3: ': Lou, Lou, gå til min Lou, <br/> Lou, Lou, gå til min Lou, <br/> Lou,
-          Lou, gå til min Lou, <br/> gå til min Lou, min kjære. <br/> <br/><p>Flyr
-          i melka, <br/>Sjo, fly, sjo,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, dra til Lou, <br/>Lou, Lou, dra til Lou, <br/>Lou, Lou, dra til
+          Lou, <br/>Dra til Lou, min kjære.<br/><br/><p>Flua er i kjernemelka, <br/>Vekk,
+          flue, vekk,
         Multiple Choice: Flervalg
-        4: '? Hva er den største delen av denne sangen som du kan definere som refrenget
-          slik at koret gjentar det nøyaktig hver gang?'
-        5: ': Hva er den største delen av denne sangen som du kan definere som refrenget
-          slik at koret gjentar det nøyaktig hver gang?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : Hva er den største delen av visa du kan definere som refrenget slik at refrenget
+          gjentas nøyaktig hver gang det påkalles?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -869,15 +871,6 @@
           av disse guttene er <b>sjåføren</b>. Og en er <b>hjelperen</b>.
         This time, which boy is the <large>driver</large>?: Denne gangen, hvilken
           gutt er <large>sjåføren</large>?
-      Warmup questions:
-        Coding in Racket: Koding i racket
-        Select the best answer to the question.: Velg det beste svaret på spørsmålet.
-        When converting a circle to code, the correct order is: Når du konverterer
-          en sirkel til kode, den riktige rekkefølgen er
-        left top right: venstre topp høyre
-        left, right, top: venstre, høyre, topp
-        random: tilfeldig
-        top, left, right: topp, venstre, høyre
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

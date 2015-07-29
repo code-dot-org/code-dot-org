@@ -1,7 +1,7 @@
 name 'PDAlg Dashboard 1'
 css 'k5pd'
 skip_dialog true
-href 'path/to/html/in/asset/folder'
+
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css" />
 

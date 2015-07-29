@@ -1,7 +1,7 @@
 "el-GR":
   hello: Γεια σου κόσμε
   select_language: Παρακαλώ επιλέξτε τη γλώσσα σας
-  computer_science: Επιστήμη Υπολογιστών
+  en: Computer Science
   computer_science_edweek: Εβδομάδα Εκπαίδευσης στην Επιστήμη Υπολογιστών
   csedweek_dates: 8-14 Δεκεμβρίου 2014
   csedweek_banner_hoc: 'H  <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -63,6 +63,7 @@
   congratulations: Συγχαρητήρια!
   congratulations_on_completing_hoc: Συγχαρητήρια για τη συμπλήρωση του "Μια ώρα κώδικα"
   get_a_certificate_of_achievement: Πάρε πιστοποιητικό για το επίτευγμα
+  enter_valid_age: Please select a valid age
   enter_valid_email: Παρακαλώ δώσε μια έγκυρη διεύθυνση email
   get_a_certificate_message: Θα σας στείλουμε ένα πιστοποιητικό και πληροφορίες σχετικά
     με το πώς να <a href='/learn/beyond'> Συνεχίστε να μαθαίνετε μετά τη Μία Ώρα</a>

@@ -21,8 +21,8 @@ theme: none
       %p{:style=>"font-size:18px;"}
         Currently,
         %strong
-          =no_credit_count()
-        states still don't allow students to count computer science courses toward high school graduation.
+          =credit_count()
+        states allow students to count computer science courses toward high school graduation.
   -else
     #state-section.clear
       = view :promote_state, state:state

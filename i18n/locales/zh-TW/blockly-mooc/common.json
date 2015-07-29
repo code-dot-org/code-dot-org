@@ -182,6 +182,7 @@
   "play":"玩",
   "print":"列印",
   "puzzleTitle":"階段 {stage_total} 的第{puzzle_number} 關",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"重複",
   "resetProgram":"再試一次",
   "rotateText":"旋轉你的設備。",

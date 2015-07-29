@@ -28,7 +28,18 @@
       "leftButton",
       "rightButton",
       "upButton"
-    ]
+    ],
+    "markdown_instructions": "Here's a function called `jump` that causes your main character to jump up 100 pixels. Use the jump function to collect all of the flags.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

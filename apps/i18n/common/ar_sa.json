@@ -182,6 +182,7 @@
   "play": "إلعب",
   "print": "طباعة",
   "puzzleTitle": "اللغز {puzzle_number} من {stage_total}",
+  "readonlyWorkspaceHeader": "View only: ",
   "repeat": "كرر",
   "resetProgram": "إعادة تعيين",
   "rotateText": "دور النص.",

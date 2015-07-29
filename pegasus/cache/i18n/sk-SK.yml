@@ -1,7 +1,7 @@
 "sk-SK":
   hello: Ahoj svet
   select_language: Prosím, zvoľte si jazyk
-  computer_science: Počítačová veda
+  en: Computer Science
   computer_science_edweek: Vzdelávací týždeň počítačovej vedy
   csedweek_dates: 8. až 14. Decembra 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -59,6 +59,7 @@
   congratulations: Gratulujem!
   congratulations_on_completing_hoc: Gratulujeme k absolvovaniu jednej Hodiny programovania
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
+  enter_valid_age: Please select a valid age
   enter_valid_email: Prosím, zadajte platnú e-mailovú adresu
   get_a_certificate_message: Pošleme ti certifikát a informácie o tom, ako sa <a href='/learn/beyond'>učiť
     dlhšie ako jednu hodinu</a>

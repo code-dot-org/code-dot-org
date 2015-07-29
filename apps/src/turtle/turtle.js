@@ -205,7 +205,8 @@ Artist.prototype.init = function(config) {
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
-      blockCounterClass : 'block-counter-default'
+      blockCounterClass : 'block-counter-default',
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 

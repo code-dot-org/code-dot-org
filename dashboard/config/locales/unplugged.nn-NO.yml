@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Introduksjon til informatikk
+        title: Introduksjon til datavitskap (informatikk)
         desc: Denne leksjonen introduserer omgrepet informasjonsvitskap og forklarer
           kva ein informatikar gjer. Den vil også gi elevar høve til å prøve seg som
           informatikar. Etter aktiviteten vil eleven få eit diplom til å ta med heim
@@ -14,7 +14,7 @@
         - unplug1
         video: Koble fra 1
       Unplug2:
-        title: Programmeringstenkning
+        title: Programmeringstenking
         desc: Uten anna enn penn og papir kan elevane lære seg de fire stega i tenkemåten
           innan programmering. Etter ein kort introduksjon, bør elevane delast inn
           i grupper der dei må lage instruksjonar for korleis andre elevar skal teikne
@@ -29,7 +29,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Millimeterpapirprogrammering
+        title: Programmering på millimeterpapir
         desc: Ved å programmere kvarandre til å teikne bilder, vil elevane begynne
           å forstå kva programmering eigentleg går ut på. Leksjonen vil starte med
           at elevar instruerer kvarandre til å fargelegge firkantar på millimeterpapir
@@ -49,7 +49,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: Funksjoner
+        title: Funksjonar
         desc: I denne leksjonen vil eleverne lage ein solfangar af streng, perler
           og eit spesielt smykke. Elevane vil fylgje ein rekkje repeterande steg,
           og så bli spurt om å identifisere bestemte ferdigheiter", som blir gjentatt
@@ -89,7 +89,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Relé-programmering
+        title: Programmering med relé
         desc: 'Denne leksjonen vil ta en ide fra en tidligere aktivitet (4. Millimeterpapir
           programmering) og bruke disse ferdighetene til å understreke alvoret av
           å fullføre programmer som kjøres i sekvenser og ofte sjekke programmer for
@@ -119,18 +119,18 @@
           en figur gjennom en labyrint med én kommando.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Flytte den, flytte den
+        title: Flytt, flytt
         desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte
           en figur gjennom en labyrint med én kommando.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Virkelige algoritmer: Plante et frø'
+        title: 'Verkelege algoritmar: Plante eit frø'
         desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
           ved hjelp av plante et frø som et eksempel. Det fokuserer også på det store
           bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Bygg ett grunnlag
+        title: Bygge eit fundament
         desc: 'Elevene bygger en struktur med kun tilgjengelig tilbehør. Strukturene
           må fullføre en oppgave (når en viss høyde eller bære en viss vekt), og studentene
           diskuterer ideen om å bli værende når ting blir mer komplisert. '
@@ -142,7 +142,7 @@
           koreografi, og deretter bli bedt om å gjenta den. '
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relé programmering
+        title: Programmering med relé
         desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for
           å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov
           til å skrive en instruksjon om gangen og dersom det er en feil må de viske
@@ -155,7 +155,7 @@
           tegner et svart kort, får du et punkt."
         video: C2_conditionals_with_cards
       BigEvent:
-        title: Den store begivenheten
+        title: Den store hendinga
         desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
           handlnger som datamaskinen overfoker. Læreren trykker på knapper på en papirfjernkontroll
           og elevene svarer basert på hvilken knapp som er trykket.
@@ -166,7 +166,7 @@
           hvordan å være trygg når du navigerer på Internett.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Millimeterpapirprogrammering
+        title: Programmering på millimeterpapir
         desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en
           samling med instruksjoner) for å styre klassekameratene sine til å lage
           en tegning.
@@ -184,12 +184,12 @@
           på mer enn én måte.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Dine digitale fotavtrykk
+        title: Dine digitale fotspor
         desc: Lærere introdusere studenter ideen at sette informasjon om seg selv
           online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Programmeringstenkning
+        title: Programmeringstenking
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.

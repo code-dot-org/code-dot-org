@@ -182,6 +182,7 @@
   "play":"Bắt đầu chơi",
   "print":"In",
   "puzzleTitle":"Câu đố thứ {puzzle_number} trong số {stage_total} câu",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"lặp lại",
   "resetProgram":"Thiết lập lại",
   "rotateText":"Xoay thiết bị của bạn.",

@@ -1,7 +1,7 @@
 "lt-LT":
   hello: Sveikas, pasauli
   select_language: Pasirinkite kalbą
-  computer_science: Informatika
+  en: Computer Science
   computer_science_edweek: Programavimo švietimo savaitė
   csedweek_dates: 2014 m. gruodžio 8-14
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -61,6 +61,7 @@
   congratulations: Sveikiname!
   congratulations_on_completing_hoc: Sveikiname užbaigus „Programavimo valandą“
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
+  enter_valid_age: Please select a valid age
   enter_valid_email: Prašome įvesti galiojantį el. pašto adresą
   get_a_certificate_message: Išsiųsime Jums sertifikatą ir informaciją apie  <a href='/learn/beyond'>„Programavimo
     valandą“</a>

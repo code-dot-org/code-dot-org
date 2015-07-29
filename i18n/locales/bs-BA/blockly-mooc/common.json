@@ -182,6 +182,7 @@
   "play":"igraj",
   "print":"Isprintaj",
   "puzzleTitle":"Zadatak {puzzle_number} od {stage_total}",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"ponovi",
   "resetProgram":"Resetuj",
   "rotateText":"Okreni svoj uređaj.",

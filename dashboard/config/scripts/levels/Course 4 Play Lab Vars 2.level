@@ -31,7 +31,18 @@
     "embed": "false",
     "protaganist_sprite_index": "2",
     "disable_sharing": "false",
-    "video_key": "C4_variables_playlab"
+    "video_key": "C4_variables_playlab",
+    "markdown_instructions": "That race wasn't very fair! Change the `dog_speed` variable to make sure you can collect more flags than the Cat. The first to collect 10 flags wins!",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null,
+    "generate_function_pass_blocks": "false",
+    "timeout_after_when_run": "false"
   }
 }]]></config>
   <blocks>

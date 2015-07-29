@@ -8,8 +8,8 @@ nav: translate_nav
 ### Be Gender Neutral
 The target audience for drag-drop programming is individual or small groups of children, aged 8+. Please use gender-neutral forms if possible in your language.
 
-### Keep Spanish General
-There are several languages with multiple dialects, but please keep Spanish and other such languages in a general form that will be universally understandable by all dialects.
+### Spanish
+In Crowdin, you will see both Spanish and Spanish, Mexico. Please translate Spanish as Spain Spanish, and translate Spanish, Mexico general enough for all LATAM countries to universally understand.
 
 ### Japanese
 Since Code.org curriculum currently targets children ages 4-18, try to use Katakana or Hiragana as much as possible over Kanji characters.

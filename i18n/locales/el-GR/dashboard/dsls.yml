@@ -66,7 +66,6 @@ el:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Καλλιτέχνης, ταίριασμα βρόχων ένα
         Match the loop to the shape: Ταιριάξτε το βρόχο με το σχήμα
-        Matching loops: Βρόχοι που ταιριάζουν
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -420,9 +419,8 @@ el:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Διάλεξε την καλύτερη απάντηση.
         Maze Multiple Choice One: Λαβύρινθος Πολλαπλή Επιλογή Ένα
-        Which blocks work?: Ποια μπλοκ δουλεύουν;
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
@@ -476,15 +474,12 @@ el:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: "; Η μύγα είν' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Η μύγα είν' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Η μύγα είν' στο βούτυρο,<br/>Μπου! μύγα, μπου!<br/>Πάμε στη Λου, αγάπη μου."
-        1: "; Η μύγα είν' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Η μύγα είν' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Η μύγα είν' στο βούτυρο,<br/>Μπου! μύγα, μπου!,<br/>Πάμε στη Λου, αγάπη μου."
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: Λου, Λου, πάμε στη Λου,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.'
-        2: "; Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.<br/><br/><p>Η μύγα είν' στο γάλα,<br/>Μπου! μύγα, μπου!"
-        3: ": Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.<br/><br/>Η μύγα είν' στο βούτυρο,<br/>Μπου! μύγα, μπου!"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Πολλαπλή Επιλογή
-        4: ; Ποιο είναι το μεγαλύτερο τμήμα αυτού του τραγουδιού που μπορείς να ορίσεις ως χορωδία, ώστε η χορωδία να επαναλαμβάνεται ακριβώς μία φορά κάθε φορά που καλείται;
-        5: ': Ποιο είναι το μεγαλύτερο τμήμα αυτού του τραγουδιού που μπορείς να ορίσεις ως χορωδία, ώστε η χορωδία να επαναλαμβάνεται ακριβώς μία φορά κάθε φορά που καλείται;'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -757,14 +752,6 @@ el:
         Driver and Helper: Οδηγός και Βοηθός
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Ένα από αυτά τα αγόρια είναι ο <b>Οδηγός</b>.  Και ένας είναι ο <b>Βοηθός</b>.'
         This time, which boy is the <large>driver</large>?: 'Αυτή τη φορά, ποιο αγόρι είναι ο <large>οδηγός</large>;'
-      Warmup questions:
-        Coding in Racket: Κώδικας
-        Select the best answer to the question.: ΕΠιλέξτε την καλύτερη απάντηση.
-        When converting a circle to code, the correct order is: Όταν μετατρέπετε κύκλο σε κώδικα, η σωστή σειρά είναι
-        left top right: αριστερά επάνω δεξιά
-        left, right, top: αριστερά, δεξιά, πάνω
-        random: τυχαίο
-        top, left, right: επάνω, αριστερά, δεξιά
       test multi text:
         Fred Flintstone: Φρεντ Φλίντστοουν
         George Jetson: Τζωρτζ Τζέτσον

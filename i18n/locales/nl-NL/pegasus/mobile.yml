@@ -1,7 +1,7 @@
 nl-NL:
   hello: Hallo wereld
   select_language: Kies de gewenste taal
-  computer_science: Informatica
+  en: Computer Science
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 8-14 December 2014
   csedweek_banner_hoc: |-
@@ -46,6 +46,7 @@ nl-NL:
   congratulations: Gefeliciteerd!
   congratulations_on_completing_hoc: "Gefeliciteerd met het voltooien van een 'Hour of Code'"
   get_a_certificate_of_achievement: Ontvang een certificaat van verworvenheid
+  enter_valid_age: Please select a valid age
   enter_valid_email: Vul een correct email-adres in
   get_a_certificate_message: "We sturen je een certificaat en informatie hoe je  <a href='/learn/beyond'>Verder dan een Uur Code</a> kunt leren"
   get_a_certificate_message_after: "Klik op de certificaat om het te downloaden of te printen. Ga verder met onze <a href='http://studio.code.org'>andere cursussen</a>, Of kijk naar meer opties voor het leren bij <a href='/learn/beyond'>Verder dan een 'Hour of Code'</a>."

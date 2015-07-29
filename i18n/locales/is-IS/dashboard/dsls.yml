@@ -32,7 +32,7 @@ is:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Tengdu grind við forrit.
+        Match the grid to the program.: Finndu samsvörun reita og forrits.
         Matching: Samsvörun
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -42,10 +42,10 @@ is:
         /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        Drag the blocks to match.: Dragðu kubbana til að tengja.
+        Drag the blocks to match.: Tengdu samsvarandi kubba.
         Instructions: Leiðbeiningar
-        Match the puzzles to the blocks: Tengdu þrautirnar við kubbana
-        Maze Match: 'Völundarhús - Samtengingar'
+        Match the puzzles to the blocks: Finndu samsvörun þrauta og kubba
+        Maze Match: 'Völundarhús - Samsvörun'
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -53,7 +53,7 @@ is:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program: Tengdu grind við forrit
+        Match the grid to the program: Finndu samsvörun reita og forrits
         Matching: Samsvörun
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
@@ -65,8 +65,7 @@ is:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'Lykkjur listamanns - Samsvörun 1'
-        Match the loop to the shape: Tengdu lykkjuna við formið
-        Matching loops: Samsvarandi lykkjur
+        Match the loop to the shape: Tengdu lykkjuna við samsvarandi form
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -90,7 +89,7 @@ is:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
         Bounce Matching: 'Skopp - Samsvörun'
-        Match the events with the actions: Tengdu atvikin við aðgerðirnar
+        Match the events with the actions: Tengdu atvikin við samsvarandi aðgerðir
         Matching: Samsvörun
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
@@ -100,7 +99,7 @@ is:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
         Flappy Matching One: 'Flappy - Samsvörun 1'
-        Match the events with the actions: Tengdu atvikin við aðgerðirnar
+        Match the events with the actions: Tengdu atvikin við samsvarandi aðgerðir
         Matching: Samsvörun
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
@@ -110,7 +109,7 @@ is:
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
         Match the puzzles to the blocks: Tengdu þrautirnar við kubbana
-        Maze Match One: 'Völundarhús - Samtengingar 1'
+        Maze Match One: 'Völundarhús - Samsvörun 1'
       4-5 Algorithms Match 1:
         <h4>1)</h4>: '<h4>1)</h4>'
         <h4>2)</h4>: '<h4>2)</h4>'
@@ -131,7 +130,7 @@ is:
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Hjól/hlið: 2<br/>Gluggar/hlið: 1</h3>'
         "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Hjól/hlið: 2<br/>Gluggar/hlið: 6</h3>'
         "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Hjól/hlið: 3<br/>Gluggar/hlið: 2</h3>'
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Hvert þessara farartækja hefur verið tekið sundur í smærri parta. Tengdu hvert farartæki við lista yfir parta.
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Hvert þessara farartækja hefur verið tekið sundur í smærri parta. Tengdu hvert farartæki við samsvarandi lista yfir parta.
         Matching: Samsvörun
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
@@ -164,7 +163,7 @@ is:
         <br/><br/>above: '<br/><br/>ofan við'
         <br/><br/>below: '<br/><br/>neðan við'
         <br/><br/>next to: '<br/><br/>til hliðar við'
-        Is the square next to, above, or below the ball?: Er ferningurinn til hliðar, ofan eða neðan við boltann?
+        Is the square next to, above, or below the ball?: Er ferningurinn til hliðar við, ofan við eða neðan við boltann?
         Matching: Samsvörun
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -175,7 +174,7 @@ is:
         /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
-        Match the shapes based on type.: Tengdu formin eftir gerð þeirra.
+        Match the shapes based on type.: Tengdu samsvarandi form út frá gerð þeirra.
         Matching: Samsvörun
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
@@ -195,7 +194,7 @@ is:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
-        Match the code to the stairs it draws.: Tengdu kóða við stiga sem hann teiknar.
+        Match the code to the stairs it draws.: Tengdu kóðann við stigann sem hann teiknar.
         Matching: Samsvörun
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
@@ -206,7 +205,7 @@ is:
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: Tengdu saman kubbana
+        Match the blocks: Tengdu samsvarandi kubba
         Matching: Samsvörun
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -234,7 +233,7 @@ is:
         /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
-        Match the Map to the arrow that gets the Flurb to the treasure: Tengdu kort við píluna sem kemur Flurb til fjársjóðsins
+        Match the Map to the arrow that gets the Flurb to the treasure: Tengdu kortið við píluna sem kemur Flurb til fjársjóðsins
         Matching: Samsvörun
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
@@ -248,7 +247,7 @@ is:
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Dragðu kubbana til að tengja.
         Instructions: Leiðbeiningar
-        Match the puzzles and blocks: Tengdu saman þrautirnar og kubbana
+        Match the puzzles and blocks: Tengdu samsvarandi þrautir og kubba
         Matching: Samsvörun
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
@@ -257,7 +256,7 @@ is:
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Tengdu kort við algrím sem kemur Flurb til blómanna.
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Tengdu kortið við algrímið sem kemur Flurb til blómanna.
         Matching: Samsvörun
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
@@ -292,7 +291,7 @@ is:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Byrja með ferning<br/>Setja samsíðung ofan við ferninginn<br/>Setja þríhyrning hægra megin við samsíðunginn'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Byrja með ferning<br/>Setja þríhyrning ofan við ferninginn<br/>Setja þríhyrning neðan við ferninginn'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Byrja með ferning<br/>Setja þríhyrning neðan við ferninginn<br/>Setja samsíðung hægra megin við þríhyrninginn'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Byrja með ferning<br/>Setja þríhyrning hægra megin við ferninginn<br/>Setja samsíðung neðan við ferninginn<br/>Setja þríhyrning hægra megin við samsíðunginn'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -382,7 +381,7 @@ is:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
         Artist Loops Multiple Choice: 'Lykkjur listamanns - Valspurningar'
-        Which shape is made by this program?: Hvaða form býr þetta forrit til?
+        Which shape is made by this program?: Hvaða form er búið til með þessu forriti?
       2-3 bee conditionals multi 1:
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
         /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
@@ -420,16 +419,15 @@ is:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Veldu besta svarið.
         Maze Multiple Choice One: 'Völundarhús - Valspurningar 1'
-        Which blocks work?: Hvaða kubbar virka?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baka smákökur
+        Baking cookies: Smákökubakstur
         Banana: Banani
         Brushing your teeth: Bursta tennurnar
         Multiple Choice: Valspurningar
         Shopping from a grocery list: Versla með innkaupalista
-        Which one of these items is hardest to describe an algorithm for?: Hvað af þessu er erfiðast að búa til algrím fyrir?
+        Which one of these items is hardest to describe an algorithm for?: Hverju af þessu er erfiðast að lýsa með algrími?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene er _____ borg.
         0: '? Hér eru þrjár setningar. Hvert af eftirfarandi sniðmátum passar best við innihaldið í þessum þremur setningum?'
@@ -454,10 +452,10 @@ is:
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Valspurningar
         Which piece of information listed below is okay to share on the internet?: Hverju af eftirfarandi er í lagi að deila sem upplýsingum á netinu?
-        Your address: Heimilisfangið þitt
-        Your birthday: Afmælið þitt
-        Your favorite food: Uppáhaldsfæðan þín
-        Your parent's credit card number: Greiðslukortanúmer foreldris
+        Your address: Heimilisfanginu þínu
+        Your birthday: Afmælinu þínu
+        Your favorite food: Uppáhaldsmatnum þínum
+        Your parent's credit card number: Greiðslukortanúmeri foreldris
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -465,10 +463,10 @@ is:
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
         Multiple Choice: Valspurningar
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Hvaða IP tölu er líklegt að DNS hafi látið þig hafa ef þú reynir að skrá þig inn á code.org?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Til hvaða IP tölu er líklegt að DNS fari með þig, ef þú reynir að skrá þig inn á code.org?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Á hvaða vef ertu, ef DNS hefur sent þig á síðu þar sem IP talan er 100.42.50.110?
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Á hvaða vef ertu ef DNS hefur sent þig á síðu þar sem IP talan er 100.42.50.110?
         Multiple Choice: Valspurningar
         code.org: code.org
         csisfun.com: csisfun.com
@@ -476,15 +474,12 @@ is:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
-        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
-        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
-        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Valspurningar
-        4: '? Hver er stærsti búturinn úr þessum söng sem þú getur skilgreint sem viðlag, það er eitthvað sem er endurtekið nákvæmlega eins í hvert sinn?'
-        5: ': Hver er stærsti búturinn úr þessum söng sem þú getur skilgreint sem viðlag, það er eitthvað sem er endurtekið nákvæmlega eins í hvert sinn?'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -757,14 +752,6 @@ is:
         Driver and Helper: Ökumaður og aðstoðarmaður
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Einn drengurinn er <b>ökumaður</b>. Og annar er <b>aðstoðarmaður</b>.'
         This time, which boy is the <large>driver</large>?: 'Hver er nú <large>ökumaðurinn</large>?'
-      Warmup questions:
-        Coding in Racket: Kóðun með Racket
-        Select the best answer to the question.: Veldu besta svarið við spurningunni.
-        When converting a circle to code, the correct order is: Þegar hring er umbreytt í kóða þá er rétta röðin
-        left top right: vinstri efst hægri
-        left, right, top: vinstri, hægri, efst
-        random: af handahófi
-        top, left, right: efst, vinstri, hægri
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

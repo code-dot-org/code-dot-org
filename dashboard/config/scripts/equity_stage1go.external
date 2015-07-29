@@ -1,0 +1,25 @@
+name 'Equity Stage1Go'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### GETTING STARTED > Ready? Set? Go!
+
+<br/><br/>
+<img src="https://images.code.org/8aba6418743376966116227e1bdded53-image-1436482155019.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+<br/><br/>
+By completing this stage, you should have:
+
+- Reviewed the course details  
+- Planned your participation in this course 
+
+In the next stage, we will:
+
+- Define equity 
+- Summarize the benefits of and challenges with creating equity in computer science classrooms
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

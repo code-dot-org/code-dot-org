@@ -182,6 +182,7 @@
   "play":"luaj",
   "print":"Shtyp",
   "puzzleTitle":"Puzzle {puzzle_number} i {stage_total}",
+  "readonlyWorkspaceHeader":"View only: ",
   "repeat":"përsërit",
   "resetProgram":"Rivendosni",
   "rotateText":"Rrotullo pajisjen tënde.",

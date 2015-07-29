@@ -1,7 +1,7 @@
 "bn-BD":
   hello: হ্যালো ওয়ার্ল্ড
   select_language: অনুগ্রহ করে আপনার ভাষা নির্বাচন করুন
-  computer_science: কম্পিউটার বিজ্ঞান
+  en: Computer Science
   computer_science_edweek: কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ
   csedweek_dates: ডিসেম্বর 8-14, ২০১৪
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -63,6 +63,7 @@
   congratulations: অভিনন্দন !
   congratulations_on_completing_hoc: আওয়ার অব কোড সম্পন্ন  করার জন্য অভিনন্দন।
   get_a_certificate_of_achievement: আপনার প্রশংসাপত্র গ্রহণ করুন
+  enter_valid_age: Please select a valid age
   enter_valid_email: অনুগ্রহ করে একটি বৈধ ই-মেইল ঠিকানা লিখুন।
   get_a_certificate_message: আমরা আপনার সার্টিফিকেট পাঠিয়ে দেব <a href='/learn/beyond'>
     এক ঘণ্টার কোড এর থেকে বেশি </a> শিখতে চান?

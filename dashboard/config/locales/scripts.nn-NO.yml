@@ -10,6 +10,7 @@
           Math Image: Matematikkbilete
           title: Test Kurs
           description: Berre eit internt testkurs.
+          description_short: Berre eit internt testkurs.
         course1:
           'Jigsaw: Learn to drag and drop': 'Puslespel: Lær å dra og sleppe'
           'Maze: Sequence': 'Labyrint: sekvens'
@@ -27,11 +28,12 @@
           title: Kurs 1
           Artist 2: Kunstnar 2
           Happy Maps: Glade Kart
-          Move it, Move it: Flytte den, flytte den
-          'Real-life Algorithms: Plant a Seed': 'Virkelige algoritmer: Plante et frø'
-          Building a Foundation: Bygg ett grunnlag
+          Move it, Move it: Flytt, flytt
+          'Real-life Algorithms: Plant a Seed': 'Verkelege algoritmar: Plante eit
+            frø'
+          Building a Foundation: Bygge eit fundament
           Getting Loopy: Me blir sløyfete
-          The Big Event: Den store begivenheten
+          The Big Event: Den store hendinga
           Going Places Safely: Går steder trygt
           description: Kurs 1 er laga for å la tidlege lesarar med å lage dataprogram
             som kan hjelpe dei med å lære å samarbeide med andre, å utvikle problemløysingsevner
@@ -50,28 +52,28 @@
         course2:
           The Maze: Labyrinten
           Suzi: Suzi
-          The Artist: Kunstneren
+          The Artist: Kunstnaren
           Artist Debugging: Kunstnar Feilsøking
-          Bounce: sprett
+          Bounce: Sprett
           'Studio: Create a Story': 'Spel-lab: Lag ei historie'
-          Artist Loops: Kunstner løkker
+          Artist Loops: Kunstnar Løkker
           Bee Conditionals: Bier Vilkår
           Flappy: Flakse
           title: Kurs 2
-          Bee Loops: Bie løkker
-          Artist Functions: Kunstner funksjoner
+          Bee Loops: Bier Løkker
+          Artist Functions: Kunstnar Funksjonar
           The Artist Debugging: Kunstnaren Feilsøking
-          Bee Debugging: Bie feilsøking
-          Bee Functions: Bie funksjoner
-          Maze Loops: Labyrint løkker
-          Graph Paper Programming: Millimeterpapirprogrammering
+          Bee Debugging: Bier Feilsøking
+          Bee Functions: Bier Funksjonar
+          Maze Loops: 'Labyrint: Sløyfer'
+          Graph Paper Programming: Programmering på millimeterpapir
           'Real-life Algorithms: Paper Planes': 'Verkelege algoritmar: Papirfly'
           Getting Loopy: Me blir sløyfete
-          Relay programming: Relé programmering
+          Relay programming: Programmering med relé
           Conditionals: Betingelser
           Binary Bracelets: Binær armbånd
-          The Big Event: Den store begivenheten
-          Your Digital Footprint: Dine digitale fotavtrykk
+          The Big Event: Den store hendinga
+          Your Digital Footprint: Dine digitale fotspor
           description: Kurs 2 er laga for elevar som kan lese, men ikkje har tidlegere
             erfaring med programmering. I dette kurset vil elevane lage program for
             å løyse problem, og utvikle interaktive spel eller historier dei kan dele.
@@ -92,21 +94,21 @@
         course3:
           The Maze: Labyrinten
           'Studio: Create a Story': 'Spel-lab: Lag ei historie'
-          The Artist: Kunstneren
+          The Artist: Kunstnaren
           title: Kurs 3
-          Artist Functions: Kunstner funksjoner
+          Artist Functions: Kunstnar Funksjonar
           Artist For Loops: Kunstnar For-løkker
           Artist Nested Loops: Kunstnar Løkker inni løkker
           Bee Conditionals: Bier Vilkår
           Bee Nested Loops: Bier Løkker inni løkker
           Bee Debuggin: Bier Feilsøking
-          Bee Debugging: Bie feilsøking
-          Bee Functions: Bie funksjoner
+          Bee Debugging: Bier Feilsøking
+          Bee Functions: Bier Funksjonar
           Artist Functions with Params: Kunstnar Funksjonar med parameter
-          Bounce: sprett
+          Bounce: Sprett
           Maze Conditionals: Labyrint Vilkår
           Artist Functions with Parameters: Kunstnar Funksjonar med parameter
-          Computational Thinking: Programmeringstenkning
+          Computational Thinking: Programmeringstenking
           Functional Suncatchers: Fungerande solfangarar
           Songwriting Parameters: Låtskriving Parameter
           Dice Race: Terning Kappløp
@@ -144,62 +146,6 @@
           Songwriting: Låtskriving
           description_audience: Frå 8+ år (etter Kurs 2)
           description_short: Kurs 3 er fortsettinga av Kurs 2.
-        msm:
-          title: Matematikk for ungdomsskulen
-          description: Privat arbeid på gang med ungdomsskule-matematikk.
-          Graph Paper Programming: Millimeterpapirprogrammering
-          Assessments: Vurderingar
-          Unit 1: Eining 1
-          Unit 2: Eining 2
-          Ninja Cat and the Coordinate Plane: Ninja katt og koordinatplanet
-          'Calc: Circles of Evaluation': 'Rekning: Evalueringssirklar'
-          'Artist: Strings and Images': 'Kunstnar: Tekst og bilder'
-          Contracts: Kontrakter
-          'Artist: Writing Contracts': 'Kunstnar: Å skrive kontrakter'
-          'Calc: Defining Variables': 'Rekning: Definere Variablar'
-          'Play Lab: Defining Variables': 'Spel-lab: Definere variablar'
-          The Design Recipe: Design oppskrifta
-          'Artist: Defining Functions': 'Kunstnar: Definere funksjonar'
-          'Play Lab: Defining Functions': 'Spel-lab: Design oppskrift'
-          'Artist: Functions': 'Kunstnar: Funksjonar'
-          'Play Lab: Animation': 'Spel-lab: Animasjon'
-          Booleans: Boolske verdiar
-          'Play Lab: Booleans': 'Spel-lab: Boolske verdiar'
-          'Calc: Boolean Operators': 'Rekning: Boolske operatorara'
-          'Play Lab: Boolean Operators': 'Spel-lab: Boolske operatorar'
-          Conditionals and Piecewise Functions: Vilkår og stykkevise funksjonar
-          'Artist: Conditionals': 'Kunstnar: Vilkår'
-          Collision Detection and the Distance Formula: Deteksjon av kollisjonar og
-            formel for avstand
-          'Play Lab: Collision Detection': 'Spel-lab: Deteksjon av kollisjon'
-          'Unplugged: Ninja Cat and the Coordinate Plane': 'Straumlaust: Ninaj katt
-            og kooridinat planet'
-          'Eval: Strings and Images': 'Eval: Tekst og bilder'
-          'Unplugged: Contracts': 'Straumlaust: Kontrakter'
-          'Eval: Writing Contracts': 'Eval: Skrive kontrakter'
-          'Unplugged: The Design Recipe': 'Straumlaust: Design oppskrifta'
-          'Eval: Defining Functions': 'Eval: Raske funksjonar'
-          'Eval: Functions': 'Eval: Design oppskrifter'
-          'Unplugged: Booleans': 'Straumlaust: Boolske variable'
-          'Unplugged: Conditionals and Piecewise Functions': 'Straumlaust: Vilkår
-            og stykkevise funksjonar'
-          'Eval: Conditionals': 'Eval: Vilkår'
-          'Unplugged: Collision Detection and the Distance Formula': 'Straumlaust:
-            Deteksjon av kollisjonar og distanseformelen'
-          'Calc: Evaluation Blocks': 'Rekning: Evaluering av blokker'
-          'Unplugged: Video Games and Coordinate Planes': 'Straumlaust: Videospel
-            og kooridinat-plan'
-          'Eval: Boolean Operators': 'Eval: Boolske operatorar'
-          Blocks to Math: Blokker til matematikk
-          'Play Lab: Defining Variables (Big Game)': 'Spel-lab: Definere variablar
-            (Stort spel)'
-          'Play Lab: Animation (Big Game)': 'Spel-lab: Animasjon (Stort spel)'
-          'Play Lab: Boolean (Big Game)': 'Spel-lab: Boolsk (Stort spel)'
-          'Play Lab: Collision Detection (Big Game)': 'Spel-lab: Detekssjon av kollisjong
-            (Stort spel)'
-          'Eval: Fast Functions': 'Eval: Raske funksjonar'
-          'Play Lab: Design Recipe': 'Spel-lab: Design oppskrift'
-          'Eval: Design Recipe': 'Eval: Design oppskrifter'
         playlab:
           title: Spel-lab
           description: Lag ein historie eller eit spel med Spel-lab!
@@ -210,14 +156,9 @@
           description: Teikn stilige bilde og design med Kunstnaren!
           Artist: Kunstnar
           description_short: Teikn stilige bilde og design med Kunstnaren!
-        scrat:
-          title: Scrat
-          description_short: Scrat kort beskrivelse.
-          description: Scrat lang beskrivelse
-          'Maze: Sequence': 'Labyrint: sekvens'
         hourofcode:
           Maze: Labyrint
-          title: Hour of Code (kodetimen)
+          title: Kodetimen
           description: Prøv grunnleggjande programmering med figurane frå Angry Birds,
             planter mot zombiar og Scrat frå Istid!
           description_short: Prøv grunnleggande programmering med mange morsomme figurar!
@@ -241,7 +182,7 @@
           'Bee: For Loops': 'Bier: For-løkker'
           title: Kurs 4
           'Algorithms: Tangrams': 'Algoritmer: Tangram-puslespel'
-          Variables: Variabler
+          Variables: Variablar
           'Play Lab: Variables': 'Spel-lab: Variable'
           'Play Lab: Functions with Parameters': 'Spel-lab: Funksjonar med parameter'
           'Bee: Functions with Parameters': 'Bier: Funksjonar med parameter'
@@ -286,7 +227,7 @@
           title: Brukbarheits testing
           description_short: ''
           description: Eit utval av tema om brukbarheitstesting frå kurs 4.
-          Variables: Variabler
+          Variables: Variablar
           For Loops: For-løkker
           Binary: Binær
         potus:
@@ -300,27 +241,14 @@
           description: spesielle
           Special: Spesielle
           Binary: Binær
-        usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Usability testing for MSM
-          Evaluation Blocks: Evaluation Blocks
-          Blocks to Math: Blokker til matematikk
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
-          Design Recipe: Design Recipe
-          Booleans: Boolske verdiar
-          Conditionals: Betingelser
-          Free Play: Free Play
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
+          description_short: Learn Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Straumlaust: Videospel
             og kooridinat-plan'
           'Calc: Evaluation Blocks': 'Beregning: Evaluering blokker'
-          'Eval: Strings and Images': 'Evaluere: Tekst og bilder'
+          'Eval: Strings and Images': Strenger og bilder
           'Unplugged: Contracts': 'Frakoblet: kontrakter'
           'Eval: Writing Contracts': 'Evaluering: Skriver kontrakter'
           'Calc: Defining Variables': 'Regning: Definere variabler'
@@ -349,7 +277,7 @@
           description: Bruk Spill-Lab for å lage en historie eller spill med Disney
             Infinity figurer.
           Play Lab: Spel-lab
-          Infinity: Uendelig
+          Infinity: Uendeleg
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and
@@ -357,9 +285,9 @@
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Evalueringsblokker
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Definering av variabler
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: Design oppskrifta
         K5PD:
@@ -388,8 +316,8 @@
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
           title: Internett Simulator
-          description_short: ''
-          description: ''
+          description_short: Lær om hvordan Internett fungerer
+          description: Lær om hvordan Internett fungerer
           Internet Simulator: Internett Simulator
           Unit 1: Eining 1
           Unit 2: Eining 2
@@ -401,64 +329,74 @@
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
+          description_short: Create images with bits and bytes.
           Pixelation: Pixelation
         20-hour:
           title: 20-timers introduksjonskurs
           description_audience: Frå 10+ år (etter Kurs 3)
-          description: Denne 20-timers kurset introduserer kjernebegreper innen informatikk
-            og programmering. Kurset er utviklet for bruk i 5.klasse og oppover, men
-            det er morsomt å lære for alle aldersgrupper.
-          Introduction to Computer Science: Introduksjon til informatikk
+          description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
+            og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse
+            og oppover, men det er morosamt å lære for alle aldersgruppe.
+          description_short: Dette 20-timers kurset dekker fundamentale datavitenskaps-
+            og programmeringskonsepter i kurs 2-4.
+          Introduction to Computer Science: Introduksjon til datavitskap (informatikk)
           The Maze: Labyrinten
-          Computational Thinking: Programmeringstenkning
-          Graph Paper Programming: Millimeterpapirprogrammering
-          The Artist: Kunstneren
+          Computational Thinking: Programmeringstenking
+          Graph Paper Programming: Programmering på millimeterpapir
+          The Artist: Kunstnaren
           Algorithms: Algoritmer
-          The Artist 2: Kunstneren 2
-          Functions: Funksjoner
+          The Artist 2: Kunstnaren 2
+          Functions: Funksjonar
           The Farmer: Bonden
           Conditionals: Betingelser
-          The Artist 3: Kunstneren 3
+          The Artist 3: Kunstnaren 3
           Song Writing: Låtskriving
           The Farmer 2: Bonden 2
           Abstraction: Abstraksjon
-          The Artist 4: Kunstneren 4
-          Relay Programming: Relé-programmering
+          The Artist 4: Kunstnaren 4
+          Relay Programming: Programmering med relé
           The Farmer 3: Bonden 3
           The Internet: Internett
-          The Artist 5: Kunstneren 5
+          The Artist 5: Kunstnaren 5
           Wrap-up: Oppsummering
         edit-code:
           title: Rediger kode
-          description: ''
+          description: Rediger kode
+          description_short: Rediger kode
           The Maze: Labyrinten
           Applab: Applab
-          The Artist: Kunstneren
+          The Artist: Kunstnaren
           Play Lab: Spel-lab
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: Spillelabben 2015
         events:
           title: Hendelser
-          description: ''
-          Bounce: sprett
+          description: Hendelser
+          description_short: Hendelser
+          Bounce: Sprett
           Studio: Studio
           Calc: Calc
           Eval: Eval
         flappy:
-          title: Flappy kode
+          title: Flakse-kode
           description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen
             i Flaksekode!
-          Flappy Code: Flappy kode
+          description_short: Lag ditt eget Flappy-spill på mindre enn ti minutter!
+          Flappy Code: Flakse-kode
         jigsaw:
           title: Puslespill
-          description: ''
+          description: Prøv puslespillguiden vår
+          description_short: Prøv puslespillguiden vår
           Jigsaw: Puslespill
         step:
-          title: Trinn
-          description: ''
-          Step: Trinn
+          title: Tren
+          description: Trinnguide
+          description_short: Trinnguide
+          Step: Tren
         Hour of Code:
           title: Kodetimen 2013
-          description: ''
+          description: Prøv det grunnleggende om datavitenskap med karakterer fra
+            Angry Birds og Plants vs. Zombies!
+          description_short: Prøv grunnleggande programmering med mange morsomme figurar!
           Hour of Code 2013: Kodetimen 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -544,6 +482,7 @@
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           'Unplugged: Video Games and Coordinate Planes': 'Straumlaust: Videospel
             og kooridinat-plan'
           'Calc: Evaluation Blocks': 'Rekning: Evaluering av blokker'
@@ -569,8 +508,8 @@
             Deteksjon av kollisjonar og distanseformelen'
           'Play Lab: Collision Detection (Big Game)': 'Spel-lab: Detekssjon av kollisjong
             (Stort spel)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
           Contracts: Kontrakter
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
@@ -592,8 +531,9 @@
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          description_short: Teach Algebra through Functional Programming
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -608,12 +548,14 @@
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
         CSPPD:
           new stage: new stage
           Introduction to PD: Introduction to PD
           title: Computer Science Principles PD
           description: Online Introduction to CSP
+          description_short: Online Introduction to CSP
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -623,6 +565,7 @@
         CSPLessonSamples:
           title: CSP Lesson Samples
           description_short: lesson samples for csp
+          description: Lesson samples for csp
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
         ECSPD:
@@ -634,11 +577,13 @@
           reference: reference
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Introduction to PD
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -656,14 +601,20 @@
           Post-Survey: Post-Survey
         rbo-reference:
           reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: CSP Unit 3 - Programming
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
-          Functions: Funksjoner
+          Functions: Funksjonar
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -714,24 +665,27 @@
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the
             new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Evalueringsblokker
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: Strenger og bilder
           The Design Recipe: Design oppskrifta
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Introduction to PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Introduction to PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -750,6 +704,7 @@
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Introduction to PD
@@ -760,12 +715,14 @@
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Evalueringsblokker
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -776,8 +733,9 @@
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Evalueringsblokker
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -790,6 +748,7 @@
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -809,6 +768,7 @@
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -826,11 +786,16 @@
         ui_tests:
           title: UI Tests
           description: Script for test. Careful, don't change level ordering.
+          description_short: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: Multi
           Big Game: Big Game
+          new stage: new stage
         sciencePD2:
+          title: Computer Science in Science PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -842,6 +807,9 @@
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
         sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
           new stage: new stage
           Welcome: Welcome
           Curricular Modules: Curricular Modules
@@ -850,6 +818,9 @@
           Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
           description_short: Internett
@@ -895,9 +866,10 @@
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          description_short: Teach Functional Programming through Algebra
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
+          Defining Variables: Definering av variabler
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           The Design Recipe: Design oppskrifta
@@ -910,7 +882,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Free Play
+          Free Play: Frispill
         allthethings:
           Jigsaw: Puslespill
           Maze: Labyrint
@@ -919,7 +891,7 @@
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
-          Bounce: sprett
+          Bounce: Sprett
           Multi: Multi
           Match: Kamp
           TextMatch: TextMatch
@@ -931,6 +903,7 @@
           Online PD: Online PD
           title: Alt!
           description: Alle nivå typer for UI tester
+          description_short: Alle nivå typer for UI tester
           Odometer: Kilometerteller
           Text Compression: Text Compression
           Pixelation: Pixelation
@@ -938,36 +911,37 @@
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Definering av variabler
+          Defining Functions: Definering av funksjoner
           Rocket-Height: Rocket-Height
           Booleans: Boolske verdiar
           'Eval: Conditionals': 'Eval: Vilkår'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
-        Calc Define Funcs 5 - multiply 1:
-          'Eval: Defining Functions': 'Eval: Defining Functions'
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internett Simulator
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
-          Welcome!: Welcome!
+          description_short: Online levels for PD workshop
+          Welcome!: Velkommen!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internett Simulator
@@ -978,6 +952,8 @@
           title: 'Teaching Kids to Code: The Basics'
           description: Learn to code and how to teach computer science basics to your
             students with this free, self-paced online course.
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced
+            online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -993,7 +969,8 @@
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
-          Welcome!: Welcome!
+          description_short: Blended Summer Study
+          Welcome!: Velkommen!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1006,26 +983,28 @@
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
-          Hour of Code: Hour of Code (kodetimen)
+          title: Kodetimen 2015
+          description_short: Bruk Spillelabben til å lage en historie eller et spill.
+          description: Bruk Spillelabben til å lage en historie eller et spill.
+          Hour of Code: Kodetimen
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Evalueringsblokker
+          Strings and Images: Strenger og bilder
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Definering av variabler
+          Defining Functions: Definering av funksjoner
           Rocket-Height: Rocket-Height
           Booleans: Boolske verdiar
           'Eval: Conditionals': 'Eval: Vilkår'
@@ -1034,6 +1013,44 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: Velkommen!
           The Design Recipe: Design oppskrifta
           Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Velkommen!
+          Wrap-Up: Oppsummering
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Velkommen!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Oppsummering
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free,
+            self-paced online course.
+          description: Develop strategies for creating equity in your classroom with
+            this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps

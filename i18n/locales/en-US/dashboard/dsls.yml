@@ -66,7 +66,6 @@ en:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: crwdns39920:0crwdne39920:0
         Artist Loops Matching One: crwdns39921:0crwdne39921:0
         Match the loop to the shape: crwdns39922:0crwdne39922:0
-        Matching loops: crwdns39923:0crwdne39923:0
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: crwdns39924:0crwdne39924:0
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: crwdns39925:0crwdne39925:0
@@ -420,9 +419,8 @@ en:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: crwdns40491:0crwdne40491:0
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: crwdns40492:0crwdne40492:0
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: crwdns40493:0crwdne40493:0
-        Choose the best answer.: crwdns40494:0crwdne40494:0
         Maze Multiple Choice One: crwdns40495:0crwdne40495:0
-        Which blocks work?: crwdns40496:0crwdne40496:0
+        Which set of blocks is the correct answer?: crwdns43307:0crwdne43307:0
       4-5 Algorithms Multi 1:
         Baking cookies: crwdns40516:0crwdne40516:0
         Banana: crwdns40517:0crwdne40517:0
@@ -476,15 +474,12 @@ en:
         thinkersmith.org: crwdns40559:0crwdne40559:0
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: crwdns40560:0crwdne40560:0
-        0: crwdns40561:0crwdne40561:0
-        1: crwdns40562:0crwdne40562:0
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: crwdns43309:0crwdne43309:0
         Lou, Lou, skip to my Lou,: crwdns40563:0crwdne40563:0
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: crwdns40564:0crwdne40564:0
-        2: crwdns40565:0crwdne40565:0
-        3: crwdns40566:0crwdne40566:0
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: crwdns43310:0crwdne43310:0
         Multiple Choice: crwdns40567:0crwdne40567:0
-        4: crwdns40568:0crwdne40568:0
-        5: crwdns40569:0crwdne40569:0
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: crwdns43311:0crwdne43311:0
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: crwdns40570:0crwdne40570:0
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: crwdns40571:0crwdne40571:0
@@ -757,14 +752,6 @@ en:
         Driver and Helper: crwdns40847:0crwdne40847:0
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: crwdns40848:0crwdne40848:0
         This time, which boy is the <large>driver</large>?: crwdns40849:0crwdne40849:0
-      Warmup questions:
-        Coding in Racket: crwdns41254:0crwdne41254:0
-        Select the best answer to the question.: crwdns41255:0crwdne41255:0
-        When converting a circle to code, the correct order is: crwdns41256:0crwdne41256:0
-        left top right: crwdns41257:0crwdne41257:0
-        left, right, top: crwdns41258:0crwdne41258:0
-        random: crwdns41259:0crwdne41259:0
-        top, left, right: crwdns41260:0crwdne41260:0
       test multi text:
         Fred Flintstone: crwdns41439:0crwdne41439:0
         George Jetson: crwdns41440:0crwdne41440:0

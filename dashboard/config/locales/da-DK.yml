@@ -424,7 +424,7 @@
     heading_legacy: <h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>
     your_gallery: Galleri
     no_primary_course: Prøv et kursusforløb på Code Studio
-    print_certificate: Print Certificate
+    print_certificate: Udskriv certifikat
   gender:
     male: Mand
     female: Kvinde
@@ -525,12 +525,11 @@
       body: Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy
         kode undervisning!
     20-hour:
-      title: Accelerated Course
+      title: Accelereret kursus
       body: Dette 20-timers kursus introducerer centrale computer videnskabs og programmering
         begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det
         er sjovt at lære i alle aldre.
-      body_short: Learn basic computer science in an accelerated version of courses
-        2-4.
+      body_short: Lær grundlæggende datalogi i en accelereret version af kurser 2-4.
     hoc2014:
       try_new_tutorial: Prøv vores nye Hour of Code tutorial i beta-version
       try_frozen: Kunstner med Anna og Elsa, fra Frozen

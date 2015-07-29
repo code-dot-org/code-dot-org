@@ -21,8 +21,17 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"if_else_bee\",\"callout_text\":\"Use the \\\"if/else\\\" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower\",\"element_id\":\"#if_else_bee_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"right center\",\"at\":\"left center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "video_key": "C4_conditionals"
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"if_else_bee\",\r\n  \"callout_text\": \"Use the \\\"if/else\\\" block so that the Bee gets nectar from a flower and makes honey if it's not a flower\",\r\n  \"element_id\": \"#if_else_bee_qtip\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "video_key": "C4_conditionals",
+    "markdown_instructions": "The unknown object is either a flower or a honeycomb. \r\n\r\nUse the `if/else` block to collect nectar **if** it is a flower, **else** make honey (because then it would be a honeycomb).",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -39,6 +48,9 @@
         <block type="maze_honey"/>
         <block type="bee_ifElseFlower" id="if_else_bee_qtip">
           <title name="LOC">atFlower</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">???</title>
         </block>
       </xml>
     </toolbox_blocks>

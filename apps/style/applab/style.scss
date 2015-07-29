@@ -247,6 +247,7 @@ $resize-bar-width: 13px;
 img#turtleImage {
   position: absolute;
   height: 24px;
+  margin: 0px;
 }
 
 .debugger_button {
@@ -320,6 +321,22 @@ $debug-commands-column-width: 270px;
 
   .fa {
     margin: 0 0.25em;
+  }
+
+  #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: $workspace-headers-height;
+  }
+
+  &.js-hover-hack {
+    cursor: pointer;
+
+    #show-hide-debug-icon {
+      color: white;
+    }
   }
 }
 

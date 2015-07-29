@@ -35,7 +35,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: Kılavuzla programı eşleştir.
         Matching: Eşleştirme
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -69,7 +69,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Sanatçı döngüleri eşletirme
         Match the loop to the shape: Şekil için döngü eşleştir
-        Matching loops: Eşleşen döngüler
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -306,8 +305,8 @@
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Choose an algorithm for the image
-          provided.
+        Choose an algorithm for the image provided.: Sağlanan görüntü için bir algoritma
+          seçin.
         Multiple Choice: Çoktan Seçmeli
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Kare
           ile başla<br/>Karenin üzerine bir paralelkenar koy<br/>Paralelkenarın sağına
@@ -469,19 +468,19 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: En doğru yanıtı seç.
         Maze Multiple Choice One: Labirent çoktan seçmeli Bir
-        Which blocks work?: Hangi bloklar çalışır?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct
+          answer?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baking cookies
-        Banana: Banana
-        Brushing your teeth: Brushing your teeth
+        Baking cookies: Tanımlama bilgileri
+        Banana: Muz
+        Brushing your teeth: Dişini fırçalıyor
         Multiple Choice: Çoktan Seçmeli
-        Shopping from a grocery list: Shopping from a grocery list
+        Shopping from a grocery list: Alışveriş listesinden alışveriş
         Which one of these items is hardest to describe an algorithm for?: Bu öğelerden
           hangisi algoritmayı en zor açıklayandır?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene _____ şehirdir.
         0: '? Cümleler burada. Aşağıdaki şablonlardan hangisi kesin olarak diğer üç
           parça şablona uyar?'
         1: ': Burada üç cümle var. Aşağıdaki şablonlardan hangisi en iyi şekilde özetler,
@@ -499,21 +498,21 @@
         Which of these pictures best represents crowdsourcing?: Bu resimlerden hangisi
           kitlesel kaynağı en iyi şekilde temsil eder?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
+        Brushing your hair: Saçını fırçala
+        Cleaning your room: Odanı temizle
+        Eating your dessert: Tatlını ye
         Multiple Choice: Çoktan Seçmeli
-        Washing your face: Washing your face
+        Washing your face: Yüzünü yıka
         Which one of these activities would be best for practicing crowdsourcing?: Bu
           faaliyetlerden hangisi kitlesel kaynağı uygulamak için en iyisi olurdu?
       4-5 Digital Footprint Multi 1:
         Multiple Choice: Çoktan Seçmeli
         Which piece of information listed below is okay to share on the internet?: Aşağıda
           listelenen bilgilerden hangisini internette paylaşmak uygundur?
-        Your address: Your address
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your parent's credit card number: Your parent's credit card number
+        Your address: Adresin
+        Your birthday: Doğum günün
+        Your favorite food: Favori yiyeceğin
+        Your parent's credit card number: Ailenin kredi kartı numarası
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -535,27 +534,27 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip
           to my Lou, <br/>Skip to my Lou, my darlin.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: Çoktan Seçmeli
-        4: '? Bu şarkının her çağrıldığında tekrarlanan, koro olarak tanımlayabileceğiniz
-          en büyük parçası nedir?'
-        5: '? Bu şarkının her çağrıldığında tekrarlanan, koro olarak tanımlayabileceğiniz
-          en büyük parçası nedir?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -867,15 +866,6 @@
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Bu
           çocuklardan biri <b>sürücüdür</b>. Ve diğeri ise <b>yardımcıdır</b>.
         This time, which boy is the <large>driver</large>?: Bu defa, hangi çocuk <large>sürücüdür</large>?
-      Warmup questions:
-        Coding in Racket: Racket ile kodlama
-        Select the best answer to the question.: Soruya en uygun yanıtı seç.
-        When converting a circle to code, the correct order is: Bir daire koda dönüştürüleceğinde,
-          doğru sıralama
-        left top right: sol üst sağ
-        left, right, top: sol, sağ, üst
-        random: gelişigüzel
-        top, left, right: üst, sol, sağ
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

@@ -11,8 +11,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
+        Match the button combination to the dance moves.: Match knapkombinationen
+          til dansebevægelserne.
         Matching: Matching
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -35,7 +35,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: Match gitteret til programmet.
         Matching: Matching
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -69,7 +69,6 @@
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: Kunstner Loops Matcher Ën
         Match the loop to the shape: Match løkken til figuren
-        Matching loops: Matchende loops
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -232,8 +231,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: Match the button combination
-          to the dance moves.
+        Match the button combination to the dance moves.: Match knapkombinationen
+          til dansebevægelserne.
         Matching: Matching
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
@@ -320,8 +319,8 @@
           ved siden af trekanten
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Start med et kvadrat<br/>Sæt en trekant til højre for kvadratet <br/>Sæt
+          et parallelogram under kvadratet<br/>Sæt trekant til højre for parallelogram
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -469,29 +468,29 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
-        Choose the best answer.: Vælg det bedste svar.
         Maze Multiple Choice One: Labyrint Multiple Choice 1
-        Which blocks work?: Hvilke blokke virker?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct
+          answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Bage småkager
         Banana: Banan
         Brushing your teeth: Børste tænder
         Multiple Choice: Multiple Choice
-        Shopping from a grocery list: Shopping from a grocery list
+        Shopping from a grocery list: Indkøb fra en indkøbsliste
         Which one of these items is hardest to describe an algorithm for?: Hvilken
           en af disse elementer er sværest at beskrive en algoritme til?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene er en _____ by.
         0: '? Her er tre sætninger. Hvilke af skabeloner herunder abstrahere, således
           at alle tre matcher det samme mønster som skabelon?'
         1: ': Her er tre sætninger. Hvilke af skabelonerne herunder abstrahere, således
           at alle tre matche det samme mønster som skabelon?'
         Multiple Choice: Multiple Choice
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        Seattle _____ a _____ _____.: Seattle _____ en _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+          er en storby.<br/>Eugene er en mellemstor by<br/>Hillview er en lille by.
+        _____ is _____ a _____.: _____ er _____ en _____.
+        _____ is a _____ city.: _____ er en _____ by.
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
@@ -499,7 +498,7 @@
         Which of these pictures best represents crowdsourcing?: Hvilket af disse billeder
           repræsenterer bedst crowdsourcing?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
+        Brushing your hair: Børste dit hår
         Cleaning your room: Rydde op på dit værelse
         Eating your dessert: Spise dessert
         Multiple Choice: Multiple Choice
@@ -513,7 +512,7 @@
         Your address: Din adresse
         Your birthday: Din fødselsdato
         Your favorite food: Din livret
-        Your parent's credit card number: Your parent's credit card number
+        Your parent's credit card number: Dine forældres kreditkortnummer
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -536,36 +535,36 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
-        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.'
+        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
+        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, springe til min Lou
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, springe til min Lou <br/> Lou, Lou, springe til min Lou <br/> Lou,
           Lou, springe til min Lou <br/> Spring til min Lou, min ulv.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
-          buttermilk, <br/>Shoo, fly, shoo,'
+        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
+        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
+          buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: Multiple Choice
-        4: '? Hvad er den største del af denne sang, som du kan definere som omkvædet,
-          så koret gentager præcis hver gang det er sunget?'
-        5: ': Hvad er den største del af denne sang, som du kan definere som omkvædet,
-          så koret gentager præcis hver gang det er kaldet?'
+        ? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
+        : What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Multiple Choice
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Hvilke
+          af programmer nedenfor <em>udgør ikke</em> den nøjagtige samme rækkefølge
+          som Program 1?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -873,15 +872,6 @@
           af disse drenge er <b>kører</b>.  En anden er <b>hjælper</b>.
         This time, which boy is the <large>driver</large>?: Denne gang, hvilken dreng
           er <large>kører</large>?
-      Warmup questions:
-        Coding in Racket: Kodning i ketcher
-        Select the best answer to the question.: Vælg det bedste svar på spørgsmålet.
-        When converting a circle to code, the correct order is: Når du konverterer
-          en cirkel til kode, er den rigtige rækkefølge
-        left top right: venstre top højre
-        left, right, top: venstre, højre, top
-        random: tilfældig
-        top, left, right: top, venstre, højre
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

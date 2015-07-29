@@ -79,7 +79,7 @@
   "FUNCTION_CREATE":"Δημιούργησε μια συνάρτηση",
   "FUNCTION_EDIT":"επεξεργάσου",
   "FUNCTION_NAME_LABEL":"Δώστε όνομα  στη συνάρτηση σας:",
-  "FUNCTION_DESCRIPTION_LABEL":"Τι υποτίθεται ότι πρέπει να κάνει η συνάρτησή σου;",
+  "FUNCTION_DESCRIPTION_LABEL":"Τι υποτίθεται ότι κάνει η συνάρτησή σου;",
   "FUNCTION_PARAMETERS_LABEL":"Τι παραμέτρους δέχεται η συνάρτησή σου;",
   "FUNCTION_HEADER":"Συνάρτηση",
   "FUNCTIONAL_CREATE":"Νέο μπλοκ",

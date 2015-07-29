@@ -21,7 +21,15 @@
     "start_direction": "90",
     "x": "75",
     "y": "250",
-    "ideal": "13"
+    "ideal": "13",
+    "markdown_instructions": "Now let's use the function to draw 3 triangles from the last puzzle in a row. \r\n\r\n*Hint: each triangle is 50 pixels apart.*\r\n",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

@@ -1,7 +1,7 @@
 fr-FR:
   hello: Bonjour tout le monde
   select_language: Veuillez sélectionner votre langue
-  computer_science: Informatique
+  en: Computer Science
   computer_science_edweek: "Semaine de l'éducation aux sciences informatiques"
   csedweek_dates: 8-14 décembre 2014
   csedweek_banner_hoc: |-
@@ -49,6 +49,7 @@ fr-FR:
   congratulations: Félicitations!
   congratulations_on_completing_hoc: Félicitations, tu as terminé une Heure de Code !
   get_a_certificate_of_achievement: Obtenir un certificat de réussite
+  enter_valid_age: Please select a valid age
   enter_valid_email: Veuillez saisir une adresse de messagerie valide
   get_a_certificate_message: "Nous vous enverrons un certificat et des informations sur comment <a href='/learn/beyond'>Apprendre au-delà d'Une Heure</a>"
   get_a_certificate_message_after: "Clique sur le certificat pour le télécharger ou l'imprimer. Maintenant, continue avec nos <a href='http://studio.code.org'>autres cours</a>, ou choisis une autre option pour <a href='/learn/beyond'>Apprendre après Une Heure</a>."
@@ -357,10 +358,10 @@ fr-FR:
   dashboard_students_reset_password: Réinitialiser le mot de passe
   dashboard_students_share_section: 'Partagez la page de connexion de cette section avec vos élèves :'
   dashboard_students_print_info: Imprimez des cartes avec les données de connexion de vos élèves.
-  dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: Image secrète
+  dashboard_students_secret_picture_title: Image secrète
+  dashboard_students_secret_picture: 'This section uses <b>picture</b> as its secret type.  It means that each of your students has a secret picture used in place of a password to sign in.  Students should use the sign in web address given above to sign in.'
   dashboard_students_reset_picture: "Vous pouvez réinitialiser l'image secrète d'un élève à tout moment en choisissant <b>Afficher le secret</b>, puis <b>Réinitialiser le secret</b>. Une nouvelle image secrète sera générée pour que cet élève l'utilise lors de sa connexion."
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Mot secret
   dashboard_students_secret_word: Mot secret
   dashboard_students_reset_word: "Vous pouvez à tout moment réinitialiser les mots secrets d'un élève en choisissant <b>Afficher le secret</b> puis <b>Réinitialiser le secret</b>. Une nouvelle paire de mots secrets sera créée pour que l'élève puisse se connecter. "
   dashboard_students_join_link: "Demandez à vos élèves de créer leurs propres comptes et de s'inscrire à votre section à"

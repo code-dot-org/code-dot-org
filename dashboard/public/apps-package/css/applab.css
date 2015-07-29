@@ -1,5 +1,5 @@
 @import url(colpick.css);
-#divApplab {
+#divApplab, .draggingParent {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -11,50 +11,51 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  #divApplab canvas {
+  #divApplab canvas, .draggingParent canvas {
     position: absolute;
     overflow: hidden;
     top: 0px;
     left: 0px;
     z-index: -1; }
-  #divApplab img {
-    opacity: 1; }
-  #divApplab label {
+  #divApplab img, .draggingParent img {
+    opacity: 1.0; }
+  #divApplab label, .draggingParent label {
     display: inline-block; }
-  #divApplab div {
+  #divApplab div, .draggingParent div {
     overflow: hidden; }
-  #divApplab button {
+  #divApplab button, .draggingParent button {
     padding: 7px 12px;
     margin: 2px;
     font-size: 14px; }
-  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab label {
+  #divApplab input, #divApplab div[contenteditable=true], #divApplab button, #divApplab select, #divApplab img, #divApplab label, .draggingParent input, .draggingParent div[contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent img, .draggingParent label {
     box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px; }
-  #divApplab .design-mode-hidden {
+  #divApplab .design-mode-hidden, .draggingParent .design-mode-hidden {
     visibility: hidden; }
 
-#divApplab.divApplabDesignMode canvas {
+#divApplab.divApplabDesignMode canvas, .draggingParent canvas {
   background-color: #eee; }
-#divApplab.divApplabDesignMode .design-mode-hidden {
+
+#divApplab.divApplabDesignMode .design-mode-hidden, .draggingParent .design-mode-hidden {
   visibility: visible;
   opacity: 0.3; }
 
-#divApplab.appModern {
+#divApplab.appModern, .draggingParent {
   color: #333; }
-  #divApplab.appModern button {
+  #divApplab.appModern button, .draggingParent button {
     border: 0;
     border-radius: 0; }
-    #divApplab.appModern button:hover {
+    #divApplab.appModern button:hover, .draggingParent button:hover {
       background-image: url("/blockly/media/applab/brighter.png");
       box-shadow: none; }
-    #divApplab.appModern button:active {
+    #divApplab.appModern button:active, .draggingParent button:active {
       background-image: url("/blockly/media/applab/darker.png");
       border: 0 !important; }
-  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true] {
+  #divApplab.appModern input[type=text], #divApplab.appModern input:not([type]), #divApplab.appModern div[contenteditable=true], .draggingParent input[type=text], .draggingParent input:not([type]), .draggingParent div[contenteditable=true] {
     border: 1px solid #999;
     padding: 10px; }
-  #divApplab.appModern select {
+  #divApplab.appModern select, .draggingParent select {
     -webkit-appearance: none;
     -moz-appearance: none;
     border: 0;
@@ -62,20 +63,22 @@
     padding: 0 30px 0 10px;
     color: #fff;
     background: url("/blockly/media/applab/dropdown.png") no-repeat center right; }
-    #divApplab.appModern select::-ms-expand {
+    #divApplab.appModern select::-ms-expand, .draggingParent select::-ms-expand {
       display: none; }
-    #divApplab.appModern select:hover {
+    #divApplab.appModern select:hover, .draggingParent select:hover {
       background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png"); }
-  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true] {
+  #divApplab.appModern button, #divApplab.appModern select, #divApplab.appModern input, #divApplab.appModern [contenteditable=true], .draggingParent button, .draggingParent select, .draggingParent input, .draggingParent [contenteditable=true] {
     outline: 0; }
 
-#divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas {
+#divApplab.appModern.divApplabDesignMode img[src=''], #divApplab.appModern.divApplabDesignMode canvas, .draggingParent img[src=''], .draggingParent canvas {
   border: 5px solid #fff;
   outline: 1px solid #bdc3c7;
   outline-offset: -1px; }
-#divApplab.appModern.divApplabDesignMode img[src=''] {
+
+#divApplab.appModern.divApplabDesignMode img[src=''], .draggingParent img[src=''] {
   background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat; }
-#divApplab.appModern.divApplabDesignMode canvas {
+
+#divApplab.appModern.divApplabDesignMode canvas, .draggingParent canvas {
   background: #bdc3c7 url("/blockly/media/applab/placeholder_canvas.png") center center no-repeat; }
 
 div#visualization {
@@ -96,151 +99,111 @@ div#visualizationResizeBar {
   div#visualization.responsive {
     max-height: 400px;
     max-width: 400px; }
-
   div#visualizationColumn.responsive {
     max-width: 400px; }
-
   div#visualizationColumn.responsive.with_padding {
     max-width: 402px; }
-
   div#codeWorkspace {
     left: 400px; }
-
   html[dir='rtl'] div#codeWorkspace {
     right: 400px; }
-
   div#visualizationResizeBar {
     left: 400px;
     line-height: 400px; }
-
   html[dir='rtl'] div#visualizationResizeBar {
     right: 400px; }
-
   div#visualization.responsive > * {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-    transform: scale(1); }
- }
+    transform: scale(1); } }
 
 @media screen and (min-width: 1101px) and (max-width: 1150px), screen and (min-height: 551px) and (max-height: 600px) {
   div#visualization.responsive {
     max-height: 350px;
     max-width: 350px; }
-
   div#visualizationColumn.responsive {
     max-width: 350px; }
-
   div#visualizationColumn.responsive.with_padding {
     max-width: 352px; }
-
   div#codeWorkspace {
     left: 350px; }
-
   html[dir='rtl'] div#codeWorkspace {
     right: 350px; }
-
   div#visualizationResizeBar {
     left: 350px;
     line-height: 350px; }
-
   html[dir='rtl'] div#visualizationResizeBar {
     right: 350px; }
-
   div#visualization.responsive > * {
     -webkit-transform: scale(0.875);
     -ms-transform: scale(0.875);
-    transform: scale(0.875); }
- }
+    transform: scale(0.875); } }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px), screen and (min-height: 501px) and (max-height: 550px) {
   div#visualization.responsive {
     max-height: 300px;
     max-width: 300px; }
-
   div#visualizationColumn.responsive {
     max-width: 300px; }
-
   div#visualizationColumn.responsive.with_padding {
     max-width: 302px; }
-
   div#codeWorkspace {
     left: 300px; }
-
   html[dir='rtl'] div#codeWorkspace {
     right: 300px; }
-
   div#visualizationResizeBar {
     left: 300px;
     line-height: 300px; }
-
   html[dir='rtl'] div#visualizationResizeBar {
     right: 300px; }
-
   div#visualization.responsive > * {
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
-    transform: scale(0.75); }
- }
+    transform: scale(0.75); } }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px), screen and (min-height: 451px) and (max-height: 500px) {
   div#visualization.responsive {
     max-height: 250px;
     max-width: 250px; }
-
   div#visualizationColumn.responsive {
     max-width: 250px; }
-
   div#visualizationColumn.responsive.with_padding {
     max-width: 252px; }
-
   div#codeWorkspace {
     left: 250px; }
-
   html[dir='rtl'] div#codeWorkspace {
     right: 250px; }
-
   div#visualizationResizeBar {
     left: 250px;
     line-height: 250px; }
-
   html[dir='rtl'] div#visualizationResizeBar {
     right: 250px; }
-
   div#visualization.responsive > * {
     -webkit-transform: scale(0.625);
     -ms-transform: scale(0.625);
-    transform: scale(0.625); }
- }
+    transform: scale(0.625); } }
 
 @media screen and (max-width: 1000px), screen and (max-height: 450px) {
   div#visualization.responsive {
     max-height: 200px;
     max-width: 200px; }
-
   div#visualizationColumn.responsive {
     max-width: 200px; }
-
   div#visualizationColumn.responsive.with_padding {
     max-width: 202px; }
-
   div#codeWorkspace {
     left: 200px; }
-
   html[dir='rtl'] div#codeWorkspace {
     right: 200px; }
-
   div#visualizationResizeBar {
     left: 200px;
     line-height: 200px; }
-
   html[dir='rtl'] div#visualizationResizeBar {
     right: 200px; }
-
   div#visualization.responsive > * {
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
-    transform: scale(0.5); }
- }
+    transform: scale(0.5); } }
 
 #divApplab {
   overflow: hidden;
@@ -286,7 +249,8 @@ div#visualizationResizeBar {
 
 img#turtleImage {
   position: absolute;
-  height: 24px; }
+  height: 24px;
+  margin: 0px; }
 
 .debugger_button {
   border: 1px solid #0094ca;
@@ -342,6 +306,16 @@ img#turtleImage {
   border-right: 1px solid gray; }
   #debug-commands-header .fa {
     margin: 0 0.25em; }
+  #debug-commands-header #show-hide-debug-icon {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    margin: 0;
+    line-height: 30px; }
+  #debug-commands-header.js-hover-hack {
+    cursor: pointer; }
+    #debug-commands-header.js-hover-hack #show-hide-debug-icon {
+      color: white; }
 
 .debug-commands, .debug-console {
   display: block;

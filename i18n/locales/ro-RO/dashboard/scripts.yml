@@ -10,6 +10,7 @@ ro:
           Math Image: Imagine Matematică
           title: Curs de Testare
           description: Doar un curs de testare intern.
+          description_short: Doar un curs de testare intern.
         course1:
           "Jigsaw: Learn to drag and drop": 'Puzzle: Află cum se realizeză glisarea și fixarea'
           "Maze: Sequence": 'Labirint: Secvenţă'
@@ -135,55 +136,6 @@ ro:
           Songwriting: Compunând Cântece
           description_audience: 'Vârste 8 - 18 ani'
           description_short: Cursul 3 este un continuarea cursului 2.
-        msm:
-          title: Matematică de Gimnaziu
-          description: Lucrare privată în progres pentru Matematică de Gimnaziu.
-          Graph Paper Programming: Programare pe Hârtie Milimetrică
-          Assessments: Evaluări
-          Unit 1: Unitatea 1
-          Unit 2: Unitatea 2
-          Ninja Cat and the Coordinate Plane: Pisica Ninja și planul de coordonate
-          "Calc: Circles of Evaluation": 'Calcul: Cercuri de evaluare'
-          "Artist: Strings and Images": 'Artist: Șiruri şi imagini'
-          Contracts: Contracte
-          "Artist: Writing Contracts": 'Artist: Scrierea de contracte'
-          "Calc: Defining Variables": 'Calcul: Definirea variabilelor'
-          "Play Lab: Defining Variables": 'Laborator de joc: Definirea variabilelor'
-          The Design Recipe: Rețeta pentru design
-          "Artist: Defining Functions": 'Artist: Definirea funcțiilor'
-          "Play Lab: Defining Functions": 'Laboratorul de joc: Rețeta pentru design'
-          "Artist: Functions": 'Artist: Funcţii'
-          "Play Lab: Animation": 'Laboratorul de joc: Animație'
-          Booleans: Booleene
-          "Play Lab: Booleans": 'Laboratorul de joc: Booleene'
-          "Calc: Boolean Operators": 'Calcul: Operatori booleeni'
-          "Play Lab: Boolean Operators": 'Laborator de joc: Operatorii booleeni'
-          Conditionals and Piecewise Functions: Condiționale și funcții pe porțiuni
-          "Artist: Conditionals": 'Artist: Condiționale'
-          Collision Detection and the Distance Formula: Detectarea coliziunilor şi Formula pentru distanţă
-          "Play Lab: Collision Detection": 'Laborator de joc: Detectarea coliziunii'
-          "Unplugged: Ninja Cat and the Coordinate Plane": 'Fără calculator: Pisica Ninja și planul de coordonate'
-          "Eval: Strings and Images": 'Evaluare: Șiruri și imagini'
-          "Unplugged: Contracts": 'Fără calculator: Contracte'
-          "Eval: Writing Contracts": 'Evaluare: Scrierea de contracte'
-          "Unplugged: The Design Recipe": 'Fără calculator: Rețeta pentru design'
-          "Eval: Defining Functions": 'Evaluare: Funcţii rapide'
-          "Eval: Functions": 'Evaluare: Rețeta pentru design'
-          "Unplugged: Booleans": 'Fără calculator: booleene'
-          "Unplugged: Conditionals and Piecewise Functions": 'Fără calculator: Condiționale și funcții pe porțiuni'
-          "Eval: Conditionals": 'Evaluare: Condiționale'
-          "Unplugged: Collision Detection and the Distance Formula": 'Fără calculator: Detectarea de coliziuni și formula pentru distanță'
-          "Calc: Evaluation Blocks": 'Calcul: Blocuri de evaluare'
-          "Unplugged: Video Games and Coordinate Planes": 'Fără calculator: Jocuri video și planuri de coordonate'
-          "Eval: Boolean Operators": 'Evaluare: Operatorii booleeni'
-          Blocks to Math: Blocuri în matematică
-          "Play Lab: Defining Variables (Big Game)": 'Laboratorul de joc: Definirea de variabile (jocul mare)'
-          "Play Lab: Animation (Big Game)": 'Laboratorul de joc: Animație (jocul mare)'
-          "Play Lab: Boolean (Big Game)": 'Laboratorul de joc: Boolean (jocul mare)'
-          "Play Lab: Collision Detection (Big Game)": 'Laboratorul de joc: Detectarea de coliziuni (jocul mare)'
-          "Eval: Fast Functions": 'Evaluare: Funcţii rapide'
-          "Play Lab: Design Recipe": 'Laboratorul de joc: Rețeta pentru design'
-          "Eval: Design Recipe": 'Evaluare: Rețeta pentru design'
         playlab:
           title: Laborator de Joacă
           description: Creează o poveste sau fă un joc cu Laboratorul de Joacă!
@@ -194,11 +146,6 @@ ro:
           description: Desenează poze şi proiecte mişto cu Artistul!
           Artist: Artist
           description_short: Desenează poze şi proiecte mişto cu Artistul!
-        scrat:
-          title: Scrat
-          description_short: Scurtă descriere a lui Scrat.
-          description: Descriere detaliată a lui Scrat
-          "Maze: Sequence": 'Labirint: Secvenţă'
         hourofcode:
           Maze: Labirint
           title: Oră de Cod
@@ -274,23 +221,10 @@ ro:
           description: special
           Special: Special
           Binary: Binar
-        usabilitymsm:
-          title: Usability Middle School Math
-          description_short: Usability testing for middle school math
-          description: Usability testing for middle school math
-          Usability testing for MSM: Teste pentru matematică de gimnaziu
-          Evaluation Blocks: Blocuri de evaluare
-          Blocks to Math: Blocuri în matematică
-          Strings and Images: Șiruri și Imagini
-          Defining Variables: Definirea Variabilelor
-          Defining Functions: Definirea Funcțiilor
-          Design Recipe: Rețetă de design
-          Booleans: Booleene
-          Conditionals: Condiţionale
-          Free Play: Joc la liber
         algebra:
           title: Informatică în Algebră
           description: Învață Programare Funcțională prin Algebră
+          description_short: Învață Programare Funcțională prin Algebră
           "Unplugged: Video Games and Coordinate Planes": 'Fără calculator: Jocuri video și planuri de coordonate'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": Șiruri și Imagini
@@ -365,11 +299,13 @@ ro:
         pixelation:
           title: Pixelare
           description: Creaţi imagini cu biţi şi bytes.
+          description_short: Creaţi imagini cu biţi şi bytes.
           Pixelation: Pixelare
         20-hour:
           title: Introducere accelerată a cursului de informatică
           description_audience: 'Vârste 10 - 18 ani'
           description: Acest curs de 20 de ore prezintă concepte de bază din informatică şi programare. Cursul este creat pentru utilizarea în săli de clasă pentru clasele K-8, dar este distractiv de învăţat la toate vârstele.
+          description_short: Acest curs de 20 de ore acoperă elementele de bază în informatică și concepte de programare în cadrul cursurile 2-4.
           Introduction to Computer Science: Introducere în Informatică
           The Maze: Labirintul
           Computational Thinking: Gândire de Calcul
@@ -392,7 +328,8 @@ ro:
           Wrap-up: Încheiere
         edit-code:
           title: Editează Codul
-          description: '[șir gol]'
+          description: Editează Codul
+          description_short: Editează Codul
           The Maze: Labirintul
           Applab: Applab
           The Artist: Artistul
@@ -400,7 +337,8 @@ ro:
           Play Lab 2015: Laborator de Joacă 2015
         events:
           title: Evenimente
-          description: '[șir gol]'
+          description: Evenimente
+          description_short: Evenimente
           Bounce: Săritură
           Studio: Studio
           Calc: Calc
@@ -408,18 +346,22 @@ ro:
         flappy:
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute? Încearcă lecția noastră Codul Floppy!
+          description_short: Creează propriul joc Flappy în mai puțin de 10 minute!
           Flappy Code: Codul Flappy
         jigsaw:
           title: Puzzle
           description: '[șir gol]'
+          description_short: '[șir gol]'
           Jigsaw: Puzzle
         step:
           title: Pas
           description: '[șir gol]'
+          description_short: '[șir gol]'
           Step: Pas
         Hour of Code:
           title: Ora de cod 2013
           description: '[șir gol]'
+          description_short: Încercați elemente de bază în informatică cu multe personaje amuzante!
           Hour of Code 2013: Ora de cod 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -502,6 +444,7 @@ ro:
         algebraPD:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Fără calculator: Jocuri video și planuri de coordonate'
           "Calc: Evaluation Blocks": 'Calcul: Blocuri de evaluare'
           "Eval: Strings and Images": 'Evaluare: Șiruri și imagini'
@@ -544,6 +487,7 @@ ro:
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Blocuri de evaluare
           Strings and Images: Șiruri și Imagini
           Rocket-Height: Rocket-Height
@@ -559,12 +503,14 @@ ro:
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
+          description_short: Compress text by identifying repeated patterns.
           Text Compression: Text Compression
         CSPPD:
           new stage: new stage
           Introduction to PD: Introducere in Dezvoltarea Profesională
           title: Computer Science Principles PD
           description: Online Introduction to CSP
+          description_short: Online Introduction to CSP
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -573,7 +519,8 @@ ro:
           Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: CSP Lesson Samples
-          description_short: lesson samples for csp
+          description_short: Lesson samples for csp
+          description: Lesson samples for csp
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
         ECSPD:
@@ -585,11 +532,13 @@ ro:
           reference: reference
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Introducere in Dezvoltarea Profesională
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -604,8 +553,14 @@ ro:
           Post-Survey: Post-Survey
         rbo-reference:
           reference: reference
+          title: rbo-reference
+          description_short: rbo-reference
+          description: rbo-reference
         Test Wednesday:
           PDK5 Intro: PDK5 Intro
+          title: Test Wednesday
+          description_short: Test Wednesay
+          description: Test Wednesday
         cspunit3:
           title: 'CSP Unit 3 - Programming'
           description_short: Programming
@@ -658,6 +613,7 @@ ro:
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
+          description_short: Teach Algebra through block-based Functional Programming
           Introduction to the new Computer Science in Algebra: Introduction to the new Computer Science in Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -670,11 +626,13 @@ ro:
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Introducere in Dezvoltarea Profesională
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           Introduction to PD: Introducere in Dezvoltarea Profesională
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
         Glenallan Career Day Demo:
@@ -692,6 +650,7 @@ ro:
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Introducere in Dezvoltarea Profesională
@@ -702,10 +661,12 @@ ro:
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
           description: Online Introduction to ECS
+          description_short: Online Introduction to ECS
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Introducere in Dezvoltarea Profesională
           Evaluation Blocks: Blocuri de evaluare
           logo_image: nextech_logo.png
@@ -717,6 +678,7 @@ ro:
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
+          description_short: Teach Algebra through Functional Programming
           Introduction to PD: Introducere in Dezvoltarea Profesională
           Evaluation Blocks: Blocuri de evaluare
           logo_image: izone_logo.png
@@ -730,6 +692,7 @@ ro:
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -746,6 +709,7 @@ ro:
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: In Partnership with Project GUTS
+          description_short: In Partnership with Project GUTS
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -760,11 +724,16 @@ ro:
         ui_tests:
           title: UI Tests
           description: "Script for test. Careful, don't change level ordering."
+          description_short: "Script for test. Careful, don't change level ordering."
           All the Tests: All the Tests
           Free Response: Free Response
           Multi: Multi
           Big Game: Big Game
+          new stage: new stage
         sciencePD2:
+          title: Computer Science in Science PD
+          description: Phase 2 Online Blended Summer Study
+          description_short: Phase 2 Online Blended Summer Study
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -776,6 +745,9 @@ ro:
           Common Forms: Common Forms
           Guides and Resources: Guides and Resources
         sciencePD3:
+          title: Computer Science in Science PD
+          description: Phase 3 Professional Development
+          description_short: Phase 3 Professional Development
           new stage: new stage
           Welcome: Welcome
           Curricular Modules: Curricular Modules
@@ -784,6 +756,9 @@ ro:
           Discussion Forums: Discussion Forums
         Testing:
           Testing: Testing
+          title: Testing
+          description: Testing
+          description_short: Testing
         cspunit2:
           title: 'CSP Unit 2 - The Internet'
           description_short: Internetul
@@ -826,6 +801,7 @@ ro:
         algebraPD2a:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Evaluation Blocks: Blocuri de evaluare
           Strings and Images: Șiruri și Imagini
           Defining Variables: Definirea Variabilelor
@@ -862,6 +838,7 @@ ro:
           Online PD: Online PD
           title: Toate lucrurile!
           description: Toate tipurile de nivel pentru testarea interfeței utilizatorului
+          description_short: Toate tipurile de nivel pentru testarea interfeței utilizatorului
           Odometer: Kilometraj
           Text Compression: Text Compression
           Pixelation: Pixelare
@@ -869,6 +846,7 @@ ro:
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -882,11 +860,10 @@ ro:
           "Eval: Conditionals": 'Evaluare: Condiționale'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
-        Calc Define Funcs 5 - multiply 1:
-          "Eval: Defining Functions": 'Eval: Defining Functions'
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Simulator Internet
@@ -897,6 +874,7 @@ ro:
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
+          description_short: Online levels for PD workshop
           Welcome!: Bine ai venit!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
@@ -907,6 +885,7 @@ ro:
         K5-OnlinePD:
           title: 'Teaching Courses 1-4: The Basics'
           description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
+          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -921,6 +900,7 @@ ro:
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Blended Summer Study
+          description_short: Blended Summer Study
           Welcome!: Bine ai venit!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -934,6 +914,7 @@ ro:
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
+          description_short: How to lead a discussion on equity in a Code.org PD
           Introduction to the Equity PD: Introduction to the Equity PD
           Equity Vs. Equality: Equity Vs. Equality
           Code.org Equity PD: Code.org Equity PD
@@ -946,6 +927,7 @@ ro:
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Functional Programming through Algebra
+          description_short: Teach Functional Programming through Algebra
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -964,3 +946,39 @@ ro:
           Welcome!: Bine ai venit!
           The Design Recipe: Rețeta pentru design
           Teaching with Puzzles: Teaching with Puzzles
+        sciencePD2b:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Bine ai venit!
+          Wrap-Up: Revizuire
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+        equity-pd:
+          title: Leading a Discussion on Equity
+          description_short: How to lead a discussion on equity in a Code.org PD
+          description: How to lead a discussion on equity in a Code.org PD
+          Necessary Background: Necessary Background
+          Code.org Equity PD: Code.org Equity PD
+        science-PD2:
+          title: Computer Science in Science PD Phase 2b
+          description_short: Phase 2 Online Blended Summer Study
+          description: Phase 2 Online Blended Summer Study
+          Welcome!: Bine ai venit!
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Revizuire
+        Equity-OnlinePD:
+          title: Creating More Equitable Computer Science Classrooms
+          description_short: Develop equitable teaching strategies with this free, self-paced online course.
+          description: Develop strategies for creating equity in your classroom with this free, self-paced online course.
+          Getting Started: Getting Started
+          Introduction to Equity: Introduction to Equity
+          Creating Equitable Learning Environments: Creating Equitable Learning Environments
+          Next Steps: Next Steps

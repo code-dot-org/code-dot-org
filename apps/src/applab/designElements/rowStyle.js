@@ -2,7 +2,7 @@ module.exports.input = {
   display: 'inline-block',
   height: 20,
   padding: '4px 6px',
-  marginBottom: 10,
+  marginBottom: 0,
   marginLeft: 0,
   fontSize: 14,
   lineHeight: '20px',
@@ -15,7 +15,12 @@ module.exports.input = {
 };
 
 module.exports.container = {
-  paddingLeft: 20
+  paddingLeft: 20,
+  marginBottom: 8
+};
+
+module.exports.maxWidth = {
+  maxWidth: 245
 };
 
 module.exports.description = {

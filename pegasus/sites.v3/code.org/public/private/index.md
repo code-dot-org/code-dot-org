@@ -16,6 +16,4 @@
 
 ## Mail
 
-- [Opens](/private/poste-opens)
-- [Clicks](/private/poste-clicks)
-- [All Stats](/private/poste-stats)
+- [Poste Dashboard](/private/poste)
