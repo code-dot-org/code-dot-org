@@ -1,7 +1,7 @@
 ar-SA:
   hello: مرحباً بالعالم
   select_language: من فضلك اختر لغتك
-  en: Computer Science
+  en: علوم الكمبيوتر
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> حدث ساعة البرمجة</a>. دعوة إلى جميع المعلمين والمنظمين، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> قم بتخطيط "ساعة البرمجة" </a>'
@@ -256,7 +256,7 @@ ar-SA:
   dashboard_landing_view_progress: 'عرض عملية التقدم لـ %{biggest_section}'
   dashboard_landing_available_title: الدورات التدريبية المتاحة
   dashboard_landing_available_courses: هذة هي الدورات المتاحة حاليا لكم ولطلابكم.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials: هل تريد رؤية المزيد من الشروحات؟
   dashboard_landing_more_tutorials_desc: 'هناك المزيد من الدروس <a href="/learn/beyond">المقدمة من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.'
   dashboard_hoc_courses: The Hour of Code for All Ages
   dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
@@ -268,7 +268,7 @@ ar-SA:
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: code.org في شراكة مع بوتستراب (Bootstrap) لتطوير منهج لتدريس الجبر و الهندسة من خلال مفهوم برمجة الحاسب.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: علوم الحاسوب في مجال العلوم
   dashboard_course_csins_desc: code.org في شراكة مع مشروع جي يو تي إس (GUTS) لتوصيل المفاهيم الأساسية لعلوم الحاسب من خلال سياق النمذجة و المحاكاة.
   dashboard_course_ecs: استكشاف علوم الحاسب الآلي
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'

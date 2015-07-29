@@ -65,8 +65,8 @@
     need_confirmation: Nedostal jsi instrukce pro potvrzení?
     need_unlock: Nezískal si instrukce pro odemčení?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: Již se registrovalo %{count} studentů.
+    teacher_count: Již se přihlásilo %{count} učitelů.
     overview_student: Vytvořte si účet, abyste mohli sledovat svůj postup.. Váš email
       slouží především k přihlášení a pro obnovení hesla. Další informace naleznete
       v našich <a hrefshttp://code.org/privacy"> Zásadách ochrany osobních údajů</a>.
@@ -76,9 +76,10 @@
       různé úrovně a hádanky</a>, ale budeš se muset zaregistrovat, aby se uložil
       tvůj pokrok.
     teacher_educator_guide: Podívat se na průvodce učitele
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: Registrace učitelů  zde.
     teacher_title: Registrace učitele
-    student_pitch: Student sign up for Code.org
+    student_pitch: |
+      Registrace studentů zde.
     student_title: Student přihlásit se
     school_name: Název školy (volitelné)
     school_address: Adresa školy (volitelné)
@@ -95,15 +96,12 @@
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovat nejméně 6 znaků
     mismatch_password: Zadaná hesla se neshodují
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/>For users under 13, email addresses are not stored in a form that
-      allows us to contact them.
-    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>.
-    additional_information: We need some additional information to continue signing
-      you up.
+    student_terms: Souhlasím s <a href="http://code.org">podmínkami</a> Code.org.
+      Pokud jsem mladší 13 let, Potvrzuji odesláním formuláře, že moji rodiče mi dovolují
+      používat Code.org <br/> Uživatelům mladším 13 let není uchovávána emailovová
+      adresa.
+    teacher_terms: Souhlasím s  <a href='http://code.org/tos'>podmínkami</a> Code.org
+    additional_information: Potřebujeme další informace pro pokračování vaši registrace.
   signin_form:
     title: Máš již účet? Přihlaš se
     login: Uživatelské jméno nebo e-mail
@@ -111,11 +109,11 @@
     remember: Zapamatuj si mne
     submit: Přihlásit
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Chcete zkusit kódovat bez registrace?
     try_hoc: Nejprve vyzkoušej Hodinu kódování
     try_20hours: Vyzkoušej náš 20ti hodinový Úvod do počítačové vědy
   signinsection:
-    welcome: Welcome to %{section_name}
+    welcome: Vítejte v %{section_name}
     name: Vyberte si své jméno
     picture: Now find your secret picture
     words: Now enter your secret words
@@ -253,6 +251,7 @@
       free_play:
         playlab: Vytvořit aplikaci
         artist: Nakresli něco
+        calculate: Calculate Something
     user:
       classroom: Domovská stránka pro učitele
       district_dashboard: District Dashboard
@@ -410,7 +409,8 @@
     try_beta_courses: Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>
     your_gallery: Galerie
@@ -452,10 +452,10 @@
     download: Stáhnout Video
   compatability:
     https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
+      header: Prosím povolte HTTPS pro Code.org
+      message: Kvůli zvýšení zabezpečení, přecházíme  na HTTPS  %{https_date}. Nebude
+        mít přístup k Code.org po tomto datu. <a href='%{it_requirements_url}'> zde
+        se dozvíte,</a> jak povolit HTTPS pro Code.org.
       hide_this_warning: Skrýt toto varování
     working:
       header: Pracujeme na podpoře pro tvůj prohlížeč.

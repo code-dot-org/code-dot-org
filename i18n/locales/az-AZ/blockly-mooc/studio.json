@@ -151,7 +151,7 @@
   "projectileCherry":"cherry",
   "projectileIce":"buz",
   "projectileDuck":"ördək",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to go back to playing your story.",
+  "reinfFeedbackMsg":"You can press the \"{backButton}\" button to go back to playing your story.",
   "repeatForever":"təkrar et sonsuz",
   "repeatDo":"et",
   "repeatForeverTooltip":"Execute the actions in this block repeatedly while the story is running.",

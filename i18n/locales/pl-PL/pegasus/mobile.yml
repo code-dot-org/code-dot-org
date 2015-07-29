@@ -1,7 +1,7 @@
 pl-PL:
   hello: Witaj świecie
   select_language: Wybierz język
-  en: Computer Science
+  en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 8-14 grudnia 2014
   csedweek_banner_hoc: 'Zbliża się <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Godzina Kodowania (Hour of Code)</a>. Zapraszamy wszystkich nauczycieli i organizatorów, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> zaplanujcie swoją Godzinę Kodowania (Hour of Code)</a>'
@@ -46,7 +46,7 @@ pl-PL:
   congratulations: Gratulacje!
   congratulations_on_completing_hoc: Gratulacje z okazji ukończenia godziny programowania (One Hour of Code)
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Proszę wybrać prawidłowy wiek
   enter_valid_email: Podaj poprawny adres e-mail
   get_a_certificate_message: "Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>Kontynuować naukę po tej godzinie (One Hour)</a>"
   get_a_certificate_message_after: "Kliknij na świadectwie, aby je pobrać lub wydrukować. Dalej, kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną Kodowania</a>."

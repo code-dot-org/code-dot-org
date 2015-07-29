@@ -219,11 +219,12 @@ pl:
       free_play:
         playlab: Utwórz aplikację
         artist: Narysuj cokolwiek
+        calculate: Calculate Something
     user:
       classroom: Domowa strona nauczyciela
       district_dashboard: Panel dzielnicy/okręgu
       label: 'Witaj %{username}'
-      stats: Moje postępy
+      stats: Studio Kodowania (Code Studio)
       settings: Moje konto
       prizes: Nagrody
       logout: Wyloguj się

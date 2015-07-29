@@ -219,6 +219,7 @@ sk:
       free_play:
         playlab: Vytvoriť aplikáciu
         artist: Nakresliť niečo
+        calculate: Calculate Something
     user:
       classroom: Domovská stránka učiteľa
       district_dashboard: Oblasť Nástenka
