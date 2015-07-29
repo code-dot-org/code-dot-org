@@ -25,7 +25,6 @@ var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
-var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
@@ -202,15 +201,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.packetSpec_ = [];
 
   /**
-   * If ticked, tells the network that this router is being used.
-   *
-   * Not persisted on server (though the heartbeat does its own persisting)
-   *
-   * @type {NetSimHeartbeat}
-   */
-  this.heartbeat = null;
-
-  /**
    * Local cache of our remote row, used to decide whether our state has
    * changed.
    * 
@@ -318,26 +308,7 @@ NetSimRouterNode.inherits(NetSimNode);
  *        created entity, or null if entity creation failed.
  */
 NetSimRouterNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimRouterNode, shard, function (err, router) {
-    if (err) {
-      onComplete(err, null);
-      return;
-    }
-
-    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (err, heartbeat) {
-      if (err) {
-        onComplete(err, null);
-        return;
-      }
-
-      // Set router heartbeat to double normal interval, since we expect
-      // at least two clients to help keep it alive.
-      router.heartbeat = heartbeat;
-      router.heartbeat.setBeatInterval(12000);
-
-      onComplete(null, router);
-    });
-  });
+  NetSimEntity.create(NetSimRouterNode, shard, onComplete);
 };
 
 /**
@@ -348,26 +319,7 @@ NetSimRouterNode.create = function (shard, onComplete) {
  *        found entity, or null if entity search failed.
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
-  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (err, router) {
-    if (err) {
-      onComplete(err, null);
-      return;
-    }
-
-    NetSimHeartbeat.getOrCreate(shard, routerID, function (err, heartbeat) {
-      if (err) {
-        onComplete(err, null);
-        return;
-      }
-
-      // Set router heartbeat to double normal interval, since we expect
-      // at least two clients to help keep it alive.
-      router.heartbeat = heartbeat;
-      router.heartbeat.setBeatInterval(12000);
-
-      onComplete(null, router);
-    });
-  });
+  NetSimEntity.get(NetSimRouterNode, routerID, shard, onComplete);
 };
 
 /**
@@ -420,14 +372,11 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
 };
 
 /**
- * Ticks heartbeat, telling the network that router is in use.
+ * Performs queued routing and DNS operations.
  * @param {RunLoop.Clock} clock
  */
 NetSimRouterNode.prototype.tick = function (clock) {
   this.simulationTime_ = clock.time;
-  if (this.heartbeat) {
-    this.heartbeat.tick(clock);
-  }
   this.routeOverdueMessages_(clock);
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);
