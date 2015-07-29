@@ -26,7 +26,7 @@ class RedisPropertyBag
   #
   # @return [Hash<String, String>]
   def to_hash()
-    return @redis.hgetall(@key)
+    @redis.hgetall(@key)
   end
 
   # Returns a collection of all of the items in the property bag, representing each entry
@@ -34,7 +34,7 @@ class RedisPropertyBag
   #
   # @return Array<Hash<String, String>>
   def items()
-    return to_hash.collect {|k, v| {name: k, value: v}}
+    to_hash.collect {|k, v| {name: k, value: v}}
   end
 
   # Deletes the property with the given name.
@@ -54,7 +54,7 @@ class RedisPropertyBag
   # @param {String} name
   # @return {String}
   def get(name)
-    return @redis.hget(@key, name)
+    @redis.hget(@key, name)
   end
 
   # Sets the value of the property with the given name.
