@@ -1,15 +1,16 @@
-# A simple propery bag backed by Redis.
+# A simple property bag backed by Redis.
 #
 # In addition to string properties the property bag also supports
 # named, atomic counters via the increment_counter call.  These can
 # be used (for example) to generate ascending sequence numbers for keys.
 #
-# Implementation notes:  The entire property bag, including its counter,
+# Implementation notes: The entire property bag, including its counter,
 # is stored in a single value as a Redis hash. This makes it efficient to
 # fetch tne entire property bag without having to make multiple requests to
-# Redis.  It also means all of the data in the bag is "fate shared": if any
+# Redis. It also means all of the data in the bag is "fate shared": if any
 # of the data in the property bag is lost due to a Redis node going down,
-# *all* of the data will be lsot.  This provides some degree of consistency.
+# *all* of the data will be lost. This provides some degree of consistency
+# between strings and counters in the bag.
 
 require 'redis'
 
@@ -31,17 +32,17 @@ class RedisPropertyBag
   # Returns value of the property with the given name, or nil
   # if no such property exists.
   #
-  # @param {String} name
-  # @return {String}
+  # @param [String] name
+  # @return [String]
   def get(name)
     @redis.hget(@key, name)
   end
 
   # Sets the value of the property with the given name.
   #
-  # @param {String} name
-  # @param {String} value
-  # @return {String} the set value
+  # @param [String] name
+  # @param [String] value
+  # @return [String] the set value
   def set(name, value)
     @redis.hset(@key, name, value)
     value
@@ -49,8 +50,8 @@ class RedisPropertyBag
 
   # Deletes the property with the given name.
   #
-  # @param {String} name
-  # @return {Boolean} true if the value was present before deletion.
+  # @param [String] name
+  # @return [Boolean] true if the value was present before deletion.
   def delete(name)
     delete_count = @redis.hdel(@key, name)
     delete_count > 0
@@ -73,8 +74,8 @@ class RedisPropertyBag
   # the same name as a string field, which will result in undefined
   # behavior.
   #
-  # @param {String} name
-  # @return (Integer{)}
+  # @param [String] name
+  # @return [Integer] The incremented counter value.
   def increment_counter(name)
     @redis.hincrby(@key, name, 1)
   end
