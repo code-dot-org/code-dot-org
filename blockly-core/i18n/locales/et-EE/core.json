@@ -23,7 +23,7 @@
   "COLOUR_RGB_RED": "punane",
   "COLOUR_RGB_TITLE": "värvi",
   "COLOUR_RGB_TOOLTIP": "Loo värv koos etteantud koguse punase, rohelise ja sinisega. Kõik väärtused peavad jääma 0 ja 100 vahele.",
-  "CONTRACT_EDITOR_HEADER": "Design Recipe",
+  "CONTRACT_EDITOR_HEADER": "Disaini retsept",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "murra tsüklist välja",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "jätka tsükli järgmise iteratsiooniga",

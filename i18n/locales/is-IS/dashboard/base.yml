@@ -219,6 +219,7 @@ is:
       free_play:
         playlab: Búa til forrit
         artist: Teikna eitthvað
+        calculate: Calculate Something
     user:
       classroom: Heimasíða kennara
       district_dashboard: Stjórnborð umdæmis

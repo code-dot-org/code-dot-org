@@ -8,21 +8,21 @@ require 'cdo/geocoder'
 require 'cdo/hip_chat'
 
 raise "No SOLR server configured." unless CDO.solr_server
-SOLR = Solr::Server.new(host:CDO.solr_server)
+SOLR = Solr::Server.new(host: CDO.solr_server)
 
 USERS = DASHBOARD_DB[:users]
 
 def get_start_id()
-  row = PEGASUS_DB[:properties].where(key:'solr-user-last-id').first
+  row = PEGASUS_DB[:properties].where(key: 'solr-user-last-id').first
   unless row
-    row = {key:'solr-user-last-id', value:0}
+    row = {key: 'solr-user-last-id', value: 0}
     row[:id] = PEGASUS_DB[:properties].insert(row)
   end
   row[:value].to_i
 end
 
 def save_last_id(id)
-  PEGASUS_DB[:properties].where(key:'solr-user-last-id').update(value:id.to_i)
+  PEGASUS_DB[:properties].where(key: 'solr-user-last-id').update(value: id.to_i)
 end
 
 def main()
@@ -34,11 +34,11 @@ def main()
 
   USERS.where('id > ?', start_id).limit(batch_size).each do |i|
     user = {
-      id:"user-#{i[:id]}",
-      name_s:i[:name],
-      email_s:i[:email],
-      kind_s:'user',
-      role_s:i[:user_type],
+      id: "user-#{i[:id]}",
+      name_s: i[:name],
+      email_s: i[:email],
+      kind_s: 'user',
+      role_s: i[:user_type],
     }
 
     location = Geocoder.search(i[:current_sign_in_ip]).first

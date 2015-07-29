@@ -273,6 +273,7 @@
       free_play:
         playlab: Costruisci una App
         artist: Disegna qualcosa
+        calculate: Calculate Something
     user:
       classroom: Cruscotto di Controllo dell'insegnante
       district_dashboard: Dashboard

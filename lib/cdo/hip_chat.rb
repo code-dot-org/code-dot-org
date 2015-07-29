@@ -34,7 +34,7 @@ class HipChat
     }))
 
     channel = "\##{Slack::CHANNEL_MAP[room.to_sym] || room}"
-    Slack.message slackify(message.to_s), channel:channel, username:@@name, color:options[:color]
+    Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
   end
 
   def self.notify(room, message, options={})

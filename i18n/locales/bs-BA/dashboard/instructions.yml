@@ -635,8 +635,14 @@ bs:
         uses only blocks that you have already been shown.  Can you figure out how
         to recreate it without any extra information?  Hint:  Feel free to use trial
         and error. You are not expected to get it perfect the first time.
-      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
+      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit\nfor the solution."
+      Course 4 Artist 13_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can design anything you want!
       Course 4 Artist 2_instruction: Možeš li ponavljati ovaj kod u petlji da bi nacrtao/a posivjeli kvadrat?
+      Course 4 Artist 20_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can create whatever you want!
       Course 4 Artist 3_instruction: 'Ok, pokušaj shvatiti šta se desi ako pokreneš ovaj kod (ili klikni na "Pokreni" da probaš). Onda ponovi dovoljno mnogo puta da bi se crtež dovršio.'
       Course 4 Artist 4_instruction: Koliko stepeni ima u krugu? Popuni blok ponavljanja sa tim brojem da bi kreirao/la krug boja.
       Course 4 Artist 5_instruction: Nacrtaj drugu polovicu ovog crteža tako da je simetričan. Trokutovi su jednakostranični sa stranicama dugim 50 piksela.
@@ -662,6 +668,7 @@ bs:
       Course 4 Artist For Loops 11_instruction: |
         Sjećaš se kada smo koristili varijablu za mijenjanje broja stranica određenog oblika? Ovaj uzorak počinje sa trokutom
         i dodaje stranicu po stranicu sve dok ne nacrta desetougaonik (10 stranica). Svaka stranica bi trebala biti duga 100 piksela. Savjet: 360 podijeljeno sa brojem stranica koje oblik ima daje broj stepeni za koji trebaš rotirati.
+      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
       Course 4 Artist For Loops 12_instruction: 'To baš izgleda cool. Ali sada bih želio nacrtati oblike jedan do drugog. Sada je svaka stranica duga 20 piksela. Koristi blok za skakanje naprijed za 40 piksela nakon crtanja svakog od oblika. '
       Course 4 Artist For Loops 13_instruction: Hmmm, ovi oblici postaju sve veći i veći! Zar već nismo prethodno riješili ovaj problem koristeći varijable? Kako možemo upotrijebiti brojač varijablu za smanjivanje dužine stranica pri rastu njihovog broja? Umjesto kretanja naprijed za određenu vrijednost, pokušaj se kretati za (100 / brojač) piksela.
       Course 4 Artist For Loops 14_instruction: Okretanje manje ili više nego što je neophodno za određeni oblik daje lijep efekat. Probaj okretati za 89 stepeni da bi kreirao/la uvrnutu kvadratnu spiralu.
@@ -676,6 +683,7 @@ bs:
       Course 4 Artist For Loops 7_instruction: 'Šta će se desiti ako ukloniš "Ponovi 3" iz ovog algoritma, ali ostavljajući "pokreni" i "okreni" blokove u "od-do" petlji? U ovom spiralnom trokutu, svaka stranica je za 20 piksela duža od prethodne.'
       Course 4 Artist For Loops 8_instruction: Najmanja linija ovog kvadrata je 10, najveća je 200 i svaka linija je za 10 piksela duža od prethodne. Možeš li popuniti blokove koji nedostaju da bi ova fantastična slika bila dovršena?
       Course 4 Artist For Loops 9_instruction: Možeš li napraviti spiralu? Pokreći se naprijed od 1 do 75 piksela, povećavajući za jedan piksel svaki put.
+      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604 for the solution."
       Course 4 Artist Functions 1_instruction: Možeš li pomoću petlje nacrtati kvadrat koji ima dužinu od 100 piksela?
       Course 4 Artist Functions 10_instruction: Koji blok moraš dodati da bi se dobio trokut koji sjedi na kvadratu?
       Course 4 Artist Functions 11_instruction: 'Pogledaj ovaj kod koji crta kocku. Možeš li ga premjestiti u funkciju s nazivom "Nacrtaj Kocku"'
@@ -692,7 +700,7 @@ bs:
       Course 4 Artist Functions 7_instruction: Možeš li nacrtati liniju načinjenu od kvadrata korištenjem Kvadrat funkcije? Svaki kvadrat ima dužinu stranica of 40 piksela.
       Course 4 Artist Functions 8_instruction: 'Jesi se već navikao/la na korištenje funkcijskih blokova? Hajde da promijenimo ovaj kvadrat tako da je veličine 200 piksela. Savjet: klikni na "uredi" da bi promijenio/la veličinu urednika funkcije "nacrtaj kvadrat". Sjeti se da klikneš na "spremi i zatvori" da bi izašao/la i urednika ove funkcije. '
       Course 4 Artist Functions 9_instruction: Dali smo ti većinu koda za kreiranje funkcije. Međutim, izgleda dan ešto nedostaje. Možeš li kompletirati ovaj funkcijski blok?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
+      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made?  Visit https://studio.code.org/c/105765376/edit\nfor the solution."
       Course 4 Artist Params 1_instruction: Hajde da uredimo funkciju koja crta kvadrat sa stranicama od 50 piksela
       Course 4 Artist Params 10_instruction: 'Možeš zvati funkcije unutar drugih funkcija! Koristeći tvoju "oblik" funkciju kao osnovu, kreiraj 3 kuće, svaka za 20 piksela veća nego prethodna, počevši od veličine od 50 piksela.  Korištenje brojač petlje može biti od pomoći. '
       Course 4 Artist Params 11_instruction: 'A šta misliš o funkciji naziva "papirna vjetrenjača" koja uzima tri parametra - "stranice", "dužina" i "ponavljaj". Možeš izračunati za koliko okrenuti nakon svakog oblika koristeći istu matematiku koju si koristio/la da izračunaš okret za oblike "stranice". Možeš li napraviti ovu sliku? Evo savjet: svaki oblik je dužine od 100 piksela.'
@@ -729,8 +737,22 @@ bs:
       Course 4 Bee 2_instruction: Provjeri svaki objekat da vidiš je li cvijet. Ako jeste, pokupi nektar ... inače, samo ga ignoriši!
       Course 4 Bee 3_instruction: Nepoznati objekat je ili cvijet ili saće meda. Upotrijebi ako/inače blok za sakupljanje nektra u pitanju cvijeta. Inače napravi med (jer je onda u pitanju saće meda).
       Course 4 Bee 4_instruction: Ovaj ljubičasti cvijet može imati 3, 2 ili 1 za nektar. Ovje je ako-inače blok kombinovan sa drugim ako-inače blokom za kreiranje ako, inače-ako i inače bloka. Dovrši rješenje za sakupljanje nepoznate količine nektra.
+      Course 4 Bee 5_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Add an if-else block to create an if, else-if, else block. Complete
+        the solution to collect the unknown amount of nectar.
+      Course 4 Bee 6_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Create an if, else-if, else block to collect the unknown amount of
+        nectar.
+      Course 4 Bee 7_instruction: |
+        Use everything you have learned so far to collect
+        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
       Course 4 Bee For Loops 1_instruction: Upotrijebi petlju za sakupljanje nektra iz svakog cvijeta.
       Course 4 Bee For Loops 10_instruction: Ako tvoja petlja broji prema dole, korak za povećanje se pri svakom prolazu kroz petlju oduzima od trenutne vrijednosti tvoje brojač varijable. Koliki bi trebao biti korak povećanja da bi se sakupilo 9, onda 6, i 3 nektra?
+      Course 4 Bee For Loops 11_instruction: |
+        What's wrong with this loop? See if
+        you can fix it and make the bee collect all the nectar.
       Course 4 Bee For Loops 2_instruction: 'Ovo je nova vrsta petlje, pod nazivom "od-do" petlja. Ova petlja će brojati od 1 do 5 za korak od jedan, i izvršavati sadržaj petlje pri svakom prolazu. Pomozi Pčeli da pokupi nektar.'
       Course 4 Bee For Loops 3_instruction: 'Možeš riješiti ovaj problem koristeći "od-do" petlju za brojanje od 1 do 3 za 1. Hajde sada da pokupimo malo nektra!'
       Course 4 Bee For Loops 4_instruction: Sakupi sav nektar iz ovih cvjetova. PItam se da li postoji lakši način da se ovo odradi...
@@ -957,6 +979,7 @@ bs:
       Infinity_touch_faster_instruction: Dodirni još više pahuljica!
       Infinity_touch_four_instruction: Pokreni Annu prema gore, dole lijevo, i onda desno da bi dotakla svaku od četiri pahuljice.
       Infinity_touch_score_instruction: 'Učini da Anna osvoji bod svaki put kada dotakne pahuljicu snijega. Onda klikni na "Pokreni" i upravi Annu da dodatkne svaku od pahuljica samo jednom.'
+      jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Nacrtaj kratku liniju gore i jednu dugačku liniju desno!
       K-1 artist 1 level 10_instruction: Nacrtaj isprekidanu liniju koristeći blokove za skakanje i za crtanje
@@ -1203,11 +1226,15 @@ bs:
       NEW Course 4 Artist Functions 7_instruction: 'Jesi se već navikao/la na korištenje funkcijskih blokova? Hajde da promijenimo ovaj kvadrat tako da je veličine 200 piksela. Savjet: klikni na "uredi" da bi promijenio/la veličinu urednika funkcije "nacrtaj kvadrat". Sjeti se da klikneš na "spremi i zatvori" da bi izašao/la i urednika ove funkcije. '
       NEW Course 4 Artist Functions 8_instruction: Dali smo ti većinu koda za kreiranje funkcije. Međutim, izgleda da nešto nedostaje. Možeš li preurediti definiciju funkcije da bi se nacrtao trokut?
       NEW Course 4 Artist Functions 9_instruction: Koji blok trebaš dodati da bi dobio/la trokut na vrhu kvadrata?
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit for the solution."
       New Course 4 Artist Functions Level 4_instruction: 'Upotrijebi "nacrtaj kvadrat" funkciju da bi nacrtao/la ovaj uzorak.'
       NEW Course 4 Artist Params 1_instruction: 'Hajde da definišemo funkciju koja crta kvadrat sa stranicama od 50 piksela. Klikni na "uredi" da bi započeo/la.'
       NEW Course 4 Artist Params 10_instruction: 'Napravi "nacrtaj šestougaonik" funkcijski blok sa parametrom koji označava dužinu. Savjet: ovaj šestougaonik je veličine 100 piksela. '
       NEW Course 4 Artist Params 11_instruction: 'Možeš li shvatiti kako nacrtati ovaj oblik? Uredi funkciju tako da koristi "stranice" parametar.'
       NEW Course 4 Artist Params 12_instruction: Možeš li dovršiti ovaj crtež? Stranice svih oblika su 100 piksela duge.
+      NEW Course 4 Artist Params 12a_instruction: |
+        This image is similar to the last.
+        Can you use a "for loop" with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: 'Hajde da preuredimo ovu "nacrtaj oblik" funkciju koja već ima "dužinu" kao parametar. Dodajmo sada parametar za "stranice". Sjeti se da je ugao za okretanje datog oblika jednak 360 podijeljeno sa brojem stranica tog oblika. Savjet: dužina stranica za trokut je 100 piksela, za šestougaonik je 25 piksela, i za kvadrat je 50 piksela.'
       NEW Course 4 Artist Params 14_instruction: 'Možeš li ponovo napraviti ove oblike? Dovuci "dužina" parametar u definiciju funkcije. '
       NEW Course 4 Artist Params 15_instruction: Vrijeme za slobodno igranje! Evo funkcija koje si napisao/la i još nekih dodatnih. Nacrtaj nešto fantastično!
@@ -1219,6 +1246,7 @@ bs:
       NEW Course 4 Artist Params 7_instruction: 'Možeš li dovršiti ovaj crtež? Savjet: svaki od trokutova je za 25 piksela veći nego prethodni. Prvi trokut je 25 piksela veličine.'
       NEW Course 4 Artist Params 8_instruction: 'Možeš li nacrtati svaki od ovih trokutova sa tom novom funkcijom? Prvi je dug 25 piksela, drugi 50, a treći 75. Savjet: Počni klikom na "uredi" u svom funkcijskom bloku.'
       NEW Course 4 Artist Params 9_instruction: 'Klikni na "uredi" da upišeš definiciju "nacrtaj kvadrat" funkcije i dodaš parametar. Funkcija bi trebala imati dužinu kao parametar, baš kao i trokut. Ovaj put, nacrtaj 3 kvadrata: dužine od 25, 50 i 75 piksela, razmaknuti za 100 piksela.'
+      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530 for the solution."
       NEW Course 4 Artist Vars 1.5_instruction: 'Pogledaj ovaj kod. Možeš li vidjeti kako "postavi dužinu" i "dužina" blok rade zajedno? Klikni na "Pokreni" da ih vidiš u akciji. '
       NEW Course 4 Artist Vars 12_instruction: 'Pogledaj ovaj kod. Možeš li vidjeti kako "postavi dužinu" i "dužina" blok rade zajedno? Klikni na "Pokreni" da ih vidiš u akciji. Zamijeni broj 5 sa "stranice" varijablom, i upotrijebi "postavi stranice na" blok.'
       NEW Course 4 Artist Vars 2.5_instruction: 'Pogledaj ovaj kod. Možeš li vidjeti kako "postavi dužinu" i "dužina" blok rade zajedno? Klikni na "Pokreni" da ih vidiš u akciji. '
@@ -1239,10 +1267,21 @@ bs:
       NEW Course 4 Bee For Loops 7_instruction: 'Je si li se navikao/la na "od-do" petlje? Ovo je slično posljednjem zadatku, ali moraš sakupiti 2,4,6,8,10 nektar. Dali smo ti početni kod kojem nedostaju brojevi u brojač petljama. Hajde da sakupimo nešto nektra!'
       NEW Course 4 Bee For Loops 8_instruction: "Ako tvoja petlja broji prema gore, prirast je dodat na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati da bi sakupio/la 3, 6, 9 nektara?\r\n"
       NEW Course 4 Bee For Loops 9_instruction: Ako tvoja petlja broji prema dole, korak za povećanje se pri svakom prolazu kroz petlju oduzima od trenutne vrijednosti tvoje brojač varijable. Koliki bi trebao biti korak povećanja da bi se sakupilo 9, onda 6, i 3 nektra?
+      NEW Course 4 Bee For Loops 95_instruction: |
+        Take a look at each piece of the
+        "for loop" that you have just created.  Can you figure out which numbers
+        you need to double to solve this puzzle? Why does it work?
       NEW Course 4 Play Lab Params 11_instruction: 'Vrijeme je za slobodno igranje! Zabavi se sa svim blokovima u tvojoj alatnoj traci. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Popuni ulazne parametre za lika sa brojevima (1, 2, i 3) da bi napravio/la da ovi likovi izviđaju. '
       NEW Course 4 Play Lab Vars 4 5_instruction: '"Šta misliš da će učinii ovaj kod? Klikni na "Pokreni" da vidiš šta će se desiti".'
+      NEW Course 4 Play Labs For Loops 7a_instruction: |
+        Using what you learned so
+        far, can you have Dinosaur take a step forward every time Penguin counts?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Vrijeme je za slobodno igranje. Zabavi se sa svim blokovima u tvojoj alatnoj traci. '
+      NEW Course 4 Play Labs For Loops 8a_instruction: |
+        Challenge: How would you
+        use the "for loop" to get every actor to go around and say their actor number,
+        then vanish from the screen? 
       New Play Lab Project_instruction: Napravi svoju vlastitu priču ili igru! Tvoj kod je spremljen kao projekat i možeš mu se vratiti u bilo koje vrijeme.
       Ninjacat Demo B (copy 1)_instruction: "\r\nHajde da počnemo istraživati jednostavnu video igricu, i da otkrijemo kako radi. Možeš koristiti tipke sa strelicama za kretanje ninje lijevo, desno i za skok. Pokušaj uhvatiti jednoroga i izbjeći zmaja!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
@@ -1758,12 +1797,38 @@ bs:
         an explanation.
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
-        of the turtle's starting position. [Click to see full instructions]
+        of the turtle's starting position. Click to see full instructions.
+      U3L23 Chatbot Conditionals 1_instruction: |
+        Ask the user the question "What
+        is your favorite color?" using the "prompt" block. Using the "if" block,
+        check if the user's response matches yours. Add a "write" block to the
+        body of the "if" statement to add the response "<favorite_color> is my
+        favorite color too!" to the screen.
+      U3L23 Chatbot Conditionals 2_instruction: |
+        Replace the "if" block with an
+        "if/else" block to make your chatbot respond in all circumstances.
+      U3L23 Chatbot Conditionals 3_instruction: |
+        In text mode, add several "else
+        if" statements to your program.
+      U3L23 Chatbot Intro 2_instruction: |
+        Create a click event for your button. Create
+        a conversation variable and store the user's input in it. You may need the
+        "getText," "setText," and "+" blocks in your code.
+      U3L23 Chatbot Intro 3_instruction: |
+        Add the response "uh huh" by using the
+        "+" operator. Add newline characters (\
+        ) where appropriate.
+      U3L23 Chatbot Intro 4_instruction: |
+        Use this level to make your chatbot look
+        and work better!
+      U3L23 Chatbot Intro_instruction: |
+        Add a Lable, Text Input, Button, and Text
+        Area object to your project
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid to the *front* and *right*
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction.
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
-        of the starting location.
+        of the starting location. (Click to show full instructions)
       XML Scratchpad_instruction: Koristeći ovaj test nivo za dohvatanje xml-a za jedinični test

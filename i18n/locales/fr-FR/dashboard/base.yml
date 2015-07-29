@@ -222,6 +222,7 @@ fr:
       free_play:
         playlab: Créer une application
         artist: Dessine quelque chose
+        calculate: Calculate Something
     user:
       classroom: "Page d'accueil de l'enseignant"
       district_dashboard: Tableau de bord de district

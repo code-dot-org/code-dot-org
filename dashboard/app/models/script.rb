@@ -163,6 +163,8 @@ class Script < ActiveRecord::Base
   def banner_image
     if k5_course?
       "banner_#{name}_cropped.jpg"
+    elsif self.name == 'cspunit1'
+      "banner_#{name}_cropped.png"
     end
   end
 
