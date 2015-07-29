@@ -9,6 +9,7 @@
 require 'cdo/aws/s3'
 require 'tmpdir'
 require 'open-uri'
+require 'httparty'
 
 class Youtube
 
@@ -20,7 +21,6 @@ class Youtube
   # If `force`==true, the head request will be skipped.
   def self.process(id, filename=nil, force=false)
     if filename.nil? && !force
-      require 'httparty'
       thumbnail_url = "https:#{CDO.videos_url}/youtube/#{id}.jpg"
       response = HTTParty.head(thumbnail_url).response
       if response.is_a? ::Net::HTTPSuccess
