@@ -204,29 +204,31 @@ Calc.init = function(config) {
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
 
     if (Blockly.contractEditor) {
-      Blockly.contractEditor.registerTestHandlers(function (exampleBlock) {
-        try {
-          var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
-
-          var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
-          var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
-          var actual = entireSet.evaluateWithExpression(actualEquation.expression);
-
-          var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
-          var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
-          var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
-
-          var areEqual = expected.result.equals(actual.result);
-          return areEqual ? "Matches definition." : "Does not match definition";
-        } catch (error) {
-          return "Execution error: " + error.message;
-        }
-      }, function () {});
+      Blockly.contractEditor.registerTestHandler(testCalcExample);
     }
   };
 
   studioApp.init(config);
 };
+
+function testCalcExample(exampleBlock) {
+  try {
+    var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+
+    var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+    var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
+    var actual = entireSet.evaluateWithExpression(actualEquation.expression);
+
+    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+    var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
+    var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
+
+    var areEqual = expected.result.equals(actual.result);
+    return areEqual ? "Matches definition." : "Does not match definition";
+  } catch (error) {
+    return "Execution error: " + error.message;
+  }
+}
 
 /**
  * A few possible scenarios
