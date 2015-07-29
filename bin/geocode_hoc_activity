@@ -20,13 +20,13 @@ def main()
           ip_address = row[:started_ip] || row[:pixel_started_ip] || row[:pixel_finished_ip] || row[:finished_ip]
           if location = Geocoder.search(ip_address).first
             position = "#{location.latitude}, #{location.longitude}" if location.latitude && location.longitude
-            DB[:hoc_activity].where(id:row[:id]).update(
-              country:location.country,
-              country_code:location.country_code,
-              state:location.state,
-              state_code:location.state_code,
-              city:location.city,
-              location:position,
+            DB[:hoc_activity].where(id: row[:id]).update(
+              country: location.country,
+              country_code: location.country_code,
+              state: location.state,
+              state_code: location.state_code,
+              city: location.city,
+              location: position,
             )
           end
 
