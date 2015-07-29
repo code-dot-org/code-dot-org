@@ -48,12 +48,16 @@ class Video < ActiveRecord::Base
     "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"
   end
 
+  def self.embed_url(id)
+    CDO.studio_url "videos/embed/#{id}"
+  end
+
   def self.download_url(key)
-    "//videos.code.org/youtube/#{key}.mp4"
+    "#{CDO.videos_url}/youtube/#{key}.mp4"
   end
 
   def thumbnail_url
-    "//videos.code.org/youtube/#{key}.jpg"
+    "#{CDO.videos_url}/youtube/#{key}.jpg"
   end
 
   def thumbnail_path

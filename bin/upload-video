@@ -6,14 +6,7 @@
 # Usage:
 # upload-video youtube_id [video_filename]
 
-# To use this script to process all YouTube video tags in custom levels, run this command from the root folder (between =begin and =end):
-=begin
-grep -ERoh "(http:|https:)?\/\/(www\.)?(youtube|youtubeeducation)\.com\/embed\/([^\"\&\?\/\s]{11})" ./dashboard/config/scripts | \
-  cut -d '/' -f5 | \
-  sort | \
-  uniq | \
-  parallel bin/upload-video
-=end
+# See also `process-video-content`.
 
 require_relative '../deployment'
 
@@ -24,18 +17,18 @@ require 'cdo/video/youtube'
 
 VIDEO_BUCKET = 'videos.code.org'
 
-def usage
+def print_usage
   puts 'Usage: upload-video youtube_id [video_filename]'
 end
 
 def main
   if ARGV.length < 1
-    usage and return
+    print_usage and return
   end
   id = ARGV[0]
   filename = ARGV[1]
   if id.nil?
-    usage and return
+    print_usage and return
   end
   Youtube.process(id, filename)
 end
