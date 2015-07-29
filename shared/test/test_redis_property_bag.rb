@@ -64,11 +64,11 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     assert_equal empty_hash, bag1.to_hash
 
     # Test increment_counter.
-    assert_equal 1, bag2.increment_counter("foo_counter")
-    assert_equal 1, bag2.increment_counter("bar_counter")
-    assert_equal 2, bag2.increment_counter("foo_counter")
-    assert_equal 3, bag2.increment_counter("foo_counter")
-    assert_equal 2, bag2.increment_counter("bar_counter")
+    assert_equal 1, bag2.increment_counter('foo_counter')
+    assert_equal 1, bag2.increment_counter('bar_counter')
+    assert_equal 2, bag2.increment_counter('foo_counter')
+    assert_equal 3, bag2.increment_counter('foo_counter')
+    assert_equal 2, bag2.increment_counter('bar_counter')
   end
 
 end
