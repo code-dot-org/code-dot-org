@@ -88,6 +88,7 @@ social:
       complete: function(data, status) {
         if (data.responseText == "" || status !== "success") {
           $("#petitionexpand").animate({opacity:1}, { duration: 2000 });
+          $('#user_hero').css({display: "none"});
           //$("#petitionaction").animate({opacity:1}, { duration: 2000 });
         } else {
           $("#petitionexpand").css({display: "none"});
