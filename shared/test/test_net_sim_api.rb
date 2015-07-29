@@ -7,12 +7,14 @@ ENV['RACK_ENV'] = 'test'
 
 class NetSimApiTest < Minitest::Unit::TestCase
 
+  TABLE_NAMES = NetSimApi::TABLE_NAMES
+
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
     @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
     @shard_id = '_testShard'
-    @table_name = 'n' # for "node table"
+    @table_name = TABLE_NAMES[:node] # for "node table"
 
     # Never ever let tests hit the real Pusher API, even if our locals.yml says so.
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
@@ -145,24 +147,24 @@ class NetSimApiTest < Minitest::Unit::TestCase
     wire_ca = create_wire(node_c['id'], node_a['id'])
     wire_bc = create_wire(node_b['id'], node_c['id'])
 
-    assert_equal 3, read_records('n').count, "Didn't create 3 nodes"
-    assert_equal 3, read_records('w').count, "Didn't create 3 wires"
+    assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
+    assert_equal 3, read_records(TABLE_NAMES[:wire]).count, "Didn't create 3 wires"
 
     delete_node(node_a['id'])
 
     # Assert nodeA is gone
-    assert !record_exists('n', node_a['id'])
+    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
 
     # Assert wire AB and CA are gone
-    assert !record_exists('w', wire_ab['id'])
-    assert !record_exists('w', wire_ca['id'])
+    assert !record_exists(TABLE_NAMES[:wire], wire_ab['id'])
+    assert !record_exists(TABLE_NAMES[:wire], wire_ca['id'])
 
     # Assert node B and C are still there
-    assert record_exists('n', node_b['id'])
-    assert record_exists('n', node_c['id'])
+    assert record_exists(TABLE_NAMES[:node], node_b['id'])
+    assert record_exists(TABLE_NAMES[:node], node_c['id'])
 
     # Assert wire BC is still there
-    assert record_exists('w', wire_bc['id'])
+    assert record_exists(TABLE_NAMES[:wire], wire_bc['id'])
   ensure
     delete_node(node_a['id'])
     delete_node(node_b['id'])
@@ -170,8 +172,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_wire(wire_ab['id'])
     delete_wire(wire_ca['id'])
     delete_wire(wire_bc['id'])
-    assert read_records('n').first.nil?, "Node table was not empty"
-    assert read_records('w').first.nil?, "Wire table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
   end
 
   def test_node_delete_cascades_to_messages
@@ -182,29 +184,29 @@ class NetSimApiTest < Minitest::Unit::TestCase
     message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
     message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
 
-    assert_equal 2, read_records('n').count, "Didn't create 2 nodes"
-    assert_equal 2, read_records('m').count, "Didn't create 2 messages"
+    assert_equal 2, read_records(TABLE_NAMES[:node]).count, "Didn't create 2 nodes"
+    assert_equal 2, read_records(TABLE_NAMES[:message]).count, "Didn't create 2 messages"
 
     delete_node(node_a['id'])
 
     # Assert nodeA is gone
-    assert !record_exists('n', node_a['id'])
+    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
 
     # Assert message from B to A is gone
-    assert !record_exists('m', message_b_to_a['id'])
+    assert !record_exists(TABLE_NAMES[:message], message_b_to_a['id'])
 
     # Assert node B is still there
-    assert record_exists('n', node_b['id'])
+    assert record_exists(TABLE_NAMES[:node], node_b['id'])
 
     # Assert message from A to B is still there
-    assert record_exists('m', message_a_to_b['id'])
+    assert record_exists(TABLE_NAMES[:message], message_a_to_b['id'])
   ensure
     delete_node(node_a['id'])
     delete_node(node_b['id'])
     delete_message(message_a_to_b['id'])
     delete_message(message_b_to_a['id'])
-    assert read_records('n').first.nil?, "Node table was not empty"
-    assert read_records('w').first.nil?, "Wire table was not empty"
+    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
   end
 
   # Methods below this point are test utilities, not actual tests
@@ -216,11 +218,11 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def create_node(record)
-    create_record record, 'n'
+    create_record record, TABLE_NAMES[:node]
   end
 
   def delete_node(id)
-    delete_record id, 'n'
+    delete_record id, TABLE_NAMES[:node]
   end
 
   def create_wire(from_node_id, to_node_id)
@@ -228,20 +230,19 @@ class NetSimApiTest < Minitest::Unit::TestCase
       :localNodeID => from_node_id,
       :remoteNodeID => to_node_id
     }
-    @net_sim_api.post "/v3/netsim/#{@shard_id}/w", wire_record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    JSON.parse(@net_sim_api.last_response.body)
+    create_record wire_record, TABLE_NAMES[:wire]
   end
 
   def delete_wire(id)
-    delete_record id, 'w'
+    delete_record id, TABLE_NAMES[:wire]
   end
 
   def create_message(record)
-    create_record record, 'm'
+    create_record record, TABLE_NAMES[:message]
   end
 
   def delete_message(id)
-    delete_record id, 'm'
+    delete_record id, TABLE_NAMES[:message]
   end
 
   def create_record(record, table_name = @table_name)

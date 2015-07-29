@@ -5,6 +5,13 @@ require 'csv'
 
 class NetSimApi < Sinatra::Base
 
+  TABLE_NAMES = {
+      node: 'n',
+      wire: 'w',
+      message: 'm',
+      log: 'l'
+  }
+
   helpers do
     %w{
       core.rb
@@ -74,7 +81,7 @@ class NetSimApi < Sinatra::Base
   # @param [String] shard_id
   # @param [Integer] node_id
   def delete_wires_for_node(shard_id, node_id)
-    wire_table = get_table(shard_id, 'w')
+    wire_table = get_table(shard_id, TABLE_NAMES[:wire])
     wires = wire_table.to_a.select do |wire|
       wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
     end
@@ -88,7 +95,7 @@ class NetSimApi < Sinatra::Base
   # @param [String] shard_id
   # @param [Integer] node_id
   def delete_messages_for_node(shard_id, node_id)
-    message_table = get_table(shard_id, 'm')
+    message_table = get_table(shard_id, TABLE_NAMES[:message])
     messages = message_table.to_a.select do |message|
       message['simulatedBy'] == node_id
     end
@@ -107,7 +114,7 @@ class NetSimApi < Sinatra::Base
     table = get_table(shard_id, table_name)
     int_id = id.to_i
 
-    if table_name == 'n'
+    if table_name == TABLE_NAMES[:node]
       # Cascade deletions
       delete_wires_for_node(shard_id, int_id)
       delete_messages_for_node(shard_id, int_id)
