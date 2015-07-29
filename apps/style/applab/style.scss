@@ -206,6 +206,7 @@ div#visualizationResizeBar {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: crosshair;
 }
 
 #divApplab canvas {
@@ -214,6 +215,12 @@ div#visualizationResizeBar {
   top: 0px;
   left: 0px;
   z-index: -1;
+}
+
+#screenCoordinates {
+  position: absolute;
+  visibility: 'hidden';
+  z-index: 1;
 }
 
 $resize-bar-width: 13px;

@@ -351,6 +351,29 @@ function moveDownDebugConsoleHistory(currentInput) {
   return currentInput;
 }
 
+function updateScreenCoordinates(e) {
+  var screenCoordinates = document.getElementById('screenCoordinates');
+  var visOffset = document.getElementById('visualization').getBoundingClientRect();
+  if (screenCoordinates && visOffset) {
+    var x = e.clientX - visOffset.left;
+    var y = e.clientY - visOffset.top;
+    //var scaling = 320 / visOffset.width;
+    screenCoordinates.style.visibility='visible'; 
+    screenCoordinates.style.left = x + 'px';
+    screenCoordinates.style.top = y + 'px';
+    //console.log(x + ', ' + y + '; ' + scaling);
+    screenCoordinates.innerHTML = Math.round(x * scaling) + ', ' + Math.round(y * scaling);
+    screenCoordinates.innerHTML = x + ', ' + y;
+  }
+}
+
+function hideScreenCoordinates(e) {
+  var screenCoordinates = document.getElementById('screenCoordinates');
+  if (screenCoordinates) {
+    screenCoordinates.style.visibility='hidden';
+  }
+}
+
 function onDebugInputKeyDown(e) {
   var input = e.target.textContent;
   if (e.keyCode === KeyCodes.ENTER) {
@@ -911,6 +934,9 @@ Applab.reset = function(first) {
   }
 
   newDivApplab.addEventListener('click', designMode.onDivApplabClick);
+ // newDivApplab.addEventListener('mouseover', showScreenCoordinates);
+  newDivApplab.addEventListener('mousemove', updateScreenCoordinates);
+  newDivApplab.addEventListener('mouseout', hideScreenCoordinates);
 
   // Reset goal successState:
   if (level.goal) {
