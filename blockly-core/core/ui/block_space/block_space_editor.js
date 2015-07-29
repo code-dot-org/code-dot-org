@@ -417,7 +417,8 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
       block.moveBy(moveX, moveY);
     }
 
-    if (Blockly.BlockSpaceEditor.BUMP_DEBUG) {
+    if (Blockly.BlockSpaceEditor.BUMP_DEBUG &&
+        Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
       var afterBumpBlockBox = block.getBox();
       var originalBlockBoxColor = shouldBump ? "red" : "green";
       this.blockSpace.drawDebugBox("block box" + block.id,

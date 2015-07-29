@@ -44,6 +44,8 @@ function start() {
  */
 function toggleFullBump(checkboxElement) {
   Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK = checkboxElement.checked;
+  goog.style.setElementShown(document.getElementById('bump-debug-checkbox'),
+      checkboxElement.checked);
 }
 
 /**
@@ -383,10 +385,15 @@ h1 {
         Toggle entire block bumping <input type="checkbox" value="false" onclick="toggleFullBump(this)">
         &nbsp;
         <br>
-        Toggle bump debug drawing <input type="checkbox" value="false" onclick="toggleBumpDebug(this)">
+        <span id="bump-debug-checkbox" style="display: none">
+          Toggle block bump debug drawing <input type="checkbox" value="false" onclick="toggleBumpDebug(this)">
+          &nbsp;
+          <br>
+        </span>
+        Toggle scroll-on-drag debug drawing <input type="checkbox" value="false" onclick="toggleScrollDragDebug(this)">
         &nbsp;
         <br>
-        Toggle scroll-on-drag debug drawing <input type="checkbox" value="false" onclick="toggleScrollDragDebug(this)">
+        <input type="button" value="Clear Debug Drawings" onclick="Blockly.focusedBlockSpace.clearDebugDrawings()">
         &nbsp;
         <br>
       </p>
