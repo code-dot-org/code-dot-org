@@ -137,39 +137,72 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_node_delete_cascades_to_node_wires
 
-    nodeA = create_node({name:'nodeA'})
-    nodeB = create_node({name:'nodeB'})
-    nodeC = create_node({name:'nodeC'})
+    node_a = create_node({name:'nodeA'})
+    node_b = create_node({name:'nodeB'})
+    node_c = create_node({name:'nodeC'})
 
-    wireAB = create_wire(nodeA['id'], nodeB['id'])
-    wireCA = create_wire(nodeC['id'], nodeA['id'])
-    wireBC = create_wire(nodeB['id'], nodeC['id'])
+    wire_ab = create_wire(node_a['id'], node_b['id'])
+    wire_ca = create_wire(node_c['id'], node_a['id'])
+    wire_bc = create_wire(node_b['id'], node_c['id'])
 
     assert_equal 3, read_records('n').count, "Didn't create 3 nodes"
     assert_equal 3, read_records('w').count, "Didn't create 3 wires"
 
-    delete_node(nodeA['id'])
+    delete_node(node_a['id'])
 
     # Assert nodeA is gone
-    assert !record_exists('n', nodeA['id'])
+    assert !record_exists('n', node_a['id'])
 
     # Assert wire AB and CA are gone
-    assert !record_exists('w', wireAB['id'])
-    assert !record_exists('w', wireCA['id'])
+    assert !record_exists('w', wire_ab['id'])
+    assert !record_exists('w', wire_ca['id'])
 
     # Assert node B and C are still there
-    assert record_exists('n', nodeB['id'])
-    assert record_exists('n', nodeC['id'])
+    assert record_exists('n', node_b['id'])
+    assert record_exists('n', node_c['id'])
 
     # Assert wire BC is still there
-    assert record_exists('w', wireBC['id'])
+    assert record_exists('w', wire_bc['id'])
   ensure
-    delete_node(nodeA['id'])
-    delete_node(nodeB['id'])
-    delete_node(nodeC['id'])
-    delete_wire(wireAB['id'])
-    delete_wire(wireCA['id'])
-    delete_wire(wireBC['id'])
+    delete_node(node_a['id'])
+    delete_node(node_b['id'])
+    delete_node(node_c['id'])
+    delete_wire(wire_ab['id'])
+    delete_wire(wire_ca['id'])
+    delete_wire(wire_bc['id'])
+    assert read_records('n').first.nil?, "Node table was not empty"
+    assert read_records('w').first.nil?, "Wire table was not empty"
+  end
+
+  def test_node_delete_cascades_to_messages
+
+    node_a = create_node({name:'nodeA'})
+    node_b = create_node({name:'nodeB'})
+
+    message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
+    message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
+
+    assert_equal 2, read_records('n').count, "Didn't create 2 nodes"
+    assert_equal 2, read_records('m').count, "Didn't create 2 messages"
+
+    delete_node(node_a['id'])
+
+    # Assert nodeA is gone
+    assert !record_exists('n', node_a['id'])
+
+    # Assert message from B to A is gone
+    assert !record_exists('m', message_b_to_a['id'])
+
+    # Assert node B is still there
+    assert record_exists('n', node_b['id'])
+
+    # Assert message from A to B is still there
+    assert record_exists('m', message_a_to_b['id'])
+  ensure
+    delete_node(node_a['id'])
+    delete_node(node_b['id'])
+    delete_message(message_a_to_b['id'])
+    delete_message(message_b_to_a['id'])
     assert read_records('n').first.nil?, "Node table was not empty"
     assert read_records('w').first.nil?, "Wire table was not empty"
   end
@@ -183,12 +216,11 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def create_node(record)
-    @net_sim_api.post "/v3/netsim/#{@shard_id}/n", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    JSON.parse(@net_sim_api.last_response.body)
+    create_record record, 'n'
   end
 
   def delete_node(id)
-    @net_sim_api.delete "/v3/netsim/#{@shard_id}/n/#{id}"
+    delete_record id, 'n'
   end
 
   def create_wire(from_node_id, to_node_id)
@@ -201,11 +233,19 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def delete_wire(id)
-    @net_sim_api.delete "/v3/netsim/#{@shard_id}/w/#{id}"
+    delete_record id, 'w'
   end
 
-  def create_record(record)
-    @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+  def create_message(record)
+    create_record record, 'm'
+  end
+
+  def delete_message(id)
+    delete_record id, 'm'
+  end
+
+  def create_record(record, table_name = @table_name)
+    @net_sim_api.post "/v3/netsim/#{@shard_id}/#{table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     JSON.parse(@net_sim_api.last_response.body)
   end
 
@@ -229,8 +269,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @net_sim_api.last_response
   end
 
-  def delete_record(id)
-    @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}"
+  def delete_record(id, table_name = @table_name)
+    @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{table_name}/#{id}"
+    @net_sim_api.last_response
   end
 
 end
