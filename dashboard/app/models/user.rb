@@ -575,7 +575,10 @@ SQL
     save!
   end
 
-  def all_advertised_scripts_completed?(advertised_scripts)
+  def all_advertised_scripts_completed?
+    advertised_scripts = [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, 
+      Script.flappy_script, Script.playlab_script, Script.artist_script, Script.course1_script, 
+      Script.course2_script, Script.course3_script, Script.course4_script, Script.twenty_hour_script]
     advertised_scripts.all? { |script| completed?(script) }
   end
 
