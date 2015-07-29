@@ -358,13 +358,6 @@ Blockly.Flyout.prototype.hide = function() {
     Blockly.unbindEvent_(this.reflowWrapper_);
     this.reflowWrapper_ = null;
   }
-  // Delete all the blocks.
-  var blocks = this.blockSpace_.getTopBlocks(false);
-  for (var x = 0, block; block = blocks[x]; x++) {
-    if (block.blockSpace == this.blockSpace_) {
-      block.dispose(false, false);
-    }
-  }
   // Delete all the background buttons.
   for (var x = 0, rect; rect = this.buttons_[x]; x++) {
     goog.dom.removeNode(rect);
@@ -395,6 +388,12 @@ Blockly.Flyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
  */
 Blockly.Flyout.prototype.show = function(xmlList) {
   this.hide();
+  /**
+   * We do this clearing "before next show" rather than "on hide" to avoid
+   * killing an active touchmove event.
+   * @see https://neil.fraser.name/news/2014/08/09/
+   */
+  this.deleteAllBlocks_();
   this.svgGroup_.style.display = 'block';
 
   var margin = this.CORNER_RADIUS;
@@ -493,6 +492,16 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.reflowWrapper_ = Blockly.bindEvent_(this.blockSpace_.getCanvas(),
       'blocklyBlockSpaceChange', this, this.reflow);
   this.blockSpace_.fireChangeEvent();
+};
+
+/**
+ * Deletes any blocks from a previous flyout showing.
+ * @private
+ */
+Blockly.Flyout.prototype.deleteAllBlocks_ = function () {
+  this.blockSpace_.getTopBlocks(false).forEach(function (block) {
+    block.dispose(false, false);
+  });
 };
 
 /**
