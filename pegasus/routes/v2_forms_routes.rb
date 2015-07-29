@@ -18,7 +18,7 @@ get '/v2/forms/:kind' do |kind|
   dont_cache
   results = []
   if dashboard_user
-    DB[:forms].where(kind:kind, user_id:dashboard_user[:id]).each do |i|
+    DB[:forms].where(kind: kind, user_id: dashboard_user[:id]).each do |i|
       results << JSON.parse(i[:data]).merge(secret: i[:secret], id: i[:id])
     end
   end
@@ -28,7 +28,7 @@ end
 
 get '/v2/forms/:kind/:secret' do |kind, secret|
   dont_cache
-  forbidden! unless form = DB[:forms].where(kind:kind, secret:secret).first
+  forbidden! unless form = DB[:forms].where(kind: kind, secret: secret).first
   content_type :json
   JSON.pretty_generate(JSON.parse(form[:data]).merge(secret: secret, id: form[:id]))
 end
@@ -68,12 +68,12 @@ review '/v2/forms/:kind/:secret' do |kind, secret|
   review = payload[:review].to_s.downcase.strip
   review = nil if review.empty?
 
-  forms = DB[:forms].where(kind:kind, secret:secret)
+  forms = DB[:forms].where(kind: kind, secret: secret)
   forbidden! if forms.empty?
-  forms.update(review:review, reviewed_by:dashboard_user[:id], reviewed_at:DateTime.now, reviewed_ip:request.ip,indexed_at:nil)
+  forms.update(review: review, reviewed_by: dashboard_user[:id], reviewed_at: DateTime.now, reviewed_ip: request.ip,indexed_at: nil)
 
   content_type :json
-  ({review:review}).to_json
+  ({review: review}).to_json
 end
 post '/v2/forms/:kind/:secret/review' do |kind, secret|
   call(env.merge('REQUEST_METHOD'=>'REVIEW', 'PATH_INFO'=>"/v2/forms/#{kind}/#{secret}"))
@@ -83,20 +83,20 @@ get '/v2/forms/:kind/:secret/status/:status' do |kind, secret, status|
 
   def send_receipts(kind, form)
     templates = ['workshop_signup_cancel_receipt','workshop_signup_cancel_notice']
-    recipient = Poste2.create_recipient(form[:email], name:form[:name], ip_address:form[:updated_ip])
+    recipient = Poste2.create_recipient(form[:email], name: form[:name], ip_address: form[:updated_ip])
     templates.each do |template|
-      Poste2.send_message(template, recipient, form_id:form[:id])
+      Poste2.send_message(template, recipient, form_id: form[:id])
     end
     templates.count
   end
 
   dont_cache
-  form = DB[:forms].where(kind:kind, secret:secret).first
+  form = DB[:forms].where(kind: kind, secret: secret).first
   forbidden! if form.empty?
   data = JSON.parse(form[:data])
   pass unless ['cancelled'].include?(status)
   data['status_s'] = status
-  DB[:forms].where(kind:kind, secret:secret).update(data:data.to_json, indexed_at:nil)
+  DB[:forms].where(kind: kind, secret: secret).update(data: data.to_json, indexed_at: nil)
 
   send_receipts(kind, form);
 
@@ -108,10 +108,10 @@ get '/v2/forms/:parent_kind/:parent_secret/children/:kind' do |parent_kind, pare
   dont_cache
   results = []
 
-  forbidden! unless parent = DB[:forms].where(kind:parent_kind, secret:parent_secret).first
+  forbidden! unless parent = DB[:forms].where(kind: parent_kind, secret: parent_secret).first
 
-  DB[:forms].where(kind:kind).and(parent_id:parent[:id]).each do |i|
-    results << JSON.parse(i[:data]).merge(secret:i[:secret])
+  DB[:forms].where(kind: kind).and(parent_id: parent[:id]).each do |i|
+    results << JSON.parse(i[:data]).merge(secret: i[:secret])
   end
 
   content_type :json
@@ -120,7 +120,7 @@ end
 
 get '/v2/forms/:parent_kind/:parent_secret/children/:kind/:secret' do |parent_kind, parent_secret, kind, secret|
   dont_cache
-  forbidden! unless form = DB[:forms].where(kind:kind, secret:secret).first
+  forbidden! unless form = DB[:forms].where(kind: kind, secret: secret).first
   content_type :json
   JSON.pretty_generate(JSON.parse(form[:data]).merge(secret: secret))
 end
@@ -134,7 +134,7 @@ post '/v2/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_
   forbidden! unless parent_form
 
   begin
-    form = insert_form(kind, payload, parent_id:parent_form[:id])
+    form = insert_form(kind, payload, parent_id: parent_form[:id])
     redirect "/v2/forms/#{kind}/#{form[:secret]}", 201
   rescue FormError=>e
     form_error! e

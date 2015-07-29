@@ -13,7 +13,7 @@ end
 
 def load_languages(path)
   [].tap do |results|
-    CSV.foreach(path, headers:true) do |row|
+    CSV.foreach(path, headers: true) do |row|
       results << row['code_s!']
     end
   end
@@ -172,7 +172,7 @@ class CDOImpl < OpenStruct
 
   def slog(params)
     return unless slog_token
-    @slog ||= Slog::Writer.new(secret:slog_token)
+    @slog ||= Slog::Writer.new(secret: slog_token)
     @slog.write params
   end
 
