@@ -13,7 +13,8 @@ var DesignProperties = module.exports = React.createClass({
     element: React.PropTypes.instanceOf(HTMLElement),
     handleChange: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
-    onDelete: React.PropTypes.func.isRequired
+    onDelete: React.PropTypes.func.isRequired,
+    onInsertEvent: React.PropTypes.func.isRequired
   },
 
   getInitialState: function() {
@@ -44,12 +45,19 @@ var DesignProperties = module.exports = React.createClass({
     }
 
     var elementType = elementLibrary.getElementType(this.props.element);
-    var propertyClass = elementLibrary.getElementPropertyTable(elementType);
+    var propertyClass = elementLibrary.getElementPropertyTab(elementType);
 
     var propertiesElement = React.createElement(propertyClass, {
       element: this.props.element,
       handleChange: this.props.handleChange,
       onDepthChange: this.props.onDepthChange
+    });
+
+    var eventClass = elementLibrary.getElementEventTab(elementType);
+    var eventsElement = React.createElement(eventClass, {
+      element: this.props.element,
+      handleChange: this.props.handleChange,
+      onInsertEvent: this.props.onInsertEvent
     });
 
     var deleteButton;
@@ -192,7 +200,7 @@ var DesignProperties = module.exports = React.createClass({
           </div>
           <div id="eventsBody"
               style={this.state.selectedTab === TabType.EVENTS ? styles.activeBody : styles.inactiveBody}>
-            coming soon...
+            {eventsElement}
           </div>
         </div>
       </div>

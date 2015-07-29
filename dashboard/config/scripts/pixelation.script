@@ -1,5 +1,6 @@
 title 'Pixelation'
 description "Create images with bits and bytes."
+description_short "Create images with bits and bytes."
 
 stage 'Pixelation'
 level 'Pixelation 1'

@@ -1,7 +1,7 @@
 "th-TH":
   hello: สวัสดีชาวโลก
   select_language: โปรดเลือกภาษาของคุณ
-  computer_science: วิทยาการคอมพิวเตอร์
+  en: Computer Science
   computer_science_edweek: สัปดาห์การศึกษาวิทยาศาสตร์คอมพิวเตอร์
   csedweek_dates: 8-14 ธันวาคม 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -58,6 +58,7 @@
   congratulations_on_completing_hoc: ขอแสดงความยินดีในการผ่านการเรียนเขียนโปรแกรมกับ
     Hour of Code 1 หลักสูตร
   get_a_certificate_of_achievement: รับใบประกาศนียบัตร
+  enter_valid_age: Please select a valid age
   enter_valid_email: กรุณาใส่อีเมลที่ถูกต้อง
   get_a_certificate_message: เราจะส่งประกาศนียบัตรและข้อมูลเกี่ยวกับ <a href='/learn/beyond'>การเรียนมากกว่า
     1 ชั่วโมง</a>

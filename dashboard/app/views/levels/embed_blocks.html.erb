@@ -1,27 +1,23 @@
 <%- # Embedded Blockly block html template. Derived from /blockly/src/templates/readonly.html.ejs, converted to erb %>
-<%- options = local_assigns %>
-<%- blockly_path = options[:baseUrl] %>
-<%- app = options.delete :app %>
+<%-
+  options = local_assigns
+  options[:pretty] = Rails.configuration.pretty_apps ? '' : '.min'
+%>
 <!DOCTYPE html>
 <html dir="<%= locale_dir %>">
 <head>
   <meta charset="utf-8">
   <title>Blockly</title>
-  <link href="<%= "#{blockly_path}css/common.css" %>" media="all" rel="stylesheet">
-  <script type="text/javascript" src="<%= "#{blockly_path}js/blockly.js" %>"></script>
-  <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/blockly_locale.js" %>"></script>
-  <script type="text/javascript" src="<%= "#{blockly_path}js/common.js" %>"></script>
-  <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/common_locale.js" %>"></script>
-  <script type="text/javascript" src="<%= "#{blockly_path}js/#{options[:locale]}/#{app}_locale.js" %>"></script>
-  <script type="text/javascript" src="<%= "#{blockly_path}js/#{app}.js" %>"></script>
-  <script type="text/javascript">
-    <% # delay to onload to fix IE9. %>
-    window.onload = function() {
-      <%= app %>Main(<%=raw options.to_json %>);
-    };
-  </script>
+  <%= javascript_include_tag 'application' %>
 </head>
 <body class="readonly embed-block">
-<div id="codeWorkspace"></div>
+  <div id="codeWorkspace"></div>
+  <script type="text/javascript" src="/shared/js/shared.js"></script>
+  <script>
+    var appOptions = <%= raw options.to_json %>;
+    apps.load(function () {
+      window[appOptions.app + 'Main'](appOptions);
+    });
+  </script>
 </body>
 </html>

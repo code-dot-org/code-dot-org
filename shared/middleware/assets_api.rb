@@ -102,6 +102,9 @@ class AssetsApi < Sinatra::Base
   put %r{/v3/assets/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
 
+    # read the entire request before considering rejecting it, otherwise varnish
+    # may return a 503 instead of whatever status code we specify.
+    body = request.body.read
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = filename.split('.').last
@@ -113,7 +116,6 @@ class AssetsApi < Sinatra::Base
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = "#{CDO.assets_s3_directory}/#{owner_id}/#{channel_id}/#{filename}"
-    body = request.body.read
     s3.put_object(bucket:CDO.assets_s3_bucket, key:key, body:body)
     content_type :json
     category = mime_type.split('/').first

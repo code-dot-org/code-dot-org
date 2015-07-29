@@ -7,6 +7,12 @@
 # uploading the entire contents of the HocSignup2015 forms table in
 # our database.
 
+# After setting up authentication, provide the following CDO.* attributes (example values below):
+#   CDO.hoc_map_service_account_email: xxx-abcdef@developer.gserviceaccount.com
+#   CDO.hoc_map_api_key: ABCDEF123456 [Base64-encoded pkcs12 key file]
+#   CDO.hoc_map_api_secret: notasecret
+#   CDO.hoc_map_table_id: ABCDEF123456 (the id of the fusion table)
+
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require 'cdo/hip_chat'
 require src_dir 'database'
@@ -16,7 +22,7 @@ require 'google/api_client'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
-TABLE_ID = '164RLDWEyPij3-Z9O0791ta_a8RfuCdGUkWRFcnBD'
+TABLE_ID = CDO.hoc_map_table_id
 
 # TODO this file is not checked in so this won't work unless you also get the key file
 PRIVATE_KEY_FILENAME = 'code-dot-org-hoc-map-c3fc0a673b37.p12'
@@ -46,12 +52,12 @@ file.close
 
 client = Google::APIClient.new(:application_name => 'HOC map update',
                                :application_version => '1.0.0')
-key = Google::APIClient::KeyUtils.load_from_pkcs12(PRIVATE_KEY_FILENAME, 'notasecret')
+key = Google::APIClient::KeyUtils.load_from_pkcs12(Base64.strict_decode64(CDO.hoc_map_api_key), CDO.hoc_map_api_secret)
 client.authorization = Signet::OAuth2::Client.new(
   :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
   :audience => 'https://accounts.google.com/o/oauth2/token',
   :scope => 'https://www.googleapis.com/auth/fusiontables',
-  :issuer => '460190065247-jmmb1vpqu9povn7dq886jk5dg17lrkee@developer.gserviceaccount.com',
+  :issuer => CDO.hoc_map_service_account_email,
   :signing_key => key)
 client.authorization.fetch_access_token!
 

@@ -577,6 +577,12 @@ class UserTest < ActiveSupport::TestCase
     assert user.reload.encrypted_password != old_password
   end
 
+  test 'user is working on script' do
+    user = create :user
+    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
+    assert user.working_on?(s1.script)
+  end
+
   test 'user is working on scripts' do
     user = create :user
     s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
@@ -601,6 +607,24 @@ class UserTest < ActiveSupport::TestCase
     s1.update_attribute(:last_progress_at, Time.now - 3.hours)
     assert_equal [s1.script, a.script, s2.script], user.working_on_scripts
     assert_equal s1.script, user.primary_script
+  end
+
+  test 'user has completed script' do
+    user = create :user
+    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), completed_at: (Time.now - 4.days)
+    assert user.completed?(s1.script)
+  end
+
+  test 'user has completed script but no completed_at' do
+    # We have some users in our system who have completed all levels but don't have completed_at set.
+    # This test exercises this case by not setting completed_at, but because the script has no levels there
+    # is no next level for the user to go to, and so completed? succeeds using a fallback code path.
+
+    user = create :user
+    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
+
+    assert s1.completed_at.nil?
+    assert user.completed?(s1.script)
   end
 
   test 'user should prefer working on 20hour instead of hoc' do
@@ -934,4 +958,5 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], student.students
 
   end
+
 end

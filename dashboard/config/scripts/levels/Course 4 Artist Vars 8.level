@@ -20,7 +20,15 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "embed": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "Free Play: Experiment with the number of sides this shape has. Can you change the algorithm so that the overall size of the shape stays the same, no matter how many sides it has? \r\n\r\n*Hint: You might have to use your math blocks (360 divided by `sides` in two places this time) *",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

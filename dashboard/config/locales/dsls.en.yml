@@ -230,6 +230,23 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      Equity About: {}
+      Equity CS: {}
+      Equity Celebrate: {}
+      Equity Define: {}
+      Equity Feedback: {}
+      Equity Goals: {}
+      Equity Keep Learning: {}
+      Equity Participation: {}
+      Equity Reflection: {}
+      Equity Resources: {}
+      Equity Review: {}
+      Equity Self Assess: {}
+      Equity Stage1Go: {}
+      Equity Stage2Go: {}
+      Equity Stage3Go: {}
+      Equity Strategies: {}
+      Equity Welcome: {}
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: {}
@@ -750,6 +767,13 @@ en:
         Introduction to Equity PD: Introduction to Equity PD
       equity activity:
         Initial Activity: Initial Activity
+      equity discuss:
+        Leading a Discussion in Equity: Leading a Discussion in Equity
+      equity discussion:
+        Leading an Equity Discussion: Leading an Equity Discussion
+        description here: description here
+      equity expect:
+        Setting Expectations: Setting Expectations
       equity in CS:
         Equity in Computer Science: Equity in Computer Science
       equity is more:
@@ -757,6 +781,8 @@ en:
       equity lead 1: {}
       equity v equality:
         Equity Vs. Equality: Equity Vs. Equality
+      equity vids:
+        Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
       k5 what next 1: {}
       sciPD Course Overview: {}
@@ -791,6 +817,8 @@ en:
         Agent Based Modeling of Adaptive Systems Forum: Agent Based Modeling of Adaptive Systems Forum
       sciPD agent based video:
         Agent Based Modeling: Agent Based Modeling
+      sciPD breeds:
+        Breeds in SL Nova: Breeds in SL Nova
       sciPD class models forum:
         Models in the Classroom: Models in the Classroom
       sciPD class models video:
@@ -833,6 +861,18 @@ en:
         Computer Science in Science Pre-Survey: Computer Science in Science Pre-Survey
       sciPD what to expect:
         What to Expect: What to Expect
+      sciPD2 SLN explore:
+        Exploring StarLogo Nova Advanced Features: Exploring StarLogo Nova Advanced Features
+      sciPD2 StarLogoNova:
+        Reviewing StarLogo Nova: Reviewing StarLogo Nova
+      sciPD2 camera:
+        Changing Camera View: Changing Camera View
+      sciPD2 challenge:
+        Most Challenging Module: Most Challenging Module
+      sciPD2 color:
+        Detecting Collisions: Detecting Collisions
+      sciPD2 conditionals:
+        Using Conditionals: Using Conditionals
       sciPD2 discussion:
         Phase 2 Discussion: Phase 2 Discussion
       sciPD2 discussion lesson1:
@@ -851,6 +891,18 @@ en:
         Phase 2 Evaluation: Phase 2 Evaluation
       sciPD2 implement:
         Implementation Planning: Implementation Planning
+      sciPD2 implement1:
+        Thinking Ahead: Thinking Ahead
+      sciPD2 implement2:
+        Implementation Questions and Answers: Implementation Questions and Answers
+      sciPD2 mods:
+        Reviewing the Modules: Reviewing the Modules
+      sciPD2 procedures:
+        Creating Procedures: Creating Procedures
+      sciPD2 remember:
+        Thinking Back: Thinking Back
+      sciPD2 remix1:
+        Remixing Experience: Remixing Experience
       sciPD2 resource common:
         Phase 2 Common Forms: Phase 2 Common Forms
       sciPD2 resource module1:
@@ -863,6 +915,21 @@ en:
         Phase 2 Module 4: Phase 2 Module 4
       sciPD2 resource reference:
         Phase 2 Guides and Resources: Phase 2 Guides and Resources
+      sciPD2 sliders:
+        Creating a Slider: Creating a Slider
+      sciPD2 thanks:
+        Great Job!: Great Job!
+      sciPD2 timeline:
+        Timeline of PD Phases: Timeline of PD Phases
+      sciPD2 wiggle:
+        Walk with a Wiggle: Walk with a Wiggle
+      sciPD2b end:
+        Thank You!: Thank You!
+      sciPD2b intro:
+        Introduction to Phase 2: Introduction to Phase 2
+      sciPD2b reflection:
+        Reflection on Phase 2: Reflection on Phase 2
+        description here: description here
       sciPD3 intro:
         Welcome to Phase 3: Welcome to Phase 3
       sciPD3 logistics:
@@ -875,6 +942,8 @@ en:
         Phase 3 Module 3: Phase 3 Module 3
       sciPD3 resource module4:
         Phase 3 Module 4: Phase 3 Module 4
+      sciencePD2b remixing:
+        Remixing in StarLogo Nova: Remixing in StarLogo Nova
       test demo level:
         demo description: demo description
         demo title: demo title
@@ -1715,9 +1784,8 @@ en:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
-        Choose the best answer.: Choose the best answer.
         Maze Multiple Choice One: Maze Multiple Choice One
-        Which blocks work?: Which blocks work?
+        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
       4-5 Algorithms Multi 1:
         Baking cookies: Baking cookies
         Banana: Banana
@@ -3075,11 +3143,13 @@ en:
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 3:
         ((5 < 10 < 15)): ((5 < 10 < 15))
+        ((5 < 10) & (10 < 15)): ((5 < 10) & (10 < 15))
         ((5 < 10) && (10 < 15)): ((5 < 10) && (10 < 15))
         ((5 < 10) AND (10 < 15)): ((5 < 10) AND (10 < 15))
         ((5 < 10) And (10 < 15)): ((5 < 10) And (10 < 15))
         ((5 < 10) and (10 < 15)): ((5 < 10) and (10 < 15))
         (5 < 10 < 15): (5 < 10 < 15)
+        (5 < 10) & (10 < 15): (5 < 10) & (10 < 15)
         (5 < 10) && (10 < 15): (5 < 10) && (10 < 15)
         (5 < 10) AND (10 < 15): (5 < 10) AND (10 < 15)
         (5 < 10) And (10 < 15): (5 < 10) And (10 < 15)
@@ -3090,10 +3160,13 @@ en:
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 4:
+        (((1 < x) & (x < 5)) || ((8 < x) & (x < 10))): (((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))
         (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))
         (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))
         (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))
+        ((1 < x) & (x < 5) || (8 < x) & (x < 10)): ((1 < x) & (x < 5) || (8 < x) & (x < 10))
+        ((1 < x) & (x < 5)) || ((8 < x) & (x < 10)): ((1 < x) & (x < 5)) || ((8 < x) & (x < 10))
         ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x) && (x < 10))
         ((1 < x) && (x < 5)) || ((8 < x) && (x < 10)): ((1 < x) && (x < 5)) || ((8 < x) && (x < 10))
         ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10)): ((1 < x) AND (x < 5) OR (8 < x) AND (x < 10))
@@ -3106,6 +3179,7 @@ en:
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
         (1 < x < 5) || (8 < x < 10): (1 < x < 5) || (8 < x < 10)
+        (1 < x) & (x < 5) || (8 < x) & (x < 10): (1 < x) & (x < 5) || (8 < x) & (x < 10)
         (1 < x) && (x < 5) || (8 < x) && (x < 10): (1 < x) && (x < 5) || (8 < x) && (x < 10)
         (1 < x) AND (x < 5) OR (8 < x) AND (x < 10): (1 < x) AND (x < 5) OR (8 < x) AND (x < 10)
         (1 < x) And (x < 5) Or (8 < x) And (x < 10): (1 < x) And (x < 5) Or (8 < x) And (x < 10)

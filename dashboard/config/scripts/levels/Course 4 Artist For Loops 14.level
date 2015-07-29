@@ -20,7 +20,16 @@
     "use_modal_function_editor": "false",
     "instructions": "If you turn a little bit more or less than you normally would for a shape, it creates a neat effect. Try turning 89 degrees to create this twisted square spiral.",
     "use_contract_editor": "false",
-    "embed": "false"
+    "embed": "false",
+    "markdown_instructions": "If you turn a little bit more or less than you normally would for a shape, it creates a neat effect. \r\n\r\n<br/>\r\nTry turning 89 degrees to create this twisted square spiral.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

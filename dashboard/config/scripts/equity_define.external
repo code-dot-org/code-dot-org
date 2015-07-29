@@ -1,0 +1,30 @@
+name 'Equity Define'
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Introduction to Equity > What is equity?
+
+#### What is "equity"?
+<br/>
+Watch this breif video, defining equity and why it's important:
+<iframe src="//voice.adobe.com/a/XRDvb/embed/" width="960" height="540" frameborder="0" allowfullscreen></iframe>
+<br><br>
+**[Can't see the video? Click here.](https://voice.adobe.com/a/XRDvb)**
+<br><br>
+#### What does “equity” mean in a classroom context?
+
+Equity in learning environments can be defined as legitimate and equal social and intellectual access to class content. This means that every learner should have a stake in, and be able to contribute to, class proceedings. Incoming privileged knowledge (i.e. knowing some CS ahead of time) should not advantage you in class (or more importantly, disadvantage others. Perhaps more simply put, “equity” in the classroom means [giving each student what he or she needs in the moment, not only creating a “fair” or “equal” learning environment](http://www.teachingblogaddict.com/2011/11/fair-isnt.html).
+<br><br>
+>## Reflect
+**What does "equity" mean to you?**
+<br><br>
+[Tweet your thoughts](https://twitter.com/teachcodeorg) and be sure to tag @teachcodeorg in your tweet so we can respond.
+<br>
+<a href="http://ctt.ec/y93J1" target="blank"><button class="default">Share on Twitter >></button></a><br><br>
+Don't have a Twitter account? [Find us](http://code.org/about) on the social media platform of your choice and post your response there.
+<br><br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

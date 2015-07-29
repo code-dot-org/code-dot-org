@@ -267,7 +267,7 @@
               </value>
               <statement name="DO">
                 <block type="procedures_callnoreturn" inline="false">
-                  <mutation name="draw a triangle wioth length">
+                  <mutation name="draw a triangle with length">
                     <arg name="length"/>
                   </mutation>
                   <value name="ARG0">
@@ -294,7 +294,7 @@
           <mutation>
             <arg name="length"/>
           </mutation>
-          <title name="NAME">draw a triangle wioth length</title>
+          <title name="NAME">draw a triangle with length</title>
           <statement name="STACK">
             <block type="controls_repeat_ext" inline="true" uservisible="false">
               <value name="TIMES">

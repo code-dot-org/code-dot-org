@@ -1,7 +1,7 @@
 "fi-FI":
   hello: Hei maailma
   select_language: Valitse kieli
-  computer_science: Tietotekniikka
+  en: Computer Science
   computer_science_edweek: Tietotekniikan koulutusviikko
   csedweek_dates: 8. -14. Joulukuuta 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -59,6 +59,7 @@
   congratulations: Onneksi olkoon!
   congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta
   get_a_certificate_of_achievement: Hanki todistus suorituksesta
+  enter_valid_age: Please select a valid age
   enter_valid_email: Ole hyvä ja syötä toimiva sähköpostiosoite
   get_a_certificate_message: Me lähetämme sinulle todistuksen ja lisätietoa miten
     voit  <a href='/learn/beyond'>opiskella lisää Koodaustunnilla oppimasi lisäksi</a>

@@ -1296,7 +1296,8 @@ Studio.init = function(config) {
       idealBlockNumber: undefined,
       editCode: level.editCode,
       blockCounterClass: 'block-counter-default',
-      inputOutputTable: level.inputOutputTable
+      inputOutputTable: level.inputOutputTable,
+      readonlyWorkspace: config.readonlyWorkspace
     }
   });
 

@@ -26,34 +26,48 @@ LAUSD teachers enrolled in the Computer Science Principles program have been ass
 
 ## Exploring Computer Science
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours)
 
-The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-</br>
-</br>
+Milestone complete!
 
-**Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)**
+### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-Milestone Complete!
+In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study. 
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+
 **Save the Dates**
 
-10/17/2015
-</br>
-12/12/2015
-</br>
-2/20/2016
-</br>
-4/16/2016
+Quarter 1: Saturday, October 17, 2015 
+
+Quarter 2: Saturday, December 12, 2015 
+
+Quarter 3: Saturday, February 20, 2016 
+
+Quarter 4: Saturday, April 16, 2016
 
 8:30am - 3:30pm
-</br>
+<br/>
 Breakfast and lunch will be served.
 
+**Location**
 
-**Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)**
+TBD
+
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
+
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
 More info coming soon!
 
@@ -64,43 +78,18 @@ More info coming soon!
 
 ## CS in Algebra
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours)
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
+Milestone complete!
 
-**Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-### Save the dates
+In-person milestone complete! More info coming soon on your Phase 2 online portion. 
 
-Wednesday, June 17, 2015 - Friday, June 19, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served. 
-
-### Location
-
-Columbia Memorial Space Center
-<br/>
-12400 Columbia Way
-<br/>
-Downey, CA 90242
-
-### What do I bring to Phase 2? ###
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop
-
-</br>
-</br>
-
-**Phase 3: Academic Year Development (2 days in-person & ~10 hours online)**
+### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
 More info coming soon!
+
 
 [**Back to the top**](#top)
 
@@ -108,47 +97,42 @@ More info coming soon!
 
 ## CS in Science
 
-**Phase 1: Online Introduction (~2 hours)**
+### Phase 1: Online Introduction (~2 hours) ##
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Science course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
+Milestone complete!
 
-**Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)**
+### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online)
 
-### Save the dates
+In-person milestone complete! More info coming soon on your Phase 2 online portion. 
 
-Monday, June 15, 2015 - Wednesday, June 17, 2015
-<br/>
+### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)
+
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+**Save the dates:**
+
+Semester 1: Saturday, October 17, 2015
+
+Semester 2: Saturrday, February 20, 2016 
+
 8:00am - 4:00pm
-<br />
+</br>
+<br/>
 Breakfast and lunch will be served. 
 
-### Location
+**Location**
 
-STEM Academy of Hollywood
-<br/>
-Room 415
-<br/>
-1309 N Wilton Pl
-<br/>
-Los Angeles, CA 90028
+TBD
 
-Parking Information: Enter parking lot on Fountain Ave. and park in tandem in a STEM Academy parking spot. The school advises you put your phone number on a piece of paper on your dashboard as parking is tight and you can sometime block people in.
+**What to bring to Phase 3 bi-yearly sessions:**
 
-### What do I bring to Phase 2? ###
-Water Bottle
-<br />
-Snacks
-<br />
 Laptop
-
-</br>
-</br>
-
-**Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)**
-
-More info coming soon!
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
 
 
 [**Back to the top**](#top)
