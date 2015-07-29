@@ -178,7 +178,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
   private
 
   def record_exists(table_name, record_id)
-    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{@table_name}"
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{table_name}/#{record_id}"
     200 == @net_sim_api.last_response.status
   end
 
