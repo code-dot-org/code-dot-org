@@ -75,7 +75,7 @@ class AssetsApi < Sinatra::Base
 
     content_type :json
     category = mime_type.split('/').first
-    {filename:filename, category:category, size:body.length}.to_json
+    {filename: filename, category: category, size: body.length}.to_json
   end
 
   #
