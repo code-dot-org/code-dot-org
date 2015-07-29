@@ -62,6 +62,13 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     bag1.delete_all
     assert_nil bag1.get('foo')
     assert_equal empty_hash, bag1.to_hash
+
+    # Test increment_counter.
+    assert_equal 1, bag2.increment_counter('foo_counter')
+    assert_equal 1, bag2.increment_counter('bar_counter')
+    assert_equal 2, bag2.increment_counter('foo_counter')
+    assert_equal 3, bag2.increment_counter('foo_counter')
+    assert_equal 2, bag2.increment_counter('bar_counter')
   end
 
 end
@@ -99,6 +106,12 @@ class FakeRedisClient
   def hdel(key, field)
     value = get_hash_for_key(key).delete(field)
     value ? 1 : 0
+  end
+
+  def hincrby(key, name, increment)
+    hash = get_hash_for_key(key)
+    hash[name] ||= 0  # Initialize new counters to 0.
+    hash[name] += 1  # Return incremented counter.
   end
 
 end
