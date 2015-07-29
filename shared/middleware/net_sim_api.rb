@@ -161,7 +161,7 @@ class NetSimApi < Sinatra::Base
           insert(JSON.parse(request.body.read), request.ip)
 
       if table_name == TABLE_NAMES[:message]
-        node_exists = get_table(TABLE_NAMES[:node]).to_a.contains do |node|
+        node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
           node['id'] == value['simulatedBy']
         end
         unless node_exists
