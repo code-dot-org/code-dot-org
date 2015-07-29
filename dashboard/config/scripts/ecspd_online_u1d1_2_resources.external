@@ -4,7 +4,7 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## What is a Computer?
+## What Is a Computer?
 
 Unit 1, Days 1-2 tackles the question of what a computer actually is. Consider how you might introduce this concept to your students.
 

@@ -144,6 +144,10 @@ Calc.init = function(config) {
   config.pinWorkspaceToBottom = true;
   config.hasVerticalScrollbars = true;
 
+  // We don't want icons in instructions
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+
   config.html = page({
     assetUrl: studioApp.assetUrl,
     data: {

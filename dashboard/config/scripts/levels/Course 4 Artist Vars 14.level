@@ -13,11 +13,11 @@
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "free_play": "true",
-    "instructions": "Free Play: Check it out, now your algorithm is nested within one more loop. Experiment with changing the values of the your two variables to draw cool patterns.",
+    "instructions": "Free Play: Check it out! Now your algorithm is nested within one more loop. Experiment with changing the values of your two variables to draw cool patterns.",
     "disable_variable_editing": "true",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "impressive": "false",
+    "impressive": "true",
     "embed": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -26,7 +26,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "scrollbars": "true",
+    "markdown_instructions": "**Free Play**: Check it out! Now your algorithm is nested within one more loop. Experiment with changing the values of your two variables to draw cool patterns."
   }
 }]]></config>
   <blocks>

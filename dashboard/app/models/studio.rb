@@ -14,7 +14,6 @@ class Studio < Grid
     coordinate_grid_background
     free_play
     disable_sharing
-    generate_function_pass_blocks
     timeout_after_when_run
     custom_game_type
     complete_on_success_condition_not_goals
@@ -341,7 +340,10 @@ class Studio < Grid
   <block type="functional_background_dropdown" />
 </category>
 <category name ="Functional Cond">
-  <block type="functional_cond" />
+  <block type="functional_cond_number" />
+  <block type="functional_cond_string" />
+  <block type="functional_cond_image" />
+  <block type="functional_cond_boolean" />
 </category>
 
 #{k1_blocks(type) if is_k1 == 'true'}

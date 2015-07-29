@@ -1,41 +1,24 @@
 ---
-title: Office Hours for Teachers
+title: Live Events for Teachers
 
 ---
 
-# Office Hours for Teachers
+# Live Events for Teachers
 
-Do you have a question about Code.org's curricula that you'd like answered by a Code.org staff member or teacher that has used Code.org courses with their students? Visit Code.org's Office Hours, which is a monthly, 1-hour videochat to help you use our curriculum with your students. Hope to see you there!
+Code.org hosts regular, free virtual events for our community. Check [our Eventbrite page](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577) for upcoming events.
+<br><br>
+<img src="/images/sotm31.jpg" width=“80%”/>
+<br><br>
+<a href="http://www.eventbrite.com/o/codeorg-teacher-community-8317327577" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=17789364468" alt="Eventbrite - Code.org Teacher Community" /></a>
+<br><br>
 
-All sessions will be recorded and available on this page, so if you can't make a session, you can still watch a session afterwards. 
+## Course-specific Monthly Meetings
 
-## Schedule
+Code.org hosts monthly meetings for each of our curriculum programs. If you’re currently enrolled in one of our programs, your attendance at the monthly meeting is **highly recommended**. Learn more and register for the meetings that interest you below:
 
-**More dates coming for 2015! 
-Follow [@teachcodeorg](http://twitter.com/teachcodeorg) for updates or visit [teacherblog.code.org](http://teacherblog.code.org)**
+- [Exploring Computer Science Monthly Meetings Schedule](/educate/ecs-201516meetings)
+- *More course meetings coming soon!*
 
-## Past Events
-Thursday, November 6, 2014 • 5 p.m. *PT* / 1 hr [View Recording](http://youtu.be/Jb2xhFeNvG4)
-
-Thursday, December 4, 2014 • 5 p.m. *PT* / 1 hr [View Recording](https://www.youtube.com/watch?v=Lmr5Sfhk8rM&feature=youtu.be)
-
-Wednesday, March 11, 2015 • 5 p.m. *PT* / 1 hr *Recording Coming Soon*
-
-Wednesday, April 8, 2015 • 5 p.m. *PT* / 1 hr * *Recording Coming Soon*
-
-Wednesday, May 6, 2015 • 5 p.m. *PT* / 1 hr *Recording Coming Soon*
-
-## FAQ: Office Hours 
-**Do I need a special account or login to join?**
-
-No. You don't need to create an account to join our office hours. You don't have to pre-register. 
-
-To join:
-
-- Click the link of the office hours you'd like to attend; try to arrive 5-10 minutes before the session begins.  
--  Download a plug-in if necessary (you'll be prompted to do this if necessary)
-- Enter Name
-- Unblock plug-ins (see image below)
-- Click "Enter Meeting"
-
-<img src="/images/joinbluejeans.png" width=1000px />
+Can’t make a particular event that interests you? Don’t worry! All events are recorded and archived. Anyone who registers will receive an email with a link to the recording after the session ends.
+<br><br>
+<p><a href="http://www.eventbrite.com/o/codeorg-teacher-community-8317327577" target="_blank">Find a complete list of our upcoming and past events here &gt;&gt;</a></p>

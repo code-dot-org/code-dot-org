@@ -1,3 +1,6 @@
+/**
+ * @overview Wraps remote storage interface and polling behavior.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -14,7 +17,6 @@
 
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
-var netsimGlobals = require('./netsimGlobals');
 var clientApi = require('@cdo/shared/clientApi');
 
 /**
@@ -28,17 +30,32 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * Wraps the app storage table API in an object with local
  * cacheing and callbacks, which provides a notification API to the rest
  * of the NetSim code.
+ * @param {!PubSubChannel} channel - The pubsub channel used to listen for changes.
+ * @param {!string} shardID - The shard ID specific to this class' NetSim instance.
  * @param {!string} tableName - The name of the remote storage table to wrap.
  * @constructor
+ * @throws {Error} if wrong number of arguments are provided.
  */
-var NetSimTable = module.exports = function (tableName) {
+var NetSimTable = module.exports = function (channel, shardID, tableName) {
+  // Require channel, shardID and tableName to be provided
+  if (!channel || !shardID || !tableName) {
+    throw new Error('NetSimTable must be constructed with all arguments. ' +
+        '(got channel:' + channel + ' shardID:' + shardID + ' tableName:' + tableName);
+  }
+
+  /**
+   * @type {PubSubChannel}
+   * @private
+   */
+  this.channel_ = channel;
+  this.channel_.subscribe(tableName, NetSimTable.prototype.onPubSubEvent.bind(this));
+
   /**
    * Base URL we hit to make our API calls
    * @type {string}
    * @private
    */
-  this.remoteUrl_ = '/v3/shared-tables/' + netsimGlobals.getChannelPublicKey() +
-      '/' + tableName;
+  this.remoteUrl_ = '/v3/netsim/' + shardID + '/' + tableName;
 
   /**
    * API object for making remote calls
@@ -262,4 +279,12 @@ NetSimTable.prototype.tick = function () {
     this.lastFullUpdateTime_ = now;
     this.readAll(function () {});
   }
+};
+
+/**
+ * Called when the PubSub service fires an event that this table is subscribed to.
+ * @param {Object} eventData
+ */
+NetSimTable.prototype.onPubSubEvent = function () {
+  this.readAll(function () {});
 };

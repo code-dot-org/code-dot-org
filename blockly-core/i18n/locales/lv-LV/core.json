@@ -23,7 +23,7 @@
   "COLOUR_RGB_RED": "sarkanās krāsas",
   "COLOUR_RGB_TITLE": "krāsa ar",
   "COLOUR_RGB_TOOLTIP": "Izveido krāsu ar norādīto daudzumu sarkanās, zaļās un zilās krāsas.  Visām vērtībām jābūt no 0 līdz 100.",
-  "CONTRACT_EDITOR_HEADER": "Design Recipe",
+  "CONTRACT_EDITOR_HEADER": "Dizaina Recepte",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "pārtraukt ciklu",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_CONTINUE": "turpināt ar nākamo cikla soli",

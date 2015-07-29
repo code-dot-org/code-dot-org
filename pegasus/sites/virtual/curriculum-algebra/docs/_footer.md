@@ -6,12 +6,13 @@
 <summary>Standards Alignment</summary>
 
 <% standards.each do |family| %>
-### <%= family[0] %>
+<h3><%= family[0] %></h3>
+<ul>
 <% family[1].each do |standard| %>
-- **<%= standard[:id_s] %>** - <%= standard[:desc_t] %>
+<li><b><%= standard[:id_s] %></b> - <%= standard[:desc_t] %></li>
 <% end %>
+</ul>
 <% end %>
-
 </details>
 
 [/standards]

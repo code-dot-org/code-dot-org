@@ -1,3 +1,7 @@
+/**
+ * @overview Represents a collection of tables that map to a particular
+ *           class section's simulation, isolated from other class sections.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
@@ -12,6 +16,7 @@
 'use strict';
 
 var NetSimTable = require('./NetSimTable');
+var PubSubService = require('./PubSubService');
 
 /**
  * A shard is an isolated, complete simulation state shared by a subset of
@@ -21,28 +26,33 @@ var NetSimTable = require('./NetSimTable');
  * the same App ID.
  *
  * @param {!string} shardID
+ * @param {!PubSubConfig} pubSubConfig
  * @constructor
  */
-var NetSimShard = module.exports = function (shardID) {
+var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   /** @type {string} */
   this.id = shardID;
 
-  /** @type {NetSimTable} */
-  this.nodeTable = new NetSimTable(shardID + '_n');
+  /** @type {PubSubService} */
+  this.pubSub = PubSubService.create(pubSubConfig);
+  var channel = this.pubSub.subscribe(shardID);
 
   /** @type {NetSimTable} */
-  this.wireTable = new NetSimTable(shardID + '_w');
+  this.nodeTable = new NetSimTable(channel, shardID, 'n');
 
   /** @type {NetSimTable} */
-  this.messageTable = new NetSimTable(shardID + '_m');
+  this.wireTable = new NetSimTable(channel, shardID, 'w');
+
+  /** @type {NetSimTable} */
+  this.messageTable = new NetSimTable(channel, shardID, 'm');
   this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
-  this.logTable = new NetSimTable(shardID + '_l');
+  this.logTable = new NetSimTable(channel, shardID, 'l');
   this.logTable.setPollingInterval(10000);
 
   /** @type {NetSimTable} */
-  this.heartbeatTable = new NetSimTable(shardID + '_h');
+  this.heartbeatTable = new NetSimTable(channel, shardID, 'h');
 };
 
 /**

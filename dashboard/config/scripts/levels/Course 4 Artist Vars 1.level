@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you help me draw a triangle? It's 100 pixels long on each side.",
+    "instructions": "Can you help me draw an equilateral triangle? It has to be exactly 100 pixels long on each side.",
     "x": "150",
     "y": "225",
     "start_direction": "90",

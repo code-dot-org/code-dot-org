@@ -29,7 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Draw the other half of this design so it's symmetrical. The triangles are equilateral and are 50 pixels long.  \r\nHint: You may have to run the code several times to figure out all of the blocks that need to be added."
+    "markdown_instructions": "Draw the other half of this design so it's symmetrical. The triangles are equilateral and are 50 pixels long.  \r\n*Hint: You may have to run the code several times to figure out all of the blocks that need to be added.*"
   }
 }]]></config>
   <blocks>

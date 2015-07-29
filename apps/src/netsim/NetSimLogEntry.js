@@ -1,3 +1,6 @@
+/**
+ * @overview Simulation entity for router log entries.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

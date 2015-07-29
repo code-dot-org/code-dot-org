@@ -14306,7 +14306,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   }
   this.blockEvents = new goog.events.EventTarget
 };
-Blockly.Block.EVENTS = {AFTER_DISPOSED:"afterDisposed"};
+Blockly.Block.EVENTS = {AFTER_DISPOSED:"afterDisposed", AFTER_DROPPED:"afterDropped"};
 Blockly.Block.prototype.svg_ = null;
 Blockly.Block.prototype.mutator = null;
 Blockly.Block.prototype.comment = null;
@@ -14377,6 +14377,7 @@ Blockly.Block.terminateDrag_ = function() {
       selected.setDragging_(false);
       selected.render();
       goog.Timer.callOnce(selected.bumpNeighbours_, Blockly.BUMP_DELAY, selected);
+      selected.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DROPPED);
       Blockly.fireUiEvent(window, "resize")
     }
   }
@@ -15712,7 +15713,7 @@ Blockly.Flyout.prototype.position_ = function() {
 Blockly.Flyout.prototype.isVisible = function() {
   return this.svgGroup_.style.display == "block"
 };
-Blockly.Flyout.prototype.hide = function() {
+Blockly.Flyout.prototype.hide = function(opt_saveBlock) {
   if(!this.isVisible()) {
     return
   }
@@ -15725,12 +15726,11 @@ Blockly.Flyout.prototype.hide = function() {
     Blockly.unbindEvent_(this.reflowWrapper_);
     this.reflowWrapper_ = null
   }
-  var blocks = this.blockSpace_.getTopBlocks(false);
-  for(var x = 0, block;block = blocks[x];x++) {
-    if(block.blockSpace == this.blockSpace_) {
+  this.blockSpace_.getTopBlocks(false).forEach(function(block) {
+    if(block !== opt_saveBlock) {
       block.dispose(false, false)
     }
-  }
+  });
   for(var x = 0, rect;rect = this.buttons_[x];x++) {
     goog.dom.removeNode(rect)
   }
@@ -15925,7 +15925,10 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
     var xyNew = Blockly.getSvgXY_(svgRootNew, block.blockSpace.blockSpaceEditor.svg_);
     block.moveBy(xyOld.x - xyNew.x, xyOld.y - xyNew.y);
     if(flyout.autoClose) {
-      flyout.hide()
+      flyout.hide(originBlock);
+      block.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DROPPED, function() {
+        originBlock.dispose(false, false)
+      })
     }else {
       flyout.filterForCapacity_()
     }
@@ -18842,7 +18845,7 @@ Blockly.Procedures.flyoutCategory = function(blocks, gaps, margin, blockSpace, o
     var newCallBlock = Blockly.Procedures.createCallerBlock(blockSpace, procedureDefinitionInfo);
     blocks.push(newCallBlock);
     gaps.push(margin * 2);
-    if(Blockly.generateFunctionPassBlocks) {
+    if(!!Blockly.editBlocks) {
       var newPassBlock = Blockly.Procedures.createFunctionPassingBlock(blockSpace, procedureDefinitionInfo);
       blocks.push(newPassBlock);
       gaps.push(margin * 2)
@@ -24526,8 +24529,8 @@ Blockly.parseOptions_ = function(options) {
   }
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
-  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, generateFunctionPassBlocks:options["generateFunctionPassBlocks"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, disableExamples:options["disableExamples"] || 
-  false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
+  }, hasCategories:hasCategories, hasScrollbars:hasScrollbars, hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, disableExamples:options["disableExamples"] || false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 
+  0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
 };
 Blockly.registerUISounds_ = function(audioPlayer) {
   audioPlayer.register({id:"click", mp3:Blockly.assetUrl("media/click.mp3"), wav:Blockly.assetUrl("media/click.wav"), ogg:Blockly.assetUrl("media/click.ogg")});

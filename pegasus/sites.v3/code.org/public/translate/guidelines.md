@@ -27,7 +27,12 @@ If any mathematical (or other) symbols are inappropriate in your language but ar
 Code that shows up in peach or green like `var x = 2;`, `&quot;`, `%{keyword}` should not be translated. There is also the case when you might see text such as `{ outside text { inside text } outside text }`. Notice the two sets of curly braces. Translate the inside text, but do not translate the outside text. And for consistency, leep the same capitalization and punctuation of our strings.
 
 ### Use Informal Style
-The tone is informal and conversational, and we prefer short phrases to long ones, such as "if path ahead" instead of "if there is a path ahead". Translations do not need to be exact.
+The tone is informal and conversational, and we prefer short phrases to long ones, such as "if path ahead" instead of "if there is a path ahead". Translations do not need to be exact. You can use informal tone for the tutorials (since these are targeted for younger students) and formal tone for everything else.
+
+* Blockly-core and everything in blockly-mooc is tutorial related and can be casual. 
+* Dashboard: dsls, instructions, scripts, slides, unplugged are tutorial related and can be casual.
+* Dashboard: base, data, and devise are strings you encounter throughout Code Studio like resetting your password. Since it's outside of the tutorials themselves and is seen by both teachers and students, keep it formal.
+* Pegasus/mobile.yml is for the homepage, code.org/learn, and the teacher dashboard so keep it formal. 
 
 ### CrowdIn Etiquette
 As a translator, please do not submit a translation that is identical to another user's submission. If you think a proofreader has made a mistake, please leave a comment in the comment section to bring it to their attention. As a proofreader, please do not delete translations.

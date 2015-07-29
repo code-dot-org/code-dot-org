@@ -1,3 +1,7 @@
+/**
+ * @overview a modal dialog showing the union of all router logs for the
+ *           current shard.
+ */
 /* jshint
  funcscope: true,
  newcap: true,

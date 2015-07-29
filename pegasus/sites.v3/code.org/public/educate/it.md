@@ -16,6 +16,7 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 | **Optional**    | `https://cdn.optimizely.com`<br/>`https://www.google-analytics.com` |
 | **To use YouTube hosted videos**   | `https://s.youtube.com/*`<br/>`https://www.youtube.com/*`<br/>`https://*.googlevideo.com`<br/>`https://*.ytimg.com` |
 | **To use Code.org hosted videos**   | **Unblock:**<br/>`https://videos.code.org`<br/>**Block:**<br/>`https://www.youtube.com/favicon.ico` |
+| **To use Internet Simulator**   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com` |
 
 ### Hardware
 

@@ -1,3 +1,6 @@
+/**
+ * @overview Nodes in the visualization that map to simulation entities.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
