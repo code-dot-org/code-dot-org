@@ -370,7 +370,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
     this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
   }
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
+  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
@@ -1054,6 +1054,8 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   }
 
   // Shard changes almost ALWAYS require a re-render
+  this.visualization_.setShard(shard);
+  this.visualization_.setLocalNode(localNode);
   this.render();
 };
 
