@@ -254,7 +254,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
 
     // Add a handler that allows the workspace to bump blocks back into their
     // working area.
-    this.addChangeListener(this.bumpBlocksIntoBlockSpace_);
+    this.addChangeListener(this.bumpBlocksIfNotDragging);
   }
 
   /**
@@ -327,17 +327,25 @@ Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
 };
 
 /**
- * When using flyout (as opposed to category toolbox mode):
- * 1. bump out-of-bounds blocks back in
- * 2. delete blocks on top of flyout
- * @private
+ * If a drag operation is not active, bumps blocks into the BlockSpace.
  */
-Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace_ = function() {
+Blockly.BlockSpaceEditor.prototype.bumpBlocksIfNotDragging = function() {
   // Immediately return if dragging, to avoid expensive calculations
   if (Blockly.Block.isDragging()) {
     return;
   }
 
+  this.bumpBlocksIntoBlockSpace();
+};
+
+/**
+ * Bumps blocks back in to BlockSpace area.
+ * If BUMP_ENTIRE_BLOCK is true, bumps entire block back in.
+ * If BUMP_ENTIRE_BLOCK is false, bumps just enough for block to be grippable
+ *     within a padded inner area.
+ * @private
+ */
+Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace = function() {
   // Can't bump if we don't know our workspace dimensions
   var metrics = this.blockSpace.getMetrics();
   if (!metrics) {

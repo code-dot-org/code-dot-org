@@ -36,7 +36,7 @@ function test_blockSpaceBumpsBlocks() {
 
   numberBlock.moveTo(-10, -10);
   assertEquals(-10, numberBlock.getRelativeToSurfaceXY().x);
-  Blockly.mainBlockSpaceEditor.bumpBlocksIntoBlockSpace_();
+  Blockly.mainBlockSpaceEditor.bumpBlocksIntoBlockSpace();
   assertEquals(Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT, numberBlock.getRelativeToSurfaceXY().x);
   assertEquals(Blockly.BlockSpaceEditor.BUMP_PADDING_TOP, numberBlock.getRelativeToSurfaceXY().y);
 

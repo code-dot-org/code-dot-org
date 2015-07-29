@@ -285,6 +285,7 @@ Blockly.Block.terminateDrag_ = function() {
     // Terminate a drag operation.
     if (selected) {
       selected.blockSpace.clearPickedUpBlockOrigin();
+      selected.blockSpace.stopAutoScrolling();
       // Update the connection locations.
       var xy = selected.getRelativeToSurfaceXY();
       var dx = xy.x - selected.startDragX;
@@ -297,7 +298,8 @@ Blockly.Block.terminateDrag_ = function() {
       goog.Timer.callOnce(
           selected.bumpNeighbours_, Blockly.BUMP_DELAY, selected);
       selected.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DROPPED);
-      selected.blockSpace.stopAutoScrolling();
+      selected.blockSpace.blockSpaceEditor.bumpBlocksIntoBlockSpace();
+      selected.blockSpace.scrollIntoView(selected);
 
       // Fire an event to allow scrollbars to resize.
       Blockly.fireUiEvent(window, 'resize');
@@ -315,12 +317,6 @@ Blockly.Block.terminateDrag_ = function() {
   }
 
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
-
-  if (selected) {
-    // Bump block if necessary and ensure scrolled into view
-    selected.blockSpace.blockSpaceEditor.bumpBlocksIntoBlockSpace_();
-    selected.blockSpace.scrollIntoView(selected);
-  }
 };
 
 /**
