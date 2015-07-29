@@ -265,6 +265,7 @@
       free_play:
         playlab: Crie um aplicativo
         artist: Desenhe alguma coisa
+        calculate: Calculate Something
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
