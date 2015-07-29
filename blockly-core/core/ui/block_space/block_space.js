@@ -988,6 +988,16 @@ Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
 };
 
 /**
+ * Returns whether there any scrolling is currently possible on the BlockSpace
+ * (i.e., scrollbars should be visible, panning/dragging should have an effect).
+ * @returns {boolean} true if the BlockSpace can currently be scrolled.
+ */
+Blockly.BlockSpace.prototype.currentlyScrollable = function() {
+  var maxOffsets = this.getMaxScrollOffsets();
+  return maxOffsets.x > 0 || maxOffsets.y > 0;
+};
+
+/**
  * Returns the maximum possible scrolling offsets (+x right, +y down) for
  * this blockspace.
  * @returns {{x: number, y: number}}
