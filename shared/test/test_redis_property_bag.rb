@@ -21,9 +21,9 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
 
     # A unique suffix to ensure that each run uses a fresh key when running
     # against real Redis.
-    uniquifier = Random.rand
-    bag1 = RedisPropertyBag.new(redis, "bag1_#{uniquifier}")
-    bag2 = RedisPropertyBag.new(redis, "bag2_#{uniquifier}")
+    suffix = Random.rand
+    bag1 = RedisPropertyBag.new(redis, "bag1_#{suffix}")
+    bag2 = RedisPropertyBag.new(redis, "bag2_#{suffix}")
 
     # Make sure the bag initially has nothing in it.
     assert_nil bag1.get('foo')
