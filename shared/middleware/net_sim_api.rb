@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
-require 'shared/middleware/helpers/redis_property_bag'
+require '../../shared/middleware/helpers/redis_property_bag'
 
 class NetSimApi < Sinatra::Base
 
@@ -23,13 +23,20 @@ class NetSimApi < Sinatra::Base
   @@overridden_pub_sub_api = nil
 
   def initialize
-    @redis = Redis.new()
-
+    @redis = create_redis_client
   end
 
-  def get_table(shard_id, table_name)
+  # Creates a new Redis client.
+  # @return [Redis]
+  # @private
+  def create_redis_client
+    Redis.new(host: 'localhost')
+  end
 
-    return RedisPropertyBag.new(redis, "#{shard_id}_#{table_name}")
+  # Returns a property bag for the given shard_id and table_name.
+  # @return [RedisPropertyBag]
+  def get_props(shard_id, table_name)
+    RedisPropertyBag.new(@redis, "#{shard_id}_#{table_name}")
   end
 
   # Get the Pub/Sub API interface for the current configuration
@@ -58,7 +65,7 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    get_table(shard_id, table_name).to_a.to_json
+    get_props(shard_id, table_name).to_hash.values
   end
 
   #
@@ -69,20 +76,18 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     content_type :json
-    get_table(shard_id, table_name).fetch(id.to_i).to_json
+    get_props(shard_id, table_name)[id]
   end
 
   #
   # DELETE /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
   # Deletes a row by id.
-  #
   delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-    table = get_table(shard_id, table_name)
-    int_id = id.to_i
-    table.delete(int_id)
-    get_pub_sub_api.publish(shard_id, table_name, {:action => 'delete', :id => int_id})
+    props = get_props(shard_id, table_name)
+    props.delete(id)
+    get_pub_sub_api.publish(shard_id, table_name, {:action => 'delete', :id => id.to_i})
     no_content
   end
 
@@ -103,13 +108,17 @@ class NetSimApi < Sinatra::Base
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     unsupported_media_type unless has_json_utf8_headers(request)
 
+    # Validate JSON body.
     begin
-      value = get_table(shard_id, table_name).
-          insert(JSON.parse(request.body.read), request.ip)
-      get_pub_sub_api.publish(shard_id, table_name, {:action => 'insert', :id => value[:id]})
+      json = JSON.parse(request.body.read).to_json
     rescue JSON::ParserError
       bad_request
     end
+
+    props = get_props(shard_id, table_name)
+    new_row_id = props.increment_counter("row_id")
+    props.set(new_row_id, json)
+    get_pub_sub_api.publish(shard_id, table_name, {:action => 'insert', :id => new_row_id})
 
     dont_cache
     content_type :json
@@ -125,14 +134,16 @@ class NetSimApi < Sinatra::Base
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     unsupported_media_type unless has_json_utf8_headers(request)
 
+    # Validate JSON body.
     begin
-      table = get_table(shard_id, table_name)
-      int_id = id.to_i
-      value = table.update(int_id, JSON.parse(request.body.read), request.ip)
-      get_pub_sub_api.publish(shard_id, table_name, {:action => 'update', :id => int_id})
+      json = JSON.parse(request.body.read).to_json
     rescue JSON::ParserError
       bad_request
     end
+
+    props = get_props(shard_id, table_name)
+    props.set(id, json)
+    get_pub_sub_api.publish(shard_id, table_name, {:action => 'update', :id => id.to_i})
 
     dont_cache
     content_type :json
