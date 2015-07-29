@@ -6,11 +6,7 @@ require 'cdo/rack/request'
 class ChannelsApi < Sinatra::Base
 
   helpers do
-    [
-      'core.rb',
-      'storage_apps.rb',
-      'storage_id.rb',
-    ].each do |file|
+    %w(core.rb storage_apps.rb storage_id.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -20,7 +16,7 @@ class ChannelsApi < Sinatra::Base
       dont_cache
       content_type :json
       JSON.pretty_generate({
-        storage_id:storage_id('user'),
+        storage_id: storage_id('user'),
       })
     end
   end
@@ -72,10 +68,6 @@ class ChannelsApi < Sinatra::Base
 
     timestamp = Time.now
     id = storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
-
-    if src_channel
-      AssetsApi.copy_assets(src_channel, id)
-    end
 
     redirect "/v3/channels/#{id}", 301
   end

@@ -43,7 +43,9 @@
       %ul
         - @workshop[:segments].each do |segment|
           %li
-            #{segment}
+            #{segment[:start].strftime("%A, %B %d, %Y")}
+            %br
+            #{segment[:start].strftime("%I:%M %P")} - #{segment[:end].strftime("%H:%M %P")}
         %li
           Breakfast and lunch will be served.
     %td

@@ -23,8 +23,8 @@ def main()
       puts "Downloading #{url} to #{path}" if rack_env?(:development)
       IO.write(path, open(url).read)
     rescue => e
-      HipChat.log "Unable to download <b>#{url}<b> to <b>#{path}</b>", color:'yellow'
-      HipChat.log "/quote #{e}", message_format:'text'
+      HipChat.log "Unable to download <b>#{url}<b> to <b>#{path}</b>", color: 'yellow'
+      HipChat.log "/quote #{e}", message_format: 'text'
     end
   end
 end
