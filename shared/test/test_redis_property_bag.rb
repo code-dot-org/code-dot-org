@@ -47,11 +47,11 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     bag2.set("foo", "2")
     assert_equal "2", bag2.get("foo")
 
+    # Test delete.
     assert_equal true, bag1.delete("foo")
     assert_equal({"added" => "added value"}, bag1.to_hash)
     assert_equal true, bag1.delete("added")
     assert_equal(empty_hash, bag1.to_hash)
-
     begin
       bag1.delete("added")
       raise "Should have thrown"
@@ -59,6 +59,12 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
       # Expected.
     end
 
+    # Test increment_counter.
+    assert_equal 1, bag2.increment_counter("foo_counter")
+    assert_equal 1, bag2.increment_counter("bar_counter")
+    assert_equal 2, bag2.increment_counter("foo_counter")
+    assert_equal 3, bag2.increment_counter("foo_counter")
+    assert_equal 2, bag2.increment_counter("bar_counter")
   end
 
   # Create a redis client.
@@ -71,6 +77,7 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
       return FakeRedisClient.new()
     end
   end
+
 end
 
 # A fake redis client implementation that uses a local hash.
@@ -102,6 +109,13 @@ class FakeRedisClient
   def hdel(key, field)
     value = get_hash_for_key(key).delete(field)
     return value ? 1 : 0
+  end
+
+  def hincrby(key, name, increment)
+    hash = get_hash_for_key(key)
+    hash[name] ||= 0  # Initialize new counters to 0.
+    hash[name] += 1
+    return hash[name]
   end
 
 end
