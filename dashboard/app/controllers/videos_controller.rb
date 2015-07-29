@@ -80,10 +80,10 @@ class VideosController < ApplicationController
 
   def set_video_by_key
     key = params[:key]
-    # Create a temporary video object from default attributes if an entry isn't found in the DB
+    # Create a temporary video object from default attributes if an entry isn't found in the DB.
     @video = Video.find_by_key(key) ||
       Video.new(
-        key:key,
+        key: key,
         youtube_code: key,
         download: Video.download_url(key)
       )
@@ -94,7 +94,7 @@ class VideosController < ApplicationController
     params.require(:video).permit(:name, :key, :youtube_code)
   end
 
-  # this is to fix a ForbiddenAttributesError cancan issue
+  # This is to fix a ForbiddenAttributesError CanCan issue.
   prepend_before_filter do
     params[:video] &&= video_params
   end
