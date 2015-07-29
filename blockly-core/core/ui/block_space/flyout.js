@@ -697,10 +697,11 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
        */
       flyout.hide(originBlock);
       block.blockEvents.listenOnce(
-       Blockly.Block.EVENTS.AFTER_DROPPED,
-       function () {
-         originBlock.dispose(false, false);
-       });
+        Blockly.Block.EVENTS.AFTER_DROPPED,
+        function () {
+          originBlock.dispose(false, false);
+        }
+      );
     } else {
       flyout.filterForCapacity_();
     }
