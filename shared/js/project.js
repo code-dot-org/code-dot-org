@@ -284,10 +284,15 @@ var projects = module.exports = {
         current.name = 'My Project';
       }
     }
-    // Save, then do our remix on the server
-    projects.save(function () {
+    function redirectToRemix() {
       location.href = projects.getPathName('remix');
-    });
+    }
+    // If the user is the owner, save before remixing on the server.
+    if (current.isOwner) {
+      projects.save(redirectToRemix);
+    } else {
+      redirectToRemix();
+    }
   },
   delete: function(callback) {
     var channelId = current.id;
