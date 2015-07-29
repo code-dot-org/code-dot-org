@@ -120,19 +120,19 @@ class ScriptTest < ActiveSupport::TestCase
   test 'script_levels are in order' do
     script = create(:script)
     s1 = create(:stage, script: script, position: 1)
-    last = create(:script_level, script:script, stage:s1, chapter:3)
-    second = create(:script_level, script:script, stage:s1, chapter:2)
-    create(:script_level, script:script, stage:s1, chapter:1)
+    last = create(:script_level, script: script, stage: s1, chapter: 3)
+    second = create(:script_level, script: script, stage: s1, chapter: 2)
+    create(:script_level, script: script, stage: s1, chapter: 1)
     second.move_to_bottom
     last.move_to_bottom
 
     s2 = create(:stage, script: script, position: 2)
-    create(:script_level, script:script, stage:s2, chapter:4)
-    create(:script_level, script:script, stage:s2, chapter:5)
+    create(:script_level, script: script, stage: s2, chapter: 4)
+    create(:script_level, script: script, stage: s2, chapter: 5)
 
     s3 = create(:stage, script: script, position: 3)
-    last = create(:script_level, script:script, stage:s3, chapter:7)
-    create(:script_level, script:script, stage:s3, chapter:6)
+    last = create(:script_level, script: script, stage: s3, chapter: 7)
+    create(:script_level, script: script, stage: s3, chapter: 6)
     last.move_to_bottom
 
     assert_equal [1, 2, 3], script.stages.collect(&:position)
