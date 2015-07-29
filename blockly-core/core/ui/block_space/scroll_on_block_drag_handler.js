@@ -28,14 +28,13 @@ goog.require('Blockly.AutoScroll');
 goog.require('goog.math.Vec2');
 
 /**
- * @param {!Blockly.ScrollOnBlockDragHandler} blockSpace
+ * @param {!Blockly.BlockSpace} blockSpace
  * @constructor
  */
 Blockly.ScrollOnBlockDragHandler = function (blockSpace) {
   /**
    * BlockSpace to scroll
-   * @type {Blockly.BlockSpace}
-   * @private
+   * @private {Blockly.BlockSpace}
    */
   this.blockSpace_ = blockSpace;
 
