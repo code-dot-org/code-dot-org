@@ -112,6 +112,15 @@ NetSimMessage.send = function (shard, messageData, onComplete) {
 };
 
 /**
+ * Static helper.
+ * @param {NetSimMessage} message
+ * @returns {boolean} TRUE iff the given message is well-formed.
+ */
+NetSimMessage.isValid = function (message) {
+  return /^[01]*$/.test(message.payload);
+};
+
+/**
  * Helper that gets the wires table for the configured instance.
  * @returns {NetSimTable}
  */

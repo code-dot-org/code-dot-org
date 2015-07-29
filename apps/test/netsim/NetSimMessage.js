@@ -46,6 +46,17 @@ describe("NetSimMessage", function () {
     assertEqual(row.visitedNodeIDs, []);
   });
 
+  describe ("isValid static check", function () {
+    it ("is minimally valid with a payload", function () {
+      assert(!NetSimMessage.isValid({}));
+      assert(NetSimMessage.isValid({ payload: '' }));
+    });
+
+    it ("passes given a default-constructed NetSimMessage", function () {
+      assert(NetSimMessage.isValid(new NetSimMessage()));
+    });
+  });
+
   it ("converts messageRow.base64Payload to local binary payload", function () {
     var message = new NetSimMessage(testShard, {
       fromNodeID: 1,
