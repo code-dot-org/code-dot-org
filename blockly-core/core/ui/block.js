@@ -283,6 +283,7 @@ Blockly.Block.terminateDrag_ = function() {
   if (Blockly.Block.isFreelyDragging()) {
     // Terminate a drag operation.
     if (selected) {
+      selected.blockSpace.clearPickedUpBlockOrigin();
       // Update the connection locations.
       var xy = selected.getRelativeToSurfaceXY();
       var dx = xy.x - selected.startDragX;
@@ -294,6 +295,8 @@ Blockly.Block.terminateDrag_ = function() {
       selected.render();
       goog.Timer.callOnce(
           selected.bumpNeighbours_, Blockly.BUMP_DELAY, selected);
+      selected.blockSpace.stopAutoScrolling();
+
       // Fire an event to allow scrollbars to resize.
       Blockly.fireUiEvent(window, 'resize');
     }
@@ -308,7 +311,14 @@ Blockly.Block.terminateDrag_ = function() {
     // If not, at least trigger a cursor change on blocks.
     Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, null);
   }
+
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
+
+  if (selected) {
+    // Bump block if necessary and ensure scrolled into view
+    selected.blockSpace.blockSpaceEditor.bumpBlocksIntoBlockSpace_();
+    selected.blockSpace.scrollIntoView(selected);
+  }
 };
 
 /**
@@ -518,6 +528,26 @@ Blockly.Block.prototype.moveBy = function(dx, dy) {
 };
 
 /**
+ * Gets box dimensions of block
+ * @returns {goog.math.Box}
+ */
+Blockly.Block.prototype.getBox = function() {
+  var heightWidth = this.getHeightWidth();
+  var xy = this.getRelativeToSurfaceXY();
+
+  // Account for left notch
+  if (this.outputConnection) {
+    xy.x -= Blockly.BlockSvg.TAB_WIDTH;
+  }
+
+  return new goog.math.Box(
+    xy.y,
+    xy.x + heightWidth.width,
+    xy.y + heightWidth.height,
+    xy.x);
+};
+
+/**
  * Returns a bounding box describing the dimensions of this block.
  * @return {!Object} Object with height and width properties.
  */
@@ -697,7 +727,7 @@ Blockly.Block.prototype.onMouseUp_ = function(e) {
     }
   } else if (Blockly.selected &&
       Blockly.selected.areBlockAndDescendantsDeletable() &&
-      thisBlockSpace.isDeleteArea(e, this.startDragMouseX)) {
+      thisBlockSpace.isDeleteArea(e.clientX, e.clientY, this.startDragMouseX)) {
     // The ordering of the statement above is important because isDeleteArea()
     // has a side effect of opening the trash can.
     var trashcan = thisBlockSpace.trashcan;
@@ -1038,25 +1068,10 @@ Blockly.Block.prototype.moveToFrontOfMainCanvas_ = function () {
   this.blockSpace.moveElementToMainCanvas(this.svg_.getRootElement());
 };
 
-/**
- * Drag this block to follow the mouse.
- * @param {!Event} e Mouse move event.
- * @private
- */
-Blockly.Block.prototype.onMouseMove_ = function(e) {
-  if (e.type == 'mousemove' && e.clientX <= 1 && e.clientY == 0 &&
-      e.button == 0) {
-    /* HACK:
-     Safari Mobile 6.0 and Chrome for Android 18.0 fire rogue mousemove events
-     on certain touch actions. Ignore events with these signatures.
-     This may result in a one-pixel blind spot in other browsers,
-     but this shouldn't be noticable. */
-    e.stopPropagation();
-    return;
-  }
+Blockly.Block.prototype.moveBlockBeingDragged_ = function (mouseX, mouseY) {
   Blockly.removeAllRanges();
-  var dx = e.clientX - this.startDragMouseX;
-  var dy = e.clientY - this.startDragMouseY;
+  var dx = mouseX - this.startDragMouseX;
+  var dy = mouseY - this.startDragMouseY;
 
   if (Blockly.Block.dragMode_ == Blockly.Block.DRAG_MODE_INSIDE_STICKY_RADIUS) {
     // Still dragging within the sticky DRAG_RADIUS.
@@ -1069,6 +1084,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
       this.setParent(null);
       this.setDraggingHandleImmovable_(true, firstImmovableBlockHandler);
       this.moveToDragCanvas_();
+      this.blockSpace.recordPickedUpBlockOrigin();
       this.blockSpace.recordDeleteAreas();
     }
   }
@@ -1082,7 +1098,7 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
     for (var i = 0; i < this.draggedBubbles_.length; i++) {
       var commentData = this.draggedBubbles_[i];
       commentData.bubble.setIconLocation(commentData.x + dx,
-                                         commentData.y + dy);
+        commentData.y + dy);
     }
 
     // Check to see if any of this block's connections are within range of
@@ -1103,14 +1119,14 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
 
     // Remove connection highlighting if needed.
     if (Blockly.highlightedConnection_ &&
-        Blockly.highlightedConnection_ != closestConnection) {
+      Blockly.highlightedConnection_ != closestConnection) {
       Blockly.highlightedConnection_.unhighlight();
       Blockly.highlightedConnection_ = null;
       Blockly.localConnection_ = null;
     }
     // Add connection highlighting if needed.
     if (closestConnection &&
-        closestConnection != Blockly.highlightedConnection_) {
+      closestConnection != Blockly.highlightedConnection_) {
       closestConnection.highlight();
       Blockly.highlightedConnection_ = closestConnection;
       Blockly.localConnection_ = localConnection;
@@ -1118,9 +1134,29 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
     // Provide visual indication of whether the block will be
     // deleted if dropped here.
     if (this.areBlockAndDescendantsDeletable()) {
-      this.blockSpace.isDeleteArea(e, this.startDragMouseX);
+      this.blockSpace.isDeleteArea(mouseX, mouseY, this.startDragMouseX);
     }
   }
+};
+
+/**
+ * Drag this block to follow the mouse.
+ * @param {!Event} e Mouse move event.
+ * @private
+ */
+Blockly.Block.prototype.onMouseMove_ = function(e) {
+  if (e.type == 'mousemove' && e.clientX <= 1 && e.clientY == 0 &&
+      e.button == 0) {
+    /* HACK:
+     Safari Mobile 6.0 and Chrome for Android 18.0 fire rogue mousemove events
+     on certain touch actions. Ignore events with these signatures.
+     This may result in a one-pixel blind spot in other browsers,
+     but this shouldn't be noticable. */
+    e.stopPropagation();
+    return;
+  }
+  this.moveBlockBeingDragged_(e.clientX, e.clientY);
+  this.blockSpace.panIfOverEdge(this, e.clientX, e.clientY);
   // This event has been handled.  No need to bubble up to the document.
   e.stopPropagation();
 };

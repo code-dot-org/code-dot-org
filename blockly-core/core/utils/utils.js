@@ -29,6 +29,7 @@ goog.provide('Blockly.utils');
 goog.require('goog.array');
 goog.require('goog.memoize');
 goog.require('goog.events');
+goog.require('goog.math.Rect');
 
 /**
  * Add a CSS class to a element.
@@ -404,16 +405,40 @@ Blockly.mouseToSvg = function(e, opt_svgParent) {
 /**
  * Return the converted coordinates of the given mouse coordinates.
  * The origin (0,0) is the top-left corner of the Blockly svg.
- * @param {number} x Mouse client X.
- * @param {number} y Mouse client Y.
- * @param {Element=} Target element.
- * @return {!Object} Object with .x and .y properties.
+ * @param {number} clientX Mouse client X.
+ * @param {number} clientY Mouse client Y.
+ * @param {Element=} target element.
+ * @return {Object} coordinate with .x and .y properties.
  */
 Blockly.mouseCoordinatesToSvg = function(clientX, clientY, target) {
   return Blockly.convertCoordinates(
       clientX + window.pageXOffset,
       clientY + window.pageYOffset,
       target, true);
+};
+
+/**
+ * Converts given SVG coordinates to blockspace coordinates
+ * @param {goog.math.Coordinate} coordinates
+ * @param {Blockly.BlockSpace} blockSpace
+ * @returns {goog.math.Coordinate}
+ */
+Blockly.svgCoordinatesToViewport = function(coordinates, blockSpace) {
+  return new goog.math.Coordinate(
+    coordinates.x - blockSpace.getMetrics().absoluteLeft,
+    coordinates.y);
+};
+
+/**
+ * Converts given SVG coordinates to blockspace coordinates
+ * @param {goog.math.Coordinate} coordinates
+ * @param {Blockly.BlockSpace} blockSpace
+ * @returns {goog.math.Coordinate}
+ */
+Blockly.viewportCoordinateToBlockSpace = function(coordinates, blockSpace) {
+  var viewportBox = blockSpace.getViewportBox();
+  return new goog.math.Coordinate(coordinates.x + viewportBox.left,
+    coordinates.y + viewportBox.top);
 };
 
 /**
@@ -626,3 +651,106 @@ Blockly.getNormalizedWheelDeltaY = function (e) {
   return wheelDeltaY;
 };
 
+/**
+ * Given an outer box, returns a box with the amounts of an inner box's overflow
+ * on each side.
+ * @param {goog.math.Box} outerBox
+ * @param {goog.math.Box} innerBox
+ * @return {goog.math.Box} overflow on each side, (+) is amount hanging off
+ */
+Blockly.getBoxOverflow = function (outerBox, innerBox) {
+  return new goog.math.Box(
+    Math.max(0, outerBox.top - innerBox.top),
+    Math.max(0, innerBox.right - outerBox.right),
+    Math.max(0, innerBox.bottom - outerBox.bottom),
+    Math.max(0, outerBox.left - innerBox.left));
+};
+
+/**
+ * Gets a point's distance outside each side (or negative if inside box)
+ * @param {goog.math.Box} outerBox
+ * @param {goog.math.Coordinate} innerPoint
+ * @return {goog.math.Box} distances to each side, from point's perspective
+ */
+Blockly.getPointBoxOverflow = function (outerBox, innerPoint) {
+  return new goog.math.Box(
+    outerBox.top - innerPoint.y,
+    innerPoint.x - outerBox.right,
+    innerPoint.y - outerBox.bottom,
+    outerBox.left - innerPoint.x);
+};
+
+/**
+ * @param {goog.math.Box} boxA
+ * @param {goog.math.Box} boxB
+ * @returns {boolean} whether boxA is wider than boxB
+ */
+Blockly.isBoxWiderThan = function (boxA, boxB) {
+  return Blockly.getBoxWidth(boxA) > Blockly.getBoxWidth(boxB);
+};
+
+/**
+ * @param {goog.math.Box} boxA
+ * @param {goog.math.Box} boxB
+ * @returns {boolean} whether boxA is taller than boxB
+ */
+Blockly.isBoxTallerThan = function (boxA, boxB) {
+  return Blockly.getBoxHeight(boxA) > Blockly.getBoxHeight(boxB);
+};
+
+/**
+ * @param {goog.math.Box} box
+ * @return {number} width of box
+ */
+Blockly.getBoxWidth = function (box) {
+  return box.right - box.left;
+};
+
+/**
+ * @param {goog.math.Box} box
+ * @return {number} height of box
+ */
+Blockly.getBoxHeight = function (box) {
+  return box.bottom - box.top;
+};
+
+/**
+ * @param {number} number
+ * @param {number} min
+ * @param {number} max
+ * @param {boolean} inclusive
+ * @return {boolean} whether given number is within range
+ */
+Blockly.numberWithin = function (number, min, max, inclusive) {
+  return inclusive?
+    (number >= min && number <= max) :
+    (number > min && number < max);
+};
+
+/**
+ * @param {SVGRect} svgRect
+ * @returns {goog.math.Rect}
+ */
+Blockly.svgRectToRect = function (svgRect) {
+  return new goog.math.Rect(svgRect.x, svgRect.y, svgRect.width,
+    svgRect.height);
+};
+
+/**
+ * Direction properties for goog.math.Boxes
+ * @type {string[]}
+ */
+Blockly.BOX_DIRECTIONS = ['top', 'right', 'bottom', 'left'];
+
+/**
+ * Given a box, adds a given amount to any non-zero side.
+ * @param {goog.math.Box} box
+ * @param {number} amount
+ */
+Blockly.addToNonZeroSides = function (box, amount) {
+  Blockly.BOX_DIRECTIONS.forEach(function (direction) {
+    if (box[direction] !== 0) {
+      box[direction] += amount;
+    }
+  });
+};
