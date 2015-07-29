@@ -12,7 +12,18 @@ class VideosController < ApplicationController
 
   def embed
     set_video_by_key
-    render layout: false, locals: {video: @video}
+    if current_user.try(:admin?) && !Rails.env.production? && !Rails.env.test?
+      params[:fallback_only] = true
+      begin
+        Youtube.process @video.key
+      rescue Exception => e
+        render layout: 'application', text: "Error: #{e}. Contact an engineer for support", status: 500 and raise e
+      end
+    end
+    video_info = @video.summarize(params.has_key?(:autoplay))
+    video_info[:enable_fallback] = !params.has_key?(:youtube_only)
+    video_info[:force_fallback] = params.has_key?(:fallback_only)
+    render layout: false, locals: {video_info: video_info}
   end
 
   def index

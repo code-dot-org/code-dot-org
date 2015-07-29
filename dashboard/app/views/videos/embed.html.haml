@@ -1,9 +1,7 @@
 / This view creates a page that transparently provides fallback-player support to the specified YouTube video.
-/ See VideosController#embed for usage
+/ See VideosController#embed for usage.
 !!! 5
-- video = local_assigns[:video]
-- process_fallback_videos = current_user.try(:admin?) && !(Rails.env.production? || Rails.env.test?)
-- Youtube.process(video.key) if process_fallback_videos
+- video_info = local_assigns[:video_info]
 %head
   = stylesheet_link_tag    'video-js', media: 'all'
   = javascript_include_tag 'video/video'
@@ -38,7 +36,4 @@
     var width = $(window).width();
     var height = $(window).height();
 
-    var videoInfo = #{video.summarize(params.has_key?(:autoplay)).to_json};
-    videoInfo['enable_fallback'] = #{!params.has_key?(:youtube_only)};
-    videoInfo['force_fallback'] = #{params.has_key?(:fallback_only) || process_fallback_videos};
-    $('#video-container').append(createVideoWithFallback(videoInfo, width, height));
+    $('#video-container').append(createVideoWithFallback(#{video_info.to_json}, width, height));
