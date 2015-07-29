@@ -2,9 +2,9 @@
 # making it available for viewing through Code.org's fallback video player.
 
 # Dependency requirements:
-# viddl-rb (`gem install viddl-rb`) - for downloading the video
-# ffmpeg (`brew install ffmpeg` / `apt-get install ffmpeg`) - for transcoding local videos
-# s3_access_key_id and s3_secret_access_key defined (e.g. in `locals.yml`)
+# - viddl-rb (`gem install viddl-rb`) - for downloading the video
+# - ffmpeg (`brew install ffmpeg` / `apt-get install ffmpeg`) - for transcoding local videos
+# - s3_access_key_id and s3_secret_access_key defined (e.g. in `locals.yml`)
 
 require 'cdo/aws/s3'
 require 'tmpdir'
@@ -31,7 +31,7 @@ class Youtube
 
     Dir.mktmpdir do |dir|
       if filename
-        # Run ffmpeg to transcode local file
+        # Run ffmpeg to transcode local file.
         output_file = "#{dir}/#{id}.mp4"
         cmd = "ffmpeg -i #{filename} #{%w(
           -acodec aac
@@ -45,7 +45,7 @@ class Youtube
           -s 640x360
         ).join(' ')} #{output_file}"
       else
-        # Run viddl-rb to download transcoded video from YouTube
+        # Run viddl-rb to download transcoded video from YouTube.
         url = "https://www.youtube.com/watch?v=#{id}"
         cmd = "viddl-rb #{url} -s #{dir} -q 640:360:mp4"
       end
