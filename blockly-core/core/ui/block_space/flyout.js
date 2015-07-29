@@ -343,8 +343,9 @@ Blockly.Flyout.prototype.isVisible = function() {
 
 /**
  * Hide and empty the flyout.
+ * @param {?Blockly.Block} opt_saveBlock - block to not immediately destroy
  */
-Blockly.Flyout.prototype.hide = function() {
+Blockly.Flyout.prototype.hide = function(opt_saveBlock) {
   if (!this.isVisible()) {
     return;
   }
@@ -360,12 +361,11 @@ Blockly.Flyout.prototype.hide = function() {
     this.reflowWrapper_ = null;
   }
   // Delete all the blocks.
-  var blocks = this.blockSpace_.getTopBlocks(false);
-  for (var x = 0, block; block = blocks[x]; x++) {
-    if (block.blockSpace == this.blockSpace_) {
+  this.blockSpace_.getTopBlocks(false).forEach(function (block) {
+    if (block !== opt_saveBlock) {
       block.dispose(false, false);
     }
-  }
+  });
   // Delete all the background buttons.
   for (var x = 0, rect; rect = this.buttons_[x]; x++) {
     goog.dom.removeNode(rect);
@@ -694,7 +694,18 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
         block.blockSpace.blockSpaceEditor.svg_);
     block.moveBy(xyOld.x - xyNew.x, xyOld.y - xyNew.y);
     if (flyout.autoClose) {
-      flyout.hide();
+      /**
+       * We need to avoid destroying the currently dragged block
+       * until the active touchmove event is completed (block dropped)
+       * @see https://neil.fraser.name/news/2014/08/09/
+       */
+      flyout.hide(originBlock);
+      block.blockEvents.listenOnce(
+        Blockly.Block.EVENTS.AFTER_DROPPED,
+        function () {
+          originBlock.dispose(false, false);
+        }
+      );
     } else {
       flyout.filterForCapacity_();
     }

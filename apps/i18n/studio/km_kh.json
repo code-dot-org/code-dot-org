@@ -151,7 +151,7 @@
   "projectileCherry": "cherry",
   "projectileIce": "ice",
   "projectileDuck": "duck",
-  "reinfFeedbackMsg": "អ្នក​អាច​ចុច​ប៊ូតុង \"ព្យាយាម​ម្ដង​ទៀត\" ដើម្បី​ត្រឡប់​ទៅ​ការ​លេង​សាច់​រឿង​របស់​អ្នក។",
+  "reinfFeedbackMsg": "You can press the \"Keep Playing\" button to go back to playing your story.",
   "repeatForever": "ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត",
   "repeatDo": "ធ្វើ",
   "repeatForeverTooltip": "អនុវត្ត​សកម្មភាព​នៅ​ក្នុង​ប្លុក​នេះ​ឡើង​វិញ​ដដែលៗ អំឡុង​ពេលសាច់​រឿង​កំពុង​ដើរ។",

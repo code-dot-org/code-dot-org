@@ -258,16 +258,14 @@ html[dir='rtl'] #codeWorkspace {
   border-top: 1px solid #ddd;
 }
 
-#codeWorkspace.readonly:after { /* gray overlay when workspace is read only */
-  content: "";
-  display: block;
-  position: absolute;
-  top: $workspace-headers-height;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-  background-color: rgba(0,0,0,0.1);
+// #codeWorkspace.readonly is used when we are displaying a workspace but it iss not editable (like someone else project)
+#codeWorkspace.readonly {
+  // special cases for:
+  .blocklySvg, // blockly
+  .droplet-main-scroller, // droplet block view
+  .ace_scroller, { // droplet code view
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
@@ -1327,6 +1325,8 @@ $workspace-header-button-margin: ($workspace-headers-height -
 .share-fail-excerpt .generatedCode {
   font-size: 14px;
 }
+
+// body.readonly is used in cases where we are just displaying uneditable blocks (like feedback dialogs) with no workspace
 
 body.readonly {
   margin: 0;

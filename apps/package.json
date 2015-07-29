@@ -51,6 +51,7 @@
     "grunt-sass": "~1.0.0",
     "grunt-strip-code": "~0.1.2",
     "handlebars-runtime": "~1.0.12",
+    "http-proxy": "~1.11.1",
     "jquery": "^2.1.4",
     "jquery-ui": "^1.10.5",
     "jsdom": "0.8.6",
@@ -76,6 +77,7 @@
     "watchify": "^2.2.1",
     "which": "^1.0.9",
     "wrench": "~1.5.8",
-    "xmldom": "~0.1.19"
+    "xmldom": "~0.1.19",
+    "Base64": "^0.3.0"
   }
 }

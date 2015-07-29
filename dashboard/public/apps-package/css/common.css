@@ -174,16 +174,7 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly:after {
-  /* gray overlay when workspace is read only */
-  content: "";
-  display: block;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
+#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {

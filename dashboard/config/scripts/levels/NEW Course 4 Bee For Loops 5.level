@@ -18,10 +18,19 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
     "ideal": "9",
-    "instructions": "You can also use a for loop to count down. Try gathering this nectar by counting down from 5 to 1 by 1.",
+    "instructions": "You can also use a \"for loop\" to count down. Try gathering this nectar by counting down from 5 to 1 by 1.",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"actions_category\",\"callout_text\":\"The tool box got a new look! The \\\"Actions\\\" blocks are in here now.\",\"element_id\":\".blocklyTreeRow:eq(1)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]"
+    "callout_json": "[\r\n  {\"localization_key\":\"actions_category\",\"callout_text\":\"The tool box got a new look! The \\\"Actions\\\" blocks are in here now.\",\"element_id\":\".blocklyTreeRow:eq(1)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "markdown_instructions": "You can also use a `for loop` to count down. Try gathering this nectar by counting down from 5 to 1 by 1.",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

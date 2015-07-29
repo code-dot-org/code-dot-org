@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Modify this algorithm so it uses the \"sides\" variable instead of a fixed number to draw a triangle. Use the \"set sides to\" block.",
+    "instructions": "Modify this algorithm so it uses the \"sides\" variable instead of a fixed number to draw a triangle. Don't forget to use the \"set sides to\" block.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -23,7 +23,7 @@
     "ideal": "11",
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"set_sides\",\"callout_text\":\"Use this block to set \\\"sides\\\" to the number needed to complete the puzzle.\",\"element_id\":\"#set_sides_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
-    "markdown_instructions": "Modify this algorithm so it uses the `sides` variable instead of a fixed number to draw a triangle. Use the `set sides to` block.",
+    "markdown_instructions": "Modify this algorithm so it uses the `sides` variable instead of a fixed number to draw a triangle. Don't forget to use the `set sides to` block.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

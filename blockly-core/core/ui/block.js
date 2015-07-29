@@ -135,7 +135,8 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
  * @enum {string}
  */
 Blockly.Block.EVENTS = {
-  AFTER_DISPOSED: 'afterDisposed'
+  AFTER_DISPOSED: 'afterDisposed',
+  AFTER_DROPPED: 'afterDropped'
 };
 
 /**
@@ -295,6 +296,7 @@ Blockly.Block.terminateDrag_ = function() {
       selected.render();
       goog.Timer.callOnce(
           selected.bumpNeighbours_, Blockly.BUMP_DELAY, selected);
+      selected.blockEvents.dispatchEvent(Blockly.Block.EVENTS.AFTER_DROPPED);
       selected.blockSpace.stopAutoScrolling();
 
       // Fire an event to allow scrollbars to resize.

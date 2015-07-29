@@ -142,6 +142,7 @@ class DynamoTable
   def fetch(id)
     row = db.get_item(
       table_name:CDO.dynamo_tables_table,
+      consistent_read: true,
       key:{'hash'=>@hash, 'row_id'=>id},
     ).item
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless row
@@ -260,6 +261,7 @@ class DynamoTable
       begin
         page = db.query(
           table_name:CDO.dynamo_tables_table,
+          consistent_read: true,
           key_conditions: {
             "hash" => {
               attribute_value_list: [@hash],

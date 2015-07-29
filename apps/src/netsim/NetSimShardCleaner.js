@@ -1,3 +1,6 @@
+/**
+ * @overview Client-driven clean-up system for old/orphaned rows.
+ */
 /* jshint
  funcscope: true,
  newcap: true,
