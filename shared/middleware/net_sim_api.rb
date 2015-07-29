@@ -69,6 +69,34 @@ class NetSimApi < Sinatra::Base
     get_table(shard_id, table_name).fetch(id.to_i).to_json
   end
 
+  # Delete all wires associated with (locally or remotely) a given node_id
+  #
+  # @param [String] shard_id
+  # @param [Integer] node_id
+  def delete_wires_for_node(shard_id, node_id)
+    wire_table = get_table(shard_id, 'w')
+    wires = wire_table.to_a.select do |wire|
+      wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+    end
+    wires.each do |wire|
+      wire_table.delete(wire['id'])
+    end
+  end
+
+  # Delete all messages simulated by a given node_id
+  #
+  # @param [String] shard_id
+  # @param [Integer] node_id
+  def delete_messages_for_node(shard_id, node_id)
+    message_table = get_table(shard_id, 'm')
+    messages = message_table.to_a.select do |message|
+      message['simulatedBy'] == node_id
+    end
+    messages.each do |message|
+      message_table.delete(message['id'])
+    end
+  end
+
   #
   # DELETE /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
@@ -80,17 +108,9 @@ class NetSimApi < Sinatra::Base
     int_id = id.to_i
 
     if table_name == 'n'
-      # Cascade!
-      # remove wires
-      wire_table = get_table(shard_id, 'w')
-      wires = wire_table.to_a.select do |wire|
-        wire['localNodeID'] == int_id or wire['remoteNodeID'] == int_id
-      end
-      wires.each do |wire|
-        wire_table.delete(wire['id'])
-      end
-
-      # remove messages
+      # Cascade deletions
+      delete_wires_for_node(shard_id, int_id)
+      delete_messages_for_node(shard_id, int_id)
     end
 
     table.delete(int_id)
