@@ -485,8 +485,11 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
   }, this);
 };
 
-Blockly.ContractEditor.prototype.registerTestHandlers = function(testHandler, testResetHandler) {
+Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
   this.testHandler_ = testHandler;
+};
+
+Blockly.ContractEditor.prototype.registerTestResetHandler = function (testResetHandler) {
   this.testResetHandler_ = testResetHandler;
 };
 
