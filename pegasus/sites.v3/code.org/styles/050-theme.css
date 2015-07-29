@@ -129,92 +129,10 @@ body {
 
 
 /* styling for the embedded dashboard components... */
-
 #user_hero #contents {
-  margin-top: 20px;
-  padding-left:5px;
-  padding-right:5px;
-}
-#user_hero #welcome {
-  left: 0px;
-  color: white;
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
-  text-align: left;
-  font-family: 'Gotham 5r', sans-serif;
-  text-align: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-#user_hero button {
-  border: none;
-}
-
-#user_hero button.teacher {
-  background-color: rgb(0, 148, 202);
-}
-
-#user_hero button.student {
-  background-color: #7665a0;
-}
-
-#user_hero #welcome.teacher {
-  background-color: #0094ca;
-}
-
-#user_hero #welcome.student {
-  background-color: #7665a0;
-}
-
-#user_hero #body {
-  overflow: hidden;
-  padding: 10px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-#user_hero #body #student {
+  margin: 10px 0px;
   padding-left: 5px;
-}
-
-#user_hero #body.teacher {
-  background-color: #59b9dc;
-  color: white;
-}
-
-#user_hero #body.student {
-  background-color: #ebe8f1;
-}
-
-#user_hero #student_progress {
-  font-family: 'Gotham 5r', sans-serif;
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero a {
-  font-family: 'Gotham 4r', sans-serif;
-}
-
-#user_hero #left_off {
-  font-family: 'Gotham 5r', sans-serif;
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero #classroom {
-  font-family: 'Gotham 5r', sans-serif;
-}
-
-#user_hero #student_count {
-  width: 175px;
-  display: inline-block;
-}
-
-#user_hero #teacherarea {
-  padding: 5px;
+  width: 100%;
 }
 
 #sign_in_or_user .button-signin {
