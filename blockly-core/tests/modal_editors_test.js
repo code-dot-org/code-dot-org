@@ -71,7 +71,7 @@ function test_functionEditorDoesntBumpBlocksInMainBlockspace() {
 
   openFunctionEditor();
 
-  Blockly.modalBlockSpaceEditor.bumpBlocksIntoBlockSpace_();
+  Blockly.modalBlockSpaceEditor.bumpBlocksIntoBlockSpace();
 
   assertEquals("Opening function editor doesn't bump main block",
     viewportHeight, numberBlock.getRelativeToSurfaceXY().y);
