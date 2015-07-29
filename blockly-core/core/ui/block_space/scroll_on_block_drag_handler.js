@@ -121,6 +121,12 @@ Blockly.ScrollOnBlockDragHandler.DEBUG = false;
 Blockly.ScrollOnBlockDragHandler.prototype.panIfOverEdge = function (block,
                                                                      mouseClientX,
                                                                      mouseClientY) {
+  if (!this.blockSpace_.currentlyScrollable()) {
+    // Don't perform potentially expensive panning calculations if not currently
+    // scrollable
+    return;
+  }
+
   var SCROLLABLE_DIRECTIONS = [];
 
   if (this.blockSpace_.scrollbarPair &&
