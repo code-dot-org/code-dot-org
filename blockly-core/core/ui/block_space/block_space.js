@@ -1065,8 +1065,9 @@ Blockly.BlockSpace.prototype.debugRects_ = {};
 Blockly.BlockSpace.prototype.drawDebugBox = function (key, box, color) {
   var rect = goog.math.Rect.createFromBox(box);
   if (!this.debugRects_[key]) {
-   this. debugRects_[key] = Blockly.createSvgElement('rect', {
-      fill: 'none'
+    this.debugRects_[key] = Blockly.createSvgElement('rect', {
+      fill: 'none',
+      style: 'pointer-events: none'
     }, this.svgDebugCanvas_);
   }
   this.svgDebugCanvas_.setAttribute('transform', this.svgBlockCanvas_.getAttribute('transform'));
@@ -1099,8 +1100,9 @@ Blockly.BlockSpace.prototype.drawDebugCircle = function (key, coordinate, color)
    this.debugCircles_[key] = Blockly.createSvgElement('circle', {
      cx: "50",
      cy: "50",
-     r: "50"
-    }, this.svgDebugCanvas_);
+     r: "50",
+     style: 'pointer-events: none'
+   }, this.svgDebugCanvas_);
   }
   this.svgDebugCanvas_.setAttribute('transform', this.svgBlockCanvas_.getAttribute('transform'));
   var debugSvgRect = this.debugCircles_[key];
@@ -1109,3 +1111,18 @@ Blockly.BlockSpace.prototype.drawDebugCircle = function (key, coordinate, color)
   debugSvgRect.setAttribute('r', radius);
   debugSvgRect.setAttribute('fill', color);
 };
+
+/**
+ * Removes and clears list of debug drawings
+ */
+Blockly.BlockSpace.prototype.clearDebugDrawings = function () {
+  [this.debugCircles_, this.debugRects_].forEach(function (debugDict) {
+    for (var key in debugDict) {
+      var svg = debugDict[key];
+      goog.dom.removeNode(svg);
+    }
+  });
+  this.debugCircles_ = {};
+  this.debugRects_ = {};
+};
+
