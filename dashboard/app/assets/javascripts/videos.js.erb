@@ -1,10 +1,10 @@
 
-function createVideoWithFallback(options, width, height) {
+function createVideoWithFallback(parentElement, options, width, height) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
   video.width(width).height(height);
+  parentElement.append(video);
   setupVideoFallback(options, width, height);
-  return video;
 }
 
 function createVideo(options) {
@@ -127,6 +127,7 @@ function stopTrackingVideoJSProgress() {
   fallbackPlayer.stopTrackingCurrentTime();
 }
 
+// Precondition: $('#video') must exist on the DOM before this function is called.
 function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {
   shouldStillAddCallback = shouldStillAddCallback || function() { return true };
 
@@ -135,11 +136,7 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
   }
 
   if (videoInfo['force_fallback']) {
-    // this and the below setTimeout wrapper work around a load-ordering issue, see detailed comment:
-    // https://github.com/code-dot-org/code-dot-org/pull/3260#discussion_r35707401
-    setTimeout(function() {
-      addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
-    }, 0);
+    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
     return;
   }
 
@@ -147,9 +144,7 @@ function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAdd
     if (!shouldStillAddCallback()) {
       return;
     }
-    setTimeout(function() {
-      addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
-    }, 0);
+    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
   });
 }
 
@@ -164,6 +159,7 @@ function youTubeAvailabilityEndpointURL() {
   return "https://www.youtube.com/favicon.ico";
 }
 
+// Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
   var playerCode =
