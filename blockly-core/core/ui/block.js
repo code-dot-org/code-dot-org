@@ -1093,7 +1093,7 @@ Blockly.Block.prototype.moveBlockBeingDragged_ = function (mouseX, mouseY) {
     var x = this.startDragX + dx;
     var y = this.startDragY + dy;
     this.svg_.getRootElement().setAttribute('transform',
-      'translate(' + x + ', ' + y + ')');
+        'translate(' + x + ', ' + y + ')');
     // Drag all the nested bubbles.
     for (var i = 0; i < this.draggedBubbles_.length; i++) {
       var commentData = this.draggedBubbles_[i];

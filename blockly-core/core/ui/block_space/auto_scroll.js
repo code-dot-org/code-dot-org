@@ -19,7 +19,6 @@
 
 /**
  * @fileoverview Represents an active, update-able automatic scroll behavior.
- * @author fraser@google.com (Neil Fraser)
  */
 'use strict';
 
@@ -36,15 +35,13 @@ goog.require('goog.async.AnimationDelay');
 Blockly.AutoScroll = function (blockSpace, startPanVector) {
   /**
    * BlockSpace to scroll
-   * @type {!Blockly.BlockSpace}
-   * @private
+   * @private {!Blockly.BlockSpace}
    */
   this.blockSpace_ = blockSpace;
 
   /**
-   * Current active auto-pan vector in x/y pixels per second
-   * @type {goog.math.Vec2}
-   * @private
+   * Current active auto-pan vector in x/y pixels per millisecond
+   * @private {goog.math.Vec2}
    */
   this.activePanVector_ = startPanVector;
 
@@ -79,11 +76,14 @@ Blockly.AutoScroll.prototype.handleAnimationDelay_ = function (now) {
   this.animationDelay_.start();
 };
 
+/**
+ * Perform scroll given time passed
+ * @param msPassed
+ * @private
+ */
 Blockly.AutoScroll.prototype.scrollTick_ = function (msPassed) {
-  var xPixelsPerMs = (this.activePanVector_.x / 1000);
-  var yPixelsPerMs = (this.activePanVector_.y / 1000);
-  var scrollDx = xPixelsPerMs * msPassed;
-  var scrollDy = yPixelsPerMs * msPassed;
+  var scrollDx = this.activePanVector_.x * msPassed;
+  var scrollDy = this.activePanVector_.y * msPassed;
   this.blockSpace_.scrollDeltaWithAnySelectedBlock(scrollDx, scrollDy,
     this.lastMouseX_, this.lastMouseY_);
 };
