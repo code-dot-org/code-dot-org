@@ -18,7 +18,7 @@ class VideosController < ApplicationController
       begin
         Youtube.process @video.key
       rescue Exception => e
-        render layout: 'application', text: "Error: #{e}. Contact an engineer for support", status: 500 and raise e
+        render layout: false, text: "Error processing video: #{e}. Contact an engineer for support.", status: 500 and return
       end
     end
     video_info = @video.summarize(params.has_key?(:autoplay))
