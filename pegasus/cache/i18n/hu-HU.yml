@@ -1,7 +1,7 @@
 "hu-HU":
   hello: Helló világ
   select_language: Válassz nyelvet
-  en: Computer Science
+  en: Számítógép-tudomány
   computer_science_edweek: Számítógép Tudomány Oktatási Hét
   csedweek_dates: 2014. december 8-14
   csedweek_banner_hoc: 'Hamarosan itt a <a href="http://hourofcode.com" style="color:
@@ -62,7 +62,7 @@
   congratulations: Gratulálok!
   congratulations_on_completing_hoc: Gratulálunk egy Kód Órája befejezéséhez
   get_a_certificate_of_achievement: Kapjon egy bízonyítványt teljesítményéért
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Kérlek válassz egy érvényes életkort
   enter_valid_email: Adj meg egy érvényes e-mail címet
   get_a_certificate_message: Küldünk önnek egy tanúsítványt, és további információkat
     Önnek arról, hogy hogyan <a href='/learn/beyond'>tanuljon a Kód Óráján túl</a>
@@ -319,14 +319,14 @@
   dashboard_landing_available_title: Elérhető kurzusok
   dashboard_landing_available_courses: Ezek a jelenleg elérhető kurzusok Neked és
     diákjaid számára.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_landing_more_tutorials: Szeretnél még több gyakorlatot megnézni?
+  dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">Partnereink még több</a>
+    gyakorlatot kínálnak. Ezeken megtanulhatod a robotok programozását, weboldalt
+    készíthetsz, elkészítheted saját alkalmazásodat, és felfedezhetsz olyan programnyelveket,
+    mint a C++, a Ruby és a Python!
+  dashboard_hoc_courses: A Kódolás órája minden életkornak szól
+  dashboard_hoc_courses_desc: Próbáld ki az alábbi egy órás gyakorlatokat a diákjaiddal!
+  dashboard_k5_courses: 20 órás tanfolyamok alsó tagozatosoknak
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -334,28 +334,29 @@
     get started, we offer high quality professional development workshops around the
     U.S. free of charge. <a href="/professional-development-workshops">Find one near
     you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: 20 órás tanfolyamok felső tagozatosoknak
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: Éves középiskolás tanfolyamok
   dashboard_high_courses_desc: Our high school program helps school districts offer
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
     a <a href="/educate/districts">district-wide partnership</a> with Code.org.
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
-    curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
-    an introduction to computer science concepts within the context of modeling and
-    simulation.
+  dashboard_course_csina_desc: A Code.org partner kapcsolatban áll a a Bootstrap-al,
+    amely kidolgozott egy tantervet, amely megtanítja az algebrai és geomertiai fogalmakat
+    a számítógépes programozásban.
+  dashboard_course_csins: Számítógép-tudomány a tudományok között
+  dashboard_course_csins_desc: A Code.org partner kapcsolatban áll a GUTS projekttel,
+    amely bevezetést ad a számítógép tudomány fogalmak közé modellezés és szimuláció
+    segítségével.
   dashboard_course_ecs: A számítástechnika felfedezése
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp: Az AP® számítástechnika alapelvei
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Betöltés...
@@ -437,12 +438,14 @@
     oldalát:'
   dashboard_students_print_info: Nyomtasd ki a diákjaid belépési adatait tartalmazó
     kártyákat.
-  dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: Titkos kép
+  dashboard_students_secret_picture_title: Titkos kép
+  dashboard_students_secret_picture: Ez a szakasz titkos típusú <b>képet</b> használ.
+    Ez azt jelenti, hogy a diákok a képet jelszó segítségével tekinthetik meg. A diákoknak
+    be kell hozzá jelentkezniük a fenti webcímen.
   dashboard_students_reset_picture: A <b>Titok mutatása</b>, majd a <b>Titok beállítása</b>
     kiválasztásával bármikor újra beállíthatod egy diák titkos képét. A diák bejelentkezéséhez
     egy új kép készül.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Titkos szó
   dashboard_students_secret_word: Titkos szó
   dashboard_students_reset_word: 'A <b>Titok mutatása</b>, majd a <b>Titok beállítása</b>
     kiválasztásával bármikor új titkos szót állíthat be egy diák számára. Ilyenkor
@@ -457,18 +460,18 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kattints
     ide</a> az adatkezelési dokumentumhoz, amit kinyomtathatsz a diákoknak, vagy megoszthatsz
     velük.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: K-5 pedagógus források
+  dashboard_curriculum_middle_title: Középiskolai pedagógus források
+  dashboard_curriculum_high_title: Középiskola pedagógus források
+  dashboard_lesson_plans: Óravázlat
   dashboard_view_all_lesson_plans: Az összes lecke áttekintése
   dashboard_course1: 'Első kurzus:'
   dashboard_course2: 'Második kurzus:'
   dashboard_course3: 'Harmadik kurzus:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: '4. tanfolyam (béta): '
+  dashboard_curriculum: Tanterv
   dashboard_curriculum_overview: K-5 (alsó tagozatos) tananyag áttekintés
-  dashboard_overview: Overview
+  dashboard_overview: Összefoglaló
   dashboard_sequence: Sorozat
   dashboard_framework: Keretrendszer
   dashboard_standards: Sztenderdek
@@ -479,10 +482,10 @@
   dashboard_puzzle_solving: 'Feladvány fejtés:'
   dashboard_student_worksheet: diák munkafüzet
   dashboard_teacher_worksheet: tanár munkalap
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csina: 'A számítógépes-tudomány az algebrában:'
+  dashboard_curriculum_csins: 'A számítógép-tudomány a tudományok között:'
+  dashboard_curriculum_csp: 'Az AP® számítástechnika alapelvei:'
+  dashboard_curriculum_ecs: 'A számítástechnika felfedezése:'
   dashboard_grade_k: K
   dashboard_grade_other: Egyéb
   dashboard_login_word: Szó
@@ -514,7 +517,7 @@
   dashboard_sections_login_type_explanation: Ez a táblázat segít kiválasztani a szekciódnak
     megfelelőt a <b>kép, szó vagy e-mail</b> azonosítási típusok közül.
   dashboard_faq: Gyakran ismételt kérdések
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
   code_hoc_coming: Megkezdődött a Kódolás Órája - December 8-14.
   code_sign_up: Jelentkezz, hogy részt vehess a programon a számítástechnika-oktatás
     hete keretében
@@ -1211,7 +1214,7 @@
   sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató
     gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai
     és tudományos képzettségük fejlesztése közben.
-  compatibility_https_header: Please enable HTTPS for Code.org.
+  compatibility_https_header: Kérjük engedélyezd a HTTPS protokollt a Code.org-nak.
   compatibility_https_message: To increase security, we are switching to HTTPS on
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.

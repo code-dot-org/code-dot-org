@@ -60,8 +60,8 @@
       1:
         image: notes/stage5_1.jpg
         text: Olá! Eu sou o JR. Qualquer equipa de carros de corrida precisa de um
-          programador de computadores para vencer. Eles analisam os dados do veículo,
-          de forma a torná-lo mais rápido.
+          programador de computadores para vencer. Eles analisam os dados do veículo
+          para o tornarem mais rápido.
       2:
         image: notes/stage5_2.jpg
         text: Nesses desafios, você vai ser um artista que desenha por todo lugar

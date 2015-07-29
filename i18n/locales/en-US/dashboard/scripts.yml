@@ -297,6 +297,13 @@ en:
           description: crwdns34821:0crwdne34821:0
           description_short: crwdns43230:0crwdne43230:0
           Pixelation: crwdns34822:0crwdne34822:0
+          Black & White Pixelation Widget: crwdns43369:0crwdne43369:0
+          Color Pixelation Widget: crwdns43370:0crwdne43370:0
+          Black & White Pixelation Tutorial: crwdns43371:0crwdne43371:0
+          Black & White Pixelation Freeplay: crwdns43372:0crwdne43372:0
+          Color Pixelation Tutorial: crwdns43373:0crwdne43373:0
+          Color Pixelation Examples: crwdns43374:0crwdne43374:0
+          Color Pixelation Freeplay: crwdns43375:0crwdne43375:0
         20-hour:
           title: crwdns35335:0crwdne35335:0
           description_audience: crwdns42114:0crwdne42114:0
@@ -834,6 +841,7 @@ en:
           Text Compression: crwdns38999:0crwdne38999:0
           Pixelation: crwdns39000:0crwdne39000:0
           Multi2: crwdns41853:0crwdne41853:0
+          Markdown Details: crwdns43376:0crwdne43376:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -902,6 +910,25 @@ en:
           Unit 1, Day 15-16: crwdns41865:0crwdne41865:0
           Unit 1, Day 17-19: crwdns41866:0crwdne41866:0
           Wrap-up: crwdns42118:0crwdne42118:0
+          Unit 1, Days 1-2. What Is a Computer?: crwdns43377:0crwdne43377:0
+          Unit 1, Days 3-4. Buying a Computer: crwdns43378:0crwdne43378:0
+          Unit 1, Days 5-7. Searching and Web 2.0: crwdns43379:0crwdne43379:0
+          Unit 1, Days 8-9. Impact of Computers and Communication: crwdns43380:0crwdne43380:0
+          Unit 1, Day 10. Telling a Story with Data: crwdns43381:0crwdne43381:0
+          Unit 1, Day 11-14. Data Modeling and Design: crwdns43382:0crwdne43382:0
+          Unit 1, Day 15-16. Computer Programs and Following Directions: crwdns43383:0crwdne43383:0
+          Unit 1, Day 17-19. What Is Intelligence?: crwdns43384:0crwdne43384:0
+          "Unit 1, Days 1-2: What Is a Computer?": crwdns43385:0crwdne43385:0
+          Unit 1, Days 3-4 Buying a Computer: crwdns43386:0crwdne43386:0
+          0: crwdns43387:0crwdne43387:0
+          1: crwdns43388:0crwdne43388:0
+          Unit 1, Days 5-7 Searching and Web 2.0: crwdns43389:0crwdne43389:0
+          Unit 1, Days 8-9 Impact of Computers and Communication: crwdns43390:0crwdne43390:0
+          Unit 1, Day 10 Telling a Story with Data: crwdns43391:0crwdne43391:0
+          Unit 1, Day 11-14 Data Modeling and Design: crwdns43392:0crwdne43392:0
+          Unit 1, Day 15-16 Computer Programs and Following Directions: crwdns43393:0crwdne43393:0
+          Unit 1, Day 17-19 What Is Intelligence?: crwdns43394:0crwdne43394:0
+          Unit 1, Days 5-7 Searching and Web 2: crwdns43395:0crwdne43395:0
         equityPD:
           title: crwdns41867:0crwdne41867:0
           description: crwdns41868:0crwdne41868:0
@@ -973,3 +1000,60 @@ en:
           Introduction to Equity: crwdns43320:0crwdne43320:0
           Creating Equitable Learning Environments: crwdns43321:0crwdne43321:0
           Next Steps: crwdns43322:0crwdne43322:0
+        sciencePD2b-iZone:
+          Welcome!: crwdns43396:0crwdne43396:0
+          title: crwdns43397:0crwdne43397:0
+          description_short: crwdns43398:0crwdne43398:0
+          description: crwdns43399:0crwdne43399:0
+          Review StarLogo Nova: crwdns43400:0crwdne43400:0
+          Reviewing the Modules: crwdns43401:0crwdne43401:0
+          Advanced StarLogo Nova: crwdns43402:0crwdne43402:0
+          Remixing Phases 1 and 2: crwdns43403:0crwdne43403:0
+          Thinking Ahead to Implementation: crwdns43404:0crwdne43404:0
+          Wrap-Up: crwdns43405:0crwdne43405:0
+        ECSPD2-iZone:
+          title: crwdns43406:0crwdne43406:0
+          description_short: crwdns43407:0crwdne43407:0
+          description: crwdns43408:0crwdne43408:0
+          Welcome!: crwdns43409:0crwdne43409:0
+          0: crwdns43410:0crwdne43410:0
+          1: crwdns43411:0crwdne43411:0
+          Unit 1, Days 3-4 Buying a Computer: crwdns43412:0crwdne43412:0
+          Unit 1, Days 5-7 Searching and Web 2: crwdns43413:0crwdne43413:0
+          Unit 1, Days 8-9 Impact of Computers and Communication: crwdns43414:0crwdne43414:0
+          Unit 1, Day 10 Telling a Story with Data: crwdns43415:0crwdne43415:0
+          Unit 1, Day 11-14 Data Modeling and Design: crwdns43416:0crwdne43416:0
+          Unit 1, Day 15-16 Computer Programs and Following Directions: crwdns43417:0crwdne43417:0
+          Unit 1, Day 17-19 What Is Intelligence?: crwdns43418:0crwdne43418:0
+          Wrap-up: crwdns43419:0crwdne43419:0
+        ECSPD2-NexTech:
+          title: crwdns43420:0crwdne43420:0
+          description_short: crwdns43421:0crwdne43421:0
+          description: crwdns43422:0crwdne43422:0
+          Welcome!: crwdns43423:0crwdne43423:0
+          0: crwdns43424:0crwdne43424:0
+          1: crwdns43425:0crwdne43425:0
+          Unit 1, Days 3-4 Buying a Computer: crwdns43426:0crwdne43426:0
+          Unit 1, Days 5-7 Searching and Web 2: crwdns43427:0crwdne43427:0
+          Unit 1, Days 8-9 Impact of Computers and Communication: crwdns43428:0crwdne43428:0
+          Unit 1, Day 10 Telling a Story with Data: crwdns43429:0crwdne43429:0
+          Unit 1, Day 11-14 Data Modeling and Design: crwdns43430:0crwdne43430:0
+          Unit 1, Day 15-16 Computer Programs and Following Directions: crwdns43431:0crwdne43431:0
+          Unit 1, Day 17-19 What Is Intelligence?: crwdns43432:0crwdne43432:0
+          Wrap-up: crwdns43433:0crwdne43433:0
+        CSPPD2:
+          title: crwdns43434:0crwdne43434:0
+          description_short: crwdns43435:0crwdne43435:0
+          description: crwdns43436:0crwdne43436:0
+          Getting Started: crwdns43437:0crwdne43437:0
+          Welcome to the Course!: crwdns43438:0crwdne43438:0
+          "Lesson Chunk 1: Sending Binary Messages": crwdns43439:0crwdne43439:0
+          "Lesson Chunk 2: Encoding and Sending Numbers": crwdns43440:0crwdne43440:0
+          "Lesson Chunk 3: Encoding and Sending Text": crwdns43441:0crwdne43441:0
+          Lesson Chunk 1- Sending Binary Messages: crwdns43442:0crwdne43442:0
+          Lesson Chunk 2- Encoding and Sending Numbers: crwdns43443:0crwdne43443:0
+          Lesson Chunk 3- Encoding and Sending Text: crwdns43444:0crwdne43444:0
+          Lesson Chunk 4- Compressing and Storing Information: crwdns43445:0crwdne43445:0
+          Practice PT: crwdns43446:0crwdne43446:0
+          Ramping Up: crwdns43447:0crwdne43447:0
+          Wrap Up and Next Steps: crwdns43448:0crwdne43448:0

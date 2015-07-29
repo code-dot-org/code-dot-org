@@ -219,6 +219,7 @@ ro:
       free_play:
         playlab: Creează o aplicație
         artist: Desenează ceva
+        calculate: Calculate Something
     user:
       classroom: Pagina de Start a Profesorilor
       district_dashboard: Tabel de instrumente pe zonă districtuală
