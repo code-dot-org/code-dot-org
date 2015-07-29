@@ -1,4 +1,4 @@
-# A property bag implementation backed by Redis.
+# A simple propery bag backed by Redis.
 #
 # In addition to string properties the property bag also supports
 # named, atomic counters via the increment_counter call.  These can

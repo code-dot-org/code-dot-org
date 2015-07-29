@@ -111,8 +111,7 @@ class FakeRedisClient
   def hincrby(key, name, increment)
     hash = get_hash_for_key(key)
     hash[name] ||= 0  # Initialize new counters to 0.
-    hash[name] += 1
-    return hash[name]
+    hash[name] += 1  # Return incremented counter.
   end
 
 end
