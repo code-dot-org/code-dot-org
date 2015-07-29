@@ -79,7 +79,7 @@ If you have more time, complete the project in the following prioritized order.
 1. dashboard/unplugged.yml - Titles and descritions of unplugged activities
 
 <br/>
-**Remaining Filess**
+**Remaining Files**
 
 1. The rest of pegasus/mobile.yml 
 	* context: [code.org/learn](https://code.org/learn)
