@@ -54,7 +54,7 @@
   "CONTROLS_REPEAT_INPUT_DO": "করা",
   "CONTROLS_REPEAT_TITLE": "%1 বার পুনরাবৃত্তি করো",
   "CONTROLS_REPEAT_TITLE_REPEAT": "পুনরাই",
-  "CONTROLS_REPEAT_TITLE_TIMES": "কাল",
+  "CONTROLS_REPEAT_TITLE_TIMES": "বার",
   "CONTROLS_REPEAT_TOOLTIP": "কিছু বিবৃতি বেশ কয়েকবার করুন.\n",
   "CONTROLS_WHILEUNTIL_HELPURL": "http://code.google.com/p/blockly/wiki/Repeat",
   "CONTROLS_WHILEUNTIL_OPERATOR_UNTIL": "যতক্ষণ না পুনরাবৃত্তি",

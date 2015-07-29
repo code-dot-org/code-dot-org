@@ -48,7 +48,7 @@ class AssetsApi < Sinatra::Base
     dont_cache
 
     encrypted_src_channel_id = request.GET['src']
-    error(400) if encrypted_src_channel_id.empty?
+    bad_request if encrypted_src_channel_id.empty?
     AssetBucket.new.copy_assets(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
   end
 
