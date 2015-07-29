@@ -159,6 +159,17 @@ class NetSimApi < Sinatra::Base
     begin
       value = get_table(shard_id, table_name).
           insert(JSON.parse(request.body.read), request.ip)
+
+      if table_name == TABLE_NAMES[:message]
+        node_exists = get_table(TABLE_NAMES[:node]).to_a.contains do |node|
+          node['id'] == value['simulatedBy']
+        end
+        unless node_exists
+          get_table(shard_id, table_name).delete(value[:id])
+          bad_request
+        end
+      end
+
       get_pub_sub_api.publish(shard_id, table_name, {:action => 'insert', :id => value[:id]})
     rescue JSON::ParserError
       bad_request

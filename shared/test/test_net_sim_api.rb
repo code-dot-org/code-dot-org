@@ -20,7 +20,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
 
     # Every test should start with an empty table
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, "Table did not begin empty"
   end
 
   def test_create_read_update_delete
@@ -173,7 +173,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal node_a['id'], node_event[:data][:id]
   ensure
     delete_node(node_b['id'])
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records(TABLE_NAMES[:node]).empty?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:wire]).empty?, "Wire table was not empty"
+    assert read_records(TABLE_NAMES[:message]).empty?, "Message table was not empty"
   end
 
   def test_node_delete_cascades_to_node_wires
