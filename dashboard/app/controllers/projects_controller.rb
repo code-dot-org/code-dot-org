@@ -39,6 +39,25 @@ class ProjectsController < ApplicationController
     render template: "projects/projects", layout: nil
   end
 
+  def load
+    if current_user
+      channel = StorageApps.new(storage_id_for_user).most_recent(params[:key])
+      if channel
+        redirect_to action: 'edit', channel_id: channel
+        return
+      end
+    end
+
+    create_new
+  end
+
+  def create_new
+    redirect_to action: 'edit', channel_id: create_channel({
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key], 'project_projects'])
+    })
+  end
+
   def show
     sharing = params[:share] == true
     level_view_options(

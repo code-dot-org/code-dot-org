@@ -289,6 +289,11 @@ var projects = module.exports = {
       location.href = projects.getPathName('remix');
     });
   },
+  createNew: function() {
+    projects.save(function () {
+      location.href = projects.appToProjectUrl() + '/new';
+    });
+  },
   delete: function(callback) {
     var channelId = current.id;
     if (channelId) {
