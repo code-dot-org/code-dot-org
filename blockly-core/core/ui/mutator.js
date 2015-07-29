@@ -227,9 +227,7 @@ Blockly.Mutator.prototype.blockSpaceChanged_ = function() {
   if (!this.blockSpace_) {
     return;
   }
-  console.log("blockSpaceChanged");
   if (!Blockly.Block.isDragging()) {
-    console.log("...and not dragging");
     var blocks = this.blockSpace_.getTopBlocks(false);
     var MARGIN = 20;
     for (var b = 0, block; block = blocks[b]; b++) {
