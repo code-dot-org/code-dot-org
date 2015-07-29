@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
+require 'shared/middleware/helpers/redis_property_bag'
 
 class NetSimApi < Sinatra::Base
 
@@ -21,12 +22,14 @@ class NetSimApi < Sinatra::Base
   # For test, make it possible to override the usual configured API choice
   @@overridden_pub_sub_api = nil
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  def initialize
+    @redis = Redis.new()
+
+  end
 
   def get_table(shard_id, table_name)
-    # Table name within channels API just concatenates shard + table
-    api_table_name = "#{shard_id}_#{table_name}"
-    TableType.new(CDO.netsim_api_publickey, nil, api_table_name)
+
+    return RedisPropertyBag.new(redis, "#{shard_id}_#{table_name}")
   end
 
   # Get the Pub/Sub API interface for the current configuration
