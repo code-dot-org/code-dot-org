@@ -1,3 +1,4 @@
+require 'cdo/video/youtube'
 class VideosController < ApplicationController
   before_filter :authenticate_user!, except: [:test, :embed]
   check_authorization except: [:test, :embed]
