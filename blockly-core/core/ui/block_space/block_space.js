@@ -904,6 +904,13 @@ Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
     boxOverflows.bottom - boxOverflows.top);
 };
 
+/**
+ * Relative version of {@link Blockly.BlockSpace#scrollWithAnySelectedBlock}
+ * @param {number} scrollDx delta amount to pan-right (+)
+ * @param {number} scrollDy delta amount to pan-down (+)
+ * @param {number} mouseX clientX position of mouse
+ * @param {number} mouseY clientY position of mouse
+ */
 Blockly.BlockSpace.prototype.scrollDeltaWithAnySelectedBlock = function (scrollDx, scrollDy,
   mouseX, mouseY) {
   this.scrollWithAnySelectedBlock(
@@ -913,20 +920,6 @@ Blockly.BlockSpace.prototype.scrollDeltaWithAnySelectedBlock = function (scrollD
     mouseY);
 };
 
-Blockly.BlockSpace.prototype.scrollToDelta = function (scrollDx, scrollDy) {
-  this.scrollTo(this.getScrollOffsetX() + scrollDx,
-    this.getScrollOffsetY() + scrollDy);
-};
-
-Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
-  var maxScrollOffsets = this.getMaxScrollOffsets();
-
-  newScrollX = goog.math.clamp(newScrollX, 0, maxScrollOffsets.x);
-  newScrollY = goog.math.clamp(newScrollY, 0, maxScrollOffsets.y);
-
-  // Set the scrollbar position, which will auto-scroll the canvas
-  this.scrollbarPair.set(newScrollX, newScrollY);
-};
 
 /**
  * Given desired new scrollX and scrollY positions, scroll to position,
@@ -959,9 +952,34 @@ Blockly.BlockSpace.prototype.scrollWithAnySelectedBlock = function (newScrollX,
     var scrolledAmount = this.getScrollOffset().subtract(offsetBefore);
     Blockly.selected.startDragMouseX -= scrolledAmount.x;
     Blockly.selected.startDragMouseY -= scrolledAmount.y;
-    // Moves block to stay under cursor with e.clientX/Y
+    // Moves block to stay under cursor's clientX/clientY
     Blockly.selected.moveBlockBeingDragged_(mouseX, mouseY);
   }
+};
+
+/**
+ * Scrolls to given delta coordinates
+ * @param {number} scrollDx pixels to pan-right (+)
+ * @param {number} scrollDy pixels to pan-down (+)
+ */
+Blockly.BlockSpace.prototype.scrollToDelta = function (scrollDx, scrollDy) {
+  this.scrollTo(this.getScrollOffsetX() + scrollDx,
+    this.getScrollOffsetY() + scrollDy);
+};
+
+/**
+ * Scrolls scrollbars to given offset coordinates
+ * @param {number} newScrollX new pan-right (+) offset
+ * @param {number} newScrollY new pan-down (+) offset
+ */
+Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
+  var maxScrollOffsets = this.getMaxScrollOffsets();
+
+  newScrollX = goog.math.clamp(newScrollX, 0, maxScrollOffsets.x);
+  newScrollY = goog.math.clamp(newScrollY, 0, maxScrollOffsets.y);
+
+  // Set the scrollbar position, which will auto-scroll the canvas
+  this.scrollbarPair.set(newScrollX, newScrollY);
 };
 
 /**
