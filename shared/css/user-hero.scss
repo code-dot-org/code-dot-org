@@ -27,6 +27,8 @@
     font-family: $gotham-regular;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    font-size: 18px;
+    line-height: 25px;
     vertical-align: middle;
 
     &.teacher {
@@ -36,20 +38,14 @@
       background-color: $light_purple;
     }
   }
-  #student {
-    font-size: 18px;
-    line-height: 25px;
-    margin-left: 2px;
-
-    #currentprogress {
-      width: 70%;
-      float: left;
-    }
-    #coursebuttons {
-      width: 30%;
-      float: right;
-      margin-top: 7px;
-    }
+  #currentprogress {
+    width: 70%;
+    float: left;
+  }
+  #coursebuttons {
+    width: 30%;
+    float: right;
+    margin-top: 7px;
   }
   a {
     color: white;

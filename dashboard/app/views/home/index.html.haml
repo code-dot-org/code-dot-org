@@ -1,5 +1,3 @@
-- advertised_scripts = [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, Script.flappy_script, Script.playlab_script, Script.artist_script, Script.course1_script, Script.course2_script, Script.course3_script, Script.course4_script, Script.twenty_hour_script]
-
 = render partial: 'layouts/survey'
 = render partial: 'devise/confirmations/alert'
 
@@ -24,7 +22,8 @@
 
   - if current_user
     #user_hero
-      = render template: 'api/user_hero', locals: { advertised_scripts: advertised_scripts }
+      = render template: 'api/user_hero'
+    - advertised_scripts = [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, Script.flappy_script, Script.playlab_script, Script.artist_script, Script.course1_script, Script.course2_script, Script.course3_script, Script.course4_script, Script.twenty_hour_script]
     - unadvertised_user_scripts = [current_user.working_on_user_scripts, current_user.completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.in?(advertised_scripts)}
     - unadvertised_user_scripts.each_slice(2) do |course_pair|
       .row
