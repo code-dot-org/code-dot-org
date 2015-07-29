@@ -314,28 +314,6 @@ NetSimLocalClientNode.prototype.getMyRouter = function () {
 };
 
 /**
- * Synchronously destroy the local node.  Use on page unload, normally prefer
- * async steps.
- */
-NetSimLocalClientNode.prototype.synchronousDestroy = function () {
-  // If connected to remote, synchronously disconnect
-  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
-    this.synchronousDisconnectRemote();
-  }
-
-  // Remove messages being simulated by me
-  this.shard_.messageTable.readAllCached().forEach(function (row) {
-    if (row.simulatedBy === this.entityID) {
-      var message = new NetSimMessage(this.shard_, row);
-      message.synchronousDestroy();
-    }
-  }, this);
-
-  // Finally, call super-method
-  NetSimLocalClientNode.superPrototype.synchronousDestroy.call(this);
-};
-
-/**
  * Destroy the local node; performs appropriate clean-up leading up to
  * node destruction.
  * @param {!NodeStyleCallback} onComplete
@@ -371,17 +349,6 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   }
 
   NetSimLocalClientNode.superPrototype.destroy.call(this, onComplete);
-};
-
-/**
- * Synchronously destroy my outgoing wire.  Used when navigating away from
- * the page - in normal circumstances use async version.
- */
-NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
-  if (this.myWire) {
-    this.myWire.synchronousDestroy();
-  }
-  this.cleanUpAfterDestroyingWire_();
 };
 
 /**
