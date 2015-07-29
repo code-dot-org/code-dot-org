@@ -221,6 +221,7 @@ div#visualizationResizeBar {
   position: absolute;
   visibility: 'hidden';
   z-index: 1;
+  cursor: crosshair;
 }
 
 $resize-bar-width: 13px;

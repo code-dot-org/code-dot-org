@@ -362,7 +362,7 @@ function updateScreenCoordinates(e) {
     screenCoordinates.style.left = x + 'px';
     screenCoordinates.style.top = y + 'px';
     //console.log(x + ', ' + y + '; ' + scaling);
-    screenCoordinates.innerHTML = Math.round(x * scaling) + ', ' + Math.round(y * scaling);
+    //screenCoordinates.innerHTML = Math.round(x * scaling) + ', ' + Math.round(y * scaling);
     screenCoordinates.innerHTML = x + ', ' + y;
   }
 }
