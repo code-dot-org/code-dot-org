@@ -51,8 +51,9 @@ class Youtube
       end
 
       IO.popen(cmd) { |output| output.each { |line| CDO.log.info line } }
+      raise RuntimeError, 'Video processing command exited with an error' unless $?.success?
       file = Dir.glob("#{dir}/*").first
-      raise RuntimeError, 'Video not available in correct format' if File.extname(file) != '.mp4'
+      raise RuntimeError, 'Video not available in correct format' unless file && File.extname(file) == '.mp4'
       video_filename = AWS::S3.upload_to_bucket(CDO.videos_bucket, "youtube/#{id}.mp4", File.open(file), access: :public_read, no_random: true, content_type: 'video/mp4')
       CDO.log.info "https:#{CDO.videos_url}/#{video_filename}"
 
