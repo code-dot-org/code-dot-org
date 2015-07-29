@@ -9,7 +9,7 @@ get '/sendy/*' do |uri|
   unless ['', 'none'].include?(layout)
     template = resolve_template('layouts', settings.template_extnames, layout)
     raise Exception, "'#{layout}' layout not found." unless template
-    src = render_template(template, @locals.merge({body:src}))
+    src = render_template(template, @locals.merge({body: src}))
   end
 
   res = Net::HTTP.post_form(URI('http://premailer.dialect.ca/api/0.1/documents'), 'html'=>src, 'base_url'=>"http://#{request.site}")

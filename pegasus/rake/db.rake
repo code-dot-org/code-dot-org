@@ -26,13 +26,13 @@ namespace :db do
   task :rollback, :target do |t, args|
     args.with_defaults(:target => 0)
 
-    Sequel::Migrator.run(DB, migrations_dir, target:args[:target].to_i)
+    Sequel::Migrator.run(DB, migrations_dir, target: args[:target].to_i)
     Rake::Task['db:version'].execute
   end
 
   desc 'Perform migration reset (full rollback and migration)'
   task :reset do
-    Sequel::Migrator.run(DB, migrations_dir, target:0)
+    Sequel::Migrator.run(DB, migrations_dir, target: 0)
     Sequel::Migrator.run(DB, migrations_dir)
     Rake::Task['db:version'].execute
   end

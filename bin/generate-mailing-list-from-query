@@ -6,7 +6,7 @@ require src_dir 'database'
 raise "Usage: $0 'solr query'" unless ARGV.length == 1
 solr_query = ARGV[0]
 
-SOLR = Solr::Server.new(host:'ec2-54-83-22-254.compute-1.amazonaws.com')
+SOLR = Solr::Server.new(host: 'ec2-54-83-22-254.compute-1.amazonaws.com')
 
 def export_contacts_to_csv(contacts, path)
   columns = nil
@@ -27,9 +27,9 @@ def query_contacts(params)
   fields = params[:fields] if params[:fields]
 
   [].tap do |results|
-    SOLR.query(params.merge(rows:10000, fl: ['email_s', 'name_s'] + fields)).each do |i|
+    SOLR.query(params.merge(rows: 10000, fl: ['email_s', 'name_s'] + fields)).each do |i|
       i = yield(i) if block_given?
-      results << {email:i['email_s'].downcase.strip, name:i['name_s']}.merge(i.slice(*fields)) if i
+      results << {email: i['email_s'].downcase.strip, name: i['name_s']}.merge(i.slice(*fields)) if i
     end
   end
 end
