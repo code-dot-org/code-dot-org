@@ -83,7 +83,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_select '#welcome.teacher'
     assert_select '.teacherdashboard'
   end
-  
+
   test "should get user_hero for student with script" do
     sign_in @student_3
     get :user_hero
