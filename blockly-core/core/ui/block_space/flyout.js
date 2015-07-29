@@ -343,8 +343,9 @@ Blockly.Flyout.prototype.isVisible = function() {
 
 /**
  * Hide and empty the flyout.
+ * @param {?Blockly.Block} opt_saveBlock - block to not immediately destroy
  */
-Blockly.Flyout.prototype.hide = function() {
+Blockly.Flyout.prototype.hide = function(opt_saveBlock) {
   if (!this.isVisible()) {
     return;
   }
@@ -358,6 +359,12 @@ Blockly.Flyout.prototype.hide = function() {
     Blockly.unbindEvent_(this.reflowWrapper_);
     this.reflowWrapper_ = null;
   }
+  // Delete all the blocks.
+  this.blockSpace_.getTopBlocks(false).forEach(function (block) {
+    if (block !== opt_saveBlock) {
+      block.dispose(false, false);
+    }
+  });
   // Delete all the background buttons.
   for (var x = 0, rect; rect = this.buttons_[x]; x++) {
     goog.dom.removeNode(rect);
@@ -388,12 +395,6 @@ Blockly.Flyout.prototype.layoutBlock_ = function(block, cursor, gap, initialX) {
  */
 Blockly.Flyout.prototype.show = function(xmlList) {
   this.hide();
-  /**
-   * We do this clearing "before next show" rather than "on hide" to avoid
-   * killing an active touchmove event.
-   * @see https://neil.fraser.name/news/2014/08/09/
-   */
-  this.deleteAllBlocks_();
   this.svgGroup_.style.display = 'block';
 
   var margin = this.CORNER_RADIUS;
@@ -492,16 +493,6 @@ Blockly.Flyout.prototype.show = function(xmlList) {
   this.reflowWrapper_ = Blockly.bindEvent_(this.blockSpace_.getCanvas(),
       'blocklyBlockSpaceChange', this, this.reflow);
   this.blockSpace_.fireChangeEvent();
-};
-
-/**
- * Deletes any blocks from a previous flyout showing.
- * @private
- */
-Blockly.Flyout.prototype.deleteAllBlocks_ = function () {
-  this.blockSpace_.getTopBlocks(false).forEach(function (block) {
-    block.dispose(false, false);
-  });
 };
 
 /**
@@ -699,7 +690,17 @@ Blockly.Flyout.prototype.createBlockFunc_ = function(originBlock) {
         block.blockSpace.blockSpaceEditor.svg_);
     block.moveBy(xyOld.x - xyNew.x, xyOld.y - xyNew.y);
     if (flyout.autoClose) {
-      flyout.hide();
+      /**
+       * We need to avoid destroying the currently dragged block
+       * until the active touchmove event is completed (block dropped)
+       * @see https://neil.fraser.name/news/2014/08/09/
+       */
+      flyout.hide(originBlock);
+      block.blockEvents.listenOnce(
+       Blockly.Block.EVENTS.AFTER_DROPPED,
+       function () {
+         originBlock.dispose(false, false);
+       });
     } else {
       flyout.filterForCapacity_();
     }
