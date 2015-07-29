@@ -186,3 +186,80 @@ function test_printerRangeToNumbers() {
   assert('Single numbers and a range', goog.array.equals([1,2,3,4,5], Blockly.printerRangeToNumbers('1,2-4,5')));
   assert('Spaces in list', goog.array.equals([1,2,3,4,5], Blockly.printerRangeToNumbers('1, 2-4, 5')));
 }
+
+function test_getBoxOverflow() {
+  // top right bottom left
+  var sameBoxOverflow = Blockly.getBoxOverflow(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Box(0, 0, 0, 0));
+  assertEquals(0, sameBoxOverflow.top);
+  assertEquals(0, sameBoxOverflow.right);
+  assertEquals(0, sameBoxOverflow.bottom);
+  assertEquals(0, sameBoxOverflow.left);
+  var differentBoxesOverflow = Blockly.getBoxOverflow(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Box(-1, 2, 3, -4));
+  assertEquals(1, differentBoxesOverflow.top);
+  assertEquals(2, differentBoxesOverflow.right);
+  assertEquals(3, differentBoxesOverflow.bottom);
+  assertEquals(4, differentBoxesOverflow.left);
+}
+
+function test_isBoxWiderThan() {
+  // top right bottom left
+  assert(!Blockly.isBoxWiderThan(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Box(0, 0, 0, 0)));
+  assert(Blockly.isBoxWiderThan(
+    new goog.math.Box(0, 1, 0, 0),
+    new goog.math.Box(0, 0, 0, 0)));
+  assert(!Blockly.isBoxWiderThan(
+    new goog.math.Box(0, 0, 0, 0),
+    new goog.math.Box(0, 1, 0, 0)));
+}
+
+function test_numberWithin() {
+  // Within inclusive
+  assert(Blockly.numberWithin(1, 1, 5, true));
+  assert(Blockly.numberWithin(5, 1, 5, true));
+  assert(Blockly.numberWithin(4, 1, 5, true));
+
+  // Not within inclusive
+  assert(!Blockly.numberWithin(0, 1, 5, true));
+  assert(!Blockly.numberWithin(6, 1, 5, true));
+  assert(!Blockly.numberWithin(-1, 1, 5, true));
+
+  // Within exclusive
+  assert(Blockly.numberWithin(2, 1, 5, false));
+  assert(Blockly.numberWithin(4, 1, 5, false));
+  assert(Blockly.numberWithin(4.9, 1, 5, false));
+
+  // Not within exclusive
+  assert(!Blockly.numberWithin(1, 1, 5, false));
+  assert(!Blockly.numberWithin(5, 1, 5, false));
+  assert(!Blockly.numberWithin(6, 1, 5, false));
+}
+
+
+function test_svgRectToRect() {
+  /** @type SVGRect */
+  var fakeSvgRect = {
+    x: 0,
+    y: 1,
+    width: 2,
+    height: 3
+  };
+  var googRect = Blockly.svgRectToRect(fakeSvgRect);
+  assertEquals(0, googRect.left);
+  assertEquals(1, googRect.top);
+  assertEquals(2, googRect.width);
+  assertEquals(3, googRect.height);
+}
+
+function test_addToNonZeroSides() {
+  var actualBox = new goog.math.Box(1, 0, 0, 0);
+  Blockly.addToNonZeroSides(actualBox, 1);
+  var expectedBox = new goog.math.Box(2, 0, 0, 0);
+  assert(goog.math.Box.equals(expectedBox, actualBox));
+}
+

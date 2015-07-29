@@ -215,7 +215,7 @@ Blockly.Flyout.prototype.getMetrics_ = function() {
     viewHeight: viewHeight,
     viewWidth: viewWidth,
     contentHeight: optionBox.height + optionBox.y,
-    viewTop: -this.blockSpace_.yOffsetFromView,
+    viewTop: this.blockSpace_.getScrollOffsetY(),
     contentTop: 0,
     absoluteTop: this.CORNER_RADIUS,
     absoluteLeft: 0

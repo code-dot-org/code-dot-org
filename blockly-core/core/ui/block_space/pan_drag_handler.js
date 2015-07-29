@@ -242,19 +242,10 @@ Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
   // + is down
   var wheelDelta = Blockly.getNormalizedWheelDeltaY(e);
   if (wheelDelta) {
-    var yOffsetBefore = this.blockSpace_.scrollbarOffsetY();
-    this.blockSpace_.scrollTo(this.blockSpace_.scrollbarOffsetX(),
-       + this.blockSpace_.scrollbarOffsetY() + wheelDelta);
-
-    // If dragging a block too, move the "mouse start position" as if it
-    // had scrolled along with any blockspace scrolling, and add the scroll event
-    // delta to the block's movement.
-    if (Blockly.Block.isFreelyDragging() && Blockly.selected) {
-      var scrolledY = this.blockSpace_.scrollbarOffsetY() - yOffsetBefore;
-      Blockly.selected.startDragMouseY -= scrolledY;
-      // Moves block to stay under cursor with e.clientY
-      Blockly.selected.onMouseMove_(e);
-    }
+    this.blockSpace_.scrollWithAnySelectedBlock(
+      this.blockSpace_.getScrollOffsetX(),
+      this.blockSpace_.getScrollOffsetY() + wheelDelta,
+      e.clientX, e.clientY);
 
     // Don't scroll the page.
     e.stopPropagation();
@@ -271,8 +262,8 @@ Blockly.PanDragHandler.prototype.beginDragScroll_ = function (e) {
   // Record the current mouse position.
   this.startMouseX_ = e.clientX;
   this.startMouseY_ = e.clientY;
-  this.startScrollX_ = this.blockSpace_.scrollbarOffsetX();
-  this.startScrollY_ = this.blockSpace_.scrollbarOffsetY();
+  this.startScrollX_ = this.blockSpace_.getScrollOffsetX();
+  this.startScrollY_ = this.blockSpace_.getScrollOffsetY();
 
   this.bindDuringPanDragHandlers_();
 };

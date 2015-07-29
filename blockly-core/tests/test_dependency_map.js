@@ -1301,11 +1301,13 @@ goog.addDependency('../../../core/initialization/inject.js', ['Blockly.inject'],
 goog.addDependency('../../../core/namespaces/blocks.js', ['Blockly.Blocks'], []);
 goog.addDependency('../../../core/namespaces/msg.js', ['Blockly.Msg'], []);
 goog.addDependency('../../../core/ui/block.js', ['Blockly.Block'], ['Blockly.BlockSpace', 'Blockly.BlockSvg', 'Blockly.BlockSvgFramed', 'Blockly.BlockSvgFunctional', 'Blockly.Blocks', 'Blockly.Comment', 'Blockly.Connection', 'Blockly.ContextMenu', 'Blockly.Input', 'Blockly.Msg', 'Blockly.Mutator', 'Blockly.Warning', 'Blockly.Xml', 'goog.Timer', 'goog.asserts', 'goog.string']);
-goog.addDependency('../../../core/ui/block_space/block_space.js', ['Blockly.BlockSpace'], ['Blockly.PanDragHandler', 'Blockly.ScrollbarPair', 'Blockly.Trashcan', 'Blockly.Xml', 'goog.array', 'goog.math.Coordinate']);
+goog.addDependency('../../../core/ui/block_space/auto_scroll.js', ['Blockly.AutoScroll'], ['goog.async.AnimationDelay']);
+goog.addDependency('../../../core/ui/block_space/block_space.js', ['Blockly.BlockSpace'], ['Blockly.PanDragHandler', 'Blockly.ScrollOnBlockDragHandler', 'Blockly.ScrollbarPair', 'Blockly.Trashcan', 'Blockly.Xml', 'goog.array', 'goog.math', 'goog.math.Coordinate']);
 goog.addDependency('../../../core/ui/block_space/block_space_editor.js', ['Blockly.BlockSpaceEditor'], ['Blockly.BlockSpace', 'goog.array', 'goog.style']);
 goog.addDependency('../../../core/ui/block_space/flyout.js', ['Blockly.Flyout'], ['Blockly.Block', 'Blockly.Comment', 'goog.math.Rect']);
 goog.addDependency('../../../core/ui/block_space/horizontal_flyout.js', ['Blockly.HorizontalFlyout'], ['Blockly.Block', 'Blockly.Flyout']);
 goog.addDependency('../../../core/ui/block_space/pan_drag_handler.js', ['Blockly.PanDragHandler'], []);
+goog.addDependency('../../../core/ui/block_space/scroll_on_block_drag_handler.js', ['Blockly.ScrollOnBlockDragHandler'], ['Blockly.AutoScroll', 'goog.math.Vec2']);
 goog.addDependency('../../../core/ui/block_space/scrollbar.js', ['Blockly.Scrollbar', 'Blockly.ScrollbarPair'], []);
 goog.addDependency('../../../core/ui/block_space/toolbox.js', ['Blockly.Toolbox'], ['Blockly.Flyout', 'goog.events.BrowserFeature', 'goog.math.Rect', 'goog.style', 'goog.ui.tree.TreeControl', 'goog.ui.tree.TreeNode']);
 goog.addDependency('../../../core/ui/block_space/trashcan.js', ['Blockly.Trashcan'], ['goog.math.Rect']);
@@ -1351,7 +1353,7 @@ goog.addDependency('../../../core/utils/block_value_type.js', ['Blockly.BlockVal
 goog.addDependency('../../../core/utils/functional_block_utils.js', ['Blockly.FunctionalBlockUtils', 'Blockly.FunctionalTypeColors'], ['Blockly.BlockValueType']);
 goog.addDependency('../../../core/utils/image_dimension_cache.js', ['Blockly.ImageDimensionCache'], []);
 goog.addDependency('../../../core/utils/procedures.js', ['Blockly.Procedures'], ['Blockly.BlockSpace', 'Blockly.FieldVariable', 'Blockly.Names', 'goog.events']);
-goog.addDependency('../../../core/utils/utils.js', ['Blockly.utils'], ['goog.array', 'goog.events', 'goog.memoize']);
+goog.addDependency('../../../core/utils/utils.js', ['Blockly.utils'], ['goog.array', 'goog.events', 'goog.math.Rect', 'goog.memoize']);
 goog.addDependency('../../../core/utils/variables.js', ['Blockly.Variables'], ['Blockly.BlockSpace', 'Blockly.Toolbox']);
 goog.addDependency('../../../core/utils/xml.js', ['Blockly.Xml'], []);
 goog.addDependency('../../../generators/javascript.js', ['Blockly.JavaScript'], ['Blockly.Generator']);
