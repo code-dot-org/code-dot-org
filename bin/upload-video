@@ -23,12 +23,14 @@ end
 
 def main
   if ARGV.length < 1
-    print_usage and return
+    print_usage
+    return
   end
   id = ARGV[0]
   filename = ARGV[1]
   if id.nil?
-    print_usage and return
+    print_usage
+    return
   end
   Youtube.process(id, filename)
 end
