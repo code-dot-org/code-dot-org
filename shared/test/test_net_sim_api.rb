@@ -135,8 +135,74 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?, "Table was not empty"
   end
 
+  def test_node_delete_cascades_to_node_wires
+
+    nodeA = create_node({name:'nodeA'})
+    nodeB = create_node({name:'nodeB'})
+    nodeC = create_node({name:'nodeC'})
+
+    wireAB = create_wire(nodeA['id'], nodeB['id'])
+    wireCA = create_wire(nodeC['id'], nodeA['id'])
+    wireBC = create_wire(nodeB['id'], nodeC['id'])
+
+    assert_equal 3, read_records('n').count, "Didn't create 3 nodes"
+    assert_equal 3, read_records('w').count, "Didn't create 3 wires"
+
+    delete_node(nodeA['id'])
+
+    # Assert nodeA is gone
+    assert !record_exists('n', nodeA['id'])
+
+    # Assert wire AB and CA are gone
+    assert !record_exists('w', wireAB['id'])
+    assert !record_exists('w', wireCA['id'])
+
+    # Assert node B and C are still there
+    assert record_exists('n', nodeB['id'])
+    assert record_exists('n', nodeC['id'])
+
+    # Assert wire BC is still there
+    assert record_exists('w', wireBC['id'])
+  ensure
+    delete_node(nodeA['id'])
+    delete_node(nodeB['id'])
+    delete_node(nodeC['id'])
+    delete_wire(wireAB['id'])
+    delete_wire(wireCA['id'])
+    delete_wire(wireBC['id'])
+    assert read_records('n').first.nil?, "Node table was not empty"
+    assert read_records('w').first.nil?, "Wire table was not empty"
+  end
+
   # Methods below this point are test utilities, not actual tests
   private
+
+  def record_exists(table_name, record_id)
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{@table_name}"
+    200 == @net_sim_api.last_response.status
+  end
+
+  def create_node(record)
+    @net_sim_api.post "/v3/netsim/#{@shard_id}/n", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    JSON.parse(@net_sim_api.last_response.body)
+  end
+
+  def delete_node(id)
+    @net_sim_api.delete "/v3/netsim/#{@shard_id}/n/#{id}"
+  end
+
+  def create_wire(from_node_id, to_node_id)
+    wire_record = {
+      :localNodeID => from_node_id,
+      :remoteNodeID => to_node_id
+    }
+    @net_sim_api.post "/v3/netsim/#{@shard_id}/w", wire_record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    JSON.parse(@net_sim_api.last_response.body)
+  end
+
+  def delete_wire(id)
+    @net_sim_api.delete "/v3/netsim/#{@shard_id}/w/#{id}"
+  end
 
   def create_record(record)
     @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -148,8 +214,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @net_sim_api.last_response
   end
 
-  def read_records
-    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{@table_name}"
+  def read_records(table_name = @table_name)
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{table_name}"
     JSON.parse(@net_sim_api.last_response.body)
   end
 

@@ -78,6 +78,21 @@ class NetSimApi < Sinatra::Base
     dont_cache
     table = get_table(shard_id, table_name)
     int_id = id.to_i
+
+    if table_name == 'n' then
+      # Cascade!
+      # remove wires
+      wireTable = get_table(shard_id, 'w')
+      wires = wireTable.to_a().select do |wire|
+        wire[:localNodeID] == int_id or wire[:remoteNodeID] == int_id
+      end
+      wires.each do |wire|
+        wireTable.delete(wire[:id])
+      end
+
+      # remove messages
+    end
+
     table.delete(int_id)
     get_pub_sub_api.publish(shard_id, table_name, {:action => 'delete', :id => int_id})
     no_content
