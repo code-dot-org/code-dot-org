@@ -7,21 +7,36 @@ require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
 class RedisTableTest < Minitest::Unit::TestCase
-  def test_redis_table
+  def test_redis_tables
     redis = FakeRedisClient.new
     pubsub = SpyPubSubApi.new
-    table = RedisTable.new(redis, pubsub, 'test', 'table')
+
+    # We take care to test multiple tables in the same shard
+    # since all of those tables are combined in a single Redis key
+    # and could be intermingled in the event of a bug.
+    table = RedisTable.new(redis, pubsub, 'shard1', 'table')
+    table2 = RedisTable.new(redis, pubsub, 'shard1', 'table2')
+    table3 = RedisTable.new(redis, pubsub, 'shard2', 'table2')
+
     assert_equal [], table.to_a
     assert_equal nil, table.fetch(1)
 
     value = {'name' => 'alice', 'age' => 7, 'male' => false}
     inserted = table.insert(value)
 
+    value_table2 = {'name' => 'bob', 'age' => 12, 'male' => true}
+    table2.insert(value_table2)
+
     value_with_id = value.merge({'id' => 1})
+    value_table2_with_id = value_table2.merge({'id' => 1})
+
     assert_equal value_with_id, inserted
     assert_equal [value_with_id], table.to_a
     assert_equal value_with_id, table.fetch(1)
-    assert_equal [make_pubsub_event('test', 'table', {:action => 'insert', :id => 1})],
+    assert_equal [value_table2_with_id], table2.to_a
+
+    assert_equal [make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 1}),
+                  make_pubsub_event('shard1', 'table2', {:action => 'insert', :id => 1})],
                  pubsub.publish_history
 
     value2 = {'foo' => 52}
@@ -29,34 +44,41 @@ class RedisTableTest < Minitest::Unit::TestCase
     table.insert(value2)
     assert_equal [value_with_id, value2_with_id], table.to_a
     assert_equal value2_with_id, table.fetch(2)
-    assert_equal make_pubsub_event('test', 'table', {:action => 'insert', :id => 2}),
-                 pubsub.publish_history[1]
+    assert_equal make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 2}),
+                 pubsub.publish_history[2]
 
     value2a = {'foo' => 53}
     value2a_with_id = value2a.merge('id' => 2)
     updated = table.update(2, value2a)
     assert_equal(value2a_with_id, updated)
-    assert_equal make_pubsub_event('test', 'table', {:action => 'update', :id => 2}),
-                 pubsub.publish_history[2]
+    assert_equal make_pubsub_event('shard1', 'table', {:action => 'update', :id => 2}),
+                 pubsub.publish_history[3]
 
     value3 = {'bar' => 3}
     value3_with_id = value3.merge('id' => 3)
     table.insert(value3)
     assert_equal(value3_with_id, table.fetch(3))
     assert_equal([value_with_id, value2a_with_id, value3_with_id], table.to_a)
-    assert_equal make_pubsub_event('test', 'table', {:action => 'insert', :id => 3}),
-                 pubsub.publish_history[3]
+    assert_equal make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 3}),
+                 pubsub.publish_history[4]
 
     table.delete(2)
     assert_equal([value_with_id, value3_with_id], table.to_a)
-    assert_equal make_pubsub_event('test', 'table', {:action => 'delete', :id => 2}),
-                 pubsub.publish_history[4]
+    assert_equal([value_table2_with_id], table2.to_a)
 
-    table.delete_all
-    assert_equal([], table.to_a)
-    assert_equal(nil, table.fetch(1))
-    assert_equal make_pubsub_event('test', 'table', {:action => 'delete_all'}),
+    assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :id => 2}),
                  pubsub.publish_history[5]
+
+    # Test reset shard and make sure it doesn't affect tables in other shards.
+    table3.insert(value)
+
+    RedisTable.reset_shard('shard1', redis, pubsub)
+    assert_equal([], table.to_a)
+    assert_equal([], table2.to_a)
+    assert_equal(nil, table.fetch(1))
+    assert_equal make_pubsub_event('shard1', '', {:action => 'reset_shard'}),
+                 pubsub.publish_history[7]
+    assert_equal [value_with_id], table3.to_a
   end
 
   def make_pubsub_event(channel, event, data)
