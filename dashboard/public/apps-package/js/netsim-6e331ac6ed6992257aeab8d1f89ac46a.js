@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({260:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({257:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -16,7 +16,7 @@ window.netsimMain = function(options) {
 };
 
 
-},{"../StudioApp":5,"../appMain":9,"./levels":258,"./netsim":261,"./skins":267}],267:[function(require,module,exports){
+},{"../StudioApp":5,"../appMain":9,"./levels":255,"./netsim":258,"./skins":264}],264:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -25,7 +25,7 @@ exports.load = function (assetUrl, id) {
 };
 
 
-},{"../skins":271}],261:[function(require,module,exports){
+},{"../skins":268}],258:[function(require,module,exports){
 /**
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
@@ -66,7 +66,6 @@ var NetSimRouterLogModal = require('./NetSimRouterLogModal');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimShard = require('./NetSimShard');
-var NetSimShardCleaner = require('./NetSimShardCleaner');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimVisualization = require('./NetSimVisualization');
@@ -76,13 +75,6 @@ var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
 var netsimGlobals = require('./netsimGlobals');
-
-/**
- * Initial time between connecting to the shard and starting
- * the first cleaning cycle.
- * @type {number}
- */
-var INITIAL_CLEANING_DELAY_MS = 10000; // 10 seconds
 
 /**
  * The top-level Internet Simulator controller.
@@ -124,12 +116,6 @@ var NetSim = module.exports = function () {
    * @private
    */
   this.shard_ = null;
-
-  /**
-   * @type {NetSimShardCleaner}
-   * @private
-   */
-  this.shardCleaner_ = null;
 
   /**
    * The local client's node representation within the shard.
@@ -301,10 +287,6 @@ NetSim.prototype.tick = function (clock) {
   if (this.isConnectedToShard()) {
     this.myNode.tick(clock);
     this.shard_.tick(clock);
-
-    if (this.shardCleaner_) {
-      this.shardCleaner_.tick(clock);
-    }
   }
 };
 
@@ -335,13 +317,6 @@ NetSim.prototype.getOverrideShardID = function () {
     }
   });
   return shardID;
-};
-
-/** 
- * @returns {boolean} TRUE if the "enableCleaning" flag is found in the URL
- */
-NetSim.prototype.shouldEnableCleanup = function () {
-  return location.search.match(/enableCleaning/i);
 };
 
 /**
@@ -394,9 +369,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.statusPanel_ = new NetSimStatusPanel(
       $('#netsim-status'),
       {
-        disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
-        cleanShardNow: this.cleanShardNow.bind(this),
-        expireHeartbeat: this.expireHeartbeat.bind(this)
+        disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
       });
 
   if (this.level.showLogBrowserButton) {
@@ -528,10 +501,6 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
   }
 
   this.shard_ = new NetSimShard(shardID, netsimGlobals.getPubSubConfig());
-  if (this.shouldEnableCleanup()) {
-    this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
-        INITIAL_CLEANING_DELAY_MS);
-  }
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
     this.shardChange.notifyObservers(this.shard_, this.myNode);
@@ -1267,28 +1236,6 @@ NetSim.prototype.onRouterLogChange_ = function () {
 };
 
 /**
- * Immediately start a shard-cleaning process from this client
- */
-NetSim.prototype.cleanShardNow = function () {
-  if (this.shardCleaner_) {
-    this.shardCleaner_.cleanShard();
-  }
-};
-
-/**
- * Make the local node's heartbeat pretend to be expired, so it can be
- * cleaned up.
- */
-NetSim.prototype.expireHeartbeat = function () {
-  if (!(this.myNode && this.myNode.heartbeat)) {
-    return;
-  }
-
-  this.myNode.heartbeat.spoofExpired();
-  logger.info("Local node heartbeat is now expired.");
-};
-
-/**
  * Kick off an animation that shows the local node setting the state of a
  * simplex wire.
  * @param {"0"|"1"} newState
@@ -1390,7 +1337,7 @@ NetSim.prototype.completeLevelAndContinue = function () {
 };
 
 
-},{"../ObservableEvent":2,"../RunLoop":4,"../utils":321,"./DashboardUser":182,"./NetSimBitLogPanel":185,"./NetSimLobby":201,"./NetSimLocalClientNode":202,"./NetSimLogPanel":206,"./NetSimLogger":207,"./NetSimRouterLogModal":224,"./NetSimRouterNode":227,"./NetSimSendPanel":233,"./NetSimShard":234,"./NetSimShardCleaner":235,"./NetSimStatusPanel":241,"./NetSimTabsComponent":244,"./NetSimVisualization":245,"./controls.html.ejs":256,"./locale":259,"./netsimConstants":262,"./netsimGlobals":263,"./netsimUtils":265,"./page.html.ejs":266,"@cdo/shared/smallFooter":324}],266:[function(require,module,exports){
+},{"../ObservableEvent":2,"../RunLoop":4,"../utils":318,"./DashboardUser":181,"./NetSimBitLogPanel":184,"./NetSimLobby":199,"./NetSimLocalClientNode":200,"./NetSimLogPanel":204,"./NetSimLogger":205,"./NetSimRouterLogModal":222,"./NetSimRouterNode":225,"./NetSimSendPanel":231,"./NetSimShard":232,"./NetSimStatusPanel":238,"./NetSimTabsComponent":241,"./NetSimVisualization":242,"./controls.html.ejs":253,"./locale":256,"./netsimConstants":259,"./netsimGlobals":260,"./netsimUtils":262,"./page.html.ejs":263,"@cdo/shared/smallFooter":321}],263:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1412,7 +1359,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":495}],258:[function(require,module,exports){
+},{"../locale":150,"ejs":492}],255:[function(require,module,exports){
 /*jshint multistr: true */
 /**
  * @overview Type documentation for a NetSim level configuration object,
@@ -1730,7 +1677,7 @@ levels.playground = {
 };
 
 
-},{"./Packet":253,"./netsimConstants":262}],256:[function(require,module,exports){
+},{"./Packet":250,"./netsimConstants":259}],253:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1750,7 +1697,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":495}],245:[function(require,module,exports){
+},{"ejs":492}],242:[function(require,module,exports){
 /**
  * @overview Top-level controller for the network visualization.
  */
@@ -2716,7 +2663,7 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
 };
 
 
-},{"../utils":321,"./NetSimVizAutoDnsNode":246,"./NetSimVizNode":248,"./NetSimVizSimulationNode":249,"./NetSimVizSimulationWire":250,"./NetSimVizWire":251,"./NetSimWire":252,"./netsimConstants":262,"./netsimGlobals":263,"./netsimNodeFactory":264,"./tweens":268}],250:[function(require,module,exports){
+},{"../utils":318,"./NetSimVizAutoDnsNode":243,"./NetSimVizNode":245,"./NetSimVizSimulationNode":246,"./NetSimVizSimulationWire":247,"./NetSimVizWire":248,"./NetSimWire":249,"./netsimConstants":259,"./netsimGlobals":260,"./netsimNodeFactory":261,"./tweens":265}],247:[function(require,module,exports){
 /**
  * @overview Wires in the visualization that map to simulation entities.
  */
@@ -2809,7 +2756,7 @@ NetSimVizSimulationWire.prototype.kill = function () {
 };
 
 
-},{"../utils":321,"./NetSimVizNode":248,"./NetSimVizWire":251,"./netsimGlobals":263}],251:[function(require,module,exports){
+},{"../utils":318,"./NetSimVizNode":245,"./NetSimVizWire":248,"./netsimGlobals":260}],248:[function(require,module,exports){
 /**
  * @overview Wires in the visualization.
  */
@@ -3100,7 +3047,7 @@ NetSimVizWire.prototype.getWireCenterPosition = function () {
 };
 
 
-},{"../utils":321,"./NetSimVizElement":247,"./dataConverters":257,"./netsimConstants":262,"./netsimUtils":265,"./tweens":268}],249:[function(require,module,exports){
+},{"../utils":318,"./NetSimVizElement":244,"./dataConverters":254,"./netsimConstants":259,"./netsimUtils":262,"./tweens":265}],246:[function(require,module,exports){
 /**
  * @overview Nodes in the visualization that map to simulation entities.
  */
@@ -3193,7 +3140,7 @@ NetSimVizSimulationNode.prototype.kill = function () {
 };
 
 
-},{"../utils":321,"./NetSimVizNode":248,"./netsimConstants":262,"./netsimGlobals":263}],246:[function(require,module,exports){
+},{"../utils":318,"./NetSimVizNode":245,"./netsimConstants":259,"./netsimGlobals":260}],243:[function(require,module,exports){
 /**
  * @overview Visualization auto-dns node.
  */
@@ -3235,7 +3182,7 @@ var NetSimVizAutoDnsNode = module.exports = function () {
 NetSimVizAutoDnsNode.inherits(NetSimVizNode);
 
 
-},{"../utils":321,"./NetSimVizNode":248,"./netsimGlobals":263}],248:[function(require,module,exports){
+},{"../utils":318,"./NetSimVizNode":245,"./netsimGlobals":260}],245:[function(require,module,exports){
 /**
  * @overview Nodes in the visualization.
  */
@@ -3527,7 +3474,7 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
 };
 
 
-},{"../utils":321,"./NetSimVizElement":247,"./netsimConstants":262,"./netsimGlobals":263,"./netsimUtils":265,"./tweens":268}],247:[function(require,module,exports){
+},{"../utils":318,"./NetSimVizElement":244,"./netsimConstants":259,"./netsimGlobals":260,"./netsimUtils":262,"./tweens":265}],244:[function(require,module,exports){
 /**
  * @overview Base type for visible elements in the visualization.
  */
@@ -3784,7 +3731,7 @@ NetSimVizElement.prototype.snapToScale = function (newScale) {
 };
 
 
-},{"./netsimUtils":265,"./tweens":268}],268:[function(require,module,exports){
+},{"./netsimUtils":262,"./tweens":265}],265:[function(require,module,exports){
 /**
  * @overview Tween functions used to animate visualization elements.
  */
@@ -4024,7 +3971,7 @@ exports.DoAfterDelay.prototype.tick = function (clock) {
 };
 
 
-},{"../utils":321}],244:[function(require,module,exports){
+},{"../utils":318}],241:[function(require,module,exports){
 /**
  * @overview UI controller for tabs area in left column
  *           Directly controls the instructions tab, others are delegated.
@@ -4327,7 +4274,7 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimDnsTab":194,"./NetSimMyDeviceTab":213,"./NetSimRouterTab":231,"./NetSimTabsComponent.html.ejs":243,"./netsimConstants":262,"./netsimGlobals":263,"./netsimUtils":265}],243:[function(require,module,exports){
+},{"./NetSimDnsTab":193,"./NetSimMyDeviceTab":211,"./NetSimRouterTab":229,"./NetSimTabsComponent.html.ejs":240,"./netsimConstants":259,"./netsimGlobals":260,"./netsimUtils":262}],240:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4357,7 +4304,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":259,"./netsimConstants":262,"./netsimUtils":265,"ejs":495}],241:[function(require,module,exports){
+},{"./locale":256,"./netsimConstants":259,"./netsimUtils":262,"ejs":492}],238:[function(require,module,exports){
 /**
  * @overview UI component: The small expandable box above the visualization,
  *           used to show debug and diagnostic information.
@@ -4386,9 +4333,6 @@ var NetSimPanel = require('./NetSimPanel.js');
  * @param {Object} callbacks
  * @param {function} callbacks.disconnectCallback - method to call when disconnect button
  *        is clicked.
- * @param {function} callbacks.cleanShardNow - Manually kick off shard cleaning
- * @param {function} callbacks.expireHeartbeat - Force local node heartbeat to
- *        look old
  * @constructor
  * @augments NetSimPanel
  */
@@ -4399,24 +4343,11 @@ var NetSimStatusPanel = module.exports = function (rootDiv, callbacks) {
    */
   this.disconnectCallback_ = callbacks.disconnectCallback;
 
-  /**
-   * Callback for debug button that starts shard cleaning immediately
-   * @type {function}
-   * @private
-   */
-  this.cleanShardNow_ = callbacks.cleanShardNow;
-
-  /**
-   * Callback for debug button that spoofs expired local node heartbeat
-   * @type {function}
-   * @private
-   */
-  this.expireHeartbeat_ = callbacks.expireHeartbeat;
-
   // Superclass constructor
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim_status_panel',
     panelTitle: 'Status',
+    userToggleable: false,
     beginMinimized: true
   });
 };
@@ -4454,13 +4385,10 @@ NetSimStatusPanel.prototype.render = function (data) {
   if (data.isConnected) {
     this.addButton('Disconnect', this.disconnectCallback_);
   }
-
-  this.getBody().find('.clean-shard-now').click(this.cleanShardNow_);
-  this.getBody().find('.expire-heartbeat').click(this.expireHeartbeat_);
 };
 
 
-},{"../utils":321,"./NetSimPanel.js":219,"./NetSimStatusPanel.html.ejs":240}],240:[function(require,module,exports){
+},{"../utils":318,"./NetSimPanel.js":217,"./NetSimStatusPanel.html.ejs":237}],237:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4474,16 +4402,7 @@ var buf = [];
 with (locals || {}) { (function(){ 
  buf.push('');1;
 var i18n = require('./locale');
-
-/**
- * Causes helpful controls to appear that provide ways to manually change/break
- * the simulation, for help repro-ing bugs.
- * Don't check this in set to TRUE!
- * @type {boolean}
- * @const
- */
-var ENABLE_DEBUG_CONTROLS = false;
-; buf.push('\n<div class="content-wrap">\n  ');14; if (remoteNodeName) { ; buf.push('\n  <p>Connected to ', escape((15,  remoteNodeName )), '</p>\n  ');16; } ; buf.push('\n\n  ');18; if (myHostname) { ; buf.push('\n  <p>My hostname: ', escape((19,  myHostname )), '</p>\n  ');20; } ; buf.push('\n\n  ');22; if (myAddress) { ; buf.push('\n  <p>My address: ', escape((23,  myAddress )), '</p>\n  ');24; } ; buf.push('\n\n  ');26; if (shareLink) { ; buf.push('\n  <p><a href="', escape((27,  shareLink )), '">', escape((27,  i18n.shareThisNetwork() )), '</a></p>\n  ');28; } ; buf.push('\n\n  ');30; if (ENABLE_DEBUG_CONTROLS) { ; buf.push('\n    <input type="button" class="debug-button expire-heartbeat" value="Expire Heartbeat" title="Make local node look expired" />\n    <input type="button" class="debug-button clean-shard-now" value="Clean Shard Now" title="Manuallly start a cleaning cycle from this client" />\n  ');33; } ; buf.push('\n</div>\n'); })();
+; buf.push('\n<div class="content-wrap">\n  ');5; if (remoteNodeName) { ; buf.push('\n  <p>Connected to ', escape((6,  remoteNodeName )), '</p>\n  ');7; } ; buf.push('\n\n  ');9; if (myHostname) { ; buf.push('\n  <p>My hostname: ', escape((10,  myHostname )), '</p>\n  ');11; } ; buf.push('\n\n  ');13; if (myAddress) { ; buf.push('\n  <p>My address: ', escape((14,  myAddress )), '</p>\n  ');15; } ; buf.push('\n\n  ');17; if (shareLink) { ; buf.push('\n  <p><a href="', escape((18,  shareLink )), '">', escape((18,  i18n.shareThisNetwork() )), '</a></p>\n  ');19; } ; buf.push('\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4491,594 +4410,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":259,"ejs":495}],235:[function(require,module,exports){
-/**
- * @overview Client-driven clean-up system for old/orphaned rows.
- */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-'use strict';
-
-var utils = require('../utils');
-var commands = require('../commands');
-var Command = commands.Command;
-var CommandSequence = commands.CommandSequence;
-var NetSimEntity = require('./NetSimEntity');
-var NetSimHeartbeat = require('./NetSimHeartbeat');
-var NetSimNode = require('./NetSimNode');
-var NetSimWire = require('./NetSimWire');
-var NetSimMessage = require('./NetSimMessage');
-var NetSimLogEntry = require('./NetSimLogEntry');
-var NetSimLogger = require('./NetSimLogger');
-
-var _ = utils.getLodash();
-var logger = NetSimLogger.getSingleton();
-
-/**
- * Minimum delay between attempts to start a cleaning job.
- * @type {number}
- * @const
- */
-var CLEANING_RETRY_INTERVAL_MS = 120000; // 2 minutes
-
-/**
- * Minimum delay before the next cleaning job is started after
- * a cleaning job has finished successfully.
- * @type {number}
- * @const
- */
-var CLEANING_SUCCESS_INTERVAL_MS = 600000; // 10 minutes
-
-/**
- * How old a heartbeat can be without being cleaned up.
- * @type {number}
- * @const
- */
-var HEARTBEAT_TIMEOUT_MS = 180000; // 3 minutes
-
-/**
- * Special heartbeat type that acts as a cleaning lock across the shard
- * for the NetSimShardCleaner module.
- *
- * @param {!NetSimShard} shard
- * @param {*} row
- * @constructor
- * @augments NetSimHeartbeat
- */
-var CleaningHeartbeat = function (shard, row) {
-  row = row !== undefined ? row : {};
-  NetSimHeartbeat.call(this, shard, row);
-
-  /**
-   * @type {number}
-   * @private
-   * @override
-   */
-  this.nodeID_ = 0;
-};
-CleaningHeartbeat.inherits(NetSimHeartbeat);
-
-/**
- * Static creation method for a CleaningHeartbeat.
- * @param {!NetSimShard} shard
- * @param {!NodeStyleCallback} onComplete - Callback that is passed the new
- *        CleaningHeartbeat object.
- */
-CleaningHeartbeat.create = function (shard, onComplete) {
-  NetSimEntity.create(CleaningHeartbeat, shard, onComplete);
-};
-
-/**
- * Static getter for all non-expired cleaning locks on the shard.
- * @param {!NetSimShard} shard
- * @param {!NodeStyleCallback} onComplete - callback that receives an array of the non-
- *        expired cleaning locks.
- */
-CleaningHeartbeat.getAllCurrent = function (shard, onComplete) {
-  shard.heartbeatTable.readAll(function (err, rows) {
-    if (err) {
-      onComplete(err, null);
-      return;
-    }
-
-    var heartbeats = rows
-        .filter(function (row) {
-          return row.cleaner === true &&
-              Date.now() - row.time < HEARTBEAT_TIMEOUT_MS;
-        })
-        .map(function (row) {
-          return new CleaningHeartbeat(shard, row);
-        });
-    onComplete(null, heartbeats);
-  });
-};
-
-/**
- * CleaningHeartbeat row has an extra field to indicate its special type.
- * @returns {*}
- * @private
- * @override
- */
-CleaningHeartbeat.prototype.buildRow = function () {
-  return utils.extend(
-      CleaningHeartbeat.superPrototype.buildRow.call(this),
-      { cleaner: true }
-  );
-};
-
-/**
- * Special subsystem that performs periodic cleanup on the shard tables.
- *
- * Every once in a while, a client will invoke the cleaning routine, which
- * begins by attempting to get a cleaning lock on the shard.  If lock is
- * obtained we can be sure that no other client is trying to clean the shard
- * right now, and we proceed to clean the tables of expired rows.
- *
- * @param {!NetSimShard} shard
- * @param {number} initialCleaningDelayMs
- * @constructor
- */
-var NetSimShardCleaner = module.exports = function (shard, initialCleaningDelayMs) {
-
-  /**
-   * Shard we intend to keep clean.
-   * @type {NetSimShard}
-   * @private
-   */
-  this.shard_ = shard;
-
-  /**
-   * Local timestamp (milliseconds) of when we next intend to
-   * kick off a cleaning routine.
-   * @type {number}
-   * @private
-   */
-  this.nextAttemptTime_ = Date.now() + initialCleaningDelayMs;
-
-  /**
-   * A special heartbeat that acts as our cleaning lock on the shard
-   * and prevents other clients from cleaning at the same time.
-   * @type {CleaningHeartbeat}
-   * @private
-   */
-  this.heartbeat = null;
-};
-
-/**
- * Expose heartbeat timeout for flexible tests.
- * @type {number}
- * @const
- */
-NetSimShardCleaner.HEARTBEAT_TIMEOUT_MS = HEARTBEAT_TIMEOUT_MS;
-
-/**
- * Check whether enough time has passed since our last cleaning
- * attempt, and if so try to start a cleaning routine.
- * @param {RunLoop.Clock} clock
- */
-NetSimShardCleaner.prototype.tick = function (clock) {
-  if (Date.now() >= this.nextAttemptTime_) {
-    this.nextAttemptTime_ = Date.now() + CLEANING_RETRY_INTERVAL_MS;
-    this.cleanShard();
-  }
-
-  if (this.heartbeat) {
-    this.heartbeat.tick(clock);
-  }
-
-  if (this.steps_){
-    this.steps_.tick(clock);
-    if (this.steps_.isFinished()){
-      this.steps_ = undefined;
-      this.releaseCleaningLock(function () {
-      });
-    }
-  }
-};
-
-/**
- * Attempt to begin a cleaning routine.
- */
-NetSimShardCleaner.prototype.cleanShard = function () {
-  this.getCleaningLock(function (err) {
-    if (err) {
-      logger.warn("Failed to get cleaning lock: " + err.message);
-      return;
-    }
-
-    this.steps_ = new CommandSequence([
-      new CacheTable(this, 'heartbeat', this.shard_.heartbeatTable),
-      new CleanHeartbeats(this),
-
-      new CacheTable(this, 'heartbeat', this.shard_.heartbeatTable),
-      new CacheTable(this, 'node', this.shard_.nodeTable),
-      new CleanNodes(this),
-
-      new CacheTable(this, 'node', this.shard_.nodeTable),
-      new CacheTable(this, 'wire', this.shard_.wireTable),
-      new CleanWires(this),
-
-      new CacheTable(this, 'message', this.shard_.messageTable),
-      new CleanMessages(this),
-
-      new CacheTable(this, 'log', this.shard_.logTable),
-      new CleanLogs(this)
-    ]);
-    this.steps_.begin();
-  }.bind(this));
-};
-
-/**
- * Whether this cleaner currently has the only permission to clean
- * shard tables.
- * @returns {boolean}
- */
-NetSimShardCleaner.prototype.hasCleaningLock = function () {
-  return this.heartbeat !== null;
-};
-
-/**
- * Attempt to acquire a cleaning lock by creating a CleaningHeartbeat
- * of our own, that does not collide with any existing CleaningHeartbeats.
- * @param {!NodeStyleCallback} onComplete - called when operation completes.
- */
-NetSimShardCleaner.prototype.getCleaningLock = function (onComplete) {
-  CleaningHeartbeat.create(this.shard_, function (err, heartbeat) {
-    if (err) {
-      onComplete(err, null);
-      return;
-    }
-
-    // We made a heartbeat - now check to make sure there wasn't already
-    // another one.
-    CleaningHeartbeat.getAllCurrent(this.shard_, function (err, heartbeats) {
-      if (err || heartbeats.length > 1) {
-        // Someone else is already cleaning, back out and try again later.
-        heartbeat.destroy(function () {
-          onComplete(new Error('Failed to acquire cleaning lock'), null);
-        });
-        return;
-      }
-
-      // Success, we have cleaning lock.
-      this.heartbeat = heartbeat;
-      logger.info("Cleaning lock acquired");
-      onComplete(null, null);
-    }.bind(this));
-  }.bind(this));
-};
-
-/**
- * Remove and destroy this cleaner's CleaningHeartbeat, giving another
- * client the chance to acquire a lock.
- * @param {!NodeStyleCallback} onComplete - called when operation completes, with
- *        boolean "success" argument.
- */
-NetSimShardCleaner.prototype.releaseCleaningLock = function (onComplete) {
-  if (!this.heartbeat) {
-    onComplete(null, null);
-    return;
-  }
-
-  this.heartbeat.destroy(function (err) {
-    this.heartbeat = null;
-    this.nextAttemptTime_ = Date.now() + CLEANING_SUCCESS_INTERVAL_MS;
-    logger.info("Cleaning lock released");
-    onComplete(err, null);
-  }.bind(this));
-};
-
-/**
- * Sets key-value pair on cleaner's table cache.
- * @param {!string} key - usually table's name.
- * @param {!Array} rows - usually table data.
- */
-NetSimShardCleaner.prototype.cacheTable = function (key, rows) {
-  if (this.tableCache === undefined) {
-    this.tableCache = {};
-  }
-  this.tableCache[key] = rows;
-};
-
-/**
- * Look up value for key in cleaner's table cache.
- * @param {!string} key - usually table's name.
- * @returns {Array} table's cached data.
- */
-NetSimShardCleaner.prototype.getTableCache = function (key) {
-  return this.tableCache[key];
-};
-
-/**
- * Get shard that cleaner is operating on.
- * @returns {NetSimShard}
- */
-NetSimShardCleaner.prototype.getShard = function () {
-  return this.shard_;
-};
-
-/**
- * Command that asynchronously fetches all rows for the given table
- * and stores them in the cleaner's tableCache for the given key.
- *
- * @param {!NetSimShardCleaner} cleaner
- * @param {!string} key
- * @param {!NetSimTable} table
- * @constructor
- * @augments Command
- */
-var CacheTable = function (cleaner, key, table) {
-  Command.call(this);
-
-  /**
-   * @type {NetSimShardCleaner}
-   * @private
-   */
-  this.cleaner_ = cleaner;
-
-  /**
-   * @type {string}
-   * @private
-   */
-  this.key_ = key;
-
-  /**
-   * @type {!NetSimTable}
-   * @private
-   */
-  this.table_ = table;
-};
-CacheTable.inherits(Command);
-
-/**
- * Trigger asynchronous readAll request on table.
- * @private
- */
-CacheTable.prototype.onBegin_ = function () {
-  this.table_.readAll(function (err, rows) {
-    if (err) {
-      logger.error("Failed to cache rows for " + this.key_);
-      this.fail();
-      return;
-    }
-
-    this.cleaner_.cacheTable(this.key_, rows);
-    this.succeed();
-  }.bind(this));
-};
-
-/**
- * Command that calls destroy() on the provided entity.
- *
- * @param {!NetSimEntity} entity
- * @constructor
- * @augments Command
- */
-var DestroyEntity = function (entity) {
-  Command.call(this);
-
-  /**
-   * @type {!NetSimEntity}
-   * @private
-   */
-  this.entity_ = entity;
-};
-DestroyEntity.inherits(Command);
-
-/**
- * Call destory() on stored entity.
- * @private
- */
-DestroyEntity.prototype.onBegin_ = function () {
-  this.entity_.destroy(function (err) {
-    if (err) {
-      logger.warn("Failed to destroy entity: " + err.message);
-      this.fail();
-      return;
-    }
-    logger.info("Deleted entity");
-    this.succeed();
-  }.bind(this));
-};
-
-/**
- * Command that scans cleaner's heartbeat table cache for expired heartbeats,
- * and deletes them one at a time.
- *
- * @param {!NetSimShardCleaner} cleaner
- * @constructor
- * @augments CommandSequence
- */
-var CleanHeartbeats = function (cleaner) {
-  CommandSequence.call(this);
-
-  /**
-   * @type {!NetSimShardCleaner}
-   * @private
-   */
-  this.cleaner_ = cleaner;
-};
-CleanHeartbeats.inherits(CommandSequence);
-
-/**
- * @private
- * @override
- */
-CleanHeartbeats.prototype.onBegin_ = function () {
-  var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
-  this.commandList_ = heartbeatRows.filter(function (row) {
-    return Date.now() - row.time > HEARTBEAT_TIMEOUT_MS;
-  }).map(function (row) {
-    return new DestroyEntity(new NetSimHeartbeat(this.cleaner_.getShard(), row));
-  }.bind(this));
-  CommandSequence.prototype.onBegin_.call(this);
-};
-
-/**
- * Command that scans cleaner's node table cache, and then deletes all
- * nodes that don't have matching heartbeats in the heartbeat table cache.
- *
- * @param {!NetSimShardCleaner} cleaner
- * @constructor
- * @augments CommandSequence
- */
-var CleanNodes = function (cleaner) {
-  CommandSequence.call(this);
-
-  /**
-   * @type {!NetSimShardCleaner}
-   * @private
-   */
-  this.cleaner_ = cleaner;
-};
-CleanNodes.inherits(CommandSequence);
-
-/**
- * @private
- * @override
- */
-CleanNodes.prototype.onBegin_ = function () {
-  var heartbeatRows = this.cleaner_.getTableCache('heartbeat');
-  var nodeRows = this.cleaner_.getTableCache('node');
-  this.commandList_ = nodeRows.filter(function (row) {
-    return heartbeatRows.every(function (heartbeat) {
-      return heartbeat.nodeID !== row.id;
-    });
-  }).map(function (row) {
-    return new DestroyEntity(new NetSimNode(this.cleaner_.getShard(), row));
-  }.bind(this));
-  CommandSequence.prototype.onBegin_.call(this);
-};
-
-/**
- * Command that scans cleaner's Wires table cache, and deletes any wires
- * that are associated with nodes that aren't in the node table cache.
- *
- * @param {!NetSimShardCleaner} cleaner
- * @constructor
- * @augments CommandSequence
- */
-var CleanWires = function (cleaner) {
-  CommandSequence.call(this);
-
-  /**
-   * @type {!NetSimShardCleaner}
-   * @private
-   */
-  this.cleaner_ = cleaner;
-};
-CleanWires.inherits(CommandSequence);
-
-/**
- * @private
- * @override
- */
-CleanWires.prototype.onBegin_ = function () {
-  var nodeRows = this.cleaner_.getTableCache('node');
-  var wireRows = this.cleaner_.getTableCache('wire');
-  this.commandList_ = wireRows.filter(function (wireRow) {
-    return !(nodeRows.some(function (nodeRow) {
-      return nodeRow.id === wireRow.localNodeID;
-    }) && nodeRows.some(function (nodeRow) {
-      return nodeRow.id === wireRow.remoteNodeID;
-    }));
-  }).map(function (row) {
-    return new DestroyEntity(new NetSimWire(this.cleaner_.getShard(), row));
-  }.bind(this));
-  CommandSequence.prototype.onBegin_.call(this);
-};
-
-/**
- * Command that scans the cleaner's message table cache, and deletes any
- * messages in transit to nodes that no longer exist in the node table cache.
- *
- * @param {!NetSimShardCleaner} cleaner
- * @constructor
- * @augments CommandSequence
- */
-var CleanMessages = function (cleaner) {
-  CommandSequence.call(this);
-
-  /**
-   * @type {!NetSimShardCleaner}
-   * @private
-   */
-  this.cleaner_ = cleaner;
-};
-CleanMessages.inherits(CommandSequence);
-
-/**
- * @private
- * @override
- */
-CleanMessages.prototype.onBegin_ = function () {
-  var nodeRows = this.cleaner_.getTableCache('node');
-  var messageRows = this.cleaner_.getTableCache('message');
-  this.commandList_ = messageRows.filter(function (messageRow) {
-
-    var simulatingNodeRow = _.find(nodeRows, function (nodeRow) {
-      return nodeRow.id === messageRow.simulatedBy;
-    });
-
-    // A message not being simulated by any client can be cleaned up.
-    if (!simulatingNodeRow) {
-      return true;
-    }
-
-    var destinationNodeRow = _.find(nodeRows, function (nodeRow) {
-      return nodeRow.id === messageRow.toNodeID;
-    });
-
-    // Messages with an invalid destination should also be cleaned up.
-    return !destinationNodeRow;
-
-  }).map(function (row) {
-    return new DestroyEntity(new NetSimMessage(this.cleaner_.getShard(), row));
-  }.bind(this));
-  CommandSequence.prototype.onBegin_.call(this);
-};
-
-/**
- *
- * @param cleaner
- * @constructor
- * @augments CommandSequence
- */
-var CleanLogs = function (cleaner) {
-  CommandSequence.call(this);
-  this.cleaner_ = cleaner;
-};
-CleanLogs.inherits(CommandSequence);
-
-/**
- *
- * @private
- * @override
- */
-CleanLogs.prototype.onBegin_ = function () {
-  var nodeRows = this.cleaner_.getTableCache('node');
-  var logRows = this.cleaner_.getTableCache('log');
-  this.commandList_ = logRows.filter(function (logRow) {
-    return nodeRows.every(function (nodeRow) {
-      return nodeRow.id !== logRow.nodeID;
-    });
-  }).map(function (row) {
-    return new DestroyEntity(new NetSimLogEntry(this.cleaner_.getShard(), row));
-  }.bind(this));
-  CommandSequence.prototype.onBegin_.call(this);
-};
-
-
-},{"../commands":107,"../utils":321,"./NetSimEntity":199,"./NetSimHeartbeat":200,"./NetSimLogEntry":203,"./NetSimLogger":207,"./NetSimMessage":209,"./NetSimNode":214,"./NetSimWire":252}],234:[function(require,module,exports){
+},{"./locale":256,"ejs":492}],232:[function(require,module,exports){
 /**
  * @overview Represents a collection of tables that map to a particular
  *           class section's simulation, isolated from other class sections.
@@ -5131,9 +4463,6 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(channel, shardID, 'l');
   this.logTable.setPollingInterval(10000);
-
-  /** @type {NetSimTable} */
-  this.heartbeatTable = new NetSimTable(channel, shardID, 'h');
 };
 
 /**
@@ -5150,7 +4479,7 @@ NetSimShard.prototype.tick = function (clock) {
 };
 
 
-},{"./NetSimTable":242,"./PubSubService":255}],255:[function(require,module,exports){
+},{"./NetSimTable":239,"./PubSubService":252}],252:[function(require,module,exports){
 /**
  * @overview Wrapped pub/sub service client APIs (like Pusher)
  */
@@ -5244,7 +4573,7 @@ PubSubService.PusherService.prototype.subscribe = function (channelID) {
 };
 
 
-},{"./PubSubChannel":254}],254:[function(require,module,exports){
+},{"./PubSubChannel":251}],251:[function(require,module,exports){
 /**
  * @overview Wrapped pub/sub service channel APIs (like Pusher's Channel)
  */
@@ -5318,7 +4647,7 @@ PubSubChannel.PusherChannel.prototype.subscribe = function (eventName, callback)
 };
 
 
-},{}],242:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 /**
  * @overview Wraps remote storage interface and polling behavior.
  */
@@ -5611,7 +4940,7 @@ NetSimTable.prototype.onPubSubEvent = function () {
 };
 
 
-},{"../ObservableEvent":2,"../utils":321,"@cdo/shared/clientApi":323}],323:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":318,"@cdo/shared/clientApi":320}],320:[function(require,module,exports){
 /* global $ */
 
 var base = {
@@ -5708,7 +5037,7 @@ module.exports = {
   }
 };
 
-},{}],233:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 /**
  * @overview UI controller for the send panel (the bottom panel on the right)
  *           which is used to transmit packets.
@@ -6292,7 +5621,7 @@ NetSimSendPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":321,"./NetSimLogger":207,"./NetSimPacketEditor":216,"./NetSimPacketSizeControl":217,"./NetSimPanel":219,"./NetSimSendPanel.html.ejs":232,"./Packet":253,"./dataConverters":257,"./locale":259,"./netsimConstants":262,"./netsimGlobals":263}],232:[function(require,module,exports){
+},{"../utils":318,"./NetSimLogger":205,"./NetSimPacketEditor":214,"./NetSimPacketSizeControl":215,"./NetSimPanel":217,"./NetSimSendPanel.html.ejs":230,"./Packet":250,"./dataConverters":254,"./locale":256,"./netsimConstants":259,"./netsimGlobals":260}],230:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6315,7 +5644,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":259,"./netsimConstants":262,"ejs":495}],231:[function(require,module,exports){
+},{"./locale":256,"./netsimConstants":259,"ejs":492}],229:[function(require,module,exports){
 /**
  * @overview UI controller for the "Router" tab in the left column.
  */
@@ -6509,7 +5838,7 @@ NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
 };
 
 
-},{"./NetSimBandwidthControl":183,"./NetSimMemoryControl":208,"./NetSimRouterLogTable":226,"./NetSimRouterStatsTable":229,"./NetSimRouterTab.html.ejs":230,"./netsimGlobals":263}],230:[function(require,module,exports){
+},{"./NetSimBandwidthControl":182,"./NetSimMemoryControl":206,"./NetSimRouterLogTable":224,"./NetSimRouterStatsTable":227,"./NetSimRouterTab.html.ejs":228,"./netsimGlobals":260}],228:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6531,7 +5860,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":259,"ejs":495}],229:[function(require,module,exports){
+},{"./locale":256,"ejs":492}],227:[function(require,module,exports){
 /**
  * @overview UI component displaying router stats on the "Router" tab.
  */
@@ -6823,7 +6152,7 @@ NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) 
 };
 
 
-},{"./NetSimLogEntry":203,"./NetSimRouterStatsTable.html.ejs":228,"./netsimUtils":265}],228:[function(require,module,exports){
+},{"./NetSimLogEntry":201,"./NetSimRouterStatsTable.html.ejs":226,"./netsimUtils":262}],226:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6871,7 +6200,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":321,"./netsimUtils":265,"ejs":495}],226:[function(require,module,exports){
+},{"../utils":318,"./netsimUtils":262,"ejs":492}],224:[function(require,module,exports){
 /**
  * @overview Router log table UI component on the "Router" tab.
  */
@@ -6941,7 +6270,7 @@ NetSimRouterLogTable.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimRouterLogTable.html.ejs":225}],225:[function(require,module,exports){
+},{"./NetSimRouterLogTable.html.ejs":223}],223:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6985,7 +6314,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":253,"./locale":259,"./netsimConstants":262,"./netsimUtils":265,"ejs":495}],224:[function(require,module,exports){
+},{"./Packet":250,"./locale":256,"./netsimConstants":259,"./netsimUtils":262,"ejs":492}],222:[function(require,module,exports){
 /**
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
@@ -7172,7 +6501,7 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
 };
 
 
-},{"../utils":321,"./NetSimLogEntry":203,"./NetSimRouterLogModal.html.ejs":223,"./Packet":253,"./netsimGlobals":263}],223:[function(require,module,exports){
+},{"../utils":318,"./NetSimLogEntry":201,"./NetSimRouterLogModal.html.ejs":221,"./Packet":250,"./netsimGlobals":260}],221:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7224,7 +6553,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":253,"./locale":259,"./netsimGlobals":263,"ejs":495}],217:[function(require,module,exports){
+},{"./Packet":250,"./locale":256,"./netsimGlobals":260,"ejs":492}],215:[function(require,module,exports){
 /**
  * @overview UI slider used to change maximum packet length.
  */
@@ -7306,7 +6635,7 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":239,"./locale":259}],216:[function(require,module,exports){
+},{"./NetSimSlider":236,"./locale":256}],214:[function(require,module,exports){
 /**
  * @overview UI controller for the packet editor which allows editing multiple
  *           encodings at once and lives inside the send panel.
@@ -8260,7 +7589,7 @@ NetSimPacketEditor.prototype.consumeFirstBit = function () {
 };
 
 
-},{"../constants":108,"../utils":321,"./NetSimEncodingControl":198,"./NetSimLogPanel":206,"./NetSimPacketEditor.html.ejs":215,"./Packet":253,"./dataConverters":257,"./locale":259,"./netsimConstants":262,"./netsimGlobals":263}],215:[function(require,module,exports){
+},{"../constants":107,"../utils":318,"./NetSimEncodingControl":197,"./NetSimLogPanel":204,"./NetSimPacketEditor.html.ejs":213,"./Packet":250,"./dataConverters":254,"./locale":256,"./netsimConstants":259,"./netsimGlobals":260}],213:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8333,7 +7662,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":253,"./locale":259,"./netsimConstants":262,"./netsimUtils":265,"ejs":495}],213:[function(require,module,exports){
+},{"./Packet":250,"./locale":256,"./netsimConstants":259,"./netsimUtils":262,"ejs":492}],211:[function(require,module,exports){
 /**
  * @overview UI controller for the "My Device" tab in the left column.
  */
@@ -8542,7 +7871,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
 };
 
 
-},{"./NetSimBitRateControl":186,"./NetSimChunkSizeControl":187,"./NetSimEncodingControl":198,"./NetSimMetronome":211,"./NetSimMyDeviceTab.html.ejs":212,"./NetSimPulseRateControl":220,"./netsimGlobals":263}],220:[function(require,module,exports){
+},{"./NetSimBitRateControl":185,"./NetSimChunkSizeControl":186,"./NetSimEncodingControl":197,"./NetSimMetronome":209,"./NetSimMyDeviceTab.html.ejs":210,"./NetSimPulseRateControl":218,"./netsimGlobals":260}],218:[function(require,module,exports){
 /**
  * @overview UI slider for changing the pulse rate (bitrate) of the local device.
  *           Differs from the bitrate slider in its scale and units.
@@ -8614,7 +7943,7 @@ NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"../utils":321,"./NetSimSlider":239,"./locale":259}],212:[function(require,module,exports){
+},{"../utils":318,"./NetSimSlider":236,"./locale":256}],210:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8634,7 +7963,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":495}],211:[function(require,module,exports){
+},{"ejs":492}],209:[function(require,module,exports){
 /**
  * @overview UI component: An animated SVG metronome.
  */
@@ -8751,7 +8080,7 @@ NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
 };
 
 
-},{"./NetSimMetronome.html.ejs":210}],210:[function(require,module,exports){
+},{"./NetSimMetronome.html.ejs":208}],208:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8843,7 +8172,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":495}],208:[function(require,module,exports){
+},{"ejs":492}],206:[function(require,module,exports){
 /**
  * @overview UI slider used to control router memory size.
  */
@@ -8899,7 +8228,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":321,"./NetSimSlider":239,"./netsimConstants":262,"./netsimUtils":265}],206:[function(require,module,exports){
+},{"../utils":318,"./NetSimSlider":236,"./netsimConstants":259,"./netsimUtils":262}],204:[function(require,module,exports){
 /**
  * @overview UI component, a log panel (used as "Sent Packets" and
  *           "Received Packets") that is used in the packet-sending
@@ -9345,7 +8674,7 @@ NetSimLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":321,"./NetSimEncodingControl":198,"./NetSimLogPacket.html.ejs":204,"./NetSimLogPanel.html.ejs":205,"./NetSimPanel":219,"./Packet":253,"./locale":259,"./netsimGlobals":263}],205:[function(require,module,exports){
+},{"../utils":318,"./NetSimEncodingControl":197,"./NetSimLogPacket.html.ejs":202,"./NetSimLogPanel.html.ejs":203,"./NetSimPanel":217,"./Packet":250,"./locale":256,"./netsimGlobals":260}],203:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9365,7 +8694,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":495}],204:[function(require,module,exports){
+},{"ejs":492}],202:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9505,7 +8834,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":253,"./dataConverters":257,"./locale":259,"./netsimConstants":262,"./netsimGlobals":263,"./netsimUtils":265,"ejs":495}],202:[function(require,module,exports){
+},{"./Packet":250,"./dataConverters":254,"./locale":256,"./netsimConstants":259,"./netsimGlobals":260,"./netsimUtils":262,"ejs":492}],200:[function(require,module,exports){
 /**
  * @overview Simulation entity controller reserved for the local client's
  *           simulation node.
@@ -9530,7 +8859,6 @@ var _ = utils.getLodash();
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
-var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var ObservableEvent = require('../ObservableEvent');
@@ -9602,13 +8930,6 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   this.receivedLog_ = null;
 
   /**
-   * Tells the network that we're alive
-   * @type {NetSimHeartbeat}
-   * @private
-   */
-  this.heartbeat = null;
-
-  /**
    * Change event others can observe, which we will fire when we
    * connect or disconnect from a router or remote client
    * @type {ObservableEvent}
@@ -9639,6 +8960,8 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
  *        created entity, or null if entity creation failed.
  */
 NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
+  // TODO (bbuchanan): Modify and return the template node instead of
+  // making two in this method.
   var templateNode = new NetSimLocalClientNode(shard);
   templateNode.displayName_ = displayName;
   templateNode.getTable().create(templateNode.buildRow(), function (err, row) {
@@ -9647,19 +8970,8 @@ NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
       return;
     }
 
-    NetSimHeartbeat.getOrCreate(shard, row.id, function (err, heartbeat) {
-      if (err) {
-        onComplete(err, null);
-        return;
-      }
-
-      // Attach a heartbeat failure (heart attack?) callback to
-      // detect and respond to a disconnect.
-      var newNode = new NetSimLocalClientNode(shard, row);
-      newNode.heartbeat = heartbeat;
-      newNode.heartbeat.setFailureCallback(newNode.onFailedHeartbeat.bind(newNode));
-      onComplete(null, newNode);
-    });
+    var newNode = new NetSimLocalClientNode(shard, row);
+    onComplete(null, newNode);
   });
 };
 
@@ -9709,31 +9021,15 @@ NetSimLocalClientNode.prototype.stopSimulation = function () {
 };
 
 /**
- * Our own client must send a regular heartbeat to broadcast its presence on
- * the shard.
+ * Ticks the simulation routers
  * @param {!RunLoop.Clock} clock
  */
 NetSimLocalClientNode.prototype.tick = function (clock) {
-  this.heartbeat.tick(clock);
+  // TODO (bbuchanan): Move the router collection and ticking the
+  // routers up to netsim.js (or elsewhere)
   this.routers_.forEach(function (router) {
     router.tick(clock);
   });
-};
-
-/**
- * Handler for a heartbeat update failure.  Propagates the failure up through
- * our own "lost connection" callback.
- * @param {Error} err
- * @private
- */
-NetSimLocalClientNode.prototype.onFailedHeartbeat = function (err) {
-  logger.error("Heartbeat failed.");
-  if (err) {
-    logger.error(err.message);
-  }
-  if (this.onNodeLostConnection_ !== undefined) {
-    this.onNodeLostConnection_();
-  }
 };
 
 /**
@@ -9825,9 +9121,6 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
     this.myRouterID_ = router.entityID;
     var myRouter = this.getMyRouter();
-    // Copy the heartbeat reference over to the router instance
-    // in our simulating routers collection.
-    myRouter.heartbeat = router.heartbeat;
 
     myRouter.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
@@ -9855,32 +9148,6 @@ NetSimLocalClientNode.prototype.getMyRouter = function () {
   return _.find(this.routers_, function (router) {
     return router.entityID === this.myRouterID_;
   }.bind(this));
-};
-
-/**
- * Synchronously destroy the local node.  Use on page unload, normally prefer
- * async steps.
- */
-NetSimLocalClientNode.prototype.synchronousDestroy = function () {
-  // If connected to remote, synchronously disconnect
-  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
-    this.synchronousDisconnectRemote();
-  }
-
-  // Remove messages being simulated by me
-  this.shard_.messageTable.readAllCached().forEach(function (row) {
-    if (row.simulatedBy === this.entityID) {
-      var message = new NetSimMessage(this.shard_, row);
-      message.synchronousDestroy();
-    }
-  }, this);
-
-  // Remove my heartbeat row(s)
-  this.heartbeat.synchronousDestroy();
-  this.heartbeat = null;
-
-  // Finally, call super-method
-  NetSimLocalClientNode.superPrototype.synchronousDestroy.call(this);
 };
 
 /**
@@ -9918,26 +9185,7 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
     return;
   }
 
-  // Remove heartbeat row, then self
-  this.heartbeat.destroy(function (err) {
-    if (err) {
-      onComplete(err);
-      return;
-    }
-
-    NetSimLocalClientNode.superPrototype.destroy.call(this, onComplete);
-  });
-};
-
-/**
- * Synchronously destroy my outgoing wire.  Used when navigating away from
- * the page - in normal circumstances use async version.
- */
-NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
-  if (this.myWire) {
-    this.myWire.synchronousDestroy();
-  }
-  this.cleanUpAfterDestroyingWire_();
+  NetSimLocalClientNode.superPrototype.destroy.call(this, onComplete);
 };
 
 /**
@@ -9967,13 +9215,6 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
  * @private
  */
 NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
-  var myRouter = this.getMyRouter();
-  if (myRouter) {
-    // We did manual heartbeat setup, we also need to do manual heartbeat
-    // cleanup when we disconnect from the router.
-    myRouter.heartbeat = null;
-  }
-
   this.myWire = null;
   this.myRemoteClient = null;
   this.myRouterID_ = undefined;
@@ -10316,7 +9557,7 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 };
 
 
-},{"../ObservableEvent":2,"../utils":321,"./NetSimClientNode":188,"./NetSimEntity":199,"./NetSimHeartbeat":200,"./NetSimLogger":207,"./NetSimMessage":209,"./NetSimRouterNode":227,"./netsimConstants":262,"./netsimGlobals":263}],201:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":318,"./NetSimClientNode":187,"./NetSimEntity":198,"./NetSimLogger":205,"./NetSimMessage":207,"./NetSimRouterNode":225,"./netsimConstants":259,"./netsimGlobals":260}],199:[function(require,module,exports){
 /**
  * @overview UI controller for lobby - handles flow for name entry, section
  *           selection, and remote node selection.
@@ -10825,7 +10066,7 @@ NetSimLobby.prototype.getShareLink = function () {
 };
 
 
-},{"../utils":321,"./NetSimClientNode":188,"./NetSimLogger":207,"./NetSimRemoteNodeSelectionPanel":222,"./NetSimRouterNode":227,"./NetSimShardSelectionPanel":237,"./locale":259,"./netsimGlobals":263,"./netsimNodeFactory":264}],237:[function(require,module,exports){
+},{"../utils":318,"./NetSimClientNode":187,"./NetSimLogger":205,"./NetSimRemoteNodeSelectionPanel":220,"./NetSimRouterNode":225,"./NetSimShardSelectionPanel":234,"./locale":256,"./netsimGlobals":260,"./netsimNodeFactory":261}],234:[function(require,module,exports){
 /**
  * @overview Lobby UI component used for name entry and selecting a shard/class
  *           section.
@@ -10912,7 +10153,7 @@ var NetSimShardSelectionPanel = module.exports = function (rootDiv, options,
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-shard-selection-panel',
     panelTitle: i18n.pickASection(),
-    canMinimize: false
+    userToggleable: false
   });
 };
 NetSimShardSelectionPanel.inherits(NetSimPanel);
@@ -11004,7 +10245,7 @@ NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
 };
 
 
-},{"../constants":108,"../utils":321,"./NetSimPanel":219,"./NetSimShardSelectionPanel.html.ejs":236,"./locale":259}],236:[function(require,module,exports){
+},{"../constants":107,"../utils":318,"./NetSimPanel":217,"./NetSimShardSelectionPanel.html.ejs":233,"./locale":256}],233:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11036,7 +10277,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":259,"ejs":495}],227:[function(require,module,exports){
+},{"./locale":256,"ejs":492}],225:[function(require,module,exports){
 /**
  * @overview Router node simulation entity.  Also contains logic for the
  *           auto-DNS system.
@@ -11064,7 +10305,6 @@ var NetSimLogEntry = require('./NetSimLogEntry');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
-var NetSimHeartbeat = require('./NetSimHeartbeat');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
@@ -11241,15 +10481,6 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   this.packetSpec_ = [];
 
   /**
-   * If ticked, tells the network that this router is being used.
-   *
-   * Not persisted on server (though the heartbeat does its own persisting)
-   *
-   * @type {NetSimHeartbeat}
-   */
-  this.heartbeat = null;
-
-  /**
    * Local cache of our remote row, used to decide whether our state has
    * changed.
    * 
@@ -11357,26 +10588,7 @@ NetSimRouterNode.inherits(NetSimNode);
  *        created entity, or null if entity creation failed.
  */
 NetSimRouterNode.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimRouterNode, shard, function (err, router) {
-    if (err) {
-      onComplete(err, null);
-      return;
-    }
-
-    NetSimHeartbeat.getOrCreate(shard, router.entityID, function (err, heartbeat) {
-      if (err) {
-        onComplete(err, null);
-        return;
-      }
-
-      // Set router heartbeat to double normal interval, since we expect
-      // at least two clients to help keep it alive.
-      router.heartbeat = heartbeat;
-      router.heartbeat.setBeatInterval(12000);
-
-      onComplete(null, router);
-    });
-  });
+  NetSimEntity.create(NetSimRouterNode, shard, onComplete);
 };
 
 /**
@@ -11387,26 +10599,7 @@ NetSimRouterNode.create = function (shard, onComplete) {
  *        found entity, or null if entity search failed.
  */
 NetSimRouterNode.get = function (routerID, shard, onComplete) {
-  NetSimEntity.get(NetSimRouterNode, routerID, shard, function (err, router) {
-    if (err) {
-      onComplete(err, null);
-      return;
-    }
-
-    NetSimHeartbeat.getOrCreate(shard, routerID, function (err, heartbeat) {
-      if (err) {
-        onComplete(err, null);
-        return;
-      }
-
-      // Set router heartbeat to double normal interval, since we expect
-      // at least two clients to help keep it alive.
-      router.heartbeat = heartbeat;
-      router.heartbeat.setBeatInterval(12000);
-
-      onComplete(null, router);
-    });
-  });
+  NetSimEntity.get(NetSimRouterNode, routerID, shard, onComplete);
 };
 
 /**
@@ -11459,14 +10652,11 @@ NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
 };
 
 /**
- * Ticks heartbeat, telling the network that router is in use.
+ * Performs queued routing and DNS operations.
  * @param {RunLoop.Clock} clock
  */
 NetSimRouterNode.prototype.tick = function (clock) {
   this.simulationTime_ = clock.time;
-  if (this.heartbeat) {
-    this.heartbeat.tick(clock);
-  }
   this.routeOverdueMessages_(clock);
   if (this.dnsMode === DnsMode.AUTOMATIC) {
     this.tickAutoDns_(clock);
@@ -12892,7 +12082,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
 };
 
 
-},{"../ObservableEvent":2,"../utils":321,"./NetSimEntity":199,"./NetSimHeartbeat":200,"./NetSimLogEntry":203,"./NetSimLogger":207,"./NetSimMessage":209,"./NetSimNode":214,"./NetSimWire":252,"./Packet":253,"./dataConverters":257,"./locale":259,"./netsimConstants":262,"./netsimGlobals":263,"./netsimNodeFactory":264,"./netsimUtils":265}],209:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":318,"./NetSimEntity":198,"./NetSimLogEntry":201,"./NetSimLogger":205,"./NetSimMessage":207,"./NetSimNode":212,"./NetSimWire":249,"./Packet":250,"./dataConverters":254,"./locale":256,"./netsimConstants":259,"./netsimGlobals":260,"./netsimNodeFactory":261,"./netsimUtils":262}],207:[function(require,module,exports){
 /**
  * @overview Simulation entity for a message between two nodes.
  */
@@ -13051,7 +12241,7 @@ NetSimMessage.prototype.buildRow = function () {
 };
 
 
-},{"../utils":321,"./NetSimEntity":199,"./dataConverters":257}],203:[function(require,module,exports){
+},{"../utils":318,"./NetSimEntity":198,"./dataConverters":254}],201:[function(require,module,exports){
 /**
  * @overview Simulation entity for router log entries.
  */
@@ -13268,7 +12458,7 @@ NetSimLogEntry.prototype.getOriginNode = function () {
 };
 
 
-},{"../utils":321,"./NetSimEntity":199,"./Packet":253,"./dataConverters":257,"./locale":259,"./netsimConstants":262,"./netsimNodeFactory":264,"moment":499}],499:[function(require,module,exports){
+},{"../utils":318,"./NetSimEntity":198,"./Packet":250,"./dataConverters":254,"./locale":256,"./netsimConstants":259,"./netsimNodeFactory":261,"moment":496}],496:[function(require,module,exports){
 //! moment.js
 //! version : 2.10.3
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -16380,7 +15570,7 @@ NetSimLogEntry.prototype.getOriginNode = function () {
     return _moment;
 
 }));
-},{}],264:[function(require,module,exports){
+},{}],261:[function(require,module,exports){
 /**
  * @overview Utility methods for generating the right kinds of node controllers
  *           from raw node table rows.
@@ -16438,7 +15628,7 @@ netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
 };
 
 
-},{"./NetSimClientNode":188,"./NetSimRouterNode":227,"./netsimConstants":262}],253:[function(require,module,exports){
+},{"./NetSimClientNode":187,"./NetSimRouterNode":225,"./netsimConstants":259}],250:[function(require,module,exports){
 /**
  * @overview Utility class for encoding and decoding simulated packets.
  */
@@ -16803,7 +15993,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
 };
 
 
-},{"./dataConverters":257,"./netsimGlobals":263,"./netsimUtils":265}],222:[function(require,module,exports){
+},{"./dataConverters":254,"./netsimGlobals":260,"./netsimUtils":262}],220:[function(require,module,exports){
 /**
  * @overview Lobby table UI component.
  * @see NetSimLobby for usage.
@@ -16900,7 +16090,7 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
     panelTitle: this.getLocalizedPanelTitle(),
-    canMinimize: false
+    userToggleable: false
   });
 };
 NetSimRemoteNodeSelectionPanel.inherits(NetSimPanel);
@@ -17053,7 +16243,7 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 
 
 
-},{"../utils":321,"./NetSimPanel":219,"./NetSimRemoteNodeSelectionPanel.html.ejs":221,"./locale":259,"./netsimConstants":262,"./netsimGlobals":263}],221:[function(require,module,exports){
+},{"../utils":318,"./NetSimPanel":217,"./NetSimRemoteNodeSelectionPanel.html.ejs":219,"./locale":256,"./netsimConstants":259,"./netsimGlobals":260}],219:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17291,237 +16481,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":321,"./locale":259,"./netsimConstants":262,"./netsimGlobals":263,"ejs":495}],200:[function(require,module,exports){
-/**
- * @overview Simulation entity representing a client's presence in the simulation.
- */
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-'use strict';
-
-require('../utils');
-var NetSimEntity = require('./NetSimEntity');
-var logger = require('./NetSimLogger').getSingleton();
-
-/**
- * How often a heartbeat is sent, in milliseconds
- * Six seconds, against the one-minute timeout over in NetSimShardCleaner,
- * gives a heartbeat at least nine chances to update before it gets cleaned up.
- * @type {number}
- * @const
- */
-var DEFAULT_HEARTBEAT_INTERVAL_MS = 6000;
-
-/**
- * How many consecutive failed heartbeat updates must occur before we call it
- * and kick the client out of the simulator.
- * @type {number}
- */
-var NUM_FAILED_UPDATES_TO_KICK = 3;
-
-/**
- * Sends regular heartbeat messages to the heartbeat table on the given
- * shard, for the given node.
- * @param {!NetSimShard} shard
- * @param {*} row
- * @constructor
- * @augments NetSimEntity
- */
-var NetSimHeartbeat = module.exports = function (shard, row) {
-  // TODO (bbuchanan): Consider:
-  //      Will this scale?  Can we move the heartbeat system to an in-memory
-  //      store on the server - or even better, hook into whatever our
-  //      notification service uses to read presence on a channel?
-  
-  row = row !== undefined ? row : {};
-  NetSimEntity.call(this, shard, row);
-
-  /** @type {number} Row ID in node table */
-  this.nodeID = row.nodeID;
-
-  /**
-   * @type {number} unix timestamp (ms)
-   * @private
-   */
-  this.time_ = row.time !== undefined ? row.time : Date.now();
-
-  /**
-   * @type {number} How often heartbeat is sent, in milliseconds
-   * @private
-   */
-  this.intervalMs_ = DEFAULT_HEARTBEAT_INTERVAL_MS;
-
-  /**
-   * A heartbeat can be given a recovery action to take if it fails to
-   * update its remote row.
-   * @type {function}
-   * @private
-   */
-  this.onFailedHeartbeat = undefined;
-
-  /**
-   * Fake age to apply to this heartbeat's remote row, allowing us to manually
-   * expire it for debugging purposes.
-   * @type {number}
-   * @private
-   */
-  this.falseAgeMS_ = 0;
-
-  /**
-   * Count of consecutive failed heartbeat updates by this controller.
-   * Used to implement three-strikes rule.
-   * @type {number}
-   * @private
-   */
-  this.consecutiveFailedUpdates_ = 0;
-};
-NetSimHeartbeat.inherits(NetSimEntity);
-
-/**
- * Static async creation method.  See NetSimEntity.create().
- * @param {!NetSimShard} shard
- * @param {!NodeStyleCallback} onComplete - Method that will be given the
- *        created entity, or null if entity creation failed.
- */
-NetSimHeartbeat.create = function (shard, onComplete) {
-  NetSimEntity.create(NetSimHeartbeat, shard, onComplete);
-};
-
-/**
- * Static "upsert" of heartbeat
- * @param {!NetSimShard} shard
- * @param {!number} nodeID
- * @param {!NodeStyleCallback} onComplete
- */
-NetSimHeartbeat.getOrCreate = function (shard, nodeID, onComplete) {
-  // TODO (bbuchanan): Extend storage API to support an upsert operation, and
-  //      use that here.  Would be even better if our backend storage supported
-  //      it (like mongodb).
-  shard.heartbeatTable.readAll(function (err, rows) {
-    var nodeRows = rows
-        .filter(function (row) {
-          return row.nodeID == nodeID;
-        })
-        .sort(function (a, b) {
-          return a.time < b.time ? 1 : -1;
-        });
-
-    if (nodeRows.length > 0) {
-      onComplete(null, new NetSimHeartbeat(shard, nodeRows[0]));
-    } else {
-      NetSimHeartbeat.create(shard, function (err, newHeartbeat) {
-        if (err) {
-          onComplete(err, null);
-          return;
-        }
-
-        newHeartbeat.nodeID = nodeID;
-        newHeartbeat.update(function (err) {
-          if (err) {
-            // Failed to fully create heartbeat
-            newHeartbeat.destroy();
-            onComplete(err, null);
-            return;
-          }
-          onComplete(null, newHeartbeat);
-        });
-      });
-    }
-  });
-};
-
-/**
- * Helper that gets the wires table for the configured shard.
- * @returns {NetSimTable}
- * @override
- */
-NetSimHeartbeat.prototype.getTable = function () {
-  return this.shard_.heartbeatTable;
-};
-
-/**
- * Build own row for the wire table
- * @override
- */
-NetSimHeartbeat.prototype.buildRow = function () {
-  return {
-    nodeID: this.nodeID,
-    time: (this.time_ - this.falseAgeMS_)
-  };
-};
-
-/**
- * Change how often this heartbeat attempts to update its remote storage
- * self.  Default value is 6 seconds.  Warning! If set too high, this
- * heartbeat may be seen as expired by another client and get cleaned up!
- *
- * @param {number} intervalMs - time between udpates, in milliseconds
- */
-NetSimHeartbeat.prototype.setBeatInterval = function (intervalMs) {
-  this.intervalMs_ = intervalMs;
-};
-
-/**
- * Set a handler to call if this heartbeat is unable to update its remote
- * storage representation.  Can be used to go into a recovery mode,
- * acknowledge disconnect, and/or attempt an auto-reconnect.
- * @param {function} failedHeartbeatCallback
- * @throws if set would clobber a previously-set callback
- */
-NetSimHeartbeat.prototype.setFailureCallback = function (failedHeartbeatCallback) {
-  if (this.onFailedHeartbeat !== undefined && failedHeartbeatCallback !== undefined) {
-    throw new Error("Heartbeat already has a failure callback.");
-  }
-  this.onFailedHeartbeat = failedHeartbeatCallback;
-};
-
-/**
- * Updates own row on regular interval, as long as something's making
- * it tick.
- */
-NetSimHeartbeat.prototype.tick = function () {
-  if (Date.now() - this.time_ > this.intervalMs_) {
-    this.time_ = Date.now();
-    this.update(function (err) {
-      if (err) {
-        // Implement a three-strikes rule for failed updates, to be more
-        // resilient against brief service interruptions.
-        this.consecutiveFailedUpdates_++;
-        logger.warn("Heartbeat update failed; strike " + this.consecutiveFailedUpdates_);
-        if (this.consecutiveFailedUpdates_ >= NUM_FAILED_UPDATES_TO_KICK) {
-          // A failed heartbeat update may indicate that we've been disconnected
-          // or kicked from the shard.  We may want to take action.
-          if (this.onFailedHeartbeat !== undefined) {
-            this.onFailedHeartbeat(err);
-          }
-        }
-      } else {
-        this.consecutiveFailedUpdates_ = 0;
-      }
-    }.bind(this));
-  }
-};
-
-/**
- * Cause this heartbeat to look like it's ten minutes old to the other
- * nodes on the shard, so it will be cleaned up by another node.
- */
-NetSimHeartbeat.prototype.spoofExpired = function () {
-  this.falseAgeMS_ += 600000; // 10 minutes old
-  this.update();
-};
-
-
-},{"../utils":321,"./NetSimEntity":199,"./NetSimLogger":207}],194:[function(require,module,exports){
+},{"../utils":318,"./locale":256,"./netsimConstants":259,"./netsimGlobals":260,"ejs":492}],193:[function(require,module,exports){
 /**
  * @overview UI controller for the DNS tab in the left column.
  */
@@ -17647,7 +16607,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsManualControl":190,"./NetSimDnsModeControl":192,"./NetSimDnsTab.html.ejs":193,"./NetSimDnsTable":196,"./netsimConstants":262,"./netsimGlobals":263}],196:[function(require,module,exports){
+},{"./NetSimDnsManualControl":189,"./NetSimDnsModeControl":191,"./NetSimDnsTab.html.ejs":192,"./NetSimDnsTable":195,"./netsimConstants":259,"./netsimGlobals":260}],195:[function(require,module,exports){
 /**
  * @overview UI table of local subnet, displaying hostname => address map.
  */
@@ -17725,7 +16685,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsTable.html.ejs":195,"./netsimConstants":262}],195:[function(require,module,exports){
+},{"./NetSimDnsTable.html.ejs":194,"./netsimConstants":259}],194:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17768,7 +16728,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":262,"ejs":495}],193:[function(require,module,exports){
+},{"./netsimConstants":259,"ejs":492}],192:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17788,7 +16748,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":495}],192:[function(require,module,exports){
+},{"ejs":492}],191:[function(require,module,exports){
 /**
  * @overview UI component used to select a DNS mode at runtime.
  */
@@ -17878,7 +16838,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
 };
 
 
-},{"./NetSimDnsModeControl.html.ejs":191,"./netsimConstants":262}],191:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html.ejs":190,"./netsimConstants":259}],190:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17909,7 +16869,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":259,"./netsimConstants":262,"ejs":495}],190:[function(require,module,exports){
+},{"./locale":256,"./netsimConstants":259,"ejs":492}],189:[function(require,module,exports){
 /**
  * @overview UI button used become the current DNS node in manual DNS mode.
  */
@@ -17978,7 +16938,7 @@ NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
 };
 
 
-},{"./NetSimDnsManualControl.html.ejs":189}],189:[function(require,module,exports){
+},{"./NetSimDnsManualControl.html.ejs":188}],188:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17998,7 +16958,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":495}],188:[function(require,module,exports){
+},{"ejs":492}],187:[function(require,module,exports){
 /**
  * @overview Simulated client node.
  */
@@ -18124,7 +17084,7 @@ NetSimClientNode.get = function (nodeID, shard, onComplete) {
 };
 
 
-},{"../utils":321,"./NetSimEntity":199,"./NetSimNode":214,"./NetSimWire":252,"./locale":259,"./netsimConstants":262}],214:[function(require,module,exports){
+},{"../utils":318,"./NetSimEntity":198,"./NetSimNode":212,"./NetSimWire":249,"./locale":256,"./netsimConstants":259}],212:[function(require,module,exports){
 /**
  * @overview A base class for all simulation node entities.
  */
@@ -18281,7 +17241,7 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
 
-},{"../utils":321,"./NetSimEntity":199,"./NetSimWire":252,"./locale":259}],252:[function(require,module,exports){
+},{"../utils":318,"./NetSimEntity":198,"./NetSimWire":249,"./locale":256}],249:[function(require,module,exports){
 /**
  * @overview Simulation Entity: A connection between two nodes and related
  *           metadata.
@@ -18409,7 +17369,7 @@ NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
 };
 
 
-},{"../utils":321,"./NetSimEntity":199}],199:[function(require,module,exports){
+},{"../utils":318,"./NetSimEntity":198}],198:[function(require,module,exports){
 /**
  * @overview base class for all simulation entities.
  */
@@ -18559,7 +17519,7 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
 };
 
 
-},{}],187:[function(require,module,exports){
+},{}],186:[function(require,module,exports){
 /**
  * @overview UI slider used to change the local device's chunk size, which
  *           is used when interpreting binary to other formats.
@@ -18623,7 +17583,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":239,"./locale":259}],186:[function(require,module,exports){
+},{"./NetSimSlider":236,"./locale":256}],185:[function(require,module,exports){
 /**
  * @overview UI slider used to change the local device's bitrate.
  *           Differs from the pulse rate slider in scale and units.
@@ -18680,7 +17640,7 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":321,"./NetSimSlider":239,"./netsimUtils":265}],185:[function(require,module,exports){
+},{"../utils":318,"./NetSimSlider":236,"./netsimUtils":262}],184:[function(require,module,exports){
 /**
  * @overview UI component, a log panel (used as "Sent Bits" and "Received Bits")
  *           that is used in the single-bit-sending configurations of the simulator.
@@ -18932,7 +17892,7 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":321,"./NetSimBitLogPanel.html.ejs":184,"./NetSimEncodingControl":198,"./NetSimLogger":207,"./NetSimPanel":219,"./locale":259,"./netsimGlobals":263}],263:[function(require,module,exports){
+},{"../utils":318,"./NetSimBitLogPanel.html.ejs":183,"./NetSimEncodingControl":197,"./NetSimLogger":205,"./NetSimPanel":217,"./locale":256,"./netsimGlobals":260}],260:[function(require,module,exports){
 /**
  * @overview Global singleton used to simplify certain cross-cutting concerns,
  *           including:
@@ -19082,7 +18042,7 @@ module.exports = {
 };
 
 
-},{"seedrandom":655}],655:[function(require,module,exports){
+},{"seedrandom":652}],652:[function(require,module,exports){
 // A library of seedable RNGs implemented in Javascript.
 //
 // Usage:
@@ -19138,7 +18098,7 @@ sr.tychei = tychei;
 
 module.exports = sr;
 
-},{"./lib/tychei":656,"./lib/xor128":657,"./lib/xor4096":658,"./lib/xorshift7":659,"./lib/xorwow":660,"./seedrandom":661}],661:[function(require,module,exports){
+},{"./lib/tychei":653,"./lib/xor128":654,"./lib/xor4096":655,"./lib/xorshift7":656,"./lib/xorwow":657,"./seedrandom":658}],658:[function(require,module,exports){
 /*
 Copyright 2014 David Bau.
 
@@ -19382,7 +18342,7 @@ if ((typeof module) == 'object' && module.exports) {
   Math    // math: package containing random, pow, and seedrandom
 );
 
-},{"crypto":332}],332:[function(require,module,exports){
+},{"crypto":329}],329:[function(require,module,exports){
 'use strict';
 exports.randomBytes = exports.rng = require('randombytes')
 var prng = exports.prng = require('./prng');
@@ -19441,7 +18401,7 @@ each([
   }
 })
 
-},{"./pbkdf2":468,"./prng":469,"browserify-aes/inject":340,"browserify-sign/algos":351,"browserify-sign/inject":352,"create-ecdh/inject":398,"create-hash":420,"create-hmac":431,"diffie-hellman/inject":434,"public-encrypt/inject":440,"randombytes":467}],469:[function(require,module,exports){
+},{"./pbkdf2":465,"./prng":466,"browserify-aes/inject":337,"browserify-sign/algos":348,"browserify-sign/inject":349,"create-ecdh/inject":395,"create-hash":417,"create-hmac":428,"diffie-hellman/inject":431,"public-encrypt/inject":437,"randombytes":464}],466:[function(require,module,exports){
 (function (global,Buffer){
 'use strict';
 (function() {
@@ -19472,9 +18432,9 @@ each([
 }())
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"buffer":328,"crypto":327}],327:[function(require,module,exports){
-arguments[4][326][0].apply(exports,arguments)
-},{"dup":326}],468:[function(require,module,exports){
+},{"buffer":325,"crypto":324}],324:[function(require,module,exports){
+arguments[4][323][0].apply(exports,arguments)
+},{"dup":323}],465:[function(require,module,exports){
 'use strict';
 var pbkdf2Export = require('pbkdf2-compat/pbkdf2')
 
@@ -19489,7 +18449,7 @@ module.exports = function (crypto, exports) {
   return exports
 }
 
-},{"pbkdf2-compat/pbkdf2":439}],439:[function(require,module,exports){
+},{"pbkdf2-compat/pbkdf2":436}],436:[function(require,module,exports){
 (function (Buffer){
 module.exports = function(crypto) {
   function pbkdf2(password, salt, iterations, keylen, digest, callback) {
@@ -19577,7 +18537,7 @@ module.exports = function(crypto) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],467:[function(require,module,exports){
+},{"buffer":325}],464:[function(require,module,exports){
 (function (process,global,Buffer){
 'use strict';
 
@@ -19608,13 +18568,13 @@ function oldBrowser() {
     )
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"_process":474,"buffer":328}],440:[function(require,module,exports){
+},{"_process":471,"buffer":325}],437:[function(require,module,exports){
 
 module.exports = function (exports, crypto) {
   exports.publicEncrypt = require('./publicEncrypt')(crypto);
   exports.privateDecrypt = require('./privateDecrypt')(crypto);
 };
-},{"./privateDecrypt":464,"./publicEncrypt":465}],465:[function(require,module,exports){
+},{"./privateDecrypt":461,"./publicEncrypt":462}],462:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -19703,7 +18663,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":441,"./xor":466,"bn.js":442,"buffer":328,"parse-asn1":448}],464:[function(require,module,exports){
+},{"./mgf":438,"./xor":463,"bn.js":439,"buffer":325,"parse-asn1":445}],461:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -19803,7 +18763,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":441,"./xor":466,"bn.js":442,"browserify-rsa":443,"buffer":328,"parse-asn1":448}],466:[function(require,module,exports){
+},{"./mgf":438,"./xor":463,"bn.js":439,"browserify-rsa":440,"buffer":325,"parse-asn1":445}],463:[function(require,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -19812,51 +18772,51 @@ module.exports = function xor(a, b) {
   }
   return a
 };
-},{}],448:[function(require,module,exports){
-arguments[4][379][0].apply(exports,arguments)
-},{"./aesid.json":445,"./asn1":446,"./fixProc":447,"buffer":328,"dup":379,"pemstrip":463}],463:[function(require,module,exports){
-arguments[4][394][0].apply(exports,arguments)
-},{"dup":394}],447:[function(require,module,exports){
-arguments[4][378][0].apply(exports,arguments)
-},{"./EVP_BytesToKey":444,"buffer":328,"dup":378}],444:[function(require,module,exports){
-arguments[4][375][0].apply(exports,arguments)
-},{"buffer":328,"dup":375}],446:[function(require,module,exports){
-arguments[4][377][0].apply(exports,arguments)
-},{"asn1.js":450,"asn1.js-rfc3280":449,"dup":377}],449:[function(require,module,exports){
-arguments[4][380][0].apply(exports,arguments)
-},{"asn1.js":450,"dup":380}],450:[function(require,module,exports){
-arguments[4][381][0].apply(exports,arguments)
-},{"./asn1/api":451,"./asn1/base":453,"./asn1/constants":457,"./asn1/decoders":459,"./asn1/encoders":461,"bn.js":442,"dup":381}],461:[function(require,module,exports){
-arguments[4][392][0].apply(exports,arguments)
-},{"./der":460,"dup":392}],460:[function(require,module,exports){
-arguments[4][391][0].apply(exports,arguments)
-},{"../../asn1":450,"buffer":328,"dup":391,"inherits":471}],459:[function(require,module,exports){
-arguments[4][390][0].apply(exports,arguments)
-},{"./der":458,"dup":390}],458:[function(require,module,exports){
-arguments[4][389][0].apply(exports,arguments)
-},{"../../asn1":450,"dup":389,"inherits":471}],457:[function(require,module,exports){
-arguments[4][388][0].apply(exports,arguments)
-},{"./der":456,"dup":388}],456:[function(require,module,exports){
-arguments[4][387][0].apply(exports,arguments)
-},{"../constants":457,"dup":387}],453:[function(require,module,exports){
-arguments[4][384][0].apply(exports,arguments)
-},{"./buffer":452,"./node":454,"./reporter":455,"dup":384}],455:[function(require,module,exports){
-arguments[4][386][0].apply(exports,arguments)
-},{"dup":386,"inherits":471}],454:[function(require,module,exports){
-arguments[4][385][0].apply(exports,arguments)
-},{"../base":453,"dup":385,"minimalistic-assert":462}],462:[function(require,module,exports){
-arguments[4][393][0].apply(exports,arguments)
-},{"dup":393}],452:[function(require,module,exports){
-arguments[4][383][0].apply(exports,arguments)
-},{"../base":453,"buffer":328,"dup":383,"inherits":471}],451:[function(require,module,exports){
-arguments[4][382][0].apply(exports,arguments)
-},{"../asn1":450,"dup":382,"inherits":471,"vm":493}],445:[function(require,module,exports){
+},{}],445:[function(require,module,exports){
 arguments[4][376][0].apply(exports,arguments)
-},{"dup":376}],443:[function(require,module,exports){
-arguments[4][354][0].apply(exports,arguments)
-},{"bn.js":442,"buffer":328,"dup":354}],442:[function(require,module,exports){
-arguments[4][353][0].apply(exports,arguments)
-},{"dup":353}],441:[function(require,module,exports){
+},{"./aesid.json":442,"./asn1":443,"./fixProc":444,"buffer":325,"dup":376,"pemstrip":460}],460:[function(require,module,exports){
+arguments[4][391][0].apply(exports,arguments)
+},{"dup":391}],444:[function(require,module,exports){
+arguments[4][375][0].apply(exports,arguments)
+},{"./EVP_BytesToKey":441,"buffer":325,"dup":375}],441:[function(require,module,exports){
+arguments[4][372][0].apply(exports,arguments)
+},{"buffer":325,"dup":372}],443:[function(require,module,exports){
+arguments[4][374][0].apply(exports,arguments)
+},{"asn1.js":447,"asn1.js-rfc3280":446,"dup":374}],446:[function(require,module,exports){
+arguments[4][377][0].apply(exports,arguments)
+},{"asn1.js":447,"dup":377}],447:[function(require,module,exports){
+arguments[4][378][0].apply(exports,arguments)
+},{"./asn1/api":448,"./asn1/base":450,"./asn1/constants":454,"./asn1/decoders":456,"./asn1/encoders":458,"bn.js":439,"dup":378}],458:[function(require,module,exports){
+arguments[4][389][0].apply(exports,arguments)
+},{"./der":457,"dup":389}],457:[function(require,module,exports){
+arguments[4][388][0].apply(exports,arguments)
+},{"../../asn1":447,"buffer":325,"dup":388,"inherits":468}],456:[function(require,module,exports){
+arguments[4][387][0].apply(exports,arguments)
+},{"./der":455,"dup":387}],455:[function(require,module,exports){
+arguments[4][386][0].apply(exports,arguments)
+},{"../../asn1":447,"dup":386,"inherits":468}],454:[function(require,module,exports){
+arguments[4][385][0].apply(exports,arguments)
+},{"./der":453,"dup":385}],453:[function(require,module,exports){
+arguments[4][384][0].apply(exports,arguments)
+},{"../constants":454,"dup":384}],450:[function(require,module,exports){
+arguments[4][381][0].apply(exports,arguments)
+},{"./buffer":449,"./node":451,"./reporter":452,"dup":381}],452:[function(require,module,exports){
+arguments[4][383][0].apply(exports,arguments)
+},{"dup":383,"inherits":468}],451:[function(require,module,exports){
+arguments[4][382][0].apply(exports,arguments)
+},{"../base":450,"dup":382,"minimalistic-assert":459}],459:[function(require,module,exports){
+arguments[4][390][0].apply(exports,arguments)
+},{"dup":390}],449:[function(require,module,exports){
+arguments[4][380][0].apply(exports,arguments)
+},{"../base":450,"buffer":325,"dup":380,"inherits":468}],448:[function(require,module,exports){
+arguments[4][379][0].apply(exports,arguments)
+},{"../asn1":447,"dup":379,"inherits":468,"vm":490}],442:[function(require,module,exports){
+arguments[4][373][0].apply(exports,arguments)
+},{"dup":373}],440:[function(require,module,exports){
+arguments[4][351][0].apply(exports,arguments)
+},{"bn.js":439,"buffer":325,"dup":351}],439:[function(require,module,exports){
+arguments[4][350][0].apply(exports,arguments)
+},{"dup":350}],438:[function(require,module,exports){
 (function (Buffer){
 module.exports = function (seed, len, crypto) {
   var t = new Buffer('');
@@ -19874,7 +18834,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],434:[function(require,module,exports){
+},{"buffer":325}],431:[function(require,module,exports){
 (function (Buffer){
 var primes = require('./primes.json');
 var DH = require('./dh');
@@ -19913,7 +18873,7 @@ module.exports = function (crypto, exports) {
 	};
 }
 }).call(this,require("buffer").Buffer)
-},{"./dh":432,"./generatePrime":433,"./primes.json":438,"buffer":328}],438:[function(require,module,exports){
+},{"./dh":429,"./generatePrime":430,"./primes.json":435,"buffer":325}],435:[function(require,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -19948,7 +18908,7 @@ module.exports={
         "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff"
     }
 }
-},{}],432:[function(require,module,exports){
+},{}],429:[function(require,module,exports){
 (function (Buffer){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -20108,7 +19068,7 @@ function returnValue(bn, enc) {
 	}
 }
 }).call(this,require("buffer").Buffer)
-},{"./generatePrime":433,"bn.js":435,"buffer":328,"miller-rabin":436}],433:[function(require,module,exports){
+},{"./generatePrime":430,"bn.js":432,"buffer":325,"miller-rabin":433}],430:[function(require,module,exports){
 
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -20240,7 +19200,7 @@ function findPrime(bits, gen ,crypto) {
   }
 
 }
-},{"bn.js":435,"miller-rabin":436}],436:[function(require,module,exports){
+},{"bn.js":432,"miller-rabin":433}],433:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -20356,11 +19316,11 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return prime;
 };
 
-},{"bn.js":435,"brorand":437}],437:[function(require,module,exports){
-arguments[4][367][0].apply(exports,arguments)
-},{"dup":367}],435:[function(require,module,exports){
-arguments[4][353][0].apply(exports,arguments)
-},{"dup":353}],431:[function(require,module,exports){
+},{"bn.js":432,"brorand":434}],434:[function(require,module,exports){
+arguments[4][364][0].apply(exports,arguments)
+},{"dup":364}],432:[function(require,module,exports){
+arguments[4][350][0].apply(exports,arguments)
+},{"dup":350}],428:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var createHash = require('create-hash/browser');
@@ -20429,7 +19389,7 @@ Hmac.prototype.digest = function (enc) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":328,"create-hash/browser":420,"inherits":471,"stream":490}],420:[function(require,module,exports){
+},{"buffer":325,"create-hash/browser":417,"inherits":468,"stream":487}],417:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var createHash = require('sha.js')
@@ -20515,7 +19475,7 @@ Hash.prototype.digest = function (enc) {
   return outData
 }
 }).call(this,require("buffer").Buffer)
-},{"./md5":422,"buffer":328,"inherits":471,"ripemd160":423,"sha.js":425,"stream":490}],425:[function(require,module,exports){
+},{"./md5":419,"buffer":325,"inherits":468,"ripemd160":420,"sha.js":422,"stream":487}],422:[function(require,module,exports){
 var exports = module.exports = function (alg) {
   var Alg = exports[alg.toLowerCase()]
   if(!Alg) throw new Error(alg + ' is not supported (we accept pull requests)')
@@ -20529,7 +19489,7 @@ exports.sha256 = require('./sha256')
 exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
-},{"./sha1":426,"./sha224":427,"./sha256":428,"./sha384":429,"./sha512":430}],429:[function(require,module,exports){
+},{"./sha1":423,"./sha224":424,"./sha256":425,"./sha384":426,"./sha512":427}],426:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var SHA512 = require('./sha512');
@@ -20589,7 +19549,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":424,"./sha512":430,"buffer":328,"inherits":471}],430:[function(require,module,exports){
+},{"./hash":421,"./sha512":427,"buffer":325,"inherits":468}],427:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -20838,7 +19798,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":424,"buffer":328,"inherits":471}],427:[function(require,module,exports){
+},{"./hash":421,"buffer":325,"inherits":468}],424:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -20894,7 +19854,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":424,"./sha256":428,"buffer":328,"inherits":471}],428:[function(require,module,exports){
+},{"./hash":421,"./sha256":425,"buffer":325,"inherits":468}],425:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -21047,7 +20007,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":424,"buffer":328,"inherits":471}],426:[function(require,module,exports){
+},{"./hash":421,"buffer":325,"inherits":468}],423:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -21147,7 +20107,7 @@ module.exports = Sha1
 
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":424,"buffer":328,"inherits":471}],424:[function(require,module,exports){
+},{"./hash":421,"buffer":325,"inherits":468}],421:[function(require,module,exports){
 (function (Buffer){
 //prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -21220,7 +20180,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],423:[function(require,module,exports){
+},{"buffer":325}],420:[function(require,module,exports){
 (function (Buffer){
 /*
 CryptoJS v3.1.2
@@ -21430,7 +20390,7 @@ function ripemd160(message) {
 module.exports = ripemd160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],422:[function(require,module,exports){
+},{"buffer":325}],419:[function(require,module,exports){
 'use strict';
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -21587,7 +20547,7 @@ function bit_rol(num, cnt)
 module.exports = function md5(buf) {
   return helpers.hash(buf, core_md5, 16);
 };
-},{"./helpers":421}],421:[function(require,module,exports){
+},{"./helpers":418}],418:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var intSize = 4;
@@ -21624,14 +20584,14 @@ function hash(buf, fn, hashSize, bigEndian) {
 }
 exports.hash = hash;
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],398:[function(require,module,exports){
+},{"buffer":325}],395:[function(require,module,exports){
 var ECDH = require('./ecdh');
 module.exports = function (crypto, exports) {
 	exports.createECDH = function (curve) {
 		return new ECDH(curve, crypto);
 	};
 };
-},{"./ecdh":397}],397:[function(require,module,exports){
+},{"./ecdh":394}],394:[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -21703,49 +20663,49 @@ function returnValue(bn, enc) {
 	}
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":399,"buffer":328,"elliptic":400}],400:[function(require,module,exports){
-arguments[4][355][0].apply(exports,arguments)
-},{"../package.json":419,"./elliptic/curve":403,"./elliptic/curves":406,"./elliptic/ec":407,"./elliptic/hmac-drbg":410,"./elliptic/utils":411,"brorand":412,"dup":355}],419:[function(require,module,exports){
-arguments[4][374][0].apply(exports,arguments)
-},{"dup":374}],412:[function(require,module,exports){
-arguments[4][367][0].apply(exports,arguments)
-},{"dup":367}],411:[function(require,module,exports){
-arguments[4][366][0].apply(exports,arguments)
-},{"bn.js":399,"dup":366}],410:[function(require,module,exports){
-arguments[4][365][0].apply(exports,arguments)
-},{"../elliptic":400,"dup":365,"hash.js":413}],407:[function(require,module,exports){
-arguments[4][362][0].apply(exports,arguments)
-},{"../../elliptic":400,"./key":408,"./signature":409,"bn.js":399,"dup":362}],409:[function(require,module,exports){
-arguments[4][364][0].apply(exports,arguments)
-},{"../../elliptic":400,"bn.js":399,"dup":364}],408:[function(require,module,exports){
-arguments[4][363][0].apply(exports,arguments)
-},{"../../elliptic":400,"bn.js":399,"dup":363}],406:[function(require,module,exports){
-arguments[4][361][0].apply(exports,arguments)
-},{"../elliptic":400,"bn.js":399,"dup":361,"hash.js":413}],413:[function(require,module,exports){
-arguments[4][368][0].apply(exports,arguments)
-},{"./hash/common":414,"./hash/hmac":415,"./hash/ripemd":416,"./hash/sha":417,"./hash/utils":418,"dup":368}],418:[function(require,module,exports){
-arguments[4][373][0].apply(exports,arguments)
-},{"dup":373,"inherits":471}],417:[function(require,module,exports){
-arguments[4][372][0].apply(exports,arguments)
-},{"../hash":413,"dup":372}],416:[function(require,module,exports){
+},{"bn.js":396,"buffer":325,"elliptic":397}],397:[function(require,module,exports){
+arguments[4][352][0].apply(exports,arguments)
+},{"../package.json":416,"./elliptic/curve":400,"./elliptic/curves":403,"./elliptic/ec":404,"./elliptic/hmac-drbg":407,"./elliptic/utils":408,"brorand":409,"dup":352}],416:[function(require,module,exports){
 arguments[4][371][0].apply(exports,arguments)
-},{"../hash":413,"dup":371}],415:[function(require,module,exports){
-arguments[4][370][0].apply(exports,arguments)
-},{"../hash":413,"dup":370}],414:[function(require,module,exports){
-arguments[4][369][0].apply(exports,arguments)
-},{"../hash":413,"dup":369}],403:[function(require,module,exports){
-arguments[4][358][0].apply(exports,arguments)
-},{"./base":401,"./edwards":402,"./mont":404,"./short":405,"dup":358}],405:[function(require,module,exports){
-arguments[4][360][0].apply(exports,arguments)
-},{"../../elliptic":400,"../curve":403,"bn.js":399,"dup":360,"inherits":471}],404:[function(require,module,exports){
+},{"dup":371}],409:[function(require,module,exports){
+arguments[4][364][0].apply(exports,arguments)
+},{"dup":364}],408:[function(require,module,exports){
+arguments[4][363][0].apply(exports,arguments)
+},{"bn.js":396,"dup":363}],407:[function(require,module,exports){
+arguments[4][362][0].apply(exports,arguments)
+},{"../elliptic":397,"dup":362,"hash.js":410}],404:[function(require,module,exports){
 arguments[4][359][0].apply(exports,arguments)
-},{"../../elliptic":400,"../curve":403,"bn.js":399,"dup":359,"inherits":471}],402:[function(require,module,exports){
+},{"../../elliptic":397,"./key":405,"./signature":406,"bn.js":396,"dup":359}],406:[function(require,module,exports){
+arguments[4][361][0].apply(exports,arguments)
+},{"../../elliptic":397,"bn.js":396,"dup":361}],405:[function(require,module,exports){
+arguments[4][360][0].apply(exports,arguments)
+},{"../../elliptic":397,"bn.js":396,"dup":360}],403:[function(require,module,exports){
+arguments[4][358][0].apply(exports,arguments)
+},{"../elliptic":397,"bn.js":396,"dup":358,"hash.js":410}],410:[function(require,module,exports){
+arguments[4][365][0].apply(exports,arguments)
+},{"./hash/common":411,"./hash/hmac":412,"./hash/ripemd":413,"./hash/sha":414,"./hash/utils":415,"dup":365}],415:[function(require,module,exports){
+arguments[4][370][0].apply(exports,arguments)
+},{"dup":370,"inherits":468}],414:[function(require,module,exports){
+arguments[4][369][0].apply(exports,arguments)
+},{"../hash":410,"dup":369}],413:[function(require,module,exports){
+arguments[4][368][0].apply(exports,arguments)
+},{"../hash":410,"dup":368}],412:[function(require,module,exports){
+arguments[4][367][0].apply(exports,arguments)
+},{"../hash":410,"dup":367}],411:[function(require,module,exports){
+arguments[4][366][0].apply(exports,arguments)
+},{"../hash":410,"dup":366}],400:[function(require,module,exports){
+arguments[4][355][0].apply(exports,arguments)
+},{"./base":398,"./edwards":399,"./mont":401,"./short":402,"dup":355}],402:[function(require,module,exports){
 arguments[4][357][0].apply(exports,arguments)
-},{"../../elliptic":400,"../curve":403,"bn.js":399,"dup":357,"inherits":471}],401:[function(require,module,exports){
+},{"../../elliptic":397,"../curve":400,"bn.js":396,"dup":357,"inherits":468}],401:[function(require,module,exports){
 arguments[4][356][0].apply(exports,arguments)
-},{"../../elliptic":400,"bn.js":399,"dup":356}],399:[function(require,module,exports){
+},{"../../elliptic":397,"../curve":400,"bn.js":396,"dup":356,"inherits":468}],399:[function(require,module,exports){
+arguments[4][354][0].apply(exports,arguments)
+},{"../../elliptic":397,"../curve":400,"bn.js":396,"dup":354,"inherits":468}],398:[function(require,module,exports){
 arguments[4][353][0].apply(exports,arguments)
-},{"dup":353}],352:[function(require,module,exports){
+},{"../../elliptic":397,"bn.js":396,"dup":353}],396:[function(require,module,exports){
+arguments[4][350][0].apply(exports,arguments)
+},{"dup":350}],349:[function(require,module,exports){
 (function (Buffer){
 var sign = require('./sign');
 var verify = require('./verify');
@@ -21827,7 +20787,7 @@ Verify.prototype.verify = function verifyMethod(key, sig, enc) {
 	return verify(sig, Buffer.concat([this._tag, hash]), key);
 };
 }).call(this,require("buffer").Buffer)
-},{"./algos":351,"./sign":395,"./verify":396,"buffer":328,"inherits":471,"stream":490}],396:[function(require,module,exports){
+},{"./algos":348,"./sign":392,"./verify":393,"buffer":325,"inherits":468,"stream":487}],393:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var parseKeys = require('parse-asn1');
@@ -21907,7 +20867,7 @@ function checkValue(b, q) {
   }
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":353,"buffer":328,"elliptic":355,"parse-asn1":379}],395:[function(require,module,exports){
+},{"bn.js":350,"buffer":325,"elliptic":352,"parse-asn1":376}],392:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var parseKeys = require('parse-asn1');
@@ -22070,7 +21030,7 @@ function makeR(g, k, p, q) {
   return g.toRed(bn.mont(p)).redPow(k).fromRed().mod(q);
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":353,"browserify-rsa":354,"buffer":328,"elliptic":355,"parse-asn1":379}],379:[function(require,module,exports){
+},{"bn.js":350,"browserify-rsa":351,"buffer":325,"elliptic":352,"parse-asn1":376}],376:[function(require,module,exports){
 (function (Buffer){
 var pemstrip = require('pemstrip');
 var asn1 = require('./asn1');
@@ -22176,7 +21136,7 @@ function decrypt(crypto, data, password) {
   return Buffer.concat(out);
 }
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":376,"./asn1":377,"./fixProc":378,"buffer":328,"pemstrip":394}],394:[function(require,module,exports){
+},{"./aesid.json":373,"./asn1":374,"./fixProc":375,"buffer":325,"pemstrip":391}],391:[function(require,module,exports){
 exports.strip = function strip(artifact) {
   artifact = artifact.toString()
   var startRegex = /^-----BEGIN (.*)-----\n/;
@@ -22210,7 +21170,7 @@ exports.assemble = function assemble(info) {
   var endLine = "-----END " + tag + "-----";
   return startLine + "\n" + wrap(base64, 64) + "\n" + endLine + "\n";
 }
-},{}],378:[function(require,module,exports){
+},{}],375:[function(require,module,exports){
 (function (Buffer){
 var findProc = /Proc-Type: 4,ENCRYPTED\n\r?DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\n\r?\n\r?([0-9A-z\n\r\+\/\=]+)\n\r?/m;
 var startRegex = /^-----BEGIN (.*)-----\n/;
@@ -22249,7 +21209,7 @@ function wrap(str) {
   return chunks.join("\n");
 }
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":375,"buffer":328}],375:[function(require,module,exports){
+},{"./EVP_BytesToKey":372,"buffer":325}],372:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function evp(crypto, password, salt, keyLen) {
@@ -22291,7 +21251,7 @@ module.exports = function evp(crypto, password, salt, keyLen) {
   return key;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],377:[function(require,module,exports){
+},{"buffer":325}],374:[function(require,module,exports){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
 
@@ -22454,7 +21414,7 @@ exports.signature = asn1.define('signature', function() {
     this.key('s').int()
   );
 });
-},{"asn1.js":381,"asn1.js-rfc3280":380}],380:[function(require,module,exports){
+},{"asn1.js":378,"asn1.js-rfc3280":377}],377:[function(require,module,exports){
 try {
   var asn1 = require('asn1.js');
 } catch (e) {
@@ -22608,7 +21568,7 @@ var AttributeValue = asn1.define('AttributeValue', function() {
 });
 exports.AttributeValue = AttributeValue;
 
-},{"asn1.js":381}],381:[function(require,module,exports){
+},{"asn1.js":378}],378:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -22619,12 +21579,12 @@ asn1.constants = require('./asn1/constants');
 asn1.decoders = require('./asn1/decoders');
 asn1.encoders = require('./asn1/encoders');
 
-},{"./asn1/api":382,"./asn1/base":384,"./asn1/constants":388,"./asn1/decoders":390,"./asn1/encoders":392,"bn.js":353}],392:[function(require,module,exports){
+},{"./asn1/api":379,"./asn1/base":381,"./asn1/constants":385,"./asn1/decoders":387,"./asn1/encoders":389,"bn.js":350}],389:[function(require,module,exports){
 var encoders = exports;
 
 encoders.der = require('./der');
 
-},{"./der":391}],391:[function(require,module,exports){
+},{"./der":388}],388:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -22896,12 +21856,12 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":381,"buffer":328,"inherits":471}],390:[function(require,module,exports){
+},{"../../asn1":378,"buffer":325,"inherits":468}],387:[function(require,module,exports){
 var decoders = exports;
 
 decoders.der = require('./der');
 
-},{"./der":389}],389:[function(require,module,exports){
+},{"./der":386}],386:[function(require,module,exports){
 var inherits = require('inherits');
 
 var asn1 = require('../../asn1');
@@ -23203,7 +22163,7 @@ function derDecodeLen(buf, primitive, fail) {
   return len;
 }
 
-},{"../../asn1":381,"inherits":471}],388:[function(require,module,exports){
+},{"../../asn1":378,"inherits":468}],385:[function(require,module,exports){
 var constants = exports;
 
 // Helper
@@ -23224,7 +22184,7 @@ constants._reverse = function reverse(map) {
 
 constants.der = require('./der');
 
-},{"./der":387}],387:[function(require,module,exports){
+},{"./der":384}],384:[function(require,module,exports){
 var constants = require('../constants');
 
 exports.tagClass = {
@@ -23268,7 +22228,7 @@ exports.tag = {
 };
 exports.tagByName = constants._reverse(exports.tag);
 
-},{"../constants":388}],384:[function(require,module,exports){
+},{"../constants":385}],381:[function(require,module,exports){
 var base = exports;
 
 base.Reporter = require('./reporter').Reporter;
@@ -23276,7 +22236,7 @@ base.DecoderBuffer = require('./buffer').DecoderBuffer;
 base.EncoderBuffer = require('./buffer').EncoderBuffer;
 base.Node = require('./node');
 
-},{"./buffer":383,"./node":385,"./reporter":386}],386:[function(require,module,exports){
+},{"./buffer":380,"./node":382,"./reporter":383}],383:[function(require,module,exports){
 var inherits = require('inherits');
 
 function Reporter(options) {
@@ -23367,7 +22327,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
   return this;
 };
 
-},{"inherits":471}],385:[function(require,module,exports){
+},{"inherits":468}],382:[function(require,module,exports){
 var Reporter = require('../base').Reporter;
 var EncoderBuffer = require('../base').EncoderBuffer;
 var assert = require('minimalistic-assert');
@@ -23944,7 +22904,7 @@ Node.prototype._encodePrimitive = function encodePrimitive(tag, data) {
     throw new Error('Unsupported tag: ' + tag);
 };
 
-},{"../base":384,"minimalistic-assert":393}],393:[function(require,module,exports){
+},{"../base":381,"minimalistic-assert":390}],390:[function(require,module,exports){
 module.exports = assert;
 
 function assert(val, msg) {
@@ -23957,7 +22917,7 @@ assert.equal = function assertEqual(l, r, msg) {
     throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
 };
 
-},{}],383:[function(require,module,exports){
+},{}],380:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -24074,7 +23034,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":384,"buffer":328,"inherits":471}],382:[function(require,module,exports){
+},{"../base":381,"buffer":325,"inherits":468}],379:[function(require,module,exports){
 var asn1 = require('../asn1');
 var inherits = require('inherits');
 var vm = require('vm');
@@ -24127,7 +23087,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":381,"inherits":471,"vm":493}],493:[function(require,module,exports){
+},{"../asn1":378,"inherits":468,"vm":490}],490:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {
@@ -24267,7 +23227,7 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":494}],494:[function(require,module,exports){
+},{"indexof":491}],491:[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -24278,7 +23238,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],376:[function(require,module,exports){
+},{}],373:[function(require,module,exports){
 module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -24292,7 +23252,7 @@ module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.43": "aes-256-ofb",
 "2.16.840.1.101.3.4.1.44": "aes-256-cfb"
 }
-},{}],355:[function(require,module,exports){
+},{}],352:[function(require,module,exports){
 var elliptic = exports;
 
 elliptic.version = require('../package.json').version;
@@ -24305,7 +23265,7 @@ elliptic.curves = require('./elliptic/curves');
 // Protocols
 elliptic.ec = require('./elliptic/ec');
 
-},{"../package.json":374,"./elliptic/curve":358,"./elliptic/curves":361,"./elliptic/ec":362,"./elliptic/hmac-drbg":365,"./elliptic/utils":366,"brorand":367}],374:[function(require,module,exports){
+},{"../package.json":371,"./elliptic/curve":355,"./elliptic/curves":358,"./elliptic/ec":359,"./elliptic/hmac-drbg":362,"./elliptic/utils":363,"brorand":364}],371:[function(require,module,exports){
 module.exports={
   "name": "elliptic",
   "version": "1.0.1",
@@ -24354,7 +23314,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-1.0.1.tgz"
 }
 
-},{}],367:[function(require,module,exports){
+},{}],364:[function(require,module,exports){
 var r;
 
 module.exports = function rand(len) {
@@ -24413,7 +23373,7 @@ if (typeof window === 'object') {
   }
 }
 
-},{}],366:[function(require,module,exports){
+},{}],363:[function(require,module,exports){
 var bn = require('bn.js');
 
 var utils = exports;
@@ -24565,7 +23525,7 @@ function getJSF(k1, k2) {
 }
 utils.getJSF = getJSF;
 
-},{"bn.js":353}],365:[function(require,module,exports){
+},{"bn.js":350}],362:[function(require,module,exports){
 var hash = require('hash.js');
 var elliptic = require('../elliptic');
 var utils = elliptic.utils;
@@ -24679,7 +23639,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
   return utils.encode(res, enc);
 };
 
-},{"../elliptic":355,"hash.js":368}],362:[function(require,module,exports){
+},{"../elliptic":352,"hash.js":365}],359:[function(require,module,exports){
 var bn = require('bn.js');
 var elliptic = require('../../elliptic');
 var utils = elliptic.utils;
@@ -24832,7 +23792,7 @@ EC.prototype.verify = function verify(msg, signature, key) {
   return p.getX().mod(this.n).cmp(r) === 0;
 };
 
-},{"../../elliptic":355,"./key":363,"./signature":364,"bn.js":353}],364:[function(require,module,exports){
+},{"../../elliptic":352,"./key":360,"./signature":361,"bn.js":350}],361:[function(require,module,exports){
 var bn = require('bn.js');
 
 var elliptic = require('../../elliptic');
@@ -24897,7 +23857,7 @@ Signature.prototype.toDER = function toDER(enc) {
   return utils.encode(res, enc);
 };
 
-},{"../../elliptic":355,"bn.js":353}],363:[function(require,module,exports){
+},{"../../elliptic":352,"bn.js":350}],360:[function(require,module,exports){
 var bn = require('bn.js');
 
 var elliptic = require('../../elliptic');
@@ -25043,7 +24003,7 @@ KeyPair.prototype.inspect = function inspect() {
          ' pub: ' + (this.pub && this.pub.inspect()) + ' >';
 };
 
-},{"../../elliptic":355,"bn.js":353}],361:[function(require,module,exports){
+},{"../../elliptic":352,"bn.js":350}],358:[function(require,module,exports){
 var curves = exports;
 
 var hash = require('hash.js');
@@ -25973,7 +24933,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":355,"bn.js":353,"hash.js":368}],368:[function(require,module,exports){
+},{"../elliptic":352,"bn.js":350,"hash.js":365}],365:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -25990,7 +24950,7 @@ hash.sha384 = hash.sha.sha384;
 hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
-},{"./hash/common":369,"./hash/hmac":370,"./hash/ripemd":371,"./hash/sha":372,"./hash/utils":373}],373:[function(require,module,exports){
+},{"./hash/common":366,"./hash/hmac":367,"./hash/ripemd":368,"./hash/sha":369,"./hash/utils":370}],370:[function(require,module,exports){
 var utils = exports;
 var inherits = require('inherits');
 
@@ -26249,7 +25209,7 @@ function shr64_lo(ah, al, num) {
 };
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":471}],372:[function(require,module,exports){
+},{"inherits":468}],369:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -26815,7 +25775,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../hash":368}],371:[function(require,module,exports){
+},{"../hash":365}],368:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 
@@ -26961,7 +25921,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"../hash":368}],370:[function(require,module,exports){
+},{"../hash":365}],367:[function(require,module,exports){
 var hmac = exports;
 
 var hash = require('../hash');
@@ -27011,7 +25971,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"../hash":368}],369:[function(require,module,exports){
+},{"../hash":365}],366:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -27104,7 +26064,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"../hash":368}],358:[function(require,module,exports){
+},{"../hash":365}],355:[function(require,module,exports){
 var curve = exports;
 
 curve.base = require('./base');
@@ -27112,7 +26072,7 @@ curve.short = require('./short');
 curve.mont = require('./mont');
 curve.edwards = require('./edwards');
 
-},{"./base":356,"./edwards":357,"./mont":359,"./short":360}],360:[function(require,module,exports){
+},{"./base":353,"./edwards":354,"./mont":356,"./short":357}],357:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -28010,7 +26970,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":355,"../curve":358,"bn.js":353,"inherits":471}],359:[function(require,module,exports){
+},{"../../elliptic":352,"../curve":355,"bn.js":350,"inherits":468}],356:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -28175,7 +27135,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../../elliptic":355,"../curve":358,"bn.js":353,"inherits":471}],357:[function(require,module,exports){
+},{"../../elliptic":352,"../curve":355,"bn.js":350,"inherits":468}],354:[function(require,module,exports){
 var curve = require('../curve');
 var elliptic = require('../../elliptic');
 var bn = require('bn.js');
@@ -28538,7 +27498,7 @@ Point.prototype.getY = function getY() {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":355,"../curve":358,"bn.js":353,"inherits":471}],356:[function(require,module,exports){
+},{"../../elliptic":352,"../curve":355,"bn.js":350,"inherits":468}],353:[function(require,module,exports){
 var bn = require('bn.js');
 var elliptic = require('../../elliptic');
 
@@ -28842,7 +27802,7 @@ BasePoint.prototype.dblp = function dblp(k) {
   return r;
 };
 
-},{"../../elliptic":355,"bn.js":353}],354:[function(require,module,exports){
+},{"../../elliptic":352,"bn.js":350}],351:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 module.exports = crt;
@@ -28890,7 +27850,7 @@ function getr(priv, crypto) {
   return r;
 }
 }).call(this,require("buffer").Buffer)
-},{"bn.js":353,"buffer":328}],353:[function(require,module,exports){
+},{"bn.js":350,"buffer":325}],350:[function(require,module,exports){
 // Utils
 
 function assert(val, msg) {
@@ -30814,7 +29774,7 @@ Mont.prototype.invm = function invm(a) {
   return res._forceRed(this);
 };
 
-},{}],351:[function(require,module,exports){
+},{}],348:[function(require,module,exports){
 (function (Buffer){
 exports['RSA-SHA224'] = exports.sha224WithRSAEncryption = {
   sign: 'rsa',
@@ -30887,7 +29847,7 @@ exports['RSA-MD5'] = exports.md5WithRSAEncryption = {
   id: new Buffer('3020300c06082a864886f70d020505000410', 'hex')
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],340:[function(require,module,exports){
+},{"buffer":325}],337:[function(require,module,exports){
 module.exports = function (crypto, exports) {
   exports = exports || {};
   var ciphers = require('./encrypter')(crypto);
@@ -30903,7 +29863,7 @@ module.exports = function (crypto, exports) {
   exports.listCiphers = exports.getCiphers = getCiphers;
 };
 
-},{"./decrypter":337,"./encrypter":338,"./modes":341}],338:[function(require,module,exports){
+},{"./decrypter":334,"./encrypter":335,"./modes":338}],335:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -31030,7 +29990,7 @@ module.exports = function (crypto) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":333,"./aes":334,"./authCipher":335,"./cipherBase":336,"./modes":341,"./modes/cbc":342,"./modes/cfb":343,"./modes/cfb1":344,"./modes/cfb8":345,"./modes/ctr":346,"./modes/ecb":347,"./modes/ofb":348,"./streamCipher":349,"buffer":328,"inherits":471}],337:[function(require,module,exports){
+},{"./EVP_BytesToKey":330,"./aes":331,"./authCipher":332,"./cipherBase":333,"./modes":338,"./modes/cbc":339,"./modes/cfb":340,"./modes/cfb1":341,"./modes/cfb8":342,"./modes/ctr":343,"./modes/ecb":344,"./modes/ofb":345,"./streamCipher":346,"buffer":325,"inherits":468}],334:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -31174,7 +30134,7 @@ module.exports = function (crypto) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./EVP_BytesToKey":333,"./aes":334,"./authCipher":335,"./cipherBase":336,"./modes":341,"./modes/cbc":342,"./modes/cfb":343,"./modes/cfb1":344,"./modes/cfb8":345,"./modes/ctr":346,"./modes/ecb":347,"./modes/ofb":348,"./streamCipher":349,"buffer":328,"inherits":471}],349:[function(require,module,exports){
+},{"./EVP_BytesToKey":330,"./aes":331,"./authCipher":332,"./cipherBase":333,"./modes":338,"./modes/cbc":339,"./modes/cfb":340,"./modes/cfb1":341,"./modes/cfb8":342,"./modes/ctr":343,"./modes/ecb":344,"./modes/ofb":345,"./streamCipher":346,"buffer":325,"inherits":468}],346:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -31202,7 +30162,7 @@ StreamCipher.prototype._final = function () {
   this._cipher.scrub();
 };
 }).call(this,require("buffer").Buffer)
-},{"./aes":334,"./cipherBase":336,"buffer":328,"inherits":471}],348:[function(require,module,exports){
+},{"./aes":331,"./cipherBase":333,"buffer":325,"inherits":468}],345:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 function getBlock(self) {
@@ -31218,14 +30178,14 @@ exports.encrypt = function (self, chunk) {
   return xor(chunk, pad);
 };
 }).call(this,require("buffer").Buffer)
-},{"../xor":350,"buffer":328}],347:[function(require,module,exports){
+},{"../xor":347,"buffer":325}],344:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block);
 };
 exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block);
 };
-},{}],346:[function(require,module,exports){
+},{}],343:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 function getBlock(self) {
@@ -31256,7 +30216,7 @@ function incr32(iv) {
   }
 }
 }).call(this,require("buffer").Buffer)
-},{"../xor":350,"buffer":328}],345:[function(require,module,exports){
+},{"../xor":347,"buffer":325}],342:[function(require,module,exports){
 (function (Buffer){
 function encryptByte(self, byte, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev);
@@ -31274,7 +30234,7 @@ exports.encrypt = function (self, chunk, decrypt) {
   return out;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],344:[function(require,module,exports){
+},{"buffer":325}],341:[function(require,module,exports){
 (function (Buffer){
 
 function encryptByte(self, byte, decrypt) {
@@ -31312,7 +30272,7 @@ function shiftIn(buffer, value) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],343:[function(require,module,exports){
+},{"buffer":325}],340:[function(require,module,exports){
 (function (Buffer){
 var xor = require('../xor');
 exports.encrypt = function (self, data, decrypt) {
@@ -31342,7 +30302,7 @@ function encryptStart(self, data, decrypt) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"../xor":350,"buffer":328}],342:[function(require,module,exports){
+},{"../xor":347,"buffer":325}],339:[function(require,module,exports){
 var xor = require('../xor');
 exports.encrypt = function (self, block) {
   var data = xor(block, self._prev);
@@ -31355,7 +30315,7 @@ exports.decrypt = function (self, block) {
   var out = self._cipher.decryptBlock(block);
   return xor(out, pad);
 };
-},{"../xor":350}],341:[function(require,module,exports){
+},{"../xor":347}],338:[function(require,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -31527,7 +30487,7 @@ exports['aes-256-gcm'] = {
   mode: 'GCM',
   type: 'auth'
 };
-},{}],335:[function(require,module,exports){
+},{}],332:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes');
 var Transform = require('./cipherBase');
@@ -31630,7 +30590,7 @@ function xorTest(a, b) {
 
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":334,"./cipherBase":336,"./ghash":339,"./xor":350,"buffer":328,"inherits":471}],350:[function(require,module,exports){
+},{"./aes":331,"./cipherBase":333,"./ghash":336,"./xor":347,"buffer":325,"inherits":468}],347:[function(require,module,exports){
 (function (Buffer){
 module.exports = xor;
 function xor(a, b) {
@@ -31643,7 +30603,7 @@ function xor(a, b) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],339:[function(require,module,exports){
+},{"buffer":325}],336:[function(require,module,exports){
 (function (Buffer){
 var zeros = new Buffer(16);
 zeros.fill(0);
@@ -31744,7 +30704,7 @@ function xor(a, b) {
   ];
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],336:[function(require,module,exports){
+},{"buffer":325}],333:[function(require,module,exports){
 (function (Buffer){
 var Transform = require('stream').Transform;
 var inherits = require('inherits');
@@ -31784,7 +30744,7 @@ CipherBase.prototype.final = function (outputEnc) {
   return outData;
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":328,"inherits":471,"stream":490}],490:[function(require,module,exports){
+},{"buffer":325,"inherits":468,"stream":487}],487:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -31913,13 +30873,13 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":470,"inherits":471,"readable-stream/duplex.js":479,"readable-stream/passthrough.js":486,"readable-stream/readable.js":487,"readable-stream/transform.js":488,"readable-stream/writable.js":489}],489:[function(require,module,exports){
+},{"events":467,"inherits":468,"readable-stream/duplex.js":476,"readable-stream/passthrough.js":483,"readable-stream/readable.js":484,"readable-stream/transform.js":485,"readable-stream/writable.js":486}],486:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":484}],488:[function(require,module,exports){
+},{"./lib/_stream_writable.js":481}],485:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":483}],487:[function(require,module,exports){
+},{"./lib/_stream_transform.js":480}],484:[function(require,module,exports){
 var Stream = require('stream'); // hack to fix a circular dependency issue when used with browserify
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = Stream;
@@ -31929,10 +30889,10 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":480,"./lib/_stream_passthrough.js":481,"./lib/_stream_readable.js":482,"./lib/_stream_transform.js":483,"./lib/_stream_writable.js":484,"stream":490}],486:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":477,"./lib/_stream_passthrough.js":478,"./lib/_stream_readable.js":479,"./lib/_stream_transform.js":480,"./lib/_stream_writable.js":481,"stream":487}],483:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":481}],481:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":478}],478:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -31980,7 +30940,7 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
   cb(null, chunk);
 };
 
-},{"./_stream_transform":483,"core-util-is":485,"inherits":471}],483:[function(require,module,exports){
+},{"./_stream_transform":480,"core-util-is":482,"inherits":468}],480:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -32192,10 +31152,10 @@ function done(stream, er) {
   return stream.push(null);
 }
 
-},{"./_stream_duplex":480,"core-util-is":485,"inherits":471}],479:[function(require,module,exports){
+},{"./_stream_duplex":477,"core-util-is":482,"inherits":468}],476:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":480}],480:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":477}],477:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -32288,7 +31248,7 @@ function forEach (xs, f) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_readable":482,"./_stream_writable":484,"_process":474,"core-util-is":485,"inherits":471}],484:[function(require,module,exports){
+},{"./_stream_readable":479,"./_stream_writable":481,"_process":471,"core-util-is":482,"inherits":468}],481:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -32678,7 +31638,7 @@ function endWritable(stream, state, cb) {
 }
 
 }).call(this,require('_process'))
-},{"./_stream_duplex":480,"_process":474,"buffer":328,"core-util-is":485,"inherits":471,"stream":490}],482:[function(require,module,exports){
+},{"./_stream_duplex":477,"_process":471,"buffer":325,"core-util-is":482,"inherits":468,"stream":487}],479:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -33664,7 +32624,7 @@ function indexOf (xs, x) {
 }
 
 }).call(this,require('_process'))
-},{"_process":474,"buffer":328,"core-util-is":485,"events":470,"inherits":471,"isarray":472,"stream":490,"string_decoder/":491}],491:[function(require,module,exports){
+},{"_process":471,"buffer":325,"core-util-is":482,"events":467,"inherits":468,"isarray":469,"stream":487,"string_decoder/":488}],488:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -33887,7 +32847,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":328}],485:[function(require,module,exports){
+},{"buffer":325}],482:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -33997,12 +32957,12 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],472:[function(require,module,exports){
+},{"buffer":325}],469:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],470:[function(require,module,exports){
+},{}],467:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -34305,7 +33265,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],471:[function(require,module,exports){
+},{}],468:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -34330,7 +33290,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],334:[function(require,module,exports){
+},{}],331:[function(require,module,exports){
 (function (Buffer){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -34531,7 +33491,7 @@ AES.prototype._doCryptBlock = function(M, keySchedule, SUB_MIX, SBOX) {
 
   exports.AES = AES;
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],333:[function(require,module,exports){
+},{"buffer":325}],330:[function(require,module,exports){
 (function (Buffer){
 
 module.exports = function (crypto, password, keyLen, ivLen) {
@@ -34591,7 +33551,7 @@ module.exports = function (crypto, password, keyLen, ivLen) {
   };
 };
 }).call(this,require("buffer").Buffer)
-},{"buffer":328}],328:[function(require,module,exports){
+},{"buffer":325}],325:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -35909,7 +34869,7 @@ function decodeUtf8Char (str) {
   }
 }
 
-},{"base64-js":329,"ieee754":330,"is-array":331}],331:[function(require,module,exports){
+},{"base64-js":326,"ieee754":327,"is-array":328}],328:[function(require,module,exports){
 
 /**
  * isArray
@@ -35944,7 +34904,7 @@ module.exports = isArray || function (val) {
   return !! val && '[object Array]' == str.call(val);
 };
 
-},{}],330:[function(require,module,exports){
+},{}],327:[function(require,module,exports){
 exports.read = function(buffer, offset, isLE, mLen, nBytes) {
   var e, m,
       eLen = nBytes * 8 - mLen - 1,
@@ -36030,7 +34990,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128;
 };
 
-},{}],329:[function(require,module,exports){
+},{}],326:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -36156,7 +35116,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],660:[function(require,module,exports){
+},{}],657:[function(require,module,exports){
 // A Javascript implementaion of the "xorwow" prng algorithm by
 // George Marsaglia.  See http://www.jstatsoft.org/v08/i14/paper
 
@@ -36244,7 +35204,7 @@ if (module && module.exports) {
 
 
 
-},{}],659:[function(require,module,exports){
+},{}],656:[function(require,module,exports){
 // A Javascript implementaion of the "xorshift7" algorithm by
 // François Panneton and Pierre L'ecuyer:
 // "On the Xorgshift Random Number Generators"
@@ -36343,7 +35303,7 @@ if (module && module.exports) {
 );
 
 
-},{}],658:[function(require,module,exports){
+},{}],655:[function(require,module,exports){
 // A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
 //
 // This fast non-cryptographic random number generator is designed for
@@ -36491,7 +35451,7 @@ if (module && module.exports) {
   (typeof define) == 'function' && define   // present with an AMD loader
 );
 
-},{}],657:[function(require,module,exports){
+},{}],654:[function(require,module,exports){
 // A Javascript implementaion of the "xor128" prng algorithm by
 // George Marsaglia.  See http://www.jstatsoft.org/v08/i14/paper
 
@@ -36574,7 +35534,7 @@ if (module && module.exports) {
 
 
 
-},{}],656:[function(require,module,exports){
+},{}],653:[function(require,module,exports){
 // A Javascript implementaion of the "Tyche-i" prng algorithm by
 // Samuel Neves and Filipe Araujo.
 // See https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
@@ -36679,7 +35639,7 @@ if (module && module.exports) {
 
 
 
-},{}],219:[function(require,module,exports){
+},{}],217:[function(require,module,exports){
 /**
  * @overview base class for all "panels" (visual boxes) in the NetSim
  *           interface, provides some common expand/collapse functionality.
@@ -36712,7 +35672,7 @@ var markup = require('./NetSimPanel.html.ejs');
  *        Defaults to no class, so only the 'netsim-panel' class will be used.
  * @param {string} [options.panelTitle] - Localized initial panel title.
  *        Defaults to empty string.
- * @param {boolean} [options.canMinimize] - Whether this panel can be minimized
+ * @param {boolean} [options.userToggleable] - Whether this panel can be minimized
  *        (closed) by clicking on the title. Defaults to TRUE.
  * @param {boolean} [options.beginMinimized] - Whether this panel should be
  *        minimized (closed) when it is initially created.  Defaults to FALSE.
@@ -36755,7 +35715,7 @@ var NetSimPanel = module.exports = function (rootDiv, options) {
    * @type {boolean}
    * @private
    */
-  this.canMinimize_ = utils.valueOr(options.canMinimize, true);
+  this.userToggleable_ = utils.valueOr(options.userToggleable, true);
 
   /**
    * Whether the component is minimized, for consistent
@@ -36784,17 +35744,14 @@ NetSimPanel.prototype.render = function () {
     instanceID: this.instanceID_,
     className: this.className_,
     panelTitle: this.panelTitle_,
-    canMinimize: this.canMinimize_
-
+    userToggleable: this.userToggleable_
   }));
   this.rootDiv_.html(newMarkup);
 
-  if (this.canMinimize_) {
+  if (this.userToggleable_) {
     this.rootDiv_.find('.minimizer').click(this.onMinimizerClick_.bind(this));
-    this.setMinimized(this.isMinimized_);
-  } else {
-    this.setMinimized(false);
   }
+  this.setMinimized(this.isMinimized_);
 };
 
 /**
@@ -36871,7 +35828,7 @@ NetSimPanel.prototype.getBody = function () {
 };
 
 
-},{"../utils":321,"./NetSimPanel.html.ejs":218}],218:[function(require,module,exports){
+},{"../utils":318,"./NetSimPanel.html.ejs":216}],216:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -36883,7 +35840,7 @@ escape = escape || function (html){
 };
 var buf = [];
 with (locals || {}) { (function(){ 
- buf.push('<div id="netsim-panel-', escape((1,  instanceID )), '"\n     class="netsim-panel ', escape((2,  className )), '">\n  <h1>\n    <div class="panel-controls"></div>\n    <div class="minimizer single-line-with-ellipsis">\n      ');6; if (canMinimize) { ; buf.push('\n        <i class="fa fa-minus-square"></i>\n      ');8; } ; buf.push('\n      <span class="title-text">', escape((9,  panelTitle )), '</span>\n    </div>\n  </h1>\n  <div class="panel-body">\n  </div>\n</div>\n'); })();
+ buf.push('<div id="netsim-panel-', escape((1,  instanceID )), '"\n     class="netsim-panel ', escape((2,  className )), '">\n  <h1>\n    <div class="panel-controls"></div>\n    <div class="single-line-with-ellipsis');5; if (userToggleable) { ; buf.push(' minimizer');5; } ; buf.push('">\n      ');6; if (userToggleable) { ; buf.push('\n        <i class="fa fa-minus-square"></i>\n      ');8; } ; buf.push('\n      <span class="title-text">', escape((9,  panelTitle )), '</span>\n    </div>\n  </h1>\n  <div class="panel-body">\n  </div>\n</div>\n'); })();
 } 
 return buf.join('');
 };
@@ -36891,7 +35848,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":495}],198:[function(require,module,exports){
+},{"ejs":492}],197:[function(require,module,exports){
 /**
  * @overview UI controller for set of radio buttons used to select display encodings.
  */
@@ -37018,7 +35975,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
 };
 
 
-},{"./NetSimEncodingControl.html.ejs":197,"./netsimConstants":262}],197:[function(require,module,exports){
+},{"./NetSimEncodingControl.html.ejs":196,"./netsimConstants":259}],196:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -37053,7 +36010,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":259,"./netsimConstants":262,"ejs":495}],184:[function(require,module,exports){
+},{"./locale":256,"./netsimConstants":259,"ejs":492}],183:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -37100,7 +36057,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./dataConverters":257,"./locale":259,"./netsimConstants":262,"./netsimUtils":265,"ejs":495}],257:[function(require,module,exports){
+},{"./dataConverters":254,"./locale":256,"./netsimConstants":259,"./netsimUtils":262,"ejs":492}],254:[function(require,module,exports){
 /**
  * @overview Provides utility methods for converting user data between
  *           different encodings, and formatting those encodings: binary,
@@ -37623,7 +36580,7 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
 };
 
 
-},{"../utils":321,"./netsimUtils":265,"Base64":325}],325:[function(require,module,exports){
+},{"../utils":318,"./netsimUtils":262,"Base64":322}],322:[function(require,module,exports){
 ;(function () {
 
   var object = typeof exports != 'undefined' ? exports : this; // #8: web workers
@@ -37686,7 +36643,7 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
 
 }());
 
-},{}],183:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 /**
  * @overview UI Slider control used for changing simulated router bandwidth.
  */
@@ -37743,7 +36700,7 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":321,"./NetSimSlider":239,"./netsimConstants":262,"./netsimUtils":265}],265:[function(require,module,exports){
+},{"../utils":318,"./NetSimSlider":236,"./netsimConstants":259,"./netsimUtils":262}],262:[function(require,module,exports){
 /**
  * @overview Static helper methods for NetSim.
  */
@@ -38114,7 +37071,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
 
 
 
-},{"../utils":321,"./NetSimLogger":207,"./locale":259,"./netsimConstants":262}],207:[function(require,module,exports){
+},{"../utils":318,"./NetSimLogger":205,"./locale":256,"./netsimConstants":259}],205:[function(require,module,exports){
 /**
  * @overview Utility class wrapping more granular log behavior that isn't
  * available in all browsers.  Also makes it easy to turn logging on and off
@@ -38272,7 +37229,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
 };
 
 
-},{}],262:[function(require,module,exports){
+},{}],259:[function(require,module,exports){
 /**
  * @overview Constants and enums used across Internet Simulator.
  */
@@ -38427,7 +37384,7 @@ exports.PacketUIColumnType = {
 };
 
 
-},{}],239:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 /**
  * @overview Base implementation of NetSim UI sliders.
  */
@@ -38927,13 +37884,13 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) 
 };
 
 
-},{"../utils":321,"./NetSimSlider.html.ejs":238,"./locale":259}],259:[function(require,module,exports){
+},{"../utils":318,"./NetSimSlider.html.ejs":235,"./locale":256}],256:[function(require,module,exports){
 // locale for netsim
 
 module.exports = window.blockly.netsim_locale;
 
 
-},{}],238:[function(require,module,exports){
+},{}],235:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -38953,7 +37910,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":495}],182:[function(require,module,exports){
+},{"ejs":492}],181:[function(require,module,exports){
 /**
  * @overview Interface to dashboard user data API.
  */
@@ -39070,232 +38027,7 @@ DashboardUser.prototype.whenReady = function (callback) {
   }
 };
 
-},{}],107:[function(require,module,exports){
-/* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
- unused: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
- */
-'use strict';
-
-require('./utils');
-
-var commands = module.exports;
-
-/**
- * @enum {int}
- */
-var commandState = {
-  NOT_STARTED: 0,
-  WORKING: 1,
-  SUCCESS: 2,
-  FAILURE: 3
-};
-
-/**
- * A command is an operation that can be constructed with parameters now,
- * triggered later, and completed even later than that.
- *
- * Similar to a promise or a deferred, commands are useful for non-blocking
- * operations that need to take place with a particular relationship to time
- * or to one another - asynchronous calls that should happen in order, events
- * that should be triggered on a timeline, etc.  Instead of nesting callbacks
- * N-layers-deep, create a queue of commands to run.
- *
- * You'll usually want to define commands for your own unique needs.  A child
- * command should always call the Command constructor from its own constructor,
- * it will almost always need to override onBegin_, and it may want to override
- * tick and onEnd_.  Commands can call success() or fail() on themselves, or
- * wait for others to do so; usage is up to you.
- *
- * @constructor
- */
-var Command = commands.Command = function () {
-  /**
-   * @type {commandState}
-   * @private
-   */
-  this.status_ = commandState.NOT_STARTED;
-};
-
-/**
- * Whether the command has started working.
- * @returns {boolean}
- */
-Command.prototype.isStarted = function () {
-  return this.status_ !== commandState.NOT_STARTED;
-};
-
-/**
- * Whether the command has succeeded or failed, and is
- * finished with its work.
- * @returns {boolean}
- */
-Command.prototype.isFinished = function () {
-  return this.succeeded() || this.failed();
-};
-
-/**
- * Whether the command has finished with its work and reported success.
- * @returns {boolean}
- */
-Command.prototype.succeeded = function () {
-  return this.status_ === commandState.SUCCESS;
-};
-
-/**
- * Whether the command has finished with its work and reported failure.
- * @returns {boolean}
- */
-Command.prototype.failed = function () {
-  return this.status_ === commandState.FAILURE;
-};
-
-/**
- * Tells the command to start working.
- */
-Command.prototype.begin = function () {
-  this.status_ = commandState.WORKING;
-  this.onBegin_();
-};
-
-/**
- * Called to mark that the command is done with its work and has
- * succeeded.  Might be called by the command itself, or by an external
- * controller.
- * @throws if called before begin()
- */
-Command.prototype.succeed = function () {
-  if (!this.isStarted()) {
-    throw new Error("Command cannot succeed before it begins.");
-  }
-  this.status_ = commandState.SUCCESS;
-  this.onEnd_();
-};
-
-/**
- * Called to mark that the command is done with its work and has
- * failed.  Might be called by the command itself, or by an external
- * controller.
- * @throws if called before begin()
- */
-Command.prototype.fail = function () {
-  if (!this.isStarted()) {
-    throw new Error("Command cannot fail before it begins.");
-  }
-  this.status_ = commandState.FAILURE;
-  this.onEnd_();
-};
-
-/**
- * Stub to be implemented by descendant classes, of operations to perform
- * when the command begins.
- * @private
- */
-Command.prototype.onBegin_ = function () {};
-
-/**
- * Stub to be implemented by descendant classes, of operations to perform
- * on tick.
- * @param {RunLoop.Clock} clock - Time information passed into all tick methods.
- */
-Command.prototype.tick = function (/*clock*/) {};
-
-/**
- * Stub to be implemented by descendant classes, of operations to perform
- * when the command either succeeds or fails.
- * @private
- */
-Command.prototype.onEnd_ = function () {};
-
-/**
- * A CommandSequence is constructed with a list of commands to be executed
- * in order, either until a command fails or the end of the list is reached.
- * Each command will be started on the first tick where the previous command
- * is found to be successful: If a command succeeds between ticks, the next
- * command will start on the next tick, but if a command succeeds _during_
- * a tick (in its tick() or onBegin_() methods) then the next command may
- * begin immediately.
- *
- * The CommandSequence is itself a command which succeeds after all of the
- * commands it contains have succeeded, or fails if any of the commands it
- * contains have failed.  CommandSequences may thus be nested, and it is
- * often useful for a custom command to inherit from CommandSequence or to
- * contain a CommandSequence.
- *
- * @param {Array.<Command>} commandList - List of commands to be executed
- *        in order, provided each command succeeds.
- * @constructor
- */
-var CommandSequence = commands.CommandSequence = function (commandList) {
-  Command.call(this);
-
-  /**
-   * @type {Array.<Command>}
-   * @private
-   */
-  this.commandList_ = commandList;
-
-  /**
-   * @type {number}
-   * @private
-   */
-  this.currentCommandIndex_ = 0;
-};
-CommandSequence.inherits(Command);
-
-/**
- * @private
- */
-CommandSequence.prototype.onBegin_ = function () {
-  this.currentCommandIndex_ = 0;
-
-  // Empty sequence succeeds immediately
-  if (this.commandList_.length === 0) {
-    this.succeed();
-  }
-};
-
-/**
- * @returns {Command}
- */
-CommandSequence.prototype.currentCommand = function () {
-  return this.commandList_[this.currentCommandIndex_];
-};
-
-/**
- * @param {RunLoop.Clock} clock
- */
-CommandSequence.prototype.tick = function (clock) {
-  while (this.isStarted() && !this.isFinished() && this.currentCommand()) {
-    if (!this.currentCommand().isStarted()) {
-      this.currentCommand().begin();
-    } else {
-      this.currentCommand().tick(clock);
-    }
-
-    if (this.currentCommand().succeeded()) {
-      this.currentCommandIndex_++;
-      if (this.currentCommand() === undefined) {
-        this.succeed();
-      }
-    } else if (this.currentCommand().failed()) {
-      this.fail();
-    } else {
-      // Let the current command work
-      break;
-    }
-  }
-};
-
-
-},{"./utils":321}],4:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /* jshint
  funcscope: true,
  newcap: true,
@@ -39553,4 +38285,4 @@ ObservableEvent.prototype.notifyObservers = function () {
   });
 };
 
-},{}]},{},[260]);
+},{}]},{},[257]);
