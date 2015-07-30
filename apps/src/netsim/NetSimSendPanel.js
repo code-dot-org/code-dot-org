@@ -288,7 +288,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   newPacket.getRoot().appendTo(this.packetsDiv_);
   newPacket.getRoot().hide().slideDown('fast', function () {
-    newPacket.getFirstVisibleMessage().focus();
+    newPacket.getFirstVisibleMessageBox().focus();
     updateLayout();
   });
   this.packets_.push(newPacket);
