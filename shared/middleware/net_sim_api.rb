@@ -175,7 +175,6 @@ class NetSimApi < Sinatra::Base
   #
   # @param [Request] request
   # @return [Boolean]
-  # @private
   def has_json_utf8_headers(request)
     request.content_type.to_s.split(';').first == 'application/json' and
         request.content_charset.to_s.downcase == 'utf-8'
