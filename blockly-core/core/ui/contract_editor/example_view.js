@@ -9,14 +9,12 @@ goog.provide('Blockly.ExampleView');
  * @constructor
  * @param {Element} dom
  * @param {SVGElement} svg
- * @param {Function} onExampleRun
- * @param {Function} onExampleReset
+ * @param {Blockly.ContractEditor} contractEditor
  */
-Blockly.ExampleView = function (dom, svg, onExampleRun, onExampleReset) {
+Blockly.ExampleView = function (dom, svg, contractEditor) {
   this.domParent_ = dom;
   this.svgParent_ = svg;
-  this.onExampleRun_ = onExampleRun;
-  this.onExampleReset_ = onExampleReset;
+  this.contractEditor_ = contractEditor;
 
   this.testRunning_ = false;
 
@@ -29,7 +27,7 @@ Blockly.ExampleView = function (dom, svg, onExampleRun, onExampleReset) {
   }, this.svgParent_, {'belowExisting': true});
 
   this.testExampleButton = this.initializeTestButton("Test", "run26", this.testExample_.bind(this));
-  this.resetExampleButton = this.initializeTestButton("Reset", "reset26", this.resetExample_.bind(this));
+  this.resetExampleButton = this.initializeTestButton("Reset", "reset26", this.reset.bind(this));
   goog.dom.classes.add(this.resetExampleButton, 'resetButton');
   goog.dom.append(this.domParent_, this.testExampleButton);
   goog.dom.append(this.domParent_, this.resetExampleButton);
@@ -52,14 +50,19 @@ Blockly.ExampleView.prototype.initializeTestButton = function (buttonText, iconC
 };
 
 Blockly.ExampleView.prototype.testExample_ = function () {
-  this.resultText.innerHTML = this.onExampleRun_(this.block_);
+  this.contractEditor_.resetExampleViews();
+
+  // TODO(bjordan): Reset main workspace runner esp. if visualizing?
+
+  this.resultText.innerHTML = this.contractEditor_.testExample(block_);
   this.testRunning_ = true;
   this.refreshButtons();
+
   // TODO(bjordan): UI re-layout post-result?
 };
 
-Blockly.ExampleView.prototype.resetExample_ = function () {
-  this.onExampleReset_();
+Blockly.ExampleView.prototype.reset = function () {
+  this.contractEditor_.testResetHandler_();
   this.resultText.innerHTML = NO_RESULT_TEXT;
   this.testRunning_ = false;
   this.refreshButtons();
