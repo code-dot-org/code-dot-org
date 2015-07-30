@@ -7,11 +7,11 @@ template "/etc/init.d/pegasus" do
   group 'root'
   mode '0755'
   variables ({
-    src_file:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/unicorn.rb",
-    app_root:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus",
-    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/unicorn.rb.pid",
-    user:node[:current_user],
-    env:node.chef_environment,
+    src_file: "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/unicorn.rb",
+    app_root: "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus",
+    pid_file: "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/unicorn.rb.pid",
+    user: node[:current_user],
+    env: node.chef_environment,
   })
   notifies :run, 'execute[bundle-install-pegasus]', :immediately
 end
@@ -22,8 +22,8 @@ template "/etc/logrotate.d/pegasus" do
   group 'root'
   mode '0644'
   variables ({
-    app_name:'pegasus',
-    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
+    app_name: 'pegasus',
+    log_dir: "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
   })
 end
 
@@ -32,9 +32,9 @@ template "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/config/n
   user node[:current_user]
   group node[:current_user]
   variables ({
-    app_name:'Pegasus',
-    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
-    auto_instrument:true,
+    app_name: 'Pegasus',
+    log_dir: "/home/#{node[:current_user]}/#{node.chef_environment}/pegasus/log",
+    auto_instrument: true,
   })
 end
 

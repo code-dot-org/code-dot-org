@@ -57,13 +57,13 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 3, 2015
+Quarter 1: Saturday, October 17, 2015
 
-Quarter 2: Saturday, November 14, 2015
+Quarter 2: Saturday, December 5, 2015
 
-Quarter 3: Saturday, February 6, 2016
+Quarter 3: Saturday, February 27, 2016
 
-Quarter 4: Saturday, April 16, 2016
+Quarter 4: Saturday, March 26, 2016
 
 8:30am - 3:30pm
 <br/>
@@ -252,7 +252,7 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 Semester 1: Saturday, October 3, 2015
 
-Semester 2: Saturday, February 6, 2015
+Semester 2: Saturday, February 6, 2016
 
 8:00am - 4:00pm
 <br/>

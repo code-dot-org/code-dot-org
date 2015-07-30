@@ -29,7 +29,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
   def test_create_read_update_delete
     # Verify that the CREATE response body and READ response bodies
     # both return the correct record values
-    record_create_response = create_record({name:'alice', age:7, male:false})
+    record_create_response = create_record({name: 'alice', age: 7, male: false})
     record_get_response = read_records.first
     assert_equal record_create_response['id'].to_i, record_get_response['id'].to_i
     assert_equal 'alice', record_get_response['name']
@@ -41,7 +41,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     record_id = record_get_response['id'].to_i
 
-    assert_equal 8, update_record(record_id, {id:record_id, age:8})['age']
+    assert_equal 8, update_record(record_id, {id: record_id, age: 8})['age']
     record = read_records.first
     assert_equal 8, record['age']
   ensure
@@ -51,7 +51,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation
-    record_create_response = create_record_malformed({name:'bob', age:7, male:false})
+    record_create_response = create_record_malformed({name: 'bob', age: 7, male: false})
 
     # Verify that the CREATE response is a 400 BAD REQUEST since we sent malformed JSON
     assert_equal 400, record_create_response.status
@@ -62,11 +62,11 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_get_400_on_bad_json_update
     # Create a record correctly
-    record_create_response = create_record({name:'charles', age:7, male:false})
+    record_create_response = create_record({name: 'charles', age: 7, male: false})
     record_id = record_create_response['id'].to_i
 
     # Send malformed JSON with an UPDATE operation
-    record_update_response = update_record_malformed(record_id, {id:record_id, age:8})
+    record_update_response = update_record_malformed(record_id, {id: record_id, age: 8})
 
     # Verify that the UPDATE response is a 400 BAD REQUEST since we sent malformed JSON
     assert_equal 400, record_update_response.status
@@ -92,7 +92,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     test_spy = SpyPubSubApi.new
     NetSimApi.override_pub_sub_api_for_test(test_spy)
 
-    record_create_response = create_record({name:'dave', age:7, male:false})
+    record_create_response = create_record({name: 'dave', age: 7, male: false})
     record_id = record_create_response['id'].to_i
 
     assert_equal 1, test_spy.publish_history.length
@@ -109,9 +109,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
     test_spy = SpyPubSubApi.new
     NetSimApi.override_pub_sub_api_for_test(test_spy)
 
-    record_create_response = create_record({name:'eliza', age:7, male:false})
+    record_create_response = create_record({name: 'eliza', age: 7, male: false})
     record_id = record_create_response['id'].to_i
-    update_record(record_id, {id:record_id, age:8})
+    update_record(record_id, {id: record_id, age: 8})
 
     assert_equal 2, test_spy.publish_history.length
     assert_equal @shard_id, test_spy.publish_history.last[:channel]
