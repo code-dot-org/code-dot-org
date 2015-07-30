@@ -38,10 +38,10 @@ class RedisTable
   # @param [String] ignored_ip Unused, for compatability with other table apis.
   # @return [Hash] The inserted value, including the new :id field.
   def insert(value, ignored_ip=nil)
-    new_row_id = next_id
-    @props.set(row_key(new_row_id), value.to_json)
-    publish_change({:action => 'insert', :id => new_row_id})
-    merge_id(value, new_row_id)
+    new_id = next_id
+    @props.set(row_key(new_id), value.to_json)
+    publish_change({:action => 'insert', :id => new_id})
+    merge_id(value, new_id)
   end
 
   # Converts the rows to an array ordered by ascending row id.
