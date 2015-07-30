@@ -13,7 +13,7 @@ class StorageApps
   end
 
   def create(value, ip_address)
-    timestamp = Time.now
+    timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
       value: value.to_json,

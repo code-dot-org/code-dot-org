@@ -23,7 +23,7 @@ class ChannelsTest < Minitest::Unit::TestCase
   end
 
   def test_update_channel
-    start = Time.now - 1
+    start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
@@ -35,12 +35,12 @@ class ChannelsTest < Minitest::Unit::TestCase
     # Check timestamps.
     created = result['createdAt']
     assert_equal created, result['updatedAt']
-    assert (start..Time.now).cover? Time.parse(created)
+    assert (start..DateTime.now).cover? DateTime.parse(created)
 
     sleep 1
 
     # Update.
-    start = Time.now - 1
+    start = DateTime.now - 1
     post "/v3/channels/#{channel_id}", {abc: 456}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.successful?
 
@@ -52,7 +52,7 @@ class ChannelsTest < Minitest::Unit::TestCase
     # Check timestamps.
     assert_equal created, result['createdAt']
     refute_equal result['createdAt'], result['updatedAt']
-    assert (start..Time.now).cover? Time.parse(result['updatedAt'])
+    assert (start..DateTime.now).cover? DateTime.parse(result['updatedAt'])
   end
 
   def test_delete_channel
