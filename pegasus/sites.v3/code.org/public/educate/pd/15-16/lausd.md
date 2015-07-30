@@ -88,7 +88,35 @@ In-person milestone complete! More info coming soon on your Phase 2 online porti
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-More info coming soon!
+Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+
+**Save the dates:**
+
+Semester 1: Saturday, October 10, 2015 (This workshop will take place in Orange County)
+
+Semester 2: Saturrday, April 16, 2016 (This workshop will take place in Los Angeles)
+
+You are expected to attend both of these workshops.
+
+8:00am - 4:00pm
+</br>
+<br/>
+Breakfast and lunch will be served. 
+
+**Location**
+
+TBD
+
+**What to bring to Phase 3 bi-yearly sessions:**
+
+Laptop
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
+
 
 
 [**Back to the top**](#top)
@@ -111,9 +139,12 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Semester 1: Saturday, October 17, 2015
+Semester 1: Saturday, October 17, 2015 (This workshop will take place in Orange County)
 
-Semester 2: Saturrday, February 20, 2016 
+Semester 2: Saturrday, February 20, 2016 (This workshop will take place in Los Angeles)
+
+You are expected to attend both of these workshops.
+
 
 8:00am - 4:00pm
 </br>
