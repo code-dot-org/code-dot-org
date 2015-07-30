@@ -177,27 +177,27 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.exampleAreaDiv.style.position = 'absolute';
   goog.dom.insertChildAt(this.container_, this.exampleAreaDiv, 0);
 
-  var callText = goog.dom.createDom('div', 'callText');
-  callText.innerHTML = "Call";
-  goog.dom.appendChild(this.exampleAreaDiv, callText);
+  this.callText = goog.dom.createDom('div', 'callText');
+  this.callText.innerHTML = "Call";
+  goog.dom.appendChild(this.exampleAreaDiv, this.callText);
 
-  var resultText = goog.dom.createDom('div', 'callText');
-  resultText.innerHTML = "Result";
-  goog.dom.appendChild(this.exampleAreaDiv, resultText);
+  this.resultText = goog.dom.createDom('div', 'callText');
+  this.resultText.innerHTML = "Result";
+  goog.dom.appendChild(this.exampleAreaDiv, this.resultText);
 
-  var examplesTableGroup = Blockly.createSvgElement('g', {}, canvasToDrawOn);
+  this.examplesTableGroup = Blockly.createSvgElement('g', {}, canvasToDrawOn);
 
-  var topHorizontalLine = Blockly.createSvgElement('rect', {
+  this.topHorizontalLine = Blockly.createSvgElement('rect', {
     'fill': '#000'
-  }, examplesTableGroup);
-  topHorizontalLine.setAttribute('height', 2.0);
+  }, this.examplesTableGroup);
+  this.topHorizontalLine.setAttribute('height', 2.0);
 
   // TODO(bjordan): get horizontal line #X helper, lay out below examples
 
-  var verticalMidline = Blockly.createSvgElement('rect', {
+  this.verticalMidline = Blockly.createSvgElement('rect', {
     'fill': '#000'
-  }, examplesTableGroup);
-  verticalMidline.setAttribute('width', 2.0);
+  }, this.examplesTableGroup);
+  this.verticalMidline.setAttribute('width', 2.0);
 
   /**
    * @type {Blockly.ExampleView[]}
@@ -210,101 +210,11 @@ Blockly.ContractEditor.prototype.create_ = function() {
       sectionNumber: 2,
       headerHeight: HEADER_HEIGHT,
       headerText: "Examples", // TODO(bjordan): i18n
-      placeContentCallback: goog.bind(function (currentY) {
-        var maxWidth = +this.exampleBlocks.reduce(function (previousMax, block) {
-          var functionCallBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-          if (!functionCallBlock) {
-            return previousMax;
-          }
-          var width = functionCallBlock.getHeightWidth().width;
-          return Math.max(previousMax, width);
-        }, 0);
-
-        var marginEgBlockToCallSlot = 13;
-        var verticalMidlineOffset = (EXAMPLE_BLOCK_MARGIN_LEFT + maxWidth + marginEgBlockToCallSlot);
-
-        var metrics = this.modalBlockSpace.getMetrics();
-
-        this.exampleAreaDiv.style.left = metrics.absoluteLeft + 'px';
-        this.exampleAreaDiv.style.top = metrics.absoluteTop + 'px';
-        this.exampleAreaDiv.style.width = metrics.viewWidth + 'px';
-
-        var blockSplitMargin = (EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2);
-
-        var exampleSectionVisible = this.exampleBlocks.length;
-
-        var newY = currentY;
-
-        var verticalMidlineY = newY;
-        verticalMidline.setAttribute('transform', 'translate(' + verticalMidlineOffset + ',' + newY + ')');
-
-        if (exampleSectionVisible) {
-          newY += blockSplitMargin;
-
-          callText.style.top = newY + 'px';
-          callText.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
-
-          resultText.style.top = newY + 'px';
-          resultText.style.left = verticalMidlineOffset + EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
-
-          newY += callText.offsetHeight;
-
-          newY += blockSplitMargin;
-
-          topHorizontalLine.setAttribute('transform', 'translate(' + 0 + ',' + newY + ')');
-          topHorizontalLine.setAttribute('width', this.getFullWidth());
-
-          var i = 0;
-          for (; i < this.exampleBlocks.length; i++) {
-            var block = this.exampleBlocks[i];
-            var canReuse = this.exampleViews_.length > i;
-            if (!canReuse) {
-              var newExampleView = new Blockly.ExampleView(this.exampleAreaDiv, examplesTableGroup, function (block) {
-                this.exampleViews_.forEach(function (exampleView) {
-                  exampleView.resetExample_();
-                });
-
-                // TODO(bjordan): Reset main workspace runner esp. if visualizing?
-
-                this.contractSectionView_.setCollapsed(true);
-                return this.testHandler_(block);
-              }.bind(this), function () {
-                this.testResetHandler_();
-              }.bind(this));
-              this.exampleViews_.push(newExampleView);
-            }
-            newY = this.exampleViews_[i].placeExampleAndGetNewY(block, newY, maxWidth,
-              EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW, this.getFullWidth(), verticalMidlineOffset);
-          }
-        }
-
-        for (var j = this.exampleBlocks.length; j < this.exampleViews_.length; j++) {
-          this.exampleViews_[j].dispose();
-        }
-        this.exampleViews_.length = this.exampleBlocks.length;
-
-        verticalMidline.style.display = exampleSectionVisible ? 'block' : 'none';
-        topHorizontalLine.style.display = exampleSectionVisible ? 'block' : 'none';
-        callText.style.display = exampleSectionVisible ? 'block' : 'none';
-        resultText.style.display = exampleSectionVisible ? 'block' : 'none';
-
-        verticalMidline.setAttribute('height', newY - verticalMidlineY);
-
-        newY += blockSplitMargin;
-
-        this.addExampleButton.style.top = newY + 'px';
-        this.addExampleButton.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
-        newY += this.addExampleButton.offsetHeight;
-        newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
-
-        this.exampleAreaDiv.style.height = (newY - currentY) + 'px';
-
-        return newY;
-      }, this),
+      placeContentCallback: this.onPlaceExampleContent.bind(this),
       highlightBox: sharedHighlightBox,
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
         this.exampleAreaDiv.style.display = isNowCollapsed ? 'none' : 'block';
-        examplesTableGroup.style.display = isNowCollapsed ? 'none' : 'block';
+        this.examplesTableGroup.style.display = isNowCollapsed ? 'none' : 'block';
         this.hiddenExampleBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInExampleArea, this),
           this.hiddenExampleBlocks_);
@@ -871,4 +781,126 @@ Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newNam
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
   Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
+};
+
+/**
+ * Go through each of our example blocks and figure out which is widest
+ * @return {number}
+ */
+Blockly.ContractEditor.prototype.getMaxExampleBlockWidth_ = function () {
+  return this.exampleBlocks.reduce(function (previousMax, block) {
+    var functionCallBlock = block.getInputTargetBlock(
+      Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+    if (!functionCallBlock) {
+      return previousMax;
+    }
+    var width = functionCallBlock.getHeightWidth().width;
+    return Math.max(previousMax, width);
+  }, 0);
+};
+
+/**
+ * Call reset on each of our views
+ */
+Blockly.ContractEditor.prototype.resetExampleViews = function () {
+  this.exampleViews_.forEach(function (exampleView) {
+    exampleView.reset();
+  });
+};
+
+/**
+ * Call our app-specific test handler for this block
+ * @return {string} Result describing pass/failure
+ */
+Blockly.ContractEditor.prototype.testExample = function (block) {
+  return this.testHandler_(block);
+};
+
+/**
+ * Call our app-specific test reset handler for this block
+ */
+Blockly.ContractEditor.prototype.resetExample = function (block) {
+  this.testResetHandler_(block);
+};
+
+/**
+ * Handle example content being placed.
+ * @param {number} currentY Current y location
+ * @returns {number} Updated y location
+ */
+Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
+  var maxWidth = this.getMaxExampleBlockWidth_();
+
+  var metrics = this.modalBlockSpace.getMetrics();
+
+  this.exampleAreaDiv.style.left = metrics.absoluteLeft + 'px';
+  this.exampleAreaDiv.style.top = metrics.absoluteTop + 'px';
+  this.exampleAreaDiv.style.width = metrics.viewWidth + 'px';
+
+  var blockSplitMargin = (EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2);
+
+  var newY = currentY;
+
+  var marginEgBlockToCallSlot = 13;
+  var verticalMidlineOffset = (EXAMPLE_BLOCK_MARGIN_LEFT + maxWidth +
+    marginEgBlockToCallSlot);
+
+  var verticalMidlineY = newY;
+  this.verticalMidline.setAttribute('transform',
+    'translate(' + verticalMidlineOffset + ',' + newY + ')');
+
+  var exampleSectionVisible = this.exampleBlocks.length > 0;
+  if (exampleSectionVisible) {
+    newY += blockSplitMargin;
+
+    this.callText.style.top = newY + 'px';
+    this.callText.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+
+    this.resultText.style.top = newY + 'px';
+    this.resultText.style.left = verticalMidlineOffset +
+      EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+
+    newY += this.callText.offsetHeight;
+
+    newY += blockSplitMargin;
+
+    this.topHorizontalLine.setAttribute('transform',
+      'translate(' + 0 + ',' + newY + ')');
+    this.topHorizontalLine.setAttribute('width', this.getFullWidth());
+
+    this.exampleBlocks.forEach(goog.bind(function (block, index) {
+      var canReuse = this.exampleViews_.length > index;
+      if (!canReuse) {
+        var newExampleView = new Blockly.ExampleView(this.exampleAreaDiv,
+            this.examplesTableGroup, this);
+        this.exampleViews_.push(newExampleView);
+      }
+      newY = this.exampleViews_[index].placeExampleAndGetNewY(block, newY,
+        maxWidth, EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW,
+        this.getFullWidth(), verticalMidlineOffset);
+    }, this));
+  }
+
+  for (var j = this.exampleBlocks.length; j < this.exampleViews_.length; j++) {
+    this.exampleViews_[j].dispose();
+  }
+  this.exampleViews_.length = this.exampleBlocks.length;
+
+  this.verticalMidline.style.display = exampleSectionVisible ? 'block' : 'none';
+  this.topHorizontalLine.style.display = exampleSectionVisible ? 'block' : 'none';
+  this.callText.style.display = exampleSectionVisible ? 'block' : 'none';
+  this.resultText.style.display = exampleSectionVisible ? 'block' : 'none';
+
+  this.verticalMidline.setAttribute('height', newY - verticalMidlineY);
+
+  newY += blockSplitMargin;
+
+  this.addExampleButton.style.top = newY + 'px';
+  this.addExampleButton.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + 'px';
+  newY += this.addExampleButton.offsetHeight;
+  newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
+
+  this.exampleAreaDiv.style.height = (newY - currentY) + 'px';
+
+  return newY;
 };
