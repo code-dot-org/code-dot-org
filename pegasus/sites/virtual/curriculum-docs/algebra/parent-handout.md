@@ -8,26 +8,29 @@ theme: none
 
 [content]
 
-Software and technology are everywhere - in our computers, in our pockets, in our cars, and used in banking, communications, entertainment, transportation, and science. But very few kids are learning how to actually create technology - games, apps and programs. Even fewer US schools teach computer science. Women are underrepresented in this field, and so are African Americans and Hispanic Americans. Computer science is foundational for every student, whether they want to pursue a career in software, or to be a more well rounded citizen in the 21st century. That’s why we’re proud to introduce our classroom to some of the basics of computer science using Code Studio an online learning platform by Code.org.
+Software and technology are everywhere - in our computers, in our pockets, in our cars, and used in banking, communications, entertainment, transportation, and science. But very few kids are learning how to actually create technology - games, apps and programs. Even fewer US schools teach computer science. Women are underrepresented in this field, and so are African Americans and Hispanic Americans. Computer science is foundational for every student, whether they want to pursue a career in software, or to be a more well rounded citizen in the 21st century. That’s why we’re proud to introduce our classroom to the Computer Science in Algebra course, as part of Code Studio, an online learning platform by Code.org.
 
 ### What is Code Studio?
 Code Studio is a fun, creative platform for learning basic coding and computer science! Using a blended learning model, your children are learning with a mix of online activities (on the computer) and “unplugged” classroom activities that use no computer at all.
 
 This format helps nurture creativity, problem solving, collaboration, and logic through interactive, self-paced tutorials, featuring short video lectures and game-like puzzles. 
 
+### What is Computer Science in Algebra?
+Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+
 <center>
-<img src="pinkstar.png" style="width: 20%; margin: 20px;"/>
+<img src="orangestar.png" style="width: 20%; margin: 20px;"/>
 <img src="collidefunction.png" style="width: 30%; margin: 20px;"/>
 <img src="bat.png" style="width: 20%; margin: 20px;"/>
 </center>
          
 ### Students will study topics such as:
-* How the Internet works
-* Basic computer programming
-* Logic, problem solving and creativity
-* Creating simple apps, animations, and “code art”
+* Order of operations
+* Cartesian plane
+* Function composition and definition
+* Solving word problems
 
-### With an online course, students are able to benefit from a truly modern educational experience. For example, Code Studio is able to:
+### With an online course, students benefit from a truly modern educational experience. Code Studio is able to:
 * Make tutorials smarter and more personalized
 * Use data to identify where students get stumped and improve puzzles
 * Use smart hints to guide students with custom answers to common mistakes
