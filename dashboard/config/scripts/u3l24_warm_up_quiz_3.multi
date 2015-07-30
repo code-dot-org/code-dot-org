@@ -10,8 +10,8 @@ right 'I & III'
 wrong 'II & IV'
 
 markdown <<MARKDOWN
-	var blue = "green"
-    var green = "green"
+	var blue = "green";
+    var green = "green";
     
     I.
     	if (blue == green) {
