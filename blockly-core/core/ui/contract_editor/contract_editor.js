@@ -211,17 +211,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
       headerHeight: HEADER_HEIGHT,
       headerText: "Examples", // TODO(bjordan): i18n
       placeContentCallback: goog.bind(function (currentY) {
-        var maxWidth = +this.exampleBlocks.reduce(function (previousMax, block) {
-          var functionCallBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-          if (!functionCallBlock) {
-            return previousMax;
-          }
-          var width = functionCallBlock.getHeightWidth().width;
-          return Math.max(previousMax, width);
-        }, 0);
-
-        var marginEgBlockToCallSlot = 13;
-        var verticalMidlineOffset = (EXAMPLE_BLOCK_MARGIN_LEFT + maxWidth + marginEgBlockToCallSlot);
+        var maxWidth = this.getMaxExampleBlockWidth_();
 
         var metrics = this.modalBlockSpace.getMetrics();
 
@@ -231,13 +221,16 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
         var blockSplitMargin = (EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2);
 
-        var exampleSectionVisible = this.exampleBlocks.length;
-
         var newY = currentY;
+
+        var marginEgBlockToCallSlot = 13;
+        var verticalMidlineOffset = (EXAMPLE_BLOCK_MARGIN_LEFT + maxWidth +
+          marginEgBlockToCallSlot);
 
         var verticalMidlineY = newY;
         verticalMidline.setAttribute('transform', 'translate(' + verticalMidlineOffset + ',' + newY + ')');
 
+        var exampleSectionVisible = this.exampleBlocks.length > 0;
         if (exampleSectionVisible) {
           newY += blockSplitMargin;
 
@@ -254,28 +247,17 @@ Blockly.ContractEditor.prototype.create_ = function() {
           topHorizontalLine.setAttribute('transform', 'translate(' + 0 + ',' + newY + ')');
           topHorizontalLine.setAttribute('width', this.getFullWidth());
 
-          var i = 0;
-          for (; i < this.exampleBlocks.length; i++) {
-            var block = this.exampleBlocks[i];
-            var canReuse = this.exampleViews_.length > i;
+          this.exampleBlocks.forEach(goog.bind(function (block, index) {
+            var canReuse = this.exampleViews_.length > index;
             if (!canReuse) {
-              var newExampleView = new Blockly.ExampleView(this.exampleAreaDiv, examplesTableGroup, function (block) {
-                this.exampleViews_.forEach(function (exampleView) {
-                  exampleView.resetExample_();
-                });
-
-                // TODO(bjordan): Reset main workspace runner esp. if visualizing?
-
-                this.contractSectionView_.setCollapsed(true);
-                return this.testHandler_(block);
-              }.bind(this), function () {
-                this.testResetHandler_();
-              }.bind(this));
+              var newExampleView = new Blockly.ExampleView(this.exampleAreaDiv,
+                  examplesTableGroup, this);
               this.exampleViews_.push(newExampleView);
             }
-            newY = this.exampleViews_[i].placeExampleAndGetNewY(block, newY, maxWidth,
-              EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW, this.getFullWidth(), verticalMidlineOffset);
-          }
+            newY = this.exampleViews_[index].placeExampleAndGetNewY(block, newY,
+              maxWidth, EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW,
+              this.getFullWidth(), verticalMidlineOffset);
+          }, this));
         }
 
         for (var j = this.exampleBlocks.length; j < this.exampleViews_.length; j++) {
@@ -871,4 +853,42 @@ Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newNam
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
   Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
+};
+
+/**
+ * Go through each of our example blocks and figure out which is widest
+ */
+Blockly.ContractEditor.prototype.getMaxExampleBlockWidth_ = function () {
+  return this.exampleBlocks.reduce(function (previousMax, block) {
+    var functionCallBlock = block.getInputTargetBlock(
+      Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+    if (!functionCallBlock) {
+      return previousMax;
+    }
+    var width = functionCallBlock.getHeightWidth().width;
+    return Math.max(previousMax, width);
+  }, 0);
+};
+
+/**
+ * Call reset on each of our views
+ */
+Blockly.ContractEditor.prototype.resetExampleViews = function () {
+  this.exampleViews_.forEach(function (exampleView) {
+    exampleView.reset();
+  });
+};
+
+/**
+ * Call our app-specific test handler for this block
+ */
+Blockly.ContractEditor.prototype.testExample = function (block) {
+  return this.testHandler_(block);
+};
+
+/**
+ * Call our app-specific test reset handler for this block
+ */
+Blockly.ContractEditor.prototype.resetExample = function (block) {
+  return this.testResetHandler_(block);
 };
