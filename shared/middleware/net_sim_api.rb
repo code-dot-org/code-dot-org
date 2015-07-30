@@ -2,7 +2,10 @@ require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
+require_relative '../middleware/helpers/redis_table'
+require_relative '../middleware/channels_api'
 
+# NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
 
   helpers do
@@ -18,33 +21,17 @@ class NetSimApi < Sinatra::Base
 
   end
 
-  # For test, make it possible to override the usual configured API choice
+  # For test, make it possible to override the usual configured API choices.
   @@overridden_pub_sub_api = nil
+  @@overridden_redis = nil
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  def initialize(app = nil)
+    super(app)
+  end
 
+  # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
-    # Table name within channels API just concatenates shard + table
-    api_table_name = "#{shard_id}_#{table_name}"
-    TableType.new(CDO.netsim_api_publickey, nil, api_table_name)
-  end
-
-  # Get the Pub/Sub API interface for the current configuration
-  def get_pub_sub_api
-    return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
-    CDO.use_pusher ? PusherApi : NullPubSubApi
-  end
-
-  # Set a particular Pub/Sub API interface to use - for use in tests.
-  #
-  # @param [PubSubApi] override_api
-  def self.override_pub_sub_api_for_test(override_api)
-    @@overridden_pub_sub_api = override_api
-  end
-
-  def has_json_utf8_headers(request)
-    request.content_type.to_s.split(';').first == 'application/json' and
-        request.content_charset.to_s.downcase == 'utf-8'
+    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name)
   end
 
   #
@@ -79,7 +66,6 @@ class NetSimApi < Sinatra::Base
     table = get_table(shard_id, table_name)
     int_id = id.to_i
     table.delete(int_id)
-    get_pub_sub_api.publish(shard_id, table_name, {:action => 'delete', :id => int_id})
     no_content
   end
 
@@ -98,12 +84,12 @@ class NetSimApi < Sinatra::Base
   # Insert a new row.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
+    dont_cache
     unsupported_media_type unless has_json_utf8_headers(request)
 
     begin
       value = get_table(shard_id, table_name).
           insert(JSON.parse(request.body.read), request.ip)
-      get_pub_sub_api.publish(shard_id, table_name, {:action => 'insert', :id => value[:id]})
     rescue JSON::ParserError
       bad_request
     end
@@ -120,13 +106,13 @@ class NetSimApi < Sinatra::Base
   # Update an existing row.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
+    dont_cache
     unsupported_media_type unless has_json_utf8_headers(request)
 
     begin
       table = get_table(shard_id, table_name)
       int_id = id.to_i
       value = table.update(int_id, JSON.parse(request.body.read), request.ip)
-      get_pub_sub_api.publish(shard_id, table_name, {:action => 'update', :id => int_id})
     rescue JSON::ParserError
       bad_request
     end
@@ -140,6 +126,58 @@ class NetSimApi < Sinatra::Base
   end
   put %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     call(env.merge('REQUEST_METHOD'=>'POST'))
+  end
+
+  # TEST-ONLY METHODS
+
+  # Set a particular Pub/Sub interface to use - for use in tests.
+  #
+  # @param [PubSubApi] override_api
+  def self.override_pub_sub_api_for_test(override_api)
+    @@overridden_pub_sub_api = override_api
+  end
+
+  # Set a particular Redis interface to use - for use in tests.
+  #
+  # @param [Redis] override_redis
+  def self.override_redis_for_test(override_redis)
+    @@overridden_redis = override_redis
+  end
+
+
+  private
+
+  # Returns a new Redis client for the current configuration.
+  #
+  # @return [Redis]
+  def get_redis_client
+    @@overridden_redis || Redis.new(host: redis_host)
+  end
+
+  # Returns the host name of the redis service in the current
+  # configuration.
+  #
+  # @return [String]
+  def redis_host
+    CDO.geocoder_redis_url || 'localhost'
+  end
+
+  # Get the Pub/Sub API interface for the current configuration
+  #
+  # @return [PusherApi]
+  def get_pub_sub_api
+    return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
+    CDO.use_pusher ? PusherApi : NullPubSubApi
+  end
+
+  # Return true if the request's content type is application/json and charset
+  # is utf-8.
+  #
+  # @param [Request] request
+  # @return [Boolean]
+  def has_json_utf8_headers(request)
+    request.content_type.to_s.split(';').first == 'application/json' and
+        request.content_charset.to_s.downcase == 'utf-8'
   end
 
 end
