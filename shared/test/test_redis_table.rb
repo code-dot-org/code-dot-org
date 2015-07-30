@@ -14,8 +14,11 @@ class RedisTableTest < Minitest::Unit::TestCase
     # We take care to test multiple tables in the same shard
     # since all of those tables are combined in a single Redis key
     # and could be intermingled in the event of a bug.
+
     table = RedisTable.new(redis, pubsub, 'shard1', 'table')
+    # Create another table in the same shard.
     table2 = RedisTable.new(redis, pubsub, 'shard1', 'table2')
+    # Create a third table in a different shard.
     table3 = RedisTable.new(redis, pubsub, 'shard2', 'table2')
 
     assert_equal [], table.to_a
@@ -30,11 +33,13 @@ class RedisTableTest < Minitest::Unit::TestCase
     value_with_id = value.merge({'id' => 1})
     value_table2_with_id = value_table2.merge({'id' => 1})
 
+    # Each table should only see its own inserts, not others in the same shard.
     assert_equal value_with_id, inserted
     assert_equal [value_with_id], table.to_a
     assert_equal value_with_id, table.fetch(1)
     assert_equal [value_table2_with_id], table2.to_a
 
+    # Make sure the expected pubsub events were published.
     assert_equal [make_pubsub_event('shard1', 'table', {:action => 'insert', :id => 1}),
                   make_pubsub_event('shard1', 'table2', {:action => 'insert', :id => 1})],
                  pubsub.publish_history
