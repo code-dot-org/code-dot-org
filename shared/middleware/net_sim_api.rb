@@ -166,13 +166,13 @@ class NetSimApi < Sinatra::Base
         end
         unless node_exists
           get_table(shard_id, table_name).delete(value[:id])
-          bad_request
+          json_bad_request
         end
       end
 
       get_pub_sub_api.publish(shard_id, table_name, {:action => 'insert', :id => value[:id]})
     rescue JSON::ParserError
-      bad_request
+      json_bad_request
     end
 
     dont_cache
@@ -195,7 +195,7 @@ class NetSimApi < Sinatra::Base
       value = table.update(int_id, JSON.parse(request.body.read), request.ip)
       get_pub_sub_api.publish(shard_id, table_name, {:action => 'update', :id => int_id})
     rescue JSON::ParserError
-      bad_request
+      json_bad_request
     end
 
     dont_cache
