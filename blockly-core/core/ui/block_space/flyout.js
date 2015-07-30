@@ -406,8 +406,10 @@ Blockly.Flyout.prototype.show = function(xmlList) {
     y: margin
   };
 
-  // Bind mousedown on the flyout background
-  this.blockSpace_.bindBeginPanDragHandler(this.svgGroup_);
+  // We bind mouse pan-drag on the background group so blocks are ignored.
+  this.blockSpace_.bindBeginPanDragHandler(this.svgBackground_);
+  // We bind scrollwheel on the full group so wheeling over blocks works.
+  this.blockSpace_.bindScrollOnWheelHandler(this.svgGroup_);
 
   // Create the blocks to be shown in this flyout.
   var blocks = [];
