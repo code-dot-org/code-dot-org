@@ -51,7 +51,7 @@ module Google
       return nil if file.nil?
       Google::Drive::File.new(@session, file)
     rescue GoogleDrive::Error => e
-      HipChat.log "<p>Error syncing <b>#{path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color:'yellow'
+      HipChat.log "<p>Error syncing <b>#{path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
       return nil
     end
 

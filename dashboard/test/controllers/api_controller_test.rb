@@ -13,6 +13,7 @@ class ApiControllerTest < ActionController::TestCase
 
     @flappy_section = create(:section, user: @teacher, script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
     @student_3 = create(:follower, section: @flappy_section).student_user
+    @student_4 = create(:follower, section: @flappy_section).student_user
     @student_3.backfill_user_scripts
   end
 
@@ -79,16 +80,40 @@ class ApiControllerTest < ActionController::TestCase
     sign_in @teacher
     get :user_hero
 
-    assert_select '#welcome'
-    assert_select '#classroom'
+    assert_select '#welcome.teacher'
+    assert_select '.teacherdashboard'
   end
 
   test "should get user_hero for student with script" do
     sign_in @student_3
     get :user_hero
 
-    assert_select '#welcome'
-    assert_select '#student_progress'
+    assert_select '#welcome.student'
+    assert_select '#currentprogress'
+  end
+
+  test "should get user_hero for student with no script" do
+    sign_in @student_1
+    get :user_hero
+
+    assert_select '#welcome.student'
+    assert_select '#suggestcourse', I18n.t('home.no_primary_course')
+  end
+
+  test "should get user_hero for student who completed all scripts" do
+    sign_in @student_4
+    advertised_scripts = [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
+      Script.flappy_script, Script.playlab_script, Script.artist_script, Script.course1_script,
+      Script.course2_script, Script.course3_script, Script.course4_script, Script.twenty_hour_script]
+    advertised_scripts.each do |script|
+      UserScript.create!(user_id: @student_4.id, script_id: script.id, completed_at: Time.now)
+    end
+    get :user_hero
+
+    assert_select '#welcome.student'
+    assert_select '#suggestcourse', I18n.t('home.student_finished',
+      online_link: I18n.t('home.online'),
+      local_school_link: I18n.t('home.local_school'))
   end
 
   test 'api routing' do

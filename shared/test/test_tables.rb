@@ -18,14 +18,14 @@ class TablesTest < Minitest::Unit::TestCase
 
     assert read_records.first.nil?
 
-    record_id = create_record({name:'alice', age:7, male:false})
+    record_id = create_record({name: 'alice', age: 7, male: false})
     record = read_records.first
     assert_equal record_id.to_i, record['id'].to_i
     assert_equal 'alice', record['name']
     assert_equal 7, record['age']
     assert_equal false, record['male']
 
-    assert_equal 8, update_record(record_id, {id:record_id, age:8})['age']
+    assert_equal 8, update_record(record_id, {id: record_id, age: 8})['age']
     record = read_records.first
     assert_equal 8, record['age']
 

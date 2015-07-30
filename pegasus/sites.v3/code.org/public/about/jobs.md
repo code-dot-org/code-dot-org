@@ -11,10 +11,12 @@ nav: about_nav
 - [Data Engineer](#data-engineer)
 - [District Manager (Seattle, New York City)](#reg-PM)
 - [Evaluation Manager](#Eval)
+- [Operations Coordinator](#opscoord)
 - [Technical Product Manager](#techpm)
 - [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
+
 
 ## <a name="support" href="#support">Customer Support Associate (Seattle, WA)</a>
 
@@ -148,6 +150,14 @@ The ideal candidate has the following qualifications:
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="opscoord" href="#opscoord">Operations Coordinator (Seattle, WA)</a>
+
+**Job Summary:**
+
+
+**Skills and Qualifications:**
+
+
 ## <a name="techpm" href="#techpm">Technical Product Manager (Seattle, WA)</a>
 
 **Job Summary:**
@@ -157,7 +167,7 @@ Code.org is recruiting for an experienced Product Manager who can help us identi
 Responsibilities of the position include:
 
 - Defining the scope of these projects
-- Designing user experience and working with engineers and other teams at Code.org to implement them
+- Designing user experience and working with engineers, education experts, and other teams at Code.org to implement them
 
 This person must be able to work in a fast paced environment with continuous release to customers.
 
@@ -171,6 +181,11 @@ The ideal candidate has the following qualifications:
 - Strong technical background
 - Strong communication and collaboration skills
 
+Additional skills that would be valuable in this role:
+
+- Visual or interaction design
+- Teaching in K-12 classrooms
+- Curriculum design or partnering with educators on curriculum design
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 

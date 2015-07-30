@@ -31,7 +31,7 @@ class Slack
       }.merge params
     else
       payload = {
-        text:text,
+        text: text,
         unfurl_links: true
       }.merge params
     end
@@ -39,7 +39,7 @@ class Slack
     url = URI.parse("https://hooks.slack.com/services/#{CDO.slack_endpoint}")
     begin
       response = Net::HTTP.post_form(url, {
-        payload:payload.to_json
+        payload: payload.to_json
       })
 
       response.code.to_s == '200'

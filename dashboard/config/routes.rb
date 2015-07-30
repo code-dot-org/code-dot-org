@@ -79,12 +79,25 @@ Dashboard::Application.routes.draw do
   get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
-  resources :projects, path: '/p/', only: [:index] do
+  resources :p, path: '/p/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, value|
-        get '/' + key.to_s, to: 'levels#show', key: value, as: key.to_s
+        get '/' + key.to_s, to: 'projects#redirect_legacy', key: value[:name], as: key.to_s
       end
-      get '/:template', to: 'projects#template'
+      get '/', to: redirect('/projects')
+    end
+  end
+
+  resources :projects, path: '/projects/', only: [:index] do
+    collection do
+      ProjectsController::STANDALONE_PROJECTS.each do |key, _|
+        get "/#{key}", to: 'projects#edit', key: key.to_s, as: "#{key}_project"
+        get "/#{key}/:channel_id", to: 'projects#show', key: key.to_s, as: "#{key}_project_share", share: true
+        get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
+        get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
+        get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
+      end
+      get '/angular', to: 'projects#angular'
     end
   end
 
