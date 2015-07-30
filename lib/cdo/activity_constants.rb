@@ -20,7 +20,7 @@ module ActivityConstants
   }
   PHASES = {
       1 => {short_name: 'Phase 1', long_name: 'Phase 1: Online Introduction'},
-      2 => {short_name: 'Phase 2', long_name: 'Phase 2: Blended Summer Study', prerequisite_phase:1},
+      2 => {short_name: 'Phase 2', long_name: 'Phase 2: Blended Summer Study', prerequisite_phase: 1},
       3 => {short_name: 'Phase 2 Online', long_name: 'Phase 2 Online: Blended Summer Study'},
       4 => {short_name: 'Phase 3A', long_name: 'Phase 3A'},
       5 => {short_name: 'Phase 3B', long_name: 'Phase 3B'},
