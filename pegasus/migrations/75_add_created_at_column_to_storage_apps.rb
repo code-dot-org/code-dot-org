@@ -5,7 +5,7 @@ Sequel.migration do
 
     batch_update do |row|
       value = JSON.parse(row[:value])
-      created = Time.parse(value['createdAt']) if value['createdAt']
+      created = DateTime.parse(value['createdAt']) if value['createdAt']
 
       # Set :created_at.
       from(:storage_apps).where(id: row[:id]).update(created_at: created)
