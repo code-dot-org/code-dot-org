@@ -9,6 +9,7 @@
 'use strict';
 goog.require('Blockly.Playground');
 goog.require('goog.tweak');
+goog.require('goog.tweak.TweakUi');
 // Depending on the URL argument, render as LTR or RTL.
 var rtl = (document.location.search == '?rtl');
 var block = null;
@@ -16,18 +17,19 @@ var block = null;
 <script type="text/javascript" src="../msg/js/en_us.js"></script>
 <script type="text/javascript">
 function start() {
-  var toolbox = document.getElementById('toolbox');
+  goog.tweak.registerBoolean('nonCategoryMode', 'opens blockly with blocks in categories', false);
+  goog.tweak.registerBoolean('openContractEditor', 'pre-opens contract editor', false);
+  goog.tweak.registerBoolean('toggleScrollDragDebug', 'enables autoscroll debugging', false);
+  goog.tweak.registerBoolean('openFunctionEditor', 'pre-opens function editor', false);
+
   Blockly.inject(document.getElementById('blocklyDiv'), {
-    'rtl': rtl,
+    rtl: rtl,
     path: '../',
-    toolbox: toolbox,
+    toolbox: getToolboxElement(),
     hasVerticalScrollbars: true,
     assetUrl: function(path) { return '../' + path; }
   });
 
-  goog.tweak.registerBoolean('openContractEditor', 'pre-opens contract editor', false);
-  goog.tweak.registerBoolean('toggleScrollDragDebug', 'enables autoscroll debugging', false);
-  goog.tweak.registerBoolean('openFunctionEditor', 'pre-opens function editor', false);
   if (goog.tweak.getBoolean('openContractEditor')) {
     newContractEditor();
   } else if (goog.tweak.getBoolean('openFunctionEditor')) {
@@ -38,6 +40,11 @@ function start() {
   }
 }
 
+function getToolboxElement() {
+  return goog.tweak.getBoolean('nonCategoryMode') ?
+      document.getElementById('non-category-toolbox') :
+      document.getElementById('toolbox');
+}
 
 /**
  * @param {Element} checkboxElement
@@ -107,7 +114,7 @@ function toCode(lang) {
 
 function airstrike(n) {
   var prototypes = [];
-  var toolbox = document.getElementById('toolbox');
+  var toolbox = getToolboxElement();
   var blocks = toolbox.getElementsByTagName('block');
   for (var x = 0, block; block = blocks[x]; x++) {
     prototypes.push(block.getAttribute('type'));
@@ -339,8 +346,18 @@ h1 {
     <category name="CSinA Vars" custom="FUNCTIONAL_VARIABLE" />
   </xml>
 
+  <xml id="non-category-toolbox" style="display: none">
+    <block type="controls_if"></block>
+    <block type="logic_compare"></block>
+    <block type="logic_operation"></block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean"></block>
+    <block type="logic_null"></block>
+    <block type="logic_ternary"></block>
+  </xml>
+
   <div id="controls-section">
-    <div id="controls">
+    <h2 id="controls">
       <h1>Blockly Playground</h1>
 
       <p><a href="javascript:void([document.getElementById('blocklyDiv').style.display = 'block', Blockly.mainBlockSpace.render()])">Show</a>
@@ -400,6 +417,14 @@ h1 {
       <hr>
       <p>
         Stress test with an <input type="button" value="Airstrike!" onclick="airstrike(100)">
+      </p>
+      <hr>
+      <p>
+        <h3>URL Parameter Tweaks</h3>
+        <div id="tweak-menu"></div>
+        <script>
+          document.getElementById('tweak-menu').appendChild(goog.tweak.TweakUi.create());
+        </script>
       </p>
     </div>
   </div>
