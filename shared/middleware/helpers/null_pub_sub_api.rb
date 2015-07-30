@@ -1,9 +1,9 @@
 # Base class that defines an interface for publishing messages to a Pubsub
-# system. This class does nothing other than counting the number of
-# publish calls, real implementations should provide actual behavior for
+# system. This class does nothing other than record the published messages
+# for testing.  Real implementations should provide actual behavior for
 # publish.
 class NullPubSubApi
-  @@publish_count = 0
+  @@published_messages = []
 
   # Publishes an event to a a channel using the Pub/Sub system.
   #
@@ -11,10 +11,10 @@ class NullPubSubApi
   # @param [String] event - the name of the event to be triggered
   # @param [Hash] data - the data to be sent with the event
   def self.publish(channel, event, data)
-    @@publish_count += 1
+    @@published_messages << [channel, event, data]
   end
 
-  def self.publish_count
-    @@publish_count
+  def self.published_messages
+    @@published_messages
   end
 end

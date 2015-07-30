@@ -12,6 +12,9 @@ class RedisTable
 
   def initialize(redis, pub_sub_api, shard_id, table_name)
     @pub_sub_api = pub_sub_api
+
+    @shard_id = shard_id
+    @table_name = table_name
     @props = RedisPropertyBag.new(redis, "#{shard_id}_#{table_name}")
   end
 
@@ -22,7 +25,7 @@ class RedisTable
   def insert(value)
     new_row_id = next_id
     @props.set(new_row_id.to_s, value.to_json)
-    publish_change({:action => 'insert', 'id' => new_row_id})
+    publish_change({:action => 'insert', :id => new_row_id})
     merge_id(value, new_row_id)
   end
 
@@ -34,12 +37,12 @@ class RedisTable
     @props.to_hash.each do |key, value|
       result << make_row(key, value) if key != ROW_ID_KEY
     end
-    result.sort_by {|row| row['id'].to_i}
+    result.sort_by {|row| row['id']}
   end
 
   # Fetches a row by id.
   #
-  # @param [String] id The id for the new row
+  # @param [Integer] id The id of the row to fetch
   # @return [Hash] The row, or null if no such row exists.
   def fetch(id)
     make_row(id, @props.to_hash[id.to_s])
@@ -47,27 +50,27 @@ class RedisTable
 
   # Updates an existing row, notifying other clients using the pubsub service.
   #
-  # @param [String] id The id of the row to update.
+  # @param [Integer] id The id of the row to update.
   # @param [Hash] hash The updated hash.
   def update(id, hash)
     @props.set(id.to_s, hash.to_json)
-    publish_change({:action => 'update', :id => id.to_i})
+    publish_change({:action => 'update', :id => id})
     merge_id(hash, id)
   end
 
   # Deletes a row, notifying other clients using the pubsub service.
   #
-  # @param [String] id The id for the new row
+  # @param [Integer] id The id for the new row
   def delete(id)
-    @props.delete(id)
-    publish_change({:action => 'delete', :id => id.to_i})
+    @props.delete(id.to_s)
+    publish_change({:action => 'delete', :id => id})
   end
 
   # Deletes all rows in the table.
   def delete_all
     @props.delete_all
+    publish_change({:action => 'delete_all'})
   end
-
 
  private
   # Returns a new, monotonically increasing id for a row.
@@ -82,7 +85,7 @@ class RedisTable
   # @param [String, Integer] id
   # @return [Hash]
   def merge_id(value, id)
-    value.merge({'id' => id.to_s})
+    value.merge({'id' => id.to_i})
   end
 
   # Makes a row object by parsing the JSON value and adding the id property.
@@ -92,7 +95,8 @@ class RedisTable
   # @return [Hash] The row, or null if no such row exists.
   # @private
   def make_row(id, value)
-    value.nil? ? nil : merge_id(JSON.load(value), id)
+    puts "make_row #{id}, #{value}"
+    value.nil? ? nil : merge_id(JSON.parse(value), id)
   end
 
   # Notifies other clients about changes to this table using pubsub api.
