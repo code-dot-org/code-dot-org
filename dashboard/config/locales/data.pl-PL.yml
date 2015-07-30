@@ -168,8 +168,8 @@
           labirynt? Jeśli zrobisz to prawidłowo, to będę mógł przejść każdą krętą
           ścieżkę bez względu na jej długość.
         turtle_1_1: Witaj, jestem artystą. Pisząc kod możesz sprawić, że narysuję
-          niemalże wszystko. Użyj kilku bloków, abym zaczął rysować po szarych liniach
-          na obrazku.
+          niemalże wszystko. Użyj kilku bloków, abym zaczął rysować wzdłuż szarych
+          linii na obrazku.
         turtle_1_2: 'A teraz narysuj kwadrat. Wskazówka: użyj swojego ulubionego koloru,
           wybierając go z nowego bloku ustaw kolor.'
         turtle_1_3: Narysuj kwadrat używając jedynie 3 bloków.
@@ -195,8 +195,8 @@
           ustaw szerokość. Baw się dobrze!'
         turtle_4_1: 'Czy możesz narysować trójkąt (z bokami o długości 100 pikseli)
           używając tylko 3 bloków? Wskazówka: Użyj bloku powtórz.'
-        turtle_4_2: Dodaj blok "Skręć w prawo o 90 stopni" gdzieś w środku programu
-          na obszarze roboczym, żeby rysować trójkąty.
+        turtle_4_2: Dodaj blok "skręć w prawo o 90 stopni" gdzieś w środku programu
+          na obszarze roboczym, żeby narysować te trójkąty.
         turtle_4_3: OK,  tutaj jest kod, który napisałeś, aby narysować pojedynczy
           trójkąt. Czy możesz dodać bloki powtórz i obróć, aby otrzymać ładny kwiat?
         turtle_4_4: 'Tutaj jest kod z poprzedniej łamigłówki, ale wykonujący obrót
@@ -530,7 +530,7 @@
           klawiszy strzałek w górę/w dół/w prawo/w lewo, aby dostać wszystkie magiczne
           kule ogniste?
         studio_playlab_7: Blok "powtarzaj zawsze" umożliwia wykonywanie kodu bez przerwy.
-          Czy mógłbyś dołączyć do niego bloki powodujące, że  kreatora porusza się
+          Czy mógłbyś dołączyć do niego bloki powodujące, że czarodziej porusza się
           w górę i w dół bez przerwy?
         studio_playlab_8: Czy mógłbyś dodać blok zdobycia punktu i blok do odtwarzania
           dźwięku, gdy jednorożec wpada na Kreatora, następnie przenoś go za pomocą
@@ -557,8 +557,8 @@
         maze_wordsearch_k_2: Przesuwaj mnie, żeby przeliterować słowo  SOUTH
         maze_wordsearch_k_3: Przesuwaj mnie, żeby przeliterować słowo WEST
         maze_wordsearch_k_4: Przesuwaj mnie, żeby przeliterować słowo NORTH
-        maze_wordsearch_k_6: Przesuwaj mną na wschód a potem na południe, żeby przeliterować
-          słowo JUMP
+        maze_wordsearch_k_6: Przesuwaj mną na wschód (East) a potem na południe (South),
+          żeby przeliterować słowo JUMP
         maze_wordsearch_k_9: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
           słowo CODE
         maze_wordsearch_k_13: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
@@ -567,9 +567,9 @@
           słowo ABOVE
         maze_wordsearch_k_16: Przesuwaj mnie w jedną stronę a potem w inną, żeby przeliterować
           słowo BELOW
-        maze_wordsearch_k_20: To jest test! Przesuwaj mnie w jedną stronę a potem
-          w inną, żeby przeliterować słowo STORY
-        applab_ec_simple: Stwórz swoją aplikację używając bloków z przybornika.
+        maze_wordsearch_k_20: To jest test! Przenieś mnie w jedną stronę, a później
+          w inną, by przeliterować słowo STORY
+        applab_ec_simple: Utwórz własną aplikację używając bloków z przybornika.
         turtle_ec_1_2: 'Teraz narysuj kwadrat. Uwaga: użyj ulubionego koloru, wybierając
           go w nowym bloku "kolor pisaka".'
         turtle_ec_1_10: 'Wykonałeś to! Teraz narysuj cokolwiek. Niektóre zabawne pomysły:
@@ -719,13 +719,13 @@
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
         run: Kliknij na "Uruchom", aby uruchomić program
-        watch_again: Kliknij tutaj, aby obejrzeć film ponownie
+        watch_again: Kliknij tutaj, aby ponownie obejrzeć film
         gray_block_explanation: Nie można usunąć bloków, które są szare. Czy mógłbyś
           jakkolwiek rozwiązać tę łamigłówkę?
         show_code_explanation: Kliknij tutaj, aby zobaczyć kod programu, który tworzysz
         instructions_repeat_explanation: Instrukcje dla każdej łamigłówki są powtarzane
           tutaj
-        category_explanation: Masz te same bloki, ale teraz są one ułożone w kategorie
+        category_explanation: Masz te same bloki, ale teraz są one uporządkowane kategoriami
         set_sprite_image: Dołącz blok "ustaw obrazek aktora" do bloku "kiedy historia
           się rozpocznie", aby aktor mógł wziąć udział w historii
         studio_say_text: W te cudzysłowy wpisz to, co ma powiedzieć Twoja postać
@@ -761,13 +761,13 @@
           go podczas następnej zagadki.
         edit_draw_square: Użyj tego przycisku, aby edytować funkcję i dodać pętlę.
         edit_get_nectar: Użyj tego przycisku, aby edytować funkcję i zmienić kierunek,
-          w którym Pszczoła skręci aby zdobyc nektar.
-        logic_category: Otworzyć wysuwane "Logiki" znaleźć "if/else" bloku.
-        length_parameter: Czy potrafisz poprawić tę funkcję tak, aby używała parametru
-          "długość"?
-        frozen_diamond_repeat: Użyj bloku "powtarzaj" aby utworzyć ten kształt.
-        frozen_circle_function_in_circle_turn: Nie zapomnij włączyć po utworzeniu
-          każdego koła.
+          w którym Pszczółka skręci, aby zebrać nektar.
+        logic_category: Otwórz "Logika", by znaleźć blok "jeśli/w przeciwnym razie".
+        length_parameter: Czy potrafisz zmodyfikować tę funkcję tak, aby używała parametru
+          "długość" (length)?
+        frozen_diamond_repeat: Użyj bloku "powtarzaj", aby utworzyć ten kształt.
+        frozen_circle_function_in_circle_turn: Nie zapomnij skręcić po utworzeniu
+          każdego okregu.
         frozen_circle_function_with_parameter_circle: Używać "Tworzenie koło" bloku
           i zmieniać jego rozmiar.
         frozen_snowflake_branch: Użyj bloku "utworzyć oddział śnieżynka"

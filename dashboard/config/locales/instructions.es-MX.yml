@@ -111,7 +111,7 @@
       2-3 Artist Loops 11_instruction: Ahora vamos a poner * otro * bucle alrededor
         de toda la creación!  No olvide añadir un ángulo al final del bucle externo.
       2-3 Artist Loops 2_instruction: Ahora utilice un bloque de repetición para hacer
-        de célula a cáscara.
+        la célula una cáscara.
       2-3 Artist Loops 4_instruction: ¿Quieres ver lo que pasa cuando repetimos la
         forma otra vez y otra vez utilizando un bucle?
       2-3 Artist Loops 5_instruction: Ahora vamos a hacer un pequeño cambio en el
@@ -1226,18 +1226,23 @@
         línea es de 300 píxeles de largo)
       Course 4 Artist 10_instruction: ¡ Es hora de jugar gratis! Diviértete y dibuja
         lo que quieras.
-      Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it without any extra information?  Hint:  Feel free to use trial
-        and error. You are not expected to get it perfect the first time.
-      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this! If this picture inspires\nyou,
-        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made? Click on the blue tab\nto the
-        right and then click the \"see the solution\" button."
+      Course 4 Artist 11_instruction: '¡Ahora, un desafío! Aquí hay un diseño que
+        solamente usa bloques que ya te hemos mostrado. ¿Puedes averiguar cómo crearlo
+        nuevamente sin información extra? Sugerencia: Tantea, usa ensayo y error.
+        No se espera que esté perfecto la primera vez.'
+      Course 4 Artist 12_instruction: "Inspiración para juego libre: Ahora has aprendido
+        todo lo que necesitas saber para hacer un patrón como este. Si esta imagen
+        te inspira, trata de hacer una similar. Si no, crea algo propio.\r\n\n\r\n¿Quieres
+        saber cómo fue hecho nuestro nuestro patrón? Haz clic en la pestaña azul a
+        la derecha y haz clic en el botón \"ver la solución\"."
+      Course 4 Artist 13_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can design anything you want!
       Course 4 Artist 2_instruction: ¿Puedes enlazar este código para que dibuje de
         gris el cuadrado?
+      Course 4 Artist 20_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can create whatever you want!
       Course 4 Artist 3_instruction: Muy bien, trat de averiguar que sucede si ejecutas
         este código (o presionas "Run" para comprobarlo). Entonces repítelo varias
         veces hasta completar el dibujo.
@@ -1293,6 +1298,11 @@
         lados). cada lado debe ser de 100 píxeles de largo. Sugerencia: 360 dividido
         por el número de lados de una forma, es el número de grados que necesitarás
         para girar.'
+      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour
+        knowledge of \"for loops\" and the \"counter\", create this drawing where\neach
+        shape has two more sides than the last.  Make sure that each side is\n10 times
+        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
+        code has been provided for you."
       Course 4 Artist For Loops 12_instruction: 'Eso se ve muy bien, pero ahora me
         gustaría que dibuje cada forma junto a la otra.  Esta vez, cada lado es de
         20 pixeles.  Use un bloque de salto para saltar 20 pixeles adelante después
@@ -1334,6 +1344,11 @@
         sorprendente dibujo?
       Course 4 Artist For Loops 9_instruction: ¿Puedes hacer un espiral? avanza de
         1 a 75 píxeles, incrementando de  1 a 1 píxeles.
+      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow
+        learned everything you need to know to make a pattern like this! If this\npicture
+        inspires you, try to make something similar. Otherwise, create something\nall
+        your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604
+        for the solution."
       Course 4 Artist Functions 1_instruction: ¿Puedes dibujar en cuadrado que tiene
         100 píxeles de longitud, utilizando un circuito?
       Course 4 Artist Functions 10_instruction: ¿Cúal bloque necesitas agregar para
@@ -1502,11 +1517,25 @@
         un bloque if-else se combina con otro bloque if-else para crear un bloque
         if,else-if, else. Completa la solución para recoger la cantidad desconocida
         de néctar.
+      Course 4 Bee 5_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Add an if-else block to create an if, else-if, else block. Complete
+        the solution to collect the unknown amount of nectar.
+      Course 4 Bee 6_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Create an if, else-if, else block to collect the unknown amount of
+        nectar.
+      Course 4 Bee 7_instruction: |
+        Use everything you have learned so far to collect
+        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
       Course 4 Bee For Loops 1_instruction: Utilizar un bucle para recolectar el néctar
         de cada flor.
       Course 4 Bee For Loops 10_instruction: Si tu ciclo es regresivo, se resta el
         incremento de la variable contador en cada bucle. Lo que debería ser un incremento
         a recoger néctar 9, luego 6 y 3 ?
+      Course 4 Bee For Loops 11_instruction: |
+        What's wrong with this loop? See if
+        you can fix it and make the bee collect all the nectar.
       Course 4 Bee For Loops 2_instruction: Aquí es un nuevo tipo de lazo, llamado
         el bucle "for" . Este particular bucle for contará de 1 a 5 por 1 y ejecutar
         el contenido del bucle cada vez cuenta. Ayudar a la abeja el néctar.
@@ -2042,6 +2071,7 @@
       Infinity_touch_score_instruction: Has que Anna anote un punto cuando ella toque
         un copo de nieve.  Después has clic en "Ejecutar" y conducela para tocar una
         vez cada copo de nieve.
+      jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: |
         ¡Dibuja una linea corta hacia arriba y una larga
@@ -2389,6 +2419,11 @@
         la definición de la función para dibujar el triángulo?
       NEW Course 4 Artist Functions 9_instruction: ¿Qué bloque necesitas añadir para
         conseguir que el triángulo se ponga encima del cuadrado?
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've
+        now learned everything you need to know to make a pattern like this!\nIf this
+        picture inspires you, try to make something similar. Otherwise, create\nsomething
+        all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade?
+        Visit for the solution."
       New Course 4 Artist Functions Level 4_instruction: Usa la función "dibujar un
         cuadrado" para dibujar este patrón.
       NEW Course 4 Artist Params 1_instruction: Vamos a definir esta función para
@@ -2400,6 +2435,9 @@
         forma? Edita la función para usar el parámetro "lados".
       NEW Course 4 Artist Params 12_instruction: ¿Puedes completar este dibujo? Los
         lados de todas las formas son 100 píxeles de largos.
+      NEW Course 4 Artist Params 12a_instruction: |
+        This image is similar to the last.
+        Can you use a "for loop" with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: |
         Vamos a editar esta función "dibujar una forma".
         Ya tiene un parámetro de "longitud". Ahora, vamos a editar la función para añadir también un parámetro "lados". Recuerda que el ángulo para girar una forma determinada es 360 dividido por la cantidad de lados que tiene. Sugerencia: las longitudes para cada forma son: el triángulo es 100 píxeles, el hexágono es 25 píxeles y el cuadrado es de 50 píxeles.
@@ -2431,6 +2469,11 @@
         la definición de la función "dibujar un cuadrado" y agrega un parámetro. Debe
         tomar un parámetro de longitud, al igual que el triángulo. Esta vez, dibuja
         3 cuadrados: de 25, 50 y 75 píxeles de largo, separados por 100 píxeles.'
+      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow
+        learned everything you need to know to make a pattern like this! If this\npicture
+        inspires you, try to make something similar. Otherwise, create something\nall
+        your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530
+        for the solution."
       NEW Course 4 Artist Vars 1.5_instruction: '¿Echa un vistazo al código, puedes
         ver cómo los bloques "establecer longitud" y "longitud" trabajan juntos? Haz
         clic en "Ejecutar" para verlo en acción. '
@@ -2486,14 +2529,24 @@
       NEW Course 4 Bee For Loops 9_instruction: Si tu ciclo es regresivo, se resta
         el incremento de la variable contador en cada bucle. Lo que debería ser un
         incremento a recoger néctar 9, luego 6 y 3 ?
+      NEW Course 4 Bee For Loops 95_instruction: |
+        Take a look at each piece of the
+        "for loop" that you have just created.  Can you figure out which numbers
+        you need to double to solve this puzzle? Why does it work?
       NEW Course 4 Play Lab Params 11_instruction: '¡Es hora de jugar! Diviértete
         con todos los bloques en tu caja de herramientas. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Introducir entradas de parámetro
         de actor con los números (1, 2 y 3) para hacer de estos actores patrulla. '
       NEW Course 4 Play Lab Vars 4 5_instruction: '"Que piensas que este código realizara?
         Presiona "Ejecutar" para ver que ocurre."'
+      NEW Course 4 Play Labs For Loops 7a_instruction: |
+        Using what you learned so
+        far, can you have Dinosaur take a step forward every time Penguin counts?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "Es hora de Jugar
         libremente, \ndiviértete con todos los bloques de tu caja de herramientas.\n"
+      NEW Course 4 Play Labs For Loops 8a_instruction: "Challenge: How would you\nuse
+        the \"for loop\" to get every actor to go around and say their actor number,\nthen
+        vanish from the screen? \n"
       New Play Lab Project_instruction: |
         Crea tu propia historia o juego! Tu código
         es guardado como un proyecto al cual tu puedes acceder en cualquier momento.
@@ -3113,12 +3166,38 @@
         an explanation.
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
-        of the turtle's starting position. [Click to see full instructions]
+        of the turtle's starting position. Click to see full instructions.
+      U3L23 Chatbot Conditionals 1_instruction: |
+        Ask the user the question "What
+        is your favorite color?" using the "prompt" block. Using the "if" block,
+        check if the user's response matches yours. Add a "write" block to the
+        body of the "if" statement to add the response "<favorite_color> is my
+        favorite color too!" to the screen.
+      U3L23 Chatbot Conditionals 2_instruction: |
+        Replace the "if" block with an
+        "if/else" block to make your chatbot respond in all circumstances.
+      U3L23 Chatbot Conditionals 3_instruction: |
+        In text mode, add several "else
+        if" statements to your program.
+      U3L23 Chatbot Intro 2_instruction: |
+        Create a click event for your button. Create
+        a conversation variable and store the user's input in it. You may need the
+        "getText," "setText," and "+" blocks in your code.
+      U3L23 Chatbot Intro 3_instruction: |
+        Add the response "uh huh" by using the
+        "+" operator. Add newline characters (\
+        ) where appropriate.
+      U3L23 Chatbot Intro 4_instruction: |
+        Use this level to make your chatbot look
+        and work better!
+      U3L23 Chatbot Intro_instruction: |
+        Add a Lable, Text Input, Button, and Text
+        Area object to your project
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid to the *front* and *right*
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction.
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
-        of the starting location.
+        of the starting location. (Click to show full instructions)
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

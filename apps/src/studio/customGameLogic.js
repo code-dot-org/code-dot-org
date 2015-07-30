@@ -26,6 +26,12 @@ CustomGameLogic.prototype.onTick = function () {
 };
 
 /**
+ * Logic to be run when game is reset
+ */
+CustomGameLogic.prototype.reset = function () {
+};
+
+/**
  * Store a block in our cache, so that it can be called elsewhere
  */
 CustomGameLogic.prototype.cacheBlock = function (key, block) {

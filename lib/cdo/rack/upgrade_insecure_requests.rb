@@ -19,7 +19,7 @@ module Rack
       super(
           app,
           skip_if: lambda(&method(:not_ssl?)),
-          xpath:%w(img script embed iframe).map{|x|"//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
+          xpath: %w(img script embed iframe).map{|x|"//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
       ) do |nodes|
         nodes.each{|node|process(node)}
       end
@@ -39,6 +39,7 @@ module Rack
               "style-src 'self' https: 'unsafe-inline'",
               "img-src 'self' https: data:",
               "font-src 'self' https: data:",
+              "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com",
               "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ].join('; ')
         end

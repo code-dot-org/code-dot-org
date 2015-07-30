@@ -151,7 +151,7 @@
   "projectileCherry":"cherry",
   "projectileIce":"ice",
   "projectileDuck":"duck",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to go back to playing your story.",
+  "reinfFeedbackMsg":"You can press the \"{backButton}\" button to go back to playing your story.",
   "repeatForever":"repetir per sempre",
   "repeatDo":"fer",
   "repeatForeverTooltip":"Executar les accions en aquest bloc repetidament mentre que la història s'està executant.",

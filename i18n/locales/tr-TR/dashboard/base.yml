@@ -218,6 +218,7 @@ tr:
       free_play:
         playlab: Uygulama oluşturun
         artist: Bir şeyler çizin
+        calculate: Calculate Something
     user:
       classroom: Öğretmen ana sayfa
       district_dashboard: Kontrol Paneli Bölgesi

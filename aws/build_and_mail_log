@@ -28,16 +28,16 @@ def main()
     # Notify the HipChat channels about what happened.
     projects = ARGV.join(' ')
     if status == 0
-      HipChat.log "<b>#{projects}</b> built.", color:'green'
+      HipChat.log "<b>#{projects}</b> built.", color: 'green'
 
-      HipChat.developers "<b>#{projects}</b> built.", color:'green'
-      HipChat.developers commit_url, color:'gray', message_format:'text'
+      HipChat.developers "<b>#{projects}</b> built.", color: 'green'
+      HipChat.developers commit_url, color: 'gray', message_format: 'text'
     else
-      HipChat.log "<b>#{projects}</b>  failed to build!", color:'red'
-      HipChat.log "/quote #{log}", color:'gray', message_format:'text'
+      HipChat.log "<b>#{projects}</b>  failed to build!", color: 'red'
+      HipChat.log "/quote #{log}", color: 'gray', message_format: 'text'
 
-      HipChat.developers "<b>#{projects}</b>  failed to build!", color:'red', notify:1
-      HipChat.developers commit_url, color:'gray', message_format:'text'
+      HipChat.developers "<b>#{projects}</b>  failed to build!", color: 'red', notify: 1
+      HipChat.developers commit_url, color: 'gray', message_format: 'text'
     end
   end
 

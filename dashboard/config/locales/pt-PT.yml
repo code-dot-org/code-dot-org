@@ -264,6 +264,7 @@
       free_play:
         playlab: Desenvolver uma aplicação
         artist: Desenhar alguma coisa
+        calculate: Calculate Something
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -380,13 +381,12 @@
     classroom_activity: Atividade off-line
   home:
     title: O meu progresso
-    description: No Code Studio você pode encontrar os cursos on-line criados pela
-      Code.org
+    description: No Code Studio podes encontrar os cursos online do Code.org
     lines_of_code: '%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS'
     lines_of_code_linebreak: '%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS %{students_count}
       MILHÕES DE ALUNOS'
     all_courses: Visão geral dos cursos 1, 2 e 3
-    lesson_plans: Planos de aula
+    lesson_plans: Planos das aulas
     signin_message: Já criaste uma conta? %{link}
     student_reg_link: Criar conta de aluno
     teacher_reg_link: Cadastro de Professor
@@ -493,8 +493,8 @@
   try_reloading: Tente recarregar a página
   next_stage: Já está! Continua para a próxima etapa
   download_pdf: Abrir o plano da aula
-  lesson_plan: Plano de aula
-  view_lesson_plan: Exibir plano de aula
+  lesson_plan: Plano da aula
+  view_lesson_plan: Ver plano da aula
   pdf_download: Descarregar PDF
   download_coming_soon: 'Brevemente: Atividade para descarregar.'
   video_coming_soon: Vídeo em breve!

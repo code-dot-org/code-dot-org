@@ -281,25 +281,43 @@
         video: binarë C4_unplugged_
       VideoGamesCoordinatePlanes:
         title: Video Games dhe Plane Koordinative
-        desc: Video Games dhe Plane Koordinative përshkrim mësimi
+        desc: Meso sesi lojrat qe te pelqejne jane faktikisht te drejtuara nga algjebra!
+          Eksploro se si shprehjet algjebrike dhe plani i koordinuar mund te n'a ndihmojne
+          te kuptojme sesi funksionojne lojrat kompjuterike, dhe me pas fillo te planifikosh
+          rreth lojes qe ti do te krijosh.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Marrëveshjet
-        desc: Përshkrim mësimi i kontratave unplugged
+        title: Kontrata, Hapesire dhe Larmishmeri
+        desc: Kontratat n'a japin nje mundesi te kuptojme dhe diskutojme funksionet.
+          Gjate mesimit do te shikojme sesi Kontratat mund te n'a mesojne te kuptojme
+          nje gjuhe apo funksion te ri ne programim.
         video: alg_5_contracts
       DesignRecipe:
         title: Receta e Dizenjimit
-        desc: Përshkrimi i mësimit të Recetës së Dizenjimit
+        desc: Ne fazen finale, studentet shkruajten disa funksione shume te thjeshta-
+          por funksione me te sofistikuara kerkojne nje qasje me te miremenduar. Receta
+          e Dizenjimit eshte nje qasje e strukturuar per te pergatitur funksione ku
+          perfshihet edhe shkruajtja e teksteve per te siguruar mbarevajtjen e funksionit
+          ne perputhje me pritshmerite.
         video: alg_8_design_recipe
       Booleans:
-        title: Booleans
-        desc: Përshkrimi i mësimit të Booleans
+        title: Boolean dhe Logjika
+        desc: Booleans jane i katerti dhe i fundit lloj informacioni qe ju do mesoni
+          ne kete kurs. Gjate ketij kursi ju do te mesoni se cfare jane Booleans dhe
+          sesi mund te n'a ndihmojne te shkruajme funksione qe mendojne me logjike
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Kushtet dhe Funksionet Piecewise
-        desc: Përshkrimi i mësimit të Kushteve dhe Funksioneve Piecewise
+        desc: Parametrat qe ne i kthejme ne funksione i bejne rezultatet te ndryshojne
+          bazuar ne nje model te palekundshem. Te supozojme qe i deshirojme parametrat  me
+          disa vlera per te sjelle rezultate duke perdorur nje model por vlerat e
+          tjera te perdorin modele te ndryshme. Ketu nevojiten fjalite kushtore...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Zbulimi i Përplasjeve
-        desc: Përshkrimi i mësimit të Zbulimit të Përpjasjeve
+        title: Zbulimi i Perplasjes dhe Teorema e Pitagores
+        desc: Te percaktosh se kur te prekesh objektet ne ekran eshte nje aspekt i
+          rendesishem per shumicen e lojrave. Ne kete mesim do te shikojme sesi Teorema
+          e Pitagores dhe Formula e Distances mund te perdoren per te percaktuar largesine
+          e dy pikave ne nje avion, dhe me pas te percaktojme nese ato dy pika ( apo
+          personazhe lojrash) po takojne ne ndonje pike.
         video: alg_16_biggame_collision_detection

@@ -63,7 +63,7 @@ def hipchat_notify(command, status, content, recipient)
   return if recipient == 'dev+build@code.org' && status == 0
 
   message = "/quote #{command} returned (#{status}):\n#{content}".strip
-  HipChat.log message, color:'yellow', message_format:'text'
+  HipChat.log message, color: 'yellow', message_format: 'text'
 end
 
 #

@@ -1266,6 +1266,9 @@ Studio.init = function(config) {
   var isAlgebraLevel = !!level.useContractEditor;
   config.grayOutUndeletableBlocks = isAlgebraLevel;
 
+  config.pinWorkspaceToBottom = true;
+  config.hasVerticalScrollbars = true;
+
   loadLevel();
 
   window.addEventListener("keydown", Studio.onKey, false);
@@ -1469,6 +1472,10 @@ Studio.reset = function(first) {
   var i;
   Studio.clearEventHandlersKillTickLoop();
   var svg = document.getElementById('svgStudio');
+
+  if (Studio.customLogic) {
+    Studio.customLogic.reset();
+  }
 
   // Soft buttons
   var softButtonCount = 0;
@@ -2612,40 +2619,50 @@ Studio.vanishActor = function (opts) {
 
   var spriteClipRect = document.getElementById('spriteClipRect' + opts.spriteIndex);
 
+  var frameWidth = Studio.sprite[opts.spriteIndex].width;
+
   explosion.setAttribute('height', Studio.sprite[opts.spriteIndex].height);
-  explosion.setAttribute('width', Studio.sprite[opts.spriteIndex].width);
   explosion.setAttribute('x', spriteClipRect.getAttribute('x'));
-  explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
+
   explosion.setAttribute('visibility', 'visible');
 
   var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
   var numFrames = skin.explosionFrames;
-  if (numFrames && numFrames > 1) {
-    explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
-    explosion.setAttribute('width', numFrames * 100);
-    _.range(0, numFrames).forEach(function (i) {
-      Studio.perExecutionTimeouts.push(setTimeout(function () {
-        explosion.setAttribute('x', baseX - i * 100);
-        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
-      }, i * 100));
+  explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
+  explosion.setAttribute('width', numFrames * frameWidth);
+
+  if (!skin.fadeExplosion) {
+    Studio.setSprite({
+      spriteIndex: opts.spriteIndex,
+      value: 'hidden'
     });
+  }
+
+  _.range(0, numFrames).forEach(function (i) {
     Studio.perExecutionTimeouts.push(setTimeout(function () {
-      explosion.setAttribute('visibility', 'hidden');
+      explosion.setAttribute('x', baseX - i * frameWidth);
+      if (i === 0) {
+        // Sometimes the spriteClipRect still moves a bit before our explosion
+        // starts, so wait until first frame to set y.
+        explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
+      }
+
+      if (skin.fadeExplosion) {
+        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
+      }
+    }, i * skin.timePerExplosionFrame));
+  });
+  Studio.perExecutionTimeouts.push(setTimeout(function () {
+    explosion.setAttribute('visibility', 'hidden');
+    if (skin.fadeAnimation) {
       // hide the sprite
       Studio.setSprite({
         spriteIndex: opts.spriteIndex,
         value: 'hidden'
       });
       sprite.removeAttribute('opacity');
-
-    }, 100 * (numFrames + 1)));
-  } else {
-    // hide the sprite
-    Studio.setSprite({
-      spriteIndex: opts.spriteIndex,
-      value: 'hidden'
-    });
-  }
+    }
+  }, skin.timePerExplosionFrame * (numFrames + 1)));
 
   // we append the url with the spriteIndex so that each sprites explosion gets
   // treated as being different, otherwise chrome will animate all existing
