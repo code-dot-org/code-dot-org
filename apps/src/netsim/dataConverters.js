@@ -384,6 +384,8 @@ exports.binaryToAscii = function (binaryString, byteSize) {
  * @param {string} binaryString
  * @returns {base64Payload} Object containing the base64 string and the
  *          length of of the original binaryString
+ * @throws {TypeError} if binaryString argument is not a
+ *         properly-formatted string of zeroes and ones.
  * @example
  * // returns { string: "kg==", len: 7 }
  * dataConverters.binaryToBase64("1001001");

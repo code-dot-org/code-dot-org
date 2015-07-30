@@ -11,7 +11,7 @@
     "instructions": "Here's a similar function red shape with an additional variable for size. Complete the conditionals so the correct solid red image of a given size is drawn for \"circle\", \"triangle\", and \"star\".",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "min_workspace_height": "1500",
+    "min_workspace_height": "2000",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -270,6 +270,7 @@
           <block type="functional_square" inline="false"/>
           <block type="functional_rectangle" inline="false"/>
           <block type="functional_star" inline="false"/>
+          <block type="functional_text" inline="false"/>
         </category>
         <category name="Boolean">
           <block type="functional_string_equals" inline="false"/>
