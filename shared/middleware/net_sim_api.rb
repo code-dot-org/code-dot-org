@@ -130,6 +130,27 @@ class NetSimApi < Sinatra::Base
   end
 
   #
+  # DELETE /v3/netsim/<shard-id>
+  #
+  # Deletes the entire shard.
+  # TODO: Authenticate! Only allow admins/owning teachers to do this.
+  #
+  delete %r{/v3/netsim/([^/]+)$} do |shard_id|
+    dont_cache
+    RedisTable.reset_shard(shard_id, get_redis_client, get_pub_sub_api)
+    no_content
+  end
+
+  #
+  # POST /v3/netsim/<shard-id>/delete
+  #
+  # This mapping exists for older browsers that don't support the DELETE verb.
+  #
+  post %r{/v3/netsim/([^/]+)/delete$} do |shard_id|
+    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+  end
+
+  #
   # POST /v3/netsim/<shard-id>/<table-name>
   #
   # Insert a new row.
