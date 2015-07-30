@@ -585,7 +585,15 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
   var neighbors = [];
 
   if (vizElement instanceof NetSimVizSimulationNode) {
-    neighbors = this.getReciprocatedWiresAttachedToNode(vizElement);
+
+    // In broadcast mode we display "fake," unidirectional wires. In
+    // regular mode, we only want to display wires connecting us to
+    // nodes that are also connected back.
+    if (netsimGlobals.getLevelConfig().broadcastMode) {
+      neighbors = this.getWiresAttachedToNode(vizElement);
+    } else {
+      neighbors = this.getReciprocatedWiresAttachedToNode(vizElement);
+    }
 
     // Special case: The DNS node fake is a neighbor of a visited router
     if (vizElement.isRouter && this.autoDnsNode_) {
