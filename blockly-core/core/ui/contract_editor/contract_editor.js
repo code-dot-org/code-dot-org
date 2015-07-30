@@ -785,6 +785,7 @@ Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newNam
 
 /**
  * Go through each of our example blocks and figure out which is widest
+ * @return {number}
  */
 Blockly.ContractEditor.prototype.getMaxExampleBlockWidth_ = function () {
   return this.exampleBlocks.reduce(function (previousMax, block) {
@@ -809,6 +810,7 @@ Blockly.ContractEditor.prototype.resetExampleViews = function () {
 
 /**
  * Call our app-specific test handler for this block
+ * @return {string} Result describing pass/failure
  */
 Blockly.ContractEditor.prototype.testExample = function (block) {
   return this.testHandler_(block);
@@ -818,7 +820,7 @@ Blockly.ContractEditor.prototype.testExample = function (block) {
  * Call our app-specific test reset handler for this block
  */
 Blockly.ContractEditor.prototype.resetExample = function (block) {
-  return this.testResetHandler_(block);
+  this.testResetHandler_(block);
 };
 
 /**

@@ -15,6 +15,7 @@ Blockly.ExampleView = function (dom, svg, contractEditor) {
   this.domParent_ = dom;
   this.svgParent_ = svg;
   this.contractEditor_ = contractEditor;
+  this.block_ = null;
 
   this.testRunning_ = false;
 
@@ -54,7 +55,7 @@ Blockly.ExampleView.prototype.testExample_ = function () {
 
   // TODO(bjordan): Reset main workspace runner esp. if visualizing?
 
-  this.resultText.innerHTML = this.contractEditor_.testExample(block_);
+  this.resultText.innerHTML = this.contractEditor_.testExample(this.block_);
   this.testRunning_ = true;
   this.refreshButtons();
 
@@ -62,7 +63,7 @@ Blockly.ExampleView.prototype.testExample_ = function () {
 };
 
 Blockly.ExampleView.prototype.reset = function () {
-  this.contractEditor_.testResetHandler_();
+  this.contractEditor_.resetExample(this.block_);
   this.resultText.innerHTML = NO_RESULT_TEXT;
   this.testRunning_ = false;
   this.refreshButtons();
