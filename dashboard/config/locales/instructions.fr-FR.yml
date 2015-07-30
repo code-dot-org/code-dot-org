@@ -1260,10 +1260,16 @@
       Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made? Click on the blue tab\nto the
-        right and then click the \"see the solution\" button."
+        to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit\nfor
+        the solution."
+      Course 4 Artist 13_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can design anything you want!
       Course 4 Artist 2_instruction: Vous pouvez boucler ce code-ci pour dessiner
         le carré en gris?
+      Course 4 Artist 20_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can create whatever you want!
       Course 4 Artist 3_instruction: Bon, essayez de comprendre ce qui arrivera si
         vous faites fonctionner ce code (ou appuyez sur "run" pour essayer). Ensuite,
         répétez-le suffisamment de fois pour terminer le dessin.
@@ -1319,6 +1325,11 @@
         décagone (10 côtés). Chaque côté doit mesurer 100 pixels de long. Astuce :
         360 divisé par le nombre de côtés de la forme est le nombre de degré que tu
         dois utiliser pour tourner à chaque fois.'
+      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour
+        knowledge of \"for loops\" and the \"counter\", create this drawing where\neach
+        shape has two more sides than the last.  Make sure that each side is\n10 times
+        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
+        code has been provided for you."
       Course 4 Artist For Loops 12_instruction: 'Ça avait l''air assez cool, mais
         maintenant je voudrais dessiner chaque forme à côté de la précédente. Cette
         fois chaque côté est de 20 pixels. Utilise un bloc de saut pour sauter en
@@ -1359,6 +1370,11 @@
         magnifique image ?
       Course 4 Artist For Loops 9_instruction: Sais-tu dessiner une spirale ? Avance
         d'1 pixel à la fois, de 1 à 75.
+      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow
+        learned everything you need to know to make a pattern like this! If this\npicture
+        inspires you, try to make something similar. Otherwise, create something\nall
+        your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604
+        for the solution."
       Course 4 Artist Functions 1_instruction: Peux-tu dessiner un carré qui a 100
         pixels de côté en utilisant une boucle ?
       Course 4 Artist Functions 10_instruction: De quel bloc as-tu besoin d'ajouter
@@ -1411,8 +1427,8 @@
       Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made? Click on the blue tab\nto the
-        right and then click the `see the solution` button."
+        to know how our inspiration pattern was made?  Visit https://studio.code.org/c/105765376/edit\nfor
+        the solution."
       Course 4 Artist Params 1_instruction: Nous allons éditer une fonction qui dessine
         un carré de côté 50 pixels
       Course 4 Artist Params 10_instruction: 'Vous pouvez appeler des fonctions à
@@ -1529,11 +1545,25 @@
         Ici un bloc si-sinon est combiné avec un autre bloc si-sinon pour créer un
         bloc si, sinon-si, sinon. Complète la solution pour collecter la quantité
         inconnue de nectar.
+      Course 4 Bee 5_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Add an if-else block to create an if, else-if, else block. Complete
+        the solution to collect the unknown amount of nectar.
+      Course 4 Bee 6_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Create an if, else-if, else block to collect the unknown amount of
+        nectar.
+      Course 4 Bee 7_instruction: |
+        Use everything you have learned so far to collect
+        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
       Course 4 Bee For Loops 1_instruction: Utilise une boucle pour collecter le nectar
         de chaque fleur.
       Course 4 Bee For Loops 10_instruction: Si ta boucle est dégressive, l'incrémentation
         est soustraite de la variable counter à chaque boucle. Que devrait être ton
         incrémentation pour collecter 9, ensuite 6 et enfin 3 nectars?
+      Course 4 Bee For Loops 11_instruction: |
+        What's wrong with this loop? See if
+        you can fix it and make the bee collect all the nectar.
       Course 4 Bee For Loops 2_instruction: Voici un nouveau genre de boucle, appelé
         la boucle "for". Cette boucle particulière comptera de 1 à 5, de 1 en 1, et
         exécutera le contenu de la boucle à chaque compte. Aide l'abeille à récolter
@@ -2071,6 +2101,7 @@
       Infinity_touch_score_instruction: Fais marquer un point par Anna quand elle
         touche un flocon de neige.  Puis clique sur « Exécuter » et dirige-la pour
         toucher une fois chaque flocon de neige.
+      jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: Dessine une courte ligne vers le haut
         et une longue ligne vers la droite !
@@ -2426,6 +2457,11 @@
         Peux-tu modifier la fonction pour dessiner le triangle ?
       NEW Course 4 Artist Functions 9_instruction: Quel bloc dois-tu ajouter pour
         que le triangle soit placé au-dessus du carré?
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've
+        now learned everything you need to know to make a pattern like this!\nIf this
+        picture inspires you, try to make something similar. Otherwise, create\nsomething
+        all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade?
+        Visit for the solution."
       New Course 4 Artist Functions Level 4_instruction: Sers-toi de la fonction "draw
         a square" pour dessiner ce motif.
       NEW Course 4 Artist Params 1_instruction: Nous allons définir cette fonction
@@ -2437,6 +2473,9 @@
         ? Edite la fonction pour utiliser le paramètre "côtés".
       NEW Course 4 Artist Params 12_instruction: Peux-tu compléter ce dessin ? Toutes
         les formes ont un côté de 100 pixels de long.
+      NEW Course 4 Artist Params 12a_instruction: |
+        This image is similar to the last.
+        Can you use a "for loop" with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: 'Editons la fonction "dessine une
         forme". Elle a déjà un paramètre "longueur". Editons-la pour rajouter un paramètre
         "côtés". N''oublie pas que l''angle de rotation pour une forme donnée est
@@ -2472,6 +2511,11 @@
         la définition de la fonction "dessine un carré" et rajoute un paramètre. Elle
         devra contenir le paramètre "longueur", comme pour le triangle. Cette fois,
         dessine 3 carrés : 25, 50 et 75 pixels de côté, chacun espacé de 100 pixels.'
+      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow
+        learned everything you need to know to make a pattern like this! If this\npicture
+        inspires you, try to make something similar. Otherwise, create something\nall
+        your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530
+        for the solution."
       NEW Course 4 Artist Vars 1.5_instruction: 'Regarde ce code, peux-tu voir comment
         les blocs "définir la longueur" et "longueur" travaillent ensemble ? Clique
         sur "exécuter" pour les voir en action. '
@@ -2526,14 +2570,24 @@
       NEW Course 4 Bee For Loops 9_instruction: Si ta boucle est dégressive, l'incrémentation
         est soustraite de la variable counter à chaque boucle. Que devrait être ton
         incrémentation pour collecter 9, ensuite 6 et enfin 3 nectars?
+      NEW Course 4 Bee For Loops 95_instruction: |
+        Take a look at each piece of the
+        "for loop" that you have just created.  Can you figure out which numbers
+        you need to double to solve this puzzle? Why does it work?
       NEW Course 4 Play Lab Params 11_instruction: 'C''est l''heure de la récréation
         ! Amusez-vous avec tous les blocs de votre boîte à outils. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Renseignez les paramètres d''entrée
         acteurs avec des chiffres (1, 2 et 3) pour les faire tous patrouiller. '
       NEW Course 4 Play Lab Vars 4 5_instruction: '"Que pensez-vous que fait ce code
         ? Appuyez sur "Run" pour voir ce qui se passe."'
+      NEW Course 4 Play Labs For Loops 7a_instruction: |
+        Using what you learned so
+        far, can you have Dinosaur take a step forward every time Penguin counts?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'C''est l''heure de
         la récréation ! Amusez-vous avec tous les blocs de votre boîte à outils. '
+      NEW Course 4 Play Labs For Loops 8a_instruction: "Challenge: How would you\nuse
+        the \"for loop\" to get every actor to go around and say their actor number,\nthen
+        vanish from the screen? \n"
       New Play Lab Project_instruction: Créez votre propre histoire ou jeu ! Votre
         code est enregistré dans un projet afin que vous puissiez y revenir à tout
         moment.
@@ -3158,12 +3212,38 @@
         an explanation.
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
-        of the turtle's starting position. [Click to see full instructions]
+        of the turtle's starting position. Click to see full instructions.
+      U3L23 Chatbot Conditionals 1_instruction: |
+        Ask the user the question "What
+        is your favorite color?" using the "prompt" block. Using the "if" block,
+        check if the user's response matches yours. Add a "write" block to the
+        body of the "if" statement to add the response "<favorite_color> is my
+        favorite color too!" to the screen.
+      U3L23 Chatbot Conditionals 2_instruction: |
+        Replace the "if" block with an
+        "if/else" block to make your chatbot respond in all circumstances.
+      U3L23 Chatbot Conditionals 3_instruction: |
+        In text mode, add several "else
+        if" statements to your program.
+      U3L23 Chatbot Intro 2_instruction: |
+        Create a click event for your button. Create
+        a conversation variable and store the user's input in it. You may need the
+        "getText," "setText," and "+" blocks in your code.
+      U3L23 Chatbot Intro 3_instruction: |
+        Add the response "uh huh" by using the
+        "+" operator. Add newline characters (\
+        ) where appropriate.
+      U3L23 Chatbot Intro 4_instruction: |
+        Use this level to make your chatbot look
+        and work better!
+      U3L23 Chatbot Intro_instruction: |
+        Add a Lable, Text Input, Button, and Text
+        Area object to your project
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid to the *front* and *right*
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction.
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
-        of the starting location.
+        of the starting location. (Click to show full instructions)
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

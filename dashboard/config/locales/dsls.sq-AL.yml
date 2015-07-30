@@ -11,7 +11,7 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: Përshtat butonin e kombinimit
+        Match the button combination to the dance moves.: Përshtasni butonin e kombinimit
           me lëvizjet e kërcimit.
         Matching: Koordinimi
       2-3 Binary Match 1:
@@ -36,7 +36,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: Lidhni rrjetin me programin.
         Matching: Koordinimi
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -475,28 +475,28 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Maze Multiple Choice One: Maze me Zgjedhje Të Shumëfishtë Një
-        Which set of blocks is the correct answer?: Which set of blocks is the correct
-          answer?
+        Which set of blocks is the correct answer?: Cili grup blloqesh është i saktë?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baking cookies
-        Banana: Banana
-        Brushing your teeth: Brushing your teeth
+        Baking cookies: Biskota të pjekura
+        Banana: Banane
+        Brushing your teeth: Duke larë dhëmbët
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Shopping from a grocery list: Shopping from a grocery list
+        Shopping from a grocery list: Pazar nga një listë ushqimesh
         Which one of these items is hardest to describe an algorithm for?: Cili nga
           këto produkte është më i vështiri për të përshkruar një algoritëm?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene është një ______ qytet.
         0: '? Këtu jepen 3 fjali. Cila nga templatet më poshtë përmbledh saktë në
           mënyrë që të treja fjalitë të përshtatin të njëjtin model si template?'
         1: ': Këtu jepen tre fjali. Cila nga templatet më poshtë përmbledh saktë,
           në mënyrë që të treja fjalitë të përshtatin të njëjtin model si template?'
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
+        Seattle _____ a _____ _____.: Seattle____ një ___ ____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
-          is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
-        _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+          është një qytet i madh. <br/> Eugene është një qytet mesatar <br/> Hillview
+          është qytet i vogël.
+        _____ is _____ a _____.: ____ është ____ një ____.
+        _____ is a _____ city.: ____është një _____qytet.
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
@@ -504,11 +504,11 @@
         Which of these pictures best represents crowdsourcing?: Cila nga këto figura
           paraqet më mirë crowdsourcing?
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Brushing your hair
-        Cleaning your room: Cleaning your room
-        Eating your dessert: Eating your dessert
+        Brushing your hair: Kreh flokët
+        Cleaning your room: Pastrimi i dhomës
+        Eating your dessert: Duke ngrënë ëmbëlsirë
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Washing your face: Washing your face
+        Washing your face: Duke larë fytyrën
         Which one of these activities would be best for practicing crowdsourcing?: Cila
           nga këto aktivitete do të ishte më mirë për të praktikuar crowdsourcing?
       4-5 Digital Footprint Multi 1:
@@ -516,10 +516,11 @@
         Which piece of information listed below is okay to share on the internet?: Cila
           pjesë informacioni e listuar më poshtë është në rregull për tu shpërndarë
           në internet?
-        Your address: Your address
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your parent's credit card number: Your parent's credit card number
+        Your address: Adresa juaj
+        Your birthday: Ditëlindja juaj
+        Your favorite food: Ushqimi juaj i preferuar
+        Your parent's credit card number: Numri i kartës së kreditit të prindërve
+          tuaj
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -542,36 +543,36 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        : Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.'
         Lou, Lou, skip to my Lou,: Lou, lou, kalo te Lou im,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, kalo te Lou im, <br/>Lou, Lou, kalo te Lou im, <br/>Lou, Lou, kalo
           te Lou im, <br/>Kalo te Lou im, i dashur.
-        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        : Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
         Multiple Choice: Zgjedhje e Shumëfishtë
-        ? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        : What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
+        4: '? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?'
+        5: ': What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?'
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Zgjedhje e Shumëfishtë
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which
-          of the programs below <em>does not</em> make the exact same sequence as
-          Program 1?
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Cilët
+          nga programet e mëposhtme <em> nuk </em> kanë egzaktësisht të njëjtën sekuencë
+          si Programi 1?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -877,6 +878,28 @@
           nga këta djemtë është <b>shoferi</b>. Dhe tjetri është <b>ndihmësi</b>.
         This time, which boy is the <large>driver</large>?: Këtë herë, cili djalë
           është <large>shoferi</large>?
+      Multi Strings Images 1:
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
+          1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
+          1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
+          1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
+          1.blocks4.start_blocks, 350, 100
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Which of these Evaluation Blocks will draw the image on the left?: Which of
+          these Evaluation Blocks will draw the image on the left?
+        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
+      Warmup questions:
+        Coding in Racket: Coding in Racket
+        Select the best answer to the question.: Select the best answer to the question.
+        When converting a circle to code, the correct order is: When converting a
+          circle to code, the correct order is
+        left top right: left top right
+        left, right, top: left, right, top
+        random: zakonshem
+        top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

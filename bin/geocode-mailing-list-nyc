@@ -9,7 +9,7 @@ FORMS = PEGASUS_DB[:forms]
 def main()
   #['nyc-admins', 'nyc-parents', 'nyc-teachers'].each do |group|
   ['nyc-teachers'].each do |group|
-    CSV.foreach("#{group}.csv", headers:true) do |row|
+    CSV.foreach("#{group}.csv", headers: true) do |row|
       if row['city'].to_s.empty?
         if row['address']
           location = Geocoder.search(row['address']).first
@@ -17,7 +17,7 @@ def main()
         end
 
         unless location
-          form = FORMS.where(id:row['id']).first
+          form = FORMS.where(id: row['id']).first
           raise "form" unless form # No form, no location.
           location = Geocoder.search(form[:created_ip]).first
         end

@@ -42,7 +42,7 @@ uk:
           "Bee: Loops": 'Бджілка: цикли'
           "Studio: Create a Story": 'Ігрова студія: Створення історії'
           "Artist: Loops": 'Художник: цикли'
-          description_audience: Вік 4 + (не вміють читати)
+          description_audience: Вік 4-6
           description_short: Курс 1 призначений для початківців у читанні.
         course2:
           The Maze: Лабіринт
@@ -81,7 +81,7 @@ uk:
           "Artist: Sequence2": 'Художник: послідовність 2'
           "Maze: Sequence2": 'Лабіринт: послідовність 2'
           "Artist: Nested Loops": 'Художник - вкладені цикли'
-          description_audience: Вік 6 + (необхідне читання)
+          description_audience: Вік 6-18
           description_short: Курс 2 призначено для учнів, котрі вміють читати.
         course3:
           The Maze: Лабіринт
@@ -132,7 +132,7 @@ uk:
           "Bee: Debugging2": 'Бджілка - відлагодження 2'
           "Artist: Patterns": 'Художник: візерунки'
           Songwriting: Написання пісень
-          description_audience: Вік 8 + (після курсу 2)
+          description_audience: Вік 8-18
           description_short: Курс 3 є продовженням Курсу 2.
         playlab:
           title: Ігрова студія
@@ -181,7 +181,7 @@ uk:
           Farmer Binary: 'Фермер: двійкова система'
           Maze and Bee: Бджілка у лабіринті
           Artist Binary: 'Художник: двійкова система'
-          description_audience: Вік 10 + (після курсу 3)
+          description_audience: Вік 10-18
         Course4pre:
           title: Знання, необхідні для курсу 4
           description_short: Коротке узагальнення понять для учнів, котрі не проходили курси 2 та 3.
@@ -297,11 +297,18 @@ uk:
           description: Створити зображення з бітів та байтів.
           description_short: Створити зображення з бітів та байтів.
           Pixelation: Пікселізаціі
+          Black & White Pixelation Widget: 'Black & White Pixelation Widget'
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: 'Black & White Pixelation Tutorial'
+          Black & White Pixelation Freeplay: 'Black & White Pixelation Freeplay'
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: 20-годинний вступний курс
-          description_audience: Вік 10 + (після курсу 3)
+          title: Прискорений вступний курс
+          description_audience: Вік 10-18
           description: "Цей 20-годинний курс охоплює базові поняття комп'ютерних наук та програмування. Цей курс розроблено для використання на заняттях в основній школі, але може бути цікавим для будь-якого віку."
-          description_short: "Цей 20-годинний курс охоплює core комп'ютерні науки та програмування концепцій в 2-4 курси."
+          description_short: Цей 20-годинний курс охоплює поняття інформатики та програмування курсів 2-4.
           Introduction to Computer Science: Вступ до інформатики
           The Maze: Лабіринт
           Computational Thinking: Обчислювальне мислення
@@ -330,7 +337,7 @@ uk:
           Applab: Applab
           The Artist: Художник
           Play Lab: Ігрова студія
-          Play Lab 2015: Гральна лабораторія 2015
+          Play Lab 2015: Ігрова лабораторія 2015
         events:
           title: Події
           description: Події
@@ -342,21 +349,21 @@ uk:
         flappy:
           title: Код Пурха
           description: Хочете написати свою власну гру, менш ніж за 10 хвилин? Спробуйте запрограмувати Пурха!
-          description_short: Писати свій власний Flappy гри в менш ніж за 10 хвилин!
+          description_short: Створіть власну гру в Пурха менш, ніж за 10 хвилин!
           Flappy Code: Код Пурха
         jigsaw:
           title: Пазли
-          description: Спробуйте наші головоломки підручник
-          description_short: Спробуйте наші головоломки підручник
+          description: Спробуйте наш задачник
+          description_short: Спробуйте наш задачник
           Jigsaw: Пазли
         step:
           title: Крок
-          description: Кроком підручник
-          description_short: Кроком підручник
+          description: Покроковий підручник
+          description_short: Покроковий підручник
           Step: Крок
         Hour of Code:
           title: Година коду 2013
-          description: Спробуйте основи інформатики з персонажів з сердитися птахів і рослини проти зомбі!
+          description: Спробуйте основи інформатики з персонажами зі Злих птахів та Рослин проти Зомбі!
           description_short: Спробуйте основи інформатики з цікавими персонажами!
           Hour of Code 2013: Година коду 2013
         Code Studio Puzzle Challenge:
@@ -439,8 +446,8 @@ uk:
           "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           "Unplugged: Video Games and Coordinate Planes": 'Безмашинна вправа: відео-ігри та координатні площини'
           "Calc: Evaluation Blocks": 'Калькулятор: оцінювання блоків'
           "Eval: Strings and Images": 'Оцінка: рядки та картинки'
@@ -505,8 +512,8 @@ uk:
           new stage: new stage
           Introduction to PD: Знайомство з профессійним кодуванням
           title: Computer Science Principles PD
-          description: Online Introduction to CSP
-          description_short: Online Introduction to CSP
+          description: 'Phase 1: Online Introduction for CSP'
+          description_short: 'Phase 1: Online Introduction for CSP'
           What is CSP?: What is CSP?
           Exploring CSP Instructional Materials: Exploring CSP Instructional Materials
           Impact of Computer Science: Impact of Computer Science
@@ -527,14 +534,14 @@ uk:
           Preparing for in-person PD: Preparing for in-person PD
           reference: reference
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Знайомство з профессійним кодуванням
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -621,14 +628,14 @@ uk:
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Знайомство з профессійним кодуванням
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Знайомство з профессійним кодуванням
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
         Glenallan Career Day Demo:
@@ -645,8 +652,8 @@ uk:
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Знайомство з профессійним кодуванням
@@ -656,13 +663,13 @@ uk:
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Знайомство з профессійним кодуванням
           Evaluation Blocks: Оцінкові блоки
           logo_image: nextech_logo.png
@@ -673,8 +680,8 @@ uk:
           Preparing for in-person PD: Preparing for in-person PD
         algebraPD-iZone:
           title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Знайомство з профессійним кодуванням
           Evaluation Blocks: Оцінкові блоки
           logo_image: izone_logo.png
@@ -687,8 +694,8 @@ uk:
           Introduction to PD: Знайомство з профессійним кодуванням
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -704,8 +711,8 @@ uk:
           Introduction to PD: Знайомство з профессійним кодуванням
           logo_image: izone_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive Systems
           Introduction to Computational Science: Introduction to Computational Science
@@ -728,8 +735,8 @@ uk:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: Phase 2 Online Blended Summer Study
-          description_short: Phase 2 Online Blended Summer Study
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -796,8 +803,8 @@ uk:
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Оцінкові блоки
           Strings and Images: Рядки та зображення
           Defining Variables: Визначення змінних
@@ -839,10 +846,11 @@ uk:
           Text Compression: Text Compression
           Pixelation: Пікселізаціі
           Multi2: Multi2
+          Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -879,9 +887,9 @@ uk:
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: 'Teaching Courses 1-4: The Basics'
-          description: "Learn how to teach computer science using Code.org's Courses 1-4 with this free, self-paced online course."
-          description_short: Learn how to teach Courses 1-4 with this free, self-paced online course.
+          title: Teaching Computer Science Fundamentals
+          description: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
+          description_short: "Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course."
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           "Mastering the Basics: Sequencing": 'Mastering the Basics: Sequencing'
@@ -895,8 +903,8 @@ uk:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Blended Summer Study
-          description_short: Blended Summer Study
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Welcome!: Ласкаво просимо!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -907,6 +915,29 @@ uk:
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
           Wrap-up: Підведення підсумків
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9. Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day 15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          "Unit 1, Days 1-2: What Is a Computer?": 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web 2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -917,13 +948,13 @@ uk:
           Necessary Background: Necessary Background
         hoc2015:
           title: Година коду 2015
-          description_short: Використовуйте Гральну Лабораторію для створення історії або гри.
-          description: Використовуйте Гральну Лабораторію для створення історії або гри.
+          description_short: Скористайтесь Ігровою лабораторією для створення історії або гри.
+          description: Скористайтесь Ігровою лабораторією для створення історії або гри.
           Hour of Code: Година Коду
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -944,8 +975,8 @@ uk:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
           Welcome!: Ласкаво просимо!
           Wrap-Up: Підведення підсумків
           Review StarLogo Nova: Review StarLogo Nova
@@ -961,8 +992,8 @@ uk:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
           Welcome!: Ласкаво просимо!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -978,3 +1009,68 @@ uk:
           Introduction to Equity: Introduction to Equity
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
+        sciencePD2b-iZone:
+          Welcome!: Ласкаво просимо!
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Підведення підсумків
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Ласкаво просимо!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Підведення підсумків
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: Ласкаво просимо!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Підведення підсумків
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          "Lesson Chunk 1: Sending Binary Messages": 'Lesson Chunk 1: Sending Binary Messages'
+          "Lesson Chunk 2: Encoding and Sending Numbers": 'Lesson Chunk 2: Encoding and Sending Numbers'
+          "Lesson Chunk 3: Encoding and Sending Text": 'Lesson Chunk 3: Encoding and Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: 'Lesson Chunk 1- Sending Binary Messages'
+          Lesson Chunk 2- Encoding and Sending Numbers: 'Lesson Chunk 2- Encoding and Sending Numbers'
+          Lesson Chunk 3- Encoding and Sending Text: 'Lesson Chunk 3- Encoding and Sending Text'
+          Lesson Chunk 4- Compressing and Storing Information: 'Lesson Chunk 4- Compressing and Storing Information'
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps

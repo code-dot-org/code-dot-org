@@ -19,7 +19,7 @@ module Rack
       super(
           app,
           skip_if: lambda(&method(:not_ssl?)),
-          xpath:%w(img script embed iframe).map{|x|"//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
+          xpath: %w(img script embed iframe).map{|x|"//#{x}[@src[starts-with(.,'http://')]]"}.join(' | ')
       ) do |nodes|
         nodes.each{|node|process(node)}
       end

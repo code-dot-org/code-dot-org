@@ -85,7 +85,7 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 10, 2015
+Quarter 1: Saturday, October 3, 2015
 
 Quarter 2: Saturday, November 7, 2015
 
@@ -266,10 +266,10 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Semester 1: Saturday, October 3, 2015
+Semester 1: Saturday, October 17, 2015 in Orange County.
 
 
-Semester 2: Saturday, January 23, 2016
+Semester 2: Saturday, February 20, 2016 in Los Angeles.
 
 
 8:30am - 3:30pm

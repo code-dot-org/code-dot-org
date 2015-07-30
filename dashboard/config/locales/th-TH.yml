@@ -80,12 +80,12 @@
     student_pitch: สมัครเป็นนักเรียนสำหรับ code.org
     student_title: สมัครเป็นนักเรียน
     school_name: ชื่อโรงเรียน (ถ้ามี)
-    school_address: School Address (optional)
-    address_placeholder: address, city, state, zip
+    school_address: ที่อยู่โรงเรียน (ถ้ามี)
+    address_placeholder: ที่อยู่, อำเภอ, จังหวัด, รหัสไปรษณีย์
     gender: Gender (optional)
     birthday: Birthday (optional)
     age: อายุ
-    user_type: Are you a student or teacher?
+    user_type: คุณเป็นนักเรียนหรืออาจารย์
     submit: สมัครสมาชิก
     teacher: คุณเป็นครูหรือ
     valid_username: อนุญาต
@@ -170,7 +170,7 @@
     code: 'Code:'
     redeem_header: 'To redeem:'
     donorschoose_register: Register as a teacher on DonorsChoose.org
-    donorschoose_project: Post a project
+    donorschoose_project: ส่งโครงงาน
     donorschoose_how_to: วิธีการใช้โค้ดของคุณ
     success: Your prize was succesfully redeemed, see code below.
     error: Your prize could not be redeemed, please try again.
@@ -256,6 +256,7 @@
       free_play:
         playlab: Make an App
         artist: Draw Something
+        calculate: Calculate Something
     user:
       classroom: หน้าแรกของคุณครู
       district_dashboard: District Dashboard
@@ -412,7 +413,8 @@
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
     heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Beginners (all ages)</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
@@ -519,9 +521,9 @@
         tutorial!
     20-hour:
       title: Accelerated Course
-      body: This 20-hour course covers the core computer science and programming concepts
-        in courses 2-4. The course is designed for use with ages 10-18. Check out
-        courses 2-4 for a more complete experience!
+      body: This 20-hour คอร์ส covers the core computer science and programming concepts
+        in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส
+        2-4 for a more complete experience!
       body_short: Learn basic computer science in an accelerated version of courses
         2-4.
     hoc2014:
@@ -550,7 +552,7 @@
     caption_time_ago: '%{time_ago} ago'
     header: Gallery
     header_playlab: Play Lab
-    header_artist: Artist
+    header_artist: ศิลปิน
   landing:
     prerelease: This course is in <span class='betatext'>beta</span>.  This means
       it is not the final version of the course, and is subject to revision as feedback

@@ -219,6 +219,7 @@ da:
       free_play:
         playlab: Lav en App
         artist: Tegn noget
+        calculate: Calculate Something
     user:
       classroom: Lærerens startside
       district_dashboard: Særskilt betjeningspanel

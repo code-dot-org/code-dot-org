@@ -11,7 +11,7 @@ class DashboardStudent
     DASHBOARD_DB[:users].
       join(:followers, :student_user_id=>:users__id).
       select(*fields).
-      where(followers__user_id:user_id).
+      where(followers__user_id: user_id).
       all
   end
 
@@ -25,14 +25,14 @@ class DashboardStudent
     created_at = DateTime.now
 
     row = DASHBOARD_DB[:users].insert({
-      name:name,
-      user_type:'student',
-      provider:'sponsored',
-      gender:params[:gender],
-      birthday:params[:birthday],
-      created_at:created_at,
-      updated_at:created_at,
-      username:UserHelpers.generate_username(DASHBOARD_DB[:users], name)
+      name: name,
+      user_type: 'student',
+      provider: 'sponsored',
+      gender: params[:gender],
+      birthday: params[:birthday],
+      created_at: created_at,
+      updated_at: created_at,
+      username: UserHelpers.generate_username(DASHBOARD_DB[:users], name)
     }.merge(random_secrets))
     return nil unless row
 
@@ -57,7 +57,7 @@ class DashboardStudent
              :secret_pictures__name___secret_picture_name,
              :secret_pictures__path___secret_picture_path,
             ).
-      where(users__id:id).
+      where(users__id: id).
       server(:default).
       first
 
@@ -69,7 +69,7 @@ class DashboardStudent
       where(student_user_id: params[:id],
             user_id: dashboard_user_id)
 
-    fields = {updated_at:DateTime.now}
+    fields = {updated_at: DateTime.now}
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
     fields[:encrypted_password] = encrypt_password(params[:password]) unless params[:password].nil_or_empty?
     fields[:gender] = params[:gender] if valid_gender?(params[:gender])
@@ -78,7 +78,7 @@ class DashboardStudent
     fields.merge!(random_secrets) if params[:secrets].to_s == 'reset'
 
     rows_updated = DASHBOARD_DB[:users].
-      where(id:params[:id]).
+      where(id: params[:id]).
       update(fields)
     return nil unless rows_updated > 0
 
@@ -218,14 +218,14 @@ class DashboardSection
     tries = 0
     begin
       row = DASHBOARD_DB[:sections].insert({
-        user_id:params[:user][:id],
-        name:name,
-        login_type:params[:login_type],
-        grade:params[:grade],
-        script_id:params[:script_id],
-        code:random_code,
-        created_at:created_at,
-        updated_at:created_at,
+        user_id: params[:user][:id],
+        name: name,
+        login_type: params[:login_type],
+        grade: params[:grade],
+        script_id: params[:script_id],
+        code: random_code,
+        created_at: created_at,
+        updated_at: created_at,
       })
     rescue Sequel::UniqueConstraintViolation
       tries += 1
@@ -237,12 +237,12 @@ class DashboardSection
   end
 
   def self.delete_if_owner(id, user_id)
-    row = DASHBOARD_DB[:sections].where(id:id).and(user_id:user_id).first
+    row = DASHBOARD_DB[:sections].where(id: id).and(user_id: user_id).first
     return nil unless row
 
     DASHBOARD_DB.transaction do
-      DASHBOARD_DB[:followers].where(section_id:id).delete
-      DASHBOARD_DB[:sections].where(id:id).delete
+      DASHBOARD_DB[:followers].where(section_id: id).delete
+      DASHBOARD_DB[:sections].where(id: id).delete
     end
 
     row
@@ -256,7 +256,7 @@ class DashboardSection
     return nil unless row = DASHBOARD_DB[:sections].
       join(:users, :id=>:user_id).
       select(*fields).
-      where(sections__id:id).
+      where(sections__id: id).
       first
 
     section = self.new(row)
@@ -268,7 +268,7 @@ class DashboardSection
     return nil unless row = DASHBOARD_DB[:sections].
       join(:users, :id=>:user_id).
       select(*fields).
-      where(sections__id:id).
+      where(sections__id: id).
       first
 
     section = self.new(row)
@@ -280,7 +280,7 @@ class DashboardSection
     DASHBOARD_DB[:sections].
       join(:users, :id=>:user_id).
       select(*fields).
-      where(user_id:user_id).
+      where(user_id: user_id).
       map{|row| self.new(row).to_owner_hash}
   end
 
@@ -298,11 +298,11 @@ class DashboardSection
 
     created_at = DateTime.now
     DASHBOARD_DB[:followers].insert({
-      user_id:@row[:teacher_id],
-      student_user_id:student_id,
-      section_id:@row[:id],
-      created_at:created_at,
-      updated_at:created_at,
+      user_id: @row[:teacher_id],
+      student_user_id: student_id,
+      section_id: @row[:id],
+      created_at: created_at,
+      updated_at: created_at,
     })
     student_id
   end
@@ -316,7 +316,7 @@ class DashboardSection
   def remove_student(student_id)
     # BUGBUG: Need to detect "sponsored" accounts and disallow delete.
 
-    rows_deleted = DASHBOARD_DB[:followers].where(section_id:@row[:id], student_user_id:student_id).delete
+    rows_deleted = DASHBOARD_DB[:followers].where(section_id: @row[:id], student_user_id: student_id).delete
     rows_deleted > 0
   end
 
@@ -337,10 +337,10 @@ class DashboardSection
              :secret_pictures__name___secret_picture_name,
              :secret_pictures__path___secret_picture_path).
       distinct(:student_user_id).
-      where(section_id:@row[:id]).
+      where(section_id: @row[:id]).
       where(deleted_at: nil).
       map{|row| row.merge({
-        location:"/v2/users/#{row[:id]}",
+        location: "/v2/users/#{row[:id]}",
         age: DashboardStudent::birthday_to_age(row[:birthday]),
         completed_levels_count: DashboardStudent.completed_levels(row[:id]).count
       })}
@@ -352,34 +352,34 @@ class DashboardSection
 
   def teachers()
     @teachers ||= [{
-      id:@row[:teacher_id],
-      location:"/v2/users/#{@row[:teacher_id]}",
+      id: @row[:teacher_id],
+      location: "/v2/users/#{@row[:teacher_id]}",
                    }]
   end
 
   def course
     @course ||= DASHBOARD_DB[:scripts].
-      where(id:@row[:script_id]).
+      where(id: @row[:script_id]).
       select(:id, :name).
       first
   end
 
   def to_owner_hash()
     to_member_hash.merge(
-        course:course,
-        teachers:teachers,
-        students:students
+        course: course,
+        teachers: teachers,
+        students: students
     )
   end
 
   def to_member_hash()
     {
-        id:@row[:id],
-        location:"/v2/sections/#{@row[:id]}",
-        name:@row[:name],
-        login_type:@row[:login_type],
-        grade:@row[:grade],
-        code:@row[:code],
+        id: @row[:id],
+        location: "/v2/sections/#{@row[:id]}",
+        name: @row[:name],
+        login_type: @row[:login_type],
+        grade: @row[:grade],
+        code: @row[:code],
     }
   end
 
@@ -388,7 +388,7 @@ class DashboardSection
     return nil unless params[:user] && params[:user][:user_type] == 'teacher'
     user_id = params[:user][:id]
 
-    fields = {updated_at:DateTime.now}
+    fields = {updated_at: DateTime.now}
     fields[:name] = params[:name] unless params[:name].nil_or_empty?
     fields[:login_type] = params[:login_type] if valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if valid_grade?(params[:grade])
@@ -399,8 +399,8 @@ class DashboardSection
     end
 
     rows_updated = DASHBOARD_DB[:sections].
-      where(id:section_id).
-      and(user_id:user_id).
+      where(id: section_id).
+      and(user_id: user_id).
       update(fields)
     return nil unless rows_updated > 0
 

@@ -224,6 +224,7 @@ sv:
       free_play:
         playlab: Skapa en App
         artist: Rita något
+        calculate: Calculate Something
     user:
       classroom: Lärare hemsida
       district_dashboard: Distrikt Dashboard

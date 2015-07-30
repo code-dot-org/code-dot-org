@@ -320,7 +320,7 @@ end
 def encrypted_cookie(user)
   key_generator = ActiveSupport::KeyGenerator.new(
       CDO.dashboard_secret_key_base,
-      iterations:1000
+      iterations: 1000
     )
 
   encryptor = ActiveSupport::MessageEncryptor.new(
