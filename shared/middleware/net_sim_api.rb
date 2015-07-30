@@ -78,15 +78,17 @@ class NetSimApi < Sinatra::Base
 
   # Delete all wires associated with (locally or remotely) a given node_id
   #
+  # @private
   # @param [String] shard_id
   # @param [Integer] node_id
+  # @returns [Integer|Array] ids of deleted wires
   def delete_wires_for_node(shard_id, node_id)
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
-    wire_ids = wire_table.to_a.select do |wire|
+    wire_ids = wire_table.to_a.select {|wire|
       wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
-    end.map do |wire|
+    }.map {|wire|
       wire['id']
-    end
+    }
     wire_ids.each do |wire_id|
       wire_table.delete(wire_id)
     end
@@ -95,15 +97,17 @@ class NetSimApi < Sinatra::Base
 
   # Delete all messages simulated by a given node_id
   #
+  # @private
   # @param [String] shard_id
   # @param [Integer] node_id
+  # @returns [Integer|Array] ids of deleted messages
   def delete_messages_for_node(shard_id, node_id)
     message_table = get_table(shard_id, TABLE_NAMES[:message])
-    message_ids = message_table.to_a.select do |message|
+    message_ids = message_table.to_a.select {|message|
       message['simulatedBy'] == node_id
-    end.map do |message|
+    }.map {|message|
       message['id']
-    end
+    }
     message_ids.each do |message_id|
       message_table.delete(message_id)
     end
