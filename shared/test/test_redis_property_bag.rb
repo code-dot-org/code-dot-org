@@ -62,14 +62,14 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     # Test the delete all functionality.
     bag1.delete_all
     assert_nil bag1.get('foo')
-    assert_equal empty_hash, bag1.to_hash 
+    assert_equal empty_hash, bag1.to_hash
 
     # Test increment_counter.
-    assert_equal 1, bag2.increment_counter("foo_counter")
-    assert_equal 1, bag2.increment_counter("bar_counter")
-    assert_equal 2, bag2.increment_counter("foo_counter")
-    assert_equal 3, bag2.increment_counter("foo_counter")
-    assert_equal 2, bag2.increment_counter("bar_counter")
+    assert_equal 1, bag2.increment_counter('foo_counter')
+    assert_equal 1, bag2.increment_counter('bar_counter')
+    assert_equal 2, bag2.increment_counter('foo_counter')
+    assert_equal 3, bag2.increment_counter('foo_counter')
+    assert_equal 2, bag2.increment_counter('bar_counter')
   end
 
 end
