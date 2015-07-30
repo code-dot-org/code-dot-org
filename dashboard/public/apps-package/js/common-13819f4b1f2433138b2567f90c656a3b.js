@@ -4741,7 +4741,7 @@ with (locals || {}) { (function(){
  buf.push('');1;
   var msg = require('../locale');
   var hideRunButton = locals.hideRunButton || false;
-; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/turnphone_horizontal.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  ');30; if (data.hasDesignMode) { ; buf.push('\n    <div id="designToggleRow"></div>\n  ');32; } ; buf.push('\n\n  <div id="visualization">\n    ', (35,  data.visualization ), '\n  </div>\n\n  <div id="belowVisualization">\n\n    ');40; gameButtons() ; buf.push('\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar" class="fa fa-ellipsis-v">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <i id="hide-toolbox-icon" style="display:none;" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((87,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;">\n          <i id="show-toolbox-icon" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((91,  msg.showToolbox() )), '</span>\n        </div>\n        <div id="show-code-header" class="workspace-header workspace-header-button"><span><img src="', escape((93,  assetUrl('media/applab/blocks_glyph.gif') )), '" class="blocks-glyph" /><i class="fa fa-code"></i>', escape((93,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header workspace-header-button"><span><i class="fa fa-undo"></i>', escape((94,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">\n            ', escape((97,  data.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort() )), '\n          </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((100,  data.blockCounterClass )), '>\n              ', escape((101,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((104,  data.idealBlockNumber )), '</span>\n            <span> ', escape((105,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');110; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');112; } ; buf.push('\n    ');113; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (114,  data.extraControlRows ), '\n    ');115; } ; buf.push('\n  </div>\n  ');117; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');120; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
+; buf.push('\n\n<div id="rotateContainer" style="background-image: url(', escape((6,  assetUrl('media/turnphone_horizontal.png') )), ')">\n  <div id="rotateText">\n    <p>', escape((8,  msg.rotateText() )), '<br>', escape((8,  msg.orientationLock() )), '</p>\n  </div>\n</div>\n\n');12; var gameButtons = function() {; buf.push('  <div id="gameButtons">\n    <button id="runButton" class="launch blocklyLaunch ', escape((13,  hideRunButton ? 'invisible' : '')), '">\n      <div>', escape((14,  msg.runProgram() )), '</div>\n      <img src="', escape((15,  assetUrl('media/1x1.gif') )), '" class="run26"/>\n    </button>\n    <button id="resetButton" class="launch blocklyLaunch" style="display: none">\n      <div>', escape((18,  msg.resetProgram() )), '</div>\n      <img src="', escape((19,  assetUrl('media/1x1.gif') )), '" class="reset26"/>\n    </button>\n    ');21; if (data.controls) { ; buf.push('\n    ', (22,  data.controls ), '\n    ');23; } ; buf.push('\n    ');24; if (!data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (25,  data.extraControlRows ), '\n    ');26; } ; buf.push('\n  </div>\n');28; };; buf.push('\n<div id="visualizationColumn">\n  ');30; if (data.hasDesignMode) { ; buf.push('\n    <div id="designToggleRow"></div>\n  ');32; } ; buf.push('\n\n  <div id="visualization">\n    ', (35,  data.visualization ), '\n  </div>\n\n  ');38; gameButtons() ; buf.push('\n\n  <div id="belowVisualization">\n\n    <div id="bubble" class="clearfix">\n      <table id="prompt-table">\n        <tr>\n          <td id="prompt-icon-cell">\n            <img id="prompt-icon"/>\n          </td>\n          <td id="prompt-cell">\n            <p id="prompt">\n            </p>\n          </td>\n        </tr>\n      </table>\n      ');54; if (data.inputOutputTable) { ; buf.push('\n      <div id="input-table">\n        <table>\n          <tr>\n            <th>Input</th>\n            <th>Output</th>\n          </tr>\n          ');61; for (var i = 0; i < data.inputOutputTable.length; i++) { ; buf.push('\n          <tr>\n            <td>', (63,  data.inputOutputTable[i][0] ), '</td>\n            <td>', (64,  data.inputOutputTable[i][1] ), '</td>\n          </tr>\n          ');66; } ; buf.push('\n        </table>\n      </div>\n      ');69; } ; buf.push('\n      <div id="ani-gif-preview-wrapper">\n        <div id="ani-gif-preview">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id="visualizationResizeBar" class="fa fa-ellipsis-v">\n</div>\n\n<div id="codeWorkspace">\n  <div id="codeWorkspaceWrapper">\n    <div id="headers" dir="', escape((83,  data.localeDirection )), '">\n      <div id="codeModeHeaders">\n        <div id="toolbox-header" class="workspace-header">\n          <i id="hide-toolbox-icon" style="display:none;" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((87,  data.editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader() )), '</span>\n        </div>\n        <div id="show-toolbox-header" class="workspace-header" style="display:none;">\n          <i id="show-toolbox-icon" class="fa fa-chevron-circle-right"></i>\n          <span>', escape((91,  msg.showToolbox() )), '</span>\n        </div>\n        <div id="show-code-header" class="workspace-header workspace-header-button"><span><img src="', escape((93,  assetUrl('media/applab/blocks_glyph.gif') )), '" class="blocks-glyph" /><i class="fa fa-code"></i>', escape((93,  msg.showCodeHeader() )), '</span></div>\n        <div id="clear-puzzle-header" class="workspace-header workspace-header-button"><span><i class="fa fa-undo"></i>', escape((94,  msg.clearPuzzle() )), '</span></div>\n        <div id="workspace-header" class="workspace-header">\n          <span id="workspace-header-span">\n            ', escape((97,  data.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort() )), '\n          </span>\n          <div id="blockCounter">\n            <div id="blockUsed" class=', escape((100,  data.blockCounterClass )), '>\n              ', escape((101,  data.blockUsed )), '\n            </div>\n            <span>/</span>\n            <span id="idealBlockNumber">', escape((104,  data.idealBlockNumber )), '</span>\n            <span> ', escape((105,  msg.blocks() )), '</span>\n          </div>\n        </div>\n      </div>\n    </div>\n    ');110; if (data.editCode) { ; buf.push('\n      <div id="codeTextbox"></div>\n    ');112; } ; buf.push('\n    ');113; if (data.pinWorkspaceToBottom && data.extraControlRows) { ; buf.push('\n    ', (114,  data.extraControlRows ), '\n    ');115; } ; buf.push('\n  </div>\n  ');117; if (data.hasDesignMode) { ; buf.push('\n    <div id="designWorkspace" style="display:none;">\n    </div>\n  ');120; } ; buf.push('\n</div>\n\n<div class="clear"></div>\n'); })();
 } 
 return buf.join('');
 };
@@ -4749,7 +4749,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":494}],272:[function(require,module,exports){
+},{"../locale":151,"ejs":495}],272:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5740,6 +5740,7 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
+var smallFooterUtils = require('@cdo/shared/smallFooter');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -6026,7 +6027,7 @@ StudioApp.prototype.init = function(config) {
       viz.style['max-height'] = (displayWidth * scale) + 'px';
       viz.style.display = 'block';
       vizCol.style.width = '';
-      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      vizCol.style.maxWidth = displayWidth + 'px';
       // Needs to run twice on initialization
       if(!resized) {
         resized = true;
@@ -6143,6 +6144,8 @@ StudioApp.prototype.init = function(config) {
       }).bind(this));
     }).bind(this));
   }
+
+  smallFooterUtils.bindHandlers();
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -6567,7 +6570,58 @@ StudioApp.prototype.onResize = function() {
 
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
+
+  // Content below visualization is a resizing scroll area in pinned mode
+  onResizeSmallFooter();
 };
+
+/**
+ * Resizes the content area below the visualization in pinned (viewport height)
+ * view mode.
+ */
+function resizePinnedBelowVisualizationArea() {
+  var pinnedBelowVisualization = document.querySelector(
+      '#visualizationColumn.pin_bottom #belowVisualization');
+  if (!pinnedBelowVisualization) {
+    return;
+  }
+
+  var visualization = document.getElementById('visualization');
+  var gameButtons = document.getElementById('gameButtons');
+  var smallFooter = document.querySelector('.small-footer');
+
+  var top = 0;
+  if (visualization) {
+    top += $(visualization).outerHeight(true);
+  }
+
+  if (gameButtons) {
+    top += $(gameButtons).outerHeight(true);
+  }
+
+  var bottom = 0;
+  if (smallFooter) {
+    var codeApp = $('#codeApp');
+    bottom += $(smallFooter).outerHeight(true);
+    // Footer is relative to the document, not codeApp, so we need to
+    // remove the codeApp bottom offset to get the correct margin.
+    bottom -= parseInt(codeApp.css('bottom'), 10);
+  }
+
+  pinnedBelowVisualization.style.top = top + 'px';
+  pinnedBelowVisualization.style.bottom = bottom + 'px';
+}
+
+/**
+ * Debounced onResize operations that update the layout to support sizing
+ * to viewport height and using the small footer.
+ * @type {Function}
+ */
+var onResizeSmallFooter = _.debounce(function () {
+  resizePinnedBelowVisualizationArea();
+  smallFooterUtils.repositionCopyrightFlyout();
+  smallFooterUtils.repositionMoreMenu();
+}, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
@@ -6641,6 +6695,22 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
+
+  var smallFooter = document.querySelector('.small-footer');
+  if (smallFooter) {
+    smallFooter.style.maxWidth = newVizWidthString;
+
+    // If the small print and language selector are on the same line,
+    // the small print should float right.  Otherwise, it should float left.
+    var languageSelector = smallFooter.querySelector('form');
+    var smallPrint = smallFooter.querySelector('small');
+    if (smallPrint.offsetTop === languageSelector.offsetTop) {
+      smallPrint.style.float = 'right';
+    } else {
+      smallPrint.style.float = 'left';
+    }
+  }
+
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
 };
@@ -7012,6 +7082,10 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
+    var smallFooter = document.querySelector(".small-footer");
+    if (smallFooter) {
+      smallFooter.className += " responsive";
+    }
   }
 };
 
@@ -7456,7 +7530,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"./ResizeSensor":3,"./acemode/mode-javascript_codeorg":8,"./blockTooltips/DropletTooltipManager":75,"./block_utils":77,"./constants.js":108,"./dom":109,"./dropletUtils":110,"./feedback":130,"./locale":151,"./templates/builder.html.ejs":293,"./templates/buttons.html.ejs":294,"./templates/instructions.html.ejs":296,"./templates/learn.html.ejs":297,"./templates/makeYourOwn.html.ejs":298,"./utils":321,"./xml":322,"url":491}],491:[function(require,module,exports){
+},{"./ResizeSensor":3,"./acemode/mode-javascript_codeorg":8,"./blockTooltips/DropletTooltipManager":75,"./block_utils":77,"./constants.js":108,"./dom":109,"./dropletUtils":110,"./feedback":130,"./locale":151,"./templates/builder.html.ejs":293,"./templates/buttons.html.ejs":294,"./templates/instructions.html.ejs":296,"./templates/learn.html.ejs":297,"./templates/makeYourOwn.html.ejs":298,"./utils":321,"./xml":322,"@cdo/shared/smallFooter":324,"url":492}],492:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8165,13 +8239,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":474,"querystring":477}],477:[function(require,module,exports){
+},{"punycode":475,"querystring":478}],478:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":475,"./encode":476}],476:[function(require,module,exports){
+},{"./decode":476,"./encode":477}],477:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8258,7 +8332,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],475:[function(require,module,exports){
+},{}],476:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8344,7 +8418,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],474:[function(require,module,exports){
+},{}],475:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8855,6 +8929,122 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],324:[function(require,module,exports){
+/**
+ * @fileoverview Provides a secondary "small" footer for pages without
+ * the default, full-size footer.
+ */
+/* global $ */
+var smallFooter = exports;
+
+/**
+ * Sometimes events get cloned so we can't test identity, but a soft check
+ * for same event type/target/timestamp produces the effect we want.
+ * @param {Event} eventA
+ * @param {Event} eventB
+ * @returns {boolean} true if the two events represent the same user interaction.
+ */
+function areSameEvent(eventA, eventB) {
+  return eventA.type === eventB.type &&
+          eventA.target === eventB.target &&
+          eventA.timeStamp === eventB.timeStamp;
+}
+
+/**
+ * Bind click handler for a "show flyout" link in the footer, which, when
+ * clicked, binds a one-time click handler on body to close the flyout no
+ * matter where the next click occurs.  Takes care of appropriate show/hide
+ * toggle when clicking on the "show" link twice in a row.
+ * @param {EventTarget} showClickTarget - the element which should cause the
+ *        flyout to appear on click.
+ * @param {function} showAction - callback that actually shows the flyout.
+ * @param {function} hideAction - callback that actually hides the flyout.
+ */
+function bindFooterShowHideHandlers(showClickTarget, showAction, hideAction) {
+  var isShowing = false;
+
+  $(showClickTarget).bind('click', function (showEvent) {
+    // Don't show/add handlers when already showing
+    if (isShowing) {
+      return;
+    }
+
+    var hideFlyout = function (hideEvent) {
+      // Don't hide / remove handlers on same click that shows flyout
+      if (areSameEvent(hideEvent, showEvent)) {
+        return;
+      }
+      hideAction();
+      isShowing = false;
+      // In handler, unbind one-time listeners
+      $(document.body).unbind('click', hideFlyout);
+    };
+
+    // Allows a second click on the "show" link to also result in a "hide"
+    showAction();
+    isShowing = true;
+    // Bind one-time listeners
+    $(document.body).bind('click', hideFlyout);
+  });
+}
+
+/**
+ * Handle clicks on links in small footer
+ */
+smallFooter.bindHandlers = function () {
+  var smallFooter = document.querySelector('.small-footer');
+  if (!smallFooter) {
+    return;
+  }
+
+  var copyrightLink = smallFooter.querySelector('.copyright-link');
+  var copyrightFlyout = document.getElementById('copyright-flyout');
+  bindFooterShowHideHandlers(copyrightLink, function () {
+    copyrightFlyout.style.display = 'block';
+  }, function () {
+    copyrightFlyout.style.display = 'none';
+  });
+
+  var moreLink = smallFooter.querySelector('.more-link');
+  var faGlyph = moreLink.querySelector('.fa');
+  var moreMenu = document.getElementById('more-menu');
+  bindFooterShowHideHandlers(moreLink, function () {
+    moreMenu.style.display = 'block';
+    faGlyph.className = faGlyph.className.replace('fa-caret-up', 'fa-caret-down');
+  }, function () {
+    moreMenu.style.display = 'none';
+    faGlyph.className = faGlyph.className.replace('fa-caret-down', 'fa-caret-up');
+  });
+};
+
+/**
+ * Sets the copyright flyout to sit exactly above the footer.
+ */
+smallFooter.repositionCopyrightFlyout = function () {
+  var copyrightFlyout = document.querySelector('#copyright-flyout');
+  var smallFooter = document.querySelector('.small-footer');
+  if (!(copyrightFlyout && smallFooter)) {
+    return;
+  }
+  copyrightFlyout.style.left = '0';
+  copyrightFlyout.style.paddingBottom = smallFooter.offsetHeight + 'px';
+};
+
+/**
+ * Sets the more-menu size and position to sit above the footer and
+ * match its full width.
+ */
+smallFooter.repositionMoreMenu = function () {
+  var smallFooter = document.querySelector('.small-footer');
+  var moreMenu = document.querySelector('#more-menu');
+  if (!(smallFooter && moreMenu)) {
+    return;
+  }
+  moreMenu.style.bottom = smallFooter.offsetHeight + 'px';
+  moreMenu.style.width = smallFooter.offsetWidth + 'px';
+};
+
+
 },{}],298:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
@@ -8875,7 +9065,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":494}],297:[function(require,module,exports){
+},{"../locale":151,"ejs":495}],297:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8897,7 +9087,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":494}],296:[function(require,module,exports){
+},{"../locale":151,"ejs":495}],296:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8917,7 +9107,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],293:[function(require,module,exports){
+},{"ejs":495}],293:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8937,7 +9127,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],130:[function(require,module,exports){
+},{"ejs":495}],130:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -10187,7 +10377,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],303:[function(require,module,exports){
+},{"ejs":495}],303:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10207,7 +10397,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":494}],302:[function(require,module,exports){
+},{"../locale":151,"ejs":495}],302:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10227,7 +10417,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":494}],301:[function(require,module,exports){
+},{"../locale":151,"ejs":495}],301:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10247,7 +10437,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],295:[function(require,module,exports){
+},{"ejs":495}],295:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10267,7 +10457,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],294:[function(require,module,exports){
+},{"ejs":495}],294:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10287,7 +10477,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":494}],131:[function(require,module,exports){
+},{"../locale":151,"ejs":495}],131:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10438,7 +10628,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],108:[function(require,module,exports){
+},{"ejs":495}],108:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -11352,7 +11542,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],69:[function(require,module,exports){
+},{"ejs":495}],69:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
@@ -11766,7 +11956,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],494:[function(require,module,exports){
+},{"ejs":495}],495:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12121,7 +12311,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":495,"./utils":496,"fs":325,"path":472}],496:[function(require,module,exports){
+},{"./filters":496,"./utils":497,"fs":326,"path":473}],497:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12145,7 +12335,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],495:[function(require,module,exports){
+},{}],496:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -12344,7 +12534,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],472:[function(require,module,exports){
+},{}],473:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12572,7 +12762,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":473}],473:[function(require,module,exports){
+},{"_process":474}],474:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12631,7 +12821,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],325:[function(require,module,exports){
+},{}],326:[function(require,module,exports){
 
 },{}],8:[function(require,module,exports){
 /* global ace */

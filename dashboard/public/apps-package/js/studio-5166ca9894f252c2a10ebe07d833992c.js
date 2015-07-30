@@ -1286,6 +1286,9 @@ Studio.init = function(config) {
   var isAlgebraLevel = !!level.useContractEditor;
   config.grayOutUndeletableBlocks = isAlgebraLevel;
 
+  config.pinWorkspaceToBottom = true;
+  config.hasVerticalScrollbars = true;
+
   loadLevel();
 
   window.addEventListener("keydown", Studio.onKey, false);
@@ -3581,7 +3584,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],289:[function(require,module,exports){
+},{"ejs":495}],289:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -6025,7 +6028,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":494}],282:[function(require,module,exports){
+},{"../locale":151,"ejs":495}],282:[function(require,module,exports){
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
@@ -6076,7 +6079,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":151,"ejs":494}],277:[function(require,module,exports){
+},{"../locale":151,"ejs":495}],277:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *

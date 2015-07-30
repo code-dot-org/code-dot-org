@@ -2322,7 +2322,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],171:[function(require,module,exports){
+},{"ejs":495}],171:[function(require,module,exports){
 var SquareType = require('./tiles').SquareType;
 var Direction = require('./tiles').Direction;
 var utils = require('../utils');
@@ -3332,7 +3332,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],173:[function(require,module,exports){
+},{"ejs":495}],173:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3352,7 +3352,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],170:[function(require,module,exports){
+},{"ejs":495}],170:[function(require,module,exports){
 var requiredBlockUtils = require('../required_block_utils');
 
 var MOVE_FORWARD = {'test': 'moveForward', 'type': 'maze_moveForward'};
@@ -4665,7 +4665,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale":151,"ejs":494}],176:[function(require,module,exports){
+},{"../../locale":151,"ejs":495}],176:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4690,7 +4690,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../../locale":151,".././locale":166,"ejs":494}],175:[function(require,module,exports){
+},{"../../locale":151,".././locale":166,"ejs":495}],175:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4710,7 +4710,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":494}],164:[function(require,module,exports){
+},{"ejs":495}],164:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4741,7 +4741,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":166,"ejs":494}],162:[function(require,module,exports){
+},{"./locale":166,"ejs":495}],162:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4763,7 +4763,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":166,"ejs":494}],161:[function(require,module,exports){
+},{"./locale":166,"ejs":495}],161:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 
@@ -4928,7 +4928,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":166,"ejs":494}],157:[function(require,module,exports){
+},{"./locale":166,"ejs":495}],157:[function(require,module,exports){
 /**
  * Blockly Demo: Maze
  *

@@ -12,6 +12,7 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
+var smallFooterUtils = require('@cdo/shared/smallFooter');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -298,7 +299,7 @@ StudioApp.prototype.init = function(config) {
       viz.style['max-height'] = (displayWidth * scale) + 'px';
       viz.style.display = 'block';
       vizCol.style.width = '';
-      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      vizCol.style.maxWidth = displayWidth + 'px';
       // Needs to run twice on initialization
       if(!resized) {
         resized = true;
@@ -415,6 +416,8 @@ StudioApp.prototype.init = function(config) {
       }).bind(this));
     }).bind(this));
   }
+
+  smallFooterUtils.bindHandlers();
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -839,7 +842,58 @@ StudioApp.prototype.onResize = function() {
 
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
+
+  // Content below visualization is a resizing scroll area in pinned mode
+  onResizeSmallFooter();
 };
+
+/**
+ * Resizes the content area below the visualization in pinned (viewport height)
+ * view mode.
+ */
+function resizePinnedBelowVisualizationArea() {
+  var pinnedBelowVisualization = document.querySelector(
+      '#visualizationColumn.pin_bottom #belowVisualization');
+  if (!pinnedBelowVisualization) {
+    return;
+  }
+
+  var visualization = document.getElementById('visualization');
+  var gameButtons = document.getElementById('gameButtons');
+  var smallFooter = document.querySelector('.small-footer');
+
+  var top = 0;
+  if (visualization) {
+    top += $(visualization).outerHeight(true);
+  }
+
+  if (gameButtons) {
+    top += $(gameButtons).outerHeight(true);
+  }
+
+  var bottom = 0;
+  if (smallFooter) {
+    var codeApp = $('#codeApp');
+    bottom += $(smallFooter).outerHeight(true);
+    // Footer is relative to the document, not codeApp, so we need to
+    // remove the codeApp bottom offset to get the correct margin.
+    bottom -= parseInt(codeApp.css('bottom'), 10);
+  }
+
+  pinnedBelowVisualization.style.top = top + 'px';
+  pinnedBelowVisualization.style.bottom = bottom + 'px';
+}
+
+/**
+ * Debounced onResize operations that update the layout to support sizing
+ * to viewport height and using the small footer.
+ * @type {Function}
+ */
+var onResizeSmallFooter = _.debounce(function () {
+  resizePinnedBelowVisualizationArea();
+  smallFooterUtils.repositionCopyrightFlyout();
+  smallFooterUtils.repositionMoreMenu();
+}, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
@@ -913,6 +967,22 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
+
+  var smallFooter = document.querySelector('.small-footer');
+  if (smallFooter) {
+    smallFooter.style.maxWidth = newVizWidthString;
+
+    // If the small print and language selector are on the same line,
+    // the small print should float right.  Otherwise, it should float left.
+    var languageSelector = smallFooter.querySelector('form');
+    var smallPrint = smallFooter.querySelector('small');
+    if (smallPrint.offsetTop === languageSelector.offsetTop) {
+      smallPrint.style.float = 'right';
+    } else {
+      smallPrint.style.float = 'left';
+    }
+  }
+
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
 };
@@ -1284,6 +1354,10 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
+    var smallFooter = document.querySelector(".small-footer");
+    if (smallFooter) {
+      smallFooter.className += " responsive";
+    }
   }
 };
 
