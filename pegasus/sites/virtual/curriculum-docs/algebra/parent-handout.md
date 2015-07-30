@@ -8,7 +8,7 @@ theme: none
 
 [content]
 
-Software and technology are everywhere - in our computers, in our pockets, in our cars, and used in banking, communications, entertainment, transportation, and science. But very few kids are learning how to actually create technology - games, apps and programs. Even fewer US schools teach computer science. Women are underrepresented in this field, and so are African Americans and Hispanic Americans. Computer science is foundational for every student, whether they want to pursue a career in software, or to be a more well rounded citizen in the 21st century. That’s why we’re proud to introduce our classroom to the Computer Science in Algebra course, as part of Code Studio, an online learning platform by Code.org.
+Software and technology are everywhere - in our computers, in our pockets, in our cars, and used in banking, communications, entertainment, transportation, and science. But very few kids are learning how to actually create technology - games, apps and programs. Even fewer US schools teach computer science. Women are underrepresented in this field, and so are black and Hispanic Americans. Computer science is foundational for every student, whether they want to pursue a career in software, or to be a more well rounded citizen in the 21st century. That’s why we’re proud to introduce our classroom to the Computer Science in Algebra course, as part of Code Studio, an online learning platform by Code.org.
 
 ### What is Code Studio?
 Code Studio is a fun, creative platform for learning basic coding and computer science! Using a blended learning model, your children are learning with a mix of online activities (on the computer) and “unplugged” classroom activities that use no computer at all.
