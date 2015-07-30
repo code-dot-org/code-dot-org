@@ -14,32 +14,32 @@ class PropertyBag
   end
 
   def items()
-    @items ||= @table.where(app_id:@channel_id, storage_id:@storage_id)
+    @items ||= @table.where(app_id: @channel_id, storage_id: @storage_id)
   end
 
   def delete(name)
-    delete_count = items.where(name:name).delete
+    delete_count = items.where(name: name).delete
     raise NotFound, "property `#{name}` not found" unless delete_count > 0
     true
   end
 
   def get(name)
-    row = items.where(name:name).first
+    row = items.where(name: name).first
     raise NotFound, "property `#{name}` not found" unless row
     PropertyBag.parse_value(row[:value])
   end
 
   def set(name, value, ip_address)
     row = {
-      app_id:@channel_id,
-      storage_id:@storage_id,
-      name:name,
-      value:value.to_json,
-      updated_at:DateTime.now,
-      updated_ip:ip_address,
+      app_id: @channel_id,
+      storage_id: @storage_id,
+      name: name,
+      value: value.to_json,
+      updated_at: DateTime.now,
+      updated_ip: ip_address,
     }
 
-    update_count = items.where(name:name).update(row)
+    update_count = items.where(name: name).update(row)
     if update_count == 0
       row[:id] = @table.insert(row)
     end
@@ -86,9 +86,9 @@ class DynamoPropertyBag
   def delete(name)
     begin
       db.delete_item(
-        table_name:CDO.dynamo_properties_table,
-        key:{'hash'=>@hash,name:name},
-        expected:name_exists(name),
+        table_name: CDO.dynamo_properties_table,
+        key: {'hash'=>@hash,name: name},
+        expected: name_exists(name),
       )
     rescue Aws::DynamoDB::Errors::ConditionalCheckFailedException
       raise NotFound, "key '#{name}' not found"
@@ -98,8 +98,8 @@ class DynamoPropertyBag
 
   def get(name)
     item = db.get_item(
-      table_name:CDO.dynamo_properties_table,
-      key:{'hash'=>@hash, 'name'=>name},
+      table_name: CDO.dynamo_properties_table,
+      key: {'hash'=>@hash, 'name'=>name},
     ).item
 
     raise NotFound, "key '#{name}' not found" unless item
@@ -108,13 +108,13 @@ class DynamoPropertyBag
 
   def set(name, value, ip_address)
     db.put_item(
-      table_name:CDO.dynamo_properties_table,
-      item:{
-        hash:@hash,
-        name:name,
-        updated_at:DateTime.now.to_s,
-        updated_ip:ip_address,
-        value:value.to_json,
+      table_name: CDO.dynamo_properties_table,
+      item: {
+        hash: @hash,
+        name: name,
+        updated_at: DateTime.now.to_s,
+        updated_ip: ip_address,
+        value: value.to_json,
       },
     )
     value
@@ -126,15 +126,15 @@ class DynamoPropertyBag
     results = {}
     begin
       page = db.query(
-        table_name:CDO.dynamo_properties_table,
+        table_name: CDO.dynamo_properties_table,
         key_conditions: {
           "hash" => {
             attribute_value_list: [@hash],
             comparison_operator: "EQ",
           },
         },
-        attributes_to_get:['name', 'value'],
-        exclusive_start_key:last_evaluated_key,
+        attributes_to_get: ['name', 'value'],
+        exclusive_start_key: last_evaluated_key,
       ).first
 
       page[:items].each do |item|
@@ -147,7 +147,7 @@ class DynamoPropertyBag
   end
 
   def name_exists(id)
-    { "name" => { value:id, comparison_operator:'EQ', } }
+    { "name" => { value: id, comparison_operator: 'EQ', } }
   end
 
 end

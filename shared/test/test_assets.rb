@@ -8,9 +8,11 @@ ENV['RACK_ENV'] = 'test'
 
 class AssetsTest < Minitest::Unit::TestCase
 
-  def test_assets
+  def setup
     init_apis
+  end
 
+  def test_assets
     channel_id = create_channel
 
     ensure_aws_credentials(channel_id)
@@ -63,8 +65,6 @@ class AssetsTest < Minitest::Unit::TestCase
   end
 
   def test_assets_copy_all
-    init_apis
-
     src_channel_id = create_channel
     dest_channel_id = create_channel
 
@@ -91,6 +91,11 @@ class AssetsTest < Minitest::Unit::TestCase
     delete(dest_channel_id, sound_filename)
     delete_channel(src_channel_id)
     delete_channel(dest_channel_id)
+  end
+
+  def test_copy_all_with_no_src
+    copy_all(nil, create_channel)
+    assert @assets.last_response.bad_request?
   end
 
   # Methods below this line are test utilities, not actual tests

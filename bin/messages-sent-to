@@ -7,7 +7,7 @@ def poste_message(id)
   message = $poste_messages[id]
   return message if message
 
-  message = POSTE_DB[:poste_messages].where(id:id).first;
+  message = POSTE_DB[:poste_messages].where(id: id).first;
   $poste_messages[id] = message if message
 
   message
@@ -18,7 +18,7 @@ def poste_url(id)
   url = $poste_urls[id]
   return url if url
 
-  url = POSTE_DB[:poste_urls].where(id:id).first;
+  url = POSTE_DB[:poste_urls].where(id: id).first;
   $poste_urls[id] = url if url
 
   url
@@ -27,16 +27,16 @@ end
 def main()
   email = ARGV[0].to_s.strip.downcase
 
-  contact = POSTE_DB[:contacts].where(email:email).first
+  contact = POSTE_DB[:contacts].where(email: email).first
   unless contact
     puts "'#{email}' not found in Poste contacts."
     exit 1
   end
 
-  deliveries = POSTE_DB[:poste_deliveries].where(contact_id:contact[:id])
+  deliveries = POSTE_DB[:poste_deliveries].where(contact_id: contact[:id])
   deliveries.each do |delivery|
-    opened = POSTE_DB[:poste_opens].where(delivery_id:delivery[:id]).first
-    clicks = POSTE_DB[:poste_clicks].where(delivery_id:delivery[:id])
+    opened = POSTE_DB[:poste_opens].where(delivery_id: delivery[:id]).first
+    clicks = POSTE_DB[:poste_clicks].where(delivery_id: delivery[:id])
 
     puts poste_message(delivery[:message_id])[:name] + " on " + delivery[:sent_at].strftime("%Y-%m-%d")
     puts "  opened on " + opened[:created_at].strftime("%Y-%m-%d") if opened

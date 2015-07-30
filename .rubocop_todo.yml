@@ -265,11 +265,6 @@ Style/Semicolon:
 Style/SingleSpaceBeforeFirstArg:
   Enabled: false
 
-# Offense count: 1027
-# Cop supports --auto-correct.
-Style/SpaceAfterColon:
-  Enabled: false
-
 # Offense count: 171
 # Cop supports --auto-correct.
 Style/SpaceAfterComma:

@@ -10,8 +10,10 @@ def main
     workshops.each do |workshop|
       # Get all attendees of a single workshop
       recipients = DASHBOARD_DB.fetch("SELECT * FROM users JOIN cohorts_users ON id = user_id JOIN workshop_cohorts ON workshop_cohorts.cohort_id = cohorts_users.cohort_id WHERE workshop_cohorts.workshop_id = #{workshop[:id]};")
+      workshop_segments = DASHBOARD_DB.fetch("SELECT * FROM segments WHERE workshop_id = #{workshop[:id]};")
       recipients.each do |recipient|
         recipient_ops_data = JSON.parse(recipient[:properties])
+        workshop[:segments] = workshop_segments
         OpsMailer.workshop_in_2_weeks_reminder(workshop, recipient, recipient_ops_data).deliver
       end
     end
