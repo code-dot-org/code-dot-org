@@ -15,11 +15,11 @@ Code Studio is a fun, creative platform for learning basic coding and computer s
 
 This format helps nurture creativity, problem solving, collaboration, and logic through interactive, self-paced tutorials, featuring short video lectures and game-like puzzles. 
 
-<!-- <center>
-<img src="https://code.org/curriculum/docs/k-5/blocks-color.png" style="width: 30%; margin: 20px;"/>
-<img src="https://code.org/curriculum/docs/k-5/artist-color.png" style="width: 20%; margin: 20px;"/>
-<img src="https://code.org/curriculum/docs/k-5/dog-color.png" style="width: 20%; margin: 20px;"/>
-</center> -->
+<center>
+<img src="pinkstar.png" style="width: 20%; margin: 20px;"/>
+<img src="collidefunction.png" style="width: 30%; margin: 20px;"/>
+<img src="bat.png" style="width: 20%; margin: 20px;"/>
+</center>
          
 ### Students will study topics such as:
 * How the Internet works
