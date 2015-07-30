@@ -2338,7 +2338,15 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
   var neighbors = [];
 
   if (vizElement instanceof NetSimVizSimulationNode) {
-    neighbors = this.getReciprocatedWiresAttachedToNode(vizElement);
+
+    // In broadcast mode we display "fake," unidirectional wires. In
+    // regular mode, we only want to display wires connecting us to
+    // nodes that are also connected back.
+    if (netsimGlobals.getLevelConfig().broadcastMode) {
+      neighbors = this.getWiresAttachedToNode(vizElement);
+    } else {
+      neighbors = this.getReciprocatedWiresAttachedToNode(vizElement);
+    }
 
     // Special case: The DNS node fake is a neighbor of a visited router
     if (vizElement.isRouter && this.autoDnsNode_) {
@@ -5777,6 +5785,13 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.packets_ = [];
 
   /**
+   * Last addres we sent a packet to
+   * @type {string}
+   * @private
+   */
+  this.lastPacketToAddress_ = "0";
+
+  /**
    * Our local node's address, zero until assigned by a router.
    * @type {number}
    * @private
@@ -5891,6 +5906,7 @@ NetSimSendPanel.prototype.tick = function (clock) {
   if (firstPacket.isSending()) {
     firstPacket.tick(clock);
   } else {
+    this.lastPacketToAddress_ = firstPacket.toAddress;
     firstPacket.beginSending(this.netsim_.myNode);
   }
 };
@@ -5929,7 +5945,7 @@ NetSimSendPanel.prototype.render = function () {
   // TODO: NetSim buttons in this panel need to do nothing if disabled!
   this.getBody()
       .find('#send-button')
-      .click(this.onSendButtonPress_.bind(this));
+      .click(this.onSendEventTriggered_.bind(this));
   this.getBody()
       .find('#set-wire-button')
       .click(this.onSetWireButtonPress_.bind(this));
@@ -5952,11 +5968,14 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     packetEditor.setPacketCount(newPacketCount);
   });
 
-  // Copy the to address of the previous packet, for convenience.
+  // Copy the to address of the previous packet if it exists. Otherwise
+  // use the last address sent.
   // TODO: Do we need to lock the toAddress for all of these packets together?
-  var newPacketToAddress = 0;
+  var newPacketToAddress;
   if (this.packets_.length > 0) {
     newPacketToAddress = this.packets_[this.packets_.length - 1].toAddress;
+  } else {
+    newPacketToAddress = this.lastPacketToAddress_;
   }
 
   // Create a new packet
@@ -5972,13 +5991,17 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     bitRate: this.bitRate_,
     enabledEncodings: this.enabledEncodings_,
     removePacketCallback: this.removePacket_.bind(this),
-    contentChangeCallback: this.onContentChange_.bind(this)
+    contentChangeCallback: this.onContentChange_.bind(this),
+    enterKeyPressedCallback: this.onSendEventTriggered_.bind(this)
   });
 
   // Attach the new packet to this SendPanel
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   newPacket.getRoot().appendTo(this.packetsDiv_);
-  newPacket.getRoot().hide().slideDown('fast', updateLayout);
+  newPacket.getRoot().hide().slideDown('fast', function () {
+    newPacket.getFirstVisibleMessageBox().focus();
+    updateLayout();
+  });
   this.packets_.push(newPacket);
 };
 
@@ -6033,16 +6056,21 @@ NetSimSendPanel.prototype.resetPackets_ = function () {
 NetSimSendPanel.prototype.onContentChange_ = function () {
   var nextBit = this.getNextBit_();
 
-  // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
-  // format this button label using the "A/B" convention
-  if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
-      !this.isEncodingEnabled_(EncodingType.BINARY)) {
-    nextBit = binaryToAB(nextBit);
-  }
+  if (nextBit === undefined) {
+    // If there are no bits queued up, disable the button
+    this.getSetWireButton().text(i18n.setWire());
+    this.conditionallyToggleSetWireButton();
+  } else {
+    // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
+    // format this button label using the "A/B" convention
+    if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
+        !this.isEncodingEnabled_(EncodingType.BINARY)) {
+      nextBit = binaryToAB(nextBit);
+    }
 
-  this.getBody()
-      .find('#set-wire-button')
-      .text(i18n.setWireToValue({ value: nextBit }));
+    this.getSetWireButton().text(i18n.setWireToValue({ value: nextBit }));
+    this.conditionallyToggleSetWireButton();
+  }
 };
 
 /**
@@ -6093,9 +6121,9 @@ NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimSendPanel.prototype.onSendButtonPress_ = function (jQueryEvent) {
-  var thisButton = $(jQueryEvent.target);
-  if (thisButton.is('[disabled]')) {
+NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
+  var triggeringTarget = $(jQueryEvent.target);
+  if (triggeringTarget.is('[disabled]')) {
     return;
   }
 
@@ -6118,29 +6146,36 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
     throw new Error("Tried to set wire state when no connection is established.");
   }
 
-  // Find the first bit of the first packet.  Set the wire to 0/off if
-  // there is no first bit.
-  this.disableEverything();
-  this.netsim_.animateSetWireState(this.getNextBit_());
-  myNode.setSimplexWireState(this.getNextBit_(), function (err) {
-    if (err) {
-      logger.warn(err.message);
-      return;
-    }
+  // Find the first bit of the first packet. Disallow setting the wire
+  // if there is no first bit.
+  var nextBit = this.getNextBit_();
+  if (nextBit === undefined) {
+    throw new Error("Tried to set wire state when no bit is queued.");
+  } else {
+    this.disableEverything();
+    this.netsim_.animateSetWireState(nextBit);
+    myNode.setSimplexWireState(nextBit, function (err) {
+      if (err) {
+        logger.warn(err.message);
+        return;
+      }
 
-    this.consumeFirstBit();
-    this.enableEverything();
-  }.bind(this));
+      this.consumeFirstBit();
+      this.enableEverything();
+      this.conditionallyToggleSetWireButton();
+    }.bind(this));
+  }
 };
 
 /**
  * Get the next bit that would be sent, if sending the entered message one
  * bit at a time.
- * @returns {string} single bit as a "0" or "1"
+ * @returns {string|undefined} single bit as a "0" or "1" if there are
+ * bits to be sent, or undefined otherwise
  * @private
  */
 NetSimSendPanel.prototype.getNextBit_ = function () {
-  return this.packets_.length > 0 ? this.packets_[0].getFirstBit() : '0';
+  return this.packets_.length > 0 ? this.packets_[0].getFirstBit() : undefined;
 };
 
 /** Disable all controls in this panel, usually during network activity. */
@@ -6150,6 +6185,28 @@ NetSimSendPanel.prototype.disableEverything = function () {
   if (this.packetSizeControl_) {
     this.packetSizeControl_.disable();
   }
+};
+
+/**
+ * Finds the button used to set the wire state
+ * @returns {jQuery}
+ */
+NetSimSendPanel.prototype.getSetWireButton = function () {
+  return this.getBody().find('#set-wire-button');
+};
+
+/** Enables the setWireButton if there is another bit in the queue,
+ * disables it otherwise.
+ * @returns {jQuery}
+ */
+NetSimSendPanel.prototype.conditionallyToggleSetWireButton = function () {
+  var setWireButton = this.getSetWireButton();
+  if (this.getNextBit_() === undefined) {
+    setWireButton.attr('disabled', 'disabled');
+  } else {
+    setWireButton.removeAttr('disabled');
+  }
+  return setWireButton;
 };
 
 /** Enable all controls in this panel, usually after network activity. */
@@ -7318,6 +7375,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
  * @param {function} initialConfig.removePacketCallback
  * @param {function} initialConfig.contentChangeCallback
+ * @param {function} initialConfig.enterKeyPressedCallback
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
@@ -7408,6 +7466,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.contentChangeCallback_ = initialConfig.contentChangeCallback;
 
   /**
+   * Method to notify our parent container that the enter key has been
+   * pressed
+   * @type {function}
+   * @private
+   */
+  this.enterKeyPressedCallback_ = initialConfig.enterKeyPressedCallback;
+
+  /**
    * @type {jQuery}
    * @private
    */
@@ -7474,6 +7540,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
  */
 NetSimPacketEditor.prototype.getRoot = function () {
   return this.rootDiv_;
+};
+
+/**
+ * Returns the first visible message box, so that we can focus() on it
+ * @returns {jQuery}
+ */
+NetSimPacketEditor.prototype.getFirstVisibleMessageBox = function () {
+  return this.getRoot().find('textarea.message:visible').first();
 };
 
 /** Replace contents of our root element with our own markup. */
@@ -7569,6 +7643,16 @@ var removeWatermark = function (focusEvent) {
     target.val('');
     target.removeClass('watermark');
   }
+};
+
+/**
+ * Helper method for determining if a given keyPress event represents a
+ * CLEAN enter press. As in, one without the Shift or Control modifiers.
+ * @param {Event} jqueryEvent
+ * @returns {boolean} true iff the given event represents a clean enter
+ */
+var isUnmodifiedEnterPress = function (jqueryEvent) {
+  return (jqueryEvent.keyCode == 13 && !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
 };
 
 /**
@@ -7860,6 +7944,11 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     rowFields.message.focus(removeWatermark);
     rowFields.message.keypress(
         makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters));
+    rowFields.message.keydown(function(jqueryEvent){
+      if (isUnmodifiedEnterPress(jqueryEvent)) {
+        this.enterKeyPressedCallback_(jqueryEvent);
+      }
+    }.bind(this));
     rowFields.message.keyup(
         this.makeKeyupHandler('message', rowType.messageConversion));
     rowFields.message.blur(
@@ -8066,12 +8155,14 @@ NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
 };
 
 /**
- * Get just the first bit of the packet binary, for single-bit sending mode.
- * @returns {string} a single bit, as "0" or "1"
+ * Get just the first bit of the packet binary if it exists, for
+ * single-bit sending mode.
+ * @returns {string|undefined} a single bit if it exists, as "0" or "1",
+ * or undefined if none does.
  */
 NetSimPacketEditor.prototype.getFirstBit = function () {
   var binary = this.getPacketBinary();
-  return binary.length > 0 ? binary.substr(0, 1) : '0';
+  return binary.length > 0 ? binary.substr(0, 1) : undefined;
 };
 
 /** @param {number} fromAddress */
@@ -17031,6 +17122,7 @@ var nodeToRowMetadata = function (node) {
     nodeID: node.entityID,
     classAttr: classes.join(' '),
     displayName: node.getDisplayName(),
+    hostname: node.getHostname(),
     status: node.getStatus(),
     isFull: (node.getNodeType() === NodeType.ROUTER) && node.isFull(),
     canConnectToNode: controller.canConnectToNode(node)
@@ -17097,30 +17189,30 @@ function buttonMarkup(buttonText, buttonID, extraClasses, extraAttributes) {
 }
 
 function writeHeader(headerText) {
-  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((126,  headerText )), '</th>\n    </tr>\n  ');128;
+  ; buf.push('\n    <tr>\n      <th colspan="3">', escape((127,  headerText )), '</th>\n    </tr>\n  ');129;
 }
 
 function writeEmptyRow(contents) {
   contents = utils.valueOr(contents, '');
-  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (135,  contents ), '</td>\n    </tr>\n  ');137;
+  ; buf.push('\n    <tr>\n      <td colspan="3" class="empty-row">', (136,  contents ), '</td>\n    </tr>\n  ');138;
 }
 
-function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
-  ; buf.push('\n    <tr>\n      <td nowrap>', escape((143,  nodeName )), '</td>\n      <td>', (144,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');146;
+function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
+  ; buf.push('\n    <tr>\n      <td nowrap>', escape((144,  row.displayName )), ' <small>(', escape((144,  row.hostname )), ')</small></td>\n      <td>', (145,  nodeStatus ), '</td>\n      <td class="button-column">\n        ');147;
           var markup = '';
           if (buttonType === 'join-button') {
-            markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
+            markup = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
           } else if (buttonType === 'accept-button') {
-            markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': nodeID });
+            markup = buttonMarkup(i18n.buttonAccept(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
           } else if (buttonType === 'cancel-button') {
-            markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': nodeID });
+            markup = buttonMarkup(i18n.buttonCancel(), undefined, [buttonType, addlClass, 'secondary'], { 'data-node-id': row.nodeID });
           } else if (buttonType === 'full-button') {
             markup = buttonMarkup(i18n.buttonFull(), undefined, [buttonType, addlClass], { 'disabled': 'disabled' });
           }
-        ; buf.push('\n        ', (158,  markup ), '\n      </td>\n    </tr>\n  ');161;
+        ; buf.push('\n        ', (159,  markup ), '\n      </td>\n    </tr>\n  ');162;
 }
 
-; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((166,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');170;
+; buf.push('\n<div class="content-wrap">\n  <div class="instructions">', escape((167,  controller.getLocalizedLobbyInstructions() )), '</div>\n  <div class="controls">\n    <table>\n\n      ');171;
         // Outgoing request table (hidden if empty)
         if (outgoingRequestRows.length > 0) {
           writeHeader(i18n.outgoingConnectionRequests());
@@ -17130,7 +17222,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
               otherName: row.displayName,
               otherStatus: row.status
             });
-            writeNodeRow(row.nodeID, row.displayName, outgoingStatus, 'cancel-button', row.classAttr);
+            writeNodeRow(row, outgoingStatus, 'cancel-button', row.classAttr);
           });
           writeEmptyRow();
         }
@@ -17144,7 +17236,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
               buttonType = 'accept-button';
             }
             var incomingStatus = i18n.lobbyStatusWaitingForYou();
-            writeNodeRow(row.nodeID, row.displayName, incomingStatus, buttonType, row.classAttr);
+            writeNodeRow(row, incomingStatus, buttonType, row.classAttr);
           });
           writeEmptyRow();
         }
@@ -17160,7 +17252,7 @@ function writeNodeRow(nodeID, nodeName, nodeStatus, buttonType, addlClass) {
               buttonType = 'join-button';
             }
           }
-          writeNodeRow(row.nodeID, row.displayName, row.status, buttonType, row.classAttr);
+          writeNodeRow(row, row.status, buttonType, row.classAttr);
         });
 
         var buttons = [];
