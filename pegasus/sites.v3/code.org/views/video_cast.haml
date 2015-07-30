@@ -1,0 +1,8 @@
+- people.each do |person|
+  .row.film-cast-member
+    %h2.col-xs-12{style: "margin-top: 1em; margin-bottom: .75em; padding-bottom: .5em; border-bottom: 1px solid #b7b7a7;"} #{person[:name_s]}
+    .col-xs-3
+      %img{alt: person[:name_s], src: avatar_image(person[:name_s]), style: "width: 100%; max-width: 100%;"}/
+    .col-xs-9
+      :markdown
+        #{person[:description_t]}

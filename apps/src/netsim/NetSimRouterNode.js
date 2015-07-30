@@ -1438,7 +1438,9 @@ NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
  * @param {NetSimMessage[]} messages
  */
 NetSimRouterNode.prototype.updateRouterQueue_ = function (messages) {
-  var newQueue = messages.filter(this.isMessageToRouter_.bind(this));
+  var newQueue = messages
+    .filter(NetSimMessage.isValid)
+    .filter(this.isMessageToRouter_.bind(this));
   if (_.isEqual(this.routerQueueCache_, newQueue)) {
     return;
   }

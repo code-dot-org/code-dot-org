@@ -1,16 +1,18 @@
 @import 'color';
+@import 'font';
 
 #user_hero {
-  margin-top:30px;
-  .col-50 {
-    width: 50%;
-    float: left;
-  }
+  margin: 10px 0px;
+  padding-right:5px;
+  width: 100%;
+  line-height: 35px;
+
   #welcome {
     left: 0;
     color: $white;
     padding: 10px;
     font-size: 20px;
+    font-family: $gotham-regular;
     text-align: left;
     text-align: center;
     border-top-left-radius: 5px;
@@ -26,8 +28,13 @@
     color: white;
     overflow: hidden;
     padding: 10px;
+    font-family: $gotham-regular;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    font-size: 18px;
+    line-height: 25px;
+    vertical-align: middle;
+
     &.teacher {
       background-color: $light_cyan;
     }
@@ -35,19 +42,20 @@
       background-color: $light_purple;
     }
   }
-  #student_progress {
-    width: 175px;
-    display: inline-block;
+  #currentprogress {
+    width: 70%;
+    float: left;
   }
-  #left_off {
-    width: 175px;
-    display: inline-block;
-  }
-  #student_count {
-    width: 175px;
-    display: inline-block;
+  #coursebuttons {
+    width: 30%;
+    float: right;
+    line-height: 45px;
   }
   a {
     color: white;
+    font-family: $gotham-regular;
+  }
+  .smalltext {
+    font-size: 14px;
   }
 }
