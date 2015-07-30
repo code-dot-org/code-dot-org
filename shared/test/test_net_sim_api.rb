@@ -57,6 +57,12 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?, "Table was not empty"
   end
 
+  def test_get_400_on_inserting_orphaned_message
+    create_message({fromNodeID: 1, toNodeID: 2, simulatedBy: 2})
+    assert_equal 400, @net_sim_api.last_response.status, "Orphaned message not created"
+    assert_equal 0, read_records(TABLE_NAMES[:message]).count, "Created no messages"
+  end
+
   def test_get_400_on_bad_json_update
     # Create a record correctly
     record_create_response = create_record({name:'charles', age:7, male:false})
