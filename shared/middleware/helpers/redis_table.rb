@@ -45,15 +45,10 @@ class RedisTable
   #
   # @return [Array<String>]
   def to_a
-    result = []
-    @props.to_hash.each do |key, value|
-      # Filter the properties to only those in the current table,
-      # ignoring the special row_id_key.
-      if table_from_row_key(key) == @table_name and key != @row_id_key
-        result << make_row(id_from_row_key(key), value)
-      end
-    end
-    result.sort_by {|row| row['id']}
+    @props.to_hash.
+        select { |k, v| belongs_to_this_table(k) }.
+        collect { |k, v| make_row(id_from_row_key(k), v) }.
+        sort_by { |row| row[:id] }
   end
 
   # Fetches a row by id.
@@ -84,11 +79,9 @@ class RedisTable
   end
 
   # Deletes all the tables and rows in a shard.
-  def self.reset_shard(shard_id, redis, pub_sub_api)
+  def self.reset_shard(shard_id, redis, pub_sub)
     RedisPropertyBag.new(redis, shard_id).delete_all
-    if pub_sub_api
-      pub_sub_api.publish(shard_id, '', {:action => 'reset_shard'})
-    end
+    pub_sub.publish(shard_id, '', {:action => 'reset_shard'}) if pub_sub
   end
 
   private
@@ -149,4 +142,14 @@ class RedisTable
   def publish_change(update_hash)
     @pub_sub_api.publish(@shard_id, @table_name, update_hash) if @pub_sub_api
   end
+
+  # Return true if row_key is a row_key for this table.
+  #
+  # @param [String] row_key
+  # @return [Boolean]
+  def belongs_to_this_table(row_key)
+    table_from_row_key(row_key) == @table_name and row_key != @row_id_key
+  end
+
+
 end
