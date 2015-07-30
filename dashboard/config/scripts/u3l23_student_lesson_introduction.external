@@ -6,18 +6,18 @@ markdown <<MARKDOWN
 
 # Background
 
-Natural Language Processing (NLP) is a field of computer science which refers to algorithms that process unstructured text -- both written and spoken. It is technology that allows programs, called chatbots, such as Siri to recognize your voice and respond “intelligently”. Some look for keywords and respond with pre-fabricated sentences. More sophisticated chatbots analyze the parts of speech and the meaning of words.
+Natural Language Processing (NLP) is a field of computer science which refers to algorithms that process unstructured text - both written and spoken. It is technology that allows voice recognition programs, such as Siri, to respond “intelligently” to your questions and commands. Some look for keywords and respond with pre-fabricated sentences. More sophisticated assistants analyze the parts of speech and the meaning of words.
 
 # Lesson
 
-* Interact with a variety of chatbots.
-* Speculate on elements in the algorithms for chatbots. 
-* Analyze the purpose, features, and interface of a chatbot. 
+* Interact with an intelligent personal assistant.
+* Speculate on elements in the algorithms for assistants. 
+* Analyze the purpose, features, and interface of an assistant. 
 
 
 
 # Resources
-* Activity: <a href="https://docs.google.com/document/d/13dG_S8Qi8sMoWUbCdpNa8CtrzLGoWlk-BbrAPRnwEYk" target="_blank">Chatbot Analysis 
+* Activity: <a href="https://docs.google.com/a/code.org/document/d/18RQvHC2MUegTzwiz0ge_X3fmDQ_TGObcpt597rFy5Xo/edit?usp=sharing" target="_blank">Assistant Analysis 
 </a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
