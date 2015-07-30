@@ -237,7 +237,7 @@ NetSimPacketEditor.prototype.getRoot = function () {
  * Returns the first visible message box, so that we can focus() on it
  * @returns {jQuery}
  */
-NetSimPacketEditor.prototype.getFirstVisibleMessage = function () {
+NetSimPacketEditor.prototype.getFirstVisibleMessageBox = function () {
   return this.getRoot().find('textarea.message:visible').first();
 };
 
