@@ -50,7 +50,7 @@ class Youtube
         cmd = "viddl-rb #{url} -s #{dir} -q 640:360:mp4"
       end
 
-      IO.popen(cmd) { |output| output.each { |line| CDO.log.info line } }
+      IO.popen(cmd) { |output| output.each { |line| CDO.log.info('[Youtube] ' + line.chomp) } }
       raise RuntimeError, 'Video processing command exited with an error' unless $?.success?
       file = Dir.glob("#{dir}/*").first
       raise RuntimeError, 'Video not available in correct format' unless file && File.extname(file) == '.mp4'
