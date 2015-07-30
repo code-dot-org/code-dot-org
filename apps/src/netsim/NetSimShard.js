@@ -37,6 +37,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   /** @type {PubSubService} */
   this.pubSub = PubSubService.create(pubSubConfig);
   var channel = this.pubSub.subscribe(shardID);
+  channel.subscribe('all_tables', NetSimShard.prototype.onPubSubEvent.bind(this));
 
   /**
    * Collection of client (user) nodes and router nodes on the shard.
@@ -148,4 +149,15 @@ NetSimShard.prototype.resetEverything = function (onComplete) {
     var err = new Error('status: ' + status + '; error: ' + error);
     onComplete(err, false);
   });
+};
+
+/**
+ * Called when the PubSub service fires an event that applies to all tables
+ * @param {Object} eventData
+ */
+NetSimShard.prototype.onPubSubEvent = function () {
+  // Right now, the only all_tables event is the shard reset.
+  // Reading the node table informs our node that a reset has occurred.
+  // TODO: Use a "disconnect from shard" callback instead here.
+  this.nodeTable.readAll(function () {});
 };
