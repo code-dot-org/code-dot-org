@@ -1,7 +1,9 @@
 require 'minitest/autorun'
 require 'rack/test'
-require File.expand_path '../../../deployment', __FILE__
-require File.expand_path '../../middleware/net_sim_api', __FILE__
+require_relative '../../deployment'
+require_relative '../middleware/net_sim_api'
+require_relative 'fake_redis_client'
+require_relative 'spy_pub_sub_api'
 
 ENV['RACK_ENV'] = 'test'
 
@@ -11,11 +13,14 @@ class NetSimApiTest < Minitest::Unit::TestCase
     # The NetSim API does not need to share a cookie jar with the Channels API.
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
     @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
-    @shard_id = '_testShard'
+    @shard_id = '_testShard2'
     @table_name = 'n' # for "node table"
 
     # Never ever let tests hit the real Pusher API, even if our locals.yml says so.
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
+
+    # Always use a fake Redis.
+    NetSimApi.override_redis_for_test(FakeRedisClient.new)
 
     # Every test should start with an empty table
     assert read_records.first.nil?, "Table was not empty"
@@ -123,6 +128,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     NetSimApi.override_pub_sub_api_for_test(test_spy)
 
     record_create_response = create_record({name:'franklin', age:7, male:false})
+
     record_id = record_create_response['id'].to_i
     delete_record(record_id)
 
@@ -167,23 +173,4 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}"
   end
 
-end
-
-# Test-only pub/sub API that sense whether events have been published without
-# actually contacting a remote service.
-class SpyPubSubApi
-  attr_reader :publish_history
-
-  def initialize
-    @publish_history = []
-  end
-
-  # Pretends to publish an event to a a channel using the Pub/Sub system.
-  #
-  # @param [String] channel a single channel name that the event is to be published on
-  # @param [String] event - the name of the event to be triggered
-  # @param [Hash] data - the data to be sent with the event
-  def publish(channel, event, data)
-    @publish_history.push({ :channel => channel, :event => event, :data => data })
-  end
 end
