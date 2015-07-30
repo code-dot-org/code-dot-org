@@ -172,4 +172,3 @@ class NetSimApi < Sinatra::Base
   end
 
 end
-
