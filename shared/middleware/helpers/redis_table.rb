@@ -72,7 +72,8 @@ class RedisTable
     publish_change({:action => 'delete_all'})
   end
 
- private
+  private
+  
   # Returns a new, monotonically increasing id for a row.
   # @return [String]
   def next_id
@@ -106,3 +107,4 @@ class RedisTable
     @pub_sub_api.publish(@shard_id, @table_name, update_hash)
   end
 end
+
