@@ -9,12 +9,14 @@ ENV['RACK_ENV'] = 'test'
 
 class NetSimApiTest < Minitest::Unit::TestCase
 
+  TABLE_NAMES = NetSimApi::TABLE_NAMES
+
   def setup
     # The NetSim API does not need to share a cookie jar with the Channels API.
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
     @net_sim_api = Rack::Test::Session.new(Rack::MockSession.new(NetSimApi, "studio.code.org"))
     @shard_id = '_testShard2'
-    @table_name = 'n' # for "node table"
+    @table_name = TABLE_NAMES[:node]
 
     # Never ever let tests hit the real Pusher API, even if our locals.yml says so.
     NetSimApi.override_pub_sub_api_for_test(SpyPubSubApi.new)
@@ -23,7 +25,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     NetSimApi.override_redis_for_test(FakeRedisClient.new)
 
     # Every test should start with an empty table
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records.first.nil?, "Table did not begin empty"
   end
 
   def test_create_read_update_delete
@@ -58,6 +60,12 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     # Verify that no record was created
     assert read_records.first.nil?, "Table was not empty"
+  end
+
+  def test_get_400_on_inserting_orphaned_message
+    create_message({fromNodeID: 1, toNodeID: 2, simulatedBy: 2})
+    assert_equal 400, @net_sim_api.last_response.status, "Orphaned message not created"
+    assert_equal 0, read_records(TABLE_NAMES[:message]).count, "Created no messages"
   end
 
   def test_get_400_on_bad_json_update
@@ -141,11 +149,116 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?, "Table was not empty"
   end
 
+  def test_node_delete_cascades_to_node_wires
+
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
+    node_c = create_node({name: 'nodeC'})
+
+    wire_ab = create_wire(node_a['id'], node_b['id'])
+    wire_ca = create_wire(node_c['id'], node_a['id'])
+    wire_bc = create_wire(node_b['id'], node_c['id'])
+
+    assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
+    assert_equal 3, read_records(TABLE_NAMES[:wire]).count, "Didn't create 3 wires"
+
+    delete_node(node_a['id'])
+
+    # Assert nodeA is gone
+    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+
+    # Assert wire AB and CA are gone
+    assert !record_exists(TABLE_NAMES[:wire], wire_ab['id'])
+    assert !record_exists(TABLE_NAMES[:wire], wire_ca['id'])
+
+    # Assert node B and C are still there
+    assert record_exists(TABLE_NAMES[:node], node_b['id'])
+    assert record_exists(TABLE_NAMES[:node], node_c['id'])
+
+    # Assert wire BC is still there
+    assert record_exists(TABLE_NAMES[:wire], wire_bc['id'])
+  ensure
+    delete_node(node_a['id'])
+    delete_node(node_b['id'])
+    delete_node(node_c['id'])
+    delete_wire(wire_ab['id'])
+    delete_wire(wire_ca['id'])
+    delete_wire(wire_bc['id'])
+    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
+  end
+
+  def test_node_delete_cascades_to_messages
+
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
+
+    message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
+    message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
+
+    assert_equal 2, read_records(TABLE_NAMES[:node]).count, "Didn't create 2 nodes"
+    assert_equal 2, read_records(TABLE_NAMES[:message]).count, "Didn't create 2 messages"
+
+    delete_node(node_a['id'])
+
+    # Assert nodeA is gone
+    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+
+    # Assert message from B to A is gone
+    assert !record_exists(TABLE_NAMES[:message], message_b_to_a['id'])
+
+    # Assert node B is still there
+    assert record_exists(TABLE_NAMES[:node], node_b['id'])
+
+    # Assert message from A to B is still there
+    assert record_exists(TABLE_NAMES[:message], message_a_to_b['id'])
+  ensure
+    delete_node(node_a['id'])
+    delete_node(node_b['id'])
+    delete_message(message_a_to_b['id'])
+    delete_message(message_b_to_a['id'])
+    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+  end
+
   # Methods below this point are test utilities, not actual tests
   private
 
-  def create_record(record)
-    @net_sim_api.post "/v3/netsim/#{@shard_id}/#{@table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+  def record_exists(table_name, record_id)
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{table_name}/#{record_id}"
+    200 == @net_sim_api.last_response.status
+  end
+
+  def create_node(record)
+    create_record record, TABLE_NAMES[:node]
+  end
+
+  def delete_node(id)
+    delete_record id, TABLE_NAMES[:node]
+  end
+
+  def create_wire(from_node_id, to_node_id)
+    wire_record = {
+      :localNodeID => from_node_id,
+      :remoteNodeID => to_node_id
+    }
+    create_record wire_record, TABLE_NAMES[:wire]
+  end
+
+  def delete_wire(id)
+    delete_record id, TABLE_NAMES[:wire]
+  end
+
+  def create_message(record)
+    create_record record, TABLE_NAMES[:message]
+  end
+
+  def delete_message(id)
+    delete_record id, TABLE_NAMES[:message]
+  end
+
+  def create_record(record, table_name = @table_name)
+    @net_sim_api.post "/v3/netsim/#{@shard_id}/#{table_name}", record.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     JSON.parse(@net_sim_api.last_response.body)
   end
 
@@ -154,8 +267,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @net_sim_api.last_response
   end
 
-  def read_records
-    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{@table_name}"
+  def read_records(table_name = @table_name)
+    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{table_name}"
     JSON.parse(@net_sim_api.last_response.body)
   end
 
@@ -169,8 +282,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @net_sim_api.last_response
   end
 
-  def delete_record(id)
-    @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{@table_name}/#{id}"
+  def delete_record(id, table_name = @table_name)
+    @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{table_name}/#{id}"
+    @net_sim_api.last_response
   end
 
 end
