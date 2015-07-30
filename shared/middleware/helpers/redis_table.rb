@@ -32,8 +32,9 @@ class RedisTable
   # Inserts a new row, notifying other clients using the pubsub service.
   #
   # @param [Hash] value The hash for the new row.
+  # @param [String] ignored_ip Unused, for compatability with other table apis.
   # @return [Hash] The inserted value, including the new :id field.
-  def insert(value)
+  def insert(value, ignored_ip=nil)
     new_row_id = next_id
     @props.set(row_key(new_row_id), value.to_json)
     publish_change({:action => 'insert', :id => new_row_id})
@@ -67,7 +68,8 @@ class RedisTable
   #
   # @param [Integer] id The id of the row to update.
   # @param [Hash] hash The updated hash.
-  def update(id, hash)
+  # @param [String] ignored_ip Unused, for compatability with other table apis.
+  def update(id, hash, ignored_ip=nil)
     @props.set(row_key(id), hash.to_json)
     publish_change({:action => 'update', :id => id})
     merge_id(hash, id)

@@ -89,7 +89,7 @@ class NetSimApi < Sinatra::Base
 
     begin
       value = get_table(shard_id, table_name).
-          insert(JSON.parse(request.body.read))
+          insert(JSON.parse(request.body.read), request.ip)
     rescue JSON::ParserError
       bad_request
     end
@@ -112,7 +112,7 @@ class NetSimApi < Sinatra::Base
     begin
       table = get_table(shard_id, table_name)
       int_id = id.to_i
-      value = table.update(int_id, JSON.parse(request.body.read))
+      value = table.update(int_id, JSON.parse(request.body.read), request.ip)
     rescue JSON::ParserError
       bad_request
     end
