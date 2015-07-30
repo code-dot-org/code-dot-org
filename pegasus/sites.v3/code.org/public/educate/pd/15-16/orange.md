@@ -189,7 +189,10 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-TBD
+Semester 1: Saturday, October 10, 2015 in Orange County.
+
+
+Semester 2: Saturday, April 16, 2016 in Los Angeles.
 
 8:30am - 3:30pm
 <br/>

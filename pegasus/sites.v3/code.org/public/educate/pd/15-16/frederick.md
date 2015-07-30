@@ -24,30 +24,7 @@ In-person milestone complete! It is now time to complete the 8 hour online porti
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
-Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates:**
-
-TBD
-
-8:30am - 3:30pm
-<br/>
-Breakfast and lunch will be served.
-
-**Location**
-
-TBD
-
-**What to bring to Phase 3 quarterly sessions:**
-
-Laptop
-<br/>
-ECS green journal and curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+Frederick teachers enrolled in the Exploring Computer Science program will attend PD in Howard,. Please visit the [https://staging.code.org/educate/pd/15-16/howard) for all  workshop details
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
