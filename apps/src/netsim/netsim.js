@@ -1103,7 +1103,8 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
         logger.error(err);
         return;
       }
-      this.onShardChange_(null, null);
+      // Reload page without the shard-reset query parameter
+      location.href=location.href.replace(/&?resetShard([^&]$|[^&]*)/i, "");
     }.bind(this));
   }
 };
