@@ -16,7 +16,7 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "open_function_definition": "green shape",
-    "min_workspace_height": "1500",
+    "min_workspace_height": "2000",
     "default_num_example_blocks": "4",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -432,6 +432,7 @@
           <block type="functional_triangle" inline="false"/>
           <block type="functional_square" inline="false"/>
           <block type="functional_rectangle" inline="false"/>
+          <block type="functional_text" inline="false"/>
         </category>
         <category name="Boolean">
           <block type="functional_string_equals" inline="false"/>

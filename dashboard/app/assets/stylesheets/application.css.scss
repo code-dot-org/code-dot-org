@@ -253,6 +253,121 @@ html, body {
   }
 }
 
+/* Styling that keeps the small footer consistent with other page elements */
+$codeApp-left-margin: 25px;
+$small-footer-horizontal-margin: 15px;
+$small-footer-standard-width: 400px;
+
+/* Shared styles so flyout looks like footer */
+.small-footer, #copyright-flyout, #more-menu {
+  background-color: #ddd; /* Matches blockly flyout */
+  color: $light_gray;
+  font-size: 14px;
+  a {
+    font-family: $gotham-bold;
+    font-weight: normal;
+    &:link {
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:visited {
+      color: $light_gray;
+      text-decoration: none;
+    }
+    &:hover {
+      color:$dark_charcoal;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    &:active {
+      color:$light_gray;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+}
+
+.small-footer {
+  position: absolute;
+  bottom: 0;
+  width: $small-footer-standard-width;
+  overflow: hidden;
+  padding-left: $codeApp-left-margin;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  /*
+   * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
+   * fit between the visualization above and the .small-footer
+   */
+  margin-top: 5px;
+
+  form {
+    float: left;
+    margin-right: $small-footer-horizontal-margin;
+  }
+
+  select {
+    width: 80px;
+    font-size:11px;
+    height: 18px;
+    margin-bottom: 0;
+  }
+
+  small {
+    display: block;
+    float: right;
+    margin-right: $small-footer-horizontal-margin;
+    padding-top: 3px;
+    white-space: nowrap;
+  }
+}
+
+#copyright-flyout {
+  display: none; /* Invisible until summoned. */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 625px;
+  max-width: 50%;
+  min-width: 300px;
+  padding: 1em;
+}
+
+#more-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* Prevent default unordered-list style */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & > li > a {
+    display: block;
+    padding: 3px $small-footer-horizontal-margin 3px $codeApp-left-margin;
+    border-bottom: solid thin $lightest_gray;
+
+    &:hover {
+      background-color: $dark_charcoal;
+      color: $lightest_gray;
+      text-decoration: none;
+    }
+  }
+}
+
+/* All three major components of .small-footer are stacked: */
+#more-menu {
+  z-index: 1;
+}
+#copyright-flyout {
+  z-index: 2;
+}
+.small-footer {
+  z-index: 3;
+}
+
 #locale {
   font-family: sans-serif;
   height: 24px;
@@ -725,7 +840,7 @@ input.header_input {
 #codeApp.pin_bottom {
   position: absolute;
   top: 85px;
-  left: 25px;
+  left: $codeApp-left-margin;
   right: 25px;
   bottom: 10px;
   @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
