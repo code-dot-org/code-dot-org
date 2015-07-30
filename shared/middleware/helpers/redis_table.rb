@@ -23,9 +23,12 @@ class RedisTable
 
     @shard_id = shard_id
     @table_name = table_name
+
+    # A counter key in the underlying RedisPropertyBag, used to generate
+    # asecending row ids.
     @row_id_key = "#{table_name}_row_id"
 
-    # Create a redis property bag for storing all tables in the shard.
+    # A redis property bag for storing all tables in the shard.
     @props = RedisPropertyBag.new(redis, shard_id)
   end
 
@@ -74,14 +77,15 @@ class RedisTable
   #
   # @param [Integer] id The id for the new row
   def delete(id)
-    @props.delete(row_key(id))
-    publish_change({:action => 'delete', :id => id})
+    deleted = @props.delete(row_key(id))
+    publish_change({:action => 'delete', :id => id}) if deleted
+    deleted
   end
 
   # Deletes all the tables and rows in a shard.
   def self.reset_shard(shard_id, redis, pub_sub)
     RedisPropertyBag.new(redis, shard_id).delete_all
-    pub_sub.publish(shard_id, '', {:action => 'reset_shard'}) if pub_sub
+    pub_sub.publish(shard_id, 'all_tables', {:action => 'reset_shard'}) if pub_sub
   end
 
   private
@@ -108,7 +112,6 @@ class RedisTable
   def id_from_row_key(key)
     key.split('_')[1]
   end
-
 
   # Returns a new, monotonically increasing id for a row.
   # @return [String]
@@ -150,6 +153,5 @@ class RedisTable
   def belongs_to_this_table(row_key)
     table_from_row_key(row_key) == @table_name and row_key != @row_id_key
   end
-
 
 end
