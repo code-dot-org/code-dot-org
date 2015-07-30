@@ -6,13 +6,25 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "The \"If-else\" blocks checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.",
+    "instructions": "The \"If-else\" block checks a condition, and then does one thing OR another. To get me to the sunflower try to use this new block.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
     "maze": "[[0,0,0,0,0,0,0,0],[0,1,4,1,1,1,0,0],[0,0,1,0,0,0,0,0],[3,1,1,1,1,1,1,0],[0,1,0,1,0,0,1,0],[1,1,1,4,1,0,1,0],[0,1,0,1,0,2,1,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "5"
+    "ideal": "5",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

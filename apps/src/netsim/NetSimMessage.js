@@ -15,6 +15,9 @@
 
 var utils = require('../utils');
 var NetSimEntity = require('./NetSimEntity');
+var dataConverters = require('./dataConverters');
+var base64ToBinary = dataConverters.base64ToBinary;
+var binaryToBase64 = dataConverters.binaryToBase64;
 
 /**
  * Local controller for a message that is 'on the wire'
@@ -59,7 +62,10 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
    * All other message content, including the 'packets' students will send.
    * @type {*}
    */
-  this.payload = messageRow.payload;
+  var base64Payload = messageRow.base64Payload;
+  this.payload = (base64Payload) ?
+    base64ToBinary(base64Payload.string, base64Payload.len) :
+    undefined;
 
   /**
    * If this is an inter-router message, the number of routers this
@@ -115,8 +121,9 @@ NetSimMessage.prototype.getTable = function () {
  * @property {number} toNodeID - this message in-flight-to node
  * @property {number} simulatedBy - Node ID of the client responsible for
  *           all operations involving this message.
- * @property {string} payload - binary message content, all of which can be
- *           exposed to the student.  May contain headers of its own.
+ * @property {base64Payload} base64Payload - base64-encoded binary
+ *           message content, all of which can be exposed to the
+ *           student.  May contain headers of its own.
  */
 
 /**
@@ -128,7 +135,7 @@ NetSimMessage.prototype.buildRow = function () {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     simulatedBy: this.simulatedBy,
-    payload: this.payload,
+    base64Payload: this.payload ? binaryToBase64(this.payload) : undefined,
     extraHopsRemaining: this.extraHopsRemaining,
     visitedNodeIDs: this.visitedNodeIDs
   };

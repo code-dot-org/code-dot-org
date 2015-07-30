@@ -1,7 +1,7 @@
 #about_nav
   %span.about_list
     -current_url = request.path_info
-    -{'Educator Overview'=>'/educate','Hour of Code'=>'/educate/hoc','Curriculum'=>'/educate/curriculum','Professional Development'=>'/educate/professional-development','District Partnerships'=>'/educate/districts','Inspire Students'=>'/educate/inspire','3rd Party Resources'=>'/educate/3rdparty'}.each_pair do |label,url|
+    -{'Educator Overview'=>'/educate','Hour of Code'=>'/educate/hoc','Curriculum'=>'/educate/curriculum','Professional Development'=>'/educate/professional-development','District Partnerships'=>'/educate/districts','Community and Support'=>'/educate/community','Inspire Students'=>'/educate/inspire','3rd Party Resources'=>'/educate/3rdparty'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

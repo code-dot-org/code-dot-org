@@ -42,8 +42,29 @@ Donald Bren Hall
 Irvine, CA 92617
 
 For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
+
+We were able to reserve UCI parking permits for your attendance next week. Please note, your parking lot changes on Thursday.
+ 
+**Monday, Tuesday and Wednesday Parking Instructions**
 <br />
-Parking is available for $10 per day at the Anteater Parking Structure: [http://tinyurl.com/AnteaterParking](http://tinyurl.com/AnteaterParking)
+Park in the Anteater Parking Structure on the corner of East Peltason Drive and Anteater Drive. There will be signs at all campus entrances leading you to the parking lot and we highly recommend you [get directions](http://tinyurl.com/AnteaterParking) ahead of time. There will be a parking attendant and you will need to tell them you are with the Code.org Professional Development event. You will then receive your permit and instructions on where to park and how to exit the parking structure. We will also have pedestrian signs leading you to Donald Bren Hall.
+ 
+**Thursday and Friday Parking Instructions**
+<br />
+Park at the University Club Parking Lot, 801 East Peltason Drive
+<br />
+[http://tinyurl.com/UClubUCI](http://tinyurl.com/UClubUCI)
+<br />
+No permit is required.
+
+[Click here](http://communications.uci.edu//documents/pdf/UCI_14_map_campus_core.pdf) for a campus map.
+<br />
+Anteater Parking Structure is in quadrant H-10 on the map
+<br />
+Donald Bren Hall is Bldg 314 and in quadrant H-8 on the map
+<br />
+The University Club is Bldg 801 and in quadrant H-8 on the map.
+
 
 **What do I bring to Phase 2?**
 
@@ -64,7 +85,7 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 10, 2015
+Quarter 1: Saturday, October 3, 2015
 
 Quarter 2: Saturday, November 7, 2015
 
@@ -128,7 +149,28 @@ Irvine, CA 92617
 
 For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
 <br />
-Parking is available for $10 per day at the Anteater Parking Structure: [http://tinyurl.com/AnteaterParking](http://tinyurl.com/AnteaterParking)
+We were able to reserve UCI parking permits for your attendance next week. Please note, your parking lot changes on Tuesday.
+ 
+**Monday Parking Instructions**
+<br />
+Park in the Anteater Parking Structure on the corner of East Peltason Drive and Anteater Drive. There will be signs at all campus entrances leading you to the parking lot and we highly recommend you [get directions](http://tinyurl.com/AnteaterParking) ahead of time. There will be a parking attendant and you will need to tell them you are with the Code.org Professional Development event. You will then receive your permit and instructions on where to park and how to exit the parking structure. We will also have pedestrian signs leading you to Donald Bren Hall.
+ 
+**Tuesday and Wednesday Parking Instructions**
+<br />
+Park at the University Club Parking Lot, 801 East Peltason Drive
+<br />
+[http://tinyurl.com/UClubUCI](http://tinyurl.com/UClubUCI)
+<br />
+No permit is required.
+
+[Click here](http://communications.uci.edu//documents/pdf/UCI_14_map_campus_core.pdf) for a campus map.
+<br />
+Anteater Parking Structure is in quadrant H-10 on the map
+<br />
+Donald Bren Hall is Bldg 314 and in quadrant H-8 on the map
+<br />
+The University Club is Bldg 801 and in quadrant H-8 on the map.
+
 
 **What do I bring to Phase 2?**
 
@@ -205,7 +247,7 @@ Irvine, CA 92617
 
 For directions to Donald Bren Hall go here: [http://tinyurl.com/DonaldBrenHall](http://tinyurl.com/DonaldBrenHall)
 <br />
-Parking is available for $10 per day at the Anteater Parking Structure: [http://tinyurl.com/AnteaterParking](http://tinyurl.com/AnteaterParking)
+Park in the Anteater Parking Structure on the corner of East Peltason Drive and Anteater Drive. There will be signs at all campus entrances leading you to the parking lot and we highly recommend you get directions ahead of time: [http://tinyurl.com/AnteaterParking](http://tinyurl.com/AnteaterParking). Tell the parking attendant you are with the Code.org Professional Development event. You will then receive your permit and instructions on where to park and how to exit the parking structure. We will also have pedestrian signs leading you to Donald Bren Hall from the parking structure.
 
 **What do I bring to Phase 2?**
 
@@ -224,10 +266,10 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Semester 1: Saturday, October 3, 2015
+Semester 1: Saturday, October 17, 2015 in Orange County.
 
 
-Semester 2: Saturday, January 23, 2016
+Semester 2: Saturday, February 20, 2016 in Los Angeles.
 
 
 8:30am - 3:30pm

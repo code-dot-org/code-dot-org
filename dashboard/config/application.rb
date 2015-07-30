@@ -11,6 +11,7 @@ require 'channels_api'
 require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
+require 'net_sim_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -28,6 +29,7 @@ module Dashboard
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
+    config.middleware.insert_after SharedResources, NetSimApi
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after SharedResources, PegasusSites
@@ -79,6 +81,7 @@ module Dashboard
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
     config.assets.paths << Rails.root.join('../shared/css')
+    config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
       editor/blockly_editor.css

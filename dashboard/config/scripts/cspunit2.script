@@ -9,7 +9,6 @@ login_required 'true'
 
 stage 'The Internet'
 level 'U2L1 Student Lesson Introduction'
-assessment 'Choose 2 Test'
 assessment 'U2L01 Assessment 1'
 assessment 'U2L01 Assessment 2'
 assessment 'U2L01 Assessment 3'

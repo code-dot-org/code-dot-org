@@ -176,12 +176,6 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  after_create :codeorg_admin unless Rails.env.production?
-  def codeorg_admin
-    require 'mail'
-    update(admin: true) if Mail::Address.new(email).domain.try(:downcase) == 'code.org'
-  end
-
   before_save :dont_reconfirm_emails_that_match_hashed_email
   def dont_reconfirm_emails_that_match_hashed_email
     # we make users "reconfirm" when they change their email

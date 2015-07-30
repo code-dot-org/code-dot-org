@@ -144,23 +144,19 @@
               </block>
             </value>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
             <title name="NUM">0</title>
           </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE">
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation/>
             <title name="NAME">do something</title>
-          </block>
-        </category>
-        <category name="Functions" custom="PROCEDURE"/>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">counter</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">length</title>
           </block>
         </category>
       </xml>

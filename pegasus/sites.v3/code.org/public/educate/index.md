@@ -57,6 +57,11 @@ If you're an administrator at a large district, or situated near an [existing Co
 
 <br/>
 
+## Teacher Community and Support
+We’re kicking off a new worldwide community to keep teachers up-to-date on what’s new with Code.org, and to help connect our teachers around the globe. There are many ways to get involved in our community. [Review the options](/educate/community) and choose how you’d like to participate.
+
+[<button>Join our Professional Learning Community</button>](/educate/community)
+
 ## Inspire students
 Use these videos, posters, and how-to resources to inspire students to try computer science. You can also [nominate a student](/sotw) or [teacher](/totm) for a Code.org award.
 

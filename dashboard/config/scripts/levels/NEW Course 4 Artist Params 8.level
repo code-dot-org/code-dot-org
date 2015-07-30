@@ -9,7 +9,7 @@
     "instructions": "The code for this triangle function is broken. Can you edit the function to fix it, and then make triangles of length 25, 50, and 75?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "16",
+    "ideal": "18",
     "slider_speed": ".5",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
@@ -159,18 +159,13 @@
               </block>
             </value>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
             <title name="NUM">0</title>
-          </block>
-        </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">counter</title>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">length</title>
           </block>
           <block type="procedures_defnoreturn" uservisible="false">
             <mutation>

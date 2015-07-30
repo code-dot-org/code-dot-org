@@ -114,12 +114,12 @@ describe("NetSimRouterNode", function () {
    * @returns {*}
    */
   var getFirstMessageProperty = function (propertyName) {
-    var messages = getRows('messageTable');
-    if (messages.length === 0) {
+    var messageRows = getRows('messageTable');
+    if (messageRows.length === 0) {
       throw new Error("No rows in message table, unable to check first message.");
     }
 
-    return messages[0][propertyName];
+    return new NetSimMessage(testShard, messageRows[0])[propertyName];
   };
 
   /**
@@ -798,7 +798,7 @@ describe("NetSimRouterNode", function () {
       // Construct a message with a timestamp payload, to ensure calls to
       // this method don't conflict with one another.
       var headers = encoder.makeBinaryHeaders({ toAddress: forClient.getAddress()});
-      var payload = encoder.concatenateBinary(headers, new Date().toISOString());
+      var payload = encoder.concatenateBinary(headers, new Date().getTime().toString(2));
       forClient.sendMessage(payload, function () {});
       time = tickUntilLogsStabilize(forClient, time);
       assertEqual(payload, fakeReceivedLog.getLatest());
@@ -837,7 +837,7 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("ignores messages sent to itself from other clients", function () {
-      clientB.sendMessage('garbage', function () {});
+      clientB.sendMessage('00000', function () {});
       routerA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 0);
       assertFirstMessageProperty('fromNodeID', clientB.entityID);
@@ -853,7 +853,7 @@ describe("NetSimRouterNode", function () {
             fromNodeID: from,
             toNodeID: to,
             simulatedBy: from,
-            payload: 'garbage'
+            payload: '00000'
           },
           function () {});
       routerA.tick({time: 1000});
@@ -866,7 +866,7 @@ describe("NetSimRouterNode", function () {
     it ("does not forward malformed packets", function () {
       // Here, the payload gets 'cleaned' down to empty string, then treated
       // as zero when parsing the toAddress.
-      clientA.sendMessage('garbage', function () {});
+      clientA.sendMessage('00000', function () {});
       routerA.tick({time: 1000});
 
       assertTableSize(testShard, 'messageTable', 0);
@@ -877,7 +877,7 @@ describe("NetSimRouterNode", function () {
       var payload = encoder.concatenateBinary({
         toAddress: '1111',
         fromAddress: '1111'
-      }, 'messageBody');
+      }, '101010101');
       clientA.sendMessage(payload, function () {});
       routerA.tick({time: 1000});
 
@@ -893,7 +893,7 @@ describe("NetSimRouterNode", function () {
         toAddress: toAddress,
         fromAddress: fromAddress
       });
-      var payload = encoder.concatenateBinary(headers, 'messageBody');
+      var payload = encoder.concatenateBinary(headers, '101010101');
       clientA.sendMessage(payload, function () {});
       routerA.tick({time: 1000});
 
@@ -1271,7 +1271,7 @@ describe("NetSimRouterNode", function () {
         var queueSize = getRows('messageTable').filter(function (m) {
           return m.toNodeID === routerA.entityID;
         }).map(function (m) {
-          return m.payload.length;
+          return m.base64Payload.len;
         }).reduce(function (p, c) {
           return p + c;
         }, 0);
@@ -1449,8 +1449,8 @@ describe("NetSimRouterNode", function () {
           return p + c;
         }, 0);
         assert(droppedPackets === expectedDropCount, "Expected that " +
-        expectedDropCount + " packets would be dropped, " +
-        "but logs only report " + droppedPackets + " dropped packets");
+            expectedDropCount + " packets would be dropped, " +
+            "but logs only report " + droppedPackets + " dropped packets");
       };
 
       beforeEach(function () {
