@@ -106,4 +106,3 @@ class RedisTable
     @pub_sub_api.publish(@shard_id, @table_name, update_hash)
   end
 end
-

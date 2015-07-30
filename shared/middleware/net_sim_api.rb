@@ -128,12 +128,19 @@ class NetSimApi < Sinatra::Base
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
-  # Returns a new Redis client.
+  # Returns a new Redis client for the current configuration.
   #
   # @return [Redis]
-  # @private
   def get_redis_client
-    @@overridden_redis || Redis.new(host: 'localhost')
+    @@overridden_redis || Redis.new(host: redis_host)
+  end
+
+  # Returns the host name of the redis service in the current
+  # configuration.
+  #
+  # @return [String]
+  def redis_host
+    CDO.geocoder_redis_url || 'localhost'
   end
 
   # Get the Pub/Sub API interface for the current configuration

@@ -127,7 +127,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     test_spy = SpyPubSubApi.new
     NetSimApi.override_pub_sub_api_for_test(test_spy)
 
-    record_create_response = create_record({name:'franklin', age:7, male:false})
+    record_create_response = create_record({name: 'franklin', age: 7, male: false})
 
     record_id = record_create_response['id'].to_i
     delete_record(record_id)
