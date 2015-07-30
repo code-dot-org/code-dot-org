@@ -581,6 +581,10 @@ SQL
       Script.course3_script, Script.course4_script, Script.twenty_hour_script]
   end
 
+  def unadvertised_user_scripts
+    [working_on_user_scripts, completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.in?(advertised_scripts)}
+  end
+
   def all_advertised_scripts_completed?
     advertised_scripts.all? { |script| completed?(script) }
   end
