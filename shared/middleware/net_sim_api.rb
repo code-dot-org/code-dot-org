@@ -128,6 +128,25 @@ class NetSimApi < Sinatra::Base
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
+  # TEST-ONLY METHODS
+
+  # Set a particular Pub/Sub interface to use - for use in tests.
+  #
+  # @param [PubSubApi] override_api
+  def self.override_pub_sub_api_for_test(override_api)
+    @@overridden_pub_sub_api = override_api
+  end
+
+  # Set a particular Redis interface to use - for use in tests.
+  #
+  # @param [Redis] override_redis
+  def self.override_redis_for_test(override_redis)
+    @@overridden_redis = override_redis
+  end
+
+
+  private
+
   # Returns a new Redis client for the current configuration.
   #
   # @return [Redis]
@@ -149,20 +168,6 @@ class NetSimApi < Sinatra::Base
   def get_pub_sub_api
     return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
     CDO.use_pusher ? PusherApi : NullPubSubApi
-  end
-
-  # Set a particular Pub/Sub API interface to use - for use in tests.
-  #
-  # @param [PubSubApi] override_api
-  def self.override_pub_sub_api_for_test(override_api)
-    @@overridden_pub_sub_api = override_api
-  end
-
-  # Set a particular Pub/Sub API interface to use - for use in tests.
-  #
-  # @param [PubSubApi] override_api
-  def self.override_redis_for_test(override_redis)
-    @@overridden_redis = override_redis
   end
 
   # Return true if the request's content type is application/json and charset
