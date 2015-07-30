@@ -342,7 +342,7 @@ var removeWatermark = function (focusEvent) {
  * @param {Event} jqueryEvent
  * @returns {boolean} true iff the given event represents a clean enter
  */
-var isCleanEnterPress = function (jqueryEvent) {
+var isUnmodifiedEnterPress = function (jqueryEvent) {
   return (jqueryEvent.keyCode == 13 && !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
 };
 
@@ -636,7 +636,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     rowFields.message.keypress(
         makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters));
     rowFields.message.keydown(function(jqueryEvent){
-      if (isCleanEnterPress(jqueryEvent)) {
+      if (isUnmodifiedEnterPress(jqueryEvent)) {
         this.enterKeyPressedCallback_(jqueryEvent);
       }
     }.bind(this));

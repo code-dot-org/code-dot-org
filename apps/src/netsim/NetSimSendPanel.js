@@ -74,11 +74,11 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.packets_ = [];
 
   /**
-   * List of controllers for packets currently being edited.
-   * @type {NetSimPacketEditor[]}
+   * Last addres we sent a packet to
+   * @type {string}
    * @private
    */
-  this.lastPacketToAddress_ = 0;
+  this.lastPacketToAddress_ = "0";
 
   /**
    * Our local node's address, zero until assigned by a router.
@@ -258,7 +258,7 @@ NetSimSendPanel.prototype.addPacket_ = function () {
   });
 
   // Copy the to address of the previous packet if it exists. Otherwise
-  // remember the last address sent.
+  // use the last address sent.
   // TODO: Do we need to lock the toAddress for all of these packets together?
   var newPacketToAddress;
   if (this.packets_.length > 0) {
@@ -347,7 +347,8 @@ NetSimSendPanel.prototype.onContentChange_ = function () {
 
   if (nextBit === undefined) {
     // If there are no bits queued up, disable the button
-    this.conditionallyToggleSetWireButton().text(i18n.setWire());
+    this.getSetWireButton().text(i18n.setWire());
+    this.conditionallyToggleSetWireButton();
   } else {
     // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
     // format this button label using the "A/B" convention
@@ -356,7 +357,8 @@ NetSimSendPanel.prototype.onContentChange_ = function () {
       nextBit = binaryToAB(nextBit);
     }
 
-    this.conditionallyToggleSetWireButton().text(i18n.setWireToValue({ value: nextBit }));
+    this.getSetWireButton().text(i18n.setWireToValue({ value: nextBit }));
+    this.conditionallyToggleSetWireButton();
   }
 };
 
@@ -474,8 +476,20 @@ NetSimSendPanel.prototype.disableEverything = function () {
   }
 };
 
+/**
+ * Finds the button used to set the wire state
+ * @returns {jQuery}
+ */
+NetSimSendPanel.prototype.getSetWireButton = function () {
+  return this.getBody().find('#set-wire-button');
+};
+
+/** Enables the setWireButton if there is another bit in the queue,
+ * disables it otherwise.
+ * @returns {jQuery}
+ */
 NetSimSendPanel.prototype.conditionallyToggleSetWireButton = function () {
-  var setWireButton = this.getBody().find('#set-wire-button');
+  var setWireButton = this.getSetWireButton();
   if (this.getNextBit_() === undefined) {
     setWireButton.attr('disabled', 'disabled');
   } else {
