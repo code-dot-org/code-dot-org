@@ -144,8 +144,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def test_publish_on_cascading_delete
-    node_a = create_node({name:'nodeA'})
-    node_b = create_node({name:'nodeB'})
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
     wire_ab = create_wire(node_a['id'], node_b['id'])
     message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
 
@@ -186,9 +186,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_node_delete_cascades_to_node_wires
 
-    node_a = create_node({name:'nodeA'})
-    node_b = create_node({name:'nodeB'})
-    node_c = create_node({name:'nodeC'})
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
+    node_c = create_node({name: 'nodeC'})
 
     wire_ab = create_wire(node_a['id'], node_b['id'])
     wire_ca = create_wire(node_c['id'], node_a['id'])
@@ -225,8 +225,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
   def test_node_delete_cascades_to_messages
 
-    node_a = create_node({name:'nodeA'})
-    node_b = create_node({name:'nodeB'})
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
 
     message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
     message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
