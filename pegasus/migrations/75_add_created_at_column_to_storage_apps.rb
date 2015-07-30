@@ -4,7 +4,12 @@ Sequel.migration do
     add_column :storage_apps, :created_at, DateTime
 
     batch_update do |row|
-      value = JSON.parse(row[:value])
+      begin
+        value = JSON.parse(row[:value])
+      rescue JSON::ParserError
+        next
+      end
+
       created = DateTime.parse(value['createdAt']) if value['createdAt']
 
       # Set :created_at.
@@ -22,7 +27,7 @@ def batch_update
   offset = 0
   batch_size = 1000
   loop do
-    batch = from(:storage_apps).where(state: 'active').offset(offset).limit(batch_size)
+    batch = from(:storage_apps).offset(offset).limit(batch_size)
     break if batch.count == 0
     batch.each do |row|
       yield row
