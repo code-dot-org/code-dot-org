@@ -12,6 +12,9 @@ require_relative 'redis_property_bag'
 
 class RedisTable
 
+  class NotFound < Sinatra::NotFound
+  end
+
   # Constructs the redis table.
   #
   # @param [Redis] redis The Redis client.
@@ -57,9 +60,12 @@ class RedisTable
   # Fetches a row by id.
   #
   # @param [Integer] id The id of the row to fetch
-  # @return [Hash] The row, or null if no such row exists.
+  # @raises [Sinatra::NotFound] if no such row exists
+  # @return [Hash] The row if exists
   def fetch(id)
-    make_row(id, @props.to_hash[row_key(id)])
+    hash = @props.to_hash[row_key(id)]
+    raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless hash
+    make_row(id, hash)
   end
 
   # Updates an existing row, notifying other clients using the pubsub service.
