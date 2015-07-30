@@ -17,6 +17,7 @@
 /* global -Blockly */
 /* global $ */
 /* global sendReport */
+/* global confirm */
 'use strict';
 
 var utils = require('../utils');
@@ -298,6 +299,15 @@ NetSim.prototype.getOverrideShardID = function () {
  */
 NetSim.prototype.shouldShowAnyTabs = function () {
   return this.level.showTabs.length > 0;
+};
+
+/**
+ * @returns {boolean} TRUE if the "resetShard" flag is found in the URL
+ * TODO: This needs to be replaced with real UI and a route that
+ *       only allows section owners and admins to perform a reset.
+ */
+NetSim.prototype.shouldResetShard = function () {
+  return location.search.match(/resetShard/i);
 };
 
 /**
@@ -1084,6 +1094,18 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   this.visualization_.setShard(shard);
   this.visualization_.setLocalNode(localNode);
   this.render();
+
+  // TODO (bbuchanan): Tear this out when replacing reset option with real UI.
+  if (shard && this.shouldResetShard() && confirm("Are you sure?" +
+          "  This will kick everyone out and reset all data for the class.")) {
+    shard.resetEverything(function (err) {
+      if (err) {
+        logger.error(err);
+        return;
+      }
+      this.onShardChange_(null, null);
+    }.bind(this));
+  }
 };
 
 /**

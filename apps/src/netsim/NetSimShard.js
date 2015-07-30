@@ -13,6 +13,7 @@
  maxparams: 3,
  maxstatements: 200
  */
+/* global $ */
 'use strict';
 
 var NetSimTable = require('./NetSimTable');
@@ -125,4 +126,25 @@ NetSimShard.prototype.tick = function (clock) {
   this.wireTable.tick(clock);
   this.messageTable.tick(clock);
   this.logTable.tick(clock);
+};
+
+/**
+ * The "panic button" option - clears all data on the shard, kicking all
+ * users out and starting over.
+ * @param {function} onComplete
+ * TODO (bbuchanan): Right now anyone can do this.  This needs to have an
+ *                   authentication step on the server that only allows an admin
+ *                   or the teacher that owns the section to do this.
+ */
+NetSimShard.prototype.resetEverything = function (onComplete) {
+  $.ajax({
+    url: 'v3/netsim/' + this.id + '/delete',
+    type: "post",
+    dataType: "json"
+  }).done(function() {
+    onComplete(null, true);
+  }).fail(function(request, status, error) {
+    var err = new Error('status: ' + status + '; error: ' + error);
+    onComplete(err, false);
+  });
 };
