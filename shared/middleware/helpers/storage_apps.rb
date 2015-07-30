@@ -59,7 +59,8 @@ class StorageApps
     update_count = @table.where(id: id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
-    JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id, createdAt: row[:created_at], updatedAt: row[:updated_at])
+    # We can't include :created_at here without an extra DB query. Most consumers won't need :created_at during updates, so omit it.
+    JSON.parse(row[:value]).merge(id: channel_id, isOwner: owner == @storage_id, updatedAt: row[:updated_at])
   end
 
   def to_a()
