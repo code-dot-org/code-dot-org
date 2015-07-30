@@ -10,7 +10,6 @@
     "embed": "false",
     "instructions": "Free Play: Write functions and algorithms of your own design!",
     "is_k1": "false",
-    "is_project_level": "true",
     "skip_instructions_popup": "false",
     "scrollbars": "true",
     "min_workspace_height": "1500",
@@ -18,7 +17,14 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "default_num_example_blocks": "2",
-    "free_play": "true"
+    "free_play": "true",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -29,6 +35,9 @@
           <block type="functional_minus"/>
           <block type="functional_times"/>
           <block type="functional_dividedby"/>
+          <block type="functional_sqrt"/>
+          <block type="functional_squared"/>
+          <block type="functional_pow"/>
           <block type="functional_math_number"/>
         </category>
         <category name="Functions" custom="PROCEDURE"/>

@@ -1,0 +1,21 @@
+@import 'color';
+@import 'font';
+
+.primary {
+	background-color: $orange;
+	border-color: $orange;
+	color: $white;
+	margin: 0;
+	padding: 6px 12px;
+	height: 34px;
+	line-height: 20px;
+	font-size: 14px;
+	font-family: $gotham-regular;
+	font-weight: normal;
+	letter-spacing: normal;
+	text-align: center;
+	vertical-align: middle;
+}
+.primary:hover {
+	box-shadow: none;
+}
