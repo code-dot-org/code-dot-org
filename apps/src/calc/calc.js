@@ -142,6 +142,10 @@ Calc.init = function(config) {
   config.forceInsertTopBlock = 'functional_compute';
   config.enableShowCode = false;
 
+  // We don't want icons in instructions
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+
   config.html = page({
     assetUrl: studioApp.assetUrl,
     data: {

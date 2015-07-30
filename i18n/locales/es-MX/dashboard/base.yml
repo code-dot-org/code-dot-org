@@ -219,6 +219,7 @@ es-MX:
       free_play:
         playlab: Hacer una aplicación
         artist: Dibujar algo
+        calculate: Calculate Something
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de Distrito
@@ -325,7 +326,7 @@ es-MX:
     classroom_activity: Actividad fuera de línea
   home:
     title: Mi progreso
-    description: Code Studio es la página principal para los cursos en línea creados por Code.org
+    description: Code Studio es la página principal de los cursos en línea creados por Code.org
     lines_of_code: '%{lines_count} LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES'
     lines_of_code_linebreak: '%{lines_count} LÍNEAS DE CÓDIGO<br/>ESCRITAS POR %{students_count} MILLONES DE ALUMNOS'
     all_courses: Resumen de los cursos 1, 2 y 3

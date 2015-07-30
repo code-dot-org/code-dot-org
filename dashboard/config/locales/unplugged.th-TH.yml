@@ -3,9 +3,8 @@
     unplugged:
       Unplug1:
         title: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
+        desc: บทนี้จะแนะนำหลักการของวิทยาการคอมพิวเตอร์ และ อธิบายสิ่งที่ นักวิทยาศาสตร์คอมพิวเตอร์ทำ.  เป็นโอกาสที่นักเรียนจะได้เห็นว่า
+          ตัวเขาเหมาะจะเป็น นักวิทยาศาสตร์คอมพิวเตอร์แขนงใด.  By the end of the activity,
           each student will have a take-home reminder of what he or she learned.  You
           may be tempted to skip teaching young children the vocabulary words that
           are associated with the lessons that follow, but presenting them in a fun
@@ -65,7 +64,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: เงื่อนไข
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -115,23 +114,23 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: แผนที่แห่งความสุข
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: ขยับมันสิ, ขยับมัน
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
+        title: 'วิธีคิด (Algorithms)ในชีวิตจริง: ต้นไม้ และ เมล็ดพันธุ์'
         desc: This lesson calls out ways we use algorithms in our daily lives, using
           the act of planting a seed as an example. It also focuses on the bigger
           picture of computer science and how algorithms play an essential part.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
+        title: สร้างพื้นฐาน
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
@@ -156,7 +155,7 @@
           black card, you get a point."
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: เหตุการณ์ใหญ่
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -250,7 +249,7 @@
           become templates for fun and crazy new ones.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: For Loop Fun
+        title: สนุกกับ For ลูป
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops

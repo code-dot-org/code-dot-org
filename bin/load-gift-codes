@@ -8,7 +8,7 @@ def main()
 
   CSV.foreach(path) do |i|
     value = i[0].strip
-    DB[:hoc_survey_prizes].insert(type:type, value:value) unless value.empty?
+    DB[:hoc_survey_prizes].insert(type: type, value: value) unless value.empty?
   end
 end
 

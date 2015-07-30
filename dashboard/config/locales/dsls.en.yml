@@ -130,6 +130,32 @@ en:
         Overview of CSP Program: Overview of CSP Program
       CSPPD teaching strategies video:
         CSPPD teaching strategies video: CSPPD teaching strategies video
+      CSPPD2 PT: {}
+      CSPPD2 PT forum: {}
+      CSPPD2 PT reflection: {}
+      CSPPD2 chunk 1: {}
+      CSPPD2 chunk 1 lessons: {}
+      CSPPD2 chunk 1 reflection: {}
+      CSPPD2 chunk 2: {}
+      CSPPD2 chunk 2 lessons: {}
+      CSPPD2 chunk 2 reflection: {}
+      CSPPD2 chunk 3: {}
+      CSPPD2 chunk 3 lessons: {}
+      CSPPD2 chunk 3 reflection: {}
+      CSPPD2 chunk 4: {}
+      CSPPD2 chunk 4 lessons: {}
+      CSPPD2 chunk 4 reflection: {}
+      CSPPD2 congrats: {}
+      CSPPD2 lesson 1: {}
+      CSPPD2 lesson 1 reflection: {}
+      CSPPD2 next step announcements: {}
+      CSPPD2 overview: {}
+      CSPPD2 participation: {}
+      CSPPD2 share compression: {}
+      CSPPD2 survey: {}
+      CSPPD2 tips for prep: {}
+      CSPPD2 welcome:
+        Getting Started > Welcome!: Getting Started > Welcome!
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -513,6 +539,8 @@ en:
       Pixelation Flappy:
         description here: description here
         title: title
+      Test External Markdown:
+        Test External Markdown: Test External Markdown
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
@@ -737,6 +765,7 @@ en:
         Permanent Data Storage: Permanent Data Storage
       U3L23 Student Lesson Introduction:
         Natural Language Processing: Natural Language Processing
+      U3L24 Conditionals Lecture: {}
       U3L24 Student Lesson Introduction:
         Chained Conditionals: Chained Conditionals
       U3L25 Student Lesson Introduction:
@@ -1148,6 +1177,13 @@ en:
         planning, organizing, and completion of performance tasks: planning, organizing, and completion of performance tasks
         programming principles and JavaScript: programming principles and JavaScript
         structure and design of the internet: structure and design of the internet
+      CSPPD2 PIvideo:
+        Copper Wire: Copper Wire
+        Fiber Optic Cable: Fiber Optic Cable
+        Wireless: Wireless
+        uses electricity, is pretty cheap: uses electricity, is pretty cheap
+        uses light, is expensive: uses light, is expensive
+        uses radio waves, cannot travel very far: uses radio waves, cannot travel very far
       Coordinate Matching:
         (250, 400): (250, 400)
         (320, 240): (320, 240)
@@ -1952,6 +1988,19 @@ en:
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
         There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
+      CSPPD2 pixel video 1:
+        How many different light channels make up a single pixel on a standard monitor?: How many different light channels make up a single pixel on a standard monitor?
+        four: four
+        one: one
+        three: three
+        two: two
+      CSPPD2 pixel video 2:
+        ' Monitor 1 has higher density than Monitor 2.': ' Monitor 1 has higher density than Monitor 2.'
+        ? Monitor 1 and Monitor 2 are standard RGB monitors. Monitor 1 has a higher resolution than Monitor 2. Which of the following is true?
+        : Monitor 1 and Monitor 2 are standard RGB monitors. Monitor 1 has a higher resolution than Monitor 2. Which of the following is true?
+        Monitor 1 has the same density as Monitor 2.: Monitor 1 has the same density as Monitor 2.
+        Monitor 2 has higher density than 2: Monitor 2 has higher density than 2
+        There is not enough information to compare the density of the monitors.: There is not enough information to compare the density of the monitors.
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
@@ -2882,6 +2931,27 @@ en:
         Readable variable names makes it easier to understand the program logic: Readable variable names makes it easier to understand the program logic
         The literary quality of variable names is an important attribute of successful programs: The literary quality of variable names is an important attribute of successful programs
         Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?: Which of the following is NOT a reason for giving variables meaningful, readable, descriptive names?
+      U3L24 Warm-up Quiz 1:
+        Warm-up quiz 1: Warm-up quiz 1
+        Which of the following will print "Hello World!" to the screen: Which of the following will print "Hello World!" to the screen
+        'if false: print("Hello World!")': 'if false: print("Hello World!")'
+        'if true: print("Hello World!")': 'if true: print("Hello World!")'
+      U3L24 Warm-up Quiz 2:
+        I: I
+        I & III: I & III
+        II: II
+        III: III
+        Warm-up Quiz 2: Warm-up Quiz 2
+        Which of the following will print "Hello World!" to the screen?: Which of the following will print "Hello World!" to the screen?
+      U3L24 Warm-up Quiz 3:
+        I: I
+        I & III: I & III
+        II: II
+        II & IV: II & IV
+        III: III
+        IV: IV
+        Warm-up quiz 3: Warm-up quiz 3
+        Which of the following will print "Hello World!" to the screen: Which of the following will print "Hello World!" to the screen
       U3L30 Assessment1:
         '6': '6'
         '7': '7'
@@ -3259,6 +3329,8 @@ en:
         Relationship between Curriculum and PD: Relationship between Curriculum and PD
       CSPPD strategies:
         Classroom Strategies Journal: Classroom Strategies Journal
+      CSPPD2 PT activity: {}
+      CSPPD2 share protocol: {}
       ECSPD Online U1D1-2 Assessment 1:
         What is a Computer?: What is a Computer?
       ECSPD Online U1D1-2 Reflection:

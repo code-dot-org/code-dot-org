@@ -151,7 +151,7 @@
   "projectileCherry":"cherry",
   "projectileIce":"ice",
   "projectileDuck":"duck",
-  "reinfFeedbackMsg":"You can press the \"Keep Playing\" button to go back to playing your story.",
+  "reinfFeedbackMsg":"You can press the \"{backButton}\" button to go back to playing your story.",
   "repeatForever":"ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត",
   "repeatDo":"ធ្វើ",
   "repeatForeverTooltip":"អនុវត្ត​សកម្មភាព​នៅ​ក្នុង​ប្លុក​នេះ​ឡើង​វិញ​ដដែលៗ អំឡុង​ពេលសាច់​រឿង​កំពុង​ដើរ។",

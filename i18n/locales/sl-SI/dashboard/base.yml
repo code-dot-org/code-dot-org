@@ -219,6 +219,7 @@ sl:
       free_play:
         playlab: Izdelja App
         artist: Nariši kaj
+        calculate: Calculate Something
     user:
       classroom: Učiteljeva domača stran
       district_dashboard: District Dashboard
@@ -396,8 +397,8 @@ sl:
     download: Prenos videa
   compatability:
     https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+      header: Prosimo, omogočite HTTPS za Code.org.
+      message: "Da bi povečali varnost, smo prešli na HTTPS, dne %{https_date}. Po tem datumu ne boste mogli dostopati do Code.org. <a href='%{it_requirements_url}'> Kliknite tukaj</a>, če želite izvedeti, kako omogočiti HTTPS za Code.org."
       hide_this_warning: Skrij to opozorilo
     working:
       header: Delamo na podpori za vaš brskalnik.

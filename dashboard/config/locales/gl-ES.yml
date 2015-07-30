@@ -266,6 +266,7 @@
       free_play:
         playlab: Hacer una aplicación
         artist: Dibujar algo
+        calculate: Calculate Something
     user:
       classroom: Página de inicio del maestro
       district_dashboard: District Dashboard
@@ -426,8 +427,8 @@
       a 11 años K-5
     use_as_teacher: Usa este sitio como un maestro
     heading_hoc2014: <h2>La Hora Del Código Para</h2><h1>Todas Las Edades</h1>
-    heading_elementary: <h2>Cursos de 20 Horas para</h2><h1>Principiantes (todas las
-      edades)</h1>
+    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>
     heading_apps: <h2>Diversión para</h2><h1>Todos</h1>
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria

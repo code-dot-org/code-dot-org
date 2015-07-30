@@ -1,7 +1,7 @@
 pt-PT:
   hello: Olá mundo
   select_language: Por favor, escolhe o teu idioma
-  en: Computer Science
+  en: Ciência da computação
   computer_science_edweek: Semana da Educação da Ciência da Computação
   csedweek_dates: De 8 a 14 de dezembro de 2014
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora de Código</a> está a chegar. Relembramos todos os professores e organizadores de que devem <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planear a sua Hora de Código</a>'
@@ -25,7 +25,7 @@ pt-PT:
   hoc2014_teachers: Professores
   hoc2014_host: Promova
   hoc2014_everyone: Todos
-  hoc2014_support: 'Apoie &#x25BE;'
+  hoc2014_support: 'Assinar a petição &#x25BE;'
   hoc2014_whatishoc: O que é a Hora de Código?
   twentyhours_trynow: Experimentar agora
   california_heading: Peça a sua escola para ensinar ciência da computação
@@ -45,7 +45,7 @@ pt-PT:
   congratulations: Parabéns!
   congratulations_on_completing_hoc: Parabéns por teres concluído uma Hora de Código
   get_a_certificate_of_achievement: Obtem um certificado de realização
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Por favor, seleciona uma idade válida
   enter_valid_email: Por favor, digita um endereço de e-mail válido
   get_a_certificate_message: "Vamos enviar-lhe um certificado e informações sobre como <a href='/learn/beyond'>aprender além de Uma Hora</a>"
   get_a_certificate_message_after: "Clica no certificado para o descarregares ou imprimires. Agora, continua com <a href='http://studio.code.org'>outros cursos</a> ou vê outras opções para <a href='/learn/beyond'>aprenderes, além da Hora de Código</a>."
@@ -128,59 +128,60 @@ pt-PT:
   studiobar_shop_title: Loja
   studiobar_shop_body: Quebre estereótipos. Use nosso logotipo com orgulho.
   homepage_hero_text_malala: |
-    &ldquo;Eu desafio as meninas do mundo todo a fazer a Hora do Código&rdquo;
-    Malala, ganhadora do Prêmio Nobel da Paz
+    &ldquo;Eu desafio todas as raparigas do mundo
+    a experimentarem uma Hora de Código.&rdquo;
+    Malala, Prémio Nobel da Paz
   homepage_hero_text_susan: |
-    &ldquo;Se você pode mudar a tecnologia,
-    você pode mudar o mundo.&rdquo;
+    &ldquo;Se é possível mudar a tecnologia,
+    é possível mudar o mundo.&rdquo;
     Susan, CEO do YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Em vez de simplesmente jogar em seu celular,
-    aprenda a programá-lo.&rdquo;
-    Presidente Barack Obama
+    &ldquo;Em vez de jogares no teu telemóvel,
+    aprende a programá-lo.&rdquo;
+    Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Nossos filhos &mdash; inclusive nossas meninas &mdash;
-    precisam ter a oportunidade de aprender ciência da computação.&rdquo;
+    &ldquo;Os nossos filhos &mdash; e filhas &mdash; devem ter
+    todos a oportunidade de ter uma disciplina de informática.&rdquo;
     Sheryl, COO do Facebook
   homepage_hero_text_satya: |
-    &ldquo;A ciência da computação leva
-    às melhores oportunidades no mundo.&rdquo;
+    &ldquo;A informática permite-te descobrir as
+    melhores oportunidades no mundo.&rdquo;
     Satya, CEO da Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;Se você programa, você pode escolher
-    o rumo da sua vida.&rdquo;
+    &ldquo;Se souberes programar, sabes
+    que podes definir toda a tua vida.&rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;Essas habilidades mudaram meu futuro.
-    Sem contar que elas são muito divertidas.&rdquo;
-    Luna, aluna do 7º ano
+    &ldquo;A informática mudou o meu futuro.
+    Além de que é muito divertida.&rdquo;
+    Luna, Aluna do 7.º Ano
   homepage_hero_text_student2: |
-    &ldquo;Eu nunca vi meus alunos tão
-    animados em aprender.&rdquo;
-    Michael, professor
+    &ldquo;Nunca vi os meus alunos tão interessados
+    em explorar um assunto.&rdquo;
+    Michael, Professor
   homepage_hero_text_student3: |
-    &ldquo;A ciência da computação é um campo que
-    não tem como você saber se gosta ou não antes de experimentar.&rdquo;
-    Jackson, aluno do 6º ano
+    &ldquo;A única forma de saberes se gostas, ou não,
+    de informática é experimentar.&rdquo;
+    Jackson, Aluno do 6.º Ano
   homepage_hero_text_student4: |
-    &ldquo;Você pode fazer o que quiser
-    com a programação.&rdquo;
-    Maya, 2º ano
+    &ldquo;Com a programação, podes
+    fazer tudo o que quiseres.&rdquo; 
+    Maya, 2nd grade
   homepage_hero_text_student5: |
-    &ldquo;A ciência da computação não é para
-    outra pessoa. É para você, aqui e agora.&rdquo;
-    Geraldo, professor
+    &ldquo;A informática é para ti.
+    Aqui e agora.&rdquo; 
+    Geraldo, teacher
   homepage_hero_text_teacher1: |
-    &ldquo;A programação estimula a criatividade, inspiração e inovação &mdash;
-    e tudo isso é essencial em qualquer carreira.&rdquo;
-    Floresa, professora
+    &ldquo;A programação estimula a criatividade, a inspiração e a inovação &mdash;
+    que são essenciais para qualquer carreira.&rdquo;
+    Floresa, Professora
   homepage_hero_text_teacher2: |
-    &ldquo;Esse programa manteve 100% dos meus alunos
-    engajados, envolvidos e participando.&rdquo;
-    Adam, professor
+    &ldquo;Este programa consegue que os meus
+    alunos se empenhem a 100% em tudo o que fazem.&rdquo;
+    Adam, Professor
   homepage_hero_text_stat_loc: '#loc linhas de código escritas por alunos'
-  homepage_hero_text_stat_students: '#student_count contas de aluno no Code Studio'
-  homepage_hero_text_stat_served: 'Hora de Código: #served já experimentaram'
+  homepage_hero_text_stat_students: '#student_count de contas de alunos no Code Studio'
+  homepage_hero_text_stat_served: 'Hora de Código: #served de alunos já experimentaram'
   homepage_slot_text_hoc: A Hora de Código
   homepage_slot_text_frozen: Frozen com Anna e Elsa
   homepage_slot_text_teacher: Teacher Dashboard
@@ -196,22 +197,24 @@ pt-PT:
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saber mais
   homepage_slot_text_title_hoc: Hora de Código
-  homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
+  homepage_slot_text_blurb_hoc: |
+    Todos podem aprender.
+    Começa hoje com uma Hora de Código.
   homepage_slot_text_link_hoc: Exprimenta a Hora de Código
   homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: '# já experimentaram'
   homepage_slot_text_title_students: Alunos
-  homepage_slot_text_blurb_students: Explore todos os nossos tutoriais
+  homepage_slot_text_blurb_students: Explora todos os nossos tutoriais.
   homepage_slot_text_link_codestudio: Experimenta o Code Studio
   homepage_slot_text_link_local: Encontra uma turma à tua volta
   homepage_slot_text_link_othercourses: Outros cursos online
   homepage_slot_text_title_educators: Professores
-  homepage_slot_text_blurb_educators: Ensine os seus alunos
+  homepage_slot_text_blurb_educators: Ensine os seus alunos.
   homepage_slot_text_link_k5: Cursos para alunos do 1.º Ciclo
   homepage_slot_text_link_fullcurriculum: Vê o nosso currículo completo
   homepage_slot_text_link_pd: Desenvolvimento profissional
   homepage_slot_text_title_advocates: Advogados
-  homepage_slot_text_blurb_advocates: Apoia o nosso trabalho
+  homepage_slot_text_blurb_advocates: Apoie nosso trabalho
   homepage_slot_text_link_stats: Vê as estatísticas
   homepage_slot_text_link_buy: Participe
   homepage_slot_text_link_donate: Faz uma doação
@@ -388,7 +391,7 @@ pt-PT:
   dashboard_curriculum_k5_title: Recursos para professores do 1.º Ciclo
   dashboard_curriculum_middle_title: Recursos para professores dos 2.º e 3.º Ciclos
   dashboard_curriculum_high_title: Recursos para professores do Ensino Secundário
-  dashboard_lesson_plans: Planos de aula
+  dashboard_lesson_plans: Planos das aulas
   dashboard_view_all_lesson_plans: Descarrega o currículo completo dos cursos 1 a 3
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'

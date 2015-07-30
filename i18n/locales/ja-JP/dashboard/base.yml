@@ -219,6 +219,7 @@ ja:
       free_play:
         playlab: アプリケーションをを作る
         artist: 何かの絵を描く
+        calculate: Calculate Something
     user:
       classroom: 先生用ホームページ
       district_dashboard: District Dashboard
@@ -290,7 +291,7 @@ ja:
       course: コース
       rename: 名前の変更
       edit: edit
-      delete: delete
+      delete: 削除
       confirm_delete: Are you sure you want to delete this section?
       email: Send in email
     rollup: 進捗状況のダッシュ ボード
@@ -360,9 +361,9 @@ ja:
     heading_elementary: '<h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>'
     heading_apps: '<h2>お楽しみ</h2><h1>みんなの</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
-    your_gallery: Gallery
-    no_primary_course: Try a course at Code Studio
-    print_certificate: Print Certificate
+    your_gallery: ギャラリー
+    no_primary_course: コード スタジオ でコースを見る
+    print_certificate: 証書を印刷
   gender:
     male: 男性
     female: 女性
@@ -448,12 +449,12 @@ ja:
     20-hour:
       title: Accelerated Course
       body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。
     hoc2014:
       try_new_tutorial: 動作試験中の新しい Hour of Code チュートリアルをお試しください。
       try_frozen: Artist with Anna and Elsa, from Frozen
     gallery:
-      title: Gallery
+      title: ギャラリー
       body: View a gallery of app and artist images created by our users
     frozen:
       title: アナと雪の女王
@@ -469,7 +470,7 @@ ja:
     more: 'つづきを読む &rarr;'
     caption_by_name_age: '作成者： %{name} ( %{age} 歳)'
     caption_time_ago: '%{time_ago} 前'
-    header: Gallery
+    header: ギャラリー
     header_playlab: Play Lab
     header_artist: アーティスト
   landing:
@@ -501,7 +502,7 @@ ja:
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
     placeholder: ここに答えを入力
-    open_response_title: Thanks
+    open_response_title: ありがとう
     open_response_body: Thanks for your response!
   dialog:
     ok: OK
@@ -558,32 +559,32 @@ ja:
     all_courses: All courses
   project:
     projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    create: プロジェクトを作る
+    create_a_project: 新しいプロジェクトを作る
+    new: 新しく作る
+    rename: 名前を変更
     save: 保存
     delete: 削除
-    exit: Return to Course
-    my_projects: My Projects
+    exit: コースに戻る
+    my_projects: マイプロジェクト
     share: 共有
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
+    share_title: プロジェクトを共有
+    share_copy_link: 'リンクをコピー:'
     close: Close
     more: それ以上
     name: 名前
     updated: Updated
-    project_type: Project Type
-    help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
-    need_help: Need help getting started?
+    project_type: プロジェクトの種類
+    help_text: '下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！ <br/>いつでも、戻ってきてプロジェクトを再開することができます。'
+    need_help: スタートするのをお手伝いしましょうか？
     really_delete: 削除しますか？
     delete_yes: はい
     delete_no: いいえ
-    saved: Saved
-    not_saved: Not saved
+    saved: 保存されました
+    not_saved: 保存されていません
     cancel: キャンセル
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    delete_confirm_title: このプロジェクトを削除してよろしいですか？
+    delete_confirm_text: プロジェクトを削除すると、マイプロジェクトのリストからは永久に消えます。今までにリンクを共有した人は誰もそのプロジェクトを見ることができなくなります。
+    view_all: マイプロジェクトを見る
     remix: Remix
     click_to_remix: "Click 'Remix' to spin-off your own version!"

@@ -34,9 +34,9 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
   }
   if (stageData.script_stages > 1) {
     $('.header_popup_link').show();
-    if (stageData.show_freeplay_links) {
-      $('.freeplay_links').show();
-    }
+    stageData.freeplay_links.forEach(function (item) {
+      $('.' + item + '_free_play').show();
+    });
   }
   if (progressData.trophies) {
     $('.header_trophy_link').show();
@@ -163,33 +163,33 @@ dashboard.buildHeader = function (stageData, progressData, currentLevelId, userI
 function shareProject() {
   dashboard.project.save(function () {
     var origin = location.protocol + '//' + location.host;
-    var shareUrl = origin + dashboard.project.appToProjectUrl() + '#' + dashboard.project.getCurrentId();
+    var shareUrl = origin + dashboard.project.getPathName();
     var encodedShareUrl = encodeURIComponent(shareUrl);
     var dialog = new Dialog({body: '<img class="modal-image" src="' + appOptions.skin.staticAvatar + '">'
-    + '<div id="project-share" class="modal-content">'
-    + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
-    + '<p><%= I18n.t('project.share_copy_link') %></p>'
-      // TODO: de-dup with apps code once JS common-core work is done.
-    + '<div><input type="text" id="sharing-input" value="' + shareUrl + '" style="cursor: copy; width: 465px;" readonly></div>'
-    + '<button id="continue-button" style="float: right;"><%= I18n.t('project.close') %></button>'
-    + '<div class="social-buttons">'
-    + '  <a href="https://www.facebook.com/sharer/sharer.php?u=' + encodedShareUrl + '" target="_blank" class="popup-window">'
-    + '    <i class="fa fa-facebook"></i>'
-    + '  </a>'
-    + '  <a href="https://twitter.com/intent/tweet?url=' + encodedShareUrl + '&amp;text=Check%20out%20what%20I%20made%20@codeorg&amp;hashtags=HourOfCode&amp;related=codeorg" target="_blank" class="popup-window">'
-    + '    <i class="fa fa-twitter"></i>'
-    + '  </a>'
-    + '  <a id="sharing-phone" href="" onclick="return false;">'
-    + '    <i class="fa fa-mobile-phone" style="font-size: 28pt;"></i>'
-    + '  </a>'
-      // TODO + '  <a href="#" onclick="return false;" id="print"><i class="fa fa-print"></i></a>'
-    + '</div>'
-    + '<div id="send-to-phone" class="sharing" style="display: none;">'
-    + '  <label for="phone">Enter a US phone number:</label>'
-    + '  <input type="text" id="phone" name="phone">'
-    + '  <button id="phone-submit" onclick="return false;">Send</button>'
-    + '  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>'
-    + '</div></div>'
+      + '<div id="project-share" class="modal-content">'
+      + '<p class="dialog-title"><%= I18n.t('project.share_title') %></p>'
+      + '<p><%= I18n.t('project.share_copy_link') %></p>'
+        // TODO: de-dup with apps code once JS common-core work is done.
+      + '<div><input type="text" id="sharing-input" value="' + shareUrl + '" style="cursor: copy; width: 465px;" readonly></div>'
+      + '<button id="continue-button" style="float: right;"><%= I18n.t('project.close') %></button>'
+      + '<div class="social-buttons">'
+      + '  <a href="https://www.facebook.com/sharer/sharer.php?u=' + encodedShareUrl + '" target="_blank" class="popup-window">'
+      + '    <i class="fa fa-facebook"></i>'
+      + '  </a>'
+      + '  <a href="https://twitter.com/intent/tweet?url=' + encodedShareUrl + '&amp;text=Check%20out%20what%20I%20made%20@codeorg&amp;hashtags=HourOfCode&amp;related=codeorg" target="_blank" class="popup-window">'
+      + '    <i class="fa fa-twitter"></i>'
+      + '  </a>'
+      + '  <a id="sharing-phone" href="" onclick="return false;">'
+      + '    <i class="fa fa-mobile-phone" style="font-size: 28pt;"></i>'
+      + '  </a>'
+        // TODO + '  <a href="#" onclick="return false;" id="print"><i class="fa fa-print"></i></a>'
+      + '</div>'
+      + '<div id="send-to-phone" class="sharing" style="display: none;">'
+      + '  <label for="phone">Enter a US phone number:</label>'
+      + '  <input type="text" id="phone" name="phone">'
+      + '  <button id="phone-submit" onclick="return false;">Send</button>'
+      + '  <div id="phone-charges">A text message will be sent via <a href="http://twilio.com">Twilio</a>. Charges may apply to the recipient.</div>'
+      + '</div></div>'
     });
     function createHiddenPrintWindow(src) {
       var iframe = $('<iframe id="print_frame" style="display: none"></iframe>'); // Created a hidden iframe with just the desired image as its contents
@@ -225,7 +225,7 @@ function shareProject() {
         submitButton.click(function() {
           var phone = $("#project-share #phone");
           var params = jQuery.param({
-            type: location.pathname.match(/^\/p\/(\w+)/)[1],
+            type: dashboard.project.getCurrentApp(),
             channel_id: dashboard.project.getCurrentId(),
             phone: phone.val()
           });
@@ -252,16 +252,23 @@ function shareProject() {
 }
 
 function remixProject() {
-  var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-  dashboard.project.copy(newName, function () {
-    $('.project_name').text(dashboard.project.getCurrentName());
-  });
+  if (dashboard.project.getCurrentId()) {
+    dashboard.project.serverSideRemix();
+  } else {
+    // We don't have an id. This implies we are either a legacy /c/ share page,
+    // or we're on a blank project page that hasn't been saved for the first time
+    // yet. In both cases, copy will create a new project for us.
+    var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
+    dashboard.project.copy(newName, function() {
+      $(".project_name").text(newName)
+    });
+  }
 }
 
 // Namespace for manipulating the header DOM.
 dashboard.header = {};
 
-// Minimal project header for legacy /c/ share pages.
+// Minimal project header for viewing channel shares and legacy /c/ share pages.
 dashboard.header.showMinimalProjectHeader = function () {
   var projectName = $('<div class="project_name_wrapper header_text">')
       .append($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()))
@@ -285,7 +292,7 @@ dashboard.header.showProjectLevelHeader = function () {
 dashboard.header.showProjectHeader = function () {
   function projectNameShow() {
     $('.project_name').replaceWith($('<div class="project_name header_text">').text(dashboard.project.getCurrentName()));
-    dashboard.project.updateTimestamp();
+    dashboard.header.updateTimestamp();
     $('.project_save').replaceWith($('<div class="project_edit header_button header_button_light">').text('<%= I18n.t('project.rename') %>'));
   }
 
@@ -369,7 +376,7 @@ dashboard.header.showProjectHeader = function () {
     dialog.show();
     $('#confirm-delete #continue-button').click(function () {
       dashboard.project.delete(function () {
-        location.href = location.pathname;
+        location.href = dashboard.project.appToProjectUrl();
       });
     });
     $('#confirm-delete #again-button').click(function () {
@@ -382,14 +389,25 @@ dashboard.header.showProjectHeader = function () {
     // Save the project if one exists (i.e. isn't just the default one) then navigate.
     if (dashboard.project.getCurrentId()) {
       dashboard.project.save(function () {
-        location.href = location.pathname;
+        location.href = dashboard.project.appToProjectUrl();
       });
     } else {
-      location.href = location.pathname;
+      location.href = dashboard.project.appToProjectUrl();
     }
   });
 
   $(document).on('click', '.project_list', function () {
-    location.href = '/p'; <%# TODO: Can't call project_list_path because it's not in scope %>
+    location.href = '/projects'; <%# TODO: Can't call project_list_path because it's not in scope %>
   });
+};
+
+dashboard.header.updateTimestamp = function () {
+  var timestamp = dashboard.project.getCurrentTimestamp();
+  if (timestamp) {
+    $('.project_updated_at').empty().append("Saved ")  // TODO i18n
+        .append($('<span class="timestamp">').attr('title', timestamp)).show();
+    $('.project_updated_at span.timestamp').timeago();
+  } else {
+    $('.project_updated_at').text("Not saved"); // TODO i18n
+  }
 };

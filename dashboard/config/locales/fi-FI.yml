@@ -245,6 +245,7 @@
       free_play:
         playlab: Tee sovellus
         artist: Piirrä jotakin
+        calculate: Calculate Something
     user:
       classroom: Opettajan kotisivu
       district_dashboard: District Dashboard

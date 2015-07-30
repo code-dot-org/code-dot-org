@@ -13,7 +13,7 @@ def pdf_conversions_for_files(file_pattern, url_extension)
       extname = File.extname(file)
       file_path_without_extension = file[0...-(extname.length)]
       url_path_from_curriculum_without_extension = file_path_without_extension.match(/curriculum-(.*)/)[1]
-      url_path = 'curriculum/' + url_path_from_curriculum_without_extension + url_extension
+      url_path = 'curriculum/' + url_path_from_curriculum_without_extension + url_extension + '?pdf_version=true'
       conversion_infos << PDFConversionInfo.new(url_path, [file], file_path_without_extension + '.pdf')
     end
   end
@@ -35,7 +35,7 @@ all_outfiles = [].tap do |all_outfiles|
     file fetchfile_for_pdf => pdf_conversion_info.src_files do
       url = "#{base_url}#{pdf_conversion_info.url_path}"
 
-      PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose:true)
+      PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
 
       fetchable_url = RakeUtils.replace_file_with_s3_backed_fetch_file(pdf_conversion_info.output_pdf_path, fetchfile_for_pdf, bucket: 'cdo-fetch')
 

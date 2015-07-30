@@ -248,6 +248,7 @@
       free_play:
         playlab: Izveidot aplikāciju
         artist: Uzzīmēt kaut ko
+        calculate: Calculate Something
     user:
       classroom: Skolotāju mājas lapa
       district_dashboard: District Dashboard

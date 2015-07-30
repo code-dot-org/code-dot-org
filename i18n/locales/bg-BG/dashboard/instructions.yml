@@ -701,13 +701,15 @@ bg:
       Course 4 2_instruction: Пчелата иска нектар точно сега. Не забравяйте, не всички обекти са цветя, така че проверете цветята за събиране на нектар.
       Course 4 Artist 1_instruction: 'Помогнете ми да завърша моята кутия. (Всеки ред е дълъг 300 пиксела) '
       Course 4 Artist 10_instruction: 'Сега е време за импровизации! Забавлявайте се и направете това, което Ви харесва. '
-      Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it without any extra information?  Hint:  Feel free to use trial
-        and error. You are not expected to get it perfect the first time.
-      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the \"see the solution\" button."
+      Course 4 Artist 11_instruction: 'Сега е време за  предизвикателство!  Ето един дизайн, който използва само блокове, които вече са показали.  Можеш ли да разбереш как да го пресъздадеш без никаква допълнителна информация?  Съвет: Чувствай се свободен да пробваш колкото е нужно. Не е задължително да успееш от  първия път.'
+      Course 4 Artist 12_instruction: "Вдъхнови се за свободна игра: Вече сте научили всичко, което трябва да знаете за да направите модел като този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно. От друга страна, можете да създаде нещо свое. \r \r Искате ли да знаете как е направен нашия вдъхновяващ модел? Щракнете върху синята стрелка вдясно и след това щракнете върху бутона \"Вижте решението\"."
+      Course 4 Artist 13_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can design anything you want!
       Course 4 Artist 2_instruction: Можете ли да повторите този код, за да очертаете сивите контури на квадрата?
+      Course 4 Artist 20_instruction: |
+        Still playing?  Here is a blank canvas where
+        you can create whatever you want!
       Course 4 Artist 3_instruction: 'Добре, опитайте се да разберете какво ще стане ако стартирате този код (или натиснете "Старт", за да го пробвате). След това го повторете достатъчно пъти, за да завършите чертежа.'
       Course 4 Artist 4_instruction: 'Колко градуса има една окръжност?  Попълнете блокът за повторение с такова число, че да се създаде кръг от цветове.'
       Course 4 Artist 5_instruction: 'Начертайте другата половина на този дизайн така, че да е симетричен. Триъгълниците са равностранни и с дължина  на страната 50 пиксела.'
@@ -735,6 +737,7 @@ bg:
       Course 4 Artist For Loops 1_instruction: 'Начертай триъгълник, който е с размер 50 пиксела. Подсказка: използвай блок за повторение.'
       Course 4 Artist For Loops 10_instruction: Време е за свободна игра! Забавлявай се, нарисувай каквото искаш с блоковете, които си научил как да използваш
       Course 4 Artist For Loops 11_instruction: 'Помните ли, когато използвахме променливи за да контролираме броя на страните в геометрична форма? Тази форма започва като триъгълник, а след това се допълва по една страна докато не се получи десетоъгълник ( 10 страни). Всяка страна трябва да бъде 100 пиксела дълга. Съвет: Разделете 360 на страните на фигурата, за да получите ъгъла на завъртане.'
+      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
       Course 4 Artist For Loops 12_instruction: 'Това изглеждаше много готино, но сега бих искал да начертаем още фигури до последната. Този път, всяка страна е 20 пиксела. Използвайте "скок" блок за да  скачате напред 40 пиксела след всяка фигура. '
       Course 4 Artist For Loops 13_instruction: 'Хммм, тези фигури стават все по -големи всеки път! Но, не решихме ли тази задача с използване на променливи? Как да използваме променливата "брояч", за да умалим страните на многоъгълника? Вместо да се премествате напред на точна величина, опитайте да разделите  величината първо на 100 пиксела.'
       Course 4 Artist For Loops 14_instruction: 'Ако, когато чертаете фигура,  завъртите малко повече или по-малко от обикновено, ще получите фигура близка до оригиналната .Опитайте да завъртите на 89 градуса, за да получите тази сложна спирала.'
@@ -747,6 +750,7 @@ bg:
       Course 4 Artist For Loops 7_instruction: 'Какво ще стане, ако премахнете "Повтори 3" от алгоритъма, а оставите блоковете "премести" и " завий" ? В тази спирала от триъгълници всяка от страните е 20 пиксела по-дълга от предишната.'
       Course 4 Artist For Loops 8_instruction: Най-малката линия от тази квадратна спирала е 10, най-голямата е 200, и всяка линия е с 10 пиксела по-дълга от предходната. Можете ли да попълните липсващите блокове, за да завършите тази страхотна картина?
       Course 4 Artist For Loops 9_instruction: Можете ли да направите спирала? Преместете се напред от 1 до 75 пиксела, като увеличавате с 1 пиксел всеки път.
+      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604 for the solution."
       Course 4 Artist Functions 1_instruction: Можете ли да начертаете квадрат със страни 100 пиксела дълги, използвайки цикъл?
       Course 4 Artist Functions 10_instruction: Кой блок трябва да използвате, за да поставите триъгълника върху квадрата?
       Course 4 Artist Functions 11_instruction: 'Проверете този код, който изчертава куб- можете ли да го поместите във функцията, наречена" начертай Куб"'
@@ -763,7 +767,7 @@ bg:
       Course 4 Artist Functions 7_instruction: Можете ли да чертаете линия от квадратчета с помощта на квадратна функция? Всеки квадрат е 40 пиксела дължина.
       Course 4 Artist Functions 8_instruction: 'Разбрахте ли как се използва блока "функция"? Нека да променим квадрата на 200 пиксела. Съвет: щракнете на "Редактиране", за да промените размера в блока "начертай квадрат". Не забравяйте да  щракнете на "запиши и затвори", за да излезете от менюто за редактиране на функции. '
       Course 4 Artist Functions 9_instruction: Направили сме по-голямата част от кода за създаване на функция. Обаче, има нещо което липсва. Можете ли да допълните този функционален блок?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything you need to know to make a pattern like this! If this picture inspires\nyou, try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant to know how our inspiration pattern was made? Click on the blue tab\nto the right and then click the `see the solution` button."
+      Course 4 Artist Inspire_instruction: "Вдъхнови се за свободна игра: Вече сте научили всичко, което трябва да знаете за да направите модел като този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно. От друга страна, можете да създаде нещо свое. \r \r Искате ли да знаете как е направен нашия вдъхновяващ модел? Щракнете върху синята стрелка вдясно и след това щракнете върху бутона \"Вижте решението\"."
       Course 4 Artist Params 1_instruction: Да редактираме функцията, която изчертава квадрат със страни 50 пиксела
       Course 4 Artist Params 10_instruction: |-
         Можете да извикате функция която се намира в друга функция! Използвайте функция "фигура' и начертайте 3 къщи, всяка с 20 пиксела по-голяма от предходната, като първата е 50 пиксела. Помогнете си, като използвате цикъл "брояч" . 
@@ -820,8 +824,22 @@ bg:
       Course 4 Bee 2_instruction: Проверете всеки обект, за да видите дали това е цвете. Ако е така, съберете нектар... в противен случай, можете да го игнорирате!
       Course 4 Bee 3_instruction: Неизвестния обект е или цвете или медена пита. Използвай блока Ако-Иначе, за да вземеш нектар ако е цвете, иначе направи мед ( защото това значи че е медена пита).
       Course 4 Bee 4_instruction: Това лилаво цвете може да има 3, 2 или 1 нектар. Тук ако-иначе блокът е комбиниран с друг ако-иначе блок, за да създаде ако, иначе-ако, иначе блок. Завършете решението, за да съберете неизвестното количество нектар.
+      Course 4 Bee 5_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Add an if-else block to create an if, else-if, else block. Complete
+        the solution to collect the unknown amount of nectar.
+      Course 4 Bee 6_instruction: |
+        This purple flower may have either 3, 2, or 1
+        nectar. Create an if, else-if, else block to collect the unknown amount of
+        nectar.
+      Course 4 Bee 7_instruction: |
+        Use everything you have learned so far to collect
+        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
       Course 4 Bee For Loops 1_instruction: Използвайте цикъл, за да съберете нектар от всяко цвете.
       Course 4 Bee For Loops 10_instruction: Ако цикъла е намаляващ, стъпката се движи в низходящ ред при всяко повторение. Каква трябва да е стъпката, за да съберете нектар от 9, 6 и накрая 3?
+      Course 4 Bee For Loops 11_instruction: |
+        What's wrong with this loop? See if
+        you can fix it and make the bee collect all the nectar.
       Course 4 Bee For Loops 2_instruction: 'Това е един нов вид цикъл наречен " за" цикъл. Той ще преброи от 1 до 5 ( многократно събиране на числото 1) и ще стартира броенето в цикъла отначало. Помогнете на пчелата да вземе нектара.'
       Course 4 Bee For Loops 3_instruction: 'Може да решите пъзела като използвате  блока " за цикъл", за да преброите от 1 до 3. Хайде да съберем нектара!'
       Course 4 Bee For Loops 4_instruction: Съберете всичкия нектар от цветята. Чудя се, няма ли по лесен начин от този...
@@ -1166,6 +1184,7 @@ bg:
       Infinity_touch_faster_instruction: Докоснете още повече снежинки!
       Infinity_touch_four_instruction: Премести Анна, нагоре, надолу наляво и надясно, за да докосне всяка от четирите снежинки.
       Infinity_touch_score_instruction: 'Направете така, че Анна да получава точка, когато докосне снежинка.  След това щракнете върху бутона "Старт" и я направлявайте да докосне всяка снежинка по веднъж.'
+      jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
       K-1 Artist 1 Assessment 1_instruction: 'Начертай къса линия нагоре и дълга  вдясно!'
       K-1 artist 1 level 10_instruction: 'Начертай пунктирана линия с помощта на  блокове за скок и чертане'
@@ -1422,11 +1441,15 @@ bg:
       NEW Course 4 Artist Functions 7_instruction: 'Разбрахте ли как се използва блока функция? Нека да променим страните на квадрата на 200 пиксела. Съвет:щракнете на "Редактиране" да промените размера в блока" начертай квадрат". Не забравяйте да  щракнете на "запиши затвори" за да излезете от менюто за редактиране на функции. '
       NEW Course 4 Artist Functions 8_instruction: Ние сме приготвили повечето от кода, за да се създаде функция. Въпреки това изглежда, че нещо липсва. Можете ли да редактирате дефиницията на функцията и да нарисувате триъгълника?
       NEW Course 4 Artist Functions 9_instruction: Кой блок трябва да се добави, за да се постави триъгълник върху квадрата?
+      NEW Course 4 Artist Functions inspire_instruction: "Free Play Inspiration:\nYou've now learned everything you need to know to make a pattern like this!\nIf this picture inspires you, try to make something similar. Otherwise, create\nsomething all your own.\r\n \r\nWant to know how our inspiration pattern was\nmade? Visit for the solution."
       New Course 4 Artist Functions Level 4_instruction: 'Използвайте функцията "чертае квадрат", за да изготвите този модел.'
       NEW Course 4 Artist Params 1_instruction: 'Нека да дефинираме тази функция, която ще чертае квадрат със страни 50 пиксела. Щракнете върху "Редактиране", за да започнете.'
       NEW Course 4 Artist Params 10_instruction: 'Създайте "начертава шестоъгълник" функция с параметър "дължина". Съвет: Страната на този шестоъгълник е 100 пиксела. '
       NEW Course 4 Artist Params 11_instruction: 'Може ли да разберете как се прави тази форма? Редактирайте функцията, за да използвате параметъра "страни".'
       NEW Course 4 Artist Params 12_instruction: Можете ли да завършите тази рисунка? Страните на всички фигури са дълги 100 пиксела.
+      NEW Course 4 Artist Params 12a_instruction: |
+        This image is similar to the last.
+        Can you use a "for loop" with your function to make this design?
       NEW Course 4 Artist Params 13_instruction: |
         Нека редактираме функцията "начертай фигура".
         Тя вече има "дължина". Сега нека променим функцията така, че да се добави и "ширина".
@@ -1442,6 +1465,7 @@ bg:
       NEW Course 4 Artist Params 7_instruction: 'Можете ли да завършите тази рисунка? Съвет: всеки триъгълник е 25 пиксела по-голям от предходния.  Първия триъгълник е със страни от 25 пиксела.'
       NEW Course 4 Artist Params 8_instruction: 'Можете ли да начертаете всеки един от тези триъгълници с тази нова функция? Страните на първия са дълги 25 пиксела, на втория 50, а на третия- 75. Съвет: започнете, като щракнете върху "Редактиране" в блока на функцията.'
       NEW Course 4 Artist Params 9_instruction: 'Щракнете върху "Редактиране", за да попълните параметъра в дефиницията на функцията "чертае квадрат". Тя трябва да получи параметър за дължина, точно като триъгълника. Този път, начертайте 3 квадрата със страни: 25, 50 и 75 пиксела, като всеки да е на 100 пиксела от другия.'
+      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n \r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387530 for the solution."
       NEW Course 4 Artist Vars 1.5_instruction: 'Погледнете в кода, можете ли да разберете как "поставя дължина" блока и "дължина" блока работят заедно? Щракнете върху "Старт", за да го видите в действие. '
       NEW Course 4 Artist Vars 12_instruction: 'Промени този алгоритъм, така че той да използва "страни" променливата вместо фиксирано число, за да нарисувате петоъгълник. Заместете числото 5 с променлива "страни" и използвате "Задаване страни" блока.'
       NEW Course 4 Artist Vars 2.5_instruction: 'Погледнете в кода, можете ли да разберете как "поставя дължина" блока и "дължина" блока работят заедно? Щракнете върху "Старт", за да го видите в действие. '
@@ -1462,10 +1486,21 @@ bg:
       NEW Course 4 Bee For Loops 7_instruction: Разбрахте ли как работят циклите ? Подобно е на последният пъзел, но сега трябва да вземете 2,4,6,8,10 нектара. Кода е започнат с изключение на числата във циклите за броене!
       NEW Course 4 Bee For Loops 8_instruction: "Ако вашият цикъл брои с възходяща стъпка, то стъпката се добавя към вашия брояч, който се променя след всяко действие. Каква трябва да е стъпката ви за да съберете 3, 6, 9 нектара? \r "
       NEW Course 4 Bee For Loops 9_instruction: Ако цикъла е намаляващ, стъпката се движи в низходящ ред при всяко повторение. Каква трябва да е стъпката, за да съберете нектар от 9, 6 и накрая 3?
+      NEW Course 4 Bee For Loops 95_instruction: |
+        Take a look at each piece of the
+        "for loop" that you have just created.  Can you figure out which numbers
+        you need to double to solve this puzzle? Why does it work?
       NEW Course 4 Play Lab Params 11_instruction: 'Сега е време за игра! Забавлявайте се с всички блокове на вашата кутия с инструменти. '
       NEW Course 4 Play Lab Params 5 5_instruction: 'Попълнете параметъра на актьора с въвеждане на числа (1, 2 и 3), за да накарате тези участници да патрулират. '
       NEW Course 4 Play Lab Vars 4 5_instruction: '"Какво мислите прави този код? Натиснете "Старт", за да видите какво се случва.'
+      NEW Course 4 Play Labs For Loops 7a_instruction: |
+        Using what you learned so
+        far, can you have Dinosaur take a step forward every time Penguin counts?
       NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Сега е време за игра! Забавлявайте се с всички блокове на вашата кутия с инструменти. '
+      NEW Course 4 Play Labs For Loops 8a_instruction: |
+        Challenge: How would you
+        use the "for loop" to get every actor to go around and say their actor number,
+        then vanish from the screen? 
       New Play Lab Project_instruction: Създайте своя собствена история или игра! Вашият код се записва като проект, към който можете да върнете по всяко време.
       Ninjacat Demo B (copy 1)_instruction: "\r\nLet’s begin by exploring a simple\nvideogame, and then figuring out how it works. You can use the arrow keys\nto move the ninja left, right and jump - try to catch the unicorn and avoid\nthe dragon!\r\n\r\n\r\n\r\n  \r\n\r\n"
       Ninjacat Demo B_instruction: |
@@ -1979,12 +2014,38 @@ bg:
         an explanation.
       U3L2 Using Simple Commands_instruction: |
         Draw a square above and to the left
-        of the turtle's starting position. [Click to see full instructions]
+        of the turtle's starting position. Click to see full instructions.
+      U3L23 Chatbot Conditionals 1_instruction: |
+        Ask the user the question "What
+        is your favorite color?" using the "prompt" block. Using the "if" block,
+        check if the user's response matches yours. Add a "write" block to the
+        body of the "if" statement to add the response "<favorite_color> is my
+        favorite color too!" to the screen.
+      U3L23 Chatbot Conditionals 2_instruction: |
+        Replace the "if" block with an
+        "if/else" block to make your chatbot respond in all circumstances.
+      U3L23 Chatbot Conditionals 3_instruction: |
+        In text mode, add several "else
+        if" statements to your program.
+      U3L23 Chatbot Intro 2_instruction: |
+        Create a click event for your button. Create
+        a conversation variable and store the user's input in it. You may need the
+        "getText," "setText," and "+" blocks in your code.
+      U3L23 Chatbot Intro 3_instruction: |
+        Add the response "uh huh" by using the
+        "+" operator. Add newline characters (\
+        ) where appropriate.
+      U3L23 Chatbot Intro 4_instruction: |
+        Use this level to make your chatbot look
+        and work better!
+      U3L23 Chatbot Intro_instruction: |
+        Add a Lable, Text Input, Button, and Text
+        Area object to your project
       U3L2_Turtle3by3Grid_instruction: |
-        Draw a 3x3 grid to the *front* and *right*
-        of the turtle as efficiently as possible. The turtle should end at its original
-        location, facing its original direction.
+        Draw a 3x3 grid to the front and right of
+        the turtle as efficiently as possible. The turtle should end at its original
+        location, facing its original direction. (Click to see full instructions)
       U3L2_TurtleSquare_right_instruction: |
         Draw a square ABOVE and to the RIGHT
-        of the starting location.
+        of the starting location. (Click to show full instructions)
       XML Scratchpad_instruction: Използвай това тестово ниво за да вземеш xml-а за unit тестове

@@ -3,7 +3,7 @@ partner_sites = ['al.code.org', 'ar.code.org', 'br.code.org', 'eu.code.org', 'it
 get '/:short_code' do |short_code|
   only_for ['code.org', 'csedweek.org', 'hourofcode.com', partner_sites].flatten
   pass if request.site == 'hourofcode.com' && ['ap', 'ca', 'co', 'gr'].include?(short_code)
-  pass unless tutorial = DB[:tutorials].where(short_code:short_code).first
+  pass unless tutorial = DB[:tutorials].where(short_code: short_code).first
   launch_tutorial(tutorial)
 end
 
@@ -15,20 +15,20 @@ end
 
 # Employee engagement
 get '/api/hour/begin_company/:company' do |company|
-  pass unless DB[:forms].where(kind:'CompanyProfile', name:company).first
-  pass unless tutorial = DB[:tutorials].where(code:'codeorg').first
-  launch_tutorial(tutorial, company:company)
+  pass unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
+  pass unless tutorial = DB[:tutorials].where(code: 'codeorg').first
+  launch_tutorial(tutorial, company: company)
 end
 
 get '/api/hour/begin/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code:code).first
+  pass unless tutorial = DB[:tutorials].where(code: code).first
   launch_tutorial(tutorial)
 end
 
 get '/api/hour/begin_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code:code).first
+  pass unless tutorial = DB[:tutorials].where(code: code).first
   launch_tutorial_pixel(tutorial)
 end
 
@@ -40,7 +40,7 @@ get '/api/hour/certificate/:filename' do |filename|
 
   basename = File.basename(filename, extname)
   session, width = basename.split('-')
-  pass unless row = DB[:hoc_activity].where(session:session).first
+  pass unless row = DB[:hoc_activity].where(session: session).first
 
   width = width.to_i
   width = 0 unless(width > 0 && width < 1754)
@@ -97,19 +97,19 @@ end
 
 get '/api/hour/finish/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code:code).first
+  pass unless tutorial = DB[:tutorials].where(code: code).first
   complete_tutorial(tutorial)
 end
 
 get '/api/hour/finish_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = DB[:tutorials].where(code:code).first
+  pass unless tutorial = DB[:tutorials].where(code: code).first
   complete_tutorial_pixel(tutorial)
 end
 
 get '/api/hour/status' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless row = DB[:hoc_activity].where(session:request.cookies['hour_of_code']).first
+  pass unless row = DB[:hoc_activity].where(session: request.cookies['hour_of_code']).first
   dont_cache
   content_type :json
   JSON.pretty_generate session_status_for_row(row)
@@ -117,7 +117,7 @@ end
 
 get '/api/hour/status/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless row = DB[:hoc_activity].where(session:code).first
+  pass unless row = DB[:hoc_activity].where(session: code).first
   dont_cache
   content_type :json
   JSON.pretty_generate session_status_for_row(row)
@@ -126,10 +126,10 @@ end
 post '/api/hour/certificate' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
 
-  row = DB[:hoc_activity].where(session:params[:session_s]).first
+  row = DB[:hoc_activity].where(session: params[:session_s]).first
   if row
     name = params[:name_s].to_s.strip
-    DB[:hoc_activity].where(id:row[:id]).update(name:name)
+    DB[:hoc_activity].where(id: row[:id]).update(name: name)
     row[:name] = name
   end
 

@@ -61,7 +61,7 @@
   congratulations: Вітання!
   congratulations_on_completing_hoc: Вітаємо із завершенням першої Години коду
   get_a_certificate_of_achievement: Отримати сертифікат досягнень
-  enter_valid_age: Будь ласка, виберіть припустимі віку
+  enter_valid_age: Будь ласка, виберіть припустимий вік
   enter_valid_email: Будь ласка, введіть електронну адресу
   get_a_certificate_message: Ми надішлемо вам сертифікат та інформацію про те, як
     <a href='/learn/beyond'>вчитися далі після однієї години коду</a>
@@ -190,21 +190,21 @@
     &ldquo;Інформатика - це така сфера, у якій ви не можете
     знати, чи вам це подобається, поки не спробуєте.&rdquo;
     Джексон, 6 клас
-  homepage_hero_text_student4: "&ldquo;Ви можете зробити все, що забажає\nваша фантазія,
-    з допомогою програмування .&rdquo; \nМайя, 2 клас\n"
+  homepage_hero_text_student4: "&ldquo;З допомогою програмування можна зробити \nвсе,
+    що забажає ваша фантазія .&rdquo; \nМайя, 2 клас\n"
   homepage_hero_text_student5: "&ldquo;Інформатика - не для когось-там.\nВона для
     тебе, тут і зараз.&rdquo; \nДжеральдо, вчитель\n"
-  homepage_hero_text_teacher1: "&ldquo;Програмування збуджує творчість, натхнення
+  homepage_hero_text_teacher1: "&ldquo;Програмування пробуджує творчість, натхнення
     та інноваційність &mdash; \nа всі вони важливі для будь-якої професії.&rdquo;\nФлореза,
     вчитель\n"
   homepage_hero_text_teacher2: |
     &ldquo;Ця програма спонукала 100% моїх учнів
     до активної участі та залучення.&rdquo;
     Адам, вчитель
-  homepage_hero_text_stat_loc: '#loc линий кода, які написані учнями'
-  homepage_hero_text_stat_students: '#student_count облікові записи учнів на Code
-    Studio'
-  homepage_hero_text_stat_served: 'Година код: #served надана'
+  homepage_hero_text_stat_loc: '#loc рядків коду, написаних учнями'
+  homepage_hero_text_stat_students: '#student_count облікових записів учнів у Студії
+    коду'
+  homepage_hero_text_stat_served: 'Година коду: навчились #served'
   homepage_slot_text_hoc: Година Коду
   homepage_slot_text_frozen: Крижане серце з Анною і Ельзою
   homepage_slot_text_teacher: Teacher Dashboard
@@ -226,7 +226,7 @@
   homepage_slot_text_link_host: Провести Годину Коду
   homepage_slot_text_link_hocserved: '# спробували'
   homepage_slot_text_title_students: Учні
-  homepage_slot_text_blurb_students: Вивчіть всі наші навчальні курси
+  homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
   homepage_slot_text_link_codestudio: Спробуйте Студію Коду
   homepage_slot_text_link_local: Знайти місцевий клас
   homepage_slot_text_link_othercourses: Інші онлайн курси
@@ -330,8 +330,8 @@
     для Вас і Ваших учнів.
   dashboard_landing_more_tutorials: Хочите побачити більше уроків?
   dashboard_landing_more_tutorials_desc: Є й інші навчальні посібники <a href="/learn/beyond">
-    від наших партнерів.</a> Навчіться програмувати з роботами, зробити веб-сторінки,
-    зробити свій власний app або вивчити інші мови, як C++, Ruby, Python або!
+    від наших партнерів.</a> Навчіться програмувати з роботами, робити веб-сторінки,
+    створювати власні програмки або вивчати інші мови, як C++, Ruby або Python!
   dashboard_hoc_courses: Година код для людей різного віку
   dashboard_hoc_courses_desc: Спробуйте один із цих коротше 1 годину підручники з
     вашими студентами!
@@ -367,7 +367,7 @@
   dashboard_course_ecs_desc: 'Вивчення інформатики, річної курс, який складається
     з 6 блоків: Human Computer Interaction, вирішення проблем, веб-дизайн, програмування,
     обчислювальним та аналізу даних і робототехніка.'
-  dashboard_course_csp: AP® принципи комп'ютерної науки
+  dashboard_course_csp: AP® принципи інформатики
   dashboard_course_csp_desc: Code.org розробив суворі, чарівна і доступним курс, який
     досліджує основоположної ідеї обчислень.
   dashboard_landing_loading: Завантаження...
@@ -1184,7 +1184,7 @@
     цікавий прискорений курс програмування роботів, водночас розвиваючи математичні
     та природничі знання та навики.
   compatibility_https_header: Будь ласка, увімкніть HTTPS для Code.org.
-  compatibility_https_message: Для підвищення безпеки, ми перейшли до HTTPS на %{https_date}.
+  compatibility_https_message: Для підвищення безпеки, ми перейшли до HTTPS %{https_date}.
     Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'>
     натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org.
   compatibility_https_hide_this_warning: Сховати попередження

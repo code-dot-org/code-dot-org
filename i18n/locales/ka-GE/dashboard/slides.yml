@@ -12,10 +12,10 @@ ka:
         text: 'Most code is typed, but Blockly is visual. Each blocks corresponds to a line of "real" code.'
       4:
         image: notes/hoc1_4.jpg
-        text: "You'll learn the foundations of computer science, concepts which are used anywhere from making apps to controlling the Mars rover."
+        text: თქვენ ისწავლით კომპიუტერული მეცნიერების იმ საწყისებს, რომლებიც გამოიყენება ყველგან, დაწყებული აპლიკაციების შექმნით, დამთავრებული მარსზე მავალის მართვით.
       5:
         image: notes/hoc1_5.jpg
-        text: A program is a set of instructions for your computer to follow.
+        text: პროგრამა არის ინსტრუქციების ერთობლიობა, რომელსაც ემორჩილება თქვენი კომპიუტერი.
       6:
         image: notes/hoc1_6.jpg
         text: The goal of your first program is to get an Angry Bird through a maze to hit a Green Pig.

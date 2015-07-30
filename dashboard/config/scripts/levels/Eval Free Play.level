@@ -10,6 +10,7 @@
     "embed": "false",
     "instructions": "Free Play: Make art with code!",
     "is_k1": "false",
+    "is_project_level": "true",
     "skip_instructions_popup": "false",
     "scrollbars": "true",
     "min_workspace_height": "1500",

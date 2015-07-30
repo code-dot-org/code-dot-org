@@ -79,6 +79,10 @@ Eval.init = function(config) {
   config.forceInsertTopBlock = 'functional_display';
   config.enableShowCode = false;
 
+  // We don't want icons in instructions
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+
   config.html = page({
     assetUrl: studioApp.assetUrl,
     data: {
@@ -444,6 +448,7 @@ function evaluateAnswer() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
+  var tryAgainText;
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
@@ -460,7 +465,7 @@ var displayFeedback = function(response) {
     saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
     feedbackImage: Eval.feedbackImage,
     appStrings: {
-      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg()
+      reinfFeedbackMsg: evalMsg.reinfFeedbackMsg({backButton: tryAgainText})
     }
   };
   if (Eval.message && !level.edit_blocks) {
