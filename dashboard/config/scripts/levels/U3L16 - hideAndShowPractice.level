@@ -73,12 +73,16 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "start_blocks": "image(\"img\", \"http://code.org/images/logo.png\");\r\nhideElement(\"img\");\r\nbutton(\"showBtn\", \"show image\");\r\nbutton(\"hideBtn\", \"hide image\");\r\n\r\n\r\n",
+    "start_blocks": "image(\"img\", \"https://code.org/images/logo.png\");\r\nhideElement(\"img\");\r\nbutton(\"showBtn\", \"show image\");\r\nbutton(\"hideBtn\", \"hide image\");\r\n\r\n\r\n",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
     "app_height": "480",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L16 - hideAndShowExample.gif"
+    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L16 - hideAndShowExample.gif",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false"
   }
 }]]></config>
   <blocks/>
