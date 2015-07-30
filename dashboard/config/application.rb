@@ -91,7 +91,7 @@ module Dashboard
       react.js
       jquery.handsontable.full.css
       jquery.handsontable.full.js
-      video/video.js video-js.css.erb video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
+      video/video.js video-js.css video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
     )
     config.react.variant = :development
     config.react.addons = true
