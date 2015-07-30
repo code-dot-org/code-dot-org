@@ -458,7 +458,13 @@ NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
 NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
   var nodeRows = this.shard_.nodeTable.readAll();
 
-  // 1. Remove simulating routers that have vanished from remote storage.
+  // If our own row is gone, drop everything and handle disconnect.
+  if (this.onNodeLostConnection_ && !this.canFindOwnRowIn(nodeRows)) {
+    this.onNodeLostConnection_();
+    return;
+  }
+
+  // Remove simulating routers that have vanished from remote storage.
   this.routers_ = this.routers_.filter(function (simulatingRouter) {
     var stillExists = nodeRows.some(function (row) {
       return row.id === simulatingRouter.entityID;
@@ -470,7 +476,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
     return true;
   });
 
-  // 2. Create and simulate new routers
+  // Create and simulate new routers
   nodeRows.filter(function (row) {
     return row.type === NetSimConstants.NodeType.ROUTER;
   }).forEach(function (row) {
@@ -487,9 +493,19 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
 };
 
 /**
+ * @param {Object[]} nodeRows
+ * @returns {boolean} TRUE if own row is in given row collection
+ */
+NetSimLocalClientNode.prototype.canFindOwnRowIn = function (nodeRows) {
+  return nodeRows.some(function (row) {
+    return row.id === this.entityID;
+  }, this);
+};
+
+/**
  * Handler for any wire table change.  Used here to detect mutual
  * connections between client nodes that indicate we can move to a
- * "connected" state or stop trying to connect
+ * "connected" state or stop trying to connect.
  * @private
  */
 NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
