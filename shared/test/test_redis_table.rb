@@ -81,8 +81,8 @@ class RedisTableTest < Minitest::Unit::TestCase
     assert_equal([], table.to_a)
     assert_equal([], table2.to_a)
     assert_equal(nil, table.fetch(1))
-    assert_equal make_pubsub_event('shard1', '', {:action => 'reset_shard'}),
-                 pubsub.publish_history[7]
+    expected_event = make_pubsub_event('shard1', 'all_tables', {:action => 'reset_shard'})
+    assert_equal expected_event, pubsub.publish_history[7]
     assert_equal [value_with_id], table3.to_a
   end
 
