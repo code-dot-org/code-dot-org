@@ -74,6 +74,13 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
   this.packets_ = [];
 
   /**
+   * List of controllers for packets currently being edited.
+   * @type {NetSimPacketEditor[]}
+   * @private
+   */
+  this.lastPacketToAddress_ = 0;
+
+  /**
    * Our local node's address, zero until assigned by a router.
    * @type {number}
    * @private
@@ -188,6 +195,7 @@ NetSimSendPanel.prototype.tick = function (clock) {
   if (firstPacket.isSending()) {
     firstPacket.tick(clock);
   } else {
+    this.lastPacketToAddress_ = firstPacket.toAddress;
     firstPacket.beginSending(this.netsim_.myNode);
   }
 };
@@ -226,7 +234,7 @@ NetSimSendPanel.prototype.render = function () {
   // TODO: NetSim buttons in this panel need to do nothing if disabled!
   this.getBody()
       .find('#send-button')
-      .click(this.onSendButtonPress_.bind(this));
+      .click(this.onSendEventTriggered_.bind(this));
   this.getBody()
       .find('#set-wire-button')
       .click(this.onSetWireButtonPress_.bind(this));
@@ -249,11 +257,14 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     packetEditor.setPacketCount(newPacketCount);
   });
 
-  // Copy the to address of the previous packet, for convenience.
+  // Copy the to address of the previous packet if it exists. Otherwise
+  // remember the last address sent.
   // TODO: Do we need to lock the toAddress for all of these packets together?
-  var newPacketToAddress = 0;
+  var newPacketToAddress;
   if (this.packets_.length > 0) {
     newPacketToAddress = this.packets_[this.packets_.length - 1].toAddress;
+  } else {
+    newPacketToAddress = this.lastPacketToAddress_;
   }
 
   // Create a new packet
@@ -269,13 +280,17 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     bitRate: this.bitRate_,
     enabledEncodings: this.enabledEncodings_,
     removePacketCallback: this.removePacket_.bind(this),
-    contentChangeCallback: this.onContentChange_.bind(this)
+    contentChangeCallback: this.onContentChange_.bind(this),
+    enterKeyPressedCallback: this.onSendEventTriggered_.bind(this)
   });
 
   // Attach the new packet to this SendPanel
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   newPacket.getRoot().appendTo(this.packetsDiv_);
-  newPacket.getRoot().hide().slideDown('fast', updateLayout);
+  newPacket.getRoot().hide().slideDown('fast', function () {
+    newPacket.getFirstVisibleMessage().focus();
+    updateLayout();
+  });
   this.packets_.push(newPacket);
 };
 
@@ -393,9 +408,9 @@ NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimSendPanel.prototype.onSendButtonPress_ = function (jQueryEvent) {
-  var thisButton = $(jQueryEvent.target);
-  if (thisButton.is('[disabled]')) {
+NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
+  var triggeringTarget = $(jQueryEvent.target);
+  if (triggeringTarget.is('[disabled]')) {
     return;
   }
 
