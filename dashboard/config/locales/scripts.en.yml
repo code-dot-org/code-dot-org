@@ -615,6 +615,9 @@ en:
           'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
           'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
           'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
