@@ -18,7 +18,7 @@
  */
 
 /**
- * @fileoverview scroll-blockspace-on-mousewheel interaction handler
+ * @fileoverview Scroll-BlockSpace-on-mousewheel interaction handler.
  */
 'use strict';
 
@@ -30,21 +30,18 @@ goog.provide('Blockly.ScrollOnWheelHandler');
  */
 Blockly.ScrollOnWheelHandler = function (blockSpace) {
   /**
-   * @type {Blockly.BlockSpace}
-   * @private
+   * @private {Blockly.BlockSpace}
    */
   this.blockSpace_ = blockSpace;
 
   /**
-   * @type {BindData}
-   * @private
+   * @private {BindData}
    */
   this.wheelEventBindData_ = null;
 
   /**
    * (for Safari)
-   * @type {BindData}
-   * @private
+   * @private {BindData}
    */
   this.mousewheelEventBindData_ = null;
 };
