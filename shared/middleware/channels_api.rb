@@ -58,7 +58,8 @@ class ChannelsApi < Sinatra::Base
     end
     bad_request unless data.is_a? Hash
 
-    id = StorageApps.new(storage_id('user')).create(data, request.ip)
+    timestamp = Time.now
+    id = StorageApps.new(storage_id('user')).create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
 
     redirect "/v3/channels/#{id}", 301
   end
