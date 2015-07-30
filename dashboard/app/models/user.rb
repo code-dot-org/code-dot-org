@@ -575,6 +575,20 @@ SQL
     save!
   end
 
+  def advertised_scripts
+    [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, Script.flappy_script, 
+      Script.playlab_script, Script.artist_script, Script.course1_script, Script.course2_script, 
+      Script.course3_script, Script.course4_script, Script.twenty_hour_script]
+  end
+
+  def unadvertised_user_scripts
+    [working_on_user_scripts, completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.in?(advertised_scripts)}
+  end
+
+  def all_advertised_scripts_completed?
+    advertised_scripts.all? { |script| completed?(script) }
+  end
+
   def completed?(script)
     user_script = user_scripts.where(script_id: script.id).first
     user_script.try(:completed_at) || (user_script && next_unpassed_progression_level(script).nil?)

@@ -47,6 +47,7 @@ social:
 
 %link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
 %link{:href=>"/shared/css/user-hero.css", :rel=>"stylesheet"}
+%link{:href=>"/shared/css/buttons.css", :rel=>"stylesheet"}
 
 - # The homepage gsheet may specify "en" or "not en" for many row types.
 - languageFilter = request.language == "en" ? "en" : "not en"
@@ -87,6 +88,7 @@ social:
       complete: function(data, status) {
         if (data.responseText == "" || status !== "success") {
           $("#petitionexpand").animate({opacity:1}, { duration: 2000 });
+          $('#user_hero').css({display: "none"});
           //$("#petitionaction").animate({opacity:1}, { duration: 2000 });
         } else {
           $("#petitionexpand").css({display: "none"});
