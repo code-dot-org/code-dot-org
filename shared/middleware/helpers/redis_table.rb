@@ -73,7 +73,7 @@ class RedisTable
   end
 
   private
-  
+
   # Returns a new, monotonically increasing id for a row.
   # @return [String]
   def next_id
@@ -96,7 +96,6 @@ class RedisTable
   # @return [Hash] The row, or null if no such row exists.
   # @private
   def make_row(id, value)
-    puts "make_row #{id}, #{value}"
     value.nil? ? nil : merge_id(JSON.parse(value), id)
   end
 

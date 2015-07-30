@@ -42,9 +42,7 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    a = get_table(shard_id, table_name).to_a
-    puts "a=#{a}"
-    a.to_json
+    get_table(shard_id, table_name).to_a.to_json
   end
 
   #
