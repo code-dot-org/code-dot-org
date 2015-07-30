@@ -26,10 +26,13 @@
         .container.main
           = show_flashes.html_safe
           = page
-      - unless view_options[:no_footer]
+      - unless view_options[:no_footer] || view_options[:small_footer]
         .push
 
     - unless view_options[:no_footer]
-      = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
+      - if view_options[:small_footer]
+        = render partial: 'layouts/small_footer'
+      - else
+        = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
 
     = yield :body_scripts

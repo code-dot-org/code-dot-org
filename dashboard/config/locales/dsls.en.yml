@@ -2934,8 +2934,8 @@ en:
       U3L24 Warm-up Quiz 1:
         Warm-up quiz 1: Warm-up quiz 1
         Which of the following will print "Hello World!" to the screen: Which of the following will print "Hello World!" to the screen
-        'if false: print("Hello World!")': 'if false: print("Hello World!")'
-        'if true: print("Hello World!")': 'if true: print("Hello World!")'
+        if (false) { write("Hello World!"); }: if (false) { write("Hello World!"); }
+        if (true) { write("Hello World!"); }: if (true) { write("Hello World!"); }
       U3L24 Warm-up Quiz 2:
         I: I
         I & III: I & III

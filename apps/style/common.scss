@@ -89,6 +89,11 @@ html[dir='rtl'] #visualizationColumn {
   position: absolute;
   bottom: 0px;
   overflow-y: hidden;
+
+  #belowVisualization {
+    position: absolute;
+    overflow: auto;
+  }
 }
 
 div.droplet-palette-group-header {
@@ -353,6 +358,9 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
+  .small-footer.responsive {
+    max-width: $width;
+  }
   #codeWorkspace {
     left: $width;
   }
@@ -387,6 +395,9 @@ html[dir='rtl'] #codeWorkspace {
     max-width: $width;
   }
   #visualizationColumn.responsive {
+    max-width: $width;
+  }
+  .small-footer.responsive {
     max-width: $width;
   }
   #codeWorkspace {
@@ -425,6 +436,9 @@ html[dir='rtl'] #codeWorkspace {
   #visualizationColumn.responsive {
     max-width: $width;
   }
+  .small-footer.responsive {
+    max-width: $width;
+  }
   #codeWorkspace {
     left: $width;
   }
@@ -460,6 +474,12 @@ html[dir='rtl'] #codeWorkspace {
   }
   #visualizationColumn.responsive {
     max-width: $width;
+  }
+  .small-footer.responsive {
+    max-width: $width;
+    small {
+      float: left;
+    }
   }
   #codeWorkspace {
     left: $width;
@@ -626,6 +646,7 @@ input[type="radio"] {
 }
 
 #gameButtons {
+  position: relative;
   margin-bottom: 10px;
   width: 100%;
 
