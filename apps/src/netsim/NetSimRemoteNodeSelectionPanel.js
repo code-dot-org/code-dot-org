@@ -94,7 +94,7 @@ var NetSimRemoteNodeSelectionPanel = module.exports = function (rootDiv,
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
     panelTitle: this.getLocalizedPanelTitle(),
-    canMinimize: false
+    userToggleable: false
   });
 };
 NetSimRemoteNodeSelectionPanel.inherits(NetSimPanel);
