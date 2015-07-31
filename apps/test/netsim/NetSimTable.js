@@ -185,8 +185,8 @@ describe("NetSimTable", function () {
     netsimTable.tick();
     assertEqual(apiTable.log(), '');
 
-    // Until 5-second poll interval has passed.
-    netsimTable.lastFullUpdateTime_ = Date.now() - 5001;
+    // Until poll interval has passed.
+    netsimTable.lastFullUpdateTime_ = Date.now() - (netsimTable.pollingInterval_ + 1);
     netsimTable.tick();
     assertEqual(apiTable.log(), 'readAll');
   });
