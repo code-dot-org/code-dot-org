@@ -393,7 +393,7 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 30 )
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
   wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
 
   if redirect_source == 'pushState'

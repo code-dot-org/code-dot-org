@@ -33,7 +33,7 @@ def localize_instructions
   level_instructions = Hash.new
 
   Dir.glob("../../dashboard/config/scripts/levels/*.level").each do |file|
-    level = File.basename(file, ".*" ) + "_instruction"
+    level = File.basename(file, ".*") + "_instruction"
 
     File.open(file) do |f|
       instruction = find_instruction(f)
