@@ -1682,14 +1682,15 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
       var logRow = getLatestRow('logTable');
+      var log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.DROPPED, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 0);
     });
 
     it ("can send a message to another router", function () {
-      var logRow;
+      var logRow, log;
 
       // This test reads better with slower routing.
       // It lets you see each step, when with Infinite bandwidth you get
@@ -1717,9 +1718,10 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
       logRow = getLatestRow('logTable');
+      log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerA.entityID);
       assertFirstMessageProperty('toNodeID', routerB.entityID);
@@ -1728,14 +1730,15 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 2000});
       assertTableSize(testShard, 'logTable', 2);
       logRow = getLatestRow('logTable');
+      log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerB.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 0);
     });
 
     it ("can send a message to client on another router", function () {
-      var logRow;
+      var logRow, log;
 
       // This test reads better with slower routing.
       // It lets you see each step, when with Infinite bandwidth you get
@@ -1763,9 +1766,10 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
       logRow = getLatestRow('logTable');
+      log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerA.entityID);
       assertFirstMessageProperty('toNodeID', routerB.entityID);
@@ -1774,9 +1778,10 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 2000});
       assertTableSize(testShard, 'logTable', 2);
       logRow = getLatestRow('logTable');
+      log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerB.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerB.entityID);
       assertFirstMessageProperty('toNodeID', clientB.entityID);

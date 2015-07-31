@@ -24,7 +24,13 @@ var clientApi = require('@cdo/shared/clientApi');
  * updates from the server.
  * @type {number}
  */
-var DEFAULT_POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 10000;
+
+/**
+ * Minimum wait time (in milliseconds) between readAll requests.
+ * @type {number}
+ */
+var DEFAULT_REFRESH_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -59,7 +65,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
 
   /**
    * API object for making remote calls
-   * @type {SharedTableApi}
+   * @type {ClientApi}
    * @private
    */
   this.clientApi_ = clientApi.create(this.remoteUrl_);
@@ -93,6 +99,15 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
    * @private
    */
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
+
+  /**
+   * Throttled version (specific to this instance) of the readAll operation,
+   * used to coalesce readAll requests.
+   * @type {function}
+   * @private
+   */
+  this.refreshTable_ = this.makeThrottledRefresh_(
+      DEFAULT_REFRESH_THROTTLING_MS);
 };
 
 /**
@@ -105,6 +120,25 @@ NetSimTable.prototype.readAll = function (callback) {
     }
     callback(err, data);
   }.bind(this));
+};
+
+/**
+ * Generate throttled refresh function which will generate actual server
+ * requests at the maximum given rate no matter how fast it is called. This
+ * allows us to coalesce readAll events and reduce server load.
+ * @param {number} waitMs - Minimum time (in milliseconds) to wait between
+ *        readAll requests to the server.
+ * @returns {function}
+ * @private
+ */
+NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
+  return _.throttle(function () {
+    this.clientApi_.all(function (err, data) {
+      if (err === null) {
+        this.fullCacheUpdate_(data);
+      }
+    }.bind(this));
+  }.bind(this), waitMs);
 };
 
 /**
@@ -272,12 +306,23 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
   this.pollingInterval_ = intervalMs;
 };
 
+/**
+ * Change the maximum rate at which the readAll operation for this table
+ * will _actually_ be executed, no matter how fast readAll() is called.
+ * @param {number} waitMs - Minimum number of milliseconds between readAll
+ *        requests to the server.
+ */
+NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
+  // To do this, we just replace the throttled readAll function with a new one.
+  this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
+};
+
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
   var now = Date.now();
   if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
     this.lastFullUpdateTime_ = now;
-    this.readAll(function () {});
+    this.refreshTable_();
   }
 };
 
@@ -286,5 +331,5 @@ NetSimTable.prototype.tick = function () {
  * @param {Object} eventData
  */
 NetSimTable.prototype.onPubSubEvent = function () {
-  this.readAll(function () {});
+  this.refreshTable_();
 };
