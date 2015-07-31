@@ -56,7 +56,7 @@ class RedisTable
     @props.to_hash.
         select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
         collect { |k, v| make_row(id_from_row_key(k), v) }.
-        sort_by { |row| row[:id] }
+        sort_by { |row| row['id'] }
   end
 
   # Returns all rows as an array ordered by ascending row id.
