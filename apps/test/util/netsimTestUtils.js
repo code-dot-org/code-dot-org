@@ -172,20 +172,12 @@ exports.fakeShard = function () {
   };
   /* jshint unused:true */
 
-  var fake = {
+  return {
     nodeTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'node')),
     wireTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
     messageTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'message')),
     logTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'log'))
   };
-
-  // Disable readAll throttling in tests, so we can read as often as we want.
-  fake.nodeTable.setReadAllThrottleTime(0);
-  fake.wireTable.setReadAllThrottleTime(0);
-  fake.messageTable.setReadAllThrottleTime(0);
-  fake.logTable.setReadAllThrottleTime(0);
-
-  return fake;
 };
 
 /**
