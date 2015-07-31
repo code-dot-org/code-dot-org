@@ -33,9 +33,6 @@ describe("NetSimTable", function () {
     netsimTable = netsimTestUtils.overrideClientApi(
         new NetSimTable(fakeChannel, 'testShard', 'testTable'));
 
-    // Allow multiple readAll calls without delay for tests.
-    netsimTable.setReadAllThrottleTime(0);
-
     apiTable = netsimTable.clientApi_.remoteTable;
     callback = function () {};
     notified = false;
@@ -176,6 +173,9 @@ describe("NetSimTable", function () {
   });
 
   it ("polls table on tick", function () {
+    // For this test, disable refresh throttling
+    netsimTable.setRefreshThrottleTime(0);
+    
     // Initial tick always triggers a poll event.
     netsimTable.tick();
     assertEqual(apiTable.log(), 'readAll');
@@ -191,26 +191,26 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), 'readAll');
   });
 
-  describe ("readAll throttling", function () {
+  describe ("refreshTable_ throttling", function () {
     beforeEach(function () {
-      // Re-enable 10ms readAll throttle to test throttling feature
-      netsimTable.setReadAllThrottleTime(50);
+      // Re-enable 10ms refreshTable_ throttle to test throttling feature
+      netsimTable.setRefreshThrottleTime(50);
     });
 
     it ("still reads immediately on first request", function () {
-      netsimTable.readAll(callback);
+      netsimTable.refreshTable_(callback);
       assertEqual(apiTable.log(), 'readAll');
     });
 
     it ("coalesces multiple rapid requests", function () {
       for (var i = 0; i < 5; i++) {
-        netsimTable.readAll(callback);
+        netsimTable.refreshTable_(callback);
       }
       assertEqual(apiTable.log(), 'readAll');
     });
 
     it ("does not issue trailing request when only one request occurred", function (testDone) {
-      netsimTable.readAll(callback);
+      netsimTable.refreshTable_(callback);
       delayTest(50, testDone, function () {
         assertEqual(apiTable.log(), 'readAll');
         testDone();
@@ -219,7 +219,7 @@ describe("NetSimTable", function () {
 
     it ("issues trailing request when multiple requests occurred", function (testDone) {
       for (var i = 0; i < 5; i++) {
-        netsimTable.readAll(callback);
+        netsimTable.refreshTable_(callback);
       }
       assertEqual(apiTable.log(), 'readAll');
       delayTest(10, testDone, function () {
@@ -238,22 +238,22 @@ describe("NetSimTable", function () {
 
         // Call at 10ms happens immediately, even when delayed
         assertEqual(apiTable.log(), '');
-        netsimTable.readAll(callback);
+        netsimTable.refreshTable_(callback);
         assertEqual(apiTable.log(), 'readAll');
         delayTest(10, testDone, function () {
 
           // Call at 20ms causes no request (yet)
           assertEqual(apiTable.log(), 'readAll');
-          netsimTable.readAll(callback);
+          netsimTable.refreshTable_(callback);
           assertEqual(apiTable.log(), 'readAll');
           delayTest(40, testDone, function () {
 
             // Trailing request from second call has already happened, but
             // third call does not cause immediate request.
             assertEqual(apiTable.log(), 'readAllreadAll');
-            netsimTable.readAll(callback);
+            netsimTable.refreshTable_(callback);
             assertEqual(apiTable.log(), 'readAllreadAll');
-            delayTest(40, testDone, function () {
+            delayTest(60, testDone, function () {
 
               // Trailing request from third call has arrived
               assertEqual(apiTable.log(), 'readAllreadAllreadAll');
