@@ -9,7 +9,7 @@ nav: about_nav
 
 # About Us
 
-Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participation in computer science by making it available in more schools, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science and computer programming should be part of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, physics, chemistry and algebra.
+Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra.
 
 [col-25]
 
@@ -19,7 +19,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding participa
 
 [col-75]
 
-![image](/images/infographics/fit-580/diversity-courses.png)
+![image](/images/infographics/fit-500/diversity-courses.png)
 
 [/col-75]
 
@@ -66,7 +66,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 <br/>
 
 ## More information, history, and philosophy
-Code.org launched in 2013 as a bootstrapped project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. Our goal is for computer science to be a fixed part of school curriculum. 
+Code.org launched in 2013 as a bootstrapped project of co-founders Ali and Hadi Partovi. Our initial work was a [video](https://www.youtube.com/watch?v=nKIu9yen5nc) that became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded to build a full organization supporting a a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few. 
 
 To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 
 
@@ -76,8 +76,7 @@ Our work builds upon [decades of effort, by countless organizations and individu
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
 - [A letter from our founder addressing misconceptions about our motivations](http://codeorg.tumblr.com/post/73963049605/the-secret-agenda-of-code-org)
 
-
-We believe that a quality computer science education should be available to every child, not just a lucky few. All curriculum resources and tutorials we author are free to use under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, and our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+All curriculum resources and tutorials we author are free to use under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, and our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
 
 <hr/>
 
