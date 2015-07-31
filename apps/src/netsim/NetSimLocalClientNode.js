@@ -365,6 +365,7 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     // re-disconnect.
     if (err) {
       logger.info("Error while disconnecting: " + err.message);
+      onComplete(err);
     }
 
     this.cleanUpAfterDestroyingWire_();
@@ -521,8 +522,9 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 };
 
 /**
- * Handler for any wire table change.  Used here to detect mutual connections
- * between client nodes that indicate we can move to a "connected" state.
+ * Handler for any wire table change.  Used here to detect mutual
+ * connections between client nodes that indicate we can move to a
+ * "connected" state or stop trying to connect
  * @param {Array} wireRows
  * @private
  */
@@ -530,6 +532,8 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   if (!this.myWire) {
     return;
   }
+
+  var connectingClientRow, connectingClientMutualRow;
 
   // Look for mutual connection
   var mutualConnectionRow = _.find(wireRows, function (row) {
@@ -547,8 +551,22 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   } else if (!mutualConnectionRow && this.myRemoteClient) {
     // Remote client disconnected or we disconnected; either way we are
     // no longer connected.
-    this.myRemoteClient = null;
-    this.remoteChange.notifyObservers(this.myWire, this.myRemoteClient);
+    this.disconnectRemote();
+  } else if (!mutualConnectionRow && ! this.myRemoteClient) {
+    // The client we're trying to connect to might have connected to
+    // someone else; check if they did and if so, stop trying to connect
+    connectingClientRow = _.find(wireRows, function(row) {
+      return row.localNodeID === this.myWire.remoteNodeID &&
+          row.remoteNodeID !== this.myWire.localNodeID;
+    }.bind(this));
+    connectingClientMutualRow = connectingClientRow ?
+        _.find(wireRows, function(row) {
+          return row.remoteNodeID == connectingClientRow.localNodeID &&
+              row.localNodeID == connectingClientRow.remoteNodeID;
+        }) : undefined;
+    if (connectingClientRow && connectingClientMutualRow) {
+      this.disconnectRemote();
+    }
   }
 };
 
