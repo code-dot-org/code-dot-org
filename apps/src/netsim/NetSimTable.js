@@ -30,7 +30,7 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * Minimum wait time (in milliseconds) between readAll requests.
  * @type {number}
  */
-var READ_ALL_THROTTLING_MS = 1000;
+var DEFAULT_READ_ALL_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -103,36 +103,43 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   /**
    * Throttled version (specific to this instance) of the readAll operation,
    * used to coalesce readAll requests.
-   * @type {function}
+   * @type {ThrottledReadAllFunction}
    * @private
    */
-  this.throttledReadAll_ = _.throttle(
-      this.readAllThrottledWork_.bind(this),
-      READ_ALL_THROTTLING_MS);
-};
-
-/**
- * Actual readAll operation, which we wrap with _.throttle to
- * coalesce reads and call from the prototype version below.
- * @param {!NodeStyleCallback} callback
- * @private
- */
-NetSimTable.prototype.readAllThrottledWork_ = function (callback) {
-  this.clientApi_.all(function (err, data) {
-    if (err === null) {
-      this.fullCacheUpdate_(data);
-    }
-    callback(err, data);
-  }.bind(this));
+  this.throttledReadAll_ = this.makeThrottledReadAll_(
+      DEFAULT_READ_ALL_THROTTLING_MS);
 };
 
 /**
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.readAll = function (callback) {
-  // TODO (brad): I was bad and broke tests!  Fixing, since revert isn't working.
-  //this.throttledReadAll_(callback);
-  this.readAllThrottledWork_(callback);
+  this.throttledReadAll_(callback);
+};
+
+/**
+ * Generate throttled readAll function which will generate actual server
+ * requests at the maximum given rate no matter how fast it is called. This
+ * allows us to coalesce readAll events and reduce server load.
+ * @param {number} waitMs - Minimum time (in milliseconds) to wait assertVersionBetween
+ *        readAll requests to the server.
+ * @returns {ThrottledReadAllFunction}
+ * @private
+ */
+NetSimTable.prototype.makeThrottledReadAll_ = function (waitMs) {
+  /**
+   * @name ThrottledReadAllFunction
+   * @function
+   * @param {NodeStyleCallback} callback
+   */
+  return _.throttle(function (callback) {
+    this.clientApi_.all(function (err, data) {
+      if (err === null) {
+        this.fullCacheUpdate_(data);
+      }
+      callback(err, data);
+    }.bind(this));
+  }.bind(this), waitMs);
 };
 
 /**
@@ -298,6 +305,17 @@ NetSimTable.prototype.arrayFromCache_ = function () {
  */
 NetSimTable.prototype.setPollingInterval = function (intervalMs) {
   this.pollingInterval_ = intervalMs;
+};
+
+/**
+ * Change the maximum rate at which the readAll operation for this table
+ * will _actually_ be executed, no matter how fast readAll() is called.
+ * @param {number} waitMs - Minimum number of milliseconds between readAll
+ *        requests to the server.
+ */
+NetSimTable.prototype.setReadAllThrottleTime = function (waitMs) {
+  // To do this, we just replace the throttled readAll function with a new one.
+  this.throttledReadAll_ = this.makeThrottledReadAll_(waitMs);
 };
 
 /** Polls server for updates, if it's been long enough. */
