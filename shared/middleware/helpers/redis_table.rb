@@ -56,14 +56,40 @@ class RedisTable
         sort_by { |row| row[:id] }
   end
 
-  # Returns all rows with id >= min_id as an array ordered by ascending row id.
-  # (If min_id is null, returns all rows.)
+  # Returns all rows as an array ordered by ascending row id.
   #
   # @return [Array<Hash>]
   def to_a
     to_a_from_min_id(nil)
   end
-  
+
+
+  def self.get_tables(redis, shard_id, table_map)
+    @props = RedisPropertyBag.new(redis, shard_id)
+    result = {}
+    @props.to_hash.each do |k, v|
+      continue if row_key == @row_id_key  # Skip row id keys
+      table_name = table_from_row_key(row_key)
+      min_id = table_map[table_name]
+
+      # Ignore tables not present in the map.
+      continue if min_id.nil?
+
+      # Add or get the rows entry for the table from the result map.
+      rows = (result[table_name] ||= [])
+
+      # Ignore rows whose id is too low
+      id = id_from_row_key(row_key)
+      continue if id < min_id
+
+      table_rows << make_row(id, )
+
+    end
+    @props.to_hash.
+        select { |k, v| has_min_id_for_table(k, min_id_map)}.
+        collect { |k, v| make_row(id_from_row_key(k), v) }.
+        sort_by { |row| row[:id] }
+  end
 
   # Fetches a row by id.
   #
