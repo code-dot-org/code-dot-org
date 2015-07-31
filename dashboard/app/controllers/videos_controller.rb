@@ -1,3 +1,4 @@
+require 'cdo/video/youtube'
 class VideosController < ApplicationController
   before_filter :authenticate_user!, except: [:test, :embed]
   check_authorization except: [:test, :embed]
@@ -12,7 +13,18 @@ class VideosController < ApplicationController
 
   def embed
     set_video_by_key
-    render layout: false
+    if current_user.try(:admin?) && !Rails.env.production? && !Rails.env.test?
+      params[:fallback_only] = true
+      begin
+        Youtube.process @video.key
+      rescue Exception => e
+        render layout: false, text: "Error processing video: #{e}. Contact an engineer for support.", status: 500 and return
+      end
+    end
+    video_info = @video.summarize(params.has_key?(:autoplay))
+    video_info[:enable_fallback] = !params.has_key?(:youtube_only)
+    video_info[:force_fallback] = params.has_key?(:fallback_only)
+    render layout: false, locals: {video_info: video_info}
   end
 
   def index
@@ -79,7 +91,14 @@ class VideosController < ApplicationController
   end
 
   def set_video_by_key
-    @video = Video.find_by_key(params[:key])
+    key = params[:key]
+    # Create a temporary video object from default attributes if an entry isn't found in the DB.
+    @video = Video.find_by_key(key) ||
+      Video.new(
+        key: key,
+        youtube_code: key,
+        download: Video.download_url(key)
+      )
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
@@ -87,7 +106,7 @@ class VideosController < ApplicationController
     params.require(:video).permit(:name, :key, :youtube_code)
   end
 
-  # this is to fix a ForbiddenAttributesError cancan issue
+  # This is to fix a ForbiddenAttributesError CanCan issue.
   prepend_before_filter do
     params[:video] &&= video_params
   end
