@@ -45,11 +45,11 @@ class RedisTable
   end
 
   # Returns all rows with id >= min_id as an array ordered by ascending row id.
-  # (If min_id is null, returns all rows.)
+  # (If min_id is 1, this will return all rows.)
   #
   # @param [Integer] min_id
   # @return [Array<Hash>]
-  def to_a_from_min_id(min_id=null)
+  def to_a_from_min_id(min_id)
     @props.to_hash.
         select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
         collect { |k, v| make_row(id_from_row_key(k), v) }.
@@ -64,31 +64,49 @@ class RedisTable
   end
 
 
+  # Fetch the rows multiple tables all at once.
+  # The parameters are a shard_id and and a table map. The keys of the map
+  # are the table names to fetch and the values are the starting id to fetch, or
+  # 1 for all ids. The return value is a map from table name to a hash containing
+  # a 'rows' field whose value is an array of rows.
+  #
+  # For example:
+  #
+  # RedisTable.get_tables(redis, "shard", {'t1' => 1, 't2' => 3})
+  # =>  {'t1' => {'rows' => ["...", "..."]}, <etc> }
+
+  # @param [Redis] redis The redis client.
+  # @param []
+  # @param [Integer] min_id
+  # @return [Array<Hash>]
+
   def self.get_tables(redis, shard_id, table_map)
     @props = RedisPropertyBag.new(redis, shard_id)
     result = {}
     @props.to_hash.each do |k, v|
       continue if row_key == @row_id_key  # Skip row id keys
+
       table_name = table_from_row_key(row_key)
-      min_id = table_map[table_name]
+      id = id_from_row_key(row_key)
 
       # Ignore tables not present in the map.
+      min_id = table_map[table_name]
       continue if min_id.nil?
 
       # Add or get the rows entry for the table from the result map.
-      rows = (result[table_name] ||= [])
+      # Note that always ensure that a requested table has an entry
+      # in the result map even if none of the rows passes the min_id
+      # test.
+      value = (result[table_name] ||= {'rows' => []})
 
       # Ignore rows whose id is too low
-      id = id_from_row_key(row_key)
       continue if id < min_id
 
-      table_rows << make_row(id, )
-
+      # Add the rows.
+      value['rows'] << make_row(id, v)
     end
-    @props.to_hash.
-        select { |k, v| has_min_id_for_table(k, min_id_map)}.
-        collect { |k, v| make_row(id_from_row_key(k), v) }.
-        sort_by { |row| row[:id] }
+
+    result
   end
 
   # Fetches a row by id.
