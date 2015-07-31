@@ -118,7 +118,6 @@ class NetSimApi < Sinatra::Base
   #
   delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-
     table = get_table(shard_id, table_name)
     int_id = id.to_i
 
