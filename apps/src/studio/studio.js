@@ -582,7 +582,7 @@ var setSvgText = function(opts) {
  * @param {boolean} allowQueueExension When true, we allow additional cmds to
  *  be appended to the queue
  */
-function callHandler (name, allowQueueExtension) {
+function callHandler (name, allowQueueExtension, extraArgs) {
   Studio.eventHandlers.forEach(function (handler) {
     if (studioApp.isUsingBlockly()) {
       // Note: we skip executing the code if we have not completed executing
@@ -600,7 +600,7 @@ function callHandler (name, allowQueueExtension) {
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        Studio.JSInterpreter.queueEvent(handler.func);
+        Studio.JSInterpreter.queueEvent(handler.func, extraArgs);
       }
     }
   });
@@ -739,6 +739,8 @@ Studio.onTick = function() {
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
   }
+
+  updateItems();
 
   checkForCollisions();
 
@@ -990,7 +992,7 @@ function createItemEdgeCollisionHandler (item) {
   return function (edgeClass) {
     if (level.blockMovingIntoWalls) {
       // TODO: Find a real direction!!
-      item.bounce();
+      //item.bounce();
     }
     Studio.currentEventParams = { eventObject: item };
     // Allow cmdQueue extension (pass true) since this handler
@@ -999,6 +1001,13 @@ function createItemEdgeCollisionHandler (item) {
     handleItemCollision(item.className, edgeClass, true);
     Studio.currentEventParams = null;
   };
+}
+
+function updateItems () {
+  for (var i = 0; i < Studio.items.length; i++) {
+    var item = Studio.items[i];
+    executeItemUpdate(item, i);
+  }
 }
 
 function checkForItemCollisions () {
@@ -1010,7 +1019,7 @@ function checkForItemCollisions () {
       if (Studio.willCollidableTouchWall(item, next.x, next.y)) {
         if (level.blockMovingIntoWalls) {
           // TODO: Find a real direction!!
-          item.bounce();
+          //item.bounce();
         }
         Studio.currentEventParams = { eventObject: item };
         // Allow cmdQueue extension (pass true) since this handler
@@ -2113,7 +2122,7 @@ function cellId(prefix, row, col) {
  */
 
 Studio.drawDebugRect = function(className, x, y, width, height) {
-  return;
+  //return;
 
   var svg = document.getElementById('svgStudio');
   var group = document.createElementNS(SVG_NS, 'g');
@@ -2566,6 +2575,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.addItemsToScene(cmd.opts);
       break;
+    case 'setItemAction':
+      studioApp.highlight(cmd.id);
+      Studio.setItemAction(cmd.opts);
+      break;
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
@@ -2595,7 +2608,7 @@ Studio.addItemsToScene = function (opts) {
     // max of max - Studio.HALF_SQUARE)
 
     var pos = {};
-    if (level.gridAlignedMovement) {
+    if (level.itemGridAlignedMovement) {
       pos.x = Studio.HALF_SQUARE +
                 Studio.SQUARE_SIZE * Math.floor(Math.random() * Studio.COLS);
       pos.y = Studio.HALF_SQUARE +
@@ -2610,7 +2623,7 @@ Studio.addItemsToScene = function (opts) {
   };
 
   for (var i = 0; i < opts.number; i++) {
-    var direction = level.gridAlignedMovement ? Direction.NONE :
+    var direction = level.itemGridAlignedMovement ? Direction.NONE :
                       directions[Math.floor(Math.random() * directions.length)];
     var pos = generateRandomItemPosition();
     var itemOptions = {
@@ -2644,6 +2657,17 @@ Studio.addItemsToScene = function (opts) {
     item.createElement(document.getElementById('svgStudio'));
     Studio.items.push(item);
   }
+};
+
+Studio.setItemAction = function (opts) {
+  var item = Studio.items[opts.itemIndex];
+
+  if (item) {
+    if (opts.type == "roamGrid") {
+        item.roamGrid();
+    }
+  }
+
 };
 
 Studio.vanishActor = function (opts) {
@@ -3270,6 +3294,11 @@ function executeItemCollision(src, target) {
   if (isEdgeClass(target)) {
     Studio.executeQueue(prefix + 'any_edge');
   }
+}
+
+function executeItemUpdate(item, itemIndex) {
+  var prefix = 'whenItemUpdated-' + item.className;
+  callHandler(prefix, undefined, [itemIndex]);
 }
 
 /**
