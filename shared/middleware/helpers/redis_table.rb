@@ -44,14 +44,20 @@ class RedisTable
     merge_id(value, new_id)
   end
 
-  # Converts the rows to an array ordered by ascending row id.
+  # Returns all rows with id >= min_id as an array ordered by ascending row id.
+  # (If min_id is null, returns all rows.)
   #
+  # @param [Integer] min_id
   # @return [Array<String>]
-  def to_a
+  def to_a_from_min_id(min_id=null)
     @props.to_hash.
-        select { |k, v| belongs_to_this_table(k) }.
+        select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
         collect { |k, v| make_row(id_from_row_key(k), v) }.
         sort_by { |row| row[:id] }
+  end
+
+  def to_a
+    to_a_from_min_id(nil)
   end
 
   # Fetches a row by id.
@@ -110,7 +116,7 @@ class RedisTable
   # @param [String] key
   # @return [Integer] the row id.
   def id_from_row_key(key)
-    key.split('_')[1]
+    key.split('_')[1].to_i
   end
 
   # Returns a new, monotonically increasing id for a row.
@@ -148,10 +154,13 @@ class RedisTable
 
   # Return true if row_key is a row_key for this table.
   #
-  # @param [String] row_key
+  # @param [String] row_key The row key.
+  # @param [Integer] min_id The minimum id, or nil for all ids.
   # @return [Boolean]
-  def belongs_to_this_table(row_key)
-    table_from_row_key(row_key) == @table_name and row_key != @row_id_key
+  def belongs_to_this_table_with_min_id(row_key, min_id )
+    (@table_name == table_from_row_key(row_key)) &&
+        (row_key != @row_id_key) &&
+        (min_id.nil? || id_from_row_key(row_key) >= min_id)
   end
 
 end
