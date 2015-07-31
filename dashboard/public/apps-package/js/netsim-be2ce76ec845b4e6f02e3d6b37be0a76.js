@@ -2856,9 +2856,10 @@ NetSimVizWire.inherits(NetSimVizElement);
 
 /**
  * Update path data for wire.
+ * @param {RunLoop.Clock} [clock] - somtimes omitted during setup
  */
-NetSimVizWire.prototype.render = function () {
-  NetSimVizWire.superPrototype.render.call(this);
+NetSimVizWire.prototype.render = function (clock) {
+  NetSimVizWire.superPrototype.render.call(this, clock);
 
   var pathData = 'M 0 0';
   var wireCenter = { x: 0, y: 0 };
