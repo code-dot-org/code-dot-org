@@ -82,7 +82,7 @@ class RedisTableTest < Minitest::Unit::TestCase
     table_map = RedisTable.get_tables(redis, 'shard1', {'table' => 1, 'table2' => 1})
     assert_equal(
        {'table' =>
-            {'rows' => [{'name' => 'alice', 'age'=>7, 'male'=>false, 'id'=>1}, {'bar'=>3, 'id'=>3}]},
+            {'rows' => [{'name' => 'alice', 'age' => 7, 'male'=>false, 'id' => 1}, {'bar' => 3, 'id' => 3}]},
         'table2' =>
             {'rows' => [{'name' => 'bob', 'age' => 12, 'male' => true, 'id' => 1}]}},
        table_map)
