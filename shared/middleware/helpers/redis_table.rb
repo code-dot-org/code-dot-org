@@ -45,11 +45,11 @@ class RedisTable
   end
 
   # Returns all rows with id >= min_id as an array ordered by ascending row id.
-  # (If min_id is null, returns all rows.)
+  # (If min_id is nil or 1, returns all rows.)
   #
   # @param [Integer] min_id
   # @return [Array<String>]
-  def to_a_from_min_id(min_id=null)
+  def to_a_from_min_id(min_id)
     @props.to_hash.
         select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
         collect { |k, v| make_row(id_from_row_key(k), v) }.
