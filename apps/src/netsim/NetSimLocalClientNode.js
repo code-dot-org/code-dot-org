@@ -521,8 +521,9 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 };
 
 /**
- * Handler for any wire table change.  Used here to detect mutual connections
- * between client nodes that indicate we can move to a "connected" state.
+ * Handler for any wire table change.  Used here to detect mutual
+ * connections between client nodes that indicate we can move to a
+ * "connected" state or stop trying to connect
  * @param {Array} wireRows
  * @private
  */
@@ -530,6 +531,8 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   if (!this.myWire) {
     return;
   }
+
+  var myConnectionTargetWireRow, isTargetConnectedToSomeoneElse;
 
   // Look for mutual connection
   var mutualConnectionRow = _.find(wireRows, function (row) {
@@ -547,8 +550,22 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   } else if (!mutualConnectionRow && this.myRemoteClient) {
     // Remote client disconnected or we disconnected; either way we are
     // no longer connected.
-    this.myRemoteClient = null;
-    this.remoteChange.notifyObservers(this.myWire, this.myRemoteClient);
+    this.disconnectRemote();
+  } else if (!mutualConnectionRow && ! this.myRemoteClient) {
+    // The client we're trying to connect to might have connected to
+    // someone else; check if they did and if so, stop trying to connect
+    myConnectionTargetWireRow = _.find(wireRows, function(row) {
+      return row.localNodeID === this.myWire.remoteNodeID &&
+          row.remoteNodeID !== this.myWire.localNodeID;
+    }.bind(this));
+    isTargetConnectedToSomeoneElse = myConnectionTargetWireRow ?
+        wireRows.some(function(row) {
+          return row.remoteNodeID == myConnectionTargetWireRow.localNodeID &&
+              row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
+        }) : undefined;
+    if (myConnectionTargetWireRow && isTargetConnectedToSomeoneElse) {
+      this.disconnectRemote();
+    }
   }
 };
 

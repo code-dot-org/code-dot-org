@@ -2856,9 +2856,10 @@ NetSimVizWire.inherits(NetSimVizElement);
 
 /**
  * Update path data for wire.
+ * @param {RunLoop.Clock} [clock] - somtimes omitted during setup
  */
-NetSimVizWire.prototype.render = function () {
-  NetSimVizWire.superPrototype.render.call(this);
+NetSimVizWire.prototype.render = function (clock) {
+  NetSimVizWire.superPrototype.render.call(this, clock);
 
   var pathData = 'M 0 0';
   var wireCenter = { x: 0, y: 0 };
@@ -4458,11 +4459,10 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
 
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(channel, shardID, 'm');
-  this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(channel, shardID, 'l');
-  this.logTable.setPollingInterval(10000);
+  this.logTable.setRefreshThrottleTime(5000);
 };
 
 /**
@@ -4674,7 +4674,13 @@ var clientApi = require('@cdo/shared/clientApi');
  * updates from the server.
  * @type {number}
  */
-var DEFAULT_POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 10000;
+
+/**
+ * Minimum wait time (in milliseconds) between readAll requests.
+ * @type {number}
+ */
+var DEFAULT_REFRESH_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -4709,7 +4715,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
 
   /**
    * API object for making remote calls
-   * @type {SharedTableApi}
+   * @type {ClientApi}
    * @private
    */
   this.clientApi_ = clientApi.create(this.remoteUrl_);
@@ -4743,6 +4749,15 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
    * @private
    */
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
+
+  /**
+   * Throttled version (specific to this instance) of the readAll operation,
+   * used to coalesce readAll requests.
+   * @type {function}
+   * @private
+   */
+  this.refreshTable_ = this.makeThrottledRefresh_(
+      DEFAULT_REFRESH_THROTTLING_MS);
 };
 
 /**
@@ -4755,6 +4770,25 @@ NetSimTable.prototype.readAll = function (callback) {
     }
     callback(err, data);
   }.bind(this));
+};
+
+/**
+ * Generate throttled refresh function which will generate actual server
+ * requests at the maximum given rate no matter how fast it is called. This
+ * allows us to coalesce readAll events and reduce server load.
+ * @param {number} waitMs - Minimum time (in milliseconds) to wait between
+ *        readAll requests to the server.
+ * @returns {function}
+ * @private
+ */
+NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
+  return _.throttle(function () {
+    this.clientApi_.all(function (err, data) {
+      if (err === null) {
+        this.fullCacheUpdate_(data);
+      }
+    }.bind(this));
+  }.bind(this), waitMs);
 };
 
 /**
@@ -4922,12 +4956,23 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
   this.pollingInterval_ = intervalMs;
 };
 
+/**
+ * Change the maximum rate at which the readAll operation for this table
+ * will _actually_ be executed, no matter how fast readAll() is called.
+ * @param {number} waitMs - Minimum number of milliseconds between readAll
+ *        requests to the server.
+ */
+NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
+  // To do this, we just replace the throttled readAll function with a new one.
+  this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
+};
+
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
   var now = Date.now();
   if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
     this.lastFullUpdateTime_ = now;
-    this.readAll(function () {});
+    this.refreshTable_();
   }
 };
 
@@ -4936,21 +4981,43 @@ NetSimTable.prototype.tick = function () {
  * @param {Object} eventData
  */
 NetSimTable.prototype.onPubSubEvent = function () {
-  this.readAll(function () {});
+  this.refreshTable_();
 };
 
 
 },{"../ObservableEvent":2,"../utils":318,"@cdo/shared/clientApi":320}],320:[function(require,module,exports){
+/**
+ * @file Helper API object that wraps asynchronous calls to our data APIs.
+ */
 /* global $ */
 
+/**
+ * Standard callback form for asynchronous operations, popularized by Node.
+ * @typedef {function} NodeStyleCallback
+ * @param {Error|null} error - null if the async operation was successful.
+ * @param {*} result - return value for async operation.
+ */
+
+/**
+ * @name ClientApi
+ */
 var base = {
+  /**
+   * Base URL for target API.
+   * @type {string}
+   */
   api_base_url: "/v3/channels",
 
+  /**
+   * Request all collections.
+   * @param {NodeStyleCallback} callback - Expected result is an array of
+   *        collection objects.
+   */
   all: function(callback) {
     $.ajax({
       url: this.api_base_url,
       type: "get",
-      dataType: "json",
+      dataType: "json"
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
@@ -4959,6 +5026,12 @@ var base = {
     });
   },
 
+  /**
+   * Insert a collection.
+   * @param {Object} value - collection contents, must be JSON.stringify-able.
+   * @param {NodeStyleCallback} callback - Expected result is the created
+   *        collection object (which will include an assigned 'id' key).
+   */
   create: function(value, callback) {
     $.ajax({
       url: this.api_base_url,
@@ -4973,11 +5046,16 @@ var base = {
     });
   },
 
+  /**
+   * Remove a collection.
+   * @param {number} id - The collection identifier.
+   * @param {NodeStyleCallback} callback - Expected result is TRUE.
+   */
   delete: function(id, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id + "/delete",
       type: "post",
-      dataType: "json",
+      dataType: "json"
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
@@ -4986,6 +5064,12 @@ var base = {
     });
   },
 
+  /**
+   * Retrieve a collection.
+   * @param {number} id - The collection identifier.
+   * @param {NodeStyleCallback} callback - Expected result is the requested
+   *        collection object.
+   */
   fetch: function(id, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id,
@@ -4999,6 +5083,13 @@ var base = {
     });
   },
 
+  /**
+   * Change the contents of a collection.
+   * @param {number} id - The collection identifier.
+   * @param {Object} value - The new collection contents.
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
   update: function(id, value, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id,
@@ -5013,9 +5104,15 @@ var base = {
     });
   },
 
-  // Copy to the destination collection, since we expect the destination
-  // to be empty. A true rest API would replace the destination collection:
-  // https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+
+  /**
+   * Copy to the destination collection, since we expect the destination
+   * to be empty. A true rest API would replace the destination collection:
+   * @see https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+   * @param {*} src - Source collection identifier.
+   * @param {*} dest - Destination collection identifier.
+   * @param {NodeStyleCallback} callback
+   */
   copyAll: function(src, dest, callback) {
     $.ajax({
       url: this.api_base_url + "/" + dest + '?src=' + src,
@@ -5030,9 +5127,14 @@ var base = {
 };
 
 module.exports = {
+  /**
+   * Create a ClientApi instance with the given base URL.
+   * @param {!string} url - Custom API base url (e.g. '/v3/netsim')
+   * @returns {ClientApi}
+   */
   create: function (url) {
     return $.extend({}, base, {
-      api_base_url: url,
+      api_base_url: url
     });
   }
 };
@@ -9358,8 +9460,9 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 };
 
 /**
- * Handler for any wire table change.  Used here to detect mutual connections
- * between client nodes that indicate we can move to a "connected" state.
+ * Handler for any wire table change.  Used here to detect mutual
+ * connections between client nodes that indicate we can move to a
+ * "connected" state or stop trying to connect
  * @param {Array} wireRows
  * @private
  */
@@ -9367,6 +9470,8 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   if (!this.myWire) {
     return;
   }
+
+  var myConnectionTargetWireRow, isTargetConnectedToSomeoneElse;
 
   // Look for mutual connection
   var mutualConnectionRow = _.find(wireRows, function (row) {
@@ -9384,8 +9489,22 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   } else if (!mutualConnectionRow && this.myRemoteClient) {
     // Remote client disconnected or we disconnected; either way we are
     // no longer connected.
-    this.myRemoteClient = null;
-    this.remoteChange.notifyObservers(this.myWire, this.myRemoteClient);
+    this.disconnectRemote();
+  } else if (!mutualConnectionRow && ! this.myRemoteClient) {
+    // The client we're trying to connect to might have connected to
+    // someone else; check if they did and if so, stop trying to connect
+    myConnectionTargetWireRow = _.find(wireRows, function(row) {
+      return row.localNodeID === this.myWire.remoteNodeID &&
+          row.remoteNodeID !== this.myWire.localNodeID;
+    }.bind(this));
+    isTargetConnectedToSomeoneElse = myConnectionTargetWireRow ?
+        wireRows.some(function(row) {
+          return row.remoteNodeID == myConnectionTargetWireRow.localNodeID &&
+              row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
+        }) : undefined;
+    if (myConnectionTargetWireRow && isTargetConnectedToSomeoneElse) {
+      this.disconnectRemote();
+    }
   }
 };
 
@@ -12267,12 +12386,16 @@ var Packet = require('./Packet');
 var netsimNodeFactory = require('./netsimNodeFactory');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
+var base64ToBinary = dataConverters.base64ToBinary;
+var binaryToBase64 = dataConverters.binaryToBase64;
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**
  * @typedef {Object} logEntryRow
  * @property {number} nodeID
- * @property {string} binary
+ * @property {base64Payload} base64Binary - base64-encoded binary
+ *           message content, all of which can be exposed to the
+ *           student.  May contain headers of its own.
  * @property {NetSimLogEntry.LogStatus} status
  * @property {number} timestamp
  */
@@ -12306,7 +12429,10 @@ var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
    * Binary content of the log entry.  Defaults to empty string.
    * @type {string}
    */
-  this.binary = utils.valueOr(row.binary, '');
+  var base64Binary = row.base64Binary;
+  this.binary = (base64Binary) ?
+    base64ToBinary(base64Binary.string, base64Binary.len) :
+    '';
 
   /**
    * Status value for log entry; for router log, usually SUCCESS for completion
@@ -12353,7 +12479,7 @@ NetSimLogEntry.prototype.getTable = function () {
 NetSimLogEntry.prototype.buildRow = function () {
   return {
     nodeID: this.nodeID,
-    binary: this.binary,
+    base64Binary: binaryToBase64(this.binary),
     status: this.status,
     timestamp: this.timestamp
   };

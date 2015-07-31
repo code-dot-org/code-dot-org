@@ -67,7 +67,7 @@ class StorageApps
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |i|
       channel_id = storage_encrypt_channel_id(i[:storage_id], i[:id])
       begin
-        JSON.parse(i[:value]).merge(id: channel_id, isOwner: true, createdAt: row[:created_at], updatedAt: row[:updated_at])
+        JSON.parse(i[:value]).merge(id: channel_id, isOwner: true, createdAt: i[:created_at], updatedAt: i[:updated_at])
       rescue JSON::ParserError
         nil
       end
