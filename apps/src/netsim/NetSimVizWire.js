@@ -97,6 +97,7 @@ NetSimVizWire.inherits(NetSimVizElement);
 
 /**
  * Update path data for wire.
+ * @param {RunLoop.Clock} [clock] - somtimes omitted during setup
  */
 NetSimVizWire.prototype.render = function (clock) {
   NetSimVizWire.superPrototype.render.call(this, clock);
