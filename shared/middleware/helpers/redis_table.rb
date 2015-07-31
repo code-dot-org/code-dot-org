@@ -1,13 +1,12 @@
-# RedisTable provides a table abstraction that notifies clients of changes.
+# RedisTable provides a table abstraction backed by Redis.
 # Operations include adding a row, updating and fetching a specific row
 # by id, and fetching all rows, preserving the rows in the order of insertion.
 #
-# The implementation wraps a RedisProperty bag to store the table rows
-# and a pub sub service to notify clients of changes. All of the tables for
-# a particular shard are stored in the same Redis key which ensures that
-# data storage for a shard is all-or-none, avoiding some consistency issues if
-# a Redis shard goes down.
-
+# The implementation wraps a RedisProperty bag to store the table rows.
+# All of the tables for a particular shard are stored in the same Redis key
+# which ensures that data storage for a shard is all-or-none, avoiding some
+# consistency issues if a Redis shard goes down.
+require 'sinatra/base'
 require_relative 'redis_property_bag'
 
 class RedisTable
@@ -18,24 +17,21 @@ class RedisTable
   # Constructs the redis table.
   #
   # @param [Redis] redis The Redis client.
-  # @param [PubSubApi] pub_sub_api An optional PubSub API implementation
   # @param [String] shard_id
   # @param [String] table_name
-  def initialize(redis, pub_sub_api, shard_id, table_name)
-    @pub_sub_api = pub_sub_api
-
+  def initialize(redis, shard_id, table_name)
     @shard_id = shard_id
     @table_name = table_name
 
     # A counter key in the underlying RedisPropertyBag, used to generate
-    # asecending row ids.
+    # ascending row ids.
     @row_id_key = "#{table_name}_row_id"
 
     # A redis property bag for storing all tables in the shard.
     @props = RedisPropertyBag.new(redis, shard_id)
   end
 
-  # Inserts a new row, notifying other clients using the pubsub service.
+  # Inserts a new row.
   #
   # @param [Hash] value The hash for the new row.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
@@ -43,7 +39,6 @@ class RedisTable
   def insert(value, ignored_ip=nil)
     new_id = next_id
     @props.set(row_key(new_id), value.to_json)
-    publish_change({:action => 'insert', :id => new_id})
     merge_id(value, new_id)
   end
 
@@ -77,30 +72,26 @@ class RedisTable
     make_row(id, hash)
   end
 
-  # Updates an existing row, notifying other clients using the pubsub service.
+  # Updates an existing row.
   #
   # @param [Integer] id The id of the row to update.
   # @param [Hash] hash The updated hash.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
   def update(id, hash, ignored_ip=nil)
     @props.set(row_key(id), hash.to_json)
-    publish_change({:action => 'update', :id => id})
     merge_id(hash, id)
   end
 
-  # Deletes a row, notifying other clients using the pubsub service.
+  # Deletes a row.
   #
   # @param [Integer] id The id for the new row
   def delete(id)
-    deleted = @props.delete(row_key(id))
-    publish_change({:action => 'delete', :id => id}) if deleted
-    deleted
+    @props.delete(row_key(id))
   end
 
   # Deletes all the tables and rows in a shard.
-  def self.reset_shard(shard_id, redis, pub_sub)
+  def self.reset_shard(shard_id, redis)
     RedisPropertyBag.new(redis, shard_id).delete_all
-    pub_sub.publish(shard_id, 'all_tables', {:action => 'reset_shard'}) if pub_sub
   end
 
   private
@@ -151,14 +142,6 @@ class RedisTable
   # @private
   def make_row(id, value)
     value.nil? ? nil : merge_id(JSON.parse(value), id)
-  end
-
-  # Notifies other clients about changes to this table using pubsub api, if
-  # provided.
-  #
-  # @param [Hash] update_hash A hash describing the update.
-  def publish_change(update_hash)
-    @pub_sub_api.publish(@shard_id, @table_name, update_hash) if @pub_sub_api
   end
 
   # Return true if row_key is a row_key for this table.

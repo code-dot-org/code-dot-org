@@ -169,6 +169,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?, "Table was not empty"
   end
 
+
+
   def test_node_delete_cascades_to_node_wires
 
     node_a = create_node({name: 'nodeA'})
