@@ -7,6 +7,22 @@ var fakeStorageTable = netsimTestUtils.fakeStorageTable;
 
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 
+/**
+ * Helper method for introducing a delay in your test method.
+ * @param {number} delayMs - Number of milliseconds to wait before continuing.
+ * @param {function} testDone - Chai's "done" callback.
+ * @param {function} nextStep - Function to call after the delay.
+ */
+function delayTest(delayMs, testDone, nextStep) {
+  setTimeout(function () {
+    try {
+      nextStep();
+    } catch (e) {
+      testDone(e);
+    }
+  }, delayMs);
+}
+
 describe("NetSimTable", function () {
   var apiTable, netsimTable, callback, notified;
 
@@ -16,6 +32,7 @@ describe("NetSimTable", function () {
     };
     netsimTable = netsimTestUtils.overrideClientApi(
         new NetSimTable(fakeChannel, 'testShard', 'testTable'));
+
     apiTable = netsimTable.clientApi_.remoteTable;
     callback = function () {};
     notified = false;
@@ -156,6 +173,9 @@ describe("NetSimTable", function () {
   });
 
   it ("polls table on tick", function () {
+    // For this test, disable refresh throttling
+    netsimTable.setRefreshThrottleTime(0);
+    
     // Initial tick always triggers a poll event.
     netsimTable.tick();
     assertEqual(apiTable.log(), 'readAll');
@@ -169,6 +189,80 @@ describe("NetSimTable", function () {
     netsimTable.lastFullUpdateTime_ = Date.now() - 5001;
     netsimTable.tick();
     assertEqual(apiTable.log(), 'readAll');
+  });
+
+  describe ("refreshTable_ throttling", function () {
+    beforeEach(function () {
+      // Re-enable 10ms refreshTable_ throttle to test throttling feature
+      netsimTable.setRefreshThrottleTime(50);
+    });
+
+    it ("still reads immediately on first request", function () {
+      netsimTable.refreshTable_(callback);
+      assertEqual(apiTable.log(), 'readAll');
+    });
+
+    it ("coalesces multiple rapid requests", function () {
+      for (var i = 0; i < 5; i++) {
+        netsimTable.refreshTable_(callback);
+      }
+      assertEqual(apiTable.log(), 'readAll');
+    });
+
+    it ("does not issue trailing request when only one request occurred", function (testDone) {
+      netsimTable.refreshTable_(callback);
+      delayTest(50, testDone, function () {
+        assertEqual(apiTable.log(), 'readAll');
+        testDone();
+      });
+    });
+
+    it ("issues trailing request when multiple requests occurred", function (testDone) {
+      for (var i = 0; i < 5; i++) {
+        netsimTable.refreshTable_(callback);
+      }
+      assertEqual(apiTable.log(), 'readAll');
+      delayTest(10, testDone, function () {
+        assertEqual(apiTable.log(), 'readAll');
+        delayTest(40, testDone, function () {
+          // See the second request come in by 50ms of delay
+          assertEqual(apiTable.log(), 'readAllreadAll');
+          testDone();
+        });
+      });
+    });
+
+    it ("throttles requests", function (testDone) {
+      assertEqual(apiTable.log(), '');
+      delayTest(10, testDone, function () {
+
+        // Call at 10ms happens immediately, even when delayed
+        assertEqual(apiTable.log(), '');
+        netsimTable.refreshTable_(callback);
+        assertEqual(apiTable.log(), 'readAll');
+        delayTest(10, testDone, function () {
+
+          // Call at 20ms causes no request (yet)
+          assertEqual(apiTable.log(), 'readAll');
+          netsimTable.refreshTable_(callback);
+          assertEqual(apiTable.log(), 'readAll');
+          delayTest(40, testDone, function () {
+
+            // Trailing request from second call has already happened, but
+            // third call does not cause immediate request.
+            assertEqual(apiTable.log(), 'readAllreadAll');
+            netsimTable.refreshTable_(callback);
+            assertEqual(apiTable.log(), 'readAllreadAll');
+            delayTest(60, testDone, function () {
+
+              // Trailing request from third call has arrived
+              assertEqual(apiTable.log(), 'readAllreadAllreadAll');
+              testDone();
+            });
+          });
+        });
+      });
+    });
   });
 
 });

@@ -50,6 +50,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(channel, shardID, 'l');
   this.logTable.setPollingInterval(10000);
+  this.logTable.setRefreshThrottleTime(5000);
 };
 
 /**
