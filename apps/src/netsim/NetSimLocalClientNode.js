@@ -365,7 +365,6 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     // re-disconnect.
     if (err) {
       logger.info("Error while disconnecting: " + err.message);
-      onComplete(err);
     }
 
     this.cleanUpAfterDestroyingWire_();
@@ -533,7 +532,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
     return;
   }
 
-  var connectingClientRow, connectingClientMutualRow;
+  var myConnectionTargetWireRow, isTargetConnectedToSomeoneElse;
 
   // Look for mutual connection
   var mutualConnectionRow = _.find(wireRows, function (row) {
@@ -555,16 +554,16 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   } else if (!mutualConnectionRow && ! this.myRemoteClient) {
     // The client we're trying to connect to might have connected to
     // someone else; check if they did and if so, stop trying to connect
-    connectingClientRow = _.find(wireRows, function(row) {
+    myConnectionTargetWireRow = _.find(wireRows, function(row) {
       return row.localNodeID === this.myWire.remoteNodeID &&
           row.remoteNodeID !== this.myWire.localNodeID;
     }.bind(this));
-    connectingClientMutualRow = connectingClientRow ?
-        _.find(wireRows, function(row) {
-          return row.remoteNodeID == connectingClientRow.localNodeID &&
-              row.localNodeID == connectingClientRow.remoteNodeID;
+    isTargetConnectedToSomeoneElse = myConnectionTargetWireRow ?
+        wireRows.some(function(row) {
+          return row.remoteNodeID == myConnectionTargetWireRow.localNodeID &&
+              row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
         }) : undefined;
-    if (connectingClientRow && connectingClientMutualRow) {
+    if (myConnectionTargetWireRow && isTargetConnectedToSomeoneElse) {
       this.disconnectRemote();
     }
   }
