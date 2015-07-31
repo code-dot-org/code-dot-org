@@ -51,21 +51,23 @@ class NetSimApiTest < Minitest::Unit::TestCase
     # Add a another row to make thing slightly more interesting.
     create_record({name: 'bob'})
 
-    records = read_records_for_url(@url + "@#{record_id}")
+    url = "/v3/netsim/#{@shard_id}/#{@table_name}"
+    records = read_records_for_url(url + "@#{record_id}")
+
     assert_equal 2, records.length
     assert_equal 'alice', records[0]['name']
     assert_equal 'bob', records[1]['name']
     record_id2 = records[1]['id']
 
-    records = read_records_for_url(@url + "@#{record_id2}")
+    records = read_records_for_url(url + "@#{record_id2}")
     assert_equal 1, records.length
     assert_equal 'bob', records[0]['name']
 
-    records = read_records_for_url(@url + "@#{record_id2 + 1}")
+    records = read_records_for_url(url + "@#{record_id2 + 1}")
     assert_equal 0, records.length
   ensure
-    delete_record(record_id)
-    delete_record(record_id2)
+    delete_record(record_id || 1)
+    delete_record(record_id2 || 2)
     assert read_records.first.nil?, 'Table was not empty'
   end
 
