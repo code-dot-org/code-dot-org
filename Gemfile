@@ -156,3 +156,4 @@ gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
 gem 'pusher', '~> 0.14.5'
 
 gem 'viddl-rb', group: [:development, :staging, :test, :levelbuilder]
+gem 'httparty', group: [:development, :staging, :test, :levelbuilder]

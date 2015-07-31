@@ -457,6 +457,7 @@ DEPENDENCIES
   heroku_rails_deflate
   highline (~> 1.6.21)
   honeybadger (~> 1.11.2)
+  httparty
   i18nema
   jbuilder (~> 1.2)
   jquery-rails
