@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-07-15T21:45:59.000Z",
+  "created_at": "2015-07-30T21:04:49.000Z",
   "level_num": "custom",
   "user_id": 112,
   "properties": {
@@ -149,8 +149,8 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "instructions": "Add newline characters \"\\n\" to separate the user's input and the computer's response.",
-    "markdown_instructions": "You have now displayed the user's input on the screen, but it is all scrunched together. In this level, we will add some nicer formatting by using the newline character.\r\n\r\n### Instructions\r\n\r\n* Add newline characters: Your user's input and your chatbot's response should be on separate lines. The character `\\n` will add a new line to your message. Your newline character needs to live between quotes! \r\n\r\n<table style=\"width:100%; margin-left:25px;\">\r\n<tr>\r\n<td style=\"vertical-align: text-top; border-right:1px solid #000\">\r\n\t**Example1:**<br/><br/>\r\n    \r\n    `write(\"Hi!\\nuh huh\");`<br/><br/>\r\n    \r\n    *will be displayed as...*<br/><br/>\r\n    \r\n    Hi!<br/>uh huh<br/><br/>\r\n    \r\n    *...on your screen.*\r\n</td>\r\n<td style=\"padding-left:20px;\">\r\n    **Example2:**<br/><br/>\r\n    \r\n    `var firstName = \"Jessica\";`<br/>\r\n    \r\n    `var lastName = \"Programmer\";`<br/>\r\n    \r\n    `write(firstName + \"\\n\" + lastName);`<br/><br/>\r\n    \r\n    *will be displayed as...*<br/><br/>\r\n    \r\n    Jessica<br/>Programmer<br/><br/>\r\n    \r\n    *...on your screen.*\r\n</td>\r\n</tr>\r\n</table>"
+    "instructions": "Display the conversation onto the \"text_area\" element. Optional: clear the user's input after every \"change\" event.",
+    "markdown_instructions": "<style>\r\ncode {color:black}\r\n</style>\r\n\r\nNow we need to control what gets displayed onto the screen.\r\n\r\n### Instructions\r\n\r\n* Display the conversation onto the <code>text_area</code> element\r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nYou may need the <code>setText</code> block\r\n</details>\r\n\r\n<br/>\r\n**Going Further**\r\n\r\nAfter the use types a prompt and hits \"enter/return\", the prompt should disappear from the <code>text_input</code> element; otherwise, the user will have to erase the input every time s/he types a prompt.\r\n\r\n* Add one block to the end of your event handler that will clear the <code>text_input</code>\r\n\r\n<br/>"
   }
 }]]></config>
   <blocks/>
