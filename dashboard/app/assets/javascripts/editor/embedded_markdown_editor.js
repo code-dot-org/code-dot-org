@@ -1,4 +1,4 @@
-/* globals codeMirror marked */
+/* global codeMirror, marked */
 
 /**
  * Initializes a live preview markdown editor that spits its contents out into
@@ -22,6 +22,7 @@ dashboard.initializeEmbeddedMarkdownEditor = function (embeddedElement, markdown
 
   var mdEditor = codeMirror(markdownTextArea, 'markdown', function (editor, change) {
     markdownPreviewArea.html(marked(editor.getValue()));
+    markdownPreviewArea.children('details').details();
 
     var editorText = editor.getValue();
     var dslText = dslElement.val();

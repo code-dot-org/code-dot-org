@@ -16,9 +16,19 @@
  maxstatements: 200
  */
 'use strict';
+/* global window */
+/* global require */
+/* global exports */
 
 require('../utils'); // For String.prototype.repeat polyfill
 var netsimUtils = require('./netsimUtils');
+
+// window.{btoa, atob} polyfills
+if (!(window.atob && window.btoa)) {
+  var base64 = require('Base64');
+  window.btoa = window.btoa || base64.btoa;
+  window.atob = window.atob || base64.atob;
+}
 
 /**
  * @typedef {string} addressHeaderFormat
@@ -358,6 +368,55 @@ exports.binaryToAscii = function (binaryString, byteSize) {
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
+};
+
+/**
+ * @typedef {Object} base64Payload
+ * @property {string} string - the base64-encoded payload
+ * @property {number} len - the length of the original binary payload
+ */
+
+/**
+ * Converts binary to a base64 string for more efficient network
+ * transfer. Because base64 expects even bytes, we pad the binary string
+ * to the nearest byte and return the original length. The reverse
+ * conversion expects to be given that original length.
+ * @param {string} binaryString
+ * @returns {base64Payload} Object containing the base64 string and the
+ *          length of of the original binaryString
+ * @throws {TypeError} if binaryString argument is not a
+ *         properly-formatted string of zeroes and ones.
+ * @example
+ * // returns { string: "kg==", len: 7 }
+ * dataConverters.binaryToBase64("1001001");
+ */
+exports.binaryToBase64 = function (binaryString) {
+
+  if (/^[01]*$/.test(binaryString) === false) {
+    throw new TypeError("argument binaryString to method binaryToBase64" +
+      "must be a binary string; received \"" + binaryString + "\" instead");
+  }
+
+  var byteLen = Math.ceil(binaryString.length/8.0) * 8;
+  var paddedBinaryString = netsimUtils.zeroPadRight(binaryString, byteLen);
+  var payload = window.btoa(exports.binaryToAscii(paddedBinaryString, 8));
+
+  return { string: payload, len: binaryString.length };
+
+};
+
+/**
+ * Converts a base64 string back into a binary string of the specified
+ * length.
+ * @param {string} base64string
+ * @param {number} len
+ * @returns {string} binaryString
+ * @example
+ * // returns "1001001"
+ * dataConverters.base64ToBinary("kg==", 7);
+ */
+exports.base64ToBinary = function (base64string, len) {
+  return exports.asciiToBinary(window.atob(base64string), 8).substr(0, len);
 };
 
 /**

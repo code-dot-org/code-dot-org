@@ -35,8 +35,8 @@ class HocSignup2014
     fq = []
     fq.push("kind_s:#{self.name}")
     {
-      q:query,
-      fq:fq,
+      q: query,
+      fq: fq,
       rows: 100000,
     }
   end

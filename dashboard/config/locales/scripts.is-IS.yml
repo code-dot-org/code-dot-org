@@ -330,14 +330,21 @@
           description: Búa til myndir með bitum og bætum.
           description_short: Búa til myndir með bitum og bætum.
           Pixelation: Dílamynstur
+          Black & White Pixelation Widget: Black & White Pixelation Widget
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: Black & White Pixelation Tutorial
+          Black & White Pixelation Freeplay: Black & White Pixelation Freeplay
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Kynning á tölvunarfræði, hraðnámskeið
           description_audience: Fyrir 10-18 ára
           description: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
             og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi
             13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: Þetta 20 tíma námskeið fer í þau kjarnahugtök tölvunarfræði
+            og forritunar sem kynnt eru á námskeiðum 2-4.
           Introduction to Computer Science: Kynning á tölvunarfræði
           The Maze: Völundarhúsið
           Computational Thinking: Tölvunarmiðuð hugsun
@@ -379,21 +386,22 @@
           title: Flappy kóði
           description: Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu
             kennsluna með Flappy kóða!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Skrifaðu þinn eigin Flappy leik á innan við 10 mínútum!
           Flappy Code: Flappy kóði
         jigsaw:
           title: Púsl
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: Prófaðu Jigsaw kennsluefnið okkar
+          description_short: Prófaðu Jigsaw kennsluefnið okkar
           Jigsaw: Púsl
         step:
           title: Þrep
-          description: ''
-          description_short: Step tutorial
+          description: Kennsla í skrefum
+          description_short: Kennsla í skrefum
           Step: Þrep
         Hour of Code:
           title: Klukkustund kóðunar 2013
-          description: ''
+          description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum úr Angry
+            Birds og Plants vs. Zombies!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum
             fígúrum!
           Hour of Code 2013: Klukkustund kóðunar 2013
@@ -567,8 +575,8 @@
           Preparing for in-person PD: Preparing for in-person PD
         CSPLessonSamples:
           title: Sýnishorn GT kennslustunda
-          description_short: sýnishorn kennslustunda fyrir GT
-          description: sýnishorn kennslustunda fyrir GT
+          description_short: Sýnishorn kennslustunda fyrir GT
+          description: Sýnishorn kennslustunda fyrir GT
           Lesson 14: Kennslustund 14
           Lesson 15: Kennslustund 15
         ECSPD:
@@ -579,14 +587,14 @@
           Preparing for in-person PD: Preparing for in-person PD
           reference: reference
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Kynning á PD
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -681,14 +689,14 @@
           Next Steps: Næstu skref
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Introduction to PD: Kynning á PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Introduction to PD: Kynning á PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -706,8 +714,8 @@
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Kynning á PD
@@ -717,13 +725,13 @@
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Tölvunarfræði í algebru - fagmenntun
-          description: Kenna algebru með fallmiðaðri forritun
-          description_short: Kenna algebru með fallmiðaðri forritun
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Introduction to PD: Kynning á PD
           Evaluation Blocks: Matskubbar
           logo_image: nextech_logo.png
@@ -735,8 +743,8 @@
           Preparing for in-person PD: Preparing for in-person PD
         algebraPD-iZone:
           title: Tölvunarfræði í algebru - fagmenntun
-          description: Kenna algebru með fallmiðaðri forritun
-          description_short: Kenna algebru með fallmiðaðri forritun
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Introduction to PD: Kynning á PD
           Evaluation Blocks: Matskubbar
           logo_image: izone_logo.png
@@ -750,8 +758,8 @@
           Introduction to PD: Kynning á PD
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -770,8 +778,8 @@
           Introduction to PD: Kynning á PD
           logo_image: izone_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           What to Expect: What to Expect
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -797,8 +805,8 @@
           new stage: nýr áfangi
         sciencePD2:
           title: Computer Science in Science PD
-          description: Phase 2 Online Blended Summer Study
-          description_short: Phase 2 Online Blended Summer Study
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -911,6 +919,7 @@
           Text Compression: Þjöppun texta
           Pixelation: Dílamynstur
           Multi2: Multi2
+          Markdown Details: Markdown Details
         algebraPD2b:
           title: Tölvunarfræði í algebru - fagmenntun
           description: Kenna fallmiðaða forritun í gegnum algebru
@@ -952,11 +961,11 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your
-            students with this free, self-paced online course.
-          description_short: Learn how to teach Courses 1-4 with this free, self-paced
-            online course.
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer
+            Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's
+            Computer Science Fundamentals with this free, self-paced online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -971,8 +980,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Blended Summer Study
-          description_short: Blended Summer Study
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
           Welcome!: Velkomin!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -983,6 +992,40 @@
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
           Wrap-up: Samantekt
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
+            Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9.
+            Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story
+            with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling
+            and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day
+            15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web
+            2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -1021,8 +1064,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: Kenna fallmiðaða forritun í gegnum algebru
           Welcome!: Velkomin!
           Wrap-Up: Samantekt
           Review StarLogo Nova: Review StarLogo Nova
@@ -1038,8 +1081,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: Kenna fallmiðaða forritun í gegnum algebru
           Welcome!: Velkomin!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1057,3 +1100,86 @@
           Introduction to Equity: Introduction to Equity
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Næstu skref
+        sciencePD2b-iZone:
+          Welcome!: Velkomin!
+          title: Computer Science in Science PD Phase 2b
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: Samantekt
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          Welcome!: Velkomin!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Samantekt
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: Kenna fallmiðaða forritun í gegnum algebru
+          description: Kenna fallmiðaða forritun í gegnum algebru
+          Welcome!: Velkomin!
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: Samantekt
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience
+            and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          'Lesson Chunk 1: Sending Binary Messages': 'Lesson Chunk 1: Sending Binary
+            Messages'
+          'Lesson Chunk 2: Encoding and Sending Numbers': 'Lesson Chunk 2: Encoding
+            and Sending Numbers'
+          'Lesson Chunk 3: Encoding and Sending Text': 'Lesson Chunk 3: Encoding and
+            Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: Lesson Chunk 1- Sending Binary
+            Messages
+          Lesson Chunk 2- Encoding and Sending Numbers: Lesson Chunk 2- Encoding and
+            Sending Numbers
+          Lesson Chunk 3- Encoding and Sending Text: Lesson Chunk 3- Encoding and
+            Sending Text
+          Lesson Chunk 4- Compressing and Storing Information: Lesson Chunk 4- Compressing
+            and Storing Information
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps

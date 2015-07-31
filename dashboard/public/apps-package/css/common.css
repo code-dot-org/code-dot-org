@@ -52,6 +52,9 @@ html[dir='rtl'] #visualizationColumn {
   position: absolute;
   bottom: 0px;
   overflow-y: hidden; }
+  #visualizationColumn.pin_bottom #belowVisualization {
+    position: absolute;
+    overflow: auto; }
 
 div.droplet-palette-group-header {
   font-family: "Gotham 4r", sans-serif, sans-serif;
@@ -174,16 +177,7 @@ html[dir='rtl'] #codeWorkspace {
   border: none;
   border-top: 1px solid #ddd; }
 
-#codeWorkspace.readonly:after {
-  /* gray overlay when workspace is read only */
-  content: "";
-  display: block;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
+#codeWorkspace.readonly .blocklySvg, #codeWorkspace.readonly .droplet-main-scroller, #codeWorkspace.readonly .ace_scroller {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .ace_gutter-cell.ace_breakpoint, .droplet-gutter-line.droplet_breakpoint {
@@ -260,6 +254,8 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 350px; }
   #visualizationColumn.responsive {
     max-width: 350px; }
+  .small-footer.responsive {
+    max-width: 350px; }
   #codeWorkspace {
     left: 350px; }
   html[dir='rtl'] #codeWorkspace {
@@ -284,6 +280,8 @@ html[dir='rtl'] #codeWorkspace {
     max-height: 300px;
     max-width: 300px; }
   #visualizationColumn.responsive {
+    max-width: 300px; }
+  .small-footer.responsive {
     max-width: 300px; }
   #codeWorkspace {
     left: 300px; }
@@ -310,6 +308,8 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 250px; }
   #visualizationColumn.responsive {
     max-width: 250px; }
+  .small-footer.responsive {
+    max-width: 250px; }
   #codeWorkspace {
     left: 250px; }
   html[dir='rtl'] #codeWorkspace {
@@ -335,6 +335,10 @@ html[dir='rtl'] #codeWorkspace {
     max-width: 200px; }
   #visualizationColumn.responsive {
     max-width: 200px; }
+  .small-footer.responsive {
+    max-width: 200px; }
+    .small-footer.responsive small {
+      float: left; }
   #codeWorkspace {
     left: 200px; }
   html[dir='rtl'] #codeWorkspace {
@@ -477,6 +481,7 @@ input[type="radio"] {
   margin: 5px 0px 5px 0px; }
 
 #gameButtons {
+  position: relative;
   margin-bottom: 10px;
   width: 100%;
   text-align: justify;

@@ -176,12 +176,6 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  after_create :codeorg_admin unless Rails.env.production?
-  def codeorg_admin
-    require 'mail'
-    update(admin: true) if Mail::Address.new(email).domain.try(:downcase) == 'code.org'
-  end
-
   before_save :dont_reconfirm_emails_that_match_hashed_email
   def dont_reconfirm_emails_that_match_hashed_email
     # we make users "reconfirm" when they change their email
@@ -579,6 +573,20 @@ SQL
   def reset_secret_words
     generate_secret_words
     save!
+  end
+
+  def advertised_scripts
+    [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script, Script.flappy_script,
+      Script.playlab_script, Script.artist_script, Script.course1_script, Script.course2_script,
+      Script.course3_script, Script.course4_script, Script.twenty_hour_script]
+  end
+
+  def unadvertised_user_scripts
+    [working_on_user_scripts, completed_user_scripts].compact.flatten.delete_if { |user_script| user_script.script.in?(advertised_scripts)}
+  end
+
+  def all_advertised_scripts_completed?
+    advertised_scripts.all? { |script| completed?(script) }
   end
 
   def completed?(script)

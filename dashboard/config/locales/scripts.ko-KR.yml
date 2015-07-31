@@ -34,7 +34,7 @@
           Getting Loopy: 반복적으로 하기
           The Big Event: 빅 이벤트
           Going Places Safely: 안전하게 자리잡기
-          description: 코스1은 컴퓨터 프로그래밍을 처음 이해하기 시작하는 사람들을 위한 코스로, 다른 사람들과 협력하고, 문제
+          description: 과정1은 컴퓨터 프로그래밍을 처음 이해하기 시작하는 사람들을 위한 코스로, 다른 사람들과 협력하고, 문제
             해결 능력을 계발하고 어려운 문제들에 도전할 수 있도록 하는 코스 입니다. 이 코스를 통해 학생 스스로 자신만의 게임과 스토리들을
             만들어 공유할 수 있습니다. K-1(초등 1학년) 학생들에게 권장합니다.
           'Bee: Sequence': '꿀벌 : 순차'
@@ -311,6 +311,13 @@
           description: Create images with bits and bytes.
           description_short: Create images with bits and bytes.
           Pixelation: Pixelation
+          Black & White Pixelation Widget: Black & White Pixelation Widget
+          Color Pixelation Widget: Color Pixelation Widget
+          Black & White Pixelation Tutorial: Black & White Pixelation Tutorial
+          Black & White Pixelation Freeplay: Black & White Pixelation Freeplay
+          Color Pixelation Tutorial: Color Pixelation Tutorial
+          Color Pixelation Examples: Color Pixelation Examples
+          Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: 20 시간 소개 과정
           description_audience: 10세 이상 (과정3을 마친 후)
@@ -456,8 +463,8 @@
           'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
         algebraPD:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           'Unplugged: Video Games and Coordinate Planes': '언플러그드: 비디오 게임과 좌표 평면'
           'Calc: Evaluation Blocks': '계산: 평가(결과 계산) 블럭'
           'Eval: Strings and Images': '평가: 문자열(문장)과 이미지'
@@ -546,14 +553,14 @@
           Preparing for in-person PD: Preparing for in-person PD
           reference: reference
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
           Introduction to PD: Introduction to PD
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Pre-Workshop Online Component: Pre-Workshop Online Component
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -648,14 +655,14 @@
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -673,8 +680,8 @@
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: nextech_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
           Introduction to PD: Introduction to PD
@@ -684,13 +691,13 @@
           Preparing for in-person PD: Preparing for in-person PD
           logo_image: izone_logo.png
           title: Exploring Computer Science PD
-          description: Online Introduction to ECS
-          description_short: Online Introduction to ECS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
           Evaluation Blocks: Evaluation Blocks
           logo_image: nextech_logo.png
@@ -702,8 +709,8 @@
           Preparing for in-person PD: Preparing for in-person PD
         algebraPD-iZone:
           title: Computer Science in Algebra PD
-          description: Teach Algebra through Functional Programming
-          description_short: Teach Algebra through Functional Programming
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
           Evaluation Blocks: Evaluation Blocks
           logo_image: izone_logo.png
@@ -717,8 +724,8 @@
           Introduction to PD: Introduction to PD
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           What to Expect: 기대 할 것은
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -737,8 +744,8 @@
           Introduction to PD: Introduction to PD
           logo_image: izone_logo.png
           title: Computer Science in Science PD
-          description: In Partnership with Project GUTS
-          description_short: In Partnership with Project GUTS
+          description: 'Phase 1: Online Introduction'
+          description_short: 'Phase 1: Online Introduction'
           What to Expect: 기대 할 것은
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
@@ -764,8 +771,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: Phase 2 Online Blended Summer Study
-          description_short: Phase 2 Online Blended Summer Study
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -835,8 +842,8 @@
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Strings and Images
           Defining Variables: Defining Variables
@@ -878,10 +885,11 @@
           Text Compression: Text Compression
           Pixelation: Pixelation
           Multi2: Multi2
+          Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -919,11 +927,11 @@
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
-          title: 'Teaching Kids to Code: The Basics'
-          description: Learn to code and how to teach computer science basics to your
-            students with this free, self-paced online course.
-          description_short: Learn how to teach Courses 1-4 with this free, self-paced
-            online course.
+          title: Teaching Computer Science Fundamentals
+          description: Learn how to teach computer science using Code.org's Computer
+            Science Fundamentals with this free, self-paced online course.
+          description_short: Learn how to teach computer science using Code.org's
+            Computer Science Fundamentals with this free, self-paced online course.
           Getting Started: Getting Started
           Computer Science Fundamentals: Computer Science Fundamentals
           'Mastering the Basics: Sequencing': 'Mastering the Basics: Sequencing'
@@ -938,8 +946,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Blended Summer Study
-          description_short: Blended Summer Study
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Welcome!: 환영합니다.
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -950,6 +958,40 @@
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
           Wrap-up: 마무리
+          Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
+          Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
+          Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
+            Web 2.0
+          Unit 1, Days 8-9. Impact of Computers and Communication: Unit 1, Days 8-9.
+            Impact of Computers and Communication
+          Unit 1, Day 10. Telling a Story with Data: Unit 1, Day 10. Telling a Story
+            with Data
+          Unit 1, Day 11-14. Data Modeling and Design: Unit 1, Day 11-14. Data Modeling
+            and Design
+          Unit 1, Day 15-16. Computer Programs and Following Directions: Unit 1, Day
+            15-16. Computer Programs and Following Directions
+          Unit 1, Day 17-19. What Is Intelligence?: Unit 1, Day 17-19. What Is Intelligence?
+          'Unit 1, Days 1-2: What Is a Computer?': 'Unit 1, Days 1-2: What Is a Computer?'
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 5-7 Searching and Web 2.0: Unit 1, Days 5-7 Searching and Web
+            2.0
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
         equityPD:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -965,8 +1007,8 @@
           Hour of Code: Hour of Code
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: Teach Functional Programming through Algebra
-          description_short: Teach Functional Programming through Algebra
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -988,8 +1030,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
           Welcome!: 환영합니다.
           Wrap-Up: 마무리
           Review StarLogo Nova: Review StarLogo Nova
@@ -1005,8 +1047,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Phase 2 Online Blended Summer Study
-          description: Phase 2 Online Blended Summer Study
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
           Welcome!: 환영합니다.
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1024,3 +1066,86 @@
           Introduction to Equity: Introduction to Equity
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
+        sciencePD2b-iZone:
+          Welcome!: 환영합니다.
+          title: Computer Science in Science PD Phase 2b
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Review StarLogo Nova: Review StarLogo Nova
+          Reviewing the Modules: Reviewing the Modules
+          Advanced StarLogo Nova: Advanced StarLogo Nova
+          Remixing Phases 1 and 2: Remixing Phases 1 and 2
+          Thinking Ahead to Implementation: Thinking Ahead to Implementation
+          Wrap-Up: 마무리
+        ECSPD2-iZone:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: 환영합니다.
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: 마무리
+        ECSPD2-NexTech:
+          title: 'Exploring Computer Science PD: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Phase 2 Online: Blended Summer Study'
+          Welcome!: 환영합니다.
+          0: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          1: |
+            Unit 1, Days 1-2
+            What Is a Computer?
+          Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
+          Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web
+            2
+          Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9
+            Impact of Computers and Communication
+          Unit 1, Day 10 Telling a Story with Data: Unit 1, Day 10 Telling a Story
+            with Data
+          Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling
+            and Design
+          Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
+            15-16 Computer Programs and Following Directions
+          Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
+          Wrap-up: 마무리
+        CSPPD2:
+          title: 'Computer Science Principles PD: Blended Summer Study'
+          description_short: 'Blended Summer Study: 8 hour online'
+          description: 8-hour online PD that builds on the 5-day in-person experience
+            and helps teachers prepare for the beginning of the semester
+          Getting Started: Getting Started
+          Welcome to the Course!: Welcome to the Course!
+          'Lesson Chunk 1: Sending Binary Messages': 'Lesson Chunk 1: Sending Binary
+            Messages'
+          'Lesson Chunk 2: Encoding and Sending Numbers': 'Lesson Chunk 2: Encoding
+            and Sending Numbers'
+          'Lesson Chunk 3: Encoding and Sending Text': 'Lesson Chunk 3: Encoding and
+            Sending Text'
+          Lesson Chunk 1- Sending Binary Messages: Lesson Chunk 1- Sending Binary
+            Messages
+          Lesson Chunk 2- Encoding and Sending Numbers: Lesson Chunk 2- Encoding and
+            Sending Numbers
+          Lesson Chunk 3- Encoding and Sending Text: Lesson Chunk 3- Encoding and
+            Sending Text
+          Lesson Chunk 4- Compressing and Storing Information: Lesson Chunk 4- Compressing
+            and Storing Information
+          Practice PT: Practice PT
+          Ramping Up: Ramping Up
+          Wrap Up and Next Steps: Wrap Up and Next Steps

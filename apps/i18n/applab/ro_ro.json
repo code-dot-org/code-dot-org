@@ -419,7 +419,7 @@
   "no": "No",
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
   "pause": "Break",
-  "reinfFeedbackMsg": "You can press the \"Try again\" button to go back to running your app.",
+  "reinfFeedbackMsg": "You can press the \"Try Again\" button to go back to running your app.",
   "repeatForever": "repeat forever",
   "repeatDo": "do",
   "repeatForeverTooltip": "Execute the actions in this block repeatedly while the app is running.",

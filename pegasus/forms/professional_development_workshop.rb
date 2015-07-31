@@ -76,10 +76,10 @@ class ProfessionalDevelopmentWorkshop
           begin
             Poste2.send_message('professional-development-workshop-section-receipt',
                                 Poste2.ensure_recipient(recipient[:email], name: recipient[:name], ip_address: '127.0.0.1'),
-                                workshop_id:row[:id],
-                                location_name:data['location_name_s'],
-                                facilitator_name:data['name_s'],
-                                start_date:data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
+                                workshop_id: row[:id],
+                                location_name: data['location_name_s'],
+                                facilitator_name: data['name_s'],
+                                start_date: data['dates'] && data['dates'].first ? data['dates'].first['date_s'] : nil)
           rescue => e
             puts "#{recipient[:name]} <#{recipient[:email]}> couldn't be sent a pd certificate because: #{e.message}"
           end

@@ -22,7 +22,6 @@ var _ = utils.getLodash();
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimMessage = require('./NetSimMessage');
-var NetSimHeartbeat = require('./NetSimHeartbeat');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var ObservableEvent = require('../ObservableEvent');
@@ -94,13 +93,6 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
   this.receivedLog_ = null;
 
   /**
-   * Tells the network that we're alive
-   * @type {NetSimHeartbeat}
-   * @private
-   */
-  this.heartbeat = null;
-
-  /**
    * Change event others can observe, which we will fire when we
    * connect or disconnect from a router or remote client
    * @type {ObservableEvent}
@@ -131,6 +123,8 @@ NetSimLocalClientNode.inherits(NetSimClientNode);
  *        created entity, or null if entity creation failed.
  */
 NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
+  // TODO (bbuchanan): Modify and return the template node instead of
+  // making two in this method.
   var templateNode = new NetSimLocalClientNode(shard);
   templateNode.displayName_ = displayName;
   templateNode.getTable().create(templateNode.buildRow(), function (err, row) {
@@ -139,19 +133,8 @@ NetSimLocalClientNode.create = function (shard, displayName, onComplete) {
       return;
     }
 
-    NetSimHeartbeat.getOrCreate(shard, row.id, function (err, heartbeat) {
-      if (err) {
-        onComplete(err, null);
-        return;
-      }
-
-      // Attach a heartbeat failure (heart attack?) callback to
-      // detect and respond to a disconnect.
-      var newNode = new NetSimLocalClientNode(shard, row);
-      newNode.heartbeat = heartbeat;
-      newNode.heartbeat.setFailureCallback(newNode.onFailedHeartbeat.bind(newNode));
-      onComplete(null, newNode);
-    });
+    var newNode = new NetSimLocalClientNode(shard, row);
+    onComplete(null, newNode);
   });
 };
 
@@ -201,31 +184,15 @@ NetSimLocalClientNode.prototype.stopSimulation = function () {
 };
 
 /**
- * Our own client must send a regular heartbeat to broadcast its presence on
- * the shard.
+ * Ticks the simulation routers
  * @param {!RunLoop.Clock} clock
  */
 NetSimLocalClientNode.prototype.tick = function (clock) {
-  this.heartbeat.tick(clock);
+  // TODO (bbuchanan): Move the router collection and ticking the
+  // routers up to netsim.js (or elsewhere)
   this.routers_.forEach(function (router) {
     router.tick(clock);
   });
-};
-
-/**
- * Handler for a heartbeat update failure.  Propagates the failure up through
- * our own "lost connection" callback.
- * @param {Error} err
- * @private
- */
-NetSimLocalClientNode.prototype.onFailedHeartbeat = function (err) {
-  logger.error("Heartbeat failed.");
-  if (err) {
-    logger.error(err.message);
-  }
-  if (this.onNodeLostConnection_ !== undefined) {
-    this.onNodeLostConnection_();
-  }
 };
 
 /**
@@ -317,9 +284,6 @@ NetSimLocalClientNode.prototype.connectToRouter = function (router, onComplete) 
 
     this.myRouterID_ = router.entityID;
     var myRouter = this.getMyRouter();
-    // Copy the heartbeat reference over to the router instance
-    // in our simulating routers collection.
-    myRouter.heartbeat = router.heartbeat;
 
     myRouter.requestAddress(wire, this.getHostname(), function (err) {
       if (err) {
@@ -347,32 +311,6 @@ NetSimLocalClientNode.prototype.getMyRouter = function () {
   return _.find(this.routers_, function (router) {
     return router.entityID === this.myRouterID_;
   }.bind(this));
-};
-
-/**
- * Synchronously destroy the local node.  Use on page unload, normally prefer
- * async steps.
- */
-NetSimLocalClientNode.prototype.synchronousDestroy = function () {
-  // If connected to remote, synchronously disconnect
-  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
-    this.synchronousDisconnectRemote();
-  }
-
-  // Remove messages being simulated by me
-  this.shard_.messageTable.readAllCached().forEach(function (row) {
-    if (row.simulatedBy === this.entityID) {
-      var message = new NetSimMessage(this.shard_, row);
-      message.synchronousDestroy();
-    }
-  }, this);
-
-  // Remove my heartbeat row(s)
-  this.heartbeat.synchronousDestroy();
-  this.heartbeat = null;
-
-  // Finally, call super-method
-  NetSimLocalClientNode.superPrototype.synchronousDestroy.call(this);
 };
 
 /**
@@ -410,26 +348,7 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
     return;
   }
 
-  // Remove heartbeat row, then self
-  this.heartbeat.destroy(function (err) {
-    if (err) {
-      onComplete(err);
-      return;
-    }
-
-    NetSimLocalClientNode.superPrototype.destroy.call(this, onComplete);
-  });
-};
-
-/**
- * Synchronously destroy my outgoing wire.  Used when navigating away from
- * the page - in normal circumstances use async version.
- */
-NetSimLocalClientNode.prototype.synchronousDisconnectRemote = function () {
-  if (this.myWire) {
-    this.myWire.synchronousDestroy();
-  }
-  this.cleanUpAfterDestroyingWire_();
+  NetSimLocalClientNode.superPrototype.destroy.call(this, onComplete);
 };
 
 /**
@@ -459,13 +378,6 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
  * @private
  */
 NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
-  var myRouter = this.getMyRouter();
-  if (myRouter) {
-    // We did manual heartbeat setup, we also need to do manual heartbeat
-    // cleanup when we disconnect from the router.
-    myRouter.heartbeat = null;
-  }
-
   this.myWire = null;
   this.myRemoteClient = null;
   this.myRouterID_ = undefined;

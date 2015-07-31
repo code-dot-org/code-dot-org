@@ -1,26 +1,26 @@
 ka:
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
+      confirmed: თქვენი ელ.ფოსტა წარმატებით დადასტურდა.
       send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
       send_paranoid_instructions: If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes.
     failure:
       already_authenticated: You are already signed in.
-      inactive: Your account was not activated yet.
-      invalid: Invalid email or password.
+      inactive: თქვენი ანგარიში ჯერ არ არის გააქტიურებული.
+      invalid: ელ.ფოსტა ან პაროლი არასწორია.
       invalid_token: Invalid authentication token.
-      locked: Your account is locked.
-      not_found_in_database: Invalid email or password.
-      timeout: Your session expired, please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your account before continuing.
+      locked: თქვენი ანგარიში დაბლოკილია.
+      not_found_in_database: ელ.ფოსტა ან პაროლი არასწორია.
+      timeout: თქვენი სესიის დრო დასრულდა, გასაგრძელებლად შედით სისტემაში.
+      unauthenticated: გასაგრძელებლად უნდა შემოხვიდეთ ან დარეგისტრირდეთ.
+      unconfirmed: გასაგრძელებლად უნდა დაადასტუროთ თქვენი რეგისტრაცია.
     mailer:
       confirmation_instructions:
         subject: Code.org confirmation instructions
       reset_password_instructions:
         subject: Code.org reset password instructions
       unlock_instructions:
-        subject: Unlock Instructions
+        subject: ინსტრუქციების გახსნა
     omniauth_callbacks:
       failure: 'Could not authenticate you from %{kind} because "%{reason}".'
       success: 'Successfully authenticated from %{kind} account.'

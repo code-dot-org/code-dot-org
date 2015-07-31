@@ -4,24 +4,20 @@ Sequel.migration do
     add_column :storage_apps, :created_at, DateTime
 
     batch_update do |row|
-      value = JSON.parse(row[:value])
-      created = Time.parse(value['createdAt']) if value['createdAt']
+      begin
+        value = JSON.parse(row[:value])
+      rescue JSON::ParserError
+        next
+      end
 
-      # Remove metadata keys from :value hash (they're stored in separate columns or calculated dynamically).
-      %w(id isOwner createdAt updatedAt).each{ |key| value.delete(key) }
+      created = DateTime.parse(value['createdAt']) if value['createdAt']
 
       # Set :created_at.
-      from(:storage_apps).where(id: row[:id]).update(created_at: created, value: value.to_json)
+      from(:storage_apps).where(id: row[:id]).update(created_at: created)
     end
   end
 
   down do
-    batch_update do |row|
-      value = JSON.parse(row[:value])
-
-      # Move timestamp keys back to the :value hash.
-      from(:storage_apps).where(id: row[:id]).update(value: value.merge('createdAt' => row[:created_at], 'updatedAt' => row[:updated_at]).to_json)
-    end
     drop_column :storage_apps, :created_at
   end
 end
@@ -31,7 +27,7 @@ def batch_update
   offset = 0
   batch_size = 1000
   loop do
-    batch = from(:storage_apps).where(state: 'active').offset(offset).limit(batch_size)
+    batch = from(:storage_apps).offset(offset).limit(batch_size)
     break if batch.count == 0
     batch.each do |row|
       yield row

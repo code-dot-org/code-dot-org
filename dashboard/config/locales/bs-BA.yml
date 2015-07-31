@@ -252,6 +252,7 @@
       free_play:
         playlab: Napravi Aplikaciju
         artist: Nacrtaj Nešto
+        calculate: Calculate Something
     user:
       classroom: Početna Stranica za Učitelje
       district_dashboard: District Dashboard

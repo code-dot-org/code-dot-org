@@ -151,7 +151,7 @@
   "projectileCherry": "cherry",
   "projectileIce": "ice",
   "projectileDuck": "duck",
-  "reinfFeedbackMsg": "\"Berriro saiatu\" botoiean klikatu dezakezu zure istorioa atzera egiteko.",
+  "reinfFeedbackMsg": "You can press the \"Keep Playing\" button to go back to playing your story.",
   "repeatForever": "errepikatu betirako",
   "repeatDo": "egin",
   "repeatForeverTooltip": "Exekutatu blokeko ekintzak etengabe istorioa martxan dagoen bitartean.",

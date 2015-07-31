@@ -176,8 +176,7 @@
             </value>
           </block>
         </category>
-        <category name="Functions" custom="PROCEDURE">
-  </category>
+        <category name="Functions" custom="PROCEDURE"/>
         <category name="Loops">
           <block type="controls_repeat_ext" inline="true"/>
           <block type="controls_for_counter" inline="true">
@@ -198,6 +197,9 @@
               </block>
             </value>
           </block>
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
         </category>
         <category name="Math">
           <block type="math_number">
@@ -207,12 +209,12 @@
             <title name="OP">ADD</title>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="variables_get">
-            <title name="VAR">length</title>
+        <category name="Variable">
+          <block type="variables_set" inline="false">
+            <title name="VAR">i</title>
           </block>
           <block type="variables_get">
-            <title name="VAR">sides</title>
+            <title name="VAR">i</title>
           </block>
         </category>
       </xml>

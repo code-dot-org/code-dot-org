@@ -1,0 +1,5 @@
+name 'U3L24 Warm-up Quiz 1'
+title 'Warm-up quiz 1'
+question 'Which of the following will print "Hello World!" to the screen'
+wrong 'if (false) { write("Hello World!"); }'
+right 'if (true) { write("Hello World!"); }'

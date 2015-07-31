@@ -83,7 +83,7 @@ Below is a list of all K-5 Affiliates. To find and sign up for a workshop they a
 ## Alabama
 [col-33]
 ### Jeff Gray
-Tuscloosa, AL
+Tuscaloosa, AL
 
 gray@pd.code.org
 
@@ -739,14 +739,6 @@ style="clear:both">&nbsp;
 Apple Valley, MN
 
 hitchcock@pd.code.org
-
-[/col-33]
-
-[col-33]
-### Angie Kalthoff
-Richmond, MN
-
-kalthoff@pd.code.org
 
 [/col-33]
 

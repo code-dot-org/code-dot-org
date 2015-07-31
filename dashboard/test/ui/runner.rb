@@ -168,8 +168,8 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
     message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
-    HipChat.log message, color:'yellow'
-    HipChat.developers message, color:'yellow' if CDO.hip_chat_logging
+    HipChat.log message, color: 'yellow'
+    HipChat.developers message, color: 'yellow' if CDO.hip_chat_logging
     next
   end
 
@@ -284,10 +284,10 @@ Parallel.map($browsers, :in_processes => $options.parallel_limit) do |browser|
 
     if $options.html
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
-      message += " <a href='#{link}'>&#x2601; html output</a>"
+      message += " <a href='#{link}'>☁ html output</a>"
     end
-    HipChat.log message, color:'red'
-    HipChat.developers message, color:'red' if CDO.hip_chat_logging
+    HipChat.log message, color: 'red'
+    HipChat.developers message, color: 'red' if CDO.hip_chat_logging
   end
   result_string = succeeded ? "succeeded".green : "failed".red
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)})\n"

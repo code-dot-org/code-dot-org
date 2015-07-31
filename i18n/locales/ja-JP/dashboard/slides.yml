@@ -325,7 +325,7 @@ ja:
         text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: ピクセルと角度はとなりの矢印をクリックすれば変えられますよ。
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg

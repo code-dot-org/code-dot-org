@@ -1,8 +1,8 @@
 sq-AL:
   hello: Pershendetje Botë
   select_language: Ju lutem zgjedheni gjuhën tuaj
-  en: Computer Science
-  computer_science_edweek: Java Edukuese per Shkencat Kompjuterike
+  en: Shkencat Kompjuterike
+  computer_science_edweek: Java Arsimuese per Shkencat Kompjuterike
   csedweek_dates: Dhjetor 8-14, 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora e kodimit</a> po vjen. Të thirrur të gjithë mësuesit/ mësueset dhe organizatorët, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifikojeni Oren tuaj të Kodimit</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">A je ti nje mesues CS? Shiko burimet e Javes CS</a>'
@@ -11,8 +11,8 @@ sq-AL:
   learn_now: Meso tani
   petition_message: Cdo student ne cdo shkolle duhet te kete mundesine te mesoje shkencat kompjuterike
   petition_sign_message: 'Nëse ju pranoni, nënshkruani emrin e juaj. Bashkangjitu me # të tjerë.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
-  petition_join_others: 'Join # others'
+  petition_sign_message_support: "Nëse n'a mbështet, shkruaj emrin tënd. Bashkohu#të tjerë."
+  petition_join_others: 'Bashkohu # të tjerë'
   name: Emri
   email: Email
   zipcode: Kodi Postar ose Shteti
@@ -45,7 +45,7 @@ sq-AL:
   congratulations: Urime!
   congratulations_on_completing_hoc: Urime për përfundimin e një Orë Kodimi
   get_a_certificate_of_achievement: Merr një çertifikatë të arritjes
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Të lutem zgjidh një moshë të vlefshme
   enter_valid_email: Ju lutem shkruani një email adresë të vlefshme
   get_a_certificate_message: "Ne do tu dergojme nje certifikate dhe informacione se si mund te mesoni <a href='/learn/beyond'>pertej Ores se Kodimit</a>"
   get_a_certificate_message_after: "Kliko ne certifikate qe ta shkarkosh ose ta printosh. Tani vazhdo me <a href='http://studio.code.org'> mesimet e tjera</a>, ose shiko opsione te tjera ne <a href='/learn/beyond'> Meso me teper se nje ore.</a>"
@@ -93,7 +93,7 @@ sq-AL:
   learn_classes: Gjej klasa te aferta
   hoc_is_here: '#OraPerKodim eshte ketu - provoje! @codeorg'
   just_did_hoc: 'Une sapo mbarova #OrenPerKodim - provoje! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more."
+  twitter_teach_cs: Përse nuk mësohen shkencat kompjuterike në më shumë shkolla? Gjë që rregullohet http://youtu.be/nKIu9yen5nc. Vizito http://code.org/ për të mësuar më shumë.
   learn_hoc: Meso nje Ore kodim
   beyond_hoc: Pertej Ores se Kodimit
   what_gender: Cfare gjinie jeni ju?
@@ -112,7 +112,7 @@ sq-AL:
   stats_student: '"E dija që kjo ishte një mundësi që të vjen <b>një herë në jetë</b>." - Mariana Alzate, nxënëse e klasës së 5-të'
   stats_michael: '"Nuk i kam parë<b> kurrë më parë</b> studentët e mi kaq të emocionuar për të mësuar." - Michael Clark, Mësuese'
   studiobar_title: "Eksploro <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_title_nolink: Explore Code Studio
+  studiobar_title_nolink: Eksploro Studion e Kodit
   studiobar_elementary_title: Kurset elementare
   studiobar_elementary_body: 'Tre kurset tona të reja për K&#8209;5'
   studiobar_hoc_title: Ora e Kodimit
@@ -128,97 +128,87 @@ sq-AL:
   studiobar_shop_title: Bli
   studiobar_shop_body: Anashkalo stereotipat. Vish logon tonë me krenari.
   homepage_hero_text_malala: |
-    &ldquo;I challenge girls in every single country
-    to learn one Hour of Code&rdquo; 
-    Malala, Nobel Peace Prize winner
+    &ldquo; Sfidoj vajzat në mbarëbotën të mësojnë të kodojnë për një orë &rdquo; 
+    Malala, Fituese e Çmimit Nobel për Paqen
   homepage_hero_text_susan: |
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
+    &ldquo; Nëse mund të ndryshosh teknologjinë mund të ndryshosh botën. &rdquo;
+    Susan, Themeluese e YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
+    &ldquo; Mos e përdor telefonin vetëm për lojë, mëso t'a programosh atë. &rdquo;
+    Presidenti Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
+    &ldquo; Fëmijët tanë &mdash; duke përfshirë edhe vajzat tona &mdash;
+    kanë nevojë t'ju jepet mundësia të mësojnë shkencat kompjuterike. &rdquo;
+    Sheryl, Drejtoreshë e Operimeve në Facebook
   homepage_hero_text_satya: |
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo; Shkencat kompjuterike mund të ç'kyçin mundësitë më të mira në botë. &rdquo;
+    Satya, Drejtuese e Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;If you code, you can pick and choose
-    the course of your life.&rdquo;
+    &ldquo;Nëse arrin të kodosh mund të zgjedhësh dhe kryesh kursin e jetës tënde. &rdquo;
     Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;These skills have changed my future.
-    Not to mention, it's just plain fun.&rdquo;
-    Luna, 7th grade
+    &ldquo; Këto aftësi kanë ndryshuar të ardhmen time.
+    Për të mos folur për qejfin që bën përmes tyre.  &rdquo;
+    Luna, klasa e 7-të
   homepage_hero_text_student2: |
-    &ldquo;I have never, ever seen my kids
-    so excited about learning.&rdquo;
-    Michael, teacher
+    &ldquo; Nuk i kam parë kurrë fëmijët e mi më të apasionuar pas të mësuarit se tani. &rdquo;
+    Michael, mësues
   homepage_hero_text_student3: |
-    &ldquo;Computer science is a field you can't
-    know if you like or not before you try it.&rdquo;
-    Jackson, 6th grade
+    &ldquo; Shkencat Kompjuterike është terren të cilin pa e provuar nuk arrin do t'a kuptosh  nëse e pëlqen apo jo. &rdquo;
+    Jackson, klasa e 6-të
   homepage_hero_text_student4: |
-    &ldquo;You can do anything your mind
-    wants to do with programming.&rdquo; 
-    Maya, 2nd grade
+    &ldquo; Ti mund të bësh çdo gjë që të thotë mendja me anë të programimit. &rdquo; 
+    Maya, klasa e 2-të
   homepage_hero_text_student5: |
-    &ldquo;Computer science isn't for someone
-    else. It's for you, here, now.&rdquo; 
-    Geraldo, teacher
+    &ldquo; Shkencat kompjuterike nuk janë për ndokënd tjetër. Janë për ty, këtu, tani. &rdquo; 
+    Geraldo, mësues
   homepage_hero_text_teacher1: |
-    &ldquo;Coding sparks creativity, inspiration and innovation &mdash; 
-    all of which are essential in any career.&rdquo;
-    Floresa, teacher
+    &ldquo; Kodimi sjell kreativitet, frymëzim dhe risi  &mdash; 
+    të gjitha këto thelbësore në karrierën time. &rdquo;
+    Floresa, mësuese
   homepage_hero_text_teacher2: |
-    &ldquo;This program got 100% of my students
-    engaged, involved and participating.&rdquo;
-    Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
-  homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+    &ldquo; Ky program i bën të gjithë nxënësit të përfshihen, të marrin pjesë dhe të angazhohen plotësisht.&rdquo;
+    Adam, mësues
+  homepage_hero_text_stat_loc: '#loc rreshtat e kodimit të përgatitura nga studentët'
+  homepage_hero_text_stat_students: '#student_numëron llogaritë e studentit në studion e Kodit'
+  homepage_hero_text_stat_served: 'Ora e Kodimit: #dorëzuar dorëzuar'
   homepage_slot_text_hoc: Ora e Kodimit
-  homepage_slot_text_frozen: Frozen with Anna and Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
-  homepage_slot_text_studio: All of our tutorials
+  homepage_slot_text_frozen: E Ngrirë me Anën dhe Elsën
+  homepage_slot_text_teacher: Dërrasa e zezë
+  homepage_slot_text_studio: Të gjitha tutorialet tona
   homepage_slot_text_course4: Kursi 4
   homepage_slot_text_shop: Bli
   homepage_slot_text_flappy: Kodi Flappy
-  homepage_action_text_codevideo: Watch the video
-  homepage_action_text_teachervideo: Watch the video
-  homepage_action_text_learn: Start learning
-  homepage_action_text_signpetition: Sign the petition
-  homepage_signpetition_dropdown: 'I agree &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
-  homepage_slot_text_title_hoc: Ora e Kodit
-  homepage_slot_text_blurb_hoc: Anybody can learn. Start today
+  homepage_action_text_codevideo: Ndiq videon
+  homepage_action_text_teachervideo: Ndiq videon
+  homepage_action_text_learn: Fillo të mësosh
+  homepage_action_text_signpetition: Nënshkruaj thirrjen
+  homepage_signpetition_dropdown: 'Bie dakort &#x25BE;'
+  homepage_banner_text_main: Code.org dhe Bordi i Kolegjit bashkohen për të nxitur larmishmërinë në shkencat kompjuterike.
+  homepage_banner_text_link: Mëso më shumë
+  homepage_slot_text_title_hoc: Ora e Kodimit
+  homepage_slot_text_blurb_hoc: Çdokush mund të mësojë. Fillo sot
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
-  homepage_slot_text_link_host: Host an Hour of Code
-  homepage_slot_text_link_hocserved: '# served'
+  homepage_slot_text_link_host: Organizo një Orë Kodim
+  homepage_slot_text_link_hocserved: '# e dorëzuar'
   homepage_slot_text_title_students: Studentët
-  homepage_slot_text_blurb_students: Explore all of our tutorials
-  homepage_slot_text_link_codestudio: Try Code Studio
-  homepage_slot_text_link_local: Find a local class
-  homepage_slot_text_link_othercourses: Other online courses
-  homepage_slot_text_title_educators: Educators
-  homepage_slot_text_blurb_educators: Teach your students
-  homepage_slot_text_link_k5: Courses for grades K-5
-  homepage_slot_text_link_fullcurriculum: See our full curriculum
-  homepage_slot_text_link_pd: Professional development
-  homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
-  homepage_slot_text_link_stats: See the stats
-  homepage_slot_text_link_buy: Get involved
-  homepage_slot_text_link_donate: Make a donation
-  homepage_header_codestudio: Code Studio student creations
-  homepage_header_donors: Code.org thanks its supporters
-  homepage_donors_seall: See all
+  homepage_slot_text_blurb_students: Eksploro të gjithë tutorialët tonë
+  homepage_slot_text_link_codestudio: Provo Studion e Kodit
+  homepage_slot_text_link_local: Gjej një klasë vendase
+  homepage_slot_text_link_othercourses: Të tjera kurse online
+  homepage_slot_text_title_educators: Mësuesit
+  homepage_slot_text_blurb_educators: Mëso studentët e tu
+  homepage_slot_text_link_k5: Kurse për klasat K-5
+  homepage_slot_text_link_fullcurriculum: Shiko kurrikulën tonë të plotë
+  homepage_slot_text_link_pd: Zhvillim profesional
+  homepage_slot_text_title_advocates: Avokatët
+  homepage_slot_text_blurb_advocates: Mbështet punën tonë
+  homepage_slot_text_link_stats: Shiko statistikat
+  homepage_slot_text_link_buy: Përfshihu
+  homepage_slot_text_link_donate: Bëj një donacion
+  homepage_header_codestudio: Krijimet e studentëve në Studion e Kodit
+  homepage_header_donors: Code.org falenderon të gjithë mbështetësit
+  homepage_donors_seall: Shiko deri në fund
   homepage_donors_donate: Dhuro
   contact_form_topic_student: Unë jam një student
   contact_form_topic_parent: Unë jam një prind
@@ -291,24 +281,26 @@ sq-AL:
   dashboard_landing_view_progress: 'Shiko Ecurinë për %{biggest_section}'
   dashboard_landing_available_title: Kurset e disponueshëm
   dashboard_landing_available_courses: Këtu janë kurset e disponueshme për momentin për ty dhe studentët e tu.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
-  dashboard_middle_courses: 20-Hour Middle School Courses
-  dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
-  dashboard_high_courses: Year-long High School Courses
-  dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
+  dashboard_landing_more_tutorials: Dëshiron të shikosh më shumë tutoriale?
+  dashboard_landing_more_tutorials_desc: 'Ka akoma më shumë tutoriale  <a href="/learn/beyond"> të ofruara nga partnerët tanë.</a> Mëso të programosh me automate, krijo faqe zyrtare në rrjetet sociale, krijo aplikacionin tënd, ose eksploro gjuhë të tjera si C++, Ruby, ose Python!'
+  dashboard_hoc_courses: Ora e Kodimit për të gjitha moshat
+  dashboard_hoc_courses_desc: Provo të gjitha këto tutoriale më të shkurtra se 1 orë me studentët e tu!
+  dashboard_k5_courses: '20- Orë Kurse për K-5'
+  dashboard_k5_courses_desc: 'Këto kurse grumbullojnë online, tutoriale me vetdrejtim dhe ritëm të tyrin sidhe  aktivitete " pa prizë" për të cilat nuk nevojitet asnjë kompjuter. Secili kurs përbëhet nga 20 mësime të cilat mund të implementohen si një njësi e vetme apo gjatë njërit prej kurseve të një semestri. Edhe fëmijët e kopshteve apo ata në fazën e para leximit mund të marrin pjesë.Që të të ndihmojmë të fillosh, ofrojmë workshop-e për rritjen profesionale të një cilësie të lartë në U.S. pa pagesë. <a href="/professional-development-workshops"> Gjej një të tillë pranë vetes!</a>'
+  dashboard_middle_courses: 20-Orë Kurse në Shkollat e Mesme
+  dashboard_middle_courses_desc: |-
+    Kurrikula jonë për shkollat e mesme shfrytëzon shkencat kompjuterike dhe programimin brenda kontekstit të matematikës dhe shkencave të shkollës së mesme, si vegël për të dhënë mësim konceptet e matematikës dhe shkencave. Për t'u regjistruar në workshop-et e zhvillimit profesional, apliko për një  <a href="/educate/districts"> partneritet në mbarë zonën </a>  me Code.org.
+  dashboard_high_courses: Kurse përgjatë gjithë vitit në Shkollë të mesme
+  dashboard_high_courses_desc: |-
+    Programi yne per shkollat e mesme ndihmon shkollat e zonave te ndryshme qe te ofrojne klasa te plota ne shkencat kompjuterike duke pergatitur stafin pedagogjik ekzistues t'a ofrojne kete fushe te re. Per t'u regjistruar ne workshop-e zhvillimi, apliko per nje <a href="/educate/districts">d partnership te shtrire ne mbare lagjien </a> me Code.org.
   dashboard_course_csina: Shkenëa Kompjuterike në Algjebër
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_csina_desc: Code.org ka hyre ne partneritet me Bootstrap per te zhvilluar nje kurrikul e cila meson konceptet e algjebres dhe gjeometrise permes programimit kompjuterik.
+  dashboard_course_csins: Shkencat kompjuterike si pjese e shkences
+  dashboard_course_csins_desc: Code.org ka hyre ne partneritet me Project GUTS per te krijuar nje hyrje ne konceptet e shkencave kompjuterike brenda kontekstit te modelimit dhe simmulimit.
   dashboard_course_ecs: Eksplorimi i Shkencës Kompjuterike
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
+  dashboard_course_ecs_desc: 'Eksplorimi i Shkencave Kompjuterike eshte nje kurs 1-vjecar i cili perbehet nga 6 kapituj: Nderlidhja  e Njerezve me Kompjuterimizin, Zgjidhja e Problemit, Dizenjimi i Faqes dhe Analiza e te Dhenave, dhe Robotika.'
+  dashboard_course_csp: Ap® Parimet e Shkencave Kompjuterike
+  dashboard_course_csp_desc: Code.org ka dizenjuar nje kurs rigoroz, perfshires dhe te pershtatshem i cili eksploron idete gjeneze te kompjuterizimit.
   dashboard_landing_loading: Në ngarkim...
   dashboard_action_edit: Redakto
   dashboard_action_save: Ruaj
@@ -375,10 +367,10 @@ sq-AL:
   dashboard_students_reset_password: Rivendos fjalëkalimin
   dashboard_students_share_section: 'Ndaj këtë pjesë faqeje të rregjistrimit me studentët e tu:'
   dashboard_students_print_info: Printo karta me informacionin e login-it të studentëve të tu.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Pikturat sekrete
   dashboard_students_secret_picture: Figura e Fshehur
   dashboard_students_reset_picture: 'Ti mund të rivendosësh një figurë të fshehur të studentit në çdo kohë duke zgjedhur <b>Trego të fshehtën</b> dhe pastaj <b>Rivendos të fshehtën</b>. Një figurë e re e fshehur do të gjenerohet për ata studentë që ta përdorin kur të futen.'
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Bota sekrete
   dashboard_students_secret_word: Fjala e Fshehur
   dashboard_students_reset_word: 'Ti mund të rivendosësh një figurë të fshehur të studentit në çdo kohë duke zgjedhur <b>Trego të fshehtën</b> dhe pastaj <b>Rivendos të fshehtën</b>. Një çift fjalësh të fshehta do të gjenerohen për ata studentë që ta përdorin kur të futen. '
   dashboard_students_join_link: Thuaju studentëve të krijojnë llogaritë e tyre dhe të bashkohen ne pjesën tënde tek
@@ -386,18 +378,18 @@ sq-AL:
   dashboard_students_print_page: Printo këtë faqe
   dashboard_students_url: URL
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">Kliko këtu</a> për dokumentat tona të privatësisë që mund të ndahen ose printohen për studentët e tu.'
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: K-5 Burimet Edukuese
+  dashboard_curriculum_middle_title: Burimet e mesimdhenies ne shkollen 9 vjecare
+  dashboard_curriculum_high_title: Burimet e mesimdhenies ne shkollen e mesme
+  dashboard_lesson_plans: Orari e lendeve
   dashboard_view_all_lesson_plans: Shiko të gjithë planet mësimore
   dashboard_course1: 'Kursi 1:'
   dashboard_course2: 'Kursi 2:'
   dashboard_course3: 'Kursi 3:'
-  dashboard_course4: 'Course 4 (beta): '
-  dashboard_curriculum: Curriculum
+  dashboard_course4: 'Kursi 4 (beta): '
+  dashboard_curriculum: Kurrikula
   dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
-  dashboard_overview: Overview
+  dashboard_overview: Permbledhja
   dashboard_sequence: Sekuencë
   dashboard_framework: Struktura
   dashboard_standards: Standartet
@@ -408,10 +400,10 @@ sq-AL:
   dashboard_puzzle_solving: 'Zgjidhja-Puzzle-it:'
   dashboard_student_worksheet: puna studentit
   dashboard_teacher_worksheet: puna mësuesit
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_csina: 'Shkencat Kompjuterike ne fushen e algjebres:'
+  dashboard_curriculum_csins: 'Shkenca e Shkencave Kompjuterike:'
+  dashboard_curriculum_csp: 'Ap® Parimet e Shkencave Kompjuterike:'
+  dashboard_curriculum_ecs: 'Explorimi i Shkencave Kompjuterike:'
   dashboard_grade_k: K
   dashboard_grade_other: Të tjera/ë
   dashboard_login_word: Fjalë
@@ -439,7 +431,7 @@ sq-AL:
   dashboard_sections_password_account_creation: Password tekst i krijuar nga studentët
   dashboard_sections_login_type_explanation: 'Kjo tabele ndihmon në shpjeigmin se cili nga këto tipe logini, <b>figura, fjalë ose email</b>, do të duash të zgjedhësh për një seksion.'
   dashboard_faq: Pyetjet më të shpeshta
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: K-5 Pyetje e shtruar shpesh
   code_hoc_coming: 'Ora e Kodimit është këtu - Dhjetor 8-14!'
   code_sign_up: Rregjistrohu për të marrë pjesë gjatë Javës së Edukimit CS
   learn_more: Mëso më Shumë
@@ -856,6 +848,6 @@ sq-AL:
   processing_beyond_longdescription: Proçesimi është një gjuhë programimi, mjedis zhvillimi dhe komunitet online. Që nga 2001, Proçesimi ka promovuar software e shkrimit brenda arteve vizule dhe shklrimit vizual brenda teknologjisë. Fillimisht u krijua për të shërbyer si një software sketchbook dhe për të mësuar themelet e programimit kompjuterik brenda një konteksti vizual, Procesimi evoloi në pajisje zhvillimi për profesionistët. Sot, ka dhejtra e mijëra studentë, artistë, dizenjuesë, kërkues që përdorin Proçesimin për të mësuar dhe prodhuar.
   alice_beyond_longdescription: Duke përdorur një mjedis programimi inovativ që suporton krijimet e animimeve 3D, Projetki Alice siguron mjete dhe materiale për të mësuar dhe shpjeguar mendimin kompjuterik, zgjidhjen e problemeve, dhe programimin kompjuterik ndërmjet një spektrumi moshash dhe nivelesh.
   sphero_beyond_longdescription: Nëse je edukues ose prind, mësimet SPRK i japin fëmijëve një kurs argëtues në programim robotash ndërsa mprehin njohuritë e tyre në matematikë dhe shkencë.
-  compatibility_https_header: Please enable HTTPS for Code.org.
-  compatibility_https_message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
+  compatibility_https_header: Ju lutem aktivizoni HTTPS per Code.org.
+  compatibility_https_message: "Per te rritur sigurine, ne po kalojme ne HTTPS ne %{https_date}. Pas kesaj te dhene nuk do te arrish te kesh akese ne Code.org.  <a href='%{it_requirements_url}'> Kliko ketu </a>  per te mesuar si te mundesosh HTTPS per Code.org."
   compatibility_https_hide_this_warning: Fshih këtë paralajmërim

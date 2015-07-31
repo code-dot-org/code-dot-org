@@ -12,6 +12,7 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
+var smallFooterUtils = require('@cdo/shared/smallFooter');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -298,7 +299,7 @@ StudioApp.prototype.init = function(config) {
       viz.style['max-height'] = (displayWidth * scale) + 'px';
       viz.style.display = 'block';
       vizCol.style.width = '';
-      document.getElementById('visualizationColumn').style['max-width'] = displayWidth + 'px';
+      vizCol.style.maxWidth = displayWidth + 'px';
       // Needs to run twice on initialization
       if(!resized) {
         resized = true;
@@ -330,7 +331,11 @@ StudioApp.prototype.init = function(config) {
 
   if (config.level.instructions || config.level.aniGifURL) {
     var promptIcon = document.getElementById('prompt-icon');
-    promptIcon.src = this.smallIcon;
+    if (this.smallIcon) {
+      promptIcon.src = this.smallIcon;
+    } else {
+      $('#prompt-icon-cell').hide();
+    }
 
     var bubble = document.getElementById('bubble');
     dom.addClickTouchEvent(bubble, _.bind(function() {
@@ -411,6 +416,8 @@ StudioApp.prototype.init = function(config) {
       }).bind(this));
     }).bind(this));
   }
+
+  smallFooterUtils.bindHandlers();
 };
 
 StudioApp.prototype.handleClearPuzzle = function (config) {
@@ -723,8 +730,8 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
-StudioApp.prototype.createModalDialogWithIcon = function(options) {
-  return this.feedback_.createModalDialogWithIcon(options);
+StudioApp.prototype.createModalDialog = function(options) {
+  return this.feedback_.createModalDialog(options);
 };
 
 StudioApp.prototype.showInstructions_ = function(level, autoClose) {
@@ -743,6 +750,9 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     headerElement = document.createElement('h1');
     headerElement.className = 'markdown-level-header-text';
     headerElement.innerHTML = puzzleTitle;
+    if (!this.icon) {
+      headerElement.className += ' no-modal-icon';
+    }
   }
 
   instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
@@ -780,7 +790,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     };
   }
 
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
     Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
@@ -806,6 +816,11 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   }
 
   dialog.show({hideOptions: hideOptions});
+
+  if (renderedMarkdown) {
+    // process <details> tags with polyfill jQuery plugin
+    $('details').details();
+  }
 };
 
 /**
@@ -827,7 +842,58 @@ StudioApp.prototype.onResize = function() {
 
   // Droplet toolbox width varies as the window size changes, so refresh:
   this.resizeToolboxHeader();
+
+  // Content below visualization is a resizing scroll area in pinned mode
+  onResizeSmallFooter();
 };
+
+/**
+ * Resizes the content area below the visualization in pinned (viewport height)
+ * view mode.
+ */
+function resizePinnedBelowVisualizationArea() {
+  var pinnedBelowVisualization = document.querySelector(
+      '#visualizationColumn.pin_bottom #belowVisualization');
+  if (!pinnedBelowVisualization) {
+    return;
+  }
+
+  var visualization = document.getElementById('visualization');
+  var gameButtons = document.getElementById('gameButtons');
+  var smallFooter = document.querySelector('.small-footer');
+
+  var top = 0;
+  if (visualization) {
+    top += $(visualization).outerHeight(true);
+  }
+
+  if (gameButtons) {
+    top += $(gameButtons).outerHeight(true);
+  }
+
+  var bottom = 0;
+  if (smallFooter) {
+    var codeApp = $('#codeApp');
+    bottom += $(smallFooter).outerHeight(true);
+    // Footer is relative to the document, not codeApp, so we need to
+    // remove the codeApp bottom offset to get the correct margin.
+    bottom -= parseInt(codeApp.css('bottom'), 10);
+  }
+
+  pinnedBelowVisualization.style.top = top + 'px';
+  pinnedBelowVisualization.style.bottom = bottom + 'px';
+}
+
+/**
+ * Debounced onResize operations that update the layout to support sizing
+ * to viewport height and using the small footer.
+ * @type {Function}
+ */
+var onResizeSmallFooter = _.debounce(function () {
+  resizePinnedBelowVisualizationArea();
+  smallFooterUtils.repositionCopyrightFlyout();
+  smallFooterUtils.repositionMoreMenu();
+}, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
@@ -901,6 +967,22 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
   }
+
+  var smallFooter = document.querySelector('.small-footer');
+  if (smallFooter) {
+    smallFooter.style.maxWidth = newVizWidthString;
+
+    // If the small print and language selector are on the same line,
+    // the small print should float right.  Otherwise, it should float left.
+    var languageSelector = smallFooter.querySelector('form');
+    var smallPrint = smallFooter.querySelector('small');
+    if (smallPrint.offsetTop === languageSelector.offsetTop) {
+      smallPrint.style.float = 'right';
+    } else {
+      smallPrint.style.float = 'left';
+    }
+  }
+
   // Fire resize so blockly and droplet handle this type of resize properly:
   utils.fireResizeEvent();
 };
@@ -997,7 +1079,7 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
 StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
   builderDetails.innerHTML = require('./templates/builder.html.ejs')();
-  var dialog = this.createModalDialogWithIcon({
+  var dialog = this.createModalDialog({
     Dialog: this.Dialog,
     contentDiv: builderDetails,
     icon: this.icon
@@ -1272,6 +1354,10 @@ StudioApp.prototype.configureDom = function (config) {
     // Make the visualization responsive to screen size, except on share page.
     visualization.className += " responsive";
     visualizationColumn.className += " responsive";
+    var smallFooter = document.querySelector(".small-footer");
+    if (smallFooter) {
+      smallFooter.className += " responsive";
+    }
   }
 };
 
@@ -1312,7 +1398,14 @@ StudioApp.prototype.handleHideSource_ = function (options) {
     dom.addClickTouchEvent(openWorkspace, function() {
       // TODO: don't make assumptions about hideSource during init so this works.
       // workspaceDiv.style.display = '';
-      location.href += '/edit';
+
+      // /c/ URLs go to /edit when we click open workspace.
+      // /project/ URLs we want to go to /view (which doesnt require login)
+      if (/^\/c\//.test(location.pathname)) {
+        location.href += '/edit';
+      } else {
+        location.href += '/view';
+      }
     });
 
     buttonRow.appendChild(openWorkspace);
@@ -1518,7 +1611,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
-    'disableParamEditing', 'generateFunctionPassBlocks'].forEach(
+    'disableParamEditing'].forEach(
     function (prop) {
       if (config[prop] !== undefined) {
         options[prop] = config[prop];

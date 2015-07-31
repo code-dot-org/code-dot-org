@@ -16,7 +16,7 @@ We're working to give *every* student the opportunity to learn computer science 
 ## Ask your school to teach computer science
 Encourage local elementary schools to teach our [elementary curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
  
-[<button>Sample letter</button>](/promote/letter)&nbsp;&nbsp; [<button>See Options for schools</button>](/educate)
+[<button>Sample letter</button>](/promote/letter)&nbsp;&nbsp; [<button>See options for schools</button>](/educate)
 
 ## Advocate for computer science locally
 Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).

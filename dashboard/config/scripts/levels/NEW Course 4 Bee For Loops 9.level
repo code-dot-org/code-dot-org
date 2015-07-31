@@ -64,7 +64,6 @@
     <required_blocks>
       <xml>
         <block type="maze_moveForward"/>
-        <block type="maze_nectar"/>
         <block type="controls_repeat_ext" inline="true">
           <value name="TIMES">
             <block type="variables_get">
@@ -72,6 +71,7 @@
             </block>
           </value>
         </block>
+        <block type="maze_nectar"/>
         <block type="controls_for" inline="true">
           <title name="VAR">counter</title>
           <value name="FROM">
