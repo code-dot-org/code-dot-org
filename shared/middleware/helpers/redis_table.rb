@@ -48,7 +48,7 @@ class RedisTable
   # (If min_id is null, returns all rows.)
   #
   # @param [Integer] min_id
-  # @return [Array<String>]
+  # @return [Array<Hash>]
   def to_a_from_min_id(min_id=null)
     @props.to_hash.
         select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
@@ -56,6 +56,9 @@ class RedisTable
         sort_by { |row| row[:id] }
   end
 
+  # Returns all rows as an array ordered by ascending row id.
+  #
+  # @return [Array<Hash>]
   def to_a
     to_a_from_min_id(nil)
   end
