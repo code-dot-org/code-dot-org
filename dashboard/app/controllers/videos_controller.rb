@@ -1,4 +1,3 @@
-require 'cdo/video/youtube'
 class VideosController < ApplicationController
   before_filter :authenticate_user!, except: [:test, :embed]
   check_authorization except: [:test, :embed]
@@ -16,6 +15,7 @@ class VideosController < ApplicationController
     if current_user.try(:admin?) && !Rails.env.production? && !Rails.env.test?
       params[:fallback_only] = true
       begin
+        require 'cdo/video/youtube'
         Youtube.process @video.key
       rescue Exception => e
         render layout: false, text: "Error processing video: #{e}. Contact an engineer for support.", status: 500 and return
