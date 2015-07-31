@@ -16,6 +16,10 @@ describe("NetSimTable", function () {
     };
     netsimTable = netsimTestUtils.overrideClientApi(
         new NetSimTable(fakeChannel, 'testShard', 'testTable'));
+
+    // Allow multiple readAll calls without delay for tests.
+    netsimTable.setReadAllThrottleTime(0);
+
     apiTable = netsimTable.clientApi_.remoteTable;
     callback = function () {};
     notified = false;
