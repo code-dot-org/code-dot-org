@@ -45,6 +45,16 @@ class NetSimApi < Sinatra::Base
     get_table(shard_id, table_name).to_a.to_json
   end
 
+  # GET /v3/netsim/<shard-id>/<table-name>@<min_id>
+  #
+  # Returns all of the rows in the table with id >= min_id
+  #
+  get %r{/v3/netsim/([^/]+)/(\w+)@([0-9]+)$} do |shard_id, table_name, min_id|
+    dont_cache
+    content_type :json
+    get_table(shard_id, table_name).to_a_from_min_id(min_id.to_i).to_json
+  end
+
   #
   # GET /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
