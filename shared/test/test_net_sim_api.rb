@@ -46,8 +46,9 @@ class NetSimApiTest < Minitest::Unit::TestCase
     record = read_records(@url).first
     assert_equal 8, record['age']
 
-    # Test fetching starting from a minimum version.
-    record_create_response = create_record({name: 'bob'})
+    # Test fetching starting from a minimum row id.
+    # Add a another row to make thing slightly more interesting.
+    create_record({name: 'bob'})
 
     records = read_records(@url + "@#{record_id}")
     assert_equal 2, records.length
