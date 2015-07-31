@@ -160,7 +160,7 @@ class RedisTable
   # @param [String] row_key The row key.
   # @param [Integer] min_id The minimum id, or nil for all ids.
   # @return [Boolean]
-  def belongs_to_this_table_with_min_id(row_key, min_id )
+  def belongs_to_this_table_with_min_id(row_key, min_id)
     (@table_name == table_from_row_key(row_key)) &&
         (row_key != @row_id_key) &&
         (min_id.nil? || id_from_row_key(row_key) >= min_id)
