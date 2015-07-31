@@ -106,23 +106,25 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
    * @type {function}
    * @private
    */
-  this.throttledReadAll_ = _.throttle(readAll.bind(this), READ_ALL_THROTTLING_MS);
+  this.throttledReadAll_ = _.throttle(
+      this.readAllThrottledWork_.bind(this),
+      READ_ALL_THROTTLING_MS);
 };
 
 /**
  * Actual readAll operation, which we wrap with _.throttle to
  * coalesce reads and call from the prototype version below.
- * Must be bound against `this`.
  * @param {!NodeStyleCallback} callback
+ * @private
  */
-function readAll(callback) {
+NetSimTable.prototype.readAllThrottledWork_ = function (callback) {
   this.clientApi_.all(function (err, data) {
     if (err === null) {
       this.fullCacheUpdate_(data);
     }
     callback(err, data);
   }.bind(this));
-}
+};
 
 /**
  * @param {!NodeStyleCallback} callback
