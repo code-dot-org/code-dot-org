@@ -12352,12 +12352,16 @@ var Packet = require('./Packet');
 var netsimNodeFactory = require('./netsimNodeFactory');
 var dataConverters = require('./dataConverters');
 var formatBinary = dataConverters.formatBinary;
+var base64ToBinary = dataConverters.base64ToBinary;
+var binaryToBase64 = dataConverters.binaryToBase64;
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**
  * @typedef {Object} logEntryRow
  * @property {number} nodeID
- * @property {string} binary
+ * @property {base64Payload} base64Binary - base64-encoded binary
+ *           message content, all of which can be exposed to the
+ *           student.  May contain headers of its own.
  * @property {NetSimLogEntry.LogStatus} status
  * @property {number} timestamp
  */
@@ -12391,7 +12395,10 @@ var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
    * Binary content of the log entry.  Defaults to empty string.
    * @type {string}
    */
-  this.binary = utils.valueOr(row.binary, '');
+  var base64Binary = row.base64Binary;
+  this.binary = (base64Binary) ?
+    base64ToBinary(base64Binary.string, base64Binary.len) :
+    '';
 
   /**
    * Status value for log entry; for router log, usually SUCCESS for completion
@@ -12438,7 +12445,7 @@ NetSimLogEntry.prototype.getTable = function () {
 NetSimLogEntry.prototype.buildRow = function () {
   return {
     nodeID: this.nodeID,
-    binary: this.binary,
+    base64Binary: binaryToBase64(this.binary),
     status: this.status,
     timestamp: this.timestamp
   };
