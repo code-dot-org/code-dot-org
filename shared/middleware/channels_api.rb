@@ -110,7 +110,7 @@ class ChannelsApi < Sinatra::Base
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
-    StorageApps.new(storage_id('user')).update(id, value, request.ip)
+    value = StorageApps.new(storage_id('user')).update(id, value, request.ip)
 
     dont_cache
     content_type :json

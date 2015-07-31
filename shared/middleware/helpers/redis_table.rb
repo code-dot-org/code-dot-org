@@ -12,6 +12,9 @@ require_relative 'redis_property_bag'
 
 class RedisTable
 
+  class NotFound < Sinatra::NotFound
+  end
+
   # Constructs the redis table.
   #
   # @param [Redis] redis The Redis client.
@@ -45,7 +48,7 @@ class RedisTable
   end
 
   # Returns all rows with id >= min_id as an array ordered by ascending row id.
-  # (If min_id is 1 or null , this will return all rows.)
+  # (If min_id is nil or 1, returns all rows.)
   #
   # @param [Integer?] min_id
   # @return [Array<Hash>]
@@ -53,7 +56,7 @@ class RedisTable
     @props.to_hash.
         select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
         collect { |k, v| make_row(id_from_row_key(k), v) }.
-        sort_by { |row| row[:id] }
+        sort_by { |row| row['id'] }
   end
 
   # Returns all rows as an array ordered by ascending row id.
@@ -106,9 +109,12 @@ class RedisTable
   # Fetches a row by id.
   #
   # @param [Integer] id The id of the row to fetch
-  # @return [Hash] The row, or null if no such row exists.
+  # @raises [Sinatra::NotFound] if no such row exists
+  # @return [Hash] The row if exists
   def fetch(id)
-    make_row(id, @props.to_hash[row_key(id)])
+    hash = @props.to_hash[row_key(id)]
+    raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless hash
+    make_row(id, hash)
   end
 
   # Updates an existing row, notifying other clients using the pubsub service.
@@ -212,7 +218,7 @@ class RedisTable
   # @param [String] row_key The row key.
   # @param [Integer] min_id The minimum id, or nil for all ids.
   # @return [Boolean]
-  def belongs_to_this_table_with_min_id(row_key, min_id )
+  def belongs_to_this_table_with_min_id(row_key, min_id)
     (@table_name == table_from_row_key(row_key)) &&
         (row_key != @row_id_key) &&
         (min_id.nil? || id_from_row_key(row_key) >= min_id)

@@ -91,16 +91,38 @@ function wrapExistingClipPaths() {
 }
 
 },{}],2:[function(require,module,exports){
+/**
+ * @file Helper API object that wraps asynchronous calls to our data APIs.
+ */
 /* global $ */
 
+/**
+ * Standard callback form for asynchronous operations, popularized by Node.
+ * @typedef {function} NodeStyleCallback
+ * @param {Error|null} error - null if the async operation was successful.
+ * @param {*} result - return value for async operation.
+ */
+
+/**
+ * @name ClientApi
+ */
 var base = {
+  /**
+   * Base URL for target API.
+   * @type {string}
+   */
   api_base_url: "/v3/channels",
 
+  /**
+   * Request all collections.
+   * @param {NodeStyleCallback} callback - Expected result is an array of
+   *        collection objects.
+   */
   all: function(callback) {
     $.ajax({
       url: this.api_base_url,
       type: "get",
-      dataType: "json",
+      dataType: "json"
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
@@ -109,6 +131,12 @@ var base = {
     });
   },
 
+  /**
+   * Insert a collection.
+   * @param {Object} value - collection contents, must be JSON.stringify-able.
+   * @param {NodeStyleCallback} callback - Expected result is the created
+   *        collection object (which will include an assigned 'id' key).
+   */
   create: function(value, callback) {
     $.ajax({
       url: this.api_base_url,
@@ -123,11 +151,16 @@ var base = {
     });
   },
 
+  /**
+   * Remove a collection.
+   * @param {number} id - The collection identifier.
+   * @param {NodeStyleCallback} callback - Expected result is TRUE.
+   */
   delete: function(id, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id + "/delete",
       type: "post",
-      dataType: "json",
+      dataType: "json"
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
@@ -136,6 +169,12 @@ var base = {
     });
   },
 
+  /**
+   * Retrieve a collection.
+   * @param {number} id - The collection identifier.
+   * @param {NodeStyleCallback} callback - Expected result is the requested
+   *        collection object.
+   */
   fetch: function(id, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id,
@@ -149,6 +188,13 @@ var base = {
     });
   },
 
+  /**
+   * Change the contents of a collection.
+   * @param {number} id - The collection identifier.
+   * @param {Object} value - The new collection contents.
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
   update: function(id, value, callback) {
     $.ajax({
       url: this.api_base_url + "/" + id,
@@ -163,9 +209,15 @@ var base = {
     });
   },
 
-  // Copy to the destination collection, since we expect the destination
-  // to be empty. A true rest API would replace the destination collection:
-  // https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+
+  /**
+   * Copy to the destination collection, since we expect the destination
+   * to be empty. A true rest API would replace the destination collection:
+   * @see https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
+   * @param {*} src - Source collection identifier.
+   * @param {*} dest - Destination collection identifier.
+   * @param {NodeStyleCallback} callback
+   */
   copyAll: function(src, dest, callback) {
     $.ajax({
       url: this.api_base_url + "/" + dest + '?src=' + src,
@@ -180,9 +232,14 @@ var base = {
 };
 
 module.exports = {
+  /**
+   * Create a ClientApi instance with the given base URL.
+   * @param {!string} url - Custom API base url (e.g. '/v3/netsim')
+   * @returns {ClientApi}
+   */
   create: function (url) {
     return $.extend({}, base, {
-      api_base_url: url,
+      api_base_url: url
     });
   }
 };
