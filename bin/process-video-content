@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Use this script to (re)process all YouTube video tags in custom levels.
+# Additional dependencies (beyond Bundler-specified ones):
+# Various GNU utils (awk, grep -P, sort, uniq)
+# GNU parallel (`apt-get install parallel` or `brew install parallel`)
+
+# Set current working directory to script location
+cd -P -- "$(dirname -- "$0")"
+
+# These regular expressions should match those in markdown_handler.rb.
+VIDEO_ID_REGEX="[^!*\"&?\/\s]{11}"
+EMBED_URL_REGEX="(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education)?)\.com\/embed\/(?<id>${VIDEO_ID_REGEX})"
+
+grep --perl-regexp --recursive --only-matching --no-filename ${EMBED_URL_REGEX} ../dashboard/config/scripts | \
+  # Split by / delimiter, print last column
+  awk -F '/' '{print $NF}' | \
+  sort | \
+  uniq | \
+  parallel ./upload-video
