@@ -130,7 +130,9 @@ NetSimTable.prototype.readAllThrottledWork_ = function (callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.readAll = function (callback) {
-  this.throttledReadAll_(callback);
+  // TODO (brad): I was bad and broke tests!  Fixing, since revert isn't working.
+  //this.throttledReadAll_(callback);
+  this.readAllThrottledWork_(callback);
 };
 
 /**
