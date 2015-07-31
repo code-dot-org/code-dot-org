@@ -48,8 +48,24 @@ class Video < ActiveRecord::Base
     "#{Video.youtube_base_url}/embed/#{youtube_code}/?#{defaults.to_query}"
   end
 
+  def self.embed_url(id)
+    CDO.studio_url "videos/embed/#{id}"
+  end
+
+  def self.download_url(key)
+    "#{CDO.videos_url}/youtube/#{key}.mp4"
+  end
+
+  def thumbnail_url
+    "#{CDO.videos_url}/youtube/#{key}.jpg"
+  end
+
   def thumbnail_path
-    "/c/video_thumbnails/#{id}.jpg"
+    if id
+      path = "/c/video_thumbnails/#{id}.jpg"
+      return path if File.exist? dashboard_dir('public', path)
+    end
+    self.thumbnail_url
   end
 
   def summarize(autoplay = true)

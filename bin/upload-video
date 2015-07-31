@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+# Command-line wrapper script for Youtube#process.
+# See Youtube#process for description.
+
+# Usage:
+# upload-video youtube_id [video_filename]
+
+# See also `process-video-content`.
+
+require_relative '../deployment'
+
+require 'cdo/aws/s3'
+require 'tmpdir'
+require 'open-uri'
+require 'cdo/video/youtube'
+
+VIDEO_BUCKET = 'videos.code.org'
+
+def print_usage
+  puts 'Usage: upload-video youtube_id [video_filename]'
+end
+
+def main
+  if ARGV.length < 1
+    print_usage
+    return
+  end
+  id = ARGV[0]
+  filename = ARGV[1]
+  if id.nil?
+    print_usage
+    return
+  end
+  Youtube.process(id, filename)
+end
+
+main
