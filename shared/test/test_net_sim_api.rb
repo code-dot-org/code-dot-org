@@ -24,7 +24,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     # Always use a fake Redis.
     NetSimApi.override_redis_for_test(FakeRedisClient.new)
 
-    # Every test should start with an empty table
+    # Every test should start with an empty table.
     assert read_records.first.nil?, "Table did not begin empty"
   end
 
@@ -43,12 +43,32 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     record_id = record_get_response['id'].to_i
 
-    assert_equal 8, update_record(record_id, {id: record_id, age: 8})['age']
+    assert_equal 8, update_record(record_id, {name: 'alice', id: record_id, age: 8})['age']
     record = read_records.first
     assert_equal 8, record['age']
+
+    # Test fetching starting from a minimum row id.
+    # Add a another row to make thing slightly more interesting.
+    create_record({name: 'bob'})
+
+    url = "/v3/netsim/#{@shard_id}/#{@table_name}"
+    records = read_records_for_url(url + "@#{record_id}")
+
+    assert_equal 2, records.length
+    assert_equal 'alice', records[0]['name']
+    assert_equal 'bob', records[1]['name']
+    record_id2 = records[1]['id']
+
+    records = read_records_for_url(url + "@#{record_id2}")
+    assert_equal 1, records.length
+    assert_equal 'bob', records[0]['name']
+
+    records = read_records_for_url(url + "@#{record_id2 + 1}")
+    assert_equal 0, records.length
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    delete_record(record_id2 || 2)
+    assert read_records.first.nil?, 'Table was not empty'
   end
 
   def test_get_400_on_bad_json_insert
@@ -268,7 +288,11 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def read_records(table_name = @table_name)
-    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{table_name}"
+    read_records_for_url("/v3/netsim/#{@shard_id}/#{table_name}")
+  end
+
+  def read_records_for_url(url)
+    @net_sim_api.get url
     JSON.parse(@net_sim_api.last_response.body)
   end
 
