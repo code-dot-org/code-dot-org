@@ -59,7 +59,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
 
   /**
    * API object for making remote calls
-   * @type {SharedTableApi}
+   * @type {ClientApi}
    * @private
    */
   this.clientApi_ = clientApi.create(this.remoteUrl_);
