@@ -80,7 +80,21 @@ title: "Ops Dashboard"
 
       return program_types;
   }]);
+  services.factory('phaseInfoService', [
+    function() {
+      var phases = {
+        1: {id: 1, short_name: "#{ ActivityConstants::PHASES[1][:short_name]}", long_name: "#{ ActivityConstants::PHASES[1][:long_name]}"},
+        2: {id: 2, short_name: "#{ ActivityConstants::PHASES[2][:short_name]}", long_name: "#{ ActivityConstants::PHASES[2][:long_name]}"},
+        3: {id: 3, short_name: "#{ ActivityConstants::PHASES[3][:short_name]}", long_name: "#{ ActivityConstants::PHASES[3][:long_name]}"},
+        4: {id: 4, short_name: "#{ ActivityConstants::PHASES[4][:short_name]}", long_name: "#{ ActivityConstants::PHASES[4][:long_name]}"},
+        5: {id: 5, short_name: "#{ ActivityConstants::PHASES[5][:short_name]}", long_name: "#{ ActivityConstants::PHASES[5][:long_name]}"},
+        6: {id: 6, short_name: "#{ ActivityConstants::PHASES[6][:short_name]}", long_name: "#{ ActivityConstants::PHASES[6][:long_name]}"},
+        7: {id: 7, short_name: "#{ ActivityConstants::PHASES[7][:short_name]}", long_name: "#{ ActivityConstants::PHASES[7][:long_name]}"},
+        8: {id: 8, short_name: "#{ ActivityConstants::PHASES[8][:short_name]}", long_name: "#{ ActivityConstants::PHASES[8][:long_name]}"}
+      };
 
+      return phases;
+  }]);
   services.factory('workshopsService', ['$resource',
     function($resource){
       var Workshop = $resource('/dashboardapi/workshops/:id', {}, {
@@ -618,11 +632,12 @@ title: "Ops Dashboard"
     }
   ]);
 
-  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService',
-    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programTypesService) {
+  controllers.controller('WorkshopController', ['$scope', '$route', '$routeParams', '$location', '$window', 'segmentsService', 'workshopsService', 'cohortsService', 'programTypesService', 'phaseInfoService',
+    function($scope, $route, $routeParams, $location, $window, segmentsService, workshopsService, cohortsService, programTypesService, phaseInfoService) {
       $scope.workshop = workshopsService.get({id: $routeParams.id});
       $scope.workshopSegments = segmentsService.query({id: $routeParams.id});
       $scope.program_types = programTypesService;
+      $scope.phases = phaseInfoService;
       $scope.cohorts = cohortsService.query();
       $scope.cohortName = function (cohortId) {
         if ($scope.cohorts) {

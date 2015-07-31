@@ -74,7 +74,7 @@ class Table
 
   def to_a()
     items.map do |row|
-      JSON.load(row[:value]).merge(id: row[:row_id])
+      JSON.load(row[:value]).merge('id' => row[:row_id])
     end
   end
 

@@ -84,7 +84,7 @@ var NetSimShardSelectionPanel = module.exports = function (rootDiv, options,
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-shard-selection-panel',
     panelTitle: i18n.pickASection(),
-    canMinimize: false
+    userToggleable: false
   });
 };
 NetSimShardSelectionPanel.inherits(NetSimPanel);

@@ -204,7 +204,7 @@
   signup_send_posters_address_label: 'Address of school or organization'
   signup_whole_school_flag_label: 'This event is for a whole school'
   signup_your_event: 'Sign up your event'
-  signup_match_volunteer: 'Connect me with a local tech volunteer for my Hour of Code'
+  signup_match_volunteer: 'Help me find a local software engineer to inspire my students'
 
   signup_name_placeholder: 'Your Name'
   signup_email_placeholder: 'you@example.com'

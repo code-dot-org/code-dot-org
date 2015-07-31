@@ -8,6 +8,13 @@ require_relative '../middleware/channels_api'
 # NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
 
+  TABLE_NAMES = {
+      node: 'n',
+      wire: 'w',
+      message: 'm',
+      log: 'l'
+  }
+
   helpers do
     %w{
       core.rb
@@ -66,6 +73,44 @@ class NetSimApi < Sinatra::Base
     get_table(shard_id, table_name).fetch(id.to_i).to_json
   end
 
+  # Delete all wires associated with (locally or remotely) a given node_id
+  #
+  # @private
+  # @param [String] shard_id
+  # @param [Integer] node_id
+  # @returns [Integer|Array] ids of deleted wires
+  def delete_wires_for_node(shard_id, node_id)
+    wire_table = get_table(shard_id, TABLE_NAMES[:wire])
+    wire_ids = wire_table.to_a.select {|wire|
+      wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+    }.map {|wire|
+      wire['id']
+    }
+    wire_ids.each do |wire_id|
+      wire_table.delete(wire_id)
+    end
+    wire_ids
+  end
+
+  # Delete all messages simulated by a given node_id
+  #
+  # @private
+  # @param [String] shard_id
+  # @param [Integer] node_id
+  # @returns [Integer|Array] ids of deleted messages
+  def delete_messages_for_node(shard_id, node_id)
+    message_table = get_table(shard_id, TABLE_NAMES[:message])
+    message_ids = message_table.to_a.select {|message|
+      message['simulatedBy'] == node_id
+    }.map {|message|
+      message['id']
+    }
+    message_ids.each do |message_id|
+      message_table.delete(message_id)
+    end
+    message_ids
+  end
+
   #
   # DELETE /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
@@ -75,6 +120,13 @@ class NetSimApi < Sinatra::Base
     dont_cache
     table = get_table(shard_id, table_name)
     int_id = id.to_i
+
+    if table_name == TABLE_NAMES[:node]
+      # Cascade deletions
+      delete_wires_for_node(shard_id, int_id)
+      delete_messages_for_node(shard_id, int_id)
+    end
+
     table.delete(int_id)
     no_content
   end
@@ -100,8 +152,17 @@ class NetSimApi < Sinatra::Base
     begin
       value = get_table(shard_id, table_name).
           insert(JSON.parse(request.body.read), request.ip)
+      if table_name == TABLE_NAMES[:message]
+        node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
+          node['id'] == value['simulatedBy']
+        end
+        unless node_exists
+          get_table(shard_id, table_name).delete(value['id'])
+          json_bad_request
+        end
+      end
     rescue JSON::ParserError
-      bad_request
+      json_bad_request
     end
 
     dont_cache
@@ -124,7 +185,7 @@ class NetSimApi < Sinatra::Base
       int_id = id.to_i
       value = table.update(int_id, JSON.parse(request.body.read), request.ip)
     rescue JSON::ParserError
-      bad_request
+      json_bad_request
     end
 
     dont_cache
