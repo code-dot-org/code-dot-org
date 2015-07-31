@@ -30,7 +30,7 @@ var DEFAULT_POLLING_DELAY_MS = 5000;
  * Minimum wait time (in milliseconds) between readAll requests.
  * @type {number}
  */
-var DEFAULT_READ_ALL_THROTTLING_MS = 1000;
+var DEFAULT_REFRESH_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -107,7 +107,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
    * @private
    */
   this.refreshTable_ = this.makeThrottledRefresh_(
-      DEFAULT_READ_ALL_THROTTLING_MS);
+      DEFAULT_REFRESH_THROTTLING_MS);
 };
 
 /**
