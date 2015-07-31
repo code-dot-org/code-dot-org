@@ -23,7 +23,7 @@ class RedisTableTest < Minitest::Unit::TestCase
     table3 = RedisTable.new(redis, pubsub, 'shard2', 'table2')
 
     assert_equal [], table.to_a
-    assert_equal nil, table.fetch(1)
+    assert_raises(RedisTable::NotFound) { table.fetch(1) }
 
     value = {'name' => 'alice', 'age' => 7, 'male' => false}
     inserted = table.insert(value)
@@ -104,7 +104,7 @@ class RedisTableTest < Minitest::Unit::TestCase
     RedisTable.reset_shard('shard1', redis, pubsub)
     assert_equal([], table.to_a)
     assert_equal([], table2.to_a)
-    assert_equal(nil, table.fetch(1))
+    assert_raises(RedisTable::NotFound) { table.fetch(1) }
     expected_event = make_pubsub_event('shard1', 'all_tables', {:action => 'reset_shard'})
     assert_equal expected_event, pubsub.publish_history[7]
     assert_equal [row(value, 1)], table3.to_a

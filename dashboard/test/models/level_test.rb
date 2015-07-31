@@ -51,6 +51,7 @@ class LevelTest < ActiveSupport::TestCase
       end
     end
 
+    # rubocop:disable Style/SpaceInsideParens
     validate_karel_val(     0,   0,   0)
     validate_karel_val(     1,   1,   0)
     validate_karel_val( '-10',   1, -10)
@@ -63,6 +64,7 @@ class LevelTest < ActiveSupport::TestCase
     validate_karel_val(   '0',   0,   0, false)
     validate_karel_val(  '00',   0,   0, false)
     validate_karel_val(  '01',   1,   0, false)
+    # rubocop:enable Style/SpaceInsideParens
   end
 
   test "cannot create two custom levels with same name" do

@@ -27,6 +27,12 @@ var clientApi = require('@cdo/shared/clientApi');
 var DEFAULT_POLLING_DELAY_MS = 5000;
 
 /**
+ * Minimum wait time (in milliseconds) between readAll requests.
+ * @type {number}
+ */
+var READ_ALL_THROTTLING_MS = 1000;
+
+/**
  * Wraps the app storage table API in an object with local
  * cacheing and callbacks, which provides a notification API to the rest
  * of the NetSim code.
@@ -59,7 +65,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
 
   /**
    * API object for making remote calls
-   * @type {SharedTableApi}
+   * @type {ClientApi}
    * @private
    */
   this.clientApi_ = clientApi.create(this.remoteUrl_);
@@ -93,18 +99,40 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
    * @private
    */
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
+
+  /**
+   * Throttled version (specific to this instance) of the readAll operation,
+   * used to coalesce readAll requests.
+   * @type {function}
+   * @private
+   */
+  this.throttledReadAll_ = _.throttle(
+      this.readAllThrottledWork_.bind(this),
+      READ_ALL_THROTTLING_MS);
 };
 
 /**
+ * Actual readAll operation, which we wrap with _.throttle to
+ * coalesce reads and call from the prototype version below.
  * @param {!NodeStyleCallback} callback
+ * @private
  */
-NetSimTable.prototype.readAll = function (callback) {
+NetSimTable.prototype.readAllThrottledWork_ = function (callback) {
   this.clientApi_.all(function (err, data) {
     if (err === null) {
       this.fullCacheUpdate_(data);
     }
     callback(err, data);
   }.bind(this));
+};
+
+/**
+ * @param {!NodeStyleCallback} callback
+ */
+NetSimTable.prototype.readAll = function (callback) {
+  // TODO (brad): I was bad and broke tests!  Fixing, since revert isn't working.
+  //this.throttledReadAll_(callback);
+  this.readAllThrottledWork_(callback);
 };
 
 /**

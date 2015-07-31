@@ -66,6 +66,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @param {EncodingType[]} [initialConfig.enabledEncodings]
  * @param {function} initialConfig.removePacketCallback
  * @param {function} initialConfig.contentChangeCallback
+ * @param {function} initialConfig.enterKeyPressedCallback
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
@@ -156,6 +157,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
   this.contentChangeCallback_ = initialConfig.contentChangeCallback;
 
   /**
+   * Method to notify our parent container that the enter key has been
+   * pressed
+   * @type {function}
+   * @private
+   */
+  this.enterKeyPressedCallback_ = initialConfig.enterKeyPressedCallback;
+
+  /**
    * @type {jQuery}
    * @private
    */
@@ -222,6 +231,14 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
  */
 NetSimPacketEditor.prototype.getRoot = function () {
   return this.rootDiv_;
+};
+
+/**
+ * Returns the first visible message box, so that we can focus() on it
+ * @returns {jQuery}
+ */
+NetSimPacketEditor.prototype.getFirstVisibleMessageBox = function () {
+  return this.getRoot().find('textarea.message:visible').first();
 };
 
 /** Replace contents of our root element with our own markup. */
@@ -317,6 +334,16 @@ var removeWatermark = function (focusEvent) {
     target.val('');
     target.removeClass('watermark');
   }
+};
+
+/**
+ * Helper method for determining if a given keyPress event represents a
+ * CLEAN enter press. As in, one without the Shift or Control modifiers.
+ * @param {Event} jqueryEvent
+ * @returns {boolean} true iff the given event represents a clean enter
+ */
+var isUnmodifiedEnterPress = function (jqueryEvent) {
+  return (jqueryEvent.keyCode == 13 && !(jqueryEvent.ctrlKey || jqueryEvent.shiftKey));
 };
 
 /**
@@ -608,6 +635,11 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     rowFields.message.focus(removeWatermark);
     rowFields.message.keypress(
         makeKeypressHandlerWithWhitelist(rowType.messageAllowedCharacters));
+    rowFields.message.keydown(function(jqueryEvent){
+      if (isUnmodifiedEnterPress(jqueryEvent)) {
+        this.enterKeyPressedCallback_(jqueryEvent);
+      }
+    }.bind(this));
     rowFields.message.keyup(
         this.makeKeyupHandler('message', rowType.messageConversion));
     rowFields.message.blur(
@@ -814,12 +846,14 @@ NetSimPacketEditor.prototype.specContainsHeader_ = function (headerKey) {
 };
 
 /**
- * Get just the first bit of the packet binary, for single-bit sending mode.
- * @returns {string} a single bit, as "0" or "1"
+ * Get just the first bit of the packet binary if it exists, for
+ * single-bit sending mode.
+ * @returns {string|undefined} a single bit if it exists, as "0" or "1",
+ * or undefined if none does.
  */
 NetSimPacketEditor.prototype.getFirstBit = function () {
   var binary = this.getPacketBinary();
-  return binary.length > 0 ? binary.substr(0, 1) : '0';
+  return binary.length > 0 ? binary.substr(0, 1) : undefined;
 };
 
 /** @param {number} fromAddress */
