@@ -24,7 +24,7 @@ var clientApi = require('@cdo/shared/clientApi');
  * updates from the server.
  * @type {number}
  */
-var DEFAULT_POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
  * Minimum wait time (in milliseconds) between readAll requests.
