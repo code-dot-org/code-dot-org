@@ -17,6 +17,7 @@ module.exports.blocks = [
   {'func': 'throwProjectile', 'parent': api, 'category': 'Play Lab', 'params': ["0", "1", "'blue_fireball'"] },
   {'func': 'vanish', 'parent': api, 'category': 'Play Lab', 'params': ["0"] },
   {'func': 'addItemsToScene', 'parent': api, 'category': 'Play Lab', 'params': ["'blue_fireball'", "5"] },
+  {'func': 'setItemAction', 'parent': api, 'category': 'Play Lab', 'params': ["0", "4"] },
   {'func': 'onEvent', 'parent': api, 'category': 'Play Lab', 'params': ["'when-left'", "function() {\n  \n}"] },
 ];
 

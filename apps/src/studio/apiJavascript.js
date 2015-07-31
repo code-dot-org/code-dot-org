@@ -106,6 +106,13 @@ exports.addItemsToScene = function(className, number) {
   });
 };
 
+exports.setItemAction = function(itemIndex, type) {
+  Studio.queueCmd(null, 'setItemAction', {
+    'itemIndex': itemIndex,
+    'type': type
+  });
+};
+
 /*
 exports.setScoreText = function(text) {
   Studio.queueCmd(null, 'setScoreText', {'text': text});

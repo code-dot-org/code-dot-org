@@ -22,6 +22,7 @@ class Studio < Grid
     wall_map_collisions
     block_moving_into_walls
     grid_aligned_movement
+    item_grid_aligned_movement
     remove_items_when_actor_collides
     slow_js_execution_factor
     marker_height
