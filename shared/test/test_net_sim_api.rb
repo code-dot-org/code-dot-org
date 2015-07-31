@@ -23,14 +23,15 @@ class NetSimApiTest < Minitest::Unit::TestCase
     NetSimApi.override_redis_for_test(FakeRedisClient.new)
 
     # Every test should start with an empty table
-    assert read_records.first.nil?, "Table was not empty"
+    @url = "/v3/netsim/#{@shard_id}/#{@table_name}"
+    assert read_records(@url).first.nil?, 'Table was not empty'
   end
 
   def test_create_read_update_delete
     # Verify that the CREATE response body and READ response bodies
     # both return the correct record values
     record_create_response = create_record({name: 'alice', age: 7, male: false})
-    record_get_response = read_records.first
+    record_get_response = read_records(@url).first
     assert_equal record_create_response['id'].to_i, record_get_response['id'].to_i
     assert_equal 'alice', record_get_response['name']
     assert_equal 'alice', record_create_response['name']
@@ -41,13 +42,32 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     record_id = record_get_response['id'].to_i
 
-    assert_equal 8, update_record(record_id, {id: record_id, age: 8})['age']
-    record = read_records.first
+    assert_equal 8, update_record(record_id, {name: 'alice', id: record_id, age: 8})['age']
+    record = read_records(@url).first
     assert_equal 8, record['age']
+
+    # Test fetching starting from a minimum version.
+    record_create_response = create_record({name: 'bob'})
+
+    records = read_records(@url + "@#{record_id}")
+    assert_equal 2, records.length
+    assert_equal 'alice', records[0]['name']
+    assert_equal 'bob', records[1]['name']
+    record_id2 = records[1]['id']
+
+    records = read_records(@url + "@#{record_id2}")
+    assert_equal 1, records.length
+    assert_equal 'bob', records[0]['name']
+
+    records = read_records(@url + "@#{record_id2 + 1}")
+    assert_equal 0, records.length
   ensure
-    delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    delete_record(record_id)
+    delete_record(record_id2)
+    assert read_records(@url).first.nil?, 'Table was not empty'
   end
+
+
 
   def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation
@@ -57,7 +77,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 400, record_create_response.status
 
     # Verify that no record was created
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records(@url).first.nil?, "Table was not empty"
   end
 
   def test_get_400_on_bad_json_update
@@ -72,18 +92,18 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 400, record_update_response.status
 
     # Verify that the record was not changed
-    record = read_records.first
+    record = read_records(@url).first
     assert_equal 7, record['age']
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records(@url).first.nil?, "Table was not empty"
   end
 
   def test_no_publish_on_read
     test_spy = SpyPubSubApi.new
     NetSimApi.override_pub_sub_api_for_test(test_spy)
 
-    read_records
+    read_records(@url)
 
     assert test_spy.publish_history.empty?
   end
@@ -102,7 +122,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal record_id, test_spy.publish_history.first[:data][:id]
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records(@url).first.nil?, "Table was not empty"
   end
 
   def test_publish_on_update
@@ -120,7 +140,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal record_id, test_spy.publish_history.last[:data][:id]
   ensure
     delete_record(record_id || 1)
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records(@url).first.nil?, "Table was not empty"
   end
 
   def test_publish_on_delete
@@ -138,7 +158,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 'delete', test_spy.publish_history.last[:data][:action]
     assert_equal record_id, test_spy.publish_history.last[:data][:id]
   ensure
-    assert read_records.first.nil?, "Table was not empty"
+    assert read_records(@url).first.nil?, "Table was not empty"
   end
 
   # Methods below this point are test utilities, not actual tests
@@ -154,8 +174,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     @net_sim_api.last_response
   end
 
-  def read_records
-    @net_sim_api.get "/v3/netsim/#{@shard_id}/#{@table_name}"
+  def read_records(url)
+    @net_sim_api.get url
     JSON.parse(@net_sim_api.last_response.body)
   end
 
