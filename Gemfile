@@ -154,3 +154,6 @@ gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
 
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
+
+gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
+gem 'httparty', group: [:development, :staging, :levelbuilder]
