@@ -76,9 +76,29 @@ class RedisTableTest < Minitest::Unit::TestCase
     assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :id => 2}),
                  pubsub.publish_history[5]
 
-    # Test reset shard and make sure it doesn't affect tables in other shards.
     table3.insert(value)
 
+    # Test getting multiple tables
+    table_map = RedisTable.get_tables(redis, 'shard1', {'table' => 1, 'table2' => 1})
+    assert_equal(
+       {"table"=>
+            {"rows"=>[{"name"=>"alice", "age"=>7, "male"=>false, "id"=>1}, {"bar"=>3, "id"=>3}]},
+        "table2"=>
+            {"rows"=>[{"name"=>"bob", "age"=>12, "male"=>true, "id"=>1}]}},
+       table_map)
+
+    table_map = RedisTable.get_tables(redis, 'shard1', {'table' => 3})
+    assert_equal(
+        {"table"=> {"rows"=>[{"bar"=>3, "id"=>3}]}},
+        table_map)
+
+    table_map = RedisTable.get_tables(redis, 'shard1', {'table' => 4, 'table2' => 1})
+    assert_equal(
+        {"table"=> {"rows"=>[]},
+         "table2"=> {"rows"=>[{"name"=>"bob", "age"=>12, "male"=>true, "id"=>1}]}},
+        table_map)
+
+    # Test reset shard and make sure it doesn't affect tables in other shards.
     RedisTable.reset_shard('shard1', redis, pubsub)
     assert_equal([], table.to_a)
     assert_equal([], table2.to_a)
