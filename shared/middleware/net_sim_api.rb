@@ -231,7 +231,7 @@ class NetSimApi < Sinatra::Base
   #
   # @return [String]
   def redis_url
-    CDO.geocoder_redis_url || 'localhost'
+    CDO.geocoder_redis_url || 'redis://localhost:6379'
   end
 
   # Get the Pub/Sub API interface for the current configuration
