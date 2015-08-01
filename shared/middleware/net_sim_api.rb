@@ -222,14 +222,15 @@ class NetSimApi < Sinatra::Base
   #
   # @return [Redis]
   def get_redis_client
-    @@overridden_redis || Redis.new(host: redis_host)
+    @@overridden_redis || Redis.new(url: redis_url)
   end
 
-  # Returns the host name of the redis service in the current
-  # configuration.
+  # Returns the URL (configuration string) of the redis service in the current
+  # configuration.  Should be passed as the :url parameter in the options hash
+  # to Redis.new.
   #
   # @return [String]
-  def redis_host
+  def redis_url
     CDO.geocoder_redis_url || 'localhost'
   end
 
