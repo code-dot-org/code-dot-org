@@ -20,6 +20,7 @@ class Youtube
   # When downloading from YouTube, an HTTP head request will first check the absence of the file.
   # If `force`==true, the head request will be skipped.
   def self.process(id, filename=nil, force=false)
+    raise RuntimeError, 'Invalid YouTube ID' unless id.match(/^#{Video::YOUTUBE_ID_REGEX}$/)
     if filename.nil? && !force
       thumbnail_url = "https:#{CDO.videos_url}/youtube/#{id}.jpg"
       response = HTTParty.head(thumbnail_url).response
@@ -48,18 +49,20 @@ class Youtube
         # Run viddl-rb to download transcoded video from YouTube.
         url = "https://www.youtube.com/watch?v=#{id}"
         cmd = "viddl-rb #{url} -s #{dir} -q 640:360:mp4"
+        # Workaround for https://github.com/rb2k/viddl-rb/issues/114
+        cmd = 'sudo ' + cmd if CDO.bundler_use_sudo
       end
 
       IO.popen(cmd) { |output| output.each { |line| CDO.log.info('[Youtube] ' + line.chomp) } }
       raise RuntimeError, 'Video processing command exited with an error' unless $?.success?
       file = Dir.glob("#{dir}/*").first
       raise RuntimeError, 'Video not available in correct format' unless file && File.extname(file) == '.mp4'
-      video_filename = AWS::S3.upload_to_bucket(CDO.videos_bucket, "youtube/#{id}.mp4", File.open(file), access: :public_read, no_random: true, content_type: 'video/mp4')
+      video_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.mp4", File.open(file), access: :public_read, no_random: true, content_type: 'video/mp4')
       CDO.log.info "https:#{CDO.videos_url}/#{video_filename}"
 
       thumbnail_file = "https://i.ytimg.com/vi/#{id}/0.jpg"
       thumbnail = open(thumbnail_file) || raise(RuntimeError, 'Could not retrieve thumbnail for video')
-      thumbnail_filename = AWS::S3.upload_to_bucket(CDO.videos_bucket, "youtube/#{id}.jpg", thumbnail, access: :public_read, no_random: true)
+      thumbnail_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.jpg", thumbnail, access: :public_read, no_random: true)
       CDO.log.info "https:#{CDO.videos_url}/#{thumbnail_filename}"
     end
   end

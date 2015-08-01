@@ -4459,11 +4459,10 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
 
   /** @type {NetSimTable} */
   this.messageTable = new NetSimTable(channel, shardID, 'm');
-  this.messageTable.setPollingInterval(3000);
 
   /** @type {NetSimTable} */
   this.logTable = new NetSimTable(channel, shardID, 'l');
-  this.logTable.setPollingInterval(10000);
+  this.logTable.setRefreshThrottleTime(5000);
 };
 
 /**
@@ -4675,13 +4674,13 @@ var clientApi = require('@cdo/shared/clientApi');
  * updates from the server.
  * @type {number}
  */
-var DEFAULT_POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
  * Minimum wait time (in milliseconds) between readAll requests.
  * @type {number}
  */
-var READ_ALL_THROTTLING_MS = 1000;
+var DEFAULT_REFRESH_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -4757,18 +4756,14 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
    * @type {function}
    * @private
    */
-  this.throttledReadAll_ = _.throttle(
-      this.readAllThrottledWork_.bind(this),
-      READ_ALL_THROTTLING_MS);
+  this.refreshTable_ = this.makeThrottledRefresh_(
+      DEFAULT_REFRESH_THROTTLING_MS);
 };
 
 /**
- * Actual readAll operation, which we wrap with _.throttle to
- * coalesce reads and call from the prototype version below.
  * @param {!NodeStyleCallback} callback
- * @private
  */
-NetSimTable.prototype.readAllThrottledWork_ = function (callback) {
+NetSimTable.prototype.readAll = function (callback) {
   this.clientApi_.all(function (err, data) {
     if (err === null) {
       this.fullCacheUpdate_(data);
@@ -4778,12 +4773,22 @@ NetSimTable.prototype.readAllThrottledWork_ = function (callback) {
 };
 
 /**
- * @param {!NodeStyleCallback} callback
+ * Generate throttled refresh function which will generate actual server
+ * requests at the maximum given rate no matter how fast it is called. This
+ * allows us to coalesce readAll events and reduce server load.
+ * @param {number} waitMs - Minimum time (in milliseconds) to wait between
+ *        readAll requests to the server.
+ * @returns {function}
+ * @private
  */
-NetSimTable.prototype.readAll = function (callback) {
-  // TODO (brad): I was bad and broke tests!  Fixing, since revert isn't working.
-  //this.throttledReadAll_(callback);
-  this.readAllThrottledWork_(callback);
+NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
+  return _.throttle(function () {
+    this.clientApi_.all(function (err, data) {
+      if (err === null) {
+        this.fullCacheUpdate_(data);
+      }
+    }.bind(this));
+  }.bind(this), waitMs);
 };
 
 /**
@@ -4951,12 +4956,23 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
   this.pollingInterval_ = intervalMs;
 };
 
+/**
+ * Change the maximum rate at which the readAll operation for this table
+ * will _actually_ be executed, no matter how fast readAll() is called.
+ * @param {number} waitMs - Minimum number of milliseconds between readAll
+ *        requests to the server.
+ */
+NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
+  // To do this, we just replace the throttled readAll function with a new one.
+  this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
+};
+
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
   var now = Date.now();
   if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
     this.lastFullUpdateTime_ = now;
-    this.readAll(function () {});
+    this.refreshTable_();
   }
 };
 
@@ -4965,7 +4981,7 @@ NetSimTable.prototype.tick = function () {
  * @param {Object} eventData
  */
 NetSimTable.prototype.onPubSubEvent = function () {
-  this.readAll(function () {});
+  this.refreshTable_();
 };
 
 
@@ -9444,8 +9460,9 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 };
 
 /**
- * Handler for any wire table change.  Used here to detect mutual connections
- * between client nodes that indicate we can move to a "connected" state.
+ * Handler for any wire table change.  Used here to detect mutual
+ * connections between client nodes that indicate we can move to a
+ * "connected" state or stop trying to connect
  * @param {Array} wireRows
  * @private
  */
@@ -9453,6 +9470,8 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   if (!this.myWire) {
     return;
   }
+
+  var myConnectionTargetWireRow, isTargetConnectedToSomeoneElse;
 
   // Look for mutual connection
   var mutualConnectionRow = _.find(wireRows, function (row) {
@@ -9470,8 +9489,22 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   } else if (!mutualConnectionRow && this.myRemoteClient) {
     // Remote client disconnected or we disconnected; either way we are
     // no longer connected.
-    this.myRemoteClient = null;
-    this.remoteChange.notifyObservers(this.myWire, this.myRemoteClient);
+    this.disconnectRemote();
+  } else if (!mutualConnectionRow && ! this.myRemoteClient) {
+    // The client we're trying to connect to might have connected to
+    // someone else; check if they did and if so, stop trying to connect
+    myConnectionTargetWireRow = _.find(wireRows, function(row) {
+      return row.localNodeID === this.myWire.remoteNodeID &&
+          row.remoteNodeID !== this.myWire.localNodeID;
+    }.bind(this));
+    isTargetConnectedToSomeoneElse = myConnectionTargetWireRow ?
+        wireRows.some(function(row) {
+          return row.remoteNodeID == myConnectionTargetWireRow.localNodeID &&
+              row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
+        }) : undefined;
+    if (myConnectionTargetWireRow && isTargetConnectedToSomeoneElse) {
+      this.disconnectRemote();
+    }
   }
 };
 
