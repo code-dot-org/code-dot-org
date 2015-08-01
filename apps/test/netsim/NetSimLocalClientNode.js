@@ -38,6 +38,60 @@ describe("NetSimLocalClientNode", function () {
     assert(undefined !== testRemoteNode, "Made a remote node");
   });
 
+  describe("onWireTableChange_", function () {
+    it ("detects when remote client disconnects, and removes local wire", function () {
+
+      var localWireRow, remoteWireRow;
+
+      testLocalNode.connectToNode(testRemoteNode, function () {});
+      testRemoteNode.connectToNode(testLocalNode, function () {});
+
+      localWireRow = testLocalNode.myWire.buildRow();
+      remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
+
+      assertEqual(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
+      assertEqual(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
+
+      // Trigger onWireTableChange_ with both wires; the connection
+      // should be complete!
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow]);
+      assertEqual(testLocalNode.myRemoteClient, testRemoteNode);
+
+      // Trigger onWireTableChange_ without the remoteWire; the
+      // connection should be broken
+      testLocalNode.onWireTableChange_([localWireRow]);
+      assertEqual(testLocalNode.myWire, null);
+      assertEqual(testLocalNode.myRemoteClient, null);
+
+    });
+
+    it ("detects when attempted connection is rejected", function () {
+
+      var testThirdNode;
+      var localWireRow, remoteWireRow, thirdWireRow;
+
+      NetSimEntity.create(NetSimClientNode, testShard, function (err, node) {
+        testThirdNode = node;
+      });
+      testLocalNode.connectToNode(testRemoteNode, function () {});
+      testRemoteNode.connectToNode(testThirdNode, function () {});
+
+      localWireRow = testLocalNode.myWire.buildRow();
+      remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
+
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow]);
+      assertEqual(testLocalNode.myWire.buildRow(), localWireRow);
+      assertEqual(testLocalNode.myRemoteClient, null);
+
+      testThirdNode.connectToNode(testRemoteNode, function () {});
+
+      thirdWireRow = testThirdNode.getOutgoingWire().buildRow();
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow, thirdWireRow]);
+      assertEqual(testLocalNode.myWire, null);
+
+    });
+  });
+
   describe("sendMessage", function () {
     it ("fails with error when not connected", function () {
       var error;
