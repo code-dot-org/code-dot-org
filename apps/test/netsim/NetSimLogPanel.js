@@ -26,6 +26,11 @@ describe("NetSimLogPanel", function () {
     rootDiv = $('<div>');
   });
 
+  it ("has default maximum packet size of 50", function () {
+    panel = new NetSimLogPanel(rootDiv, {});
+    assert.equal(50, panel.maximumLogPackets_);
+  });
+
   it ("is open by default", function () {
     panel = new NetSimLogPanel(rootDiv, {});
     assert.equal(false, panel.isMinimized());
@@ -48,7 +53,8 @@ describe("NetSimLogPanel", function () {
     var scrollArea;
     beforeEach(function () {
       panel = new NetSimLogPanel(rootDiv, {
-        packetSpec: netsimGlobals.getLevelConfig().clientInitialPacketHeader
+        packetSpec: netsimGlobals.getLevelConfig().clientInitialPacketHeader,
+        maximumLogPackets: 10
       });
       scrollArea = rootDiv.find('.scroll-area');
     });
@@ -76,28 +82,29 @@ describe("NetSimLogPanel", function () {
           scrollArea.find('.packet:first tr.ascii td.message').text());
     });
 
-    it ("keeps the 100 most recent packets", function () {
-      for (var i = 1; i <= 99; i++) {
+    it ("keeps a limited number of packets", function () {
+      // The limit in this test is 10 (see beforeEach for describe("logging"))
+      for (var i = 1; i <= 9; i++) {
         panel.log(to_b('packet ' + i));
       }
-      assert.equal(99, scrollArea.children().length);
-      assert.equal('packet 99',
+      assert.equal(9, scrollArea.children().length);
+      assert.equal('packet 9',
           scrollArea.find('.packet:first tr.ascii td.message').text());
       assert.equal('packet 1',
           scrollArea.find('.packet:last tr.ascii td.message').text());
 
-      // Packet 100 does not cause culling
-      panel.log(to_b('packet 100'));
-      assert.equal(100, scrollArea.children().length);
-      assert.equal('packet 100',
+      // Packet 10 does not cause culling
+      panel.log(to_b('packet 10'));
+      assert.equal(10, scrollArea.children().length);
+      assert.equal('packet 10',
           scrollArea.find('.packet:first tr.ascii td.message').text());
       assert.equal('packet 1',
           scrollArea.find('.packet:last tr.ascii td.message').text());
 
-      // Packet 101 causes packet 1 to drop off the end
-      panel.log(to_b('packet 101'));
-      assert.equal(100, scrollArea.children().length);
-      assert.equal('packet 101',
+      // Packet 11 causes packet 1 to drop off the end
+      panel.log(to_b('packet 11'));
+      assert.equal(10, scrollArea.children().length);
+      assert.equal('packet 11',
           scrollArea.find('.packet:first tr.ascii td.message').text());
       assert.equal('packet 2',
           scrollArea.find('.packet:last tr.ascii td.message').text());
