@@ -30,7 +30,7 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
   NetSimSlider.call(this, rootDiv, {
     onChange: packetSizeChangeCallback,
     min: options.minimumPacketSize,
-    max: 1024,
+    max: 8192,
     upperBoundInfinite: true
   });
 
@@ -45,9 +45,6 @@ NetSimPacketSizeControl.inherits(NetSimSlider);
  * @returns {string}
  */
 NetSimPacketSizeControl.prototype.getPacketSizeText = function (packetSize) {
-  if (packetSize === Infinity) {
-    return i18n.unlimited();
-  }
   return i18n.numBitsPerPacket({ numBits: packetSize });
 };
 
