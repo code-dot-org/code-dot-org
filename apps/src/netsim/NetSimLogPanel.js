@@ -36,6 +36,13 @@ var netsimGlobals = require('./netsimGlobals');
 var MESSAGE_SLIDE_IN_DURATION_MS = 400;
 
 /**
+ * How many packets the log may keep in its history (and in the DOM!)
+ * @type {number}
+ * @const
+ */
+var MAXIMUM_HISTORY_LENGTH = 100;
+
+/**
  * Object that can be sent data to be browsed by the user at their discretion
  * @interface
  * @name INetSimLogPanel
@@ -171,6 +178,13 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
  * Put a message into the log.
  */
 NetSimLogPanel.prototype.log = function (packetBinary) {
+  // Remove all packets that are beyond our maximum size
+  this.packets_
+      .splice(MAXIMUM_HISTORY_LENGTH - 1, this.packets_.length)
+      .forEach(function (packet) {
+        packet.getRoot().remove();
+      });
+
   var newPacket = new NetSimLogPacket(packetBinary, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
