@@ -31,7 +31,7 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
     onChange: packetSizeChangeCallback,
     min: options.minimumPacketSize,
     max: 8192,
-    upperBoundInfinite: true
+    upperBoundInfinite: false
   });
 
   // Auto-render, unlike our base class
