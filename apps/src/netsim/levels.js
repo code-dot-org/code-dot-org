@@ -211,7 +211,7 @@ levels.custom = {
   // Send widget configuration
   showAddPacketButton: false,
   showPacketSizeControl: false,
-  defaultPacketSizeLimit: Infinity,
+  defaultPacketSizeLimit: 8192,
 
   // Tab-panel control
   showTabs: [],
@@ -280,7 +280,7 @@ levels.playground = {
   // Send widget configuration
   showAddPacketButton: false,
   showPacketSizeControl: false,
-  defaultPacketSizeLimit: Infinity,
+  defaultPacketSizeLimit: 8192,
 
   // Tab-panel control
   showTabs: ['instructions', 'my_device', 'router', 'dns'],
