@@ -1,4 +1,4 @@
-/* global dashboard, appOptions, $, trackEvent, Applab, Blockly */
+/* global dashboard, appOptions, $, trackEvent */
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -82,20 +82,64 @@ var projects = module.exports = {
     return isEditing;
   },
 
-  init: function () {
+  // Whether the current level is a project level (i.e. at the /projects url).
+  isProjectLevel: function() {
+    return (appOptions.level && appOptions.level.isProjectLevel);
+  },
+
+  isEmbedded: function() {
+    return (
+        (appOptions.level && appOptions.level.projectTemplateLevelName) ||
+        appOptions.app === 'applab' ||
+        appOptions.isExternalProjectLevel
+    );
+  },
+
+  shouldUpdateHeaders: function() {
+    return !appOptions.isExternalProjectLevel;
+  },
+
+  showProjectHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showProjectHeader();
+    }
+  },
+
+  showMinimalProjectHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showMinimalProjectHeader();
+    }
+  },
+
+  showProjectLevelHeader: function() {
+    if (this.shouldUpdateHeaders()) {
+      dashboard.header.showProjectLevelHeader();
+    }
+  },
+
+  /**
+   *
+   * @param {Object} handler Object containing callbacks provided by caller.
+   * @param {Function} handler.setInitialLevelHtml
+   * @param {Function} handler.getLevelHtml
+   * @param {Function} handler.setInitialLevelSource
+   * @param {Function} handler.getLevelSource
+   */
+  init: function (handler) {
+    this.handler = handler;
     if (redirectFromHashUrl() || redirectEditView()) {
       return;
     }
 
-    if (appOptions.level.isProjectLevel || current) {
+    if (this.isProjectLevel() || current) {
       if (current && current.levelHtml) {
-        appOptions.level.levelHtml = current.levelHtml;
+        handler.setInitialHtml(current.levelHtml);
       }
 
       if (isEditing) {
         if (current) {
           if (current.levelSource) {
-            appOptions.level.lastAttempt = current.levelSource;
+            handler.setInitialLevelSource(current.levelSource);
           }
         } else {
           current = {
@@ -110,7 +154,7 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          current.levelSource = getEditorSource();
+          current.levelSource = this.handler.getLevelSource(current.levelSource);
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
@@ -119,21 +163,21 @@ var projects = module.exports = {
 
         if (!current.hidden) {
           if (current.isOwner || !parsePath().channelId) {
-            dashboard.header.showProjectHeader();
+            this.showProjectHeader();
           } else {
             // Viewing someone else's project - set share mode
-            dashboard.header.showMinimalProjectHeader();
+            this.showMinimalProjectHeader();
           }
         }
       } else if (current) {
-        appOptions.level.lastAttempt = current.levelSource;
-        dashboard.header.showMinimalProjectHeader();
+        this.handler.setInitialLevelSource(current.levelSource);
+        this.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
       current = {
         name: 'Untitled Project'
       };
-      dashboard.header.showMinimalProjectHeader();
+      this.showMinimalProjectHeader();
     }
     if (appOptions.noPadding) {
       $(".full_container").css({"padding":"0px"});
@@ -163,7 +207,7 @@ var projects = module.exports = {
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    * @param {string?} source Optional source to be provided, saving us another
-   *   call to getEditorSource
+   *   call to handler.getLevelSource
    * @param {function} callback Fucntion to be called after saving
    */
   save: function(source, callback) {
@@ -171,12 +215,12 @@ var projects = module.exports = {
       // If no source is provided, the only argument is our callback and we
       // ask for the source ourselves
       callback = arguments[0];
-      source = getEditorSource();
+      source = this.handler.getLevelSource();
     }
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
     current.levelSource = source;
-    current.levelHtml = getLevelHtml();
+    current.levelHtml = this.handler.getLevelHtml();
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
@@ -225,14 +269,14 @@ var projects = module.exports = {
     if (current.levelSource === undefined) {
       return;
     }
-    // `getEditorSource()` is expensive for Blockly so only call
+    // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
       return;
     }
 
-    var source = getEditorSource();
-    var html = getLevelHtml();
+    var source = this.handler.getLevelSource();
+    var html = this.handler.getLevelHtml();
 
     if (current.levelSource === source && current.levelHtml === html) {
       hasProjectChanged = false;
@@ -309,13 +353,20 @@ var projects = module.exports = {
    */
   load: function () {
     var deferred;
-    if (appOptions.level.isProjectLevel) {
+    if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
         return;
       }
       var pathInfo = parsePath();
 
-      if (pathInfo.channelId) {
+      // External levels which have a channel id should fetch the data in that
+      // channel from the server. In other cases, appOptions.channel is assumed to
+      // contain no data and will only be used later when data is saved back
+      // to the server.
+      var channelId = pathInfo.channelId ||
+          (appOptions.isExternalProjectLevel && appOptions.channel);
+
+      if (channelId) {
         if (pathInfo.action === 'edit') {
           isEditing = true;
         } else {
@@ -324,7 +375,7 @@ var projects = module.exports = {
 
         // Load the project ID, if one exists
         deferred = new $.Deferred();
-        channels.fetch(pathInfo.channelId, function (err, data) {
+        channels.fetch(channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname.split('/')
@@ -341,8 +392,7 @@ var projects = module.exports = {
       } else {
         isEditing = true;
       }
-    } else if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
-      // this is an embedded project
+    } else if (projects.isEmbedded()) {
       isEditing = true;
       deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
@@ -350,7 +400,7 @@ var projects = module.exports = {
           deferred.reject();
         } else {
           current = data;
-          dashboard.header.showProjectLevelHeader();
+          projects.showProjectLevelHeader();
           deferred.resolve();
         }
       });
@@ -375,25 +425,6 @@ function executeCallback(callback, data) {
   if (typeof callback === 'function') {
     callback(data);
   }
-}
-
-/**
- * @returns {string} The serialized level source from the editor.
- */
-function getEditorSource() {
-  var source;
-  if (window.Blockly) {
-    // If we're readOnly, source hasn't changed at all
-    source = Blockly.readOnly ? current.levelSource :
-      Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-  } else {
-    source = window.Applab && Applab.getCode();
-  }
-  return source;
-}
-
-function getLevelHtml() {
-  return window.Applab && Applab.getHtml();
 }
 
 /**
