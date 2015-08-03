@@ -43,3 +43,9 @@ $root: '/blockly/media/turtle/'; //TODO: Parameterize for asset pipeline
 #answerExpression {
   fill: rgb(60, 60, 60);
 }
+
+.svgCalcFeedback {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

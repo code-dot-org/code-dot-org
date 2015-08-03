@@ -117,7 +117,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @type {Number}
    * @private
    */
-  this.maxPacketSize_ = initialConfig.maxPacketSize || Infinity;
+  this.maxPacketSize_ = initialConfig.maxPacketSize || 8192;
 
   /**
    * Bits per chunk/byte for parsing and formatting purposes.
@@ -915,8 +915,7 @@ NetSimPacketEditor.prototype.setBitRate = function (newBitRate) {
  */
 NetSimPacketEditor.prototype.updateBitCounter = function () {
   var size = this.getPacketBinary().length;
-  var maxSize = this.maxPacketSize_ === Infinity ?
-      netsimMsg.infinity() : this.maxPacketSize_;
+  var maxSize = this.maxPacketSize_;
   this.bitCounter_.html(netsimMsg.bitCounter({
     x: size,
     y: maxSize

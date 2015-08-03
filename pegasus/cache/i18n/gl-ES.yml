@@ -111,7 +111,7 @@
   continue_learning_header: Sigue aprendiendo más allá de una hora
   continue_learning_body: Hay muchas opciones. Puedes aprender en línea, en una escuela
     local o en un campamento de verano.
-  learn_next_level: Continuar al siguiente nivel
+  learn_next_level: Continue to the next level
   learn_online: Pruebe otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
   hoc_is_here: '#HourOfCode está aquí - compruébalo! @codeorg'
@@ -1229,3 +1229,6 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Hide this warning
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

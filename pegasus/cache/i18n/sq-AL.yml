@@ -1205,3 +1205,6 @@
     Pas kesaj te dhene nuk do te arrish te kesh akese ne Code.org.  <a href='%{it_requirements_url}'>
     Kliko ketu </a>  per te mesuar si te mundesosh HTTPS per Code.org.
   compatibility_https_hide_this_warning: Fshih këtë paralajmërim
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

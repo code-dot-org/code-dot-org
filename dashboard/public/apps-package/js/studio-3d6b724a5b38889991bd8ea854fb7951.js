@@ -1288,6 +1288,14 @@ Studio.init = function(config) {
 
   loadLevel();
 
+  if (Studio.customLogic) {
+    // We don't want icons in instructions for our custom logic base games
+    skin.staticAvatar = null;
+    skin.smallStaticAvatar = null;
+    skin.failureAvatar = null;
+    skin.winAvatar = null;
+  }
+
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);
 
