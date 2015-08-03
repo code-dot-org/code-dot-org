@@ -1,7 +1,13 @@
 name 'U3L24 Assessment 3'
-title 'Question 3'
+title 'Prove it works!'
 
 
 markdown <<MARKDOWN
-Write a set of chained conditionals that respond to the keywords, ‘sunny’, ‘cloudy’, ‘rain’ and ‘sun’. 
+How do you prove that your digital assistant works the way you want it to work? You need to provide a series of test cases that will allow anyone to test your digital assistant and verify that it works correctly. 
+
+<strong>This is a required section for your digital assistant</strong>
+
+In the space below, record all keywords and keyword combinations that will cause your digital assistant to produce a unique output. Use the following format:
+
+
 MARKDOWN

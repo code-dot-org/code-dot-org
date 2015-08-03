@@ -891,3 +891,6 @@
   compatibility_https_message: Code.org では、セキュリティを強化するため、%{https_date} をもって HTTPS
     に切り替えます。それ以降は、HTTPS を有効にしない限り Code.org にアクセスできなくなります。HTTPS を有効にする方法については<a href='%{it_requirements_url}'>こちらをクリック</a>してください。
   compatibility_https_hide_this_warning: この警告を非表示
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more
