@@ -1197,3 +1197,6 @@
     Вие няма да достъпите до Code.org след тази дата. <a href='%{it_requirements_url}'>
     Щракнете тук</a>, за да научите как да активирате HTTPS за Code.org.
   compatibility_https_hide_this_warning: Скрий предупреждението
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more
