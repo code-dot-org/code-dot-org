@@ -82,7 +82,6 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 200, @net_sim_api.last_response.status
 
     result = JSON.parse(@net_sim_api.last_response.body)
-
     assert_equal(
         {'table1' => {'rows' => [{'name' => 'rec1_1', 'id' => 1},
                                  {'name' => 'rec1_2', 'id' => 2}]},
@@ -90,6 +89,14 @@ class NetSimApiTest < Minitest::Unit::TestCase
          'table3' => {'rows' => []}},
         result)
   end
+
+  def test_read_no_tables
+    # Test that request no tables from a shard returns no results.
+    @net_sim_api.get "/v3/netsim/#{@shard_id}"
+    assert_equal 200, @net_sim_api.last_response.status
+    assert_equal({}, JSON.parse(@net_sim_api.last_response.body))
+  end
+
 
   def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation
