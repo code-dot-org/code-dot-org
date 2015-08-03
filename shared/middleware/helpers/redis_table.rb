@@ -12,7 +12,8 @@ require_relative 'redis_property_bag'
 
 class RedisTable
 
-  ROW_ID_SUFFIX = '_row_id'
+  # Suffix appended to special row id columns.
+  ROW_ID_SUFFIX='_row_id'
 
   class NotFound < Sinatra::NotFound
   end
@@ -230,7 +231,7 @@ class RedisTable
   # Return true if k is special internal key (e.g. the row id key) that should
   # not be returned to callers.
   def self.is_internal_key(k)
-    k.end_with?('_row_id')
+    k.end_with?(ROW_ID_SUFFIX)
   end
   def is_internal_key(k)
     self.class.is_internal_key(k)
