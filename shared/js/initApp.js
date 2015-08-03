@@ -1,6 +1,6 @@
 // TODO (brent) - way too many globals
 // TODO (brent) - I wonder if we should sub-namespace dashboard
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
 
 var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
@@ -118,9 +118,41 @@ window.apps = {
       }
     })(appOptions.level);
   },
+
+  // Set up projects, skipping blockly-specific steps. Designed for use
+  // by levels of type "external".
+  setupProjectsExternal: function() {
+    dashboard.project = project;
+  },
+
+  // Define blockly/droplet-specific callbacks for projects to access
+  // level source, HTML and headers.
+  projectsHandler: {
+    setInitialLevelHtml: function (levelHtml) {
+      appOptions.level.levelHtml = levelHtml;
+    },
+    getLevelHtml: function () {
+      return window.Applab && Applab.getHtml();
+    },
+    setInitialLevelSource: function (levelSource) {
+      appOptions.level.lastAttempt = levelSource;
+    },
+    getLevelSource: function (currentLevelSource) {
+      var source;
+      if (window.Blockly) {
+        // If we're readOnly, source hasn't changed at all
+        source = Blockly.readOnly ? currentLevelSource :
+          Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+      } else {
+        source = window.Applab && Applab.getCode();
+      }
+      return source;
+    },
+  },
+
   // Initialize the Blockly or Droplet app.
   init: function () {
-    dashboard.project.init();
+    dashboard.project.init(window.apps.projectsHandler);
     window[appOptions.app + 'Main'](appOptions);
   }
 };

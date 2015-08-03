@@ -186,6 +186,13 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # Returns true if this is a pixelation level.
+  def pixelation?
+    # TODO(dave|joshlory): Define Pixelation < DSLDefined as a new level type,
+    # eliminating this fragile test of 'href'.
+    self.is_a?(DSLDefined) && self.try(:properties).try(:[], "href") == "pixelation/pixelation.html"
+  end
+
   def key
     if level_num == 'custom'
       name

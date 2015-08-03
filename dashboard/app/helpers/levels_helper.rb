@@ -117,7 +117,7 @@ module LevelsHelper
   # Options hash for all level types
   def app_options
     # Provide the channel for templated and applab levels.
-    set_channel if @level.project_template_level || @level.game == Game.applab
+    set_channel if @level.project_template_level || @level.game == Game.applab || @level.pixelation?
 
     callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
     # Set videos and callouts.
@@ -125,6 +125,7 @@ module LevelsHelper
       autoplay_video: select_and_track_autoplay_video,
       callouts: callouts
     )
+    view_options(is_external_project_level: true) if @level.pixelation?
 
     return blockly_options if @level.is_a? Blockly
     Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
