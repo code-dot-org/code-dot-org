@@ -12,6 +12,9 @@ require_relative 'redis_property_bag'
 
 class RedisTable
 
+  # Suffix appended to special row id columns.
+  ROW_ID_SUFFIX='_row_id'
+
   class NotFound < Sinatra::NotFound
   end
 
@@ -29,7 +32,7 @@ class RedisTable
 
     # A counter key in the underlying RedisPropertyBag, used to generate
     # asecending row ids.
-    @row_id_key = "#{table_name}_row_id"
+    @row_id_key = "#{table_name}#{ROW_ID_SUFFIX}"
 
     # A redis property bag for storing all tables in the shard.
     @props = RedisPropertyBag.new(redis, shard_id)
@@ -227,7 +230,7 @@ class RedisTable
   # Return true if k is special internal key (e.g. the row id key) that should
   # not be returned to callers.
   def self.is_internal_key(k)
-    k == @row_id_key
+    k.end_with?(ROW_ID_SUFFIX)
   end
   def is_internal_key(k)
     self.class.is_internal_key(k)
