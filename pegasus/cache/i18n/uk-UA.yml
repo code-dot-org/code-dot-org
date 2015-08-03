@@ -1188,3 +1188,6 @@
     Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'>
     натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org.
   compatibility_https_hide_this_warning: Сховати попередження
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

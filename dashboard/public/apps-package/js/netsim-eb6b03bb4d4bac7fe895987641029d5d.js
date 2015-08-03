@@ -211,6 +211,8 @@ NetSim.prototype.init = function(config) {
   // Remove icon from all NetSim instructions dialogs
   config.skin.staticAvatar = null;
   config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
 
   /**
    * Skin for the loaded level
@@ -1573,7 +1575,7 @@ levels.custom = {
   // Send widget configuration
   showAddPacketButton: false,
   showPacketSizeControl: false,
-  defaultPacketSizeLimit: Infinity,
+  defaultPacketSizeLimit: 8192,
 
   // Tab-panel control
   showTabs: [],
@@ -1642,7 +1644,7 @@ levels.playground = {
   // Send widget configuration
   showAddPacketButton: false,
   showPacketSizeControl: false,
-  defaultPacketSizeLimit: Infinity,
+  defaultPacketSizeLimit: 8192,
 
   // Tab-panel control
   showTabs: ['instructions', 'my_device', 'router', 'dns'],
@@ -6688,8 +6690,8 @@ var NetSimPacketSizeControl = module.exports = function (rootDiv,
   NetSimSlider.call(this, rootDiv, {
     onChange: packetSizeChangeCallback,
     min: options.minimumPacketSize,
-    max: 1024,
-    upperBoundInfinite: true
+    max: 8192,
+    upperBoundInfinite: false
   });
 
   // Auto-render, unlike our base class
@@ -6703,9 +6705,6 @@ NetSimPacketSizeControl.inherits(NetSimSlider);
  * @returns {string}
  */
 NetSimPacketSizeControl.prototype.getPacketSizeText = function (packetSize) {
-  if (packetSize === Infinity) {
-    return i18n.unlimited();
-  }
   return i18n.numBitsPerPacket({ numBits: packetSize });
 };
 
@@ -6857,7 +6856,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @type {Number}
    * @private
    */
-  this.maxPacketSize_ = initialConfig.maxPacketSize || Infinity;
+  this.maxPacketSize_ = initialConfig.maxPacketSize || 8192;
 
   /**
    * Bits per chunk/byte for parsing and formatting purposes.
@@ -7655,8 +7654,7 @@ NetSimPacketEditor.prototype.setBitRate = function (newBitRate) {
  */
 NetSimPacketEditor.prototype.updateBitCounter = function () {
   var size = this.getPacketBinary().length;
-  var maxSize = this.maxPacketSize_ === Infinity ?
-      netsimMsg.infinity() : this.maxPacketSize_;
+  var maxSize = this.maxPacketSize_;
   this.bitCounter_.html(netsimMsg.bitCounter({
     x: size,
     y: maxSize
@@ -37094,6 +37092,12 @@ exports.scrubLevelConfiguration_ = function (levelConfig) {
   // needs to be converted to a number, like "Infinity"
   scrubbedLevel.defaultPacketSizeLimit = exports.deserializeNumber(
       scrubbedLevel.defaultPacketSizeLimit);
+
+  // Packet Size cannot be infinity; defaults to 8kb
+  if (scrubbedLevel.defaultPacketSizeLimit === Infinity) {
+    scrubbedLevel.defaultPacketSizeLimit = 8192;
+  }
+
   scrubbedLevel.defaultBitRateBitsPerSecond = exports.deserializeNumber(
       scrubbedLevel.defaultBitRateBitsPerSecond);
   scrubbedLevel.defaultChunkSizeBits = exports.deserializeNumber(

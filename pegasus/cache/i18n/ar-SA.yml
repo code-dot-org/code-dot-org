@@ -1133,3 +1133,6 @@
     لن تستطيع الوصول إلى code.org بعد هذا التاريخ. <a href='%{it_requirements_url}'>اضغط
     هنا</a> لتعلم كيفية تفعيل HTTPS لـ code.org.
   compatibility_https_hide_this_warning: إخفاء هذا التحذير
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more
