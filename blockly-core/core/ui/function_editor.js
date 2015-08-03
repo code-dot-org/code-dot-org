@@ -445,6 +445,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.modalBlockSpace.bindBeginPanDragHandler(this.container_, goog.bind(function () {
     this.modalBlockSpaceEditor.hideChaff();
   }, this));
+  this.modalBlockSpace.bindScrollOnWheelHandler(this.container_);
 
   Blockly.modalBlockSpace = this.modalBlockSpace;
   Blockly.modalBlockSpaceEditor = this.modalBlockSpaceEditor;

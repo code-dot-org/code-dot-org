@@ -445,6 +445,7 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
   // Bind pan-drag handlers
   this.blockSpace.bindBeginPanDragHandler(this.svg_,
     goog.bind(this.hideChaff, this));
+  this.blockSpace.bindScrollOnWheelHandler(this.svg_);
 
   Blockly.bindEvent_(Blockly.WidgetDiv.DIV, 'contextmenu', null,
     Blockly.blockContextMenu);

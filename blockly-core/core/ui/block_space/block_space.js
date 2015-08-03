@@ -30,6 +30,7 @@ goog.provide('Blockly.BlockSpace');
 goog.require('Blockly.ScrollbarPair');
 goog.require('Blockly.Trashcan');
 goog.require('Blockly.PanDragHandler');
+goog.require('Blockly.ScrollOnWheelHandler');
 goog.require('Blockly.ScrollOnBlockDragHandler');
 goog.require('Blockly.Xml');
 goog.require('goog.array');
@@ -80,10 +81,15 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
 
   /**
    * Encapsulates state used to make pan-drag work.
-   * @type {Blockly.PanDragHandler}
-   * @private
+   * @private {Blockly.PanDragHandler}
    */
   this.panDragHandler_ = new Blockly.PanDragHandler(this);
+
+  /**
+   * Encapsulates state used to make scroll-on-mousewheel work.
+   * @private {Blockly.ScrollOnWheelHandler}
+   */
+  this.scrollOnWheelHandler_ = new Blockly.ScrollOnWheelHandler(this);
 
   /**
    * Encapsulates state used to make scroll-on-block-drag work.
@@ -1053,6 +1059,14 @@ Blockly.BlockSpace.prototype.updateScrollableSize = function () {
 Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (target,
                                                                  onDragTargetMouseDown) {
   this.panDragHandler_.bindBeginPanDragHandler(target, onDragTargetMouseDown);
+};
+
+/**
+ * @param {!EventTarget} target - Element which initiates pan-drag mode when
+ *        clicked directly.
+ */
+Blockly.BlockSpace.prototype.bindScrollOnWheelHandler = function (target) {
+  this.scrollOnWheelHandler_.bindTo(target);
 };
 
 /**
