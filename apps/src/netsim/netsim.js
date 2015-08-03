@@ -183,8 +183,6 @@ NetSim.prototype.init = function(config) {
   // Remove icon from all NetSim instructions dialogs
   config.skin.staticAvatar = null;
   config.skin.smallStaticAvatar = null;
-  config.skin.failureAvatar = null;
-  config.skin.winAvatar = null;
 
   /**
    * Skin for the loaded level
