@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Find extra .level files for dsl defined levels
+# Find and remove extra .level files for dsl defined levels
 require_relative '../../config/environment'
 
 DSL_TYPES = %w(TextMatch ContractMatch External Match Multi)
@@ -9,7 +9,7 @@ DSL_TYPES.map(&:constantize).each do |c|
     level_file = LevelLoader.level_file_path(level.name)
     if File.exist? level_file
       puts `ls -l '#{level_file}'`
-      # puts "#{level.name}:\n\t#{level_file}\n\t#{level.file_path}"
+      #      puts `git rm '#{level_file}'`
     end
   end
 end
