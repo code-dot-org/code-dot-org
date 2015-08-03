@@ -39,6 +39,9 @@ exports.overrideClientApi = function (netsimTable) {
     all: function (callback) {
       return table.readAll(callback);
     },
+    allFromID: function (id, callback) {
+      return table.readAllFromID(id, callback);
+    },
     fetch: function (id, callback) {
       return table.read(id, callback);
     },
@@ -53,6 +56,9 @@ exports.overrideClientApi = function (netsimTable) {
     },
     log: function () {
       return table.log();
+    },
+    clearLog: function () {
+      table.clearLog();
     }
   };
 
@@ -78,6 +84,18 @@ var fakeStorageTable = function () {
       log_ += 'readAll';
 
       callback(null, tableData_);
+    },
+
+    /**
+     * @param {!number} id
+     * @param {!NodeStyleCallback} callback
+     */
+    readAllFromID: function (id, callback) {
+      log_ += 'readAllFromID[' + id + ']';
+
+      callback(null, tableData_.filter(function (row) {
+        return row.id >= id;
+      }));
     },
 
     /**
@@ -157,6 +175,11 @@ var fakeStorageTable = function () {
       }
 
       return log_;
+    },
+
+    /** Reset test log to empty */
+    clearLog: function () {
+      log_ = '';
     }
   };
 };
