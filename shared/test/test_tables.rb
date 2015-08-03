@@ -6,13 +6,10 @@ require File.expand_path '../../middleware/tables_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class TablesTest < Minitest::Unit::TestCase
+class TablesTest < Minitest::Test
 
   def test_create_read_update_delete
-    # The Tables API does not need to share a cookie jar with the Channels API.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
-    @tables = Rack::Test::Session.new(Rack::MockSession.new(TablesApi, "studio.code.org"))
-    @table_name = '_testTable'
+    init_apis
 
     create_channel
 
@@ -35,8 +32,33 @@ class TablesTest < Minitest::Unit::TestCase
     delete_channel
   end
 
+  def test_import
+    init_apis
+    create_channel
+
+    # this record should not appear in the output
+    create_record(name: 'eve', age: 9)
+
+    csv_filename = File.expand_path('../roster.csv', __FILE__)
+    import(csv_filename)
+
+    records = read_records
+    assert_equal 2, records.length
+    assert_equal 'alice', records[0]['name']
+    assert_equal 'bob', records[1]['name']
+
+    delete_channel
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
+
+  def init_apis
+    # The Tables API does not need to share a cookie jar with the Channels API.
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))
+    @tables = Rack::Test::Session.new(Rack::MockSession.new(TablesApi, "studio.code.org"))
+    @table_name = '_testTable'
+  end
 
   def create_channel
     @channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -67,4 +89,8 @@ class TablesTest < Minitest::Unit::TestCase
     @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}/#{id}"
   end
 
+  def import(csv_filename)
+    import_file = Rack::Test::UploadedFile.new csv_filename, "text/csv"
+    @tables.post "/v3/import-shared-tables/#{@channel_id}/#{@table_name}", "import_file" => import_file
+  end
 end

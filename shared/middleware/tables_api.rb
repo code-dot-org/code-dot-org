@@ -122,7 +122,7 @@ class TablesApi < Sinatra::Base
               "contains a name for each column:<br><br>#{columns.join(',')}"
         halt 400, {}, msg unless column
       end
-      CSV.foreach(tempfile, headers: true) do |row|
+      CSV.foreach(tempfile, headers: true, skip_blanks: true) do |row|
         records.push(row.to_hash)
       end
     rescue => e
