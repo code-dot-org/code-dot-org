@@ -173,6 +173,8 @@ module LevelsHelper
       level_options['edit_blocks'] = level_view_options[:edit_blocks]
       level_options['edit_blocks_success'] = t('builder.success')
       level_options['toolbox'] = level_view_options[:toolbox_blocks]
+      level_options['embed'] = false
+      level_options['hideSource'] = false
     end
 
     if @level.game.uses_pusher?
