@@ -12,6 +12,8 @@ require_relative 'redis_property_bag'
 
 class RedisTable
 
+  ROW_ID_SUFFIX = '_row_id'
+
   class NotFound < Sinatra::NotFound
   end
 
@@ -29,7 +31,7 @@ class RedisTable
 
     # A counter key in the underlying RedisPropertyBag, used to generate
     # asecending row ids.
-    @row_id_key = "#{table_name}_row_id"
+    @row_id_key = "#{table_name}#{ROW_ID_SUFFIX}"
 
     # A redis property bag for storing all tables in the shard.
     @props = RedisPropertyBag.new(redis, shard_id)
@@ -92,6 +94,7 @@ class RedisTable
         # Skip internal keys and rows for non-requested tables
         table_name = table_from_row_key(k)
         next if is_internal_key(k) || !table_map.include?(table_name)
+        puts "k=#{k} v=#{v}"
 
         # Add or get the rows entry for the table from the result map.
         value = (result[table_name] ||= {'rows' => []})
@@ -101,7 +104,7 @@ class RedisTable
         next if id < table_map[table_name]
 
         # Add the rows.
-        value['rows'] << make_row(id, v)
+        value['rows'] << v.merge({'id' => id})
       end
     end
   end
@@ -227,7 +230,7 @@ class RedisTable
   # Return true if k is special internal key (e.g. the row id key) that should
   # not be returned to callers.
   def self.is_internal_key(k)
-    k == @row_id_key
+    k.end_with?('_row_id')
   end
   def is_internal_key(k)
     self.class.is_internal_key(k)
