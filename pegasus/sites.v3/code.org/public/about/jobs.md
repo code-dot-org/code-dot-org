@@ -154,8 +154,28 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 **Job Summary:**
 
+Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
+
+- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
+- Drafting communications to stakeholders, responding to requests for information, distributing materials externally
+- Updating and managing event attendee lists
+- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
+- Attending and participating in meetings and recording notes/follow-up items, as appropriate
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
 
 **Skills and Qualifications:**
+
+We are looking for a self-starter, skilled in event planning, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+The ideal candidate has the following qualifications:
+
+- Has a bachelors degree (Computer Science background/experience not required)
+- Ability to travel 20% time 
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
 
 
 ## <a name="techpm" href="#techpm">Technical Product Manager (Seattle, WA)</a>
