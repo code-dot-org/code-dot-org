@@ -280,4 +280,3 @@ def parse_table_map_from_query_string(query_string)
     end
   end
 end
-
