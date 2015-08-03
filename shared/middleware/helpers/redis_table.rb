@@ -208,7 +208,7 @@ class RedisTable
     self.class.make_row(id, value)
   end
 
-    # Notifies other clients about changes to this table using pubsub api, if
+  # Notifies other clients about changes to this table using pubsub api, if
   # provided.
   #
   # @param [Hash] update_hash A hash describing the update.
