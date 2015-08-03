@@ -76,16 +76,17 @@ class NetSimApiTest < Minitest::Unit::TestCase
     create_record({name: 'rec1_2'}, 'table1')
     create_record({name: 'rec2_1'}, 'table2')
     create_record({name: 'rec2_2'}, 'table2')
-    create_record({name: 'rec3_1'}, 'table2')
+    create_record({name: 'rec3_1'}, 'table3')
 
-    @net_sim_api.get "/v3/netsim/#{@shard_id}?t[]=table1&t[]=table2@2&t[]=table3@5"
+    @net_sim_api.get "/v3/netsim/#{@shard_id}?t[]=table1&t[]=table2@2&t[]=table3@2"
     assert_equal 200, @net_sim_api.last_response.status
 
     result = JSON.parse(@net_sim_api.last_response.body)
 
     assert_equal(
-        {'table1' => {'rows' => [{name: 'rec1@1'}, {name: 'rec1@2'}]},
-         'table2' => {'rows' => [{name: 'rec2@2'}]},
+        {'table1' => {'rows' => [{'name' => 'rec1_1', 'id' => 1},
+                                 {'name' => 'rec1_2', 'id' => 2}]},
+         'table2' => {'rows' => [{'name' => 'rec2_2', 'id' => 2}]},
          'table3' => {'rows' => []}},
         result)
   end
