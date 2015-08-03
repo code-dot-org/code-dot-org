@@ -50,11 +50,25 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   }
 
   /**
+   * @type {string}
+   * @private
+   */
+  this.tableName_ = tableName;
+
+  /**
    * @type {PubSubChannel}
    * @private
    */
   this.channel_ = channel;
-  this.channel_.subscribe(tableName, NetSimTable.prototype.onPubSubEvent.bind(this));
+  this.subscribe();
+
+  /**
+   * The callback we most recently subscribed with, so that we can
+   * cleanly unsubscribe.
+   * @type {function}
+   * @private
+   */
+  this.channelCallback_ = undefined;
 
   /**
    * Base URL we hit to make our API calls
@@ -108,6 +122,25 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
    */
   this.refreshTable_ = this.makeThrottledRefresh_(
       DEFAULT_REFRESH_THROTTLING_MS);
+};
+
+/**
+ * Subscribes this table's onPubSubEvent method to events for this table
+ * on our local channel. Also saves the callback locally, so we can
+ * later reference it on unsubscribe
+ */
+NetSimTable.prototype.subscribe = function () {
+  this.channelCallback_ = NetSimTable.prototype.onPubSubEvent.bind(this);
+  this.channel_.subscribe(this.tableName_, this.channelCallback_);
+};
+
+/**
+ * Unubscribes the saved callback from events for this table on our
+ * local channel. Also clears the saved callback.
+ */
+NetSimTable.prototype.unsubscribe = function () {
+  this.channel_.unsubscribe(this.tableName_, this.channelCallback_);
+  this.cannelCallback = undefined;
 };
 
 /**
