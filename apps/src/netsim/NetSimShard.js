@@ -38,16 +38,25 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   var channel = this.pubSub.subscribe(shardID);
 
   /** @type {NetSimTable} */
-  this.nodeTable = new NetSimTable(channel, shardID, 'n');
+  this.nodeTable = new NetSimTable(shardID, 'n', {
+    channel: channel
+  });
 
   /** @type {NetSimTable} */
-  this.wireTable = new NetSimTable(channel, shardID, 'w');
+  this.wireTable = new NetSimTable(shardID, 'w', {
+    channel: channel
+  });
 
   /** @type {NetSimTable} */
-  this.messageTable = new NetSimTable(channel, shardID, 'm');
+  this.messageTable = new NetSimTable(shardID, 'm', {
+    channel: channel
+  });
 
   /** @type {NetSimTable} */
-  this.logTable = new NetSimTable(channel, shardID, 'l');
+  this.logTable = new NetSimTable(shardID, 'l', {
+    channel: channel,
+    useIncrementalRefresh: true
+  });
   this.logTable.setRefreshThrottleTime(5000);
 };
 

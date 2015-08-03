@@ -31,9 +31,11 @@ describe("NetSimTable", function () {
       subscribe: function () {}
     };
     netsimTable = netsimTestUtils.overrideClientApi(
-        new NetSimTable(fakeChannel, 'testShard', 'testTable'));
+        new NetSimTable('testShard', 'testTable', {
+          channel: fakeChannel
+        }));
 
-    apiTable = netsimTable.clientApi_.remoteTable;
+    apiTable = netsimTable.api_.remoteTable;
     callback = function () {};
     notified = false;
     netsimTable.tableChange.register(function () {
@@ -186,7 +188,7 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), '');
 
     // Until poll interval has passed.
-    netsimTable.lastFullUpdateTime_ = Date.now() - (netsimTable.pollingInterval_ + 1);
+    netsimTable.lastRefreshTime_ = Date.now() - (netsimTable.pollingInterval_ + 1);
     netsimTable.tick();
     assertEqual(apiTable.log(), 'readAll');
   });
