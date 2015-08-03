@@ -95,7 +95,6 @@ class RedisTable
         # Skip internal keys and rows for non-requested tables
         table_name = table_from_row_key(k)
         next if is_internal_key(k) || !table_map.include?(table_name)
-        puts "k=#{k} v=#{v}"
 
         # Add or get the rows entry for the table from the result map.
         value = (result[table_name] ||= {'rows' => []})
@@ -105,7 +104,7 @@ class RedisTable
         next if id < table_map[table_name]
 
         # Add the rows.
-        value['rows'] << v.merge({'id' => id})
+        value['rows'] << make_row(id, v)
       end
     end
   end
