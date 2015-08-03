@@ -18,8 +18,7 @@
  */
 
 /**
- * @fileoverview Panning (click-drag and mousewheel) scroll interaction handler
- * @author fraser@google.com (Neil Fraser)
+ * @fileoverview Click-drag panning interaction handler for BlockSpaces
  */
 'use strict';
 
@@ -31,82 +30,69 @@ goog.provide('Blockly.PanDragHandler');
  */
 Blockly.PanDragHandler = function (blockSpace) {
   /**
-   * @type {Blockly.BlockSpace}
-   * @private
+   * @private {Blockly.BlockSpace}
    */
   this.blockSpace_ = blockSpace;
 
   /**
    * Element which initiates pan-drag mode when clicked directly.
-   * @type {EventTarget}
-   * @private
+   * @private {EventTarget}
    */
   this.target_ = null;
 
   /**
-   * @type {function}
-   * @private
+   * @private {function}
    */
   this.onTargetMouseDown_ = null;
 
   /**
-   * @type {BindData}
-   * @private
+   * @private {BindData}
    */
   this.mouseDownEventBindData_ = null;
 
   /**
-   * @type {BindData}
-   * @private
+   * @private {BindData}
    */
   this.wheelEventBindData_ = null;
 
   /**
    * (for Safari)
-   * @type {BindData}
-   * @private
+   * @private {BindData}
    */
   this.mousewheelEventBindData_ = null;
 
   /**
-   * @type {BindData}
-   * @private
+   * @private {BindData}
    */
   this.contextMenuBlockEventBindData_ = null;
 
   /**
-   * @type {BindData}
-   * @private
+   * @private {BindData}
    */
   this.mouseMoveEventBindData_ = null;
 
   /**
-   * @type {BindData}
-   * @private
+   * @private {BindData}
    */
   this.mouseUpEventBindData_ = null;
 
   /**
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.startMouseX_ = null;
 
   /**
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.startMouseY_ = null;
 
   /**
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.startScrollX_ = null;
 
   /**
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.startScrollY_ = null;
 };
@@ -127,12 +113,6 @@ Blockly.PanDragHandler.prototype.bindBeginPanDragHandler = function (target,
   this.mouseDownEventBindData_ = Blockly.bindEvent_(
       target, 'mousedown', this, this.onPanDragTargetMouseDown_);
 
-  this.wheelEventBindData_ = Blockly.bindEvent_(target, 'wheel', this, this.onWheel_);
-
-  // Safari uses 'mousewheel'
-  this.mousewheelEventBindData_ = Blockly.bindEvent_(
-      target, 'mousewheel', this, this.onWheel_);
-
   // Also block the context menu on the pan-drag target element
   this.contextMenuBlockEventBindData_ = Blockly.bindEvent_(
       target, 'contextmenu', null, Blockly.blockContextMenu);
@@ -146,16 +126,6 @@ Blockly.PanDragHandler.prototype.unbindBeginPanDragHandler = function () {
   if (this.mouseDownEventBindData_) {
     Blockly.unbindEvent_(this.mouseDownEventBindData_);
     this.mouseDownEventBindData_ = null;
-  }
-
-  if (this.wheelEventBindData_) {
-    Blockly.unbindEvent_(this.wheelEventBindData_);
-    this.wheelEventBindData_ = null;
-  }
-
-  if (this.mousewheelEventBindData_) {
-    Blockly.unbindEvent_(this.mousewheelEventBindData_);
-    this.mousewheelEventBindData_ = null;
   }
 
   if (this.contextMenuBlockEventBindData_) {
@@ -212,42 +182,21 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function (e) {
     this.onTargetMouseDown_();
   }
 
+  var isClickDirectlyOnDragTarget = e.target && e.target === this.target_;
+
   // Clicking on the flyout background clears the global selection
-  if (Blockly.selected && !Blockly.readOnly) {
+  if (Blockly.selected && !Blockly.readOnly && isClickDirectlyOnDragTarget) {
     Blockly.selected.unselect();
   }
 
   // On left-click on scrollable area, begin scroll-drag
   // In readonly mode, we scroll-drag when clicking through a block, too.
-  if (this.blockSpace_.scrollbarPair && !Blockly.isRightButton(e)) {
+  if (this.blockSpace_.scrollbarPair && !Blockly.isRightButton(e) &&
+      (isClickDirectlyOnDragTarget || Blockly.readOnly)) {
     this.beginDragScroll_(e);
 
     // Don't click through to the workspace drag handler, or the browser
     // default drag/scroll handlers
-    e.stopPropagation();
-    e.preventDefault();
-  }
-};
-
-/**
- * Scroll the blockspace up or down based on wheel scrolling.
- * @param {!Event} e Mouse wheel scroll event.
- * @private
- */
-Blockly.PanDragHandler.prototype.onWheel_ = function(e) {
-  if (!this.blockSpace_.scrollbarPair) {
-    return;
-  }
-
-  // + is down
-  var wheelDelta = Blockly.getNormalizedWheelDeltaY(e);
-  if (wheelDelta) {
-    this.blockSpace_.scrollWithAnySelectedBlock(
-      this.blockSpace_.getScrollOffsetX(),
-      this.blockSpace_.getScrollOffsetY() + wheelDelta,
-      e.clientX, e.clientY);
-
-    // Don't scroll the page.
     e.stopPropagation();
     e.preventDefault();
   }
