@@ -1240,3 +1240,6 @@
     Nu vei mai putea accesa Code.org după această dată. <a href='%{it_requirements_url}'>
     click aici</a> pentru a afla cum să activezi HTTPS pentru Code.org.
   compatibility_https_hide_this_warning: Ascunde această avertizare
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more
