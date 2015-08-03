@@ -85,7 +85,7 @@ class RedisTable
   # =>  {'t1' => {'rows' => [{..}, <etc> }
 
   # @param [Redis] redis The redis client.
-  # @param []
+  # @param [String] shard_id
   # @param [Hash<String, Integer>] table_map
   # @return [Array<Hash<String, Array<Hash>>>]
   def self.get_tables(redis, shard_id, table_map)
