@@ -149,7 +149,7 @@ NetSimTable.prototype.readAll = function (callback) {
 };
 
 /**
- * @param {number} rowID
+ * @param {!number} rowID
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.readFromID = function (rowID, callback) {
@@ -297,9 +297,7 @@ NetSimTable.prototype.incrementalCacheUpdate_ = function (newRows) {
     var maxRowID = 0;
     newRows.forEach(function (row) {
       this.cache_[row.id] = row;
-      if (row.id > maxRowID) {
-        maxRowID = row.id;
-      }
+      maxRowID = Math.max(maxRowID, row.id);
     }, this);
     this.latestRowID_ = maxRowID;
     this.tableChange.notifyObservers(this.arrayFromCache_());
