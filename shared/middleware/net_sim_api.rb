@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
+require 'cgi'
 require 'csv'
 require_relative '../middleware/helpers/redis_table'
 require_relative '../middleware/channels_api'
@@ -71,6 +72,18 @@ class NetSimApi < Sinatra::Base
     dont_cache
     content_type :json
     get_table(shard_id, table_name).fetch(id.to_i).to_json
+  end
+
+  # GET /v3/netsim/<shard-id>?t=<table1>@<id1>&t=<table2>@<id2>&...
+  #
+  # Fetches rows in multiple tables starting a given version for each table, specified
+  # via query string parameters of the form "t=<table>@<min_id>"
+  #
+  get %r{/v3/netsim/([^/]+)$} do |shard_id|
+    dont_cache
+    content_type :json
+    table_map = parse_table_map_from_query_string(CGI::unescape(request.query_string))
+    RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
   end
 
   # Delete all wires associated with (locally or remotely) a given node_id
@@ -215,7 +228,6 @@ class NetSimApi < Sinatra::Base
     @@overridden_redis = override_redis
   end
 
-
   private
 
   # Returns a new Redis client for the current configuration.
@@ -252,3 +264,20 @@ class NetSimApi < Sinatra::Base
   end
 
 end
+
+# Convert a query_string of the form "t=table1@1&t=table2@1" into a
+# table map as expected by RedisTable.get_tables(). Id numbers
+# can be omitted in which case they default to 0.
+#
+# @param [String] query_string
+# @return [Hash<String, Integer>]
+# @private
+def parse_table_map_from_query_string(query_string)
+  {}.tap do |result|
+    CGI::parse(query_string)['t[]'].each do |tv|
+      table, min_id = tv.split('@')
+      result[table] = min_id.to_i  # defaults to 0 for invalid ints.
+    end
+  end
+end
+
