@@ -74,10 +74,10 @@ class NetSimApi < Sinatra::Base
     get_table(shard_id, table_name).fetch(id.to_i).to_json
   end
 
-  # GET /v3/netsim/<shard-id>?t=<table1>@<id1>&t=<table2>@<id2>&...
+  # GET /v3/netsim/<shard-id>?t[]=<table1>@<id1>&t[]=<table2>@<id2>&...
   #
   # Fetches rows in multiple tables starting a given version for each table, specified
-  # via query string parameters of the form "t=<table>@<min_id>"
+  # via query string parameters of the form "t[]=<table>@<min_id>"
   #
   get %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
@@ -265,7 +265,7 @@ class NetSimApi < Sinatra::Base
 
 end
 
-# Convert a query_string of the form "t=table1@1&t=table2@1" into a
+# Convert a query_string of the form "t[]=table1@1&t[]=table2@1" into a
 # table map as expected by RedisTable.get_tables(). Id numbers
 # can be omitted in which case they default to 0.
 #
