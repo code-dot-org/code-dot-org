@@ -189,14 +189,15 @@ NetSimTable.prototype.refresh = function (callback) {
 /**
  * Generate throttled refresh function which will generate actual server
  * requests at the maximum given rate no matter how fast it is called. This
- * allows us to coalesce refresh events and reduce server load.
- * @param {number} waitMs - Minimum time (in milliseconds) to wait between
- *        refresh requests to the server.
+ * allows us to coalesce refreshAll events and reduce server load.
+ * @param {number} minimumDelayBetweenRequests - Minimum time (in milliseconds)
+ *        to wait between refreshAll requests to the server.
  * @returns {function}
  * @private
  */
-NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
-  return _.throttle(this.refresh.bind(this, function () {}), waitMs);
+NetSimTable.prototype.makeThrottledRefresh_ = function (minimumDelayBetweenRequests) {
+  var throttledRefresh = _.throttle(this.refresh.bind(this), minimumDelayBetweenRequests);
+  return _.debounce(throttledRefresh, 250, {maxWait: 500});
 };
 
 /**
