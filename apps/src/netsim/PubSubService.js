@@ -89,3 +89,11 @@ PubSubService.PusherService = function (applicationKey) {
 PubSubService.PusherService.prototype.subscribe = function (channelID) {
   return new PubSubChannel.PusherChannel(this.api_.subscribe(channelID));
 };
+
+/**
+ * Unsubscribefrom events on a particular channel.
+ * @param {string} channelID
+ */
+PubSubService.PusherService.prototype.unsubscribe = function (channelID) {
+  this.api_.unsubscribe(channelID);
+};

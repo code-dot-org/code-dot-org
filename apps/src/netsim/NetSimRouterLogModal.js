@@ -115,6 +115,9 @@ NetSimRouterLogModal.iterateeMap = {
  */
 NetSimRouterLogModal.prototype.render = function () {
 
+  this.rootDiv_.off('shown.bs.modal.onModalOpen');
+  this.rootDiv_.off('hidden.bs.modal.onModalClose');
+
   // Sort before rendering
   var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
   var sortedLogEntries = _.sortBy(this.logEntries_, iterateeFunction);
@@ -128,6 +131,18 @@ NetSimRouterLogModal.prototype.render = function () {
     sortDescending: this.sortDescending_
   }));
   this.rootDiv_.html(renderedMarkup);
+
+  this.rootDiv_.on('shown.bs.modal.onModalOpen', function () {
+    if (this.shard_) {
+      this.shard_.logTable.subscribe();
+    }
+  }.bind(this));
+
+  this.rootDiv_.on('hidden.bs.modal.onModalClose', function () {
+      if (this.shard_) {
+        this.shard_.logTable.unsubscribe();
+      }
+  }.bind(this));
 
   this.rootDiv_.find('th').click(function (event) {
     this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
