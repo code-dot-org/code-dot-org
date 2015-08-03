@@ -34,7 +34,7 @@ exports.overrideClientApi = function (netsimTable) {
   var table = fakeStorageTable();
 
   // send client api calls through our fake storage table
-  netsimTable.clientApi_ = {
+  netsimTable.api_ = {
     remoteTable: table,
     all: function (callback) {
       return table.readAll(callback);
@@ -173,10 +173,19 @@ exports.fakeShard = function () {
   /* jshint unused:true */
 
   return {
-    nodeTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'node')),
-    wireTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
-    messageTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'message')),
-    logTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'log'))
+    nodeTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'node', {
+      channel: fakeChannel
+    })),
+    wireTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'wire', {
+      channel: fakeChannel
+    })),
+    messageTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'message', {
+      channel: fakeChannel
+    })),
+    logTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'log', {
+      channel: fakeChannel,
+      useIncrementalRefresh: true
+    }))
   };
 };
 
