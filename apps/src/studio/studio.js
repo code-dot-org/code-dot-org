@@ -1272,6 +1272,8 @@ Studio.init = function(config) {
     // We don't want icons in instructions for our custom logic base games
     skin.staticAvatar = null;
     skin.smallStaticAvatar = null;
+    skin.failureAvatar = null;
+    skin.winAvatar = null;
   }
 
   window.addEventListener("keydown", Studio.onKey, false);
