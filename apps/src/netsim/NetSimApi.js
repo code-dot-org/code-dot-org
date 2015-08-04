@@ -149,12 +149,17 @@ var tableApi = {
    * Remove a row.
    * @param {number} id - The row identifier.
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
+   * @param {boolean} [async] - default TRUE.  Pass FALSE only in special
+   *        onUnload cleanup attempt.
    */
-  deleteRow: function(id, callback) {
+  deleteRow: function(id, callback, async) {
+    async = async !== false; // `undefined` maps to true
+
     $.ajax({
       url: this.baseUrl + "/" + id + "/delete",
       type: "post",
-      dataType: "json"
+      dataType: "json",
+      async: async
     }).done(function(data, text) {
       callback(null, true);
     }).fail(function(request, status, error) {
