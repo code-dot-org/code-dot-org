@@ -29,51 +29,45 @@ var netsimGlobals = require('./netsimGlobals');
  * @constructor
  */
 var NetSimRouterLogModal = module.exports = function (rootDiv) {
+
   /**
    * Component root, which we fill whenever we call render()
-   * @type {jQuery}
-   * @private
+   * @private {jQuery}
    */
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimShard}
-   * @private
+   * @private {NetSimShard}
    */
   this.shard_ = null;
 
   /**
-   * @type {NetSimRouterNode}
-   * @private
+   * @private {NetSimRouterNode}
    */
   this.router_ = null;
 
   /**
-   * @type {NetSimLogEntry[]}
-   * @private
+   * @private {NetSimLogEntry}
    */
   this.logEntries_ = [];
 
   /**
    * Tracking information for which events we're registered to, so we can
    * perform cleanup as needed.
-   * @type {Object}
-   * @private
+   * @private {Object}
    */
   this.eventKeys_ = {};
 
   /**
    * Sorting key, changed by user interaction, which determines which sort
    * we use on render.
-   * @type {string}
-   * @private
+   * @private {string}
    */
   this.sortBy_ = 'timestamp';
 
   /**
    * Whether currently using a descending sort.
-   * @type {boolean}
-   * @private
+   * @private {boolean}
    */
   this.sortDescending_ = true;
 
