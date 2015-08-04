@@ -1,6 +1,5 @@
 /**
- * @overview Wraps NetSim REST API by extending our standard client API.
- * @see clientApi.js
+ * @overview Wraps NetSim REST APIs for operations of "tables" and "shards"
  * @see net_sim_api.rb
  */
 /* jshint
@@ -17,25 +16,86 @@
 'use strict';
 
 /**
- * @name NetSimApi
- * @extends ClientApi
+ * @type {string}
+ * @const
  */
-var netsimApi = {
+var NETSIM_API_BASE_URL = '/v3/netsim';
+
+/**
+ * @name NetSimShardApi
+ */
+var shardApi = {
+
   /**
-   * Base URL for target API.
-   * Must be set through NetSimApi.create().
-   * @type {string}
+   * Create an initialized NetSim Shard API instance.
+   * @param {string} shardID
+   * @returns {NetSimShardApi}
    */
-  api_base_url: undefined,
+  create: function (shardID) {
+    return $.extend({}, shardApi, {
+
+      /**
+       * Shard identifier.
+       * @type {string}
+       */
+      shardID: shardID,
+
+      /**
+       * Beginning part of URL for all calls that interact with the shard.
+       * @type {string}
+       */
+      baseUrl: NETSIM_API_BASE_URL + '/' + shardID
+    });
+  },
+
+  makeTableApi: function (tableName) {
+    return tableApi.create(this.shardID, tableName);
+  }
+};
+
+/**
+ * @name NetSimTableApi
+ */
+var tableApi = {
+
+  /**
+   * Create an initialized NetSim Table API instance.
+   * @param {string} shardID
+   * @param {string} tableName
+   * @returns {NetSimTableApi}
+   */
+  create: function (shardID, tableName) {
+    return $.extend({}, tableApi, {
+
+      /**
+       * Shard identifier.
+       * @type {string}
+       */
+      shardID: shardID,
+
+      /**
+       * Table name.
+       * @type {string}
+       */
+      tableName: tableName,
+
+      /**
+       * Beginning part of URL for all calls that interact only with
+       * this table.
+       * @type {string}
+       */
+      baseUrl: NETSIM_API_BASE_URL + '/' + shardID + '/' + tableName
+    });
+  },
 
   /**
    * Request all rows from the given table.
    * @param {NodeStyleCallback} callback - Expected result is an array of
-   *        collection objects.
+   *        row objects.
    */
-  all: function(callback) {
+  allRows: function(callback) {
     $.ajax({
-      url: this.api_base_url,
+      url: this.baseUrl,
       type: "get",
       dataType: "json"
     }).done(function(data, text) {
@@ -47,14 +107,14 @@ var netsimApi = {
   },
 
   /**
-   * Request all rows including and following the given row ID.
+   * Request all rows including and following the given row ID from the table.
    * @param {int} rowID - lower bound on row IDs to fetch
    * @param {NodeStyleCallback} callback - Expected result is an array of
    *        table rows.
    */
-  allFromID: function(rowID, callback) {
+  allRowsFromID: function(rowID, callback) {
     $.ajax({
-      url: this.api_base_url + '@' + rowID,
+      url: this.baseUrl + '@' + rowID,
       type: "get",
       dataType: "json"
     }).done(function(data, text) {
@@ -66,14 +126,14 @@ var netsimApi = {
   },
 
   /**
-   * Insert a row.
-   * @param {Object} value - collection contents, must be JSON.stringify-able.
+   * Insert a row into the table.
+   * @param {Object} value - desired row contents, must be JSON.stringify-able.
    * @param {NodeStyleCallback} callback - Expected result is the created
-   *        collection object (which will include an assigned 'id' key).
+   *        row object (which will include an assigned 'id' key).
    */
-  create: function(value, callback) {
+  createRow: function(value, callback) {
     $.ajax({
-      url: this.api_base_url,
+      url: this.baseUrl,
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
@@ -87,12 +147,12 @@ var netsimApi = {
 
   /**
    * Remove a row.
-   * @param {number} id - The collection identifier.
+   * @param {number} id - The row identifier.
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
    */
-  delete: function(id, callback) {
+  deleteRow: function(id, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id + "/delete",
+      url: this.baseUrl + "/" + id + "/delete",
       type: "post",
       dataType: "json"
     }).done(function(data, text) {
@@ -105,15 +165,15 @@ var netsimApi = {
 
   /**
    * Retrieve a row.
-   * @param {number} id - The collection identifier.
+   * @param {number} id - The row identifier.
    * @param {NodeStyleCallback} callback - Expected result is the requested
-   *        collection object.
+   *        row object.
    */
-  fetch: function(id, callback) {
+  fetchRow: function(id, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id,
+      url: this.baseUrl + "/" + id,
       type: "get",
-      dataType: "json",
+      dataType: "json"
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
@@ -124,14 +184,13 @@ var netsimApi = {
 
   /**
    * Change the contents of a row.
-   * @param {number} id - The collection identifier.
-   * @param {Object} value - The new collection contents.
-   * @param {NodeStyleCallback} callback - Expected result is the new collection
-   *        object.
+   * @param {number} id - The row identifier.
+   * @param {Object} value - The new row contents.
+   * @param {NodeStyleCallback} callback - Expected result is the new row object.
    */
-  update: function(id, value, callback) {
+  updateRow: function(id, value, callback) {
     $.ajax({
-      url: this.api_base_url + "/" + id,
+      url: this.baseUrl + "/" + id,
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(value)
@@ -146,13 +205,21 @@ var netsimApi = {
 
 module.exports = {
   /**
-   * Create a NetSimApi instance with the given base URL.
-   * @param {!string} url - Custom API base url (e.g. '/v3/netsim')
-   * @returns {NetSimApi}
+   * Create a NetSim Shard API instance for the given shard.
+   * @param {string} shardID
+   * @returns {NetSimShardApi}
    */
-  create: function (url) {
-    return $.extend({}, netsimApi, {
-      api_base_url: url
-    });
+  makeShardApi: function (shardID) {
+    return shardApi.create(shardID);
+  },
+
+  /**
+   * Create a NetSim Table API instance for the given shard and table name.
+   * @param {string} shardID
+   * @param {string} tableName
+   * @returns {NetSimTableApi}
+   */
+  makeTableApi: function (shardID, tableName) {
+    return tableApi.create(shardID, tableName);
   }
 };

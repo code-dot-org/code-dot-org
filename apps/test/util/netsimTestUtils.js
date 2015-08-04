@@ -30,28 +30,28 @@ exports.assertTableSize = function (shard, tableName, size) {
  * accessing the server API.
  * @param {NetSimTable} netsimTable
  */
-exports.overrideClientApi = function (netsimTable) {
+exports.overrideNetSimTableApi = function (netsimTable) {
   var table = fakeStorageTable();
 
   // send client api calls through our fake storage table
   netsimTable.api_ = {
     remoteTable: table,
-    all: function (callback) {
+    allRows: function (callback) {
       return table.readAll(callback);
     },
-    allFromID: function (id, callback) {
+    allRowsFromID: function (id, callback) {
       return table.readAllFromID(id, callback);
     },
-    fetch: function (id, callback) {
+    fetchRow: function (id, callback) {
       return table.read(id, callback);
     },
-    create: function (value, callback) {
+    createRow: function (value, callback) {
       return table.create(value, callback);
     },
-    update: function (id, value, callback) {
+    updateRow: function (id, value, callback) {
       return table.update(id, value, callback);
     },
-    delete: function (id, callback) {
+    deleteRow: function (id, callback) {
       return table.delete(id, callback);
     },
     log: function () {
@@ -196,16 +196,16 @@ exports.fakeShard = function () {
   /* jshint unused:true */
 
   return {
-    nodeTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'node', {
+    nodeTable: exports.overrideNetSimTableApi(new NetSimTable('fakeShard', 'node', {
       channel: fakeChannel
     })),
-    wireTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'wire', {
+    wireTable: exports.overrideNetSimTableApi(new NetSimTable('fakeShard', 'wire', {
       channel: fakeChannel
     })),
-    messageTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'message', {
+    messageTable: exports.overrideNetSimTableApi(new NetSimTable('fakeShard', 'message', {
       channel: fakeChannel
     })),
-    logTable: exports.overrideClientApi(new NetSimTable('fakeShard', 'log', {
+    logTable: exports.overrideNetSimTableApi(new NetSimTable('fakeShard', 'log', {
       channel: fakeChannel,
       useIncrementalRefresh: true
     }))
