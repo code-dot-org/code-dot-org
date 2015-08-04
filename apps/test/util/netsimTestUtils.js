@@ -196,19 +196,16 @@ exports.fakeShard = function () {
   /* jshint unused:true */
 
   return {
-    nodeTable: exports.overrideNetSimTableApi(new NetSimTable('fakeShard', 'node', {
-      channel: fakeChannel
-    })),
-    wireTable: exports.overrideNetSimTableApi(new NetSimTable('fakeShard', 'wire', {
-      channel: fakeChannel
-    })),
-    messageTable: exports.overrideNetSimTableApi(new NetSimTable('fakeShard', 'message', {
-      channel: fakeChannel
-    })),
-    logTable: exports.overrideNetSimTableApi(new NetSimTable('fakeShard', 'log', {
-      channel: fakeChannel,
-      useIncrementalRefresh: true
-    }))
+    nodeTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'node')),
+    wireTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
+    messageTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'message')),
+    logTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'log', {
+          useIncrementalRefresh: true
+        }))
   };
 };
 
