@@ -11,36 +11,37 @@ goog.require('Blockly.XButton');
  * A DOM-based parameter editor
  * @param {!Object} options
  * @param {string} options.name
+ * @param {string} options.paramID unique ID of domain
  * @param {Blockly.BlockValueType} options.type
  * @param {Function} options.onRemovePress
  * @param {Function} options.onTypeChanged takes {Blockly.BlockValueType} newType
- * @param {Function} options.onNameChanged takes {string} newName
+ * @param {Function} options.onNameChanged takes {string} uniqueID and {string} newName
  * @param {Object.<String, Blockly.BlockValueType>} options.typeChoices
  * @constructor
  */
 Blockly.DomainEditor = function (options) {
-  this.onRemovePress = options.onRemovePress;
-  this.onTypeChanged = options.onTypeChanged;
-  this.onNameChanged = options.onNameChanged;
-  this.typeChoices = options.typeChoices;
-  this.type = options.type;
-  this.name = options.name;
+  this.options = options;
 
   /**
-   * @type {Element}
-   * @private
+   * @private {Element}
    */
   this.editorDom_ = null;
   /**
-   * @type {Blockly.TypeDropdown}
-   * @private
+   * @private {Blockly.TypeDropdown}
    */
   this.typeDropdown_ = null;
   /**
-   * @type {Blockly.DomainNameInput}
-   * @private
+   * @private {Blockly.DomainNameInput}
    */
   this.nameInput_ = null;
+};
+
+/**
+ * Get unique parameter ID of editor
+ * @returns {string}
+ */
+Blockly.DomainEditor.prototype.getParamID = function () {
+  return this.options.paramID;
 };
 
 /**
@@ -50,19 +51,18 @@ Blockly.DomainEditor.prototype.render = function (parent) {
   var editorDOM = goog.dom.createDom('div');
 
   var typeDropdown = new Blockly.TypeDropdown({
-    onRemovePress: this.onRemovePress,
-    onTypeChanged: this.onTypeChanged,
-    typeChoices: this.typeChoices,
-    type: this.type
+    onTypeChanged: this.options.onTypeChanged,
+    typeChoices: this.options.typeChoices,
+    type: this.options.type
   });
 
   var nameInput = new Blockly.DomainNameInput({
-    onNameChanged: this.onNameChanged,
-    name: this.name
+    onNameChanged: this.options.onNameChanged,
+    name: this.options.name
   });
 
   var xButton = new Blockly.XButton({
-    onButtonPressed: this.onRemovePress
+    onButtonPressed: this.options.onRemovePress
   });
 
   nameInput.render(editorDOM);
