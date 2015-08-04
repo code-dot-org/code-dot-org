@@ -9,10 +9,9 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
+ maxparams: 4,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 var _ = require('../utils').getLodash();
@@ -34,13 +33,13 @@ var DEFAULT_REFRESH_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
- * cacheing and callbacks, which provides a notification API to the rest
+ * caching and callbacks, which provides a notification API to the rest
  * of the NetSim code.
+ * @param {!PubSubChannel} channel - The pubsub channel used to listen
+ *        for changes to the table.cellPadding
  * @param {!string} shardID - The shard ID specific to this class' NetSim instance.
  * @param {!string} tableName - The name of the remote storage table to wrap.
- * @param {!Object} options - Additional table configuration options
- * @param {!PubSubChannel} options.channel - The pubsub channel used to listen
- *        for changes to the table.cellPadding
+ * @param {Object} [options] - Additional table configuration options
  * @param {boolean} [options.useIncrementalRefresh] - defaults to FALSE.  If
  *        TRUE, this table will only request content that is new since its
  *        last refresh, not the entire table contents.  Currently this option
@@ -48,23 +47,21 @@ var DEFAULT_REFRESH_THROTTLING_MS = 1000;
  * @constructor
  * @throws {Error} if wrong number of arguments are provided.
  */
-var NetSimTable = module.exports = function (shardID, tableName, options) {
+var NetSimTable = module.exports = function (channel, shardID, tableName, options) {
   // Require channel, shardID and tableName to be provided
-  if (!shardID) {
+  if (!channel) {
+    throw new Error('channel is required');
+  } else if (!shardID) {
     throw new Error('shardID is required');
   } else if (!tableName) {
     throw new Error('tableName is required');
-  } else if (!options) {
-    throw new Error('options object is required');
-  } else if (!options.channel) {
-    throw new Error('options.channel is required');
   }
 
   /**
    * @type {PubSubChannel}
    * @private
    */
-  this.channel_ = options.channel;
+  this.channel_ = channel;
   this.channel_.subscribe(tableName, NetSimTable.prototype.onPubSubEvent.bind(this));
 
   /**
@@ -73,14 +70,7 @@ var NetSimTable = module.exports = function (shardID, tableName, options) {
    * @type {boolean}
    * @private
    */
-  this.useIncrementalRefresh_ = !!(options.useIncrementalRefresh);
-
-  /**
-   * Base URL we hit to make our API calls
-   * @type {string}
-   * @private
-   */
-  this.remoteUrl_ = '/v3/netsim/' + shardID + '/' + tableName;
+  this.useIncrementalRefresh_ = !!(options && options.useIncrementalRefresh);
 
   /**
    * API object for making remote calls
@@ -247,12 +237,12 @@ NetSimTable.prototype.delete = function (id, callback) {
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
   var async = false; // Force synchronous request
-  this.api_.deleteRow(id, function (err, success) {
+  this.api_.deleteRow(id, function (err) {
     if (err) {
       // Nothing we can really do with the error, as we're in the process of
       // navigating away. Throw so that high incidence rates will show up in
       // new relic.
-      throw new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
+      throw err;
     }
     this.removeRowFromCache_(id);
   }.bind(this), async);
