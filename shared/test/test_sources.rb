@@ -39,5 +39,11 @@ class SourcesTest < Minitest::Unit::TestCase
     assert @files.last_response.successful?
     versions = JSON.parse(@files.last_response.body)
     assert_equal 2, versions.count
+
+    # Get the first and second version.
+    @files.get "/v3/sources/#{channel}/#{filename}?version=#{versions.last.first}"
+    assert_equal file_data, @files.last_response.body
+    @files.get "/v3/sources/#{channel}/#{filename}?version=#{versions.first.first}"
+    assert_equal new_file_data, @files.last_response.body
   end
 end
