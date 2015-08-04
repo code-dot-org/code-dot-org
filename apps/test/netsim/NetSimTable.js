@@ -285,7 +285,7 @@ describe("NetSimTable", function () {
       assertEqual('', apiTable.log());
       netsimTable.refreshTable_(callback);
       assertEqual('readAllFromID[1]', apiTable.log());
-      assertEqual([], netsimTable.readAllCached());
+      assertEqual([], netsimTable.readAll());
 
       // Keeps requesting from row 1 when there's no content
       apiTable.clearLog();
@@ -305,14 +305,14 @@ describe("NetSimTable", function () {
       // Intentionally "1" here - we update our internal "latestRowID"
       // until after an incremental or full read.
       assertEqual('readAllFromID[1]', apiTable.log());
-      assertEqual([{id:1}, {id:2}, {id:3}], netsimTable.readAllCached());
+      assertEqual([{id:1}, {id:2}, {id:3}], netsimTable.readAll());
 
       apiTable.clearLog();
       netsimTable.create({}, callback);
       netsimTable.refreshTable_(callback);
       // Got 1, 2, 3 in last refresh, so we read all from 4 this time.
       assertEqual('create[{}]readAllFromID[4]', apiTable.log());
-      assertEqual([{id:1}, {id:2}, {id:3}, {id:4}], netsimTable.readAllCached());
+      assertEqual([{id:1}, {id:2}, {id:3}, {id:4}], netsimTable.readAll());
     });
 
   });

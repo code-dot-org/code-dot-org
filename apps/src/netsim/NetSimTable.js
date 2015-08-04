@@ -178,7 +178,7 @@ NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
 /**
  * @returns {Array} all locally cached table rows
  */
-NetSimTable.prototype.readAllCached = function () {
+NetSimTable.prototype.readAll = function () {
   return this.arrayFromCache_();
 };
 
