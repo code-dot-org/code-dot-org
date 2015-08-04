@@ -75,6 +75,11 @@ var projects = module.exports = {
     return current.updatedAt;
   },
 
+  //////////////////////////////////////////////////////////////////////
+  // Properties and callbacks. These are all candidates for being extracted
+  // as configuration parameters which are passed in by the caller.
+  //////////////////////////////////////////////////////////////////////
+
   /**
    * @returns {boolean} true if we're editing
    */
@@ -116,6 +121,10 @@ var projects = module.exports = {
       dashboard.header.showProjectLevelHeader();
     }
   },
+
+  //////////////////////////////////////////////////////////////////////
+  // End of properties and callbacks.
+  //////////////////////////////////////////////////////////////////////
 
   /**
    *
