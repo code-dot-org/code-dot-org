@@ -27,7 +27,7 @@ var NetSimApi = require('./NetSimApi');
 var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
- * Minimum wait time (in milliseconds) between refreshAll requests.
+ * Minimum wait time (in milliseconds) between refresh requests.
  * @type {number}
  */
 var DEFAULT_REFRESH_THROTTLING_MS = 1000;
@@ -118,8 +118,8 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 
   /**
-   * Throttled version (specific to this instance) of the refreshAll operation,
-   * used to coalesce refreshAll requests.
+   * Throttled version (specific to this instance) of the refresh operation,
+   * used to coalesce refresh requests.
    * @type {function}
    * @private
    */
@@ -161,25 +161,11 @@ NetSimTable.prototype.refresh = function (callback) {
 };
 
 /**
- * Pull the full table contents from the server, replace the local cache
- * with the returned rows, and finally call the provided callback.
- * @param {!NodeStyleCallback} callback
- */
-NetSimTable.prototype.refreshAll = function (callback) {
-  this.api_.allRows(function (err, data) {
-    if (err === null) {
-      this.fullCacheUpdate_(data);
-    }
-    callback(err, data);
-  }.bind(this));
-};
-
-/**
  * Generate throttled refresh function which will generate actual server
  * requests at the maximum given rate no matter how fast it is called. This
- * allows us to coalesce refreshAll events and reduce server load.
+ * allows us to coalesce refresh events and reduce server load.
  * @param {number} waitMs - Minimum time (in milliseconds) to wait between
- *        refreshAll requests to the server.
+ *        refresh requests to the server.
  * @returns {function}
  * @private
  */
@@ -373,13 +359,13 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
 };
 
 /**
- * Change the maximum rate at which the refreshAll operation for this table
- * will _actually_ be executed, no matter how fast refreshAll() is called.
- * @param {number} waitMs - Minimum number of milliseconds between refreshAll
- *        requests to the server.
+ * Change the maximum rate at which the refresh operation for this table
+ * will _actually_ be executed, no matter how fast we receive invalidations.
+ * @param {number} waitMs - Minimum number of milliseconds between invalidation-
+ *        triggered requests to the server.
  */
 NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
-  // To do this, we just replace the throttled refreshAll function with a new one.
+  // To do this, we just replace the throttled refresh function with a new one.
   this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
 };
 

@@ -861,23 +861,22 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var shard = this.shard_;
+  var wireTable = shard.wireTable;
   var routerID = this.entityID;
-  this.shard_.wireTable.refreshAll(function (err, rows) {
-    if (err) {
-      onComplete(err, []);
-      return;
-    }
-
-    var myWires = rows
-        .map(function (row) {
-          return new NetSimWire(shard, row);
-        })
-        .filter(function (wire){
-          return wire.remoteNodeID === routerID;
-        });
-
-    onComplete(null, myWires);
-  });
+  wireTable.refresh()
+    .fail(function (err) {
+        onComplete(err, []);
+      })
+    .done(function () {
+        var myWires = wireTable.readAll()
+            .map(function (row) {
+              return new NetSimWire(shard, row);
+            })
+            .filter(function (wire) {
+              return wire.remoteNodeID === routerID;
+            });
+        onComplete(null, myWires);
+      }.bind(this));
 };
 
 /**
