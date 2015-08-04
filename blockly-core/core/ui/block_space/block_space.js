@@ -162,12 +162,16 @@ Blockly.BlockSpace.prototype.findFunction = function(functionName) {
   });
 };
 
+/**
+ * @param {string} [functionName] If provided, only return examples for the
+ *   given function.
+ */
 Blockly.BlockSpace.prototype.findFunctionExamples = function(functionName) {
   return goog.array.filter(this.getTopBlocks(), function(block) {
     if (Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE === block.type) {
       var actualBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-      return actualBlock &&
-        Blockly.Names.equals(functionName, actualBlock.getTitleValue('NAME'));
+      return actualBlock && (!functionName ||
+        Blockly.Names.equals(functionName, actualBlock.getTitleValue('NAME')));
     }
     return false;
   });
@@ -705,9 +709,9 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
         {
           // Initial part of the drag:
           // fade normal blocks from fully-visible to mostly-visible.
-          normalIntensity = INNER_TRASH_NORMAL_INTENSITY + 
-            (xDifference - INNER_TRASH_DISTANCE) / 
-            (trashZoneWidth - INNER_TRASH_DISTANCE) * 
+          normalIntensity = INNER_TRASH_NORMAL_INTENSITY +
+            (xDifference - INNER_TRASH_DISTANCE) /
+            (trashZoneWidth - INNER_TRASH_DISTANCE) *
             INNER_TRASH_TRASHCAN_INTENSITY;
         }
       }
