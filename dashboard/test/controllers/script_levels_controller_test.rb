@@ -38,9 +38,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should not log an activity monitor start for netsim' do
     @controller.expects(:slog).never # don't log activity monitor start
 
-    netsim_script = Script.find_by_name('netsim')
-    netsim_script_level = netsim_script.script_levels.first
-    get :show, script_id: netsim_script, stage_id: netsim_script_level.stage.position, id: netsim_script_level.position
+    allthethings_script = Script.find_by_name('allthethings')
+    netsim_level = allthethings_script.levels.select { |level| level.game == Game.netsim }.first
+    netsim_script_level = allthethings_script.script_levels.select { |script_level| script_level.level_id == netsim_level.id }.first
+    get :show, script_id: allthethings_script, stage_id: netsim_script_level.stage.position, id: netsim_script_level.position
     assert_response :success
 
     assert_equal netsim_script_level, assigns(:script_level)
