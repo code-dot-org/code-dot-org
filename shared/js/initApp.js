@@ -13,7 +13,8 @@ window.apps = {
   load: loadApp,
   // Legacy Blockly initialization that was moved here from _blockly.html.haml.
   // Modifies `appOptions` with some default values in `baseOptions`.
-  setup: function () {
+  // Move blockly-specific setup function out of shared and back into dashboard.
+  setupBlockly: function () {
 
     if (!window.dashboard) {
       throw new Error('Assume existence of window.dashboard');
@@ -127,6 +128,7 @@ window.apps = {
 
   // Define blockly/droplet-specific callbacks for projects to access
   // level source, HTML and headers.
+  // TODO(dave): Extract blockly-specific handler code into _blockly.html.haml.
   projectsHandler: {
     setInitialLevelHtml: function (levelHtml) {
       appOptions.level.levelHtml = levelHtml;
