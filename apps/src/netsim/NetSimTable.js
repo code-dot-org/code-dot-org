@@ -9,7 +9,7 @@
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
+ maxparams: 4,
  maxstatements: 200
  */
 /* global $ */
@@ -17,7 +17,7 @@
 
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
-var clientApi = require('@cdo/shared/clientApi');
+var NetSimApi = require('./NetSimApi');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -27,26 +27,35 @@ var clientApi = require('@cdo/shared/clientApi');
 var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
- * Minimum wait time (in milliseconds) between readAll requests.
+ * Minimum wait time (in milliseconds) between refresh requests.
  * @type {number}
  */
 var DEFAULT_REFRESH_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
- * cacheing and callbacks, which provides a notification API to the rest
+ * caching and callbacks, which provides a notification API to the rest
  * of the NetSim code.
- * @param {!PubSubChannel} channel - The pubsub channel used to listen for changes.
+ * @param {!PubSubChannel} channel - The pubsub channel used to listen
+ *        for changes to the table.cellPadding
  * @param {!string} shardID - The shard ID specific to this class' NetSim instance.
  * @param {!string} tableName - The name of the remote storage table to wrap.
+ * @param {Object} [options] - Additional table configuration options
+ * @param {boolean} [options.useIncrementalRefresh] - defaults to FALSE.  If
+ *        TRUE, this table will only request content that is new since its
+ *        last refresh, not the entire table contents.  Currently this option
+ *        is not safe to use if you care about updates or deletes in the table.
  * @constructor
  * @throws {Error} if wrong number of arguments are provided.
  */
-var NetSimTable = module.exports = function (channel, shardID, tableName) {
+var NetSimTable = module.exports = function (channel, shardID, tableName, options) {
   // Require channel, shardID and tableName to be provided
-  if (!channel || !shardID || !tableName) {
-    throw new Error('NetSimTable must be constructed with all arguments. ' +
-        '(got channel:' + channel + ' shardID:' + shardID + ' tableName:' + tableName);
+  if (!channel) {
+    throw new Error('channel is required');
+  } else if (!shardID) {
+    throw new Error('shardID is required');
+  } else if (!tableName) {
+    throw new Error('tableName is required');
   }
 
   /**
@@ -68,16 +77,19 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   this.channelCallback_ = undefined;
 
   /**
-   * Base URL we hit to make our API calls
-   * @private {string}
+   * If TRUE, will only request deltas from remote storage.  Currently
+   * unsafe if we care about more than inserts to the table.
+   * @type {boolean}
+   * @private
    */
-  this.remoteUrl_ = '/v3/netsim/' + shardID + '/' + tableName;
+  this.useIncrementalRefresh_ = !!(options && options.useIncrementalRefresh);
 
   /**
    * API object for making remote calls
-   * @private {ClientApi}
+   * @type {NetSimApi}
+   * @private
    */
-  this.clientApi_ = clientApi.create(this.remoteUrl_);
+  this.api_ = NetSimApi.makeTableApi(shardID, tableName);
 
   /**
    * Event that fires when full table updates indicate a change,
@@ -93,11 +105,18 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   this.cache_ = {};
 
   /**
+   * The row ID of the most recently inserted row retrieved from remote storage.
+   * @type {number}
+   * @private
+   */
+  this.latestRowID_ = 0;
+
+  /**
    * Unix timestamp for last time this table's cache contents were fully
    * updated.  Used to determine when to poll the server for changes.
    * @private {number}
    */
-  this.lastFullUpdateTime_ = 0;
+  this.lastRefreshTime_ = 0;
 
   /**
    * Minimum time (in milliseconds) to wait between pulling full table contents
@@ -107,8 +126,8 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 
   /**
-   * Throttled version (specific to this instance) of the readAll operation,
-   * used to coalesce readAll requests.
+   * Throttled version (specific to this instance) of the refresh operation,
+   * used to coalesce refresh requests.
    * @private {function}
    */
   this.refreshTable_ = this.makeThrottledRefresh_(
@@ -135,40 +154,55 @@ NetSimTable.prototype.unsubscribe = function () {
 };
 
 /**
- * @param {!NodeStyleCallback} callback
+ * Asynchronously retrieve new/updated table content from the server, using
+ * whatever method is most appropriate to this table's configuration.
+ * When done, updates the local cache and hits the provided callback to
+ * indicate completion.
+ * @param {NodeStyleCallback} [callback] - indicates completion of the operation.
+ * @returns {jQuery.Promise} Guaranteed to resolve after the cache update,
+ *          so .done() operations can interact with the cache.
  */
-NetSimTable.prototype.readAll = function (callback) {
-  this.clientApi_.all(function (err, data) {
-    if (err === null) {
-      this.fullCacheUpdate_(data);
+NetSimTable.prototype.refresh = function (callback) {
+  callback = callback || function () {};
+
+  var apiCall = this.useIncrementalRefresh_ ?
+      this.api_.allRowsFromID.bind(this.api_, this.latestRowID_ + 1) :
+      this.api_.allRows.bind(this.api_);
+  var cacheUpdate = this.useIncrementalRefresh_ ?
+      this.incrementalCacheUpdate_.bind(this) :
+      this.fullCacheUpdate_.bind(this);
+
+  var deferred = $.Deferred();
+  apiCall(function (err, data) {
+    if (err) {
+      callback(err, data);
+      deferred.reject(err);
+    } else {
+      cacheUpdate(data);
+      callback(err, data);
+      deferred.resolve();
     }
-    callback(err, data);
-  }.bind(this));
+  });
+  return deferred.promise();
 };
 
 /**
  * Generate throttled refresh function which will generate actual server
  * requests at the maximum given rate no matter how fast it is called. This
- * allows us to coalesce readAll events and reduce server load.
+ * allows us to coalesce refresh events and reduce server load.
  * @param {number} waitMs - Minimum time (in milliseconds) to wait between
- *        readAll requests to the server.
+ *        refresh requests to the server.
  * @returns {function}
  * @private
  */
 NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
-  return _.throttle(function () {
-    this.clientApi_.all(function (err, data) {
-      if (err === null) {
-        this.fullCacheUpdate_(data);
-      }
-    }.bind(this));
-  }.bind(this), waitMs);
+  return _.throttle(this.refresh.bind(this, function () {}), waitMs);
 };
 
 /**
  * @returns {Array} all locally cached table rows
  */
-NetSimTable.prototype.readAllCached = function () {
+NetSimTable.prototype.readAll = function () {
   return this.arrayFromCache_();
 };
 
@@ -177,7 +211,7 @@ NetSimTable.prototype.readAllCached = function () {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.read = function (id, callback) {
-  this.clientApi_.fetch(id, function (err, data) {
+  this.api_.fetchRow(id, function (err, data) {
     if (err === null) {
       this.updateCacheRow_(id, data);
     }
@@ -190,7 +224,7 @@ NetSimTable.prototype.read = function (id, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.create = function (value, callback) {
-  this.clientApi_.create(value, function (err, data) {
+  this.api_.createRow(value, function (err, data) {
     if (err === null) {
       this.addRowToCache_(data);
     }
@@ -204,7 +238,7 @@ NetSimTable.prototype.create = function (value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.update = function (id, value, callback) {
-  this.clientApi_.update(id, value, function (err, success) {
+  this.api_.updateRow(id, value, function (err, success) {
     if (err === null) {
       this.updateCacheRow_(id, value);
     }
@@ -217,7 +251,7 @@ NetSimTable.prototype.update = function (id, value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.clientApi_.delete(id, function (err, success) {
+  this.api_.deleteRow(id, function (err, success) {
     if (err === null) {
       this.removeRowFromCache_(id);
     }
@@ -231,21 +265,16 @@ NetSimTable.prototype.delete = function (id, callback) {
  * @param id
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
-  // Client API doesn't support synchronous calls, so we manually make our API
-  // call here
-  $.ajax({
-    url: this.remoteUrl_ + '/' + id,
-    type: 'delete',
-    async: false,
-    error: function (jqXHR, textStatus, errorThrown) {
+  var async = false; // Force synchronous request
+  this.api_.deleteRow(id, function (err) {
+    if (err) {
       // Nothing we can really do with the error, as we're in the process of
       // navigating away. Throw so that high incidence rates will show up in
       // new relic.
-      throw new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
+      throw err;
     }
-  });
-
-  this.removeRowFromCache_(id);
+    this.removeRowFromCache_(id);
+  }.bind(this), async);
 };
 
 /**
@@ -254,18 +283,43 @@ NetSimTable.prototype.synchronousDelete = function (id) {
  */
 NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Rebuild entire cache
+  var maxRowID = 0;
   var newCache = allRows.reduce(function (prev, currentRow) {
     prev[currentRow.id] = currentRow;
+    if (currentRow.id > maxRowID) {
+      maxRowID = currentRow.id;
+    }
     return prev;
   }, {});
 
   // Check for changes, if anything changed notify all observers on table.
   if (!_.isEqual(this.cache_, newCache)) {
     this.cache_ = newCache;
+    this.latestRowID_ = maxRowID;
     this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 
-  this.lastFullUpdateTime_ = Date.now();
+  this.lastRefreshTime_ = Date.now();
+};
+
+/**
+ * Add and update rows in the local cache from the given set of new rows
+ * (probably retrieved from the server).
+ * @param {Array} newRows
+ * @private
+ */
+NetSimTable.prototype.incrementalCacheUpdate_ = function (newRows) {
+  if (newRows.length > 0) {
+    var maxRowID = 0;
+    newRows.forEach(function (row) {
+      this.cache_[row.id] = row;
+      maxRowID = Math.max(maxRowID, row.id);
+    }, this);
+    this.latestRowID_ = maxRowID;
+    this.tableChange.notifyObservers(this.arrayFromCache_());
+  }
+
+  this.lastRefreshTime_ = Date.now();
 };
 
 /**
@@ -331,21 +385,21 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
 };
 
 /**
- * Change the maximum rate at which the readAll operation for this table
- * will _actually_ be executed, no matter how fast readAll() is called.
- * @param {number} waitMs - Minimum number of milliseconds between readAll
- *        requests to the server.
+ * Change the maximum rate at which the refresh operation for this table
+ * will _actually_ be executed, no matter how fast we receive invalidations.
+ * @param {number} waitMs - Minimum number of milliseconds between invalidation-
+ *        triggered requests to the server.
  */
 NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
-  // To do this, we just replace the throttled readAll function with a new one.
+  // To do this, we just replace the throttled refresh function with a new one.
   this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
 };
 
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
   var now = Date.now();
-  if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
-    this.lastFullUpdateTime_ = now;
+  if (now - this.lastRefreshTime_ >= this.pollingInterval_) {
+    this.lastRefreshTime_ = now;
     this.refreshTable_();
   }
 };
