@@ -95,7 +95,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   this.messageTable = new NetSimTable(channel, shardID, 'm');
 
   /**
-   * Collection of log entries for nodes on teh shard.  Logs reference node IDs,
+   * Collection of log entries for nodes on the shard.  Logs reference node IDs,
    * and are therefore referentially dependent on the node table (but we should
    * change this).channel
    *
@@ -113,7 +113,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
     // This is only safe to do because we never update or delete rows in this table.
     useIncrementalRefresh: true
   });
-  this.logTable.setRefreshThrottleTime(5000);
+  this.logTable.unsubscribe();
 };
 
 /**

@@ -34,8 +34,7 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           should appear above the lobby list.
  *
  * @property {boolean} showLogBrowserButton - Whether the "Log Browser" is
- *           available.  Adds a button to the lobby and one to the bottom
- *           of the router tab.
+ *           available in the lobby.
  *
  * @property {MessageGranularity} messageGranularity - Whether the simulator
  *           puts a single bit into storage at a time, or a whole packet.
