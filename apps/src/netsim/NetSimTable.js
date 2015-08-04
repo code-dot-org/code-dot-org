@@ -18,6 +18,7 @@
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
+var netsimGlobals = require('./netsimGlobals');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -197,7 +198,8 @@ NetSimTable.prototype.refresh = function (callback) {
  */
 NetSimTable.prototype.makeThrottledRefresh_ = function (minimumDelayBetweenRequests) {
   var throttledRefresh = _.throttle(this.refresh.bind(this), minimumDelayBetweenRequests);
-  return _.debounce(throttledRefresh, 250, {maxWait: 500});
+  var jitter = netsimGlobals.randomIntInRange(0, 250);
+  return _.debounce(throttledRefresh, 250 + jitter, {maxWait: 500 + jitter});
 };
 
 /**
