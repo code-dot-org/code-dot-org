@@ -646,7 +646,7 @@ NetSimRouterNode.prototype.getStatus = function () {
   var levelConfig = netsimGlobals.getLevelConfig();
 
   // Determine status based on cached wire data
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.entityID;
   }, this);
@@ -663,7 +663,7 @@ NetSimRouterNode.prototype.getStatus = function () {
     });
   }
 
-  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var cachedNodeRows = this.shard_.nodeTable.readAll();
   var connectedNodeNames = incomingWireRows.map(function (wireRow) {
     var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
       return nodeRow.id === wireRow.localNodeID;
@@ -704,7 +704,7 @@ NetSimRouterNode.prototype.getStatus = function () {
  */
 NetSimRouterNode.prototype.isFull = function () {
   // Determine status based on cached wire data
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.entityID;
   }, this);
@@ -767,11 +767,11 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
 
     // Populate router wire cache with initial data
-    var cachedWires = this.shard_.wireTable.readAllCached();
+    var cachedWires = this.shard_.wireTable.readAll();
     this.onWireTableChange_(cachedWires);
 
     // Populate router log cache with initial data
-    var cachedLogs = this.shard_.logTable.readAllCached();
+    var cachedLogs = this.shard_.logTable.readAll();
     this.onLogTableChange_(cachedLogs);
   }
 };
@@ -1125,7 +1125,7 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
 
   // Is it some node elsewhere on the shard?
   var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
-      this.shard_.nodeTable.readAllCached());
+      this.shard_.nodeTable.readAll());
   var node = _.find(nodes, function (node) {
     return node.getHostname() === hostname;
   });
@@ -1188,7 +1188,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
 
   // Is it a local client?
   var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
-      this.shard_.nodeTable.readAllCached());
+      this.shard_.nodeTable.readAll());
   var wireRow = _.find(this.myWireRowCache_, function (row) {
     return row.localAddress === address;
   });

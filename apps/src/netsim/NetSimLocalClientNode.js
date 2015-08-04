@@ -164,7 +164,7 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
   this.eventKeys.registeredOnShard = this.shard_;
 
   // Set up initial state from cached rows
-  this.onNodeTableChange_(this.shard_.nodeTable.readAllCached());
+  this.onNodeTableChange_(this.shard_.nodeTable.readAll());
 };
 
 /**
@@ -332,7 +332,7 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   }
 
   // Remove messages being simulated by this node
-  var myMessages = this.shard_.messageTable.readAllCached().filter(function (row) {
+  var myMessages = this.shard_.messageTable.readAll().filter(function (row) {
     return row.simulatedBy === this.entityID;
   }, this).map(function (row) {
     return new NetSimMessage(this.shard_, row);
