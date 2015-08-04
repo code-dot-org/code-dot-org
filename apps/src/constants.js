@@ -38,6 +38,7 @@ exports.TestResults = {
   INCOMPLETE_BLOCK_IN_FUNCTION: 16, // Incomplete block inside a function.
   QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
   EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
+  EXAMPLE_FAILED: 19,            // One of our examples didn't match the definition
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
