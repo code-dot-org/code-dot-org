@@ -18,12 +18,15 @@ var Item = function (options) {
   this.height = options.height || 50;
   this.width = options.width || 50;
   this.speed = options.speed || constants.DEFAULT_SPRITE_SPEED / 2;
+  this.animationFrames = options.animationFrames || 1;
 
   this.currentFrame_ = 0;
   var self = this;
   this.animator_ = window.setInterval(function () {
-    if (self.loop || self.currentFrame_ + 1 < self.frames) {
-      self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+    if (self.dir != Direction.NONE) {
+      if (self.loop || self.currentFrame_ + 1 < self.frames) {
+        self.currentFrame_ = (self.currentFrame_ + 1) % self.frames;
+      }
     }
   }, 50);
 };
@@ -58,7 +61,7 @@ Item.prototype.createElement = function (parentElement) {
   this.element = document.createElementNS(SVG_NS, 'image');
   this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     this.image);
-  this.element.setAttribute('height', this.height);
+  this.element.setAttribute('height', this.height * this.animationFrames);
   this.element.setAttribute('width', this.width * this.frames);
   parentElement.appendChild(this.element);
 
@@ -87,7 +90,7 @@ Item.prototype.removeElement = function () {
 };
 
 /**
- * Display our item at it's current location (currently not supporting rotation)
+ * Display our item at its current location
  */
 Item.prototype.display = function () {
   var topLeft = {
@@ -95,8 +98,10 @@ Item.prototype.display = function () {
     y: this.y - this.height / 2
   };
 
-  this.element.setAttribute('x', topLeft.x - this.width * this.currentFrame_);
-  this.element.setAttribute('y', topLeft.y);
+  var directionFrame = Studio.itemGetDirectionFrame(this);
+
+  this.element.setAttribute('x', topLeft.x - this.width * directionFrame);
+  this.element.setAttribute('y', topLeft.y - this.height * this.currentFrame_);
 
   var clipRect = this.clipPath.childNodes[0];
   clipRect.setAttribute('x', topLeft.x);

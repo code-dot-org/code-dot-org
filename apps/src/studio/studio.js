@@ -2041,6 +2041,11 @@ var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
 // reset them to face south.
 var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
 
+Studio.itemGetDirectionFrame = function(item) {
+  return item.dir == Direction.NONE ? 0 : frameDirTableWalking[item.dir];
+}
+
+
 /**
  * Given direction/emotion/tickCount, calculate which frame number we should
  * display for sprite.
@@ -2634,6 +2639,9 @@ Studio.addItemsToScene = function (opts) {
       loop: true,
       x: pos.x,
       y: pos.y,
+      animationFrames: 12,
+      width: 100,
+      height: 100
     };
 
     var item = new Item(itemOptions);
