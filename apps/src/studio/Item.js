@@ -49,7 +49,7 @@ Item.__resetIds = function () {
 Item.prototype.createElement = function (parentElement) {
   // create our clipping path/rect
   this.clipPath = document.createElementNS(SVG_NS, 'clipPath');
-  var clipId = 'item_clippath_' + (uniqueId++);
+  var clipId = 'item_clippath_' + uniqueId;
   this.clipPath.setAttribute('id', clipId);
   var rect = document.createElementNS(SVG_NS, 'rect');
   rect.setAttribute('width', this.width);
@@ -57,10 +57,11 @@ Item.prototype.createElement = function (parentElement) {
   this.clipPath.appendChild(rect);
 
   parentElement.appendChild(this.clipPath);
-
+  var itemId = 'item_' + (uniqueId++);
   this.element = document.createElementNS(SVG_NS, 'image');
   this.element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     this.image);
+  this.element.setAttribute('id', itemId);
   this.element.setAttribute('height', this.height * this.animationFrames);
   this.element.setAttribute('width', this.width * this.frames);
   parentElement.appendChild(this.element);
