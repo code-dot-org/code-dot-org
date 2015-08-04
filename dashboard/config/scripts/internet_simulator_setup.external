@@ -1,0 +1,29 @@
+name 'Internet Simulator Setup'
+title 'Internet Simulator Setup'
+description 'description here'
+css 'unplugged'
+
+markdown <<MARKDOWN
+# Internet Simulator: Overview
+
+_Note: This instructions listed in this tutorial are for teachers wishing to use the Internet Simulator as a standalone tool, separate from the Code.org Computer Science Principles curriculum. If you are planning to use the activities designed as part of the Code.org CSP curriculum, then please head to the [CSP curriculum page.](/educate/csp)_
+
+The Internet Simulator is a tool developed by Code.org for our new high school [Computer Science Principles](/educate/csp) class. The tool is designed to let students get a hands on experience with the different challenges associated with multiple computers communicating via the internet, starting with the basics of how two computers can communicate a single bit of information via a single share wire, to what protocols are needed to ensure reliable delivery of messages, to experimenting with sophisticated text-based protocols such as HTTP or HTML.
+ <br><br>
+<img src="https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png" width="600px" hspace="100px"/>
+<br><br>
+The tool doesn't _teach_ these concepts, but rather provides a mechanism for multiple students to come together and send binary, decimal, or ascii based messages that follow certain rules configured for that variation of the simulation. In Code.org's Computer Science Principles curriculum, we structure lessons and activities such that students are:
+
+* **First presented with a challenge**
+ * e.g. The physical internet is inherently unreliable and can drop messages
+* **Given an opportunity to experience and experiment with solutions** to that challenge in the Internet Simulator
+ * e.g. 20% of all messages are dropped and packets can be routed out of order
+* **Finally, students research how that protocol or invention works "in the real world"** via a video or research project
+ * e.g. Research how TCP really works
+    
+The Internet Simulator is used in multiple lessons throughout Units 1 and 2 in our curriculum to successively build up the different layers of the Internet. The setup instructions on the next page are for teachers who would like to use the Internet Simulator separate from the Code.org CSP curriculum. If you are considering using the tool in your classroom with activities you design, we would still recommend you get familiar with the tool via our [lesson plans](/educate/csp/unit1). 
+
+_Next up: Setup instructions_
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
