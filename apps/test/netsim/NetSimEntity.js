@@ -119,7 +119,7 @@ describe("NetSimEntity", function () {
       assertTableSize(testShard, 'nodeTable', 3);
 
       var nodes;
-      testShard.nodeTable.readAll(function (err, rows) {
+      testShard.nodeTable.refreshAll(function (err, rows) {
         nodes = rows.map(function (row) {
           return new NetSimClientNode(testShard, row);
         });

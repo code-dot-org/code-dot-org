@@ -283,14 +283,14 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
  * @private
  */
 NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
-  this.shard_.nodeTable.readAll(function (err, rows) {
+  this.shard_.nodeTable.refreshAll(function (err, rows) {
     if (err) {
       logger.warn("Node table read failed: " + err.message);
       return;
     }
 
     this.onNodeTableChange_(rows);
-    this.shard_.wireTable.readAll(function (err, rows) {
+    this.shard_.wireTable.refreshAll(function (err, rows) {
       if (err) {
         logger.warn("Wire table read failed: " + err.message);
         return;

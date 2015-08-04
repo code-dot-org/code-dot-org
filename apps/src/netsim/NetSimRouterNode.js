@@ -862,7 +862,7 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
 
   var shard = this.shard_;
   var routerID = this.entityID;
-  this.shard_.wireTable.readAll(function (err, rows) {
+  this.shard_.wireTable.refreshAll(function (err, rows) {
     if (err) {
       onComplete(err, []);
       return;

@@ -254,7 +254,7 @@ describe("NetSimVisualization", function () {
         var newNode = makeRemoteClient('gamma');
 
         // Trigger visualization update, synchronous in tests.
-        testShard.nodeTable.readAll(function (_, data) {
+        testShard.nodeTable.refreshAll(function (_, data) {
           netSimVis.onNodeTableChange_(data);
         });
 
@@ -293,7 +293,7 @@ describe("NetSimVisualization", function () {
         makeRemoteWire(deltaNode, router, [deltaNode, router]);
 
         // Trigger visualization update, synchronous in tests.
-        testShard.wireTable.readAll(function (_, data) {
+        testShard.wireTable.refreshAll(function (_, data) {
           netSimVis.onWireTableChange_(data);
         });
 
