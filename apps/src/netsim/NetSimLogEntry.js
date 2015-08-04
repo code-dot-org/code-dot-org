@@ -208,7 +208,7 @@ NetSimLogEntry.prototype.getTimeString = function () {
  * @returns {NetSimClientNode|NetSimRouterNode|null}
  */
 NetSimLogEntry.prototype.getOriginNode = function () {
-  var nodeRows = this.shard_.nodeTable.readAllCached();
+  var nodeRows = this.shard_.nodeTable.readAll();
   var originNodeRow = _.find(nodeRows, function (row) {
     return row.id === this.nodeID;
   }.bind(this));
