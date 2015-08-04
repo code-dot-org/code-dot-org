@@ -30,6 +30,7 @@ This .md file should only contain information which is specific to Code.org engi
 1. `git commit -m "levelbuilder changes committed by YOUR NAME HERE"`
 1. `git push`
 1. On GitHub, open a pull request from `levelbuilder` into `staging`. link: https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder
+2. Click the "Merge pull request" button and watch the "Staging" room in Hipchat to make sure the build succeeds. If anything breaks, see the "Did it break section" below. 
 
 # Did it break?
 
