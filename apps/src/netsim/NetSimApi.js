@@ -1,5 +1,5 @@
 /**
- * @overview Wraps NetSim REST APIs for operations of "tables" and "shards"
+ * @overview Wraps NetSim REST APIs for operations of "tables" and "shards."
  * @see net_sim_api.rb
  */
 /* jshint
