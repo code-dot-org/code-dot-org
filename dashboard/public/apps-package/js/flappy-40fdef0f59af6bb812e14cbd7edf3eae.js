@@ -187,7 +187,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":266}],136:[function(require,module,exports){
+},{"../skins":267}],136:[function(require,module,exports){
 /*jshint multistr: true */
 
 // todo - i think our prepoluated code counts as LOCs
@@ -763,7 +763,7 @@ module.exports.k1_9 = {
 };
 
 
-},{"../block_utils":77,"../utils":316,"./constants":133,"./locale":137}],135:[function(require,module,exports){
+},{"../block_utils":77,"../utils":317,"./constants":133,"./locale":137}],135:[function(require,module,exports){
 /**
  * Blockly App: Flappy
  *
@@ -1778,7 +1778,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":106,"../dom":108,"../dropletUtils":109,"../locale":150,"../skins":266,"../templates/page.html.ejs":294,"../utils":316,"./api":131,"./constants":133,"./controls.html.ejs":134,"./locale":137,"./visualization.html.ejs":140}],140:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":106,"../dom":108,"../dropletUtils":109,"../locale":150,"../skins":267,"../templates/page.html.ejs":295,"../utils":317,"./api":131,"./constants":133,"./controls.html.ejs":134,"./locale":137,"./visualization.html.ejs":140}],140:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2476,7 +2476,7 @@ exports.install = function(blockly, blockInstallOptions) {
 };
 
 
-},{"../StudioApp":5,"../block_utils":77,"../locale":150,"../utils":316,"./locale":137}],137:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":77,"../locale":150,"../utils":317,"./locale":137}],137:[function(require,module,exports){
 // locale for flappy
 
 module.exports = window.blockly.flappy_locale;

@@ -37,7 +37,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":266}],62:[function(require,module,exports){
+},{"../skins":267}],62:[function(require,module,exports){
 /*jshint multistr: true */
 
 var msg = require('./locale');
@@ -309,7 +309,7 @@ levels.full_sandbox =  {
 };
 
 
-},{"../block_utils":77,"../utils":316,"./locale":63}],21:[function(require,module,exports){
+},{"../block_utils":77,"../utils":317,"./locale":63}],21:[function(require,module,exports){
 /**
  * CodeOrgApp: Applab
  *
@@ -1793,7 +1793,7 @@ Applab.getIdDropdown = function (tagFilter) {
 };
 
 
-},{"../JSInterpreter":1,"../StudioApp":5,"../acemode/annotationList":6,"../codegen":106,"../constants":107,"../dom":108,"../dropletUtils":109,"../locale":150,"../skins":266,"../slider":267,"../templates/page.html.ejs":294,"../timeoutList":300,"../utils":316,"../xml":317,"./DebugArea":11,"./api":18,"./apiBlockly":19,"./appStorage":20,"./applabTurtle":22,"./assetManagement/assetListStore":25,"./assetManagement/clientApi":26,"./assetManagement/show.js":27,"./blocks":28,"./commands":30,"./controls.html.ejs":32,"./designElements/library":49,"./designMode":55,"./dontMarshalApi":57,"./dropletConfig":58,"./errorHandler":59,"./extraControlRows.html.ejs":60,"./locale":63,"./visualization.html.ejs":68}],68:[function(require,module,exports){
+},{"../JSInterpreter":1,"../StudioApp":5,"../acemode/annotationList":6,"../codegen":106,"../constants":107,"../dom":108,"../dropletUtils":109,"../locale":150,"../skins":267,"../slider":268,"../templates/page.html.ejs":295,"../timeoutList":301,"../utils":317,"../xml":318,"./DebugArea":11,"./api":18,"./apiBlockly":19,"./appStorage":20,"./applabTurtle":22,"./assetManagement/assetListStore":25,"./assetManagement/clientApi":26,"./assetManagement/show.js":27,"./blocks":28,"./commands":30,"./controls.html.ejs":32,"./designElements/library":49,"./designMode":55,"./dontMarshalApi":57,"./dropletConfig":58,"./errorHandler":59,"./extraControlRows.html.ejs":60,"./locale":63,"./visualization.html.ejs":68}],68:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3093,7 +3093,7 @@ designMode.addKeyboardHandlers = function () {
 };
 
 
-},{"../StudioApp":5,"../constants":107,"../utils":316,"./DesignToggleRow.jsx":14,"./DesignWorkspace.jsx":17,"./assetManagement/show.js":27,"./designElements/library":49,"react":649}],32:[function(require,module,exports){
+},{"../StudioApp":5,"../constants":107,"../utils":317,"./DesignToggleRow.jsx":14,"./DesignWorkspace.jsx":17,"./assetManagement/show.js":27,"./designElements/library":49,"react":649}],32:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3188,7 +3188,7 @@ function installContainer(blockly, generator, blockInstallOptions) {
 }
 
 
-},{"../codegen":106,"../locale":150,"../utils":316,"./locale":63}],22:[function(require,module,exports){
+},{"../codegen":106,"../locale":150,"../utils":317,"./locale":63}],22:[function(require,module,exports){
 var studioApp = require('../StudioApp').singleton;
 var applabCommands = require('./commands');
 
@@ -4628,7 +4628,7 @@ applabCommands.getUserId = function (opts) {
 };
 
 
-},{"../StudioApp":5,"../codegen":106,"../timeoutList":300,"./ChangeEventHandler":10,"./appStorage":20,"./applabTurtle":22,"./errorHandler":59,"./keyEvent":61,"./rgbcolor.js":65}],65:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":106,"../timeoutList":301,"./ChangeEventHandler":10,"./appStorage":20,"./applabTurtle":22,"./errorHandler":59,"./keyEvent":61,"./rgbcolor.js":65}],65:[function(require,module,exports){
 /**
  * A class to parse color values
  * @author Stoyan Stefanov <sstoo@gmail.com>
@@ -7426,7 +7426,7 @@ module.exports = {
 };
 
 
-},{"../../utils":316,"./button.jsx":42,"./canvas.jsx":43,"./checkbox.jsx":44,"./dropdown.jsx":45,"./image.jsx":47,"./label.jsx":48,"./radioButton.jsx":50,"./screen.jsx":52,"./textInput.jsx":53,"./textarea.jsx":54}],54:[function(require,module,exports){
+},{"../../utils":317,"./button.jsx":42,"./canvas.jsx":43,"./checkbox.jsx":44,"./dropdown.jsx":45,"./image.jsx":47,"./label.jsx":48,"./radioButton.jsx":50,"./screen.jsx":52,"./textInput.jsx":53,"./textarea.jsx":54}],54:[function(require,module,exports){
 /* global $ */
 var React = require('react');
 
@@ -30345,7 +30345,7 @@ DebugArea.prototype.getHeightWhenClosed = function () {
 };
 
 
-},{"../dom":108,"../utils":316,"./locale":63}],63:[function(require,module,exports){
+},{"../dom":108,"../utils":317,"./locale":63}],63:[function(require,module,exports){
 // locale for applab
 
 module.exports = window.blockly.applab_locale;
