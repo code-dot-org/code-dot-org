@@ -1,26 +1,32 @@
 class ChangePhaseToInt < ActiveRecord::Migration
-  def change
+  PHASES = {
+      1 => 'Phase 1',
+      2 => 'Phase 2',
+      3 => 'Phase 2 Online',
+      4 => 'Phase 3A',
+      5 => 'Phase 3B',
+      6 => 'Phase 3C',
+      7 => 'Phase 3D',
+      8 => 'Phase 4'
+  }
+  def up
+    ActiveRecord::Base.transaction do
+      Workshop.find_each do |workshop|
+        phase = workshop.phase
+        if PHASES.invert[phase]
+          workshop.phase = PHASES.invert[phase]
+        else
+          raise "error"
+        end
+        workshop.save!
+      end
+      change_column :workshops, :phase, :text
+    end
+  end
+  def down
     Workshop.find_each do |workshop|
       phase = workshop.phase
-      new_phase = 0
-      if phase == 'Phase 1'
-        new_phase = 1
-      elsif phase == 'Phase 2'
-        new_phase = 2
-      elsif phase == 'Phase 2 Online'
-        new_phase = 3
-      elsif phase == 'Phase 3A'
-        new_phase = 4
-      elsif phase == 'Phase 3B'
-        new_phase = 5
-      elsif phase == 'Phase 3C'
-        new_phase = 6
-      elsif phase == 'Phase 3D'
-        new_phase = 7
-      elsif phase == 'Phase 4'
-        new_phase = 8
-      end
-      workshop.phase = new_phase
+      workshop.phase = PHASES[phase]
       workshop.save!
     end
     change_column :workshops, :phase, :text
