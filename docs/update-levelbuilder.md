@@ -23,7 +23,7 @@ This .md file should only contain information which is specific to Code.org engi
 ## To commit changes from levelbuilder into staging:
 
 1. Integrate `staging` into `levebuilder` as described above; wait for levelbuilder finish deploying.
-1. `ssh levelbuilder.studio.code.org`
+1. `ssh levelbuilder-staging` from gateway
 1. `cd levelbuilder`
 1. `git branch` **If it doesn't say `levelbuilder` get the dev-of-the-week and/or Will.**
 1. `git add --all dashboard`
