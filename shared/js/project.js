@@ -192,6 +192,9 @@ var projects = module.exports = {
       $(".full_container").css({"padding":"0px"});
     }
   },
+  projectChanged: function() {
+    hasProjectChanged = true;
+  },
   getCurrentApp: function () {
     switch (appOptions.app) {
       case 'applab':
@@ -220,7 +223,7 @@ var projects = module.exports = {
    * @param {function} callback Fucntion to be called after saving
    */
   save: function(source, callback) {
-    if (arguments.length === 1) {
+    if (arguments.length < 2) {
       // If no source is provided, the only argument is our callback and we
       // ask for the source ourselves
       callback = arguments[0];
