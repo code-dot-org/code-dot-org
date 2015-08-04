@@ -91,6 +91,12 @@
   }
   pixelationInit();
 
+  function pixelationDisplay() {
+    pixel_data.value = options.data;
+    drawGraph();
+    formatBitDisplay();
+  }
+
   // Initialize projects for save/load functionality if channel id is present.
   if (appOptions.channel) {
     window.apps.setupProjectsExternal();
@@ -103,23 +109,23 @@
         options.data = levelSource;
       },
       getLevelSource: function () {
-        return pixel_data.value;
+        return pixel_data.value.replace(/[ \n]/g, "");
       }
     };
 
-    options.saveProject = dashboard.project.save;
-
     var promise = dashboard.project.load();
     promise.then(function() {
+      // Only enable saving if the initial load succeeds. This means new work
+      // will not be saved, but old work will not be erased and may become
+      // available by refreshing the page.
+      options.saveProject = dashboard.project.save.bind(dashboard.project);
+      options.projectChanged = dashboard.project.projectChanged;
       window.dashboard.project.init(projectsHandler);
-      pixel_data.value = options.data;
-      drawGraph();
+    }).always(function() {
+      pixelationDisplay();
     });
   } else {
-    pixel_data.value = options.data;
-    drawGraph();
+    pixelationDisplay();
   }
 
-  if(options.format=='raw') unformatBits()
-  else formatBitDisplay();
 </script>
