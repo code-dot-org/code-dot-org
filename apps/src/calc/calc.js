@@ -147,6 +147,8 @@ Calc.init = function(config) {
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
   config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -1028,6 +1030,7 @@ function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) 
  */
 function cloneNodeWithoutIds(elementId) {
   var clone = document.getElementById(elementId).cloneNode(true);
+  clone.removeAttribute("id");
   var descendants = clone.getElementsByTagName("*");
   for (var i = 0; i < descendants.length; i++) {
     var element = descendants[i];
@@ -1052,6 +1055,7 @@ function displayFeedback() {
   // Show svg in feedback dialog
   if (!isPreAnimationFailure(appState.testResults)) {
     appDiv = cloneNodeWithoutIds('svgCalc');
+    appDiv.setAttribute('class', 'svgCalcFeedback');
   }
   var options = {
     app: 'calc',

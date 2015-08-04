@@ -9,6 +9,9 @@ var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
+var dataConverters = require('@cdo/apps/netsim/dataConverters');
+var binaryToBase64 = dataConverters.binaryToBase64;
+var base64ToBinary = dataConverters.base64ToBinary;
 
 describe("NetSimLogEntry", function () {
   var testShard;
@@ -30,8 +33,11 @@ describe("NetSimLogEntry", function () {
     assertOwnProperty(row, 'nodeID');
     assertEqual(row.nodeID, undefined);
 
-    assertOwnProperty(row, 'binary');
-    assertEqual(row.binary, '');
+    assertOwnProperty(row, 'base64Binary');
+    assertOwnProperty(row.base64Binary, 'string');
+    assertEqual(row.base64Binary.string, '');
+    assertOwnProperty(row.base64Binary, 'len');
+    assertEqual(row.base64Binary.len, 0);
 
     assertOwnProperty(row, 'status');
     assertEqual(row.status, NetSimLogEntry.LogStatus.SUCCESS);
@@ -44,7 +50,10 @@ describe("NetSimLogEntry", function () {
     var row = {
       id: 1,
       nodeID: 42,
-      binary: 'Non-default log text',
+      base64Binary: {
+        string: "kg==",
+        len: 7
+      },
       status: NetSimLogEntry.LogStatus.DROPPED,
       timestamp: 52000
     };
@@ -52,7 +61,7 @@ describe("NetSimLogEntry", function () {
 
     assertEqual(logEntry.entityID, 1);
     assertEqual(logEntry.nodeID, 42);
-    assertEqual(logEntry.binary, 'Non-default log text');
+    assertEqual(logEntry.binary, '1001001');
     assertEqual(logEntry.status, NetSimLogEntry.LogStatus.DROPPED);
     assertEqual(logEntry.timestamp, 52000);
   });
@@ -61,29 +70,30 @@ describe("NetSimLogEntry", function () {
     it ("adds an entry to the log table", function () {
       assertTableSize(testShard, 'logTable', 0);
 
-      NetSimLogEntry.create(testShard, null, null, null, function () {});
+      NetSimLogEntry.create(testShard, null, '10100101', null, function () {});
 
       assertTableSize(testShard, 'logTable', 1);
     });
 
     it ("Puts row values in remote table", function () {
       var nodeID = 1;
-      var binary = 'xyzzy';
+      var binary = '1001010100101';
       var status = NetSimLogEntry.LogStatus.SUCCESS;
 
       NetSimLogEntry.create(testShard, nodeID, binary, status, function () {});
 
       testShard.logTable.readAll(function (err, rows) {
         var row = rows[0];
+        var rowBinary = base64ToBinary(row.base64Binary.string, row.base64Binary.len);
         assertEqual(row.nodeID, nodeID);
-        assertEqual(row.binary, binary);
+        assertEqual(rowBinary, binary);
         assertEqual(row.status, status);
         assertWithinRange(row.timestamp, Date.now(), 10);
       });
     });
 
     it ("Returns log and no error on success", function () {
-      NetSimLogEntry.create(testShard, null, null, null, function (err, result) {
+      NetSimLogEntry.create(testShard, null, '10101010', null, function (err, result) {
         assert(err === null, "Error is null on success");
         assert(result instanceof NetSimLogEntry, "Result is a NetSimLogEntry");
       });
@@ -112,7 +122,7 @@ describe("NetSimLogEntry", function () {
     netsimGlobals.getLevelConfig().addressFormat = '4';
     netsimGlobals.getLevelConfig().packetCountBitWidth = 4;
     var logEntry = new NetSimLogEntry(null, {
-      binary: '0001 0010 0011 0100 01010110'
+      base64Binary: binaryToBase64('000100100011010001010110')
     }, [
       Packet.HeaderType.TO_ADDRESS,
       Packet.HeaderType.FROM_ADDRESS,

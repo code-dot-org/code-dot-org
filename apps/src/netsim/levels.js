@@ -34,8 +34,7 @@ var NetSimTabType = netsimConstants.NetSimTabType;
  *           should appear above the lobby list.
  *
  * @property {boolean} showLogBrowserButton - Whether the "Log Browser" is
- *           available.  Adds a button to the lobby and one to the bottom
- *           of the router tab.
+ *           available in the lobby.
  *
  * @property {MessageGranularity} messageGranularity - Whether the simulator
  *           puts a single bit into storage at a time, or a whole packet.
@@ -211,7 +210,7 @@ levels.custom = {
   // Send widget configuration
   showAddPacketButton: false,
   showPacketSizeControl: false,
-  defaultPacketSizeLimit: Infinity,
+  defaultPacketSizeLimit: 8192,
 
   // Tab-panel control
   showTabs: [],
@@ -280,7 +279,7 @@ levels.playground = {
   // Send widget configuration
   showAddPacketButton: false,
   showPacketSizeControl: false,
-  defaultPacketSizeLimit: Infinity,
+  defaultPacketSizeLimit: 8192,
 
   // Tab-panel control
   showTabs: ['instructions', 'my_device', 'router', 'dns'],

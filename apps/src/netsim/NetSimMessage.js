@@ -65,7 +65,7 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
   var base64Payload = messageRow.base64Payload;
   this.payload = (base64Payload) ?
     base64ToBinary(base64Payload.string, base64Payload.len) :
-    undefined;
+    '';
 
   /**
    * If this is an inter-router message, the number of routers this
@@ -104,7 +104,20 @@ NetSimMessage.send = function (shard, messageData, onComplete) {
   entity.payload = messageData.payload;
   entity.extraHopsRemaining = utils.valueOr(messageData.extraHopsRemaining, 0);
   entity.visitedNodeIDs = utils.valueOr(messageData.visitedNodeIDs, []);
-  entity.getTable().create(entity.buildRow(), onComplete);
+  try {
+    entity.getTable().create(entity.buildRow(), onComplete);
+  } catch (err) {
+    onComplete(err, null);
+  }
+};
+
+/**
+ * Static helper.
+ * @param {NetSimMessage} message
+ * @returns {boolean} TRUE iff the given message is well-formed.
+ */
+NetSimMessage.isValid = function (message) {
+  return /^[01]*$/.test(message.payload);
 };
 
 /**
@@ -129,13 +142,14 @@ NetSimMessage.prototype.getTable = function () {
 /**
  * Build own row for the message table
  * @returns {messageRow}
+ * @throws {TypeError} if payload is invalid
  */
 NetSimMessage.prototype.buildRow = function () {
   return {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     simulatedBy: this.simulatedBy,
-    base64Payload: this.payload ? binaryToBase64(this.payload) : undefined,
+    base64Payload: binaryToBase64(this.payload),
     extraHopsRemaining: this.extraHopsRemaining,
     visitedNodeIDs: this.visitedNodeIDs
   };

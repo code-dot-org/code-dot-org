@@ -1,9 +1,20 @@
 require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
+require 'cgi'
 require 'csv'
+require_relative '../middleware/helpers/redis_table'
+require_relative '../middleware/channels_api'
 
+# NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
+
+  TABLE_NAMES = {
+      node: 'n',
+      wire: 'w',
+      message: 'm',
+      log: 'l'
+  }
 
   helpers do
     %w{
@@ -18,33 +29,17 @@ class NetSimApi < Sinatra::Base
 
   end
 
-  # For test, make it possible to override the usual configured API choice
+  # For test, make it possible to override the usual configured API choices.
   @@overridden_pub_sub_api = nil
+  @@overridden_redis = nil
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  def initialize(app = nil)
+    super(app)
+  end
 
+  # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
-    # Table name within channels API just concatenates shard + table
-    api_table_name = "#{shard_id}_#{table_name}"
-    TableType.new(CDO.netsim_api_publickey, nil, api_table_name)
-  end
-
-  # Get the Pub/Sub API interface for the current configuration
-  def get_pub_sub_api
-    return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
-    CDO.use_pusher ? PusherApi : NullPubSubApi
-  end
-
-  # Set a particular Pub/Sub API interface to use - for use in tests.
-  #
-  # @param [PubSubApi] override_api
-  def self.override_pub_sub_api_for_test(override_api)
-    @@overridden_pub_sub_api = override_api
-  end
-
-  def has_json_utf8_headers(request)
-    request.content_type.to_s.split(';').first == 'application/json' and
-        request.content_charset.to_s.downcase == 'utf-8'
+    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name)
   end
 
   #
@@ -58,6 +53,16 @@ class NetSimApi < Sinatra::Base
     get_table(shard_id, table_name).to_a.to_json
   end
 
+  # GET /v3/netsim/<shard-id>/<table-name>@<min_id>
+  #
+  # Returns all of the rows in the table with id >= min_id
+  #
+  get %r{/v3/netsim/([^/]+)/(\w+)@([0-9]+)$} do |shard_id, table_name, min_id|
+    dont_cache
+    content_type :json
+    get_table(shard_id, table_name).to_a_from_min_id(min_id.to_i).to_json
+  end
+
   #
   # GET /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
@@ -69,6 +74,56 @@ class NetSimApi < Sinatra::Base
     get_table(shard_id, table_name).fetch(id.to_i).to_json
   end
 
+  # GET /v3/netsim/<shard-id>?t[]=<table1>@<id1>&t[]=<table2>@<id2>&...
+  #
+  # Fetches rows in multiple tables starting a given version for each table, specified
+  # via query string parameters of the form "t[]=<table>@<min_id>"
+  #
+  get %r{/v3/netsim/([^/]+)$} do |shard_id|
+    dont_cache
+    content_type :json
+    table_map = parse_table_map_from_query_string(CGI::unescape(request.query_string))
+    RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
+  end
+
+  # Delete all wires associated with (locally or remotely) a given node_id
+  #
+  # @private
+  # @param [String] shard_id
+  # @param [Integer] node_id
+  # @returns [Integer|Array] ids of deleted wires
+  def delete_wires_for_node(shard_id, node_id)
+    wire_table = get_table(shard_id, TABLE_NAMES[:wire])
+    wire_ids = wire_table.to_a.select {|wire|
+      wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+    }.map {|wire|
+      wire['id']
+    }
+    wire_ids.each do |wire_id|
+      wire_table.delete(wire_id)
+    end
+    wire_ids
+  end
+
+  # Delete all messages simulated by a given node_id
+  #
+  # @private
+  # @param [String] shard_id
+  # @param [Integer] node_id
+  # @returns [Integer|Array] ids of deleted messages
+  def delete_messages_for_node(shard_id, node_id)
+    message_table = get_table(shard_id, TABLE_NAMES[:message])
+    message_ids = message_table.to_a.select {|message|
+      message['simulatedBy'] == node_id
+    }.map {|message|
+      message['id']
+    }
+    message_ids.each do |message_id|
+      message_table.delete(message_id)
+    end
+    message_ids
+  end
+
   #
   # DELETE /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
@@ -78,8 +133,14 @@ class NetSimApi < Sinatra::Base
     dont_cache
     table = get_table(shard_id, table_name)
     int_id = id.to_i
+
+    if table_name == TABLE_NAMES[:node]
+      # Cascade deletions
+      delete_wires_for_node(shard_id, int_id)
+      delete_messages_for_node(shard_id, int_id)
+    end
+
     table.delete(int_id)
-    get_pub_sub_api.publish(shard_id, table_name, {:action => 'delete', :id => int_id})
     no_content
   end
 
@@ -98,14 +159,23 @@ class NetSimApi < Sinatra::Base
   # Insert a new row.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
+    dont_cache
     unsupported_media_type unless has_json_utf8_headers(request)
 
     begin
       value = get_table(shard_id, table_name).
           insert(JSON.parse(request.body.read), request.ip)
-      get_pub_sub_api.publish(shard_id, table_name, {:action => 'insert', :id => value[:id]})
+      if table_name == TABLE_NAMES[:message]
+        node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
+          node['id'] == value['simulatedBy']
+        end
+        unless node_exists
+          get_table(shard_id, table_name).delete(value['id'])
+          json_bad_request
+        end
+      end
     rescue JSON::ParserError
-      bad_request
+      json_bad_request
     end
 
     dont_cache
@@ -120,15 +190,15 @@ class NetSimApi < Sinatra::Base
   # Update an existing row.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
+    dont_cache
     unsupported_media_type unless has_json_utf8_headers(request)
 
     begin
       table = get_table(shard_id, table_name)
       int_id = id.to_i
       value = table.update(int_id, JSON.parse(request.body.read), request.ip)
-      get_pub_sub_api.publish(shard_id, table_name, {:action => 'update', :id => int_id})
     rescue JSON::ParserError
-      bad_request
+      json_bad_request
     end
 
     dont_cache
@@ -142,4 +212,72 @@ class NetSimApi < Sinatra::Base
     call(env.merge('REQUEST_METHOD'=>'POST'))
   end
 
+  # TEST-ONLY METHODS
+
+  # Set a particular Pub/Sub interface to use - for use in tests.
+  #
+  # @param [PubSubApi] override_api
+  def self.override_pub_sub_api_for_test(override_api)
+    @@overridden_pub_sub_api = override_api
+  end
+
+  # Set a particular Redis interface to use - for use in tests.
+  #
+  # @param [Redis] override_redis
+  def self.override_redis_for_test(override_redis)
+    @@overridden_redis = override_redis
+  end
+
+  private
+
+  # Returns a new Redis client for the current configuration.
+  #
+  # @return [Redis]
+  def get_redis_client
+    @@overridden_redis || Redis.new(url: redis_url)
+  end
+
+  # Returns the URL (configuration string) of the redis service in the current
+  # configuration.  Should be passed as the :url parameter in the options hash
+  # to Redis.new.
+  #
+  # @return [String]
+  def redis_url
+    CDO.geocoder_redis_url || 'redis://localhost:6379'
+  end
+
+  # Get the Pub/Sub API interface for the current configuration
+  #
+  # @return [PusherApi]
+  def get_pub_sub_api
+    return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
+    CDO.use_pusher ? PusherApi : NullPubSubApi
+  end
+
+  # Return true if the request's content type is application/json and charset
+  # is utf-8.
+  #
+  # @param [Request] request
+  # @return [Boolean]
+  def has_json_utf8_headers(request)
+    request.content_type.to_s.split(';').first == 'application/json' and
+        request.content_charset.to_s.downcase == 'utf-8'
+  end
+
+end
+
+# Convert a query_string of the form "t[]=table1@1&t[]=table2@1" into a
+# table map as expected by RedisTable.get_tables(). Id numbers
+# can be omitted in which case they default to 0.
+#
+# @param [String] query_string
+# @return [Hash<String, Integer>]
+# @private
+def parse_table_map_from_query_string(query_string)
+  {}.tap do |result|
+    CGI::parse(query_string)['t[]'].each do |tv|
+      table, min_id = tv.split('@')
+      result[table] = min_id.to_i  # defaults to 0 for invalid ints.
+    end
+  end
 end
