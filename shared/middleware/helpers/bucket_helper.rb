@@ -67,6 +67,15 @@ class BucketHelper
     @s3.delete_object(bucket: @bucket, key: key)
   end
 
+  def list_versions(encrypted_channel_id, filename)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    @s3.list_object_versions(bucket: @bucket, prefix: key).versions.map do |version|
+      [version.version_id, version.last_modified]
+    end
+  end
+
   protected
 
   def s3_path(owner_id, channel_id, filename = nil)

@@ -5,18 +5,28 @@ require 'sinatra/base'
 class AssetsApi < Sinatra::Base
 
   def get_impl(endpoint)
-    case
-    when endpoint == 'assets'
+    case endpoint
+    when 'assets'
       AssetBucket
-    when endpoint == 'sources'
+    when 'sources'
       SourceBucket
     else
       not_found
     end
   end
 
-  # Only allow specific image and sound types to be uploaded by users.
-  ALLOWED_FILE_TYPES = %w(.jpg .jpeg .gif .png .mp3)
+  def allowed_file_type?(endpoint, extension)
+    case endpoint
+    when 'assets'
+      # Only allow specific image and sound types to be uploaded by users.
+      %w(.jpg .jpeg .gif .png .mp3).include? extension
+    when 'sources'
+      # Only allow JavaScript and Blockly XML source files.
+      %w(.js .xml).include? extension
+    else
+      not_found
+    end
+  end
 
   helpers do
     %w(core.rb bucket_helper.rb asset_bucket.rb source_bucket.rb storage_id.rb).each do |file|
@@ -77,7 +87,7 @@ class AssetsApi < Sinatra::Base
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
     file_type = File.extname(filename)
-    unsupported_media_type unless ALLOWED_FILE_TYPES.include?(file_type)
+    unsupported_media_type unless allowed_file_type?(endpoint, file_type)
     # ignore client-specified mime type. infer it from file extension
     # when serving assets.
     mime_type = Sinatra::Base.mime_type(file_type)
@@ -98,6 +108,19 @@ class AssetsApi < Sinatra::Base
     dont_cache
     get_impl(endpoint).new.delete(encrypted_channel_id, filename)
     no_content
+  end
+
+  #
+  # GET /v3/sources/<channel-id>/<filename>/versions
+  #
+  # List versions of the given file.
+  # NOTE: Not yet implemented for assets.
+  #
+  get %r{/v3/sources/([^/]+)/([^/]+)/versions$} do |encrypted_channel_id, filename|
+    dont_cache
+    content_type :json
+
+    SourceBucket.new.list_versions(encrypted_channel_id, filename).to_json
   end
 
 end
