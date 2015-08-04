@@ -185,7 +185,7 @@ NetSimRouterLogModal.prototype.setRouter = function (router) {
  * Helper method to determine whether or we are currently in
  * "All-Router" mode, or dealing with a single router. Currently is
  * determined exclusively by the current connection state, but may later
- * be epanded to allow switching between the two.
+ * be expanded to allow switching between the two.
  * @returns {boolean}
  */
 NetSimRouterLogModal.prototype.isAllRouterMode = function () {
