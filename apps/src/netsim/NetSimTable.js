@@ -372,7 +372,7 @@ NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
   var now = Date.now();
-  if (now - this.lastRefreshTime_ > this.pollingInterval_) {
+  if (now - this.lastRefreshTime_ >= this.pollingInterval_) {
     this.lastRefreshTime_ = now;
     this.refreshTable_();
   }
