@@ -91,27 +91,34 @@
   }
   pixelationInit();
 
-  // Initialize projects for save/load functionality.
-  window.apps.setupProjectsExternal();
-  var projectsHandler = {
-    setInitialLevelHtml: function (levelHtml) {},
-    getLevelHtml: function () {
-      return '';
-    },
-    setInitialLevelSource: function (levelSource) {
-      options.data = levelSource;
-    },
-    getLevelSource: function () {
-      return pixel_data.value;
-    }
-  };
+  // Initialize projects for save/load functionality if channel id is present.
+  if (appOptions.channel) {
+    window.apps.setupProjectsExternal();
+    var projectsHandler = {
+      setInitialLevelHtml: function (levelHtml) {},
+      getLevelHtml: function () {
+        return '';
+      },
+      setInitialLevelSource: function (levelSource) {
+        options.data = levelSource;
+      },
+      getLevelSource: function () {
+        return pixel_data.value;
+      }
+    };
 
-  var promise = dashboard.project.load();
-  promise.then(function() {
-    window.dashboard.project.init(projectsHandler);
+    options.saveProject = dashboard.project.save;
+
+    var promise = dashboard.project.load();
+    promise.then(function() {
+      window.dashboard.project.init(projectsHandler);
+      pixel_data.value = options.data;
+      drawGraph();
+    });
+  } else {
     pixel_data.value = options.data;
     drawGraph();
-  });
+  }
 
   if(options.format=='raw') unformatBits()
   else formatBitDisplay();

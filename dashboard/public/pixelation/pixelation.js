@@ -381,5 +381,5 @@ function showPNG() {
   var w = window.open(canvas.toDataURL(), 'ShowImageWindow',
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
-  appOptions.channel && window.dashboard.project.save(pixel_data.value);
+  options.saveProject && options.saveProject(pixel_data.value);
 }
