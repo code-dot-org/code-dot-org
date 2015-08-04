@@ -1433,7 +1433,9 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
     if (config.pinWorkspaceToBottom) {
-      document.body.style.overflow = "hidden";
+      var bodyElement = document.body;
+      bodyElement.style.overflow = "hidden";
+      bodyElement.className = bodyElement.className + " pin_bottom";
       container.className = container.className + " pin_bottom";
       visualizationColumn.className = visualizationColumn.className + " pin_bottom";
       codeWorkspace.className = codeWorkspace.className + " pin_bottom";
