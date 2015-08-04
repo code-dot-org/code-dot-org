@@ -635,6 +635,51 @@ function performItemOrProjectileMoves (list) {
 }
 
 /**
+ * Sort the draw order of sprites, items, and tiles so that items higher on
+ * the screen are drawn before the ones in front, for a simple form of
+ * z-sorting.
+ */
+function sortDrawOrder() {
+  var list = document.getElementById('svgStudio');
+
+  var itemsArray = [];
+
+  // Add items.
+  for (var i = 0; i < Studio.items.length; i++) {
+    var item = {};
+    item.element = Studio.items[i].element;
+    item.y = Studio.items[i].y + Studio.items[i].height/2;
+    itemsArray.push(item);
+    
+    Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
+    Studio.drawDebugRect("itemBottom", Studio.items[i].x, item.y, 4, 4);
+  }
+
+  // Add sprites, both walking and non-walking.
+  for (var i = 0; i < Studio.sprite.length; i++) {
+    var sprite = {};
+    sprite.element = document.getElementById('sprite' + i);
+    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    itemsArray.push(sprite);
+
+    var sprite = {};
+    sprite.element = document.getElementById('spriteWalk' + i);
+    sprite.y = Studio.sprite[i].y + Studio.sprite[i].height;
+    itemsArray.push(sprite);
+
+    Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
+  }
+
+  itemsArray.sort(function(a, b) {
+    return a.y - b.y;
+  });
+
+  for (i = 0; i < itemsArray.length; ++i) {
+    list.appendChild(itemsArray[i].element);
+  }
+}
+
+/**
  * This is a little weird, but is effectively a way for us to call api code
  * (i.e. the methods in studio/api.js) so that we can essentially simulate
  * generated code. It does this by creating an event handler for the given name,
@@ -780,6 +825,8 @@ Studio.onTick = function() {
 
   performItemOrProjectileMoves(Studio.projectiles);
   performItemOrProjectileMoves(Studio.items);
+
+  sortDrawOrder();
 
   if (checkFinished()) {
     Studio.onPuzzleComplete();
@@ -2134,8 +2181,8 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
 
   var svg = document.getElementById('svgStudio');
   var group = document.createElementNS(SVG_NS, 'g');
+  group.setAttribute('class', className);
   var background = document.createElementNS(SVG_NS, 'rect');
-  background.setAttribute('class', className);
   background.setAttribute('width', width);
   background.setAttribute('height', height);
   background.setAttribute('x', x - width/2);
@@ -2153,7 +2200,9 @@ Studio.drawDebugRect = function(className, x, y, width, height) {
 
 Studio.clearDebugRects = function() {
   $(".spriteCenter").remove();
-
+  $(".itemLocation").remove();
+  $(".itemBottom").remove();
+  $(".spriteBottom").remove();
   $(".avatarCollision").remove();
   $(".wallCollision").remove();
   $(".itemCollision").remove();
