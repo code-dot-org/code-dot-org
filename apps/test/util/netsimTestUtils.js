@@ -17,8 +17,8 @@ var levels = require('@cdo/apps/netsim/levels');
  */
 exports.assertTableSize = function (shard, tableName, size) {
   var rowCount;
-  shard[tableName].refreshAll(function (err, rows) {
-    rowCount = rows.length;
+  shard[tableName].refresh(function () {
+    rowCount = shard[tableName].readAll().length;
   });
   assert(rowCount === size, "Expected table '" + tableName +
       "' to contain " + size + " rows, but it had " + rowCount +
@@ -37,7 +37,7 @@ exports.overrideNetSimTableApi = function (netsimTable) {
   netsimTable.api_ = {
     remoteTable: table,
     allRows: function (callback) {
-      return table.refreshAll(callback);
+      return table.readAll(callback);
     },
     allRowsFromID: function (id, callback) {
       return table.readAllFromID(id, callback);
@@ -80,8 +80,8 @@ var fakeStorageTable = function () {
     /**
      * @param {!NodeStyleCallback} callback
      */
-    refreshAll: function (callback) {
-      log_ += 'refreshAll';
+    readAll: function (callback) {
+      log_ += 'readAll';
 
       callback(null, tableData_);
     },
