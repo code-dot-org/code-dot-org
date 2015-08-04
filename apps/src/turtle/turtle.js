@@ -179,8 +179,8 @@ Artist.prototype.init = function(config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  config.pinWorkspaceToBottom = true;
-  config.hasVerticalScrollbars = true;
+  config.pinWorkspaceToBottom = false;
+  config.hasVerticalScrollbars = false;
 
   if (this.skin.id == "anna") {
     this.avatarWidth = 73;
