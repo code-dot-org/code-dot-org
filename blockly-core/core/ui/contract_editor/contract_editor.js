@@ -625,9 +625,10 @@ Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) 
   var type = paramInfo.type;
 
   var domainEditor = new Blockly.DomainEditor({
+    paramID: paramID,
     name: name,
     type: type,
-    onRemovePress: goog.bind(this.removeParameter, this, name),
+    onRemovePress: goog.bind(this.removeContractParameter_, this, paramID),
     onTypeChanged: goog.bind(this.changeParameterType_, this, paramID),
     onNameChanged: goog.bind(this.changeParameterName_, this, paramID),
     typeChoices: USER_TYPE_CHOICES
@@ -636,11 +637,17 @@ Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) 
   this.domainEditors_.push(domainEditor);
 };
 
-Blockly.ContractEditor.prototype.removeParameter = function(name) {
-  Blockly.ContractEditor.superClass_.removeParameter.call(this, name);
+/**
+ * Delete the given parameter, destroying its editor and any usages.
+ * @param {string} paramID - unique parameter ID
+ * @private
+ */
+Blockly.ContractEditor.prototype.removeContractParameter_ = function(paramID) {
+  this.orderedParamIDsToBlocks_.remove(paramID);
+  this.refreshParamsEverywhere();
 
   goog.array.removeIf(this.domainEditors_, function (editor) {
-    if (editor.name === name) {
+    if (editor.getParamID() === paramID) {
       editor.dispose();
       return true;
     }
@@ -728,5 +735,6 @@ Blockly.ContractEditor.prototype.changeParameterType_ = function(paramID, newTyp
 Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newName) {
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
+
   Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
 };

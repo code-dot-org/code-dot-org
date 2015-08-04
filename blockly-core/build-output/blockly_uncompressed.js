@@ -20184,21 +20184,19 @@ goog.require("Blockly.TypeDropdown");
 goog.require("Blockly.DomainNameInput");
 goog.require("Blockly.XButton");
 Blockly.DomainEditor = function(options) {
-  this.onRemovePress = options.onRemovePress;
-  this.onTypeChanged = options.onTypeChanged;
-  this.onNameChanged = options.onNameChanged;
-  this.typeChoices = options.typeChoices;
-  this.type = options.type;
-  this.name = options.name;
+  this.options = options;
   this.editorDom_ = null;
   this.typeDropdown_ = null;
   this.nameInput_ = null
 };
+Blockly.DomainEditor.prototype.getParamID = function() {
+  return this.options.paramID
+};
 Blockly.DomainEditor.prototype.render = function(parent) {
   var editorDOM = goog.dom.createDom("div");
-  var typeDropdown = new Blockly.TypeDropdown({onRemovePress:this.onRemovePress, onTypeChanged:this.onTypeChanged, typeChoices:this.typeChoices, type:this.type});
-  var nameInput = new Blockly.DomainNameInput({onNameChanged:this.onNameChanged, name:this.name});
-  var xButton = new Blockly.XButton({onButtonPressed:this.onRemovePress});
+  var typeDropdown = new Blockly.TypeDropdown({onTypeChanged:this.options.onTypeChanged, typeChoices:this.options.typeChoices, type:this.options.type});
+  var nameInput = new Blockly.DomainNameInput({onNameChanged:this.options.onNameChanged, name:this.options.name});
+  var xButton = new Blockly.XButton({onButtonPressed:this.options.onRemovePress});
   nameInput.render(editorDOM);
   typeDropdown.render(editorDOM);
   xButton.render(editorDOM);
@@ -22522,14 +22520,15 @@ Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) 
   var paramInfo = this.getParamNameType(paramID);
   var name = paramInfo.name;
   var type = paramInfo.type;
-  var domainEditor = new Blockly.DomainEditor({name:name, type:type, onRemovePress:goog.bind(this.removeParameter, this, name), onTypeChanged:goog.bind(this.changeParameterType_, this, paramID), onNameChanged:goog.bind(this.changeParameterName_, this, paramID), typeChoices:USER_TYPE_CHOICES});
+  var domainEditor = new Blockly.DomainEditor({paramID:paramID, name:name, type:type, onRemovePress:goog.bind(this.removeContractParameter_, this, paramID), onTypeChanged:goog.bind(this.changeParameterType_, this, paramID), onNameChanged:goog.bind(this.changeParameterName_, this, paramID), typeChoices:USER_TYPE_CHOICES});
   domainEditor.render(goog.dom.getElement("domain-area"));
   this.domainEditors_.push(domainEditor)
 };
-Blockly.ContractEditor.prototype.removeParameter = function(name) {
-  Blockly.ContractEditor.superClass_.removeParameter.call(this, name);
+Blockly.ContractEditor.prototype.removeContractParameter_ = function(paramID) {
+  this.orderedParamIDsToBlocks_.remove(paramID);
+  this.refreshParamsEverywhere();
   goog.array.removeIf(this.domainEditors_, function(editor) {
-    if(editor.name === name) {
+    if(editor.getParamID() === paramID) {
       editor.dispose();
       return true
     }

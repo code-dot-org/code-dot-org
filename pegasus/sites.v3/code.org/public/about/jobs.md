@@ -7,7 +7,6 @@ nav: about_nav
 
 **We are currently hiring for:**
 
-- [Customer Support Associate](#support)	
 - [Data Engineer](#data-engineer)
 - [District Manager (Seattle, New York City)](#reg-PM)
 - [Evaluation Manager](#Eval)
@@ -16,35 +15,6 @@ nav: about_nav
 - [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
-
-
-## <a name="support" href="#support">Customer Support Associate (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for for a tech-savvy customer support associate who is passionate about helping others. This is a full-time position for a candidate who can effectively solve customer issues and positively represent Code.org. 
-
-Responsibilities of the position include:
-
-- Managing end-to-end customer support for Code.org including answering tickets, developing resources such as customer FAQ, and setting and measuring metrics for support 
-- Answering forum questions and providing clear, friendly guidance on behalf of Code.org
-- Trouble shooting and reproducing customer bugs; escalating issues to the development, education, or operations teams when necessary
-- Providing additional support to the operations team (i.e. helping with workshop planning, coordination and communications) as needed 
-
-**Skills & Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- 1-2 years experience using ZenDesk and/or customer service in a tech environment
-- Strong technical aptitude and ability to learn and utilize technology to solve problems quickly  
-- Excellent written and verbal communication skills
-- Bachelors degree preferred  
-- Background in education and communicating with educators preferred
-- Experience managing online forums a plus
-
-This person must be able to work in a fast paced environment while maintaining our excellent standard for customer service.
-
-Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="data-engineer" href="#data-engineer">Data Engineer (Seattle, WA preferred)</a>
