@@ -1138,6 +1138,7 @@ NetSim.prototype.onRouterConnect_ = function (router) {
   this.onRouterStateChange_(router);
   this.onRouterStatsChange_(router);
   this.setRouterLogData(router.getLog());
+  this.routerLogModal_.setRouter(router);
 };
 
 /**
@@ -1150,6 +1151,7 @@ NetSim.prototype.onRouterDisconnect_ = function () {
   this.setRouterMemoryInUse_(0);
   this.setRouterDataRate_(0);
   this.setRouterLogData([]);
+  this.routerLogModal_.setRouter(null);
 };
 
 /**

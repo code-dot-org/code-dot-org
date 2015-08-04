@@ -43,6 +43,12 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
   this.shard_ = null;
 
   /**
+   * @type {NetSimRouterNode}
+   * @private
+   */
+  this.router_ = null;
+
+  /**
    * @type {NetSimLogEntry[]}
    * @private
    */
@@ -118,15 +124,22 @@ NetSimRouterLogModal.prototype.render = function () {
   this.rootDiv_.off('shown.bs.modal.onModalOpen');
   this.rootDiv_.off('hidden.bs.modal.onModalClose');
 
+  var filteredLogEntries = this.isAllRouterMode() ?
+      this.logEntries_ :
+      this.logEntries_.filter(function (entry) {
+        return entry.nodeID === this.router_.entityID;
+      }, this);
+
   // Sort before rendering
   var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
-  var sortedLogEntries = _.sortBy(this.logEntries_, iterateeFunction);
+  var sortedFilteredLogEntries = _.sortBy(filteredLogEntries, iterateeFunction);
   if (this.sortDescending_) {
-    sortedLogEntries.reverse();
+    sortedFilteredLogEntries.reverse();
   }
 
   var renderedMarkup = $(markup({
-    logEntries: sortedLogEntries,
+    logEntries: sortedFilteredLogEntries,
+    isAllRouterMode: this.isAllRouterMode(),
     sortBy: this.sortBy_,
     sortDescending: this.sortDescending_
   }));
@@ -161,6 +174,28 @@ NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
     this.sortDescending_ = false;
   }
   this.render();
+};
+
+/**
+ * Called by the sumulation's onRouterConnect and onRouterDisconnect
+ * methods, this locally remembers the current router state and triggers
+ * a rerender
+ * @param {NetSimRouterNode} router
+ */
+NetSimRouterLogModal.prototype.setRouter = function (router) {
+  this.router_ = router;
+  this.render();
+};
+
+/**
+ * Helper method to determine whether or we are currently in
+ * "All-Router" mode, or dealing with a single router. Currently is
+ * determined exclusively by the current connection state, but may later
+ * be epanded to allow switching between the two.
+ * @returns {boolean}
+ */
+NetSimRouterLogModal.prototype.isAllRouterMode = function () {
+  return !(this.router_);
 };
 
 /**
