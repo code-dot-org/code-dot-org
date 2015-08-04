@@ -37,7 +37,7 @@
       var selectionValue = $('.video-dropdown')[0].value;
       if (selectionValue) {
         var videoInfo = videoInfos[selectionValue];
-        $('.video-preview').html(createVideoWithFallback(videoInfo, 400, 400));
+        $('.video-preview').html(createVideoWithFallback(null, videoInfo, 400, 400));
         $('.video-preview').show();
       } else {
         $('.video-preview').hide();

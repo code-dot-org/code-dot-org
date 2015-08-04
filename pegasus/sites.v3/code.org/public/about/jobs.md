@@ -7,7 +7,6 @@ nav: about_nav
 
 **We are currently hiring for:**
 
-- [Customer Support Associate](#support)	
 - [Data Engineer](#data-engineer)
 - [District Manager (Seattle, New York City)](#reg-PM)
 - [Evaluation Manager](#Eval)
@@ -16,35 +15,6 @@ nav: about_nav
 - [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
-
-
-## <a name="support" href="#support">Customer Support Associate (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for for a tech-savvy customer support associate who is passionate about helping others. This is a full-time position for a candidate who can effectively solve customer issues and positively represent Code.org. 
-
-Responsibilities of the position include:
-
-- Managing end-to-end customer support for Code.org including answering tickets, developing resources such as customer FAQ, and setting and measuring metrics for support 
-- Answering forum questions and providing clear, friendly guidance on behalf of Code.org
-- Trouble shooting and reproducing customer bugs; escalating issues to the development, education, or operations teams when necessary
-- Providing additional support to the operations team (i.e. helping with workshop planning, coordination and communications) as needed 
-
-**Skills & Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- 1-2 years experience using ZenDesk and/or customer service in a tech environment
-- Strong technical aptitude and ability to learn and utilize technology to solve problems quickly  
-- Excellent written and verbal communication skills
-- Bachelors degree preferred  
-- Background in education and communicating with educators preferred
-- Experience managing online forums a plus
-
-This person must be able to work in a fast paced environment while maintaining our excellent standard for customer service.
-
-Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="data-engineer" href="#data-engineer">Data Engineer (Seattle, WA preferred)</a>
@@ -154,8 +124,28 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 **Job Summary:**
 
+Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
+
+- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
+- Drafting communications to stakeholders, responding to requests for information, distributing materials externally
+- Updating and managing event attendee lists
+- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
+- Attending and participating in meetings and recording notes/follow-up items, as appropriate
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
 
 **Skills and Qualifications:**
+
+We are looking for a self-starter, skilled in event planning, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+The ideal candidate has the following qualifications:
+
+- Has a bachelors degree (Computer Science background/experience not required)
+- Ability to travel 20% time 
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
 
 
 ## <a name="techpm" href="#techpm">Technical Product Manager (Seattle, WA)</a>

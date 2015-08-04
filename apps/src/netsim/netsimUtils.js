@@ -265,6 +265,12 @@ exports.scrubLevelConfiguration_ = function (levelConfig) {
   // needs to be converted to a number, like "Infinity"
   scrubbedLevel.defaultPacketSizeLimit = exports.deserializeNumber(
       scrubbedLevel.defaultPacketSizeLimit);
+
+  // Packet Size cannot be infinity; defaults to 8kb
+  if (scrubbedLevel.defaultPacketSizeLimit === Infinity) {
+    scrubbedLevel.defaultPacketSizeLimit = 8192;
+  }
+
   scrubbedLevel.defaultBitRateBitsPerSecond = exports.deserializeNumber(
       scrubbedLevel.defaultBitRateBitsPerSecond);
   scrubbedLevel.defaultChunkSizeBits = exports.deserializeNumber(

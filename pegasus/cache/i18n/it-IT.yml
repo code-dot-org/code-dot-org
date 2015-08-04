@@ -1260,3 +1260,6 @@
     href='%{it_requirements_url}'> Clicca qui</a> per informazioni su come abilitare
     HTTPS per accedere a Code.org.
   compatibility_https_hide_this_warning: Nascondi questo avviso
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

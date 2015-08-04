@@ -1210,3 +1210,6 @@
     over naar HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik
     hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org.
   compatibility_https_hide_this_warning: Verberg deze waarschuwing
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

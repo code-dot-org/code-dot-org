@@ -11,6 +11,9 @@ require_relative 'redis_property_bag'
 
 class RedisTable
 
+  # Suffix appended to special row id columns.
+  ROW_ID_SUFFIX='_row_id'
+
   class NotFound < Sinatra::NotFound
   end
 
@@ -25,7 +28,7 @@ class RedisTable
 
     # A counter key in the underlying RedisPropertyBag, used to generate
     # ascending row ids.
-    @row_id_key = "#{table_name}_row_id"
+    @row_id_key = "#{table_name}#{ROW_ID_SUFFIX}"
 
     # A redis property bag for storing all tables in the shard.
     @props = RedisPropertyBag.new(redis, shard_id)
@@ -45,7 +48,7 @@ class RedisTable
   # Returns all rows with id >= min_id as an array ordered by ascending row id.
   # (If min_id is nil or 1, returns all rows.)
   #
-  # @param [Integer] min_id
+  # @param [Integer?] min_id
   # @return [Array<Hash>]
   def to_a_from_min_id(min_id)
     @props.to_hash.
@@ -59,6 +62,46 @@ class RedisTable
   # @return [Array<Hash>]
   def to_a
     to_a_from_min_id(nil)
+  end
+
+
+  # Fetch the rows multiple tables all at once.
+  # The parameters are a shard_id and and a table map. The keys of the map
+  # are the table names to fetch and the values are the starting id to fetch, or
+  # 1 for all ids. The return value is a map from table name to a hash containing
+  # a 'rows' field whose value is an array of rows.
+  #
+  # Note that the result map will always include a row for a requested table even
+  # if none of the rows passed the min_id test.
+  #
+  # For example:
+  #
+  # RedisTable.get_tables(redis, "shard", {'t1' => 1, 't2' => 3})
+  # =>  {'t1' => {'rows' => [{..}, <etc> }
+
+  # @param [Redis] redis The redis client.
+  # @param [String] shard_id
+  # @param [Hash<String, Integer>] table_map
+  # @return [Array<Hash<String, Array<Hash>>>]
+  def self.get_tables(redis, shard_id, table_map)
+    props = RedisPropertyBag.new(redis, shard_id)
+    {}.tap do |result|
+      props.to_hash.select do |k, v|
+        # Skip internal keys and rows for non-requested tables
+        table_name = table_from_row_key(k)
+        next if is_internal_key(k) || !table_map.include?(table_name)
+
+        # Add or get the rows entry for the table from the result map.
+        value = (result[table_name] ||= {'rows' => []})
+
+        # Ignore rows whose id is too low
+        id = id_from_row_key(k)
+        next if id < table_map[table_name]
+
+        # Add the rows.
+        value['rows'] << make_row(id, v)
+      end
+    end
   end
 
   # Fetches a row by id.
@@ -108,15 +151,21 @@ class RedisTable
   # Given a row key, return the name of the RedisTable that it belongs to.
   # @param [String] row_key
   # @return [String] the RedisTable name.
-  def table_from_row_key(key)
+  def self.table_from_row_key(key)
     key.split('_')[0]
+  end
+  def table_from_row_key(key)
+    self.class.table_from_row_key(key)
   end
 
   # Given a row key, return the id of the row that it corresponds to.
   # @param [String] key
   # @return [Integer] the row id.
-  def id_from_row_key(key)
+  def self.id_from_row_key(key)
     key.split('_')[1].to_i
+  end
+  def id_from_row_key(key)
+    self.class.id_from_row_key(key)
   end
 
   # Returns a new, monotonically increasing id for a row.
@@ -130,8 +179,11 @@ class RedisTable
   # @param [Hash] value
   # @param [String, Integer] id
   # @return [Hash]
-  def merge_id(value, id)
+  def self.merge_id(value, id)
     value.merge({'id' => id.to_i})
+  end
+  def merge_id(value, id)
+    self.class.merge_id(value, id)
   end
 
   # Makes a row object by parsing the JSON value and adding the id property.
@@ -140,8 +192,11 @@ class RedisTable
   # @param [String] value The JSON-encoded value.
   # @return [Hash] The row, or null if no such row exists.
   # @private
-  def make_row(id, value)
+  def self.make_row(id, value)
     value.nil? ? nil : merge_id(JSON.parse(value), id)
+  end
+  def make_row(id, value)
+    self.class.make_row(id, value)
   end
 
   # Return true if row_key is a row_key for this table.
@@ -153,6 +208,15 @@ class RedisTable
     (@table_name == table_from_row_key(row_key)) &&
         (row_key != @row_id_key) &&
         (min_id.nil? || id_from_row_key(row_key) >= min_id)
+  end
+
+  # Return true if k is special internal key (e.g. the row id key) that should
+  # not be returned to callers.
+  def self.is_internal_key(k)
+    k.end_with?(ROW_ID_SUFFIX)
+  end
+  def is_internal_key(k)
+    self.class.is_internal_key(k)
   end
 
 end

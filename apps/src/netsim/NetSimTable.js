@@ -24,13 +24,13 @@ var clientApi = require('@cdo/shared/clientApi');
  * updates from the server.
  * @type {number}
  */
-var DEFAULT_POLLING_DELAY_MS = 5000;
+var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
  * Minimum wait time (in milliseconds) between readAll requests.
  * @type {number}
  */
-var READ_ALL_THROTTLING_MS = 1000;
+var DEFAULT_REFRESH_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -50,23 +50,32 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   }
 
   /**
-   * @type {PubSubChannel}
-   * @private
+   * @private {string}
+   */
+  this.tableName_ = tableName;
+
+  /**
+   * @private {PubSubChannel}
    */
   this.channel_ = channel;
-  this.channel_.subscribe(tableName, NetSimTable.prototype.onPubSubEvent.bind(this));
+  this.subscribe();
+
+  /**
+   * The callback we most recently subscribed with, so that we can
+   * cleanly unsubscribe.
+   * @private {function{}}
+   */
+  this.channelCallback_ = undefined;
 
   /**
    * Base URL we hit to make our API calls
-   * @type {string}
-   * @private
+   * @private {string}
    */
   this.remoteUrl_ = '/v3/netsim/' + shardID + '/' + tableName;
 
   /**
    * API object for making remote calls
-   * @type {ClientApi}
-   * @private
+   * @private {ClientApi}
    */
   this.clientApi_ = clientApi.create(this.remoteUrl_);
 
@@ -79,45 +88,56 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
 
   /**
    * Store table contents locally, so we can detect when changes occur.
-   * @type {Object}
-   * @private
+   * @private {Object}
    */
   this.cache_ = {};
 
   /**
    * Unix timestamp for last time this table's cache contents were fully
    * updated.  Used to determine when to poll the server for changes.
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.lastFullUpdateTime_ = 0;
 
   /**
    * Minimum time (in milliseconds) to wait between pulling full table contents
    * from remote storage.
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 
   /**
    * Throttled version (specific to this instance) of the readAll operation,
    * used to coalesce readAll requests.
-   * @type {function}
-   * @private
+   * @private {function}
    */
-  this.throttledReadAll_ = _.throttle(
-      this.readAllThrottledWork_.bind(this),
-      READ_ALL_THROTTLING_MS);
+  this.refreshTable_ = this.makeThrottledRefresh_(
+      DEFAULT_REFRESH_THROTTLING_MS);
 };
 
 /**
- * Actual readAll operation, which we wrap with _.throttle to
- * coalesce reads and call from the prototype version below.
- * @param {!NodeStyleCallback} callback
- * @private
+ * Subscribes this table's onPubSubEvent method to events for this table
+ * on our local channel. Also saves the callback locally, so we can
+ * later reference it on unsubscribe
  */
-NetSimTable.prototype.readAllThrottledWork_ = function (callback) {
+NetSimTable.prototype.subscribe = function () {
+  this.channelCallback_ = NetSimTable.prototype.onPubSubEvent.bind(this);
+  this.channel_.subscribe(this.tableName_, this.channelCallback_);
+};
+
+/**
+ * Unubscribes the saved callback from events for this table on our
+ * local channel. Also clears the saved callback.
+ */
+NetSimTable.prototype.unsubscribe = function () {
+  this.channel_.unsubscribe(this.tableName_, this.channelCallback_);
+  this.channelCallback = undefined;
+};
+
+/**
+ * @param {!NodeStyleCallback} callback
+ */
+NetSimTable.prototype.readAll = function (callback) {
   this.clientApi_.all(function (err, data) {
     if (err === null) {
       this.fullCacheUpdate_(data);
@@ -127,12 +147,22 @@ NetSimTable.prototype.readAllThrottledWork_ = function (callback) {
 };
 
 /**
- * @param {!NodeStyleCallback} callback
+ * Generate throttled refresh function which will generate actual server
+ * requests at the maximum given rate no matter how fast it is called. This
+ * allows us to coalesce readAll events and reduce server load.
+ * @param {number} waitMs - Minimum time (in milliseconds) to wait between
+ *        readAll requests to the server.
+ * @returns {function}
+ * @private
  */
-NetSimTable.prototype.readAll = function (callback) {
-  // TODO (brad): I was bad and broke tests!  Fixing, since revert isn't working.
-  //this.throttledReadAll_(callback);
-  this.readAllThrottledWork_(callback);
+NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
+  return _.throttle(function () {
+    this.clientApi_.all(function (err, data) {
+      if (err === null) {
+        this.fullCacheUpdate_(data);
+      }
+    }.bind(this));
+  }.bind(this), waitMs);
 };
 
 /**
@@ -300,12 +330,23 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
   this.pollingInterval_ = intervalMs;
 };
 
+/**
+ * Change the maximum rate at which the readAll operation for this table
+ * will _actually_ be executed, no matter how fast readAll() is called.
+ * @param {number} waitMs - Minimum number of milliseconds between readAll
+ *        requests to the server.
+ */
+NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
+  // To do this, we just replace the throttled readAll function with a new one.
+  this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
+};
+
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
   var now = Date.now();
   if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
     this.lastFullUpdateTime_ = now;
-    this.readAll(function () {});
+    this.refreshTable_();
   }
 };
 
@@ -314,5 +355,5 @@ NetSimTable.prototype.tick = function () {
  * @param {Object} eventData
  */
 NetSimTable.prototype.onPubSubEvent = function () {
-  this.readAll(function () {});
+  this.refreshTable_();
 };
