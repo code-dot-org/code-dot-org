@@ -52,6 +52,8 @@
   "lobbyStatusWaitingForYou": "Waiting for you...",
   "logBrowserButton": "Log Browser",
   "logBrowserHeader": "All Router Logs",
+  "logBrowserHeader_all": "All Router Logs",
+  "logBrowserHeader_mine": "My Router Logs",
   "logStatus_dropped": "Dropped",
   "logStatus_success": "Success",
   "loggedByNode": "Logged By",
