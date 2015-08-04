@@ -476,8 +476,8 @@ var displayFeedback = function(response) {
     feedbackType: Eval.testResults,
     response: response,
     level: level,
-    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
-    continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
+    tryAgainText: commonMsg.keepPlaying(),
+    continueText: commonMsg.nextPuzzle(),
     showingSharing: !level.disableSharing && (level.freePlay),
     // allow users to save freeplay levels to their gallery
     saveToGalleryUrl: level.freePlay && Eval.response && Eval.response.save_to_gallery_url,
