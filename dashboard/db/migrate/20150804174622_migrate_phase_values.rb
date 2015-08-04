@@ -16,7 +16,7 @@ class MigratePhaseValues < ActiveRecord::Migration
         if PHASES.invert[phase]
           workshop.phase = PHASES.invert[phase]
         else
-          raise "error"
+          raise "Unknown phase name #{phase}. Please update the PHASES map"
         end
         workshop.save!
       end
@@ -26,7 +26,11 @@ class MigratePhaseValues < ActiveRecord::Migration
     ActiveRecord::Base.transaction do
       Workshop.find_each do |workshop|
         phase = workshop.phase
-        workshop.phase = PHASES[phase]
+        if PHASES.invert[phase]
+          workshop.phase = PHASES[phase]
+        else
+          raise "Unknown phase id #{phase}. Please update the PHASES map"
+        end
         workshop.save!
       end
     end
