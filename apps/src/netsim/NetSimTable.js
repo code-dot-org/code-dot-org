@@ -246,21 +246,16 @@ NetSimTable.prototype.delete = function (id, callback) {
  * @param id
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
-  // Client API doesn't support synchronous calls, so we manually make our API
-  // call here
-  $.ajax({
-    url: this.remoteUrl_ + '/' + id,
-    type: 'delete',
-    async: false,
-    error: function (jqXHR, textStatus, errorThrown) {
+  var async = false; // Force synchronous request
+  this.api_.deleteRow(id, function (err, success) {
+    if (err) {
       // Nothing we can really do with the error, as we're in the process of
       // navigating away. Throw so that high incidence rates will show up in
       // new relic.
       throw new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
     }
-  });
-
-  this.removeRowFromCache_(id);
+    this.removeRowFromCache_(id);
+  }.bind(this), async);
 };
 
 /**
