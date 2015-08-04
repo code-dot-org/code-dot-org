@@ -92,10 +92,6 @@ class Game < ActiveRecord::Base
     app == NETSIM
   end
 
-  def uses_small_footer?
-    app == MAZE || app == CALC || app == EVAL || app == ARTIST || app == PLAYLAB || app == FLAPPY || app == BOUNCE
-  end
-
   def self.setup
     transaction do
       # Format: name:app:intro_video
