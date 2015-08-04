@@ -231,7 +231,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":266,"../utils":316}],167:[function(require,module,exports){
+},{"../skins":267,"../utils":317}],167:[function(require,module,exports){
 /**
  * Blockly Apps: Maze
  *
@@ -2048,7 +2048,7 @@ Maze.onExecutionFinish = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":106,"../dom":108,"../dropletUtils":109,"../locale":150,"../templates/page.html.ejs":294,"../timeoutList":300,"../utils":316,"./api":152,"./bee":153,"./beeItemDrawer":155,"./controls.html.ejs":157,"./dirtDrawer":158,"./dropletConfig":159,"./executionInfo":160,"./extraControlRows.html.ejs":161,"./mazeUtils":168,"./scrat":170,"./tiles":173,"./visualization.html.ejs":178,"./wordsearch":179}],179:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":106,"../dom":108,"../dropletUtils":109,"../locale":150,"../templates/page.html.ejs":295,"../timeoutList":301,"../utils":317,"./api":152,"./bee":153,"./beeItemDrawer":155,"./controls.html.ejs":157,"./dirtDrawer":158,"./dropletConfig":159,"./executionInfo":160,"./extraControlRows.html.ejs":161,"./mazeUtils":168,"./scrat":170,"./tiles":173,"./visualization.html.ejs":178,"./wordsearch":179}],179:[function(require,module,exports){
 var utils = require('../utils');
 var _ = utils.getLodash();
 var cellId = require('./mazeUtils').cellId;
@@ -2302,7 +2302,7 @@ WordSearch.__testonly__ = {
 /* end-test-block */
 
 
-},{"../utils":316,"./mazeUtils":168,"./tiles":173}],178:[function(require,module,exports){
+},{"../utils":317,"./mazeUtils":168,"./tiles":173}],178:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2436,7 +2436,7 @@ module.exports.scheduleDance = function (victoryDance, timeAlloted, skin) {
 };
 
 
-},{"../utils":316,"./tiles":173}],164:[function(require,module,exports){
+},{"../utils":317,"./tiles":173}],164:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var karelLevels = require('./karelLevels');
 var wordsearchLevels = require('./wordsearchLevels');
@@ -3071,7 +3071,7 @@ cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
 
 
-},{"../block_utils":77,"../utils":316,"./karelLevels":162,"./locale":165,"./requiredBlocks":169,"./startBlocks.xml.ejs":172,"./tiles":173,"./toolboxes/maze.xml.ejs":177,"./wordsearchLevels":180}],180:[function(require,module,exports){
+},{"../block_utils":77,"../utils":317,"./karelLevels":162,"./locale":165,"./requiredBlocks":169,"./startBlocks.xml.ejs":172,"./tiles":173,"./toolboxes/maze.xml.ejs":177,"./wordsearchLevels":180}],180:[function(require,module,exports){
 var Direction = require('./tiles').Direction;
 var reqBlocks = require('./requiredBlocks');
 var blockUtils = require('../block_utils');
@@ -3381,7 +3381,7 @@ module.exports = {
 };
 
 
-},{"../required_block_utils":264}],162:[function(require,module,exports){
+},{"../required_block_utils":265}],162:[function(require,module,exports){
 /*jshint multistr: true */
 
 var levelBase = require('../level_base');
@@ -4890,7 +4890,7 @@ ExecutionInfo.prototype.checkTimeout = function() {
 };
 
 
-},{"../utils":316}],159:[function(require,module,exports){
+},{"../utils":317}],159:[function(require,module,exports){
 var msg = require('./locale');
 
 module.exports.blocks = [
@@ -5627,7 +5627,7 @@ BeeItemDrawer.prototype.addCheckerboardTile = function (row, col, isPath) {
 };
 
 
-},{"../utils":316,"./dirtDrawer":158,"./mazeUtils":168}],158:[function(require,module,exports){
+},{"../utils":317,"./dirtDrawer":158,"./mazeUtils":168}],158:[function(require,module,exports){
 var cellId = require('./mazeUtils').cellId;
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
@@ -6304,7 +6304,7 @@ exports.honeyCreated = API_FUNCTION(function (id) {
 });
 
 
-},{"../utils":316,"./bee":153,"./tiles":173}],173:[function(require,module,exports){
+},{"../utils":317,"./bee":153,"./tiles":173}],173:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -6368,7 +6368,7 @@ Tiles.constrainDirection4 = function(d) {
 };
 
 
-},{"../utils":316}],153:[function(require,module,exports){
+},{"../utils":317}],153:[function(require,module,exports){
 var utils = require('../utils');
 var mazeMsg = require('./locale');
 var TestResults = require('../constants.js').TestResults;
@@ -6784,7 +6784,7 @@ Bee.prototype.animateMakeHoney = function () {
 };
 
 
-},{"../constants.js":107,"../utils":316,"./locale":165}],165:[function(require,module,exports){
+},{"../constants.js":107,"../utils":317,"./locale":165}],165:[function(require,module,exports){
 // locale for maze
 module.exports = window.blockly.maze_locale;
 

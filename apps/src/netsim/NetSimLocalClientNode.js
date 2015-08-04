@@ -164,7 +164,7 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
   this.eventKeys.registeredOnShard = this.shard_;
 
   // Set up initial state from cached rows
-  this.onNodeTableChange_(this.shard_.nodeTable.readAllCached());
+  this.onNodeTableChange_(this.shard_.nodeTable.readAll());
 };
 
 /**
@@ -255,14 +255,7 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
 NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
   this.connectToNode(client, function (err, wire) {
     // Check whether WE just established a mutual connection with a remote client.
-    this.shard_.wireTable.readAll(function (err, wireRows) {
-      if (err) {
-        onComplete(err, wire);
-        return;
-      }
-      this.onWireTableChange_(wireRows);
-      onComplete(err, wire);
-    }.bind(this));
+    this.shard_.wireTable.refresh().always(onComplete.bind(null, err, wire));
   }.bind(this));
 };
 
@@ -332,7 +325,7 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   }
 
   // Remove messages being simulated by this node
-  var myMessages = this.shard_.messageTable.readAllCached().filter(function (row) {
+  var myMessages = this.shard_.messageTable.readAll().filter(function (row) {
     return row.simulatedBy === this.entityID;
   }, this).map(function (row) {
     return new NetSimMessage(this.shard_, row);
@@ -652,26 +645,24 @@ NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function (onComp
 
   // Does an asynchronous request to the message table to ensure we have
   // the latest contents
-  this.shard_.messageTable.readAll(function (err, messageRows) {
-    if (err) {
-      onComplete(err);
-      return;
-    }
+  var messageTable = this.shard_.messageTable;
+  messageTable.refresh()
+    .fail(onComplete)
+    .done(function () {
+        // We only care about rows on our (simplex) wire
+        var rowsOnWire = messageTable.readAll().filter(function (row) {
+          return this.myWire.isMessageRowOnSimplexWire(row);
+        }.bind(this));
 
-    // We only care about rows on our (simplex) wire
-    var rowsOnWire = messageRows.filter(function (row) {
-      return this.myWire.isMessageRowOnSimplexWire(row);
-    }.bind(this));
+        // If there are no rows, complete successfully but pass null result.
+        if (rowsOnWire.length === 0) {
+          onComplete(null, null);
+          return;
+        }
 
-    // If there are no rows, complete successfully but pass null result.
-    if (rowsOnWire.length === 0) {
-      onComplete(null, null);
-      return;
-    }
-
-    var lastRow = rowsOnWire[rowsOnWire.length - 1];
-    onComplete(null, new NetSimMessage(this.shard_, lastRow));
-  }.bind(this));
+        var lastRow = rowsOnWire[rowsOnWire.length - 1];
+        onComplete(null, new NetSimMessage(this.shard_, lastRow));
+      }.bind(this));
 };
 
 /**
@@ -708,30 +699,28 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 
   // Does an asynchronous request to the message table to ensure we have
   // the latest contents
-  this.shard_.messageTable.readAll(function (err, messageRows) {
-    if (err) {
-      onComplete(err);
-      return;
-    }
+  var messageTable = this.shard_.messageTable;
+  messageTable.refresh()
+    .fail(onComplete)
+    .done(function () {
+        // We only care about rows on our (simplex) wire
+        var rowsOnWire = messageTable.readAll().filter(function (row) {
+          return this.myWire.isMessageRowOnSimplexWire(row);
+        }, this);
 
-    // We only care about rows on our (simplex) wire
-    var rowsOnWire = messageRows.filter(function (row) {
-      return this.myWire.isMessageRowOnSimplexWire(row);
-    }, this);
+        // "Old" rows are all but the last element (the latest one)
+        var oldRowsOnWire = rowsOnWire.slice(0, -1);
 
-    // "Old" rows are all but the last element (the latest one)
-    var oldRowsOnWire = rowsOnWire.slice(0, -1);
+        // We are only in charge of deleting messages that we are simulating
+        var myOldRowsOnWire = oldRowsOnWire.filter(function (row) {
+          return row.simulatedBy === this.entityID;
+        }, this);
 
-    // We are only in charge of deleting messages that we are simulating
-    var myOldRowsOnWire = oldRowsOnWire.filter(function (row) {
-      return row.simulatedBy === this.entityID;
-    }, this);
+        // Convert to message entities so we can destroy them
+        var myOldMessagesOnWire = myOldRowsOnWire.map(function (row) {
+          return new NetSimMessage(this.shard_, row);
+        }, this);
 
-    // Convert to message entities so we can destroy them
-    var myOldMessagesOnWire = myOldRowsOnWire.map(function (row) {
-      return new NetSimMessage(this.shard_, row);
-    }, this);
-
-    NetSimEntity.destroyEntities(myOldMessagesOnWire, onComplete);
-  }.bind(this));
+        NetSimEntity.destroyEntities(myOldMessagesOnWire, onComplete);
+      }.bind(this));
 };

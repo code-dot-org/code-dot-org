@@ -386,8 +386,8 @@ NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
  * @private
  */
 NetSimVisualization.prototype.generateBroadcastModeConnections_ = function () {
-  var nodeRows = this.shard_.nodeTable.readAllCached();
-  var wireRows = this.shard_.wireTable.readAllCached();
+  var nodeRows = this.shard_.nodeTable.readAll();
+  var wireRows = this.shard_.wireTable.readAll();
   var nodeCount = nodeRows.length;
 
   // Generate a reverse mapping for lookups
