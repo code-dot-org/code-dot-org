@@ -346,9 +346,7 @@ NetSim.prototype.initWithUserName_ = function (user) {
         disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
       });
 
-  if (this.level.showLogBrowserButton) {
-    this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
-  }
+  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
 
   this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_);
 
@@ -1142,6 +1140,7 @@ NetSim.prototype.onRouterConnect_ = function (router) {
   this.onRouterStateChange_(router);
   this.onRouterStatsChange_(router);
   this.setRouterLogData(router.getLog());
+  this.routerLogModal_.setRouter(router);
 };
 
 /**
@@ -1154,6 +1153,7 @@ NetSim.prototype.onRouterDisconnect_ = function () {
   this.setRouterMemoryInUse_(0);
   this.setRouterDataRate_(0);
   this.setRouterLogData([]);
+  this.routerLogModal_.setRouter(null);
 };
 
 /**

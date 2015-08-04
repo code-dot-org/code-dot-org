@@ -59,11 +59,22 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   }
 
   /**
-   * @type {PubSubChannel}
-   * @private
+   * @private {string}
+   */
+  this.tableName_ = tableName;
+
+  /**
+   * @private {PubSubChannel}
    */
   this.channel_ = channel;
-  this.channel_.subscribe(tableName, NetSimTable.prototype.onPubSubEvent.bind(this));
+  this.subscribe();
+
+  /**
+   * The callback we most recently subscribed with, so that we can
+   * cleanly unsubscribe.
+   * @private {function{}}
+   */
+  this.channelCallback_ = undefined;
 
   /**
    * If TRUE, will only request deltas from remote storage.  Currently
@@ -89,8 +100,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
 
   /**
    * Store table contents locally, so we can detect when changes occur.
-   * @type {Object}
-   * @private
+   * @private {Object}
    */
   this.cache_ = {};
 
@@ -104,27 +114,43 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   /**
    * Unix timestamp for last time this table's cache contents were fully
    * updated.  Used to determine when to poll the server for changes.
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.lastRefreshTime_ = 0;
 
   /**
    * Minimum time (in milliseconds) to wait between pulling full table contents
    * from remote storage.
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 
   /**
    * Throttled version (specific to this instance) of the refresh operation,
    * used to coalesce refresh requests.
-   * @type {function}
-   * @private
+   * @private {function}
    */
   this.refreshTable_ = this.makeThrottledRefresh_(
       DEFAULT_REFRESH_THROTTLING_MS);
+};
+
+/**
+ * Subscribes this table's onPubSubEvent method to events for this table
+ * on our local channel. Also saves the callback locally, so we can
+ * later reference it on unsubscribe
+ */
+NetSimTable.prototype.subscribe = function () {
+  this.channelCallback_ = NetSimTable.prototype.onPubSubEvent.bind(this);
+  this.channel_.subscribe(this.tableName_, this.channelCallback_);
+};
+
+/**
+ * Unubscribes the saved callback from events for this table on our
+ * local channel. Also clears the saved callback.
+ */
+NetSimTable.prototype.unsubscribe = function () {
+  this.channel_.unsubscribe(this.tableName_, this.channelCallback_);
+  this.channelCallback = undefined;
 };
 
 /**

@@ -276,6 +276,15 @@ en:
       External level test (will):
         first computer program: first computer program
       Hour of Code test content: {}
+      Internet Simulator Setup:
+        Internet Simulator Setup: Internet Simulator Setup
+        description here: description here
+      Internet Simulator Setup 2:
+        description here: description here
+        title: title
+      Internet Simulator Setup 3:
+        Internet Simulator Setup 3: Internet Simulator Setup 3
+        description here: description here
       Intro to CodeStudio:
         An Introduction to Code Studio: An Introduction to Code Studio
       K5PD tour:
@@ -766,6 +775,7 @@ en:
       U3L23 Student Lesson Introduction:
         Natural Language Processing: Natural Language Processing
       U3L24 Conditionals Lecture: {}
+      U3L24 Debugging Lecture: {}
       U3L24 Return Statements Lecture: {}
       U3L24 Student Lesson Introduction:
         Chained Conditionals: Chained Conditionals
@@ -3231,11 +3241,26 @@ en:
         Type out the arithmetic expression that matches this code: Type out the arithmetic expression that matches this code
         Type the arithmetic expression here: Type the arithmetic expression here
       Blocks to Bools 4:
+        (((1 < X) & (X < 5)) || ((8 < X) & (X < 10))): (((1 < X) & (X < 5)) || ((8 < X) & (X < 10)))
+        (((1 < X) && (X < 5)) || ((8 < X) && (X < 10))): (((1 < X) && (X < 5)) || ((8 < X) && (X < 10)))
+        (((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))): (((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)))
+        (((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))): (((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)))
+        (((1 < X) and (X < 5)) or ((8 < X) and (X < 10))): (((1 < X) and (X < 5)) or ((8 < X) and (X < 10)))
         (((1 < x) & (x < 5)) || ((8 < x) & (x < 10))): (((1 < x) & (x < 5)) || ((8 < x) & (x < 10)))
         (((1 < x) && (x < 5)) || ((8 < x) && (x < 10))): (((1 < x) && (x < 5)) || ((8 < x) && (x < 10)))
         (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10))): (((1 < x) AND (x < 5)) OR ((8 < x) AND (x < 10)))
         (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))): (((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)))
         (((1 < x) and (x < 5)) or ((8 < x) and (x < 10))): (((1 < x) and (x < 5)) or ((8 < x) and (x < 10)))
+        ((1 < X) & (X < 5) || (8 < X) & (X < 10)): ((1 < X) & (X < 5) || (8 < X) & (X < 10))
+        ((1 < X) & (X < 5)) || ((8 < X) & (X < 10)): ((1 < X) & (X < 5)) || ((8 < X) & (X < 10))
+        ((1 < X) && (X < 5) || (8 < X) && (X < 10)): ((1 < X) && (X < 5) || (8 < X) && (X < 10))
+        ((1 < X) && (X < 5)) || ((8 < X) && (X < 10)): ((1 < X) && (X < 5)) || ((8 < X) && (X < 10))
+        ((1 < X) AND (X < 5) OR (8 < X) AND (X < 10)): ((1 < X) AND (X < 5) OR (8 < X) AND (X < 10))
+        ((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10)): ((1 < X) AND (X < 5)) OR ((8 < X) AND (X < 10))
+        ((1 < X) And (X < 5) Or (8 < X) And (X < 10)): ((1 < X) And (X < 5) Or (8 < X) And (X < 10))
+        ((1 < X) And (X < 5)) Or ((8 < X) And (X < 10)): ((1 < X) And (X < 5)) Or ((8 < X) And (X < 10))
+        ((1 < X) and (X < 5) or (8 < X) and (X < 10)): ((1 < X) and (X < 5) or (8 < X) and (X < 10))
+        ((1 < X) and (X < 5)) or ((8 < X) and (X < 10)): ((1 < X) and (X < 5)) or ((8 < X) and (X < 10))
         ((1 < x) & (x < 5) || (8 < x) & (x < 10)): ((1 < x) & (x < 5) || (8 < x) & (x < 10))
         ((1 < x) & (x < 5)) || ((8 < x) & (x < 10)): ((1 < x) & (x < 5)) || ((8 < x) & (x < 10))
         ((1 < x) && (x < 5) || (8 < x) && (x < 10)): ((1 < x) && (x < 5) || (8 < x) && (x < 10))
@@ -3246,6 +3271,15 @@ en:
         ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10)): ((1 < x) And (x < 5)) Or ((8 < x) And (x < 10))
         ((1 < x) and (x < 5) or (8 < x) and (x < 10)): ((1 < x) and (x < 5) or (8 < x) and (x < 10))
         ((1 < x) and (x < 5)) or ((8 < x) and (x < 10)): ((1 < x) and (x < 5)) or ((8 < x) and (x < 10))
+        (1 < X < 5) OR (8 < X < 10): (1 < X < 5) OR (8 < X < 10)
+        (1 < X < 5) Or (8 < X < 10): (1 < X < 5) Or (8 < X < 10)
+        (1 < X < 5) or (8 < X < 10): (1 < X < 5) or (8 < X < 10)
+        (1 < X < 5) || (8 < X < 10): (1 < X < 5) || (8 < X < 10)
+        (1 < X) & (X < 5) || (8 < X) & (X < 10): (1 < X) & (X < 5) || (8 < X) & (X < 10)
+        (1 < X) && (X < 5) || (8 < X) && (X < 10): (1 < X) && (X < 5) || (8 < X) && (X < 10)
+        (1 < X) AND (X < 5) OR (8 < X) AND (X < 10): (1 < X) AND (X < 5) OR (8 < X) AND (X < 10)
+        (1 < X) And (X < 5) Or (8 < X) And (X < 10): (1 < X) And (X < 5) Or (8 < X) And (X < 10)
+        (1 < X) and (X < 5) or (8 < X) and (X < 10): (1 < X) and (X < 5) or (8 < X) and (X < 10)
         (1 < x < 5) OR (8 < x < 10): (1 < x < 5) OR (8 < x < 10)
         (1 < x < 5) Or (8 < x < 10): (1 < x < 5) Or (8 < x < 10)
         (1 < x < 5) or (8 < x < 10): (1 < x < 5) or (8 < x < 10)
@@ -3771,7 +3805,7 @@ en:
       U3L23 Free Response Wrap Up 2:
         Natural Language Processing: Natural Language Processing
       U3L24 Assessment 3:
-        Question 3: Question 3
+        Prove it works!: Prove it works!
       U3L25 Assessment:
         'Compound Conditionals: Assessment': 'Compound Conditionals: Assessment'
       U3L25 Free Response Getting Started:

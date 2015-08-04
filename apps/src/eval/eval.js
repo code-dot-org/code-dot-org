@@ -450,9 +450,13 @@ function evaluateAnswer() {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
-  var tryAgainText;
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
+
+  var tryAgainText;
+  if (level.freePlay) {
+    tryAgainText = commonMsg.keepPlaying();
+  }
 
   var options = {
     app: 'eval',
@@ -460,7 +464,7 @@ var displayFeedback = function(response) {
     feedbackType: Eval.testResults,
     response: response,
     level: level,
-    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    tryAgainText: tryAgainText,
     continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     showingSharing: !level.disableSharing && (level.freePlay),
     // allow users to save freeplay levels to their gallery

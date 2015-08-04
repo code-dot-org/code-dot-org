@@ -23,13 +23,14 @@ This .md file should only contain information which is specific to Code.org engi
 ## To commit changes from levelbuilder into staging:
 
 1. Integrate `staging` into `levebuilder` as described above; wait for levelbuilder finish deploying.
-1. `ssh levelbuilder.studio.code.org`
+1. `ssh levelbuilder-staging` from gateway
 1. `cd levelbuilder`
 1. `git branch` **If it doesn't say `levelbuilder` get the dev-of-the-week and/or Will.**
 1. `git add --all dashboard`
 1. `git commit -m "levelbuilder changes committed by YOUR NAME HERE"`
 1. `git push`
 1. On GitHub, open a pull request from `levelbuilder` into `staging`. link: https://github.com/code-dot-org/code-dot-org/compare/staging...levelbuilder
+2. Click the "Merge pull request" button and watch the "Staging" room in Hipchat to make sure the build succeeds. If anything breaks, see the "Did it break section" below. 
 
 # Did it break?
 
