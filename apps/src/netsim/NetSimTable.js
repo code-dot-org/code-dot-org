@@ -50,14 +50,12 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   }
 
   /**
-   * @type {string}
-   * @private
+   * @private {string}
    */
   this.tableName_ = tableName;
 
   /**
-   * @type {PubSubChannel}
-   * @private
+   * @private {PubSubChannel}
    */
   this.channel_ = channel;
   this.subscribe();
@@ -65,22 +63,19 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   /**
    * The callback we most recently subscribed with, so that we can
    * cleanly unsubscribe.
-   * @type {function{}}
-   * @private
+   * @private {function{}}
    */
   this.channelCallback_ = undefined;
 
   /**
    * Base URL we hit to make our API calls
-   * @type {string}
-   * @private
+   * @private {string}
    */
   this.remoteUrl_ = '/v3/netsim/' + shardID + '/' + tableName;
 
   /**
    * API object for making remote calls
-   * @type {ClientApi}
-   * @private
+   * @private {ClientApi}
    */
   this.clientApi_ = clientApi.create(this.remoteUrl_);
 
@@ -93,32 +88,28 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
 
   /**
    * Store table contents locally, so we can detect when changes occur.
-   * @type {Object}
-   * @private
+   * @private {Object}
    */
   this.cache_ = {};
 
   /**
    * Unix timestamp for last time this table's cache contents were fully
    * updated.  Used to determine when to poll the server for changes.
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.lastFullUpdateTime_ = 0;
 
   /**
    * Minimum time (in milliseconds) to wait between pulling full table contents
    * from remote storage.
-   * @type {number}
-   * @private
+   * @private {number}
    */
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 
   /**
    * Throttled version (specific to this instance) of the readAll operation,
    * used to coalesce readAll requests.
-   * @type {function}
-   * @private
+   * @private {function}
    */
   this.refreshTable_ = this.makeThrottledRefresh_(
       DEFAULT_REFRESH_THROTTLING_MS);
