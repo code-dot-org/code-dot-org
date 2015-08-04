@@ -1266,8 +1266,8 @@ Studio.init = function(config) {
   var isAlgebraLevel = !!level.useContractEditor;
   config.grayOutUndeletableBlocks = isAlgebraLevel;
 
-  config.pinWorkspaceToBottom = true;
-  config.hasVerticalScrollbars = true;
+  config.pinWorkspaceToBottom = false;
+  config.hasVerticalScrollbars = false;
 
   loadLevel();
 
