@@ -4,60 +4,71 @@ require 'sinatra/base'
 
 class AssetsApi < Sinatra::Base
 
+  def get_impl(endpoint)
+    case
+    when endpoint == 'assets'
+      AssetBucket
+    when endpoint == 'sources'
+      SourceBucket
+    else
+      not_found
+    end
+  end
+
   # Only allow specific image and sound types to be uploaded by users.
   ALLOWED_FILE_TYPES = %w(.jpg .jpeg .gif .png .mp3)
 
   helpers do
-    %w(core.rb bucket_helper.rb asset_bucket.rb storage_id.rb).each do |file|
+    %w(core.rb bucket_helper.rb asset_bucket.rb source_bucket.rb storage_id.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
 
   #
-  # GET /v3/assets/<channel-id>
+  # GET /v3/(assets|sources)/<channel-id>
   #
   # List filenames and sizes.
   #
-  get %r{/v3/assets/([^/]+)$} do |encrypted_channel_id|
+  get %r{/v3/(assets|sources)/([^/]+)$} do |endpoint, encrypted_channel_id|
     dont_cache
     content_type :json
 
-    AssetBucket.new.list(encrypted_channel_id).to_json
+    get_impl(endpoint).new.list(encrypted_channel_id).to_json
   end
 
   #
-  # GET /v3/assets/<channel-id>/<filename>
+  # GET /v3/(assets|sources)/<channel-id>/<filename>
   #
   # Read a file.
   #
-  get %r{/v3/assets/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+  get %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     type = File.extname(filename)
     not_found if type.empty?
     content_type type
 
-    AssetBucket.new.get(encrypted_channel_id, filename) || not_found
+    get_impl(endpoint).new.get(encrypted_channel_id, filename) || not_found
   end
 
   #
-  # PUT /v3/assets/<dest-channel-id>?src=<src-channel-id>
+  # PUT /v3/(assets|sources)/<dest-channel-id>?src=<src-channel-id>
   #
   # Copy all files from one channel to another. Return metadata of copied files.
   #
-  put %r{/v3/assets/([^/]+)$} do |encrypted_dest_channel_id|
+  put %r{/v3/(assets|sources)/([^/]+)$} do |endpoint, encrypted_dest_channel_id|
     dont_cache
 
     encrypted_src_channel_id = request.GET['src']
     bad_request if encrypted_src_channel_id.empty?
-    AssetBucket.new.copy_assets(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
+    get_impl(endpoint).new.copy_assets(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
   end
 
   #
-  # PUT /v3/assets/<channel-id>/<filename>
+  # PUT /v3/(assets|sources)/<channel-id>/<filename>
   #
   # Create or replace a file.
   #
-  put %r{/v3/assets/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+  put %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
 
     # read the entire request before considering rejecting it, otherwise varnish
@@ -71,7 +82,7 @@ class AssetsApi < Sinatra::Base
     # when serving assets.
     mime_type = Sinatra::Base.mime_type(file_type)
 
-    AssetBucket.new.create_or_replace(encrypted_channel_id, filename, body)
+    get_impl(endpoint).new.create_or_replace(encrypted_channel_id, filename, body)
 
     content_type :json
     category = mime_type.split('/').first
@@ -79,13 +90,13 @@ class AssetsApi < Sinatra::Base
   end
 
   #
-  # DELETE /v3/assets/<channel-id>/<filename>
+  # DELETE /v3/(assets|sources)/<channel-id>/<filename>
   #
   # Delete a file.
   #
-  delete %r{/v3/assets/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+  delete %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
-    AssetBucket.new.delete(encrypted_channel_id, filename)
+    get_impl(endpoint).new.delete(encrypted_channel_id, filename)
     no_content
   end
 
