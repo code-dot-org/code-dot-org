@@ -30,7 +30,7 @@ describe("NetSimTable", function () {
     fakeChannel = {
       subscribe: function () {}
     };
-    netsimTable = netsimTestUtils.overrideClientApi(
+    netsimTable = netsimTestUtils.overrideNetSimTableApi(
         new NetSimTable('testShard', 'testTable', {
           channel: fakeChannel
         }));
@@ -271,7 +271,7 @@ describe("NetSimTable", function () {
 
     beforeEach(function () {
       // New table configured for incremental refresh
-      netsimTable = netsimTestUtils.overrideClientApi(
+      netsimTable = netsimTestUtils.overrideNetSimTableApi(
           new NetSimTable('testShard', 'testTable', {
             channel: fakeChannel,
             useIncrementalRefresh: true
