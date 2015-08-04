@@ -116,8 +116,7 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
-    # Provide the channel for templated and applab levels.
-    set_channel if @level.project_template_level || @level.game == Game.applab || @level.pixelation?
+    set_channel if @level.channel_backed?
 
     callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
     # Set videos and callouts.
@@ -125,6 +124,9 @@ module LevelsHelper
       autoplay_video: select_and_track_autoplay_video,
       callouts: callouts
     )
+
+    # External project levels are any levels of type 'external' which use
+    # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.pixelation?
 
     return blockly_options if @level.is_a? Blockly

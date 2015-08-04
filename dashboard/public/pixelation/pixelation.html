@@ -113,8 +113,7 @@
       }
     };
 
-    var promise = dashboard.project.load();
-    promise.then(function() {
+    dashboard.project.load().then(function() {
       // Only enable saving if the initial load succeeds. This means new work
       // will not be saved, but old work will not be erased and may become
       // available by refreshing the page.
