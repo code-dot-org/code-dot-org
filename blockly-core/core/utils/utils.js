@@ -424,9 +424,10 @@ Blockly.mouseCoordinatesToSvg = function(clientX, clientY, target) {
  * @returns {goog.math.Coordinate}
  */
 Blockly.svgCoordinatesToViewport = function(coordinates, blockSpace) {
+  var blockSpaceMetrics = blockSpace.getMetrics();
   return new goog.math.Coordinate(
-    coordinates.x - blockSpace.getMetrics().absoluteLeft,
-    coordinates.y);
+    coordinates.x - blockSpaceMetrics.absoluteLeft,
+    coordinates.y - blockSpaceMetrics.absoluteTop);
 };
 
 /**
