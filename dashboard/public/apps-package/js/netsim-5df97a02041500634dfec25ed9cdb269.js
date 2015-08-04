@@ -4601,18 +4601,37 @@ PubSubService.create = function (pubSubConfig) {
  */
 
 /**
+ * @function
+ * @name PubSubService#unsubscribe
+ * @param {string} channelID - Channel from which we unsubscribe.
+ */
+
+/**
  * Stub implementation of PubSub API.
  * @constructor
  * @implements PubSubService
  */
+// Disable "unused variable" errors for null implementation declarations
+/* jshint unused:false */
 PubSubService.NullService = function () { };
 
 /**
+ * Subscribe to events on a particular channel.
+ * @param {string} channelID
  * @returns {PubSubChannel}
  */
-PubSubService.NullService.prototype.subscribe = function () {
+PubSubService.NullService.prototype.subscribe = function (channelID) {
   return new PubSubChannel.NullChannel();
 };
+
+/**
+ * Unsubscribe from events on a particular channel.
+ * @param {string} channelID
+ */
+PubSubService.NullService.prototype.unsubscribe = function (channelID) { };
+
+// Re-enable "unused variable" error
+/* jshint unused:true */
 
 /**
  * Wrapped Pusher.com API.
@@ -4695,6 +4714,13 @@ PubSubChannel.NullChannel = function () { };
  *        triggered.
  */
 PubSubChannel.NullChannel.prototype.subscribe = function (eventName, callback) { };
+
+/**
+ * Unsubscribe a given callback from a given event
+ * @param {string} eventName
+ * @param {function{}} callback
+ */
+PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName, callback) { };
 
 // Re-enable "unused variable" error
 /* jshint unused:true */
