@@ -65,7 +65,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   /**
    * The callback we most recently subscribed with, so that we can
    * cleanly unsubscribe.
-   * @type {function}
+   * @type {function{}}
    * @private
    */
   this.channelCallback_ = undefined;
