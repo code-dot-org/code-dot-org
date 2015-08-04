@@ -85,7 +85,11 @@ class Game < ActiveRecord::Base
   end
 
   def has_footer?
-    !(app == APPLAB || app == NETSIM)
+    !(app == APPLAB)
+  end
+
+  def uses_small_footer?
+    app == NETSIM
   end
 
   def uses_small_footer?

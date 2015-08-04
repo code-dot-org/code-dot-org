@@ -12,6 +12,7 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
+var smallFooterUtils = require('@cdo/shared/smallFooter');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -416,7 +417,7 @@ StudioApp.prototype.init = function(config) {
     }).bind(this));
   }
 
-  this.bindSmallFooterHandlers_();
+  smallFooterUtils.bindHandlers();
 };
 
 /**
@@ -961,43 +962,14 @@ function resizePinnedBelowVisualizationArea() {
 }
 
 /**
- * Sets the copyright flyout to sit exactly above the footer.
- */
-function repositionCopyrightFlyout() {
-  var copyrightFlyout = document.querySelector('#copyright-flyout');
-  var smallFooter = document.querySelector('.small-footer');
-  if (!(copyrightFlyout && smallFooter)) {
-    return;
-  }
-
-  copyrightFlyout.style.left = '0';
-  copyrightFlyout.style.paddingBottom = smallFooter.offsetHeight + 'px';
-}
-
-/**
- * Sets the more-menu size and position to sit above the footer and
- * match its full width.
- */
-function repositionMoreMenu() {
-  var smallFooter = document.querySelector('.small-footer');
-  var moreMenu = document.querySelector('#more-menu');
-  if (!(smallFooter && moreMenu)) {
-    return;
-  }
-
-  moreMenu.style.bottom = smallFooter.offsetHeight + 'px';
-  moreMenu.style.width = smallFooter.offsetWidth + 'px';
-}
-
-/**
  * Debounced onResize operations that update the layout to support sizing
  * to viewport height and using the small footer.
  * @type {Function}
  */
 var onResizeSmallFooter = _.debounce(function () {
   resizePinnedBelowVisualizationArea();
-  repositionCopyrightFlyout();
-  repositionMoreMenu();
+  smallFooterUtils.repositionCopyrightFlyout();
+  smallFooterUtils.repositionMoreMenu();
 }, 10);
 
 StudioApp.prototype.onMouseDownVizResizeBar = function (event) {

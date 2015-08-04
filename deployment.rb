@@ -13,7 +13,7 @@ end
 
 def load_languages(path)
   [].tap do |results|
-    CSV.foreach(path, headers:true) do |row|
+    CSV.foreach(path, headers: true) do |row|
       results << row['code_s!']
     end
   end
@@ -84,7 +84,9 @@ def load_configuration()
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
-    'pusher_application_secret'   => 'fake_application_secret'
+    'pusher_application_secret'   => 'fake_application_secret',
+    'videos_s3_bucket'             => 'videos.code.org',
+    'videos_url'                   => '//videos.code.org'
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
@@ -172,7 +174,7 @@ class CDOImpl < OpenStruct
 
   def slog(params)
     return unless slog_token
-    @slog ||= Slog::Writer.new(secret:slog_token)
+    @slog ||= Slog::Writer.new(secret: slog_token)
     @slog.write params
   end
 

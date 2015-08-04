@@ -5,8 +5,9 @@
 
 require 'minitest/autorun'
 require 'rack/test'
-require File.expand_path '../../../deployment', __FILE__
-require File.expand_path '../../middleware/helpers/redis_property_bag', __FILE__
+require_relative '../../deployment'
+require_relative '../middleware/helpers/redis_property_bag'
+require_relative 'fake_redis_client'
 
 class RedisPropertyBagTest < Minitest::Unit::TestCase
 
@@ -62,43 +63,13 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     bag1.delete_all
     assert_nil bag1.get('foo')
     assert_equal empty_hash, bag1.to_hash
-  end
 
-end
-
-# A fake redis client implementation that uses a local hash.
-# Note that this does not implement the entire Redis client API,
-# only that portion required by the RedisPropertyBag.
-class FakeRedisClient
-
-  def initialize
-    @hash = Hash.new
-  end
-
-  def get_hash_for_key(key)
-    @hash[key] ||= {}
-  end
-
-  def hget(key, field)
-    get_hash_for_key(key)[field]
-  end
-
-  def hset(key, field, value)
-    get_hash_for_key(key)[field] = value
-    value
-  end
-
-  def hgetall(key)
-    get_hash_for_key(key).clone
-  end
-
-  def del(key)
-    @hash.delete(key)
-  end
-
-  def hdel(key, field)
-    value = get_hash_for_key(key).delete(field)
-    value ? 1 : 0
+    # Test increment_counter.
+    assert_equal 1, bag2.increment_counter('foo_counter')
+    assert_equal 1, bag2.increment_counter('bar_counter')
+    assert_equal 2, bag2.increment_counter('foo_counter')
+    assert_equal 3, bag2.increment_counter('foo_counter')
+    assert_equal 2, bag2.increment_counter('bar_counter')
   end
 
 end

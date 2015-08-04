@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Let's use that aqua-star function to make a row of different sized stars. From left to right, the stars should have radiuses of 25, 50, and 75.",
+    "instructions": "Let's use that aqua-star function to make a row of different sized stars. From left to right, the stars should have radii of 25, 50, and 75.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's use that _aqua-star_ function to make a row of different sized stars. From left to right, the stars should have radiuses of 25, 50, and 75."
+    "markdown_instructions": "Let's use that _aqua-star_ function to make a row of different sized stars. From left to right, the stars should have radii of 25, 50, and 75."
   }
 }]]></config>
   <blocks>

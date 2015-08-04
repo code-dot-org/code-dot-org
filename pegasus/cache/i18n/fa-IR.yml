@@ -1228,3 +1228,6 @@
     داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال
     کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>.
   compatibility_https_hide_this_warning: مخفی کردن هشدار
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

@@ -10,7 +10,7 @@ module AWS
     end
 
     def self.connect!()
-      AWS::S3::Base.establish_connection! access_key_id:CDO.s3_access_key_id, secret_access_key:CDO.s3_secret_access_key
+      AWS::S3::Base.establish_connection! access_key_id: CDO.s3_access_key_id, secret_access_key: CDO.s3_secret_access_key
     end
 
     def self.download_from_bucket(bucket, name, options={})

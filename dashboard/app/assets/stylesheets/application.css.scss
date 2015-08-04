@@ -25,6 +25,7 @@
  *= require user-menu
  *= require user-progress
  *= require user-hero
+ *= require buttons
  *= require course-blocks
  *= require details-polyfill
  */
@@ -271,28 +272,22 @@ $small-footer-standard-width: 400px;
   color: $light_gray;
   font-size: 14px;
   a {
+    font-family: $gotham-bold;
+    font-weight: normal;
     &:link {
-      font-family: $gotham-regular;
-      font-weight: normal;
       color: $light_gray;
       text-decoration: none;
     }
     &:visited {
-      font-family: $gotham-regular;
-      font-weight: normal;
       color: $light_gray;
       text-decoration: none;
     }
     &:hover {
-      font-family: $gotham-regular;
-      font-weight: normal;
       color:$dark_charcoal;
       background-color: transparent;
       text-decoration: underline;
     }
     &:active {
-      font-family: $gotham-regular;
-      font-weight: normal;
       color:$light_gray;
       background-color: transparent;
       text-decoration: none;
@@ -302,14 +297,18 @@ $small-footer-standard-width: 400px;
 
 .small-footer {
   position: absolute;
-  z-index: 3;
   bottom: 0;
   width: $small-footer-standard-width;
   overflow: hidden;
   padding-left: $codeApp-left-margin;
   padding-top: 3px;
   padding-bottom: 3px;
-  margin-top: 5px; /* Used in javascript to position #belowVisualization */
+
+  /*
+   * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
+   * fit between the visualization above and the .small-footer
+   */
+  margin-top: 5px;
 
   form {
     float: left;
@@ -335,7 +334,6 @@ $small-footer-standard-width: 400px;
 #copyright-flyout {
   display: none; /* Invisible until summoned. */
   position: absolute;
-  z-index: 2;
   bottom: 0;
   left: 0;
   width: 625px;
@@ -347,7 +345,6 @@ $small-footer-standard-width: 400px;
 #more-menu {
   display: none;
   position: absolute;
-  z-index: 1;
   bottom: 0;
   left: 0;
   /* Prevent default unordered-list style */
@@ -366,6 +363,17 @@ $small-footer-standard-width: 400px;
       text-decoration: none;
     }
   }
+}
+
+/* All three major components of .small-footer are stacked: */
+#more-menu {
+  z-index: 1;
+}
+#copyright-flyout {
+  z-index: 2;
+}
+.small-footer {
+  z-index: 3;
 }
 
 #locale {

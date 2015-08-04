@@ -176,8 +176,7 @@ exports.fakeShard = function () {
     nodeTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'node')),
     wireTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
     messageTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'message')),
-    logTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'log')),
-    heartbeatTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'heartbeat')),
+    logTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'log'))
   };
 };
 

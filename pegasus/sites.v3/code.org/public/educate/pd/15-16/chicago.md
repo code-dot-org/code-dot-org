@@ -59,13 +59,13 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 17, 2015
+Quarter 1: Saturday, October 24, 2015
 
-Quarter 2: Saturday, November 21, 2015
+Quarter 2: Saturday, December 12, 2015
 
-Quarter 3: Saturday, January 23, 2016
+Quarter 3: Saturday, February 6, 2016
 
-Quarter 4: Saturday, April 30 , 2016
+Quarter 4: Saturday, March 19 , 2016
 
 8:30am - 3:30pm
 <br/>
@@ -223,7 +223,30 @@ Laptop
 </br>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-More info coming soon!
+**Save the dates:**
+
+Semester 1: Saturday, October 24, 2015 
+
+Semester 2: Saturday, April 30, 2016 
+
+8:00am - 4:00pm
+</br>
+<br/>
+Breakfast and lunch will be served. 
+
+**Location**
+
+TBD
+
+**What to bring to Phase 3 bi-yearly sessions:**
+
+Laptop
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 

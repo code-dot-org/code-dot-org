@@ -320,7 +320,7 @@ end
 def encrypted_cookie(user)
   key_generator = ActiveSupport::KeyGenerator.new(
       CDO.dashboard_secret_key_base,
-      iterations:1000
+      iterations: 1000
     )
 
   encryptor = ActiveSupport::MessageEncryptor.new(
@@ -393,7 +393,7 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 30 )
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
   wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
 
   if redirect_source == 'pushState'

@@ -26,7 +26,7 @@
     "instructions": "Free Play: What can you do to make Luigi's cost function even more useful?",
     "min_workspace_height": "2000",
     "disable_examples": "false",
-    "markdown_instructions": "Free Play: What can you do to make Luigi's cost function even more useful? Try one (or more) of the following:  \r\n\r\n- Create a new function to display an image of the chosen pizza\r\n- Create a function that allows for ordering multiple pizzas\r\n- Create a function that allows you to add a coupon code for a 50% discount"
+    "markdown_instructions": "Free Play: What can you do to make Luigi's cost function even more useful? Try one (or more) of the following:  \r\n\r\n- Create a new function to display an image of the chosen pizza\r\n- Create a function that allows for ordering multiple pizzas (the same, or with different toppings)\r\n- Create a function that allows you to add a coupon code for a 30% discount"
   }
 }]]></config>
   <blocks>
