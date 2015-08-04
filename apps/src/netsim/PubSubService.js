@@ -91,7 +91,7 @@ PubSubService.PusherService.prototype.subscribe = function (channelID) {
 };
 
 /**
- * Unsubscribefrom events on a particular channel.
+ * Unsubscribe from events on a particular channel.
  * @param {string} channelID
  */
 PubSubService.PusherService.prototype.unsubscribe = function (channelID) {

@@ -64,7 +64,7 @@ PubSubChannel.PusherChannel = function (pusherApiChannel) {
 /**
  * Subscribe to an event so the given callback is called when the event occurs.
  * @param {string} eventName
- * @param {function} callback
+ * @param {function{}} callback
  */
 PubSubChannel.PusherChannel.prototype.subscribe = function (eventName, callback) {
   this.pusherChannel_.bind(eventName, callback);
@@ -73,7 +73,7 @@ PubSubChannel.PusherChannel.prototype.subscribe = function (eventName, callback)
 /**
  * Unsubscribe a given callback from a given event
  * @param {string} eventName
- * @param {function} callback
+ * @param {function{}} callback
  */
 PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName, callback) {
   this.pusherChannel_.unbind(eventName, callback);
