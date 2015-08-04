@@ -29,45 +29,45 @@ var netsimGlobals = require('./netsimGlobals');
  * @constructor
  */
 var NetSimRouterLogModal = module.exports = function (rootDiv) {
+
   /**
    * Component root, which we fill whenever we call render()
-   * @type {jQuery}
-   * @private
+   * @private {jQuery}
    */
   this.rootDiv_ = rootDiv;
 
   /**
-   * @type {NetSimShard}
-   * @private
+   * @private {NetSimShard}
    */
   this.shard_ = null;
 
   /**
-   * @type {NetSimLogEntry[]}
-   * @private
+   * @private {NetSimRouterNode}
+   */
+  this.router_ = null;
+
+  /**
+   * @private {NetSimLogEntry}
    */
   this.logEntries_ = [];
 
   /**
    * Tracking information for which events we're registered to, so we can
    * perform cleanup as needed.
-   * @type {Object}
-   * @private
+   * @private {Object}
    */
   this.eventKeys_ = {};
 
   /**
    * Sorting key, changed by user interaction, which determines which sort
    * we use on render.
-   * @type {string}
-   * @private
+   * @private {string}
    */
   this.sortBy_ = 'timestamp';
 
   /**
    * Whether currently using a descending sort.
-   * @type {boolean}
-   * @private
+   * @private {boolean}
    */
   this.sortDescending_ = true;
 
@@ -115,19 +115,41 @@ NetSimRouterLogModal.iterateeMap = {
  */
 NetSimRouterLogModal.prototype.render = function () {
 
+  this.rootDiv_.off('shown.bs.modal.onModalOpen');
+  this.rootDiv_.off('hidden.bs.modal.onModalClose');
+
+  var filteredLogEntries = this.isAllRouterMode() ?
+      this.logEntries_ :
+      this.logEntries_.filter(function (entry) {
+        return entry.nodeID === this.router_.entityID;
+      }, this);
+
   // Sort before rendering
   var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
-  var sortedLogEntries = _.sortBy(this.logEntries_, iterateeFunction);
+  var sortedFilteredLogEntries = _.sortBy(filteredLogEntries, iterateeFunction);
   if (this.sortDescending_) {
-    sortedLogEntries.reverse();
+    sortedFilteredLogEntries.reverse();
   }
 
   var renderedMarkup = $(markup({
-    logEntries: sortedLogEntries,
+    logEntries: sortedFilteredLogEntries,
+    isAllRouterMode: this.isAllRouterMode(),
     sortBy: this.sortBy_,
     sortDescending: this.sortDescending_
   }));
   this.rootDiv_.html(renderedMarkup);
+
+  this.rootDiv_.on('shown.bs.modal.onModalOpen', function () {
+    if (this.shard_) {
+      this.shard_.logTable.subscribe();
+    }
+  }.bind(this));
+
+  this.rootDiv_.on('hidden.bs.modal.onModalClose', function () {
+      if (this.shard_) {
+        this.shard_.logTable.unsubscribe();
+      }
+  }.bind(this));
 
   this.rootDiv_.find('th').click(function (event) {
     this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
@@ -146,6 +168,28 @@ NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
     this.sortDescending_ = false;
   }
   this.render();
+};
+
+/**
+ * Called by the sumulation's onRouterConnect and onRouterDisconnect
+ * methods, this locally remembers the current router state and triggers
+ * a rerender
+ * @param {NetSimRouterNode} router
+ */
+NetSimRouterLogModal.prototype.setRouter = function (router) {
+  this.router_ = router;
+  this.render();
+};
+
+/**
+ * Helper method to determine whether or we are currently in
+ * "All-Router" mode, or dealing with a single router. Currently is
+ * determined exclusively by the current connection state, but may later
+ * be expanded to allow switching between the two.
+ * @returns {boolean}
+ */
+NetSimRouterLogModal.prototype.isAllRouterMode = function () {
+  return !(this.router_);
 };
 
 /**
