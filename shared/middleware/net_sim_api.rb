@@ -5,7 +5,8 @@ require 'csv'
 require_relative '../middleware/helpers/redis_table'
 require_relative '../middleware/channels_api'
 
-# NetSimApi implements a rest service for interacting with NetSim tables.
+# NetSimApi implements a REST service for interacting with NetSim tables and
+# notifying clients of changes using a pubsub service.
 class NetSimApi < Sinatra::Base
 
   TABLE_NAMES = {
@@ -114,7 +115,7 @@ class NetSimApi < Sinatra::Base
   #
   # DELETE /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
-  # Deletes a row by id.
+  # Deletes a row by id, notifying other clients using the pubsub service.
   #
   delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
@@ -144,7 +145,7 @@ class NetSimApi < Sinatra::Base
   #
   # POST /v3/netsim/<shard-id>/<table-name>
   #
-  # Insert a new row.
+  # Insert a new row, notifying other clients using the pubsub service.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
@@ -176,7 +177,7 @@ class NetSimApi < Sinatra::Base
   #
   # PATCH (PUT, POST) /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
-  # Update an existing row.
+  # Update an existing row, notifying other clients using the pubsub service.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
