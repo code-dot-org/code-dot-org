@@ -3,6 +3,8 @@ var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 var commonMsg = require('@cdo/apps/locale');
 
+// TODO - do something similar for calc (and probably ultimately studio)
+
 var solutionBlocks = '' +
   '<block type="functional_definition" inline="false" movable="false">' +
   '  <mutation>' +
@@ -60,7 +62,7 @@ module.exports = {
   },
   tests: [
     {
-      description: "example missing result block",
+      description: "example is missing result block",
       expected: {
         result: false,
         testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
@@ -83,5 +85,10 @@ module.exports = {
         '</block>' +
         '</xml>'
     }
+
+    // TODO
+    // example returns wrong result
+
+    // example returns correct result
   ]
 };

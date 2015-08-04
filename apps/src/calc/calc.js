@@ -216,17 +216,27 @@ function testCalcExample(exampleBlock) {
     var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
 
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+
+    if (!actualBlock) {
+      throw new Error('Invalid Call Block');
+    }
+
+    if (!expectedBlock) {
+      throw new Error('Invalid Result Block');
+    }
+
     var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
     var actual = entireSet.evaluateWithExpression(actualEquation.expression);
 
-    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
     var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
     var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
 
     var areEqual = expected.result.equals(actual.result);
     return areEqual ? "Matches definition." : "Does not match definition";
   } catch (error) {
-    return "Execution error: " + error.message;
+    // Most Calc error messages were not meant to be user facing.
+    return "Evaluation Failed.";
   }
 }
 
@@ -682,7 +692,8 @@ Calc.execute = function() {
 function isPreAnimationFailure(testResult) {
   return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
     testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
-    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
+    testResult == TestResults.EXAMPLE_FAILED;
 }
 
 /**
@@ -730,11 +741,13 @@ Calc.generateResults_ = function () {
     appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
   } else {
-    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
-    appState.result = outcome.result;
-    appState.testResults = outcome.testResults;
-    appState.message = outcome.message;
-    appState.failedInput = outcome.failedInput;
+    var outcome = Calc.checkExamples_();
+    appState = $.extend(appState, outcome);
+
+    if (appState.result === null) {
+      var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
+      appState = $.extend(appState, outcome);
+    }
   }
 
   // Override default message for LEVEL_INCOMPLETE_FAIL
@@ -742,6 +755,57 @@ Calc.generateResults_ = function () {
       !appState.message) {
     appState.message = calcMsg.levelIncompleteError();
   }
+};
+
+/**
+ * @returns {Object} set of appState to be merged by caller
+ */
+Calc.checkExamples_ = function () {
+  var outcome = {};
+  // TODO (brent) - turn this on
+  // if (!level.examplesRequired) {
+  //   return outcome;
+  // }
+
+  var unfilled = studioApp.getUnfilledFunctionalExample();
+  if (unfilled) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    // TODO
+    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+      .getTitleValue('NAME');
+
+    outcome.message = 'You need at least one example in function ' + name +
+      '. Make sure each example has a call and a result';
+    return outcome;
+  }
+
+  // TODO - what of this belongs in studio app?
+  var failingBlockName = '';
+  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
+    var result = testCalcExample(exampleBlock, true);
+    var success = result === "Matches definition.";
+
+    // Update the example result. No-op if we're not currently editing this
+    // function.
+    Blockly.contractEditor.updateExampleResult(exampleBlock, result);
+
+    if (!success) {
+      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
+        .getTitleValue('NAME');
+    }
+
+  });
+
+  if (failingBlockName) {
+    outcome.result = false;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = 'The function ' + failingBlockName + ' has one or more' +
+      ' examples that need adjusting. Make sure they match your definition and' +
+      ' answer the question';
+  }
+
+  return outcome;
 };
 
 /**
