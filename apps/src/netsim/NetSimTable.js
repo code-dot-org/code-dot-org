@@ -12,6 +12,7 @@
  maxparams: 4,
  maxstatements: 200
  */
+/* global $ */
 'use strict';
 
 var _ = require('../utils').getLodash();
@@ -127,6 +128,39 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
 };
 
 /**
+ * Asynchronously retrieve new/updated table content from the server, using
+ * whatever method is most appropriate to this table's configuration.
+ * When done, updates the local cache and hits the provided callback to
+ * indicate completion.
+ * @param {NodeStyleCallback} [callback] - indicates completion of the operation.
+ * @returns {jQuery.Promise} Guaranteed to resolve after the cache update,
+ *          so .done() operations can interact with the cache.
+ */
+NetSimTable.prototype.refresh = function (callback) {
+  callback = callback || function () {};
+
+  var apiCall = this.useIncrementalRefresh_ ?
+      this.api_.allRowsFromID.bind(this.api_, this.latestRowID_ + 1) :
+      this.api_.allRows.bind(this.api_);
+  var cacheUpdate = this.useIncrementalRefresh_ ?
+      this.incrementalCacheUpdate_.bind(this) :
+      this.fullCacheUpdate_.bind(this);
+
+  var deferred = $.Deferred();
+  apiCall(function (err, data) {
+    if (err) {
+      callback(err, data);
+      deferred.reject(err);
+    } else {
+      cacheUpdate(data);
+      callback(err, data);
+      deferred.resolve();
+    }
+  });
+  return deferred.promise();
+};
+
+/**
  * Pull the full table contents from the server, replace the local cache
  * with the returned rows, and finally call the provided callback.
  * @param {!NodeStyleCallback} callback
@@ -135,22 +169,6 @@ NetSimTable.prototype.refreshAll = function (callback) {
   this.api_.allRows(function (err, data) {
     if (err === null) {
       this.fullCacheUpdate_(data);
-    }
-    callback(err, data);
-  }.bind(this));
-};
-
-/**
- * Pull the table contents since the given row ID, update the local cache with
- * the returned rows, and finally call the provided callback.
- * @param {!number} rowID
- * @param {!NodeStyleCallback} callback
- * @private
- */
-NetSimTable.prototype.refreshFromRowID_ = function (rowID, callback) {
-  this.api_.allRowsFromID(rowID, function (err, data) {
-    if (err === null) {
-      this.incrementalCacheUpdate_(data);
     }
     callback(err, data);
   }.bind(this));
@@ -166,13 +184,7 @@ NetSimTable.prototype.refreshFromRowID_ = function (rowID, callback) {
  * @private
  */
 NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
-  return _.throttle(function () {
-    if (this.useIncrementalRefresh_) {
-      this.refreshFromRowID_(this.latestRowID_ + 1, function () {});
-    } else {
-      this.refreshAll(function () {});
-    }
-  }.bind(this), waitMs);
+  return _.throttle(this.refresh.bind(this, function () {}), waitMs);
 };
 
 /**
