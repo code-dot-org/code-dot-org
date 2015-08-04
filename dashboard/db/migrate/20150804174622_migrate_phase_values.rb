@@ -1,4 +1,4 @@
-class ChangePhaseToInt < ActiveRecord::Migration
+class MigratePhaseValues < ActiveRecord::Migration
   PHASES = {
       1 => 'Phase 1',
       2 => 'Phase 2',
@@ -20,15 +20,15 @@ class ChangePhaseToInt < ActiveRecord::Migration
         end
         workshop.save!
       end
-      change_column :workshops, :phase, :text
     end
   end
   def down
-    Workshop.find_each do |workshop|
-      phase = workshop.phase
-      workshop.phase = PHASES[phase]
-      workshop.save!
+    ActiveRecord::Base.transaction do
+      Workshop.find_each do |workshop|
+        phase = workshop.phase
+        workshop.phase = PHASES[phase]
+        workshop.save!
+      end
     end
-    change_column :workshops, :phase, :text
   end
 end
