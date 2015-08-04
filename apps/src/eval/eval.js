@@ -78,8 +78,8 @@ Eval.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_display';
   config.enableShowCode = false;
-  config.pinWorkspaceToBottom = true;
-  config.hasVerticalScrollbars = true;
+  config.pinWorkspaceToBottom = false;
+  config.hasVerticalScrollbars = false;
 
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
