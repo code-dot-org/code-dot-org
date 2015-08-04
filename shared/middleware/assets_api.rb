@@ -47,9 +47,9 @@ class AssetsApi < Sinatra::Base
   end
 
   #
-  # GET /v3/(assets|sources)/<channel-id>/<filename>
+  # GET /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
   #
-  # Read a file.
+  # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
@@ -57,7 +57,7 @@ class AssetsApi < Sinatra::Base
     not_found if type.empty?
     content_type type
 
-    get_impl(endpoint).new.get(encrypted_channel_id, filename) || not_found
+    get_impl(endpoint).new.get(encrypted_channel_id, filename, request.GET['version']) || not_found
   end
 
   #

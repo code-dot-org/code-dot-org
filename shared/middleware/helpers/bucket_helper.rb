@@ -25,11 +25,11 @@ class BucketHelper
     end
   end
 
-  def get(encrypted_channel_id, filename)
+  def get(encrypted_channel_id, filename, version = nil)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
     begin
-      @s3.get_object(bucket: @bucket, key: key).body
+      @s3.get_object(bucket: @bucket, key: key, version_id: version).body
     rescue Aws::S3::Errors::NoSuchKey
       nil
     end
