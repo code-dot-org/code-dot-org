@@ -46,6 +46,13 @@ PubSubChannel.NullChannel = function () { };
  */
 PubSubChannel.NullChannel.prototype.subscribe = function (eventName, callback) { };
 
+/**
+ * Unsubscribe a given callback from a given event
+ * @param {string} eventName
+ * @param {function{}} callback
+ */
+PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName, callback) { };
+
 // Re-enable "unused variable" error
 /* jshint unused:true */
 
