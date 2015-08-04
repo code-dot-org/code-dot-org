@@ -52,6 +52,14 @@ body {
   font-style: normal;
 }
 
+body.pin_bottom {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
