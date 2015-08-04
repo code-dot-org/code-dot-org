@@ -15,7 +15,7 @@ goog.require('Blockly.XButton');
  * @param {Blockly.BlockValueType} options.type
  * @param {Function} options.onRemovePress
  * @param {Function} options.onTypeChanged takes {Blockly.BlockValueType} newType
- * @param {Function} options.onNameChanged takes {string} uniqueID and {string} newName
+ * @param {Function} options.onNameChanged takes {string} uniqueID
  * @param {Object.<String, Blockly.BlockValueType>} options.typeChoices
  * @constructor
  */
