@@ -126,7 +126,7 @@ describe("NetSimLocalClientNode", function () {
       var fromNodeID, toNodeID;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('101001100101', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testShard.messageTable.refreshAll(function (err, rows) {
         fromNodeID = rows[0].fromNodeID;
         toNodeID = rows[0].toNodeID;
       });
@@ -138,7 +138,7 @@ describe("NetSimLocalClientNode", function () {
       var message;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('1010101010100101010', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testShard.messageTable.refreshAll(function (err, rows) {
         message = new NetSimMessage(testShard, rows[0]);
       });
       assertEqual('1010101010100101010', message.payload);

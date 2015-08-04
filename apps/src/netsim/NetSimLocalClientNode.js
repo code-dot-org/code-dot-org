@@ -255,7 +255,7 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
 NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
   this.connectToNode(client, function (err, wire) {
     // Check whether WE just established a mutual connection with a remote client.
-    this.shard_.wireTable.readAll(function (err, wireRows) {
+    this.shard_.wireTable.refreshAll(function (err, wireRows) {
       if (err) {
         onComplete(err, wire);
         return;
@@ -652,7 +652,7 @@ NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function (onComp
 
   // Does an asynchronous request to the message table to ensure we have
   // the latest contents
-  this.shard_.messageTable.readAll(function (err, messageRows) {
+  this.shard_.messageTable.refreshAll(function (err, messageRows) {
     if (err) {
       onComplete(err);
       return;
@@ -708,7 +708,7 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 
   // Does an asynchronous request to the message table to ensure we have
   // the latest contents
-  this.shard_.messageTable.readAll(function (err, messageRows) {
+  this.shard_.messageTable.refreshAll(function (err, messageRows) {
     if (err) {
       onComplete(err);
       return;

@@ -26,7 +26,7 @@ var NetSimApi = require('./NetSimApi');
 var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
- * Minimum wait time (in milliseconds) between readAll requests.
+ * Minimum wait time (in milliseconds) between refreshAll requests.
  * @type {number}
  */
 var DEFAULT_REFRESH_THROTTLING_MS = 1000;
@@ -117,8 +117,8 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 
   /**
-   * Throttled version (specific to this instance) of the readAll operation,
-   * used to coalesce readAll requests.
+   * Throttled version (specific to this instance) of the refreshAll operation,
+   * used to coalesce refreshAll requests.
    * @type {function}
    * @private
    */
@@ -127,9 +127,11 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
 };
 
 /**
+ * Pull the full table contents from the server, replace the local cache
+ * with the returned rows, and finally call the provided callback.
  * @param {!NodeStyleCallback} callback
  */
-NetSimTable.prototype.readAll = function (callback) {
+NetSimTable.prototype.refreshAll = function (callback) {
   this.api_.allRows(function (err, data) {
     if (err === null) {
       this.fullCacheUpdate_(data);
@@ -139,10 +141,13 @@ NetSimTable.prototype.readAll = function (callback) {
 };
 
 /**
+ * Pull the table contents since the given row ID, update the local cache with
+ * the returned rows, and finally call the provided callback.
  * @param {!number} rowID
  * @param {!NodeStyleCallback} callback
+ * @private
  */
-NetSimTable.prototype.readFromID = function (rowID, callback) {
+NetSimTable.prototype.refreshFromRowID_ = function (rowID, callback) {
   this.api_.allRowsFromID(rowID, function (err, data) {
     if (err === null) {
       this.incrementalCacheUpdate_(data);
@@ -154,18 +159,18 @@ NetSimTable.prototype.readFromID = function (rowID, callback) {
 /**
  * Generate throttled refresh function which will generate actual server
  * requests at the maximum given rate no matter how fast it is called. This
- * allows us to coalesce readAll events and reduce server load.
+ * allows us to coalesce refreshAll events and reduce server load.
  * @param {number} waitMs - Minimum time (in milliseconds) to wait between
- *        readAll requests to the server.
+ *        refreshAll requests to the server.
  * @returns {function}
  * @private
  */
 NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
   return _.throttle(function () {
     if (this.useIncrementalRefresh_) {
-      this.readFromID(this.latestRowID_ + 1, function () {});
+      this.refreshFromRowID_(this.latestRowID_ + 1, function () {});
     } else {
-      this.readAll(function () {});
+      this.refreshAll(function () {});
     }
   }.bind(this), waitMs);
 };
@@ -274,6 +279,8 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
 };
 
 /**
+ * Add and update rows in the local cache from the given set of new rows
+ * (probably retrieved from the server).
  * @param {Array} newRows
  * @private
  */
@@ -354,13 +361,13 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
 };
 
 /**
- * Change the maximum rate at which the readAll operation for this table
- * will _actually_ be executed, no matter how fast readAll() is called.
- * @param {number} waitMs - Minimum number of milliseconds between readAll
+ * Change the maximum rate at which the refreshAll operation for this table
+ * will _actually_ be executed, no matter how fast refreshAll() is called.
+ * @param {number} waitMs - Minimum number of milliseconds between refreshAll
  *        requests to the server.
  */
 NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
-  // To do this, we just replace the throttled readAll function with a new one.
+  // To do this, we just replace the throttled refreshAll function with a new one.
   this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
 };
 

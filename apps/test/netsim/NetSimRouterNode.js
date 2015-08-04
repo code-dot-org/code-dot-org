@@ -74,13 +74,13 @@ describe("NetSimRouterNode", function () {
   };
 
   /**
-   * Synchronous readAll for tests
+   * Synchronous refreshAll for tests
    * @param {string} tableName
    * @returns {Array}
    */
   var getRows = function (tableName) {
     var rows;
-    testShard[tableName].readAll(function (err, result) {
+    testShard[tableName].refreshAll(function (err, result) {
       rows = result;
     });
     return rows;
