@@ -322,6 +322,8 @@ function loadHoc2015(skin, assetUrl) {
     background: skin.assetUrl('background_snowy.jpg')
   };
 
+  skin.tiles = skin.assetUrl('tiles.png');
+
   // These are used by blocks.js to customize our dropdown blocks across skins
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],

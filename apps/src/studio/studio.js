@@ -54,6 +54,9 @@ var TestResults = studioApp.TestResults;
 
 var SVG_NS = "http://www.w3.org/2000/svg";
 
+// uniqueId that increments by 1 each time an element is created
+var uniqueId = 0;
+
 /**
  * Create a namespace for the application.
  */
@@ -2127,7 +2130,7 @@ function cellId(prefix, row, col) {
  */
 
 Studio.drawDebugRect = function(className, x, y, width, height) {
-  //return;
+  return;
 
   var svg = document.getElementById('svgStudio');
   var group = document.createElementNS(SVG_NS, 'g');
@@ -2167,37 +2170,29 @@ Studio.clearDebugRects = function() {
 
 
 Studio.drawWallTile = function (svg, row, col) {
+  var clipPath = document.createElementNS(SVG_NS, 'clipPath');
+  var clipId = 'tile_clippath_' + uniqueId;
+  clipPath.setAttribute('id', clipId);
+  var rect = document.createElementNS(SVG_NS, 'rect');
+  rect.setAttribute('width', Studio.SQUARE_SIZE);
+  rect.setAttribute('height', Studio.SQUARE_SIZE);
+  rect.setAttribute('x', col * Studio.SQUARE_SIZE);
+  rect.setAttribute('y', row * Studio.SQUARE_SIZE);
+  clipPath.appendChild(rect);
+  svg.appendChild(clipPath);
 
-  // Placeholder implementation: just drawing boxes with X's in them for now:
+  var tile = document.createElementNS(SVG_NS, 'image');
+  var tileId = 'tile_' + (uniqueId++);
+  tile.setAttribute('id', tileId);
+  tile.setAttribute('width', 4 * Studio.SQUARE_SIZE);
+  tile.setAttribute('height', 4 * Studio.SQUARE_SIZE);
+  tile.setAttribute('x', col * Studio.SQUARE_SIZE);
+  tile.setAttribute('y', row * Studio.SQUARE_SIZE);
+  tile.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+    skin.tiles);
+  svg.appendChild(tile);
 
-  var backgroundId = cellId('wallBackground', row, col);
-  var textId = cellId('wallLetter', row, col);
-
-  var group = document.createElementNS(SVG_NS, 'g');
-  var background = document.createElementNS(SVG_NS, 'rect');
-  background.setAttribute('id', backgroundId);
-  background.setAttribute('width', Studio.SQUARE_SIZE);
-  background.setAttribute('height', Studio.SQUARE_SIZE);
-  background.setAttribute('x', col * Studio.SQUARE_SIZE);
-  background.setAttribute('y', row * Studio.SQUARE_SIZE);
-  background.setAttribute('fill', 'rgba(255, 255, 255, 0.5)');
-  background.setAttribute('stroke', '#000000');
-  background.setAttribute('stroke-width', 1);
-  group.appendChild(background);
-
-  var text = document.createElementNS(SVG_NS, 'text');
-  text.setAttribute('id', textId);
-  text.setAttribute('class', 'wall-letter');
-  text.setAttribute('width', Studio.SQUARE_SIZE);
-  text.setAttribute('height', Studio.SQUARE_SIZE);
-  text.setAttribute('x', (col + 0.5) * Studio.SQUARE_SIZE);
-  text.setAttribute('y', (row + 1) * Studio.SQUARE_SIZE - 12);
-  text.setAttribute('font-size', 32);
-  text.setAttribute('text-anchor', 'middle');
-  text.setAttribute('font-family', 'Verdana');
-  text.textContent = 'X';
-  group.appendChild(text);
-  svg.appendChild(group);
+  tile.setAttribute('clip-path', 'url(#' + clipId + ')');
 };
 
 Studio.createLevelItems = function (svg) {
