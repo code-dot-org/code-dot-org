@@ -826,9 +826,9 @@ Blockly.ContractEditor.prototype.resetExample = function (block) {
 Blockly.ContractEditor.prototype.updateExampleResult = function (block, result) {
   this.exampleViews_.forEach(function (view) {
     if (view.isViewForBlock(block)) {
-      return;
+      view.setResult(result);
     }
-    view.setResult(result);
+    return;
   });
 };
 

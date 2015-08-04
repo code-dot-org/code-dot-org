@@ -2,6 +2,7 @@
 
 goog.provide('Blockly.ExampleView');
 
+// TODO (brent) - change this text
 /** @const */ var NO_RESULT_TEXT = "Test result: not ran yet.";
 
 /**
@@ -68,6 +69,7 @@ Blockly.ExampleView.prototype.isViewForBlock = function (block) {
  * Performs the test for this example, setting the result text appropriately.
  */
 Blockly.ExampleView.prototype.testExample_ = function () {
+  // TODO  (brent)- only reset examples that current have a reset button?
   this.contractEditor_.resetExampleViews();
 
   this.setResult(this.contractEditor_.testExample(this.block_));

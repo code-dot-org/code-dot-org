@@ -431,7 +431,7 @@ Eval.execute = function() {
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
       Eval.message = evalMsg.wrongBooleanError();
     } else {
-      Eval.checkExamples();
+      Eval.checkExamples_();
 
       // Haven't run into any errors. Do our actual comparison
       if (Eval.result === ResultType.UNSET) {
@@ -478,7 +478,7 @@ Eval.execute = function() {
   studioApp.playAudio(Eval.result ? 'win' : 'failure');
 };
 
-Eval.checkExamples = function (resetPlayspace) {
+Eval.checkExamples_ = function (resetPlayspace) {
   // TODO (brent) - turn this on
   // if (!level.examplesRequired) {
   //   return;
