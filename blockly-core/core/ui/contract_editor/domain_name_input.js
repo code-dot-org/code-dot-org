@@ -5,6 +5,7 @@ goog.provide('Blockly.DomainNameInput');
 /**
  * A DOM-based input which sends events on changes
  * @param {!Object} options
+ * @param {string} options.name initial name of domain
  * @param {Function} options.onNameChanged with parameter {String} newName
  * @param {Function} options.onEnterPressed
  * @constructor
