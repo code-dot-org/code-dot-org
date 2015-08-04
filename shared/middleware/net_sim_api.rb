@@ -6,7 +6,8 @@ require 'csv'
 require_relative '../middleware/helpers/redis_table'
 require_relative '../middleware/channels_api'
 
-# NetSimApi implements a rest service for interacting with NetSim tables.
+# NetSimApi implements a REST service for interacting with NetSim tables and
+# notifying clients of changes using a pubsub service.
 class NetSimApi < Sinatra::Base
 
   TABLE_NAMES = {
@@ -39,7 +40,7 @@ class NetSimApi < Sinatra::Base
 
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
-    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name)
+    RedisTable.new(get_redis_client, shard_id, table_name)
   end
 
   #
@@ -127,7 +128,7 @@ class NetSimApi < Sinatra::Base
   #
   # DELETE /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
-  # Deletes a row by id.
+  # Deletes a row by id, notifying other clients using the pubsub service.
   #
   delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
@@ -141,6 +142,7 @@ class NetSimApi < Sinatra::Base
     end
 
     table.delete(int_id)
+    get_pub_sub_api.publish(shard_id, table_name, {:action => 'delete', :id => int_id})
     no_content
   end
 
@@ -156,7 +158,7 @@ class NetSimApi < Sinatra::Base
   #
   # POST /v3/netsim/<shard-id>/<table-name>
   #
-  # Insert a new row.
+  # Insert a new row, notifying other clients using the pubsub service.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
@@ -165,6 +167,7 @@ class NetSimApi < Sinatra::Base
     begin
       value = get_table(shard_id, table_name).
           insert(JSON.parse(request.body.read), request.ip)
+      get_pub_sub_api.publish(shard_id, table_name, {:action => 'insert', :id => value['id']})
       if table_name == TABLE_NAMES[:message]
         node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
           node['id'] == value['simulatedBy']
@@ -187,7 +190,7 @@ class NetSimApi < Sinatra::Base
   #
   # PATCH (PUT, POST) /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
-  # Update an existing row.
+  # Update an existing row, notifying other clients using the pubsub service.
   #
   post %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
@@ -197,6 +200,7 @@ class NetSimApi < Sinatra::Base
       table = get_table(shard_id, table_name)
       int_id = id.to_i
       value = table.update(int_id, JSON.parse(request.body.read), request.ip)
+      get_pub_sub_api.publish(shard_id, table_name, {:action => 'update', :id => int_id})
     rescue JSON::ParserError
       json_bad_request
     end
