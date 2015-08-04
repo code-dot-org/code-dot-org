@@ -140,7 +140,7 @@ NetSimTable.prototype.subscribe = function () {
  */
 NetSimTable.prototype.unsubscribe = function () {
   this.channel_.unsubscribe(this.tableName_, this.channelCallback_);
-  this.cannelCallback = undefined;
+  this.channelCallback = undefined;
 };
 
 /**
