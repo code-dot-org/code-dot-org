@@ -6,7 +6,7 @@ var assert = testUtils.assert;
 
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
 var dataConverters = require('@cdo/apps/netsim/dataConverters');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 /** binary to ascii */
 function to_a(binary) {
@@ -53,7 +53,7 @@ describe("NetSimLogPanel", function () {
     var scrollArea;
     beforeEach(function () {
       panel = new NetSimLogPanel(rootDiv, {
-        packetSpec: netsimGlobals.getLevelConfig().clientInitialPacketHeader,
+        packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
         maximumLogPackets: 10
       });
       scrollArea = rootDiv.find('.scroll-area');
