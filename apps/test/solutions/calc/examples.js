@@ -169,6 +169,61 @@ module.exports = {
         '</block>' +
         '</xml>'
     },
+    {
+      description: "variables don't need examples",
+      expected: {
+        result: true,
+        testResult: TestResults.ALL_PASS
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, null);
+        return true;
+      },
+      xml: '<xml>' +
+        solutionBlocks +
+        '<block type="functional_example" inline="false">' +
+        '  <functional_input name="ACTUAL">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="f">' +
+        '        <arg name="x" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '  <functional_input name="EXPECTED">' +
+        '    <block type="functional_plus" inline="false">' +
+        '      <functional_input name="ARG1">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="ARG2">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        // We add a variable definition without examples. Things should still pass
+        '<block type="functional_definition" inline="false">' +
+        '  <mutation>' +
+        '    <outputtype>Number</outputtype>' +
+        '    <isfunctionalvariable>true</isfunctionalvariable>' +
+        '  </mutation>' +
+        '  <title name="NAME">age</title>' +
+        '  <functional_input name="STACK">' +
+        '    <block type="functional_math_number">' +
+        '      <title name="NUM">12</title>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        '</xml>'
+    },
 
     {
       description: "no examples when examples required",
@@ -184,6 +239,6 @@ module.exports = {
       xml: '<xml>' +
         solutionBlocks +
         '</xml>'
-    }
+    },
   ]
 };

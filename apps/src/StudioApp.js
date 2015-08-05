@@ -1659,7 +1659,7 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
  */
 StudioApp.prototype.getFunctionWithoutExample = function () {
   var definitionNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
-    return block.type === 'functional_definition';
+    return block.type === 'functional_definition' && !block.isVariable();
   }).map(function (definitionBlock) {
     return definitionBlock.getProcedureInfo().name;
   });
