@@ -26,7 +26,7 @@ var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
 var DataConverters = require('./dataConverters_renaming');
 var NetSimConstants = require('./netsimConstants_renaming');
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 var EncodingType = NetSimConstants.EncodingType;
 var MessageGranularity = NetSimConstants.MessageGranularity;

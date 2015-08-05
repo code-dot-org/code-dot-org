@@ -20,7 +20,7 @@ var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimMetronome = require('./NetSimMetronome');
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 /**
  * Generator and controller for "My Device" tab.

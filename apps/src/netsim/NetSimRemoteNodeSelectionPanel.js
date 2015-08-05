@@ -21,7 +21,7 @@ var i18n = require('./locale');
 var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
 var NodeType = require('./netsimConstants_renaming').NodeType;
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 /**
  * Generator and controller for lobby node listing, selection, and connection

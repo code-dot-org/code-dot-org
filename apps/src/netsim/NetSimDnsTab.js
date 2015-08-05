@@ -19,7 +19,7 @@ var DnsMode = require('./netsimConstants_renaming').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsTable = require('./NetSimDnsTable');
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 /**
  * Generator and controller for "DNS" tab.

@@ -19,7 +19,7 @@ var _ = require('../utils').getLodash();
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 /**
  * Generator and controller for contents of modal dialog that reveals
