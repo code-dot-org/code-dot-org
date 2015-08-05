@@ -66,7 +66,7 @@ module.exports = {
       description: "example is missing result block",
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EXAMPLE_FAILED
       },
       customValidator: function (assert) {
         debugger;
@@ -182,6 +182,22 @@ module.exports = {
         '      </block>' +
         '  </functional_input>' +
         '</block>' +
+        '</xml>'
+    },
+
+    {
+      description: "no examples when examples required",
+      expected: {
+        result: false,
+        testResult: TestResults.EXAMPLE_FAILED
+      },
+      customValidator: function (assert) {
+        assert.equal(Eval.message, 'You need at least one example in function ' +
+        'green-triangle. Make sure each example has a call and a result');
+        return true;
+      },
+      xml: '<xml>' +
+        solutionBlocks +
         '</xml>'
     }
 

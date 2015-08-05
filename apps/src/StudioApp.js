@@ -1654,6 +1654,39 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
 };
 
 /**
+ * @returns {string} The name of a function that doesn't have any examples, or
+ *   undefined if all have at least one.
+ */
+StudioApp.prototype.getFunctionWithoutExample = function () {
+  var definitionNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+    return block.type === 'functional_definition';
+  }).map(function (definitionBlock) {
+    return definitionBlock.getProcedureInfo().name;
+  });
+
+  var exampleNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+    if (block.type !== 'functional_example') {
+      return false;
+    }
+
+    // Only care about functional_examples that have an ACTUAL input (i.e. it's
+    // clear which function they're for
+    var actual = block.getInputTargetBlock('ACTUAL');
+    return actual && actual.getTitleValue('NAME');
+  }).map(function (exampleBlock) {
+    return exampleBlock.getInputTargetBlock('ACTUAL').getTitleValue('NAME');
+  });
+
+  var exampleless;
+  definitionNames.forEach(function (def) {
+    if (exampleNames.indexOf(def) === -1) {
+      exampleless = def;
+    }
+  });
+  return exampleless;
+};
+
+/**
  * Get the error message when we have an unfilled block
  * @param {string} topLevelType The block.type For our expected top level block
  */
