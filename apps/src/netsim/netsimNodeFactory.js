@@ -15,9 +15,9 @@
  */
 'use strict';
 
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 
-var NodeType = netsimConstants.NodeType;
+var NodeType = NetSimConstants.NodeType;
 
 var netsimNodeFactory = module.exports;
 

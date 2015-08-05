@@ -25,9 +25,9 @@ var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
 var NetSimVizWire = require('./NetSimVizWire');
 var NetSimGlobals = require('./netsimGlobals');
 var tweens = require('./tweens');
-var netsimConstants = require('./netsimConstants');
-var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
+var NetSimConstants = require('./netsimConstants');
+var DnsMode = NetSimConstants.DnsMode;
+var NodeType = NetSimConstants.NodeType;
 
 /**
  * Top-level controller for the network visualization.

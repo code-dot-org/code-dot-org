@@ -14,7 +14,7 @@
 'use strict';
 
 require('../utils');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var NetSimSlider = require('./NetSimSlider');
 
@@ -31,8 +31,8 @@ var NetSimMemoryControl = module.exports = function (rootDiv,
     onChange: sliderChangeCallback,
     onStop: sliderStopCallback,
     value: Infinity,
-    min: netsimConstants.BITS_PER_BYTE,
-    max: netsimConstants.BITS_PER_MEGABYTE,
+    min: NetSimConstants.BITS_PER_BYTE,
+    max: NetSimConstants.BITS_PER_MEGABYTE,
     upperBoundInfinite: true
   });
 

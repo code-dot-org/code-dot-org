@@ -23,13 +23,13 @@ var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var Packet = require('@cdo/apps/netsim/Packet');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
-var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
+var NetSimConstants = require('@cdo/apps/netsim/netsimConstants');
 var DataConverters = require('@cdo/apps/netsim/dataConverters');
 
 var addressStringToBinary = DataConverters.addressStringToBinary;
 var asciiToBinary = DataConverters.asciiToBinary;
-var DnsMode = netsimConstants.DnsMode;
-var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var DnsMode = NetSimConstants.DnsMode;
+var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 
 describe("NetSimRouterNode", function () {

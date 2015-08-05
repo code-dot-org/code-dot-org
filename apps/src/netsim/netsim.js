@@ -26,7 +26,7 @@ var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var DashboardUser = require('./DashboardUser');
 var NetSimBitLogPanel = require('./NetSimBitLogPanel');
@@ -42,8 +42,8 @@ var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimVisualization = require('./NetSimVisualization');
 
-var DnsMode = netsimConstants.DnsMode;
-var MessageGranularity = netsimConstants.MessageGranularity;
+var DnsMode = NetSimConstants.DnsMode;
+var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
 var NetSimGlobals = require('./netsimGlobals');

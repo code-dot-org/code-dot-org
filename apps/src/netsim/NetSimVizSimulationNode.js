@@ -14,10 +14,10 @@
 'use strict';
 
 require('../utils');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 var NetSimVizNode = require('./NetSimVizNode');
 
-var NodeType = netsimConstants.NodeType;
+var NodeType = NetSimConstants.NodeType;
 
 var NetSimGlobals = require('./netsimGlobals');
 

@@ -1,12 +1,12 @@
 <%
   var i18n = require('./locale');
-  var netsimConstants = require('./netsimConstants');
+  var NetSimConstants = require('./netsimConstants');
   var netsimUtils = require('./netsimUtils');
   var Packet = require('./Packet');
 
-  var EncodingType = netsimConstants.EncodingType;
-  var MessageGranularity = netsimConstants.MessageGranularity;
-  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+  var EncodingType = NetSimConstants.EncodingType;
+  var MessageGranularity = NetSimConstants.MessageGranularity;
+  var PacketUIColumnType = NetSimConstants.PacketUIColumnType;
 
   var getEncodingLabel = netsimUtils.getEncodingLabel;
   var forEachEnumValue = netsimUtils.forEachEnumValue;
