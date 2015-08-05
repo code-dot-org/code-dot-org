@@ -1611,13 +1611,36 @@ StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
  *   if there isn't one.
  */
 StudioApp.prototype.getUnfilledFunctionalBlock = function () {
+  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
+    return rootBlock.type !== 'functional_example';
+  });
+};
+
+/**
+ * @returns {Block} The first example block that has an unfilled input, or
+ *   undefined if there isn't one. Ignores example blocks that don't have a
+ *   call portion, as these are considered invalid.
+ */
+StudioApp.prototype.getUnfilledFunctionalExample = function () {
+  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
+    if (rootBlock.type !== 'functional_example') {
+      return false;
+    }
+    var actual = rootBlock.getInputTargetBlock('ACTUAL');
+    return actual && actual.getTitleValue('NAME');
+  });
+};
+
+/**
+ * @param {function} filter Run against root block in chain. Returns true if
+ *   this is a block we care about
+ */
+StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
   var unfilledBlock;
   Blockly.mainBlockSpace.getAllBlocks().some(function (block) {
     // Get the root block in the chain
     var rootBlock = block.getRootBlock();
-
-    // Allow example blocks to have unfilled inputs
-    if (rootBlock.type === 'functional_example') {
+    if (!filter(rootBlock)) {
       return false;
     }
 
@@ -1628,6 +1651,39 @@ StudioApp.prototype.getUnfilledFunctionalBlock = function () {
   });
 
   return unfilledBlock;
+};
+
+/**
+ * @returns {string} The name of a function that doesn't have any examples, or
+ *   undefined if all have at least one.
+ */
+StudioApp.prototype.getFunctionWithoutExample = function () {
+  var definitionNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+    return block.type === 'functional_definition' && !block.isVariable();
+  }).map(function (definitionBlock) {
+    return definitionBlock.getProcedureInfo().name;
+  });
+
+  var exampleNames = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+    if (block.type !== 'functional_example') {
+      return false;
+    }
+
+    // Only care about functional_examples that have an ACTUAL input (i.e. it's
+    // clear which function they're for
+    var actual = block.getInputTargetBlock('ACTUAL');
+    return actual && actual.getTitleValue('NAME');
+  }).map(function (exampleBlock) {
+    return exampleBlock.getInputTargetBlock('ACTUAL').getTitleValue('NAME');
+  });
+
+  var exampleless;
+  definitionNames.forEach(function (def) {
+    if (exampleNames.indexOf(def) === -1) {
+      exampleless = def;
+    }
+  });
+  return exampleless;
 };
 
 /**
