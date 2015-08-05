@@ -28,7 +28,7 @@ var binaryToBase64 = DataConverters.binaryToBase64;
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**
- * @typedef {Object} logEntryRow
+ * @typedef {Object} LogEntryRow
  * @property {number} nodeID
  * @property {Base64Payload} base64Binary - base64-encoded binary
  *           message content, all of which can be exposed to the
@@ -44,7 +44,7 @@ var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
  * removes it.
  *
  * @param {!NetSimShard} shard - The shard where this log entry lives.
- * @param {logEntryRow} [row] - A row out of the log table on the
+ * @param {LogEntryRow} [row] - A row out of the log table on the
  *        shard.  If provided, will initialize this log with the given
  *        data.  If not, this log will initialize to default values.
  * @param {Packet.HeaderType[]} [packetSpec] - Packet layout spec used to
@@ -111,7 +111,7 @@ NetSimLogEntry.prototype.getTable = function () {
 
 /**
  * Build own row for the log table
- * @returns {logEntryRow}
+ * @returns {LogEntryRow}
  */
 NetSimLogEntry.prototype.buildRow = function () {
   return {
