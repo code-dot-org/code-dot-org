@@ -13,7 +13,7 @@ Dashboard::Application.configure do
   config.eager_load = false
 
   # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_assets  = true
+  config.serve_static_files  = true
   config.static_cache_control = "public, max-age=3600"
 
   # Show full error reports and disable caching.
@@ -53,4 +53,8 @@ Dashboard::Application.configure do
   ActiveRecordQueryTrace.enabled = false
 
   config.react.variant = :production
+
+  # Explicitly set legacy test-order behavior in Rails 4.2
+  # See http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases
+  config.active_support.test_order = :sorted
 end

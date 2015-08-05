@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.2.3'
 
 gem 'sinatra', '1.4.4', require: 'sinatra/base'
 gem 'rack-contrib', '~> 1.1'
@@ -23,6 +23,7 @@ group :development do
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   gem 'thin', '~> 1.6.2'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
@@ -50,6 +51,7 @@ group :development, :test do
   gem 'colorize'
   gem 'spring'
   gem 'spring-commands-testunit'
+  gem 'minitest'
   gem 'minitest-reporters'
   gem 'eyes_selenium'
 end
@@ -129,7 +131,6 @@ gem 'codemirror-rails' # edit code in textarea
 gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
-gem 'aws-s3'
 
 gem 'font-awesome-rails'
 gem 'sequel', '~> 4.10.0'
