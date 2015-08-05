@@ -251,7 +251,29 @@ NetSimTable.prototype.refresh = function (callback) {
  * Generate throttled refresh function which will generate actual server
  * requests at the maximum given rate no matter how fast it is called. This
  * allows us to coalesce refreshAll events and reduce server load.
- * @returns {function}
+ *
+ * How this works:
+ * Wraps a longer throttle with leading and trailing events in a shorter debounce
+ * with a maximum wait time.  This gives grouped events a chance to coalesce
+ * without triggering an unneeded trailing event on the longer throttle.
+ *
+ * Here are some examples of what's going on, if using a 1000ms throttle
+ * wrapped in a 250ms debounce.
+ *
+ * In low traffic we collapse two groups of events to just two events.
+ *
+ * original events   :   || |                     | |
+ * debounced         :   -250>|                   -250>|
+ * then throttled    :        |--------------1000->    |--------------1000->
+ *
+ * In higher traffic we collapse the groups but still keep events at least
+ * one second apart.
+ *
+ * original events   :   || |        |     |      | |
+ * debounced         :   -250>|      -250>|-250>| -250>|
+ * then throttled    :        |--------------1000->|--------------1000->|
+ *
+ * @returns {function()}
  * @private
  */
 NetSimTable.prototype.makeThrottledRefresh_ = function () {
