@@ -28,7 +28,7 @@ var NetSimMessage = require('./NetSimMessage');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
 var DataConverters = require('./dataConverters_renaming');
-var NetSimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./netsimNodeFactory_renaming');
 
 var _ = utils.getLodash();
 
