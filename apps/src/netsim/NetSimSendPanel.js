@@ -24,7 +24,7 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
-var DataConverters = require('./dataConverters');
+var DataConverters = require('./dataConverters_renaming');
 var NetSimConstants = require('./netsimConstants');
 var NetSimGlobals = require('./netsimGlobals');
 

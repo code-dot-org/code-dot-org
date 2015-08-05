@@ -24,7 +24,7 @@ var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimLogPanel = require('./NetSimLogPanel');
 var Packet = require('./Packet');
-var DataConverters = require('./dataConverters');
+var DataConverters = require('./dataConverters_renaming');
 var NetSimConstants = require('./netsimConstants');
 var NetSimGlobals = require('./netsimGlobals');
 
