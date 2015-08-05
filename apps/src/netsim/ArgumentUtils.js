@@ -44,8 +44,9 @@ exports.validateRequired = function (arg, argName, validator) {
  * @throws {TypeError} if a non-object is passed to the constructor.
  */
 exports.extendOptionsObject = function (optionsObject) {
-  // Both checks here becuase `typeof null === 'object'`
-  if (typeof optionsObject !== 'object' || optionsObject === null) {
+  // Allow `undefined` and all objects except for `null`
+  if (optionsObject !== undefined &&
+      (typeof optionsObject !== 'object' || optionsObject === null)) {
     throw new TypeError('Options object must be an object.');
   }
 
