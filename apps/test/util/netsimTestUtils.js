@@ -195,17 +195,27 @@ exports.fakeShard = function () {
   };
   /* jshint unused:true */
 
+  // In tests we normally disable delays, coalescing and jitter so that they
+  // run fast and predictably.  See specific NetSimTable tests covering the
+  // behavior of these parameters.
+  var defaultTestTableConfig = {
+    minimumDelayBeforeRefresh: 0,
+    maximumDelayJitter: 0,
+    minimumDelayBetweenRefreshes: 0
+  };
+
   return {
     nodeTable: exports.overrideNetSimTableApi(
-        new NetSimTable(fakeChannel, 'fakeShard', 'node')),
+        new NetSimTable(fakeChannel, 'fakeShard', 'node', defaultTestTableConfig)),
     wireTable: exports.overrideNetSimTableApi(
-        new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
+        new NetSimTable(fakeChannel, 'fakeShard', 'wire', defaultTestTableConfig)),
     messageTable: exports.overrideNetSimTableApi(
-        new NetSimTable(fakeChannel, 'fakeShard', 'message')),
+        new NetSimTable(fakeChannel, 'fakeShard', 'message', defaultTestTableConfig)),
     logTable: exports.overrideNetSimTableApi(
-        new NetSimTable(fakeChannel, 'fakeShard', 'log', {
-          useIncrementalRefresh: true
-        }))
+        new NetSimTable(fakeChannel, 'fakeShard', 'log',
+            $.extend({}, defaultTestTableConfig, {
+              useIncrementalRefresh: true
+            })))
   };
 };
 
