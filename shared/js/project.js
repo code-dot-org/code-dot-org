@@ -120,27 +120,27 @@ var projects = module.exports = {
 
   /**
    *
-   * @param {Object} handler Object containing callbacks provided by caller.
-   * @param {Function} handler.setInitialLevelHtml
-   * @param {Function} handler.getLevelHtml
-   * @param {Function} handler.setInitialLevelSource
-   * @param {Function} handler.getLevelSource
+   * @param {Object} sourceHandler Object containing callbacks provided by caller.
+   * @param {Function} sourceHandler.setInitialLevelHtml
+   * @param {Function} sourceHandler.getLevelHtml
+   * @param {Function} sourceHandler.setInitialLevelSource
+   * @param {Function} sourceHandler.getLevelSource
    */
-  init: function (handler) {
-    this.handler = handler;
+  init: function (sourceHandler) {
+    this.sourceHandler = sourceHandler;
     if (redirectFromHashUrl() || redirectEditView()) {
       return;
     }
 
     if (this.isProjectLevel() || current) {
       if (current && current.levelHtml) {
-        handler.setInitialHtml(current.levelHtml);
+        sourceHandler.setInitialHtml(current.levelHtml);
       }
 
       if (isEditing) {
         if (current) {
           if (current.levelSource) {
-            handler.setInitialLevelSource(current.levelSource);
+            sourceHandler.setInitialLevelSource(current.levelSource);
           }
         } else {
           current = {
@@ -155,7 +155,7 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          current.levelSource = this.handler.getLevelSource(current.levelSource);
+          current.levelSource = this.sourceHandler.getLevelSource(current.levelSource);
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
@@ -171,7 +171,7 @@ var projects = module.exports = {
           }
         }
       } else if (current) {
-        this.handler.setInitialLevelSource(current.levelSource);
+        this.sourceHandler.setInitialLevelSource(current.levelSource);
         this.showMinimalProjectHeader();
       }
     } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
@@ -211,7 +211,7 @@ var projects = module.exports = {
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
    * @param {string?} source Optional source to be provided, saving us another
-   *   call to handler.getLevelSource
+   *   call to sourceHandler.getLevelSource
    * @param {function} callback Fucntion to be called after saving
    */
   save: function(source, callback) {
@@ -219,12 +219,12 @@ var projects = module.exports = {
       // If no source is provided, the only argument is our callback and we
       // ask for the source ourselves
       callback = arguments[0];
-      source = this.handler.getLevelSource();
+      source = this.sourceHandler.getLevelSource();
     }
     $('.project_updated_at').text('Saving...');  // TODO (Josh) i18n
     var channelId = current.id;
     current.levelSource = source;
-    current.levelHtml = this.handler.getLevelHtml();
+    current.levelHtml = this.sourceHandler.getLevelHtml();
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
@@ -279,8 +279,8 @@ var projects = module.exports = {
       return;
     }
 
-    var source = this.handler.getLevelSource();
-    var html = this.handler.getLevelHtml();
+    var source = this.sourceHandler.getLevelSource();
+    var html = this.sourceHandler.getLevelHtml();
 
     if (current.levelSource === source && current.levelHtml === html) {
       hasProjectChanged = false;

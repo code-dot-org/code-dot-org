@@ -13,7 +13,7 @@ window.apps = {
   load: loadApp,
   // Legacy Blockly initialization that was moved here from _blockly.html.haml.
   // Modifies `appOptions` with some default values in `baseOptions`.
-  // Move blockly-specific setup function out of shared and back into dashboard.
+  // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
   setupBlockly: function () {
 
     if (!window.dashboard) {
@@ -123,13 +123,17 @@ window.apps = {
   // Set up projects, skipping blockly-specific steps. Designed for use
   // by levels of type "external".
   setupProjectsExternal: function() {
+    if (!window.dashboard) {
+      throw new Error('Assume existence of window.dashboard');
+    }
+
     dashboard.project = project;
   },
 
   // Define blockly/droplet-specific callbacks for projects to access
   // level source, HTML and headers.
   // TODO(dave): Extract blockly-specific handler code into _blockly.html.haml.
-  projectsHandler: {
+  sourceHandler: {
     setInitialLevelHtml: function (levelHtml) {
       appOptions.level.levelHtml = levelHtml;
     },
@@ -154,7 +158,7 @@ window.apps = {
 
   // Initialize the Blockly or Droplet app.
   init: function () {
-    dashboard.project.init(window.apps.projectsHandler);
+    dashboard.project.init(window.apps.sourceHandler);
     window[appOptions.app + 'Main'](appOptions);
   }
 };

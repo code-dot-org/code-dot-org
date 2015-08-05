@@ -100,7 +100,7 @@
   // Initialize projects for save/load functionality if channel id is present.
   if (appOptions.channel) {
     window.apps.setupProjectsExternal();
-    var projectsHandler = {
+    var sourceHandler = {
       setInitialLevelHtml: function (levelHtml) {},
       getLevelHtml: function () {
         return '';
@@ -119,7 +119,7 @@
       // available by refreshing the page.
       options.saveProject = dashboard.project.save.bind(dashboard.project);
       options.projectChanged = dashboard.project.projectChanged;
-      window.dashboard.project.init(projectsHandler);
+      window.dashboard.project.init(sourceHandler);
     }).always(function() {
       pixelationDisplay();
     });
