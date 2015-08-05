@@ -1,5 +1,5 @@
 <%
-  var netsimConstants = require('./netsimConstants');
+  var NetSimConstants = require('./netsimConstants');
   var NetSimGlobals = require('./netsimGlobals');
   var DataConverters = require('./dataConverters');
   var i18n = require('./locale');
@@ -8,8 +8,8 @@
 
   var level = NetSimGlobals.getLevelConfig();
 
-  var EncodingType = netsimConstants.EncodingType;
-  var PacketUIColumnType = netsimConstants.PacketUIColumnType;
+  var EncodingType = NetSimConstants.EncodingType;
+  var PacketUIColumnType = NetSimConstants.PacketUIColumnType;
 
   var formatAB = DataConverters.formatAB;
   var formatBinary = DataConverters.formatBinary;

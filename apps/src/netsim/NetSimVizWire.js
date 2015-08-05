@@ -18,9 +18,9 @@ var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 var DataConverters = require('./dataConverters');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 
-var EncodingType = netsimConstants.EncodingType;
+var EncodingType = NetSimConstants.EncodingType;
 
 var binaryToAB = DataConverters.binaryToAB;
 

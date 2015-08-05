@@ -15,7 +15,7 @@
 
 // Utils required only for Function.prototype.inherits()
 require('../utils');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var NetSimSlider = require('./NetSimSlider');
 
@@ -33,7 +33,7 @@ var NetSimBandwidthControl = module.exports = function (rootDiv,
     onStop: sliderStopCallback,
     value: Infinity,
     min: 4,
-    max: 128 * netsimConstants.BITS_PER_KILOBIT,
+    max: 128 * NetSimConstants.BITS_PER_KILOBIT,
     upperBoundInfinite: true
   });
 

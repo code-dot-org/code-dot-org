@@ -18,11 +18,11 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 
 var logger = require('./NetSimLogger').getSingleton();
 
-var EncodingType = netsimConstants.EncodingType;
+var EncodingType = NetSimConstants.EncodingType;
 
 /**
  * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
@@ -145,7 +145,7 @@ exports.getEncodingLabel = function (encodingType) {
 
 /**
  * @param {Object} enumObj - Technically any object, but should be used with
- *        an enum like those found in netsimConstants
+ *        an enum like those found in NetSimConstants
  * @param {function} func - A function to call for each value in the enum,
  *        which gets passed the enum value.
  */
@@ -309,22 +309,22 @@ exports.bitsToLocalizedRoundedBytesize = function (bits) {
     return i18n.unlimited();
   }
 
-  var gbytes = Math.floor(bits / netsimConstants.BITS_PER_GIGABYTE);
+  var gbytes = Math.floor(bits / NetSimConstants.BITS_PER_GIGABYTE);
   if (gbytes > 0) {
     return i18n.x_GBytes({ x: gbytes });
   }
 
-  var mbytes = Math.floor(bits / netsimConstants.BITS_PER_MEGABYTE);
+  var mbytes = Math.floor(bits / NetSimConstants.BITS_PER_MEGABYTE);
   if (mbytes > 0) {
     return i18n.x_MBytes({ x: mbytes });
   }
 
-  var kbytes = Math.floor(bits / netsimConstants.BITS_PER_KILOBYTE);
+  var kbytes = Math.floor(bits / NetSimConstants.BITS_PER_KILOBYTE);
   if (kbytes > 0) {
     return i18n.x_KBytes({ x: kbytes });
   }
 
-  var bytes = Math.floor(bits / netsimConstants.BITS_PER_BYTE);
+  var bytes = Math.floor(bits / NetSimConstants.BITS_PER_BYTE);
   if (bytes > 0) {
     return i18n.x_Bytes({ x: bytes });
   }
@@ -343,17 +343,17 @@ exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
     return i18n.unlimited();
   }
 
-  var gbps = Math.floor(bitsPerSecond / netsimConstants.BITS_PER_GIGABIT);
+  var gbps = Math.floor(bitsPerSecond / NetSimConstants.BITS_PER_GIGABIT);
   if (gbps > 0) {
     return i18n.x_Gbps({ x: gbps });
   }
 
-  var mbps = Math.floor(bitsPerSecond / netsimConstants.BITS_PER_MEGABIT);
+  var mbps = Math.floor(bitsPerSecond / NetSimConstants.BITS_PER_MEGABIT);
   if (mbps > 0) {
     return i18n.x_Mbps({ x: mbps });
   }
 
-  var kbps = Math.floor(bitsPerSecond / netsimConstants.BITS_PER_KILOBIT);
+  var kbps = Math.floor(bitsPerSecond / NetSimConstants.BITS_PER_KILOBIT);
   if (kbps > 0) {
     return i18n.x_Kbps({ x: kbps });
   }

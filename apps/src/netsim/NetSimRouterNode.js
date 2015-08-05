@@ -17,7 +17,7 @@
 
 var utils = require('../utils');
 var i18n = require('./locale');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 var netsimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
@@ -37,9 +37,9 @@ var deserializeNumber = netsimUtils.deserializeNumber;
 
 var asciiToBinary = DataConverters.asciiToBinary;
 
-var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
-var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var DnsMode = NetSimConstants.DnsMode;
+var NodeType = NetSimConstants.NodeType;
+var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
 var logger = NetSimLogger.getSingleton();
 var NetSimGlobals = require('./netsimGlobals');

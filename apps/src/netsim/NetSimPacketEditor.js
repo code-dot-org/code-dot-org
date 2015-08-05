@@ -25,11 +25,11 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimLogPanel = require('./NetSimLogPanel');
 var Packet = require('./Packet');
 var DataConverters = require('./dataConverters');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants');
 var NetSimGlobals = require('./netsimGlobals');
 
-var EncodingType = netsimConstants.EncodingType;
-var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var EncodingType = NetSimConstants.EncodingType;
+var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
 var minifyBinary = DataConverters.minifyBinary;
 var formatAB = DataConverters.formatAB;
