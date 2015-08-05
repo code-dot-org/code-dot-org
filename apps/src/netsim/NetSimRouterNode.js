@@ -18,7 +18,7 @@
 var utils = require('../utils');
 var i18n = require('./locale');
 var NetSimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -32,8 +32,8 @@ var NetSimNodeFactory = require('./netsimNodeFactory');
 
 var _ = utils.getLodash();
 
-var serializeNumber = netsimUtils.serializeNumber;
-var deserializeNumber = netsimUtils.deserializeNumber;
+var serializeNumber = NetSimUtils.serializeNumber;
+var deserializeNumber = NetSimUtils.deserializeNumber;
 
 var asciiToBinary = DataConverters.asciiToBinary;
 

@@ -16,7 +16,7 @@
 // Utils required only for Function.prototype.inherits()
 require('../utils');
 var NetSimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimUtils = require('./netsimUtils');
 var NetSimSlider = require('./NetSimSlider');
 
 /**
@@ -50,5 +50,5 @@ NetSimBandwidthControl.inherits(NetSimSlider.LogarithmicSlider);
  * @override
  */
 NetSimBandwidthControl.prototype.valueToLabel = function (val) {
-  return netsimUtils.bitrateToLocalizedRoundedBitrate(val);
+  return NetSimUtils.bitrateToLocalizedRoundedBitrate(val);
 };

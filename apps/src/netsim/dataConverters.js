@@ -21,7 +21,7 @@
 /* global exports */
 
 require('../utils'); // For String.prototype.repeat polyfill
-var netsimUtils = require('./netsimUtils');
+var NetSimUtils = require('./netsimUtils');
 
 // window.{btoa, atob} polyfills
 if (!(window.atob && window.btoa)) {
@@ -224,7 +224,7 @@ var intToString = function (int, base, width) {
   if (width <= 0) {
     throw new RangeError("Output width must be greater than zero");
   }
-  return netsimUtils.zeroPadLeft(int.toString(base), width);
+  return NetSimUtils.zeroPadLeft(int.toString(base), width);
 };
 
 /**
@@ -286,7 +286,7 @@ exports.binaryToHex = function (binaryString) {
   var chars = [];
   var uglyBinary = exports.minifyBinary(binaryString);
   for (var i = 0; i < uglyBinary.length; i += nibbleWidth) {
-    currentNibble = netsimUtils.zeroPadRight(
+    currentNibble = NetSimUtils.zeroPadRight(
         uglyBinary.substr(i, nibbleWidth), nibbleWidth);
     chars.push(exports.intToHex(exports.binaryToInt(currentNibble), 1));
   }
@@ -325,7 +325,7 @@ exports.binaryToDecimal = function (binaryString, byteSize) {
   var numbers = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = netsimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = NetSimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
     numbers.push(exports.binaryToInt(currentByte));
   }
   return numbers.join(' ');
@@ -364,7 +364,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   var chars = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = netsimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = NetSimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
@@ -398,7 +398,7 @@ exports.binaryToBase64 = function (binaryString) {
   }
 
   var byteLen = Math.ceil(binaryString.length/8.0) * 8;
-  var paddedBinaryString = netsimUtils.zeroPadRight(binaryString, byteLen);
+  var paddedBinaryString = NetSimUtils.zeroPadRight(binaryString, byteLen);
   var payload = window.btoa(exports.binaryToAscii(paddedBinaryString, 8));
 
   return { string: payload, len: binaryString.length };
