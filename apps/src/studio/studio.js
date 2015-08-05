@@ -4,7 +4,7 @@
  * Copyright 2014 Code.org
  *
  */
- 
+
  /* global $*/
 
 'use strict';
@@ -2054,15 +2054,12 @@ Studio.onPuzzleComplete = function() {
   // If we know they succeeded, mark levelComplete true
   var levelComplete = (Studio.result === ResultType.SUCCESS);
 
-  // If the current level is a free play, always return the free play
-  // result type
-  if (level.freePlay) {
-    if (!Studio.preExecutionFailure) {
-      Studio.testResults = TestResults.FREE_PLAY;
-    }
-    // If preExecutionFailure testResults should already be set
-  } else {
-    Studio.testResults = studioApp.getTestResults(levelComplete);
+  // If preExecutionFailure testResults should already be set
+  if (!Studio.preExecutionFailure) {
+    // If the current level is a free play, always return the free play
+    // result type
+    Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
+      studioApp.getTestResults(levelComplete);
   }
 
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
