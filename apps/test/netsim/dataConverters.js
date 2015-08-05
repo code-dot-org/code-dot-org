@@ -639,8 +639,8 @@ describe("DataConverters", function () {
     /**
      * Assert if the given base64 results are not equal. Equality is
      * defined as sharing BOTH their string and their len properties
-     * @param {base64Payload} left
-     * @param {base64Payload} right
+     * @param {Base64Payload} left
+     * @param {Base64Payload} right
      */
     var assertBase64NotEqual = function (left, right) {
       var stringsEqual = (left.string == right.string);

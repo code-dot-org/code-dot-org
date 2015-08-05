@@ -134,7 +134,7 @@ NetSimMessage.prototype.getTable = function () {
  * @property {number} toNodeID - this message in-flight-to node
  * @property {number} simulatedBy - Node ID of the client responsible for
  *           all operations involving this message.
- * @property {base64Payload} base64Payload - base64-encoded binary
+ * @property {Base64Payload} base64Payload - base64-encoded binary
  *           message content, all of which can be exposed to the
  *           student.  May contain headers of its own.
  */

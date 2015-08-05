@@ -30,7 +30,7 @@ var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 /**
  * @typedef {Object} logEntryRow
  * @property {number} nodeID
- * @property {base64Payload} base64Binary - base64-encoded binary
+ * @property {Base64Payload} base64Binary - base64-encoded binary
  *           message content, all of which can be exposed to the
  *           student.  May contain headers of its own.
  * @property {NetSimLogEntry.LogStatus} status
