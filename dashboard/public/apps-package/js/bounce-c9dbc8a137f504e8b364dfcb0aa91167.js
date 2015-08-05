@@ -111,7 +111,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":267}],83:[function(require,module,exports){
+},{"../skins":268}],83:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -1968,7 +1968,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":106,"../constants":107,"../dom":108,"../dropletUtils":109,"../hammer":141,"../locale":150,"../skins":267,"../templates/page.html.ejs":295,"../timeoutList":301,"../utils":317,"./api":79,"./controls.html.ejs":82,"./locale":84,"./tiles":87,"./visualization.html.ejs":88}],88:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":106,"../constants":107,"../dom":108,"../dropletUtils":109,"../hammer":141,"../locale":150,"../skins":268,"../templates/page.html.ejs":296,"../timeoutList":302,"../utils":318,"./api":79,"./controls.html.ejs":82,"./locale":84,"./tiles":87,"./visualization.html.ejs":88}],88:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1988,7 +1988,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],82:[function(require,module,exports){
+},{"ejs":491}],82:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -2011,7 +2011,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"./locale":84,"ejs":490}],80:[function(require,module,exports){
+},{"../locale":150,"./locale":84,"ejs":491}],80:[function(require,module,exports){
 /**
  * Blockly App: Bounce
  *

@@ -4155,7 +4155,7 @@ function BlurStack()
 	this.next = null;
 }
 
-},{}],266:[function(require,module,exports){
+},{}],267:[function(require,module,exports){
 /**
  * A set of functional blocks
  */
@@ -4726,7 +4726,7 @@ function installCondForType(blockly, generator, type) {
 }
 
 
-},{"./locale":150,"./utils":317}],295:[function(require,module,exports){
+},{"./locale":150,"./utils":318}],296:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4749,7 +4749,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":490}],268:[function(require,module,exports){
+},{"../locale":150,"ejs":491}],269:[function(require,module,exports){
 /**
  * Blockly Apps: SVG Slider
  *
@@ -5015,7 +5015,7 @@ Slider.bindEvent_ = function(element, name, func) {
 module.exports = Slider;
 
 
-},{"./dom":108}],267:[function(require,module,exports){
+},{"./dom":108}],268:[function(require,module,exports){
 // avatar: A 1029x51 set of 21 avatar images.
 
 exports.load = function(assetUrl, id) {
@@ -5090,7 +5090,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{}],301:[function(require,module,exports){
+},{}],302:[function(require,module,exports){
 var timeoutList = [];
 
 /**
@@ -5233,7 +5233,7 @@ module.exports = function(app, levels, options) {
 };
 
 
-},{"./StudioApp":5,"./blocksCommon":78,"./dom":108,"./required_block_utils":265,"./utils":317}],265:[function(require,module,exports){
+},{"./StudioApp":5,"./blocksCommon":78,"./dom":108,"./required_block_utils":266,"./utils":318}],266:[function(require,module,exports){
 /* global Text */
 
 var xml = require('./xml');
@@ -5556,7 +5556,7 @@ var titlesMatch = function(titleA, titleB) {
 };
 
 
-},{"./block_utils":77,"./locale":150,"./utils":317,"./xml":318}],78:[function(require,module,exports){
+},{"./block_utils":77,"./locale":150,"./utils":318,"./xml":319}],78:[function(require,module,exports){
 /**
  * Defines blocks useful in multiple blockly apps
  */
@@ -7534,7 +7534,7 @@ function rectFromElementBoundingBox(element) {
 }
 
 
-},{"./ResizeSensor":3,"./acemode/mode-javascript_codeorg":8,"./blockTooltips/DropletTooltipManager":75,"./block_utils":77,"./constants.js":107,"./dom":108,"./dropletUtils":109,"./feedback":129,"./locale":150,"./templates/builder.html.ejs":289,"./templates/buttons.html.ejs":290,"./templates/instructions.html.ejs":292,"./templates/learn.html.ejs":293,"./templates/makeYourOwn.html.ejs":294,"./utils":317,"./xml":318,"@cdo/shared/smallFooter":319,"url":487}],487:[function(require,module,exports){
+},{"./ResizeSensor":3,"./acemode/mode-javascript_codeorg":8,"./blockTooltips/DropletTooltipManager":75,"./block_utils":77,"./constants.js":107,"./dom":108,"./dropletUtils":109,"./feedback":129,"./locale":150,"./templates/builder.html.ejs":290,"./templates/buttons.html.ejs":291,"./templates/instructions.html.ejs":293,"./templates/learn.html.ejs":294,"./templates/makeYourOwn.html.ejs":295,"./utils":318,"./xml":319,"@cdo/shared/smallFooter":320,"url":488}],488:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8243,13 +8243,13 @@ function isNullOrUndefined(arg) {
   return  arg == null;
 }
 
-},{"punycode":470,"querystring":473}],473:[function(require,module,exports){
+},{"punycode":471,"querystring":474}],474:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":471,"./encode":472}],472:[function(require,module,exports){
+},{"./decode":472,"./encode":473}],473:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8336,7 +8336,7 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],471:[function(require,module,exports){
+},{}],472:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -8422,7 +8422,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],470:[function(require,module,exports){
+},{}],471:[function(require,module,exports){
 (function (global){
 /*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
@@ -8933,7 +8933,7 @@ var isArray = Array.isArray || function (xs) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],319:[function(require,module,exports){
+},{}],320:[function(require,module,exports){
 /**
  * @fileoverview Provides a secondary "small" footer for pages without
  * the default, full-size footer.
@@ -9049,7 +9049,7 @@ smallFooter.repositionMoreMenu = function () {
 };
 
 
-},{}],294:[function(require,module,exports){
+},{}],295:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9069,7 +9069,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":490}],293:[function(require,module,exports){
+},{"../locale":150,"ejs":491}],294:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9091,7 +9091,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":490}],292:[function(require,module,exports){
+},{"../locale":150,"ejs":491}],293:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9111,7 +9111,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],289:[function(require,module,exports){
+},{"ejs":491}],290:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -9131,7 +9131,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],129:[function(require,module,exports){
+},{"ejs":491}],129:[function(require,module,exports){
 /* global trackEvent, $, jQuery */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
@@ -10361,7 +10361,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
 };
 
 
-},{"./codegen":106,"./constants":107,"./dom":108,"./feedbackBlocks":130,"./locale":150,"./templates/buttons.html.ejs":290,"./templates/code.html.ejs":291,"./templates/shareFailure.html.ejs":297,"./templates/sharing.html.ejs":298,"./templates/showCode.html.ejs":299,"./templates/trophy.html.ejs":300,"./utils":317,"./xml":318}],300:[function(require,module,exports){
+},{"./codegen":106,"./constants":107,"./dom":108,"./feedbackBlocks":130,"./locale":150,"./templates/buttons.html.ejs":291,"./templates/code.html.ejs":292,"./templates/shareFailure.html.ejs":298,"./templates/sharing.html.ejs":299,"./templates/showCode.html.ejs":300,"./templates/trophy.html.ejs":301,"./utils":318,"./xml":319}],301:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10381,7 +10381,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],299:[function(require,module,exports){
+},{"ejs":491}],300:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10401,7 +10401,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":490}],298:[function(require,module,exports){
+},{"../locale":150,"ejs":491}],299:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10421,7 +10421,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":490}],297:[function(require,module,exports){
+},{"../locale":150,"ejs":491}],298:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10441,7 +10441,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],291:[function(require,module,exports){
+},{"ejs":491}],292:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10461,7 +10461,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],290:[function(require,module,exports){
+},{"ejs":491}],291:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10481,7 +10481,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":490}],130:[function(require,module,exports){
+},{"../locale":150,"ejs":491}],130:[function(require,module,exports){
 var constants = require('./constants');
 var readonly = require('./templates/readonly.html.ejs');
 
@@ -10611,7 +10611,7 @@ FeedbackBlocks.prototype.generateXMLForBlocks_ = function(blocks) {
 };
 
 
-},{"./constants":107,"./templates/readonly.html.ejs":296}],296:[function(require,module,exports){
+},{"./constants":107,"./templates/readonly.html.ejs":297}],297:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10632,7 +10632,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],107:[function(require,module,exports){
+},{"ejs":491}],107:[function(require,module,exports){
 /**
  * @fileoverview Constants used in production code and tests.
  */
@@ -11011,7 +11011,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
 };
 
 
-},{"./xml":318}],75:[function(require,module,exports){
+},{"./xml":319}],75:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
@@ -11371,7 +11371,7 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function () {
 module.exports = DropletFunctionTooltip;
 
 
-},{"../locale":150,"../utils":317}],150:[function(require,module,exports){
+},{"../locale":150,"../utils":318}],150:[function(require,module,exports){
 // base locale
 
 module.exports = window.blockly.common_locale;
@@ -11546,7 +11546,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],69:[function(require,module,exports){
+},{"ejs":491}],69:[function(require,module,exports){
 /* global $ */
 
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
@@ -11935,7 +11935,7 @@ exports.findFunctionAndParamNumber = function (editor, position) {
 
 
 
-},{"../utils":317}],74:[function(require,module,exports){
+},{"../utils":318}],74:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -11960,7 +11960,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],490:[function(require,module,exports){
+},{"ejs":491}],491:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12315,7 +12315,7 @@ if (require.extensions) {
   });
 }
 
-},{"./filters":491,"./utils":492,"fs":321,"path":468}],492:[function(require,module,exports){
+},{"./filters":492,"./utils":493,"fs":322,"path":469}],493:[function(require,module,exports){
 
 /*!
  * EJS
@@ -12339,7 +12339,7 @@ exports.escape = function(html){
     .replace(/"/g, '&quot;');
 };
  
-},{}],491:[function(require,module,exports){
+},{}],492:[function(require,module,exports){
 
 /*!
  * EJS - Filters
@@ -12538,7 +12538,7 @@ exports.get = function(obj, prop){
 exports.json = function(obj){
   return JSON.stringify(obj);
 };
-},{}],468:[function(require,module,exports){
+},{}],469:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -12766,7 +12766,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":469}],469:[function(require,module,exports){
+},{"_process":470}],470:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -12825,7 +12825,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],321:[function(require,module,exports){
+},{}],322:[function(require,module,exports){
 
 },{}],8:[function(require,module,exports){
 /* global ace */
@@ -13653,7 +13653,7 @@ JSInterpreter.prototype.findGlobalFunction = function (funcName) {
 };
 
 
-},{"./codegen":106,"./utils":317}],106:[function(require,module,exports){
+},{"./codegen":106,"./utils":318}],106:[function(require,module,exports){
 /* global Interpreter */
 
 var dropletUtils = require('./dropletUtils');
@@ -14605,7 +14605,7 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig) {
 };
 
 
-},{"./utils":317}],317:[function(require,module,exports){
+},{"./utils":318}],318:[function(require,module,exports){
 /* global define */
 
 var xml = require('./xml');
@@ -14896,7 +14896,7 @@ exports.getPegasusHost = function() {
 };
 
 
-},{"./hammer":141,"./lodash":151,"./xml":318}],318:[function(require,module,exports){
+},{"./hammer":141,"./lodash":151,"./xml":319}],319:[function(require,module,exports){
 // Serializes an XML DOM node to a string.
 exports.serialize = function(node) {
   var serializer = new XMLSerializer();
