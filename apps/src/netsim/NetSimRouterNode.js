@@ -17,8 +17,8 @@
 
 var utils = require('../utils');
 var i18n = require('./locale');
-var NetSimConstants = require('./netsimConstants_renaming');
-var NetSimUtils = require('./netsimUtils_renaming');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimUtils = require('./NetSimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -27,8 +27,8 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
-var DataConverters = require('./dataConverters_renaming');
-var NetSimNodeFactory = require('./netsimNodeFactory_renaming');
+var DataConverters = require('./DataConverters');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 
 var _ = utils.getLodash();
 
@@ -42,7 +42,7 @@ var NodeType = NetSimConstants.NodeType;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
 var logger = NetSimLogger.getSingleton();
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @type {number}

@@ -17,7 +17,7 @@
 
 // Utils required only for Function.prototype.inherits()
 require('../utils');
-var NetSimUtils = require('./netsimUtils_renaming');
+var NetSimUtils = require('./NetSimUtils');
 var NetSimSlider = require('./NetSimSlider');
 
 /**

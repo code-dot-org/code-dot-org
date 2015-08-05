@@ -22,9 +22,9 @@ var buildMarkup = require('./NetSimTabsComponent.html.ejs');
 var NetSimRouterTab = require('./NetSimRouterTab');
 var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');
-var NetSimTabType = require('./netsimConstants_renaming').NetSimTabType;
-var shouldShowTab = require('./netsimUtils_renaming').shouldShowTab;
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var NetSimTabType = require('./NetSimConstants').NetSimTabType;
+var shouldShowTab = require('./NetSimUtils').shouldShowTab;
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Wrapper component for tabs panel on the right side of the page.

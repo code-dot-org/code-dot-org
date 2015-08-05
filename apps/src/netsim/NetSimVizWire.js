@@ -14,11 +14,11 @@
 'use strict';
 
 require('../utils');
-var jQuerySvgElement = require('./netsimUtils_renaming').jQuerySvgElement;
+var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
-var DataConverters = require('./dataConverters_renaming');
-var NetSimConstants = require('./netsimConstants_renaming');
+var DataConverters = require('./DataConverters');
+var NetSimConstants = require('./NetSimConstants');
 
 var EncodingType = NetSimConstants.EncodingType;
 

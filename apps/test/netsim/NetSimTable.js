@@ -6,7 +6,7 @@ var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeStorageTable = NetSimTestUtils.fakeStorageTable;
 
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
-var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals_renaming');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 /**
  * Helper method for introducing a delay in your test method.

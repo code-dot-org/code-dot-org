@@ -14,9 +14,9 @@
  */
 'use strict';
 
-var NetSimUtils = require('./netsimUtils_renaming');
-var DataConverters = require('./dataConverters_renaming');
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var NetSimUtils = require('./NetSimUtils');
+var DataConverters = require('./DataConverters');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Wraps binary packet content with the format information required to

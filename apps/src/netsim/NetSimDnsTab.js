@@ -15,11 +15,11 @@
 'use strict';
 
 var markup = require('./NetSimDnsTab.html.ejs');
-var DnsMode = require('./netsimConstants_renaming').DnsMode;
+var DnsMode = require('./NetSimConstants').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsTable = require('./NetSimDnsTable');
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Generator and controller for "DNS" tab.

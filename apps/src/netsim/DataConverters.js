@@ -21,7 +21,7 @@
 /* global exports */
 
 require('../utils'); // For String.prototype.repeat polyfill
-var NetSimUtils = require('./netsimUtils_renaming');
+var NetSimUtils = require('./NetSimUtils');
 
 // window.{btoa, atob} polyfills
 if (!(window.atob && window.btoa)) {

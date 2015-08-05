@@ -24,9 +24,9 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
-var DataConverters = require('./dataConverters_renaming');
-var NetSimConstants = require('./netsimConstants_renaming');
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var DataConverters = require('./DataConverters');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 
 var EncodingType = NetSimConstants.EncodingType;
 var MessageGranularity = NetSimConstants.MessageGranularity;

@@ -16,7 +16,7 @@
 'use strict';
 
 var markup = require('./NetSimEncodingControl.html.ejs');
-var EncodingType = require('./netsimConstants_renaming').EncodingType;
+var EncodingType = require('./NetSimConstants').EncodingType;
 
 /**
  * Generator and controller for message encoding selector: A dropdown that

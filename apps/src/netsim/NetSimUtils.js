@@ -18,7 +18,7 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var NetSimConstants = require('./netsimConstants_renaming');
+var NetSimConstants = require('./NetSimConstants');
 
 var logger = require('./NetSimLogger').getSingleton();
 

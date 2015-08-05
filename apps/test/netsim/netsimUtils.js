@@ -2,7 +2,7 @@ var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var assertEqual = testUtils.assertEqual;
 
-var NetSimUtils = require('@cdo/apps/netsim/netsimUtils_renaming');
+var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
 
 describe("NetSimUtils", function () {
 
