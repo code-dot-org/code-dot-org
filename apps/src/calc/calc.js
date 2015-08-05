@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+ /* global $*/
+
 'use strict';
 
 var Calc = module.exports;
@@ -741,12 +743,11 @@ Calc.generateResults_ = function () {
     appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
   } else {
-    var outcome = Calc.checkExamples_();
-    appState = $.extend(appState, outcome);
+    appState = $.extend(appState, Calc.checkExamples_());
 
     if (appState.result === null) {
-      var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
-      appState = $.extend(appState, outcome);
+      appState = $.extend(appState,
+        Calc.evaluateResults_(appState.targetSet, appState.userSet));
     }
   }
 
@@ -771,9 +772,7 @@ Calc.checkExamples_ = function () {
   if (exampleless) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
-    // TODO
-    outcome.message = 'You need at least one example in function ' + exampleless +
-      '. Make sure each example has a call and a result';
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
     return outcome;
   }
 
@@ -781,12 +780,10 @@ Calc.checkExamples_ = function () {
   if (unfilled) {
     outcome.result = ResultType.FAILURE;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
-    // TODO
+
     var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
       .getTitleValue('NAME');
-
-    outcome.message = 'You need at least one example in function ' + name +
-      '. Make sure each example has a call and a result';
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
     return outcome;
   }
 
@@ -810,9 +807,7 @@ Calc.checkExamples_ = function () {
   if (failingBlockName) {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;
-    outcome.message = 'The function ' + failingBlockName + ' has one or more' +
-      ' examples that need adjusting. Make sure they match your definition and' +
-      ' answer the question';
+    outcome.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
   }
 
   return outcome;

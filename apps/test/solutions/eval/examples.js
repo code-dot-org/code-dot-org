@@ -66,7 +66,7 @@ module.exports = {
       },
       customValidator: function (assert) {
         assert.equal(Eval.message, 'You need at least one example in function ' +
-          'green-triangle. Make sure each example has a call and a result');
+          'green-triangle. Make sure each example has a call and a result.');
         return true;
       },
       xml: '<xml>' +
@@ -91,7 +91,7 @@ module.exports = {
       customValidator: function (assert) {
         assert.equal(Eval.message, 'The function green-triangle has one or more' +
           ' examples that need adjusting. Make sure they match your definition and' +
-          ' answer the question');
+          ' answer the question.');
         return true;
       },
       xml: '<xml>' +
@@ -188,7 +188,7 @@ module.exports = {
       },
       customValidator: function (assert) {
         assert.equal(Eval.message, 'You need at least one example in function ' +
-        'green-triangle. Make sure each example has a call and a result');
+        'green-triangle. Make sure each example has a call and a result.');
         return true;
       },
       xml: '<xml>' +
