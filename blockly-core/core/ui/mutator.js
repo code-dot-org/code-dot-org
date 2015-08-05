@@ -148,6 +148,7 @@ Blockly.Mutator.prototype.resizeBubble_ = function() {
     // Scroll the blockSpace to always left-align.
     var translation = 'translate(' + this.blockSpaceWidth_ + ',0)';
     this.blockSpace_.getCanvas().setAttribute('transform', translation);
+    this.blockSpace_.getDragCanvas().setAttribute('transform', translation);
   }
 };
 
@@ -251,7 +252,9 @@ Blockly.Mutator.prototype.blockSpaceChanged_ = function() {
     if (this.block_.rendered) {
       this.block_.render();
     }
-    this.resizeBubble_();
+    if (!Blockly.Block.isDragging()) {
+      this.resizeBubble_();
+    }
     // The source block may have changed, notify its blockSpace.
     this.block_.blockSpace.fireChangeEvent();
   }

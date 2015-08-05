@@ -1,7 +1,7 @@
 "sk-SK":
   hello: Ahoj svet
   select_language: Prosím, zvoľte si jazyk
-  en: Computer Science
+  en: Počítačová veda
   computer_science_edweek: Vzdelávací týždeň počítačovej vedy
   csedweek_dates: 8. až 14. Decembra 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -59,7 +59,7 @@
   congratulations: Gratulujem!
   congratulations_on_completing_hoc: Gratulujeme k absolvovaniu jednej Hodiny programovania
   get_a_certificate_of_achievement: Získaj osvedčenie o dokončení
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Zvoľte prosím platný vek
   enter_valid_email: Prosím, zadajte platnú e-mailovú adresu
   get_a_certificate_message: Pošleme ti certifikát a informácie o tom, ako sa <a href='/learn/beyond'>učiť
     dlhšie ako jednu hodinu</a>
@@ -321,14 +321,14 @@
   dashboard_landing_available_title: Dostupné kurzy
   dashboard_landing_available_courses: Tu sú aktuálne dostupné kurzy pre vás a vašich
     študentov.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_landing_more_tutorials: Chcete vidieť ešte viac návodov?
+  dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">Naši partneri vám
+    ponúkajú</a> ďalšie návody. Naučte sa programovať s robotmi, vyrábajte webstránky,
+    urobte si vlastnú appku či objavujte ďalšie jazyky – C++, Ruby alebo Python!
+  dashboard_hoc_courses: Hodina kódu pre všetky vekové kategórie
+  dashboard_hoc_courses_desc: Skúste s vašimi študentmi niektorý z týchto hodinových
+    návodov!
+  dashboard_k5_courses: 20-hodinové kurzy pre K-5
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -349,7 +349,7 @@
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: Počítačová veda vo vede
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver
     an introduction to computer science concepts within the context of modeling and
     simulation.
@@ -438,12 +438,12 @@
   dashboard_students_share_section: 'Zdieľajte prihlasovaciu stránku tejto sekcie
     so svojimi žiakmi:'
   dashboard_students_print_info: Vytlačiť kartičky s prihlasovacími údajmi študentov.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Tajný obrázok
   dashboard_students_secret_picture: Tajný obrázok
   dashboard_students_reset_picture: Tajný obrázok študenta môžete kedykoľvek obnoviť
     výberom <b>Zobraziť tajomstvo</b> a potom <b>Obnoviť tajomstvo</b>. Nový tajný
     obrázok bude pre tohoto študenta vygenerovaný pri ďalšom prihlásení.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Tajné slovo
   dashboard_students_secret_word: Tajné slovo
   dashboard_students_reset_word: 'Tajné slová študentov môžete kedykoľvek obnoviť
     výberom <b>Zobraziť tajomstvo</b> a potom <b>Obnoviť tajomstvo</b>. Nový pár tajných
@@ -458,7 +458,7 @@
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kliknite
     sem</a> pre dokument o ochrane súkromných údajov, ktorý môžete zdieľať alebo vytlačiť
     pre svojich študentov.
-  dashboard_curriculum_k5_title: K-5 Educator Resources
+  dashboard_curriculum_k5_title: Podklady pre učiteľov prvého stupňa
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
   dashboard_lesson_plans: Lesson Plans
@@ -469,7 +469,7 @@
   dashboard_course4: 'Course 4 (beta): '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Prehľad učiva 1. stupňa ZŠ
-  dashboard_overview: Overview
+  dashboard_overview: Prehľad
   dashboard_sequence: Sequence
   dashboard_framework: Rámec
   dashboard_standards: Štandardy
@@ -480,8 +480,8 @@
   dashboard_puzzle_solving: 'Riešenie hádaniek:'
   dashboard_student_worksheet: pracovný zošit študenta
   dashboard_teacher_worksheet: pracovný zošit učiteľa
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
+  dashboard_curriculum_csina: 'Počítačová veda a algebra:'
+  dashboard_curriculum_csins: 'Počítačová veda a veda:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
@@ -515,7 +515,7 @@
     z týchto typov prihlásenia <b>obrázok, slovo alebo e-mail</b> budete chcieť vybrať
     pre vašu skupinu.
   dashboard_faq: Často kladené otázky
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: Často kladené otázky – prvý stupeň
   code_hoc_coming: Hodina kódu je tu - 8.-14. december!
   code_sign_up: Prihláste sa k účasti počas "CS Education Week"
   learn_more: Ďalšie informácie
@@ -1191,3 +1191,6 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Skryť toto upozornenie
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

@@ -242,6 +242,7 @@ en:
       free_play:
         playlab: 'Make an App'
         artist: 'Draw Something'
+        calculate: 'Calculate Something'
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
@@ -367,10 +368,11 @@ en:
     student_progress: Your learning progress
     student_stats: You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
     student_left_off: 'Where you left off:'
-    student_finished: You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}
+    student_finished: You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}.
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: 'Try now'
@@ -380,11 +382,12 @@ en:
     try_beta_courses: 'New! Try our beta courses for K-5 students'
     use_as_teacher: 'Use this site as a teacher'
     heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Basics (all ages)</h1>"
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
     heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
-    no_primary_course: "Try a course at Code Studio"
+    no_primary_course: "Try a Code Studio course"
+    choose_next_course: "Try a Code Studio course by choosing one below"
     print_certificate: "Print Certificate"
   gender:
     male: 'Male'

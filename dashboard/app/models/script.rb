@@ -36,6 +36,45 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
   end
 
+  def Script.hoc_2014_script
+    Script.get_from_cache(Script::HOC_NAME)
+  end
+
+  def Script.frozen_script
+    Script.get_from_cache(Script::FROZEN_NAME)
+  end
+
+  def Script.course1_script
+    Script.get_from_cache(Script::COURSE1_NAME)
+  end
+
+  def Script.course2_script
+    Script.get_from_cache(Script::COURSE2_NAME)
+  end
+
+  def Script.course3_script
+    Script.get_from_cache(Script::COURSE3_NAME)
+  end
+
+  def Script.course4_script
+    Script.get_from_cache(Script::COURSE4_NAME)
+  end
+
+  def Script.infinity_script
+    Script.get_from_cache(Script::INFINITY_NAME)
+  end
+
+  def Script.flappy_script
+    Script.get_from_cache(Script::FLAPPY_NAME)
+  end
+
+  def Script.playlab_script
+    Script.get_from_cache(Script::PLAYLAB_NAME)
+  end
+
+  def Script.artist_script
+    Script.get_from_cache(Script::ARTIST_NAME)
+  end
 
   def starting_level
     raise "Script #{name} has no level to start at" if script_levels.empty?
@@ -163,6 +202,8 @@ class Script < ActiveRecord::Base
   def banner_image
     if k5_course?
       "banner_#{name}_cropped.jpg"
+    elsif self.name == 'cspunit1'
+      "banner_#{name}_cropped.png"
     end
   end
 
@@ -182,8 +223,13 @@ class Script < ActiveRecord::Base
     k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
   end
 
-  def show_freeplay_links?
-    name != 'algebra'
+  def freeplay_links
+    if name == 'algebra'
+      ['calc', 'eval']
+    else
+      ['playlab', 'artist']
+    end
+
   end
 
   SCRIPT_CSV_MAPPING = %w(Game Name Level:level_num Skin Concepts Url:level_url Stage)

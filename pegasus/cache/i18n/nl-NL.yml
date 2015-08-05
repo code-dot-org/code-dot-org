@@ -1,7 +1,7 @@
 "nl-NL":
   hello: Hallo wereld
   select_language: Kies de gewenste taal
-  en: Computer Science
+  en: informatica
   computer_science_edweek: Week van het Informaticaonderwijs
   csedweek_dates: 8-14 December 2014
   csedweek_banner_hoc: 'De <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -64,7 +64,7 @@
   congratulations_on_completing_hoc: Gefeliciteerd met het voltooien van een 'Hour
     of Code'
   get_a_certificate_of_achievement: Ontvang een certificaat van verworvenheid
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Selecteer een geldige leeftijd
   enter_valid_email: Vul een correct email-adres in
   get_a_certificate_message: We sturen je een certificaat en informatie hoe je  <a
     href='/learn/beyond'>Verder dan een Uur Code</a> kunt leren
@@ -326,22 +326,18 @@
   dashboard_landing_available_title: Beschikbare cursussen
   dashboard_landing_available_courses: Hier zijn de  momenteel beschikbare cursussen
     voor u en uw leerlingen.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: There are more tutorials <a href="/learn/beyond">offered
-    by our partners.</a> Learn to program with robots, make web pages, make your own
-    app, or explore other languages like C++, Ruby, or Python!
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
-  dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
-    tutorials with "unplugged" activities that require no computer at all. Each course
-    consists of about 20 lessons that may be implemented as one unit or over the course
-    of a semester. Even kindergarten-aged pre-readers can participate. To help you
-    get started, we offer high quality professional development workshops around the
-    U.S. free of charge. <a href="/professional-development-workshops">Find one near
-    you!</a>
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_landing_more_tutorials: Wil je meer opdrachten zien?
+  dashboard_landing_more_tutorials_desc: Er zijn meer opdrachten <a href="/learn/beyond">van
+    onze partners.</a> Leer programmeren met robots, maak webpagina's, maak je eigen
+    app of ontdek andere programmeertalen zoals C++, Ruby en Python!
+  dashboard_hoc_courses: Het Uur Code voor alle leeftijden
+  dashboard_hoc_courses_desc: Probeer een 1-uurs cursus met je leerlingen!
+  dashboard_k5_courses: 20-uurs cursussen voor de basisschool
+  dashboard_k5_courses_desc: Deze cursussen mengen de online zelfsturende online cursussen
+    op eigen tempo, met de "unplugged" activiteiten die geen computer nodig hebben.
+    elke cursus bestaat uit 20 lessen die als een blok kunnen worden ingezet, of welke
+    kunnen uitgesmeerd over meerdere semesters.
+  dashboard_middle_courses: 20-uur durende middelbare school cursussen
   dashboard_middle_courses_desc: Our middle school curriculum uses computer science
     and programming within the context of middle school math and science - as a tool
     to teach math and science concepts. To register for professional development workshops,
@@ -1214,3 +1210,6 @@
     over naar HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik
     hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org.
   compatibility_https_hide_this_warning: Verberg deze waarschuwing
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

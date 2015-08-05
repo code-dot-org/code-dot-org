@@ -23,19 +23,36 @@ class ChannelsTest < Minitest::Unit::TestCase
   end
 
   def test_update_channel
+    start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?
-    assert_equal 123, JSON.parse(last_response.body)['abc']
+    result = JSON.parse(last_response.body)
+    assert_equal 123, result['abc']
 
+    # Check timestamps.
+    created = result['createdAt']
+    assert_equal created, result['updatedAt']
+    assert (start..DateTime.now).cover? DateTime.parse(created)
+
+    sleep 1
+
+    # Update.
+    start = DateTime.now - 1
     post "/v3/channels/#{channel_id}", {abc: 456}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.successful?
 
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?
-    assert_equal 456, JSON.parse(last_response.body)['abc']
+    result = JSON.parse(last_response.body)
+    assert_equal 456, result['abc']
+
+    # Check timestamps.
+    assert_equal created, result['createdAt']
+    refute_equal result['createdAt'], result['updatedAt']
+    assert (start..DateTime.now).cover? DateTime.parse(result['updatedAt'])
   end
 
   def test_delete_channel
@@ -79,5 +96,18 @@ class ChannelsTest < Minitest::Unit::TestCase
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?
     assert_equal "\xF0\x9F\x91\x8D", JSON.parse(last_response.body)['emoticon']
+  end
+
+  def test_create_channel_from_src
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels?src=#{channel_id}", '', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?
+    follow_redirect!
+
+    response = JSON.parse(last_response.body)
+    assert last_request.url.end_with? "/#{response['id']}"
+    assert_equal 123, response['abc']
   end
 end

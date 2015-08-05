@@ -22,6 +22,7 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
+var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
@@ -37,7 +38,6 @@ var NetSimRouterLogModal = require('./NetSimRouterLogModal');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimSendPanel = require('./NetSimSendPanel');
 var NetSimShard = require('./NetSimShard');
-var NetSimShardCleaner = require('./NetSimShardCleaner');
 var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimVisualization = require('./NetSimVisualization');
@@ -46,14 +46,7 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = require('./netsimGlobals');
-
-/**
- * Initial time between connecting to the shard and starting
- * the first cleaning cycle.
- * @type {number}
- */
-var INITIAL_CLEANING_DELAY_MS = 10000; // 10 seconds
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The top-level Internet Simulator controller.
@@ -95,12 +88,6 @@ var NetSim = module.exports = function () {
    * @private
    */
   this.shard_ = null;
-
-  /**
-   * @type {NetSimShardCleaner}
-   * @private
-   */
-  this.shardCleaner_ = null;
 
   /**
    * The local client's node representation within the shard.
@@ -191,7 +178,13 @@ NetSim.prototype.init = function(config) {
   }
 
   // Set up global singleton for easy access to simulator-wide settings
-  netsimGlobals.setRootControllers(this.studioApp_, this);
+  NetSimGlobals.setRootControllers(this.studioApp_, this);
+
+  // Remove icon from all NetSim instructions dialogs
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
 
   /**
    * Skin for the loaded level
@@ -210,6 +203,19 @@ NetSim.prototype.init = function(config) {
    * @type {string} one of "development"|"staging"|"test"|"production"
    */
   this.environment = config.rackEnv;
+
+  /**
+   * Whether NetSim should subscribe to events using Pusher.
+   * @type {boolean}
+   */
+  this.usePusher = config.usePusher;
+
+  /**
+   * The public application key for the Pusher service. (Not used if not using
+   * Pusher).
+   * @type {string}
+   */
+  this.pusherApplicationKey = config.pusherApplicationKey;
 
   /**
    * Configuration for reporting level completion
@@ -233,8 +239,8 @@ NetSim.prototype.init = function(config) {
 
   // Override certain StudioApp methods - netsim does a lot of configuration
   // itself, because of its nonstandard layout.
-  this.studioApp_.configureDom = this.configureDomOverride_.bind(this.studioApp_);
-  this.studioApp_.onResize = this.onResizeOverride_.bind(this.studioApp_);
+  this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
+  this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
 
   this.studioApp_.init(config);
 
@@ -255,10 +261,6 @@ NetSim.prototype.tick = function (clock) {
   if (this.isConnectedToShard()) {
     this.myNode.tick(clock);
     this.shard_.tick(clock);
-
-    if (this.shardCleaner_) {
-      this.shardCleaner_.tick(clock);
-    }
   }
 };
 
@@ -289,13 +291,6 @@ NetSim.prototype.getOverrideShardID = function () {
     }
   });
   return shardID;
-};
-
-/**
- * @returns {boolean} TRUE if the "disableCleaning" flag is found in the URL
- */
-NetSim.prototype.shouldEnableCleanup = function () {
-  return !location.search.match(/disableCleaning/i);
 };
 
 /**
@@ -348,16 +343,12 @@ NetSim.prototype.initWithUserName_ = function (user) {
   this.statusPanel_ = new NetSimStatusPanel(
       $('#netsim-status'),
       {
-        disconnectCallback: this.disconnectFromRemote.bind(this, function () {}),
-        cleanShardNow: this.cleanShardNow.bind(this),
-        expireHeartbeat: this.expireHeartbeat.bind(this)
+        disconnectCallback: this.disconnectFromRemote.bind(this, function () {})
       });
 
-  if (this.level.showLogBrowserButton) {
-    this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
-  }
+  this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_, this);
+  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
@@ -481,11 +472,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
     return;
   }
 
-  this.shard_ = new NetSimShard(shardID);
-  if (this.shouldEnableCleanup()) {
-    this.shardCleaner_ = new NetSimShardCleaner(this.shard_,
-        INITIAL_CLEANING_DELAY_MS);
-  }
+  this.shard_ = new NetSimShard(shardID, NetSimGlobals.getPubSubConfig());
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
     this.shardChange.notifyObservers(this.shard_, this.myNode);
@@ -922,7 +909,7 @@ NetSim.prototype.loadAudio_ = function () {
  *   html: Content to put inside #containerId
  * @private
  */
-NetSim.prototype.configureDomOverride_ = function (config) {
+NetSim.configureDomOverride_ = function (config) {
   var container = document.getElementById(config.containerId);
   container.innerHTML = config.html;
 
@@ -940,17 +927,69 @@ NetSim.prototype.configureDomOverride_ = function (config) {
 };
 
 /**
+ * Resize the left column so it pins above the footer.
+ */
+function resizeLeftColumnToSitAboveFooter() {
+  var pinnedLeftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  if (!pinnedLeftColumn) {
+    return;
+  }
+
+  var smallFooter = document.querySelector('.small-footer');
+
+  var bottom = 0;
+  if (smallFooter) {
+    var codeApp = $('#codeApp');
+    bottom += $(smallFooter).outerHeight(true);
+    // Footer is relative to the document, not codeApp, so we need to
+    // remove the codeApp bottom offset to get the correct margin.
+    bottom -= parseInt(codeApp.css('bottom'), 10);
+  }
+
+  pinnedLeftColumn.style.bottom = bottom + 'px';
+}
+
+function resizeFooterToLeftColumnWidth() {
+  var leftColumn = document.querySelector('#netsim-leftcol.pin_bottom');
+  var smallFooter = document.querySelector('.small-footer');
+  if (!(leftColumn && smallFooter) || !$(leftColumn).is(':visible')) {
+    return;
+  }
+
+  smallFooter.style.maxWidth = leftColumn.offsetWidth + 'px';
+
+  // If the small print and language selector are on the same line,
+  // the small print should float right.  Otherwise, it should float left.
+  var languageSelector = smallFooter.querySelector('form');
+  var smallPrint = smallFooter.querySelector('small');
+  if (smallPrint.offsetTop === languageSelector.offsetTop) {
+    smallPrint.style.float = 'right';
+  } else {
+    smallPrint.style.float = 'left';
+  }
+}
+
+var netsimDebouncedResizeFooter = _.debounce(function () {
+  resizeFooterToLeftColumnWidth();
+  resizeLeftColumnToSitAboveFooter();
+  smallFooterUtils.repositionCopyrightFlyout();
+  smallFooterUtils.repositionMoreMenu();
+}, 10);
+
+/**
  * Replaces StudioApp.onResize
  * Should be bound against StudioApp instance.
  * @private
  */
-NetSim.prototype.onResizeOverride_ = function() {
+NetSim.onResizeOverride_ = function() {
   var div = document.getElementById('appcontainer');
   var divParent = div.parentNode;
   var parentStyle = window.getComputedStyle(divParent);
   var parentWidth = parseInt(parentStyle.width, 10);
   div.style.top = divParent.offsetTop + 'px';
   div.style.width = parentWidth + 'px';
+
+  netsimDebouncedResizeFooter();
 };
 
 /**
@@ -1041,6 +1080,8 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   }
 
   // Shard changes almost ALWAYS require a re-render
+  this.visualization_.setShard(shard);
+  this.visualization_.setLocalNode(localNode);
   this.render();
 };
 
@@ -1099,6 +1140,7 @@ NetSim.prototype.onRouterConnect_ = function (router) {
   this.onRouterStateChange_(router);
   this.onRouterStatsChange_(router);
   this.setRouterLogData(router.getLog());
+  this.routerLogModal_.setRouter(router);
 };
 
 /**
@@ -1111,6 +1153,7 @@ NetSim.prototype.onRouterDisconnect_ = function () {
   this.setRouterMemoryInUse_(0);
   this.setRouterDataRate_(0);
   this.setRouterLogData([]);
+  this.routerLogModal_.setRouter(null);
 };
 
 /**
@@ -1167,28 +1210,6 @@ NetSim.prototype.onRouterLogChange_ = function () {
 };
 
 /**
- * Immediately start a shard-cleaning process from this client
- */
-NetSim.prototype.cleanShardNow = function () {
-  if (this.shardCleaner_) {
-    this.shardCleaner_.cleanShard();
-  }
-};
-
-/**
- * Make the local node's heartbeat pretend to be expired, so it can be
- * cleaned up.
- */
-NetSim.prototype.expireHeartbeat = function () {
-  if (!(this.myNode && this.myNode.heartbeat)) {
-    return;
-  }
-
-  this.myNode.heartbeat.spoofExpired();
-  logger.info("Local node heartbeat is now expired.");
-};
-
-/**
  * Kick off an animation that shows the local node setting the state of a
  * simplex wire.
  * @param {"0"|"1"} newState
@@ -1225,6 +1246,9 @@ NetSim.prototype.updateLayout = function () {
   var rightColumn = $('#netsim-rightcol');
   var sendPanel = $('#netsim-send');
   var logWrap = $('#netsim-logs');
+
+  netsimDebouncedResizeFooter();
+
   if (!rightColumn.is(':visible')) {
     return;
   }

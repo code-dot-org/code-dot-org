@@ -26,7 +26,7 @@ var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 var MessageGranularity = netsimConstants.MessageGranularity;
@@ -72,6 +72,13 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
    * @private
    */
   this.packets_ = [];
+
+  /**
+   * Last addres we sent a packet to
+   * @type {string}
+   * @private
+   */
+  this.lastPacketToAddress_ = "0";
 
   /**
    * Our local node's address, zero until assigned by a router.
@@ -188,6 +195,7 @@ NetSimSendPanel.prototype.tick = function (clock) {
   if (firstPacket.isSending()) {
     firstPacket.tick(clock);
   } else {
+    this.lastPacketToAddress_ = firstPacket.toAddress;
     firstPacket.beginSending(this.netsim_.myNode);
   }
 };
@@ -205,7 +213,7 @@ NetSimSendPanel.prototype.render = function () {
 
   // Add packet size slider control
   if (this.levelConfig_.showPacketSizeControl) {
-    var level = netsimGlobals.getLevelConfig();
+    var level = NetSimGlobals.getLevelConfig();
     var encoder = new Packet.Encoder(level.addressFormat,
         level.packetCountBitWidth, this.packetSpec_);
     this.packetSizeControl_ = new NetSimPacketSizeControl(
@@ -226,7 +234,7 @@ NetSimSendPanel.prototype.render = function () {
   // TODO: NetSim buttons in this panel need to do nothing if disabled!
   this.getBody()
       .find('#send-button')
-      .click(this.onSendButtonPress_.bind(this));
+      .click(this.onSendEventTriggered_.bind(this));
   this.getBody()
       .find('#set-wire-button')
       .click(this.onSetWireButtonPress_.bind(this));
@@ -249,11 +257,14 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     packetEditor.setPacketCount(newPacketCount);
   });
 
-  // Copy the to address of the previous packet, for convenience.
+  // Copy the to address of the previous packet if it exists. Otherwise
+  // use the last address sent.
   // TODO: Do we need to lock the toAddress for all of these packets together?
-  var newPacketToAddress = 0;
+  var newPacketToAddress;
   if (this.packets_.length > 0) {
     newPacketToAddress = this.packets_[this.packets_.length - 1].toAddress;
+  } else {
+    newPacketToAddress = this.lastPacketToAddress_;
   }
 
   // Create a new packet
@@ -269,13 +280,17 @@ NetSimSendPanel.prototype.addPacket_ = function () {
     bitRate: this.bitRate_,
     enabledEncodings: this.enabledEncodings_,
     removePacketCallback: this.removePacket_.bind(this),
-    contentChangeCallback: this.onContentChange_.bind(this)
+    contentChangeCallback: this.onContentChange_.bind(this),
+    enterKeyPressedCallback: this.onSendEventTriggered_.bind(this)
   });
 
   // Attach the new packet to this SendPanel
   var updateLayout = this.netsim_.updateLayout.bind(this.netsim_);
   newPacket.getRoot().appendTo(this.packetsDiv_);
-  newPacket.getRoot().hide().slideDown('fast', updateLayout);
+  newPacket.getRoot().hide().slideDown('fast', function () {
+    newPacket.getFirstVisibleMessageBox().focus();
+    updateLayout();
+  });
   this.packets_.push(newPacket);
 };
 
@@ -330,16 +345,21 @@ NetSimSendPanel.prototype.resetPackets_ = function () {
 NetSimSendPanel.prototype.onContentChange_ = function () {
   var nextBit = this.getNextBit_();
 
-  // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
-  // format this button label using the "A/B" convention
-  if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
-      !this.isEncodingEnabled_(EncodingType.BINARY)) {
-    nextBit = binaryToAB(nextBit);
-  }
+  if (nextBit === undefined) {
+    // If there are no bits queued up, disable the button
+    this.getSetWireButton().text(i18n.setWire());
+    this.conditionallyToggleSetWireButton();
+  } else {
+    // Special case: If we have the "A/B" encoding enabled but _not_ "Binary",
+    // format this button label using the "A/B" convention
+    if (this.isEncodingEnabled_(EncodingType.A_AND_B) &&
+        !this.isEncodingEnabled_(EncodingType.BINARY)) {
+      nextBit = binaryToAB(nextBit);
+    }
 
-  this.getBody()
-      .find('#set-wire-button')
-      .text(i18n.setWireToValue({ value: nextBit }));
+    this.getSetWireButton().text(i18n.setWireToValue({ value: nextBit }));
+    this.conditionallyToggleSetWireButton();
+  }
 };
 
 /**
@@ -390,9 +410,9 @@ NetSimSendPanel.prototype.onAddPacketButtonPress_ = function (jQueryEvent) {
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimSendPanel.prototype.onSendButtonPress_ = function (jQueryEvent) {
-  var thisButton = $(jQueryEvent.target);
-  if (thisButton.is('[disabled]')) {
+NetSimSendPanel.prototype.onSendEventTriggered_ = function (jQueryEvent) {
+  var triggeringTarget = $(jQueryEvent.target);
+  if (triggeringTarget.is('[disabled]')) {
     return;
   }
 
@@ -415,29 +435,36 @@ NetSimSendPanel.prototype.onSetWireButtonPress_ = function (jQueryEvent) {
     throw new Error("Tried to set wire state when no connection is established.");
   }
 
-  // Find the first bit of the first packet.  Set the wire to 0/off if
-  // there is no first bit.
-  this.disableEverything();
-  this.netsim_.animateSetWireState(this.getNextBit_());
-  myNode.setSimplexWireState(this.getNextBit_(), function (err) {
-    if (err) {
-      logger.warn(err.message);
-      return;
-    }
+  // Find the first bit of the first packet. Disallow setting the wire
+  // if there is no first bit.
+  var nextBit = this.getNextBit_();
+  if (nextBit === undefined) {
+    throw new Error("Tried to set wire state when no bit is queued.");
+  } else {
+    this.disableEverything();
+    this.netsim_.animateSetWireState(nextBit);
+    myNode.setSimplexWireState(nextBit, function (err) {
+      if (err) {
+        logger.warn(err.message);
+        return;
+      }
 
-    this.consumeFirstBit();
-    this.enableEverything();
-  }.bind(this));
+      this.consumeFirstBit();
+      this.enableEverything();
+      this.conditionallyToggleSetWireButton();
+    }.bind(this));
+  }
 };
 
 /**
  * Get the next bit that would be sent, if sending the entered message one
  * bit at a time.
- * @returns {string} single bit as a "0" or "1"
+ * @returns {string|undefined} single bit as a "0" or "1" if there are
+ * bits to be sent, or undefined otherwise
  * @private
  */
 NetSimSendPanel.prototype.getNextBit_ = function () {
-  return this.packets_.length > 0 ? this.packets_[0].getFirstBit() : '0';
+  return this.packets_.length > 0 ? this.packets_[0].getFirstBit() : undefined;
 };
 
 /** Disable all controls in this panel, usually during network activity. */
@@ -447,6 +474,28 @@ NetSimSendPanel.prototype.disableEverything = function () {
   if (this.packetSizeControl_) {
     this.packetSizeControl_.disable();
   }
+};
+
+/**
+ * Finds the button used to set the wire state
+ * @returns {jQuery}
+ */
+NetSimSendPanel.prototype.getSetWireButton = function () {
+  return this.getBody().find('#set-wire-button');
+};
+
+/** Enables the setWireButton if there is another bit in the queue,
+ * disables it otherwise.
+ * @returns {jQuery}
+ */
+NetSimSendPanel.prototype.conditionallyToggleSetWireButton = function () {
+  var setWireButton = this.getSetWireButton();
+  if (this.getNextBit_() === undefined) {
+    setWireButton.attr('disabled', 'disabled');
+  } else {
+    setWireButton.removeAttr('disabled');
+  }
+  return setWireButton;
 };
 
 /** Enable all controls in this panel, usually after network activity. */

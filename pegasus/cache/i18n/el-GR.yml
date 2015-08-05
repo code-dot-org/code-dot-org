@@ -63,7 +63,7 @@
   congratulations: Συγχαρητήρια!
   congratulations_on_completing_hoc: Συγχαρητήρια για τη συμπλήρωση του "Μια ώρα κώδικα"
   get_a_certificate_of_achievement: Πάρε πιστοποιητικό για το επίτευγμα
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Παρακαλώ επιλέξτε μια έγκυρη ηλικία
   enter_valid_email: Παρακαλώ δώσε μια έγκυρη διεύθυνση email
   get_a_certificate_message: Θα σας στείλουμε ένα πιστοποιητικό και πληροφορίες σχετικά
     με το πώς να <a href='/learn/beyond'> Συνεχίστε να μαθαίνετε μετά τη Μία Ώρα</a>
@@ -1268,3 +1268,6 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

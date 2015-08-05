@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-07-13
+ * Date: 2015-07-31
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -61662,6 +61662,9 @@ RememberedSocketRecord = (function() {
 
 Editor.prototype.replace = function(before, after, updates) {
   var dropletDocument, operation;
+  if (updates == null) {
+    updates = [];
+  }
   dropletDocument = before.start.getDocument();
   if (dropletDocument != null) {
     operation = dropletDocument.replace(before, after, updates.concat(this.getPreserves(dropletDocument)));
@@ -61827,6 +61830,34 @@ hook('mousedown', 1, function(point, event, state) {
         this.redrawMain();
         return;
       }
+    }
+  }
+});
+
+hook('mousedown', 4, function(point, event, state) {
+  var hitTestBlock, hitTestResult, line, mainPoint, str;
+  if (state.consumedHitTest) {
+    return;
+  }
+  if (!this.trackerPointIsInMain(point)) {
+    return;
+  }
+  mainPoint = this.trackerPointToMain(point);
+  if ((this.lassoSelection != null) && (this.hitTest(mainPoint, this.lassoSelection) != null)) {
+    return;
+  }
+  hitTestResult = this.hitTest(mainPoint, this.tree);
+  if (hitTestResult != null) {
+    hitTestBlock = this.view.getViewNodeFor(hitTestResult);
+    str = hitTestResult.stringifyInPlace();
+    if ((hitTestBlock.addButtonRect != null) && hitTestBlock.addButtonRect.contains(mainPoint)) {
+      line = this.mode.handleButton(str, 'add-button', hitTestResult.getReader());
+      this.populateBlock(hitTestResult, line);
+      return state.consumedHitTest = true;
+    } else if ((hitTestBlock.subtractButtonRect != null) && hitTestBlock.subtractButtonRect.contains(mainPoint)) {
+      line = this.mode.handleButton(str, 'subtract-button', hitTestResult.getReader());
+      this.populateBlock(hitTestResult, line);
+      return state.consumedHitTest = true;
     }
   }
 });
@@ -62205,7 +62236,7 @@ hook('mouseup', 0, function(point, event, state) {
     this.setCursor(this.draggingBlock.start);
     for (i = j = 0, len = rememberedSocketOffsets.length; j < len; i = ++j) {
       el = rememberedSocketOffsets[i];
-      this.rememberedSockets.push(new RememberedSocketRecord(new CrossDocumentLocation(this.floatingBlocks.length - 1, new model.Location(el.offset, 'socket')), el.text));
+      this.rememberedSockets.push(new RememberedSocketRecord(new CrossDocumentLocation(this.floatingBlocks.length, new model.Location(el.offset + 1, 'socket')), el.text));
     }
     this.draggingBlock = null;
     this.draggingOffset = null;
@@ -62427,6 +62458,9 @@ hook('rebuild_palette', 1, function() {
     hoverDiv = document.createElement('div');
     hoverDiv.className = 'droplet-hover-div';
     hoverDiv.title = (ref2 = data.title) != null ? ref2 : block.stringify();
+    if (data.id != null) {
+      hoverDiv.setAttribute('data-id', data.id);
+    }
     bounds = this.paletteView.getViewNodeFor(block).totalBounds;
     hoverDiv.style.top = bounds.y + "px";
     hoverDiv.style.left = bounds.x + "px";
@@ -62478,7 +62512,6 @@ hook('populate', 1, function() {
       return function() {
         _this.highlightFlashShow();
         if (_this.cursorAtSocket()) {
-          _this.populateSocket(_this.getCursor(), _this.hiddenInput.value);
           _this.redrawTextInput();
           if (_this.dropdownVisible) {
             return _this.formatDropdown();
@@ -62571,7 +62604,7 @@ Editor.prototype.redrawTextHighlights = function(scrollIntoView) {
     if (startRow === endRow) {
       this.cursorCtx.fillRect(startPosition, textFocusView.bounds[startRow].y + this.view.opts.textPadding, endPosition - startPosition, this.view.opts.textHeight);
     } else {
-      this.cursorCtx.fillRect(startPosition, textFocusView.bounds[startRow].y + this.view.opts.textPadding + textFocusView.bounds[startRow].right() - this.view.opts.textPadding - startPosition, this.view.opts.textHeight);
+      this.cursorCtx.fillRect(startPosition, textFocusView.bounds[startRow].y + this.view.opts.textPadding, textFocusView.bounds[startRow].right() - this.view.opts.textPadding - startPosition, this.view.opts.textHeight);
       for (i = j = ref1 = startRow + 1, ref2 = endRow; ref1 <= ref2 ? j < ref2 : j > ref2; i = ref1 <= ref2 ? ++j : --j) {
         this.cursorCtx.fillRect(textFocusView.bounds[i].x, textFocusView.bounds[i].y + this.view.opts.textPadding, textFocusView.bounds[i].width, this.view.opts.textHeight);
       }
@@ -62691,11 +62724,35 @@ Editor.prototype.populateSocket = function(socket, string) {
       if (!(i > 0)) {
         continue;
       }
-      last = helper.connect(new model.NewlineToken(), last);
+      last = helper.connect(last, new model.NewlineToken());
       last = helper.connect(last, new model.TextToken(line));
     }
     return this.spliceIn(new model.List(first, last), socket.start);
   }
+};
+
+Editor.prototype.populateBlock = function(block, string) {
+  var cursor, newBlock, oldBlockEnd;
+  newBlock = this.mode.parse(string, {
+    wrapAtRoot: false
+  }).start.next.container;
+  if (newBlock) {
+    if (this.cursor.count < block.start.getLocation().count) {
+      this.replace(block, newBlock);
+    } else if (this.cursor.count < block.end.getLocation().count) {
+      this.setCursor(block, null, 'before');
+      this.replace(block, newBlock);
+    } else {
+      cursor = this.cursor.clone();
+      oldBlockEnd = block.end.getLocation().count;
+      this.setCursor(this.tree);
+      this.replace(block, newBlock);
+      cursor.count += newBlock.end.getLocation().count - oldBlockEnd;
+      this.cursor = cursor;
+    }
+    return true;
+  }
+  return false;
 };
 
 Editor.prototype.hitTestTextInput = function(point, block) {
@@ -62810,10 +62867,10 @@ Editor.prototype.showDropdown = function(socket) {
       div.style.paddingLeft = helper.DROPDOWN_ARROW_WIDTH;
       setText = function(text) {
         _this.undoCapture();
-        if (_this.dropdownElement.style.display === 'none') {
+        if ((!_this.cursorAtSocket()) || _this.dropdownElement.style.display === 'none') {
           return;
         }
-        _this.populateSocket(socket, text);
+        _this.populateSocket(_this.getCursor(), text);
         _this.hiddenInput.value = text;
         _this.redrawMain();
         return _this.hideDropdown();
@@ -63124,7 +63181,7 @@ Editor.prototype.validCursorPosition = function(destination) {
 };
 
 Editor.prototype.setCursor = function(destination, validate, direction) {
-  var ref1;
+  var end, ref1, ref2, start;
   if (validate == null) {
     validate = (function() {
       return true;
@@ -63166,7 +63223,8 @@ Editor.prototype.setCursor = function(destination, validate, direction) {
     this.undoCapture();
     this.hiddenInput.value = this.getCursor().textContent();
     this.hiddenInput.focus();
-    return this.setTextSelectionRange(0, this.hiddenInput.value.length);
+    ref2 = this.mode.getDefaultSelectionRange(this.hiddenInput.value), start = ref2.start, end = ref2.end;
+    return this.setTextSelectionRange(start, end);
   }
 };
 
@@ -63322,7 +63380,7 @@ hook('keydown', 0, function(event, state) {
     return;
   }
   if (event.which === ENTER_KEY) {
-    if (!this.cursorAtSocket() && !event.shiftKey) {
+    if (!this.cursorAtSocket() && !event.shiftKey && !event.ctrlKey && !event.metaKey) {
       newBlock = new model.Block();
       newSocket = new model.Socket(this.mode.empty, Infinity);
       newSocket.handwritten = true;
@@ -65165,6 +65223,11 @@ exports.Draw = Draw = (function() {
         return this._cacheFlag = true;
       };
 
+      Path.prototype.reverse = function() {
+        this._points.reverse();
+        return this;
+      };
+
       Path.prototype.contains = function(point) {
         var count, dest, end, j, last, len1, ref;
         this._clearCache();
@@ -66002,9 +66065,9 @@ annotateCsNodes = function(tree) {
 exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
   extend(CoffeeScriptParser, superClass);
 
-  function CoffeeScriptParser(text, opts) {
+  function CoffeeScriptParser(text1, opts) {
     var base, i, j, len, line, ref;
-    this.text = text;
+    this.text = text1;
     CoffeeScriptParser.__super__.constructor.apply(this, arguments);
     if ((base = this.opts).functions == null) {
       base.functions = KNOWN_FUNCTIONS;
@@ -66163,17 +66226,44 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
   };
 
   CoffeeScriptParser.prototype.addCode = function(node, depth, indentDepth) {
-    var j, len, param, ref;
-    ref = node.params;
-    for (j = 0, len = ref.length; j < len; j++) {
-      param = ref[j];
-      this.csSocketAndMark(param, depth, 0, indentDepth, FORBID_ALL);
+    var match, nodeBoundsStart, ref, ref1;
+    if ((ref = (ref1 = node.params) != null ? ref1.length : void 0) != null ? ref : 0 > 0) {
+      this.addSocket({
+        bounds: this.boundCombine(this.getBounds(node.params[0]), this.getBounds(node.params[node.params.length - 1])),
+        depth: depth,
+        precedence: 0,
+        dropdown: null,
+        classes: ['forbid-all', '__function_param__'],
+        empty: ''
+      });
+    } else {
+      nodeBoundsStart = this.getBounds(node).start;
+      match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*\()(\s*)\)\s*(-|=)>/);
+      if (match != null) {
+        this.addSocket({
+          bounds: {
+            start: {
+              line: nodeBoundsStart.line,
+              column: nodeBoundsStart.column + match[1].length
+            },
+            end: {
+              line: nodeBoundsStart.line,
+              column: nodeBoundsStart.column + match[1].length + match[2].length
+            }
+          },
+          depth: depth,
+          precedence: 0,
+          dropdown: null,
+          classes: ['forbid-all', '__function_param__'],
+          empty: ''
+        });
+      }
     }
     return this.mark(node.body, depth, 0, null, indentDepth);
   };
 
   CoffeeScriptParser.prototype.mark = function(node, depth, precedence, wrappingParen, indentDepth) {
-    var arg, bounds, childName, classes, condition, errorSocket, expr, fakeBlock, firstBounds, index, infix, j, k, known, l, last, len, len1, len2, len3, len4, len5, len6, len7, len8, len9, line, lines, namenodes, o, object, p, property, q, r, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, s, secondBounds, shouldBeOneLine, switchCase, t, textLine, trueIndentDepth, u, v;
+    var arg, bounds, childName, classes, condition, currentNode, errorSocket, expr, fakeBlock, firstBounds, index, infix, j, k, known, l, last, len, len1, len2, len3, len4, len5, len6, len7, len8, len9, line, lines, namenodes, o, object, p, property, q, r, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref15, ref16, ref17, ref18, ref19, ref2, ref20, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, s, secondBounds, shouldBeOneLine, switchCase, t, textLine, trueIndentDepth, u, v;
     switch (node.nodeType()) {
       case 'Block':
         if (node.expressions.length === 0) {
@@ -66374,7 +66464,9 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
         this.csSocketAndMark(node.from, depth, 0, indentDepth);
         return this.csSocketAndMark(node.to, depth, 0, indentDepth);
       case 'If':
-        this.csBlock(node, depth, 0, wrappingParen, MOSTLY_BLOCK);
+        this.csBlock(node, depth, 0, wrappingParen, MOSTLY_BLOCK, {
+          addButton: true
+        });
 
         /*
         bounds = @getBounds node
@@ -66387,10 +66479,22 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
          */
         this.csSocketAndMark(node.rawCondition, depth + 1, 0, indentDepth);
         this.mark(node.body, depth + 1, 0, null, indentDepth);
-        if (node.elseBody != null) {
-          this.flagLineAsMarked(node.elseToken.first_line);
-          return this.mark(node.elseBody, depth + 1, 0, null, indentDepth);
+        currentNode = node;
+        results3 = [];
+        while (currentNode != null) {
+          if (currentNode.isChain) {
+            currentNode = currentNode.elseBodyNode();
+            this.csSocketAndMark(currentNode.rawCondition, depth + 1, 0, indentDepth);
+            results3.push(this.mark(currentNode.body, depth + 1, 0, null, indentDepth));
+          } else if (currentNode.elseBody != null) {
+            this.flagLineAsMarked(currentNode.elseToken.first_line);
+            this.mark(currentNode.elseBody, depth + 1, 0, null, indentDepth);
+            results3.push(currentNode = null);
+          } else {
+            results3.push(currentNode = null);
+          }
         }
+        return results3;
         break;
       case 'Arr':
         this.csBlock(node, depth, 100, wrappingParen, VALUE_ONLY);
@@ -66398,16 +66502,16 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
           this.csIndentAndMark(indentDepth, node.objects, depth + 1);
         }
         ref15 = node.objects;
-        results3 = [];
+        results4 = [];
         for (s = 0, len6 = ref15.length; s < len6; s++) {
           object = ref15[s];
           if (object.nodeType() === 'Value' && object.base.nodeType() === 'Literal' && ((ref16 = (ref17 = object.properties) != null ? ref17.length : void 0) === 0 || ref16 === (void 0))) {
-            results3.push(this.csBlock(object, depth + 2, 100, null, VALUE_ONLY));
+            results4.push(this.csBlock(object, depth + 2, 100, null, VALUE_ONLY));
           } else {
-            results3.push(void 0);
+            results4.push(void 0);
           }
         }
-        return results3;
+        return results4;
         break;
       case 'Return':
         this.csBlock(node, depth, 0, wrappingParen, BLOCK_ONLY);
@@ -66460,17 +66564,17 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
       case 'Obj':
         this.csBlock(node, depth, 0, wrappingParen, VALUE_ONLY);
         ref20 = node.properties;
-        results4 = [];
+        results5 = [];
         for (v = 0, len9 = ref20.length; v < len9; v++) {
           property = ref20[v];
           if (property.nodeType() === 'Assign') {
             this.csSocketAndMark(property.variable, depth + 1, 0, indentDepth, FORBID_ALL);
-            results4.push(this.csSocketAndMark(property.value, depth + 1, 0, indentDepth));
+            results5.push(this.csSocketAndMark(property.value, depth + 1, 0, indentDepth));
           } else {
-            results4.push(void 0);
+            results5.push(void 0);
           }
         }
-        return results4;
+        return results5;
     }
   };
 
@@ -66500,6 +66604,16 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
     } else {
       return a;
     }
+  };
+
+  CoffeeScriptParser.prototype.boundCombine = function(a, b) {
+    var end, start;
+    start = this.boundMin(a.start, b.start);
+    end = this.boundMax(a.end, b.end);
+    return {
+      start: start,
+      end: end
+    };
   };
 
   CoffeeScriptParser.prototype.getBounds = function(node) {
@@ -66617,7 +66731,7 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
     return container;
   };
 
-  CoffeeScriptParser.prototype.csBlock = function(node, depth, precedence, wrappingParen, classes) {
+  CoffeeScriptParser.prototype.csBlock = function(node, depth, precedence, wrappingParen, classes, buttons) {
     if (classes == null) {
       classes = [];
     }
@@ -66627,7 +66741,8 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
       precedence: precedence,
       color: this.getColor(node),
       classes: getClassesFor(node).concat(classes),
-      parenWrapped: wrappingParen != null
+      parenWrapped: wrappingParen != null,
+      buttons: buttons
     });
   };
 
@@ -66898,11 +67013,57 @@ CoffeeScriptParser.parens = function(leading, trailing, node, context) {
   }
 };
 
+CoffeeScriptParser.getDefaultSelectionRange = function(string) {
+  var end, ref, ref1, start;
+  start = 0;
+  end = string.length;
+  if (string.length > 1 && string[0] === string[string.length - 1] && ((ref = string[0]) === '"' || ref === '\'' || ref === '/')) {
+    start += 1;
+    end -= 1;
+    if (string.length > 5 && string.slice(0, 3) === string.slice(-3) && ((ref1 = string.slice(0, 3)) === '"""' || ref1 === '\'\'\'' || ref1 === '///')) {
+      start += 2;
+      end -= 2;
+    }
+  }
+  return {
+    start: start,
+    end: end
+  };
+};
+
+CoffeeScriptParser.handleButton = function(text, button, oldBlock) {
+  var currentNode, elseLocation, lines, node;
+  if (button === 'add-button' && indexOf.call(oldBlock.classes, 'If') >= 0) {
+    node = CoffeeScript.nodes(text, {
+      locations: true,
+      line: 0,
+      allowReturnOutsideFunction: true
+    }).expressions[0];
+    lines = text.split('\n');
+    currentNode = node;
+    elseLocation = null;
+    while (currentNode.isChain) {
+      currentNode = currentNode.elseBodyNode();
+    }
+    if (currentNode.elseBody != null) {
+      lines = text.split('\n');
+      elseLocation = {
+        line: currentNode.elseToken.last_line,
+        column: currentNode.elseToken.last_column + 2
+      };
+      elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column;
+      return text.slice(0, elseLocation).trimRight() + ' if ``' + (text.slice(elseLocation).match(/^ *\n/) != null ? '' : ' then ') + text.slice(elseLocation) + '\nelse\n  ``';
+    } else {
+      return text + '\nelse\n  ``';
+    }
+  }
+};
+
 module.exports = parser.wrapParser(CoffeeScriptParser);
 
 
 },{"../../vendor/coffee-script.js":116,"../helper.coffee":102,"../model.coffee":110,"../parser.coffee":112}],105:[function(require,module,exports){
-var ATTRIBUTE_CLASSES, BLOCK_ELEMENTS, COLORS, DEFAULT_INDENT_DEPTH, EMBEDDED_CONTENT, EMPTY_ELEMENTS, FLOW_CONTENT, FLOW_ELEMENTS, HEADING_CONTENT, HTMLParser, INLINE_ELEMENTS, INTERACTIVE_CONTENT, METADATA_CONTENT, PALPABLE_CONTENT, PHRASING_CONTENT, SCRIPT_SUPPORTING, SECTIONING_CONTENT, helper, htmlParser, htmlSerializer, parse5, parser,
+var ATTRIBUTE_CLASSES, BLOCK_ELEMENTS, CATEGORIES, DEFAULT_INDENT_DEPTH, EMBEDDED_CONTENT, EMPTY_ELEMENTS, FLOW_CONTENT, FLOW_ELEMENTS, HEADING_CONTENT, HTMLParser, INLINE_ELEMENTS, INTERACTIVE_CONTENT, METADATA_CONTENT, PALPABLE_CONTENT, PHRASING_CONTENT, SCRIPT_SUPPORTING, SECTIONING_CONTENT, TAGS, helper, htmlParser, htmlSerializer, parse5, parser,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty,
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
@@ -66915,42 +67076,388 @@ parse5 = require('parse5');
 
 ATTRIBUTE_CLASSES = ['#attribute'];
 
-COLORS = {
-  'Default': 'cyan',
-  '#comment': 'grey',
-  'a': 'grey',
-  'b': 'teal',
-  'body': 'return',
-  'br': 'command',
-  'button': 'yellow',
-  'center': 'red',
-  'div': 'amber',
-  'document': 'bluegrey',
-  'font': 'value',
-  'form': 'deeporange',
-  'h1': 'teal',
-  'h3': 'indigo',
-  'head': 'cyan',
-  'hr': 'lime',
-  'html': 'amber',
-  'iframe': 'green',
-  'img': 'green',
-  'input': 'brown',
-  'label': 'lightblue',
-  'li': 'pink',
-  'link': 'purple',
-  'marquee': 'command',
-  'meta': 'error',
-  'option': 'control',
-  'p': 'deeppurple',
-  'script': 'orange',
-  'select': 'indigo',
-  'strong': 'yellow',
-  'table': 'lightgreen',
-  'td': 'lightblue',
-  'title': 'green',
-  'tr': 'bluegrey',
-  'ul': 'blue'
+TAGS = {
+  '#documentType': {
+    category: 'metadata'
+  },
+  html: {
+    category: 'metadata'
+  },
+  head: {
+    category: 'metadata'
+  },
+  title: {
+    category: 'metadata'
+  },
+  link: {
+    category: 'metadata'
+  },
+  meta: {
+    category: 'metadata'
+  },
+  style: {
+    category: 'metadata'
+  },
+  script: {
+    category: 'metadata'
+  },
+  base: {
+    category: 'metadata'
+  },
+  p: {
+    category: 'grouping'
+  },
+  hr: {
+    category: 'grouping'
+  },
+  div: {
+    category: 'grouping'
+  },
+  ul: {
+    category: 'grouping'
+  },
+  ol: {
+    category: 'grouping'
+  },
+  li: {
+    category: 'grouping'
+  },
+  dl: {
+    category: 'grouping'
+  },
+  dt: {
+    category: 'grouping'
+  },
+  dd: {
+    category: 'grouping'
+  },
+  pre: {
+    category: 'grouping'
+  },
+  blockquote: {
+    category: 'grouping'
+  },
+  figure: {
+    category: 'grouping'
+  },
+  figcaption: {
+    category: 'grouping'
+  },
+  main: {
+    category: 'grouping'
+  },
+  dd: {
+    category: 'grouping'
+  },
+  a: {
+    category: 'content'
+  },
+  i: {
+    category: 'content'
+  },
+  b: {
+    category: 'content'
+  },
+  u: {
+    category: 'content'
+  },
+  sub: {
+    category: 'content'
+  },
+  sup: {
+    category: 'content'
+  },
+  br: {
+    category: 'content'
+  },
+  em: {
+    category: 'content'
+  },
+  strong: {
+    category: 'content'
+  },
+  small: {
+    category: 'content'
+  },
+  s: {
+    category: 'content'
+  },
+  cite: {
+    category: 'content'
+  },
+  q: {
+    category: 'content'
+  },
+  dfn: {
+    category: 'content'
+  },
+  abbr: {
+    category: 'content'
+  },
+  ruby: {
+    category: 'content'
+  },
+  rt: {
+    category: 'content'
+  },
+  rp: {
+    category: 'content'
+  },
+  data: {
+    category: 'content'
+  },
+  time: {
+    category: 'content'
+  },
+  code: {
+    category: 'content'
+  },
+  "var": {
+    category: 'content'
+  },
+  samp: {
+    category: 'content'
+  },
+  kbd: {
+    category: 'content'
+  },
+  mark: {
+    category: 'content'
+  },
+  bdi: {
+    category: 'content'
+  },
+  bdo: {
+    category: 'content'
+  },
+  span: {
+    category: 'content'
+  },
+  wbr: {
+    category: 'content'
+  },
+  '#text': {
+    category: 'content'
+  },
+  body: {
+    category: 'sections'
+  },
+  article: {
+    category: 'sections'
+  },
+  section: {
+    category: 'sections'
+  },
+  nav: {
+    category: 'sections'
+  },
+  aside: {
+    category: 'sections'
+  },
+  h1: {
+    category: 'sections'
+  },
+  h2: {
+    category: 'sections'
+  },
+  h3: {
+    category: 'sections'
+  },
+  h4: {
+    category: 'sections'
+  },
+  h5: {
+    category: 'sections'
+  },
+  h6: {
+    category: 'sections'
+  },
+  hgroup: {
+    category: 'sections'
+  },
+  header: {
+    category: 'sections'
+  },
+  footer: {
+    category: 'sections'
+  },
+  address: {
+    category: 'sections'
+  },
+  table: {
+    category: 'table'
+  },
+  caption: {
+    category: 'table'
+  },
+  colgroup: {
+    category: 'table'
+  },
+  col: {
+    category: 'table'
+  },
+  tbody: {
+    category: 'table'
+  },
+  thead: {
+    category: 'table'
+  },
+  tfoot: {
+    category: 'table'
+  },
+  tr: {
+    category: 'table'
+  },
+  td: {
+    category: 'table'
+  },
+  th: {
+    category: 'table'
+  },
+  form: {
+    category: 'form'
+  },
+  input: {
+    category: 'form'
+  },
+  textarea: {
+    category: 'form'
+  },
+  label: {
+    category: 'form'
+  },
+  button: {
+    category: 'form'
+  },
+  select: {
+    category: 'form'
+  },
+  option: {
+    category: 'form'
+  },
+  optgroup: {
+    category: 'form'
+  },
+  datalist: {
+    category: 'form'
+  },
+  keygen: {
+    category: 'form'
+  },
+  output: {
+    category: 'form'
+  },
+  progress: {
+    category: 'form'
+  },
+  meter: {
+    category: 'form'
+  },
+  fieldset: {
+    category: 'form'
+  },
+  legend: {
+    category: 'form'
+  },
+  img: {
+    category: 'embedded'
+  },
+  iframe: {
+    category: 'embedded'
+  },
+  embed: {
+    category: 'embedded'
+  },
+  object: {
+    category: 'embedded'
+  },
+  param: {
+    category: 'embedded'
+  },
+  video: {
+    category: 'embedded'
+  },
+  audio: {
+    category: 'embedded'
+  },
+  source: {
+    category: 'embedded'
+  },
+  track: {
+    category: 'embedded'
+  },
+  map: {
+    category: 'embedded'
+  },
+  area: {
+    category: 'embedded'
+  },
+  ins: {
+    category: 'other'
+  },
+  del: {
+    category: 'other'
+  },
+  details: {
+    category: 'other'
+  },
+  summary: {
+    category: 'other'
+  },
+  menu: {
+    category: 'other'
+  },
+  menuitem: {
+    category: 'other'
+  },
+  dialog: {
+    category: 'other'
+  },
+  noscript: {
+    category: 'other'
+  },
+  template: {
+    category: 'other'
+  },
+  canvas: {
+    category: 'other'
+  },
+  svg: {
+    category: 'other'
+  },
+  frameset: {
+    category: 'other'
+  }
+};
+
+CATEGORIES = {
+  metadata: {
+    color: 'lightblue'
+  },
+  grouping: {
+    color: 'purple'
+  },
+  content: {
+    color: 'lightgreen'
+  },
+  sections: {
+    color: 'orange'
+  },
+  table: {
+    color: 'indigo'
+  },
+  form: {
+    color: 'deeporange'
+  },
+  embedded: {
+    color: 'teal'
+  },
+  other: {
+    color: 'pink'
+  },
+  Default: {
+    color: 'yellow'
+  }
 };
 
 DEFAULT_INDENT_DEPTH = '  ';
@@ -66997,6 +67504,8 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
     this.text = text1;
     this.opts = opts != null ? opts : {};
     HTMLParser.__super__.constructor.apply(this, arguments);
+    this.opts.tags = helper.extend({}, TAGS, this.opts.tags);
+    this.opts.categories = helper.extend({}, CATEGORIES, this.opts.categories);
     this.lines = this.text.split('\n');
   }
 
@@ -67005,20 +67514,28 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
   };
 
   HTMLParser.prototype.getClasses = function(node) {
-    var classes, ref;
+    var classes;
     classes = [node.nodeName];
-    if ((ref = node.nodeName) === 'thead' || ref === 'tbody' || ref === 'tr' || ref === 'table' || ref === 'div') {
-      classes = classes.concat('add-button');
-      if (node.childNodes.length !== 0) {
-        classes = classes.concat('subtract-button');
-      }
-    }
     return classes;
   };
 
+  HTMLParser.prototype.getButtons = function(node) {
+    var buttons, ref;
+    buttons = {};
+    if ((ref = node.nodeName) === 'thead' || ref === 'tbody' || ref === 'tr' || ref === 'table' || ref === 'div') {
+      buttons.addButton = true;
+      if (node.childNodes.length !== 0) {
+        buttons.subtractButton = true;
+      }
+    }
+    return buttons;
+  };
+
   HTMLParser.prototype.getColor = function(node) {
-    var ref;
-    return (ref = COLORS[node.nodeName]) != null ? ref : COLORS['Default'];
+    if (this.opts.tags[node.nodeName]) {
+      return this.opts.categories[this.opts.tags[node.nodeName].category].color;
+    }
+    return this.opts.categories.Default.color;
   };
 
   HTMLParser.prototype.getBounds = function(node) {
@@ -67068,7 +67585,7 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
   };
 
   HTMLParser.prototype.setAttribs = function(node, string) {
-    var att, diff, end, k, len, offset, ref, ref1, results, start;
+    var add, att, diff, end, k, len, newStr, offset, ref, ref1, ref2, results, start;
     offset = node.__location.start;
     node.attributes = [];
     string = string.toLowerCase();
@@ -67085,9 +67602,20 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
         start = string.indexOf(att.name.toLowerCase());
         end = start + att.name.length;
         string = string.slice(end);
+        if (string.trimLeft()[0] === '=') {
+          add = 0;
+          newStr = string.trimLeft().slice(1).trimLeft();
+          add = string.length - newStr.length;
+          string = string.slice(add);
+          if (((ref1 = string[0]) === '"' || ref1 === '\'') && string[0] === string[1]) {
+            add += 2;
+            string = string.slice(2);
+          }
+          end += add;
+        }
         if (att.value.length !== 0) {
           diff = string.indexOf(att.value.toLowerCase());
-          if (((ref1 = string[diff - 1]) === '"' || ref1 === '\'') && string[diff - 1] === string[diff + att.value.length]) {
+          if (((ref2 = string[diff - 1]) === '"' || ref2 === '\'') && string[diff - 1] === string[diff + att.value.length]) {
             diff++;
           }
           diff += att.value.length;
@@ -67239,7 +67767,9 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
       precedence: this.getPrecedence(node),
       color: this.getColor(node),
       classes: this.getClasses(node),
-      socketLevel: this.getSocketLevel(node)
+      socketLevel: this.getSocketLevel(node),
+      parseContext: node.nodeName,
+      buttons: this.getButtons(node)
     });
   };
 
@@ -67272,7 +67802,7 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
   };
 
   HTMLParser.prototype.markRoot = function() {
-    var column, i, k, len, line, ref, ref1, root, val;
+    var column, i, k, len, line, parseContext, ref, ref1, root, val;
     this.positions = [];
     line = 0;
     column = 0;
@@ -67293,7 +67823,8 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
       'line': line,
       'column': column
     };
-    if (((ref1 = this.opts.parseOptions) != null ? ref1.wrapAtRoot : void 0) === false) {
+    parseContext = (ref1 = this.opts.parseOptions) != null ? ref1.context : void 0;
+    if (parseContext && (parseContext !== 'html' && parseContext !== 'head' && parseContext !== 'body')) {
       root = htmlParser.parseFragment(this.text);
       this.cleanTree(root);
       this.fixBounds(root);
@@ -67388,6 +67919,73 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
 
 HTMLParser.parens = function(leading, trailing, node, context) {
   return [leading, trailing];
+};
+
+HTMLParser.handleButton = function(text, button, oldblock) {
+  var block, classes, extra, fragment, indentPrefix, last, lines, mid, prev, ref, ref1, ref2, ref3, ref4;
+  classes = oldblock.classes;
+  fragment = htmlParser.parseFragment(text);
+  this.prototype.cleanTree(fragment);
+  block = fragment.childNodes[0];
+  prev = null;
+  if (block.nodeName === 'tr') {
+    prev = 'td';
+  } else if ((ref = block.nodeName) === 'table' || ref === 'thead' || ref === 'tbody') {
+    prev = 'tr';
+  } else if (block.nodeName === 'div') {
+    prev = 'div';
+  }
+  if (prev) {
+    last = block.childNodes.length - 1;
+    while (last >= 0) {
+      if (block.childNodes[last].nodeName === prev) {
+        break;
+      }
+      last--;
+    }
+    last++;
+    if (button === 'add-button') {
+      indentPrefix = DEFAULT_INDENT_DEPTH;
+      if (((ref1 = block.childNodes) != null ? ref1.length : void 0) === 1 && block.childNodes[0].nodeName === '#text' && block.childNodes[0].value.trim().length === 0) {
+        block.childNodes[0].value = '\n';
+      } else {
+        lines = (ref2 = block.childNodes) != null ? (ref3 = ref2[0]) != null ? (ref4 = ref3.value) != null ? ref4.split('\n') : void 0 : void 0 : void 0;
+        if ((lines != null ? lines.length : void 0) > 1) {
+          indentPrefix = lines[lines.length - 1];
+        }
+      }
+      switch (block.nodeName) {
+        case 'tr':
+          extra = htmlParser.parseFragment('\n' + indentPrefix + '<td></td>');
+          break;
+        case 'table':
+          extra = htmlParser.parseFragment('\n' + indentPrefix + '<tr>\n' + indentPrefix + '\n' + indentPrefix + '</tr>');
+          break;
+        case 'tbody':
+          extra = htmlParser.parseFragment('\n' + indentPrefix + '<tr>\n' + indentPrefix + '\n' + indentPrefix + '</tr>');
+          break;
+        case 'thead':
+          extra = htmlParser.parseFragment('\n' + indentPrefix + '<tr>\n' + indentPrefix + '\n' + indentPrefix + '</tr>');
+          break;
+        case 'div':
+          extra = htmlParser.parseFragment('\n' + indentPrefix + '<div>\n' + indentPrefix + '\n' + indentPrefix + '</div>');
+      }
+      block.childNodes = block.childNodes.slice(0, last).concat(extra.childNodes).concat(block.childNodes.slice(last));
+    } else if (button === 'subtract-button') {
+      mid = last - 2;
+      while (mid >= 0) {
+        if (block.childNodes[mid].nodeName === prev) {
+          break;
+        }
+        mid--;
+      }
+      block.childNodes = (mid >= 0 ? block.childNodes.slice(0, +mid + 1 || 9e9) : []).concat(block.childNodes.slice(last));
+      if (block.childNodes.length === 1 && block.childNodes[0].nodeName === '#text' && block.childNodes[0].value.trim().length === 0) {
+        block.childNodes[0].value = '\n  \n';
+      }
+    }
+  }
+  return htmlSerializer.serialize(fragment);
 };
 
 HTMLParser.drop = function(block, context, pred, next) {
@@ -68109,7 +68707,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
   };
 
   JavaScriptParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-    var argument, block, currentElif, declaration, element, expression, i, j, k, known, l, len, len1, len10, len2, len3, len4, len5, len6, len7, len8, len9, m, n, o, p, param, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref13, ref14, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results10, results11, results2, results3, results4, results5, results6, results7, results8, results9, s, statement, switchCase, t;
+    var argument, block, currentElif, declaration, element, expression, i, j, k, known, l, len, len1, len2, len3, len4, len5, len6, len7, len8, m, match, n, nodeBoundsStart, o, p, position, prefix, property, q, r, ref, ref1, ref10, ref11, ref12, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9, results, results1, results2, results3, results4, results5, results6, results7, results8, results9, statement, switchCase;
     switch (node.type) {
       case 'Program':
         ref = node.body;
@@ -68137,13 +68735,41 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         this.jsBlock(node, depth, bounds);
         this.mark(indentDepth, node.body, depth + 1, null);
         this.jsSocketAndMark(indentDepth, node.id, depth + 1, null, null, ['no-drop']);
-        ref2 = node.params;
-        results2 = [];
-        for (l = 0, len2 = ref2.length; l < len2; l++) {
-          param = ref2[l];
-          results2.push(this.jsSocketAndMark(indentDepth, param, depth + 1, null, null, ['no-drop']));
+        if (node.params.length > 0) {
+          return this.addSocket({
+            bounds: {
+              start: this.getBounds(node.params[0]).start,
+              end: this.getBounds(node.params[node.params.length - 1]).end
+            },
+            depth: depth + 1,
+            precedence: 0,
+            dropdown: null,
+            classes: ['no-drop'],
+            empty: ''
+          });
+        } else {
+          nodeBoundsStart = this.getBounds(node.id).end;
+          match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*\()(\s*)\)/);
+          if (match != null) {
+            return this.addSocket({
+              bounds: {
+                start: {
+                  line: nodeBoundsStart.line,
+                  column: nodeBoundsStart.column + match[1].length
+                },
+                end: {
+                  line: nodeBoundsStart.line,
+                  column: nodeBoundsStart.column + match[1].length + match[2].length
+                }
+              },
+              depth: depth,
+              precedence: 0,
+              dropdown: null,
+              classes: ['forbid-all', '__function_param__'],
+              empty: ''
+            });
+          }
         }
-        return results2;
         break;
       case 'FunctionExpression':
         this.jsBlock(node, depth, bounds);
@@ -68151,13 +68777,46 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         if (node.id != null) {
           this.jsSocketAndMark(indentDepth, node.id, depth + 1, null, null, ['no-drop']);
         }
-        ref3 = node.params;
-        results3 = [];
-        for (m = 0, len3 = ref3.length; m < len3; m++) {
-          param = ref3[m];
-          results3.push(this.jsSocketAndMark(indentDepth, param, depth + 1, null, null, ['no-drop']));
+        if (node.params.length > 0) {
+          return this.addSocket({
+            bounds: {
+              start: this.getBounds(node.params[0]).start,
+              end: this.getBounds(node.params[node.params.length - 1]).end
+            },
+            depth: depth + 1,
+            precedence: 0,
+            dropdown: null,
+            classes: ['no-drop'],
+            empty: ''
+          });
+        } else {
+          if (node.id != null) {
+            nodeBoundsStart = this.getBounds(node.id).end;
+            match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*\()(\s*)\)/);
+          } else {
+            nodeBoundsStart = this.getBounds(node).start;
+            match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*function\s*\()(\s*\))/);
+          }
+          if (match != null) {
+            return position = this.addSocket({
+              bounds: {
+                start: {
+                  line: nodeBoundsStart.line,
+                  column: nodeBoundsStart.column + match[1].length
+                },
+                end: {
+                  line: nodeBoundsStart.line,
+                  column: nodeBoundsStart.column + match[1].length + match[2].length
+                }
+              },
+              depth: depth,
+              precedence: 0,
+              dropdown: null,
+              classes: ['forbid-all', '__function_param__'],
+              empty: ''
+            });
+          }
         }
-        return results3;
         break;
       case 'AssignmentExpression':
         this.jsBlock(node, depth, bounds);
@@ -68171,22 +68830,24 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'IfStatement':
       case 'ConditionalExpression':
-        this.jsBlock(node, depth, bounds);
+        this.jsBlock(node, depth, bounds, {
+          addButton: true
+        });
         this.jsSocketAndMark(indentDepth, node.test, depth + 1, NEVER_PAREN);
         this.jsSocketAndMark(indentDepth, node.consequent, depth + 1, null);
         currentElif = node.alternate;
-        results4 = [];
+        results2 = [];
         while (currentElif != null) {
           if (currentElif.type === 'IfStatement') {
             this.jsSocketAndMark(indentDepth, currentElif.test, depth + 1, null);
             this.jsSocketAndMark(indentDepth, currentElif.consequent, depth + 1, null);
-            results4.push(currentElif = currentElif.alternate);
+            results2.push(currentElif = currentElif.alternate);
           } else {
             this.jsSocketAndMark(indentDepth, currentElif, depth + 1, 10);
-            results4.push(currentElif = null);
+            results2.push(currentElif = null);
           }
         }
-        return results4;
+        return results2;
         break;
       case 'ForInStatement':
         this.jsBlock(node, depth, bounds);
@@ -68207,15 +68868,6 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       case 'ThrowStatement':
         this.jsBlock(node, depth, bounds);
         return this.jsSocketAndMark(indentDepth, node.argument, depth + 1, null);
-      case 'IfStatement':
-      case 'ConditionalExpression':
-        this.jsBlock(node, depth, bounds);
-        this.jsSocketAndMark(indentDepth, node.test, depth + 1, NEVER_PAREN);
-        this.jsSocketAndMark(indentDepth, node.consequent, depth + 1, null);
-        if (node.alternate != null) {
-          return this.jsSocketAndMark(indentDepth, node.alternate, depth + 1, 10);
-        }
-        break;
       case 'ForStatement':
         this.jsBlock(node, depth, bounds);
         if (this.opts.categories.loops.beginner && isStandardForLoop(node)) {
@@ -68240,20 +68892,20 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
           depth: depth,
           prefix: prefix
         });
-        ref4 = node.body;
-        results5 = [];
-        for (n = 0, len4 = ref4.length; n < len4; n++) {
-          statement = ref4[n];
-          results5.push(this.mark(indentDepth, statement, depth + 1, null));
+        ref2 = node.body;
+        results3 = [];
+        for (l = 0, len2 = ref2.length; l < len2; l++) {
+          statement = ref2[l];
+          results3.push(this.mark(indentDepth, statement, depth + 1, null));
         }
-        return results5;
+        return results3;
         break;
       case 'BinaryExpression':
         this.jsBlock(node, depth, bounds);
         this.jsSocketAndMark(indentDepth, node.left, depth + 1, OPERATOR_PRECEDENCES[node.operator]);
         return this.jsSocketAndMark(indentDepth, node.right, depth + 1, OPERATOR_PRECEDENCES[node.operator]);
       case 'UnaryExpression':
-        if (!(((ref5 = node.operator) === '-' || ref5 === '+') && ((ref6 = node.argument.type) === 'Identifier' || ref6 === 'Literal'))) {
+        if (!(((ref3 = node.operator) === '-' || ref3 === '+') && ((ref4 = node.argument.type) === 'Identifier' || ref4 === 'Literal'))) {
           this.jsBlock(node, depth, bounds);
           return this.jsSocketAndMark(indentDepth, node.argument, depth + 1, this.getPrecedence(node));
         }
@@ -68275,13 +68927,13 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         } else if (known.anyobj && node.callee.type === 'MemberExpression') {
           this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN);
         }
-        ref7 = node["arguments"];
-        results6 = [];
-        for (i = o = 0, len5 = ref7.length; o < len5; i = ++o) {
-          argument = ref7[i];
-          results6.push(this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref8 = known.fn) != null ? (ref9 = ref8.dropdown) != null ? ref9[i] : void 0 : void 0 : void 0));
+        ref5 = node["arguments"];
+        results4 = [];
+        for (i = m = 0, len3 = ref5.length; m < len3; i = ++m) {
+          argument = ref5[i];
+          results4.push(this.jsSocketAndMark(indentDepth, argument, depth + 1, NEVER_PAREN, null, null, known != null ? (ref6 = known.fn) != null ? (ref7 = ref6.dropdown) != null ? ref7[i] : void 0 : void 0 : void 0));
         }
-        return results6;
+        return results4;
         break;
       case 'MemberExpression':
         this.jsBlock(node, depth, bounds);
@@ -68292,13 +68944,13 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         return this.jsSocketAndMark(indentDepth, node.argument, depth + 1);
       case 'VariableDeclaration':
         this.jsBlock(node, depth, bounds);
-        ref10 = node.declarations;
-        results7 = [];
-        for (p = 0, len6 = ref10.length; p < len6; p++) {
-          declaration = ref10[p];
-          results7.push(this.mark(indentDepth, declaration, depth + 1));
+        ref8 = node.declarations;
+        results5 = [];
+        for (n = 0, len4 = ref8.length; n < len4; n++) {
+          declaration = ref8[n];
+          results5.push(this.mark(indentDepth, declaration, depth + 1));
         }
-        return results7;
+        return results5;
         break;
       case 'VariableDeclarator':
         this.jsSocketAndMark(indentDepth, node.id, depth);
@@ -68317,25 +68969,25 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         return this.jsSocketAndMark(indentDepth, node.test, depth + 1);
       case 'ObjectExpression':
         this.jsBlock(node, depth, bounds);
-        ref11 = node.properties;
-        results8 = [];
-        for (q = 0, len7 = ref11.length; q < len7; q++) {
-          property = ref11[q];
+        ref9 = node.properties;
+        results6 = [];
+        for (o = 0, len5 = ref9.length; o < len5; o++) {
+          property = ref9[o];
           this.jsSocketAndMark(indentDepth, property.key, depth + 1);
-          results8.push(this.jsSocketAndMark(indentDepth, property.value, depth + 1));
+          results6.push(this.jsSocketAndMark(indentDepth, property.value, depth + 1));
         }
-        return results8;
+        return results6;
         break;
       case 'SwitchStatement':
         this.jsBlock(node, depth, bounds);
         this.jsSocketAndMark(indentDepth, node.discriminant, depth + 1);
-        ref12 = node.cases;
-        results9 = [];
-        for (r = 0, len8 = ref12.length; r < len8; r++) {
-          switchCase = ref12[r];
-          results9.push(this.mark(indentDepth, switchCase, depth + 1, null));
+        ref10 = node.cases;
+        results7 = [];
+        for (p = 0, len6 = ref10.length; p < len6; p++) {
+          switchCase = ref10[p];
+          results7.push(this.mark(indentDepth, switchCase, depth + 1, null));
         }
-        return results9;
+        return results7;
         break;
       case 'SwitchCase':
         if (node.test != null) {
@@ -68350,13 +69002,13 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             depth: depth + 1,
             prefix: prefix
           });
-          ref13 = node.consequent;
-          results10 = [];
-          for (s = 0, len9 = ref13.length; s < len9; s++) {
-            statement = ref13[s];
-            results10.push(this.mark(indentDepth, statement, depth + 2));
+          ref11 = node.consequent;
+          results8 = [];
+          for (q = 0, len7 = ref11.length; q < len7; q++) {
+            statement = ref11[q];
+            results8.push(this.mark(indentDepth, statement, depth + 2));
           }
-          return results10;
+          return results8;
         }
         break;
       case 'TryStatement':
@@ -68377,17 +69029,17 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'ArrayExpression':
         this.jsBlock(node, depth, bounds);
-        ref14 = node.elements;
-        results11 = [];
-        for (t = 0, len10 = ref14.length; t < len10; t++) {
-          element = ref14[t];
+        ref12 = node.elements;
+        results9 = [];
+        for (r = 0, len8 = ref12.length; r < len8; r++) {
+          element = ref12[r];
           if (element != null) {
-            results11.push(this.jsSocketAndMark(indentDepth, element, depth + 1, null));
+            results9.push(this.jsSocketAndMark(indentDepth, element, depth + 1, null));
           } else {
-            results11.push(void 0);
+            results9.push(void 0);
           }
         }
-        return results11;
+        return results9;
         break;
       case 'Literal':
         return null;
@@ -68396,14 +69048,15 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     }
   };
 
-  JavaScriptParser.prototype.jsBlock = function(node, depth, bounds) {
+  JavaScriptParser.prototype.jsBlock = function(node, depth, bounds, buttons) {
     return this.addBlock({
       bounds: bounds != null ? bounds : this.getBounds(node),
       depth: depth,
       precedence: this.getPrecedence(node),
       color: this.getColor(node),
       classes: this.getClasses(node),
-      socketLevel: this.getSocketLevel(node)
+      socketLevel: this.getSocketLevel(node),
+      buttons: buttons
     });
   };
 
@@ -68414,7 +69067,6 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         depth: depth,
         precedence: precedence,
         classes: classes != null ? classes : [],
-        accepts: this.getAcceptsRule(node),
         dropdown: dropdown
       });
     }
@@ -68502,6 +69154,56 @@ JavaScriptParser.emptyIndent = "";
 JavaScriptParser.startComment = '/*';
 
 JavaScriptParser.endComment = '*/';
+
+JavaScriptParser.handleButton = function(text, button, oldBlock) {
+  var currentElif, elseLocation, lines, node;
+  if (button === 'add-button' && indexOf.call(oldBlock.classes, 'IfStatement') >= 0) {
+    node = acorn.parse(text, {
+      locations: true,
+      line: 0,
+      allowReturnOutsideFunction: true
+    }).body[0];
+    currentElif = node;
+    elseLocation = null;
+    while (true) {
+      if (currentElif.type === 'IfStatement') {
+        if (currentElif.alternate != null) {
+          elseLocation = {
+            line: currentElif.alternate.loc.start.line,
+            column: currentElif.alternate.loc.start.column
+          };
+          currentElif = currentElif.alternate;
+        } else {
+          elseLocation = null;
+          break;
+        }
+      } else {
+        break;
+      }
+    }
+    if (elseLocation != null) {
+      lines = text.split('\n');
+      elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column;
+      return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
+    } else {
+      return text + ' else {\n  __\n}';
+    }
+  }
+};
+
+JavaScriptParser.getDefaultSelectionRange = function(string) {
+  var end, ref, start;
+  start = 0;
+  end = string.length;
+  if (string[0] === string[string.length - 1] && ((ref = string[0]) === '"' || ref === '\'' || ref === '/')) {
+    start += 1;
+    end -= 1;
+  }
+  return {
+    start: start,
+    end: end
+  };
+};
 
 module.exports = parser.wrapParser(JavaScriptParser);
 
@@ -69752,11 +70454,13 @@ exports.BlockEndToken = BlockEndToken = (function(superClass) {
 exports.Block = Block = (function(superClass) {
   extend(Block, superClass);
 
-  function Block(precedence, color, socketLevel, classes) {
+  function Block(precedence, color, socketLevel, classes, parseContext, buttons) {
     this.precedence = precedence != null ? precedence : 0;
     this.color = color != null ? color : 'blank';
     this.socketLevel = socketLevel != null ? socketLevel : helper.ANY_DROP;
     this.classes = classes != null ? classes : [];
+    this.parseContext = parseContext;
+    this.buttons = buttons != null ? buttons : {};
     this.start = new BlockStartToken(this);
     this.end = new BlockEndToken(this);
     this.type = 'block';
@@ -69778,7 +70482,7 @@ exports.Block = Block = (function(superClass) {
 
   Block.prototype._cloneEmpty = function() {
     var clone;
-    clone = new Block(this.precedence, this.color, this.socketLevel, this.classes);
+    clone = new Block(this.precedence, this.color, this.socketLevel, this.classes, this.parseContext, this.buttons);
     clone.currentlyParenWrapped = this.currentlyParenWrapped;
     return clone;
   };
@@ -70125,7 +70829,7 @@ module.exports = {
 
 
 },{"./languages/c.coffee":103,"./languages/coffee.coffee":104,"./languages/html.coffee":105,"./languages/java.coffee":106,"./languages/javascript.coffee":107,"./languages/python.coffee":108}],112:[function(require,module,exports){
-var Parser, ParserFactory, YES, _extend, hasSomeTextAfter, helper, model, sax, stripFlaggedBlocks,
+var Parser, ParserFactory, YES, _extend, getDefaultSelectionRange, hasSomeTextAfter, helper, model, sax, stripFlaggedBlocks,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
@@ -70249,14 +70953,13 @@ exports.Parser = Parser = (function() {
 
   Parser.prototype.addBlock = function(opts) {
     var block;
-    block = new model.Block(opts.precedence, opts.color, opts.socketLevel, opts.classes, false);
-    block.parseContext = opts.parseContext;
+    block = new model.Block(opts.precedence, opts.color, opts.socketLevel, opts.classes, opts.parseContext, opts.buttons);
     return this.addMarkup(block, opts.bounds, opts.depth);
   };
 
   Parser.prototype.addSocket = function(opts) {
-    var socket;
-    socket = new model.Socket(this.empty, opts.precedence, false, opts.classes, opts.dropdown);
+    var ref, socket;
+    socket = new model.Socket((ref = opts.empty) != null ? ref : this.empty, opts.precedence, false, opts.classes, opts.dropdown);
     return this.addMarkup(socket, opts.bounds, opts.depth);
   };
 
@@ -70326,7 +71029,7 @@ exports.Parser = Parser = (function() {
 
   Parser.prototype.constructHandwrittenBlock = function(text) {
     var block, socket, textToken;
-    block = new model.Block(0, 'blank', helper.ANY_DROP, false);
+    block = new model.Block(0, 'blank', helper.ANY_DROP);
     socket = new model.Socket(this.empty, 0, true);
     textToken = new model.TextToken(text);
     helper.connect(block.start, socket.start);
@@ -70361,7 +71064,7 @@ exports.Parser = Parser = (function() {
     for (i = k = 0, len1 = lines.length; k < len1; i = ++k) {
       line = lines[i];
       if (!(i in markupOnLines)) {
-        if (indentDepth >= line.length || line.slice(0, indentDepth).trim().length > 0) {
+        if (indentDepth > line.length || line.slice(0, indentDepth).trim().length > 0) {
           head.specialIndent = ((function() {
             var l, ref1, results;
             results = [];
@@ -70389,7 +71092,7 @@ exports.Parser = Parser = (function() {
         }
         head = helper.connect(head, new model.NewlineToken());
       } else {
-        if (indentDepth >= line.length || line.slice(0, indentDepth).trim().length > 0) {
+        if (indentDepth > line.length || line.slice(0, indentDepth).trim().length > 0) {
           lastIndex = line.length - line.trimLeft().length;
           head.specialIndent = line.slice(0, lastIndex);
         } else {
@@ -70582,9 +71285,20 @@ Parser.drop = function(block, context, pred, next) {
   }
 };
 
+Parser.handleButton = function(text, command, oldblock) {
+  return text;
+};
+
 Parser.empty = '';
 
 Parser.emptyIndent = '';
+
+getDefaultSelectionRange = function(string) {
+  return {
+    start: 0,
+    end: string.length
+  };
+};
 
 exports.wrapParser = function(CustomParser) {
   var CustomParserFactory;
@@ -70592,12 +71306,13 @@ exports.wrapParser = function(CustomParser) {
     extend(CustomParserFactory, superClass);
 
     function CustomParserFactory(opts1) {
-      var ref, ref1;
+      var ref, ref1, ref2;
       this.opts = opts1 != null ? opts1 : {};
       this.empty = CustomParser.empty;
       this.emptyIndent = CustomParser.emptyIndent;
       this.startComment = (ref = CustomParser.startComment) != null ? ref : '/*';
       this.endComment = (ref1 = CustomParser.endComment) != null ? ref1 : '*/';
+      this.getDefaultSelectionRange = (ref2 = CustomParser.getDefaultSelectionRange) != null ? ref2 : getDefaultSelectionRange;
     }
 
     CustomParserFactory.prototype.createParser = function(text) {
@@ -70642,6 +71357,10 @@ exports.wrapParser = function(CustomParser) {
 
     CustomParserFactory.prototype.drop = function(block, context, pred, next) {
       return CustomParser.drop(block, context, pred, next);
+    };
+
+    CustomParserFactory.prototype.handleButton = function(text, command, oldblock) {
+      return CustomParser.handleButton(text, command, oldblock);
     };
 
     return CustomParserFactory;
@@ -70967,6 +71686,9 @@ DROPDOWN_ARROW_HEIGHT = 8;
 DROP_TRIANGLE_COLOR = '#555';
 
 DEFAULT_OPTIONS = {
+  buttonWidth: 15,
+  buttonHeight: 15,
+  buttonPadding: 6,
   showDropdowns: true,
   padding: 5,
   indentWidth: 10,
@@ -71693,7 +72415,7 @@ exports.View = View = (function() {
     };
 
     ListViewNode.prototype.computeMinDimensions = function() {
-      var bottomMargin, childNode, childObject, desiredLine, j, l, len1, len2, len3, len4, len5, len6, line, lineChild, lineChildView, linesToExtend, m, margins, minDimension, minDimensions, minDistanceToBase, o, p, preIndentLines, q, ref, ref1, ref2, size;
+      var bottomMargin, childNode, childObject, desiredLine, j, l, len1, len2, len3, len4, len5, len6, line, lineChild, lineChildView, linesToExtend, m, margins, minDimension, minDimensions, minDistanceToBase, o, p, preIndentLines, q, ref, ref1, ref2, ref3, ref4, size;
       if (this.computedVersion === this.model.version) {
         return null;
       }
@@ -71722,12 +72444,12 @@ exports.View = View = (function() {
             bottomMargin = margins.bottom;
           }
           this.minDistanceToBase[desiredLine].above = Math.max(this.minDistanceToBase[desiredLine].above, minDistanceToBase[line].above + margins.top);
-          this.minDistanceToBase[desiredLine].below = Math.max(this.minDistanceToBase[desiredLine].below, minDistanceToBase[line].below + bottomMargin);
+          this.minDistanceToBase[desiredLine].below = Math.max(this.minDistanceToBase[desiredLine].below, minDistanceToBase[line].below + Math.max(bottomMargin, ((((ref1 = this.model.buttons) != null ? ref1.addButton : void 0) || ((ref2 = this.model.buttons) != null ? ref2.subtractButton : void 0)) && desiredLine === this.lineLength - 1 ? this.view.opts.buttonPadding + this.view.opts.buttonHeight : 0)));
         }
       }
-      ref1 = this.minDimensions;
-      for (line = m = 0, len3 = ref1.length; m < len3; line = ++m) {
-        minDimension = ref1[line];
+      ref3 = this.minDimensions;
+      for (line = m = 0, len3 = ref3.length; m < len3; line = ++m) {
+        minDimension = ref3[line];
         if (this.lineChildren[line].length === 0) {
           if (this.model.type === 'socket') {
             this.minDistanceToBase[line].above = this.view.opts.textHeight * this.view.opts.textPadding;
@@ -71747,9 +72469,9 @@ exports.View = View = (function() {
         line = preIndentLines[p];
         this.minDimensions[line].width = Math.max(this.minDimensions[line].width, this.view.opts.indentWidth + this.view.opts.tabWidth + this.view.opts.tabOffset + this.view.opts.bevelClip);
       }
-      ref2 = this.lineChildren[this.lineLength - 1];
-      for (q = 0, len6 = ref2.length; q < len6; q++) {
-        lineChild = ref2[q];
+      ref4 = this.lineChildren[this.lineLength - 1];
+      for (q = 0, len6 = ref4.length; q < len6; q++) {
+        lineChild = ref4[q];
         lineChildView = this.view.getViewNodeFor(lineChild.child);
         if (lineChildView.carriageArrow !== CARRIAGE_ARROW_NONE) {
           this.minDistanceToBase[this.lineLength - 1].below += this.view.opts.padding;
@@ -72248,12 +72970,54 @@ exports.View = View = (function() {
         return null;
       }
       BlockViewNode.__super__.computeMinDimensions.apply(this, arguments);
+      this.extraWidth = 0;
+      if (this.model.buttons.addButton) {
+        this.extraWidth += this.view.opts.buttonWidth + this.view.opts.buttonPadding;
+      }
+      if (this.model.buttons.subtractButton) {
+        this.extraWidth += this.view.opts.buttonWidth + this.view.opts.buttonPadding;
+      }
       ref = this.minDimensions;
       for (i = j = 0, len1 = ref.length; j < len1; i = ++j) {
         size = ref[i];
         size.width = Math.max(size.width, this.view.opts.tabWidth + this.view.opts.tabOffset);
       }
+      this.minDimensions[this.minDimensions.length - 1].width += this.extraWidth;
       return null;
+    };
+
+    BlockViewNode.prototype.drawSelf = function(ctx, style) {
+      var drawButton;
+      BlockViewNode.__super__.drawSelf.apply(this, arguments);
+      drawButton = (function(_this) {
+        return function(text, rect, ctx) {
+          var dx, dy, path, textElement;
+          path = rect.toPath().reverse();
+          path.style.fillColor = _this.path.style.fillColor;
+          if (style.grayscale) {
+            path.style.fillColor = avgColor(_this.path.style.fillColor, 0.5, '#888');
+          }
+          if (style.selected) {
+            path.style.fillColor = avgColor(_this.path.style.fillColor, 0.7, '#00F');
+          }
+          path.bevel = true;
+          path.draw(ctx);
+          textElement = new _this.view.draw.Text(new _this.view.draw.Point(0, 0), text);
+          dx = rect.width - textElement.bounds().width;
+          dy = rect.height - _this.view.opts.textHeight;
+          textElement.translate({
+            x: rect.x + Math.ceil(dx / 2),
+            y: rect.y + Math.ceil(dy)
+          });
+          return textElement.draw(ctx);
+        };
+      })(this);
+      if (this.model.buttons.addButton) {
+        drawButton('+', this.addButtonRect, ctx);
+      }
+      if (this.model.buttons.subtractButton) {
+        return drawButton('-', this.subtractButtonRect, ctx);
+      }
     };
 
     BlockViewNode.prototype.shouldAddTab = function() {
@@ -72262,6 +73026,33 @@ exports.View = View = (function() {
         return ((ref = this.model.parent) != null ? ref.type : void 0) !== 'socket';
       } else {
         return !(indexOf.call(this.model.classes, 'mostly-value') >= 0 || indexOf.call(this.model.classes, 'value-only') >= 0);
+      }
+    };
+
+    BlockViewNode.prototype.computePath = function() {
+      var height, lastLine, lastRect, multilineBounds, multilineChild, start, top;
+      BlockViewNode.__super__.computePath.apply(this, arguments);
+      lastLine = this.bounds.length - 1;
+      lastRect = this.bounds[lastLine];
+      start = lastRect.x + lastRect.width - this.extraWidth;
+      top = lastRect.y + lastRect.height / 2 - this.view.opts.buttonHeight / 2;
+      if (this.multilineChildrenData[lastLine] === MULTILINE_END) {
+        multilineChild = this.lineChildren[lastLine][0];
+        multilineBounds = this.view.getViewNodeFor(multilineChild.child).bounds[lastLine - multilineChild.startLine];
+        if (this.lineChildren[lastLine].length > 1) {
+          height = multilineBounds.bottom() - lastRect.y;
+          top = lastRect.y + height / 2 - this.view.opts.buttonHeight / 2;
+        } else {
+          height = lastRect.bottom() - multilineBounds.bottom();
+          top = multilineBounds.bottom() + height / 2 - this.view.opts.buttonHeight / 2;
+        }
+      }
+      if (this.model.buttons.addButton) {
+        this.addButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
+        start += this.view.opts.buttonWidth + this.view.opts.buttonPadding;
+      }
+      if (this.model.buttons.subtractButton) {
+        return this.subtractButtonRect = new this.view.draw.Rectangle(start, top, this.view.opts.buttonWidth, this.view.opts.buttonHeight);
       }
     };
 

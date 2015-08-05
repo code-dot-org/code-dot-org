@@ -78,7 +78,11 @@ In-person milestone complete! More info coming soon on your Phase 2 online porti
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-More info coming soon!
+**Save the dates:**
+
+Semester 1: Saturday, October 10, 2015 
+
+Semester 2: Saturday, March 5, 2016 
 
 [**Back to the top**](#top)
 

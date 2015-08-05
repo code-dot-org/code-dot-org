@@ -6,11 +6,7 @@ require 'cdo/rack/request'
 class ChannelsApi < Sinatra::Base
 
   helpers do
-    [
-      'core.rb',
-      'storage_apps.rb',
-      'storage_id.rb',
-    ].each do |file|
+    %w(core.rb storage_apps.rb storage_id.rb).each do |file|
       load(CDO.dir('shared', 'middleware', 'helpers', file))
     end
   end
@@ -20,7 +16,7 @@ class ChannelsApi < Sinatra::Base
       dont_cache
       content_type :json
       JSON.pretty_generate({
-        storage_id:storage_id('user'),
+        storage_id: storage_id('user'),
       })
     end
   end
@@ -47,19 +43,31 @@ class ChannelsApi < Sinatra::Base
   #
   # Create a channel.
   #
+  # Optional query string param: ?src=<src-channel-id> creates the channel as
+  # a copy of the given src channel.
+  #
   post '/v3/channels' do
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    begin
-      data = JSON.parse(request.body.read)
-    rescue JSON::ParserError
-      bad_request
+    src_channel = request.GET['src']
+    storage_app = StorageApps.new(storage_id('user'))
+
+    if src_channel
+      data = storage_app.get(src_channel)
+      data['name'] = "Remix: #{data['name']}"
+      data['hidden'] = false
+    else
+      begin
+        data = JSON.parse(request.body.read)
+      rescue JSON::ParserError
+        bad_request
+      end
+      bad_request unless data.is_a? Hash
     end
-    bad_request unless data.is_a? Hash
 
     timestamp = Time.now
-    id = StorageApps.new(storage_id('user')).create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
+    id = storage_app.create(data.merge('createdAt' => timestamp, 'updatedAt' => timestamp), request.ip)
 
     redirect "/v3/channels/#{id}", 301
   end
@@ -102,7 +110,7 @@ class ChannelsApi < Sinatra::Base
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
 
-    StorageApps.new(storage_id('user')).update(id, value, request.ip)
+    value = StorageApps.new(storage_id('user')).update(id, value, request.ip)
 
     dont_cache
     content_type :json

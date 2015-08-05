@@ -21,7 +21,7 @@ var tweens = require('./tweens');
 
 var DnsMode = netsimConstants.DnsMode;
 
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The narrowest that a text bubble is allowed to be.
@@ -268,7 +268,7 @@ NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
 };
 
 NetSimVizNode.prototype.updateAddressDisplay = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   // If we are never assigned an address, don't try to show one.
   // In broadcast mode we will be assigned addresses but never use them, so
