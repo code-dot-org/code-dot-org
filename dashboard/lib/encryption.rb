@@ -1,8 +1,12 @@
 module Encryption
+  def self.key
+    CDO.properties_encryption_key || "thisisafakekeyyyyyyyyyyyyyyyyyyyyy"
+  end
+
   def self.encrypt_string(string)
     cipher = OpenSSL::Cipher::AES.new(128, :CBC)
     cipher.encrypt
-    cipher.key = Base64.decode64(CDO.properties_encryption_key)
+    cipher.key = Base64.decode64(self.key)
 
     cipher.update(string) + cipher.final
   end
@@ -16,7 +20,7 @@ module Encryption
   def self.decrypt_string(string)
     cipher = OpenSSL::Cipher::AES.new(128, :CBC)
     cipher.decrypt
-    cipher.key = Base64.decode64(CDO.properties_encryption_key)
+    cipher.key = Base64.decode64(self.key)
 
     cipher.update(string) + cipher.final
   end
