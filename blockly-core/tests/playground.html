@@ -9,6 +9,7 @@
 'use strict';
 goog.require('Blockly.Playground');
 goog.require('goog.tweak');
+goog.require('goog.tweak.TweakUi');
 // Depending on the URL argument, render as LTR or RTL.
 var rtl = (document.location.search == '?rtl');
 var block = null;
@@ -16,18 +17,56 @@ var block = null;
 <script type="text/javascript" src="../msg/js/en_us.js"></script>
 <script type="text/javascript">
 function start() {
-  var toolbox = document.getElementById('toolbox');
+  goog.tweak.registerBoolean('nonCategoryMode', 'opens blockly with blocks in categories', false);
+  goog.tweak.registerBoolean('openContractEditor', 'pre-opens contract editor', false);
+  goog.tweak.registerBoolean('toggleScrollDragDebug', 'enables autoscroll debugging', false);
+  goog.tweak.registerBoolean('openFunctionEditor', 'pre-opens function editor', false);
+
   Blockly.inject(document.getElementById('blocklyDiv'), {
-    'rtl': rtl,
+    rtl: rtl,
     path: '../',
-    toolbox: toolbox,
+    toolbox: getToolboxElement(),
+    hasVerticalScrollbars: true,
     assetUrl: function(path) { return '../' + path; }
   });
 
-  goog.tweak.registerBoolean('openContract', 'pre-opens contract editor', false);
-  if (goog.tweak.getBoolean('openContract')) {
+  if (goog.tweak.getBoolean('openContractEditor')) {
     newContractEditor();
+  } else if (goog.tweak.getBoolean('openFunctionEditor')) {
+    newFunctionEditor();
   }
+  if (goog.tweak.getBoolean('toggleScrollDragDebug')) {
+    Blockly.ScrollOnBlockDragHandler.DEBUG = true;
+  }
+}
+
+function getToolboxElement() {
+  return goog.tweak.getBoolean('nonCategoryMode') ?
+      document.getElementById('non-category-toolbox') :
+      document.getElementById('toolbox');
+}
+
+/**
+ * @param {Element} checkboxElement
+ */
+function toggleFullBump(checkboxElement) {
+  Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK = checkboxElement.checked;
+  goog.style.setElementShown(document.getElementById('bump-debug-checkbox'),
+      checkboxElement.checked);
+}
+
+/**
+ * @param {Element} checkboxElement
+ */
+function toggleBumpDebug(checkboxElement) {
+  Blockly.BlockSpaceEditor.BUMP_DEBUG = checkboxElement.checked;
+}
+
+/**
+ * @param {Element} checkboxElement
+ */
+function toggleScrollDragDebug(checkboxElement) {
+  Blockly.ScrollOnBlockDragHandler.DEBUG = checkboxElement.checked;
 }
 
 function newContractEditor() {
@@ -37,6 +76,21 @@ function newContractEditor() {
     disableExamples: false
   });
   Blockly.contractEditor.openWithNewFunction();
+}
+
+function newVariableEditor() {
+  Blockly.useContractEditor = true;
+  Blockly.functionEditor = Blockly.contractEditor = new Blockly.ContractEditor({
+    disableExamples: false
+  });
+  Blockly.contractEditor.openWithNewFunction(true);
+}
+
+function newFunctionEditor() {
+  Blockly.defaultNumExampleBlocks = 2;
+  Blockly.functionEditor = new Blockly.FunctionEditor({
+  });
+  Blockly.functionEditor.openWithNewFunction();
 }
 
 function toXml() {
@@ -60,7 +114,7 @@ function toCode(lang) {
 
 function airstrike(n) {
   var prototypes = [];
-  var toolbox = document.getElementById('toolbox');
+  var toolbox = getToolboxElement();
   var blocks = toolbox.getElementsByTagName('block');
   for (var x = 0, block; block = blocks[x]; x++) {
     prototypes.push(block.getAttribute('type'));
@@ -75,6 +129,13 @@ function airstrike(n) {
     block.render();
   }
 }
+
+function sizeTo(sizeString) {
+  document.getElementById('blocklyDiv').style.height = sizeString;
+  var ev = document.createEvent('Event');
+  ev.initEvent('resize', true, true);
+  window.dispatchEvent(ev);
+}
 </script>
 
 <style>
@@ -85,15 +146,29 @@ body {
   background-color: #fff;
   font-family: sans-serif;
   overflow: hidden;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 h1 {
   font-weight: normal;
   font-size: 140%;
 }
 #blocklyDiv {
-  float: right;
+  position: absolute;
+  left: calc(30% + 4px);
   height: 95%;
-  width: 70%;
+  width: calc(70% - 8px);
+}
+#controls-section {
+  position: absolute;
+  width: calc(30% - 4px);
+  left: 0;
+  top: 0;
+}
+#controls {
+  margin: 5px;
 }
 </style>
 </head>
@@ -271,39 +346,87 @@ h1 {
     <category name="CSinA Vars" custom="FUNCTIONAL_VARIABLE" />
   </xml>
 
-  <h1>Blockly Playground</h1>
+  <xml id="non-category-toolbox" style="display: none">
+    <block type="controls_if"></block>
+    <block type="logic_compare"></block>
+    <block type="logic_operation"></block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean"></block>
+    <block type="logic_null"></block>
+    <block type="logic_ternary"></block>
+  </xml>
 
-  <p><a href="javascript:void([document.getElementById('blocklyDiv').style.display = 'block', Blockly.mainBlockSpace.render()])">Show</a>
-   - <a href="javascript:void(document.getElementById('blocklyDiv').style.display = 'none')">Hide</a></p>
+  <div id="controls-section">
+    <div id="controls">
+      <h1>Blockly Playground</h1>
 
-  <script type="text/javascript">
-    if (rtl) {
-      document.write('[ &larr; RTL. Switch to <A HREF="?ltr">LTR</A>. ]');
-    } else {
-      document.write('[ &rarr; LTR. Switch to <A HREF="?rtl">RTL</A>. ]');
-    }
-  </script>
+      <p><a href="javascript:void([document.getElementById('blocklyDiv').style.display = 'block', Blockly.mainBlockSpace.render()])">Show</a>
+       - <a href="javascript:void(document.getElementById('blocklyDiv').style.display = 'none')">Hide</a></p>
 
-  <p>
-    <input type="button" value="Create Contract Editor" onclick="newContractEditor()">
-    &nbsp;
-    <input type="button" value="Export to XML" onclick="toXml()">
-    &nbsp;
-    <input type="button" value="Import from XML" onclick="fromXml()">
-    <br>
-    <input type="button" value="Generate JavaScript" onclick="toCode('JavaScript')">
-    &nbsp;
-    <input type="button" value="Generate Python" onclick="toCode('Python')">
-    <br>
-    <textarea id="importExport" style="width: 26%; height: 12em"></textarea>
-  </p>
-  <hr>
+      <script type="text/javascript">
+        if (rtl) {
+          document.write('[ &larr; RTL. Switch to <A HREF="?ltr">LTR</A>. ]');
+        } else {
+          document.write('[ &rarr; LTR. Switch to <A HREF="?rtl">RTL</A>. ]');
+        }
+      </script>
 
-  <p>
-    Stress test with an <input type="button" value="Airstrike!" onclick="airstrike(100)">
-  </p>
-
-  </form>
-
+      <p>
+        <input type="button" value="Create Contract Editor" onclick="newContractEditor()">
+        &nbsp;
+        <input type="button" value="Create Variable Editor" onclick="newVariableEditor()">
+        &nbsp;
+        <input type="button" value="Create Function Editor" onclick="newFunctionEditor()">
+        &nbsp;
+        <input type="button" value="Export to XML" onclick="toXml()">
+        &nbsp;
+        <input type="button" value="Import from XML" onclick="fromXml()">
+        <br>
+        <input type="button" value="Generate JavaScript" onclick="toCode('JavaScript')">
+        &nbsp;
+        <input type="button" value="Generate Python" onclick="toCode('Python')">
+        <br>
+        <textarea id="importExport" style="width: 100%; height: 12em"></textarea>
+      </p>
+      <hr>
+      <p>
+        <input type="button" value="Size: 100px" onclick="sizeTo('100px')">
+        &nbsp;
+        <br>
+        <input type="button" value="Size: 95%" onclick="sizeTo('95%')">
+        &nbsp;
+        <br>
+      </p>
+      <hr>
+      <p>
+        Toggle entire block bumping <input type="checkbox" value="false" onclick="toggleFullBump(this)">
+        &nbsp;
+        <br>
+        <span id="bump-debug-checkbox" style="display: none">
+          Toggle block bump debug drawing <input type="checkbox" value="false" onclick="toggleBumpDebug(this)">
+          &nbsp;
+          <br>
+        </span>
+        Toggle scroll-on-drag debug drawing <input type="checkbox" value="false" onclick="toggleScrollDragDebug(this)">
+        &nbsp;
+        <br>
+        <input type="button" value="Clear Debug Drawings" onclick="Blockly.focusedBlockSpace.clearDebugDrawings()">
+        &nbsp;
+        <br>
+      </p>
+      <hr>
+      <p>
+        Stress test with an <input type="button" value="Airstrike!" onclick="airstrike(100)">
+      </p>
+      <hr>
+      <p>
+        <h3>URL Parameter Tweaks</h3>
+        <div id="tweak-menu"></div>
+        <script>
+          document.getElementById('tweak-menu').appendChild(goog.tweak.TweakUi.create());
+        </script>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
