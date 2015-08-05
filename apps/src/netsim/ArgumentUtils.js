@@ -42,11 +42,18 @@ exports.validateRequired = function (arg, argName, validator) {
  * @returns {Object} that includes a `get` method.  Will be an object
  *          even if original optionsObject argument was undefined.
  * @throws {TypeError} if a non-object is passed to the constructor.
+ * @throws {Error} if extending the object would overwrite an existing property.
  */
 exports.extendOptionsObject = function (optionsObject) {
-  // Both checks here becuase `typeof null === 'object'`
-  if (typeof optionsObject !== 'object' || optionsObject === null) {
+  // Allow `undefined` and all objects except for `null`
+  var isUndefined = (optionsObject === undefined);
+  var isRealObject = (typeof optionsObject === 'object' && optionsObject !== null);
+  if (!(isUndefined || isRealObject)) {
     throw new TypeError('Options object must be an object.');
+  }
+
+  if (optionsObject && optionsObject.hasOwnProperty('get')) {
+    throw new Error('Cannot extend options; property "get" would be overwritten.');
   }
 
   return $.extend({}, optionsObject, {
