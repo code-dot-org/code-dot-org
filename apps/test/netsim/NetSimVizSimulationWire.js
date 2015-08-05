@@ -8,9 +8,9 @@ var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
@@ -64,7 +64,7 @@ describe("NetSimVizSimulationWire", function () {
   };
 
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
     shard = fakeShard();
   });
 

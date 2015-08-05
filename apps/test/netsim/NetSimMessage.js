@@ -3,9 +3,9 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 var assertOwnProperty = testUtils.assertOwnProperty;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');

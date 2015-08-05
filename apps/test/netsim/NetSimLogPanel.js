@@ -1,7 +1,7 @@
 /** @file Tests for NetSimLogPanel */
 /* global $, describe, beforeEach, it */
 var testUtils = require('../util/testUtils');
-var netsimTestUtils = require('../util/netsimTestUtils');
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var assert = testUtils.assert;
 
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
@@ -22,7 +22,7 @@ describe("NetSimLogPanel", function () {
   var panel, rootDiv;
 
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
   });
 

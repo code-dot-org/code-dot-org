@@ -2,8 +2,8 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeStorageTable = netsimTestUtils.fakeStorageTable;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeStorageTable = NetSimTestUtils.fakeStorageTable;
 
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
 var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
@@ -31,7 +31,7 @@ describe("NetSimTable", function () {
     fakeChannel = {
       subscribe: function () {}
     };
-    netsimTable = netsimTestUtils.overrideNetSimTableApi(
+    netsimTable = NetSimTestUtils.overrideNetSimTableApi(
         new NetSimTable(fakeChannel, 'testShard', 'testTable', {
           // In tests we usually want zero delay to allow fast test runs
           // and immediate reading at any time.
@@ -688,7 +688,7 @@ describe("NetSimTable", function () {
 
     beforeEach(function () {
       // New table configured for incremental refresh
-      netsimTable = netsimTestUtils.overrideNetSimTableApi(
+      netsimTable = NetSimTestUtils.overrideNetSimTableApi(
           new NetSimTable(fakeChannel, 'testShard', 'testTable', {
             useIncrementalRefresh: true,
             minimumDelayBeforeRefresh: 0,

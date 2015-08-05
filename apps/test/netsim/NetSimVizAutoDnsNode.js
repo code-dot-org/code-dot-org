@@ -8,9 +8,9 @@ var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
@@ -21,7 +21,7 @@ describe("NetSimVizAutoDnsNode", function () {
   var vizElement;
 
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
   describe("defaults", function () {
