@@ -8326,7 +8326,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
 /* global $ */
 'use strict';
 
-require('../utils'); // For Function.prototype.inherits()
+var utils = require('../utils');
 var i18n = require('./locale');
 var markup = require('./NetSimLogPanel.html.ejs');
 var Packet = require('./Packet');
@@ -8341,6 +8341,13 @@ var netsimGlobals = require('./netsimGlobals');
  * @const
  */
 var MESSAGE_SLIDE_IN_DURATION_MS = 400;
+
+/**
+ * How many packets the log may keep in its history (and in the DOM!)
+ * @type {number}
+ * @const
+ */
+var DEFAULT_MAXIMUM_LOG_PACKETS = 50;
 
 /**
  * Object that can be sent data to be browsed by the user at their discretion
@@ -8391,6 +8398,9 @@ var MESSAGE_SLIDE_IN_DURATION_MS = 400;
  * @param {boolean} [options.isMinimized] defaults to FALSE
  * @param {boolean} [options.hasUnreadMessages] defaults to FALSE
  * @param {Packet.HeaderType[]} options.packetSpec
+ * @param {number} [options.maximumLogPackets] How many packets the log will
+ *        keep before it starts dropping the oldest ones.  Defaults to
+ *        DEFAULT_MAXIMUM_LOG_PACKETS.
  * @constructor
  * @augments NetSimPanel
  * @implements INetSimLogPanel
@@ -8437,6 +8447,15 @@ var NetSimLogPanel = module.exports = function (rootDiv, options) {
    */
   this.hasUnreadMessages_ = !!(options.hasUnreadMessages);
 
+  /**
+   * The maximum number of packets this log panel will keep in its memory
+   * and in the DOM, so we don't have a forever-growing log.
+   * @type {number}
+   * @private,,
+   */
+  this.maximumLogPackets_ = utils.valueOr(options.maximumLogPackets,
+      DEFAULT_MAXIMUM_LOG_PACKETS);
+
   // Initial render
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
@@ -8478,6 +8497,13 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
  * Put a message into the log.
  */
 NetSimLogPanel.prototype.log = function (packetBinary) {
+  // Remove all packets that are beyond our maximum size
+  this.packets_
+      .splice(this.maximumLogPackets_ - 1, this.packets_.length)
+      .forEach(function (packet) {
+        packet.getRoot().remove();
+      });
+
   var newPacket = new NetSimLogPacket(packetBinary, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
