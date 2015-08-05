@@ -7,8 +7,8 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
 
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSim = require('@cdo/apps/netsim/netsim');
@@ -97,7 +97,7 @@ describe("NetSimVisualization", function () {
   describe("broadcast mode", function () {
 
     beforeEach(function () {
-      netsimTestUtils.initializeGlobalsToDefaultValues();
+      NetSimTestUtils.initializeGlobalsToDefaultValues();
       NetSimGlobals.getLevelConfig().broadcastMode = true;
 
       testShard = fakeShard();
@@ -170,7 +170,7 @@ describe("NetSimVisualization", function () {
   describe("router network with peripheral connection", function () {
 
     beforeEach(function () {
-      netsimTestUtils.initializeGlobalsToDefaultValues();
+      NetSimTestUtils.initializeGlobalsToDefaultValues();
       testShard = fakeShard();
 
       alphaNode = makeRemoteClient('alpha');

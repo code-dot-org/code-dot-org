@@ -9,9 +9,9 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var assertWithinRange = testUtils.assertWithinRange;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 var _ = require('lodash');
 
 var utils = require('@cdo/apps/utils');
@@ -238,7 +238,7 @@ describe("NetSimRouterNode", function () {
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
 
     // Create a useful default configuration
     addressFormat = '4';
