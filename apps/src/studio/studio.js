@@ -4,6 +4,8 @@
  * Copyright 2014 Code.org
  *
  */
+ 
+ /* global $*/
 
 'use strict';
 
@@ -1352,6 +1354,10 @@ Studio.init = function(config) {
       Blockly.HSV_SATURATION = 0.6;
 
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
+
+      if (Blockly.contractEditor) {
+        Blockly.contractEditor.registerTestHandler(Studio.runTest);
+      }
     }
 
     drawMap();
@@ -1599,6 +1605,41 @@ Studio.reset = function(first) {
 };
 
 /**
+ * Runs test of a given example
+ * @param exampleBlock
+ * @returns {string} string to display after example execution
+ */
+Studio.runTest = function (exampleBlock) {
+  try {
+    var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+
+    if (!actualBlock) {
+      throw new Error('Invalid Call Block');
+    }
+
+    if (!expectedBlock) {
+      throw new Error('Invalid Result Block');
+    }
+
+    var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
+    var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
+    if (exampleCode) {
+      var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
+        StudioApp: studioApp,
+        Studio: api,
+        Globals: Studio.Globals
+      });
+      return resultBoolean ? "Matches definition." : "Does not match definition.";
+    } else {
+      return "No example code.";
+    }
+  } catch (error) {
+    return "Execution error: " + error.message;
+  }
+};
+
+/**
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
@@ -1810,7 +1851,71 @@ Studio.checkForPreExecutionFailure = function () {
     return true;
   }
 
+  var outcome = Studio.checkExamples_();
+  if (outcome.result !== undefined) {
+    $.extend(Studio, outcome);
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
   return false;
+};
+
+/**
+ * @returns {Object} outcome
+ * @returns {boolean} outcome.result
+ * @returns {number} outcome.testResults
+ * @returns {string} outcome.message
+ */
+Studio.checkExamples_ = function () {
+  var outcome = {};
+  if (!level.examplesRequired) {
+    return outcome;
+  }
+
+  var exampleless = studioApp.getFunctionWithoutExample();
+  if (exampleless) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
+    return outcome;
+  }
+
+  var unfilled = studioApp.getUnfilledFunctionalExample();
+  if (unfilled) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+
+    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+      .getTitleValue('NAME');
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
+    return outcome;
+  }
+
+  // TODO - what of this belongs in studio app?
+  var failingBlockName = '';
+  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
+    var result = Studio.runTest(exampleBlock, true);
+    var success = result === "Matches definition.";
+
+    // Update the example result. No-op if we're not currently editing this
+    // function.
+    Blockly.contractEditor.updateExampleResult(exampleBlock, result);
+
+    if (!success) {
+      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
+        .getTitleValue('NAME');
+    }
+
+  });
+
+  if (failingBlockName) {
+    outcome.result = false;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
+  }
+
+  return outcome;
 };
 
 var ErrorLevel = {

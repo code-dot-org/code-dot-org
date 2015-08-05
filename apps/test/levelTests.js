@@ -78,6 +78,10 @@ describe('Level tests', function() {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
     }
+
+    if (window.Calc) {
+      Calc.resetButtonClick();
+    }
   });
 
   testCollectionUtils.getCollections().forEach(runTestCollection);

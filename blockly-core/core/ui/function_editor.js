@@ -766,7 +766,7 @@ Blockly.FunctionEditor.prototype.createFrameClipDiv_ = function () {
 
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div',
-      'blocklyToolboxDiv paramToolbox blocklyText innerModalDiv');
+      'blocklyToolboxDiv paramToolbox blocklyText flyoutColorGray innerModalDiv');
   if (Blockly.RTL) {
     this.contractDiv_.setAttribute('dir', 'RTL');
   }
