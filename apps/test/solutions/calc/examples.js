@@ -62,7 +62,7 @@ module.exports = {
       },
       customValidator: function (assert) {
         assert.equal(Calc.__testonly__.appState.message, 'You need at least one ' +
-          'example in function f. Make sure each example has a call and a result');
+          'example in function f. Make sure each example has a call and a result.');
         return true;
       },
       xml: '<xml>' +
@@ -92,7 +92,7 @@ module.exports = {
       customValidator: function (assert) {
         assert.equal(Calc.__testonly__.appState.message, 'The function f has' +
           ' one or more examples that need adjusting. Make sure they match your' +
-          ' definition and answer the question');
+          ' definition and answer the question.');
         return true;
       },
       xml: '<xml>' +
@@ -178,7 +178,7 @@ module.exports = {
       },
       customValidator: function (assert) {
         assert.equal(Calc.__testonly__.appState.message, 'You need at least one' +
-        ' example in function f. Make sure each example has a call and a result');
+        ' example in function f. Make sure each example has a call and a result.');
         return true;
       },
       xml: '<xml>' +

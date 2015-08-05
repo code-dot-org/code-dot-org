@@ -488,9 +488,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
   if (exampleless) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
-    // TODO
-    Eval.message = 'You need at least one example in function ' + exampleless +
-      '. Make sure each example has a call and a result';
+    Eval.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
     return;
   }
 
@@ -498,12 +496,10 @@ Eval.checkExamples_ = function (resetPlayspace) {
   if (unfilled) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
-    // TODO
+
     var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
       .getTitleValue('NAME');
-
-    Eval.message = 'You need at least one example in function ' + name +
-      '. Make sure each example has a call and a result';
+    Eval.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
     return;
   }
 
@@ -527,9 +523,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
   if (failingBlockName) {
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
-    Eval.message = 'The function ' + failingBlockName + ' has one or more' +
-      ' examples that need adjusting. Make sure they match your definition and' +
-      ' answer the question';
+    Eval.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
     return;
   }
 };
