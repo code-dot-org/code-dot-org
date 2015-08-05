@@ -28,7 +28,7 @@ var ObservableEvent = require('../ObservableEvent');
 
 var logger = NetSimLogger.getSingleton();
 var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 var MessageGranularity = netsimConstants.MessageGranularity;
 
@@ -394,10 +394,10 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   // Who will be responsible for picking up/cleaning up this message?
   var simulatingNodeID = this.selectSimulatingNode_(localNodeID, remoteNodeID);
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   var extraHops = levelConfig.minimumExtraHops;
   if (levelConfig.minimumExtraHops !== levelConfig.maximumExtraHops) {
-    extraHops = netsimGlobals.randomIntInRange(
+    extraHops = NetSimGlobals.randomIntInRange(
         levelConfig.minimumExtraHops,
         levelConfig.maximumExtraHops + 1);
   }
@@ -412,7 +412,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         payload: payload,
         extraHopsRemaining: extraHops
       },
-      function (err) {
+      function (err, row) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
               JSON.stringify(payload));
@@ -427,7 +427,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
             '\nhops: ' + extraHops);
 
         if (self.sentLog_) {
-          self.sentLog_.log(payload);
+          self.sentLog_.log(payload, row.id);
         }
         onComplete(null);
       }.bind(this)
@@ -443,7 +443,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
  */
 NetSimLocalClientNode.prototype.selectSimulatingNode_ = function (localNodeID,
     remoteNodeID) {
-  if (netsimGlobals.getLevelConfig().messageGranularity === MessageGranularity.BITS) {
+  if (NetSimGlobals.getLevelConfig().messageGranularity === MessageGranularity.BITS) {
     // In simplex wire mode, the local node cleans up its own messages
     // when it knows they are no longer current.
     return localNodeID;
@@ -569,7 +569,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
  * @private
  */
 NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
-  if (!netsimGlobals.getLevelConfig().automaticReceive) {
+  if (!NetSimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
     return;
@@ -627,7 +627,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
-    this.receivedLog_.log(message.payload);
+    this.receivedLog_.log(message.payload, message.entityID);
   }
 };
 

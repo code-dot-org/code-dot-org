@@ -6,7 +6,7 @@ require 'rails/all'
 require 'cdo/geocoder'
 require 'cdo/properties'
 require 'varnish_environment'
-require 'assets_api'
+require 'files_api'
 require 'channels_api'
 require 'properties_api'
 require 'tables_api'
@@ -24,8 +24,8 @@ module Dashboard
   class Application < Rails::Application
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, AssetsApi
-    config.middleware.insert_after AssetsApi, ChannelsApi
+    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources

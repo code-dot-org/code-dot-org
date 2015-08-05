@@ -20,7 +20,7 @@ var NetSimPulseRateControl = require('./NetSimPulseRateControl');
 var NetSimChunkSizeControl = require('./NetSimChunkSizeControl');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimMetronome = require('./NetSimMetronome');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Generator and controller for "My Device" tab.
@@ -108,7 +108,7 @@ var NetSimMyDeviceTab = module.exports = function (rootDiv, runLoop, callbacks) 
  * Fill the root div with new elements reflecting the current state
  */
 NetSimMyDeviceTab.prototype.render = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   var renderedMarkup = $(markup({
     level: levelConfig

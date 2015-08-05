@@ -19,7 +19,7 @@ var _ = require('../utils').getLodash();
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Generator and controller for contents of modal dialog that reveals
@@ -189,7 +189,7 @@ NetSimRouterLogModal.prototype.setRouter = function (router) {
  * @returns {boolean}
  */
 NetSimRouterLogModal.prototype.isAllRouterMode = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.connectedRouters) {
     return true;
   } else {
@@ -225,7 +225,7 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
  * @private
  */
 NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
-  var headerSpec = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+  var headerSpec = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
   this.logEntries_ = logRows.map(function (row) {
     return new NetSimLogEntry(this.shard_, row, headerSpec);
   }, this);

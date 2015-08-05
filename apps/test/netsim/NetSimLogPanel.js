@@ -6,7 +6,7 @@ var assert = testUtils.assert;
 
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
 var dataConverters = require('@cdo/apps/netsim/dataConverters');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 /** binary to ascii */
 function to_a(binary) {
@@ -53,7 +53,7 @@ describe("NetSimLogPanel", function () {
     var scrollArea;
     beforeEach(function () {
       panel = new NetSimLogPanel(rootDiv, {
-        packetSpec: netsimGlobals.getLevelConfig().clientInitialPacketHeader,
+        packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
         maximumLogPackets: 10
       });
       scrollArea = rootDiv.find('.scroll-area');
@@ -62,20 +62,20 @@ describe("NetSimLogPanel", function () {
     it ("can log a packet", function () {
       assert.equal(0, panel.packets_.length);
       assert.equal(0, scrollArea.children().length);
-      panel.log(to_b("fake-packet-binary"));
+      panel.log(to_b("fake-packet-binary"), 1);
       assert.equal(1, panel.packets_.length);
       assert.equal(1, scrollArea.children().length);
     });
 
     it ("puts subsequent packets at the top of the log", function () {
-      panel.log(to_b('first-message'));
-      panel.log(to_b('second-message'));
+      panel.log(to_b('first-message'), 1);
+      panel.log(to_b('second-message'), 2);
       assert.equal(2, scrollArea.children().length);
       assert.equal(to_b('second-message'), panel.packets_[0].packetBinary_);
       assert.equal('second-message',
           scrollArea.find('.packet:first tr.ascii td.message').text());
 
-      panel.log(to_b('third-message'));
+      panel.log(to_b('third-message'), 3);
       assert.equal(3, scrollArea.children().length);
       assert.equal(to_b('third-message'), panel.packets_[0].packetBinary_);
       assert.equal('third-message',
@@ -85,7 +85,7 @@ describe("NetSimLogPanel", function () {
     it ("keeps a limited number of packets", function () {
       // The limit in this test is 10 (see beforeEach for describe("logging"))
       for (var i = 1; i <= 9; i++) {
-        panel.log(to_b('packet ' + i));
+        panel.log(to_b('packet ' + i), i);
       }
       assert.equal(9, scrollArea.children().length);
       assert.equal('packet 9',
@@ -94,7 +94,7 @@ describe("NetSimLogPanel", function () {
           scrollArea.find('.packet:last tr.ascii td.message').text());
 
       // Packet 10 does not cause culling
-      panel.log(to_b('packet 10'));
+      panel.log(to_b('packet 10'), 10);
       assert.equal(10, scrollArea.children().length);
       assert.equal('packet 10',
           scrollArea.find('.packet:first tr.ascii td.message').text());
@@ -102,13 +102,23 @@ describe("NetSimLogPanel", function () {
           scrollArea.find('.packet:last tr.ascii td.message').text());
 
       // Packet 11 causes packet 1 to drop off the end
-      panel.log(to_b('packet 11'));
+      panel.log(to_b('packet 11'), 11);
       assert.equal(10, scrollArea.children().length);
       assert.equal('packet 11',
           scrollArea.find('.packet:first tr.ascii td.message').text());
       assert.equal('packet 2',
           scrollArea.find('.packet:last tr.ascii td.message').text());
     });
+
+    it ("ignores duplicate packets by id", function () {
+      panel.log(to_b('first-message'), 1);
+      panel.log(to_b('first-message again'), 1);
+
+      assert.equal(1, scrollArea.children().length);
+      assert.equal('first-message',
+          scrollArea.find('.packet:first tr.ascii td.message').text());
+    });
+
   });
 
 });
