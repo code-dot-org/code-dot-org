@@ -61,7 +61,7 @@
     "lodash-cli": "~2.4.2",
     "messageformat": "^0.2.1",
     "mkdirp": "^0.5.0",
-    "mochify": "^2.8.1",
+    "mochify": ">=2.8.1 <2.10",
     "moment": "^2.10.3",
     "node-sass": "1.2.2",
     "npm-which": "^2.0.0",
