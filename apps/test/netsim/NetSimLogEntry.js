@@ -9,7 +9,7 @@ var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
-var DataConverters = require('@cdo/apps/netsim/dataConverters');
+var DataConverters = require('@cdo/apps/netsim/dataConverters_renaming');
 var binaryToBase64 = DataConverters.binaryToBase64;
 var base64ToBinary = DataConverters.base64ToBinary;
 

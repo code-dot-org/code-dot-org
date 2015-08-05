@@ -15,7 +15,7 @@
 
 var utils = require('../utils');
 var NetSimEntity = require('./NetSimEntity');
-var DataConverters = require('./dataConverters');
+var DataConverters = require('./dataConverters_renaming');
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
 
