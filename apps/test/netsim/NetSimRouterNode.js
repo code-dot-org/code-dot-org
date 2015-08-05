@@ -1438,8 +1438,8 @@ describe("NetSimRouterNode", function () {
         clientA.sendMessage(payload, function () {});
       };
 
-      var send100MessagesAndTickUntilStable = function () {
-        for (var i = 0; i < 100; i++) {
+      var sendXMessagesAndTickUntilStable = function (numToSend) {
+        for (var i = 0; i < numToSend; i++) {
           sendMessageOfSize(8);
         }
         tickUntilLogsStabilize(routerA);
@@ -1466,44 +1466,44 @@ describe("NetSimRouterNode", function () {
 
       it ("zero chance drops nothing", function () {
         routerA.randomDropChance = 0;
-        send100MessagesAndTickUntilStable();
-        assertTableSize(testShard, 'messageTable', 100);
+        sendXMessagesAndTickUntilStable(10);
+        assertTableSize(testShard, 'messageTable', 10);
         assertHowManyDropped(0);
       });
 
       it ("100% chance drops everything", function () {
         routerA.randomDropChance = 1;
-        send100MessagesAndTickUntilStable();
+        sendXMessagesAndTickUntilStable(10);
         assertTableSize(testShard, 'messageTable', 0);
-        assertHowManyDropped(100);
+        assertHowManyDropped(10);
       });
 
       it ("50% drops about half", function () {
         NetSimGlobals.setRandomSeed('a');
         routerA.randomDropChance = 0.5;
-        send100MessagesAndTickUntilStable();
-        assertHowManyDropped(48);
+        sendXMessagesAndTickUntilStable(20);
+        assertHowManyDropped(9);
       });
 
       it ("50% drops about half (example two)", function () {
         NetSimGlobals.setRandomSeed('b');
         routerA.randomDropChance = 0.5;
-        send100MessagesAndTickUntilStable();
-        assertHowManyDropped(58);
+        sendXMessagesAndTickUntilStable(20);
+        assertHowManyDropped(11);
       });
 
       it ("10% drops a few", function () {
         NetSimGlobals.setRandomSeed('c');
         routerA.randomDropChance = 0.1;
-        send100MessagesAndTickUntilStable();
-        assertHowManyDropped(7);
+        sendXMessagesAndTickUntilStable(30);
+        assertHowManyDropped(2);
       });
 
       it ("10% drops a few (example two)", function () {
         NetSimGlobals.setRandomSeed('d');
         routerA.randomDropChance = 0.1;
-        send100MessagesAndTickUntilStable();
-        assertHowManyDropped(8);
+        sendXMessagesAndTickUntilStable(30);
+        assertHowManyDropped(1);
       });
     });
 
