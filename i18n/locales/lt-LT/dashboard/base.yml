@@ -221,6 +221,7 @@ lt:
       free_play:
         playlab: Sukurk programėlę
         artist: Nupiešk ką nors
+        calculate: Calculate Something
     user:
       classroom: Mokytojo namų puslapis
       district_dashboard: Prietaisų skydelis

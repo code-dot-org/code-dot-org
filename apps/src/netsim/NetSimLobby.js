@@ -28,7 +28,7 @@ var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 
 var logger = require('./NetSimLogger').getSingleton();
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @typedef {Object} shardChoice
@@ -283,29 +283,20 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
  * @private
  */
 NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
-  this.shard_.nodeTable.readAll(function (err, rows) {
-    if (err) {
-      logger.warn("Node table read failed: " + err.message);
-      return;
-    }
-
-    this.onNodeTableChange_(rows);
-    this.shard_.wireTable.readAll(function (err, rows) {
-      if (err) {
-        logger.warn("Wire table read failed: " + err.message);
-        return;
-      }
-
-      this.onWireTableChange_(rows);
-
-      // On initial connect, if we are connecting to routers and no routers
-      // are present, add one automatically.
-      if (netsimGlobals.getLevelConfig().canConnectToRouters &&
-          !this.doesShardContainRouter()) {
-        this.addRouterToLobby();
-      }
-    }.bind(this));
-  }.bind(this));
+  $.when(this.shard_.nodeTable.refresh(), this.shard_.wireTable.refresh())
+      .fail(function (nodeErr, wireErr) {
+        if (nodeErr) {
+          logger.warn('Node table refresh failed: ' + nodeErr);
+        } else if (wireErr) {
+          logger.warn('Wire table refresh failed: ' + wireErr);
+        }
+      }.bind(this))
+      .done(function () {
+        if (NetSimGlobals.getLevelConfig().canConnectToRouters &&
+            !this.doesShardContainRouter()) {
+          this.addRouterToLobby();
+        }
+      }.bind(this));
 };
 
 /**

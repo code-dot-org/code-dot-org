@@ -27,9 +27,11 @@ use for group work.
 	
 The following domains white-listed for access:
 <br/>
-• Code.org
+• `Code.org`
 <br/>
-• youtube.com/education
+• `youtube.com/education`
+<br/>
+• `https://api.pusherapp.com` and `wss://ws.pusherapp.com`
 
 We support the following combinations of operating systems and
 browsers:

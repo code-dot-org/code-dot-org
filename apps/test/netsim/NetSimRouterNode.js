@@ -30,7 +30,7 @@ var addressStringToBinary = dataConverters.addressStringToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 describe("NetSimRouterNode", function () {
   var testShard, addressFormat, packetCountBitWidth, packetHeaderSpec, encoder,
@@ -74,14 +74,14 @@ describe("NetSimRouterNode", function () {
   };
 
   /**
-   * Synchronous readAll for tests
+   * Synchronous refresh for tests
    * @param {string} tableName
    * @returns {Array}
    */
   var getRows = function (tableName) {
     var rows;
-    testShard[tableName].readAll(function (err, result) {
-      rows = result;
+    testShard[tableName].refresh(function () {
+      rows = testShard[tableName].readAll();
     });
     return rows;
   };
@@ -231,7 +231,7 @@ describe("NetSimRouterNode", function () {
    */
   var setAddressFormat = function (newFormat) {
     addressFormat = newFormat;
-    netsimGlobals.getLevelConfig().addressFormat = addressFormat;
+    NetSimGlobals.getLevelConfig().addressFormat = addressFormat;
     encoder = new Packet.Encoder(addressFormat, packetCountBitWidth,
         packetHeaderSpec);
   };
@@ -248,10 +248,10 @@ describe("NetSimRouterNode", function () {
       Packet.HeaderType.TO_ADDRESS
     ];
 
-    netsimGlobals.getLevelConfig().addressFormat = addressFormat;
-    netsimGlobals.getLevelConfig().packetCountBitWidth = packetCountBitWidth;
-    netsimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
-    netsimGlobals.getLevelConfig().broadcastMode = false;
+    NetSimGlobals.getLevelConfig().addressFormat = addressFormat;
+    NetSimGlobals.getLevelConfig().packetCountBitWidth = packetCountBitWidth;
+    NetSimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
+    NetSimGlobals.getLevelConfig().broadcastMode = false;
 
     encoder = new Packet.Encoder(addressFormat, packetCountBitWidth,
         packetHeaderSpec);
@@ -478,7 +478,7 @@ describe("NetSimRouterNode", function () {
 
     describe("requesting three addresses in simple four-bit format", function () {
       beforeEach(function () {
-        netsimGlobals.setRandomSeed('address assignment test');
+        NetSimGlobals.setRandomSeed('address assignment test');
         setAddressFormat('4');
         routerA.requestAddress(wire1, 'client1', function () {});
         routerA.requestAddress(wire2, 'client2', function () {});
@@ -513,7 +513,7 @@ describe("NetSimRouterNode", function () {
 
     describe("requesting three addresses in two-part format", function () {
       beforeEach(function () {
-        netsimGlobals.setRandomSeed('another assignment test');
+        NetSimGlobals.setRandomSeed('another assignment test');
         setAddressFormat('4.4');
         routerA.requestAddress(wire1, 'client1', function () {});
         routerA.requestAddress(wire2, 'client2', function () {});
@@ -536,7 +536,7 @@ describe("NetSimRouterNode", function () {
 
     describe("requesting three addresses in four-part format", function () {
       beforeEach(function () {
-        netsimGlobals.setRandomSeed('a third assignment test');
+        NetSimGlobals.setRandomSeed('a third assignment test');
         setAddressFormat('8.8.8.8');
         routerA.requestAddress(wire1, 'client1', function () {});
         routerA.requestAddress(wire2, 'client2', function () {});
@@ -644,7 +644,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("assigns every address in addressable space", function () {
-        netsimGlobals.setRandomSeed('Coverage!');
+        NetSimGlobals.setRandomSeed('Coverage!');
         setAddressFormat('4');
         // Addressable space is 0-15
         // 0 is reserved for the router
@@ -701,7 +701,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("can assign addresses in a different order", function () {
-        netsimGlobals.setRandomSeed('Variety');
+        NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('4');
 
         routerA.requestAddress(wire1, 'client1', function () {});
@@ -748,7 +748,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("shrinks addressable space according to address format", function () {
-        netsimGlobals.setRandomSeed('Variety');
+        NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('2');
 
         // Two-bit addresses, so four options, and "00" is used by the router.
@@ -768,7 +768,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("grows addressable space according to address format", function () {
-        netsimGlobals.setRandomSeed('Variety');
+        NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('8');
 
         // 8-bit addresses, so they go up to 255
@@ -788,7 +788,7 @@ describe("NetSimRouterNode", function () {
   });
 
   it ("still simulates/routes after connect-disconnect-connect cycle", function () {
-    netsimGlobals.getLevelConfig().automaticReceive = true;
+    NetSimGlobals.getLevelConfig().automaticReceive = true;
     var time = 1;
     var fakeReceivedLog = makeFakeMessageLog();
 
@@ -910,7 +910,7 @@ describe("NetSimRouterNode", function () {
 
       beforeEach(function () {
         // Put level in broadcast mode
-        netsimGlobals.getLevelConfig().broadcastMode = true;
+        NetSimGlobals.getLevelConfig().broadcastMode = true;
 
         // Stop simulation from earlier setup, hook up new client, restart
         // simulation
@@ -1159,11 +1159,12 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("drops packets after ten minutes in the router queue", function () {
-        routerA.bandwidth = 1000; // 1 bit / ms
+        routerA.bandwidth = 1; // 1 bit / second
+        var tenMinutesInBits = 600;
         var tenMinutesInMillis = 600000;
 
-        // Send a message that will take ten minutes + 1 millisecond to process.
-        sendMessageOfSize(tenMinutesInMillis + 1);
+        // Send a message that will take ten minutes + 1 second to process.
+        sendMessageOfSize(tenMinutesInBits + 1);
         assertTableSize(testShard, 'messageTable', 1);
         assertTableSize(testShard, 'logTable', 0);
 
@@ -1179,21 +1180,22 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 0);
 
         // Thus, just after ten minutes, no message is routed.
-        routerA.tick({time: tenMinutesInMillis + 1});
+        routerA.tick({time: tenMinutesInMillis + 1000});
         assertTableSize(testShard, 'messageTable', 0);
         assertTableSize(testShard, 'logTable', 0);
       });
 
       it ("smaller packets can expire if backed up behind large ones", function () {
-        routerA.bandwidth = 1000; // 1 bit / ms
+        routerA.bandwidth = 1; // 1 bit / second
+        var oneMinuteInBits = 60;
         var oneMinuteInMillis = 60000;
 
         // This message should take nine minutes to process, so it will be sent.
-        sendMessageOfSize(9 * oneMinuteInMillis);
+        sendMessageOfSize(9 * oneMinuteInBits);
         // This one only takes two minutes to process, but because it's behind
         // the nine-minute one it will expire
-        sendMessageOfSize(2 * oneMinuteInMillis);
-        // This one is tiny and should take a fraction of a second, but it will
+        sendMessageOfSize(2 * oneMinuteInBits);
+        // This one is tiny and should take sixteen seconds, but it will
         // also expire since it's after the first two.
         sendMessageOfSize(16);
 
@@ -1214,13 +1216,14 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("removing expired packets allows packets further down the queue to be processed sooner", function () {
-        routerA.bandwidth = 1000; // 1 bit / ms
+        routerA.bandwidth = 1; // 1 bit / second
+        var oneMinuteInBits = 60;
         var oneMinuteInMillis = 60000;
 
         // These messages will both expire, since before processing of the
         // first one completes they will both be over 10 minutes old.
-        sendMessageOfSize(12 * oneMinuteInMillis);
-        sendMessageOfSize(3 * oneMinuteInMillis);
+        sendMessageOfSize(12 * oneMinuteInBits);
+        sendMessageOfSize(3 * oneMinuteInBits);
         assertTableSize(testShard, 'messageTable', 2);
         assertTableSize(testShard, 'logTable', 0);
 
@@ -1233,7 +1236,7 @@ describe("NetSimRouterNode", function () {
         // and we use pessimistic scheduling, this one is initially scheduled
         // to finish at (9 + 12 + 3 + 1) = 25 minutes, meaning it would expire
         // as well.
-        sendMessageOfSize(oneMinuteInMillis);
+        sendMessageOfSize(oneMinuteInBits);
         assertTableSize(testShard, 'messageTable', 3);
         assertTableSize(testShard, 'logTable', 0);
 
@@ -1435,8 +1438,8 @@ describe("NetSimRouterNode", function () {
         clientA.sendMessage(payload, function () {});
       };
 
-      var send100MessagesAndTickUntilStable = function () {
-        for (var i = 0; i < 100; i++) {
+      var sendXMessagesAndTickUntilStable = function (numToSend) {
+        for (var i = 0; i < numToSend; i++) {
           sendMessageOfSize(8);
         }
         tickUntilLogsStabilize(routerA);
@@ -1463,44 +1466,44 @@ describe("NetSimRouterNode", function () {
 
       it ("zero chance drops nothing", function () {
         routerA.randomDropChance = 0;
-        send100MessagesAndTickUntilStable();
-        assertTableSize(testShard, 'messageTable', 100);
+        sendXMessagesAndTickUntilStable(10);
+        assertTableSize(testShard, 'messageTable', 10);
         assertHowManyDropped(0);
       });
 
       it ("100% chance drops everything", function () {
         routerA.randomDropChance = 1;
-        send100MessagesAndTickUntilStable();
+        sendXMessagesAndTickUntilStable(10);
         assertTableSize(testShard, 'messageTable', 0);
-        assertHowManyDropped(100);
+        assertHowManyDropped(10);
       });
 
       it ("50% drops about half", function () {
-        netsimGlobals.setRandomSeed('a');
+        NetSimGlobals.setRandomSeed('a');
         routerA.randomDropChance = 0.5;
-        send100MessagesAndTickUntilStable();
-        assertHowManyDropped(48);
+        sendXMessagesAndTickUntilStable(20);
+        assertHowManyDropped(9);
       });
 
       it ("50% drops about half (example two)", function () {
-        netsimGlobals.setRandomSeed('b');
+        NetSimGlobals.setRandomSeed('b');
         routerA.randomDropChance = 0.5;
-        send100MessagesAndTickUntilStable();
-        assertHowManyDropped(58);
+        sendXMessagesAndTickUntilStable(20);
+        assertHowManyDropped(11);
       });
 
       it ("10% drops a few", function () {
-        netsimGlobals.setRandomSeed('c');
+        NetSimGlobals.setRandomSeed('c');
         routerA.randomDropChance = 0.1;
-        send100MessagesAndTickUntilStable();
-        assertHowManyDropped(7);
+        sendXMessagesAndTickUntilStable(30);
+        assertHowManyDropped(2);
       });
 
       it ("10% drops a few (example two)", function () {
-        netsimGlobals.setRandomSeed('d');
+        NetSimGlobals.setRandomSeed('d');
         routerA.randomDropChance = 0.1;
-        send100MessagesAndTickUntilStable();
-        assertHowManyDropped(8);
+        sendXMessagesAndTickUntilStable(30);
+        assertHowManyDropped(1);
       });
     });
 
@@ -1646,7 +1649,7 @@ describe("NetSimRouterNode", function () {
   describe("routing to other routers", function () {
     beforeEach(function () {
       setAddressFormat('4.4');
-      netsimGlobals.getLevelConfig().connectedRouters = true;
+      NetSimGlobals.getLevelConfig().connectedRouters = true;
 
       clientA.initializeSimulation(null, null);
       clientB.initializeSimulation(null, null);
@@ -1661,7 +1664,7 @@ describe("NetSimRouterNode", function () {
 
     it ("inter-router message is dropped when 'connectedRouters' are disabled",
         function () {
-      netsimGlobals.getLevelConfig().connectedRouters = false;
+      NetSimGlobals.getLevelConfig().connectedRouters = false;
 
       var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
@@ -1682,14 +1685,15 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
       var logRow = getLatestRow('logTable');
+      var log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.DROPPED, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 0);
     });
 
     it ("can send a message to another router", function () {
-      var logRow;
+      var logRow, log;
 
       // This test reads better with slower routing.
       // It lets you see each step, when with Infinite bandwidth you get
@@ -1717,9 +1721,10 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
       logRow = getLatestRow('logTable');
+      log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerA.entityID);
       assertFirstMessageProperty('toNodeID', routerB.entityID);
@@ -1728,14 +1733,15 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 2000});
       assertTableSize(testShard, 'logTable', 2);
       logRow = getLatestRow('logTable');
+      log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerB.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 0);
     });
 
     it ("can send a message to client on another router", function () {
-      var logRow;
+      var logRow, log;
 
       // This test reads better with slower routing.
       // It lets you see each step, when with Infinite bandwidth you get
@@ -1763,9 +1769,10 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 1000});
       assertTableSize(testShard, 'logTable', 1);
       logRow = getLatestRow('logTable');
+      log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerA.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerA.entityID);
       assertFirstMessageProperty('toNodeID', routerB.entityID);
@@ -1774,17 +1781,18 @@ describe("NetSimRouterNode", function () {
       clientA.tick({time: 2000});
       assertTableSize(testShard, 'logTable', 2);
       logRow = getLatestRow('logTable');
+      log = new NetSimLogEntry(testShard, logRow);
       assertEqual(routerB.entityID, logRow.nodeID);
       assertEqual(NetSimLogEntry.LogStatus.SUCCESS, logRow.status);
-      assertEqual(packetBinary, logRow.binary);
+      assertEqual(packetBinary, log.binary);
       assertTableSize(testShard, 'messageTable', 1);
       assertFirstMessageProperty('fromNodeID', routerB.entityID);
       assertFirstMessageProperty('toNodeID', clientB.entityID);
     });
 
     it ("can make one extra hop", function () {
-      netsimGlobals.getLevelConfig().minimumExtraHops = 1;
-      netsimGlobals.getLevelConfig().maximumExtraHops = 1;
+      NetSimGlobals.getLevelConfig().minimumExtraHops = 1;
+      NetSimGlobals.getLevelConfig().maximumExtraHops = 1;
 
       // This test reads better with slower routing.
       routerA.setBandwidth(50);
@@ -1835,9 +1843,9 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("can make two extra hops", function () {
-      netsimGlobals.getLevelConfig().minimumExtraHops = 2;
-      netsimGlobals.getLevelConfig().maximumExtraHops = 2;
-      netsimGlobals.setRandomSeed('two-hops');
+      NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
+      NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
+      NetSimGlobals.setRandomSeed('two-hops');
 
       // Introduce another router so there's space for two extra hops.
       var routerD = makeRemoteRouter();
@@ -1917,9 +1925,9 @@ describe("NetSimRouterNode", function () {
 
 
       it ("uses one order here", function () {
-        netsimGlobals.getLevelConfig().minimumExtraHops = 2;
-        netsimGlobals.getLevelConfig().maximumExtraHops = 2;
-        netsimGlobals.setRandomSeed('two-hops');
+        NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
+        NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
+        NetSimGlobals.setRandomSeed('two-hops');
         sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
@@ -1930,9 +1938,9 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("uses a different order here", function () {
-        netsimGlobals.getLevelConfig().minimumExtraHops = 2;
-        netsimGlobals.getLevelConfig().maximumExtraHops = 2;
-        netsimGlobals.setRandomSeed('for something completely different');
+        NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
+        NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
+        NetSimGlobals.setRandomSeed('for something completely different');
         sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
@@ -1943,9 +1951,9 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("uses one number of hops here", function () {
-        netsimGlobals.getLevelConfig().minimumExtraHops = 0;
-        netsimGlobals.getLevelConfig().maximumExtraHops = 3;
-        netsimGlobals.setRandomSeed('some random seed');
+        NetSimGlobals.getLevelConfig().minimumExtraHops = 0;
+        NetSimGlobals.getLevelConfig().maximumExtraHops = 3;
+        NetSimGlobals.setRandomSeed('some random seed');
         sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
@@ -1957,9 +1965,9 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("uses a different number of hops here", function () {
-        netsimGlobals.getLevelConfig().minimumExtraHops = 0;
-        netsimGlobals.getLevelConfig().maximumExtraHops = 3;
-        netsimGlobals.setRandomSeed('second random seed');
+        NetSimGlobals.getLevelConfig().minimumExtraHops = 0;
+        NetSimGlobals.getLevelConfig().maximumExtraHops = 3;
+        NetSimGlobals.setRandomSeed('second random seed');
         sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
@@ -1970,8 +1978,8 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("only makes one extra hop if two would require backtracking", function () {
-      netsimGlobals.getLevelConfig().minimumExtraHops = 2;
-      netsimGlobals.getLevelConfig().maximumExtraHops = 2;
+      NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
+      NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
 
       // This test reads better with slower routing.
       routerA.setBandwidth(50);
@@ -2040,7 +2048,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("cannot get addresses out of subnet when whole-shard routing is disabled", function () {
-        netsimGlobals.getLevelConfig().connectedRouters = false;
+        NetSimGlobals.getLevelConfig().connectedRouters = false;
         sendToAutoDnsA(clientA, 'GET ' + routerB.getHostname() + ' ' +
             clientB.getHostname());
         tickUntilLogsStabilize(clientA);

@@ -78,6 +78,14 @@ Eval.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_display';
   config.enableShowCode = false;
+  config.pinWorkspaceToBottom = false;
+  config.hasVerticalScrollbars = false;
+
+  // We don't want icons in instructions
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -585,13 +593,18 @@ var displayFeedback = function(response) {
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 
+  var tryAgainText;
+  if (level.freePlay) {
+    tryAgainText = commonMsg.keepPlaying();
+  }
+
   var options = {
     app: 'eval',
     skin: skin.id,
     feedbackType: Eval.testResults,
     response: response,
     level: level,
-    tryAgainText: level.freePlay ? commonMsg.keepPlaying() : undefined,
+    tryAgainText: tryAgainText,
     continueText: level.freePlay ? commonMsg.nextPuzzle() : undefined,
     showingSharing: !level.disableSharing && (level.freePlay),
     // allow users to save freeplay levels to their gallery

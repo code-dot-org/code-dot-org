@@ -536,27 +536,27 @@
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
-          <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-          <br/>Skip to my Lou, my darlin.
-        : Flua er i kjernemelka, <br/>Vekk, flue, vekk, <br/>Flua er i kjernemelka,
-          <br/>Vekk, flue, vekk, <br/>Flua er i kjernemelka, <br/>Vekk, flue, vekk,
-          <br/>Dra til Lou, min kjære.
+        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.'
+        1: ': Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk,
+          <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,
+          <br/>Skip to my Lou, my darlin.'
         Lou, Lou, skip to my Lou,: Lou, Lou, gå til min Lou,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
           Lou, gå til min Lou, <br/>Lou, Lou, gå til min Lou, <br/>Lou, Lou, gå til
           min Lou,  <br/>Gå til min Lou, min kjære.
-        ? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
-          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the
-          buttermilk, <br/>Shoo, fly, shoo,
-        : Lou, Lou, dra til Lou, <br/>Lou, Lou, dra til Lou, <br/>Lou, Lou, dra til
-          Lou, <br/>Dra til Lou, min kjære.<br/><br/><p>Flua er i kjernemelka, <br/>Vekk,
-          flue, vekk,
+        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
+        3: ': Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou,
+          skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the
+          buttermilk, <br/>Shoo, fly, shoo,'
         Multiple Choice: Flervalg
-        ? What is the largest chunk of this song that you can define as the chorus
-          so that the chorus repeats exactly each time it is called?
-        : Hva er den største delen av visa du kan definere som refrenget slik at refrenget
-          gjentas nøyaktig hver gang det påkalles?
+        4: '? What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?'
+        5: ': What is the largest chunk of this song that you can define as the chorus
+          so that the chorus repeats exactly each time it is called?'
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -871,6 +871,28 @@
           av disse guttene er <b>sjåføren</b>. Og en er <b>hjelperen</b>.
         This time, which boy is the <large>driver</large>?: Denne gangen, hvilken
           gutt er <large>sjåføren</large>?
+      Multi Strings Images 1:
+        Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images
+          1.blocks1.start_blocks, 350, 100
+        Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images
+          1.blocks2.start_blocks, 350, 100
+        Multi Strings Images 1.blocks3.start_blocks, 350, 100: Multi Strings Images
+          1.blocks3.start_blocks, 350, 100
+        Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images
+          1.blocks4.start_blocks, 350, 100
+        Strings and Images Multiple Choice: Strings and Images Multiple Choice
+        Which of these Evaluation Blocks will draw the image on the left?: Which of
+          these Evaluation Blocks will draw the image on the left?
+        https://studio.code.org/script_assets/msm/green-rect.png: https://studio.code.org/script_assets/msm/green-rect.png
+      Warmup questions:
+        Coding in Racket: Coding in Racket
+        Select the best answer to the question.: Select the best answer to the question.
+        When converting a circle to code, the correct order is: When converting a
+          circle to code, the correct order is
+        left top right: left top right
+        left, right, top: left, right, top
+        random: tilfeldig
+        top, left, right: top, left, right
       test multi text:
         Fred Flintstone: Fred Flintstone
         George Jetson: George Jetson

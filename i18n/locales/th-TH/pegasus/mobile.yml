@@ -1,13 +1,11 @@
 th-TH:
   hello: สวัสดีชาวโลก
   select_language: โปรดเลือกภาษาของคุณ
-  en: Computer Science
+  en: วิทยาการคอมพิวเตอร์
   computer_science_edweek: สัปดาห์การศึกษาวิทยาศาสตร์คอมพิวเตอร์
   csedweek_dates: 8-14 ธันวาคม 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> กำลังจะมาถึง. บอกคุณครูของคุณ, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> เพื่อช่วยคุณวางแผนการเรียนโครงการ Hour of Code</a>'
-  csedweek_banner_teachers: |
-    <a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">คุณเป็นครูสอนวิทยาศาสตร์คอมพิวเตอร์หรือเปล่า? เรียกดูเนื้อหาจาก CSEdWeek ได้ที่นี่</a>
-    
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">คุณเป็นครูสอนวิทยาศาสตร์คอมพิวเตอร์หรือเปล่า? เรียกดูเนื้อหาจาก CSEdWeek ได้ที่นี่</a>'
   n_have_learned_an_hoc: '<h1>ลองเรียน</h1><h2>Hour of Code</h2><h3># คน ได้เข่าร่วมแล้ว</h3>'
   anybody_can_learn: ทุกคนก็สามารถเรียนรู้ได้
   learn_now: เรียนตอนนี้
@@ -135,7 +133,7 @@ th-TH:
     คุณสามารถเปลี่ยนแปลงโลกของเรา &rdquo;
     Susan, ประธานกรรมการบริหาร YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;อย่าเพียงแค่เล่นบนโทรศัพท์ของคุณ 
+    &ldquo;อย่าเพียงแค่เล่นบนโทรศัพท์ของคุณ
     ลองเขียนโปรแกรมให้มัน&rdquo;
     บารักโอบามา
   homepage_hero_text_sheryl: |
@@ -151,12 +149,12 @@ th-TH:
     เส้นทางของชีวิตคุณได้ &rdquo;
     Chris Bosh
   homepage_hero_text_student1: |2
-    "ทักษะเหล่านี้ปลี่ยนแปลงอนาคตของฉัน 
+    "ทักษะเหล่านี้ปลี่ยนแปลงอนาคตของฉัน
     ยังไม่ได้พูดถึงความสนุกของมัน"
      Luna นักเรียนชั้นมัธยมศึกษาปีที่ 2
   homepage_hero_text_student2: |2
     "ผมไม่เคยเห็นเด็กๆ
-     ตื่นเต้นกับการเรียนรู้มากขนาดนี้" 
+     ตื่นเต้นกับการเรียนรู้มากขนาดนี้"
     Michael, ครู
   homepage_hero_text_student3: |
     &ldquo; วิทยาการคอมพิวเตอร์ เป็นศาสตร์ที่คุณจะ
@@ -164,11 +162,11 @@ th-TH:
     Jackson, นักเรียนชั้นป.6
   homepage_hero_text_student4: |
     &ldquo;คุณสามารถทำอะไรก็ได้ที่คุณต้องการ
-    ด้วยโปรแกรมมิ่ง&rdquo; 
+    ด้วยโปรแกรมมิ่ง&rdquo;
     Maya, นักเรียนชั้นป.2
   homepage_hero_text_student5: |
     &ldquo;วิทนาการคอมพิวเตอร์ไม่ได้เป็นของใครอื่น
-    มันสำหรับคุณ ที่นี่ ตอนนี้ &rdquo; 
+    มันสำหรับคุณ ที่นี่ ตอนนี้ &rdquo;
     Geraldo, ครู
   homepage_hero_text_teacher1: |
     &ldquo;การเขียนโปรแกรม กระตุ้นความคิดส้รางสรรค์ แรงบันดาลใจ และนวัตกรรม &mdash;
@@ -177,23 +175,23 @@ th-TH:
   homepage_hero_text_teacher2: |
     &ldquo;โครงการนี้ได้รับความร่วมมือ 100% จากนักเรียน &rdquo;
     Adam, ครู
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_served: 'มีผู้ใช้บริการ Hour of Code: #served คนแล้ว'
   homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_frozen: Frozen กับ เจ้าหญิงแอนนา และ เอลซ่า
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: บทเรียนของเราทั้งหมด
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: คอร์ส 4
   homepage_slot_text_shop: ร้านค้า
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_codevideo: ดูวีดีโอ
   homepage_action_text_teachervideo: ดูวีดีโอ
-  homepage_action_text_learn: Start learning
+  homepage_action_text_learn: เริ่มต้นการเรียนรู้กันเลย
   homepage_action_text_signpetition: ลงนามในคำร้อง
   homepage_signpetition_dropdown: 'ลงนามในคำร้อง &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
-  homepage_banner_text_link: Learn more
+  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in วิทยาการคอมพิวเตอร์.
+  homepage_banner_text_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   homepage_slot_text_title_hoc: ช่วงเวลาของ Code
   homepage_slot_text_blurb_hoc: ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้
   homepage_slot_text_link_hoc: ลองใช้ Hour of Code สิ
@@ -212,7 +210,7 @@ th-TH:
   homepage_slot_text_title_advocates: สนับสนุน
   homepage_slot_text_blurb_advocates: สนับสนุนการทำงานของเรา
   homepage_slot_text_link_stats: ดูสถิติ
-  homepage_slot_text_link_buy: Get involved
+  homepage_slot_text_link_buy: มาร่วมกับเราสิ
   homepage_slot_text_link_donate: ร่วมบริจาค
   homepage_header_codestudio: Code Studio สำหรับนักเรียน
   homepage_header_donors: Code.org ขอขอบคุณพันธมิตร
@@ -231,7 +229,7 @@ th-TH:
   contact_form_label_submit: ส่งข้อความ
   class_submission_in_school: ในโรงเรียน
   class_submission_in_school_daily_programming_course: หลักสูตรการเขียนโปรแกรมประจำวัน
-  class_submission_in_school_ap_computer_science: AP computer science
+  class_submission_in_school_ap_computer_science: AP วิทยาการคอมพิวเตอร์
   class_submission_in_school_full_university_cs_curriculum: หลักสูตรวิทยาการคอมพิวเตอร์ของมหาวิทยาลัย
   class_submission_in_school_robotics_club: ชมรมหุ่นยนต์
   class_submission_in_school_programming_integrated_in_other_classes: การเขียนโปรแกรมแบบบูรณาการในชั้นเรียนอื่น ๆ (เช่น คณิตศาสตร์ วิทยาศาสตร์ ฯลฯ)
@@ -289,13 +287,13 @@ th-TH:
   dashboard_landing_view_progress: 'แสดงความคืบหน้าสำหรับ %{biggest_section}'
   dashboard_landing_available_title: หลักสูตรที่มี
   dashboard_landing_available_courses: หลักสูตรในปัจจุบันสำหรับคุณและนักเรียนของคุณ
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
-  dashboard_landing_more_tutorials_desc: 'There are more tutorials <a href="/learn/beyond">offered by our partners.</a> Learn to program with robots, make web pages, make your own app, or explore other languages like C++, Ruby, or Python!'
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_landing_more_tutorials: อยากเห็น ติวโตเรี่ยว มากกว่านี้มั้ย?
+  dashboard_landing_more_tutorials_desc: 'ยังมีติวโตเรี่ยวอื่นๆ <a href="/learn/beyond"> จัดทำโดยพาร์ทเนอร์ของเรา.</a> เรียนรู้การเขียนโปรแกรมร่วมกับหุ่นยนต์ , สร้างเว็บเพจ, สร้างแอ๊ฟของคุณเอง, หรือ ศึกษาภาษาโปรแกรมอื่นๆเช่น C++, Ruby, หรือ Python!'
+  dashboard_hoc_courses: The Hour of Code สำหรับคนทุกวัย
+  dashboard_hoc_courses_desc: ลองติวโตเรี่ยว สั้นๆ 1 ชั่วโมง กับ นักเรียนของคุณ!
+  dashboard_k5_courses: คอร์ส 20 ชั่วโมง สำหรับ ประถม5 (K-5)
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
-  dashboard_middle_courses: 20-Hour Middle School Courses
+  dashboard_middle_courses: คอร์ส 20 ชั่วโมง สำหรับ Middle School
   dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_high_courses: Year-long High School Courses
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
@@ -305,7 +303,7 @@ th-TH:
   dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
   dashboard_course_ecs: ทำความรู้จักกับวิทยาการคอมพิวเตอร์
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
+  dashboard_course_csp: AP® ทฤษฏี วิทยาการคอมพิวเตอร์
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
   dashboard_landing_loading: กำลังโหลด...
   dashboard_action_edit: Edit
@@ -373,29 +371,29 @@ th-TH:
   dashboard_students_reset_password: รีเซ็ตรหัสผ่าน
   dashboard_students_share_section: แชร์หน้าล็อกอินของกลุ่มนี้ให้แก่นักเรียน
   dashboard_students_print_info: พิมพ์ข้อมูลสำหรับใช้ล็อกอินให้แก่นักเรียน
-  dashboard_students_secret_picture_title: Secret Picture
-  dashboard_students_secret_picture: รูปภาพลับ
+  dashboard_students_secret_picture_title: รูปภาพสำหรับ ล๊อกอิน
+  dashboard_students_secret_picture: รูปภาพสำหรับ ล๊อกอิน
   dashboard_students_reset_picture: 'คุณอาจตั้งค่ารูปภาพลับของนักเรียนตลอดเวลา โดยเลือก<b>แสดงความลับ</b>แล้ว<b>รีเซ็ตความลับ</b> รูปภาพลับใหม่จะถูกสร้างขึ้นสำหรับนักเรียนที่จะใช้ เมื่อพวกเขาเข้าสู่ระบบ'
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: ข้อความล๊อกอิน
   dashboard_students_secret_word: ข้อความลับ
   dashboard_students_reset_word: 'คุณสามารถตั้งค่าคำลับของนักเรียนได้ตลอดเวลา โดยเลือก<b>แสดงความลับ</b>แล้ว<b>รีเซ็ตความลับ</b> คำลับคู่ใหม่จะถูกสร้างขึ้นสำหรับนักเรียนที่จะใช้ เมื่อพวกเขาเข้าสู่ระบบ '
   dashboard_students_join_link: แจ้งนักเรียนของคุณให้สร้างบัญชีของตัวเองและเข้ากลุ่มที่คุณสร้างได้ที่
   dashboard_students_no_email: 'ถ้านักเรียนของคุณไม่มีที่อยู่อีเมล์ หรือคุณต้องการสร้างบัญชีสำหรับพวกเขา เปลี่ยนประเภทของข้อมูลลับส่วนนี้ให้เป็น<b>ข้อความ</b>หรือ<b>รูปภาพ</b>'
   dashboard_students_print_page: พิมพ์หน้านี้
-  dashboard_students_url: URL
+  dashboard_students_url: ลิงค์เว็บไซต์
   dashboard_privacy_document_link: '<a href="/privacy/student-privacy", target="_blank">คลิกที่นี่</a>สำหรับเอกสารส่วนตัวของเราที่สามารถใช้ร่วมกัน หรือพิมพ์สำหรับนักเรียนของคุณ'
-  dashboard_curriculum_k5_title: K-5 Educator Resources
-  dashboard_curriculum_middle_title: Middle School Educator Resources
-  dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_curriculum_k5_title: แหล่งเครื่องมือสำหรับผู้สอน ประถม5(K-5)
+  dashboard_curriculum_middle_title: แหล่งเครื่องมือสำหรับผู้สอน Middle School
+  dashboard_curriculum_high_title: แหล่งเครื่องมือสำหรับผู้สอน High School
+  dashboard_lesson_plans: แผนการสอน
   dashboard_view_all_lesson_plans: ดูแผนการสอนทั้งหมด
   dashboard_course1: 'หลักสูตรที่ 1:'
   dashboard_course2: 'หลักสูตรที่ 2:'
   dashboard_course3: 'หลักสูตรที่ 3:'
-  dashboard_course4: 'Course 4 (beta): '
+  dashboard_course4: 'คอร์ส4 (รุ่นทดลอง): '
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: ภาพรวมของหลักสูตรประถมศึกษา
-  dashboard_overview: Overview
+  dashboard_overview: ภาพรวม
   dashboard_sequence: ลำดับ
   dashboard_framework: ขอบข่าย
   dashboard_standards: มาตรฐาน
@@ -437,7 +435,7 @@ th-TH:
   dashboard_sections_password_account_creation: รหัสผ่านที่นักเรียนสร้าง
   dashboard_sections_login_type_explanation: 'ตารางนี้ช่วยอธิบายชนิดเหล่านี้เข้าสู่ระบบ <b>รูปภาพ คำ หรืออีเมล์</b> ซึ่งคุณจะต้องเลือกใช้'
   dashboard_faq: คำถามที่พบบ่อย
-  dashboard_faq_k5: K-5 Frequently Asked Questions
+  dashboard_faq_k5: คำถามที่พบบ่อย ของ ประถม5 ( K-5 )
   code_hoc_coming: 'นี่คือ Hour of Code - 8-14 ธันวาคม!'
   code_sign_up: ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์
   learn_more: เรียนรู้เพิ่มเติม

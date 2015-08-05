@@ -220,6 +220,7 @@ id:
       free_play:
         playlab: Buat App
         artist: Gambarlah Sesuatu
+        calculate: Calculate Something
     user:
       classroom: Beranda Guru
       district_dashboard: Wilayah Dashboard

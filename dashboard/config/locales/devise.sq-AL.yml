@@ -1,16 +1,16 @@
 "sq":
   devise:
     confirmations:
-      confirmed: Emiali i juaj u konfirmua me sukses.
-      send_instructions: Do ju dërgohet një email brënda disa minutave me udhëzime
-        se si ta konfrimoni llogarinë tuaj.
-      send_paranoid_instructions: Nëse adresa juaj e emailit ekziston në databazën
-        tonë, ti do të marrësh një email me udhëzime se si të konfirmoni llogarinë
-        tuaj në pak minuta.
+      confirmed: E-maili juaj u konfirmua me sukses.
+      send_instructions: Do ju dërgohet një e-mail brenda disa minutave me udhëzime
+        se si t'a konfirmoni llogarinë tuaj.
+      send_paranoid_instructions: Nëse adresa juaj e e-mailit ekziston në databazën
+        tonë, do të merrni një e-mail me udhëzime se si të konfirmoni llogarinë tuaj
+        në pak minuta.
     failure:
-      already_authenticated: Ju tashmë jeni të regjistruar.
+      already_authenticated: Ju jeni të regjistruar tashmë.
       inactive: Llogaria juaj nuk është aktivizuar akoma.
-      invalid: Email ose fjalëkalim jo i vlefshëm.
+      invalid: E-mail ose fjalëkalim jo i vlefshëm.
       invalid_token: Shenjë e pasaktë identifikimi.
       locked: Llogaria juaj është bllokuar.
       not_found_in_database: Email ose fjalëkalim jo i vlefshëm.
@@ -75,24 +75,24 @@
         one: '1 gabim e ndaloi këtë %{resource} për tu ruajtur:'
         other: '%{count} gabimet e ndaluara %{resource} për tu ruajtur:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: Një ftesë përmes e-mailit është dërguar në %{email}.
+      invitation_token_invalid: Shenja e ftesës nuk është e vlefshme!
+      updated: Fjalëkalimi juaj u vendos me sukses. Tani jeni loguar.
+      no_invitations_remaining: Nuk ka mbetur asnjë ftesë tjetër
+      invitation_removed: Ftesa juaj u fshi.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Dërgo ftesën
+        submit_button: Dërgo një ftesë
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Vendos fjalëkalimin tënd
+        submit_button: Vendos fjalëkalimin tim
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Të dhëna rreth ftesës
+        hello: Përshëndetje %{email}
+        someone_invited_you: Dikush ju ka ftuar në %{url}, mund t'a pranoni ftesën
+          përmes link-ut të mëposhtëm.
+        accept: Pranoni ftesën
+        ignore: Nëse nuk dëshironi të pranoni ftesën ju lutem injoroni këtë e-mail.<br
+          /> Llogaria juaj nuk mund të krijohet derisa të keni akses në linkun e mësipërm
+          dhe të vendosni fjalëkalimin tuaj.

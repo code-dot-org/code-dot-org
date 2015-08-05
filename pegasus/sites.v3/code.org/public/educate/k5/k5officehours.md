@@ -5,42 +5,43 @@ title: Live Events for Teachers
 
 # Live Events for Teachers
 
-<div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.com/calendar-widget?eid=17789153838" frameborder="0" height="371" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:195px; text-align:center;" ><a class="powered-by-eb" style="color: #dddddd; text-decoration: none;" target="_blank" href="http://www.eventbrite.com/r/ecal">Powered by Eventbrite</a></div></div>
-Code.org is pleased to offer a regular schedule of free, online events to educators. 
-
-All sessions will be recorded and archived.
-
-
-
-## Upcoming Events
-
-### [Exploring Computer Science Monthly Meeting](https://www.eventbrite.com/e/ecs-monthly-meeting-september-tickets-17789364468)<br>
-**Tuesday, September 1, 2015 • 7-8 p.m. CT**<br>
-Join Code.org for our first monthly meeting of our ECS community! Hear from facilitators Brook Osborne and special guests. Learn how to kick off the school year on the right foot with tips for implementing Unit 1.
 <br><br>
-<a href="https://www.eventbrite.com/e/ecs-monthly-meeting-september-tickets-17789364468" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=17789364468" alt="Eventbrite - ECS Monthly Meeting: September" /></a>
+<img src="/images/sotm31.jpg" width=“80%”/>
+
+Code.org hosts regular, free virtual events for our community. Here are a few highlights from [our current schedule](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577).
+
+### America's Untapped Opportunity
+#### Wednesday, September 23, 2015 from 7:00 PM to 8:00 PM (CDT) 
+Join [Hadi Partovi](https://code.org/about/leadership/hadi_partovi), CEO and Founder of [Code.org](http://code.org) for a discussion of why every student should have the opportunity to shape the 21st-century.
+<br>
+[<button>Register Now</button>](http://www.eventbrite.com/e/americas-untapped-opportunity-tickets-17987288464)
+
+### An Educator's Guide to the Hour of Code
+#### Wednesday, November 18, 2015 from 7:00 PM to 8:00 PM (CST) 
+In this interactive webinar, you'll hear from Melissa Jones, Community Manager at Code.org and Laura Kline, Product Manager for Hour of Code and learn the five simple steps you can take to plan and deliver an engaging, interactive coding event at your school.
+<br>
+[<button>Register Now</button>](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+
+### Sneak Peak: 2015 Hour of Code Tutorials
+#### Wednesday, December 2, 2015 from 7:00 PM to 8:00 PM (CDT) 
+In this interactive webinar, you'll get a sneak peak of all the new tutorials for 2015. You'll get a chance to preview what's new, what's cool and what you might want to use in your classroom. This guided tour of the tutorials will be hosted by Code.org's VP of Product,  Alice Steinglass, VP of Product and will feature guest speakers from a number of the Hour of Code partners.
+<br>
+[<button>Register Now</button>](http://www.eventbrite.com/e/sneak-peak-2015-hour-of-code-tutorials-tickets-17987437911)
+
+
+<a href="http://www.eventbrite.com/o/codeorg-teacher-community-8317327577" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=17789364468" alt="Eventbrite - Code.org Teacher Community" /></a>
+
 <br><br>
-**More dates coming for 2015! 
-Follow [@teachcode](http://twitter.com/teachcode) for updates or visit [teacherblog.code.org](http://teacherblog.code.org)**
 
-## Past Events
-Thursday, November 6, 2014 • 5 p.m. *PT* / 1 hr [View Recording](http://youtu.be/Jb2xhFeNvG4)
+<br><br>
 
-Thursday, December 4, 2014 • 5 p.m. *PT* / 1 hr [View Recording](https://www.youtube.com/watch?v=Lmr5Sfhk8rM&feature=youtu.be)
+## Course-specific Monthly Meetings
 
-Wednesday, March 11, 2015 • 5 p.m. *PT* / 1 hr *Recording Coming Soon*
+Code.org hosts monthly meetings for each of our curriculum programs. If you’re currently enrolled in one of our programs, your attendance at the monthly meeting is **highly recommended**. Learn more and register for the meetings that interest you below:
 
-Wednesday, April 8, 2015 • 5 p.m. *PT* / 1 hr * *Recording Coming Soon*
+- [Exploring Computer Science Monthly Meetings Schedule](/educate/ecs-201516meetings)
+- *More course meetings coming soon!*
 
-Wednesday, May 6, 2015 • 5 p.m. *PT* / 1 hr *Recording Coming Soon*
-
-##  To join an event:
-
-- Register for the events that interest you.
-- On the date and time of your session, click the link provided in your confirmation email or visit [http://code.bluejeans.com/teach](http://code.bluejeans.com/teach) to join.  
--  Download a plug-in if necessary (you'll be prompted to do this if necessary)
-- Enter Name
-- Unblock plug-ins (see image below)
-- Click "Enter Meeting"
-
-<img src="/images/joinbluejeans.png" width=1000px />
+Can’t make a particular event that interests you? Don’t worry! All events are recorded and archived. Anyone who registers will receive an email with a link to the recording after the session ends.
+<br><br>
+<p><a href="http://www.eventbrite.com/o/codeorg-teacher-community-8317327577" target="_blank">Find a complete list of our upcoming and past events here &gt;&gt;</a></p>

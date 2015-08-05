@@ -275,7 +275,7 @@
         desc: A videó játékok és koordináta síkok lecke leírása
         video: alg_11_coordinate_plane
       Contracts:
-        title: Szerződések
+        title: Szerződések, Domainok és tartományok
         desc: Szerződések "unplugged" lecke leírása
         video: alg_5_contracts
       DesignRecipe:
@@ -283,7 +283,7 @@
         desc: '"Dizájn recept" lecke leírása'
         video: alg_8_design_recipe
       Booleans:
-        title: Logikai adattípus
+        title: Logikai változók és a logika
         desc: Boolean lecke leírása
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:

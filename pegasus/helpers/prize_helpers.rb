@@ -5,10 +5,10 @@ def claim_prize_code(type, email, params={})
   return 'None' if type == 'none'
 
   begin
-    rows_updated = DB[:hoc_survey_prizes].where(claimant:nil, type:type).limit(1).update(
-      claimant:email,
-      claimed_at:DateTime.now,
-      claimed_ip:ip_address,
+    rows_updated = DB[:hoc_survey_prizes].where(claimant: nil, type: type).limit(1).update(
+      claimant: email,
+      claimed_at: DateTime.now,
+      claimed_ip: ip_address,
     )
     raise StandardError, "Out of '#{type}' codes." if rows_updated == 0
   rescue Sequel::UniqueConstraintViolation
@@ -17,5 +17,5 @@ def claim_prize_code(type, email, params={})
     raise
   end
 
-  DB[:hoc_survey_prizes].where(claimant:email).first[:value]
+  DB[:hoc_survey_prizes].where(claimant: email).first[:value]
 end

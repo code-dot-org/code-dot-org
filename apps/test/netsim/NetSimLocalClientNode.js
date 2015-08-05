@@ -38,6 +38,60 @@ describe("NetSimLocalClientNode", function () {
     assert(undefined !== testRemoteNode, "Made a remote node");
   });
 
+  describe("onWireTableChange_", function () {
+    it ("detects when remote client disconnects, and removes local wire", function () {
+
+      var localWireRow, remoteWireRow;
+
+      testLocalNode.connectToNode(testRemoteNode, function () {});
+      testRemoteNode.connectToNode(testLocalNode, function () {});
+
+      localWireRow = testLocalNode.myWire.buildRow();
+      remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
+
+      assertEqual(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
+      assertEqual(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
+
+      // Trigger onWireTableChange_ with both wires; the connection
+      // should be complete!
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow]);
+      assertEqual(testLocalNode.myRemoteClient, testRemoteNode);
+
+      // Trigger onWireTableChange_ without the remoteWire; the
+      // connection should be broken
+      testLocalNode.onWireTableChange_([localWireRow]);
+      assertEqual(testLocalNode.myWire, null);
+      assertEqual(testLocalNode.myRemoteClient, null);
+
+    });
+
+    it ("detects when attempted connection is rejected", function () {
+
+      var testThirdNode;
+      var localWireRow, remoteWireRow, thirdWireRow;
+
+      NetSimEntity.create(NetSimClientNode, testShard, function (err, node) {
+        testThirdNode = node;
+      });
+      testLocalNode.connectToNode(testRemoteNode, function () {});
+      testRemoteNode.connectToNode(testThirdNode, function () {});
+
+      localWireRow = testLocalNode.myWire.buildRow();
+      remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
+
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow]);
+      assertEqual(testLocalNode.myWire.buildRow(), localWireRow);
+      assertEqual(testLocalNode.myRemoteClient, null);
+
+      testThirdNode.connectToNode(testRemoteNode, function () {});
+
+      thirdWireRow = testThirdNode.getOutgoingWire().buildRow();
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow, thirdWireRow]);
+      assertEqual(testLocalNode.myWire, null);
+
+    });
+  });
+
   describe("sendMessage", function () {
     it ("fails with error when not connected", function () {
       var error;
@@ -72,7 +126,7 @@ describe("NetSimLocalClientNode", function () {
       var fromNodeID, toNodeID;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('101001100101', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testShard.messageTable.refresh(function (err, rows) {
         fromNodeID = rows[0].fromNodeID;
         toNodeID = rows[0].toNodeID;
       });
@@ -84,7 +138,7 @@ describe("NetSimLocalClientNode", function () {
       var message;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('1010101010100101010', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testShard.messageTable.refresh(function (err, rows) {
         message = new NetSimMessage(testShard, rows[0]);
       });
       assertEqual('1010101010100101010', message.payload);

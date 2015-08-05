@@ -1,8 +1,11 @@
 
-function createVideoWithFallback(options, width, height) {
+function createVideoWithFallback(parentElement, options, width, height) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
   video.width(width).height(height);
+  if(parentElement) {
+    parentElement.append(video);
+  }
   setupVideoFallback(options, width, height);
   return video;
 }
@@ -127,6 +130,7 @@ function stopTrackingVideoJSProgress() {
   fallbackPlayer.stopTrackingCurrentTime();
 }
 
+// Precondition: $('#video') must exist on the DOM before this function is called.
 function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {
   shouldStillAddCallback = shouldStillAddCallback || function() { return true };
 
@@ -158,6 +162,7 @@ function youTubeAvailabilityEndpointURL() {
   return "https://www.youtube.com/favicon.ico";
 }
 
+// Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
   var playerCode =
