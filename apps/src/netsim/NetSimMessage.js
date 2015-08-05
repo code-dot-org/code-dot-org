@@ -30,7 +30,7 @@ var binaryToBase64 = DataConverters.binaryToBase64;
  * should remove messages as soon as they receive them.
  *
  * @param {!NetSimShard} shard - The shard where this wire lives.
- * @param {Object} [messageRow] - A row out of the _message table on the
+ * @param {MessageRow} [messageRow] - A row out of the _message table on the
  *        shard.  If provided, will initialize this message with the given
  *        data.  If not, this message will initialize to default values.
  * @constructor
@@ -129,7 +129,7 @@ NetSimMessage.prototype.getTable = function () {
 };
 
 /**
- * @typedef {Object} messageRow
+ * @typedef {Object} MessageRow
  * @property {number} fromNodeID - this message in-flight-from node
  * @property {number} toNodeID - this message in-flight-to node
  * @property {number} simulatedBy - Node ID of the client responsible for
@@ -141,7 +141,7 @@ NetSimMessage.prototype.getTable = function () {
 
 /**
  * Build own row for the message table
- * @returns {messageRow}
+ * @returns {MessageRow}
  * @throws {TypeError} if payload is invalid
  */
 NetSimMessage.prototype.buildRow = function () {

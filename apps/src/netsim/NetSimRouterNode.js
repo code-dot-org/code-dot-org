@@ -1357,7 +1357,7 @@ NetSimRouterNode.prototype.getCurrentDataRate = function () {
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
- * @param {messageRow[]} rows
+ * @param {MessageRow[]} rows
  * @private
  * @throws if this method is called on a non-simulating router.
  */
