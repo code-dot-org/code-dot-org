@@ -73,7 +73,7 @@ Una escuela afortunada en ***cada*** estado de los EEUU (+ Washington D.C.) gana
 
 ## Cada organizador gana un código de regalo en agradecimiento {#gift_code}
 
-¡Cada educador que sea anfitrión de una Hora del Código para sus estudiantes recibirá 10 GB en Dropbox o $10 de crédito en Skype como regalo de agradecimiento!
+¡Cada educador que sea anfitrión de una Hora del Código para sus estudiantes recibirá 10 GB en Dropbox como regalo de agradecimiento!
 
 <% if @country == 'ca' %>
 
@@ -123,7 +123,7 @@ Cualquier clase (en escuelas públicas o privadas) es elegible para ganar este p
 
 ## ¿Pueden las escuelas por fuera de los Estados Unidos ganar el premio de chat por vídeo?
 
-No, desafortunadamente debido a dificultades logísticas no podemos ofrecer el premio de chat por vídeo a escuelas por fuera de Estados Unidos y Canadá. Todos los organizadores internacionales **son** elegibles para recibir espacio en Dropbox o crédito en Skype.
+No, desafortunadamente debido a dificultades logísticas no podemos ofrecer el premio de chat por vídeo a escuelas por fuera de Estados Unidos y Canadá. Todos los organizadores internacionales **son** elegibles para recibir espacio en Dropbox.
 
 ## ¿Por qué el premio de $10.000 en hardware sólo está disponible para las escuelas públicas?
 
