@@ -36,13 +36,9 @@ class OpsMailer < ActionMailer::Base
     # program_type was originally stored as a string in the db, but was later changed to an id that maps to activity_constants.
     # The datatype in MySql was never changed, so for now you have to coerce it to an integer
     @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type].to_i]
-    @workshop[:phase] = ActivityConstants::PHASES[@workshop[:phase].to_i]
     @recipient = recipient
     @recipient_ops_data = recipient_ops_data
-    subject = "Important: Your #{@workshop[:phase][:long_name]} workshop is coming up."
-    if @workshop[:phase][:prerequisite_phase]
-      subject += " Complete #{ActivityConstants::PHASES[@workshop[:phase][:prerequisite_phase]][:long_name]}"
-    end
+    subject = "[Reminder] You have a Code.org workshop in 2 weeks."
     mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
   end
 end
