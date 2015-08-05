@@ -840,7 +840,8 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
   var metrics = this.modalBlockSpace.getMetrics();
 
   this.exampleAreaDiv.style.left = metrics.absoluteLeft + 'px';
-  this.exampleAreaDiv.style.top = metrics.absoluteTop + 'px';
+  this.exampleAreaDiv.style.top = metrics.absoluteTop +
+      this.modalBlockSpace.yOffsetFromView + 'px';
   this.exampleAreaDiv.style.width = metrics.viewWidth + 'px';
 
   var blockSplitMargin = (EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2);
