@@ -14,7 +14,7 @@
  */
 'use strict';
 
-var netsimUtils = require('./netsimUtils');
+var NetSimUtils = require('./netsimUtils');
 var DataConverters = require('./dataConverters');
 var NetSimGlobals = require('./netsimGlobals');
 
@@ -351,7 +351,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
     fieldBits = fieldBits.slice(0, fieldWidth);
 
     // Left-pad to desired size
-    fieldBits = netsimUtils.zeroPadLeft(fieldBits, fieldWidth);
+    fieldBits = NetSimUtils.zeroPadLeft(fieldBits, fieldWidth);
 
     parts.push(fieldBits);
   }, this);

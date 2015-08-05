@@ -1,7 +1,7 @@
 <%
   var i18n = require('./locale');
   var NetSimConstants = require('./netsimConstants');
-  var netsimUtils = require('./netsimUtils');
+  var NetSimUtils = require('./netsimUtils');
   var Packet = require('./Packet');
 
   /** @type {Packet.HeaderType[]} */
@@ -51,7 +51,7 @@
       <% if (showPacketInfo) { %>
         <td nowrap><%= logEntry.getLocalizedPacketInfo() %></td>
       <% }%>
-      <td nowrap><%= netsimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) %></td>
+      <td nowrap><%= NetSimUtils.bitsToLocalizedRoundedBytesize(logEntry.binary.length) %></td>
       <td nowrap><%= logEntry.getLocalizedStatus() %></td>
     </tr>
     <%

@@ -15,7 +15,7 @@
 
 require('../utils');
 var NetSimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimUtils = require('./netsimUtils');
 var NetSimSlider = require('./NetSimSlider');
 
 /**
@@ -49,5 +49,5 @@ NetSimMemoryControl.inherits(NetSimSlider.LogarithmicSlider);
  * @override
  */
 NetSimMemoryControl.prototype.valueToLabel = function (val) {
-  return netsimUtils.bitsToLocalizedRoundedBytesize(val);
+  return NetSimUtils.bitsToLocalizedRoundedBytesize(val);
 };

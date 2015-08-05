@@ -27,7 +27,7 @@ var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
 var NetSimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimUtils = require('./netsimUtils');
 var DashboardUser = require('./DashboardUser');
 var NetSimBitLogPanel = require('./NetSimBitLogPanel');
 var NetSimLobby = require('./NetSimLobby');
@@ -196,7 +196,7 @@ NetSim.prototype.init = function(config) {
    * Configuration for the loaded level
    * @type {netsimLevelConfiguration}
    */
-  this.level = netsimUtils.scrubLevelConfiguration_(config.level);
+  this.level = NetSimUtils.scrubLevelConfiguration_(config.level);
 
   /**
    * Current operating environment, used to drive certain configuration.
