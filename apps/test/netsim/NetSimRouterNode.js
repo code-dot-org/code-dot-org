@@ -39,7 +39,7 @@ describe("NetSimRouterNode", function () {
 
   /**
    * Concise router creation for test
-   * @param {routerRow} [row]
+   * @param {RouterRow} [row]
    * @returns {NetSimRouterNode}
    */
   var makeLocalRouter = function (row) {
