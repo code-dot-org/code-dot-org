@@ -188,8 +188,19 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
 
 /**
  * Put a message into the log.
+ * @param {string} packetBinary
+ * @param {number} packetID
  */
-NetSimLogPanel.prototype.log = function (packetBinary) {
+NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
+
+  var packetAlreadyInLog = this.packets_.some(function (packet) {
+    return packet.packetID_ == packetID;
+  });
+
+  if (packetAlreadyInLog) {
+    return;
+  }
+
   // Remove all packets that are beyond our maximum size
   this.packets_
       .splice(this.maximumLogPackets_ - 1, this.packets_.length)
@@ -197,7 +208,7 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
         packet.getRoot().remove();
       });
 
-  var newPacket = new NetSimLogPacket(packetBinary, {
+  var newPacket = new NetSimLogPacket(packetBinary, packetID, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
     chunkSize: this.currentChunkSize_,
@@ -263,12 +274,18 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * @param {function} options.markAsReadCallback
  * @constructor
  */
-var NetSimLogPacket = function (packetBinary, options) {
+var NetSimLogPacket = function (packetBinary, packetID, options) {
   /**
    * @type {string}
    * @private
    */
   this.packetBinary_ = packetBinary;
+
+  /**
+   * @type {number}
+   * @private
+   */
+  this.packetID_ = packetID;
 
   /**
    * @type {Packet.HeaderType[]}
