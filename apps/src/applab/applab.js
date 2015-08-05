@@ -37,7 +37,7 @@ var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
-var clientApi = require('./assetManagement/clientApi');
+var assetsApi = require('./assetManagement/clientApi')('assets');
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
 var DebugArea = require('./DebugArea');
@@ -498,7 +498,7 @@ Applab.init = function(config) {
 
   // Pre-populate asset list
   if (window.dashboard && dashboard.project.getCurrentId()) {
-    clientApi.ajax('GET', '', function (xhr) {
+    assetsApi.ajax('GET', '', function (xhr) {
       assetListStore.reset(JSON.parse(xhr.responseText));
     }, function () {
       // Unable to load asset list
