@@ -763,10 +763,9 @@ Calc.generateResults_ = function () {
  */
 Calc.checkExamples_ = function () {
   var outcome = {};
-  // TODO (brent) - turn this on
-  // if (!level.examplesRequired) {
-  //   return outcome;
-  // }
+  if (!level.examplesRequired) {
+    return outcome;
+  }
 
   var exampleless = studioApp.getFunctionWithoutExample();
   if (exampleless) {

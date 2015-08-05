@@ -479,10 +479,9 @@ Eval.execute = function() {
 };
 
 Eval.checkExamples_ = function (resetPlayspace) {
-  // TODO (brent) - turn this on
-  // if (!level.examplesRequired) {
-  //   return;
-  // }
+  if (!level.examplesRequired) {
+    return;
+  }
 
   var exampleless = studioApp.getFunctionWithoutExample();
   if (exampleless) {
