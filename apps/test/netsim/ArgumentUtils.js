@@ -41,6 +41,37 @@ describe("ArgumentUtils", function () {
       });
     });
 
+    it ("retains members of original options object", function () {
+      var originalOptions = { a: 1, b: 2, c: 3 };
+      var options = ArgumentUtils.extendOptionsObject(originalOptions);
+      for (var key in originalOptions) {
+        assert(options.hasOwnProperty(key));
+        assertEqual(originalOptions[key], options[key]);
+      }
+    });
+
+    it ("adds get method to returned object, not original object", function () {
+      var originalOptions = { a: 1, b: 2, c: 3 };
+      var options = ArgumentUtils.extendOptionsObject(originalOptions);
+
+      assert(options.hasOwnProperty('get'));
+      assert(typeof options.get === 'function');
+      assert(!originalOptions.hasOwnProperty('get'));
+    });
+
+    it ("returns an object even when passed undefined", function () {
+      var options = ArgumentUtils.extendOptionsObject(undefined);
+      assert(typeof options === 'object');
+      assert(typeof options.get === 'function');
+    });
+
+    it ("throws Error if extending would overwrite existing 'get' property", function () {
+      assertThrows(Error, function () {
+        var originalOptions = { get: 1 };
+        var _ = ArgumentUtils.extendOptionsObject(originalOptions);
+      });
+    });
+
   });
 
 });
