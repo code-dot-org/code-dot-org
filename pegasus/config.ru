@@ -8,8 +8,8 @@ end
 require 'varnish_environment'
 use VarnishEnvironment
 
-require 'assets_api'
-use AssetsApi
+require 'files_api'
+use FilesApi
 
 require 'channels_api'
 use ChannelsApi
