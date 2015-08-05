@@ -412,7 +412,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         payload: payload,
         extraHopsRemaining: extraHops
       },
-      function (err) {
+      function (err, row) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
               JSON.stringify(payload));
@@ -427,7 +427,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
             '\nhops: ' + extraHops);
 
         if (self.sentLog_) {
-          self.sentLog_.log(payload);
+          self.sentLog_.log(payload, row.id);
         }
         onComplete(null);
       }.bind(this)
@@ -627,7 +627,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
-    this.receivedLog_.log(message.payload);
+    this.receivedLog_.log(message.payload, message.entityID);
   }
 };
 
