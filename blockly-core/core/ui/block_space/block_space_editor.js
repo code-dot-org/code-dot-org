@@ -368,7 +368,7 @@ Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace = function() {
 
   // Check every block, and bump if needed.
   this.blockSpace.getTopBlocks(false, false).forEach(function (block) {
-    if (!block.isVisible()) {
+    if (!block.isVisible() || block.isCurrentlyBeingDragged()) {
       return;
     }
 
