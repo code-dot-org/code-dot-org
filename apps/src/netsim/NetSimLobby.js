@@ -31,7 +31,7 @@ var logger = require('./NetSimLogger').getSingleton();
 var NetSimGlobals = require('./netsimGlobals');
 
 /**
- * @typedef {Object} shardChoice
+ * @typedef {Object} ShardChoice
  * @property {string} shardSeed - unique key for shard within level, used in
  *           share URLs
  * @property {string} shardID - unique key for shard in tables API, used as
@@ -112,7 +112,7 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
 
   /**
    * Shard options for the current user
-   * @type {shardChoice[]}
+   * @type {ShardChoice[]}
    * @private
    */
   this.shardChoices_ = [];
