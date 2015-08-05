@@ -57,7 +57,7 @@ describe("NetSimMessage", function () {
     });
   });
 
-  it ("converts messageRow.base64Payload to local binary payload", function () {
+  it ("converts MessageRow.base64Payload to local binary payload", function () {
     var message = new NetSimMessage(testShard, {
       fromNodeID: 1,
       toNodeID: 2,
