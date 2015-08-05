@@ -30,7 +30,7 @@ var addressStringToBinary = dataConverters.addressStringToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 describe("NetSimRouterNode", function () {
   var testShard, addressFormat, packetCountBitWidth, packetHeaderSpec, encoder,
@@ -231,7 +231,7 @@ describe("NetSimRouterNode", function () {
    */
   var setAddressFormat = function (newFormat) {
     addressFormat = newFormat;
-    netsimGlobals.getLevelConfig().addressFormat = addressFormat;
+    NetSimGlobals.getLevelConfig().addressFormat = addressFormat;
     encoder = new Packet.Encoder(addressFormat, packetCountBitWidth,
         packetHeaderSpec);
   };
@@ -248,10 +248,10 @@ describe("NetSimRouterNode", function () {
       Packet.HeaderType.TO_ADDRESS
     ];
 
-    netsimGlobals.getLevelConfig().addressFormat = addressFormat;
-    netsimGlobals.getLevelConfig().packetCountBitWidth = packetCountBitWidth;
-    netsimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
-    netsimGlobals.getLevelConfig().broadcastMode = false;
+    NetSimGlobals.getLevelConfig().addressFormat = addressFormat;
+    NetSimGlobals.getLevelConfig().packetCountBitWidth = packetCountBitWidth;
+    NetSimGlobals.getLevelConfig().routerExpectsPacketHeader = packetHeaderSpec;
+    NetSimGlobals.getLevelConfig().broadcastMode = false;
 
     encoder = new Packet.Encoder(addressFormat, packetCountBitWidth,
         packetHeaderSpec);
@@ -478,7 +478,7 @@ describe("NetSimRouterNode", function () {
 
     describe("requesting three addresses in simple four-bit format", function () {
       beforeEach(function () {
-        netsimGlobals.setRandomSeed('address assignment test');
+        NetSimGlobals.setRandomSeed('address assignment test');
         setAddressFormat('4');
         routerA.requestAddress(wire1, 'client1', function () {});
         routerA.requestAddress(wire2, 'client2', function () {});
@@ -513,7 +513,7 @@ describe("NetSimRouterNode", function () {
 
     describe("requesting three addresses in two-part format", function () {
       beforeEach(function () {
-        netsimGlobals.setRandomSeed('another assignment test');
+        NetSimGlobals.setRandomSeed('another assignment test');
         setAddressFormat('4.4');
         routerA.requestAddress(wire1, 'client1', function () {});
         routerA.requestAddress(wire2, 'client2', function () {});
@@ -536,7 +536,7 @@ describe("NetSimRouterNode", function () {
 
     describe("requesting three addresses in four-part format", function () {
       beforeEach(function () {
-        netsimGlobals.setRandomSeed('a third assignment test');
+        NetSimGlobals.setRandomSeed('a third assignment test');
         setAddressFormat('8.8.8.8');
         routerA.requestAddress(wire1, 'client1', function () {});
         routerA.requestAddress(wire2, 'client2', function () {});
@@ -644,7 +644,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("assigns every address in addressable space", function () {
-        netsimGlobals.setRandomSeed('Coverage!');
+        NetSimGlobals.setRandomSeed('Coverage!');
         setAddressFormat('4');
         // Addressable space is 0-15
         // 0 is reserved for the router
@@ -701,7 +701,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("can assign addresses in a different order", function () {
-        netsimGlobals.setRandomSeed('Variety');
+        NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('4');
 
         routerA.requestAddress(wire1, 'client1', function () {});
@@ -748,7 +748,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("shrinks addressable space according to address format", function () {
-        netsimGlobals.setRandomSeed('Variety');
+        NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('2');
 
         // Two-bit addresses, so four options, and "00" is used by the router.
@@ -768,7 +768,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("grows addressable space according to address format", function () {
-        netsimGlobals.setRandomSeed('Variety');
+        NetSimGlobals.setRandomSeed('Variety');
         setAddressFormat('8');
 
         // 8-bit addresses, so they go up to 255
@@ -788,7 +788,7 @@ describe("NetSimRouterNode", function () {
   });
 
   it ("still simulates/routes after connect-disconnect-connect cycle", function () {
-    netsimGlobals.getLevelConfig().automaticReceive = true;
+    NetSimGlobals.getLevelConfig().automaticReceive = true;
     var time = 1;
     var fakeReceivedLog = makeFakeMessageLog();
 
@@ -910,7 +910,7 @@ describe("NetSimRouterNode", function () {
 
       beforeEach(function () {
         // Put level in broadcast mode
-        netsimGlobals.getLevelConfig().broadcastMode = true;
+        NetSimGlobals.getLevelConfig().broadcastMode = true;
 
         // Stop simulation from earlier setup, hook up new client, restart
         // simulation
@@ -1476,28 +1476,28 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("50% drops about half", function () {
-        netsimGlobals.setRandomSeed('a');
+        NetSimGlobals.setRandomSeed('a');
         routerA.randomDropChance = 0.5;
         send100MessagesAndTickUntilStable();
         assertHowManyDropped(48);
       });
 
       it ("50% drops about half (example two)", function () {
-        netsimGlobals.setRandomSeed('b');
+        NetSimGlobals.setRandomSeed('b');
         routerA.randomDropChance = 0.5;
         send100MessagesAndTickUntilStable();
         assertHowManyDropped(58);
       });
 
       it ("10% drops a few", function () {
-        netsimGlobals.setRandomSeed('c');
+        NetSimGlobals.setRandomSeed('c');
         routerA.randomDropChance = 0.1;
         send100MessagesAndTickUntilStable();
         assertHowManyDropped(7);
       });
 
       it ("10% drops a few (example two)", function () {
-        netsimGlobals.setRandomSeed('d');
+        NetSimGlobals.setRandomSeed('d');
         routerA.randomDropChance = 0.1;
         send100MessagesAndTickUntilStable();
         assertHowManyDropped(8);
@@ -1646,7 +1646,7 @@ describe("NetSimRouterNode", function () {
   describe("routing to other routers", function () {
     beforeEach(function () {
       setAddressFormat('4.4');
-      netsimGlobals.getLevelConfig().connectedRouters = true;
+      NetSimGlobals.getLevelConfig().connectedRouters = true;
 
       clientA.initializeSimulation(null, null);
       clientB.initializeSimulation(null, null);
@@ -1661,7 +1661,7 @@ describe("NetSimRouterNode", function () {
 
     it ("inter-router message is dropped when 'connectedRouters' are disabled",
         function () {
-      netsimGlobals.getLevelConfig().connectedRouters = false;
+      NetSimGlobals.getLevelConfig().connectedRouters = false;
 
       var packetBinary = encoder.concatenateBinary(
           encoder.makeBinaryHeaders({
@@ -1788,8 +1788,8 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("can make one extra hop", function () {
-      netsimGlobals.getLevelConfig().minimumExtraHops = 1;
-      netsimGlobals.getLevelConfig().maximumExtraHops = 1;
+      NetSimGlobals.getLevelConfig().minimumExtraHops = 1;
+      NetSimGlobals.getLevelConfig().maximumExtraHops = 1;
 
       // This test reads better with slower routing.
       routerA.setBandwidth(50);
@@ -1840,9 +1840,9 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("can make two extra hops", function () {
-      netsimGlobals.getLevelConfig().minimumExtraHops = 2;
-      netsimGlobals.getLevelConfig().maximumExtraHops = 2;
-      netsimGlobals.setRandomSeed('two-hops');
+      NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
+      NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
+      NetSimGlobals.setRandomSeed('two-hops');
 
       // Introduce another router so there's space for two extra hops.
       var routerD = makeRemoteRouter();
@@ -1922,9 +1922,9 @@ describe("NetSimRouterNode", function () {
 
 
       it ("uses one order here", function () {
-        netsimGlobals.getLevelConfig().minimumExtraHops = 2;
-        netsimGlobals.getLevelConfig().maximumExtraHops = 2;
-        netsimGlobals.setRandomSeed('two-hops');
+        NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
+        NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
+        NetSimGlobals.setRandomSeed('two-hops');
         sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
@@ -1935,9 +1935,9 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("uses a different order here", function () {
-        netsimGlobals.getLevelConfig().minimumExtraHops = 2;
-        netsimGlobals.getLevelConfig().maximumExtraHops = 2;
-        netsimGlobals.setRandomSeed('for something completely different');
+        NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
+        NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
+        NetSimGlobals.setRandomSeed('for something completely different');
         sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
@@ -1948,9 +1948,9 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("uses one number of hops here", function () {
-        netsimGlobals.getLevelConfig().minimumExtraHops = 0;
-        netsimGlobals.getLevelConfig().maximumExtraHops = 3;
-        netsimGlobals.setRandomSeed('some random seed');
+        NetSimGlobals.getLevelConfig().minimumExtraHops = 0;
+        NetSimGlobals.getLevelConfig().maximumExtraHops = 3;
+        NetSimGlobals.setRandomSeed('some random seed');
         sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
@@ -1962,9 +1962,9 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("uses a different number of hops here", function () {
-        netsimGlobals.getLevelConfig().minimumExtraHops = 0;
-        netsimGlobals.getLevelConfig().maximumExtraHops = 3;
-        netsimGlobals.setRandomSeed('second random seed');
+        NetSimGlobals.getLevelConfig().minimumExtraHops = 0;
+        NetSimGlobals.getLevelConfig().maximumExtraHops = 3;
+        NetSimGlobals.setRandomSeed('second random seed');
         sendFromAToB();
         assertFirstMessageProperty('visitedNodeIDs', [
           routerA.entityID,
@@ -1975,8 +1975,8 @@ describe("NetSimRouterNode", function () {
     });
 
     it ("only makes one extra hop if two would require backtracking", function () {
-      netsimGlobals.getLevelConfig().minimumExtraHops = 2;
-      netsimGlobals.getLevelConfig().maximumExtraHops = 2;
+      NetSimGlobals.getLevelConfig().minimumExtraHops = 2;
+      NetSimGlobals.getLevelConfig().maximumExtraHops = 2;
 
       // This test reads better with slower routing.
       routerA.setBandwidth(50);
@@ -2045,7 +2045,7 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("cannot get addresses out of subnet when whole-shard routing is disabled", function () {
-        netsimGlobals.getLevelConfig().connectedRouters = false;
+        NetSimGlobals.getLevelConfig().connectedRouters = false;
         sendToAutoDnsA(clientA, 'GET ' + routerB.getHostname() + ' ' +
             clientB.getHostname());
         tickUntilLogsStabilize(clientA);

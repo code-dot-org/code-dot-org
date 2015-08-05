@@ -5,7 +5,7 @@ var assert = testUtils.assert;
 var _ = require('@cdo/apps/utils').getLodash();
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var levels = require('@cdo/apps/netsim/levels');
 
 /**
@@ -227,7 +227,7 @@ exports.initializeGlobalsToDefaultValues = function () {
   NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
   // Deep clone level so that changes we make to it for testing don't bleed
   // into other tests.
-  netsimGlobals.setRootControllers({}, {
+  NetSimGlobals.setRootControllers({}, {
     level: _.clone(levels.custom, true)
   });
 };
