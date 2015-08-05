@@ -13,7 +13,7 @@
  */
 'use strict';
 
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var jQuerySvgElement = require('./netsimUtils_renaming').jQuerySvgElement;
 var tweens = require('./tweens');
 
 /**

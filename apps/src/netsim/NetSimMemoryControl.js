@@ -15,7 +15,7 @@
 
 require('../utils');
 var NetSimConstants = require('./netsimConstants_renaming');
-var NetSimUtils = require('./netsimUtils');
+var NetSimUtils = require('./netsimUtils_renaming');
 var NetSimSlider = require('./NetSimSlider');
 
 /**

@@ -23,7 +23,7 @@ var NetSimRouterTab = require('./NetSimRouterTab');
 var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');
 var NetSimTabType = require('./netsimConstants_renaming').NetSimTabType;
-var shouldShowTab = require('./netsimUtils').shouldShowTab;
+var shouldShowTab = require('./netsimUtils_renaming').shouldShowTab;
 var NetSimGlobals = require('./netsimGlobals_renaming');
 
 /**

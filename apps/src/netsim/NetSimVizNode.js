@@ -15,7 +15,7 @@
 
 require('../utils');
 var NetSimConstants = require('./netsimConstants_renaming');
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var jQuerySvgElement = require('./netsimUtils_renaming').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 
