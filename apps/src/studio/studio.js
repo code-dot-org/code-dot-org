@@ -1595,6 +1595,17 @@ Studio.reset = function(first) {
  */
 Studio.runTest = function (exampleBlock) {
   try {
+    var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+
+    if (!actualBlock) {
+      throw new Error('Invalid Call Block');
+    }
+
+    if (!expectedBlock) {
+      throw new Error('Invalid Result Block');
+    }
+
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [ exampleBlock ]);
     if (exampleCode) {
@@ -1824,8 +1835,73 @@ Studio.checkForPreExecutionFailure = function () {
     return true;
   }
 
+  var outcome = Studio.checkExamples_();
+  if (outcome.result !== undefined) {
+    $.extend(Studio, outcome);
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
   return false;
 };
+
+/**
+ * @returns {Object} outcome
+ * @returns {boolean} outcome.result
+ * @returns {number} outcome.testResults
+ * @returns {string} outcome.message
+ */
+Studio.checkExamples_ = function () {
+  var outcome = {};
+  // TODO (brent) - turn this on
+  // if (!level.examplesRequired) {
+  //   return outcome;
+  // }
+
+  var exampleless = studioApp.getFunctionWithoutExample();
+  if (exampleless) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
+    return outcome;
+  }
+
+  var unfilled = studioApp.getUnfilledFunctionalExample();
+  if (unfilled) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+
+    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+      .getTitleValue('NAME');
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
+    return outcome;
+  }
+
+  // TODO - what of this belongs in studio app?
+  var failingBlockName = '';
+  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
+    var result = Studio.runTest(exampleBlock, true);
+    var success = result === "Matches definition.";
+
+    // Update the example result. No-op if we're not currently editing this
+    // function.
+    Blockly.contractEditor.updateExampleResult(exampleBlock, result);
+
+    if (!success) {
+      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
+        .getTitleValue('NAME');
+    }
+
+  });
+
+  if (failingBlockName) {
+    outcome.result = false;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
+  }
+
+  return outcome;
+}
 
 var ErrorLevel = {
   WARNING: 'WARNING',
