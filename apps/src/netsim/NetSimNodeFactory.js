@@ -15,7 +15,7 @@
  */
 'use strict';
 
-var NetSimConstants = require('./netsimConstants_renaming');
+var NetSimConstants = require('./NetSimConstants');
 
 var NodeType = NetSimConstants.NodeType;
 

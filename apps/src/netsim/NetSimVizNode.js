@@ -14,14 +14,14 @@
 'use strict';
 
 require('../utils');
-var NetSimConstants = require('./netsimConstants_renaming');
-var jQuerySvgElement = require('./netsimUtils_renaming').jQuerySvgElement;
+var NetSimConstants = require('./NetSimConstants');
+var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 
 var DnsMode = NetSimConstants.DnsMode;
 
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The narrowest that a text bubble is allowed to be.

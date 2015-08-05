@@ -20,12 +20,12 @@ var _ = utils.getLodash();
 var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
-var NetSimNodeFactory = require('./netsimNodeFactory_renaming');
-var DataConverters = require('./dataConverters_renaming');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
+var DataConverters = require('./DataConverters');
 var formatBinary = DataConverters.formatBinary;
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
-var BITS_PER_BYTE = require('./netsimConstants_renaming').BITS_PER_BYTE;
+var BITS_PER_BYTE = require('./NetSimConstants').BITS_PER_BYTE;
 
 /**
  * @typedef {Object} LogEntryRow

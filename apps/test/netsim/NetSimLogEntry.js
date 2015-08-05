@@ -5,11 +5,11 @@ var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var Packet = require('@cdo/apps/netsim/Packet');
-var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals_renaming');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
-var DataConverters = require('@cdo/apps/netsim/dataConverters_renaming');
+var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var binaryToBase64 = DataConverters.binaryToBase64;
 var base64ToBinary = DataConverters.base64ToBinary;
 

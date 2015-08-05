@@ -3,7 +3,7 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 
-var DataConverters = require('@cdo/apps/netsim/dataConverters_renaming');
+var DataConverters = require('@cdo/apps/netsim/DataConverters');
 
 describe("DataConverters", function () {
 

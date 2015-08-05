@@ -16,16 +16,16 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var NetSimNodeFactory = require('./netsimNodeFactory_renaming');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
 var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
 var NetSimVizWire = require('./NetSimVizWire');
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var NetSimGlobals = require('./NetSimGlobals');
 var tweens = require('./tweens');
-var NetSimConstants = require('./netsimConstants_renaming');
+var NetSimConstants = require('./NetSimConstants');
 var DnsMode = NetSimConstants.DnsMode;
 var NodeType = NetSimConstants.NodeType;
 

@@ -26,8 +26,8 @@ var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
-var NetSimConstants = require('./netsimConstants_renaming');
-var NetSimUtils = require('./netsimUtils_renaming');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimUtils = require('./NetSimUtils');
 var DashboardUser = require('./DashboardUser');
 var NetSimBitLogPanel = require('./NetSimBitLogPanel');
 var NetSimLobby = require('./NetSimLobby');
@@ -46,7 +46,7 @@ var DnsMode = NetSimConstants.DnsMode;
 var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The top-level Internet Simulator controller.

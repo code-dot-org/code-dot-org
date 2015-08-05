@@ -15,7 +15,7 @@
 'use strict';
 
 var markup = require('./NetSimRouterStatsTable.html.ejs');
-var NetSimUtils = require('./netsimUtils_renaming');
+var NetSimUtils = require('./NetSimUtils');
 var NetSimLogEntry = require('./NetSimLogEntry');
 
 /**

@@ -21,14 +21,14 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var NetSimNodeFactory = require('./netsimNodeFactory_renaming');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 
 var logger = require('./NetSimLogger').getSingleton();
-var NetSimGlobals = require('./netsimGlobals_renaming');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @typedef {Object} ShardChoice

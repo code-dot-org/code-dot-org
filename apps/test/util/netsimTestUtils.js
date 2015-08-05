@@ -5,7 +5,7 @@ var assert = testUtils.assert;
 var _ = require('@cdo/apps/utils').getLodash();
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
-var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals_renaming');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var levels = require('@cdo/apps/netsim/levels');
 
 /**
