@@ -1,16 +1,7 @@
 name 'U3L24 Conditionals Lecture'
 css 'unplugged'
 markdown <<MARKDOWN
-<style>
-code {color: black}
-
-red {color: red}
-blue {color: blue}
-purple {color: purple}
-red {color: red}
-orange {color: orange}
-
-</style>
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/U3L24_codeStyle.css" />
 
 # Breaking Down if/else Statements
 
@@ -52,7 +43,7 @@ Just like the word "if," "else" is a keyword that your computer reads. If your c
 <code>} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
 
 <br/>
-If the **condition** evaluates to **true**, the computer will treat the body of the "else" as if it didn't exist. If the **condition** evaluates to **false**, to computer will treat the body of the "if" as if it didn't exist. It will only take one of the two possible paths.
+If the **condition** evaluates to **true**, the computer will treat the body of the "else" as if it didn't exist. If the **condition** evaluates to **false**, the computer will treat the body of the "if" as if it didn't exist. It will only take one of the two possible paths.
 
 <br/>
 ### What about an if/else if/else?
@@ -71,7 +62,7 @@ Once again, the computer chooses only one of the possible paths. When the comput
 <code>&nbsp;&nbsp;<orange>body of else</orange>;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><br/>
 <code>} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
 
-If the condition evaluates to **true**, the computer will execute the body of the **if** statement and ignore everything else. If the condition evaluates to **false**, the computer will check for the next **else** statement.
+If the condition evaluates to **true**, the computer will execute the body of the **else if** statement and ignore everything else. If the condition evaluates to **false**, the computer will check for the next **else** statement.
 
 <br/><br/><br/><br/>
 
