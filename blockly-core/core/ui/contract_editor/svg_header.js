@@ -40,7 +40,7 @@ Blockly.SvgHeader = function (parent, opt_options) {
 };
 
 Blockly.SvgHeader.prototype.showSeparator = function (shouldShow) {
-  goog.style.showElement(this.separatorElement_, shouldShow);
+  goog.style.setElementShown(this.separatorElement_, shouldShow);
 };
 
 Blockly.SvgHeader.prototype.setColor = function (colorHex) {
@@ -72,7 +72,7 @@ Blockly.SvgHeader.prototype.setText = function (text) {
 };
 
 Blockly.SvgHeader.prototype.setVisible = function (visible) {
-  goog.style.showElement(this.svgGroup_, visible);
+  goog.style.setElementShown(this.svgGroup_, visible);
 };
 
 Blockly.SvgHeader.prototype.removeSelf = function () {
