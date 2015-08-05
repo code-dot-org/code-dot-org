@@ -68,7 +68,7 @@ var DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS = 1000;
  *        to wait after an invalidation event before attempting to trigger a
  *        refresh request.  This produces a window in which clustered
  *        invalidations can be captured and coalesced together.
- * @param {number} [options.maximumDelayJitter] - Maximum additional random
+ * @param {number} [options.maximumJitterDelay] - Maximum additional random
  *        delay (in ms) to add before the refresh request.  Helps spread out
  *        requests from different clients responding to the same invalidation
  *        events.
@@ -165,8 +165,8 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
    * invalidation events.
    * @private {number}
    */
-  this.maximumDelayJitter_ = options.get(
-      'maximumDelayJitter',
+  this.maximumJitterDelay_ = options.get(
+      'maximumJitterDelay',
       ArgumentUtils.isPositiveNoninfiniteNumber,
       DEFAULT_MAXIMUM_DELAY_JITTER_MS);
 
@@ -225,16 +225,20 @@ NetSimTable.prototype.unsubscribe = function () {
  */
 NetSimTable.prototype.refresh = function (callback) {
   callback = callback || function () {};
+  var deferred = $.Deferred();
 
+  // Which API call to make
   var apiCall = this.useIncrementalRefresh_ ?
       this.api_.allRowsFromID.bind(this.api_, this.latestRowID_ + 1) :
       this.api_.allRows.bind(this.api_);
+
+  // How to update the cache (depends on what we expect to get back)
   var cacheUpdate = this.useIncrementalRefresh_ ?
       this.incrementalCacheUpdate_.bind(this) :
       this.fullCacheUpdate_.bind(this);
 
-  var deferred = $.Deferred();
-  apiCall(function (err, data) {
+  // What should happen when the API call completes.
+  var apiCallCallback = function (err, data) {
     if (err) {
       callback(err, data);
       deferred.reject(err);
@@ -243,7 +247,16 @@ NetSimTable.prototype.refresh = function (callback) {
       callback(err, data);
       deferred.resolve();
     }
-  });
+  };
+
+  // Do we fire the API call now, or after a random delay?
+  if (this.maximumJitterDelay_ === 0) {
+    apiCall(apiCallCallback);
+  } else {
+    var jitterTime = NetSimGlobals.randomIntInRange(0, this.maximumJitterDelay_);
+    setTimeout(apiCall.bind(this, apiCallCallback), jitterTime);
+  }
+
   return deferred.promise();
 };
 
@@ -277,11 +290,10 @@ NetSimTable.prototype.refresh = function (callback) {
  * @private
  */
 NetSimTable.prototype.makeThrottledRefresh_ = function () {
-  var initialDelay = this.minimumDelayBeforeRefresh_ +
-      NetSimGlobals.randomIntInRange(0, this.maximumDelayJitter_);
   var throttledRefresh = _.throttle(this.refresh.bind(this),
       this.minimumDelayBetweenRefreshes_);
-  return _.debounce(throttledRefresh, initialDelay, {maxWait: initialDelay});
+  return _.debounce(throttledRefresh, this.minimumDelayBeforeRefresh_,
+      {maxWait: this.minimumDelayBeforeRefresh_});
 };
 
 /**
@@ -492,6 +504,18 @@ NetSimTable.prototype.setMinimumDelayBeforeRefresh = function (delayMs) {
   // To do this, we just replace the throttled refresh function with a new one.
   this.minimumDelayBeforeRefresh_ = delayMs;
   this.refreshTable_ = this.makeThrottledRefresh_();
+};
+
+/**
+ * Change the Maximum additional random delay (in ms) to add before the refresh
+ * request.  Helps spread out requests from different clients responding to the
+ * same events.
+ * @param {number} delayMs - Maximum number of milliseconds to add before
+ *        refresh request fires.
+ */
+NetSimTable.prototype.setMaximumJitterDelay = function (delayMs) {
+  // To do this, we just replace the throttled refresh function with a new one.
+  this.maximumJitterDelay_ = delayMs;
 };
 
 /** Polls server for updates, if it's been long enough. */
