@@ -5,9 +5,9 @@ var assertThrows = testUtils.assertThrows;
 
 var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
 
-describe("ArgumentUtils", function () {
+describe ("ArgumentUtils", function () {
 
-  describe("extendOptionsObject", function () {
+  describe ("extendOptionsObject", function () {
 
     it ("is valid to pass empty object", function () {
       var _ = ArgumentUtils.extendOptionsObject({});
@@ -70,6 +70,58 @@ describe("ArgumentUtils", function () {
         var originalOptions = { get: 1 };
         var _ = ArgumentUtils.extendOptionsObject(originalOptions);
       });
+    });
+
+    describe ('get()', function () {
+      var originalOptions, options;
+
+      beforeEach (function () {
+        originalOptions = { a: 1, b: 2, c: 3 };
+        options = ArgumentUtils.extendOptionsObject(originalOptions);
+      });
+
+      it ("in its simplest form passes through options", function () {
+        assertEqual(1, options.get('a'));
+        assertEqual(2, options.get('b'));
+        assertEqual(3, options.get('c'));
+      });
+
+      it ("returns undefined for missing options by default", function () {
+        assertEqual(undefined, options.get('d'));
+      });
+
+      it ("throws TypeError if validator method doesn't return TRUE", function () {
+        var validator = function (x) { return x < 3; };
+        assertEqual(1, options.get('a', validator));
+        assertEqual(2, options.get('b', validator));
+        assertThrows(TypeError, function () {
+          options.get('c', validator);
+        });
+        assertEqual(undefined, options.get('d', validator));
+      });
+
+      it ("returns real value if found, even if default is provided", function () {
+        var defaultValue = 15;
+        assertEqual(1, options.get('a', undefined, defaultValue));
+      });
+
+      it ("returns default value if key not in original object", function () {
+        var defaultValue = 15;
+        assertEqual(defaultValue, options.get('d', undefined, defaultValue));
+      });
+
+      it ("returns default value if original object was undefined", function () {
+        var defaultValue = 15;
+        var opts = ArgumentUtils.extendOptionsObject(undefined);
+        assertEqual(15, opts.get('anything', undefined, defaultValue));
+      });
+
+      it ("does not validate default value", function () {
+        var validator = function (x) { return x < 3; };
+        var defaultValue = 15;
+        assertEqual(15, options.get('d', validator, defaultValue));
+      });
+
     });
 
   });
