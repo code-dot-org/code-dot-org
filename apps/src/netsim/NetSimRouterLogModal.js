@@ -189,7 +189,7 @@ NetSimRouterLogModal.prototype.setRouter = function (router) {
  * @returns {boolean}
  */
 NetSimRouterLogModal.prototype.isAllRouterMode = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.connectedRouters) {
     return true;
   } else {
