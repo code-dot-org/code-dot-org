@@ -1,7 +1,7 @@
 <%
   var i18n = require('./locale');
   var netsimConstants = require('./netsimConstants');
-  var dataConverters = require('./dataConverters');
+  var DataConverters = require('./dataConverters');
 
   var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
 
@@ -26,15 +26,15 @@
     <table>
       <tbody>
         <%
-          logRow(EncodingType.ASCII, dataConverters.binaryToAscii(binary, chunkSize));
+          logRow(EncodingType.ASCII, DataConverters.binaryToAscii(binary, chunkSize));
 
-          logRow(EncodingType.DECIMAL, dataConverters.alignDecimal(dataConverters.binaryToDecimal(binary, chunkSize)));
+          logRow(EncodingType.DECIMAL, DataConverters.alignDecimal(DataConverters.binaryToDecimal(binary, chunkSize)));
 
-          logRow(EncodingType.HEXADECIMAL, dataConverters.formatHex(dataConverters.binaryToHex(binary), chunkSize));
+          logRow(EncodingType.HEXADECIMAL, DataConverters.formatHex(DataConverters.binaryToHex(binary), chunkSize));
 
-          logRow(EncodingType.BINARY, dataConverters.formatBinary(binary, chunkSize));
+          logRow(EncodingType.BINARY, DataConverters.formatBinary(binary, chunkSize));
 
-          logRow(EncodingType.A_AND_B, dataConverters.formatAB(dataConverters.binaryToAB(binary), chunkSize));
+          logRow(EncodingType.A_AND_B, DataConverters.formatAB(DataConverters.binaryToAB(binary), chunkSize));
         %>
       </tbody>
     </table>

@@ -27,7 +27,7 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
-var dataConverters = require('./dataConverters');
+var DataConverters = require('./dataConverters');
 var netsimNodeFactory = require('./netsimNodeFactory');
 
 var _ = utils.getLodash();
@@ -35,7 +35,7 @@ var _ = utils.getLodash();
 var serializeNumber = netsimUtils.serializeNumber;
 var deserializeNumber = netsimUtils.deserializeNumber;
 
-var asciiToBinary = dataConverters.asciiToBinary;
+var asciiToBinary = DataConverters.asciiToBinary;
 
 var DnsMode = netsimConstants.DnsMode;
 var NodeType = netsimConstants.NodeType;

@@ -24,7 +24,7 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
-var dataConverters = require('./dataConverters');
+var DataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
 var NetSimGlobals = require('./netsimGlobals');
 
@@ -32,7 +32,7 @@ var EncodingType = netsimConstants.EncodingType;
 var MessageGranularity = netsimConstants.MessageGranularity;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 
-var binaryToAB = dataConverters.binaryToAB;
+var binaryToAB = DataConverters.binaryToAB;
 
 var logger = require('./NetSimLogger').getSingleton();
 

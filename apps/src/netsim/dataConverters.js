@@ -388,7 +388,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
  *         properly-formatted string of zeroes and ones.
  * @example
  * // returns { string: "kg==", len: 7 }
- * dataConverters.binaryToBase64("1001001");
+ * DataConverters.binaryToBase64("1001001");
  */
 exports.binaryToBase64 = function (binaryString) {
 
@@ -413,7 +413,7 @@ exports.binaryToBase64 = function (binaryString) {
  * @returns {string} binaryString
  * @example
  * // returns "1001001"
- * dataConverters.base64ToBinary("kg==", 7);
+ * DataConverters.base64ToBinary("kg==", 7);
  */
 exports.base64ToBinary = function (base64string, len) {
   return exports.asciiToBinary(window.atob(base64string), 8).substr(0, len);

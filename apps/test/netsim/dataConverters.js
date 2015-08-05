@@ -3,12 +3,12 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 
-var dataConverters = require('@cdo/apps/netsim/dataConverters');
+var DataConverters = require('@cdo/apps/netsim/dataConverters');
 
-describe("dataConverters", function () {
+describe("DataConverters", function () {
 
   describe("minifyAB", function () {
-    var minifyAB = dataConverters.minifyAB;
+    var minifyAB = DataConverters.minifyAB;
 
     it ("strips all characters except As and Bs", function () {
       assertEqual('AAAB', minifyAB("  A3$A A__B \n  kg"));
@@ -20,7 +20,7 @@ describe("dataConverters", function () {
   });
 
   describe("minifyBinary", function () {
-    var minifyBinary = dataConverters.minifyBinary;
+    var minifyBinary = DataConverters.minifyBinary;
 
     it("strips all characters except zeroes and ones", function () {
       assertEqual('00101', minifyBinary(' 0ABX$0K\x0D10Z  TU1'));
@@ -28,7 +28,7 @@ describe("dataConverters", function () {
   });
 
   describe("minifyHex", function () {
-    var minifyHex = dataConverters.minifyHex;
+    var minifyHex = DataConverters.minifyHex;
 
     it ("strips whitespace", function () {
       assertEqual('89AB', minifyHex('89 AB'));
@@ -44,7 +44,7 @@ describe("dataConverters", function () {
   });
 
   describe("minifyDecimal", function () {
-    var minifyDecimal = dataConverters.minifyDecimal;
+    var minifyDecimal = DataConverters.minifyDecimal;
 
     it ("strips leading whitespace", function () {
       assertEqual('1 1 1', minifyDecimal('  1 1 1'));
@@ -64,7 +64,7 @@ describe("dataConverters", function () {
   });
 
   describe("formatAB", function () {
-    var formatAB = dataConverters.formatAB;
+    var formatAB = DataConverters.formatAB;
 
     it ("is identity for empty string", function () {
       assertEqual('', formatAB(''));
@@ -93,7 +93,7 @@ describe("dataConverters", function () {
   });
 
   describe("abToInt", function () {
-    var abToInt = dataConverters.abToInt;
+    var abToInt = DataConverters.abToInt;
 
     it ("converts empty string to NaN", function () {
       assert(isNaN(abToInt('')));
@@ -111,7 +111,7 @@ describe("dataConverters", function () {
   });
 
   describe("intToAB", function () {
-    var intToAB = dataConverters.intToAB;
+    var intToAB = DataConverters.intToAB;
 
     it ("converts a number to its AB representation", function () {
       var width = 4;
@@ -152,7 +152,7 @@ describe("dataConverters", function () {
   });
 
   describe("abToBinary", function () {
-    var abToBinary = dataConverters.abToBinary;
+    var abToBinary = DataConverters.abToBinary;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', abToBinary(''));
@@ -174,7 +174,7 @@ describe("dataConverters", function () {
   });
 
   describe("binaryToAB", function () {
-    var binaryToAB = dataConverters.binaryToAB;
+    var binaryToAB = DataConverters.binaryToAB;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', binaryToAB(''));
@@ -194,7 +194,7 @@ describe("dataConverters", function () {
   });
 
   describe("formatBinary", function() {
-    var formatBinary = dataConverters.formatBinary;
+    var formatBinary = DataConverters.formatBinary;
 
     it ("is identity for empty string", function () {
       assertEqual('', formatBinary(''));
@@ -223,7 +223,7 @@ describe("dataConverters", function () {
   });
 
   describe("formatHex", function() {
-    var formatHex = dataConverters.formatHex;
+    var formatHex = DataConverters.formatHex;
 
     it ("is identity for empty string", function () {
       assertEqual('', formatHex(''));
@@ -261,7 +261,7 @@ describe("dataConverters", function () {
   });
 
   describe("alignDecimal", function () {
-    var alignDecimal = dataConverters.alignDecimal;
+    var alignDecimal = DataConverters.alignDecimal;
 
     it ("is identity for empty string", function () {
       assertEqual('', alignDecimal(''));
@@ -279,7 +279,7 @@ describe("dataConverters", function () {
   });
 
   describe("binaryToInt", function () {
-    var binaryToInt = dataConverters.binaryToInt;
+    var binaryToInt = DataConverters.binaryToInt;
 
     it ("converts empty string to NaN", function () {
       assert(isNaN(binaryToInt('')));
@@ -297,7 +297,7 @@ describe("dataConverters", function () {
   });
 
   describe("intToBinary", function () {
-    var intToBinary = dataConverters.intToBinary;
+    var intToBinary = DataConverters.intToBinary;
 
     it ("converts a number to its binary representation", function () {
       var width = 4;
@@ -338,7 +338,7 @@ describe("dataConverters", function () {
   });
 
   describe("hexToInt", function () {
-    var hexToInt = dataConverters.hexToInt;
+    var hexToInt = DataConverters.hexToInt;
 
     it ("converts empty string to NaN", function () {
       assert(isNaN(hexToInt('')));
@@ -356,7 +356,7 @@ describe("dataConverters", function () {
   });
 
   describe("intToHex", function () {
-    var intToHex = dataConverters.intToHex;
+    var intToHex = DataConverters.intToHex;
 
     it ("converts a number to its hex representation", function () {
       var width = 4;
@@ -402,7 +402,7 @@ describe("dataConverters", function () {
   });
 
   describe("hexToBinary", function () {
-    var hexToBinary = dataConverters.hexToBinary;
+    var hexToBinary = DataConverters.hexToBinary;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', hexToBinary(''));
@@ -435,7 +435,7 @@ describe("dataConverters", function () {
   });
 
   describe("binaryToHex", function () {
-    var binaryToHex = dataConverters.binaryToHex;
+    var binaryToHex = DataConverters.binaryToHex;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', binaryToHex(''));
@@ -472,7 +472,7 @@ describe("dataConverters", function () {
   });
 
   describe("decimalToBinary", function () {
-    var decimalToBinary = dataConverters.decimalToBinary;
+    var decimalToBinary = DataConverters.decimalToBinary;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', decimalToBinary('', 8));
@@ -508,7 +508,7 @@ describe("dataConverters", function () {
   });
 
   describe("binaryToDecimal", function () {
-    var binaryToDecimal = dataConverters.binaryToDecimal;
+    var binaryToDecimal = DataConverters.binaryToDecimal;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', binaryToDecimal('', 8));
@@ -547,7 +547,7 @@ describe("dataConverters", function () {
   });
 
   describe("asciiToBinary", function () {
-    var asciiToBinary = dataConverters.asciiToBinary;
+    var asciiToBinary = DataConverters.asciiToBinary;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', asciiToBinary('', 8));
@@ -590,7 +590,7 @@ describe("dataConverters", function () {
   });
 
   describe("binaryToAscii", function () {
-    var binaryToAscii = dataConverters.binaryToAscii;
+    var binaryToAscii = DataConverters.binaryToAscii;
 
     it ("converts empty string to empty string", function () {
       assertEqual('', binaryToAscii('', 8));
@@ -633,8 +633,8 @@ describe("dataConverters", function () {
   });
 
   describe("binaryToBase64", function () {
-    var binaryToBase64 = dataConverters.binaryToBase64;
-    var base64ToBinary = dataConverters.base64ToBinary;
+    var binaryToBase64 = DataConverters.binaryToBase64;
+    var base64ToBinary = DataConverters.base64ToBinary;
 
     /**
      * Assert if the given base64 results are not equal. Equality is
@@ -750,7 +750,7 @@ describe("dataConverters", function () {
   });
 
   describe("binaryToAddressString", function () {
-    var binaryToAddressString = dataConverters.binaryToAddressString;
+    var binaryToAddressString = DataConverters.binaryToAddressString;
     var ipv4 = '8.8.8.8';
 
     it ("converts empty string to empty string", function () {
@@ -758,7 +758,7 @@ describe("dataConverters", function () {
     });
 
     it ("renders correctly formatted addresses", function () {
-      var addressBinary = dataConverters.hexToBinary('7F 00 00 01');
+      var addressBinary = DataConverters.hexToBinary('7F 00 00 01');
       assertEqual('127.0.0.1', binaryToAddressString(addressBinary, ipv4));
     });
 
@@ -788,13 +788,13 @@ describe("dataConverters", function () {
 
     it ("fills right address parts with zero when not enough parts exist", function () {
       var addressBinary;
-      addressBinary = dataConverters.hexToBinary('FF');
+      addressBinary = DataConverters.hexToBinary('FF');
       assertEqual('255.0.0.0', binaryToAddressString(addressBinary, ipv4));
 
-      addressBinary = dataConverters.hexToBinary('FF FF');
+      addressBinary = DataConverters.hexToBinary('FF FF');
       assertEqual('255.255.0.0', binaryToAddressString(addressBinary, ipv4));
 
-      addressBinary = dataConverters.hexToBinary('FF FF FF');
+      addressBinary = DataConverters.hexToBinary('FF FF FF');
       assertEqual('255.255.255.0', binaryToAddressString(addressBinary, ipv4));
     });
 
@@ -808,7 +808,7 @@ describe("dataConverters", function () {
   });
 
   describe("addressStringToBinary", function () {
-    var addressStringToBinary = dataConverters.addressStringToBinary;
+    var addressStringToBinary = DataConverters.addressStringToBinary;
 
     it ("converts empty string to empty string", function () {
       var addressFormat = '4.4';
@@ -873,7 +873,7 @@ describe("dataConverters", function () {
   });
 
   describe("formatBinaryForAddressHeader", function() {
-    var formatBinaryForAddressHeader = dataConverters.formatBinaryForAddressHeader;
+    var formatBinaryForAddressHeader = DataConverters.formatBinaryForAddressHeader;
 
     it ("is identity for empty string", function () {
       assertEqual('', formatBinaryForAddressHeader('', ''));
