@@ -82,7 +82,7 @@ describe("NetSimLogEntry", function () {
 
       NetSimLogEntry.create(testShard, nodeID, binary, status, function () {});
 
-      testShard.logTable.readAll(function (err, rows) {
+      testShard.logTable.refresh(function (err, rows) {
         var row = rows[0];
         var rowBinary = base64ToBinary(row.base64Binary.string, row.base64Binary.len);
         assertEqual(row.nodeID, nodeID);

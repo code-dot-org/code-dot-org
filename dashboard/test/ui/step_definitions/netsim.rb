@@ -1,7 +1,7 @@
 When /^I load netsim$/ do
   # Stage 3 puzzle 4 is the "Everything is Enabled" level, for now.
   steps %q{
-    And I am on "http://learn.code.org/s/netsim/stage/3/puzzle/4?disableCleaning=true&noautoplay=true"
+    And I am on "http://learn.code.org/s/allthethings/stage/14/puzzle/4?noautoplay=true"
     And I wait to see "#netsim-lobby-name"
   }
   steps "And I close the dialog" if @browser.find_element(:id => 'x-close') rescue false
