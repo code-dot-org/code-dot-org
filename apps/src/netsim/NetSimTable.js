@@ -28,10 +28,27 @@ var netsimGlobals = require('./netsimGlobals');
 var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
- * Minimum wait time (in milliseconds) between refresh requests.
+ * Minimum time (in ms) to wait after an invalidation event before attempting
+ * to trigger a refresh request.  This produces a window in which clustered
+ * invalidations can be captured and coalesced together.
  * @type {number}
  */
-var DEFAULT_REFRESH_THROTTLING_MS = 1000;
+var DEFAULT_MINIMUM_DELAY_BEFORE_REFRESH_MS = 250;
+
+/**
+ * Maximum additional random delay (in ms) to add before the refresh request.
+ * Helps spread out requests from different clients responding to the same
+ * invalidation events.
+ * @type {number}
+ */
+var DEFAULT_MAXIMUM_DELAY_JITTER_MS = 200;
+
+/**
+ * Minimum time (in ms) to wait between refresh requests, regardless of how
+ * many invalidation events occur.
+ * @type {number}
+ */
+var DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -46,6 +63,17 @@ var DEFAULT_REFRESH_THROTTLING_MS = 1000;
  *        TRUE, this table will only request content that is new since its
  *        last refresh, not the entire table contents.  Currently this option
  *        is not safe to use if you care about updates or deletes in the table.
+ * @param {number} [options.minimumDelayBeforeRefresh] - Minimum time (in ms)
+ *        to wait after an invalidation event before attempting to trigger a
+ *        refresh request.  This produces a window in which clustered
+ *        invalidations can be captured and coalesced together.
+ * @param {number} [options.maximumDelayJitter] - Maximum additional random
+ *        delay (in ms) to add before the refresh request.  Helps spread out
+ *        requests from different clients responding to the same invalidation
+ *        events.
+ * @param {number} [options.minimumDelayBetweenRefreshes] - Minimum time (in ms)
+ *        to wait between refresh requests, regardless of how many invalidation
+ *        events occur.
  * @constructor
  * @throws {Error} if wrong number of arguments are provided.
  */
@@ -120,6 +148,38 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   this.lastRefreshTime_ = 0;
 
   /**
+   * Minimum time (in ms) to wait after an invalidation event before attempting
+   * to trigger a refresh request.  This produces a window in which clustered
+   * invalidations can be captured and coalesced together.
+   * @private {number}
+   */
+  this.minimumDelayBeforeRefresh_ = DEFAULT_MINIMUM_DELAY_BEFORE_REFRESH_MS;
+  if (options && options.minimumDelayBeforeRefresh !== undefined) {
+    this.minimumDelayBeforeRefresh_ = options.minimumDelayBeforeRefresh;
+  }
+
+  /**
+   * Maximum additional random delay (in ms) to add before the refresh request.
+   * Helps spread out requests from different clients responding to the same
+   * invalidation events.
+   * @private {number}
+   */
+  this.maximumDelayJitter_ = DEFAULT_MAXIMUM_DELAY_JITTER_MS;
+  if (options && options.maximumDelayJitter !== undefined) {
+    this.maximumDelayJitter_ = options.maximumDelayJitter;
+  }
+
+  /**
+   * Minimum time (in ms) to wait between refresh requests, regardless of how
+   * many invalidation events occur.
+   * @private {number}
+   */
+  this.minimumDelayBetweenRefreshes_ = DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS;
+  if (options && options.minimumDelayBetweenRefreshes !== undefined) {
+    this.minimumDelayBetweenRefreshes_ = options.minimumDelayBetweenRefreshes;
+  }
+
+  /**
    * Minimum time (in milliseconds) to wait between pulling full table contents
    * from remote storage.
    * @private {number}
@@ -131,8 +191,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
    * used to coalesce refresh requests.
    * @private {function}
    */
-  this.refreshTable_ = this.makeThrottledRefresh_(
-      DEFAULT_REFRESH_THROTTLING_MS);
+  this.refreshTable_ = this.makeThrottledRefresh_();
 };
 
 /**
@@ -191,15 +250,15 @@ NetSimTable.prototype.refresh = function (callback) {
  * Generate throttled refresh function which will generate actual server
  * requests at the maximum given rate no matter how fast it is called. This
  * allows us to coalesce refreshAll events and reduce server load.
- * @param {number} minimumDelayBetweenRequests - Minimum time (in milliseconds)
- *        to wait between refreshAll requests to the server.
  * @returns {function}
  * @private
  */
-NetSimTable.prototype.makeThrottledRefresh_ = function (minimumDelayBetweenRequests) {
-  var throttledRefresh = _.throttle(this.refresh.bind(this), minimumDelayBetweenRequests);
-  var jitter = netsimGlobals.randomIntInRange(0, 250);
-  return _.debounce(throttledRefresh, 250 + jitter, {maxWait: 500 + jitter});
+NetSimTable.prototype.makeThrottledRefresh_ = function () {
+  var initialDelay = this.minimumDelayBeforeRefresh_ +
+      netsimGlobals.randomIntInRange(0, this.maximumDelayJitter_);
+  var throttledRefresh = _.throttle(this.refresh.bind(this),
+      this.minimumDelayBetweenRefreshes_);
+  return _.debounce(throttledRefresh, initialDelay, {maxWait: initialDelay});
 };
 
 /**
@@ -390,12 +449,26 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
 /**
  * Change the maximum rate at which the refresh operation for this table
  * will _actually_ be executed, no matter how fast we receive invalidations.
- * @param {number} waitMs - Minimum number of milliseconds between invalidation-
- *        triggered requests to the server.
+ * @param {number} delayMs - Minimum number of milliseconds
+ *        between invalidation-triggered requests to the server.
  */
-NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
+NetSimTable.prototype.setMinimumDelayBetweenRefreshes = function (delayMs) {
   // To do this, we just replace the throttled refresh function with a new one.
-  this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
+  this.minimumDelayBetweenRefreshes_ = delayMs;
+  this.refreshTable_ = this.makeThrottledRefresh_();
+};
+
+/**
+ * Change the minimum time (in ms) to wait after an invalidation event before
+ * attempting to trigger a refresh request.  This produces a window in which
+ * clustered invalidations can be captured and coalesced together.
+ * @param {number} delayMs - Minimum number of milliseconds between first
+ *        invalidation and request to server.
+ */
+NetSimTable.prototype.setMinimumDelayBeforeRefresh = function (delayMs) {
+  // To do this, we just replace the throttled refresh function with a new one.
+  this.minimumDelayBeforeRefresh_ = delayMs;
+  this.refreshTable_ = this.makeThrottledRefresh_();
 };
 
 /** Polls server for updates, if it's been long enough. */

@@ -31,7 +31,13 @@ describe("NetSimTable", function () {
       subscribe: function () {}
     };
     netsimTable = netsimTestUtils.overrideNetSimTableApi(
-        new NetSimTable(fakeChannel, 'testShard', 'testTable'));
+        new NetSimTable(fakeChannel, 'testShard', 'testTable', {
+          // In tests we usually want zero delay to allow fast test runs
+          // and immediate reading at any time.
+          minimumDelayBeforeRefresh: 0,
+          maximumDelayJitter: 0,
+          minimumDelayBetweenRefreshes: 0
+        }));
 
     apiTable = netsimTable.api_.remoteTable;
     callback = function () {};
@@ -173,9 +179,6 @@ describe("NetSimTable", function () {
   });
 
   it ("polls table on tick", function () {
-    // For this test, disable refresh throttling
-    netsimTable.setRefreshThrottleTime(0);
-    
     // Initial tick always triggers a poll event.
     netsimTable.tick();
     assertEqual(apiTable.log(), 'readAll');
@@ -191,10 +194,71 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), 'readAll');
   });
 
-  describe ("refreshTable_ throttling", function () {
+  describe ("initial delay coalescing", function () {
     beforeEach(function () {
-      // Re-enable 10ms refreshTable_ throttle to test throttling feature
-      netsimTable.setRefreshThrottleTime(50);
+      // Re-enable 50ms before-refresh delay to coalesce messages
+      netsimTable.setMinimumDelayBeforeRefresh(50);
+    });
+
+    it ("does not read until minimum delay passes", function (testDone) {
+      netsimTable.refreshTable_(callback);
+      assertEqual('', apiTable.log());
+      delayTest(50, testDone, function () {
+        assertEqual('readAll', apiTable.log());
+        testDone();
+      });
+    });
+
+    it ("coalesces multiple rapid requests", function (testDone) {
+      netsimTable.refreshTable_(callback);
+      netsimTable.refreshTable_(callback);
+      netsimTable.refreshTable_(callback);
+      assertEqual('', apiTable.log());
+
+      delayTest(25, testDone, function () {
+        netsimTable.refreshTable_(callback);
+        netsimTable.refreshTable_(callback);
+        netsimTable.refreshTable_(callback);
+        assertEqual('', apiTable.log());
+
+        delayTest(25, testDone, function () {
+          // Only one request at initial delay
+          assertEqual('readAll', apiTable.log());
+
+          delayTest(25, testDone, function () {
+            // Still only one request has occurred - the calls at 25ms
+            // were coalesced into the initial call.
+            assertEqual('readAll', apiTable.log());
+
+            testDone();
+          });
+        });
+      });
+    });
+
+    it ("does not coalesce if requests are far enough apart", function (testDone) {
+      netsimTable.refreshTable_(callback);
+      delayTest(50, testDone, function () {
+        assertEqual('readAll', apiTable.log());
+
+        // This kicks off another delayed request
+        netsimTable.refreshTable_(callback);
+        assertEqual('readAll', apiTable.log());
+
+        delayTest(50, testDone, function () {
+          // Both requests occur
+          assertEqual('readAllreadAll', apiTable.log());
+
+          testDone();
+        });
+      });
+    });
+  });
+
+  describe ("refresh throttling", function () {
+    beforeEach(function () {
+      // Re-enable 50ms refreshTable_ throttle to test throttling feature
+      netsimTable.setMinimumDelayBetweenRefreshes(50);
     });
 
     it ("still reads immediately on first request", function () {
@@ -271,11 +335,11 @@ describe("NetSimTable", function () {
       // New table configured for incremental refresh
       netsimTable = netsimTestUtils.overrideNetSimTableApi(
           new NetSimTable(fakeChannel, 'testShard', 'testTable', {
-            useIncrementalRefresh: true
+            useIncrementalRefresh: true,
+            minimumDelayBeforeRefresh: 0,
+            maximumDelayJitter: 0,
+            minimumDelayBetweenRefreshes: 0
           }));
-
-      // Allow multiple quick reads for testing
-      netsimTable.setRefreshThrottleTime(0);
 
       // Necessary to re-get apiTable when we recreate netsimTable
       apiTable = netsimTable.api_.remoteTable;
