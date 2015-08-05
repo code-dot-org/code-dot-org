@@ -73,27 +73,26 @@
   <button id="finished" class="btn btn-primary submitButton right">Finished! Continue to next stage</button>
 </div>
 <script>
-  var pixelationOptions = <%= raw externalOptions %>;
-  if (!pixelationOptions) {
+  if (!window.options) {
     // Default is version 3 (all features enabled).
-    pixelationOptions = {version: '3'};
+    window.options = {version: '3'};
   }
-  if (pixelationOptions.version == '1') {
+  if (options.version == '1') {
     $('.hide_on_v1').hide();
-  } else if (pixelationOptions.version == '2') {
+  } else if (options.version == '2') {
     $('.hide_on_v2').hide();
     $('#height, #width').prop('readonly', true);
   }
-  if (pixelationOptions.hex) {
+  if (options.hex) {
     $('input[name="binHex"][value="hex"]').prop('checked', true);
   }
-  if (pixelationOptions.instructions) {
-    $('#below_viz_instructions').text(pixelationOptions.instructions).show();
+  if (options.instructions) {
+    $('#below_viz_instructions').text(options.instructions).show();
   }
   pixelationInit();
 
   function pixelationDisplay() {
-    pixel_data.value = pixelationOptions.data;
+    pixel_data.value = options.data;
     drawGraph();
     formatBitDisplay();
   }
@@ -107,7 +106,7 @@
         return '';
       },
       setInitialLevelSource: function (levelSource) {
-        pixelationOptions.data = levelSource;
+        options.data = levelSource;
       },
       getLevelSource: function () {
         return pixel_data.value.replace(/[ \n]/g, "");
@@ -118,8 +117,8 @@
       // Only enable saving if the initial load succeeds. This means new work
       // will not be saved, but old work will not be erased and may become
       // available by refreshing the page.
-      pixelationOptions.saveProject = dashboard.project.save.bind(dashboard.project);
-      pixelationOptions.projectChanged = dashboard.project.projectChanged;
+      options.saveProject = dashboard.project.save.bind(dashboard.project);
+      options.projectChanged = dashboard.project.projectChanged;
       window.dashboard.project.init(projectsHandler);
     }).always(function() {
       pixelationDisplay();
