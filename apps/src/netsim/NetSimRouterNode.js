@@ -17,7 +17,7 @@
 
 var utils = require('../utils');
 var i18n = require('./locale');
-var NetSimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants_renaming');
 var NetSimUtils = require('./netsimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');

@@ -2,7 +2,7 @@
   var i18n = require('./locale');
 
   var shouldShowTab = require('./netsimUtils').shouldShowTab;
-  var NetSimTabType = require('./netsimConstants').NetSimTabType;
+  var NetSimTabType = require('./netsimConstants_renaming').NetSimTabType;
 
   var showInstructions = shouldShowTab(level, NetSimTabType.INSTRUCTIONS);
   var showMyDevice = shouldShowTab(level, NetSimTabType.MY_DEVICE);

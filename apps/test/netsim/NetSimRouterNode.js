@@ -23,7 +23,7 @@ var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var Packet = require('@cdo/apps/netsim/Packet');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
-var NetSimConstants = require('@cdo/apps/netsim/netsimConstants');
+var NetSimConstants = require('@cdo/apps/netsim/netsimConstants_renaming');
 var DataConverters = require('@cdo/apps/netsim/dataConverters_renaming');
 
 var addressStringToBinary = DataConverters.addressStringToBinary;

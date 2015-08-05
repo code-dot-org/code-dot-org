@@ -25,7 +25,7 @@ var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
 var NetSimVizWire = require('./NetSimVizWire');
 var NetSimGlobals = require('./netsimGlobals');
 var tweens = require('./tweens');
-var NetSimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants_renaming');
 var DnsMode = NetSimConstants.DnsMode;
 var NodeType = NetSimConstants.NodeType;
 

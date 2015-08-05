@@ -14,7 +14,7 @@
 'use strict';
 
 require('../utils');
-var NetSimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants_renaming');
 var NetSimUtils = require('./netsimUtils');
 var NetSimSlider = require('./NetSimSlider');
 

@@ -4,7 +4,7 @@
  *           and default values for that object.
  */
 
-var NetSimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants_renaming');
 var Packet = require('./Packet');
 var BITS_PER_NIBBLE = NetSimConstants.BITS_PER_NIBBLE;
 var MessageGranularity = NetSimConstants.MessageGranularity;

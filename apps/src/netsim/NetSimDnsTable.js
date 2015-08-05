@@ -15,7 +15,7 @@
 'use strict';
 
 var markup = require('./NetSimDnsTable.html.ejs');
-var DnsMode = require('./netsimConstants').DnsMode;
+var DnsMode = require('./netsimConstants_renaming').DnsMode;
 
 /**
  * Generator and controller for DNS network lookup table component.
