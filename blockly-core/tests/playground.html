@@ -21,6 +21,7 @@ function start() {
   goog.tweak.registerBoolean('openContractEditor', 'pre-opens contract editor', false);
   goog.tweak.registerBoolean('toggleScrollDragDebug', 'enables autoscroll debugging', false);
   goog.tweak.registerBoolean('openFunctionEditor', 'pre-opens function editor', false);
+  goog.tweak.registerBoolean('enableExampleRunning', 'enables running of examples', false);
 
   Blockly.inject(document.getElementById('blocklyDiv'), {
     rtl: rtl,
@@ -37,6 +38,9 @@ function start() {
   }
   if (goog.tweak.getBoolean('toggleScrollDragDebug')) {
     Blockly.ScrollOnBlockDragHandler.DEBUG = true;
+  }
+  if (goog.tweak.getBoolean('enableExampleRunning')) {
+    Blockly.ContractEditor.SHOW_TEST_BUTTONS = true;
   }
 }
 
