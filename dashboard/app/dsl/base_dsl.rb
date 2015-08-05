@@ -7,13 +7,19 @@ class BaseDSL
     @name = text
   end
 
+  def encrypted(text)
+    @hash[:encrypted] = '1'
+    instance_eval(Encryption::decrypt_object(text))
+  end
+
   # returns 'xyz' from 'XyzDSL' subclasses
   def prefix()
     self.class.to_s.tap{|s|s.slice!('DSL')}.underscore
   end
 
   def self.parse_file(filename, name=nil)
-    parse(File.read(filename), filename, name)
+    text = File.read(filename)
+    parse(text, filename, name)
   end
 
   def self.parse(str, filename, name=nil)
