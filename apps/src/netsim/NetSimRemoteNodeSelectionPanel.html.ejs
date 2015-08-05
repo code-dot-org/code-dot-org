@@ -2,14 +2,14 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 var NodeType = require('./netsimConstants').NodeType;
 
 /** @type {function} */
-var getAssetUrl = netsimGlobals.getAssetUrlFunction();
+var getAssetUrl = NetSimGlobals.getAssetUrlFunction();
 
 /** @type {netsimLevelConfiguration} */
-var levelConfig = netsimGlobals.getLevelConfig();
+var levelConfig = NetSimGlobals.getLevelConfig();
 
 /**
  * @typedef {Object} rowMetadata

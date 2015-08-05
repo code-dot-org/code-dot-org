@@ -18,7 +18,7 @@
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 var ArgumentUtils = require('./ArgumentUtils');
 
 /**
@@ -256,7 +256,7 @@ NetSimTable.prototype.refresh = function (callback) {
  */
 NetSimTable.prototype.makeThrottledRefresh_ = function () {
   var initialDelay = this.minimumDelayBeforeRefresh_ +
-      netsimGlobals.randomIntInRange(0, this.maximumDelayJitter_);
+      NetSimGlobals.randomIntInRange(0, this.maximumDelayJitter_);
   var throttledRefresh = _.throttle(this.refresh.bind(this),
       this.minimumDelayBetweenRefreshes_);
   return _.debounce(throttledRefresh, initialDelay, {maxWait: initialDelay});
