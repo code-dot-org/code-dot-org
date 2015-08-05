@@ -111,7 +111,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":266}],83:[function(require,module,exports){
+},{"../skins":267}],83:[function(require,module,exports){
 /*jshint multistr: true */
 
 var Direction = require('./tiles').Direction;
@@ -1965,7 +1965,7 @@ var checkFinished = function () {
 };
 
 
-},{"../StudioApp":5,"../codegen":106,"../constants":107,"../dom":108,"../dropletUtils":109,"../hammer":141,"../locale":150,"../skins":266,"../templates/page.html.ejs":294,"../timeoutList":300,"../utils":316,"./api":79,"./controls.html.ejs":82,"./locale":84,"./tiles":87,"./visualization.html.ejs":88}],88:[function(require,module,exports){
+},{"../StudioApp":5,"../codegen":106,"../constants":107,"../dom":108,"../dropletUtils":109,"../hammer":141,"../locale":150,"../skins":267,"../templates/page.html.ejs":295,"../timeoutList":301,"../utils":317,"./api":79,"./controls.html.ejs":82,"./locale":84,"./tiles":87,"./visualization.html.ejs":88}],88:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

@@ -60,7 +60,7 @@ exports.load = function(assetUrl, id) {
 };
 
 
-},{"../skins":266}],144:[function(require,module,exports){
+},{"../skins":267}],144:[function(require,module,exports){
 /**
  * Blockly App: Jigsaw
  *
@@ -317,7 +317,7 @@ Jigsaw.onPuzzleComplete = function() {
 };
 
 
-},{"../StudioApp":5,"../dom":108,"../skins":266,"../templates/page.html.ejs":294,"./controls.html.ejs":143}],143:[function(require,module,exports){
+},{"../StudioApp":5,"../dom":108,"../skins":267,"../templates/page.html.ejs":295,"./controls.html.ejs":143}],143:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){

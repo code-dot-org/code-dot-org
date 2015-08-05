@@ -55,7 +55,7 @@ NetSimClientNode.prototype.getStatus = function () {
   }
 
   // Get remote node for display name / hostname
-  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var cachedNodeRows = this.shard_.nodeTable.readAll();
   var remoteNodeRow = _.find(cachedNodeRows, function (nodeRow) {
     return nodeRow.id === outgoingWire.remoteNodeID;
   });
@@ -70,7 +70,7 @@ NetSimClientNode.prototype.getStatus = function () {
   if (remoteNodeRow && remoteNodeRow.type === NodeType.ROUTER) {
     mutualConnection = true;
   } else {
-    var cachedWireRows = this.shard_.wireTable.readAllCached();
+    var cachedWireRows = this.shard_.wireTable.readAll();
     mutualConnection = _.find(cachedWireRows, function (wireRow) {
       return wireRow.localNodeID === outgoingWire.remoteNodeID &&
           wireRow.remoteNodeID === outgoingWire.localNodeID;
@@ -101,7 +101,7 @@ NetSimClientNode.prototype.getAddress = function () {
  * @returns {NetSimWire|null} null if wire does not exist.
  */
 NetSimClientNode.prototype.getOutgoingWire = function () {
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var outgoingWireRow = _.find(cachedWireRows, function (wireRow) {
     return wireRow.localNodeID === this.entityID;
   }, this);

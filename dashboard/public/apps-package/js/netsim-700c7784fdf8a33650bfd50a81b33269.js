@@ -1,4 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({255:[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({256:[function(require,module,exports){
 var appMain = require('../appMain');
 var studioApp = require('../StudioApp').singleton;
 var NetSim = require('./netsim');
@@ -16,7 +16,7 @@ window.netsimMain = function(options) {
 };
 
 
-},{"../StudioApp":5,"../appMain":9,"./levels":253,"./netsim":256,"./skins":262}],262:[function(require,module,exports){
+},{"../StudioApp":5,"../appMain":9,"./levels":254,"./netsim":257,"./skins":263}],263:[function(require,module,exports){
 var skinBase = require('../skins');
 
 exports.load = function (assetUrl, id) {
@@ -25,7 +25,7 @@ exports.load = function (assetUrl, id) {
 };
 
 
-},{"../skins":266}],256:[function(require,module,exports){
+},{"../skins":267}],257:[function(require,module,exports){
 /**
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
@@ -1339,7 +1339,7 @@ NetSim.prototype.completeLevelAndContinue = function () {
 };
 
 
-},{"../ObservableEvent":2,"../RunLoop":4,"../utils":316,"./DashboardUser":181,"./NetSimBitLogPanel":184,"./NetSimLobby":199,"./NetSimLocalClientNode":200,"./NetSimLogPanel":204,"./NetSimLogger":205,"./NetSimRouterLogModal":222,"./NetSimRouterNode":223,"./NetSimSendPanel":229,"./NetSimShard":230,"./NetSimStatusPanel":236,"./NetSimTabsComponent":239,"./NetSimVisualization":240,"./controls.html.ejs":251,"./locale":254,"./netsimConstants":257,"./netsimGlobals":258,"./netsimUtils":260,"./page.html.ejs":261,"@cdo/shared/smallFooter":319}],261:[function(require,module,exports){
+},{"../ObservableEvent":2,"../RunLoop":4,"../utils":317,"./DashboardUser":181,"./NetSimBitLogPanel":185,"./NetSimLobby":200,"./NetSimLocalClientNode":201,"./NetSimLogPanel":205,"./NetSimLogger":206,"./NetSimRouterLogModal":223,"./NetSimRouterNode":224,"./NetSimSendPanel":230,"./NetSimShard":231,"./NetSimStatusPanel":237,"./NetSimTabsComponent":240,"./NetSimVisualization":241,"./controls.html.ejs":252,"./locale":255,"./netsimConstants":258,"./netsimGlobals":259,"./netsimUtils":261,"./page.html.ejs":262,"@cdo/shared/smallFooter":319}],262:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1361,7 +1361,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":490}],253:[function(require,module,exports){
+},{"../locale":150,"ejs":490}],254:[function(require,module,exports){
 /*jshint multistr: true */
 /**
  * @overview Type documentation for a NetSim level configuration object,
@@ -1678,7 +1678,7 @@ levels.playground = {
 };
 
 
-},{"./Packet":248,"./netsimConstants":257}],251:[function(require,module,exports){
+},{"./Packet":249,"./netsimConstants":258}],252:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -1698,7 +1698,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],240:[function(require,module,exports){
+},{"ejs":490}],241:[function(require,module,exports){
 /**
  * @overview Top-level controller for the network visualization.
  */
@@ -2087,8 +2087,8 @@ NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
  * @private
  */
 NetSimVisualization.prototype.generateBroadcastModeConnections_ = function () {
-  var nodeRows = this.shard_.nodeTable.readAllCached();
-  var wireRows = this.shard_.wireTable.readAllCached();
+  var nodeRows = this.shard_.nodeTable.readAll();
+  var wireRows = this.shard_.wireTable.readAll();
   var nodeCount = nodeRows.length;
 
   // Generate a reverse mapping for lookups
@@ -2664,7 +2664,7 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
 };
 
 
-},{"../utils":316,"./NetSimVizAutoDnsNode":241,"./NetSimVizNode":243,"./NetSimVizSimulationNode":244,"./NetSimVizSimulationWire":245,"./NetSimVizWire":246,"./NetSimWire":247,"./netsimConstants":257,"./netsimGlobals":258,"./netsimNodeFactory":259,"./tweens":263}],245:[function(require,module,exports){
+},{"../utils":317,"./NetSimVizAutoDnsNode":242,"./NetSimVizNode":244,"./NetSimVizSimulationNode":245,"./NetSimVizSimulationWire":246,"./NetSimVizWire":247,"./NetSimWire":248,"./netsimConstants":258,"./netsimGlobals":259,"./netsimNodeFactory":260,"./tweens":264}],246:[function(require,module,exports){
 /**
  * @overview Wires in the visualization that map to simulation entities.
  */
@@ -2757,7 +2757,7 @@ NetSimVizSimulationWire.prototype.kill = function () {
 };
 
 
-},{"../utils":316,"./NetSimVizNode":243,"./NetSimVizWire":246,"./netsimGlobals":258}],246:[function(require,module,exports){
+},{"../utils":317,"./NetSimVizNode":244,"./NetSimVizWire":247,"./netsimGlobals":259}],247:[function(require,module,exports){
 /**
  * @overview Wires in the visualization.
  */
@@ -3049,7 +3049,7 @@ NetSimVizWire.prototype.getWireCenterPosition = function () {
 };
 
 
-},{"../utils":316,"./NetSimVizElement":242,"./dataConverters":252,"./netsimConstants":257,"./netsimUtils":260,"./tweens":263}],244:[function(require,module,exports){
+},{"../utils":317,"./NetSimVizElement":243,"./dataConverters":253,"./netsimConstants":258,"./netsimUtils":261,"./tweens":264}],245:[function(require,module,exports){
 /**
  * @overview Nodes in the visualization that map to simulation entities.
  */
@@ -3142,7 +3142,7 @@ NetSimVizSimulationNode.prototype.kill = function () {
 };
 
 
-},{"../utils":316,"./NetSimVizNode":243,"./netsimConstants":257,"./netsimGlobals":258}],241:[function(require,module,exports){
+},{"../utils":317,"./NetSimVizNode":244,"./netsimConstants":258,"./netsimGlobals":259}],242:[function(require,module,exports){
 /**
  * @overview Visualization auto-dns node.
  */
@@ -3184,7 +3184,7 @@ var NetSimVizAutoDnsNode = module.exports = function () {
 NetSimVizAutoDnsNode.inherits(NetSimVizNode);
 
 
-},{"../utils":316,"./NetSimVizNode":243,"./netsimGlobals":258}],243:[function(require,module,exports){
+},{"../utils":317,"./NetSimVizNode":244,"./netsimGlobals":259}],244:[function(require,module,exports){
 /**
  * @overview Nodes in the visualization.
  */
@@ -3476,7 +3476,7 @@ NetSimVizNode.prototype.updateAddressDisplay = function () {
 };
 
 
-},{"../utils":316,"./NetSimVizElement":242,"./netsimConstants":257,"./netsimGlobals":258,"./netsimUtils":260,"./tweens":263}],242:[function(require,module,exports){
+},{"../utils":317,"./NetSimVizElement":243,"./netsimConstants":258,"./netsimGlobals":259,"./netsimUtils":261,"./tweens":264}],243:[function(require,module,exports){
 /**
  * @overview Base type for visible elements in the visualization.
  */
@@ -3733,7 +3733,7 @@ NetSimVizElement.prototype.snapToScale = function (newScale) {
 };
 
 
-},{"./netsimUtils":260,"./tweens":263}],263:[function(require,module,exports){
+},{"./netsimUtils":261,"./tweens":264}],264:[function(require,module,exports){
 /**
  * @overview Tween functions used to animate visualization elements.
  */
@@ -3973,7 +3973,7 @@ exports.DoAfterDelay.prototype.tick = function (clock) {
 };
 
 
-},{"../utils":316}],239:[function(require,module,exports){
+},{"../utils":317}],240:[function(require,module,exports){
 /**
  * @overview UI controller for tabs area in left column
  *           Directly controls the instructions tab, others are delegated.
@@ -4276,7 +4276,7 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
 };
 
 
-},{"./NetSimDnsTab":193,"./NetSimMyDeviceTab":211,"./NetSimRouterTab":227,"./NetSimTabsComponent.html.ejs":238,"./netsimConstants":257,"./netsimGlobals":258,"./netsimUtils":260}],238:[function(require,module,exports){
+},{"./NetSimDnsTab":194,"./NetSimMyDeviceTab":212,"./NetSimRouterTab":228,"./NetSimTabsComponent.html.ejs":239,"./netsimConstants":258,"./netsimGlobals":259,"./netsimUtils":261}],239:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4306,7 +4306,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":254,"./netsimConstants":257,"./netsimUtils":260,"ejs":490}],236:[function(require,module,exports){
+},{"./locale":255,"./netsimConstants":258,"./netsimUtils":261,"ejs":490}],237:[function(require,module,exports){
 /**
  * @overview UI component: The small expandable box above the visualization,
  *           used to show debug and diagnostic information.
@@ -4390,7 +4390,7 @@ NetSimStatusPanel.prototype.render = function (data) {
 };
 
 
-},{"../utils":316,"./NetSimPanel.js":217,"./NetSimStatusPanel.html.ejs":235}],235:[function(require,module,exports){
+},{"../utils":317,"./NetSimPanel.js":218,"./NetSimStatusPanel.html.ejs":236}],236:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -4412,7 +4412,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":254,"ejs":490}],230:[function(require,module,exports){
+},{"./locale":255,"ejs":490}],231:[function(require,module,exports){
 /**
  * @overview Represents a collection of tables that map to a particular
  *           class section's simulation, isolated from other class sections.
@@ -4452,17 +4452,82 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   this.pubSub = PubSubService.create(pubSubConfig);
   var channel = this.pubSub.subscribe(shardID);
 
-  /** @type {NetSimTable} */
+  /**
+   * Collection of client (user) nodes and router nodes on the shard.
+   * Each client node corresponds to a user (or browser tab, to be specific).
+   * Router nodes are not associated with a particular user.
+   *
+   * All entities in this table descend from NetSimNode, and can be deserialized
+   * via utilities in netsimNodeFactory
+   *
+   * Rows in this table are
+   * - inserted when a node is created (such as when a user connects)
+   * - updated for certain changes to node status or router configuration
+   * - deleted when a node is destroyed (such as when a user disconnects)
+   *
+   * @type {NetSimTable}
+   * @see {NetSimNode}
+   * @see {NetSimClientNode}
+   * @see {NetSimRouterNode}
+   * @see {NetSimLocalClientNode}
+   * @see {netsimNodeFactory}
+   */
   this.nodeTable = new NetSimTable(channel, shardID, 'n');
 
-  /** @type {NetSimTable} */
+  /**
+   * Collection of wires on the shard.  Wires document the connections between
+   * nodes and certain node metadata, like hostnames and addresses.  Wires
+   * reference node IDs, and are therefore referentially dependent on the node
+   * table.
+   *
+   * All entities in this table deserialize into NetSimWire.
+   *
+   * Rows in this table are
+   * - inserted when two nodes are connected
+   * - updated when assigning an address
+   * - deleted when two nodes are disconnected
+   *
+   * @type {NetSimTable}
+   * @see {NetSimWire}
+   */
   this.wireTable = new NetSimTable(channel, shardID, 'w');
 
-  /** @type {NetSimTable} */
+  /**
+   * Collection of messages (enqueued or in-flight) on the shard.  Messages
+   * reference node IDs, and are therefore referentially dependent on the node
+   * table.
+   *
+   * All entities in this table deserialize into NetSimMessage.
+   *
+   * Rows in this table are
+   * - inserted when a message is sent
+   * - never updated
+   * - deleted when a message is received
+   *
+   * @type {NetSimTable}
+   * @see {NetSimMessage}
+   */
   this.messageTable = new NetSimTable(channel, shardID, 'm');
 
-  /** @type {NetSimTable} */
-  this.logTable = new NetSimTable(channel, shardID, 'l');
+  /**
+   * Collection of log entries for nodes on the shard.  Logs reference node IDs,
+   * and are therefore referentially dependent on the node table (but we should
+   * change this).channel
+   *
+   * All entities in this table deserialize into NetSimLogEntry.
+   *
+   * Rows in this table are
+   * - inserted when a router routes or drops a message
+   * - never updated
+   * - never deleted
+   *
+   * @type {NetSimTable}
+   * @see {NetSimLogEntry}
+   */
+  this.logTable = new NetSimTable(channel, shardID, 'l', {
+    // This is only safe to do because we never update or delete rows in this table.
+    useIncrementalRefresh: true
+  });
   this.logTable.unsubscribe();
 };
 
@@ -4480,7 +4545,7 @@ NetSimShard.prototype.tick = function (clock) {
 };
 
 
-},{"./NetSimTable":237,"./PubSubService":250}],250:[function(require,module,exports){
+},{"./NetSimTable":238,"./PubSubService":251}],251:[function(require,module,exports){
 /**
  * @overview Wrapped pub/sub service client APIs (like Pusher)
  */
@@ -4536,18 +4601,37 @@ PubSubService.create = function (pubSubConfig) {
  */
 
 /**
+ * @function
+ * @name PubSubService#unsubscribe
+ * @param {string} channelID - Channel from which we unsubscribe.
+ */
+
+/**
  * Stub implementation of PubSub API.
  * @constructor
  * @implements PubSubService
  */
+// Disable "unused variable" errors for null implementation declarations
+/* jshint unused:false */
 PubSubService.NullService = function () { };
 
 /**
+ * Subscribe to events on a particular channel.
+ * @param {string} channelID
  * @returns {PubSubChannel}
  */
-PubSubService.NullService.prototype.subscribe = function () {
+PubSubService.NullService.prototype.subscribe = function (channelID) {
   return new PubSubChannel.NullChannel();
 };
+
+/**
+ * Unsubscribe from events on a particular channel.
+ * @param {string} channelID
+ */
+PubSubService.NullService.prototype.unsubscribe = function (channelID) { };
+
+// Re-enable "unused variable" error
+/* jshint unused:true */
 
 /**
  * Wrapped Pusher.com API.
@@ -4582,7 +4666,7 @@ PubSubService.PusherService.prototype.unsubscribe = function (channelID) {
 };
 
 
-},{"./PubSubChannel":249}],249:[function(require,module,exports){
+},{"./PubSubChannel":250}],250:[function(require,module,exports){
 /**
  * @overview Wrapped pub/sub service channel APIs (like Pusher's Channel)
  */
@@ -4631,6 +4715,13 @@ PubSubChannel.NullChannel = function () { };
  */
 PubSubChannel.NullChannel.prototype.subscribe = function (eventName, callback) { };
 
+/**
+ * Unsubscribe a given callback from a given event
+ * @param {string} eventName
+ * @param {function{}} callback
+ */
+PubSubChannel.NullChannel.prototype.unsubscribe = function (eventName, callback) { };
+
 // Re-enable "unused variable" error
 /* jshint unused:true */
 
@@ -4665,7 +4756,7 @@ PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName, callbac
 };
 
 
-},{}],237:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 /**
  * @overview Wraps remote storage interface and polling behavior.
  */
@@ -4677,7 +4768,7 @@ PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName, callbac
  unused: true,
 
  maxlen: 90,
- maxparams: 3,
+ maxparams: 4,
  maxstatements: 200
  */
 /* global $ */
@@ -4685,7 +4776,7 @@ PubSubChannel.PusherChannel.prototype.unsubscribe = function (eventName, callbac
 
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
-var clientApi = require('@cdo/shared/clientApi');
+var NetSimApi = require('./NetSimApi');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -4695,26 +4786,35 @@ var clientApi = require('@cdo/shared/clientApi');
 var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
- * Minimum wait time (in milliseconds) between readAll requests.
+ * Minimum wait time (in milliseconds) between refresh requests.
  * @type {number}
  */
 var DEFAULT_REFRESH_THROTTLING_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
- * cacheing and callbacks, which provides a notification API to the rest
+ * caching and callbacks, which provides a notification API to the rest
  * of the NetSim code.
- * @param {!PubSubChannel} channel - The pubsub channel used to listen for changes.
+ * @param {!PubSubChannel} channel - The pubsub channel used to listen
+ *        for changes to the table.cellPadding
  * @param {!string} shardID - The shard ID specific to this class' NetSim instance.
  * @param {!string} tableName - The name of the remote storage table to wrap.
+ * @param {Object} [options] - Additional table configuration options
+ * @param {boolean} [options.useIncrementalRefresh] - defaults to FALSE.  If
+ *        TRUE, this table will only request content that is new since its
+ *        last refresh, not the entire table contents.  Currently this option
+ *        is not safe to use if you care about updates or deletes in the table.
  * @constructor
  * @throws {Error} if wrong number of arguments are provided.
  */
-var NetSimTable = module.exports = function (channel, shardID, tableName) {
+var NetSimTable = module.exports = function (channel, shardID, tableName, options) {
   // Require channel, shardID and tableName to be provided
-  if (!channel || !shardID || !tableName) {
-    throw new Error('NetSimTable must be constructed with all arguments. ' +
-        '(got channel:' + channel + ' shardID:' + shardID + ' tableName:' + tableName);
+  if (!channel) {
+    throw new Error('channel is required');
+  } else if (!shardID) {
+    throw new Error('shardID is required');
+  } else if (!tableName) {
+    throw new Error('tableName is required');
   }
 
   /**
@@ -4736,16 +4836,19 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   this.channelCallback_ = undefined;
 
   /**
-   * Base URL we hit to make our API calls
-   * @private {string}
+   * If TRUE, will only request deltas from remote storage.  Currently
+   * unsafe if we care about more than inserts to the table.
+   * @type {boolean}
+   * @private
    */
-  this.remoteUrl_ = '/v3/netsim/' + shardID + '/' + tableName;
+  this.useIncrementalRefresh_ = !!(options && options.useIncrementalRefresh);
 
   /**
    * API object for making remote calls
-   * @private {ClientApi}
+   * @type {NetSimApi}
+   * @private
    */
-  this.clientApi_ = clientApi.create(this.remoteUrl_);
+  this.api_ = NetSimApi.makeTableApi(shardID, tableName);
 
   /**
    * Event that fires when full table updates indicate a change,
@@ -4761,11 +4864,18 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   this.cache_ = {};
 
   /**
+   * The row ID of the most recently inserted row retrieved from remote storage.
+   * @type {number}
+   * @private
+   */
+  this.latestRowID_ = 0;
+
+  /**
    * Unix timestamp for last time this table's cache contents were fully
    * updated.  Used to determine when to poll the server for changes.
    * @private {number}
    */
-  this.lastFullUpdateTime_ = 0;
+  this.lastRefreshTime_ = 0;
 
   /**
    * Minimum time (in milliseconds) to wait between pulling full table contents
@@ -4775,8 +4885,8 @@ var NetSimTable = module.exports = function (channel, shardID, tableName) {
   this.pollingInterval_ = DEFAULT_POLLING_DELAY_MS;
 
   /**
-   * Throttled version (specific to this instance) of the readAll operation,
-   * used to coalesce readAll requests.
+   * Throttled version (specific to this instance) of the refresh operation,
+   * used to coalesce refresh requests.
    * @private {function}
    */
   this.refreshTable_ = this.makeThrottledRefresh_(
@@ -4803,40 +4913,55 @@ NetSimTable.prototype.unsubscribe = function () {
 };
 
 /**
- * @param {!NodeStyleCallback} callback
+ * Asynchronously retrieve new/updated table content from the server, using
+ * whatever method is most appropriate to this table's configuration.
+ * When done, updates the local cache and hits the provided callback to
+ * indicate completion.
+ * @param {NodeStyleCallback} [callback] - indicates completion of the operation.
+ * @returns {jQuery.Promise} Guaranteed to resolve after the cache update,
+ *          so .done() operations can interact with the cache.
  */
-NetSimTable.prototype.readAll = function (callback) {
-  this.clientApi_.all(function (err, data) {
-    if (err === null) {
-      this.fullCacheUpdate_(data);
+NetSimTable.prototype.refresh = function (callback) {
+  callback = callback || function () {};
+
+  var apiCall = this.useIncrementalRefresh_ ?
+      this.api_.allRowsFromID.bind(this.api_, this.latestRowID_ + 1) :
+      this.api_.allRows.bind(this.api_);
+  var cacheUpdate = this.useIncrementalRefresh_ ?
+      this.incrementalCacheUpdate_.bind(this) :
+      this.fullCacheUpdate_.bind(this);
+
+  var deferred = $.Deferred();
+  apiCall(function (err, data) {
+    if (err) {
+      callback(err, data);
+      deferred.reject(err);
+    } else {
+      cacheUpdate(data);
+      callback(err, data);
+      deferred.resolve();
     }
-    callback(err, data);
-  }.bind(this));
+  });
+  return deferred.promise();
 };
 
 /**
  * Generate throttled refresh function which will generate actual server
  * requests at the maximum given rate no matter how fast it is called. This
- * allows us to coalesce readAll events and reduce server load.
+ * allows us to coalesce refresh events and reduce server load.
  * @param {number} waitMs - Minimum time (in milliseconds) to wait between
- *        readAll requests to the server.
+ *        refresh requests to the server.
  * @returns {function}
  * @private
  */
 NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
-  return _.throttle(function () {
-    this.clientApi_.all(function (err, data) {
-      if (err === null) {
-        this.fullCacheUpdate_(data);
-      }
-    }.bind(this));
-  }.bind(this), waitMs);
+  return _.throttle(this.refresh.bind(this, function () {}), waitMs);
 };
 
 /**
  * @returns {Array} all locally cached table rows
  */
-NetSimTable.prototype.readAllCached = function () {
+NetSimTable.prototype.readAll = function () {
   return this.arrayFromCache_();
 };
 
@@ -4845,7 +4970,7 @@ NetSimTable.prototype.readAllCached = function () {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.read = function (id, callback) {
-  this.clientApi_.fetch(id, function (err, data) {
+  this.api_.fetchRow(id, function (err, data) {
     if (err === null) {
       this.updateCacheRow_(id, data);
     }
@@ -4858,7 +4983,7 @@ NetSimTable.prototype.read = function (id, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.create = function (value, callback) {
-  this.clientApi_.create(value, function (err, data) {
+  this.api_.createRow(value, function (err, data) {
     if (err === null) {
       this.addRowToCache_(data);
     }
@@ -4872,7 +4997,7 @@ NetSimTable.prototype.create = function (value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.update = function (id, value, callback) {
-  this.clientApi_.update(id, value, function (err, success) {
+  this.api_.updateRow(id, value, function (err, success) {
     if (err === null) {
       this.updateCacheRow_(id, value);
     }
@@ -4885,7 +5010,7 @@ NetSimTable.prototype.update = function (id, value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.clientApi_.delete(id, function (err, success) {
+  this.api_.deleteRow(id, function (err, success) {
     if (err === null) {
       this.removeRowFromCache_(id);
     }
@@ -4899,21 +5024,16 @@ NetSimTable.prototype.delete = function (id, callback) {
  * @param id
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
-  // Client API doesn't support synchronous calls, so we manually make our API
-  // call here
-  $.ajax({
-    url: this.remoteUrl_ + '/' + id,
-    type: 'delete',
-    async: false,
-    error: function (jqXHR, textStatus, errorThrown) {
+  var async = false; // Force synchronous request
+  this.api_.deleteRow(id, function (err) {
+    if (err) {
       // Nothing we can really do with the error, as we're in the process of
       // navigating away. Throw so that high incidence rates will show up in
       // new relic.
-      throw new Error('textStatus: ' + textStatus + '; errorThrown: ' + errorThrown);
+      throw err;
     }
-  });
-
-  this.removeRowFromCache_(id);
+    this.removeRowFromCache_(id);
+  }.bind(this), async);
 };
 
 /**
@@ -4922,18 +5042,43 @@ NetSimTable.prototype.synchronousDelete = function (id) {
  */
 NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   // Rebuild entire cache
+  var maxRowID = 0;
   var newCache = allRows.reduce(function (prev, currentRow) {
     prev[currentRow.id] = currentRow;
+    if (currentRow.id > maxRowID) {
+      maxRowID = currentRow.id;
+    }
     return prev;
   }, {});
 
   // Check for changes, if anything changed notify all observers on table.
   if (!_.isEqual(this.cache_, newCache)) {
     this.cache_ = newCache;
+    this.latestRowID_ = maxRowID;
     this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 
-  this.lastFullUpdateTime_ = Date.now();
+  this.lastRefreshTime_ = Date.now();
+};
+
+/**
+ * Add and update rows in the local cache from the given set of new rows
+ * (probably retrieved from the server).
+ * @param {Array} newRows
+ * @private
+ */
+NetSimTable.prototype.incrementalCacheUpdate_ = function (newRows) {
+  if (newRows.length > 0) {
+    var maxRowID = 0;
+    newRows.forEach(function (row) {
+      this.cache_[row.id] = row;
+      maxRowID = Math.max(maxRowID, row.id);
+    }, this);
+    this.latestRowID_ = maxRowID;
+    this.tableChange.notifyObservers(this.arrayFromCache_());
+  }
+
+  this.lastRefreshTime_ = Date.now();
 };
 
 /**
@@ -4999,21 +5144,21 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
 };
 
 /**
- * Change the maximum rate at which the readAll operation for this table
- * will _actually_ be executed, no matter how fast readAll() is called.
- * @param {number} waitMs - Minimum number of milliseconds between readAll
- *        requests to the server.
+ * Change the maximum rate at which the refresh operation for this table
+ * will _actually_ be executed, no matter how fast we receive invalidations.
+ * @param {number} waitMs - Minimum number of milliseconds between invalidation-
+ *        triggered requests to the server.
  */
 NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
-  // To do this, we just replace the throttled readAll function with a new one.
+  // To do this, we just replace the throttled refresh function with a new one.
   this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
 };
 
 /** Polls server for updates, if it's been long enough. */
 NetSimTable.prototype.tick = function () {
   var now = Date.now();
-  if (now - this.lastFullUpdateTime_ > this.pollingInterval_) {
-    this.lastFullUpdateTime_ = now;
+  if (now - this.lastRefreshTime_ >= this.pollingInterval_) {
+    this.lastRefreshTime_ = now;
     this.refreshTable_();
   }
 };
@@ -5027,161 +5172,7 @@ NetSimTable.prototype.onPubSubEvent = function () {
 };
 
 
-},{"../ObservableEvent":2,"../utils":316,"@cdo/shared/clientApi":318}],318:[function(require,module,exports){
-/**
- * @file Helper API object that wraps asynchronous calls to our data APIs.
- */
-/* global $ */
-
-/**
- * Standard callback form for asynchronous operations, popularized by Node.
- * @typedef {function} NodeStyleCallback
- * @param {Error|null} error - null if the async operation was successful.
- * @param {*} result - return value for async operation.
- */
-
-/**
- * @name ClientApi
- */
-var base = {
-  /**
-   * Base URL for target API.
-   * @type {string}
-   */
-  api_base_url: "/v3/channels",
-
-  /**
-   * Request all collections.
-   * @param {NodeStyleCallback} callback - Expected result is an array of
-   *        collection objects.
-   */
-  all: function(callback) {
-    $.ajax({
-      url: this.api_base_url,
-      type: "get",
-      dataType: "json"
-    }).done(function(data, text) {
-      callback(null, data);
-    }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, null);
-    });
-  },
-
-  /**
-   * Insert a collection.
-   * @param {Object} value - collection contents, must be JSON.stringify-able.
-   * @param {NodeStyleCallback} callback - Expected result is the created
-   *        collection object (which will include an assigned 'id' key).
-   */
-  create: function(value, callback) {
-    $.ajax({
-      url: this.api_base_url,
-      type: "post",
-      contentType: "application/json; charset=utf-8",
-      data: JSON.stringify(value)
-    }).done(function(data, text) {
-      callback(null, data);
-    }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
-    });
-  },
-
-  /**
-   * Remove a collection.
-   * @param {number} id - The collection identifier.
-   * @param {NodeStyleCallback} callback - Expected result is TRUE.
-   */
-  delete: function(id, callback) {
-    $.ajax({
-      url: this.api_base_url + "/" + id + "/delete",
-      type: "post",
-      dataType: "json"
-    }).done(function(data, text) {
-      callback(null, true);
-    }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
-    });
-  },
-
-  /**
-   * Retrieve a collection.
-   * @param {number} id - The collection identifier.
-   * @param {NodeStyleCallback} callback - Expected result is the requested
-   *        collection object.
-   */
-  fetch: function(id, callback) {
-    $.ajax({
-      url: this.api_base_url + "/" + id,
-      type: "get",
-      dataType: "json",
-    }).done(function(data, text) {
-      callback(null, data);
-    }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, undefined);
-    });
-  },
-
-  /**
-   * Change the contents of a collection.
-   * @param {number} id - The collection identifier.
-   * @param {Object} value - The new collection contents.
-   * @param {NodeStyleCallback} callback - Expected result is the new collection
-   *        object.
-   */
-  update: function(id, value, callback) {
-    $.ajax({
-      url: this.api_base_url + "/" + id,
-      type: "post",
-      contentType: "application/json; charset=utf-8",
-      data: JSON.stringify(value)
-    }).done(function(data, text) {
-      callback(null, data);
-    }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
-    });
-  },
-
-
-  /**
-   * Copy to the destination collection, since we expect the destination
-   * to be empty. A true rest API would replace the destination collection:
-   * @see https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services
-   * @param {*} src - Source collection identifier.
-   * @param {*} dest - Destination collection identifier.
-   * @param {NodeStyleCallback} callback
-   */
-  copyAll: function(src, dest, callback) {
-    $.ajax({
-      url: this.api_base_url + "/" + dest + '?src=' + src,
-      type: "put"
-    }).done(function(data, text) {
-      callback(null, data);
-    }).fail(function(request, status, error) {
-      var err = new Error('status: ' + status + '; error: ' + error);
-      callback(err, false);
-    });
-  }
-};
-
-module.exports = {
-  /**
-   * Create a ClientApi instance with the given base URL.
-   * @param {!string} url - Custom API base url (e.g. '/v3/netsim')
-   * @returns {ClientApi}
-   */
-  create: function (url) {
-    return $.extend({}, base, {
-      api_base_url: url
-    });
-  }
-};
-
-},{}],229:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":317,"./NetSimApi":182}],230:[function(require,module,exports){
 /**
  * @overview UI controller for the send panel (the bottom panel on the right)
  *           which is used to transmit packets.
@@ -5765,7 +5756,7 @@ NetSimSendPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":316,"./NetSimLogger":205,"./NetSimPacketEditor":214,"./NetSimPacketSizeControl":215,"./NetSimPanel":217,"./NetSimSendPanel.html.ejs":228,"./Packet":248,"./dataConverters":252,"./locale":254,"./netsimConstants":257,"./netsimGlobals":258}],228:[function(require,module,exports){
+},{"../utils":317,"./NetSimLogger":206,"./NetSimPacketEditor":215,"./NetSimPacketSizeControl":216,"./NetSimPanel":218,"./NetSimSendPanel.html.ejs":229,"./Packet":249,"./dataConverters":253,"./locale":255,"./netsimConstants":258,"./netsimGlobals":259}],229:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5788,7 +5779,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":254,"./netsimConstants":257,"ejs":490}],227:[function(require,module,exports){
+},{"./locale":255,"./netsimConstants":258,"ejs":490}],228:[function(require,module,exports){
 /**
  * @overview UI controller for the "Router" tab in the left column.
  */
@@ -5972,7 +5963,7 @@ NetSimRouterTab.prototype.setDataRate = function (dataRateBitsPerSecond) {
 };
 
 
-},{"./NetSimBandwidthControl":182,"./NetSimMemoryControl":206,"./NetSimRouterStatsTable":225,"./NetSimRouterTab.html.ejs":226,"./netsimGlobals":258}],226:[function(require,module,exports){
+},{"./NetSimBandwidthControl":183,"./NetSimMemoryControl":207,"./NetSimRouterStatsTable":226,"./NetSimRouterTab.html.ejs":227,"./netsimGlobals":259}],227:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -5994,7 +5985,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":254,"ejs":490}],225:[function(require,module,exports){
+},{"./locale":255,"ejs":490}],226:[function(require,module,exports){
 /**
  * @overview UI component displaying router stats on the "Router" tab.
  */
@@ -6286,7 +6277,7 @@ NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) 
 };
 
 
-},{"./NetSimLogEntry":201,"./NetSimRouterStatsTable.html.ejs":224,"./netsimUtils":260}],224:[function(require,module,exports){
+},{"./NetSimLogEntry":202,"./NetSimRouterStatsTable.html.ejs":225,"./netsimUtils":261}],225:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6334,7 +6325,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":316,"./netsimUtils":260,"ejs":490}],222:[function(require,module,exports){
+},{"../utils":317,"./netsimUtils":261,"ejs":490}],223:[function(require,module,exports){
 /**
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
@@ -6521,12 +6512,17 @@ NetSimRouterLogModal.prototype.setRouter = function (router) {
 /**
  * Helper method to determine whether or we are currently in
  * "All-Router" mode, or dealing with a single router. Currently is
- * determined exclusively by the current connection state, but may later
- * be expanded to allow switching between the two.
+ * true if we are in "connected routers" mode, and is otherwise true iff
+ * we are connected to a router.
  * @returns {boolean}
  */
 NetSimRouterLogModal.prototype.isAllRouterMode = function () {
-  return !(this.router_);
+  var levelConfig = netsimGlobals.getLevelConfig();
+  if (levelConfig.connectedRouters) {
+    return true;
+  } else {
+    return !(this.router_);
+  }
 };
 
 /**
@@ -6565,7 +6561,7 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
 };
 
 
-},{"../utils":316,"./NetSimLogEntry":201,"./NetSimRouterLogModal.html.ejs":221,"./Packet":248,"./netsimGlobals":258}],221:[function(require,module,exports){
+},{"../utils":317,"./NetSimLogEntry":202,"./NetSimRouterLogModal.html.ejs":222,"./Packet":249,"./netsimGlobals":259}],222:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -6637,7 +6633,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":248,"./locale":254,"./netsimGlobals":258,"ejs":490}],215:[function(require,module,exports){
+},{"./Packet":249,"./locale":255,"./netsimGlobals":259,"ejs":490}],216:[function(require,module,exports){
 /**
  * @overview UI slider used to change maximum packet length.
  */
@@ -6716,7 +6712,7 @@ NetSimPacketSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":234,"./locale":254}],214:[function(require,module,exports){
+},{"./NetSimSlider":235,"./locale":255}],215:[function(require,module,exports){
 /**
  * @overview UI controller for the packet editor which allows editing multiple
  *           encodings at once and lives inside the send panel.
@@ -7669,7 +7665,7 @@ NetSimPacketEditor.prototype.consumeFirstBit = function () {
 };
 
 
-},{"../constants":107,"../utils":316,"./NetSimEncodingControl":197,"./NetSimLogPanel":204,"./NetSimPacketEditor.html.ejs":213,"./Packet":248,"./dataConverters":252,"./locale":254,"./netsimConstants":257,"./netsimGlobals":258}],213:[function(require,module,exports){
+},{"../constants":107,"../utils":317,"./NetSimEncodingControl":198,"./NetSimLogPanel":205,"./NetSimPacketEditor.html.ejs":214,"./Packet":249,"./dataConverters":253,"./locale":255,"./netsimConstants":258,"./netsimGlobals":259}],214:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -7742,7 +7738,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":248,"./locale":254,"./netsimConstants":257,"./netsimUtils":260,"ejs":490}],211:[function(require,module,exports){
+},{"./Packet":249,"./locale":255,"./netsimConstants":258,"./netsimUtils":261,"ejs":490}],212:[function(require,module,exports){
 /**
  * @overview UI controller for the "My Device" tab in the left column.
  */
@@ -7951,7 +7947,7 @@ NetSimMyDeviceTab.prototype.setEncodings = function (newEncodings) {
 };
 
 
-},{"./NetSimBitRateControl":185,"./NetSimChunkSizeControl":186,"./NetSimEncodingControl":197,"./NetSimMetronome":209,"./NetSimMyDeviceTab.html.ejs":210,"./NetSimPulseRateControl":218,"./netsimGlobals":258}],218:[function(require,module,exports){
+},{"./NetSimBitRateControl":186,"./NetSimChunkSizeControl":187,"./NetSimEncodingControl":198,"./NetSimMetronome":210,"./NetSimMyDeviceTab.html.ejs":211,"./NetSimPulseRateControl":219,"./netsimGlobals":259}],219:[function(require,module,exports){
 /**
  * @overview UI slider for changing the pulse rate (bitrate) of the local device.
  *           Differs from the bitrate slider in its scale and units.
@@ -8023,7 +8019,7 @@ NetSimPulseRateControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"../utils":316,"./NetSimSlider":234,"./locale":254}],210:[function(require,module,exports){
+},{"../utils":317,"./NetSimSlider":235,"./locale":255}],211:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8043,7 +8039,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],209:[function(require,module,exports){
+},{"ejs":490}],210:[function(require,module,exports){
 /**
  * @overview UI component: An animated SVG metronome.
  */
@@ -8160,7 +8156,7 @@ NetSimMetronome.prototype.setFrequency = function (pulsesPerSecond) {
 };
 
 
-},{"./NetSimMetronome.html.ejs":208}],208:[function(require,module,exports){
+},{"./NetSimMetronome.html.ejs":209}],209:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8252,7 +8248,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],206:[function(require,module,exports){
+},{"ejs":490}],207:[function(require,module,exports){
 /**
  * @overview UI slider used to control router memory size.
  */
@@ -8308,7 +8304,7 @@ NetSimMemoryControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":316,"./NetSimSlider":234,"./netsimConstants":257,"./netsimUtils":260}],204:[function(require,module,exports){
+},{"../utils":317,"./NetSimSlider":235,"./netsimConstants":258,"./netsimUtils":261}],205:[function(require,module,exports){
 /**
  * @overview UI component, a log panel (used as "Sent Packets" and
  *           "Received Packets") that is used in the packet-sending
@@ -8754,7 +8750,7 @@ NetSimLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":316,"./NetSimEncodingControl":197,"./NetSimLogPacket.html.ejs":202,"./NetSimLogPanel.html.ejs":203,"./NetSimPanel":217,"./Packet":248,"./locale":254,"./netsimGlobals":258}],203:[function(require,module,exports){
+},{"../utils":317,"./NetSimEncodingControl":198,"./NetSimLogPacket.html.ejs":203,"./NetSimLogPanel.html.ejs":204,"./NetSimPanel":218,"./Packet":249,"./locale":255,"./netsimGlobals":259}],204:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8774,7 +8770,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],202:[function(require,module,exports){
+},{"ejs":490}],203:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -8914,7 +8910,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./Packet":248,"./dataConverters":252,"./locale":254,"./netsimConstants":257,"./netsimGlobals":258,"./netsimUtils":260,"ejs":490}],200:[function(require,module,exports){
+},{"./Packet":249,"./dataConverters":253,"./locale":255,"./netsimConstants":258,"./netsimGlobals":259,"./netsimUtils":261,"ejs":490}],201:[function(require,module,exports){
 /**
  * @overview Simulation entity controller reserved for the local client's
  *           simulation node.
@@ -9081,7 +9077,7 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
   this.eventKeys.registeredOnShard = this.shard_;
 
   // Set up initial state from cached rows
-  this.onNodeTableChange_(this.shard_.nodeTable.readAllCached());
+  this.onNodeTableChange_(this.shard_.nodeTable.readAll());
 };
 
 /**
@@ -9172,14 +9168,7 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
 NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
   this.connectToNode(client, function (err, wire) {
     // Check whether WE just established a mutual connection with a remote client.
-    this.shard_.wireTable.readAll(function (err, wireRows) {
-      if (err) {
-        onComplete(err, wire);
-        return;
-      }
-      this.onWireTableChange_(wireRows);
-      onComplete(err, wire);
-    }.bind(this));
+    this.shard_.wireTable.refresh().always(onComplete.bind(null, err, wire));
   }.bind(this));
 };
 
@@ -9249,7 +9238,7 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   }
 
   // Remove messages being simulated by this node
-  var myMessages = this.shard_.messageTable.readAllCached().filter(function (row) {
+  var myMessages = this.shard_.messageTable.readAll().filter(function (row) {
     return row.simulatedBy === this.entityID;
   }, this).map(function (row) {
     return new NetSimMessage(this.shard_, row);
@@ -9569,26 +9558,24 @@ NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function (onComp
 
   // Does an asynchronous request to the message table to ensure we have
   // the latest contents
-  this.shard_.messageTable.readAll(function (err, messageRows) {
-    if (err) {
-      onComplete(err);
-      return;
-    }
+  var messageTable = this.shard_.messageTable;
+  messageTable.refresh()
+    .fail(onComplete)
+    .done(function () {
+        // We only care about rows on our (simplex) wire
+        var rowsOnWire = messageTable.readAll().filter(function (row) {
+          return this.myWire.isMessageRowOnSimplexWire(row);
+        }.bind(this));
 
-    // We only care about rows on our (simplex) wire
-    var rowsOnWire = messageRows.filter(function (row) {
-      return this.myWire.isMessageRowOnSimplexWire(row);
-    }.bind(this));
+        // If there are no rows, complete successfully but pass null result.
+        if (rowsOnWire.length === 0) {
+          onComplete(null, null);
+          return;
+        }
 
-    // If there are no rows, complete successfully but pass null result.
-    if (rowsOnWire.length === 0) {
-      onComplete(null, null);
-      return;
-    }
-
-    var lastRow = rowsOnWire[rowsOnWire.length - 1];
-    onComplete(null, new NetSimMessage(this.shard_, lastRow));
-  }.bind(this));
+        var lastRow = rowsOnWire[rowsOnWire.length - 1];
+        onComplete(null, new NetSimMessage(this.shard_, lastRow));
+      }.bind(this));
 };
 
 /**
@@ -9625,36 +9612,34 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 
   // Does an asynchronous request to the message table to ensure we have
   // the latest contents
-  this.shard_.messageTable.readAll(function (err, messageRows) {
-    if (err) {
-      onComplete(err);
-      return;
-    }
+  var messageTable = this.shard_.messageTable;
+  messageTable.refresh()
+    .fail(onComplete)
+    .done(function () {
+        // We only care about rows on our (simplex) wire
+        var rowsOnWire = messageTable.readAll().filter(function (row) {
+          return this.myWire.isMessageRowOnSimplexWire(row);
+        }, this);
 
-    // We only care about rows on our (simplex) wire
-    var rowsOnWire = messageRows.filter(function (row) {
-      return this.myWire.isMessageRowOnSimplexWire(row);
-    }, this);
+        // "Old" rows are all but the last element (the latest one)
+        var oldRowsOnWire = rowsOnWire.slice(0, -1);
 
-    // "Old" rows are all but the last element (the latest one)
-    var oldRowsOnWire = rowsOnWire.slice(0, -1);
+        // We are only in charge of deleting messages that we are simulating
+        var myOldRowsOnWire = oldRowsOnWire.filter(function (row) {
+          return row.simulatedBy === this.entityID;
+        }, this);
 
-    // We are only in charge of deleting messages that we are simulating
-    var myOldRowsOnWire = oldRowsOnWire.filter(function (row) {
-      return row.simulatedBy === this.entityID;
-    }, this);
+        // Convert to message entities so we can destroy them
+        var myOldMessagesOnWire = myOldRowsOnWire.map(function (row) {
+          return new NetSimMessage(this.shard_, row);
+        }, this);
 
-    // Convert to message entities so we can destroy them
-    var myOldMessagesOnWire = myOldRowsOnWire.map(function (row) {
-      return new NetSimMessage(this.shard_, row);
-    }, this);
-
-    NetSimEntity.destroyEntities(myOldMessagesOnWire, onComplete);
-  }.bind(this));
+        NetSimEntity.destroyEntities(myOldMessagesOnWire, onComplete);
+      }.bind(this));
 };
 
 
-},{"../ObservableEvent":2,"../utils":316,"./NetSimClientNode":187,"./NetSimEntity":198,"./NetSimLogger":205,"./NetSimMessage":207,"./NetSimRouterNode":223,"./netsimConstants":257,"./netsimGlobals":258}],199:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":317,"./NetSimClientNode":188,"./NetSimEntity":199,"./NetSimLogger":206,"./NetSimMessage":208,"./NetSimRouterNode":224,"./netsimConstants":258,"./netsimGlobals":259}],200:[function(require,module,exports){
 /**
  * @overview UI controller for lobby - handles flow for name entry, section
  *           selection, and remote node selection.
@@ -9940,29 +9925,20 @@ NetSimLobby.prototype.onShardChange_ = function (shard, myNode) {
  * @private
  */
 NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
-  this.shard_.nodeTable.readAll(function (err, rows) {
-    if (err) {
-      logger.warn("Node table read failed: " + err.message);
-      return;
-    }
-
-    this.onNodeTableChange_(rows);
-    this.shard_.wireTable.readAll(function (err, rows) {
-      if (err) {
-        logger.warn("Wire table read failed: " + err.message);
-        return;
-      }
-
-      this.onWireTableChange_(rows);
-
-      // On initial connect, if we are connecting to routers and no routers
-      // are present, add one automatically.
-      if (netsimGlobals.getLevelConfig().canConnectToRouters &&
-          !this.doesShardContainRouter()) {
-        this.addRouterToLobby();
-      }
-    }.bind(this));
-  }.bind(this));
+  $.when(this.shard_.nodeTable.refresh(), this.shard_.wireTable.refresh())
+      .fail(function (nodeErr, wireErr) {
+        if (nodeErr) {
+          logger.warn('Node table refresh failed: ' + nodeErr);
+        } else if (wireErr) {
+          logger.warn('Wire table refresh failed: ' + wireErr);
+        }
+      }.bind(this))
+      .done(function () {
+        if (netsimGlobals.getLevelConfig().canConnectToRouters &&
+            !this.doesShardContainRouter()) {
+          this.addRouterToLobby();
+        }
+      }.bind(this));
 };
 
 /**
@@ -10163,7 +10139,7 @@ NetSimLobby.prototype.getShareLink = function () {
 };
 
 
-},{"../utils":316,"./NetSimClientNode":187,"./NetSimLogger":205,"./NetSimRemoteNodeSelectionPanel":220,"./NetSimRouterNode":223,"./NetSimShardSelectionPanel":232,"./locale":254,"./netsimGlobals":258,"./netsimNodeFactory":259}],232:[function(require,module,exports){
+},{"../utils":317,"./NetSimClientNode":188,"./NetSimLogger":206,"./NetSimRemoteNodeSelectionPanel":221,"./NetSimRouterNode":224,"./NetSimShardSelectionPanel":233,"./locale":255,"./netsimGlobals":259,"./netsimNodeFactory":260}],233:[function(require,module,exports){
 /**
  * @overview Lobby UI component used for name entry and selecting a shard/class
  *           section.
@@ -10342,7 +10318,7 @@ NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
 };
 
 
-},{"../constants":107,"../utils":316,"./NetSimPanel":217,"./NetSimShardSelectionPanel.html.ejs":231,"./locale":254}],231:[function(require,module,exports){
+},{"../constants":107,"../utils":317,"./NetSimPanel":218,"./NetSimShardSelectionPanel.html.ejs":232,"./locale":255}],232:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -10374,7 +10350,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":254,"ejs":490}],223:[function(require,module,exports){
+},{"./locale":255,"ejs":490}],224:[function(require,module,exports){
 /**
  * @overview Router node simulation entity.  Also contains logic for the
  *           auto-DNS system.
@@ -11023,7 +10999,7 @@ NetSimRouterNode.prototype.getStatus = function () {
   var levelConfig = netsimGlobals.getLevelConfig();
 
   // Determine status based on cached wire data
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.entityID;
   }, this);
@@ -11040,7 +11016,7 @@ NetSimRouterNode.prototype.getStatus = function () {
     });
   }
 
-  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var cachedNodeRows = this.shard_.nodeTable.readAll();
   var connectedNodeNames = incomingWireRows.map(function (wireRow) {
     var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
       return nodeRow.id === wireRow.localNodeID;
@@ -11081,7 +11057,7 @@ NetSimRouterNode.prototype.getStatus = function () {
  */
 NetSimRouterNode.prototype.isFull = function () {
   // Determine status based on cached wire data
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.entityID;
   }, this);
@@ -11144,11 +11120,11 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
 
     // Populate router wire cache with initial data
-    var cachedWires = this.shard_.wireTable.readAllCached();
+    var cachedWires = this.shard_.wireTable.readAll();
     this.onWireTableChange_(cachedWires);
 
     // Populate router log cache with initial data
-    var cachedLogs = this.shard_.logTable.readAllCached();
+    var cachedLogs = this.shard_.logTable.readAll();
     this.onLogTableChange_(cachedLogs);
   }
 };
@@ -11238,23 +11214,22 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var shard = this.shard_;
+  var wireTable = shard.wireTable;
   var routerID = this.entityID;
-  this.shard_.wireTable.readAll(function (err, rows) {
-    if (err) {
-      onComplete(err, []);
-      return;
-    }
-
-    var myWires = rows
-        .map(function (row) {
-          return new NetSimWire(shard, row);
-        })
-        .filter(function (wire){
-          return wire.remoteNodeID === routerID;
-        });
-
-    onComplete(null, myWires);
-  });
+  wireTable.refresh()
+    .fail(function (err) {
+        onComplete(err, []);
+      })
+    .done(function () {
+        var myWires = wireTable.readAll()
+            .map(function (row) {
+              return new NetSimWire(shard, row);
+            })
+            .filter(function (wire) {
+              return wire.remoteNodeID === routerID;
+            });
+        onComplete(null, myWires);
+      }.bind(this));
 };
 
 /**
@@ -11502,7 +11477,7 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
 
   // Is it some node elsewhere on the shard?
   var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
-      this.shard_.nodeTable.readAllCached());
+      this.shard_.nodeTable.readAll());
   var node = _.find(nodes, function (node) {
     return node.getHostname() === hostname;
   });
@@ -11565,7 +11540,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
 
   // Is it a local client?
   var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
-      this.shard_.nodeTable.readAllCached());
+      this.shard_.nodeTable.readAll());
   var wireRow = _.find(this.myWireRowCache_, function (row) {
     return row.localAddress === address;
   });
@@ -12179,7 +12154,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (message, onComplete)
 };
 
 
-},{"../ObservableEvent":2,"../utils":316,"./NetSimEntity":198,"./NetSimLogEntry":201,"./NetSimLogger":205,"./NetSimMessage":207,"./NetSimNode":212,"./NetSimWire":247,"./Packet":248,"./dataConverters":252,"./locale":254,"./netsimConstants":257,"./netsimGlobals":258,"./netsimNodeFactory":259,"./netsimUtils":260}],207:[function(require,module,exports){
+},{"../ObservableEvent":2,"../utils":317,"./NetSimEntity":199,"./NetSimLogEntry":202,"./NetSimLogger":206,"./NetSimMessage":208,"./NetSimNode":213,"./NetSimWire":248,"./Packet":249,"./dataConverters":253,"./locale":255,"./netsimConstants":258,"./netsimGlobals":259,"./netsimNodeFactory":260,"./netsimUtils":261}],208:[function(require,module,exports){
 /**
  * @overview Simulation entity for a message between two nodes.
  */
@@ -12338,7 +12313,7 @@ NetSimMessage.prototype.buildRow = function () {
 };
 
 
-},{"../utils":316,"./NetSimEntity":198,"./dataConverters":252}],201:[function(require,module,exports){
+},{"../utils":317,"./NetSimEntity":199,"./dataConverters":253}],202:[function(require,module,exports){
 /**
  * @overview Simulation entity for router log entries.
  */
@@ -12549,7 +12524,7 @@ NetSimLogEntry.prototype.getTimeString = function () {
  * @returns {NetSimClientNode|NetSimRouterNode|null}
  */
 NetSimLogEntry.prototype.getOriginNode = function () {
-  var nodeRows = this.shard_.nodeTable.readAllCached();
+  var nodeRows = this.shard_.nodeTable.readAll();
   var originNodeRow = _.find(nodeRows, function (row) {
     return row.id === this.nodeID;
   }.bind(this));
@@ -12562,7 +12537,7 @@ NetSimLogEntry.prototype.getOriginNode = function () {
 };
 
 
-},{"../utils":316,"./NetSimEntity":198,"./Packet":248,"./dataConverters":252,"./locale":254,"./netsimConstants":257,"./netsimNodeFactory":259,"moment":494}],494:[function(require,module,exports){
+},{"../utils":317,"./NetSimEntity":199,"./Packet":249,"./dataConverters":253,"./locale":255,"./netsimConstants":258,"./netsimNodeFactory":260,"moment":494}],494:[function(require,module,exports){
 //! moment.js
 //! version : 2.10.3
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -15674,7 +15649,7 @@ NetSimLogEntry.prototype.getOriginNode = function () {
     return _moment;
 
 }));
-},{}],259:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 /**
  * @overview Utility methods for generating the right kinds of node controllers
  *           from raw node table rows.
@@ -15732,7 +15707,7 @@ netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
 };
 
 
-},{"./NetSimClientNode":187,"./NetSimRouterNode":223,"./netsimConstants":257}],248:[function(require,module,exports){
+},{"./NetSimClientNode":188,"./NetSimRouterNode":224,"./netsimConstants":258}],249:[function(require,module,exports){
 /**
  * @overview Utility class for encoding and decoding simulated packets.
  */
@@ -16097,7 +16072,7 @@ Packet.Encoder.prototype.concatenateBinary = function (binaryHeaders, body) {
 };
 
 
-},{"./dataConverters":252,"./netsimGlobals":258,"./netsimUtils":260}],220:[function(require,module,exports){
+},{"./dataConverters":253,"./netsimGlobals":259,"./netsimUtils":261}],221:[function(require,module,exports){
 /**
  * @overview Lobby table UI component.
  * @see NetSimLobby for usage.
@@ -16347,7 +16322,7 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
 
 
 
-},{"../utils":316,"./NetSimPanel":217,"./NetSimRemoteNodeSelectionPanel.html.ejs":219,"./locale":254,"./netsimConstants":257,"./netsimGlobals":258}],219:[function(require,module,exports){
+},{"../utils":317,"./NetSimPanel":218,"./NetSimRemoteNodeSelectionPanel.html.ejs":220,"./locale":255,"./netsimConstants":258,"./netsimGlobals":259}],220:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -16585,7 +16560,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../utils":316,"./locale":254,"./netsimConstants":257,"./netsimGlobals":258,"ejs":490}],193:[function(require,module,exports){
+},{"../utils":317,"./locale":255,"./netsimConstants":258,"./netsimGlobals":259,"ejs":490}],194:[function(require,module,exports){
 /**
  * @overview UI controller for the DNS tab in the left column.
  */
@@ -16711,7 +16686,7 @@ NetSimDnsTab.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsManualControl":189,"./NetSimDnsModeControl":191,"./NetSimDnsTab.html.ejs":192,"./NetSimDnsTable":195,"./netsimConstants":257,"./netsimGlobals":258}],195:[function(require,module,exports){
+},{"./NetSimDnsManualControl":190,"./NetSimDnsModeControl":192,"./NetSimDnsTab.html.ejs":193,"./NetSimDnsTable":196,"./netsimConstants":258,"./netsimGlobals":259}],196:[function(require,module,exports){
 /**
  * @overview UI table of local subnet, displaying hostname => address map.
  */
@@ -16789,7 +16764,7 @@ NetSimDnsTable.prototype.setDnsTableContents = function (tableContents) {
 };
 
 
-},{"./NetSimDnsTable.html.ejs":194,"./netsimConstants":257}],194:[function(require,module,exports){
+},{"./NetSimDnsTable.html.ejs":195,"./netsimConstants":258}],195:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -16832,7 +16807,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./netsimConstants":257,"ejs":490}],192:[function(require,module,exports){
+},{"./netsimConstants":258,"ejs":490}],193:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -16852,7 +16827,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],191:[function(require,module,exports){
+},{"ejs":490}],192:[function(require,module,exports){
 /**
  * @overview UI component used to select a DNS mode at runtime.
  */
@@ -16942,7 +16917,7 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
 };
 
 
-},{"./NetSimDnsModeControl.html.ejs":190,"./netsimConstants":257}],190:[function(require,module,exports){
+},{"./NetSimDnsModeControl.html.ejs":191,"./netsimConstants":258}],191:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -16973,7 +16948,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":254,"./netsimConstants":257,"ejs":490}],189:[function(require,module,exports){
+},{"./locale":255,"./netsimConstants":258,"ejs":490}],190:[function(require,module,exports){
 /**
  * @overview UI button used become the current DNS node in manual DNS mode.
  */
@@ -17042,7 +17017,7 @@ NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
 };
 
 
-},{"./NetSimDnsManualControl.html.ejs":188}],188:[function(require,module,exports){
+},{"./NetSimDnsManualControl.html.ejs":189}],189:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -17062,7 +17037,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],187:[function(require,module,exports){
+},{"ejs":490}],188:[function(require,module,exports){
 /**
  * @overview Simulated client node.
  */
@@ -17120,7 +17095,7 @@ NetSimClientNode.prototype.getStatus = function () {
   }
 
   // Get remote node for display name / hostname
-  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var cachedNodeRows = this.shard_.nodeTable.readAll();
   var remoteNodeRow = _.find(cachedNodeRows, function (nodeRow) {
     return nodeRow.id === outgoingWire.remoteNodeID;
   });
@@ -17135,7 +17110,7 @@ NetSimClientNode.prototype.getStatus = function () {
   if (remoteNodeRow && remoteNodeRow.type === NodeType.ROUTER) {
     mutualConnection = true;
   } else {
-    var cachedWireRows = this.shard_.wireTable.readAllCached();
+    var cachedWireRows = this.shard_.wireTable.readAll();
     mutualConnection = _.find(cachedWireRows, function (wireRow) {
       return wireRow.localNodeID === outgoingWire.remoteNodeID &&
           wireRow.remoteNodeID === outgoingWire.localNodeID;
@@ -17166,7 +17141,7 @@ NetSimClientNode.prototype.getAddress = function () {
  * @returns {NetSimWire|null} null if wire does not exist.
  */
 NetSimClientNode.prototype.getOutgoingWire = function () {
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var outgoingWireRow = _.find(cachedWireRows, function (wireRow) {
     return wireRow.localNodeID === this.entityID;
   }, this);
@@ -17188,7 +17163,7 @@ NetSimClientNode.get = function (nodeID, shard, onComplete) {
 };
 
 
-},{"../utils":316,"./NetSimEntity":198,"./NetSimNode":212,"./NetSimWire":247,"./locale":254,"./netsimConstants":257}],212:[function(require,module,exports){
+},{"../utils":317,"./NetSimEntity":199,"./NetSimNode":213,"./NetSimWire":248,"./locale":255,"./netsimConstants":258}],213:[function(require,module,exports){
 /**
  * @overview A base class for all simulation node entities.
  */
@@ -17345,7 +17320,7 @@ NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
 
-},{"../utils":316,"./NetSimEntity":198,"./NetSimWire":247,"./locale":254}],247:[function(require,module,exports){
+},{"../utils":317,"./NetSimEntity":199,"./NetSimWire":248,"./locale":255}],248:[function(require,module,exports){
 /**
  * @overview Simulation Entity: A connection between two nodes and related
  *           metadata.
@@ -17473,7 +17448,7 @@ NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
 };
 
 
-},{"../utils":316,"./NetSimEntity":198}],198:[function(require,module,exports){
+},{"../utils":317,"./NetSimEntity":199}],199:[function(require,module,exports){
 /**
  * @overview base class for all simulation entities.
  */
@@ -17623,7 +17598,7 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
 };
 
 
-},{}],186:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 /**
  * @overview UI slider used to change the local device's chunk size, which
  *           is used when interpreting binary to other formats.
@@ -17687,7 +17662,7 @@ NetSimChunkSizeControl.prototype.valueToShortLabel = function (val) {
 };
 
 
-},{"./NetSimSlider":234,"./locale":254}],185:[function(require,module,exports){
+},{"./NetSimSlider":235,"./locale":255}],186:[function(require,module,exports){
 /**
  * @overview UI slider used to change the local device's bitrate.
  *           Differs from the pulse rate slider in scale and units.
@@ -17744,7 +17719,7 @@ NetSimBitRateControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":316,"./NetSimSlider":234,"./netsimUtils":260}],184:[function(require,module,exports){
+},{"../utils":317,"./NetSimSlider":235,"./netsimUtils":261}],185:[function(require,module,exports){
 /**
  * @overview UI component, a log panel (used as "Sent Bits" and "Received Bits")
  *           that is used in the single-bit-sending configurations of the simulator.
@@ -17996,7 +17971,7 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
 };
 
 
-},{"../utils":316,"./NetSimBitLogPanel.html.ejs":183,"./NetSimEncodingControl":197,"./NetSimLogger":205,"./NetSimPanel":217,"./locale":254,"./netsimGlobals":258}],258:[function(require,module,exports){
+},{"../utils":317,"./NetSimBitLogPanel.html.ejs":184,"./NetSimEncodingControl":198,"./NetSimLogger":206,"./NetSimPanel":218,"./locale":255,"./netsimGlobals":259}],259:[function(require,module,exports){
 /**
  * @overview Global singleton used to simplify certain cross-cutting concerns,
  *           including:
@@ -35743,7 +35718,7 @@ if (module && module.exports) {
 
 
 
-},{}],217:[function(require,module,exports){
+},{}],218:[function(require,module,exports){
 /**
  * @overview base class for all "panels" (visual boxes) in the NetSim
  *           interface, provides some common expand/collapse functionality.
@@ -35932,7 +35907,7 @@ NetSimPanel.prototype.getBody = function () {
 };
 
 
-},{"../utils":316,"./NetSimPanel.html.ejs":216}],216:[function(require,module,exports){
+},{"../utils":317,"./NetSimPanel.html.ejs":217}],217:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -35952,7 +35927,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],197:[function(require,module,exports){
+},{"ejs":490}],198:[function(require,module,exports){
 /**
  * @overview UI controller for set of radio buttons used to select display encodings.
  */
@@ -36079,7 +36054,7 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
 };
 
 
-},{"./NetSimEncodingControl.html.ejs":196,"./netsimConstants":257}],196:[function(require,module,exports){
+},{"./NetSimEncodingControl.html.ejs":197,"./netsimConstants":258}],197:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -36114,7 +36089,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":254,"./netsimConstants":257,"ejs":490}],183:[function(require,module,exports){
+},{"./locale":255,"./netsimConstants":258,"ejs":490}],184:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -36161,7 +36136,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./dataConverters":252,"./locale":254,"./netsimConstants":257,"./netsimUtils":260,"ejs":490}],252:[function(require,module,exports){
+},{"./dataConverters":253,"./locale":255,"./netsimConstants":258,"./netsimUtils":261,"ejs":490}],253:[function(require,module,exports){
 /**
  * @overview Provides utility methods for converting user data between
  *           different encodings, and formatting those encodings: binary,
@@ -36684,7 +36659,7 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
 };
 
 
-},{"../utils":316,"./netsimUtils":260,"Base64":320}],320:[function(require,module,exports){
+},{"../utils":317,"./netsimUtils":261,"Base64":320}],320:[function(require,module,exports){
 ;(function () {
 
   var object = typeof exports != 'undefined' ? exports : this; // #8: web workers
@@ -36747,7 +36722,7 @@ exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
 
 }());
 
-},{}],182:[function(require,module,exports){
+},{}],183:[function(require,module,exports){
 /**
  * @overview UI Slider control used for changing simulated router bandwidth.
  */
@@ -36804,7 +36779,7 @@ NetSimBandwidthControl.prototype.valueToLabel = function (val) {
 };
 
 
-},{"../utils":316,"./NetSimSlider":234,"./netsimConstants":257,"./netsimUtils":260}],260:[function(require,module,exports){
+},{"../utils":317,"./NetSimSlider":235,"./netsimConstants":258,"./netsimUtils":261}],261:[function(require,module,exports){
 /**
  * @overview Static helper methods for NetSim.
  */
@@ -37181,7 +37156,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
 
 
 
-},{"../utils":316,"./NetSimLogger":205,"./locale":254,"./netsimConstants":257}],205:[function(require,module,exports){
+},{"../utils":317,"./NetSimLogger":206,"./locale":255,"./netsimConstants":258}],206:[function(require,module,exports){
 /**
  * @overview Utility class wrapping more granular log behavior that isn't
  * available in all browsers.  Also makes it easy to turn logging on and off
@@ -37339,7 +37314,7 @@ NetSimLogger.prototype.log = function (message, logLevel /*=INFO*/) {
 };
 
 
-},{}],257:[function(require,module,exports){
+},{}],258:[function(require,module,exports){
 /**
  * @overview Constants and enums used across Internet Simulator.
  */
@@ -37494,7 +37469,7 @@ exports.PacketUIColumnType = {
 };
 
 
-},{}],234:[function(require,module,exports){
+},{}],235:[function(require,module,exports){
 /**
  * @overview Base implementation of NetSim UI sliders.
  */
@@ -37994,13 +37969,13 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (pos) 
 };
 
 
-},{"../utils":316,"./NetSimSlider.html.ejs":233,"./locale":254}],254:[function(require,module,exports){
+},{"../utils":317,"./NetSimSlider.html.ejs":234,"./locale":255}],255:[function(require,module,exports){
 // locale for netsim
 
 module.exports = window.blockly.netsim_locale;
 
 
-},{}],233:[function(require,module,exports){
+},{}],234:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -38020,7 +37995,240 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":490}],181:[function(require,module,exports){
+},{"ejs":490}],182:[function(require,module,exports){
+/**
+ * @overview Wraps NetSim REST APIs for operations of "tables" and "shards."
+ * @see net_sim_api.rb
+ */
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+
+ maxlen: 90,
+ maxparams: 3,
+ maxstatements: 200
+ */
+/* global $ */
+'use strict';
+
+/**
+ * @type {string}
+ * @const
+ */
+var NETSIM_API_BASE_URL = '/v3/netsim';
+
+/**
+ * @name NetSimShardApi
+ */
+var shardApi = {
+
+  /**
+   * Create an initialized NetSim Shard API instance.
+   * @param {string} shardID
+   * @returns {NetSimShardApi}
+   */
+  create: function (shardID) {
+    return $.extend({}, shardApi, {
+
+      /**
+       * Shard identifier.
+       * @type {string}
+       */
+      shardID: shardID,
+
+      /**
+       * Beginning part of URL for all calls that interact with the shard.
+       * @type {string}
+       */
+      baseUrl: NETSIM_API_BASE_URL + '/' + shardID
+    });
+  },
+
+  makeTableApi: function (tableName) {
+    return tableApi.create(this.shardID, tableName);
+  }
+};
+
+/**
+ * @name NetSimTableApi
+ */
+var tableApi = {
+
+  /**
+   * Create an initialized NetSim Table API instance.
+   * @param {string} shardID
+   * @param {string} tableName
+   * @returns {NetSimTableApi}
+   */
+  create: function (shardID, tableName) {
+    return $.extend({}, tableApi, {
+
+      /**
+       * Shard identifier.
+       * @type {string}
+       */
+      shardID: shardID,
+
+      /**
+       * Table name.
+       * @type {string}
+       */
+      tableName: tableName,
+
+      /**
+       * Beginning part of URL for all calls that interact only with
+       * this table.
+       * @type {string}
+       */
+      baseUrl: NETSIM_API_BASE_URL + '/' + shardID + '/' + tableName
+    });
+  },
+
+  /**
+   * Request all rows from the given table.
+   * @param {NodeStyleCallback} callback - Expected result is an array of
+   *        row objects.
+   */
+  allRows: function(callback) {
+    $.ajax({
+      url: this.baseUrl,
+      type: "get",
+      dataType: "json"
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, null);
+    });
+  },
+
+  /**
+   * Request all rows including and following the given row ID from the table.
+   * @param {int} rowID - lower bound on row IDs to fetch
+   * @param {NodeStyleCallback} callback - Expected result is an array of
+   *        table rows.
+   */
+  allRowsFromID: function(rowID, callback) {
+    $.ajax({
+      url: this.baseUrl + '@' + rowID,
+      type: "get",
+      dataType: "json"
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, null);
+    });
+  },
+
+  /**
+   * Insert a row into the table.
+   * @param {Object} value - desired row contents, must be JSON.stringify-able.
+   * @param {NodeStyleCallback} callback - Expected result is the created
+   *        row object (which will include an assigned 'id' key).
+   */
+  createRow: function(value, callback) {
+    $.ajax({
+      url: this.baseUrl,
+      type: "post",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(value)
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
+    });
+  },
+
+  /**
+   * Remove a row.
+   * @param {number} id - The row identifier.
+   * @param {NodeStyleCallback} callback - Expected result is TRUE.
+   * @param {boolean} [async] - default TRUE.  Pass FALSE only in special
+   *        onUnload cleanup attempt.
+   */
+  deleteRow: function(id, callback, async) {
+    async = async !== false; // `undefined` maps to true
+
+    $.ajax({
+      url: this.baseUrl + "/" + id + "/delete",
+      type: "post",
+      dataType: "json",
+      async: async
+    }).done(function(data, text) {
+      callback(null, true);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
+  },
+
+  /**
+   * Retrieve a row.
+   * @param {number} id - The row identifier.
+   * @param {NodeStyleCallback} callback - Expected result is the requested
+   *        row object.
+   */
+  fetchRow: function(id, callback) {
+    $.ajax({
+      url: this.baseUrl + "/" + id,
+      type: "get",
+      dataType: "json"
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, undefined);
+    });
+  },
+
+  /**
+   * Change the contents of a row.
+   * @param {number} id - The row identifier.
+   * @param {Object} value - The new row contents.
+   * @param {NodeStyleCallback} callback - Expected result is the new row object.
+   */
+  updateRow: function(id, value, callback) {
+    $.ajax({
+      url: this.baseUrl + "/" + id,
+      type: "post",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(value)
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
+  }
+};
+
+module.exports = {
+  /**
+   * Create a NetSim Shard API instance for the given shard.
+   * @param {string} shardID
+   * @returns {NetSimShardApi}
+   */
+  makeShardApi: function (shardID) {
+    return shardApi.create(shardID);
+  },
+
+  /**
+   * Create a NetSim Table API instance for the given shard and table name.
+   * @param {string} shardID
+   * @param {string} tableName
+   * @returns {NetSimTableApi}
+   */
+  makeTableApi: function (shardID, tableName) {
+    return tableApi.create(shardID, tableName);
+  }
+};
+
+
+},{}],181:[function(require,module,exports){
 /**
  * @overview Interface to dashboard user data API.
  */
@@ -38395,4 +38603,4 @@ ObservableEvent.prototype.notifyObservers = function () {
   });
 };
 
-},{}]},{},[255]);
+},{}]},{},[256]);
