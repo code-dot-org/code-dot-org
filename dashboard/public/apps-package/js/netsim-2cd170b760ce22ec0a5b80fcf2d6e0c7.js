@@ -8495,8 +8495,19 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
 
 /**
  * Put a message into the log.
+ * @param {string} packetBinary
+ * @param {number} packetID
  */
-NetSimLogPanel.prototype.log = function (packetBinary) {
+NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
+
+  var packetAlreadyInLog = this.packets_.some(function (packet) {
+    return packet.packetID == packetID;
+  });
+
+  if (packetAlreadyInLog) {
+    return;
+  }
+
   // Remove all packets that are beyond our maximum size
   this.packets_
       .splice(this.maximumLogPackets_ - 1, this.packets_.length)
@@ -8504,7 +8515,7 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
         packet.getRoot().remove();
       });
 
-  var newPacket = new NetSimLogPacket(packetBinary, {
+  var newPacket = new NetSimLogPacket(packetBinary, packetID, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
     chunkSize: this.currentChunkSize_,
@@ -8570,7 +8581,13 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * @param {function} options.markAsReadCallback
  * @constructor
  */
-var NetSimLogPacket = function (packetBinary, options) {
+var NetSimLogPacket = function (packetBinary, packetID, options) {
+
+  /**
+   * @type {number}
+   */
+  this.packetID = packetID;
+
   /**
    * @type {string}
    * @private
@@ -9351,7 +9368,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         payload: payload,
         extraHopsRemaining: extraHops
       },
-      function (err) {
+      function (err, row) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
               JSON.stringify(payload));
@@ -9366,7 +9383,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
             '\nhops: ' + extraHops);
 
         if (self.sentLog_) {
-          self.sentLog_.log(payload);
+          self.sentLog_.log(payload, row.id);
         }
         onComplete(null);
       }.bind(this)
@@ -9566,7 +9583,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
-    this.receivedLog_.log(message.payload);
+    this.receivedLog_.log(message.payload, message.entityID);
   }
 };
 
