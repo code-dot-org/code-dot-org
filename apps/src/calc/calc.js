@@ -774,7 +774,7 @@ Calc.checkExamples_ = function () {
     // TODO
     outcome.message = 'You need at least one example in function ' + exampleless +
       '. Make sure each example has a call and a result';
-    return;
+    return outcome;
   }
 
   var unfilled = studioApp.getUnfilledFunctionalExample();
@@ -993,6 +993,9 @@ Calc.step = function (animationDepth) {
 
 function clearSvgUserExpression() {
   var g = document.getElementById('userExpression');
+  if (!g) {
+    return;
+  }
   // remove all existing children, in reverse order so that we don't have to
   // worry about indexes changing
   for (var i = g.childNodes.length - 1; i >= 0; i--) {
