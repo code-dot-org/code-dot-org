@@ -1,9 +1,5 @@
 var testUtils = require('../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-var blockUtils = require('@cdo/apps/block_utils');
-var commonMsg = require('@cdo/apps/locale');
-
-// TODO - do something similar for calc (and probably ultimately studio)
 
 var solutionBlocks = '' +
   '<block type="functional_definition" inline="false" movable="false">' +
@@ -69,7 +65,6 @@ module.exports = {
         testResult: TestResults.EXAMPLE_FAILED
       },
       customValidator: function (assert) {
-        debugger;
         assert.equal(Eval.message, 'You need at least one example in function ' +
           'green-triangle. Make sure each example has a call and a result');
         return true;
@@ -200,9 +195,5 @@ module.exports = {
         solutionBlocks +
         '</xml>'
     }
-
-    // TODO
-
-    // no examples when examplesRequired
   ]
 };
