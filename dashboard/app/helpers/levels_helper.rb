@@ -129,6 +129,8 @@ module LevelsHelper
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.pixelation?
 
+    view_options(is_channel_backed: true) if @level.channel_backed?
+
     return blockly_options if @level.is_a? Blockly
     Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
   end
