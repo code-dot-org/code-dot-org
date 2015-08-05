@@ -14,7 +14,7 @@
  */
 'use strict';
 
-var NetSimUtils = require('./netsimUtils');
+var NetSimUtils = require('./netsimUtils_renaming');
 var DataConverters = require('./dataConverters_renaming');
 var NetSimGlobals = require('./netsimGlobals_renaming');
 
