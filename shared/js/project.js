@@ -80,6 +80,12 @@ var projects = module.exports = {
   // as configuration parameters which are passed in by the caller.
   //////////////////////////////////////////////////////////////////////
 
+  // TODO(dave): extract isAutosaveEnabled and any boolean helper
+  // functions below to become properties on appOptions.project.
+  // Projects behavior should ultimately be fully configurable by
+  // properties on appOptions.project, rather than reaching out
+  // into global state to make decisions.
+
   /**
    * @returns {boolean} true if we're editing
    */
@@ -363,14 +369,7 @@ var projects = module.exports = {
       }
       var pathInfo = parsePath();
 
-      // External levels which have a channel id should fetch the data in that
-      // channel from the server. In other cases, appOptions.channel is assumed to
-      // contain no data and will only be used later when data is saved back
-      // to the server.
-      var channelId = pathInfo.channelId ||
-          (appOptions.isExternalProjectLevel && appOptions.channel);
-
-      if (channelId) {
+      if (pathInfo.channelId) {
         if (pathInfo.action === 'edit') {
           isEditing = true;
         } else {
@@ -379,7 +378,7 @@ var projects = module.exports = {
 
         // Load the project ID, if one exists
         deferred = new $.Deferred();
-        channels.fetch(channelId, function (err, data) {
+        channels.fetch(pathInfo.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
             location.href = location.pathname.split('/')
