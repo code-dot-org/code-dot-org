@@ -19,6 +19,7 @@ var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
 var netsimGlobals = require('./netsimGlobals');
+var ArgumentUtils = require('./ArgumentUtils');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -76,16 +77,13 @@ var DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS = 1000;
  *        events occur.
  * @constructor
  * @throws {Error} if wrong number of arguments are provided.
+ * @throws {TypeError} if invalid types are passed in the options object.
  */
 var NetSimTable = module.exports = function (channel, shardID, tableName, options) {
-  // Require channel, shardID and tableName to be provided
-  if (!channel) {
-    throw new Error('channel is required');
-  } else if (!shardID) {
-    throw new Error('shardID is required');
-  } else if (!tableName) {
-    throw new Error('tableName is required');
-  }
+  ArgumentUtils.validateRequired(channel, 'channel');
+  ArgumentUtils.validateRequired(shardID, 'shardID', ArgumentUtils.isString);
+  ArgumentUtils.validateRequired(tableName, 'tableName', ArgumentUtils.isString);
+  options = ArgumentUtils.extendOptionsObject(options);
 
   /**
    * @private {string}
@@ -104,14 +102,6 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
    * @private {function{}}
    */
   this.channelCallback_ = undefined;
-
-  /**
-   * If TRUE, will only request deltas from remote storage.  Currently
-   * unsafe if we care about more than inserts to the table.
-   * @type {boolean}
-   * @private
-   */
-  this.useIncrementalRefresh_ = !!(options && options.useIncrementalRefresh);
 
   /**
    * API object for making remote calls
@@ -148,15 +138,26 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   this.lastRefreshTime_ = 0;
 
   /**
+   * If TRUE, will only request deltas from remote storage.  Currently
+   * unsafe if we care about more than inserts to the table.
+   * @type {boolean}
+   * @private
+   */
+  this.useIncrementalRefresh_ = options.get(
+      'useIncrementalRefresh',
+      ArgumentUtils.isBoolean,
+      false);
+
+  /**
    * Minimum time (in ms) to wait after an invalidation event before attempting
    * to trigger a refresh request.  This produces a window in which clustered
    * invalidations can be captured and coalesced together.
    * @private {number}
    */
-  this.minimumDelayBeforeRefresh_ = DEFAULT_MINIMUM_DELAY_BEFORE_REFRESH_MS;
-  if (options && options.minimumDelayBeforeRefresh !== undefined) {
-    this.minimumDelayBeforeRefresh_ = options.minimumDelayBeforeRefresh;
-  }
+  this.minimumDelayBeforeRefresh_ = options.get(
+      'minimumDelayBeforeRefresh',
+      ArgumentUtils.isPositiveNoninfiniteNumber,
+      DEFAULT_MINIMUM_DELAY_BEFORE_REFRESH_MS);
 
   /**
    * Maximum additional random delay (in ms) to add before the refresh request.
@@ -164,20 +165,20 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
    * invalidation events.
    * @private {number}
    */
-  this.maximumDelayJitter_ = DEFAULT_MAXIMUM_DELAY_JITTER_MS;
-  if (options && options.maximumDelayJitter !== undefined) {
-    this.maximumDelayJitter_ = options.maximumDelayJitter;
-  }
+  this.maximumDelayJitter_ = options.get(
+      'maximumDelayJitter',
+      ArgumentUtils.isPositiveNoninfiniteNumber,
+      DEFAULT_MAXIMUM_DELAY_JITTER_MS);
 
   /**
    * Minimum time (in ms) to wait between refresh requests, regardless of how
    * many invalidation events occur.
    * @private {number}
    */
-  this.minimumDelayBetweenRefreshes_ = DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS;
-  if (options && options.minimumDelayBetweenRefreshes !== undefined) {
-    this.minimumDelayBetweenRefreshes_ = options.minimumDelayBetweenRefreshes;
-  }
+  this.minimumDelayBetweenRefreshes_ = options.get(
+      'minimumDelayBetweenRefreshes',
+      ArgumentUtils.isPositiveNoninfiniteNumber,
+      DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS);
 
   /**
    * Minimum time (in milliseconds) to wait between pulling full table contents
