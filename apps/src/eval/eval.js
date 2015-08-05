@@ -484,10 +484,20 @@ Eval.checkExamples_ = function (resetPlayspace) {
   //   return;
   // }
 
+  var exampleless = studioApp.getFunctionWithoutExample();
+  if (exampleless) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EXAMPLE_FAILED;
+    // TODO
+    Eval.message = 'You need at least one example in function ' + exampleless +
+      '. Make sure each example has a call and a result';
+    return;
+  }
+
   var unfilled = studioApp.getUnfilledFunctionalExample();
   if (unfilled) {
     Eval.result = false;
-    Eval.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    Eval.testResults = TestResults.EXAMPLE_FAILED;
     // TODO
     var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
       .getTitleValue('NAME');

@@ -767,10 +767,20 @@ Calc.checkExamples_ = function () {
   //   return outcome;
   // }
 
+  var exampleless = studioApp.getFunctionWithoutExample();
+  if (exampleless) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    // TODO
+    outcome.message = 'You need at least one example in function ' + exampleless +
+      '. Make sure each example has a call and a result';
+    return;
+  }
+
   var unfilled = studioApp.getUnfilledFunctionalExample();
   if (unfilled) {
     outcome.result = ResultType.FAILURE;
-    outcome.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
     // TODO
     var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
       .getTitleValue('NAME');
