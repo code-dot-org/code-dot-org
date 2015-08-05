@@ -35,10 +35,6 @@ class LevelsController < ApplicationController
     if @level.is_a? Grid
       @level.maze_data = @level.class.unparse_maze(@level.properties)
     end
-    if @level.is_a? DSLDefined
-      @filename = @level.filename
-      @dsl_file = File.read(@filename) if @filename && File.exist?(@filename)
-    end
   end
 
   # Action for using blockly workspace as a toolbox/startblock editor.
@@ -236,8 +232,10 @@ class LevelsController < ApplicationController
       :level_num,
       :user,
       :dsl_text,
+      :encrypted,
       {concept_ids: []},
-      {soft_buttons: []}
+      {soft_buttons: []},
+      {examples: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select

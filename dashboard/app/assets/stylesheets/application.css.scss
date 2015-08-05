@@ -1506,6 +1506,15 @@ a.download-video {
   }
 }
 
+.content-level {
+  #markdown.teacher {
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}
+
 #current-script-levels, #all-levels {
   min-height: 50px;
   li {
