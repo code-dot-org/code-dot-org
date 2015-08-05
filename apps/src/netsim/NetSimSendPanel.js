@@ -39,7 +39,7 @@ var logger = require('./NetSimLogger').getSingleton();
 /**
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSim} netsim
  * @constructor
  * @augments NetSimPanel
@@ -48,7 +48,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
     netsim) {
 
   /**
-   * @type {netsimLevelConfiguration}
+   * @type {NetSimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
