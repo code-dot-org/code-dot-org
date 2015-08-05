@@ -1,7 +1,7 @@
 <%
   var netsimConstants = require('./netsimConstants');
   var NetSimGlobals = require('./netsimGlobals');
-  var dataConverters = require('./dataConverters');
+  var DataConverters = require('./dataConverters');
   var i18n = require('./locale');
   var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
   var Packet = require('./Packet');
@@ -11,20 +11,20 @@
   var EncodingType = netsimConstants.EncodingType;
   var PacketUIColumnType = netsimConstants.PacketUIColumnType;
 
-  var formatAB = dataConverters.formatAB;
-  var formatBinary = dataConverters.formatBinary;
-  var formatHex = dataConverters.formatHex;
-  var alignDecimal = dataConverters.alignDecimal;
-  var binaryToAB = dataConverters.binaryToAB;
-  var binaryToInt = dataConverters.binaryToInt;
-  var binaryToHex = dataConverters.binaryToHex;
-  var binaryToDecimal = dataConverters.binaryToDecimal;
-  var binaryToAscii = dataConverters.binaryToAscii;
+  var formatAB = DataConverters.formatAB;
+  var formatBinary = DataConverters.formatBinary;
+  var formatHex = DataConverters.formatHex;
+  var alignDecimal = DataConverters.alignDecimal;
+  var binaryToAB = DataConverters.binaryToAB;
+  var binaryToInt = DataConverters.binaryToInt;
+  var binaryToHex = DataConverters.binaryToHex;
+  var binaryToDecimal = DataConverters.binaryToDecimal;
+  var binaryToAscii = DataConverters.binaryToAscii;
   var binaryToAddressString = function (binaryString) {
-    return dataConverters.binaryToAddressString(binaryString, level.addressFormat);
+    return DataConverters.binaryToAddressString(binaryString, level.addressFormat);
   };
   var formatBinaryForAddressHeader = function (binaryString) {
-    return dataConverters.formatBinaryForAddressHeader(binaryString, level.addressFormat);
+    return DataConverters.formatBinaryForAddressHeader(binaryString, level.addressFormat);
   };
 
   /** @type {Packet} */

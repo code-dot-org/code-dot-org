@@ -5,17 +5,17 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var assert = testUtils.assert;
 
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
-var dataConverters = require('@cdo/apps/netsim/dataConverters');
+var DataConverters = require('@cdo/apps/netsim/dataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 
 /** binary to ascii */
 function to_a(binary) {
-  return dataConverters.binaryToAscii(binary, 8);
+  return DataConverters.binaryToAscii(binary, 8);
 }
 
 /** ascii to binary */
 function to_b(ascii) {
-  return dataConverters.asciiToBinary(ascii, 8);
+  return DataConverters.asciiToBinary(ascii, 8);
 }
 
 describe("NetSimLogPanel", function () {

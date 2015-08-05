@@ -24,10 +24,10 @@ var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var Packet = require('@cdo/apps/netsim/Packet');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
-var dataConverters = require('@cdo/apps/netsim/dataConverters');
+var DataConverters = require('@cdo/apps/netsim/dataConverters');
 
-var addressStringToBinary = dataConverters.addressStringToBinary;
-var asciiToBinary = dataConverters.asciiToBinary;
+var addressStringToBinary = DataConverters.addressStringToBinary;
+var asciiToBinary = DataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
 var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
@@ -1671,7 +1671,7 @@ describe("NetSimRouterNode", function () {
             toAddress: clientB.getAddress(),
             fromAddress: clientA.getAddress()
           }),
-          dataConverters.asciiToBinary('wop'));
+          DataConverters.asciiToBinary('wop'));
       clientA.sendMessage(packetBinary, function () {});
 
       // t=0; nothing has happened yet
@@ -1708,7 +1708,7 @@ describe("NetSimRouterNode", function () {
             toAddress: routerB.getAddress(),
             fromAddress: clientA.getAddress()
           }),
-          dataConverters.asciiToBinary('flop'));
+          DataConverters.asciiToBinary('flop'));
       clientA.sendMessage(packetBinary, function () {});
 
       // t=0; nothing has happened yet
@@ -1756,7 +1756,7 @@ describe("NetSimRouterNode", function () {
             toAddress: clientB.getAddress(),
             fromAddress: clientA.getAddress()
           }),
-          dataConverters.asciiToBinary('wop'));
+          DataConverters.asciiToBinary('wop'));
       clientA.sendMessage(packetBinary, function () {});
 
       // t=0; nothing has happened yet
@@ -1807,7 +1807,7 @@ describe("NetSimRouterNode", function () {
             toAddress: clientB.getAddress(),
             fromAddress: clientA.getAddress()
           }),
-          dataConverters.asciiToBinary('wop'));
+          DataConverters.asciiToBinary('wop'));
       clientA.sendMessage(packetBinary, function () {});
 
       // t=0; nothing has happened yet
@@ -1863,7 +1863,7 @@ describe("NetSimRouterNode", function () {
             toAddress: clientB.getAddress(),
             fromAddress: clientA.getAddress()
           }),
-          dataConverters.asciiToBinary('wop'));
+          DataConverters.asciiToBinary('wop'));
       clientA.sendMessage(packetBinary, function () {});
 
       // t=0; nothing has happened yet
@@ -1918,7 +1918,7 @@ describe("NetSimRouterNode", function () {
               toAddress: clientB.getAddress(),
               fromAddress: clientA.getAddress()
             }),
-            dataConverters.asciiToBinary('wop'));
+            DataConverters.asciiToBinary('wop'));
         clientA.sendMessage(packetBinary, function () {});
         tickUntilLogsStabilize(clientA);
       };
@@ -1994,7 +1994,7 @@ describe("NetSimRouterNode", function () {
             toAddress: clientB.getAddress(),
             fromAddress: clientA.getAddress()
           }),
-          dataConverters.asciiToBinary('wop'));
+          DataConverters.asciiToBinary('wop'));
       clientA.sendMessage(packetBinary, function () {});
 
       // t=0; nothing has happened yet

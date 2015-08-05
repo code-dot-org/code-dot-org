@@ -21,10 +21,10 @@ var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
 var netsimNodeFactory = require('./netsimNodeFactory');
-var dataConverters = require('./dataConverters');
-var formatBinary = dataConverters.formatBinary;
-var base64ToBinary = dataConverters.base64ToBinary;
-var binaryToBase64 = dataConverters.binaryToBase64;
+var DataConverters = require('./dataConverters');
+var formatBinary = DataConverters.formatBinary;
+var base64ToBinary = DataConverters.base64ToBinary;
+var binaryToBase64 = DataConverters.binaryToBase64;
 var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
 
 /**

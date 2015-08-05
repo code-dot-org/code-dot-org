@@ -15,7 +15,7 @@
 'use strict';
 
 var netsimUtils = require('./netsimUtils');
-var dataConverters = require('./dataConverters');
+var DataConverters = require('./dataConverters');
 var NetSimGlobals = require('./netsimGlobals');
 
 /**
@@ -192,7 +192,7 @@ Packet.Encoder.prototype.getHeader = function (key, binary) {
   var ruleIndex = 0, binaryIndex = 0;
 
   // Strip whitespace so we don't worry about being passed formatted binary
-  binary = dataConverters.minifyBinary(binary);
+  binary = DataConverters.minifyBinary(binary);
 
   while (this.headerSpec_[ruleIndex] !== key) {
     binaryIndex += this.getFieldBitWidth(this.headerSpec_[ruleIndex]);
@@ -224,7 +224,7 @@ Packet.Encoder.prototype.getHeader = function (key, binary) {
  * @returns {number} - requested field, interpreted as an int.
  */
 Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
-  return dataConverters.binaryToInt(this.getHeader(key, binary));
+  return DataConverters.binaryToInt(this.getHeader(key, binary));
 };
 
 /**
@@ -235,7 +235,7 @@ Packet.Encoder.prototype.getHeaderAsInt = function (key, binary) {
  * @returns {string}
  */
 Packet.Encoder.prototype.getHeaderAsAddressString = function (key, binary) {
-  return dataConverters.binaryToAddressString(
+  return DataConverters.binaryToAddressString(
       this.getHeader(key, binary), this.addressFormat_);
 };
 
@@ -246,7 +246,7 @@ Packet.Encoder.prototype.getHeaderAsAddressString = function (key, binary) {
  * @returns {string} packet body binary string
  */
 Packet.Encoder.prototype.getBody = function (binary) {
-  return dataConverters.minifyBinary(binary)
+  return DataConverters.minifyBinary(binary)
       .slice(this.getHeaderLength());
 };
 
@@ -267,7 +267,7 @@ Packet.Encoder.prototype.getHeaderLength = function () {
  *        recommended to use 8 for normal ASCII.
  */
 Packet.Encoder.prototype.getBodyAsAscii = function (binary, bitsPerChar) {
-  return dataConverters.binaryToAscii(this.getBody(binary), bitsPerChar);
+  return DataConverters.binaryToAscii(this.getBody(binary), bitsPerChar);
 };
 
 /**
@@ -303,7 +303,7 @@ Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
       if (Packet.isAddressField(headerField)) {
         binaryHeaders[headerField] = this.addressStringToBinary(headers[headerField]);
       } else {
-        binaryHeaders[headerField] = dataConverters.intToBinary(
+        binaryHeaders[headerField] = DataConverters.intToBinary(
             headers[headerField], this.getFieldBitWidth(headerField));
       }
     }
@@ -318,7 +318,7 @@ Packet.Encoder.prototype.makeBinaryHeaders = function (headers) {
  * @returns {string} binary representation
  */
 Packet.Encoder.prototype.addressStringToBinary = function (address) {
-  return dataConverters.addressStringToBinary(address, this.addressFormat_);
+  return DataConverters.addressStringToBinary(address, this.addressFormat_);
 };
 
 /**

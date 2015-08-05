@@ -17,12 +17,12 @@ require('../utils');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
-var dataConverters = require('./dataConverters');
+var DataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
 
 var EncodingType = netsimConstants.EncodingType;
 
-var binaryToAB = dataConverters.binaryToAB;
+var binaryToAB = DataConverters.binaryToAB;
 
 /**
  * How far the flying label should rest above the wire.
