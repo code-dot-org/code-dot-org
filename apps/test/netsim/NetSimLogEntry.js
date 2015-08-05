@@ -5,7 +5,7 @@ var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var Packet = require('@cdo/apps/netsim/Packet');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
@@ -119,8 +119,8 @@ describe("NetSimLogEntry", function () {
   });
 
   it ("can extract binary data based on standard format", function () {
-    netsimGlobals.getLevelConfig().addressFormat = '4';
-    netsimGlobals.getLevelConfig().packetCountBitWidth = 4;
+    NetSimGlobals.getLevelConfig().addressFormat = '4';
+    NetSimGlobals.getLevelConfig().packetCountBitWidth = 4;
     var logEntry = new NetSimLogEntry(null, {
       base64Binary: binaryToBase64('000100100011010001010110')
     }, [

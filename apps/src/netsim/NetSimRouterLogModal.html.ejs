@@ -1,9 +1,9 @@
 <%
 var Packet = require('./Packet');
 var i18n = require('./locale');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
-var headerFields = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+var headerFields = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
 
 /** @type {boolean} */
 var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
