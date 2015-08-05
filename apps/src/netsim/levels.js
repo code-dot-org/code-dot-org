@@ -14,7 +14,7 @@ var NetSimTabType = NetSimConstants.NetSimTabType;
 
 /**
  * A level configuration that can be used by NetSim
- * @typedef {Object} netsimLevelConfiguration
+ * @typedef {Object} NetSimLevelConfiguration
  *
  * @property {string} instructions - Inherited from blockly level configuration.
  *
@@ -178,7 +178,7 @@ var levels = module.exports = {};
  * A default level configuration so that we can define the others by delta.
  * This default configuration enables everything possible, so other configs
  * should start with this one and disable features.
- * @type {netsimLevelConfiguration}
+ * @type {NetSimLevelConfiguration}
  */
 levels.custom = {
 
@@ -247,7 +247,7 @@ levels.custom = {
 /**
  * Special level configuration for use with 'grunt dev' standalone mode.
  * Never used when serving NetSim levels through dashboard.
- * @type {netsimLevelConfiguration}
+ * @type {NetSimLevelConfiguration}
  */
 levels.playground = {
 
