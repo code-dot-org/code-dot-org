@@ -51,7 +51,7 @@ function drawGraph() {
   }
 
   var w, h, bitsPerPix = 1;
-  if (options.version == '1') {
+  if (pixelationOptions.version == '1') {
     w = widthText.value;
     h = heightText.value;
   } else {
@@ -62,7 +62,7 @@ function drawGraph() {
     heightText.value = heightRange.value = h;
     binCode = binCode.substring(16, binCode.length);
 
-    if (options.version != '2') {
+    if (pixelationOptions.version != '2') {
       bitsPerPix = binToInt(readByte(binCode, 0));
       bitsPerPixelText.value = bitsPerPix;
       bitsPerPixelRange.value = bitsPerPix;
@@ -94,7 +94,7 @@ function drawGraph() {
       }
     }
 
-    options.projectChanged && options.projectChanged();
+    pixelationOptions.projectChanged && pixelationOptions.projectChanged();
   }
 
   var colorNums = bitsToColors(binCode, bitsPerPix);
@@ -147,12 +147,12 @@ function formatBits(bitString, chunkSize, chunksPerLine) {
   var justBits = bitString.replace(/[ \n]/g, "");
   var formattedBits = "";
 
-  if (options.version != '1') {
+  if (pixelationOptions.version != '1') {
     // First break out first 2 bytes (width, height).
     if (isHex()) {
       formattedBits += justBits.substr(0, 2) + "\n";
       formattedBits += justBits.substr(2, 2) + "\n";
-      if (options.version == '3') {
+      if (pixelationOptions.version == '3') {
         // Break out the next byte (bits per pixel)
         formattedBits += justBits.substr(4, 2) + "\n";
         justBits = justBits.substr(6);
@@ -163,7 +163,7 @@ function formatBits(bitString, chunkSize, chunksPerLine) {
       // Binary.
       formattedBits += justBits.substr(0, 4) + " " + justBits.substr(4, 4) + "\n";
       formattedBits += justBits.substr(8, 4) + " " + justBits.substr(12, 4) + "\n";
-      if (options.version == '3') {
+      if (pixelationOptions.version == '3') {
         formattedBits += justBits.substr(16, 4) + " " + justBits.substr(20, 4) + "\n";
         justBits = justBits.substr(24);
       } else {
@@ -321,7 +321,7 @@ function changeVal(elementID) {
   // Make textbox value match slider value.
   document.getElementById(elementID).value = val;
 
-  if (options.version != '1') {
+  if (pixelationOptions.version != '1') {
     updateBinaryDataToMatchSliders();
     formatBitDisplay();
   }
@@ -334,7 +334,7 @@ function setSliders() {
   widthRange.value = widthText.value;
   bitsPerPixelRange.value = bitsPerPixelText.value;
 
-  if (options.version != '1') {
+  if (pixelationOptions.version != '1') {
     updateBinaryDataToMatchSliders();
     formatBitDisplay();
   }
@@ -354,7 +354,7 @@ function updateBinaryDataToMatchSliders() {
   }
 
   var newBits = widthByte + heightByte;
-  if (options.version == '3') {
+  if (pixelationOptions.version == '3') {
     newBits += bppByte;
     if (justBits.length > 24) {
       newBits += justBits.substring(24);
@@ -383,5 +383,5 @@ function showPNG() {
   var w = window.open(canvas.toDataURL(), 'ShowImageWindow',
       "width=" + canvas.width + ", height=" + canvas.height + ", left=100, menubar=0, titlebar=0, scrollbars=0");
   w.focus();
-  options.saveProject && options.saveProject();
+  pixelationOptions.saveProject && pixelationOptions.saveProject();
 }
