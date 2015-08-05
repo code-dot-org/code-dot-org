@@ -3808,6 +3808,21 @@ en:
         Prove it works!: Prove it works!
       U3L25 Assessment:
         'Compound Conditionals: Assessment': 'Compound Conditionals: Assessment'
+      U3L25 Free Response 1:
+        Enter answer here: Enter answer here
+        Enter prompt here: Enter prompt here
+        Enter title here: Enter title here
+        'String and Substring: Assessment 3': 'String and Substring: Assessment 3'
+      U3L25 Free Response 2:
+        Enter answer here: Enter answer here
+        Enter prompt here: Enter prompt here
+        Enter title here: Enter title here
+        'String and Substring: Assessment 2': 'String and Substring: Assessment 2'
+      U3L25 Free Response 3:
+        Enter answer here: Enter answer here
+        Enter prompt here: Enter prompt here
+        Enter title here: Enter title here
+        'String and Substring: Assessment 4': 'String and Substring: Assessment 4'
       U3L25 Free Response Getting Started:
         'Compound Conditionals: Getting Started': 'Compound Conditionals: Getting Started'
       U3L25 Free Response Wrap Up:
@@ -3815,6 +3830,7 @@ en:
       U3L26 Free Response Getting Started:
         'String and Substring: Getting Started': 'String and Substring: Getting Started'
       U3L26 Free Response Wrap Up:
+        'String and Substring: Assessment 1': 'String and Substring: Assessment 1'
         'String and Substring: Wrap Up': 'String and Substring: Wrap Up'
       U3L27 Assessment1:
         Chatbot Challenge Reflection 1: Chatbot Challenge Reflection 1

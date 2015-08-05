@@ -7056,7 +7056,9 @@ StudioApp.prototype.configureDom = function (config) {
       config.level.disableVariableEditing = false;
     }
     if (config.pinWorkspaceToBottom) {
-      document.body.style.overflow = "hidden";
+      var bodyElement = document.body;
+      bodyElement.style.overflow = "hidden";
+      bodyElement.className = bodyElement.className + " pin_bottom";
       container.className = container.className + " pin_bottom";
       visualizationColumn.className = visualizationColumn.className + " pin_bottom";
       codeWorkspace.className = codeWorkspace.className + " pin_bottom";
@@ -7335,6 +7337,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(config.level.defaultNumExampleBlocks, 2),
     scrollbars: config.level.scrollbars,
+    hasVerticalScrollbars: config.hasVerticalScrollbars,
+    hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
     readOnly: utils.valueOr(config.readonlyWorkspace, false)
   };

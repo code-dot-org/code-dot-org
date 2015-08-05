@@ -33,3 +33,19 @@ goog.require('Blockly.JavaScript.math');
 goog.require('Blockly.JavaScript.procedures');
 goog.require('Blockly.JavaScript.text');
 goog.require('Blockly.JavaScript.variables');
+
+/**
+ * @returns {Element}
+ */
+Blockly.Test.initializeBlockSpaceEditor = function () {
+  var container = document.createElement('div');
+  document.body.appendChild(container);
+  container.style.width = 500 + 'px';
+  container.style.height = 500 + 'px';
+  Blockly.assetUrl = function(){return ''};
+  Blockly.Css.inject(container);
+  Blockly.hasVerticalScrollbars = true;
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
+  return container;
+};

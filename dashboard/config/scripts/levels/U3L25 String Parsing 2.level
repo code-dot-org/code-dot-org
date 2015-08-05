@@ -79,8 +79,8 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "instructions": "Use str.length to find the length of the strings “Hello World”, “Computer science rocks\", and “I promise to do my homework every day.”",
-    "markdown_instructions": "## Challenge 2.1\r\n\r\nUse <samp>str.length</samp> to find the length of the following strings:\r\n\r\n1. <samp>“Hello World”</samp>\r\n\r\n1. <samp>“Computer science rocks\"</samp>\r\n\r\n1. <samp>“I promise to do my homework every day.”</samp>\r\n"
+    "instructions": "Use str.length to find the length of the strings “Hello World”, “Computer science rocks!\", and “I promise to do my homework every day.”",
+    "markdown_instructions": "## Challenge 2.1\r\n\r\nUse <samp>str.length</samp> to find the length of the following strings:\r\n\r\n1. <samp>“Hello World”</samp>\r\n\r\n1. <samp>“Computer science rocks!\"</samp>\r\n\r\n1. <samp>“I promise to do my homework every day.”</samp>\r\n"
   }
 }]]></config>
   <blocks/>
