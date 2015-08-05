@@ -6,6 +6,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeStorageTable = netsimTestUtils.fakeStorageTable;
 
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 
 /**
  * Helper method for introducing a delay in your test method.
@@ -35,7 +36,7 @@ describe("NetSimTable", function () {
           // In tests we usually want zero delay to allow fast test runs
           // and immediate reading at any time.
           minimumDelayBeforeRefresh: 0,
-          maximumDelayJitter: 0,
+          maximumJitterDelay: 0,
           minimumDelayBetweenRefreshes: 0
         }));
 
@@ -208,27 +209,27 @@ describe("NetSimTable", function () {
       });
     });
 
-    describe ("maximumDelayJitter", function () {
+    describe ("maximumJitterDelay", function () {
       it ("accepts `undefined`", function () {
         var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-          maximumDelayJitter: undefined
+          maximumJitterDelay: undefined
         });
       });
 
       it ("accepts ordinary numbers > 0", function () {
         var _a = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-          maximumDelayJitter: 50.354
+          maximumJitterDelay: 50.354
         });
 
         var _b = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-          maximumDelayJitter: 0
+          maximumJitterDelay: 0
         });
       });
 
       it ("rejects negative numbers", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-            maximumDelayJitter: -88
+            maximumJitterDelay: -88
           });
         });
       });
@@ -236,7 +237,7 @@ describe("NetSimTable", function () {
       it ("rejects `null`", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-            maximumDelayJitter: null
+            maximumJitterDelay: null
           });
         });
       });
@@ -244,7 +245,7 @@ describe("NetSimTable", function () {
       it ("rejects strings", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-            maximumDelayJitter: "twenty hours"
+            maximumJitterDelay: "twenty hours"
           });
         });
       });
@@ -252,7 +253,7 @@ describe("NetSimTable", function () {
       it ("rejects objects", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-            maximumDelayJitter: {}
+            maximumJitterDelay: {}
           });
         });
       });
@@ -260,13 +261,13 @@ describe("NetSimTable", function () {
       it ("rejects Infinities", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-            maximumDelayJitter: Infinity
+            maximumJitterDelay: Infinity
           });
         });
 
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-            maximumDelayJitter: -Infinity
+            maximumJitterDelay: -Infinity
           });
         });
       });
@@ -274,7 +275,7 @@ describe("NetSimTable", function () {
       it ("rejects NaN", function () {
         assertThrows(TypeError, function () {
           var _ = new NetSimTable(fakeChannel, 'shardID', 'tableName', {
-            maximumDelayJitter: NaN
+            maximumJitterDelay: NaN
           });
         });
       });
@@ -625,6 +626,64 @@ describe("NetSimTable", function () {
     });
   });
 
+  describe ("refresh jitter", function () {
+    beforeEach(function () {
+      // Re-enable 50ms jitter to test random refresh delays.
+      netsimTable.setMaximumJitterDelay(50);
+    });
+
+    it ("waits a random amount of time before reading on each request", function (testDone) {
+      NetSimGlobals.setRandomSeed('Jitter test 1');
+      // With this seed, the refresh fires sometime between 30-40ms.
+
+      netsimTable.refresh();
+      delayTest(30, testDone, function () {
+        assertEqual('', apiTable.log());
+
+        delayTest(10, testDone, function () {
+          assertEqual('readAll', apiTable.log());
+          testDone();
+        });
+      });
+    });
+
+    it ("second example (different random seed)", function (testDone) {
+      NetSimGlobals.setRandomSeed('Jitter test 2');
+      // With this seed, the refresh fires almost immediately - in under 10 ms.
+
+      netsimTable.refresh();
+      assertEqual('', apiTable.log());
+
+      delayTest(10, testDone, function () {
+        assertEqual('readAll', apiTable.log());
+        testDone();
+      });
+    });
+
+    it ("recalculated for every refresh", function (testDone) {
+      NetSimGlobals.setRandomSeed('Jitter test 3');
+      // Without request coalescing, we start two requests at the same time,
+      // but they will actually fire with different random delays.
+
+      netsimTable.refresh();
+      netsimTable.refresh();
+
+      // Neither fires instantly
+      assertEqual('', apiTable.log());
+
+      // First one has fired after 20ms
+      delayTest(20, testDone, function () {
+        assertEqual('readAll', apiTable.log());
+
+        // Second has fired after 20ms more
+        delayTest(20, testDone, function () {
+          assertEqual('readAllreadAll', apiTable.log());
+          testDone();
+        });
+      });
+    });
+  });
+
   describe ("incremental update", function () {
 
     beforeEach(function () {
@@ -633,7 +692,7 @@ describe("NetSimTable", function () {
           new NetSimTable(fakeChannel, 'testShard', 'testTable', {
             useIncrementalRefresh: true,
             minimumDelayBeforeRefresh: 0,
-            maximumDelayJitter: 0,
+            maximumJitterDelay: 0,
             minimumDelayBetweenRefreshes: 0
           }));
 

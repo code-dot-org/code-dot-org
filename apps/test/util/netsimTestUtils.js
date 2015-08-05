@@ -201,7 +201,7 @@ exports.fakeShard = function () {
   // behavior of these parameters.
   var defaultTestTableConfig = {
     minimumDelayBeforeRefresh: 0,
-    maximumDelayJitter: 0,
+    maximumJitterDelay: 0,
     minimumDelayBetweenRefreshes: 0
   };
 
