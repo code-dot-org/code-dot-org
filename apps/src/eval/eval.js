@@ -161,7 +161,18 @@ Eval.init = function(config) {
   studioApp.init(config);
 };
 
-function testEvalExample(exampleBlock) {
+/**
+ * @param {Blockly.Block}
+ * @param {boolean} [appInitiate] True if this test was initiated by the app
+ *   rather than via the contract editor
+ * @returns {string}
+ */
+function testEvalExample(exampleBlock, appInitiated) {
+  if (!appInitiated) {
+    studioApp.resetButtonClick();
+    Eval.resetButtonClick();
+  }
+
   Eval.clearCanvasWithID("test-call");
   Eval.clearCanvasWithID("test-result");
   Eval.clearCanvasWithID('user');
@@ -176,6 +187,16 @@ function testEvalExample(exampleBlock) {
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
     var actualDrawer = getDrawableFromBlock(actualBlock);
     var expectedDrawer = getDrawableFromBlock(expectedBlock);
+
+    if (!actualBlock || !actualDrawer ||
+        actualDrawer instanceof CustomEvalError) {
+      throw new Error('Invalid Call Block');
+    }
+
+    if (!expectedBlock || !expectedDrawer ||
+        expectedDrawer instanceof CustomEvalError) {
+      throw new Error('Invalid Result Block');
+    }
 
     actualDrawer.draw(document.getElementById("test-call"));
     expectedDrawer.draw(document.getElementById("test-result"));
@@ -202,9 +223,9 @@ Eval.runButtonClick = function() {
 };
 
 Eval.clearCanvasWithID = function (canvasID) {
-  var user = document.getElementById(canvasID);
-  while (user.firstChild) {
-    user.removeChild(user.firstChild);
+  var element = document.getElementById(canvasID);
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
   }
 };
 /**
@@ -212,9 +233,13 @@ Eval.clearCanvasWithID = function (canvasID) {
  * called first.
  */
 Eval.resetButtonClick = function () {
+  resetEvalExample();
   Eval.clearCanvasWithID('user');
   Eval.feedbackImage = null;
   Eval.encodedFeedbackImage = null;
+  Eval.result = ResultType.UNSET;
+  Eval.testResults = TestResults.NO_TESTS_RUN;
+  Eval.message = undefined;
 };
 
 /**
@@ -406,9 +431,13 @@ Eval.execute = function() {
       Eval.testResults = TestResults.APP_SPECIFIC_FAIL;
       Eval.message = evalMsg.wrongBooleanError();
     } else {
-      // We got an EvalImage back, compare it to our target
-      Eval.result = canvasesMatch('user', 'answer');
-      Eval.testResults = studioApp.getTestResults(Eval.result);
+      Eval.checkExamples_();
+
+      // Haven't run into any errors. Do our actual comparison
+      if (Eval.result === ResultType.UNSET) {
+        Eval.result = canvasesMatch('user', 'answer');
+        Eval.testResults = studioApp.getTestResults(Eval.result);
+      }
 
       if (level.freePlay) {
         Eval.result = true;
@@ -447,6 +476,55 @@ Eval.execute = function() {
   }
 
   studioApp.playAudio(Eval.result ? 'win' : 'failure');
+};
+
+Eval.checkExamples_ = function (resetPlayspace) {
+  if (!level.examplesRequired) {
+    return;
+  }
+
+  var exampleless = studioApp.getFunctionWithoutExample();
+  if (exampleless) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EXAMPLE_FAILED;
+    Eval.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
+    return;
+  }
+
+  var unfilled = studioApp.getUnfilledFunctionalExample();
+  if (unfilled) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EXAMPLE_FAILED;
+
+    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+      .getTitleValue('NAME');
+    Eval.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
+    return;
+  }
+
+  // TODO - what of this belongs in studio app?
+  var failingBlockName = '';
+  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
+    var result = testEvalExample(exampleBlock, true);
+    var success = result === "Matches definition.";
+
+    // Update the example result. No-op if we're not currently editing this
+    // function.
+    Blockly.contractEditor.updateExampleResult(exampleBlock, result);
+
+    if (!success) {
+      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
+        .getTitleValue('NAME');
+    }
+
+  });
+
+  if (failingBlockName) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EXAMPLE_FAILED;
+    Eval.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
+    return;
+  }
 };
 
 /**
@@ -498,6 +576,11 @@ function canvasesMatch(canvasA, canvasB) {
  * studioApp.displayFeedback when appropriate
  */
 var displayFeedback = function(response) {
+  if (Eval.result === ResultType.UNSET) {
+    // This can happen if we hit reset before our dialog popped up.
+    return;
+  }
+
   var tryAgainText;
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();

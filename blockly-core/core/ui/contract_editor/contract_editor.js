@@ -127,6 +127,12 @@ Blockly.ContractEditor = function(configuration) {
    * @private
    */
   this.testResetHandler_ = function () { };
+
+  /**
+   * @type {Blockly.ExampleView[]}
+   * @private
+   */
+  this.exampleViews_ = [];
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
@@ -198,12 +204,6 @@ Blockly.ContractEditor.prototype.create_ = function() {
     'fill': '#000'
   }, this.examplesTableGroup);
   this.verticalMidline.setAttribute('width', 2.0);
-
-  /**
-   * @type {Blockly.ExampleView[]}
-   * @private
-   */
-  this.exampleViews_ = [];
 
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
@@ -821,6 +821,15 @@ Blockly.ContractEditor.prototype.testExample = function (block) {
  */
 Blockly.ContractEditor.prototype.resetExample = function (block) {
   this.testResetHandler_(block);
+};
+
+Blockly.ContractEditor.prototype.updateExampleResult = function (block, result) {
+  this.exampleViews_.forEach(function (view) {
+    if (view.isViewForBlock(block)) {
+      view.setResult(result);
+    }
+    return;
+  });
 };
 
 /**
