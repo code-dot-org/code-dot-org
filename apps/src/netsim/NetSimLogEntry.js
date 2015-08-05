@@ -25,7 +25,7 @@ var DataConverters = require('./dataConverters_renaming');
 var formatBinary = DataConverters.formatBinary;
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
-var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
+var BITS_PER_BYTE = require('./netsimConstants_renaming').BITS_PER_BYTE;
 
 /**
  * @typedef {Object} LogEntryRow

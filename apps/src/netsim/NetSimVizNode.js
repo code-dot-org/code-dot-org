@@ -14,7 +14,7 @@
 'use strict';
 
 require('../utils');
-var NetSimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants_renaming');
 var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');

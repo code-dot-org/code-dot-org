@@ -25,7 +25,7 @@ var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimLogPanel = require('./NetSimLogPanel');
 var Packet = require('./Packet');
 var DataConverters = require('./dataConverters_renaming');
-var NetSimConstants = require('./netsimConstants');
+var NetSimConstants = require('./netsimConstants_renaming');
 var NetSimGlobals = require('./netsimGlobals');
 
 var EncodingType = NetSimConstants.EncodingType;
