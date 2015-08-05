@@ -21,7 +21,7 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./netsimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
@@ -350,7 +350,7 @@ NetSimLobby.prototype.onCancelButtonClick_ = function () {
  * @private
  */
 NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
-  this.nodesOnShard_ = netsimNodeFactory.nodesFromRows(this.shard_, rows);
+  this.nodesOnShard_ = NetSimNodeFactory.nodesFromRows(this.shard_, rows);
   this.render();
 };
 
