@@ -53,23 +53,50 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
    */
   this.blockSpace = new Blockly.BlockSpace(this,
     goog.bind(this.getBlockSpaceMetrics_, this),
-    goog.bind(this.setBlockSpaceMetrics_, this)
+    goog.bind(this.setBlockSpaceMetrics_, this),
+    container
   );
   this.createDom_(container);
   this.init_();
 };
 
 /**
- * Padding (in pixels) within the inside of the block space.
- * Blocks dropped with their top-left origin within this padding (or outside of
- * the block space) will be bumped until their top-left is within the padding.
+ * If enabled, during block bumping the entire block will be bumped into view.
+ *
+ * If disabled, when dragged off the bottom or right of the blockspace, the
+ * block will be bumped until their top or left is within the padding—just
+ * enough block in view to grab.
+ * @type {boolean}
+ */
+Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK = false;
+
+/**
+ * Padding (in pixels) within the inside of the block space for bumping.
  * @type {number}
  * @const
  */
+Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_TOP = 2;
+Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_LEFT = 2;
+Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_BOTTOM = 2;
+Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_RIGHT = 2;
+
 Blockly.BlockSpaceEditor.BUMP_PADDING_TOP = 15;
 Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT = 15;
 Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM = 25;
 Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT = 25;
+
+/**
+ * When enabled, draws debug boxes around blocks and dimensions used in bumping
+ * logic.
+ * @type {boolean}
+ */
+Blockly.BlockSpaceEditor.BUMP_DEBUG = false;
+
+/**
+ * When enabled, outputs debug logging about block bumping.
+ * @type {boolean}
+ */
+Blockly.BlockSpaceEditor.SCROLL_DRAG_DEBUG = false;
 
 /**
  * Create an SVG element containing SVG filter and pattern definitions usable
@@ -203,9 +230,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
 
   container.appendChild(svg);
   goog.events.listen(svg, 'selectstart', function() { return false; });
-  var defs = Blockly.createSvgElement('defs', {
-    id: 'blocklySvgDefs'
-  }, svg);
+  this.defs_ = Blockly.createSvgElement('defs', { id: 'blocklySvgDefs'}, svg);
   this.blockSpace.maxBlocks = Blockly.maxBlocks;
 
   // If we're going to have a toolbox, create a rect which is the same
@@ -227,9 +252,9 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
     // blocks.  This cannot be changed later, since the UI is very different.
     this.addToolboxOrFlyout_();
 
-    // Add a handler that allows the workspace to bump undeletable blocks
-    // back into its working area.
-    this.addChangeListener(this.bumpBlocksIntoView_);
+    // Add a handler that allows the workspace to bump blocks back into their
+    // working area.
+    this.addChangeListener(this.bumpBlocksIfNotDragging);
   }
 
   /**
@@ -250,6 +275,14 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   Blockly.WidgetDiv.DIV = goog.dom.createDom('div', 'blocklyWidgetDiv');
   Blockly.WidgetDiv.DIV.style.direction = Blockly.RTL ? 'rtl' : 'ltr';
   document.body.appendChild(Blockly.WidgetDiv.DIV);
+};
+
+/**
+ * Adds an SVG element to this BlockSpace's <defs>
+ * @param {SVGElement} definitionToAdd
+ */
+Blockly.BlockSpaceEditor.prototype.addToSvgDefs = function(definitionToAdd) {
+  this.defs_.appendChild(definitionToAdd);
 };
 
 Blockly.BlockSpaceEditor.prototype.addToolboxOrFlyout_ = function() {
@@ -294,76 +327,128 @@ Blockly.BlockSpaceEditor.prototype.getDeleteAreas = function() {
 };
 
 /**
- * When using flyout (as opposed to category toolbox mode):
- * 1. bump out-of-bounds blocks back in
- * 2. delete blocks on top of flyout
- * @private
+ * If a drag operation is not active, bumps blocks into the BlockSpace.
  */
-Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoView_ = function() {
+Blockly.BlockSpaceEditor.prototype.bumpBlocksIfNotDragging = function() {
   // Immediately return if dragging, to avoid expensive calculations
   if (Blockly.Block.isDragging()) {
     return;
   }
 
+  this.bumpBlocksIntoBlockSpace();
+};
+
+/**
+ * Bumps blocks back in to BlockSpace area.
+ * If BUMP_ENTIRE_BLOCK is true, bumps entire block back in.
+ * If BUMP_ENTIRE_BLOCK is false, bumps just enough for block to be grippable
+ *     within a padded inner area.
+ * @private
+ */
+Blockly.BlockSpaceEditor.prototype.bumpBlocksIntoBlockSpace = function() {
   // Can't bump if we don't know our workspace dimensions
   var metrics = this.blockSpace.getMetrics();
   if (!metrics) {
     return;
   }
 
-  // Calculate bounds of view, including bump padding
-  var viewInnerTop = metrics.viewTop + Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
-  var viewInnerLeft = metrics.viewLeft + Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
-  var viewInnerBottom = metrics.viewTop + metrics.viewHeight
-    - Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM;
-  var viewInnerRight = metrics.viewLeft + metrics.viewWidth
-    - Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT;
-  var viewInnerWidth = viewInnerRight - viewInnerLeft;
-  var viewInnerHeight = viewInnerBottom - viewInnerTop;
+  if (!Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+    var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
+
+    // Calculate bounds of view, including bump padding
+    var blockSpaceInnerTop = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
+    var blockSpaceInnerLeft = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
+    var blockSpaceInnerBottom = blockSpaceSize.height
+      - Blockly.BlockSpaceEditor.BUMP_PADDING_BOTTOM;
+    var blockSpaceInnerRight = blockSpaceSize.width
+      - Blockly.BlockSpaceEditor.BUMP_PADDING_RIGHT;
+    var blockSpaceInnerWidth = blockSpaceInnerRight - blockSpaceInnerLeft;
+    var blockSpaceInnerHeight = blockSpaceInnerBottom - blockSpaceInnerTop;
+  }
 
   // Check every block, and bump if needed.
-  this.blockSpace.getTopBlocks(false).forEach(function (block) {
-    if (!block.isVisible()) {
-      return;
-    }
-    // Skip block if it doesn't fit in the view anyway.
-    var blockHW = block.getHeightWidth();
-    if (blockHW.width > viewInnerWidth || blockHW.height > viewInnerHeight) {
+  this.blockSpace.getTopBlocks(false, false).forEach(function (block) {
+    if (!block.isVisible() || block.isCurrentlyBeingDragged()) {
       return;
     }
 
-    // If these values are positive, the block needs to be bumped
-    var blockXY = block.getRelativeToSurfaceXY();
-    var howFarOutsideLeft = Math.max(0, viewInnerLeft - blockXY.x);
-    var howFarOutsideRight = Math.max(0, blockXY.x - viewInnerRight);
-    var howFarAboveTop = Math.max(0, viewInnerTop - blockXY.y);
-    var howFarBelowBottom = Math.max(0, blockXY.y - viewInnerBottom);
+    if (!Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+      // Skip block if it doesn't fit in the view anyway.
+      var blockHW = block.getHeightWidth();
+      if (blockHW.width > blockSpaceInnerWidth || blockHW.height > blockSpaceInnerHeight) {
+        return;
+      }
+    }
+
+    var howFarOutsideLeft, howFarOutsideRight, howFarAboveTop, howFarBelowBottom;
+
+    if (!Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+      // If these values are positive, the block needs to be bumped
+      var blockXY = block.getRelativeToSurfaceXY();
+      howFarOutsideLeft = Math.max(0, blockSpaceInnerLeft - blockXY.x);
+      howFarOutsideRight = Math.max(0, blockXY.x - blockSpaceInnerRight);
+      howFarAboveTop = Math.max(0, blockSpaceInnerTop - blockXY.y);
+      howFarBelowBottom = Math.max(0, blockXY.y - blockSpaceInnerBottom);
+    } else {
+      var paddedBlockSpaceBox = this.blockSpace.getScrollableBox()
+        .expand(-Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_TOP,
+        -Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_RIGHT,
+        -Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_BOTTOM,
+        -Blockly.BlockSpaceEditor.ENTIRE_BUMP_PADDING_LEFT);
+      var originalBlockBox = block.getBox();
+      var overflow = Blockly.getBoxOverflow(paddedBlockSpaceBox, originalBlockBox);
+
+      // If overflow values are positive, the block needs to be bumped
+      howFarOutsideLeft = Math.max(0, overflow.left);
+      howFarOutsideRight = Math.max(0, overflow.right);
+      howFarAboveTop = Math.max(0, overflow.top);
+      howFarBelowBottom = Math.max(0, overflow.bottom);
+    }
 
     // Calculate needed bump
     var moveX = howFarOutsideLeft ? howFarOutsideLeft : -howFarOutsideRight;
     var moveY = howFarAboveTop ? howFarAboveTop : -howFarBelowBottom;
 
-    if (moveX || moveY) {
+    if (Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+      // If the block doesn't fit in the view, move, instead, flush to the left
+      // or top.
+      if (Blockly.isBoxWiderThan(originalBlockBox, paddedBlockSpaceBox)) {
+        moveX = overflow.left;
+      }
+      if (Blockly.isBoxTallerThan(originalBlockBox, paddedBlockSpaceBox)) {
+        moveY = overflow.top
+      }
+    }
+
+    var shouldBump = moveX || moveY;
+    if (shouldBump) {
       block.moveBy(moveX, moveY);
     }
-  });
+
+    if (Blockly.BlockSpaceEditor.BUMP_DEBUG &&
+        Blockly.BlockSpaceEditor.BUMP_ENTIRE_BLOCK) {
+      var afterBumpBlockBox = block.getBox();
+      var originalBlockBoxColor = shouldBump ? "red" : "green";
+      this.blockSpace.drawDebugBox("block box" + block.id,
+        originalBlockBox, originalBlockBoxColor);
+      this.blockSpace.drawDebugBox("block after" + block.id,
+        afterBumpBlockBox, "purple");
+      this.blockSpace.drawDebugBox("block space box" + block.id,
+        paddedBlockSpaceBox, "blue");
+    }
+  }, this);
 };
 
 Blockly.BlockSpaceEditor.prototype.init_ = function() {
   this.detectBrokenControlPoints();
 
-  // Bind events for scrolling the blockSpace.
-  // Most of these events should be bound to the SVG's surface.
-  // However, 'mouseup' has to be on the whole document so that a block dragged
-  // out of bounds and released will know that it has been released.
-  // Also, 'keydown' has to be on the whole document since the browser doesn't
-  // understand a concept of focus on the SVG image.
-  Blockly.bindEvent_(this.svg_, 'mousedown', this, this.onMouseDown_);
-  Blockly.bindEvent_(this.svg_, 'mousemove', this, this.onMouseMove_);
-  Blockly.bindEvent_(this.svg_, 'contextmenu', null, Blockly.BlockSpaceEditor.onContextMenu_);
-  Blockly.bindEvent_(this.svg_, 'mouseup', this, this.onMouseUp_);
+  // Bind pan-drag handlers
+  this.blockSpace.bindBeginPanDragHandler(this.svg_,
+    goog.bind(this.hideChaff, this));
+  this.blockSpace.bindScrollOnWheelHandler(this.svg_);
+
   Blockly.bindEvent_(Blockly.WidgetDiv.DIV, 'contextmenu', null,
-    Blockly.BlockSpaceEditor.onContextMenu_);
+    Blockly.blockContextMenu);
 
   if (!Blockly.documentEventsBound_) {
     // Only bind the window/document events once.
@@ -388,10 +473,10 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
       this.flyout_.show(Blockly.languageTree.childNodes);
     }
   }
-  if (Blockly.hasScrollbars) {
-    this.blockSpace.scrollbar = new Blockly.ScrollbarPair(
-      this.blockSpace);
-    this.blockSpace.scrollbar.resize();
+  if (Blockly.hasVerticalScrollbars || Blockly.hasHorizontalScrollbars) {
+    this.blockSpace.scrollbarPair = new Blockly.ScrollbarPair(
+      this.blockSpace, Blockly.hasHorizontalScrollbars, Blockly.hasVerticalScrollbars);
+    this.blockSpace.scrollbarPair.resize();
   }
 };
 
@@ -454,10 +539,7 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
 
   // Subtract any pixels present above the svg element from the available height
   var containerDiv = svg.parentNode;
-  var containerStyle = window.getComputedStyle(containerDiv);
-  var containerTopBorder = containerStyle ? (parseInt(containerStyle.borderTopWidth, 10) || 0) : 0;
-  var headerHeight = goog.style.getPageOffsetTop(svg)
-    - (goog.style.getPageOffsetTop(containerDiv) + containerTopBorder);
+  var headerHeight = this.getWorkspaceTopOffset();
 
   var svgWidth = containerDiv.clientWidth - svgBorderWidth;
   var svgHeight = containerDiv.clientHeight - headerHeight;
@@ -472,11 +554,20 @@ Blockly.BlockSpaceEditor.prototype.svgResize = function() {
   }
 
   // Update the scrollbars (if they exist).
-  if (this.blockSpace.scrollbar) {
-    this.blockSpace.scrollbar.resize();
+  if (this.blockSpace.scrollbarPair) {
+    this.blockSpace.scrollbarPair.resize();
   } else {
     this.setBlockSpaceMetricsNoScroll_();
   }
+};
+
+Blockly.BlockSpaceEditor.prototype.getWorkspaceTopOffset = function() {
+  var svg = this.svg_;
+  var containerDiv = svg.parentNode;
+  var containerStyle = window.getComputedStyle(containerDiv);
+  var containerTopBorder = containerStyle ? (parseInt(containerStyle.borderTopWidth, 10) || 0) : 0;
+  return goog.style.getPageOffsetTop(svg) -
+    (goog.style.getPageOffsetTop(containerDiv) + containerTopBorder);
 };
 
 /**
@@ -526,78 +617,6 @@ Blockly.BlockSpaceEditor.prototype.getToolboxWidth = function() {
 */
 Blockly.BlockSpaceEditor.prototype.setCursor = function(cursorType) {
   Blockly.Css.setCursor(cursorType, this.svg_);
-}
-
-/**
- * Handle a mouse-down on SVG drawing surface.
- * @param {!Event} e Mouse down event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseDown_ = function(e) {
-  Blockly.BlockSpaceEditor.terminateDrag_(); // In case mouse-up event was lost.
-  this.hideChaff();
-  var isTargetSvg = e.target && e.target.nodeName &&
-    e.target.nodeName.toLowerCase() == 'svg';
-  if (!Blockly.readOnly && Blockly.selected && isTargetSvg) {
-    // Clicking on the document clears the selection.
-    Blockly.selected.unselect();
-  }
-  if (Blockly.isRightButton(e)) {
-    // Right-click.
-    // Unlike google Blockly, we don't want to show a context menu
-    // Blockly.showContextMenu_(e);
-  } else if ((Blockly.readOnly || isTargetSvg) &&
-    this.blockSpace.scrollbar) {
-    // If the blockSpace is editable, only allow dragging when gripping empty
-    // space.  Otherwise, allow dragging when gripping anywhere.
-    this.blockSpace.dragMode = true;
-    // Record the current mouse position.
-    this.startDragMouseX = e.clientX;
-    this.startDragMouseY = e.clientY;
-    this.startDragMetrics =
-      this.blockSpace.getMetrics();
-    this.startScrollX = this.blockSpace.pageXOffset;
-    this.startScrollY = this.blockSpace.pageYOffset;
-
-    // Stop the browser from scrolling/zooming the page
-    e.preventDefault();
-  }
-};
-
-/**
- * Handle a mouse-up on SVG drawing surface.
- * @param {!Event} e Mouse up event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseUp_ = function(e) {
-  this.setCursor(Blockly.Css.Cursor.OPEN);
-  this.blockSpace.dragMode = false;
-};
-
-/**
- * Handle a mouse-move on SVG drawing surface.
- * @param {!Event} e Mouse move event.
- * @private
- */
-Blockly.BlockSpaceEditor.prototype.onMouseMove_ = function(e) {
-  if (this.blockSpace.dragMode) {
-    Blockly.removeAllRanges();
-    var dx = e.clientX - this.startDragMouseX;
-    var dy = e.clientY - this.startDragMouseY;
-    var metrics = this.startDragMetrics;
-    var x = this.startScrollX + dx;
-    var y = this.startScrollY + dy;
-    x = Math.min(x, -metrics.contentLeft);
-    y = Math.min(y, -metrics.contentTop);
-    x = Math.max(x, metrics.viewWidth - metrics.contentLeft -
-      metrics.contentWidth);
-    y = Math.max(y, metrics.viewHeight - metrics.contentTop -
-      metrics.contentHeight);
-
-    // Move the scrollbars and the page will scroll automatically.
-    this.blockSpace.scrollbar.set(-x - metrics.contentLeft,
-        -y - metrics.contentTop);
-  }
 };
 
 /**
@@ -606,7 +625,7 @@ Blockly.BlockSpaceEditor.prototype.onMouseMove_ = function(e) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.onKeyDown_ = function(e) {
-  if (Blockly.BlockSpaceEditor.isTargetInput_(e)) {
+  if (Blockly.isTargetInput(e)) {
     // When focused on an HTML text input widget, don't trap any keys.
     return;
   }
@@ -730,29 +749,6 @@ Blockly.BlockSpaceEditor.showContextMenu_ = function(e) {
 };
 
 /**
- * Cancel the native context menu, unless the focus is on an HTML input widget.
- * @param {!Event} e Mouse down event.
- * @private
- */
-Blockly.BlockSpaceEditor.onContextMenu_ = function(e) {
-  if (!Blockly.BlockSpaceEditor.isTargetInput_(e)) {
-    // When focused on an HTML text input widget, don't cancel the context menu.
-    e.preventDefault();
-  }
-};
-
-/**
- * Is this event targeting a text input widget?
- * @param {!Event} e An event.
- * @return {boolean} True if text input.
- * @private
- */
-Blockly.BlockSpaceEditor.isTargetInput_ = function(e) {
-  return e.target.type == 'textarea' || e.target.type == 'text';
-};
-
-
-/**
  * Close tooltips, context menus, dropdown selections, etc.
  * @param {boolean=} opt_allowToolbox If true, don't close the toolbox.
  */
@@ -782,59 +778,70 @@ Blockly.BlockSpaceEditor.prototype.hideChaff = function(opt_allowToolbox) {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
-  var blockBox, leftEdge, rightEdge, topEdge, bottomEdge;
+  /** @type {goog.math.Rect} */
+  var blockBoundingRect;
 
-  var svgSize = this.svgSize();
+  var svgSize = this.svgSize(); // includes toolbox
   var toolboxWidth = 0;
   if (this.toolbox || this.flyout_) {
     toolboxWidth = this.toolbox ? this.toolbox.width : this.flyout_.width_;
   }
   svgSize.width -= toolboxWidth;
-  var viewWidth = svgSize.width - Blockly.Scrollbar.scrollbarThickness;
-  var viewHeight = svgSize.height - Blockly.Scrollbar.scrollbarThickness;
   try {
-    if (Blockly.isMsie() || Blockly.isTrident()) {
-      this.blockSpace.getCanvas().style.display = "inline"; // required for IE
-      blockBox = {
-        x: this.blockSpace.getCanvas().getBBox().x,
-        y: this.blockSpace.getCanvas().getBBox().y,
-        width: this.blockSpace.getCanvas().scrollWidth,
-        height: this.blockSpace.getCanvas().scrollHeight
-      };
-    }
-    else {
-      blockBox = this.blockSpace.getCanvas().getBBox();
+    var mainCanvasBBox = this.getCanvasBBox(this.blockSpace.getCanvas());
+    blockBoundingRect = Blockly.svgRectToRect(mainCanvasBBox);
+    if (this.blockSpace.pickedUpBlockOrigin_) {
+      // Expand the blockBoundingRect to include origin of block being dragged
+      blockBoundingRect.boundingRect(this.blockSpace.pickedUpBlockOrigin_);
     }
   } catch (e) {
     // Firefox has trouble with hidden elements (Bug 528969).
     return null;
   }
-  if (this.blockSpace.scrollbar) {
-    // add some buffer space to the right/below existing contents
-    leftEdge = 0;
-    rightEdge = Math.max(blockBox.x + blockBox.width + viewWidth, viewWidth * 1.5);
-    topEdge = 0;
-    bottomEdge = Math.max(blockBox.y + blockBox.height + viewHeight, viewHeight * 1.5);
 
-  } else {
-    leftEdge = blockBox.x;
-    rightEdge = leftEdge + blockBox.width;
-    topEdge = blockBox.y;
-    bottomEdge = topEdge + blockBox.height;
-  }
   var absoluteLeft = Blockly.RTL ? 0 : toolboxWidth;
+
+  // view*: Viewport dimensions relative to workspace 0,0
+  // content*: Bounding rect on actual blocks, relative to workspace 0,0
+  // absolute*: Blockspace origin offset from the SVG element origin
+  //            (top right of toolbox in LTR, top left of SVG in RTL)
+  var viewLeft = this.blockSpace.getScrollOffsetX();
+  var viewWidth = svgSize.width;
+  var viewHeight = svgSize.height;
+  var viewTop = this.blockSpace.getScrollOffsetY();
+
   return {
-    viewHeight: svgSize.height,
-    viewWidth: svgSize.width,
-    contentHeight: bottomEdge - topEdge,
-    contentWidth: rightEdge - leftEdge,
-    viewTop: -this.blockSpace.pageYOffset,
-    viewLeft: -this.blockSpace.pageXOffset,
-    contentTop: topEdge,
-    contentLeft: leftEdge,
+    viewHeight: viewHeight,
+    viewWidth: viewWidth,
+    viewTop: viewTop,
+    viewLeft: viewLeft,
+    contentHeight: blockBoundingRect.height,
+    contentWidth: blockBoundingRect.width,
+    contentTop: blockBoundingRect.top,
+    contentLeft: blockBoundingRect.left,
     absoluteTop: 0,
     absoluteLeft: absoluteLeft
   };
+};
+
+/**
+ * Gets a bbox
+ * May throw error if canvas is hidden in Firefox
+ * @param {SVGGElement} canvas - the svg canvas
+ * @returns {SVGRect}
+ */
+Blockly.BlockSpaceEditor.prototype.getCanvasBBox = function(canvas) {
+  if (Blockly.isMsie() || Blockly.isTrident()) {
+    canvas.style.display = "inline"; // required for IE
+    return {
+      x: canvas.getBBox().x,
+      y: canvas.getBBox().y,
+      width: canvas.scrollWidth,
+      height: canvas.scrollHeight
+    };
+  }
+
+  return canvas.getBBox();
 };
 
 /**
@@ -844,22 +851,22 @@ Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_ = function(xyRatio) {
-  if (!this.blockSpace.scrollbar) {
-    throw 'Attempt to set editor this scroll without scrollbars.';
+  if (!this.blockSpace.scrollbarPair) {
+    throw "Attempt to set editor's scroll position without scrollbars.";
   }
   var metrics = this.getBlockSpaceMetrics_();
+  var blockSpaceSize = this.blockSpace.getScrollableSize(metrics);
   if (goog.isNumber(xyRatio.x)) {
-    this.blockSpace.pageXOffset = -metrics.contentWidth * xyRatio.x -
-      metrics.contentLeft;
+    this.blockSpace.xOffsetFromView = -blockSpaceSize.width * xyRatio.x;
   }
   if (goog.isNumber(xyRatio.y)) {
-    this.blockSpace.pageYOffset = -metrics.contentHeight * xyRatio.y -
-      metrics.contentTop;
+    this.blockSpace.yOffsetFromView = -blockSpaceSize.height * xyRatio.y;
   }
   var translation = 'translate(' +
-    (this.blockSpace.pageXOffset + metrics.absoluteLeft) + ',' +
-    (this.blockSpace.pageYOffset + metrics.absoluteTop) + ')';
+    (this.blockSpace.xOffsetFromView + metrics.absoluteLeft) + ',' +
+    (this.blockSpace.yOffsetFromView + metrics.absoluteTop) + ')';
   this.blockSpace.getCanvas().setAttribute('transform', translation);
+  this.blockSpace.getDragCanvas().setAttribute('transform', translation);
   this.blockSpace.getBubbleCanvas().setAttribute('transform', translation);
 };
 
@@ -874,6 +881,7 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
     var translation = 'translate(' + (metrics.absoluteLeft) + ',' +
       (metrics.absoluteTop) + ')';
     this.blockSpace.getCanvas().setAttribute('transform', translation);
+    this.blockSpace.getDragCanvas().setAttribute('transform', translation);
     this.blockSpace.getBubbleCanvas().setAttribute('transform',
       translation);
   }
@@ -882,7 +890,7 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
 /**
  * When something in Blockly's blockSpace changes, call a function.
  * @param {!Function} func Function to call.
- * @return {!Array.<!Array>} Opaque data that can be passed to
+ * @return {BindData} Opaque data that can be passed to
  *     removeChangeListener.
  */
 Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
@@ -892,7 +900,7 @@ Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
 
 /**
  * Stop listening for Blockly's blockSpace changes.
- * @param {!Array.<!Array>} bindData Opaque data from addChangeListener.
+ * @param {BindData} BindData Opaque data from addChangeListener.
  */
 Blockly.removeChangeListener = function(bindData) {
   Blockly.unbindEvent_(bindData);
