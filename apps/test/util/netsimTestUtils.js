@@ -17,8 +17,8 @@ var levels = require('@cdo/apps/netsim/levels');
  */
 exports.assertTableSize = function (shard, tableName, size) {
   var rowCount;
-  shard[tableName].readAll(function (err, rows) {
-    rowCount = rows.length;
+  shard[tableName].refresh(function () {
+    rowCount = shard[tableName].readAll().length;
   });
   assert(rowCount === size, "Expected table '" + tableName +
       "' to contain " + size + " rows, but it had " + rowCount +
@@ -30,29 +30,35 @@ exports.assertTableSize = function (shard, tableName, size) {
  * accessing the server API.
  * @param {NetSimTable} netsimTable
  */
-exports.overrideClientApi = function (netsimTable) {
+exports.overrideNetSimTableApi = function (netsimTable) {
   var table = fakeStorageTable();
 
   // send client api calls through our fake storage table
-  netsimTable.clientApi_ = {
+  netsimTable.api_ = {
     remoteTable: table,
-    all: function (callback) {
+    allRows: function (callback) {
       return table.readAll(callback);
     },
-    fetch: function (id, callback) {
+    allRowsFromID: function (id, callback) {
+      return table.readAllFromID(id, callback);
+    },
+    fetchRow: function (id, callback) {
       return table.read(id, callback);
     },
-    create: function (value, callback) {
+    createRow: function (value, callback) {
       return table.create(value, callback);
     },
-    update: function (id, value, callback) {
+    updateRow: function (id, value, callback) {
       return table.update(id, value, callback);
     },
-    delete: function (id, callback) {
+    deleteRow: function (id, callback) {
       return table.delete(id, callback);
     },
     log: function () {
       return table.log();
+    },
+    clearLog: function () {
+      table.clearLog();
     }
   };
 
@@ -78,6 +84,18 @@ var fakeStorageTable = function () {
       log_ += 'readAll';
 
       callback(null, tableData_);
+    },
+
+    /**
+     * @param {!number} id
+     * @param {!NodeStyleCallback} callback
+     */
+    readAllFromID: function (id, callback) {
+      log_ += 'readAllFromID[' + id + ']';
+
+      callback(null, tableData_.filter(function (row) {
+        return row.id >= id;
+      }));
     },
 
     /**
@@ -157,6 +175,11 @@ var fakeStorageTable = function () {
       }
 
       return log_;
+    },
+
+    /** Reset test log to empty */
+    clearLog: function () {
+      log_ = '';
     }
   };
 };
@@ -173,10 +196,16 @@ exports.fakeShard = function () {
   /* jshint unused:true */
 
   return {
-    nodeTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'node')),
-    wireTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
-    messageTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'message')),
-    logTable: exports.overrideClientApi(new NetSimTable(fakeChannel, 'fakeShard', 'log'))
+    nodeTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'node')),
+    wireTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'wire')),
+    messageTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'message')),
+    logTable: exports.overrideNetSimTableApi(
+        new NetSimTable(fakeChannel, 'fakeShard', 'log', {
+          useIncrementalRefresh: true
+        }))
   };
 };
 
