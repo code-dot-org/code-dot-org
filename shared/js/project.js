@@ -92,14 +92,6 @@ var projects = module.exports = {
     return (appOptions.level && appOptions.level.isProjectLevel);
   },
 
-  isEmbedded: function() {
-    return (
-        (appOptions.level && appOptions.level.projectTemplateLevelName) ||
-        appOptions.app === 'applab' ||
-        appOptions.isExternalProjectLevel
-    );
-  },
-
   shouldUpdateHeaders: function() {
     return !appOptions.isExternalProjectLevel;
   },
@@ -404,7 +396,7 @@ var projects = module.exports = {
       } else {
         isEditing = true;
       }
-    } else if (projects.isEmbedded()) {
+    } else if (appOptions.isChannelBacked) {
       isEditing = true;
       deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
