@@ -7,6 +7,33 @@ var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
 
 describe ("ArgumentUtils", function () {
 
+  describe ("validateRequired", function () {
+    it ("throws TypeError if argument is undefined", function () {
+      assertThrows(TypeError, function () {
+        ArgumentUtils.validateRequired(undefined, 'any old argument');
+      });
+    });
+
+    it ("by default allows anything but undefined through", function () {
+      ArgumentUtils.validateRequired(null, 'null');
+      ArgumentUtils.validateRequired(NaN, 'NaN');
+      ArgumentUtils.validateRequired(Infinity, 'Infinity');
+      ArgumentUtils.validateRequired('string', 'string');
+      ArgumentUtils.validateRequired(true, 'boolean true');
+      ArgumentUtils.validateRequired(false, 'boolean false');
+      ArgumentUtils.validateRequired({}, 'object');
+      ArgumentUtils.validateRequired(setTimeout, 'function');
+    });
+
+    it ("throws TypeError if validator method doesn't return TRUE", function () {
+      var validator = function (x) { return x < 3; };
+      ArgumentUtils.validateRequired(2, 'just right', validator);
+      assertThrows(TypeError, function () {
+        ArgumentUtils.validateRequired(3, 'too high!', validator);
+      });
+    });
+  });
+
   describe ("extendOptionsObject", function () {
 
     it ("is valid to pass empty object", function () {
