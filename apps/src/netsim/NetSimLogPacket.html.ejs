@@ -70,22 +70,24 @@
    * @param {string} packetInfo
    * @param {string} message
    */
-  function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
-    %>
-      <tr class="<%= encodingType %>">
-        <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"><%= getEncodingLabel(encodingType) %></th>
-        <% if (showToAddress) { %>
-          <td nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= toAddress %></td>
-        <% } %>
-        <% if (showFromAddress) { %>
-          <td nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= fromAddress %></td>
-        <% } %>
-        <% if (showPacketInfo) { %>
-          <td nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= packetInfo %></td>
-        <% } %>
-        <td class="<%= PacketUIColumnType.MESSAGE %>"><%= message %></td>
-      </tr>
-  <%
+  function logRowIfEncodingEnabled(encodingType, toAddress, fromAddress, packetInfo, message) {
+    if (isEncodingEnabled(encodingType)) {
+      %>
+        <tr class="<%= encodingType %>">
+          <th nowrap class="<%= PacketUIColumnType.ENCODING_LABEL %>"><%= getEncodingLabel(encodingType) %></th>
+          <% if (showToAddress) { %>
+            <td nowrap class="<%= PacketUIColumnType.TO_ADDRESS %>"><%= toAddress %></td>
+          <% } %>
+          <% if (showFromAddress) { %>
+            <td nowrap class="<%= PacketUIColumnType.FROM_ADDRESS %>"><%= fromAddress %></td>
+          <% } %>
+          <% if (showPacketInfo) { %>
+            <td nowrap class="<%= PacketUIColumnType.PACKET_INFO %>"><%= packetInfo %></td>
+          <% } %>
+          <td class="<%= PacketUIColumnType.MESSAGE %>"><%= message %></td>
+        </tr>
+    <%
+    }
   }
  %>
   <%
@@ -123,7 +125,7 @@
       </thead>
       <tbody>
       <%
-        logRow(EncodingType.ASCII,
+        logRowIfEncodingEnabled(EncodingType.ASCII,
             binaryToAddressString(toAddress),
             binaryToAddressString(fromAddress),
             i18n.xOfYPackets({
@@ -132,7 +134,7 @@
             }),
             binaryToAscii(message, chunkSize));
 
-        logRow(EncodingType.DECIMAL,
+        logRowIfEncodingEnabled(EncodingType.DECIMAL,
             binaryToAddressString(toAddress),
             binaryToAddressString(fromAddress),
             i18n.xOfYPackets({
@@ -141,7 +143,7 @@
             }),
             alignDecimal(binaryToDecimal(message, chunkSize)));
 
-        logRow(EncodingType.HEXADECIMAL,
+        logRowIfEncodingEnabled(EncodingType.HEXADECIMAL,
             binaryToHex(toAddress),
             binaryToHex(fromAddress),
             i18n.xOfYPackets({
@@ -150,13 +152,13 @@
             }),
             formatHex(binaryToHex(message), chunkSize));
 
-        logRow(EncodingType.BINARY,
+        logRowIfEncodingEnabled(EncodingType.BINARY,
             formatBinaryForAddressHeader(toAddress, 4),
             formatBinaryForAddressHeader(fromAddress, 4),
             formatBinary(packetIndex + packetCount, level.packetCountBitWidth),
             formatBinary(message, chunkSize));
 
-        logRow(EncodingType.A_AND_B,
+        logRowIfEncodingEnabled(EncodingType.A_AND_B,
             binaryToAB(toAddress),
             binaryToAB(fromAddress),
             formatAB(binaryToAB(packetIndex + packetCount), level.packetCountBitWidth),

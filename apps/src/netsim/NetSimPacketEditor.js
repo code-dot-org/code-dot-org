@@ -245,7 +245,8 @@ NetSimPacketEditor.prototype.getFirstVisibleMessageBox = function () {
 NetSimPacketEditor.prototype.render = function () {
   var newMarkup = $(markup({
     messageGranularity: this.messageGranularity_,
-    packetSpec: this.packetSpec_
+    packetSpec: this.packetSpec_,
+    enabledEncodings: this.enabledEncodings_
   }));
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
@@ -591,7 +592,9 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     }
   ];
 
-  rowTypes.forEach(function (rowType) {
+  rowTypes.filter(function (rowType) {
+    return this.isEncodingEnabled_(rowType.typeName);
+  }, this).forEach(function (rowType) {
     var tr = rootDiv.find('tr.' + rowType.typeName);
     var rowUIKey = rowType.typeName + 'UI';
     this[rowUIKey] = {};
@@ -703,61 +706,81 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
       asciiConverter = decimalConverter;
     }
 
-    liveFields.push({
-      inputElement: this.a_and_bUI[fieldName],
-      newValue: abConverter(this[fieldName], fieldWidth)
-    });
+    if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+      liveFields.push({
+        inputElement: this.a_and_bUI[fieldName],
+        newValue: abConverter(this[fieldName], fieldWidth)
+      });
+    }
 
-    liveFields.push({
-      inputElement: this.binaryUI[fieldName],
-      newValue: binaryConverter(this[fieldName], fieldWidth)
-    });
+    if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+      liveFields.push({
+        inputElement: this.binaryUI[fieldName],
+        newValue: binaryConverter(this[fieldName], fieldWidth)
+      });
+    }
 
-    liveFields.push({
-      inputElement: this.hexadecimalUI[fieldName],
-      newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
-    });
+    if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+      liveFields.push({
+        inputElement: this.hexadecimalUI[fieldName],
+        newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
+      });
+    }
 
-    liveFields.push({
-      inputElement: this.decimalUI[fieldName],
-      newValue: decimalConverter(this[fieldName], fieldWidth)
-    });
+    if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
+      liveFields.push({
+        inputElement: this.decimalUI[fieldName],
+        newValue: decimalConverter(this[fieldName], fieldWidth)
+      });
+    }
 
-    liveFields.push({
-      inputElement: this.asciiUI[fieldName],
-      newValue: asciiConverter(this[fieldName], fieldWidth)
-    });
+    if (this.isEncodingEnabled_(EncodingType.ASCII)) {
+      liveFields.push({
+        inputElement: this.asciiUI[fieldName],
+        newValue: asciiConverter(this[fieldName], fieldWidth)
+      });
+    }
   }, this);
 
-  liveFields.push({
-    inputElement: this.a_and_bUI.message,
-    newValue: formatAB(binaryToAB(this.message), chunkSize),
-    watermark: netsimMsg.a_and_b()
-  });
+  if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+    liveFields.push({
+      inputElement: this.a_and_bUI.message,
+      newValue: formatAB(binaryToAB(this.message), chunkSize),
+      watermark: netsimMsg.a_and_b()
+    });
+  }
 
-  liveFields.push({
-    inputElement: this.binaryUI.message,
-    newValue: formatBinary(this.message, chunkSize),
-    watermark: netsimMsg.binary()
-  });
+  if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+    liveFields.push({
+      inputElement: this.binaryUI.message,
+      newValue: formatBinary(this.message, chunkSize),
+      watermark: netsimMsg.binary()
+    });
+  }
 
-  liveFields.push({
-    inputElement: this.hexadecimalUI.message,
-    newValue: formatHex(binaryToHex(this.message), chunkSize),
-    watermark: netsimMsg.hexadecimal()
-  });
+  if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+    liveFields.push({
+      inputElement: this.hexadecimalUI.message,
+      newValue: formatHex(binaryToHex(this.message), chunkSize),
+      watermark: netsimMsg.hexadecimal()
+    });
+  }
 
-  liveFields.push({
-    inputElement: this.decimalUI.message,
-    newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
-    watermark: netsimMsg.decimal()
-  });
+  if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
+    liveFields.push({
+      inputElement: this.decimalUI.message,
+      newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
+      watermark: netsimMsg.decimal()
+    });
+  }
 
-  liveFields.push({
-    inputElement: this.asciiUI.message,
-    newValue: binaryToAscii(this.message, chunkSize),
-    watermark: netsimMsg.ascii()
-  });
+  if (this.isEncodingEnabled_(EncodingType.ASCII)) {
+    liveFields.push({
+      inputElement: this.asciiUI.message,
+      newValue: binaryToAscii(this.message, chunkSize),
+      watermark: netsimMsg.ascii()
+    });
+  }
 
   liveFields.forEach(function (field) {
     if (field.inputElement[0] !== skipElement) {
@@ -889,6 +912,20 @@ NetSimPacketEditor.prototype.setMaxPacketSize = function (maxPacketSize) {
 NetSimPacketEditor.prototype.setEncodings = function (newEncodings) {
   this.enabledEncodings_ = newEncodings;
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, newEncodings);
+  this.render();
+};
+
+/**
+ * Helper method that checks this.enabledEncodings_ to see if the given
+ * encoding is enabled
+ * @param {EncodingType} queryEncoding
+ * @returns {boolean} whether or not the given encoding is enabled
+ * @private
+ */
+NetSimPacketEditor.prototype.isEncodingEnabled_ = function (queryEncoding) {
+  return this.enabledEncodings_.some(function (enabledEncoding) {
+    return enabledEncoding === queryEncoding;
+  });
 };
 
 /**
