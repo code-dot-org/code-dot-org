@@ -20,7 +20,7 @@ var _ = utils.getLodash();
 var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
-var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./netsimNodeFactory');
 var DataConverters = require('./dataConverters');
 var formatBinary = DataConverters.formatBinary;
 var base64ToBinary = DataConverters.base64ToBinary;
@@ -217,5 +217,5 @@ NetSimLogEntry.prototype.getOriginNode = function () {
     return null;
   }
 
-  return netsimNodeFactory.nodeFromRow(this.shard_, originNodeRow);
+  return NetSimNodeFactory.nodeFromRow(this.shard_, originNodeRow);
 };

@@ -28,7 +28,7 @@ var NetSimMessage = require('./NetSimMessage');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
 var DataConverters = require('./dataConverters');
-var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./netsimNodeFactory');
 
 var _ = utils.getLodash();
 
@@ -1123,7 +1123,7 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   }
 
   // Is it some node elsewhere on the shard?
-  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
+  var nodes = NetSimNodeFactory.nodesFromRows(this.shard_,
       this.shard_.nodeTable.readAll());
   var node = _.find(nodes, function (node) {
     return node.getHostname() === hostname;
@@ -1186,7 +1186,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
   }
 
   // Is it a local client?
-  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
+  var nodes = NetSimNodeFactory.nodesFromRows(this.shard_,
       this.shard_.nodeTable.readAll());
   var wireRow = _.find(this.myWireRowCache_, function (row) {
     return row.localAddress === address;
