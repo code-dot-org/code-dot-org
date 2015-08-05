@@ -6,12 +6,12 @@ markdown <<MARKDOWN
 
 # Background
 
-You know how to detect a single word or phrase within a string. This is very useful for your digital assistant, but what if your digital assistant is expecting the keyword “programming” and the user types “Programming” or “PrOgraMMinG?” Your digital assistant should still treat these the same. What about if you want to know if the keyword is at the beginning or end of a sentence? How about if you want to use part of the input sentence as part of your output? We will explore many types of string manipulation today. In this lesson, you will use a variety of other functions to manipulate strings including str.length, str.indexOf(), str.substring(), str.toUpperCase(), str.toLowerCase(), and str.charCodeAt().
+You know how to detect a single word or phrase within a string. This is very useful for your digital assistant, but what if your digital assistant is expecting the keyword “programming” and the user types “Programming” or “PrOgraMMinG?” Your digital assistant should still treat these the same. What about if you want to know if the keyword is at the beginning or end of a sentence? How about if you want to use part of the input sentence as part of your output? We will explore many types of string manipulation today. In this lesson, you will use a variety of other functions to manipulate strings including str.length, str.indexOf(), str.substring(), str.toUpperCase(), and str.toLowerCase().
 
 # Lesson
 
 * Explore a variety of string operations
-* Manipulate strings within digital assistant
+* Manipulate strings within the digital assistant
 
 # Resources
 * Activity: <a href="https://docs.google.com/document/d/1flqB9Lew9CIzBf5ALgi--hzdEdnPqg7D3vSYyfbGzgc/edit?usp=sharing" target="_blank">
