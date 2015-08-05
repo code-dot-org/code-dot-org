@@ -137,6 +137,12 @@ Blockly.ContractEditor = function(configuration) {
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
+/**
+ * Whether to show the "Test" run buttons next to examples in the editor.
+ * @type {boolean}
+ */
+Blockly.ContractEditor.SHOW_TEST_BUTTONS = false;
+
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 
