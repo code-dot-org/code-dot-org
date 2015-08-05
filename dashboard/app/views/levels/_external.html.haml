@@ -1,6 +1,7 @@
 %link{rel: 'stylesheet', href: asset_path('blockly/css/common.css')}
 = stylesheet_link_tag 'levels/external', media: 'all'
 = javascript_include_tag 'levels/external'
+-# TODO(dave): Remove options global once all templates consume externalOptions via erb.
 :javascript
   var options = #{@level.properties['options'].to_json}
   function getResult() {
@@ -14,5 +15,5 @@
 - if href.present?
   #external
     / Load the external file through ActionView templates.
-    = ActionView::Base.new('public', {}, ActionController::Base.new).render(file: href)
+    = ActionView::Base.new('public', {}, ActionController::Base.new).render({file: href, locals: {externalOptions: @level.properties['options'].to_json}})
 = render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
