@@ -35,7 +35,8 @@ goog.require('goog.array');
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10; // px
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15; // px
 /** @const */ var FUNCTION_BLOCK_VERTICAL_MARGIN = Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN; // px
-/** @const */ var HEADER_HEIGHT = 30; //px
+/** @const */ var HEADER_HEIGHT = 30; // px
+/** @const */ var DEFAULT_EXAMPLE_CALL_SECTION_WIDTH = 100; // px
 
 /** @const */ var USER_TYPE_CHOICES = [
   Blockly.BlockValueType.NUMBER,
@@ -784,7 +785,7 @@ Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newNam
  * Go through each of our example blocks and figure out which is widest
  * @return {number}
  */
-Blockly.ContractEditor.prototype.getMaxExampleBlockWidth_ = function () {
+Blockly.ContractEditor.prototype.getMaxExampleCallBlockWidth_ = function () {
   return this.exampleBlocks.reduce(function (previousMax, block) {
     var functionCallBlock = block.getInputTargetBlock(
       Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
@@ -835,7 +836,8 @@ Blockly.ContractEditor.prototype.updateExampleResult = function (block, result) 
  * @returns {number} Updated y location
  */
 Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
-  var maxWidth = this.getMaxExampleBlockWidth_();
+  var maxWidth = this.getMaxExampleCallBlockWidth_() ||
+      DEFAULT_EXAMPLE_CALL_SECTION_WIDTH;
 
   var metrics = this.modalBlockSpace.getMetrics();
 
