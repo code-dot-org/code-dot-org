@@ -446,7 +446,7 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
  * Specification for an encoding row in the editor, which designates character
  * whitelists to limit typing in certain fields, and rules for intepreting the
  * field from binary.
- * @typedef {Object} rowType
+ * @typedef {Object} RowType
  * @property {EncodingType} typeName
  * @property {RegExp} addressFieldAllowedCharacters - Whitelist of characters
  *           that may be typed into an address field.
@@ -529,7 +529,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
   var level = NetSimGlobals.getLevelConfig();
   var rootDiv = this.rootDiv_;
 
-  /** @type {rowType[]} */
+  /** @type {RowType[]} */
   var rowTypes = [
     {
       typeName: EncodingType.A_AND_B,
