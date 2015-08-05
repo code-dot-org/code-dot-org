@@ -18,7 +18,7 @@
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
-var NetSimGlobals = require('./NetSimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 var ArgumentUtils = require('./ArgumentUtils');
 
 /**

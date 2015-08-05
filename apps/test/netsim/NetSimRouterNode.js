@@ -30,7 +30,7 @@ var addressStringToBinary = dataConverters.addressStringToBinary;
 var asciiToBinary = dataConverters.asciiToBinary;
 var DnsMode = netsimConstants.DnsMode;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 
 describe("NetSimRouterNode", function () {
   var testShard, addressFormat, packetCountBitWidth, packetHeaderSpec, encoder,

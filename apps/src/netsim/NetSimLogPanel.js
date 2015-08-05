@@ -26,7 +26,7 @@ var Packet = require('./Packet');
 var packetMarkup = require('./NetSimLogPacket.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
-var NetSimGlobals = require('./NetSimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 /**
  * How long the "entrance" animation for new messages lasts, in milliseconds.

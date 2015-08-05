@@ -21,7 +21,7 @@ var tweens = require('./tweens');
 
 var DnsMode = netsimConstants.DnsMode;
 
-var NetSimGlobals = require('./NetSimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 /**
  * The narrowest that a text bubble is allowed to be.

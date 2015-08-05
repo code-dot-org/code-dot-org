@@ -23,7 +23,7 @@ var i18n = require('./locale');
 var markup = require('./NetSimBitLogPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
-var NetSimGlobals = require('./NetSimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 var logger = require('./NetSimLogger').getSingleton();
 

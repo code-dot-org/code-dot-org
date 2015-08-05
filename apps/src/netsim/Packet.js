@@ -16,7 +16,7 @@
 
 var netsimUtils = require('./netsimUtils');
 var dataConverters = require('./dataConverters');
-var NetSimGlobals = require('./NetSimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 /**
  * Wraps binary packet content with the format information required to
