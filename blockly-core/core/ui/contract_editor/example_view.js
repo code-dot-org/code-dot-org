@@ -2,8 +2,7 @@
 
 goog.provide('Blockly.ExampleView');
 
-// TODO (brent) - change this text
-/** @const */ var NO_RESULT_TEXT = "Test result: not ran yet.";
+/** @const */ var NO_RESULT_TEXT = "";
 
 /**
  * Handles laying out an example block with a test button
@@ -82,9 +81,13 @@ Blockly.ExampleView.prototype.testExample_ = function () {
  * Reset to a non-running state, clearing our result text.
  */
 Blockly.ExampleView.prototype.reset = function () {
-  this.contractEditor_.resetExample(this.block_);
-  this.setResult(NO_RESULT_TEXT);
-  this.refreshTestingUI(false);
+  // If reset button isn't visible, don't change anything, thus keeping around
+  // old result text
+  if (goog.style.isElementShown(this.resetExampleButton)) {
+    this.contractEditor_.resetExample(this.block_);
+    this.setResult(NO_RESULT_TEXT);
+    this.refreshTestingUI(false);
+  }
 };
 
 Blockly.ExampleView.prototype.setResult = function (result) {

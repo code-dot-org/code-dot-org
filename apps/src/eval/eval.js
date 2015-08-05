@@ -589,7 +589,6 @@ var displayFeedback = function(response) {
     return;
   }
 
-  var tryAgainText;
   // override extra top blocks message
   level.extraTopBlocks = evalMsg.extraTopBlocks();
 

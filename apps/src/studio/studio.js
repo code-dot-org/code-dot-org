@@ -1833,7 +1833,6 @@ var defineProcedures = function (blockType) {
  * @returns {boolean} True if we have a pre-execution failure
  */
 Studio.checkForPreExecutionFailure = function () {
-  debugger;
   if (studioApp.hasUnfilledFunctionalBlock()) {
     Studio.result = false;
     Studio.testResults = TestResults.EMPTY_FUNCTIONAL_BLOCK;
@@ -2062,7 +2061,7 @@ Studio.onPuzzleComplete = function() {
     Studio.testResults = level.freePlay ? TestResults.FREE_PLAY :
       studioApp.getTestResults(levelComplete);
   }
-  
+
   if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
     studioApp.playAudio('win');
   } else {
