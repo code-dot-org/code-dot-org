@@ -72,7 +72,11 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
 
     @s3.list_object_versions(bucket: @bucket, prefix: key).versions.map do |version|
-      [version.version_id, version.last_modified]
+      {
+        versionId: version.version_id,
+        lastModified: version.last_modified,
+        isLatest: version.is_latest
+      }
     end
   end
 

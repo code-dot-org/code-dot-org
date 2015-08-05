@@ -9,14 +9,31 @@ module.exports = React.createClass({
 
   getInitialState: function () {
     return {
-      versions: [{
-        versionId: 'JIlHTUjtd7qEpqnAmT8_YFmiQD668Zzg',
-        lastModified: '2015-08-04T22:20:39Z'
-      }, {
-        versionId: 'P_5XB3Ql5HpF8fmqe.lSUaltXCj8M2.z',
-        lastModified: '2015-08-04T22:20:38Z'
-      }]
+      versions: null,
+      statusMessage: ''
     };
+  },
+
+  componentWillMount: function () {
+    // TODO: Use Dave's client api when it's finished.
+    sourcesApi.ajax('GET', 'main.xml/versions', this.onVersionListReceived, this.onVersionListFailure);
+  },
+
+  /**
+   * Called after the component mounts, when the server responds with the
+   * current list of assets.
+   * @param xhr
+   */
+  onVersionListReceived: function (xhr) {
+    this.setState({versions: JSON.parse(xhr.responseText)});
+  },
+
+  /**
+   * Called after the component mounts, if the server responds with an error
+   * when loading the current list of assets.
+   */
+  onVersionListFailure: function () {
+    this.setState({statusMessage: 'Error loading version list.'});
   },
 
   render: function () {
@@ -58,6 +75,7 @@ module.exports = React.createClass({
       <div className="modal-content" style={{margin: 0}}>
         <p className="dialog-title">Version History</p>
         {versionList}
+        {this.state.statusMessage}
       </div>
     );
   }
