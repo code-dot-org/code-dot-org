@@ -17,7 +17,6 @@
 var markup = require('./NetSimRouterTab.html.ejs');
 var NetSimBandwidthControl = require('./NetSimBandwidthControl');
 var NetSimMemoryControl = require('./NetSimMemoryControl');
-var NetSimRouterLogTable = require('./NetSimRouterLogTable');
 var NetSimRouterStatsTable = require('./NetSimRouterStatsTable');
 var netsimGlobals = require('./netsimGlobals');
 
@@ -64,12 +63,6 @@ var NetSimRouterTab = module.exports = function (rootDiv, callbacks) {
   this.memorySliderStopCallback_ = callbacks.memorySliderStopCallback;
 
   /**
-   * @type {NetSimRouterLogTable}
-   * @private
-   */
-  this.routerLogTable_ = null;
-
-  /**
    * @type {NetSimRouterStatsTable}
    * @private
    */
@@ -110,8 +103,6 @@ NetSimRouterTab.prototype.render = function () {
     level: levelConfig
   }));
   this.rootDiv_.html(renderedMarkup);
-  this.routerLogTable_ = new NetSimRouterLogTable(
-      this.rootDiv_.find('.router_log_table'), levelConfig);
   this.routerStatsTable_ = new NetSimRouterStatsTable(
       this.rootDiv_.find('.router-stats'));
   if (levelConfig.showRouterBandwidthControl) {
@@ -132,7 +123,6 @@ NetSimRouterTab.prototype.render = function () {
  * @param {NetSimLogEntry[]} logData
  */
 NetSimRouterTab.prototype.setRouterLogData = function (logData) {
-  this.routerLogTable_.setRouterLogData(logData);
   if (this.routerStatsTable_) {
     this.routerStatsTable_.setRouterLogData(logData);
   }
