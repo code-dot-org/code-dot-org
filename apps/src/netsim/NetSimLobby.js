@@ -28,7 +28,7 @@ var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 
 var logger = require('./NetSimLogger').getSingleton();
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 /**
  * @typedef {Object} shardChoice
@@ -292,7 +292,7 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
         }
       }.bind(this))
       .done(function () {
-        if (netsimGlobals.getLevelConfig().canConnectToRouters &&
+        if (NetSimGlobals.getLevelConfig().canConnectToRouters &&
             !this.doesShardContainRouter()) {
           this.addRouterToLobby();
         }

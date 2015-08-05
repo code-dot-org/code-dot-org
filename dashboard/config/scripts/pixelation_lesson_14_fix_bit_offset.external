@@ -36,7 +36,7 @@ data '0001 0111
 markdown <<MARKDOWN
 # Oh no! The Code.org logo got messed up during transmission!
 
-**The problem:** A *single extra bit* was inserted into the stream of bits that make up the Code.org logo.  That extra bit bumps all of the other bits down the line making which makes the logo look messed up.<br> 
+**The problem:** A *single extra bit* was inserted into the stream of bits that make up the Code.org logo.  That extra bit bumps all of the other bits down the line which makes the logo look messed up.<br> 
 **Your task:** Hunt down the extra bit and remove it to fix the Code.org logo. <br>
 **HINT:** Scroll down in the box of bits to make sure that you see all of them.  Remember: One bit early on would make it look like many bits were out of order. <br>
 MARKDOWN
