@@ -1470,6 +1470,13 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
 };
 
 /**
+ * @returns {boolean} whether this block is selected and mid-drag
+ */
+Blockly.Block.prototype.isCurrentlyBeingDragged = function () {
+  return Blockly.selected === this && Blockly.Block.isFreelyDragging();
+};
+
+/**
  * Check whether this block is currently hidden (a non-persistent property)
  */
 Blockly.Block.prototype.isCurrentlyHidden_ = function () {
