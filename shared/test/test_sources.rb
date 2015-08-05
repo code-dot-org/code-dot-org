@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
 require File.expand_path '../../../deployment', __FILE__
-require File.expand_path '../../middleware/assets_api', __FILE__
+require File.expand_path '../../middleware/files_api', __FILE__
 require File.expand_path '../../middleware/channels_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
@@ -12,7 +12,7 @@ class SourcesTest < Minitest::Unit::TestCase
     # The Sources API does not *currently* need to share a cookie jar with the Channels API,
     # but it may once we restrict put, delete and list operations to the channel owner.
     @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
-    @files = Rack::Test::Session.new(Rack::MockSession.new(AssetsApi, 'studio.code.org'))
+    @files = Rack::Test::Session.new(Rack::MockSession.new(FilesApi, 'studio.code.org'))
   end
 
   def test_assets
