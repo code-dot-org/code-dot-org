@@ -2,7 +2,7 @@ require 'cdo/aws/s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
 
-class AssetsApi < Sinatra::Base
+class FilesApi < Sinatra::Base
 
   def get_impl(endpoint)
     case endpoint
