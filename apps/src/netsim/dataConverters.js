@@ -371,7 +371,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
 };
 
 /**
- * @typedef {Object} base64Payload
+ * @typedef {Object} Base64Payload
  * @property {string} string - the base64-encoded payload
  * @property {number} len - the length of the original binary payload
  */
@@ -382,7 +382,7 @@ exports.binaryToAscii = function (binaryString, byteSize) {
  * to the nearest byte and return the original length. The reverse
  * conversion expects to be given that original length.
  * @param {string} binaryString
- * @returns {base64Payload} Object containing the base64 string and the
+ * @returns {Base64Payload} Object containing the base64 string and the
  *          length of of the original binaryString
  * @throws {TypeError} if binaryString argument is not a
  *         properly-formatted string of zeroes and ones.

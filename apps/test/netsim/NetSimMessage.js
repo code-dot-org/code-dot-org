@@ -163,7 +163,7 @@ describe("NetSimMessage", function () {
     var testRow;
 
     // Create a message row in remote table
-    // The source payload that generates this base64Payload is "1001001"
+    // The source payload that generates this Base64Payload is "1001001"
     messageTable.create({
       fromNodeID: 1,
       toNodeID: 2,
