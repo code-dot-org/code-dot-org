@@ -13,6 +13,8 @@ var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
 var smallFooterUtils = require('@cdo/shared/smallFooter');
+var React = require('react');
+var VersionHistory = require('./templates/VersionHistory.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -414,6 +416,23 @@ StudioApp.prototype.init = function(config) {
       this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
         this.handleClearPuzzle(config);
       }).bind(this));
+    }).bind(this));
+  }
+
+  // Bind listener to 'Version History' button
+  var versionsHeader = document.getElementById('versions-header');
+  if (versionsHeader) {
+    dom.addClickTouchEvent(versionsHeader, (function() {
+      var codeDiv = document.createElement('div');
+      var dialog = this.createModalDialog({
+        Dialog: Dialog,
+        contentDiv: codeDiv,
+        defaultBtnSelector: 'again-button',
+        id: 'manageAssetsModal'
+      });
+      React.render(React.createElement(VersionHistory, {}), codeDiv);
+
+      dialog.show();
     }).bind(this));
   }
 
