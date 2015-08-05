@@ -16,7 +16,7 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var NetSimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./netsimNodeFactory_renaming');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizNode = require('./NetSimVizNode');
