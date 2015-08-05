@@ -167,7 +167,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
       sectionNumber: 1,
       headerHeight: HEADER_HEIGHT,
       onCollapseCallback: goog.bind(function (isNowCollapsed) {
-        // goog.ui.showElement toggles between "hidden" and "hidden" due to
+        // goog.ui.setElementShown toggles between "hidden" and "hidden" due to
         // inherited properties, so set display directly instead
         this.contractDiv_.style.display = isNowCollapsed ? 'none' : 'block';
         this.position_();
@@ -587,12 +587,12 @@ Blockly.ContractEditor.prototype.setupUIForBlock_ = function(targetFunctionDefin
       Blockly.Msg.CONTRACT_EDITOR_HEADER;
   goog.dom.setTextContent(goog.dom.getElement('outputTypeTitle'),
     isEditingVariable ? Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE : Blockly.Msg.FUNCTIONAL_RANGE_LABEL);
-  goog.style.showElement(goog.dom.getElement('domain-area'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('domain-label'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('paramAddButton'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('description-area'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('range-hint'), !isEditingVariable);
-  goog.style.showElement(goog.dom.getElement('domain-hint'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('domain-area'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('domain-label'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('paramAddButton'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('description-area'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('range-hint'), !isEditingVariable);
+  goog.style.setElementShown(goog.dom.getElement('domain-hint'), !isEditingVariable);
 };
 
 Blockly.ContractEditor.prototype.setupAfterExampleBlocksAdded_ = function() {
@@ -828,11 +828,12 @@ Blockly.ContractEditor.prototype.resetExample = function (block) {
 };
 
 Blockly.ContractEditor.prototype.updateExampleResult = function (block, result) {
-  this.exampleViews_.forEach(function (view) {
+  this.exampleViews_.some(function (view) {
     if (view.isViewForBlock(block)) {
       view.setResult(result);
+      // Return true so that we stop looking for a matching view
+      return true;
     }
-    return;
   });
 };
 

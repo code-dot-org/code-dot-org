@@ -308,8 +308,8 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
   this.position_();
-  goog.style.showElement(this.container_, true);
-  goog.style.showElement(this.modalBackground_, true);
+  goog.style.setElementShown(this.container_, true);
+  goog.style.setElementShown(this.modalBackground_, true);
   Blockly.focusedBlockSpace = this.modalBlockSpace;
   if (Blockly.selected) {
     Blockly.selected.unselect();
@@ -358,8 +358,8 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
     goog.dom.getElement('paramAddText').value = '';
   }
 
-  goog.style.showElement(this.container_, false);
-  goog.style.showElement(this.modalBackground_, false);
+  goog.style.setElementShown(this.container_, false);
+  goog.style.setElementShown(this.modalBackground_, false);
 
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.fireUiEvent(window, 'function_editor_closed');
