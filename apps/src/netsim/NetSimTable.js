@@ -18,6 +18,8 @@
 var _ = require('../utils').getLodash();
 var ObservableEvent = require('../ObservableEvent');
 var NetSimApi = require('./NetSimApi');
+var NetSimGlobals = require('./netsimGlobals');
+var ArgumentUtils = require('./ArgumentUtils');
 
 /**
  * Maximum time (in milliseconds) that tables should wait between full cache
@@ -27,10 +29,27 @@ var NetSimApi = require('./NetSimApi');
 var DEFAULT_POLLING_DELAY_MS = 10000;
 
 /**
- * Minimum wait time (in milliseconds) between refresh requests.
+ * Minimum time (in ms) to wait after an invalidation event before attempting
+ * to trigger a refresh request.  This produces a window in which clustered
+ * invalidations can be captured and coalesced together.
  * @type {number}
  */
-var DEFAULT_REFRESH_THROTTLING_MS = 1000;
+var DEFAULT_MINIMUM_DELAY_BEFORE_REFRESH_MS = 250;
+
+/**
+ * Maximum additional random delay (in ms) to add before the refresh request.
+ * Helps spread out requests from different clients responding to the same
+ * invalidation events.
+ * @type {number}
+ */
+var DEFAULT_MAXIMUM_DELAY_JITTER_MS = 200;
+
+/**
+ * Minimum time (in ms) to wait between refresh requests, regardless of how
+ * many invalidation events occur.
+ * @type {number}
+ */
+var DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS = 1000;
 
 /**
  * Wraps the app storage table API in an object with local
@@ -45,18 +64,26 @@ var DEFAULT_REFRESH_THROTTLING_MS = 1000;
  *        TRUE, this table will only request content that is new since its
  *        last refresh, not the entire table contents.  Currently this option
  *        is not safe to use if you care about updates or deletes in the table.
+ * @param {number} [options.minimumDelayBeforeRefresh] - Minimum time (in ms)
+ *        to wait after an invalidation event before attempting to trigger a
+ *        refresh request.  This produces a window in which clustered
+ *        invalidations can be captured and coalesced together.
+ * @param {number} [options.maximumJitterDelay] - Maximum additional random
+ *        delay (in ms) to add before the refresh request.  Helps spread out
+ *        requests from different clients responding to the same invalidation
+ *        events.
+ * @param {number} [options.minimumDelayBetweenRefreshes] - Minimum time (in ms)
+ *        to wait between refresh requests, regardless of how many invalidation
+ *        events occur.
  * @constructor
  * @throws {Error} if wrong number of arguments are provided.
+ * @throws {TypeError} if invalid types are passed in the options object.
  */
 var NetSimTable = module.exports = function (channel, shardID, tableName, options) {
-  // Require channel, shardID and tableName to be provided
-  if (!channel) {
-    throw new Error('channel is required');
-  } else if (!shardID) {
-    throw new Error('shardID is required');
-  } else if (!tableName) {
-    throw new Error('tableName is required');
-  }
+  ArgumentUtils.validateRequired(channel, 'channel');
+  ArgumentUtils.validateRequired(shardID, 'shardID', ArgumentUtils.isString);
+  ArgumentUtils.validateRequired(tableName, 'tableName', ArgumentUtils.isString);
+  options = ArgumentUtils.extendOptionsObject(options);
 
   /**
    * @private {string}
@@ -75,14 +102,6 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
    * @private {function{}}
    */
   this.channelCallback_ = undefined;
-
-  /**
-   * If TRUE, will only request deltas from remote storage.  Currently
-   * unsafe if we care about more than inserts to the table.
-   * @type {boolean}
-   * @private
-   */
-  this.useIncrementalRefresh_ = !!(options && options.useIncrementalRefresh);
 
   /**
    * API object for making remote calls
@@ -119,6 +138,49 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
   this.lastRefreshTime_ = 0;
 
   /**
+   * If TRUE, will only request deltas from remote storage.  Currently
+   * unsafe if we care about more than inserts to the table.
+   * @type {boolean}
+   * @private
+   */
+  this.useIncrementalRefresh_ = options.get(
+      'useIncrementalRefresh',
+      ArgumentUtils.isBoolean,
+      false);
+
+  /**
+   * Minimum time (in ms) to wait after an invalidation event before attempting
+   * to trigger a refresh request.  This produces a window in which clustered
+   * invalidations can be captured and coalesced together.
+   * @private {number}
+   */
+  this.minimumDelayBeforeRefresh_ = options.get(
+      'minimumDelayBeforeRefresh',
+      ArgumentUtils.isPositiveNoninfiniteNumber,
+      DEFAULT_MINIMUM_DELAY_BEFORE_REFRESH_MS);
+
+  /**
+   * Maximum additional random delay (in ms) to add before the refresh request.
+   * Helps spread out requests from different clients responding to the same
+   * invalidation events.
+   * @private {number}
+   */
+  this.maximumJitterDelay_ = options.get(
+      'maximumJitterDelay',
+      ArgumentUtils.isPositiveNoninfiniteNumber,
+      DEFAULT_MAXIMUM_DELAY_JITTER_MS);
+
+  /**
+   * Minimum time (in ms) to wait between refresh requests, regardless of how
+   * many invalidation events occur.
+   * @private {number}
+   */
+  this.minimumDelayBetweenRefreshes_ = options.get(
+      'minimumDelayBetweenRefreshes',
+      ArgumentUtils.isPositiveNoninfiniteNumber,
+      DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS);
+
+  /**
    * Minimum time (in milliseconds) to wait between pulling full table contents
    * from remote storage.
    * @private {number}
@@ -130,8 +192,7 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
    * used to coalesce refresh requests.
    * @private {function}
    */
-  this.refreshTable_ = this.makeThrottledRefresh_(
-      DEFAULT_REFRESH_THROTTLING_MS);
+  this.refreshTable_ = this.makeThrottledRefresh_();
 };
 
 /**
@@ -164,16 +225,20 @@ NetSimTable.prototype.unsubscribe = function () {
  */
 NetSimTable.prototype.refresh = function (callback) {
   callback = callback || function () {};
+  var deferred = $.Deferred();
 
+  // Which API call to make
   var apiCall = this.useIncrementalRefresh_ ?
       this.api_.allRowsFromID.bind(this.api_, this.latestRowID_ + 1) :
       this.api_.allRows.bind(this.api_);
+
+  // How to update the cache (depends on what we expect to get back)
   var cacheUpdate = this.useIncrementalRefresh_ ?
       this.incrementalCacheUpdate_.bind(this) :
       this.fullCacheUpdate_.bind(this);
 
-  var deferred = $.Deferred();
-  apiCall(function (err, data) {
+  // What should happen when the API call completes.
+  var apiCallCallback = function (err, data) {
     if (err) {
       callback(err, data);
       deferred.reject(err);
@@ -182,21 +247,53 @@ NetSimTable.prototype.refresh = function (callback) {
       callback(err, data);
       deferred.resolve();
     }
-  });
+  };
+
+  // Do we fire the API call now, or after a random delay?
+  if (this.maximumJitterDelay_ === 0) {
+    apiCall(apiCallCallback);
+  } else {
+    var jitterTime = NetSimGlobals.randomIntInRange(0, this.maximumJitterDelay_);
+    setTimeout(apiCall.bind(this, apiCallCallback), jitterTime);
+  }
+
   return deferred.promise();
 };
 
 /**
  * Generate throttled refresh function which will generate actual server
  * requests at the maximum given rate no matter how fast it is called. This
- * allows us to coalesce refresh events and reduce server load.
- * @param {number} waitMs - Minimum time (in milliseconds) to wait between
- *        refresh requests to the server.
- * @returns {function}
+ * allows us to coalesce refreshAll events and reduce server load.
+ *
+ * How this works:
+ * Wraps a longer throttle with leading and trailing events in a shorter debounce
+ * with a maximum wait time.  This gives grouped events a chance to coalesce
+ * without triggering an unneeded trailing event on the longer throttle.
+ *
+ * Here are some examples of what's going on, if using a 1000ms throttle
+ * wrapped in a 250ms debounce.
+ *
+ * In low traffic we collapse two groups of events to just two events.
+ *
+ * original events   :   || |                     | |
+ * debounced         :   -250>|                   -250>|
+ * then throttled    :        |--------------1000->    |--------------1000->
+ *
+ * In higher traffic we collapse the groups but still keep events at least
+ * one second apart.
+ *
+ * original events   :   || |        |     |      | |
+ * debounced         :   -250>|      -250>|-250>| -250>|
+ * then throttled    :        |--------------1000->|--------------1000->|
+ *
+ * @returns {function()}
  * @private
  */
-NetSimTable.prototype.makeThrottledRefresh_ = function (waitMs) {
-  return _.throttle(this.refresh.bind(this, function () {}), waitMs);
+NetSimTable.prototype.makeThrottledRefresh_ = function () {
+  var throttledRefresh = _.throttle(this.refresh.bind(this),
+      this.minimumDelayBetweenRefreshes_);
+  return _.debounce(throttledRefresh, this.minimumDelayBeforeRefresh_,
+      {maxWait: this.minimumDelayBeforeRefresh_});
 };
 
 /**
@@ -387,12 +484,38 @@ NetSimTable.prototype.setPollingInterval = function (intervalMs) {
 /**
  * Change the maximum rate at which the refresh operation for this table
  * will _actually_ be executed, no matter how fast we receive invalidations.
- * @param {number} waitMs - Minimum number of milliseconds between invalidation-
- *        triggered requests to the server.
+ * @param {number} delayMs - Minimum number of milliseconds
+ *        between invalidation-triggered requests to the server.
  */
-NetSimTable.prototype.setRefreshThrottleTime = function (waitMs) {
+NetSimTable.prototype.setMinimumDelayBetweenRefreshes = function (delayMs) {
   // To do this, we just replace the throttled refresh function with a new one.
-  this.refreshTable_ = this.makeThrottledRefresh_(waitMs);
+  this.minimumDelayBetweenRefreshes_ = delayMs;
+  this.refreshTable_ = this.makeThrottledRefresh_();
+};
+
+/**
+ * Change the minimum time (in ms) to wait after an invalidation event before
+ * attempting to trigger a refresh request.  This produces a window in which
+ * clustered invalidations can be captured and coalesced together.
+ * @param {number} delayMs - Minimum number of milliseconds between first
+ *        invalidation and request to server.
+ */
+NetSimTable.prototype.setMinimumDelayBeforeRefresh = function (delayMs) {
+  // To do this, we just replace the throttled refresh function with a new one.
+  this.minimumDelayBeforeRefresh_ = delayMs;
+  this.refreshTable_ = this.makeThrottledRefresh_();
+};
+
+/**
+ * Change the Maximum additional random delay (in ms) to add before the refresh
+ * request.  Helps spread out requests from different clients responding to the
+ * same events.
+ * @param {number} delayMs - Maximum number of milliseconds to add before
+ *        refresh request fires.
+ */
+NetSimTable.prototype.setMaximumJitterDelay = function (delayMs) {
+  // To do this, we just replace the throttled refresh function with a new one.
+  this.maximumJitterDelay_ = delayMs;
 };
 
 /** Polls server for updates, if it's been long enough. */

@@ -14,7 +14,7 @@
 'use strict';
 
 require('../utils');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 var NetSimVizNode = require('./NetSimVizNode');
 
 /**
@@ -26,7 +26,7 @@ var NetSimVizAutoDnsNode = module.exports = function () {
 
   this.getRoot().addClass('auto-dns-node');
 
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.showHostnameInGraph) {
     this.setName('dns');
   } else {

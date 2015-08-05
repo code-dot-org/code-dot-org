@@ -78,15 +78,17 @@ def load_configuration()
     'use_dynamo_properties'       => false,
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'lint'                        => rack_env == :staging || rack_env == :development,
-    'assets_s3_bucket'             => "cdo-v3-assets",
-    'assets_s3_directory'          => rack_env == :production ? 'assets' : "assets_#{rack_env}",
+    'assets_s3_bucket'            => 'cdo-v3-assets',
+    'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
+    'sources_s3_bucket'           => 'cdo-v3-sources',
+    'sources_s3_directory'        => rack_env == :production ? 'sources' : "sources_#{rack_env}",
     'netsim_api_publickey'        => [:development].include?(rack_env) ? 'JGW2rHUp_UCMW_fQmRf6iQ==' : 'HQJ8GCCMGP7Yh8MrtDusIA==',
     'use_pusher'                  => false,
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
     'pusher_application_secret'   => 'fake_application_secret',
-    'videos_s3_bucket'             => 'videos.code.org',
-    'videos_url'                   => '//videos.code.org'
+    'videos_s3_bucket'            => 'videos.code.org',
+    'videos_url'                  => '//videos.code.org'
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
