@@ -1159,11 +1159,12 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("drops packets after ten minutes in the router queue", function () {
-        routerA.bandwidth = 1000; // 1 bit / ms
+        routerA.bandwidth = 1; // 1 bit / second
+        var tenMinutesInBits = 600;
         var tenMinutesInMillis = 600000;
 
-        // Send a message that will take ten minutes + 1 millisecond to process.
-        sendMessageOfSize(tenMinutesInMillis + 1);
+        // Send a message that will take ten minutes + 1 second to process.
+        sendMessageOfSize(tenMinutesInBits + 1);
         assertTableSize(testShard, 'messageTable', 1);
         assertTableSize(testShard, 'logTable', 0);
 
@@ -1179,21 +1180,22 @@ describe("NetSimRouterNode", function () {
         assertTableSize(testShard, 'logTable', 0);
 
         // Thus, just after ten minutes, no message is routed.
-        routerA.tick({time: tenMinutesInMillis + 1});
+        routerA.tick({time: tenMinutesInMillis + 1000});
         assertTableSize(testShard, 'messageTable', 0);
         assertTableSize(testShard, 'logTable', 0);
       });
 
       it ("smaller packets can expire if backed up behind large ones", function () {
-        routerA.bandwidth = 1000; // 1 bit / ms
+        routerA.bandwidth = 1; // 1 bit / second
+        var oneMinuteInBits = 60;
         var oneMinuteInMillis = 60000;
 
         // This message should take nine minutes to process, so it will be sent.
-        sendMessageOfSize(9 * oneMinuteInMillis);
+        sendMessageOfSize(9 * oneMinuteInBits);
         // This one only takes two minutes to process, but because it's behind
         // the nine-minute one it will expire
-        sendMessageOfSize(2 * oneMinuteInMillis);
-        // This one is tiny and should take a fraction of a second, but it will
+        sendMessageOfSize(2 * oneMinuteInBits);
+        // This one is tiny and should take sixteen seconds, but it will
         // also expire since it's after the first two.
         sendMessageOfSize(16);
 
@@ -1214,13 +1216,14 @@ describe("NetSimRouterNode", function () {
       });
 
       it ("removing expired packets allows packets further down the queue to be processed sooner", function () {
-        routerA.bandwidth = 1000; // 1 bit / ms
+        routerA.bandwidth = 1; // 1 bit / second
+        var oneMinuteInBits = 60;
         var oneMinuteInMillis = 60000;
 
         // These messages will both expire, since before processing of the
         // first one completes they will both be over 10 minutes old.
-        sendMessageOfSize(12 * oneMinuteInMillis);
-        sendMessageOfSize(3 * oneMinuteInMillis);
+        sendMessageOfSize(12 * oneMinuteInBits);
+        sendMessageOfSize(3 * oneMinuteInBits);
         assertTableSize(testShard, 'messageTable', 2);
         assertTableSize(testShard, 'logTable', 0);
 
@@ -1233,7 +1236,7 @@ describe("NetSimRouterNode", function () {
         // and we use pessimistic scheduling, this one is initially scheduled
         // to finish at (9 + 12 + 3 + 1) = 25 minutes, meaning it would expire
         // as well.
-        sendMessageOfSize(oneMinuteInMillis);
+        sendMessageOfSize(oneMinuteInBits);
         assertTableSize(testShard, 'messageTable', 3);
         assertTableSize(testShard, 'logTable', 0);
 
