@@ -194,7 +194,7 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
 NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
 
   var packetAlreadyInLog = this.packets_.some(function (packet) {
-    return packet.packetID_ == packetID;
+    return packet.packetID == packetID;
   });
 
   if (packetAlreadyInLog) {
@@ -275,17 +275,17 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * @constructor
  */
 var NetSimLogPacket = function (packetBinary, packetID, options) {
+
+  /**
+   * @type {number}
+   */
+  this.packetID = packetID;
+
   /**
    * @type {string}
    * @private
    */
   this.packetBinary_ = packetBinary;
-
-  /**
-   * @type {number}
-   * @private
-   */
-  this.packetID_ = packetID;
 
   /**
    * @type {Packet.HeaderType[]}
