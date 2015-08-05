@@ -113,7 +113,7 @@ var ADDRESS_OPTION_LIMIT = 4096;
  *   which appear in the wire table.
  *
  * @param {!NetSimShard} shard
- * @param {Object} [routerRow] - Lobby row for this router.
+ * @param {RouterRow} [routerRow] - Lobby row for this router.
  * @constructor
  * @augments NetSimNode
  */
@@ -323,7 +323,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 };
 
 /**
- * @typedef {Object} routerRow
+ * @typedef {Object} RouterRow
  * @property {number} creationTime - Unix timestamp (local)
  * @property {number} bandwidth - Router max transmission/processing rate
  *           in bits/second
@@ -337,7 +337,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 
 /**
  * Build table row for this node.
- * @returns {routerRow}
+ * @returns {RouterRow}
  * @private
  * @override
  */
@@ -358,7 +358,7 @@ NetSimRouterNode.prototype.buildRow = function () {
 /**
  * Load state from remoteRow into local model, then notify anything observing
  * us that we've changed.
- * @param {routerRow} remoteRow
+ * @param {RouterRow} remoteRow
  * @private
  */
 NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
