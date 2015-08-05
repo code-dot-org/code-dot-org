@@ -33,10 +33,10 @@ Blockly.ExampleView = function (dom, svg, contractEditor) {
   goog.dom.classes.add(this.resetExampleButton, 'resetButton');
   goog.dom.append(this.domParent_, this.testExampleButton);
   goog.dom.append(this.domParent_, this.resetExampleButton);
-  this.refreshButtons();
   this.resultText = goog.dom.createDom('div', 'example-result-text');
   this.resultText.innerHTML = NO_RESULT_TEXT;
   goog.dom.append(this.domParent_, this.resultText);
+  this.refreshTestingUI(false);
 };
 
 /**
@@ -73,7 +73,7 @@ Blockly.ExampleView.prototype.testExample_ = function () {
   this.contractEditor_.resetExampleViews();
 
   this.setResult(this.contractEditor_.testExample(this.block_));
-  this.refreshButtons(true);
+  this.refreshTestingUI(true);
 
   // TODO(bjordan): UI re-layout post-result?
 };
@@ -84,20 +84,24 @@ Blockly.ExampleView.prototype.testExample_ = function () {
 Blockly.ExampleView.prototype.reset = function () {
   this.contractEditor_.resetExample(this.block_);
   this.setResult(NO_RESULT_TEXT);
-  this.refreshButtons(false);
+  this.refreshTestingUI(false);
 };
 
 Blockly.ExampleView.prototype.setResult = function (result) {
   this.resultText.innerHTML = result;
-  this.refreshButtons(false);
+  this.refreshTestingUI(false);
 };
 
 /**
- * @param {boolean} active Is this example currently displayed in the play area.
+ * @param {boolean} active Is this example's result currently visualized
  */
-Blockly.ExampleView.prototype.refreshButtons = function (active) {
-  goog.style.showElement(this.testExampleButton, !active);
-  goog.style.showElement(this.resetExampleButton, active);
+Blockly.ExampleView.prototype.refreshTestingUI = function (active) {
+  goog.style.setElementShown(this.resultText,
+      Blockly.ContractEditor.SHOW_TEST_BUTTONS);
+  goog.style.setElementShown(this.testExampleButton,
+      Blockly.ContractEditor.SHOW_TEST_BUTTONS && !active);
+  goog.style.setElementShown(this.resetExampleButton,
+      Blockly.ContractEditor.SHOW_TEST_BUTTONS && active);
 };
 
 /**
