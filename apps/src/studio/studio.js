@@ -4,6 +4,8 @@
  * Copyright 2014 Code.org
  *
  */
+ 
+ /* global $*/
 
 'use strict';
 
@@ -1853,10 +1855,9 @@ Studio.checkForPreExecutionFailure = function () {
  */
 Studio.checkExamples_ = function () {
   var outcome = {};
-  // TODO (brent) - turn this on
-  // if (!level.examplesRequired) {
-  //   return outcome;
-  // }
+  if (!level.examplesRequired) {
+    return outcome;
+  }
 
   var exampleless = studioApp.getFunctionWithoutExample();
   if (exampleless) {
@@ -1901,7 +1902,7 @@ Studio.checkExamples_ = function () {
   }
 
   return outcome;
-}
+};
 
 var ErrorLevel = {
   WARNING: 'WARNING',
