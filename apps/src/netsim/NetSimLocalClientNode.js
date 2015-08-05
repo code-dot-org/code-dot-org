@@ -28,7 +28,7 @@ var ObservableEvent = require('../ObservableEvent');
 
 var logger = NetSimLogger.getSingleton();
 var NetSimConstants = require('./netsimConstants_renaming');
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 var MessageGranularity = NetSimConstants.MessageGranularity;
 

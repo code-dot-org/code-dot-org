@@ -24,7 +24,7 @@ var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');
 var NetSimTabType = require('./netsimConstants_renaming').NetSimTabType;
 var shouldShowTab = require('./netsimUtils').shouldShowTab;
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 /**
  * Wrapper component for tabs panel on the right side of the page.

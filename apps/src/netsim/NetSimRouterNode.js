@@ -42,7 +42,7 @@ var NodeType = NetSimConstants.NodeType;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
 var logger = NetSimLogger.getSingleton();
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 /**
  * @type {number}

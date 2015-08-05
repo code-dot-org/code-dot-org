@@ -46,7 +46,7 @@ var DnsMode = NetSimConstants.DnsMode;
 var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals_renaming');
 
 /**
  * The top-level Internet Simulator controller.

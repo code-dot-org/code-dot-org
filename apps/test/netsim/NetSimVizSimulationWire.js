@@ -12,7 +12,7 @@ var NetSimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = NetSimTestUtils.fakeShard;
 var assertTableSize = NetSimTestUtils.assertTableSize;
 
-var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals_renaming');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
