@@ -66,6 +66,12 @@ To fix:
 > rake seed:all
 ````
 
+### you get a merge conflict with `dashboard/config/locales/dsls.en.yml`
+
+This file is owned by levelbuilder, but can be (incorrectly) modified by
+the staging build process. If you experience a merge conflict, resolve it
+in favor of levelbuilder.
+
 ### you just pulled .level and .script files that were created by a different levelbuilder
 
 Levelbuilders by default do not read levels from files into the
