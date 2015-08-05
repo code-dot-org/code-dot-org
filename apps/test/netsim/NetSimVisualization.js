@@ -21,7 +21,7 @@ var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire'
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
 
 var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 
@@ -98,7 +98,7 @@ describe("NetSimVisualization", function () {
 
     beforeEach(function () {
       netsimTestUtils.initializeGlobalsToDefaultValues();
-      netsimGlobals.getLevelConfig().broadcastMode = true;
+      NetSimGlobals.getLevelConfig().broadcastMode = true;
 
       testShard = fakeShard();
 
