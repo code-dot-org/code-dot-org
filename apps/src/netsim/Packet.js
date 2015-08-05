@@ -113,7 +113,7 @@ Packet.prototype.getBodyAsAscii = function (bitsPerChar) {
  * Given a particular packet format, can convert a set of fields down
  * into a binary string matching the specification, or extract fields
  * on demand from a binary string.
- * @param {addressHeaderFormat} addressFormat
+ * @param {AddressHeaderFormat} addressFormat
  * @param {number} packetCountBitWidth
  * @param {Packet.HeaderType[]} headerSpec - Specification of packet format, an
  *        ordered set of objects in the form {key:string, bits:number} where
@@ -137,7 +137,7 @@ Packet.Encoder = function (addressFormat, packetCountBitWidth, headerSpec) {
 };
 
 /**
- * @param {addressHeaderFormat} addressFormat
+ * @param {AddressHeaderFormat} addressFormat
  * @private
  */
 Packet.Encoder.prototype.calculateBitWidth = function (addressFormat) {

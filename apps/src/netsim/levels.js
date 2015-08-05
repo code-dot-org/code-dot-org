@@ -65,7 +65,7 @@ var NetSimTabType = NetSimConstants.NetSimTabType;
  *           inter-router message should try to visit before going to its
  *           destination router.
  *
- * @property {addressHeaderFormat} addressFormat - Specify how many bits wide
+ * @property {AddressHeaderFormat} addressFormat - Specify how many bits wide
  *           an address is within the simulation and how it should be divided
  *           up into a hierarchy. Format resembles IPv4 dot-decimal notation,
  *           but the numbers specify the number of bits for each section.
