@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require_relative '../src/env'
 require src_dir 'course'
 
-class CourseTest < Minitest::Unit::TestCase
+class CourseTest < Minitest::Test
   describe Course do
     def setup
       @course = Course.new('course1')
