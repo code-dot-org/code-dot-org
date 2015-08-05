@@ -35,6 +35,7 @@ window.apps = {
         }
         if (appOptions.level.projectTemplateLevelName) {
           $('#clear-puzzle-header').hide();
+          $('#versions-header').show();
         }
         $(document).trigger('appInitialized');
       },
