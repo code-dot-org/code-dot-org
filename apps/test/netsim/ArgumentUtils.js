@@ -153,4 +153,138 @@ describe ("ArgumentUtils", function () {
 
   });
 
+  describe ("isPositiveNoninfiniteNumber", function () {
+    var isValid = ArgumentUtils.isPositiveNoninfiniteNumber;
+
+    it ("accepts zero, but not less", function () {
+      assert(isValid(0));
+      assert(!isValid(-1));
+    });
+
+    it ("rejects infinities", function () {
+      assert(!isValid(Infinity));
+      assert(!isValid(-Infinity));
+    });
+
+    it ("rejects null", function () {
+      assert(!isValid(null));
+    });
+
+    it ("rejects NaN", function () {
+      assert(!isValid(NaN));
+    });
+
+    it ("rejects undefined", function () {
+      assert(!isValid(undefined));
+    });
+
+    it ("rejects strings", function () {
+      assert(!isValid('string'));
+      assert(!isValid('150'));
+    });
+
+    it ("rejects booleans", function () {
+      assert(!isValid(true));
+      assert(!isValid(false));
+    });
+
+    it ("rejects objects", function () {
+      assert(!isValid({}));
+    });
+
+    it ("rejects functions", function () {
+      assert(!isValid(function () {}));
+    });
+  });
+
+  describe ("isBoolean", function () {
+    var isValid = ArgumentUtils.isBoolean;
+
+    it ("accepts booleans", function () {
+      assert(isValid(true));
+      assert(isValid(false));
+    });
+
+    it ("rejects numbers", function () {
+      assert(!isValid(-1));
+      assert(!isValid(0));
+      assert(!isValid(1));
+    });
+
+    it ("rejects infinities", function () {
+      assert(!isValid(Infinity));
+      assert(!isValid(-Infinity));
+    });
+
+    it ("rejects null", function () {
+      assert(!isValid(null));
+    });
+
+    it ("rejects NaN", function () {
+      assert(!isValid(NaN));
+    });
+
+    it ("rejects undefined", function () {
+      assert(!isValid(undefined));
+    });
+
+    it ("rejects strings", function () {
+      assert(!isValid('string'));
+      assert(!isValid('false'));
+    });
+
+    it ("rejects objects", function () {
+      assert(!isValid({}));
+    });
+
+    it ("rejects functions", function () {
+      assert(!isValid(function () {}));
+    });
+  });
+
+  describe ("isString", function () {
+    var isValid = ArgumentUtils.isString;
+
+    it ("accepts strings", function () {
+      assert(isValid(''));
+      assert(isValid('string'));
+    });
+
+    it ("rejects numbers", function () {
+      assert(!isValid(-1));
+      assert(!isValid(0));
+      assert(!isValid(1));
+    });
+
+    it ("rejects infinities", function () {
+      assert(!isValid(Infinity));
+      assert(!isValid(-Infinity));
+    });
+
+    it ("rejects null", function () {
+      assert(!isValid(null));
+    });
+
+    it ("rejects NaN", function () {
+      assert(!isValid(NaN));
+    });
+
+    it ("rejects undefined", function () {
+      assert(!isValid(undefined));
+    });
+
+    it ("rejects booleans", function () {
+      assert(!isValid(true));
+      assert(!isValid(false));
+    });
+
+    it ("rejects objects", function () {
+      assert(!isValid({}));
+    });
+
+    it ("rejects functions", function () {
+      assert(!isValid(function () {}));
+    });
+  });
+
 });
