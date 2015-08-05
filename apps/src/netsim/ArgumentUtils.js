@@ -46,8 +46,9 @@ exports.validateRequired = function (arg, argName, validator) {
  */
 exports.extendOptionsObject = function (optionsObject) {
   // Allow `undefined` and all objects except for `null`
-  if (optionsObject !== undefined &&
-      (typeof optionsObject !== 'object' || optionsObject === null)) {
+  var isUndefined = (optionsObject === undefined);
+  var isRealObject = (typeof optionsObject === 'object' && optionsObject !== null);
+  if (!(isUndefined || isRealObject)) {
     throw new TypeError('Options object must be an object.');
   }
 
