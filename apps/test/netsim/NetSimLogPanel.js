@@ -6,7 +6,7 @@ var assert = testUtils.assert;
 
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
 var dataConverters = require('@cdo/apps/netsim/dataConverters');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 
 /** binary to ascii */
 function to_a(binary) {

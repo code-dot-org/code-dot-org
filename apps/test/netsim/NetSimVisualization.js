@@ -21,7 +21,7 @@ var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire'
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
 
 var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/netsimGlobals');
 var DnsMode = netsimConstants.DnsMode;
 var EncodingType = netsimConstants.EncodingType;
 

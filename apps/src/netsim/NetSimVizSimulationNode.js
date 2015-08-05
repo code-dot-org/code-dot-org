@@ -19,7 +19,7 @@ var NetSimVizNode = require('./NetSimVizNode');
 
 var NodeType = netsimConstants.NodeType;
 
-var NetSimGlobals = require('./NetSimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 /**
  * @param {NetSimNode} sourceNode
