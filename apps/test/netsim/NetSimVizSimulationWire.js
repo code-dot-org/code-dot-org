@@ -12,7 +12,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
@@ -106,7 +106,7 @@ describe("NetSimVizSimulationWire", function () {
     });
 
     it ("is hidden in broadcast mode", function () {
-      netsimGlobals.getLevelConfig().broadcastMode = true;
+      NetSimGlobals.getLevelConfig().broadcastMode = true;
       vizWire.configureFrom(simWire);
       assertEqual('none', vizWire.getRoot().css('display'));
     });

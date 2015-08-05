@@ -12,7 +12,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 var NetSimVizAutoDnsNode = require('@cdo/apps/netsim/NetSimVizAutoDnsNode');
@@ -42,7 +42,7 @@ describe("NetSimVizAutoDnsNode", function () {
     });
 
     it ("uses a dns hostname when level expects it", function () {
-      netsimGlobals.getLevelConfig().showHostnameInGraph = true;
+      NetSimGlobals.getLevelConfig().showHostnameInGraph = true;
       vizElement = new NetSimVizAutoDnsNode();
       assertEqual('dns', vizElement.displayName_.text());
     });

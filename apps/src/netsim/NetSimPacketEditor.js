@@ -26,7 +26,7 @@ var NetSimLogPanel = require('./NetSimLogPanel');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
@@ -70,7 +70,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
 
   /**
    * @type {jQuery}
@@ -514,7 +514,7 @@ var truncatedDecimalToInt = function (decimalString, maxWidth) {
  * @returns {string}
  */
 var cleanAddressString = function (originalString) {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var binaryForm = dataConverters.addressStringToBinary(
       originalString, level.addressFormat);
   return dataConverters.binaryToAddressString(
@@ -526,7 +526,7 @@ var cleanAddressString = function (originalString) {
  * @private
  */
 NetSimPacketEditor.prototype.bindElements_ = function () {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var rootDiv = this.rootDiv_;
 
   /** @type {rowType[]} */
@@ -603,7 +603,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     // We attach blur to reformat the edited field when the user leaves it,
     //    and to catch non-keyup cases like copy/paste.
 
-    var level = netsimGlobals.getLevelConfig();
+    var level = NetSimGlobals.getLevelConfig();
     var encoder = new Packet.Encoder(level.addressFormat,
         level.packetCountBitWidth, this.packetSpec_);
 
@@ -662,7 +662,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var encoder = new Packet.Encoder(level.addressFormat,
       level.packetCountBitWidth, this.packetSpec_);
 
@@ -791,7 +791,7 @@ NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
  * @private
  */
 NetSimPacketEditor.prototype.getPacketBinary = function () {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var encoder = new Packet.Encoder(level.addressFormat,
       level.packetCountBitWidth, this.packetSpec_);
   return encoder.concatenateBinary(

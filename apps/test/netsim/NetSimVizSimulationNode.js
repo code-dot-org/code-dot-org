@@ -12,7 +12,7 @@ var netsimTestUtils = require('../util/netsimTestUtils');
 var fakeShard = netsimTestUtils.fakeShard;
 var assertTableSize = netsimTestUtils.assertTableSize;
 
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
@@ -89,7 +89,7 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it ("shows the client's hostname when level expects it", function () {
-      netsimGlobals.getLevelConfig().showHostnameInGraph = true;
+      NetSimGlobals.getLevelConfig().showHostnameInGraph = true;
       vizElement = new NetSimVizSimulationNode(simEntity);
       assertEqual('jonathan1', vizElement.displayName_.text());
     });
@@ -126,7 +126,7 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it ("shows the router's hostname when level expects it", function () {
-      netsimGlobals.getLevelConfig().showHostnameInGraph = true;
+      NetSimGlobals.getLevelConfig().showHostnameInGraph = true;
       vizElement = new NetSimVizSimulationNode(simEntity);
       assertEqual('router1', vizElement.displayName_.text());
     });
@@ -153,7 +153,7 @@ describe("NetSimVizSimulationNode", function () {
     });
 
     it ("is hidden in broadcast mode", function () {
-      netsimGlobals.getLevelConfig().broadcastMode = true;
+      NetSimGlobals.getLevelConfig().broadcastMode = true;
       vizElement = new NetSimVizSimulationNode(simEntity);
       assertEqual('none', vizElement.getRoot().css('display'));
     });

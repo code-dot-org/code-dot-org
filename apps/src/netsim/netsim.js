@@ -46,7 +46,7 @@ var DnsMode = netsimConstants.DnsMode;
 var MessageGranularity = netsimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The top-level Internet Simulator controller.
@@ -178,7 +178,7 @@ NetSim.prototype.init = function(config) {
   }
 
   // Set up global singleton for easy access to simulator-wide settings
-  netsimGlobals.setRootControllers(this.studioApp_, this);
+  NetSimGlobals.setRootControllers(this.studioApp_, this);
 
   // Remove icon from all NetSim instructions dialogs
   config.skin.staticAvatar = null;
@@ -472,7 +472,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
     return;
   }
 
-  this.shard_ = new NetSimShard(shardID, netsimGlobals.getPubSubConfig());
+  this.shard_ = new NetSimShard(shardID, NetSimGlobals.getPubSubConfig());
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
     this.shardChange.notifyObservers(this.shard_, this.myNode);

@@ -26,7 +26,7 @@ var Packet = require('./Packet');
 var packetMarkup = require('./NetSimLogPacket.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * How long the "entrance" animation for new messages lasts, in milliseconds.
@@ -366,7 +366,7 @@ NetSimLogPacket.prototype.getRoot = function () {
  * @param {jQuery} rootElement
  */
 NetSimLogPanel.adjustHeaderColumnWidths = function (rootElement) {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var encoder = new Packet.Encoder(
       level.addressFormat,
       level.packetCountBitWidth,
@@ -482,5 +482,5 @@ NetSimLogPanel.prototype.getHeight = function () {
  */
 NetSimLogPanel.prototype.onMinimizerClick_ = function () {
   NetSimLogPanel.superPrototype.onMinimizerClick_.call(this);
-  netsimGlobals.updateLayout();
+  NetSimGlobals.updateLayout();
 };

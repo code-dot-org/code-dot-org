@@ -16,7 +16,7 @@
 
 var netsimUtils = require('./netsimUtils');
 var dataConverters = require('./dataConverters');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Wraps binary packet content with the format information required to
@@ -26,7 +26,7 @@ var netsimGlobals = require('./netsimGlobals');
  * @constructor
  */
 var Packet = module.exports = function (formatSpec, binary) {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
 
   /** @type {Packet.Encoder} */
   this.encoder = new Packet.Encoder(level.addressFormat,
