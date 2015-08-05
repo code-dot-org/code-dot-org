@@ -31,7 +31,7 @@ if (!(window.atob && window.btoa)) {
 }
 
 /**
- * @typedef {string} addressHeaderFormat
+ * @typedef {string} AddressHeaderFormat
  * A string indicating the parts of an address field in the packet header,
  * their respective byte-widths, and the separators to be used when converting
  * binary to a readable format.
@@ -422,7 +422,7 @@ exports.base64ToBinary = function (base64string, len) {
 /**
  * Converts binary to an address string using the provided address format.
  * @param {string} binaryString
- * @param {addressHeaderFormat} addressFormat
+ * @param {AddressHeaderFormat} addressFormat
  * @returns {string}
  */
 exports.binaryToAddressString = function (binaryString, addressFormat) {
@@ -455,7 +455,7 @@ exports.binaryToAddressString = function (binaryString, addressFormat) {
  * Converts a formatted address string (decimal numbers with separators) into
  * binary with bit-widths for each part matching the given format.
  * @param {string} addressString
- * @param {addressHeaderFormat} addressFormat
+ * @param {AddressHeaderFormat} addressFormat
  * @returns {string}
  */
 exports.addressStringToBinary = function (addressString, addressFormat) {
@@ -490,7 +490,7 @@ exports.addressStringToBinary = function (addressString, addressFormat) {
  * Convert a binary string to a formatted representation, with chunks that
  * correspond to the parts of the address header.
  * @param {string} binaryString
- * @param {addressHeaderFormat} addressFormat
+ * @param {AddressHeaderFormat} addressFormat
  */
 exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
   var binary = exports.minifyBinary(binaryString);
