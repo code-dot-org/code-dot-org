@@ -15,11 +15,11 @@
  */
 'use strict';
 
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./NetSimConstants');
 
-var NodeType = netsimConstants.NodeType;
+var NodeType = NetSimConstants.NodeType;
 
-var netsimNodeFactory = module.exports;
+var NetSimNodeFactory = module.exports;
 
 /**
  * Given a set of rows from the node table on a shard, gives back a set of node
@@ -29,8 +29,8 @@ var netsimNodeFactory = module.exports;
  * @throws when a row doesn't have a mappable node type.
  * @return {Array.<NetSimNode>} nodes for the rows
  */
-netsimNodeFactory.nodesFromRows = function (shard, nodeRows) {
-  return nodeRows.map(netsimNodeFactory.nodeFromRow.bind(this, shard));
+NetSimNodeFactory.nodesFromRows = function (shard, nodeRows) {
+  return nodeRows.map(NetSimNodeFactory.nodeFromRow.bind(this, shard));
 };
 
 /**
@@ -41,7 +41,7 @@ netsimNodeFactory.nodesFromRows = function (shard, nodeRows) {
  * @throws when the row doesn't have a mappable node type.
  * @return {NetSimNode} node for the rows
  */
-netsimNodeFactory.nodeFromRow = function (shard, nodeRow) {
+NetSimNodeFactory.nodeFromRow = function (shard, nodeRow) {
   if (nodeRow.type === NodeType.CLIENT) {
     var NetSimClientNode = require('./NetSimClientNode');
     return new NetSimClientNode(shard, nodeRow);

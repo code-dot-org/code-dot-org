@@ -21,7 +21,7 @@
 /* global exports */
 
 require('../utils'); // For String.prototype.repeat polyfill
-var netsimUtils = require('./netsimUtils');
+var NetSimUtils = require('./NetSimUtils');
 
 // window.{btoa, atob} polyfills
 if (!(window.atob && window.btoa)) {
@@ -31,7 +31,7 @@ if (!(window.atob && window.btoa)) {
 }
 
 /**
- * @typedef {string} addressHeaderFormat
+ * @typedef {string} AddressHeaderFormat
  * A string indicating the parts of an address field in the packet header,
  * their respective byte-widths, and the separators to be used when converting
  * binary to a readable format.
@@ -224,7 +224,7 @@ var intToString = function (int, base, width) {
   if (width <= 0) {
     throw new RangeError("Output width must be greater than zero");
   }
-  return netsimUtils.zeroPadLeft(int.toString(base), width);
+  return NetSimUtils.zeroPadLeft(int.toString(base), width);
 };
 
 /**
@@ -286,7 +286,7 @@ exports.binaryToHex = function (binaryString) {
   var chars = [];
   var uglyBinary = exports.minifyBinary(binaryString);
   for (var i = 0; i < uglyBinary.length; i += nibbleWidth) {
-    currentNibble = netsimUtils.zeroPadRight(
+    currentNibble = NetSimUtils.zeroPadRight(
         uglyBinary.substr(i, nibbleWidth), nibbleWidth);
     chars.push(exports.intToHex(exports.binaryToInt(currentNibble), 1));
   }
@@ -325,7 +325,7 @@ exports.binaryToDecimal = function (binaryString, byteSize) {
   var numbers = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = netsimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = NetSimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
     numbers.push(exports.binaryToInt(currentByte));
   }
   return numbers.join(' ');
@@ -364,14 +364,14 @@ exports.binaryToAscii = function (binaryString, byteSize) {
   var chars = [];
   var binary = exports.minifyBinary(binaryString);
   for (var i = 0; i < binary.length; i += byteSize) {
-    currentByte = netsimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
+    currentByte = NetSimUtils.zeroPadRight(binary.substr(i, byteSize), byteSize);
     chars.push(String.fromCharCode(exports.binaryToInt(currentByte)));
   }
   return chars.join('');
 };
 
 /**
- * @typedef {Object} base64Payload
+ * @typedef {Object} Base64Payload
  * @property {string} string - the base64-encoded payload
  * @property {number} len - the length of the original binary payload
  */
@@ -382,13 +382,13 @@ exports.binaryToAscii = function (binaryString, byteSize) {
  * to the nearest byte and return the original length. The reverse
  * conversion expects to be given that original length.
  * @param {string} binaryString
- * @returns {base64Payload} Object containing the base64 string and the
+ * @returns {Base64Payload} Object containing the base64 string and the
  *          length of of the original binaryString
  * @throws {TypeError} if binaryString argument is not a
  *         properly-formatted string of zeroes and ones.
  * @example
  * // returns { string: "kg==", len: 7 }
- * dataConverters.binaryToBase64("1001001");
+ * DataConverters.binaryToBase64("1001001");
  */
 exports.binaryToBase64 = function (binaryString) {
 
@@ -398,7 +398,7 @@ exports.binaryToBase64 = function (binaryString) {
   }
 
   var byteLen = Math.ceil(binaryString.length/8.0) * 8;
-  var paddedBinaryString = netsimUtils.zeroPadRight(binaryString, byteLen);
+  var paddedBinaryString = NetSimUtils.zeroPadRight(binaryString, byteLen);
   var payload = window.btoa(exports.binaryToAscii(paddedBinaryString, 8));
 
   return { string: payload, len: binaryString.length };
@@ -413,7 +413,7 @@ exports.binaryToBase64 = function (binaryString) {
  * @returns {string} binaryString
  * @example
  * // returns "1001001"
- * dataConverters.base64ToBinary("kg==", 7);
+ * DataConverters.base64ToBinary("kg==", 7);
  */
 exports.base64ToBinary = function (base64string, len) {
   return exports.asciiToBinary(window.atob(base64string), 8).substr(0, len);
@@ -422,7 +422,7 @@ exports.base64ToBinary = function (base64string, len) {
 /**
  * Converts binary to an address string using the provided address format.
  * @param {string} binaryString
- * @param {addressHeaderFormat} addressFormat
+ * @param {AddressHeaderFormat} addressFormat
  * @returns {string}
  */
 exports.binaryToAddressString = function (binaryString, addressFormat) {
@@ -455,7 +455,7 @@ exports.binaryToAddressString = function (binaryString, addressFormat) {
  * Converts a formatted address string (decimal numbers with separators) into
  * binary with bit-widths for each part matching the given format.
  * @param {string} addressString
- * @param {addressHeaderFormat} addressFormat
+ * @param {AddressHeaderFormat} addressFormat
  * @returns {string}
  */
 exports.addressStringToBinary = function (addressString, addressFormat) {
@@ -490,7 +490,7 @@ exports.addressStringToBinary = function (addressString, addressFormat) {
  * Convert a binary string to a formatted representation, with chunks that
  * correspond to the parts of the address header.
  * @param {string} binaryString
- * @param {addressHeaderFormat} addressFormat
+ * @param {AddressHeaderFormat} addressFormat
  */
 exports.formatBinaryForAddressHeader = function (binaryString, addressFormat) {
   var binary = exports.minifyBinary(binaryString);
