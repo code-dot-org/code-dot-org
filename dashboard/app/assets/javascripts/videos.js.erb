@@ -1,22 +1,57 @@
 
 function createVideoWithFallback(parentElement, options, width, height) {
   upgradeInsecureOptions(options);
-  var video = createVideo(options);
+  var video = $("<div id='video'/>");
   video.width(width).height(height);
   if(parentElement) {
     parentElement.append(video);
   }
-  setupVideoFallback(options, width, height);
+  loadYouTubeVideo(options, width, height, function() {
+    addFallbackVideoPlayer(video, options, width, height);
+  });
   return video;
 }
 
-function createVideo(options) {
-  return $('<iframe id="video"/>').addClass('video-player').attr({
-    src: options.src,
-    scrolling: 'no'
-  });
+function loadYouTubeVideo(options, width, height, failureCallback) {
+  if (!options['enable_fallback']) {
+    failureCallback = function(){};
+  }
+  if (options['force_fallback'] || window.document.URL.toString().indexOf('force_youtube_fallback') >= 0) {
+    failureCallback();
+  }
+  if (!window.youTubeAPIReady) {
+    // Use the official YouTube IFrame Player API to load the YouTube video.
+    // Ref: https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+    var tag = document.createElement('script');
+    tag.onerror = failureCallback;
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    window.onYouTubeIframeAPIReady = function() {
+      window.youTubeAPIReady = true;
+      startYouTubePlayer(options, width, height);
+    };
+  } else {
+    startYouTubePlayer(options, width, height);
+  }
+  function startYouTubePlayer(options, width, height) {
+    new YT.Player('video', {
+      width: width,
+      height: height,
+      videoId: options.youtube_id,
+      events: {
+        'onReady': function (event) {
+          event.target.playVideo();
+        },
+        'onError': function(event) {
+          console.log('YT Player Error: ' + event.data);
+          failureCallback();
+        }
+      }
+    });
+  }
 }
-
 // Options include:
 //   src - the url to the video
 //   key - an uid.
@@ -33,7 +68,7 @@ function showVideoDialog(options) {
   content.find('.video-name').text(options.name);
   body.append(content);
 
-  var video = createVideo(options);
+  var video = $("<div id='video'/>");
   body.append(video);
 
   var notesDiv = $('<div id="notes-outer"><div id="notes"/></div>');
@@ -98,7 +133,7 @@ function showVideoDialog(options) {
   });
 
   var divHeight = $div.innerHeight() - nav.outerHeight();
-  $(video).height(divHeight);
+  video.height(divHeight);
 
   notesDiv.height(divHeight);
 
@@ -110,8 +145,10 @@ function showVideoDialog(options) {
     shouldStillAdd = false;
   });
 
-  setupVideoFallback(options, $div.width(), divHeight, function(){
-    return shouldStillAdd;
+  loadYouTubeVideo(options, $div.width(), divHeight, function() {
+    if (shouldStillAdd) {
+      addFallbackVideoPlayer(video, options, $div.width(), divHeight);
+    }
   });
 }
 
@@ -130,53 +167,20 @@ function stopTrackingVideoJSProgress() {
   fallbackPlayer.stopTrackingCurrentTime();
 }
 
-// Precondition: $('#video') must exist on the DOM before this function is called.
-function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {
-  shouldStillAddCallback = shouldStillAddCallback || function() { return true };
-
-  if (!videoInfo['enable_fallback']) {
-    return;
-  }
-
-  if (videoInfo['force_fallback']) {
-    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
-    return;
-  }
-
-  onYouTubeBlocked(function() {
-    if (!shouldStillAddCallback()) {
-      return;
-    }
-    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
-  });
-}
-
-function onYouTubeBlocked(callback) {
-  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function(){}, callback);
-}
-
-function youTubeAvailabilityEndpointURL() {
-  if (window.document.URL.toString().indexOf('force_youtube_fallback') >= 0) {
-    return 'https://unreachable-test-subdomain.example.com/favicon.ico';
-  }
-  return "https://www.youtube.com/favicon.ico";
-}
-
-// Precondition: $('#video') must exist on the DOM before this function is called.
-function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
+function addFallbackVideoPlayer(oldElement, options, width, height) {
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
   var playerCode =
-      '<div><video id="'+ fallbackPlayerID +'" ' +
-      'width="' + playerWidth + '" height="' + playerHeight + '" ' +
-      (videoInfo.autoplay ? 'autoplay ' : '') +
-      'class="video-js vjs-default-skin vjs-big-play-centered" ' +
-      'controls preload="auto" ' +
-      'poster="' + videoInfo.thumbnail + '">' +
-      '<source src="' + videoInfo.download + '" type="video/mp4"/>' +
-      '</video></div>';
+    '<div><video id="'+ fallbackPlayerID +'" ' +
+    'width="' + width + '" height="' + height + '" ' +
+    (options.autoplay ? 'autoplay ' : '') +
+    'class="video-js vjs-default-skin vjs-big-play-centered" ' +
+    'controls preload="auto" ' +
+    'poster="' + options.thumbnail + '">' +
+    '<source src="' + options.download + '" type="video/mp4"/>' +
+    '</video></div>';
 
-  // Swap current #video with new code
-  $('#video').replaceWith(playerCode);
+  // Swap old video element with new code
+  oldElement.replaceWith(playerCode);
 
   videojs.options.flash.swf = "<%= asset_path("video-js.swf") %>";
   videojs.options.techOrder = ["flash", "html5"];

@@ -78,6 +78,7 @@ class Video < ActiveRecord::Base
   def summarize(autoplay = true)
     # Note: similar video info is also set in javascript at levels/_blockly.html.haml
     {
+        youtube_id: youtube_code,
         src: youtube_url(autoplay: autoplay ? 1 : 0),
         key: key,
         name: I18n.t("data.video.name.#{key}"),

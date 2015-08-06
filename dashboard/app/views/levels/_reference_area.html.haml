@@ -13,6 +13,7 @@
   $('.video_link').each(function() {
     addClickTouchEvent($(this), $.proxy(function() {
       showVideoDialog({
+        youtube_id: $(this).attr('data-youtube-id'),
         src: $(this).attr('data-src'),
         name: $(this).attr('data-name'),
         key: $(this).attr('data-key'),
