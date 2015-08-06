@@ -15,7 +15,7 @@
 'use strict';
 
 var markup = require('./NetSimDnsTab.html.ejs');
-var DnsMode = require('./netsimConstants').DnsMode;
+var DnsMode = require('./NetSimConstants').DnsMode;
 var NetSimDnsModeControl = require('./NetSimDnsModeControl');
 var NetSimDnsManualControl = require('./NetSimDnsManualControl');
 var NetSimDnsTable = require('./NetSimDnsTable');

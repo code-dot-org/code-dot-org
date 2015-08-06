@@ -1319,10 +1319,11 @@ goog.addDependency('../../../core/ui/bubble.js', ['Blockly.Bubble'], ['Blockly.B
 goog.addDependency('../../../core/ui/closure_tools/custom_css_class_menu_renderer.js', ['Blockly.CustomCssClassMenuRenderer'], ['goog.ui.MenuRenderer']);
 goog.addDependency('../../../core/ui/comment.js', ['Blockly.Comment'], ['Blockly.Bubble', 'Blockly.Icon']);
 goog.addDependency('../../../core/ui/contextmenu.js', ['Blockly.ContextMenu'], ['goog.dom', 'goog.style', 'goog.ui.Menu', 'goog.ui.MenuItem']);
-goog.addDependency('../../../core/ui/contract_editor/contract_editor.js', ['Blockly.ContractEditor'], ['Blockly.BlockValueType', 'Blockly.ContractEditorSectionView', 'Blockly.CustomCssClassMenuRenderer', 'Blockly.DomainEditor', 'Blockly.FunctionEditor', 'Blockly.FunctionalBlockUtils', 'Blockly.FunctionalTypeColors', 'Blockly.SvgHeader', 'Blockly.SvgHighlightBox', 'Blockly.SvgTextButton', 'Blockly.TypeDropdown', 'goog.array', 'goog.color', 'goog.events', 'goog.ui.Component.EventType', 'goog.ui.FlatMenuButtonRenderer', 'goog.ui.Option', 'goog.ui.Select', 'goog.ui.Separator', 'goog.ui.decorate']);
+goog.addDependency('../../../core/ui/contract_editor/contract_editor.js', ['Blockly.ContractEditor'], ['Blockly.BlockValueType', 'Blockly.ContractEditorSectionView', 'Blockly.CustomCssClassMenuRenderer', 'Blockly.DomainEditor', 'Blockly.ExampleView', 'Blockly.FunctionEditor', 'Blockly.FunctionalBlockUtils', 'Blockly.FunctionalTypeColors', 'Blockly.SvgHeader', 'Blockly.SvgHighlightBox', 'Blockly.SvgTextButton', 'Blockly.TypeDropdown', 'goog.array', 'goog.color', 'goog.events', 'goog.ui.Component.EventType', 'goog.ui.FlatMenuButtonRenderer', 'goog.ui.Option', 'goog.ui.Select', 'goog.ui.Separator', 'goog.ui.decorate']);
 goog.addDependency('../../../core/ui/contract_editor/contract_editor_section_view.js', ['Blockly.ContractEditorSectionView'], []);
 goog.addDependency('../../../core/ui/contract_editor/domain_editor.js', ['Blockly.DomainEditor'], ['Blockly.DomainNameInput', 'Blockly.TypeDropdown', 'Blockly.XButton', 'goog.dom']);
 goog.addDependency('../../../core/ui/contract_editor/domain_name_input.js', ['Blockly.DomainNameInput'], []);
+goog.addDependency('../../../core/ui/contract_editor/example_view.js', ['Blockly.ExampleView'], []);
 goog.addDependency('../../../core/ui/contract_editor/svg_header.js', ['Blockly.SvgHeader'], []);
 goog.addDependency('../../../core/ui/contract_editor/svg_highlight_box.js', ['Blockly.SvgHighlightBox'], []);
 goog.addDependency('../../../core/ui/contract_editor/svg_text_button.js', ['Blockly.SvgTextButton'], []);

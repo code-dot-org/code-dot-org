@@ -27,10 +27,10 @@ var NetSimRouterNode = require('./NetSimRouterNode');
 var ObservableEvent = require('../ObservableEvent');
 
 var logger = NetSimLogger.getSingleton();
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./NetSimConstants');
 var NetSimGlobals = require('./NetSimGlobals');
 
-var MessageGranularity = netsimConstants.MessageGranularity;
+var MessageGranularity = NetSimConstants.MessageGranularity;
 
 /**
  * Client model of node being simulated on the local client.
@@ -499,7 +499,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 
   // 2. Create and simulate new routers
   nodeRows.filter(function (row) {
-    return row.type === netsimConstants.NodeType.ROUTER;
+    return row.type === NetSimConstants.NodeType.ROUTER;
   }).forEach(function (row) {
     var alreadySimulating = this.routers_.some(function (simulatingRouter) {
       return row.id === simulatingRouter.entityID;

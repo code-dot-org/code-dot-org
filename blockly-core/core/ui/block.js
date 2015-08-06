@@ -81,6 +81,14 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   // Used to hide function blocks when not in modal workspace. This property
   // is not serialized/deserialized.
   this.currentlyHidden_ = false;
+
+  /**
+   * Whether this block is allowed to disconnect from its parent block.
+   * This property does not get serialized/deserialized.
+   * @private {boolean}
+   */
+  this.canDisconnectFromParent_ = true;
+
   /**
    * The label which can be clicked to edit this block. This field is
    * currently set only for functional_call blocks.
@@ -648,7 +656,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
     // Right-click.
     // Unlike google Blockly, we don't want to show a context menu
     //this.showContextMenu_(e);
-  } else if (!this.isMovable()) {
+  } else if (!this.isMovable() || !this.canDisconnectFromParent()) {
     // Allow unmovable blocks to be selected and context menued, but not
     // dragged.  Let this event bubble up to document, so the blockSpace may be
     // dragged instead.
@@ -1042,6 +1050,20 @@ Blockly.Block.prototype.setDraggingHandleImmovable_ = function(adding, immovable
 
     block.setDraggingHandleImmovable_(adding, immovableBlockHandler);
   }
+};
+
+/**
+ * @param {boolean} canDisconnect
+ */
+Blockly.Block.prototype.setCanDisconnectFromParent = function (canDisconnect) {
+  this.canDisconnectFromParent_ = canDisconnect;
+};
+
+/**
+ * @returns {boolean}
+ */
+Blockly.Block.prototype.canDisconnectFromParent = function () {
+  return this.canDisconnectFromParent_;
 };
 
 /**

@@ -19,6 +19,6 @@
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";
     var appOptions = #{app_options.to_json};
     appOptions.locale = '#{js_locale}';
-    apps.setup();
+    apps.setupBlockly(appOptions);
     apps.load(apps.init);
     //]]>
