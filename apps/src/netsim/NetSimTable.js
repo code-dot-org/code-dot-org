@@ -196,6 +196,13 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
 };
 
 /**
+ * @returns {string} the configured table name.
+ */
+NetSimTable.prototype.getTableName = function () {
+  return this.tableName_;
+};
+
+/**
  * Subscribes this table's onPubSubEvent method to events for this table
  * on our local channel. Also saves the callback locally, so we can
  * later reference it on unsubscribe
@@ -379,7 +386,7 @@ NetSimTable.prototype.synchronousDelete = function (id) {
       // new relic.
       throw err;
     }
-    this.removeRowFromCache_(id);
+    this.removeRowsFromCache_([id]);
   }.bind(this), async);
 };
 
