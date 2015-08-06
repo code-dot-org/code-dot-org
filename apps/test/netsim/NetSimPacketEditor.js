@@ -1,19 +1,28 @@
 /** @file Tests for NetSimPacketEditor */
 /* global $, describe, beforeEach, it */
 var testUtils = require('../util/testUtils');
-var netsimTestUtils = require('../util/netsimTestUtils');
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var assert = testUtils.assert;
 
 var NetSimPacketEditor = require('@cdo/apps/netsim/NetSimPacketEditor');
-var dataConverters = require('@cdo/apps/netsim/dataConverters');
+var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var EncodingType = require('@cdo/apps/netsim/netsimConstants').EncodingType;
+var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;
 
 describe("NetSimPacketEditor", function () {
   var editor, rootDiv;
 
+  var alignDecimal = DataConverters.alignDecimal;
+  var asciiToBinary = DataConverters.asciiToBinary;
+  var binaryToAB = DataConverters.binaryToAB;
+  var binaryToDecimal = DataConverters.binaryToDecimal;
+  var binaryToHex = DataConverters.binaryToHex;
+  var formatAB = DataConverters.formatAB;
+  var formatBinary = DataConverters.formatBinary;
+  var formatHex = DataConverters.formatHex;
+
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
     editor = new NetSimPacketEditor({
       packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
       contentChangeCallback: function () {}
@@ -23,7 +32,7 @@ describe("NetSimPacketEditor", function () {
 
   it ("only renders enabled encodings", function () {
     var message = "test message";
-    var binaryMessage = dataConverters.asciiToBinary(message, 8);
+    var binaryMessage = DataConverters.asciiToBinary(message, 8);
     editor.message = binaryMessage;
 
     editor.setEncodings([EncodingType.ASCII]);
@@ -57,10 +66,10 @@ describe("NetSimPacketEditor", function () {
     assert.equal(1, rootDiv.find('tr.a_and_b').length);
 
     assert.equal(message, rootDiv.find('tr.ascii textarea.message').val());
-    assert.equal(binaryMessage, rootDiv.find('tr.binary textarea.message').val());
-    assert.equal(dataConverters.binaryToDecimal(message, 8), rootDiv.find('tr.decimal textarea.message').val());
-    assert.equal(dataConverters.binaryToHex(message), rootDiv.find('tr.hexadecimal textarea.message').val());
-    assert.equal(dataConverters.binaryToAB(message), rootDiv.find('tr.a_and_b textarea.message').val());
+    assert.equal(formatBinary(binaryMessage, 8), rootDiv.find('tr.binary textarea.message').val());
+    assert.equal(alignDecimal(binaryToDecimal(binaryMessage, 8)), rootDiv.find('tr.decimal textarea.message').val());
+    assert.equal(formatHex(binaryToHex(binaryMessage), 8), rootDiv.find('tr.hexadecimal textarea.message').val());
+    assert.equal(formatAB(binaryToAB(binaryMessage), 8), rootDiv.find('tr.a_and_b textarea.message').val());
   });
 
 });
