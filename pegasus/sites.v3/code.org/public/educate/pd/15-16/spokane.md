@@ -57,13 +57,13 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Quarter 1: TBD
+Quarter 1: Saturday, October 3, 2015
 
-Quarter 2: TBD
+Quarter 2: Saturday, November 21, 2015
 
-Quarter 3: TBD
+Quarter 3: Saturday, January 30, 2016
 
-Quarter 4: TBD
+Quarter 4: Saturday, March 5, 2016
 
 8:30am - 3:30pm
 <br/>

@@ -9,7 +9,7 @@ nav: educate_nav
 
 **Quick Links**
 
-[CSP Forum](https://support.code.org/hc/communities/public/topics/200138206-CS-Principles) | [CSP Unit 1 in Code Studio](https://studio.code.org/s/cspunit1)  | [Writing Team](team) 
+[CSP Forum](http://forum.code.org/c/csp)| [CSP Unit 1 in Code Studio](https://studio.code.org/s/cspunit1)  | [Writing Team](team) 
 
 
 
@@ -18,6 +18,8 @@ nav: educate_nav
 		<td width=66% style="padding: 3px; border-color: white">
 		<strong>Important notes about lessons and digital tools</strong>
 		<ul>
+				<li>To use the tools in this course and be able to see your students' progress, first <a href="/teacher-dashboard#/sections">create a new section</a> in the teacher dashboard. The recommended Login Type is 'Email' and the Course is 'cspunit1'. <i>Note:</i> Students must be part of the same section to use the Internet Simulator together.</li> 
+				
 				<li> When you go to <a href="https://studio.code.org/s/cspunit1">Unit 1 in Code Studio</a> each "stage" number corresponds to the lesson number.</li> 
 
 				<li> Unlike other Code.org courses, lessons for CSP on Code Studio are <strong>not self-guided</strong>. They require specific structure and context provided by the classroom teacher through the lesson plan. 

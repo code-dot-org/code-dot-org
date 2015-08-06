@@ -30,7 +30,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "I added a variable called `sides` that is set to 4. Can you use the `sides` variable (along with the math block) to make sure that I turn the right amount to make a square? \r\n\r\nHint: To draw a regular polygon I should turn 360/sides each time."
+    "markdown_instructions": "I added a variable called `sides` that is set to 4. Can you use the `sides` variable (along with the math block) to make sure that I turn the right amount to make a square? \r\n\r\n*Hint: To draw a regular polygon I should turn 360/sides each time.*"
   }
 }]]></config>
   <blocks>

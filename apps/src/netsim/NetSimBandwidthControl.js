@@ -15,8 +15,8 @@
 
 // Utils required only for Function.prototype.inherits()
 require('../utils');
-var netsimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimUtils = require('./NetSimUtils');
 var NetSimSlider = require('./NetSimSlider');
 
 /**
@@ -33,7 +33,7 @@ var NetSimBandwidthControl = module.exports = function (rootDiv,
     onStop: sliderStopCallback,
     value: Infinity,
     min: 4,
-    max: 128 * netsimConstants.BITS_PER_KILOBIT,
+    max: 128 * NetSimConstants.BITS_PER_KILOBIT,
     upperBoundInfinite: true
   });
 
@@ -50,5 +50,5 @@ NetSimBandwidthControl.inherits(NetSimSlider.LogarithmicSlider);
  * @override
  */
 NetSimBandwidthControl.prototype.valueToLabel = function (val) {
-  return netsimUtils.bitrateToLocalizedRoundedBitrate(val);
+  return NetSimUtils.bitrateToLocalizedRoundedBitrate(val);
 };

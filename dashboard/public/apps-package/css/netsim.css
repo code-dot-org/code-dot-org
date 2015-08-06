@@ -477,26 +477,28 @@
           text-align: center; }
       #netsim .netsim-slider .slider-inline-wrap .slider {
         clear: both; }
-  #netsim .netsim-tabs h1 {
-    font-size: 10pt;
-    line-height: 10pt;
-    margin: 10px 0 3px 0;
-    border-bottom: solid darkgrey thin; }
-  #netsim .netsim-tabs .ui-tabs-nav {
-    background: #0094ca;
-    border-left: none;
-    border-right: none;
-    border-top: none; }
-    #netsim .netsim-tabs .ui-tabs-nav li {
-      margin-right: 2px; }
-      #netsim .netsim-tabs .ui-tabs-nav li a {
-        font-family: "Gotham 5r", sans-serif;
-        font-size: 8pt;
-        padding: 0 1em; }
-  #netsim .netsim-tabs .ui-tabs-panel {
-    padding: 0.8em 0.5em; }
-    #netsim .netsim-tabs .ui-tabs-panel p {
-      margin: 0 1em 10px 1em; }
+  #netsim .netsim-tabs {
+    margin-bottom: 10px; }
+    #netsim .netsim-tabs h1 {
+      font-size: 10pt;
+      line-height: 10pt;
+      margin: 10px 0 3px 0;
+      border-bottom: solid darkgrey thin; }
+    #netsim .netsim-tabs .ui-tabs-nav {
+      background: #0094ca;
+      border-left: none;
+      border-right: none;
+      border-top: none; }
+      #netsim .netsim-tabs .ui-tabs-nav li {
+        margin-right: 2px; }
+        #netsim .netsim-tabs .ui-tabs-nav li a {
+          font-family: "Gotham 5r", sans-serif;
+          font-size: 8pt;
+          padding: 0 1em; }
+    #netsim .netsim-tabs .ui-tabs-panel {
+      padding: 0.8em 0.5em; }
+      #netsim .netsim-tabs .ui-tabs-panel p {
+        margin: 0 1em 10px 1em; }
   #netsim .netsim-metronome {
     text-align: center; }
     #netsim .netsim-metronome .pulse-dot {

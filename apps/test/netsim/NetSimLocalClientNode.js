@@ -7,12 +7,13 @@ var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
+var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
@@ -22,7 +23,7 @@ describe("NetSimLocalClientNode", function () {
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
 
     testShard = fakeShard();
 
@@ -37,10 +38,64 @@ describe("NetSimLocalClientNode", function () {
     assert(undefined !== testRemoteNode, "Made a remote node");
   });
 
+  describe("onWireTableChange_", function () {
+    it ("detects when remote client disconnects, and removes local wire", function () {
+
+      var localWireRow, remoteWireRow;
+
+      testLocalNode.connectToNode(testRemoteNode, function () {});
+      testRemoteNode.connectToNode(testLocalNode, function () {});
+
+      localWireRow = testLocalNode.myWire.buildRow();
+      remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
+
+      assertEqual(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
+      assertEqual(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
+
+      // Trigger onWireTableChange_ with both wires; the connection
+      // should be complete!
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow]);
+      assertEqual(testLocalNode.myRemoteClient, testRemoteNode);
+
+      // Trigger onWireTableChange_ without the remoteWire; the
+      // connection should be broken
+      testLocalNode.onWireTableChange_([localWireRow]);
+      assertEqual(testLocalNode.myWire, null);
+      assertEqual(testLocalNode.myRemoteClient, null);
+
+    });
+
+    it ("detects when attempted connection is rejected", function () {
+
+      var testThirdNode;
+      var localWireRow, remoteWireRow, thirdWireRow;
+
+      NetSimEntity.create(NetSimClientNode, testShard, function (err, node) {
+        testThirdNode = node;
+      });
+      testLocalNode.connectToNode(testRemoteNode, function () {});
+      testRemoteNode.connectToNode(testThirdNode, function () {});
+
+      localWireRow = testLocalNode.myWire.buildRow();
+      remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
+
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow]);
+      assertEqual(testLocalNode.myWire.buildRow(), localWireRow);
+      assertEqual(testLocalNode.myRemoteClient, null);
+
+      testThirdNode.connectToNode(testRemoteNode, function () {});
+
+      thirdWireRow = testThirdNode.getOutgoingWire().buildRow();
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow, thirdWireRow]);
+      assertEqual(testLocalNode.myWire, null);
+
+    });
+  });
+
   describe("sendMessage", function () {
     it ("fails with error when not connected", function () {
       var error;
-      testLocalNode.sendMessage('1 1 2 3 5 8', function (e, r) {
+      testLocalNode.sendMessage('101010010101', function (e, r) {
         error = e;
       });
       assert(error instanceof Error);
@@ -50,7 +105,7 @@ describe("NetSimLocalClientNode", function () {
 
     it ("puts the message in the messages table", function () {
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('payload', function () {});
+      testLocalNode.sendMessage('10101010101', function () {});
       assertTableSize(testShard, 'messageTable', 1);
     });
 
@@ -59,7 +114,7 @@ describe("NetSimLocalClientNode", function () {
       var err = true;
       var result = true;
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('payload', function (e,r) {
+      testLocalNode.sendMessage('10100110101', function (e,r) {
         err = e;
         result = r;
       });
@@ -70,8 +125,8 @@ describe("NetSimLocalClientNode", function () {
     it ("Generated message has correct from/to node IDs", function () {
       var fromNodeID, toNodeID;
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('payload', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testLocalNode.sendMessage('101001100101', function () {});
+      testShard.messageTable.refresh(function (err, rows) {
         fromNodeID = rows[0].fromNodeID;
         toNodeID = rows[0].toNodeID;
       });
@@ -80,18 +135,25 @@ describe("NetSimLocalClientNode", function () {
     });
 
     it ("Generated message has correct payload", function () {
-      var payload;
+      var message;
       testLocalNode.connectToNode(testRemoteNode, function () {});
-      testLocalNode.sendMessage('boogaloo', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
-        payload = rows[0].payload;
+      testLocalNode.sendMessage('1010101010100101010', function () {});
+      testShard.messageTable.refresh(function (err, rows) {
+        message = new NetSimMessage(testShard, rows[0]);
       });
-      assertEqual('boogaloo', payload);
+      assertEqual('1010101010100101010', message.payload);
     });
   });
 
   describe("sendMessages", function () {
-    var payloads = ['1', '1', '2', '3', '5', '8'];
+    var payloads = [
+      '10100111',
+      '0100110010',
+      '0001100110',
+      '00111000',
+      '1000010100',
+      '1110100110'
+    ];
 
     it ("fails with error when not connected", function () {
       var error;

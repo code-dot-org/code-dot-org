@@ -3,6 +3,7 @@
 goog.provide('Blockly.SvgHeader');
 
 /** @const */ var TEXT_PADDING_LEFT = '10'; // px
+/** @const */ var SEPARATOR_LINE_HEIGHT = 2; // px
 
 /**
  * A horizontal SVG bar with rectangular background and text
@@ -22,8 +23,11 @@ Blockly.SvgHeader = function (parent, opt_options) {
     {style: extraStyle},
     parent,
     {belowExisting: true});
-  this.grayRectangleElement_ = Blockly.createSvgElement('rect',
+  this.rectangleElement_ = Blockly.createSvgElement('rect',
     {'fill': options.backgroundColor, 'style': extraStyle},
+    this.svgGroup_);
+  this.separatorElement_ = Blockly.createSvgElement('rect',
+  {'fill': '#FFF', 'style': extraStyle + 'opacity:.3;'},
     this.svgGroup_);
   this.textElement_ = Blockly.createSvgElement('text',
     {'class': 'contractEditorHeaderText', 'style': extraStyle}, this.svgGroup_);
@@ -35,6 +39,14 @@ Blockly.SvgHeader = function (parent, opt_options) {
   }
 };
 
+Blockly.SvgHeader.prototype.showSeparator = function (shouldShow) {
+  goog.style.setElementShown(this.separatorElement_, shouldShow);
+};
+
+Blockly.SvgHeader.prototype.setColor = function (colorHex) {
+  this.rectangleElement_.setAttribute('fill', colorHex);
+};
+
 /**
  * @param yOffset {Number}
  * @param width {Number}
@@ -42,8 +54,11 @@ Blockly.SvgHeader = function (parent, opt_options) {
  */
 Blockly.SvgHeader.prototype.setPositionSize = function (yOffset, width, height) {
   this.svgGroup_.setAttribute('transform', 'translate(' + 0 + ',' + yOffset + ')');
-  this.grayRectangleElement_.setAttribute('width', width);
-  this.grayRectangleElement_.setAttribute('height', height);
+  this.rectangleElement_.setAttribute('width', width + 2); // 2 is extra for overlap, sometimes <1px spacing
+  this.separatorElement_.setAttribute('width', width);
+  this.separatorElement_.setAttribute('height', SEPARATOR_LINE_HEIGHT);
+  this.separatorElement_.setAttribute('transform', 'translate(' + 0 + ',' + (height - 1) + ')');
+  this.rectangleElement_.setAttribute('height', height);
   this.textElement_.setAttribute('x', TEXT_PADDING_LEFT);
   var rectangleMiddleY = height / 2;
   // text getBBox() height seems to be off by a bit, 1/3 of getBBox height looks best
@@ -57,7 +72,7 @@ Blockly.SvgHeader.prototype.setText = function (text) {
 };
 
 Blockly.SvgHeader.prototype.setVisible = function (visible) {
-  goog.style.showElement(this.svgGroup_, visible);
+  goog.style.setElementShown(this.svgGroup_, visible);
 };
 
 Blockly.SvgHeader.prototype.removeSelf = function () {

@@ -44,7 +44,7 @@ de:
           Jigsaw: Stufe 1
         Step Levels:
           desc: Labyrinth (Beta)
-          MazeStep: Bühnen Schritt
+          MazeStep: Bühnen-Schritt
         edit-code:
           desc: Code bearbeiten (beta)
           MazeEC: Stufe 1
@@ -66,7 +66,7 @@ de:
           Jigsaw: Stufe 1
         step:
           desc: Labyrinth (Beta)
-          MazeStep: Bühnen Schritt
+          MazeStep: Bühnen-Schritt
         wordsearch:
           desc: Buchstabierwettbewerb (beta)
           WordSearch: Stufe 1
@@ -296,18 +296,21 @@ de:
         studio_c3_game_4: 'Kannst du den Pinguin "Autsch!" sagen lassen und einen "Getroffen" Ton abspielen, wenn er in den Dinosaurier läuft, und ihn dazu mit den Pfeiltasten zu bewegen?'
         studio_c3_game_5: Kannst du einen Baustein hinzufügen um eine Punkt zu erzeilen, wenn der Pinguin in den Tintenfisch rennt, und ihn dann mit den Pfeiltasten bewegen bis du einen Punkt erzielst?
         studio_c3_game_6: Kannst du Bausteine hinzufügen um den Hintergrund und die Geschwindigkeit des Pinguins zu ändern, und in dann mit den Pfeiltasten zu bewegen bis du punktest?
-        studio_c3_game_7: 'Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke auf "Fertig" und lass Deine Freunde das Spiel auf ihren SmartPhones ausprobieren.'
+        studio_c3_game_7: |-
+          Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
         studio_playlab_1: 'Der Pinguin will "hallo" sagen - kannst du ihm helfen?'
         studio_playlab_2: 'Höhlenjunge (Schauspieler 1) und Höhlenmädchen (Schauspieler 2) wollen "hallo" zueinander sagen. Kannst du ihnen dabei helfen den "reden" Block zweimal zu benutzen?'
         studio_playlab_3: Kannst du dem Tennis Mädchen helfen die Fahne zu bekommen?
         studio_playlab_4: Kannst du dem Tennisspieler (Schauspieler 1) helfen zur Tennisspielerin (Schauspielerin 2) zu kommen und ein Geräusch abzuspielen wenn er ankommt?
-        studio_playlab_5: 'Kannst du Spacebot helfen "Willkommen Erdlinge" zu sagen, wenn es geklickt wird? Vergiss nach dem ausführen nicht das Klicken'
+        studio_playlab_5: 'Kannst du Spacebot helfen, "Willkommen Erdlinge" zu sagen, wenn es geklickt wird? Vergiss nach dem Ausführen nicht, auf es zu klicken'
         studio_playlab_6: Kannst du der Hexe helfen sich zu bewegen, um alle magischen Feuerbälle einzusammeln? Nutze die Tasten hoch/runter/rechts/links.
         studio_playlab_7: 'Der Block "wiederhole dauerhaft" ermöglicht dir, Code ständig auszuführen. Kannst Du Blöcke hinzufügen und dem Zauberer helfen, ständig nach rechts und links zu gehen?'
         studio_playlab_8: 'Der Block "wiederhole dauerhaft" ermöglicht dir, Code ständig auszuführen. Kannst Du Blöcke hinzufügen und dem Zauberer helfen, ständig nach rechts und links zu gehen?'
         studio_playlab_9: Bestimme den Hintergrund für diese Alien-Invasion und hilf dem Spacebot, schneller zu den Aliens zu gelangen, indem Du die Geschwindigkeit einstellst. Dann bewege ihn mit den Pfeiltasten um zum Alien zu gelangen und benachrichtige alle anderen.
-        studio_playlab_10: 'Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke auf "Fertig" und lass Deine Freunde das Spiel auf ihren SmartPhones ausprobieren.'
-        studio_full_sandbox: 'Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke auf "Fertig" und lass Deine Freunde das Spiel auf ihren SmartPhones ausprobieren.'
+        studio_playlab_10: |-
+          Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
+        studio_full_sandbox: |-
+          Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
         studio_k1_1: 'Kannst du diesen Hund "Hallo Welt" sagen lassen?'
         studio_k1_2: Kannst du erst den Hund und danach die Katze etwas sagen lassen?
         studio_k1_3: Kannst du ein Program schreiben, bei welchem der Hund auf die Katze zugeht?
@@ -327,7 +330,8 @@ de:
         applab_ec_simple: Erstelle deine Anwendung mithilfe der Blöcke in der Toolbox.
         turtle_ec_1_2: 'Zeichne nun ein Quadrat. Hinweis: Benutze Deine Lieblingsfarbe durch Auswahl im "neue Stiftfarbe"-Absatz.'
         turtle_ec_1_10: 'Du hast es geschafft! Zeichne jetzt, was du willst. Einige lustige Ideen: ein Strichmännchen, Schneeflocke oder Spirale. Versuche auch den neuen "Stift-Breite"-Block. Viel Spaß!'
-        studio_ec_sandbox: 'Entwickele Dein eigenes Spiel. Wenn Du fertig bist, clicke auf "Fertig" und lass Deine Freunde das Spiel auf ihren SmartPhones ausprobieren.'
+        studio_ec_sandbox: |-
+          Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
     video:
       name:
         maze_intro: Labyrinth Einführung
@@ -498,37 +502,36 @@ de:
         frozen_circle_function_in_circle_turn: Vergiss nicht zu drehen, nachdem erstellen eines Kreises.
         frozen_circle_function_with_parameter_circle: 'Nutze den "Kreis erstellen" Block und ändere die Größe.'
         frozen_snowflake_branch: 'Verwende den Block "Erstelle einen Schneeflocken-Zweig"'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
+        frozen_create_square: Füge hier mehr Blöcke an, um ein Quadrat zu erstellen
+        playlab_drag_say: 'Ziehe den "sagen"-Baustein hierher und schreibe "hallo" hinein'
+        playlab_use_twice: Benutzer diesen Baustein zwei mal und vergiss nicht, die Nummer des Schauspielers anzupassen
+        playlab_move_girl: 'Benutze den "bewege rechts"-Baustein, um das Tennismädchen nach rechts zu bewegen'
         playlab_play_sound: '"Geräusch abspielen" Baustein hier hinzufügen'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
+        playlab_arrow_keys: Denke nach dem Ausführen daran, diese zu benutzen, um die Hexe zu bewegen
+        playlab_add_move: 'Füge "bewegen"-Bausteine in diesen "wiederholen"-Baustein ein'
         playlab_add_score: Füge hier den Punkte Block ein
         playlab_add_blocks: Füge hier deinen Blöcke ein
         set_variable: Ziehe den Nummernblock hierhin um die Variable festzulegen
         place_variable: Ziehe deine Variable in diesen Block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        bee_for_loop: Entscheide, wieviel Nektar die Biene höchstens sammeln soll, in dem eine Zahl hier reinziehst
+        place_counter_variable: Ziehe deine Zählervariable in diesen Baustein
+        function_editor_draw_square: 'Dies ist deine Funktionsdefinition. Diese Bausteine werden jedes mal ausgeführt, wenn du die "Zeichne ein Quadrat"-Funktion ausführst'
         change_here: Mach deine änderung hier
         write_draw_square_function: Ziehe Blöcke aus der Toolbox hier her, um ein Quadrat zu zeichnen
         write_draw_triangle_function: Ziehe Blöcke aus der Toolbox hier her, um ein Dreieck zu zeichnen
         edit_add_parameter: 'Klicke "bearbeiten" an um einen Parameter zu deiner Funktion hinzuzufügen'
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
+        add_and_drag_parameter: Schreibe den Namen deines Parameters hier hin, klicke Hinzufügen und ziehe ihn dann in deine Funktionsdefinition
+        fill_in_actor: Fülle die ??? mit Nummern, die zu den Schauspielern (1, 2 und 3) passen
         repeat: Setze Blöcke in die Schleife um Befehle zu wiederholen
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
+        if_bee_nectar: 'Nutze den "wenn"-Baustein um zu entscheiden, ob die Biene Nektar sammeln sollen'
+        if_else_bee: 'Nutze den "wenn/ansonsten"-Baustein, so dass die Biene Nektar von Blumen sammelt und, wenn es keine Blume ist, Honig macht'
+        repeat_full_circle: Füge die Anzahl der Bewegungen ein, die der Zombie machen muss, um eine volle Runde zu laufen
+        place_length_variable: Ziehe die Längenvariable hier her, um die Fragezeichen zu ersetzen
         arrows_move_actor: Benutze die Pfeile um den Schauspieler zu bewegen
-        right_arrow_fireball: Use the right arrow to shoot fireballs
+        right_arrow_fireball: Drücke Pfeil-nach-rechts, um Feuerbälle zu schießen
         name_function: Schreib den Funktionsnamen hierhin
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_right_runbutton: 'Füge den "bewegen"-Baustein hier hinzu'
+        Infinity_move_directions_callout: Welcher Baustein bewegt Baymax nach oben, wenn Pfeil-nach-oben gedrückt wird?
+        Infinity_move_directions_callout_arrow: Benutze die Pfeiltasten zum Bewegen
+        Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
+        Infinity_repeat_callout: 'Platziere "bewegen"-Bausteine hier drin'

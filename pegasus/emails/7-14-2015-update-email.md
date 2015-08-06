@@ -1,6 +1,7 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "43% of coders are girls (and a lot more)"
+list-unsubscribe: '<mailto:unsubscribe-espc-tech-12345N@domain.com>, <http://domain.com/member/unsubscribe/?listname=espc-tech@domain.com?id=12345N>'
 ---
 
 <p>
@@ -80,7 +81,7 @@ We’re grateful for your continued support. Can’t wait for the rest of the ye
 <p>
 <hr/>
 <small>
-Code.org is a 501c3 non-profit located at 1301 5th Avenue, Suite 1225, Seattle, WA, 98101. You’re receiving this email because signed the petition at <a href="https://code.org/">Code.org</a> or hosted an <a href="https://hourofcode.com/">Hour of Code</a>. We’ll send you only rare updates on ways to get involved and the outcomes of your support. Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a>.
+Code.org is a 501c3 non-profit located at 1301 5th Avenue, Suite 1225, Seattle, WA, 98101. You’re receiving this email because signed the petition at <a href="https://code.org/">Code.org</a> or hosted an <a href="https://hourofcode.com/">Hour of Code</a>. We’ll send you only rare updates on ways to get involved and the outcomes of your support. <br /><strong>Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a></strong>
 </small></p>
 
 ![](<%= tracking_pixel %>)

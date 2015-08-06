@@ -59,13 +59,13 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 17, 2015
+Quarter 1: Saturday, October 24, 2015
 
-Quarter 2: Saturday, November 21, 2015
+Quarter 2: Saturday, December 12, 2015
 
-Quarter 3: Saturday, January 23, 2016
+Quarter 3: Saturday, February 6, 2016
 
-Quarter 4: Saturday, April 30 , 2016
+Quarter 4: Saturday, March 19 , 2016
 
 8:30am - 3:30pm
 <br/>
@@ -105,20 +105,6 @@ The first phase of professional development is a two-hour introduction that focu
 
 **Save the dates:**
 
-You will only need to attend one of the following options.
-<br />
-<br />
-**Option 1:**
-<br />
-Monday, July 6, 2015 - Friday, July 10, 2015
-<br />
-Mon - Thurs: 8:30am - 3:30pm
-<br />
-Friday: 8:30am - 1:30pm
-<br />
-<br />
-**Option 2:**
-<br />
 Monday, August 3, 2015 - Friday, August 7, 2015
 <br />
 Mon - Thurs: 8:30am - 3:30pm
@@ -129,20 +115,6 @@ Friday: 8:30am - 1:30pm
 Breakfast and lunch will be served. 
 
 **Location**
-
-**Option 1:**
-<br />
-DePaul University 
-<br />
-College of Computing and Digital Media (CDM)
-<br />
-Room 924
-<br />
-243 S. Wabash Ave
-<br />
-Chicago, IL 60604
-
-**Option 2:**
 <br />
 DePaul University 
 <br />
@@ -215,20 +187,8 @@ The first phase of professional development is a two-hour online introduction th
 </br>
 </br>
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-
+<br />
 **Save the dates:**
-
-You will only need to attend one of the following options.
-<br />
-<br />
-**Option 1:**
-<br />
-Wednesday, July 8, 2015 - Friday, July 10, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-<br />
-**Option 2:**
 <br />
 Monday, August 3, 2015 - Tuesday, August 4, 2015
 <br />
@@ -238,19 +198,6 @@ Monday, August 3, 2015 - Tuesday, August 4, 2015
 Breakfast and lunch will be served. 
 
 **Location**
-
-**Option 1:**
-<br />
-TechNexus
-<br />
-20N. Wacker 
-<br />
-Suite 1200
-<br />
-Chicago, IL 60606 
-<br />
-<br />
-**Option 2:**
 <br />
 Microsoft Technology Center
 <br />
@@ -276,7 +223,30 @@ Laptop
 </br>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-More info coming soon!
+**Save the dates:**
+
+Semester 1: Saturday, October 24, 2015 
+
+Semester 2: Saturday, April 30, 2016 
+
+8:00am - 4:00pm
+</br>
+<br/>
+Breakfast and lunch will be served. 
+
+**Location**
+
+TBD
+
+**What to bring to Phase 3 bi-yearly sessions:**
+
+Laptop
+<br/>
+ECS green journal and curriculum guide
+<br/>
+Snacks
+<br/>
+Water
 
 [**Back to the top**](#top)
 
@@ -292,18 +262,6 @@ The first phase of professional development is a two-hour online introduction th
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
 **Save the dates:**
-
-You will only need to attend one of the following options.
-<br />
-<br />
-**Option 1:**
-<br />
-Wednesday, July 8, 2015 - Friday, July 10, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-<br />
-**Option 2:**
 <br />
 Wednesday, August 5, 2015 - Friday, August 7, 2015
 <br />
@@ -312,21 +270,6 @@ Wednesday, August 5, 2015 - Friday, August 7, 2015
 Breakfast and lunch will be served. 
 
 **Location**
-
-**Option 1:**
-<br />
-Microsoft Technology Center
-<br />
-AON Center, Suite 200
-<br />
-Room: MPR 2
-<br />
-200 East Randolph Street
-<br />
-Chicago, IL 60601
-<br />
-<br />
-**Option 2:**
 <br />
 Microsoft Technology Center
 <br />

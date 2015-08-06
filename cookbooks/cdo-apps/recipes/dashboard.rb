@@ -7,11 +7,11 @@ template "/etc/init.d/dashboard" do
   group 'root'
   mode '0755'
   variables ({
-    src_file:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb",
-    app_root:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard",
-    pid_file:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb.pid",
-    user:node[:current_user],
-    env:node.chef_environment,
+    src_file: "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb",
+    app_root: "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard",
+    pid_file: "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config/unicorn.rb.pid",
+    user: node[:current_user],
+    env: node.chef_environment,
   })
   notifies :run, 'execute[bundle-install-dashboard]', :immediately
 end
@@ -22,8 +22,8 @@ template "/etc/logrotate.d/dashboard" do
   group 'root'
   mode '0644'
   variables ({
-    app_name:'dashboard',
-    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/log",
+    app_name: 'dashboard',
+    log_dir: "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/log",
   })
 end
 
@@ -32,9 +32,9 @@ template "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/config
   user node[:current_user]
   group node[:current_user]
   variables ({
-    app_name:'Dashboard',
-    log_dir:"/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/log",
-    auto_instrument:false,
+    app_name: 'Dashboard',
+    log_dir: "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/log",
+    auto_instrument: false,
   })
 end
 

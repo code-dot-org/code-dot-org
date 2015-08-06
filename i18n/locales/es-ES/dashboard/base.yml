@@ -64,8 +64,8 @@ es:
     need_confirmation: ¿No recibiste las instrucciones de confirmación?
     need_unlock: ¿No recibiste las instrucciones de desbloqueo?
   signup_form:
-    student_count: '%{count} los estudiantes ya se han registrado.'
-    teacher_count: '%{count} los maestros ya se han registrado.'
+    student_count: '%{count} estudiantes ya se han registrado.'
+    teacher_count: '%{count} maestros ya se han registrado.'
     overview_student: 'Regístrese en una cuenta para poder seguir su progreso. Su correo se utiliza principalmente para permitirle iniciar sesión y para la recuperación de la contraseña. Para obtener más información, consulte nuestra <a href="http://code.org/privacy">Política de privacidad</a>.'
     overview_teacher: 'Registre una cuenta para enseñar informática en su aula.<p/>Podrá añadir a sus alumnos y hacer un seguimiento de su progreso.'
     no_signup_message: 'Usted puede <a target="_blank" href="http://learn.code.org"> navegar por las diferentes etapas y rompecabezas</a>, pero tendrá que inscribirse para guardar su progreso.'
@@ -219,11 +219,12 @@ es:
       free_play:
         playlab: Hacer una aplicación
         artist: Dibujar algo
+        calculate: Calculate Something
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Tablero de Distrito
       label: 'Hola %{username}'
-      stats: Mi progreso
+      stats: Code Studio
       settings: Mi cuenta
       prizes: Premios
       logout: Cerrar sesión
@@ -308,13 +309,13 @@ es:
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de email %{email} no ha sido confirmada:'
-    email_confirm_wrong_email: (Dirección de correo electrónico equivocada?)
+    email_confirm_wrong_email: (¿Dirección de correo electrónico equivocada?)
     email_resend_confirm: Reenviar las instrucciones de confirmación
     new_password_hint: (déjalo en blanco si no quieres cambiarlo)
     current_password_hint: (necesitamos tu contraseña actual para confirmar los cambios)
     delete: Eliminar tu cuenta
-    delete_text: Haz click en el botón de abajo para eliminar tu cuenta.
-    delete_text_teacher_note: 'Nota: Eliminar su cuenta no eliminará la cuenta de sus alumnos.'
+    delete_text: Si haces click en el botón de abajo eliminará tu cuenta.
+    delete_text_teacher_note: 'Nota: Al eliminar tu cuenta no eliminará la cuenta de tus alumnos.'
     delete_confirm: ¿Estás seguro que desea eliminar su cuenta?
   user_level:
     completed: Completada
@@ -325,7 +326,7 @@ es:
     classroom_activity: Actividad fuera de línea
   home:
     title: Code Studio
-    description: Code Studio es la página principal para los cursos en línea creados por Code.org
+    description: Code Studio es la página principal de los cursos en línea creados por Code.org
     lines_of_code: '%{lines_count} LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES'
     lines_of_code_linebreak: '%{lines_count} LÍNEAS DE CÓDIGO<br/>ESCRITAS POR %{students_count} MILLONES DE ALUMNOS'
     all_courses: Resumen de los cursos 1, 2 y 3
@@ -359,9 +360,9 @@ es:
     heading_hoc2014: '<h2>La Hora Del Código Para</h2><h1>Todas Las Edades</h1>'
     heading_elementary: '<h2>Cursos de 20 Horas para</h2><h1>Principiantes (todas las edades)</h1>'
     heading_apps: '<h2>Diversión para</h2><h1>Todos</h1>'
-    heading_legacy: '<h2>Nuestro curso general para</h2><h1>Todas las edades</h1>'
+    heading_legacy: '<h2>Nuestro curso acelerado para</h2><h1>Todas las edades</h1>'
     your_gallery: Galeria
-    no_primary_course: Inénta un curso en Code Studio
+    no_primary_course: Prueba un curso en Code Studio
     print_certificate: Imprimir Certificado
   gender:
     male: Varón
@@ -496,7 +497,7 @@ es:
     badname: El contrato tiene el nombre equivocado.
     badname_case: Los nombres de funciones distinguen mayúsculas de minúsculas. Intente cambiar el caso del nombre de su contrato.
     badrange: El contrato tiene el nombre equivocado.
-    baddomainsize: El contrato no tiene el número de elementos en el dominio.
+    baddomainsize: El contrato no tiene el número correcto de elementos en el dominio.
     baddomainname: Uno o más items de tu dominio tienen el nombre equivocado.
     baddomaintype: 'Uno o más de  tus artículos de dominio estan mal escritos, o se encuentran fuera de orden.'
   text_match:
@@ -516,7 +517,7 @@ es:
           title: K-8 Introducción al Curso de Ciencias de la Computación (15-25 horas)
           description: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
         Hour of Code:
-          title: Hora del código 2013
+          title: La hora del código 2013
           description: ""
         edit-code:
           title: Editar el código

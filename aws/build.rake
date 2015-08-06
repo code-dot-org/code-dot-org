@@ -30,8 +30,8 @@ def build_task(name, dependencies=[], params={})
       yield if block_given?
       touch path
     rescue => e
-      HipChat.log "<b>#{name}</b> FAILED!", color:'red', notify:1
-      HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format:'text'
+      HipChat.log "<b>#{name}</b> FAILED!", color: 'red', notify: 1
+      HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
       raise $!, $!.message, []
     end
   end
@@ -129,9 +129,9 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
         # these changes after we're caught up with the repository because, if we committed the changes
         # before pulling we would need to manually handle a "merge commit" even though it's impossible
         # for there to be file conflicts (because nobody changes the files APPS_TASK builds manually).
-        HipChat.log '<b>Apps</b> package updated but git changes are pending; commmiting after next build.', color:'yellow'
+        HipChat.log '<b>Apps</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
       else
-        HipChat.log 'Committing updated <b>apps</b> package...', color:'purple'
+        HipChat.log 'Committing updated <b>apps</b> package...', color: 'purple'
         RakeUtils.system 'git', 'add', *BLOCKLY_CORE_PRODUCT_FILES
         RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/apps-package')
         message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-apps'))}"
@@ -162,9 +162,9 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
         # these changes after we're caught up with the repository because, if we committed the changes
         # before pulling we would need to manually handle a "merge commit" even though it's impossible
         # for there to be file conflicts (because nobody changes the files SHARED_TASK builds manually).
-        HipChat.log '<b>Shared</b> package updated but git changes are pending; commmiting after next build.', color:'yellow'
+        HipChat.log '<b>Shared</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
       else
-        HipChat.log 'Committing updated <b>shared</b> package...', color:'purple'
+        HipChat.log 'Committing updated <b>shared</b> package...', color: 'purple'
         RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/shared-package')
         message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-shared'))}"
         RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
@@ -222,7 +222,7 @@ def upgrade_frontend(name, host)
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
     #HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
-    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color:'red'
+    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, removing from rotation.", color: 'red'
     stop_frontend name, host, log_path
   end
 
@@ -280,8 +280,8 @@ task :pegasus_unit_tests do
     begin
       RakeUtils.rake 'test'
     rescue
-      HipChat.log 'Unit tests for <b>pegasus</b> failed.', color:'red'
-      HipChat.developers 'Unit tests for <b>pegasus</b> failed.', color:'red', notify:1
+      HipChat.log 'Unit tests for <b>pegasus</b> failed.', color: 'red'
+      HipChat.developers 'Unit tests for <b>pegasus</b> failed.', color: 'red', notify: 1
       raise
     end
   end
@@ -293,8 +293,8 @@ task :shared_unit_tests do
     begin
       RakeUtils.rake 'test'
     rescue
-      HipChat.log 'Unit tests for <b>shared</b> failed.', color:'red'
-      HipChat.developers 'Unit tests for <b>shared</b> failed.', color:'red', notify:1
+      HipChat.log 'Unit tests for <b>shared</b> failed.', color: 'red'
+      HipChat.developers 'Unit tests for <b>shared</b> failed.', color: 'red', notify: 1
       raise
     end
   end
@@ -309,8 +309,8 @@ task :dashboard_unit_tests do
     begin
       RakeUtils.rake 'test'
     rescue
-      HipChat.log 'Unit tests for <b>dashboard</b> failed.', color:'red'
-      HipChat.developers 'Unit tests for <b>dashboard</b> failed.', color:'red', notify:1
+      HipChat.log 'Unit tests for <b>dashboard</b> failed.', color: 'red'
+      HipChat.developers 'Unit tests for <b>dashboard</b> failed.', color: 'red', notify: 1
       raise
     end
     HipChat.log "Resetting <b>dashboard</b> database..."
@@ -329,11 +329,11 @@ task :dashboard_browserstack_ui_tests do
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
-        HipChat.developers message, color:'green'
+        HipChat.developers message, color: 'green'
       else
         message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
-        HipChat.log message, color:'red'
-        HipChat.developers message, color:'red', notify:1
+        HipChat.log message, color: 'red'
+        HipChat.developers message, color: 'red', notify: 1
       end
     end
   end
@@ -347,11 +347,11 @@ task :dashboard_eyes_ui_tests do
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message
-        HipChat.developers message, color:'green'
+        HipChat.developers message, color: 'green'
       else
         message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-        HipChat.log message, color:'red'
-        HipChat.developers message, color:'red', notify:1
+        HipChat.log message, color: 'red'
+        HipChat.developers message, color: 'red', notify: 1
       end
     end
   end

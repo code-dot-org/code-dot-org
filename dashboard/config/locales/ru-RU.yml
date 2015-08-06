@@ -249,6 +249,7 @@
       free_play:
         playlab: Создать приложение
         artist: Нарисовать что-нибудь
+        calculate: Calculate Something
     user:
       classroom: Домашняя страница Преподавателя
       district_dashboard: Панель управления области

@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+ /* global $*/
+
 'use strict';
 
 var Calc = module.exports;
@@ -141,6 +143,14 @@ Calc.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_compute';
   config.enableShowCode = false;
+  config.pinWorkspaceToBottom = false;
+  config.hasVerticalScrollbars = false;
+
+  // We don't want icons in instructions
+  config.skin.staticAvatar = null;
+  config.skin.smallStaticAvatar = null;
+  config.skin.failureAvatar = null;
+  config.skin.winAvatar = null;
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -202,10 +212,43 @@ Calc.init = function(config) {
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
+
+    if (Blockly.contractEditor) {
+      Blockly.contractEditor.registerTestHandler(testCalcExample);
+    }
   };
 
   studioApp.init(config);
 };
+
+function testCalcExample(exampleBlock) {
+  try {
+    var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+
+    var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+    var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+
+    if (!actualBlock) {
+      throw new Error('Invalid Call Block');
+    }
+
+    if (!expectedBlock) {
+      throw new Error('Invalid Result Block');
+    }
+
+    var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
+    var actual = entireSet.evaluateWithExpression(actualEquation.expression);
+
+    var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
+    var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
+
+    var areEqual = expected.result.equals(actual.result);
+    return areEqual ? "Matches definition." : "Does not match definition";
+  } catch (error) {
+    // Most Calc error messages were not meant to be user facing.
+    return "Evaluation Failed.";
+  }
+}
 
 /**
  * A few possible scenarios
@@ -659,7 +702,8 @@ Calc.execute = function() {
 function isPreAnimationFailure(testResult) {
   return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
     testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
-    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL;
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
+    testResult == TestResults.EXAMPLE_FAILED;
 }
 
 /**
@@ -707,11 +751,12 @@ Calc.generateResults_ = function () {
     appState.result = ResultType.SUCCESS;
     appState.testResults = TestResults.FREE_PLAY;
   } else {
-    var outcome = Calc.evaluateResults_(appState.targetSet, appState.userSet);
-    appState.result = outcome.result;
-    appState.testResults = outcome.testResults;
-    appState.message = outcome.message;
-    appState.failedInput = outcome.failedInput;
+    appState = $.extend(appState, Calc.checkExamples_());
+
+    if (appState.result === null) {
+      appState = $.extend(appState,
+        Calc.evaluateResults_(appState.targetSet, appState.userSet));
+    }
   }
 
   // Override default message for LEVEL_INCOMPLETE_FAIL
@@ -719,6 +764,60 @@ Calc.generateResults_ = function () {
       !appState.message) {
     appState.message = calcMsg.levelIncompleteError();
   }
+};
+
+/**
+ * @returns {Object} set of appState to be merged by caller
+ */
+Calc.checkExamples_ = function () {
+  var outcome = {};
+  if (!level.examplesRequired) {
+    return outcome;
+  }
+
+  var exampleless = studioApp.getFunctionWithoutExample();
+  if (exampleless) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: exampleless});
+    return outcome;
+  }
+
+  var unfilled = studioApp.getUnfilledFunctionalExample();
+  if (unfilled) {
+    outcome.result = ResultType.FAILURE;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+
+    var name = unfilled.getRootBlock().getInputTargetBlock('ACTUAL')
+      .getTitleValue('NAME');
+    outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
+    return outcome;
+  }
+
+  // TODO - what of this belongs in studio app?
+  var failingBlockName = '';
+  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
+    var result = testCalcExample(exampleBlock, true);
+    var success = result === "Matches definition.";
+
+    // Update the example result. No-op if we're not currently editing this
+    // function.
+    Blockly.contractEditor.updateExampleResult(exampleBlock, result);
+
+    if (!success) {
+      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
+        .getTitleValue('NAME');
+    }
+
+  });
+
+  if (failingBlockName) {
+    outcome.result = false;
+    outcome.testResults = TestResults.EXAMPLE_FAILED;
+    outcome.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
+  }
+
+  return outcome;
 };
 
 /**
@@ -896,6 +995,9 @@ Calc.step = function (animationDepth) {
 
 function clearSvgUserExpression() {
   var g = document.getElementById('userExpression');
+  if (!g) {
+    return;
+  }
   // remove all existing children, in reverse order so that we don't have to
   // worry about indexes changing
   for (var i = g.childNodes.length - 1; i >= 0; i--) {
@@ -1022,6 +1124,7 @@ function displayEquation(parentId, name, tokenList, line, markClass, leftAlign) 
  */
 function cloneNodeWithoutIds(elementId) {
   var clone = document.getElementById(elementId).cloneNode(true);
+  clone.removeAttribute("id");
   var descendants = clone.getElementsByTagName("*");
   for (var i = 0; i < descendants.length; i++) {
     var element = descendants[i];
@@ -1046,6 +1149,7 @@ function displayFeedback() {
   // Show svg in feedback dialog
   if (!isPreAnimationFailure(appState.testResults)) {
     appDiv = cloneNodeWithoutIds('svgCalc');
+    appDiv.setAttribute('class', 'svgCalcFeedback');
   }
   var options = {
     app: 'calc',

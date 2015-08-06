@@ -34,9 +34,9 @@ data '0001 0111
 
 
 markdown <<MARKDOWN
-# Task 2: Find and Fix the Error
+# Oh no! The Code.org logo got messed up during transmission!
 
-Oh no! The Code.org logo got messed up. An extra bit was added to this image during transmission.<br>
-Your task is to find the extra bit and remove it to fix the Code.org logo. <br>
-HINT: one bit early on would make it look like many bits were out of order. <br>
+**The problem:** A *single extra bit* was inserted into the stream of bits that make up the Code.org logo.  That extra bit bumps all of the other bits down the line which makes the logo look messed up.<br> 
+**Your task:** Hunt down the extra bit and remove it to fix the Code.org logo. <br>
+**HINT:** Scroll down in the box of bits to make sure that you see all of them.  Remember: One bit early on would make it look like many bits were out of order. <br>
 MARKDOWN

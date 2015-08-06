@@ -1,0 +1,40 @@
+- png ||= false
+
+%div{id: "chart_#{id}"}
+
+:javascript
+
+  // Callback function to fetch data from a spreadsheet.
+  window["getChartData_#{id}"] = function() {
+    var query = new google.visualization.Query("#{query_url}");
+    query.send(window["handleQueryResponse_#{id}"]);
+  };
+
+  // Draw the chart after the data comes back.
+  window["handleQueryResponse_#{id}"] = function(response) {
+    if (response.isError()) {
+      console.log('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+      return;
+    }
+
+    var chartDiv = document.getElementById("chart_#{id}");
+
+    var data = response.getDataTable();
+    var chart = new google.visualization["#{type}"](chartDiv);
+
+    if ("#{png}" !== "false") {
+      // Wait for the chart to finish drawing before calling the getImageURI() method.
+      google.visualization.events.addListener(chart, 'ready', function () {
+        chartDiv.innerHTML = '<img src="' + chart.getImageURI() + '">';
+      });
+    }
+
+    chart.draw(data, {width: "#{width}", height: "#{height}", is3D: true});
+  }
+
+  // Load the Visualization API and the piechart package.
+  google.load('visualization', '1.0', {'packages':['corechart']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+  google.setOnLoadCallback(window["getChartData_#{id}"]);
+

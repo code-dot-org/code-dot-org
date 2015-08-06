@@ -7,7 +7,7 @@
         .language_column{:style=>'width: 130px; height: 130px; float: left; display: table;'}
           %div
             - project_url = "http://crowdin.com/project/codeorg/#{code}"
-            - image_url = "https://d1ztvzf22lmr1j.cloudfront.net/images/flags/#{code}.png"
+            - image_url = "/images/flags/#{code}.png"
             %a{:href=>project_url, :style=>'display: table-cell;'}
               %img{:src=>image_url, :style=>'max-width: 130px; max-height: 130px;'}
               %br{:style=>'clear: both;'}= name

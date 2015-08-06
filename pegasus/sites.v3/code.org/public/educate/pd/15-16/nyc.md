@@ -24,7 +24,7 @@ The first phase of professional development is a two-hour online introduction th
 
 Monday, August 3, 2015 - Friday, August 7, 2015
 <br/>
-9:00am - 4:00pm
+8:30am - 3:30pm
 <br />
 Breakfast and lunch will be served. 
 
@@ -57,13 +57,13 @@ Phase 3 is composed of quarterly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Quarter 1: Saturday, October 3, 2015
+Quarter 1: Saturday, October 17, 2015
 
-Quarter 2: Saturday, November 14, 2015
+Quarter 2: Saturday, December 5, 2015
 
-Quarter 3: Saturday, February 6, 2016
+Quarter 3: Saturday, February 27, 2016
 
-Quarter 4: Saturday, April 16, 2016
+Quarter 4: Saturday, March 26, 2016
 
 8:30am - 3:30pm
 <br/>
@@ -105,9 +105,9 @@ Both group 1 & 2 will be attending the following dates:
 
 _Monday_, August 17, 2015 - _Friday_, August 21, 2015
 <br/>
-Mon - Thurs: 9:00am - 4:00pm
+Mon - Thurs: 8:30am - 3:00pm
 <br />
-_Friday_: 9:00am - 2:00pm
+_Friday_: 8:30am - 1:30pm
 <br />
 Breakfast and lunch will be served. 
 <br />
@@ -186,7 +186,7 @@ Both Group 1 & 2 will be attending the following dates:
 
 Monday, August 10, 2015 - Wednesday, August 12, 2015
 <br/>
-8:00am - 4:30pm
+8:00am - 4:00pm
 <br />
 Breakfast and lunch will be served.
 
@@ -252,9 +252,9 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 Semester 1: Saturday, October 3, 2015
 
-Semester 2: Saturday, February 6, 2015
+Semester 2: Saturday, February 6, 2016
 
-8:30am - 3:30pm
+8:00am - 4:00pm
 <br/>
 Breakfast and lunch will be served.
 

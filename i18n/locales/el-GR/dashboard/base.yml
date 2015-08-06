@@ -220,6 +220,7 @@ el:
       free_play:
         playlab: Δημιουργήστε μια εφαρμογή
         artist: Ζωγραφίστε κάτι
+        calculate: Calculate Something
     user:
       classroom: H Αρχική Σελίδα του Εκπαιδευτικού
       district_dashboard: Περιοχή Ταμπλό
@@ -303,7 +304,7 @@ el:
     panel:
       answer_viewer: Εμφάνιση Απαντήσεων
       student: φοιτητής/μαθητής
-      viewing_solution: Viewing Solution
+      viewing_solution: Προβολή λύσης
       try_it_yourself: Δοκίμασέ το μόνος σου
       section: Ενότητα
   user:

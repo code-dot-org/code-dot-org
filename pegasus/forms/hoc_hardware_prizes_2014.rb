@@ -34,9 +34,9 @@ class HocHardwarePrizes2014
     fq.push("kind_s:HocHardwarePrizes2014")
 
     {
-      q:query,
-      fq:fq,
-      rows:rows,
+      q: query,
+      fq: fq,
+      rows: rows,
     }
   end
 end

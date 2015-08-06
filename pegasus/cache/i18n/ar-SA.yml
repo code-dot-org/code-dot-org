@@ -1,7 +1,7 @@
 "ar-SA":
   hello: مرحباً بالعالم
   select_language: من فضلك اختر لغتك
-  en: Computer Science
+  en: علوم الكمبيوتر
   computer_science_edweek: الاسبوع التعليمي لعلوم الكمبيوتر
   csedweek_dates: 8-14 كانون الأول/ديسمبر، 2014
   csedweek_banner_hoc: 'قادم<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -303,7 +303,7 @@
   dashboard_landing_view_progress: عرض عملية التقدم لـ %{biggest_section}
   dashboard_landing_available_title: الدورات التدريبية المتاحة
   dashboard_landing_available_courses: هذة هي الدورات المتاحة حاليا لكم ولطلابكم.
-  dashboard_landing_more_tutorials: Want to see even more tutorials?
+  dashboard_landing_more_tutorials: هل تريد رؤية المزيد من الشروحات؟
   dashboard_landing_more_tutorials_desc: هناك المزيد من الدروس <a href="/learn/beyond">المقدمة
     من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص
     أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.
@@ -331,7 +331,7 @@
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: code.org في شراكة مع بوتستراب (Bootstrap) لتطوير منهج
     لتدريس الجبر و الهندسة من خلال مفهوم برمجة الحاسب.
-  dashboard_course_csins: Computer Science in Science
+  dashboard_course_csins: علوم الحاسوب في مجال العلوم
   dashboard_course_csins_desc: code.org في شراكة مع مشروع جي يو تي إس (GUTS) لتوصيل
     المفاهيم الأساسية لعلوم الحاسب من خلال سياق النمذجة و المحاكاة.
   dashboard_course_ecs: استكشاف علوم الحاسب الآلي
@@ -1133,3 +1133,6 @@
     لن تستطيع الوصول إلى code.org بعد هذا التاريخ. <a href='%{it_requirements_url}'>اضغط
     هنا</a> لتعلم كيفية تفعيل HTTPS لـ code.org.
   compatibility_https_hide_this_warning: إخفاء هذا التحذير
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more
