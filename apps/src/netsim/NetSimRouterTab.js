@@ -18,7 +18,7 @@ var markup = require('./NetSimRouterTab.html.ejs');
 var NetSimBandwidthControl = require('./NetSimBandwidthControl');
 var NetSimMemoryControl = require('./NetSimMemoryControl');
 var NetSimRouterStatsTable = require('./NetSimRouterStatsTable');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 /**
  * Generator and controller for router information view.
@@ -97,7 +97,7 @@ NetSimRouterTab.prototype.attachToRunLoop = function (runLoop) {
  * Fill the root div with new elements reflecting the current state.
  */
 NetSimRouterTab.prototype.render = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   var renderedMarkup = $(markup({
     level: levelConfig

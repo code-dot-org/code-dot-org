@@ -24,7 +24,7 @@ var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
 var NetSimDnsTab = require('./NetSimDnsTab');
 var NetSimTabType = require('./netsimConstants').NetSimTabType;
 var shouldShowTab = require('./netsimUtils').shouldShowTab;
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 /**
  * Wrapper component for tabs panel on the right side of the page.
@@ -149,7 +149,7 @@ NetSimTabsComponent.prototype.attachToRunLoop = function (runLoop) {
  * Fill the root div with new elements reflecting the current state
  */
 NetSimTabsComponent.prototype.render = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   // Clone the reference area (with handlers) before we re-render
   var referenceArea = $('#reference_area').first().clone(true);
 
@@ -172,7 +172,7 @@ NetSimTabsComponent.prototype.render = function () {
     referenceArea.insertBefore(continueButton);
     this.rootDiv_.find('.submitButton').click(function (jQueryEvent) {
       if (!$(jQueryEvent.target).is(':disabled')) {
-        netsimGlobals.completeLevelAndContinue();
+        NetSimGlobals.completeLevelAndContinue();
       }
     });
   }

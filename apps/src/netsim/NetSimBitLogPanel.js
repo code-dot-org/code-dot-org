@@ -23,7 +23,7 @@ var i18n = require('./locale');
 var markup = require('./NetSimBitLogPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 var logger = require('./NetSimLogger').getSingleton();
 
@@ -245,5 +245,5 @@ NetSimBitLogPanel.prototype.getHeight = function () {
  */
 NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
   NetSimBitLogPanel.superPrototype.onMinimizerClick_.call(this);
-  netsimGlobals.updateLayout();
+  NetSimGlobals.updateLayout();
 };
