@@ -28,15 +28,17 @@ class FakeRedisClient
     @hash.delete(key)
   end
 
-  def hdel(key, field)
-    if field.is_a?(Array)
-      field.reduce(0) do |memo, next_field|
-        value = get_hash_for_key(key).delete(next_field)
-        memo + (value ? 1 : 0)
-      end
-    else
-      value = get_hash_for_key(key).delete(field)
-      value ? 1 : 0
+  # Second argument takes a single name or array of names, to match
+  # the redis-rb API.
+  # @param [String] key
+  # @param [String|Array<String>] fields
+  # @returns [Integer] number of deleted fields
+  def hdel(key, fields)
+    fields = [fields] unless fields.is_a?(Array)
+    hash = get_hash_for_key(key)
+    fields.reduce(0) do |num_deleted, field|
+      num_deleted += 1 if hash.delete(field)
+      num_deleted
     end
   end
 
