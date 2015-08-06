@@ -16,7 +16,7 @@ var ExpressionNode = require('@cdo/apps/calc/expressionNode');
  * actually running.
  */
 
-var getEquationFromBlock = EquationSet.__testonly__.getEquationFromBlock;
+var getEquationFromBlock = EquationSet.getEquationFromBlock;
 
 /**
  * Load the blocks into the blockSpace, assert that there's only one top block,
