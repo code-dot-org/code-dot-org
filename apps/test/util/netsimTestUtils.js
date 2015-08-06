@@ -163,7 +163,7 @@ var fakeStorageTable = function () {
       };
 
       var deleteCount = 0;
-      for (var i = 0; i < tableData_.length; i++) {
+      for (var i = tableData_.length - 1; i >= 0; i--) {
         if (matchesAnyDeleteID(tableData_[i])) {
           tableData_.splice(i, 1);
           deleteCount++;
