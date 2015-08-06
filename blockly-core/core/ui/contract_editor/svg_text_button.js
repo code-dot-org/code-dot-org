@@ -53,5 +53,5 @@ Blockly.SvgTextButton.prototype.renderAt = function (xOffset, yOffset) {
 };
 
 Blockly.SvgTextButton.prototype.setVisible = function (visible) {
-  goog.style.showElement(this.svgGroup_, visible);
+  goog.style.setElementShown(this.svgGroup_, visible);
 };
