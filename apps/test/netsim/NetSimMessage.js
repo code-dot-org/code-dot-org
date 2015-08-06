@@ -3,9 +3,9 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 var assertOwnProperty = testUtils.assertOwnProperty;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
@@ -57,7 +57,7 @@ describe("NetSimMessage", function () {
     });
   });
 
-  it ("converts messageRow.base64Payload to local binary payload", function () {
+  it ("converts MessageRow.base64Payload to local binary payload", function () {
     var message = new NetSimMessage(testShard, {
       fromNodeID: 1,
       toNodeID: 2,
@@ -163,7 +163,7 @@ describe("NetSimMessage", function () {
     var testRow;
 
     // Create a message row in remote table
-    // The source payload that generates this base64Payload is "1001001"
+    // The source payload that generates this Base64Payload is "1001001"
     messageTable.create({
       fromNodeID: 1,
       toNodeID: 2,

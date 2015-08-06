@@ -24,22 +24,22 @@ var NetSimPanel = require('./NetSimPanel');
 var NetSimPacketEditor = require('./NetSimPacketEditor');
 var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
-var dataConverters = require('./dataConverters');
-var netsimConstants = require('./netsimConstants');
-var NetSimGlobals = require('./netsimGlobals');
+var DataConverters = require('./DataConverters');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 
-var EncodingType = netsimConstants.EncodingType;
-var MessageGranularity = netsimConstants.MessageGranularity;
-var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var EncodingType = NetSimConstants.EncodingType;
+var MessageGranularity = NetSimConstants.MessageGranularity;
+var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
-var binaryToAB = dataConverters.binaryToAB;
+var binaryToAB = DataConverters.binaryToAB;
 
 var logger = require('./NetSimLogger').getSingleton();
 
 /**
  * Generator and controller for message sending view.
  * @param {jQuery} rootDiv
- * @param {netsimLevelConfiguration} levelConfig
+ * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSim} netsim
  * @constructor
  * @augments NetSimPanel
@@ -48,7 +48,7 @@ var NetSimSendPanel = module.exports = function (rootDiv, levelConfig,
     netsim) {
 
   /**
-   * @type {netsimLevelConfiguration}
+   * @type {NetSimLevelConfiguration}
    * @private
    */
   this.levelConfig_ = levelConfig;
