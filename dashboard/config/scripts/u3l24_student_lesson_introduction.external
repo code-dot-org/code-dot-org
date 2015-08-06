@@ -2,21 +2,20 @@ name 'U3L24 Student Lesson Introduction'
 title 'Chained Conditionals'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 24 - Chained Conditionals
+## Unit 3: Lesson 24 - Chained and Nested Conditionals
 
 # Background
-To make chatbots respond to user input, you must evaluate both the user input and keywords within the input. More complex conditionals - chained if-statements - will enable your chatbot program to generate unique responses based a specific set of keywords. Chained conditionals are used to create multiple alternative conditions.  
+To make your digital assistant respond to user input, you must evaluate keywords within the input using conditionals (also known as selection). More complex conditionals - chained and nested if-statements - will enable your digital assistant to generate unique responses to a specific set of keywords. Once your digital assistant is able to respond to multiple different inputs, you need to prove it works correctly.
 
 # Lesson
 
-* Examine the impact of order in chained if-statements.
-* Create an interactive chatbot with if-else-if statements. 
+* Add chained and nested conditionals to the digital assistant project
+* Test and debug a program with logic errors
+* Use boolean functions within an if statement to direct the logical flow of a program
   
-
 # Resources
-* Worksheet: <a href="https://docs.google.com/document/d/1BJtlwB-YIcVtpmPw70UFv56hVqiNi6NWM5VsszNN1dk" target="_blank">Warm Up Sentence Completion </a>
-* Worksheet: <a href="https://docs.google.com/document/d/1X6FV0C73gwC0nySTyPg9yEa1RSSszvAnHOrU3i6Pla0" target="_blank">Peer Reflection 
-</a>
+* Worksheet: <a href="https://docs.google.com/document/d/1K8I7CDCGf4V5Z4m8DoKeamxC_IUid3mtsCRmo9hTokY/edit?usp=sharing" target="_blank">Warm Up</a>
+* Activity Guide: <a href="https://docs.google.com/document/d/1hkcIWr0YwJUMxNI8mKeV1LdHCHSx2eOfyJTlEqykevo/edit?usp=sharing" target="_blank">Debugging Conditionals</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

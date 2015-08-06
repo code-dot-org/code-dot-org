@@ -24,31 +24,31 @@ var KeyCodes = require('../constants').KeyCodes;
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimLogPanel = require('./NetSimLogPanel');
 var Packet = require('./Packet');
-var dataConverters = require('./dataConverters');
-var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
+var DataConverters = require('./DataConverters');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 
-var EncodingType = netsimConstants.EncodingType;
-var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var EncodingType = NetSimConstants.EncodingType;
+var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
-var minifyBinary = dataConverters.minifyBinary;
-var formatAB = dataConverters.formatAB;
-var formatBinary = dataConverters.formatBinary;
-var formatHex = dataConverters.formatHex;
-var alignDecimal = dataConverters.alignDecimal;
-var abToBinary = dataConverters.abToBinary;
-var abToInt = dataConverters.abToInt;
-var binaryToAB = dataConverters.binaryToAB;
-var binaryToHex = dataConverters.binaryToHex;
-var binaryToInt = dataConverters.binaryToInt;
-var binaryToDecimal = dataConverters.binaryToDecimal;
-var binaryToAscii = dataConverters.binaryToAscii;
-var hexToBinary = dataConverters.hexToBinary;
-var intToAB = dataConverters.intToAB;
-var intToBinary = dataConverters.intToBinary;
-var intToHex = dataConverters.intToHex;
-var decimalToBinary = dataConverters.decimalToBinary;
-var asciiToBinary = dataConverters.asciiToBinary;
+var minifyBinary = DataConverters.minifyBinary;
+var formatAB = DataConverters.formatAB;
+var formatBinary = DataConverters.formatBinary;
+var formatHex = DataConverters.formatHex;
+var alignDecimal = DataConverters.alignDecimal;
+var abToBinary = DataConverters.abToBinary;
+var abToInt = DataConverters.abToInt;
+var binaryToAB = DataConverters.binaryToAB;
+var binaryToHex = DataConverters.binaryToHex;
+var binaryToInt = DataConverters.binaryToInt;
+var binaryToDecimal = DataConverters.binaryToDecimal;
+var binaryToAscii = DataConverters.binaryToAscii;
+var hexToBinary = DataConverters.hexToBinary;
+var intToAB = DataConverters.intToAB;
+var intToBinary = DataConverters.intToBinary;
+var intToHex = DataConverters.intToHex;
+var decimalToBinary = DataConverters.decimalToBinary;
+var asciiToBinary = DataConverters.asciiToBinary;
 
 /**
  * Generator and controller for message sending view.
@@ -70,7 +70,7 @@ var asciiToBinary = dataConverters.asciiToBinary;
  * @constructor
  */
 var NetSimPacketEditor = module.exports = function (initialConfig) {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
 
   /**
    * @type {jQuery}
@@ -92,11 +92,11 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
 
   /** @type {string} */
   this.toAddress = initialConfig.toAddress ||
-      dataConverters.binaryToAddressString('0', level.addressFormat);
+      DataConverters.binaryToAddressString('0', level.addressFormat);
   
   /** @type {string} */
   this.fromAddress = initialConfig.fromAddress ||
-      dataConverters.binaryToAddressString('0', level.addressFormat);
+      DataConverters.binaryToAddressString('0', level.addressFormat);
   
   /** @type {number} */
   this.packetIndex = initialConfig.packetIndex !== undefined ?
@@ -117,7 +117,7 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    * @type {Number}
    * @private
    */
-  this.maxPacketSize_ = initialConfig.maxPacketSize || Infinity;
+  this.maxPacketSize_ = initialConfig.maxPacketSize || 8192;
 
   /**
    * Bits per chunk/byte for parsing and formatting purposes.
@@ -446,7 +446,7 @@ NetSimPacketEditor.prototype.makeBlurHandler = function (fieldName,
  * Specification for an encoding row in the editor, which designates character
  * whitelists to limit typing in certain fields, and rules for intepreting the
  * field from binary.
- * @typedef {Object} rowType
+ * @typedef {Object} RowType
  * @property {EncodingType} typeName
  * @property {RegExp} addressFieldAllowedCharacters - Whitelist of characters
  *           that may be typed into an address field.
@@ -514,10 +514,10 @@ var truncatedDecimalToInt = function (decimalString, maxWidth) {
  * @returns {string}
  */
 var cleanAddressString = function (originalString) {
-  var level = netsimGlobals.getLevelConfig();
-  var binaryForm = dataConverters.addressStringToBinary(
+  var level = NetSimGlobals.getLevelConfig();
+  var binaryForm = DataConverters.addressStringToBinary(
       originalString, level.addressFormat);
-  return dataConverters.binaryToAddressString(
+  return DataConverters.binaryToAddressString(
       binaryForm, level.addressFormat);
 };
 
@@ -526,17 +526,17 @@ var cleanAddressString = function (originalString) {
  * @private
  */
 NetSimPacketEditor.prototype.bindElements_ = function () {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var rootDiv = this.rootDiv_;
 
-  /** @type {rowType[]} */
+  /** @type {RowType[]} */
   var rowTypes = [
     {
       typeName: EncodingType.A_AND_B,
       addressFieldAllowedCharacters: /[AB\s]/i,
       addressFieldConversion: function (abString) {
-        return dataConverters.binaryToAddressString(
-            dataConverters.abToBinary(abString), level.addressFormat);
+        return DataConverters.binaryToAddressString(
+            DataConverters.abToBinary(abString), level.addressFormat);
       },
       shortNumberAllowedCharacters: /[AB]/i,
       shortNumberConversion: truncatedABToInt,
@@ -547,7 +547,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
       typeName: EncodingType.BINARY,
       addressFieldAllowedCharacters: /[01\s]/i,
       addressFieldConversion: function (binaryString) {
-        return dataConverters.binaryToAddressString(
+        return DataConverters.binaryToAddressString(
             binaryString, level.addressFormat);
       },
       shortNumberAllowedCharacters: /[01]/,
@@ -559,8 +559,8 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
       typeName: EncodingType.HEXADECIMAL,
       addressFieldAllowedCharacters: /[0-9a-f\s]/i,
       addressFieldConversion: function (hexString) {
-        return dataConverters.binaryToAddressString(
-            dataConverters.hexToBinary(hexString), level.addressFormat);
+        return DataConverters.binaryToAddressString(
+            DataConverters.hexToBinary(hexString), level.addressFormat);
       },
       shortNumberAllowedCharacters: /[0-9a-f]/i,
       shortNumberConversion: truncatedHexToInt,
@@ -603,7 +603,7 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     // We attach blur to reformat the edited field when the user leaves it,
     //    and to catch non-keyup cases like copy/paste.
 
-    var level = netsimGlobals.getLevelConfig();
+    var level = NetSimGlobals.getLevelConfig();
     var encoder = new Packet.Encoder(level.addressFormat,
         level.packetCountBitWidth, this.packetSpec_);
 
@@ -662,7 +662,7 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
   var chunkSize = this.currentChunkSize_;
   var liveFields = [];
 
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var encoder = new Packet.Encoder(level.addressFormat,
       level.packetCountBitWidth, this.packetSpec_);
 
@@ -675,20 +675,20 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
     var abConverter, binaryConverter, hexConverter, decimalConverter, asciiConverter;
     if (Packet.isAddressField(fieldName)) {
       abConverter = function (addressString) {
-        return dataConverters.binaryToAB(
-            dataConverters.addressStringToBinary(
+        return DataConverters.binaryToAB(
+            DataConverters.addressStringToBinary(
                 addressString, level.addressFormat));
       };
       binaryConverter = function (addressString) {
-        return dataConverters.formatBinaryForAddressHeader(
-            dataConverters.addressStringToBinary(
+        return DataConverters.formatBinaryForAddressHeader(
+            DataConverters.addressStringToBinary(
                 addressString,
                 level.addressFormat),
             level.addressFormat);
       };
       hexConverter = function (addressString) {
-        return dataConverters.binaryToHex(
-            dataConverters.addressStringToBinary(
+        return DataConverters.binaryToHex(
+            DataConverters.addressStringToBinary(
                 addressString, level.addressFormat));
       };
       decimalConverter = cleanAddressString;
@@ -791,7 +791,7 @@ NetSimPacketEditor.prototype.updateRemoveButtonVisibility_ = function () {
  * @private
  */
 NetSimPacketEditor.prototype.getPacketBinary = function () {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var encoder = new Packet.Encoder(level.addressFormat,
       level.packetCountBitWidth, this.packetSpec_);
   return encoder.concatenateBinary(
@@ -915,8 +915,7 @@ NetSimPacketEditor.prototype.setBitRate = function (newBitRate) {
  */
 NetSimPacketEditor.prototype.updateBitCounter = function () {
   var size = this.getPacketBinary().length;
-  var maxSize = this.maxPacketSize_ === Infinity ?
-      netsimMsg.infinity() : this.maxPacketSize_;
+  var maxSize = this.maxPacketSize_;
   this.bitCounter_.html(netsimMsg.bitCounter({
     x: size,
     y: maxSize

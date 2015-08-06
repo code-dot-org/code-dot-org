@@ -8,11 +8,11 @@ var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 var NetSimVizAutoDnsNode = require('@cdo/apps/netsim/NetSimVizAutoDnsNode');
@@ -21,7 +21,7 @@ describe("NetSimVizAutoDnsNode", function () {
   var vizElement;
 
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
   describe("defaults", function () {
@@ -42,7 +42,7 @@ describe("NetSimVizAutoDnsNode", function () {
     });
 
     it ("uses a dns hostname when level expects it", function () {
-      netsimGlobals.getLevelConfig().showHostnameInGraph = true;
+      NetSimGlobals.getLevelConfig().showHostnameInGraph = true;
       vizElement = new NetSimVizAutoDnsNode();
       assertEqual('dns', vizElement.displayName_.text());
     });

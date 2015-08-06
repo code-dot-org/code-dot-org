@@ -16,18 +16,18 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
 var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
 var NetSimVizWire = require('./NetSimVizWire');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 var tweens = require('./tweens');
-var netsimConstants = require('./netsimConstants');
-var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
+var NetSimConstants = require('./NetSimConstants');
+var DnsMode = NetSimConstants.DnsMode;
+var NodeType = NetSimConstants.NodeType;
 
 /**
  * Top-level controller for the network visualization.
@@ -310,7 +310,7 @@ NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
  */
 NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
-  var tableNodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
+  var tableNodes = NetSimNodeFactory.nodesFromRows(this.shard_, rows);
 
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
@@ -344,7 +344,7 @@ NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
 
   // In broadcast mode we hide the real wires and router, and overlay a set
   // of fake wires showing everybody connected to everybody else.
-  if (netsimGlobals.getLevelConfig().broadcastMode) {
+  if (NetSimGlobals.getLevelConfig().broadcastMode) {
     this.updateBroadcastModeWires_();
   }
 
@@ -386,8 +386,8 @@ NetSimVisualization.prototype.updateBroadcastModeWires_ = function () {
  * @private
  */
 NetSimVisualization.prototype.generateBroadcastModeConnections_ = function () {
-  var nodeRows = this.shard_.nodeTable.readAllCached();
-  var wireRows = this.shard_.wireTable.readAllCached();
+  var nodeRows = this.shard_.nodeTable.readAll();
+  var wireRows = this.shard_.wireTable.readAll();
   var nodeCount = nodeRows.length;
 
   // Generate a reverse mapping for lookups
@@ -589,7 +589,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
     // In broadcast mode we display "fake," unidirectional wires. In
     // regular mode, we only want to display wires connecting us to
     // nodes that are also connected back.
-    if (netsimGlobals.getLevelConfig().broadcastMode) {
+    if (NetSimGlobals.getLevelConfig().broadcastMode) {
       neighbors = this.getWiresAttachedToNode(vizElement);
     } else {
       neighbors = this.getReciprocatedWiresAttachedToNode(vizElement);
@@ -637,7 +637,7 @@ NetSimVisualization.prototype.getUnvisitedNeighborsOf_ = function (vizElement) {
  *                  O        O        O   O      O   O
  */
 NetSimVisualization.prototype.distributeForegroundNodes = function () {
-  if (netsimGlobals.getLevelConfig().broadcastMode) {
+  if (NetSimGlobals.getLevelConfig().broadcastMode) {
     this.distributeForegroundNodesForBroadcast_();
     return;
   }

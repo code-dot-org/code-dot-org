@@ -20,17 +20,17 @@ var _ = utils.getLodash();
 var i18n = require('./locale');
 var NetSimEntity = require('./NetSimEntity');
 var Packet = require('./Packet');
-var netsimNodeFactory = require('./netsimNodeFactory');
-var dataConverters = require('./dataConverters');
-var formatBinary = dataConverters.formatBinary;
-var base64ToBinary = dataConverters.base64ToBinary;
-var binaryToBase64 = dataConverters.binaryToBase64;
-var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
+var NetSimNodeFactory = require('./NetSimNodeFactory');
+var DataConverters = require('./DataConverters');
+var formatBinary = DataConverters.formatBinary;
+var base64ToBinary = DataConverters.base64ToBinary;
+var binaryToBase64 = DataConverters.binaryToBase64;
+var BITS_PER_BYTE = require('./NetSimConstants').BITS_PER_BYTE;
 
 /**
- * @typedef {Object} logEntryRow
+ * @typedef {Object} LogEntryRow
  * @property {number} nodeID
- * @property {base64Payload} base64Binary - base64-encoded binary
+ * @property {Base64Payload} base64Binary - base64-encoded binary
  *           message content, all of which can be exposed to the
  *           student.  May contain headers of its own.
  * @property {NetSimLogEntry.LogStatus} status
@@ -44,7 +44,7 @@ var BITS_PER_BYTE = require('./netsimConstants').BITS_PER_BYTE;
  * removes it.
  *
  * @param {!NetSimShard} shard - The shard where this log entry lives.
- * @param {logEntryRow} [row] - A row out of the log table on the
+ * @param {LogEntryRow} [row] - A row out of the log table on the
  *        shard.  If provided, will initialize this log with the given
  *        data.  If not, this log will initialize to default values.
  * @param {Packet.HeaderType[]} [packetSpec] - Packet layout spec used to
@@ -111,7 +111,7 @@ NetSimLogEntry.prototype.getTable = function () {
 
 /**
  * Build own row for the log table
- * @returns {logEntryRow}
+ * @returns {LogEntryRow}
  */
 NetSimLogEntry.prototype.buildRow = function () {
   return {
@@ -208,7 +208,7 @@ NetSimLogEntry.prototype.getTimeString = function () {
  * @returns {NetSimClientNode|NetSimRouterNode|null}
  */
 NetSimLogEntry.prototype.getOriginNode = function () {
-  var nodeRows = this.shard_.nodeTable.readAllCached();
+  var nodeRows = this.shard_.nodeTable.readAll();
   var originNodeRow = _.find(nodeRows, function (row) {
     return row.id === this.nodeID;
   }.bind(this));
@@ -217,5 +217,5 @@ NetSimLogEntry.prototype.getOriginNode = function () {
     return null;
   }
 
-  return netsimNodeFactory.nodeFromRow(this.shard_, originNodeRow);
+  return NetSimNodeFactory.nodeFromRow(this.shard_, originNodeRow);
 };

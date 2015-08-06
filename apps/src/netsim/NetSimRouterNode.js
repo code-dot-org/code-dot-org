@@ -17,8 +17,8 @@
 
 var utils = require('../utils');
 var i18n = require('./locale');
-var netsimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimUtils = require('./NetSimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -27,22 +27,22 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
-var dataConverters = require('./dataConverters');
-var netsimNodeFactory = require('./netsimNodeFactory');
+var DataConverters = require('./DataConverters');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 
 var _ = utils.getLodash();
 
-var serializeNumber = netsimUtils.serializeNumber;
-var deserializeNumber = netsimUtils.deserializeNumber;
+var serializeNumber = NetSimUtils.serializeNumber;
+var deserializeNumber = NetSimUtils.deserializeNumber;
 
-var asciiToBinary = dataConverters.asciiToBinary;
+var asciiToBinary = DataConverters.asciiToBinary;
 
-var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
-var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var DnsMode = NetSimConstants.DnsMode;
+var NodeType = NetSimConstants.NodeType;
+var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @type {number}
@@ -113,7 +113,7 @@ var ADDRESS_OPTION_LIMIT = 4096;
  *   which appear in the wire table.
  *
  * @param {!NetSimShard} shard
- * @param {Object} [routerRow] - Lobby row for this router.
+ * @param {RouterRow} [routerRow] - Lobby row for this router.
  * @constructor
  * @augments NetSimNode
  */
@@ -121,7 +121,7 @@ var NetSimRouterNode = module.exports = function (shard, row) {
   row = row !== undefined ? row : {};
   NetSimNode.call(this, shard, row);
 
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   /**
    * Unix timestamp (local) of router creation time.
@@ -323,7 +323,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 };
 
 /**
- * @typedef {Object} routerRow
+ * @typedef {Object} RouterRow
  * @property {number} creationTime - Unix timestamp (local)
  * @property {number} bandwidth - Router max transmission/processing rate
  *           in bits/second
@@ -337,7 +337,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 
 /**
  * Build table row for this node.
- * @returns {routerRow}
+ * @returns {RouterRow}
  * @private
  * @override
  */
@@ -358,7 +358,7 @@ NetSimRouterNode.prototype.buildRow = function () {
 /**
  * Load state from remoteRow into local model, then notify anything observing
  * us that we've changed.
- * @param {routerRow} remoteRow
+ * @param {RouterRow} remoteRow
  * @private
  */
 NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
@@ -569,7 +569,7 @@ NetSimRouterNode.prototype.tickAutoDns_ = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getDisplayName = function () {
-  if (netsimGlobals.getLevelConfig().broadcastMode) {
+  if (NetSimGlobals.getLevelConfig().broadcastMode) {
     return i18n.roomNumberX({
       x: this.getRouterNumber()
     });
@@ -590,7 +590,7 @@ NetSimRouterNode.prototype.getDisplayName = function () {
  * @returns {number}
  */
 NetSimRouterNode.prototype.getRouterNumber = function () {
-  var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+  var addressFormat = NetSimGlobals.getLevelConfig().addressFormat;
   // If two or more parts, limit our router number to the maximum value of
   // the second-to-last address part.
   var addressFormatParts = addressFormat.split(/\D+/).filter(function (part) {
@@ -643,10 +643,10 @@ NetSimRouterNode.prototype.getNodeType = function () {
 
 /** @inheritdoc */
 NetSimRouterNode.prototype.getStatus = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   // Determine status based on cached wire data
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.entityID;
   }, this);
@@ -663,7 +663,7 @@ NetSimRouterNode.prototype.getStatus = function () {
     });
   }
 
-  var cachedNodeRows = this.shard_.nodeTable.readAllCached();
+  var cachedNodeRows = this.shard_.nodeTable.readAll();
   var connectedNodeNames = incomingWireRows.map(function (wireRow) {
     var nodeRow = _.find(cachedNodeRows, function (nodeRow) {
       return nodeRow.id === wireRow.localNodeID;
@@ -704,7 +704,7 @@ NetSimRouterNode.prototype.getStatus = function () {
  */
 NetSimRouterNode.prototype.isFull = function () {
   // Determine status based on cached wire data
-  var cachedWireRows = this.shard_.wireTable.readAllCached();
+  var cachedWireRows = this.shard_.wireTable.readAll();
   var incomingWireRows = cachedWireRows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.entityID;
   }, this);
@@ -720,7 +720,7 @@ NetSimRouterNode.prototype.isFull = function () {
  */
 NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
   // There are no requirements in broadcast mode
-  if (netsimGlobals.getLevelConfig().broadcastMode) {
+  if (NetSimGlobals.getLevelConfig().broadcastMode) {
     return;
   }
 
@@ -746,7 +746,7 @@ NetSimRouterNode.prototype.validatePacketSpec_ = function (packetSpec) {
  */
 NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
   this.simulateForSender_ = nodeID;
-  this.packetSpec_ = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+  this.packetSpec_ = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
   this.validatePacketSpec_(this.packetSpec_);
 
   if (nodeID !== undefined) {
@@ -767,11 +767,11 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
 
     // Populate router wire cache with initial data
-    var cachedWires = this.shard_.wireTable.readAllCached();
+    var cachedWires = this.shard_.wireTable.readAll();
     this.onWireTableChange_(cachedWires);
 
     // Populate router log cache with initial data
-    var cachedLogs = this.shard_.logTable.readAllCached();
+    var cachedLogs = this.shard_.logTable.readAll();
     this.onLogTableChange_(cachedLogs);
   }
 };
@@ -861,23 +861,22 @@ NetSimRouterNode.prototype.getConnections = function (onComplete) {
   onComplete = onComplete || function () {};
 
   var shard = this.shard_;
+  var wireTable = shard.wireTable;
   var routerID = this.entityID;
-  this.shard_.wireTable.readAll(function (err, rows) {
-    if (err) {
-      onComplete(err, []);
-      return;
-    }
-
-    var myWires = rows
-        .map(function (row) {
-          return new NetSimWire(shard, row);
-        })
-        .filter(function (wire){
-          return wire.remoteNodeID === routerID;
-        });
-
-    onComplete(null, myWires);
-  });
+  wireTable.refresh()
+    .fail(function (err) {
+        onComplete(err, []);
+      })
+    .done(function () {
+        var myWires = wireTable.readAll()
+            .map(function (row) {
+              return new NetSimWire(shard, row);
+            })
+            .filter(function (wire) {
+              return wire.remoteNodeID === routerID;
+            });
+        onComplete(null, myWires);
+      }.bind(this));
 };
 
 /**
@@ -975,7 +974,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     });
 
     // Generate a list of unused addresses in the addressable space (to a limit)
-    var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+    var addressFormat = NetSimGlobals.getLevelConfig().addressFormat;
     var addressPartSizes = addressFormat.split(/\D+/).filter(function (part) {
       return part.length > 0;
     }).map(function (part) {
@@ -997,7 +996,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
     }
 
     // Pick one randomly from the list of possible addresses
-    var randomIndex = netsimGlobals.randomIntInRange(0, possibleAddresses.length);
+    var randomIndex = NetSimGlobals.randomIntInRange(0, possibleAddresses.length);
     wire.localAddress = possibleAddresses[randomIndex];
     wire.localHostname = hostname;
     wire.remoteAddress = self.getAddress();
@@ -1019,7 +1018,7 @@ NetSimRouterNode.prototype.requestAddress = function (wire, hostname, onComplete
  * @private
  */
 NetSimRouterNode.prototype.makeLocalNetworkAddress_ = function (lastPart) {
-  var addressFormat = netsimGlobals.getLevelConfig().addressFormat;
+  var addressFormat = NetSimGlobals.getLevelConfig().addressFormat;
   var usedLastPart = false;
   var usedRouterID = false;
 
@@ -1119,13 +1118,13 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   }
 
   // If we don't have connected routers, this is as far as the auto-DNS can see.
-  if (!netsimGlobals.getLevelConfig().connectedRouters) {
+  if (!NetSimGlobals.getLevelConfig().connectedRouters) {
     return undefined;
   }
 
   // Is it some node elsewhere on the shard?
-  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
-      this.shard_.nodeTable.readAllCached());
+  var nodes = NetSimNodeFactory.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAll());
   var node = _.find(nodes, function (node) {
     return node.getHostname() === hostname;
   });
@@ -1187,8 +1186,8 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
   }
 
   // Is it a local client?
-  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
-      this.shard_.nodeTable.readAllCached());
+  var nodes = NetSimNodeFactory.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAll());
   var wireRow = _.find(this.myWireRowCache_, function (row) {
     return row.localAddress === address;
   });
@@ -1203,7 +1202,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
 
   // End of local subnet cases:
   // In levels where routers are not connected, this is as far as we go.
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   if (!levelConfig.connectedRouters) {
     return null;
   }
@@ -1250,7 +1249,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
           });
     }, this);
     if (possibleDestinationRouters.length > 0) {
-      return netsimGlobals.randomPickOne(possibleDestinationRouters);
+      return NetSimGlobals.randomPickOne(possibleDestinationRouters);
     }
   }
 
@@ -1358,7 +1357,7 @@ NetSimRouterNode.prototype.getCurrentDataRate = function () {
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
- * @param {messageRow[]} rows
+ * @param {MessageRow[]} rows
  * @private
  * @throws if this method is called on a non-simulating router.
  */
@@ -1491,13 +1490,13 @@ NetSimRouterNode.prototype.routeMessage_ = function (message, onComplete) {
     }
 
     // Apply random chance to drop packet, right as we are about to forward it
-    if (this.randomDropChance > 0 && netsimGlobals.random() <= this.randomDropChance) {
+    if (this.randomDropChance > 0 && NetSimGlobals.random() <= this.randomDropChance) {
       this.log(message.payload, NetSimLogEntry.LogStatus.DROPPED);
       onComplete(null);
       return;
     }
 
-    var levelConfig = netsimGlobals.getLevelConfig();
+    var levelConfig = NetSimGlobals.getLevelConfig();
     if (levelConfig.broadcastMode) {
       this.forwardMessageToAll_(message, onComplete);
     } else {

@@ -1115,3 +1115,6 @@
     בתאריך  %{https_date}. לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו
     כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org.
   compatibility_https_hide_this_warning: הסתר את האזהרה הזו
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

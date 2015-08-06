@@ -206,9 +206,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
       highlightBox: sharedHighlightBox,
       placeContentCallback: goog.bind(function (currentY) {
         if (this.flyout_) {
-          currentY += this.flyout_.getHeight();
-          this.flyout_.customYOffset = currentY;
-          this.flyout_.position_();
+          currentY = this.positionFlyout_(currentY);
         }
 
         currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
@@ -452,10 +450,8 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
 
   var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
 
-  this.contractSectionView_.placeAndGetNewY(
-    -this.getBlockSpaceEditorToContractSectionTop_(), fullWidth);
-
   var currentY = 0;
+  currentY = this.contractSectionView_.placeAndGetNewY(currentY, fullWidth);
   currentY = this.examplesSectionView_.placeAndGetNewY(currentY, fullWidth);
   this.definitionSectionView_.placeAndGetNewY(currentY, fullWidth);
 };
@@ -465,7 +461,7 @@ Blockly.ContractEditor.prototype.layOutBlockSpaceItems_ = function () {
  */
 Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div',
-      'blocklyToolboxDiv paramToolbox blocklyText contractEditor');
+      'blocklyToolboxDiv paramToolbox blocklyText contractEditor innerModalDiv');
   if (Blockly.RTL) {
     this.contractDiv_.setAttribute('dir', 'RTL');
   }
@@ -493,7 +489,9 @@ Blockly.ContractEditor.prototype.createContractDom_ = function() {
   this.contractDiv_.style.top = metrics.absoluteTop + 'px';
   this.contractDiv_.style.width = metrics.viewWidth + 'px';
   this.contractDiv_.style.display = 'block';
-  this.container_.insertBefore(this.contractDiv_, this.container_.firstChild);
+  this.frameClipDiv_ = this.createFrameClipDiv_();
+  this.frameClipDiv_.insertBefore(this.contractDiv_, this.frameClipDiv_.firstChild);
+  this.container_.insertBefore(this.frameClipDiv_, this.container_.firstChild);
   this.initializeAddButton_();
 };
 
@@ -518,17 +516,8 @@ Blockly.ContractEditor.prototype.chromeBottomToContractDivDistance_ = function (
 };
 
 Blockly.ContractEditor.prototype.getContractDomTopY_ = function () {
-  return this.getWindowBorderChromeHeight() +
-    this.chromeBottomToContractDivDistance_();
-};
-
-Blockly.ContractEditor.prototype.getBlockSpaceEditorToContractSectionTop_ = function () {
-  return this.getContractDivHeight() + this.chromeBottomToContractDivDistance_();
-};
-
-Blockly.ContractEditor.prototype.getBlockSpaceEditorToScreenTop_ = function () {
-  return this.getWindowBorderChromeHeight() +
-    this.getBlockSpaceEditorToContractSectionTop_();
+  return this.chromeBottomToContractDivDistance_()
+    + this.modalBlockSpace.yOffsetFromView;
 };
 
 /**
@@ -625,9 +614,10 @@ Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) 
   var type = paramInfo.type;
 
   var domainEditor = new Blockly.DomainEditor({
+    paramID: paramID,
     name: name,
     type: type,
-    onRemovePress: goog.bind(this.removeParameter, this, name),
+    onRemovePress: goog.bind(this.removeContractParameter_, this, paramID),
     onTypeChanged: goog.bind(this.changeParameterType_, this, paramID),
     onNameChanged: goog.bind(this.changeParameterName_, this, paramID),
     typeChoices: USER_TYPE_CHOICES
@@ -636,11 +626,17 @@ Blockly.ContractEditor.prototype.addDomainEditorForParamID_ = function(paramID) 
   this.domainEditors_.push(domainEditor);
 };
 
-Blockly.ContractEditor.prototype.removeParameter = function(name) {
-  Blockly.ContractEditor.superClass_.removeParameter.call(this, name);
+/**
+ * Delete the given parameter, destroying its editor and any usages.
+ * @param {string} paramID - unique parameter ID
+ * @private
+ */
+Blockly.ContractEditor.prototype.removeContractParameter_ = function(paramID) {
+  this.orderedParamIDsToBlocks_.remove(paramID);
+  this.refreshParamsEverywhere();
 
   goog.array.removeIf(this.domainEditors_, function (editor) {
-    if (editor.name === name) {
+    if (editor.getParamID() === paramID) {
       editor.dispose();
       return true;
     }
@@ -728,5 +724,6 @@ Blockly.ContractEditor.prototype.changeParameterType_ = function(paramID, newTyp
 Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newName) {
   var paramInfo = this.getParamNameType(paramID);
   var oldName = paramInfo.name;
+
   Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
 };

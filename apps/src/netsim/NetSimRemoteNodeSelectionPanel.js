@@ -20,8 +20,8 @@ var _ = utils.getLodash();
 var i18n = require('./locale');
 var NetSimPanel = require('./NetSimPanel');
 var markup = require('./NetSimRemoteNodeSelectionPanel.html.ejs');
-var NodeType = require('./netsimConstants').NodeType;
-var netsimGlobals = require('./netsimGlobals');
+var NodeType = require('./NetSimConstants').NodeType;
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Generator and controller for lobby node listing, selection, and connection
@@ -134,7 +134,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function () {
  *          configuration
  */
 NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   if (levelConfig.canConnectToClients &&
       levelConfig.canConnectToRouters) {
@@ -155,7 +155,7 @@ NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function () {
  *          level configuration
  */
 NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions = function () {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
 
   if (levelConfig.canConnectToClients &&
       levelConfig.canConnectToRouters) {
@@ -218,7 +218,7 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
   }
 
   // Permissible connection limited by level configuration
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   var allowClients = levelConfig.canConnectToClients;
   var allowRouters = levelConfig.canConnectToRouters;
   return (isClient && allowClients) || (isRouter && allowRouters);
@@ -237,7 +237,7 @@ NetSimRemoteNodeSelectionPanel.prototype.hasOutgoingRequest = function () {
  * @returns {boolean} TRUE if the given node should show up in the lobby
  */
 NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   var isClient = (node.getNodeType() === NodeType.CLIENT);
   var isRouter = (node.getNodeType() === NodeType.ROUTER);
   var showClients = levelConfig.showClientsInLobby;

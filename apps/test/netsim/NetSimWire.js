@@ -2,9 +2,9 @@ var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertOwnProperty = testUtils.assertOwnProperty;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 
@@ -56,7 +56,7 @@ describe("NetSimWire", function () {
     it ("immediately initializes entry with endpoints", function () {
       NetSimWire.create(testShard, 1, 2, function () {});
 
-      wireTable.readAll(function (err, rows) {
+      wireTable.refresh(function (err, rows) {
         assertEqual(rows[0].localNodeID, 1);
         assertEqual(rows[0].remoteNodeID, 2);
       });

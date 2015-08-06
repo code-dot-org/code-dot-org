@@ -27,10 +27,10 @@ var NetSimRouterNode = require('./NetSimRouterNode');
 var ObservableEvent = require('../ObservableEvent');
 
 var logger = NetSimLogger.getSingleton();
-var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 
-var MessageGranularity = netsimConstants.MessageGranularity;
+var MessageGranularity = NetSimConstants.MessageGranularity;
 
 /**
  * Client model of node being simulated on the local client.
@@ -164,7 +164,7 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
   this.eventKeys.registeredOnShard = this.shard_;
 
   // Set up initial state from cached rows
-  this.onNodeTableChange_(this.shard_.nodeTable.readAllCached());
+  this.onNodeTableChange_(this.shard_.nodeTable.readAll());
 };
 
 /**
@@ -255,14 +255,7 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
 NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
   this.connectToNode(client, function (err, wire) {
     // Check whether WE just established a mutual connection with a remote client.
-    this.shard_.wireTable.readAll(function (err, wireRows) {
-      if (err) {
-        onComplete(err, wire);
-        return;
-      }
-      this.onWireTableChange_(wireRows);
-      onComplete(err, wire);
-    }.bind(this));
+    this.shard_.wireTable.refresh().always(onComplete.bind(null, err, wire));
   }.bind(this));
 };
 
@@ -332,7 +325,7 @@ NetSimLocalClientNode.prototype.destroy = function (onComplete) {
   }
 
   // Remove messages being simulated by this node
-  var myMessages = this.shard_.messageTable.readAllCached().filter(function (row) {
+  var myMessages = this.shard_.messageTable.readAll().filter(function (row) {
     return row.simulatedBy === this.entityID;
   }, this).map(function (row) {
     return new NetSimMessage(this.shard_, row);
@@ -401,10 +394,10 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
 
   // Who will be responsible for picking up/cleaning up this message?
   var simulatingNodeID = this.selectSimulatingNode_(localNodeID, remoteNodeID);
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   var extraHops = levelConfig.minimumExtraHops;
   if (levelConfig.minimumExtraHops !== levelConfig.maximumExtraHops) {
-    extraHops = netsimGlobals.randomIntInRange(
+    extraHops = NetSimGlobals.randomIntInRange(
         levelConfig.minimumExtraHops,
         levelConfig.maximumExtraHops + 1);
   }
@@ -419,7 +412,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
         payload: payload,
         extraHopsRemaining: extraHops
       },
-      function (err) {
+      function (err, row) {
         if (err) {
           logger.error('Failed to send message: ' + err.message + "\n" +
               JSON.stringify(payload));
@@ -434,7 +427,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
             '\nhops: ' + extraHops);
 
         if (self.sentLog_) {
-          self.sentLog_.log(payload);
+          self.sentLog_.log(payload, row.id);
         }
         onComplete(null);
       }.bind(this)
@@ -450,7 +443,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
  */
 NetSimLocalClientNode.prototype.selectSimulatingNode_ = function (localNodeID,
     remoteNodeID) {
-  if (netsimGlobals.getLevelConfig().messageGranularity === MessageGranularity.BITS) {
+  if (NetSimGlobals.getLevelConfig().messageGranularity === MessageGranularity.BITS) {
     // In simplex wire mode, the local node cleans up its own messages
     // when it knows they are no longer current.
     return localNodeID;
@@ -506,7 +499,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 
   // 2. Create and simulate new routers
   nodeRows.filter(function (row) {
-    return row.type === netsimConstants.NodeType.ROUTER;
+    return row.type === NetSimConstants.NodeType.ROUTER;
   }).forEach(function (row) {
     var alreadySimulating = this.routers_.some(function (simulatingRouter) {
       return row.id === simulatingRouter.entityID;
@@ -576,7 +569,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
  * @private
  */
 NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
-  if (!netsimGlobals.getLevelConfig().automaticReceive) {
+  if (!NetSimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
     return;
@@ -634,7 +627,7 @@ NetSimLocalClientNode.prototype.handleMessage_ = function (message) {
   logger.info(this.getDisplayName() + ': Handling incoming message');
   // TODO: How much validation should we do here?
   if (this.receivedLog_) {
-    this.receivedLog_.log(message.payload);
+    this.receivedLog_.log(message.payload, message.entityID);
   }
 };
 
@@ -652,26 +645,24 @@ NetSimLocalClientNode.prototype.getLatestMessageOnSimplexWire = function (onComp
 
   // Does an asynchronous request to the message table to ensure we have
   // the latest contents
-  this.shard_.messageTable.readAll(function (err, messageRows) {
-    if (err) {
-      onComplete(err);
-      return;
-    }
+  var messageTable = this.shard_.messageTable;
+  messageTable.refresh()
+    .fail(onComplete)
+    .done(function () {
+        // We only care about rows on our (simplex) wire
+        var rowsOnWire = messageTable.readAll().filter(function (row) {
+          return this.myWire.isMessageRowOnSimplexWire(row);
+        }.bind(this));
 
-    // We only care about rows on our (simplex) wire
-    var rowsOnWire = messageRows.filter(function (row) {
-      return this.myWire.isMessageRowOnSimplexWire(row);
-    }.bind(this));
+        // If there are no rows, complete successfully but pass null result.
+        if (rowsOnWire.length === 0) {
+          onComplete(null, null);
+          return;
+        }
 
-    // If there are no rows, complete successfully but pass null result.
-    if (rowsOnWire.length === 0) {
-      onComplete(null, null);
-      return;
-    }
-
-    var lastRow = rowsOnWire[rowsOnWire.length - 1];
-    onComplete(null, new NetSimMessage(this.shard_, lastRow));
-  }.bind(this));
+        var lastRow = rowsOnWire[rowsOnWire.length - 1];
+        onComplete(null, new NetSimMessage(this.shard_, lastRow));
+      }.bind(this));
 };
 
 /**
@@ -708,30 +699,28 @@ NetSimLocalClientNode.prototype.removeMyOldMessagesFromWire_ = function (onCompl
 
   // Does an asynchronous request to the message table to ensure we have
   // the latest contents
-  this.shard_.messageTable.readAll(function (err, messageRows) {
-    if (err) {
-      onComplete(err);
-      return;
-    }
+  var messageTable = this.shard_.messageTable;
+  messageTable.refresh()
+    .fail(onComplete)
+    .done(function () {
+        // We only care about rows on our (simplex) wire
+        var rowsOnWire = messageTable.readAll().filter(function (row) {
+          return this.myWire.isMessageRowOnSimplexWire(row);
+        }, this);
 
-    // We only care about rows on our (simplex) wire
-    var rowsOnWire = messageRows.filter(function (row) {
-      return this.myWire.isMessageRowOnSimplexWire(row);
-    }, this);
+        // "Old" rows are all but the last element (the latest one)
+        var oldRowsOnWire = rowsOnWire.slice(0, -1);
 
-    // "Old" rows are all but the last element (the latest one)
-    var oldRowsOnWire = rowsOnWire.slice(0, -1);
+        // We are only in charge of deleting messages that we are simulating
+        var myOldRowsOnWire = oldRowsOnWire.filter(function (row) {
+          return row.simulatedBy === this.entityID;
+        }, this);
 
-    // We are only in charge of deleting messages that we are simulating
-    var myOldRowsOnWire = oldRowsOnWire.filter(function (row) {
-      return row.simulatedBy === this.entityID;
-    }, this);
+        // Convert to message entities so we can destroy them
+        var myOldMessagesOnWire = myOldRowsOnWire.map(function (row) {
+          return new NetSimMessage(this.shard_, row);
+        }, this);
 
-    // Convert to message entities so we can destroy them
-    var myOldMessagesOnWire = myOldRowsOnWire.map(function (row) {
-      return new NetSimMessage(this.shard_, row);
-    }, this);
-
-    NetSimEntity.destroyEntities(myOldMessagesOnWire, onComplete);
-  }.bind(this));
+        NetSimEntity.destroyEntities(myOldMessagesOnWire, onComplete);
+      }.bind(this));
 };
