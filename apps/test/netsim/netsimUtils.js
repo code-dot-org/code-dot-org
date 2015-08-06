@@ -1,17 +1,17 @@
 var testUtils = require('../util/testUtils');
-var netsimTestUtils = require('../util/netsimTestUtils');
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var assertEqual = testUtils.assertEqual;
 
-var netsimUtils = require('@cdo/apps/netsim/netsimUtils');
+var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
 
-describe("netsimUtils", function () {
+describe("NetSimUtils", function () {
 
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
   describe("serializeNumber", function () {
-    var serializeNumber = netsimUtils.serializeNumber;
+    var serializeNumber = NetSimUtils.serializeNumber;
 
     it("turns Infinity into a string", function () {
       assertEqual('Infinity', serializeNumber(Infinity));
@@ -37,7 +37,7 @@ describe("netsimUtils", function () {
   });
 
   describe("deserializeNumber", function () {
-    var deserializeNumber = netsimUtils.deserializeNumber;
+    var deserializeNumber = NetSimUtils.deserializeNumber;
 
     it("turns 'Infinity' into Infinity", function () {
       assertEqual(Infinity, deserializeNumber('Infinity'));
@@ -63,8 +63,8 @@ describe("netsimUtils", function () {
   });
 
   describe("number serialize-deserialize round trip", function () {
-    var serializeNumber = netsimUtils.serializeNumber;
-    var deserializeNumber = netsimUtils.deserializeNumber;
+    var serializeNumber = NetSimUtils.serializeNumber;
+    var deserializeNumber = NetSimUtils.deserializeNumber;
     var roundTripTest = function (val) {
       var resultValue = deserializeNumber(JSON.parse(JSON.stringify(serializeNumber(val))));
       assertEqual(val, resultValue);
@@ -91,7 +91,7 @@ describe("netsimUtils", function () {
   });
 
   describe("scrubHeaderSpecForBackwardsCompatibility", function () {
-    var scrubHeaderSpecForBackwardsCompatibility = netsimUtils.scrubHeaderSpecForBackwardsCompatibility;
+    var scrubHeaderSpecForBackwardsCompatibility = NetSimUtils.scrubHeaderSpecForBackwardsCompatibility;
 
     it ("is a no-op for empty array", function () {
       assertEqual([], scrubHeaderSpecForBackwardsCompatibility([]));

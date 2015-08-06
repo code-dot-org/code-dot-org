@@ -2,14 +2,7 @@ name 'U3L24 Return Statements Lecture'
 
 css 'unplugged'
 markdown <<MARKDOWN
-<style>
-red {color:red}
-blue {color:blue}
-purple {color:purple}
-yellow {color:yellow}
-green {color:green}
-orange {color:orange}
-</style>
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/U3L24_codeStyle.css" />
 
 # What's this Return block?
 
@@ -29,7 +22,7 @@ When you use the keyword `return`, the computer knows that it is in a "return va
 
 **Example:**
 
-The function **write** -> In this block of code, the computer tries to call the function "write", but can't execute it yet because the parameter is another function. The computer then calls the function "foo" using the parameter 5.<br/>
+<i>The function <strong>write</strong>:</i> In this block of code, the computer tries to call the function "write", but can't execute it yet because the parameter is another function. The computer then calls the function "foo" using the parameter 5.<br/>
 
 
 <pre style="float:left; margin-right:20px; margin-top:20px";>
@@ -49,10 +42,10 @@ The function **write** -> In this block of code, the computer tries to call the 
 <img style="float:right; margin-left:20px" src="https://images.code.org/6baec518e622ee1996f47cedf88ed94f-image-1438303018997.PNG"/>
 
 <br/>
-The function **foo** -> The variable "number" is storing the value 5. The computer continues through the function as normal until it sees the keyword "return". At that point, it knows it has reached the end of the function (even if there are other things after "return"). It looks to see if there is anything next to "return." In this case, "bar" is next to the return. The computer reads the value stored in "bar" (which is 7) and sends that value back to the parent function.
+<i>The function <strong>foo</strong>:</i> The variable "number" is storing the value 5. The computer continues through the function as normal until it sees the keyword "return". At that point, it knows it has reached the end of the function (even if there are other things after "return"). It looks to see if there is anything next to "return." In this case, "bar" is next to the return. The computer reads the value stored in "bar" (which is 7) and sends that value back to the parent function.
 
 <br/>
-The function **write** -> The function "write" now has a parameter to use. It writes "7" to the screen!
+<i>The function <strong>write</strong>:</i> The function "write" now has a parameter to use. It writes "7" to the screen!
 
 <br/>
 Notice that "string" was declared within the function, but never used. That isn't a problem. When the function, "foo" returns, "string" will simply go out of scope.
