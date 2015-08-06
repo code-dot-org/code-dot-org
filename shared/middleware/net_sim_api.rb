@@ -154,6 +154,20 @@ class NetSimApi < Sinatra::Base
   end
 
   #
+  # DELETE /v3/netsim/<shard-id>/<table-name>?id[]=<id1>&id[]=<id2>&...
+  #
+  # Deletes multiple rows by id.
+  #
+  delete %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
+    dont_cache
+    content_type :json
+    table = get_table(shard_id, table_name)
+    ids = parse_ids_from_query_string(CGI::unescape(request.query_string))
+    table.delete_many(ids)
+    no_content
+  end
+
+  #
   # POST /v3/netsim/<shard-id>/<table-name>
   #
   # Insert a new row.
@@ -280,4 +294,17 @@ def parse_table_map_from_query_string(query_string)
       result[table] = min_id.to_i  # defaults to 0 for invalid ints.
     end
   end
+end
+
+# Convert a query string of the form "id[]=1&id[]=2" into an array of integer
+# ids as expected by RedisTable.delete_many().  Noninteger ids in the query
+# are simply omitted from the result.
+def parse_ids_from_query_string(query_string)
+  CGI::parse(query_string)['id[]'].map do |x|
+    begin
+      Integer(x, 10)
+    rescue ArgumentError
+      nil
+    end
+  end.select {|x| not x.nil?}
 end
