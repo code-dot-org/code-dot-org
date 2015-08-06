@@ -169,6 +169,29 @@ var tableApi = {
   },
 
   /**
+   * Remove multiple rows at once.
+   * @param {number[]} ids - The row IDs to remove.
+   * @param {NodeStyleCallback} callback - Expected result is TRUE.
+   */
+  deleteRows: function(ids, callback) {
+    // Generate query string in the form "id[]=1&id[]=2&..."
+    var queryString = ids.map(function (id) {
+      return 'id[]=' + id;
+    }).join('&');
+
+    $.ajax({
+      url: this.baseUrl + '/delete?' + queryString,
+      type: 'post',
+      dataType: 'json'
+    }).done(function(data, text) {
+      callback(null, true);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
+  },
+
+  /**
    * Retrieve a row.
    * @param {number} id - The row identifier.
    * @param {NodeStyleCallback} callback - Expected result is the requested
