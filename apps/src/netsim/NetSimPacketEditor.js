@@ -199,12 +199,13 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    */
   this.bitRate_ = initialConfig.bitRate || Infinity;
 
+  var encodings = initialConfig.enabledEncodings || [];
   /**
    * Which encodings should be visible in the editor.
-   * @type {EncodingType[]}
+   * @type {Object.<EncodingType, boolean>}
    * @private
    */
-  this.enabledEncodings_ = initialConfig.enabledEncodings || [];
+  this.enabledEncodingsHash_ = NetSimEncodingControl.encodingsAsHash(encodings);
 
   /**
    * Method to call in order to remove this packet from its parent.
@@ -312,14 +313,15 @@ NetSimPacketEditor.prototype.render = function () {
   var newMarkup = $(markup({
     messageGranularity: this.messageGranularity_,
     packetSpec: this.packetSpec_,
-    enabledEncodings: this.enabledEncodings_
+    enabledEncodingsHash: this.enabledEncodingsHash_
   }));
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
   this.updateRemoveButtonVisibility_();
   NetSimLogPanel.adjustHeaderColumnWidths(this.rootDiv_);
-  NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
+  NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_,
+      Object.keys(this.enabledEncodingsHash_));
 };
 
 /**
@@ -921,22 +923,20 @@ NetSimPacketEditor.prototype.setMaxPacketSize = function (maxPacketSize) {
  * @param {EncodingType[]} newEncodings
  */
 NetSimPacketEditor.prototype.setEncodings = function (newEncodings) {
-  this.enabledEncodings_ = newEncodings;
+  this.enabledEncodingsHash_ = NetSimEncodingControl.encodingsAsHash(newEncodings);
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, newEncodings);
   this.render();
 };
 
 /**
- * Helper method that checks this.enabledEncodings_ to see if the given
+ * Helper method that checks this.enabledEncodingsHash_ to see if the given
  * encoding is enabled
  * @param {EncodingType} queryEncoding
  * @returns {boolean} whether or not the given encoding is enabled
  * @private
  */
 NetSimPacketEditor.prototype.isEncodingEnabled_ = function (queryEncoding) {
-  return this.enabledEncodings_.some(function (enabledEncoding) {
-    return enabledEncoding === queryEncoding;
-  });
+  return this.enabledEncodingsHash_[queryEncoding] === true;
 };
 
 /**
