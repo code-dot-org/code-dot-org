@@ -18,19 +18,23 @@
  */
 'use strict';
 
-function test_block_connections() {
-  var containerDiv = document.createElement('div');
-  var blockSpace = new Blockly.BlockSpace(
-      new Blockly.BlockSpaceEditor(containerDiv)
-  );
+function test_setBlockNotDisconnectable() {
+  var containerDiv = Blockly.Test.initializeBlockSpaceEditor();
+
+  var blockSpace = Blockly.mainBlockSpace;
   var block1 = new Blockly.Block(blockSpace);
+  block1.initSvg();
   var block2 = new Blockly.Block(blockSpace);
+  block2.initSvg();
   block2.setFunctionalOutput(true);
   assertNotNull(block1);
   assertEquals(2, blockSpace.topBlocks_.length);
 
-  block1.appendFunctionalInput("myInputName");
-  block1.attachBlockToInputName(block2, "myInputName");
+  var inputName = "myInputName";
+  block1.appendFunctionalInput(inputName);
+  block1.attachBlockToInputName(block2, inputName);
   block2.setCanDisconnectFromParent(false);
   assertFalse(block2.canDisconnectFromParent());
+
+  goog.dom.removeNode(containerDiv);
 }
