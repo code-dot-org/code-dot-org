@@ -283,13 +283,26 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal({}, parse_table_map_from_query_string(''))
   end
 
-  def test_delete_many
+  def test_delete_many_delete_verb
+    perform_test_delete_many do |query_string|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?#{query_string}"
+    end
+  end
+
+  def test_delete_many_post_verb
+    perform_test_delete_many do |query_string|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?#{query_string}"
+    end
+  end
+
+  def perform_test_delete_many
     node_a = create_node({name: 'nodeA'})
     node_b = create_node({name: 'nodeB'})
     node_c = create_node({name: 'nodeC'})
     assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
 
-    @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?id[]=#{node_a['id']}&id[]=#{node_c['id']}"
+    query_string = [node_a['id'], node_c['id']].map { |id| "id[]=#{id}" }.join('&')
+    yield query_string # Performs delete_many using block provided by caller
     assert_equal 204, @net_sim_api.last_response.status
 
     assert !record_exists(TABLE_NAMES[:node], node_a['id'])
