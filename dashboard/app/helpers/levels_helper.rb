@@ -116,8 +116,7 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
-    # Provide the channel for templated and applab levels.
-    set_channel if @level.project_template_level || @level.game == Game.applab
+    set_channel if @level.channel_backed?
 
     callouts = params[:share] ? [] : select_and_remember_callouts(params[:show_callouts])
     # Set videos and callouts.
@@ -125,6 +124,12 @@ module LevelsHelper
       autoplay_video: select_and_track_autoplay_video,
       callouts: callouts
     )
+
+    # External project levels are any levels of type 'external' which use
+    # the projects code to save and load the user's progress on that level.
+    view_options(is_external_project_level: true) if @level.pixelation?
+
+    view_options(is_channel_backed: true) if @level.channel_backed?
 
     return blockly_options if @level.is_a? Blockly
     Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
@@ -173,6 +178,8 @@ module LevelsHelper
       level_options['edit_blocks'] = level_view_options[:edit_blocks]
       level_options['edit_blocks_success'] = t('builder.success')
       level_options['toolbox'] = level_view_options[:toolbox_blocks]
+      level_options['embed'] = false
+      level_options['hideSource'] = false
     end
 
     if @level.game.uses_pusher?

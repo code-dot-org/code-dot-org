@@ -910,3 +910,6 @@
   compatibility_https_message: 為了提高安全性，我們在 %{https_date} 切換到 HTTPS。你將不能在此日期後訪問 Code.org。<a
     href='%{it_requirements_url}'> 按一下此處</a> 瞭解如何對Code.org啟用 HTTPS。
   compatibility_https_hide_this_warning: 隱藏此警告
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

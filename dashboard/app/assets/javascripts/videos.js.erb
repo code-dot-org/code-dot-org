@@ -3,8 +3,11 @@ function createVideoWithFallback(parentElement, options, width, height) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
   video.width(width).height(height);
-  parentElement.append(video);
+  if(parentElement) {
+    parentElement.append(video);
+  }
   setupVideoFallback(options, width, height);
+  return video;
 }
 
 function createVideo(options) {

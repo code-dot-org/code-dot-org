@@ -7,9 +7,9 @@ var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
@@ -23,7 +23,7 @@ describe("NetSimLocalClientNode", function () {
 
   beforeEach(function () {
     NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
 
     testShard = fakeShard();
 
@@ -126,7 +126,7 @@ describe("NetSimLocalClientNode", function () {
       var fromNodeID, toNodeID;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('101001100101', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testShard.messageTable.refresh(function (err, rows) {
         fromNodeID = rows[0].fromNodeID;
         toNodeID = rows[0].toNodeID;
       });
@@ -138,7 +138,7 @@ describe("NetSimLocalClientNode", function () {
       var message;
       testLocalNode.connectToNode(testRemoteNode, function () {});
       testLocalNode.sendMessage('1010101010100101010', function () {});
-      testShard.messageTable.readAll(function (err, rows) {
+      testShard.messageTable.refresh(function (err, rows) {
         message = new NetSimMessage(testShard, rows[0]);
       });
       assertEqual('1010101010100101010', message.payload);

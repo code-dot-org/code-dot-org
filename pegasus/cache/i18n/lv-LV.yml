@@ -1185,3 +1185,6 @@
     no %{https_date}. Pēc šī datuma tu nevarēsi piekļūt code.org. <a href='%{it_requirements_url}'>Spied
     šeit</a> un izlasi, kā iespējot HTTPS Code.org.
   compatibility_https_hide_this_warning: Nerādīt šo brīdinājumu
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

@@ -1266,7 +1266,18 @@ Studio.init = function(config) {
   var isAlgebraLevel = !!level.useContractEditor;
   config.grayOutUndeletableBlocks = isAlgebraLevel;
 
+  config.pinWorkspaceToBottom = false;
+  config.hasVerticalScrollbars = false;
+
   loadLevel();
+
+  if (Studio.customLogic) {
+    // We don't want icons in instructions for our custom logic base games
+    skin.staticAvatar = null;
+    skin.smallStaticAvatar = null;
+    skin.failureAvatar = null;
+    skin.winAvatar = null;
+  }
 
   window.addEventListener("keydown", Studio.onKey, false);
   window.addEventListener("keyup", Studio.onKey, false);

@@ -56,7 +56,7 @@ var NetSimShardSelectionPanel = module.exports = function (rootDiv, options,
 
   /**
    * Shard options for the current user
-   * @type {shardChoice[]}
+   * @type {ShardChoice[]}
    * @private
    */
   this.shardChoices_ = utils.valueOr(options.shardChoices, []);

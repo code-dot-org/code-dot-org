@@ -71,6 +71,33 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records.first.nil?, 'Table was not empty'
   end
 
+  def test_read_multiple_tables
+    create_record({name: 'rec1_1'}, 'table1')
+    create_record({name: 'rec1_2'}, 'table1')
+    create_record({name: 'rec2_1'}, 'table2')
+    create_record({name: 'rec2_2'}, 'table2')
+    create_record({name: 'rec3_1'}, 'table3')
+
+    @net_sim_api.get "/v3/netsim/#{@shard_id}?t[]=table1&t[]=table2@2&t[]=table3@2"
+    assert_equal 200, @net_sim_api.last_response.status
+
+    result = JSON.parse(@net_sim_api.last_response.body)
+    assert_equal(
+        {'table1' => {'rows' => [{'name' => 'rec1_1', 'id' => 1},
+                                 {'name' => 'rec1_2', 'id' => 2}]},
+         'table2' => {'rows' => [{'name' => 'rec2_2', 'id' => 2}]},
+         'table3' => {'rows' => []}},
+        result)
+  end
+
+  def test_read_no_tables
+    # Test that request no tables from a shard returns no results.
+    @net_sim_api.get "/v3/netsim/#{@shard_id}"
+    assert_equal 200, @net_sim_api.last_response.status
+    assert_equal({}, JSON.parse(@net_sim_api.last_response.body))
+  end
+
+
   def test_get_400_on_bad_json_insert
     # Send malformed JSON with an INSERT operation
     record_create_response = create_record_malformed({name: 'bob', age: 7, male: false})
@@ -239,6 +266,21 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_message(message_b_to_a['id'])
     assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
     assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+  end
+
+  def test_parse_table_map_from_query_string
+    assert_equal({'lobby' => 1, 'n' => 20, 'orders' => 100},
+                 parse_table_map_from_query_string('t[]=lobby@1&t[]=n@20&t[]=orders@100&ignored=foo'))
+
+    assert_equal({'n' => 0},
+                 parse_table_map_from_query_string('t[]=n'),
+                 'Unspecified version numbers should default to 0')
+
+    assert_equal({'n' => 0},
+                 parse_table_map_from_query_string('t[]=n@a'),
+                 'Invalid version numbers should default to 0')
+
+    assert_equal({}, parse_table_map_from_query_string(''))
   end
 
   # Methods below this point are test utilities, not actual tests

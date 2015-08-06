@@ -80,7 +80,7 @@ In-person milestone complete! More info coming soon on your Phase 2 online porti
 
 **Save the dates:**
 
-Semester 1: Saturday, October 3, 2015 
+Semester 1: Saturday, October 10, 2015 
 
 Semester 2: Saturday, March 5, 2016 
 

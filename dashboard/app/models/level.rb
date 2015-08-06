@@ -186,6 +186,20 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # Returns true if this is a pixelation level.
+  def pixelation?
+    # TODO(dave|joshlory): Define Pixelation < DSLDefined as a new level type,
+    # eliminating this fragile test of 'href'.
+    self.is_a?(DSLDefined) && self.properties['href'] == "pixelation/pixelation.html"
+  end
+
+  # Returns whether this level is backed by a channel, whose id may
+  # be passed to the client, typically to save and load user progress
+  # on that level.
+  def channel_backed?
+    self.project_template_level || self.game == Game.applab || self.pixelation?
+  end
+
   def key
     if level_num == 'custom'
       name
@@ -194,6 +208,9 @@ class Level < ActiveRecord::Base
     end
   end
 
+  # Project template levels are used to persist use progress
+  # across multiple levels, using a single level name as the
+  # storage key for that user.
   def project_template_level
     return nil if self.try(:project_template_level_name).nil?
     Level.find_by_key(project_template_level_name)
