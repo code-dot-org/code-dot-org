@@ -140,7 +140,7 @@ var projects = module.exports = {
 
     if (this.isProjectLevel() || current) {
       if (current && current.levelHtml) {
-        sourceHandler.setInitialHtml(current.levelHtml);
+        sourceHandler.setInitialLevelHtml(current.levelHtml);
       }
 
       if (isEditing) {
