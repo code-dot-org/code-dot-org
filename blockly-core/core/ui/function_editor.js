@@ -634,7 +634,7 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
     'y': padding,
     'class': 'blocklyText'
   }, this.closeButton_);
-  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
+  text.textContent = Blockly.Msg.CLOSE;
   this.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
   var bounds = text.getBoundingClientRect();
   r.setAttribute('width', bounds.width + 2 * padding);
