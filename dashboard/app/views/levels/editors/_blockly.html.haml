@@ -36,6 +36,9 @@
   = f.label :disable_examples, 'Hide examples section in contract editor'
   = boolean_check_box f, :disable_examples
 .field
+  = f.label :examples_required, 'Each function must have at least 1 example, and examples will be checked when hitting run'
+  = boolean_check_box f, :examples_required
+.field
   = f.label :open_function_definition, 'Auto-open function definition'
   = f.text_field :open_function_definition, placeholder: 'name of function to open'
 %table.contract-editor-config
