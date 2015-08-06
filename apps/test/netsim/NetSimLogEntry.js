@@ -6,18 +6,18 @@ var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var Packet = require('@cdo/apps/netsim/Packet');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
-var dataConverters = require('@cdo/apps/netsim/dataConverters');
-var binaryToBase64 = dataConverters.binaryToBase64;
-var base64ToBinary = dataConverters.base64ToBinary;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
+var DataConverters = require('@cdo/apps/netsim/DataConverters');
+var binaryToBase64 = DataConverters.binaryToBase64;
+var base64ToBinary = DataConverters.base64ToBinary;
 
 describe("NetSimLogEntry", function () {
   var testShard;
 
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
     testShard = fakeShard();
   });
 

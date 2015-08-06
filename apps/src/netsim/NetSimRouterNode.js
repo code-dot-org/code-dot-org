@@ -17,8 +17,8 @@
 
 var utils = require('../utils');
 var i18n = require('./locale');
-var netsimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimUtils = require('./NetSimUtils');
 var NetSimNode = require('./NetSimNode');
 var NetSimEntity = require('./NetSimEntity');
 var NetSimLogEntry = require('./NetSimLogEntry');
@@ -27,19 +27,19 @@ var NetSimWire = require('./NetSimWire');
 var NetSimMessage = require('./NetSimMessage');
 var ObservableEvent = require('../ObservableEvent');
 var Packet = require('./Packet');
-var dataConverters = require('./dataConverters');
-var netsimNodeFactory = require('./netsimNodeFactory');
+var DataConverters = require('./DataConverters');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 
 var _ = utils.getLodash();
 
-var serializeNumber = netsimUtils.serializeNumber;
-var deserializeNumber = netsimUtils.deserializeNumber;
+var serializeNumber = NetSimUtils.serializeNumber;
+var deserializeNumber = NetSimUtils.deserializeNumber;
 
-var asciiToBinary = dataConverters.asciiToBinary;
+var asciiToBinary = DataConverters.asciiToBinary;
 
-var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
-var BITS_PER_BYTE = netsimConstants.BITS_PER_BYTE;
+var DnsMode = NetSimConstants.DnsMode;
+var NodeType = NetSimConstants.NodeType;
+var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
 var logger = NetSimLogger.getSingleton();
 var NetSimGlobals = require('./NetSimGlobals');
@@ -113,7 +113,7 @@ var ADDRESS_OPTION_LIMIT = 4096;
  *   which appear in the wire table.
  *
  * @param {!NetSimShard} shard
- * @param {Object} [routerRow] - Lobby row for this router.
+ * @param {RouterRow} [routerRow] - Lobby row for this router.
  * @constructor
  * @augments NetSimNode
  */
@@ -323,7 +323,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 };
 
 /**
- * @typedef {Object} routerRow
+ * @typedef {Object} RouterRow
  * @property {number} creationTime - Unix timestamp (local)
  * @property {number} bandwidth - Router max transmission/processing rate
  *           in bits/second
@@ -337,7 +337,7 @@ NetSimRouterNode.get = function (routerID, shard, onComplete) {
 
 /**
  * Build table row for this node.
- * @returns {routerRow}
+ * @returns {RouterRow}
  * @private
  * @override
  */
@@ -358,7 +358,7 @@ NetSimRouterNode.prototype.buildRow = function () {
 /**
  * Load state from remoteRow into local model, then notify anything observing
  * us that we've changed.
- * @param {routerRow} remoteRow
+ * @param {RouterRow} remoteRow
  * @private
  */
 NetSimRouterNode.prototype.onMyStateChange_ = function (remoteRow) {
@@ -1123,7 +1123,7 @@ NetSimRouterNode.prototype.getAddressForHostname_ = function (hostname) {
   }
 
   // Is it some node elsewhere on the shard?
-  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
+  var nodes = NetSimNodeFactory.nodesFromRows(this.shard_,
       this.shard_.nodeTable.readAll());
   var node = _.find(nodes, function (node) {
     return node.getHostname() === hostname;
@@ -1186,7 +1186,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
   }
 
   // Is it a local client?
-  var nodes = netsimNodeFactory.nodesFromRows(this.shard_,
+  var nodes = NetSimNodeFactory.nodesFromRows(this.shard_,
       this.shard_.nodeTable.readAll());
   var wireRow = _.find(this.myWireRowCache_, function (row) {
     return row.localAddress === address;
@@ -1357,7 +1357,7 @@ NetSimRouterNode.prototype.getCurrentDataRate = function () {
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
- * @param {messageRow[]} rows
+ * @param {MessageRow[]} rows
  * @private
  * @throws if this method is called on a non-simulating router.
  */

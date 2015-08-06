@@ -69,7 +69,7 @@ module.exports = {
   },
 
   /**
-   * @returns {netsimLevelConfiguration}
+   * @returns {NetSimLevelConfiguration}
    */
   getLevelConfig: function () {
     return netsim_.level;

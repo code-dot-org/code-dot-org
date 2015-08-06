@@ -28,7 +28,7 @@ Scenario: Dragging an example to delete it
 
 Scenario: Pressing the "add example" button should add an example
   When the contract editor has 2 examples
-  And I press the SVG text "Add Example"
+  And I press the last button with text "Add Example"
   And the contract editor has 3 examples
 
 @no_mobile

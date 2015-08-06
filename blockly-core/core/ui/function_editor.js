@@ -308,8 +308,8 @@ Blockly.FunctionEditor.prototype.paramsAsParallelArrays_ = function() {
 Blockly.FunctionEditor.prototype.show = function() {
   this.ensureCreated_();
   this.position_();
-  goog.style.showElement(this.container_, true);
-  goog.style.showElement(this.modalBackground_, true);
+  goog.style.setElementShown(this.container_, true);
+  goog.style.setElementShown(this.modalBackground_, true);
   Blockly.focusedBlockSpace = this.modalBlockSpace;
   if (Blockly.selected) {
     Blockly.selected.unselect();
@@ -358,8 +358,8 @@ Blockly.FunctionEditor.prototype.hideAndRestoreBlocks_ = function() {
     goog.dom.getElement('paramAddText').value = '';
   }
 
-  goog.style.showElement(this.container_, false);
-  goog.style.showElement(this.modalBackground_, false);
+  goog.style.setElementShown(this.container_, false);
+  goog.style.setElementShown(this.modalBackground_, false);
 
   Blockly.focusedBlockSpace = Blockly.mainBlockSpace;
   Blockly.fireUiEvent(window, 'function_editor_closed');
@@ -634,7 +634,7 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function () {
     'y': padding,
     'class': 'blocklyText'
   }, this.closeButton_);
-  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
+  text.textContent = Blockly.Msg.CLOSE;
   this.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
   var bounds = text.getBoundingClientRect();
   r.setAttribute('width', bounds.width + 2 * padding);
@@ -766,7 +766,7 @@ Blockly.FunctionEditor.prototype.createFrameClipDiv_ = function () {
 
 Blockly.FunctionEditor.prototype.createContractDom_ = function() {
   this.contractDiv_ = goog.dom.createDom('div',
-      'blocklyToolboxDiv paramToolbox blocklyText innerModalDiv');
+      'blocklyToolboxDiv paramToolbox blocklyText flyoutColorGray innerModalDiv');
   if (Blockly.RTL) {
     this.contractDiv_.setAttribute('dir', 'RTL');
   }

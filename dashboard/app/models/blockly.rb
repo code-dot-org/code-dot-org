@@ -26,6 +26,7 @@ class Blockly < Level
     contract_collapse
     examples_highlight
     examples_collapse
+    examples_required
     definition_highlight
     definition_collapse
     disable_examples

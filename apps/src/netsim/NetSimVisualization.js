@@ -16,7 +16,7 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
 var NetSimVizNode = require('./NetSimVizNode');
@@ -25,9 +25,9 @@ var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
 var NetSimVizWire = require('./NetSimVizWire');
 var NetSimGlobals = require('./NetSimGlobals');
 var tweens = require('./tweens');
-var netsimConstants = require('./netsimConstants');
-var DnsMode = netsimConstants.DnsMode;
-var NodeType = netsimConstants.NodeType;
+var NetSimConstants = require('./NetSimConstants');
+var DnsMode = NetSimConstants.DnsMode;
+var NodeType = NetSimConstants.NodeType;
 
 /**
  * Top-level controller for the network visualization.
@@ -310,7 +310,7 @@ NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
  */
 NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
-  var tableNodes = netsimNodeFactory.nodesFromRows(this.shard_, rows);
+  var tableNodes = NetSimNodeFactory.nodesFromRows(this.shard_, rows);
 
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {

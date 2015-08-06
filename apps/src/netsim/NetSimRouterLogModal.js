@@ -221,7 +221,7 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
 
 /**
  * Handle log table changes.
- * @param {logEntryRow[]} logRows
+ * @param {LogEntryRow[]} logRows
  * @private
  */
 NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
