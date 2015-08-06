@@ -21,17 +21,17 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var netsimNodeFactory = require('./netsimNodeFactory');
+var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimRouterNode = require('./NetSimRouterNode');
 var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
 var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
 
 var logger = require('./NetSimLogger').getSingleton();
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
- * @typedef {Object} shardChoice
+ * @typedef {Object} ShardChoice
  * @property {string} shardSeed - unique key for shard within level, used in
  *           share URLs
  * @property {string} shardID - unique key for shard in tables API, used as
@@ -112,7 +112,7 @@ var NetSimLobby = module.exports = function (rootDiv, netsim, options) {
 
   /**
    * Shard options for the current user
-   * @type {shardChoice[]}
+   * @type {ShardChoice[]}
    * @private
    */
   this.shardChoices_ = [];
@@ -350,7 +350,7 @@ NetSimLobby.prototype.onCancelButtonClick_ = function () {
  * @private
  */
 NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
-  this.nodesOnShard_ = netsimNodeFactory.nodesFromRows(this.shard_, rows);
+  this.nodesOnShard_ = NetSimNodeFactory.nodesFromRows(this.shard_, rows);
   this.render();
 };
 
