@@ -62,6 +62,39 @@ describe("NetSimLogPanel", function () {
       scrollArea = rootDiv.find('.scroll-area');
     });
 
+    it ("only renders enabled encodings", function () {
+      panel.log(to_b('first-message'), 1);
+      panel.setEncodings([EncodingType.ASCII]);
+
+      assert.equal(1, scrollArea.find('.packet:first tr.ascii').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.decimal').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.hexadecimal').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.binary').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.a_and_b').length);
+
+      panel.setEncodings([]);
+
+      assert.equal(0, scrollArea.find('.packet:first tr.ascii').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.decimal').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.hexadecimal').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.binary').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.a_and_b').length);
+
+      panel.setEncodings([
+          EncodingType.ASCII,
+          EncodingType.DECIMAL,
+          EncodingType.HEXADECIMAL,
+          EncodingType.BINARY,
+          EncodingType.A_AND_B,
+        ]);
+
+      assert.equal(1, scrollArea.find('.packet:first tr.ascii').length);
+      assert.equal(1, scrollArea.find('.packet:first tr.decimal').length);
+      assert.equal(1, scrollArea.find('.packet:first tr.hexadecimal').length);
+      assert.equal(1, scrollArea.find('.packet:first tr.binary').length);
+      assert.equal(1, scrollArea.find('.packet:first tr.a_and_b').length);
+    });
+
     it ("can log a packet", function () {
       assert.equal(0, panel.packets_.length);
       assert.equal(0, scrollArea.children().length);
