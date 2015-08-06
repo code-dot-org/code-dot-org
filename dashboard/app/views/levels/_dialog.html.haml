@@ -125,35 +125,52 @@
     adjustedScroll = true;
   }
 
-  $(window).on('submit_button_pressed', function(event, onCompleteNoRedirect) {
-    processResults(onCompleteNoRedirect);
-  });
-
-  // Dashboard shouldn't be reaching into the internal implementation of
-  // individual levels. Prefer to name the submit button of your app something
-  // else, and fire the 'submit_button_pressed' event (handled above).
-  $('.submitButton').click(function () {
-    var submitButton = $('.submitButton');
-    if (submitButton.attr('disabled')) {
-      return;
+  /**
+   * Allow the app to perform additional actions after the submit button is clicked but
+   * before the dashboard submit button handler code runs.
+   */
+  $(window).on('submit_button_pressed', function(event, onBeforeSubmit, submitButtonSelector) {
+    // Make sure handleSubmit is not inadvertently be called both by this event handler and
+    // the click event handler below.
+    if (!submitButtonSelector || (submitButtonSelector === '.submitButton')) {
+      throw new Error('must provide a submitButtonSelector other than ' +
+          '".submitButton" when firing submit_button_pressed.');
     }
 
-    // Avoid multiple simultaneous submissions.
-    submitButton.attr('disabled', true);
+    handleSubmit(onBeforeSubmit, submitButtonSelector);
+  });
 
-    var onCompleteNoRedirect = function() {
-      $('.submitButton').attr('disabled', false);
-    };
-
-    processResults(onCompleteNoRedirect);
+  $('.submitButton').click(function () {
+    handleSubmit();
   });
 
   /**
    * Process the solution to the puzzle submitted by the user.
-   * @param {Function} onCompleteNoRedirect Optional callback function to call if
-   *     the server call completes and does not indicate an immediate redirect.
+   * @param {function(callback)} onBeforeSubmit Optional function to call
+   * prior to processing the submit action, which calls the callback
+   * function passed to it once complete.
+   * @param {String} submitButtonSelector Optional jQuery selector for
+   * the button to enable/disable to make sure this handler is only called
+   * once. (default: '.submitButton').
    */
-  function processResults(onCompleteNoRedirect) {
+  function handleSubmit(onBeforeSubmit, submitButtonSelector) {
+    submitButtonSelector = submitButtonSelector || '.submitButton';
+
+    var submitButton = $(submitButtonSelector);
+    if (submitButton.attr('disabled')) {
+      return;
+    }
+    // Avoid multiple simultaneous submissions.
+    submitButton.attr('disabled', true);
+
+    if (onBeforeSubmit) {
+      onBeforeSubmit(processResults.bind(this, submitButtonSelector));
+    } else {
+      processResults(submitButtonSelector);
+    }
+  }
+
+  function processResults(submitButtonSelector) {
     var results = getResult();
     var response = results['response'];
     var result = results['result'];
@@ -180,7 +197,7 @@
       testResult: result ? 100 : 0,
       onComplete: function () {
         if (!lastServerResponse.nextRedirect) {
-          onCompleteNoRedirect && onCompleteNoRedirect();
+          $(submitButtonSelector).attr('disabled', false);
         }
         if (lastServerResponse.videoInfo)
         {
