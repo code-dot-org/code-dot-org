@@ -283,6 +283,32 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal({}, parse_table_map_from_query_string(''))
   end
 
+  def test_delete_many
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
+    node_c = create_node({name: 'nodeC'})
+    assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
+
+    @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?id[]=#{node_a['id']}&id[]=#{node_c['id']}"
+    assert_equal 204, @net_sim_api.last_response.status
+
+    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    assert record_exists(TABLE_NAMES[:node], node_b['id'])
+    assert !record_exists(TABLE_NAMES[:node], node_c['id'])
+
+  ensure
+    delete_node(node_a['id'])
+    delete_node(node_b['id'])
+    delete_node(node_c['id'])
+    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+  end
+
+  def test_parse_ids_from_query_string
+    assert_equal([1, 3, 5], parse_ids_from_query_string('id[]=1&id[]=3&id[]=5'))
+    assert_equal([2], parse_ids_from_query_string('id[]=nonsense&id[]=2'),
+                 'Nonnumeric IDs should be ignored')
+  end
+
   # Methods below this point are test utilities, not actual tests
   private
 
