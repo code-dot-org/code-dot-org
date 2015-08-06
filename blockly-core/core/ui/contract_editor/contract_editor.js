@@ -408,9 +408,19 @@ Blockly.ContractEditor.prototype.registerTestResetHandler = function (testResetH
   this.testResetHandler_ = testResetHandler;
 };
 
+/**
+ * Moves a given example block to the modal blockspace.
+ * @param {Blockly.Block} exampleBlock
+ */
 Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(exampleBlock) {
   var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
+
+  var functionCall = movedExampleBlock.getInputTargetBlock(
+      Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+  functionCall.setMovable(false);
+
   this.exampleBlocks.push(movedExampleBlock);
+
   movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED,
     this.removeExampleBlock_.bind(this, movedExampleBlock), false, this);
 };

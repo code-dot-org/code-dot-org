@@ -1000,15 +1000,6 @@ Blockly.Block.prototype.moveConnections_ = function(dx, dy) {
 };
 
 /**
- * Recursively adds or removes the dragging class to this node and its children.
- * @param {boolean} adding True if adding, false if removing.
- * @private
- */
-Blockly.Block.prototype.setDragging_ = function(adding) {
-  this.setDraggingHandleImmovable_(adding, null);
-};
-
-/**
  * Determine whether block is being dragged
  * @returns {boolean} True if block is being dragged
  * @private
@@ -1020,10 +1011,9 @@ Blockly.Block.prototype.getDragging = function() {
 /**
  * Recursively adds or removes the dragging class to this node and its children.
  * @param {boolean} adding True if adding, false if removing.
- * @param {function} immovableBlockHandler callback when immovable block is found
  * @private
  */
-Blockly.Block.prototype.setDraggingHandleImmovable_ = function(adding, immovableBlockHandler) {
+Blockly.Block.prototype.setDragging_ = function(adding) {
   if (adding) {
     this.dragging_ = true;
     this.svg_.addDragging();
@@ -1035,12 +1025,7 @@ Blockly.Block.prototype.setDraggingHandleImmovable_ = function(adding, immovable
   // Recurse through all blocks attached under this one.
   for (var x = 0; x < this.childBlocks_.length; x++) {
     var block = this.childBlocks_[x];
-    if (adding && immovableBlockHandler !== null && !block.isMovable()) {
-      immovableBlockHandler(block);
-      break;
-    }
-
-    block.setDraggingHandleImmovable_(adding, immovableBlockHandler);
+    block.setDragging_(adding);
   }
 };
 
@@ -1078,9 +1063,8 @@ Blockly.Block.prototype.moveBlockBeingDragged_ = function (mouseX, mouseY) {
       // Switch to unrestricted dragging.
       Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_FREELY_DRAGGING;
       // Push this block to the very top of the stack.
-      var firstImmovableBlockHandler = this.generateReconnector_(this.previousConnection);
       this.setParent(null);
-      this.setDraggingHandleImmovable_(true, firstImmovableBlockHandler);
+      this.setDragging_(true);
       this.moveToDragCanvas_();
       this.blockSpace.recordPickedUpBlockOrigin();
       this.blockSpace.recordDeleteAreas();
