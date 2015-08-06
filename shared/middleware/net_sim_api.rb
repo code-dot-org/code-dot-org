@@ -86,44 +86,6 @@ class NetSimApi < Sinatra::Base
     RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
   end
 
-  # Delete all wires associated with (locally or remotely) a given node_id
-  #
-  # @private
-  # @param [String] shard_id
-  # @param [Integer] node_id
-  # @returns [Integer|Array] ids of deleted wires
-  def delete_wires_for_node(shard_id, node_id)
-    wire_table = get_table(shard_id, TABLE_NAMES[:wire])
-    wire_ids = wire_table.to_a.select {|wire|
-      wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
-    }.map {|wire|
-      wire['id']
-    }
-    wire_ids.each do |wire_id|
-      wire_table.delete(wire_id)
-    end
-    wire_ids
-  end
-
-  # Delete all messages simulated by a given node_id
-  #
-  # @private
-  # @param [String] shard_id
-  # @param [Integer] node_id
-  # @returns [Integer|Array] ids of deleted messages
-  def delete_messages_for_node(shard_id, node_id)
-    message_table = get_table(shard_id, TABLE_NAMES[:message])
-    message_ids = message_table.to_a.select {|message|
-      message['simulatedBy'] == node_id
-    }.map {|message|
-      message['id']
-    }
-    message_ids.each do |message_id|
-      message_table.delete(message_id)
-    end
-    message_ids
-  end
-
   #
   # DELETE /v3/netsim/<shard-id>/<table-name>/<row-id>
   #
@@ -131,16 +93,8 @@ class NetSimApi < Sinatra::Base
   #
   delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
-    table = get_table(shard_id, table_name)
-    int_id = id.to_i
-
-    if table_name == TABLE_NAMES[:node]
-      # Cascade deletions
-      delete_wires_for_node(shard_id, int_id)
-      delete_messages_for_node(shard_id, int_id)
-    end
-
-    table.delete(int_id)
+    content_type :json
+    delete_many(shard_id, table_name, [id.to_i])
     no_content
   end
 
@@ -161,9 +115,8 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    table = get_table(shard_id, table_name)
     ids = parse_ids_from_query_string(CGI::unescape(request.query_string))
-    table.delete_many(ids)
+    delete_many(shard_id, table_name, ids)
     no_content
   end
 
@@ -287,6 +240,55 @@ class NetSimApi < Sinatra::Base
         request.content_charset.to_s.downcase == 'utf-8'
   end
 
+  # Perform delete operation, potentially on multiple rows at once,
+  # respecting cascading delete rules and producing as few invalidations
+  # as possible.
+  def delete_many(shard_id, table_name, ids)
+    if table_name == TABLE_NAMES[:node]
+      # Cascade deletions
+      ids.each do |id|
+        delete_wires_for_node(shard_id, id)
+        delete_messages_for_node(shard_id, id)
+      end
+    end
+    table = get_table(shard_id, table_name)
+    table.delete(ids)
+  end
+
+  # Delete all wires associated with (locally or remotely) a given node_id
+  #
+  # @private
+  # @param [String] shard_id
+  # @param [Integer] node_id
+  # @returns [Integer|Array] ids of deleted wires
+  def delete_wires_for_node(shard_id, node_id)
+    wire_table = get_table(shard_id, TABLE_NAMES[:wire])
+    wire_ids = wire_table.to_a.select {|wire|
+      wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+    }.map {|wire|
+      wire['id']
+    }
+    wire_table.delete(wire_ids)
+    wire_ids
+  end
+
+  # Delete all messages simulated by a given node_id
+  #
+  # @private
+  # @param [String] shard_id
+  # @param [Integer] node_id
+  # @returns [Integer|Array] ids of deleted messages
+  def delete_messages_for_node(shard_id, node_id)
+    message_table = get_table(shard_id, TABLE_NAMES[:message])
+    message_ids = message_table.to_a.select {|message|
+      message['simulatedBy'] == node_id
+    }.map {|message|
+      message['id']
+    }
+    message_table.delete(message_ids)
+    message_ids
+  end
+
 end
 
 # Convert a query_string of the form "t[]=table1@1&t[]=table2@1" into a
@@ -306,7 +308,7 @@ def parse_table_map_from_query_string(query_string)
 end
 
 # Convert a query string of the form "id[]=1&id[]=2" into an array of integer
-# ids as expected by RedisTable.delete_many().  Noninteger ids in the query
+# ids as expected by RedisTable.delete().  Noninteger ids in the query
 # are simply omitted from the result.
 def parse_ids_from_query_string(query_string)
   CGI::parse(query_string)['id[]'].map do |x|

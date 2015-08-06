@@ -75,7 +75,7 @@ class RedisTableTest < Minitest::Unit::TestCase
     assert_equal([row(value, 1),  row(value3, 3)], table.to_a)
     assert_equal([row(value_table2, 1)], table2.to_a)
 
-    assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :id => 2}),
+    assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :ids => [2]}),
                  @pubsub.publish_history[5]
 
     table3.insert(value)
@@ -133,14 +133,14 @@ class RedisTableTest < Minitest::Unit::TestCase
     assert_equal [row(value1, 1)], other_table.to_a
 
     # Delete two rows at once
-    table.delete_many([1, 3])
+    table.delete([1, 3])
 
     # Check that multi-delete worked
     assert_equal [row(value2, 2)], table.to_a
     assert_equal [row(value1, 1)], other_table.to_a
 
     # Check that multi-delete was published
-    assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete_many', :ids => [1, 3]}),
+    assert_equal make_pubsub_event('shard1', 'table', {:action => 'delete', :ids => [1, 3]}),
                  @pubsub.publish_history[4]
 
 

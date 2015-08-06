@@ -191,12 +191,36 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal @shard_id, test_spy.publish_history.last[:channel]
     assert_equal @table_name, test_spy.publish_history.last[:event]
     assert_equal 'delete', test_spy.publish_history.last[:data][:action]
-    assert_equal record_id, test_spy.publish_history.last[:data][:id]
+    assert_equal [record_id], test_spy.publish_history.last[:data][:ids]
   ensure
     assert read_records.first.nil?, "Table was not empty"
   end
 
-  def test_node_delete_cascades_to_node_wires
+  def test_node_delete_cascades_to_node_wires_delete_one_delete_verb
+    perform_test_node_delete_cascades_to_node_wires do |node_id|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}"
+    end
+  end
+
+  def test_node_delete_cascades_to_node_wires_delete_one_post_verb
+    perform_test_node_delete_cascades_to_node_wires do |node_id|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}/delete"
+    end
+  end
+
+  def test_node_delete_cascades_to_node_wires_delete_many_delete_verb
+    perform_test_node_delete_cascades_to_node_wires do |node_id|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?id[]=#{node_id}"
+    end
+  end
+
+  def test_node_delete_cascades_to_node_wires_delete_many_post_verb
+    perform_test_node_delete_cascades_to_node_wires do |node_id|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?id[]=#{node_id}"
+    end
+  end
+
+  def perform_test_node_delete_cascades_to_node_wires
 
     node_a = create_node({name: 'nodeA'})
     node_b = create_node({name: 'nodeB'})
@@ -209,7 +233,8 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
     assert_equal 3, read_records(TABLE_NAMES[:wire]).count, "Didn't create 3 wires"
 
-    delete_node(node_a['id'])
+    yield(node_a['id']) # Delete Node A using method provided by caller
+    assert_equal 204, @net_sim_api.last_response.status
 
     # Assert nodeA is gone
     assert !record_exists(TABLE_NAMES[:node], node_a['id'])
@@ -235,7 +260,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
   end
 
-  def test_node_delete_cascades_to_messages
+  def perform_test_node_delete_cascades_to_messages
 
     node_a = create_node({name: 'nodeA'})
     node_b = create_node({name: 'nodeB'})
@@ -302,7 +327,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
 
     query_string = [node_a['id'], node_c['id']].map { |id| "id[]=#{id}" }.join('&')
-    yield query_string # Performs delete_many using block provided by caller
+    yield query_string # Performs delete using block provided by caller
     assert_equal 204, @net_sim_api.last_response.status
 
     assert !record_exists(TABLE_NAMES[:node], node_a['id'])
