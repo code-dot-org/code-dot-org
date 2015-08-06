@@ -428,7 +428,7 @@ StudioApp.prototype.init = function(config) {
         Dialog: Dialog,
         contentDiv: codeDiv,
         defaultBtnSelector: 'again-button',
-        id: 'manageAssetsModal'
+        id: 'showVersionsModal'
       });
       React.render(React.createElement(VersionHistory, {}), codeDiv);
 

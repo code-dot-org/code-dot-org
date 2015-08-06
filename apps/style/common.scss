@@ -1006,6 +1006,11 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 }
 
+#showVersionsModal {
+  width: 700px;
+  margin-left: -350px;
+}
+
 #rotateContainer {
   position: fixed;
   z-index: 10001;

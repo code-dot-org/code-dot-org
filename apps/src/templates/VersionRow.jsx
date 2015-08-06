@@ -9,11 +9,22 @@ module.exports = React.createClass({
     onChoose: React.PropTypes.func
   },
 
+  getTimestamp: function () {
+    var timestamp = this.props.lastModified;
+    if (timestamp.toLocaleString) {
+      return timestamp.toLocaleString();
+    }
+    return timestamp.toString();
+  },
+
   render: function () {
 
     return (
-      <tr className="versionRow" onDoubleClick={this.props.onChoose}>
-        <td>{this.props.lastModified.toString()}</td>
+      <tr className="versionRow">
+        <td>
+          {this.getTimestamp()}
+          <p>Saved <time className="versionTimestamp" dateTime={this.props.lastModified.toISOString()}>{this.getTimestamp()}</time></p>
+        </td>
         <td width="250" style={{textAlign: 'right'}}>
           <button className="btn-info" onClick={this.props.onChoose}>
             Restore this Version
@@ -21,5 +32,9 @@ module.exports = React.createClass({
         </td>
       </tr>
     );
+  },
+
+  componentDidMount: function () {
+    $('.versionTimestamp').timeago();
   }
 });
