@@ -38,10 +38,13 @@
   var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
+  /**
+  * @name enabledEncodingsHash
+  * @type {Object}
+  */
+
   function isEncodingEnabled(queryEncoding) {
-    return enabledEncodings.some(function (enabledEncoding) {
-      return enabledEncoding === queryEncoding;
-    });
+    return enabledEncodingsHash[queryEncoding] === true;
   }
 
   /**
