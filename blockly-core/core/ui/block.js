@@ -1144,28 +1144,6 @@ Blockly.Block.prototype.onMouseMove_ = function(e) {
 };
 
 /**
- * Generates a callback that takes in a block and connects its `previousConnection` to the given `earlierConnection`
- * and disconnects any previous connection
- * @param earlierConnection {Connection}
- * @returns {Function}
- * @private
- */
-Blockly.Block.prototype.generateReconnector_ = function(earlierConnection) {
-  var earlierNextConnection;
-
-  if (earlierConnection && earlierConnection.targetConnection) {
-    earlierNextConnection = earlierConnection.targetConnection;
-  }
-
-  return function(block){
-    if (block.previousConnection) {
-      block.setParent(null);
-      earlierNextConnection && earlierNextConnection.connect(block.previousConnection);
-    }
-  };
-};
-
-/**
  * Bump unconnected blocks out of alignment.  Two blocks which aren't actually
  * connected should not coincidentally line up on screen.
  * @private
