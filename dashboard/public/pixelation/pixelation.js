@@ -387,28 +387,14 @@ function showPNG() {
 }
 
 function onFinishedButtonClick() {
-  var finishedButton = $('#finished');
-  if (finishedButton.attr('disabled')) {
-    return;
-  }
-  finishedButton.attr('disabled', true);
+  $(window).trigger('submit_button_pressed', [onBeforeSubmit, '#finished']);
+}
 
+function onBeforeSubmit(callback) {
   if (options.saveProject) {
-    options.saveProject(onSaveProjectComplete);
+    // TODO(dave): handle save failure
+    options.saveProject(callback);
   } else {
-    notifyDashboardSubmit();
+    callback();
   }
-}
-
-function onSaveProjectComplete() {
-  // TODO(dave): handle save failure
-  notifyDashboardSubmit();
-}
-
-function notifyDashboardSubmit() {
-  $(window).trigger('submit_button_pressed', onCompleteNoRedirect);
-}
-
-function onCompleteNoRedirect() {
-  finishedButton.attr('disabled', false);
 }
