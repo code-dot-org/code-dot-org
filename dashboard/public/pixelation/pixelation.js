@@ -385,3 +385,30 @@ function showPNG() {
   w.focus();
   options.saveProject && options.saveProject();
 }
+
+function onFinishedButtonClick() {
+  var finishedButton = $('#finished');
+  if (finishedButton.attr('disabled')) {
+    return;
+  }
+  finishedButton.attr('disabled', true);
+
+  if (options.saveProject) {
+    options.saveProject(onSaveProjectComplete);
+  } else {
+    notifyDashboardSubmit();
+  }
+}
+
+function onSaveProjectComplete() {
+  // TODO(dave): handle save failure
+  notifyDashboardSubmit();
+}
+
+function notifyDashboardSubmit() {
+  $(window).trigger('submit_button_pressed', onCompleteNoRedirect);
+}
+
+function onCompleteNoRedirect() {
+  finishedButton.attr('disabled', false);
+}
