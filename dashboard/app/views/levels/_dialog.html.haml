@@ -125,19 +125,39 @@
     adjustedScroll = true;
   }
 
+  $(window).on('submit_button_pressed', function(event, onCompleteNoRedirect) {
+    processResults(onCompleteNoRedirect);
+  });
+
+  // Dashboard shouldn't be reaching into the internal implementation of
+  // individual levels. Prefer to name the submit button of your app something
+  // else, and fire the 'submit_button_pressed' event (handled above).
   $('.submitButton').click(function () {
     var submitButton = $('.submitButton');
     if (submitButton.attr('disabled')) {
       return;
     }
 
+    // Avoid multiple simultaneous submissions.
+    submitButton.attr('disabled', true);
+
+    var onCompleteNoRedirect = function() {
+      $('.submitButton').attr('disabled', false);
+    };
+
+    processResults(onCompleteNoRedirect);
+  });
+
+  /**
+   * Process the solution to the puzzle submitted by the user.
+   * @param {Function} onCompleteNoRedirect Optional callback function to call if
+   *     the server call completes and does not indicate an immediate redirect.
+   */
+  function processResults(onCompleteNoRedirect) {
     var results = getResult();
     var response = results['response'];
     var result = results['result'];
     var errorType = results['errorType'];
-
-    // Avoid multiple simultaneous submissions.
-    submitButton.attr('disabled', true);
 
     if (!result) {
       showDialog(errorType || "error");
@@ -160,7 +180,7 @@
       testResult: result ? 100 : 0,
       onComplete: function () {
         if (!lastServerResponse.nextRedirect) {
-          $('.submitButton').attr('disabled', false);
+          onCompleteNoRedirect && onCompleteNoRedirect();
         }
         if (lastServerResponse.videoInfo)
         {
@@ -174,4 +194,4 @@
         }
       }
     });
-  });
+  }
