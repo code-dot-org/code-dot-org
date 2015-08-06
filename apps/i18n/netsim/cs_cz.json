@@ -66,7 +66,7 @@
   "number": "Number",
   "numBitsPerPacket": "{numBits} bits per packet",
   "numBitsPerChunk": "{numBits} bits per chunk",
-  "notConnected": "Not connected",
+  "notConnected": "In lobby",
   "onBeforeUnloadWarning": "You will be disconnected from the simulation.",
   "outgoingConnectionRequests": "Outgoing connection requests",
   "_of_": " of ",
