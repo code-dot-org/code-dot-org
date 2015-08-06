@@ -72,6 +72,72 @@ var asciiToBinary = DataConverters.asciiToBinary;
 var NetSimPacketEditor = module.exports = function (initialConfig) {
   var level = NetSimGlobals.getLevelConfig();
 
+
+  /**
+   * @type {RowType[]}
+   * @const
+   */
+  this.ROW_TYPES = [
+    {
+      typeName: EncodingType.A_AND_B,
+      addressFieldAllowedCharacters: /[AB\s]/i,
+      addressFieldConversion: function (abString) {
+        return DataConverters.binaryToAddressString(
+            DataConverters.abToBinary(abString), level.addressFormat);
+      },
+      shortNumberAllowedCharacters: /[AB]/i,
+      shortNumberConversion: truncatedABToInt,
+      messageAllowedCharacters: /[AB\s]/i,
+      messageConversion: abToBinary
+    },
+    {
+      typeName: EncodingType.BINARY,
+      addressFieldAllowedCharacters: /[01\s]/i,
+      addressFieldConversion: function (binaryString) {
+        return DataConverters.binaryToAddressString(
+            binaryString, level.addressFormat);
+      },
+      shortNumberAllowedCharacters: /[01]/,
+      shortNumberConversion: truncatedBinaryToInt,
+      messageAllowedCharacters: /[01\s]/,
+      messageConversion: minifyBinary
+    },
+    {
+      typeName: EncodingType.HEXADECIMAL,
+      addressFieldAllowedCharacters: /[0-9a-f\s]/i,
+      addressFieldConversion: function (hexString) {
+        return DataConverters.binaryToAddressString(
+            DataConverters.hexToBinary(hexString), level.addressFormat);
+      },
+      shortNumberAllowedCharacters: /[0-9a-f]/i,
+      shortNumberConversion: truncatedHexToInt,
+      messageAllowedCharacters: /[0-9a-f\s]/i,
+      messageConversion: hexToBinary
+    },
+    {
+      typeName: EncodingType.DECIMAL,
+      addressFieldAllowedCharacters: /[0-9.\s]/i,
+      addressFieldConversion: cleanAddressString,
+      shortNumberAllowedCharacters: /[0-9]/,
+      shortNumberConversion: truncatedDecimalToInt,
+      messageAllowedCharacters: /[0-9\s]/,
+      messageConversion: function (decimalString) {
+        return decimalToBinary(decimalString, this.currentChunkSize_);
+      }.bind(this)
+    },
+    {
+      typeName: EncodingType.ASCII,
+      addressFieldAllowedCharacters: /[0-9.\s]/i,
+      addressFieldConversion: cleanAddressString,
+      shortNumberAllowedCharacters: /[0-9]/,
+      shortNumberConversion: truncatedDecimalToInt,
+      messageAllowedCharacters: /./,
+      messageConversion: function (asciiString) {
+        return asciiToBinary(asciiString, this.currentChunkSize_);
+      }.bind(this)
+    }
+  ];
+
   /**
    * @type {jQuery}
    * @private
@@ -523,78 +589,27 @@ var cleanAddressString = function (originalString) {
 };
 
 /**
+ * Helper method to filter this.ROW_TYPES by enabled encodings
+ * @private
+ * @returns {RowType[]}
+ */
+NetSimPacketEditor.prototype.getEnabledRowTypes_ = function () {
+  return this.ROW_TYPES.filter(function (rowType) {
+    return this.isEncodingEnabled_(rowType.typeName);
+  }, this);
+};
+
+/**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
 NetSimPacketEditor.prototype.bindElements_ = function () {
   var level = NetSimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, this.packetSpec_);
   var rootDiv = this.rootDiv_;
 
-  /** @type {RowType[]} */
-  var rowTypes = [
-    {
-      typeName: EncodingType.A_AND_B,
-      addressFieldAllowedCharacters: /[AB\s]/i,
-      addressFieldConversion: function (abString) {
-        return DataConverters.binaryToAddressString(
-            DataConverters.abToBinary(abString), level.addressFormat);
-      },
-      shortNumberAllowedCharacters: /[AB]/i,
-      shortNumberConversion: truncatedABToInt,
-      messageAllowedCharacters: /[AB\s]/i,
-      messageConversion: abToBinary
-    },
-    {
-      typeName: EncodingType.BINARY,
-      addressFieldAllowedCharacters: /[01\s]/i,
-      addressFieldConversion: function (binaryString) {
-        return DataConverters.binaryToAddressString(
-            binaryString, level.addressFormat);
-      },
-      shortNumberAllowedCharacters: /[01]/,
-      shortNumberConversion: truncatedBinaryToInt,
-      messageAllowedCharacters: /[01\s]/,
-      messageConversion: minifyBinary
-    },
-    {
-      typeName: EncodingType.HEXADECIMAL,
-      addressFieldAllowedCharacters: /[0-9a-f\s]/i,
-      addressFieldConversion: function (hexString) {
-        return DataConverters.binaryToAddressString(
-            DataConverters.hexToBinary(hexString), level.addressFormat);
-      },
-      shortNumberAllowedCharacters: /[0-9a-f]/i,
-      shortNumberConversion: truncatedHexToInt,
-      messageAllowedCharacters: /[0-9a-f\s]/i,
-      messageConversion: hexToBinary
-    },
-    {
-      typeName: EncodingType.DECIMAL,
-      addressFieldAllowedCharacters: /[0-9.\s]/i,
-      addressFieldConversion: cleanAddressString,
-      shortNumberAllowedCharacters: /[0-9]/,
-      shortNumberConversion: truncatedDecimalToInt,
-      messageAllowedCharacters: /[0-9\s]/,
-      messageConversion: function (decimalString) {
-        return decimalToBinary(decimalString, this.currentChunkSize_);
-      }.bind(this)
-    },
-    {
-      typeName: EncodingType.ASCII,
-      addressFieldAllowedCharacters: /[0-9.\s]/i,
-      addressFieldConversion: cleanAddressString,
-      shortNumberAllowedCharacters: /[0-9]/,
-      shortNumberConversion: truncatedDecimalToInt,
-      messageAllowedCharacters: /./,
-      messageConversion: function (asciiString) {
-        return asciiToBinary(asciiString, this.currentChunkSize_);
-      }.bind(this)
-    }
-  ];
-
-  rowTypes.filter(function (rowType) {
-    return this.isEncodingEnabled_(rowType.typeName);
-  }, this).forEach(function (rowType) {
+  this.getEnabledRowTypes_().forEach(function (rowType) {
     var tr = rootDiv.find('tr.' + rowType.typeName);
     var rowUIKey = rowType.typeName + 'UI';
     this[rowUIKey] = {};
@@ -605,10 +620,6 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     // We attach keyup to live-update the widget as the user types
     // We attach blur to reformat the edited field when the user leaves it,
     //    and to catch non-keyup cases like copy/paste.
-
-    var level = NetSimGlobals.getLevelConfig();
-    var encoder = new Packet.Encoder(level.addressFormat,
-        level.packetCountBitWidth, this.packetSpec_);
 
     this.packetSpec_.forEach(function (fieldSpec) {
       /** @type {Packet.HeaderType} */
