@@ -1,8 +1,8 @@
 require File.expand_path('../router', __FILE__)
 
-if rack_env? :development
-  require 'cdo/rack/https_redirect'
-  use Rack::HTTPSRedirect
+if rack_env?(:development) && CDO.https_development
+  require 'rack/ssl-enforcer'
+  use Rack::SslEnforcer, hsts: { expires: 31536000, subdomains: false }
 end
 
 require 'varnish_environment'
