@@ -736,7 +736,7 @@
             <title name="VAL">true</title>
           </block>
         </category>
-        <category name="Cond">
+        <category name="Conditionals">
           <block type="functional_cond" inline="false"/>
         </category>
         <category name="Variables" custom="FUNCTIONAL_VARIABLE"/>

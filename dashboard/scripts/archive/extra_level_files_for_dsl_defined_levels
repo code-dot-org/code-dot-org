@@ -9,7 +9,7 @@ DSL_TYPES.map(&:constantize).each do |c|
     level_file = LevelLoader.level_file_path(level.name)
     if File.exist? level_file
       puts `ls -l '#{level_file}'`
-      #      puts `git rm '#{level_file}'`
+      puts `git rm '#{level_file}'`
     end
   end
 end
