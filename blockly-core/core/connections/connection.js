@@ -563,7 +563,8 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     }
 
     // Don't offer to connect if the target can't disconnect from parent
-    if (connection.targetConnection && !connection.targetBlock().canDisconnectFromParent()) {
+    if (connection.targetConnection &&
+        !connection.targetBlock().canDisconnectFromParent()) {
       return true;
     }
 
