@@ -43,7 +43,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
    * Router nodes are not associated with a particular user.
    *
    * All entities in this table descend from NetSimNode, and can be deserialized
-   * via utilities in netsimNodeFactory
+   * via utilities in NetSimNodeFactory
    *
    * Rows in this table are
    * - inserted when a node is created (such as when a user connects)
@@ -55,7 +55,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
    * @see {NetSimClientNode}
    * @see {NetSimRouterNode}
    * @see {NetSimLocalClientNode}
-   * @see {netsimNodeFactory}
+   * @see {NetSimNodeFactory}
    */
   this.nodeTable = new NetSimTable(channel, shardID, 'n');
 

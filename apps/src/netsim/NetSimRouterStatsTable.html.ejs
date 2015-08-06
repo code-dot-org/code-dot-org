@@ -1,6 +1,6 @@
 <%
   var utils = require('../utils');
-  var netsimUtils = require('./netsimUtils');
+  var NetSimUtils = require('./NetSimUtils');
 
   /**
    * Write a stats row with the given title and value.
@@ -36,9 +36,9 @@
   <tbody>
     <% writeStatRow('Uptime', uptime); %>
     <% writeStatRow('Queued Packets', queuedPackets); %>
-    <% fractionStatRow('Memory Use', usedMemory, totalMemory, netsimUtils.bitsToLocalizedRoundedBytesize); %>
-    <% fractionStatRow('Throughput', dataRate, bandwidthLimit, netsimUtils.bitrateToLocalizedRoundedBitrate); %>
+    <% fractionStatRow('Memory Use', usedMemory, totalMemory, NetSimUtils.bitsToLocalizedRoundedBytesize); %>
+    <% fractionStatRow('Throughput', dataRate, bandwidthLimit, NetSimUtils.bitrateToLocalizedRoundedBitrate); %>
     <% fractionStatRow('Routed Packets', successfulPackets, totalPackets); %>
-    <% fractionStatRow('Routed Data', successfulData, totalData, netsimUtils.bitsToLocalizedRoundedBytesize); %>
+    <% fractionStatRow('Routed Data', successfulData, totalData, NetSimUtils.bitsToLocalizedRoundedBytesize); %>
   </tbody>
 </table>

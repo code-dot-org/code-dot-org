@@ -14,7 +14,7 @@
 'use strict';
 
 require('../utils');
-var NetSimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = require('./NetSimVizWire');
 
