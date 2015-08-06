@@ -311,11 +311,9 @@ end
 # ids as expected by RedisTable.delete().  Noninteger ids in the query
 # are simply omitted from the result.
 def parse_ids_from_query_string(query_string)
-  CGI::parse(query_string)['id[]'].map do |x|
-    begin
-      Integer(x, 10)
-    rescue ArgumentError
-      nil
+  [].tap do |ids|
+    CGI::parse(query_string)['id[]'].each do |id|
+      ids << Integer(id, 10) rescue ArgumentError
     end
-  end.select {|x| not x.nil?}
+  end
 end
