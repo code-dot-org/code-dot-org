@@ -168,6 +168,15 @@ class NetSimApi < Sinatra::Base
   end
 
   #
+  # POST /v3/netsim/<shard-id>/<table-name>/delete?id[]=<id1>&id[]=<id2>&...
+  #
+  # This mapping exists for older browsers that don't support the DELETE verb.
+  #
+  post %r{/v3/netsim/([^/]+)/(\w+)/delete$} do |shard_id, table_name|
+    call(env.merge('REQUEST_METHOD'=>'DELETE', 'PATH_INFO'=>File.dirname(request.path_info)))
+  end
+
+  #
   # POST /v3/netsim/<shard-id>/<table-name>
   #
   # Insert a new row.
