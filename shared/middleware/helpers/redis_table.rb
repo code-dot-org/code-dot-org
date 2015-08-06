@@ -133,10 +133,19 @@ class RedisTable
 
   # Deletes a row, notifying other clients using the pubsub service.
   #
-  # @param [Integer] id The id for the new row
+  # @param [Integer] id The row ID to delete.
   def delete(id)
     deleted = @props.delete(row_key(id))
     publish_change({:action => 'delete', :id => id}) if deleted
+    deleted
+  end
+
+  # Deletes multiple rows, notifying other clients using the pubsub service
+  #
+  # @param [Array<Integer>] ids The row IDs to delete.
+  def delete_many(ids)
+    deleted = @props.delete(ids.map {|id| row_key(id)})
+    publish_change({:action => 'delete_many', :ids => ids}) if deleted
     deleted
   end
 
