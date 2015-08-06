@@ -29,8 +29,15 @@ class FakeRedisClient
   end
 
   def hdel(key, field)
-    value = get_hash_for_key(key).delete(field)
-    value ? 1 : 0
+    if field.is_a?(Array)
+      field.reduce(0) do |memo, next_field|
+        value = get_hash_for_key(key).delete(next_field)
+        memo + (value ? 1 : 0)
+      end
+    else
+      value = get_hash_for_key(key).delete(field)
+      value ? 1 : 0
+    end
   end
 
   def hincrby(key, name, increment)
