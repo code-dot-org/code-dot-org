@@ -58,7 +58,7 @@ Scenario: Creating and modifying a new contract
   And I press "paramAddButton"
   And I see no difference for "two params"
 
-  And I press the last button with text "x"
+  And I press the last button with text "Remove"
   And I see no difference for "domain removed"
 
   And I open the topmost blockly category "Functions"
