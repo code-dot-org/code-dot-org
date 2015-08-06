@@ -149,7 +149,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "markdown_instructions": "Congrats! You've made a basic chatbot!\r\n\r\nOn this level, make your chatbot look and work nicer.\r\n\r\n### Optional Challenges\r\n\r\n* Using Design mode, add colors and/or images to the objects\r\n\r\n* Define who is saying which part of the message.\r\n\r\n\t**Example:**\r\n    \r\n    User: Hi!\r\n    \r\n    Chatbot: uh huh\r\n    \r\n    User: How are you?\r\n    \r\n    Chatbot: uh huh\r\n    \r\n* Make the enter/return key submit text to the chatbot so your user doesn't have to click the button every time\r\n\r\n\t* Create a `keypress` event for your `Text Input` object\r\n    \r\n    * Use the conditional `if (event.keycode == 13)` within your `onEvent` function to check if the enter/return key was pressed\r\n    \r\n    * Avoid repeating code: move the blocks from inside your `onEvent \"clicked\"` function to a new function and call the new function from inside both your `onEvent` functions.",
+    "markdown_instructions": "Congrats! You've made a basic personal assistant!\r\n\r\nUse this level to continue to make your personal assistant look and work better. \r\n\r\n#### Some things you can do\r\n\r\n* Required: Add a comment before each of your functions describing what they do\r\n* Change the coloring of each object\r\n* Change the text color\r\n* Update the prompt and default response to seem more conversational\r\n\r\nIn the next lesson, we will start to make your personal assistant smarter.",
     "instructions": "Use this level to make your chatbot look and work better!"
   }
 }]]></config>

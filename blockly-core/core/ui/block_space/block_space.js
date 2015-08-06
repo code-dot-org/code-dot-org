@@ -29,9 +29,13 @@ goog.provide('Blockly.BlockSpace');
 // goog.require('Blockly.Block');
 goog.require('Blockly.ScrollbarPair');
 goog.require('Blockly.Trashcan');
+goog.require('Blockly.PanDragHandler');
+goog.require('Blockly.ScrollOnWheelHandler');
+goog.require('Blockly.ScrollOnBlockDragHandler');
 goog.require('Blockly.Xml');
 goog.require('goog.array');
 goog.require('goog.math.Coordinate');
+goog.require('goog.math');
 
 /**
  * Class for a BlockSpace.
@@ -43,7 +47,10 @@ goog.require('goog.math.Coordinate');
 Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   this.blockSpaceEditor = blockSpaceEditor;
   this.getMetrics = getMetrics;
-  this.setMetrics = setMetrics;
+  this.setMetrics = function (ratio) {
+    setMetrics(ratio);
+    Blockly.fireUiEvent(window, 'block_space_metrics_set');
+  };
 
   /** @type {boolean} */
   this.isFlyout = false;
@@ -59,11 +66,37 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
    */
   this.deleteAreas_ = [];
 
+  /**
+   * The original position of the currently being dragged block.
+   * Used to avoid changing scroll size until block is dropped.
+   * @private {goog.math.Rect}
+   */
+  this.pickedUpBlockOrigin_ = null;
+
   /** @type {number} */
   this.maxBlocks = Infinity;
 
   /** @type {goog.events.EventTarget} */
   this.events = new goog.events.EventTarget();
+
+  /**
+   * Encapsulates state used to make pan-drag work.
+   * @private {Blockly.PanDragHandler}
+   */
+  this.panDragHandler_ = new Blockly.PanDragHandler(this);
+
+  /**
+   * Encapsulates state used to make scroll-on-mousewheel work.
+   * @private {Blockly.ScrollOnWheelHandler}
+   */
+  this.scrollOnWheelHandler_ = new Blockly.ScrollOnWheelHandler(this);
+
+  /**
+   * Encapsulates state used to make scroll-on-block-drag work.
+   * @type {Blockly.ScrollOnBlockDragHandler}
+   * @private
+   */
+  this.scrollOnBlockDragHandler_ = new Blockly.ScrollOnBlockDragHandler(this);
 
   Blockly.ConnectionDB.init(this);
   if (Blockly.BlockSpace.DEBUG_EVENTS) {
@@ -97,22 +130,23 @@ Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
 Blockly.BlockSpace.SCAN_ANGLE = 3;
 
 /**
- * Can this blockSpace be dragged around (true) or is it fixed (false)?
- * @type {boolean}
+ * Margin (in pixels) to over-scroll when auto-panning viewport after a block
+ * is dragged out of view.
+ * @type {number}
  */
-Blockly.BlockSpace.prototype.dragMode = false;
+Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 10;
 
 /**
  * Current horizontal scrolling offset.
  * @type {number}
  */
-Blockly.BlockSpace.prototype.pageXOffset = 0;
+Blockly.BlockSpace.prototype.xOffsetFromView = 0;
 
 /**
  * Current vertical scrolling offset.
  * @type {number}
  */
-Blockly.BlockSpace.prototype.pageYOffset = 0;
+Blockly.BlockSpace.prototype.yOffsetFromView = 0;
 
 /**
  * The blockSpace's trashcan (if any).
@@ -140,7 +174,7 @@ var fireGlobalChangeEventPid_ = null;
  * This blockSpace's scrollbars, if they exist.
  * @type {Blockly.ScrollbarPair}
  */
-Blockly.BlockSpace.prototype.scrollbar = null;
+Blockly.BlockSpace.prototype.scrollbarPair = null;
 
 /**
  * Sets up debug console logging for events
@@ -162,12 +196,16 @@ Blockly.BlockSpace.prototype.findFunction = function(functionName) {
   });
 };
 
+/**
+ * @param {string} [functionName] If provided, only return examples for the
+ *   given function.
+ */
 Blockly.BlockSpace.prototype.findFunctionExamples = function(functionName) {
   return goog.array.filter(this.getTopBlocks(), function(block) {
     if (Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE === block.type) {
       var actualBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
-      return actualBlock &&
-        Blockly.Names.equals(functionName, actualBlock.getTitleValue('NAME'));
+      return actualBlock && (!functionName ||
+        Blockly.Names.equals(functionName, actualBlock.getTitleValue('NAME')));
     }
     return false;
   });
@@ -186,17 +224,28 @@ Blockly.BlockSpace.prototype.createDom = function() {
   </g>
   */
   this.svgGroup_ = Blockly.createSvgElement('g', {'class': 'svgGroup'}, null);
-  this.svgBlockCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBlockCanvas'}, this.svgGroup_);
+  this.clippingGroup_ = Blockly.createSvgElement('g', {'class': 'svgClippingGroup'}, this.svgGroup_);
+  this.svgBlockCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBlockCanvas'}, this.clippingGroup_);
+  this.svgDragCanvas_ = Blockly.createSvgElement('g', {'class': 'svgDragCanvas'}, this.svgGroup_);
   this.svgBubbleCanvas_ = Blockly.createSvgElement('g', {'class': 'svgBubbleCanvas'}, this.svgGroup_);
+  this.svgDebugCanvas_ = Blockly.createSvgElement('g', {'class': 'svgDebugCanvas'}, this.svgGroup_);
   this.fireChangeEvent();
   return this.svgGroup_;
 };
 
 /**
- * Moves element currently in this BlockSpace to the front of the canvas
- * @param {Element} blockSVGElement svg element to move to the front
+ * Moves element currently in this BlockSpace to the drag canvas group
+ * @param {Element} blockSVGElement svg element to move to the drag group
  */
-Blockly.BlockSpace.prototype.moveElementToFront = function(blockSVGElement) {
+Blockly.BlockSpace.prototype.moveElementToDragCanvas = function(blockSVGElement) {
+  this.getDragCanvas().appendChild(blockSVGElement);
+};
+
+/**
+ * Moves element currently in this BlockSpace drag canvas back to the main canvas
+ * @param {Element} blockSVGElement svg element to move to the main canvas
+ */
+Blockly.BlockSpace.prototype.moveElementToMainCanvas = function(blockSVGElement) {
   this.getCanvas().appendChild(blockSVGElement);
 };
 
@@ -210,6 +259,8 @@ Blockly.BlockSpace.prototype.dispose = function() {
     this.svgGroup_ = null;
   }
   this.svgBlockCanvas_ = null;
+  this.svgDragCanvas_ = null;
+  this.svgDebugCanvas_ = null;
   this.svgBubbleCanvas_ = null;
   if (this.flyout_) {
     this.flyout_.dispose();
@@ -218,6 +269,10 @@ Blockly.BlockSpace.prototype.dispose = function() {
   if (this.trashcan) {
     this.trashcan.dispose();
     this.trashcan = null;
+  }
+  if (this.scrollbarPair) {
+    this.scrollbarPair.dispose();
+    this.scrollbarPair = null;
   }
 };
 
@@ -238,11 +293,28 @@ Blockly.BlockSpace.prototype.setTrashcan = function(trashcan) {
 };
 
 /**
+ * Get the SVG element that wraps groups that should clip at the
+ * blockspace view bounds.
+ * @return {!SVGGElement} SVG element.
+ */
+Blockly.BlockSpace.prototype.getClippingGroup = function() {
+  return this.clippingGroup_;
+};
+
+/**
  * Get the SVG element that forms the drawing surface.
- * @return {!Element} SVG element.
+ * @return {!SVGGElement} SVG element.
  */
 Blockly.BlockSpace.prototype.getCanvas = function() {
   return this.svgBlockCanvas_;
+};
+
+/**
+ * Get the SVG element that forms the drawing surface for dragged elements
+ * @return {!SVGGElement} SVG element.
+ */
+Blockly.BlockSpace.prototype.getDragCanvas = function () {
+  return this.svgDragCanvas_;
 };
 
 /**
@@ -531,6 +603,19 @@ Blockly.BlockSpace.prototype.remainingCapacity = function() {
 };
 
 /**
+ * Records the bounding box of the currently dragged block to avoid changing
+ * scrolling size until drop.
+ */
+Blockly.BlockSpace.prototype.recordPickedUpBlockOrigin = function() {
+  var canvasBBox = this.blockSpaceEditor.getCanvasBBox(this.getDragCanvas());
+  this.pickedUpBlockOrigin_ = Blockly.svgRectToRect(canvasBBox);
+};
+
+Blockly.BlockSpace.prototype.clearPickedUpBlockOrigin = function() {
+  this.pickedUpBlockOrigin_ = null;
+};
+
+/**
 * Make a list of all the delete areas for this blockSpace.
 */
 Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
@@ -556,17 +641,19 @@ Blockly.BlockSpace.prototype.recordDeleteAreas = function() {
 /**
 * Is the mouse event over a delete area?
 * Shows the trash zone as a side effect.
-* @param {!Event} e Mouse move event.
-* @param {integer} startDragX The x coordinate of the drag start.
+* @param {number} mouseX mouse clientX
+* @param {number} mouseY mouse clientY
+* @param {number} startDragX The x coordinate of the drag start.
 * @return {boolean} True if event is in a delete area.
 */
-Blockly.BlockSpace.prototype.isDeleteArea = function(e, startDragX) {
+Blockly.BlockSpace.prototype.isDeleteArea = function(mouseX, mouseY, startDragX) {
   // If there is no toolbox and no flyout then there is no trash area.
   if (!Blockly.languageTree) {
     return false;
   }
 
-  var mouseXY = Blockly.mouseToSvg(e, this.blockSpaceEditor.svg_);
+  var mouseXY = Blockly.mouseCoordinatesToSvg(
+    mouseX, mouseY, this.blockSpaceEditor.svg_)
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
   var mouseDragStartXY = Blockly.mouseCoordinatesToSvg(
@@ -705,9 +792,9 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
         {
           // Initial part of the drag:
           // fade normal blocks from fully-visible to mostly-visible.
-          normalIntensity = INNER_TRASH_NORMAL_INTENSITY + 
-            (xDifference - INNER_TRASH_DISTANCE) / 
-            (trashZoneWidth - INNER_TRASH_DISTANCE) * 
+          normalIntensity = INNER_TRASH_NORMAL_INTENSITY +
+            (xDifference - INNER_TRASH_DISTANCE) /
+            (trashZoneWidth - INNER_TRASH_DISTANCE) *
             INNER_TRASH_TRASHCAN_INTENSITY;
         }
       }
@@ -739,3 +826,336 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   trashcanElement.style["opacity"] = trashIntensity;
   trashcanElement.style["display"] = trashcanDisplay;
 };
+
+/**
+ * Gives the logical size of the blockly workspace, currently defined as the
+ * distance from the block-space origin to the far edge of the farthest block
+ * in each scrollable direction (the workspace expands down and/or right to
+ * accommodate content), never to be smaller than the blockspace viewport size.
+ *
+ * Gets used in calculations for scrolling and block bumping.
+ *
+ * @param {Object} metrics object with information about view and content
+ *        dimensions, e.g. output of
+ *        Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_
+ * @param {number} metrics.contentLeft - distance from x=0 to left edge of
+ *        bounding box around all blocks in the blockspace.
+ * @param {number} metrics.contentWidth - width of the bounding box around all
+ *        blocks in the blockspace.
+ * @param {number} metrics.viewWidth - amount of horizontal blockspace that can
+ *        be displayed at once.
+ * @param {number} metrics.contentTop - distance from y=0 to top edge of bounding
+ *        box around all blocks in the blockspace.
+ * @param {number} metrics.contentHeight - height of the bounding box around all
+ *        blocks in the blockspace.
+ * @param {number} metrics.viewHeight - amount of vertical blockspace that can be
+ *        displayed at once.
+ * @returns {{width: number, height: number}}
+ */
+Blockly.BlockSpace.prototype.getScrollableSize = function(metrics) {
+  var scrollbarPair = this.scrollbarPair;
+  var canScrollHorizontally = scrollbarPair && scrollbarPair.canScrollHorizontally();
+  var canScrollVertically = scrollbarPair && scrollbarPair.canScrollVertically();
+
+  return {
+    width: canScrollHorizontally ?
+        Math.max(metrics.contentLeft + metrics.contentWidth, metrics.viewWidth) :
+        metrics.viewWidth,
+    height: canScrollVertically ?
+        Math.max(metrics.contentTop + metrics.contentHeight, metrics.viewHeight) :
+        metrics.viewHeight
+  };
+};
+
+/**
+ * Returns a box representing the size of the underlying editable canvas
+ * @returns {goog.math.Box}
+ */
+Blockly.BlockSpace.prototype.getScrollableBox = function() {
+  var scrollableSize = this.getScrollableSize(this.getMetrics());
+  return new goog.math.Box(0, scrollableSize.width, scrollableSize.height, 0);
+};
+
+/**
+ * Returns a box representing the position of the viewport in the coordinate
+ * space of the underlying canvas.
+ * @returns {goog.math.Box}
+ */
+Blockly.BlockSpace.prototype.getViewportBox = function() {
+  var metrics = this.getMetrics();
+  return new goog.math.Box(
+    this.getScrollOffsetY(),
+    this.getScrollOffsetX() + metrics.viewWidth,
+    this.getScrollOffsetY() + metrics.viewHeight,
+    this.getScrollOffsetX());
+};
+
+Blockly.BlockSpace.prototype.panIfOverEdge = function (block, mouseX, mouseY) {
+  this.scrollOnBlockDragHandler_.panIfOverEdge(block, mouseX, mouseY);
+};
+
+Blockly.BlockSpace.prototype.stopAutoScrolling = function () {
+  this.scrollOnBlockDragHandler_.stopAutoScrolling();
+};
+
+/**
+ * Given a block, scrolls the viewport to contain the block (plus a small
+ * margin).
+ * @param {Blockly.Block} block
+ */
+Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
+  var blockBox = block.getBox();
+  var currentView = this.getViewportBox();
+
+  var boxOverflows = Blockly.getBoxOverflow(currentView, blockBox);
+  Blockly.addToNonZeroSides(boxOverflows,
+    Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN);
+  this.scrollToDelta(boxOverflows.right - boxOverflows.left,
+    boxOverflows.bottom - boxOverflows.top);
+};
+
+/**
+ * Relative version of {@link Blockly.BlockSpace#scrollWithAnySelectedBlock}
+ * @param {number} scrollDx delta amount to pan-right (+)
+ * @param {number} scrollDy delta amount to pan-down (+)
+ * @param {number} mouseX clientX position of mouse
+ * @param {number} mouseY clientY position of mouse
+ */
+Blockly.BlockSpace.prototype.scrollDeltaWithAnySelectedBlock = function (scrollDx, scrollDy,
+  mouseX, mouseY) {
+  this.scrollWithAnySelectedBlock(
+    this.getScrollOffsetX() + scrollDx,
+    this.getScrollOffsetY() + scrollDy,
+    mouseX,
+    mouseY);
+};
+
+
+/**
+ * Given desired new scrollX and scrollY positions, scroll to position,
+ * clamping to within allowable scroll boundaries.
+ *
+ * If a block is selected, this will also move it to stay under the current
+ * mouse position after scroll (otherwise it would appear to scroll with the
+ * entire blockspace).
+ * @param {number} newScrollX new target pan-right (+) offset
+ * @param {number} newScrollY new target pan-down (+) offset
+ * @param {number} mouseX current mouse clientX position (used for
+ *        currently-dragged block movement syncing)
+ * @param {number} mouseY current mouse clientY position
+ */
+Blockly.BlockSpace.prototype.scrollWithAnySelectedBlock = function (newScrollX,
+                                                                    newScrollY,
+                                                                    mouseX,
+                                                                    mouseY) {
+  /** @type {goog.math.Vec2} */
+  var offsetBefore = this.getScrollOffset();
+
+  this.scrollTo(newScrollX, newScrollY);
+
+  /**
+   * If dragging a block too, move the "mouse start position" as if it
+   * had scrolled along with any blockspace scrolling, and add the scroll event
+   * delta to the block's movement.
+   */
+  if (Blockly.Block.isFreelyDragging() && Blockly.selected) {
+    var scrolledAmount = this.getScrollOffset().subtract(offsetBefore);
+    Blockly.selected.startDragMouseX -= scrolledAmount.x;
+    Blockly.selected.startDragMouseY -= scrolledAmount.y;
+    // Moves block to stay under cursor's clientX/clientY
+    Blockly.selected.moveBlockBeingDragged_(mouseX, mouseY);
+  }
+};
+
+/**
+ * Scrolls to given delta coordinates
+ * @param {number} scrollDx pixels to pan-right (+)
+ * @param {number} scrollDy pixels to pan-down (+)
+ */
+Blockly.BlockSpace.prototype.scrollToDelta = function (scrollDx, scrollDy) {
+  this.scrollTo(this.getScrollOffsetX() + scrollDx,
+    this.getScrollOffsetY() + scrollDy);
+};
+
+/**
+ * If possible, scrolls scrollbars to given offset coordinates.
+ * Clamps desired values between zero and max scroll values.
+ * @param {number} newScrollX new pan-right (+) offset
+ * @param {number} newScrollY new pan-down (+) offset
+ */
+Blockly.BlockSpace.prototype.scrollTo = function (newScrollX, newScrollY) {
+  if (!this.scrollbarPair) {
+    return;
+  }
+
+  var maxScrollOffsets = this.getMaxScrollOffsets();
+
+  newScrollX = goog.math.clamp(newScrollX, 0, maxScrollOffsets.x);
+  newScrollY = goog.math.clamp(newScrollY, 0, maxScrollOffsets.y);
+
+  // Set the scrollbar position, which will auto-scroll the canvas
+  this.scrollbarPair.set(newScrollX, newScrollY);
+};
+
+/**
+ * Returns whether there any scrolling is currently possible on the BlockSpace
+ * (i.e., scrollbars should be visible, panning/dragging should have an effect).
+ * @returns {boolean} true if the BlockSpace can currently be scrolled.
+ */
+Blockly.BlockSpace.prototype.currentlyScrollable = function() {
+  var maxOffsets = this.getMaxScrollOffsets();
+  return maxOffsets.x > 0 || maxOffsets.y > 0;
+};
+
+/**
+ * Returns the maximum possible scrolling offsets (+x right, +y down) for
+ * this blockspace.
+ * @returns {{x: number, y: number}}
+ */
+Blockly.BlockSpace.prototype.getMaxScrollOffsets = function() {
+  var metrics = this.getMetrics();
+  var blockSpaceSize = this.getScrollableSize(metrics);
+  return {
+    x: blockSpaceSize.width - metrics.viewWidth,
+    y: blockSpaceSize.height - metrics.viewHeight
+  };
+};
+
+/**
+ * @returns {goog.math.Vec2} scroll offsets
+ */
+Blockly.BlockSpace.prototype.getScrollOffset = function() {
+  return new goog.math.Vec2(this.getScrollOffsetX(), this.getScrollOffsetY());
+};
+
+/**
+ * @returns {number} current scroll X offset, + is right
+ */
+Blockly.BlockSpace.prototype.getScrollOffsetX = function() {
+  return -this.xOffsetFromView;
+};
+
+/**
+ * @returns {number} current scroll Y offset, + is down
+ */
+Blockly.BlockSpace.prototype.getScrollOffsetY = function() {
+  return -this.yOffsetFromView;
+};
+
+/**
+ * Can be called to force an update of scrollbar height/position and usable
+ * blockspace size according to the current content.
+ */
+Blockly.BlockSpace.prototype.updateScrollableSize = function () {
+  if (this.scrollbarPair) {
+    this.scrollbarPair.resize();
+  }
+};
+
+/**
+ * Establish a mousedown handler on the given dragTarget that will put the
+ * blockspace into a pan-drag mode as long as the mouse is down.
+ * @param {!EventTarget} target - Element which initiates pan-drag mode when
+ *        clicked directly.
+ * @param {function} [onDragTargetMouseDown] - optional function called when
+ *        click on the drag target begins (used for hideChaff by BSE)
+ */
+Blockly.BlockSpace.prototype.bindBeginPanDragHandler = function (target,
+                                                                 onDragTargetMouseDown) {
+  this.panDragHandler_.bindBeginPanDragHandler(target, onDragTargetMouseDown);
+};
+
+/**
+ * @param {!EventTarget} target - Element which initiates pan-drag mode when
+ *        clicked directly.
+ */
+Blockly.BlockSpace.prototype.bindScrollOnWheelHandler = function (target) {
+  this.scrollOnWheelHandler_.bindTo(target);
+};
+
+/**
+ * Unbinds previously bound handler to begin pan-drag.  Safe to call if no
+ * such handler is bound.
+ */
+Blockly.BlockSpace.prototype.unbindBeginPanDragHandler = function () {
+  this.panDragHandler_.unbindBeginPanDragHandler();
+};
+
+/**
+ * Cached set of debug rectangles.
+ * @type {{key: string, svgRect: SVGRect}}
+ * @private
+ */
+Blockly.BlockSpace.prototype.debugRects_ = {};
+
+/**
+ * Draws a debug box in the coordindates of this blockspace, in the same
+ * group as blocks are placed. Will re-use boxes based on given key.
+ * @param {string} key - unique key for box
+ * @param {goog.math.Box} box - box definition w.r.t. blockspace coordinates
+ * @param {string} color - color for box outline
+ */
+Blockly.BlockSpace.prototype.drawDebugBox = function (key, box, color) {
+  var rect = goog.math.Rect.createFromBox(box);
+  if (!this.debugRects_[key]) {
+    this.debugRects_[key] = Blockly.createSvgElement('rect', {
+      fill: 'none',
+      style: 'pointer-events: none'
+    }, this.svgDebugCanvas_);
+  }
+  this.svgDebugCanvas_.setAttribute('transform', this.svgBlockCanvas_.getAttribute('transform'));
+  var debugSvgRect = this.debugRects_[key];
+  debugSvgRect.setAttribute('x', rect.left);
+  debugSvgRect.setAttribute('y', rect.top);
+  debugSvgRect.setAttribute('width', rect.width);
+  debugSvgRect.setAttribute('height', rect.height);
+  debugSvgRect.setAttribute('stroke', color);
+  debugSvgRect.setAttribute('stroke-width', 3);
+};
+
+/**
+ * Cached set of debug circles.
+ * @type {{key: string, svgRect: SVGRect}}
+ * @private
+ */
+Blockly.BlockSpace.prototype.debugCircles_ = {};
+
+/**
+ * Draws a debug circle in the coordindates of this blockspace, in the same
+ * group as blocks are placed. Will re-use circles based on given key.
+ * @param {string} key
+ * @param {goog.math.Coordinate} coordinate
+ * @param {string} color
+ */
+Blockly.BlockSpace.prototype.drawDebugCircle = function (key, coordinate, color) {
+  var radius = 10;
+  if (!this.debugCircles_[key]) {
+   this.debugCircles_[key] = Blockly.createSvgElement('circle', {
+     cx: "50",
+     cy: "50",
+     r: "50",
+     style: 'pointer-events: none'
+   }, this.svgDebugCanvas_);
+  }
+  this.svgDebugCanvas_.setAttribute('transform', this.svgBlockCanvas_.getAttribute('transform'));
+  var debugSvgRect = this.debugCircles_[key];
+  debugSvgRect.setAttribute('cx', ''+coordinate.x);
+  debugSvgRect.setAttribute('cy', ''+coordinate.y);
+  debugSvgRect.setAttribute('r', radius);
+  debugSvgRect.setAttribute('fill', color);
+};
+
+/**
+ * Removes and clears list of debug drawings
+ */
+Blockly.BlockSpace.prototype.clearDebugDrawings = function () {
+  [this.debugCircles_, this.debugRects_].forEach(function (debugDict) {
+    for (var key in debugDict) {
+      var svg = debugDict[key];
+      goog.dom.removeNode(svg);
+    }
+  });
+  this.debugCircles_ = {};
+  this.debugRects_ = {};
+};
+

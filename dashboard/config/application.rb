@@ -6,11 +6,12 @@ require 'rails/all'
 require 'cdo/geocoder'
 require 'cdo/properties'
 require 'varnish_environment'
-require 'assets_api'
+require 'files_api'
 require 'channels_api'
 require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
+require 'net_sim_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -23,11 +24,12 @@ module Dashboard
   class Application < Rails::Application
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, AssetsApi
-    config.middleware.insert_after AssetsApi, ChannelsApi
+    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, PropertiesApi
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
+    config.middleware.insert_after SharedResources, NetSimApi
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after SharedResources, PegasusSites
@@ -79,6 +81,7 @@ module Dashboard
     ::CACHE_BUST = File.read(cache_bust_path).strip.gsub('.', '_') rescue ''
 
     config.assets.paths << Rails.root.join('../shared/css')
+    config.assets.paths << Rails.root.join('../shared/js')
 
     config.assets.precompile += %w(
       editor/blockly_editor.css
@@ -88,7 +91,7 @@ module Dashboard
       react.js
       jquery.handsontable.full.css
       jquery.handsontable.full.js
-      video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
+      video/video.js video-js.css video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
     )
     config.react.variant = :development
     config.react.addons = true

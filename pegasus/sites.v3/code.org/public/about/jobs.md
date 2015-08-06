@@ -7,74 +7,14 @@ nav: about_nav
 
 **We are currently hiring for:**
 
-- [Customer Support Associate](#support)	
-- [Curriculum Writer](#writer)
 - [Data Engineer](#data-engineer)
 - [District Manager (Seattle, New York City)](#reg-PM)
 - [Evaluation Manager](#Eval)
+- [Operations Coordinator](#opscoord)
+- [Technical Product Manager](#techpm)
 - [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
-
-## <a name="support" href="#support">Customer Support Associate (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for for a tech-savvy customer support associate who is passionate about helping others. This is a full-time position for a candidate who can effectively solve customer issues and positively represent Code.org. 
-
-Responsibilities of the position include:
-
-- Managing end-to-end customer support for Code.org including answering tickets, developing resources such as customer FAQ, and setting and measuring metrics for support 
-- Answering forum questions and providing clear, friendly guidance on behalf of Code.org
-- Trouble shooting and reproducing customer bugs; escalating issues to the development, education, or operations teams when necessary
-- Providing additional support to the operations team (i.e. helping with workshop planning, coordination and communications) as needed 
-
-**Skills & Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- 1-2 years experience using ZenDesk and/or customer service in a tech environment
-- Strong technical aptitude and ability to learn and utilize technology to solve problems quickly  
-- Excellent written and verbal communication skills
-- Bachelors degree preferred  
-- Background in education and communicating with educators preferred
-- Experience managing online forums a plus
-
-This person must be able to work in a fast paced environment while maintaining our excellent standard for customer service.
-
-Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="support" href="#writer">Curriculum Writer (Seattle, WA)</a>
-
-
-**Job Summary:**
-
-Code.org is looking for an experienced Curriculum Writer to work with and support the goals of Code.org’s Education team through the development of computer science curriculum. We are looking for someone to help develop curriculum as a full-time, long-term assignment (a one-to-two year term). While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway. 
-
-Responsibilities of the position include:
-
-- Working closely with the Education team to design, develop, write, and “go to market” with original curricular materials (lesson plans, formative/summative assessments, and videos).
-- Planning for evaluating the effectiveness of curriculum (from both student and teacher perspectives) and making programmatic improvements.
-- Collaborating with the Product team to develop curriculum-specific technology tools and using the tools to create tutorials and projects.
-
-**Skills & Qualifications:**
-
-The ideal candidate has experience designing, developing, and writing computer science curriculum to standards; has strong leadership, writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure.
-
-The candidate should also have: 
-
-- Comprehensive knowledge of computer science (required) 
-- Prior curriculum writing experience / activity design (required)
-- a Bachelor’s degree or higher in Education or Computer Science (preferred)
-- Recent computer science or STEM teaching experience in high school field (preferred)
-- Experience using the Understanding by Design curriculum framework (preferred)  
-- Experience/familiarity with the CS Principles Framework (preferred) 
-- Experience/familiarity with Exploring Computer Science curriculum/PD (preferred) 
-- Proficiency in working with Microsoft Office and Google Docs (required) 
-
-Ability and willingness to travel up to 10% of time is required. 
-
-Email resume and cover letter or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="data-engineer" href="#data-engineer">Data Engineer (Seattle, WA preferred)</a>
@@ -180,6 +120,64 @@ The ideal candidate has the following qualifications:
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="opscoord" href="#opscoord">Operations Coordinator (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is looking for an Operations Coordinator to join Code.org’s operations team. Our operations team is responsible for the success of Code.org professional development across the U.S. This is a full time, exempt position based in our Seattle office. Duties of this role include: 
+
+- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
+- Drafting communications to stakeholders, responding to requests for information, distributing materials externally
+- Updating and managing event attendee lists
+- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
+- Attending and participating in meetings and recording notes/follow-up items, as appropriate
+- Special projects (perform research, prepare documentation, develop templates, etc.)
+
+
+**Skills and Qualifications:**
+
+We are looking for a self-starter, skilled in event planning, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+
+The ideal candidate has the following qualifications:
+
+- Has a bachelors degree (Computer Science background/experience not required)
+- Ability to travel 20% time 
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
+
+
+## <a name="techpm" href="#techpm">Technical Product Manager (Seattle, WA)</a>
+
+**Job Summary:**
+
+Code.org is recruiting for an experienced Product Manager who can help us identify and implement solutions that use crowd-sourcing to build a strong community of teachers, volunteers, students and donors. Full-time, salaried. 
+
+Responsibilities of the position include:
+
+- Defining the scope of these projects
+- Designing user experience and working with engineers, education experts, and other teams at Code.org to implement them
+
+This person must be able to work in a fast paced environment with continuous release to customers.
+
+**Skills and Qualifications:**
+
+The ideal candidate has the following qualifications:
+
+- Bachelors degree in Computer Science
+- Minimum of 3 years of experience as a technical program manager or product manager building web-centric products/services
+- Experience in designing user experience for non-tech savvy customers
+- Strong technical background
+- Strong communication and collaboration skills
+
+Additional skills that would be valuable in this role:
+
+- Visual or interaction design
+- Teaching in K-12 classrooms
+- Curriculum design or partnering with educators on curriculum design
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
 

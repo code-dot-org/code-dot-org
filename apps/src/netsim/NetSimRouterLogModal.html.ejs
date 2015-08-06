@@ -1,12 +1,32 @@
 <%
 var Packet = require('./Packet');
 var i18n = require('./locale');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
-var headerFields = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+var headerFields = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
 
 /** @type {boolean} */
 var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+
+/**
+ * @name logEntries
+ * @type {Array|NetSimLogEntry}
+ */
+
+/**
+ * @name isAllRouterMode
+ * @type {boolean}
+ */
+
+/**
+ * @name sortBy
+ * @type {sring}
+ */
+
+/**
+ * @name sortDescending
+ * @type {boolean}
+ */
 
 /** @type {boolean} */
 var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
@@ -29,7 +49,11 @@ function sortMarkupFor(sortKey) {
 <div class="modal-dialog modal-lg">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title"><%= i18n.logBrowserHeader() %></h4>
+      <% if (isAllRouterMode) { %>
+        <h4 class="modal-title"><%= i18n.logBrowserHeader_all() %></h4>
+      <% } else { %>
+        <h4 class="modal-title"><%= i18n.logBrowserHeader_mine() %></h4>
+      <% } %>
     </div>
     <div class="modal-body">
       <table>

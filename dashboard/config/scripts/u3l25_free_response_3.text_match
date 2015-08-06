@@ -1,0 +1,12 @@
+name 'U3L25 Free Response 3'
+title 'String and Substring: Assessment 4'
+
+markdown <<MARKDOWN
+What is the output of this code segment?
+
+	var phrase = "I am so";
+	var emotion = "excited";
+	var sentence = phrase + " " + emotion.toUpperCase() + "!";
+	console.log(sentence);
+<br/>
+MARKDOWN

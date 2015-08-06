@@ -15,6 +15,9 @@
 
 var utils = require('../utils');
 var NetSimEntity = require('./NetSimEntity');
+var DataConverters = require('./DataConverters');
+var base64ToBinary = DataConverters.base64ToBinary;
+var binaryToBase64 = DataConverters.binaryToBase64;
 
 /**
  * Local controller for a message that is 'on the wire'
@@ -27,7 +30,7 @@ var NetSimEntity = require('./NetSimEntity');
  * should remove messages as soon as they receive them.
  *
  * @param {!NetSimShard} shard - The shard where this wire lives.
- * @param {Object} [messageRow] - A row out of the _message table on the
+ * @param {MessageRow} [messageRow] - A row out of the _message table on the
  *        shard.  If provided, will initialize this message with the given
  *        data.  If not, this message will initialize to default values.
  * @constructor
@@ -59,7 +62,10 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
    * All other message content, including the 'packets' students will send.
    * @type {*}
    */
-  this.payload = messageRow.payload;
+  var base64Payload = messageRow.base64Payload;
+  this.payload = (base64Payload) ?
+    base64ToBinary(base64Payload.string, base64Payload.len) :
+    '';
 
   /**
    * If this is an inter-router message, the number of routers this
@@ -98,7 +104,20 @@ NetSimMessage.send = function (shard, messageData, onComplete) {
   entity.payload = messageData.payload;
   entity.extraHopsRemaining = utils.valueOr(messageData.extraHopsRemaining, 0);
   entity.visitedNodeIDs = utils.valueOr(messageData.visitedNodeIDs, []);
-  entity.getTable().create(entity.buildRow(), onComplete);
+  try {
+    entity.getTable().create(entity.buildRow(), onComplete);
+  } catch (err) {
+    onComplete(err, null);
+  }
+};
+
+/**
+ * Static helper.
+ * @param {NetSimMessage} message
+ * @returns {boolean} TRUE iff the given message is well-formed.
+ */
+NetSimMessage.isValid = function (message) {
+  return /^[01]*$/.test(message.payload);
 };
 
 /**
@@ -110,25 +129,27 @@ NetSimMessage.prototype.getTable = function () {
 };
 
 /**
- * @typedef {Object} messageRow
+ * @typedef {Object} MessageRow
  * @property {number} fromNodeID - this message in-flight-from node
  * @property {number} toNodeID - this message in-flight-to node
  * @property {number} simulatedBy - Node ID of the client responsible for
  *           all operations involving this message.
- * @property {string} payload - binary message content, all of which can be
- *           exposed to the student.  May contain headers of its own.
+ * @property {Base64Payload} base64Payload - base64-encoded binary
+ *           message content, all of which can be exposed to the
+ *           student.  May contain headers of its own.
  */
 
 /**
  * Build own row for the message table
- * @returns {messageRow}
+ * @returns {MessageRow}
+ * @throws {TypeError} if payload is invalid
  */
 NetSimMessage.prototype.buildRow = function () {
   return {
     fromNodeID: this.fromNodeID,
     toNodeID: this.toNodeID,
     simulatedBy: this.simulatedBy,
-    payload: this.payload,
+    base64Payload: binaryToBase64(this.payload),
     extraHopsRemaining: this.extraHopsRemaining,
     visitedNodeIDs: this.visitedNodeIDs
   };

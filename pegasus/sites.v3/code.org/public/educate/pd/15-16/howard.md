@@ -29,9 +29,9 @@ Quarter 1: Saturday, October 10, 2015
 
 Quarter 2: Saturday, November 7, 2015
 
-Quarter 3: Saturday, February 20, 2015
+Quarter 3: Saturday, February 20, 2016
 
-Quarter 4: Saturday, April 9, 2015
+Quarter 4: Saturday, April 9, 2016
 
 8:30am - 3:30pm
 <br/>

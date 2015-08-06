@@ -1,7 +1,7 @@
 "pl-PL":
   hello: Witaj świecie
   select_language: Wybierz język
-  en: Computer Science
+  en: Informatyka
   computer_science_edweek: Tydzień Edukacji Informatycznej
   csedweek_dates: 8-14 grudnia 2014
   csedweek_banner_hoc: 'Zbliża się <a href="http://hourofcode.com" style="color: white;
@@ -64,7 +64,7 @@
   congratulations_on_completing_hoc: Gratulacje z okazji ukończenia godziny programowania
     (One Hour of Code)
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Proszę wybrać prawidłowy wiek
   enter_valid_email: Podaj poprawny adres e-mail
   get_a_certificate_message: Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>Kontynuować
     naukę po tej godzinie (One Hour)</a>
@@ -1230,3 +1230,6 @@
     <a href='%{it_requirements_url}'> Kliknij tutaj</a>, aby dowiedzieć się, jak włączyć
     HTTPS dla Code.org.
   compatibility_https_hide_this_warning: Ukryj to ostrzeżenie
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

@@ -194,7 +194,7 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: '#loc lines of code written by students'
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
   homepage_hero_text_stat_students: '#student_count student accounts on Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: Programatzeko ordua
@@ -228,7 +228,7 @@
   homepage_slot_text_link_fullcurriculum: See our full curriculum
   homepage_slot_text_link_pd: Professional development
   homepage_slot_text_title_advocates: Advocates
-  homepage_slot_text_blurb_advocates: Support our work
+  homepage_slot_text_blurb_advocates: Support diversity in computing
   homepage_slot_text_link_stats: See the stats
   homepage_slot_text_link_buy: Buy a T-shirt or hat
   homepage_slot_text_link_donate: Make a donation
@@ -1165,3 +1165,6 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Hide this warning
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more

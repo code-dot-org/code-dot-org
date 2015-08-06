@@ -83,7 +83,7 @@ GEM
     chunky_png (1.3.3)
     codeclimate-test-reporter (0.3.0)
       simplecov (>= 0.7.1, < 1.0.0)
-    codemirror-rails (4.2)
+    codemirror-rails (5.5)
       railties (>= 3.0, < 5)
     coderay (1.1.0)
     coffee-script-source (1.9.1)
@@ -152,7 +152,7 @@ GEM
       activesupport (>= 4.0.1)
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
-    haml_lint (0.14.1)
+    haml_lint (0.15.0)
       haml (~> 4.0)
       rubocop (>= 0.25.0)
       sysexits (~> 1.1)
@@ -169,6 +169,7 @@ GEM
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    httpclient (2.6.0.1)
     i18n (0.6.9)
     i18nema (0.0.8)
       i18n (>= 0.5)
@@ -263,6 +264,11 @@ GEM
       ansi (~> 1.4.0)
       hashie (>= 1.1.0)
     powerpack (0.1.0)
+    progressbar (0.21.0)
+    pusher (0.14.5)
+      httpclient (~> 2.5)
+      multi_json (~> 1.0)
+      signature (~> 0.1.8)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.5.3)
@@ -345,6 +351,7 @@ GEM
     sequel (4.10.0)
     shotgun (0.9)
       rack (>= 1.0)
+    signature (0.1.8)
     signet (0.6.0)
       addressable (~> 2.3)
       extlib (~> 0.9)
@@ -404,6 +411,11 @@ GEM
       rack
       raindrops (~> 0.7)
     user_agent_parser (2.1.5)
+    viddl-rb (1.0.1)
+      mime-types
+      multi_json
+      nokogiri
+      progressbar
     videojs_rails (4.5.2)
     warden (1.2.3)
       rack (>= 1.0)
@@ -445,6 +457,7 @@ DEPENDENCIES
   heroku_rails_deflate
   highline (~> 1.6.21)
   honeybadger (~> 1.11.2)
+  httparty
   i18nema
   jbuilder (~> 1.2)
   jquery-rails
@@ -468,6 +481,7 @@ DEPENDENCIES
   parallel
   paranoia (~> 2.0)
   phantomjs (~> 1.9.7.1)
+  pusher (~> 0.14.5)
   quiet_assets
   rack-contrib (~> 1.1)
   rack-ssl-enforcer
@@ -499,6 +513,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn (~> 4.8.2)
   user_agent_parser
+  viddl-rb
   videojs_rails
 
 BUNDLED WITH

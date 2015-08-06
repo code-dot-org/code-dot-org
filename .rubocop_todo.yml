@@ -198,11 +198,6 @@ Style/MethodCallParentheses:
 Style/MethodDefParentheses:
   Enabled: false
 
-# Offense count: 1
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/MethodName:
-  Enabled: false
-
 # Offense count: 3
 Style/MultilineBlockChain:
   Enabled: false
@@ -210,11 +205,6 @@ Style/MultilineBlockChain:
 # Offense count: 3
 # Cop supports --auto-correct.
 Style/MultilineBlockLayout:
-  Enabled: false
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/MultilineIfThen:
   Enabled: false
 
 # Offense count: 109
@@ -275,11 +265,6 @@ Style/Semicolon:
 Style/SingleSpaceBeforeFirstArg:
   Enabled: false
 
-# Offense count: 1027
-# Cop supports --auto-correct.
-Style/SpaceAfterColon:
-  Enabled: false
-
 # Offense count: 171
 # Cop supports --auto-correct.
 Style/SpaceAfterComma:
@@ -335,11 +320,6 @@ Style/SpaceInsideBrackets:
 Style/SpaceInsideHashLiteralBraces:
   Enabled: false
 
-# Offense count: 23
-# Cop supports --auto-correct.
-Style/SpaceInsideParens:
-  Enabled: false
-
 # Offense count: 6996
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -354,9 +334,4 @@ Style/StringLiteralsInInterpolation:
 
 # Offense count: 1
 Style/StructInheritance:
-  Enabled: false
-
-# Offense count: 3
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/VariableName:
   Enabled: false

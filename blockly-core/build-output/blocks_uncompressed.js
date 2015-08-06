@@ -1456,12 +1456,18 @@ Blockly.Blocks.functional_pass = {init:function() {
     this.editLabel_ = b
   }
   this.setFunctional(!0);
+  this.setMovable(!!Blockly.editBlocks);
+  this.setColorFromName_();
+  this.blockSpace.events.listen(Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE, this.setColorFromName_, !1, this);
   this.changeFunctionalOutput(Blockly.BlockValueType.FUNCTION)
 }, openEditor:function(a) {
   a.stopPropagation();
   Blockly.functionEditor.openEditorForCallBlock_(this)
 }, renameProcedure:function(a, b) {
-  Blockly.Names.equals(a, this.getTitleValue("NAME")) && this.setTitleValue(b, "NAME")
+  Blockly.Names.equals(a, this.getTitleValue("NAME")) && (this.setTitleValue(b, "NAME"), this.setColorFromName_())
+}, setColorFromName_:function() {
+  var a = this.getTitleValue("NAME");
+  a && (a = Blockly.mainBlockSpace.findFunction(a)) && (a = a.getOutputType(), this.setHSV.apply(this, Blockly.FunctionalTypeColors[a]))
 }, mutationToDom:function() {
   var a = document.createElement("mutation");
   a.setAttribute("name", this.getTitleValue("NAME"));
@@ -1469,7 +1475,8 @@ Blockly.Blocks.functional_pass = {init:function() {
 }, domToMutation:function(a) {
   a = a.getAttribute("name");
   this.setTitleValue(a, "NAME");
-  this.setTooltip((this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace("%1", a))
+  this.setTooltip((this.outputConnection ? Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP : Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP).replace("%1", a));
+  this.setColorFromName_()
 }};
 Blockly.Blocks.procedural_to_functional_call = Blockly.Blocks.procedures_callreturn;
 Blockly.Blocks.functionalExamples = {};
@@ -1478,10 +1485,9 @@ Blockly.Blocks.functional_example = {shouldHideIfInMainBlockSpace:function() {
 }, isCopyable:function() {
   return!1
 }, init:function() {
-  this.setHSV(94, 0.84, 0.6);
+  this.setHSV(0, 0, 0.49);
   this.setFunctional(!0, {headerHeight:0, rowBuffer:3});
   this.setFunctionalOutput(!1);
-  this.appendDummyInput().appendTitle(Blockly.Msg.EXAMPLE).appendTitle("(" + [Blockly.Msg.ACTUAL, Blockly.Msg.EXPECTED].join(", ") + ")");
   this.appendFunctionalInput("ACTUAL").setAlign(Blockly.ALIGN_CENTRE);
   this.appendFunctionalInput("EXPECTED").setAlign(Blockly.ALIGN_CENTRE).setInline(!0);
   this.setTooltip(Blockly.Msg.EXAMPLE_DESCRIPTION)

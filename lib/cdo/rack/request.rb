@@ -3,7 +3,7 @@ module Rack
     def json_body()
       return nil unless content_type.split(';').first == 'application/json'
       return nil unless content_charset.downcase == 'utf-8'
-      JSON.parse(body.read, symbolize_names:true)
+      JSON.parse(body.read, symbolize_names: true)
     end
 
     def language()
@@ -75,7 +75,7 @@ module Rack
 
       key_generator = ActiveSupport::KeyGenerator.new(
         CDO.dashboard_secret_key_base,
-        iterations:1000
+        iterations: 1000
       )
 
       encryptor = ActiveSupport::MessageEncryptor.new(
