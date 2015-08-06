@@ -1,12 +1,12 @@
 <%
   var netsimConstants = require('./netsimConstants');
-  var netsimGlobals = require('./netsimGlobals');
+  var NetSimGlobals = require('./netsimGlobals');
   var dataConverters = require('./dataConverters');
   var i18n = require('./locale');
   var getEncodingLabel = require('./netsimUtils').getEncodingLabel;
   var Packet = require('./Packet');
 
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
 
   var EncodingType = netsimConstants.EncodingType;
   var PacketUIColumnType = netsimConstants.PacketUIColumnType;

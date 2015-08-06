@@ -26,7 +26,7 @@ var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
 var Packet = require('./Packet');
 var dataConverters = require('./dataConverters');
 var netsimConstants = require('./netsimConstants');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 var EncodingType = netsimConstants.EncodingType;
 var MessageGranularity = netsimConstants.MessageGranularity;
@@ -213,7 +213,7 @@ NetSimSendPanel.prototype.render = function () {
 
   // Add packet size slider control
   if (this.levelConfig_.showPacketSizeControl) {
-    var level = netsimGlobals.getLevelConfig();
+    var level = NetSimGlobals.getLevelConfig();
     var encoder = new Packet.Encoder(level.addressFormat,
         level.packetCountBitWidth, this.packetSpec_);
     this.packetSizeControl_ = new NetSimPacketSizeControl(

@@ -26,7 +26,7 @@ var Packet = require('./Packet');
 var packetMarkup = require('./NetSimLogPacket.html.ejs');
 var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./netsimGlobals');
 
 /**
  * How long the "entrance" animation for new messages lasts, in milliseconds.
@@ -188,8 +188,19 @@ NetSimLogPanel.prototype.onClearButtonPress_ = function () {
 
 /**
  * Put a message into the log.
+ * @param {string} packetBinary
+ * @param {number} packetID
  */
-NetSimLogPanel.prototype.log = function (packetBinary) {
+NetSimLogPanel.prototype.log = function (packetBinary, packetID) {
+
+  var packetAlreadyInLog = this.packets_.some(function (packet) {
+    return packet.packetID == packetID;
+  });
+
+  if (packetAlreadyInLog) {
+    return;
+  }
+
   // Remove all packets that are beyond our maximum size
   this.packets_
       .splice(this.maximumLogPackets_ - 1, this.packets_.length)
@@ -197,7 +208,7 @@ NetSimLogPanel.prototype.log = function (packetBinary) {
         packet.getRoot().remove();
       });
 
-  var newPacket = new NetSimLogPacket(packetBinary, {
+  var newPacket = new NetSimLogPacket(packetBinary, packetID, {
     packetSpec: this.packetSpec_,
     encodings: this.currentEncodings_,
     chunkSize: this.currentChunkSize_,
@@ -263,7 +274,13 @@ NetSimLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * @param {function} options.markAsReadCallback
  * @constructor
  */
-var NetSimLogPacket = function (packetBinary, options) {
+var NetSimLogPacket = function (packetBinary, packetID, options) {
+
+  /**
+   * @type {number}
+   */
+  this.packetID = packetID;
+
   /**
    * @type {string}
    * @private
@@ -349,7 +366,7 @@ NetSimLogPacket.prototype.getRoot = function () {
  * @param {jQuery} rootElement
  */
 NetSimLogPanel.adjustHeaderColumnWidths = function (rootElement) {
-  var level = netsimGlobals.getLevelConfig();
+  var level = NetSimGlobals.getLevelConfig();
   var encoder = new Packet.Encoder(
       level.addressFormat,
       level.packetCountBitWidth,
@@ -465,5 +482,5 @@ NetSimLogPanel.prototype.getHeight = function () {
  */
 NetSimLogPanel.prototype.onMinimizerClick_ = function () {
   NetSimLogPanel.superPrototype.onMinimizerClick_.call(this);
-  netsimGlobals.updateLayout();
+  NetSimGlobals.updateLayout();
 };
