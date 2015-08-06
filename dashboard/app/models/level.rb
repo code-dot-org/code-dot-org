@@ -190,7 +190,7 @@ class Level < ActiveRecord::Base
   def pixelation?
     # TODO(dave|joshlory): Define Pixelation < DSLDefined as a new level type,
     # eliminating this fragile test of 'href'.
-    self.is_a?(DSLDefined) && self.try(:properties).try(:[], "href") == "pixelation/pixelation.html"
+    self.is_a?(DSLDefined) && self.properties['href'] == "pixelation/pixelation.html"
   end
 
   # Returns whether this level is backed by a channel, whose id may
