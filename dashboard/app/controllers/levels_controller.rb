@@ -234,8 +234,7 @@ class LevelsController < ApplicationController
       :dsl_text,
       :encrypted,
       {concept_ids: []},
-      {soft_buttons: []},
-      {examples: []}
+      {soft_buttons: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
