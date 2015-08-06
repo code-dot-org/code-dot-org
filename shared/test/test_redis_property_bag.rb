@@ -92,6 +92,9 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     assert_equal({'foo2' => 'value2'}, bag1.to_hash)
     assert_equal({'foo1' => 'value1'}, bag2.to_hash)
 
+    # Empty delete is safe
+    bag1.delete([])
+
     # Clean up
     bag1.delete_all
     bag2.delete_all

@@ -50,9 +50,10 @@ class RedisPropertyBag
 
   # Deletes the propert(y|ies) with the given name.
   #
-  # @param [String|Array<String>] names
+  # @param [String, Array<String>] names
   # @return [Boolean] true if any of the values was present before deletion.
   def delete(names)
+    return false if names.is_a?(Array) and names.empty?
     delete_count = @redis.hdel(@key, names)
     delete_count > 0
   end
