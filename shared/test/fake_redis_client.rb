@@ -31,10 +31,13 @@ class FakeRedisClient
   # Second argument takes a single name or array of names, to match
   # the redis-rb API.
   # @param [String] key
-  # @param [String|Array<String>] fields
+  # @param [String, Array<String>] fields
   # @returns [Integer] number of deleted fields
   def hdel(key, fields)
     fields = [fields] unless fields.is_a?(Array)
+    # Raise on empty array; real Redis does!
+    raise ArgumentError, "Can't pass empty array to hdel", caller if fields.empty?
+
     hash = get_hash_for_key(key)
     fields.reduce(0) do |num_deleted, field|
       num_deleted += 1 if hash.delete(field)

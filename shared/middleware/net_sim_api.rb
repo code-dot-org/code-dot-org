@@ -272,7 +272,7 @@ class NetSimApi < Sinatra::Base
     }.map {|wire|
       wire['id']
     }
-    wire_table.delete(wire_ids)
+    wire_table.delete(wire_ids) unless wire_ids.empty?
   end
 
   # Delete all messages simulated by a given node_id
@@ -287,7 +287,7 @@ class NetSimApi < Sinatra::Base
     }.map {|message|
       message['id']
     }
-    message_table.delete(message_ids)
+    message_table.delete(message_ids) unless message_ids.empty?
   end
 
 end

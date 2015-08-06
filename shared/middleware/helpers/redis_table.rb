@@ -133,7 +133,7 @@ class RedisTable
 
   # Deletes multiple rows, notifying other clients using the pubsub service
   #
-  # @param [Integer|Array<Integer>] ids The row IDs to delete.
+  # @param [Integer, Array<Integer>] ids The row IDs to delete.
   def delete(ids)
     ids = [ids] unless ids.is_a?(Array)
     deleted = @props.delete(ids.map {|id| row_key(id)})
