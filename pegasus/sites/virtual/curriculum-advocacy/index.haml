@@ -1,0 +1,26 @@
+---
+title: Advocacy Documents
+---
+- directory = Dir[sites_dir('virtual/curriculum-advocacy/')].first
+- files = Dir.entries(directory)
+
+%h1 Advocacy documents
+
+- extensions = [ ".html", ".md", ".csv"]
+- extensions.each do |extension|
+  - filtered_files = files.select {|entry| File.extname(entry) == extension }
+  - filtered_files.each do |file|
+    -basename = File.basename(file, extension)
+    - if extension == ".md" || extension == ".haml"
+      %a{:href=>"/curriculum/advocacy/#{basename}"}= basename
+      (
+      %a{:href=>"/curriculum/advocacy/#{basename}.pdf"}> PDF
+      )
+    -else
+      -if File.extname(file) == '.html'
+        -filename = File.basename(file, ".*")
+      -else
+        -filename = file
+      %a{:href=>"/curriculum/advocacy/#{file}"}= filename
+    %br
+  %br
