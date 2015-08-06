@@ -116,7 +116,7 @@
           <block type="functional_logical_not"/>
           <block type="functional_boolean"/>
         </category>
-        <category name="Cond">
+        <category name="Conditionals">
           <block type="functional_cond"/>
         </category>
         <category name="Functions" custom="PROCEDURE"/>

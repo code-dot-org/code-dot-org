@@ -437,7 +437,7 @@
         <category name="Boolean">
           <block type="functional_string_equals" inline="false"/>
         </category>
-        <category name="Cond">
+        <category name="Conditionals">
           <block type="functional_cond" inline="false"/>
         </category>
         <category name="Functions" custom="PROCEDURE">
