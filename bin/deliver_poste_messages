@@ -109,11 +109,11 @@ class Deliverer
     message = MESSAGE_TEMPLATES[delivery[:message_id]]
     encrypted_id = Poste.encrypt_id(delivery[:id])
     params = JSON.parse(delivery[:params])
-    unsubscribe_url = poste("/u/#{encrypted_id}")
+
     header, html, _ = load_template(message[:name]).render(params.merge({
       recipient: OpenStruct.new(recipient),
-      encrypted_id: encrypted_id
-      unsubscribe_link: unsubscribe_url,
+      encrypted_id: encrypted_id,
+      unsubscribe_link: poste_url("/u/#{encrypted_id}"),
       tracking_pixel: poste_url("/o/#{encrypted_id}"),
     }))
 
@@ -132,8 +132,6 @@ class Deliverer
 
     subject = header['subject'].to_s.strip
     message.puts 'Subject: ' + subject unless subject.empty?
-
-    message.puts "List-Unsubscribe: <#{unsubscribe_url}>"
 
     message.puts 'MIME-Version: 1.0'
 
