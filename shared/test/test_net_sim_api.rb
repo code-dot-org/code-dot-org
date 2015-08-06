@@ -197,30 +197,30 @@ class NetSimApiTest < Minitest::Unit::TestCase
   end
 
   def test_node_delete_cascades_to_node_wires_delete_one_delete_verb
-    perform_test_node_delete_cascades_to_node_wires do |node_id|
+    node_delete_cascades_to_node_wires do |node_id|
       @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}"
     end
   end
 
   def test_node_delete_cascades_to_node_wires_delete_one_post_verb
-    perform_test_node_delete_cascades_to_node_wires do |node_id|
+    node_delete_cascades_to_node_wires do |node_id|
       @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}/delete"
     end
   end
 
   def test_node_delete_cascades_to_node_wires_delete_many_delete_verb
-    perform_test_node_delete_cascades_to_node_wires do |node_id|
+    node_delete_cascades_to_node_wires do |node_id|
       @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?id[]=#{node_id}"
     end
   end
 
   def test_node_delete_cascades_to_node_wires_delete_many_post_verb
-    perform_test_node_delete_cascades_to_node_wires do |node_id|
+    node_delete_cascades_to_node_wires do |node_id|
       @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?id[]=#{node_id}"
     end
   end
 
-  def perform_test_node_delete_cascades_to_node_wires
+  def node_delete_cascades_to_node_wires
 
     node_a = create_node({name: 'nodeA'})
     node_b = create_node({name: 'nodeB'})
@@ -241,7 +241,6 @@ class NetSimApiTest < Minitest::Unit::TestCase
 
     # Assert wire AB and CA are gone
     assert !record_exists(TABLE_NAMES[:wire], wire_ab['id'])
-    assert !record_exists(TABLE_NAMES[:wire], wire_ca['id'])
 
     # Assert node B and C are still there
     assert record_exists(TABLE_NAMES[:node], node_b['id'])
@@ -260,7 +259,31 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
   end
 
-  def perform_test_node_delete_cascades_to_messages
+  def test_node_delete_cascades_to_messages_delete_one_delete_verb
+    node_delete_cascades_to_messages do |node_id|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}"
+    end
+  end
+
+  def test_node_delete_cascades_to_messages_delete_one_post_verb
+    node_delete_cascades_to_messages do |node_id|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/#{node_id}/delete"
+    end
+  end
+
+  def test_node_delete_cascades_to_messages_delete_many_delete_verb
+    node_delete_cascades_to_messages do |node_id|
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?id[]=#{node_id}"
+    end
+  end
+
+  def test_node_delete_cascades_to_messages_delete_many_post_verb
+    node_delete_cascades_to_messages do |node_id|
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?id[]=#{node_id}"
+    end
+  end
+
+  def node_delete_cascades_to_messages
 
     node_a = create_node({name: 'nodeA'})
     node_b = create_node({name: 'nodeB'})
@@ -271,7 +294,7 @@ class NetSimApiTest < Minitest::Unit::TestCase
     assert_equal 2, read_records(TABLE_NAMES[:node]).count, "Didn't create 2 nodes"
     assert_equal 2, read_records(TABLE_NAMES[:message]).count, "Didn't create 2 messages"
 
-    delete_node(node_a['id'])
+    yield(node_a['id'])
 
     # Assert nodeA is gone
     assert !record_exists(TABLE_NAMES[:node], node_a['id'])
@@ -290,6 +313,108 @@ class NetSimApiTest < Minitest::Unit::TestCase
     delete_message(message_a_to_b['id'])
     delete_message(message_b_to_a['id'])
     assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+  end
+
+  def test_many_node_delete_cascading_generates_minimum_invalidations_via_delete
+    many_node_delete_cascading_generates_minimum_invalidations do |node_ids|
+      query_string = node_ids.map{|id| "id[]=#{id}"}.join('&')
+      @net_sim_api.delete "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}?#{query_string}"
+    end
+  end
+
+  def test_many_node_delete_cascading_generates_minimum_invalidations_via_post
+    many_node_delete_cascading_generates_minimum_invalidations do |node_ids|
+      query_string = node_ids.map{|id| "id[]=#{id}"}.join('&')
+      @net_sim_api.post "/v3/netsim/#{@shard_id}/#{TABLE_NAMES[:node]}/delete?#{query_string}"
+    end
+  end
+
+  def many_node_delete_cascading_generates_minimum_invalidations
+    node_a = create_node({name: 'nodeA'})
+    node_b = create_node({name: 'nodeB'})
+    node_c = create_node({name: 'nodeC'})
+
+    wire_ab = create_wire(node_a['id'], node_b['id'])
+    wire_ac = create_wire(node_a['id'], node_c['id'])
+    wire_ba = create_wire(node_b['id'], node_a['id'])
+    wire_bc = create_wire(node_b['id'], node_c['id'])
+    wire_ca = create_wire(node_c['id'], node_a['id'])
+    wire_cb = create_wire(node_c['id'], node_b['id'])
+
+    message_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
+    message2_a_to_b = create_message({fromNodeID: node_a['id'], toNodeID: node_b['id'], simulatedBy: node_b['id']})
+    message_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
+    message2_b_to_a = create_message({fromNodeID: node_b['id'], toNodeID: node_a['id'], simulatedBy: node_a['id']})
+
+    assert_equal 3, read_records(TABLE_NAMES[:node]).count, "Didn't create 3 nodes"
+    assert_equal 6, read_records(TABLE_NAMES[:wire]).count, "Didn't create 6 wires"
+    assert_equal 4, read_records(TABLE_NAMES[:message]).count, "Didn't create 4 messages"
+
+    # Set up spy to count invalidations published by JUST the delete operation
+    test_spy = SpyPubSubApi.new
+    NetSimApi.override_pub_sub_api_for_test(test_spy)
+
+    # Perform cascading multi-delete
+    yield([node_a['id'], node_b['id']])
+
+    # Assert nodes A and B are gone, but C is still there.
+    assert !record_exists(TABLE_NAMES[:node], node_a['id'])
+    assert !record_exists(TABLE_NAMES[:node], node_b['id'])
+    assert record_exists(TABLE_NAMES[:node], node_c['id'])
+
+    # Assert all wires and messages are gone
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
+    assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
+
+    # Even though we just deleted ten rows, there should only be three
+    # published invalidations, because three tables were affected
+    assert_equal(3, test_spy.publish_history.length)
+
+    # In fact, the invalidations produce a very complete account of what was done.
+    assert_equal(test_spy.publish_history[0],
+                 {channel: @shard_id,
+                  event: TABLE_NAMES[:wire],
+                  data: {action: 'delete',
+                         ids: [wire_ab['id'],
+                               wire_ac['id'],
+                               wire_ba['id'],
+                               wire_bc['id'],
+                               wire_ca['id'],
+                               wire_cb['id']]}})
+
+    assert_equal(test_spy.publish_history[1],
+                 {channel: @shard_id,
+                  event: TABLE_NAMES[:message],
+                  data: {action: 'delete',
+                         ids: [message_a_to_b['id'],
+                               message2_a_to_b['id'],
+                               message_b_to_a['id'],
+                               message2_b_to_a['id']]}})
+
+    assert_equal(test_spy.publish_history[2],
+                 {channel: @shard_id,
+                  event: TABLE_NAMES[:node],
+                  data: {action: 'delete',
+                         ids: [node_a['id'],
+                               node_b['id']]}})
+
+  ensure
+    delete_node(node_a['id'])
+    delete_node(node_b['id'])
+    delete_node(node_c['id'])
+    delete_wire(wire_ab['id'])
+    delete_wire(wire_ac['id'])
+    delete_wire(wire_ba['id'])
+    delete_wire(wire_bc['id'])
+    delete_wire(wire_ca['id'])
+    delete_wire(wire_cb['id'])
+    delete_message(message_a_to_b['id'])
+    delete_message(message2_a_to_b['id'])
+    delete_message(message_b_to_a['id'])
+    delete_message(message2_b_to_a['id'])
+    assert read_records(TABLE_NAMES[:node]).first.nil?, "Node table was not empty"
+    assert read_records(TABLE_NAMES[:wire]).first.nil?, "Wire table was not empty"
     assert read_records(TABLE_NAMES[:message]).first.nil?, "Message table was not empty"
   end
 

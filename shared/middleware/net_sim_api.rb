@@ -243,13 +243,16 @@ class NetSimApi < Sinatra::Base
   # Perform delete operation, potentially on multiple rows at once,
   # respecting cascading delete rules and producing as few invalidations
   # as possible.
+  #
+  # @private
+  # @param [String] shard_id
+  # @param [String] table_name
+  # @param [Array<String>] ids
   def delete_many(shard_id, table_name, ids)
     if table_name == TABLE_NAMES[:node]
       # Cascade deletions
-      ids.each do |id|
-        delete_wires_for_node(shard_id, id)
-        delete_messages_for_node(shard_id, id)
-      end
+      delete_wires_for_nodes(shard_id, ids)
+      delete_messages_for_nodes(shard_id, ids)
     end
     table = get_table(shard_id, table_name)
     table.delete(ids)
@@ -259,34 +262,32 @@ class NetSimApi < Sinatra::Base
   #
   # @private
   # @param [String] shard_id
-  # @param [Integer] node_id
-  # @returns [Integer|Array] ids of deleted wires
-  def delete_wires_for_node(shard_id, node_id)
+  # @param [Array<Integer>] node_ids
+  def delete_wires_for_nodes(shard_id, node_ids)
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
     wire_ids = wire_table.to_a.select {|wire|
-      wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+      node_ids.any? { |node_id|
+        wire['localNodeID'] == node_id or wire['remoteNodeID'] == node_id
+      }
     }.map {|wire|
       wire['id']
     }
     wire_table.delete(wire_ids)
-    wire_ids
   end
 
   # Delete all messages simulated by a given node_id
   #
   # @private
   # @param [String] shard_id
-  # @param [Integer] node_id
-  # @returns [Integer|Array] ids of deleted messages
-  def delete_messages_for_node(shard_id, node_id)
+  # @param [Array<Integer>] node_ids
+  def delete_messages_for_nodes(shard_id, node_ids)
     message_table = get_table(shard_id, TABLE_NAMES[:message])
     message_ids = message_table.to_a.select {|message|
-      message['simulatedBy'] == node_id
+      node_ids.member? message['simulatedBy']
     }.map {|message|
       message['id']
     }
     message_table.delete(message_ids)
-    message_ids
   end
 
 end
