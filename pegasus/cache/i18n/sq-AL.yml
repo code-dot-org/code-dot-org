@@ -212,6 +212,9 @@
   homepage_banner_text_main: Code.org dhe Bordi i Kolegjit bashkohen për të nxitur
     larmishmërinë në shkencat kompjuterike.
   homepage_banner_text_link: Mëso më shumë
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Mëso më shumë
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_blurb_hoc: Çdokush mund të mësojë. Fillo sot
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
@@ -1205,6 +1208,3 @@
     Pas kesaj te dhene nuk do te arrish te kesh akese ne Code.org.  <a href='%{it_requirements_url}'>
     Kliko ketu </a>  per te mesuar si te mundesosh HTTPS per Code.org.
   compatibility_https_hide_this_warning: Fshih këtë paralajmërim
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

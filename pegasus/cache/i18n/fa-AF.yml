@@ -220,6 +220,9 @@
   homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع
     علوم کامپیوتر را بهبود ببخشند.
   homepage_banner_text_link: بیشتر بیاموزید
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: بیشتر بیاموزید
   homepage_slot_text_title_hoc: ساعتی با کد
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
@@ -1228,6 +1231,3 @@
     داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال
     کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>.
   compatibility_https_hide_this_warning: مخفی کردن هشدار
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more
