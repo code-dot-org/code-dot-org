@@ -387,14 +387,28 @@ function showPNG() {
 }
 
 function onFinishedButtonClick() {
-  $(window).trigger('submit_button_pressed', [onBeforeSubmit, '#finished']);
+  var finishedButton = $('#finished');
+  if (finishedButton.attr('disabled')) {
+    return;
+  }
+  finishedButton.attr('disabled', true);
+
+  if (options.saveProject) {
+    options.saveProject(onSaveProjectComplete);
+  } else {
+    notifyDashboardSubmit();
+  }
 }
 
-function onBeforeSubmit(callback) {
-  if (options.saveProject) {
-    // TODO(dave): handle save failure
-    options.saveProject(callback);
-  } else {
-    callback();
-  }
+function onSaveProjectComplete() {
+  // TODO(dave): handle save failure
+  notifyDashboardSubmit();
+}
+
+function notifyDashboardSubmit() {
+  $(window).trigger('submit_button_pressed', onCompleteNoRedirect);
+}
+
+function onCompleteNoRedirect() {
+  finishedButton.attr('disabled', false);
 }
