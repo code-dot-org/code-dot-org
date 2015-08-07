@@ -2,17 +2,17 @@
 var utils = require('../utils');
 var _ = utils.getLodash();
 var i18n = require('./locale');
-var netsimGlobals = require('./netsimGlobals');
-var NodeType = require('./netsimConstants').NodeType;
+var NetSimGlobals = require('./NetSimGlobals');
+var NodeType = require('./NetSimConstants').NodeType;
 
 /** @type {function} */
-var getAssetUrl = netsimGlobals.getAssetUrlFunction();
+var getAssetUrl = NetSimGlobals.getAssetUrlFunction();
 
-/** @type {netsimLevelConfiguration} */
-var levelConfig = netsimGlobals.getLevelConfig();
+/** @type {NetSimLevelConfiguration} */
+var levelConfig = NetSimGlobals.getLevelConfig();
 
 /**
- * @typedef {Object} rowMetadata
+ * @typedef {Object} RowMetadata
  * @property {number} nodeID
  * @property {string} classAttr
  * @property {string} displayName
@@ -42,7 +42,7 @@ var omitOutgoingRequestTargets = function (node) {
 /**
  * For use with Array.prototype.map()
  * @param {NetSimNode} node
- * @returns {rowMetadata}
+ * @returns {RowMetadata}
  */
 var nodeToRowMetadata = function (node) {
   var classes = (node.getNodeType() === NodeType.ROUTER) ? ['router-row'] : ['user-row'];
@@ -64,8 +64,8 @@ var nodeToRowMetadata = function (node) {
 
 /**
  * For use with Array.prototype.sort()
- * @param {rowMetadata} a
- * @param {rowMetadata} b
+ * @param {RowMetadata} a
+ * @param {RowMetadata} b
  * @returns {number}
  */
 var displayNameSort = function (a, b) {

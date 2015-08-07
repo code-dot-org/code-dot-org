@@ -26,8 +26,8 @@ var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
-var netsimConstants = require('./netsimConstants');
-var netsimUtils = require('./netsimUtils');
+var NetSimConstants = require('./NetSimConstants');
+var NetSimUtils = require('./NetSimUtils');
 var DashboardUser = require('./DashboardUser');
 var NetSimBitLogPanel = require('./NetSimBitLogPanel');
 var NetSimLobby = require('./NetSimLobby');
@@ -42,11 +42,11 @@ var NetSimStatusPanel = require('./NetSimStatusPanel');
 var NetSimTabsComponent = require('./NetSimTabsComponent');
 var NetSimVisualization = require('./NetSimVisualization');
 
-var DnsMode = netsimConstants.DnsMode;
-var MessageGranularity = netsimConstants.MessageGranularity;
+var DnsMode = NetSimConstants.DnsMode;
+var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * The top-level Internet Simulator controller.
@@ -59,7 +59,7 @@ var NetSim = module.exports = function () {
   this.skin = null;
 
   /**
-   * @type {netsimLevelConfiguration}
+   * @type {NetSimLevelConfiguration}
    */
   this.level = {};
 
@@ -166,7 +166,7 @@ NetSim.prototype.injectStudioApp = function (studioApp) {
  * Called on page load.
  * @param {Object} config
  * @param {Object} config.skin
- * @param {netsimLevelConfiguration} config.level
+ * @param {NetSimLevelConfiguration} config.level
  * @param {string} config.rackEnv - development/production/etc.
  * @param {boolean} config.enableShowCode - Always false for NetSim
  * @param {function} config.loadAudio
@@ -178,7 +178,7 @@ NetSim.prototype.init = function(config) {
   }
 
   // Set up global singleton for easy access to simulator-wide settings
-  netsimGlobals.setRootControllers(this.studioApp_, this);
+  NetSimGlobals.setRootControllers(this.studioApp_, this);
 
   // Remove icon from all NetSim instructions dialogs
   config.skin.staticAvatar = null;
@@ -194,9 +194,9 @@ NetSim.prototype.init = function(config) {
 
   /**
    * Configuration for the loaded level
-   * @type {netsimLevelConfiguration}
+   * @type {NetSimLevelConfiguration}
    */
-  this.level = netsimUtils.scrubLevelConfiguration_(config.level);
+  this.level = NetSimUtils.scrubLevelConfiguration_(config.level);
 
   /**
    * Current operating environment, used to drive certain configuration.
@@ -472,7 +472,7 @@ NetSim.prototype.connectToShard = function (shardID, displayName) {
     return;
   }
 
-  this.shard_ = new NetSimShard(shardID, netsimGlobals.getPubSubConfig());
+  this.shard_ = new NetSimShard(shardID, NetSimGlobals.getPubSubConfig());
   this.createMyClientNode_(displayName, function (err, myNode) {
     this.myNode = myNode;
     this.shardChange.notifyObservers(this.shard_, this.myNode);

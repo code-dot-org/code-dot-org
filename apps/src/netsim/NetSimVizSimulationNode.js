@@ -14,12 +14,12 @@
 'use strict';
 
 require('../utils');
-var netsimConstants = require('./netsimConstants');
+var NetSimConstants = require('./NetSimConstants');
 var NetSimVizNode = require('./NetSimVizNode');
 
-var NodeType = netsimConstants.NodeType;
+var NodeType = NetSimConstants.NodeType;
 
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @param {NetSimNode} sourceNode
@@ -54,7 +54,7 @@ NetSimVizSimulationNode.inherits(NetSimVizNode);
 NetSimVizSimulationNode.prototype.configureFrom = function (sourceNode) {
   this.correspondingNodeID_ = sourceNode.entityID;
 
-  var levelConfig = netsimGlobals.getLevelConfig();
+  var levelConfig = NetSimGlobals.getLevelConfig();
   if (levelConfig.showHostnameInGraph) {
     this.setName(sourceNode.getHostname());
   } else {

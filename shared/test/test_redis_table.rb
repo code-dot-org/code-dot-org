@@ -8,18 +8,20 @@ require_relative 'spy_pub_sub_api'
 
 class RedisTableTest < Minitest::Unit::TestCase
 
-  def test_redis_tables
-    redis = FakeRedisClient.new
+  def setup
+    @redis = FakeRedisClient.new
+  end
 
+  def test_redis_tables
     # We take care to test multiple tables in the same shard
     # since all of those tables are combined in a single Redis key
     # and could be intermingled in the event of a bug.
 
-    table = RedisTable.new(redis, 'shard1', 'table')
+    table = RedisTable.new(@redis, 'shard1', 'table')
     # Create another table in the same shard.
-    table2 = RedisTable.new(redis, 'shard1', 'table2')
+    table2 = RedisTable.new(@redis, 'shard1', 'table2')
     # Create a third table in a different shard.
-    table3 = RedisTable.new(redis, 'shard2', 'table2')
+    table3 = RedisTable.new(@redis, 'shard2', 'table2')
 
     assert_equal [], table.to_a
     assert_raises(RedisTable::NotFound) { table.fetch(1) }
@@ -64,7 +66,7 @@ class RedisTableTest < Minitest::Unit::TestCase
     table3.insert(value)
 
     # Test getting multiple tables
-    table_map = RedisTable.get_tables(redis, 'shard1', {'table' => 1, 'table2' => 1})
+    table_map = RedisTable.get_tables(@redis, 'shard1', {'table' => 1, 'table2' => 1})
     assert_equal(
        {'table' =>
             {'rows' => [{'name' => 'alice', 'age' => 7, 'male'=>false, 'id' => 1}, {'bar' => 3, 'id' => 3}]},
@@ -72,35 +74,63 @@ class RedisTableTest < Minitest::Unit::TestCase
             {'rows' => [{'name' => 'bob', 'age' => 12, 'male' => true, 'id' => 1}]}},
        table_map)
 
-    table_map = RedisTable.get_tables(redis, 'shard1', {'table'  =>  3})
+    table_map = RedisTable.get_tables(@redis, 'shard1', {'table'  =>  3})
     assert_equal(
         {'table' =>  {'rows' => [{'bar' => 3, 'id' => 3}]}},
         table_map)
 
-    table_map = RedisTable.get_tables(redis, 'shard1', {'table'  =>  4, 'table2'  =>  1})
+    table_map = RedisTable.get_tables(@redis, 'shard1', {'table'  =>  4, 'table2'  =>  1})
     assert_equal(
         {'table' =>  {'rows' => []},
          'table2' =>  {'rows' => [{'name' => 'bob', 'age' => 12, 'male' => true, 'id' => 1}]}},
         table_map)
 
-    assert_equal({}, RedisTable.get_tables(redis, 'shard1', {}))
+    assert_equal({}, RedisTable.get_tables(@redis, 'shard1', {}))
 
     # Test reset shard and make sure it doesn't affect tables in other shards.
-    RedisTable.reset_shard('shard1', redis)
+    RedisTable.reset_shard('shard1', @redis)
     assert_equal([], table.to_a)
     assert_equal([], table2.to_a)
     assert_raises(RedisTable::NotFound) { table.fetch(1) }
     assert_equal [row(value, 1)], table3.to_a
   end
 
+  def test_delete_many
+    # We take care to test multiple tables in the same shard
+    # since all of those tables are combined in a single Redis key
+    # and could be intermingled in the event of a bug.
+
+    table = RedisTable.new(@redis, 'shard1', 'table')
+    other_table = RedisTable.new(@redis, 'shard1', 'table2')
+
+    value1 = {'name' => 'alice', 'age' => 7, 'male' => false}
+    value2 = {'name' => 'bob', 'age' => 12, 'male' => true}
+    value3 = {'name' => 'chuck', 'age' => 14, 'male' => true}
+    table.insert(value1)
+    table.insert(value2)
+    table.insert(value3)
+    other_table.insert(value1)
+
+    # Check initial table set-up
+    assert_equal [row(value1, 1), row(value2, 2), row(value3, 3)], table.to_a
+    assert_equal [row(value1, 1)], other_table.to_a
+
+    # Delete two rows at once
+    table.delete([1, 3])
+
+    # Check that multi-delete worked
+    assert_equal [row(value2, 2)], table.to_a
+    assert_equal [row(value1, 1)], other_table.to_a
+
+    # Clean up
+    RedisTable.reset_shard('shard1', @redis)
+    RedisTable.reset_shard('shard2', @redis)
+  end
+
   private
 
   def row(row, id)
     row.merge({'id' => id})
-  end
-
-  def make_pubsub_event(channel, event, data)
-    { :channel => channel, :event => event, :data => data }
   end
 
 end

@@ -125,11 +125,12 @@ class RedisTable
     merge_id(hash, id)
   end
 
-  # Deletes a row.
+  # Deletes multiple rows, notifying other clients using the pubsub service
   #
-  # @param [Integer] id The id for the new row
-  def delete(id)
-    @props.delete(row_key(id))
+  # @param [Integer, Array<Integer>] ids The row IDs to delete.
+  def delete(ids)
+    ids = [ids] unless ids.is_a?(Array)
+    @props.delete(ids.map {|id| row_key(id)})
   end
 
   # Deletes all the tables and rows in a shard.

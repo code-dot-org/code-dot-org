@@ -19,7 +19,7 @@ var _ = require('../utils').getLodash();
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * Generator and controller for contents of modal dialog that reveals
@@ -184,12 +184,17 @@ NetSimRouterLogModal.prototype.setRouter = function (router) {
 /**
  * Helper method to determine whether or we are currently in
  * "All-Router" mode, or dealing with a single router. Currently is
- * determined exclusively by the current connection state, but may later
- * be expanded to allow switching between the two.
+ * true if we are in "connected routers" mode, and is otherwise true iff
+ * we are connected to a router.
  * @returns {boolean}
  */
 NetSimRouterLogModal.prototype.isAllRouterMode = function () {
-  return !(this.router_);
+  var levelConfig = NetSimGlobals.getLevelConfig();
+  if (levelConfig.connectedRouters) {
+    return true;
+  } else {
+    return !(this.router_);
+  }
 };
 
 /**
@@ -216,11 +221,11 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
 
 /**
  * Handle log table changes.
- * @param {logEntryRow[]} logRows
+ * @param {LogEntryRow[]} logRows
  * @private
  */
 NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
-  var headerSpec = netsimGlobals.getLevelConfig().routerExpectsPacketHeader;
+  var headerSpec = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
   this.logEntries_ = logRows.map(function (row) {
     return new NetSimLogEntry(this.shard_, row, headerSpec);
   }, this);

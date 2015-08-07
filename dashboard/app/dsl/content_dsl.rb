@@ -19,6 +19,8 @@ class ContentDSL < BaseDSL
   # Markdown (i18n not yet supported)
   def markdown(md) @hash[:markdown] = md end
 
+  def teacher_markdown(md) @hash[:teacher_markdown] = md end
+
   def pre_title(text) @hash[:pre_title] = text end
   def pre_body(text) @hash[:pre_body] = text end
   def pre_image(text) @hash[:pre_image] = text end

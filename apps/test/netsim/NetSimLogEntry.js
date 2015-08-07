@@ -5,19 +5,19 @@ var assertWithinRange = testUtils.assertWithinRange;
 var assertOwnProperty = testUtils.assertOwnProperty;
 var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
 var Packet = require('@cdo/apps/netsim/Packet');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
-var dataConverters = require('@cdo/apps/netsim/dataConverters');
-var binaryToBase64 = dataConverters.binaryToBase64;
-var base64ToBinary = dataConverters.base64ToBinary;
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
+var DataConverters = require('@cdo/apps/netsim/DataConverters');
+var binaryToBase64 = DataConverters.binaryToBase64;
+var base64ToBinary = DataConverters.base64ToBinary;
 
 describe("NetSimLogEntry", function () {
   var testShard;
 
   beforeEach(function () {
-    netsimTestUtils.initializeGlobalsToDefaultValues();
+    NetSimTestUtils.initializeGlobalsToDefaultValues();
     testShard = fakeShard();
   });
 
@@ -82,7 +82,7 @@ describe("NetSimLogEntry", function () {
 
       NetSimLogEntry.create(testShard, nodeID, binary, status, function () {});
 
-      testShard.logTable.readAll(function (err, rows) {
+      testShard.logTable.refresh(function (err, rows) {
         var row = rows[0];
         var rowBinary = base64ToBinary(row.base64Binary.string, row.base64Binary.len);
         assertEqual(row.nodeID, nodeID);
@@ -119,8 +119,8 @@ describe("NetSimLogEntry", function () {
   });
 
   it ("can extract binary data based on standard format", function () {
-    netsimGlobals.getLevelConfig().addressFormat = '4';
-    netsimGlobals.getLevelConfig().packetCountBitWidth = 4;
+    NetSimGlobals.getLevelConfig().addressFormat = '4';
+    NetSimGlobals.getLevelConfig().packetCountBitWidth = 4;
     var logEntry = new NetSimLogEntry(null, {
       base64Binary: binaryToBase64('000100100011010001010110')
     }, [
