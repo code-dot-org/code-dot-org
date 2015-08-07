@@ -181,7 +181,7 @@ Blockly.BlockSvgFunctional.prototype.renderDrawRightInlineFunctional_ =
     function(renderInfo, input, connectionsXY) {
   // todo (brent) - RTL
   var inputTopLeft = {
-    x: renderInfo.curX,
+    x: renderInfo.curX + (input.extraSpace || 0),
     y: renderInfo.curY + BS.INLINE_PADDING_Y
   };
 
