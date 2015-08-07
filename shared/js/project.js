@@ -5,7 +5,18 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
+var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
+
+// Name of the packed source file
+var SOURCE_FILE = 'main.json';
+
+function packSourceFile() {
+  return JSON.stringify({
+    source: current.levelSource,
+    html: current.levelHtml
+  });
+}
 
 var events = {
   // Fired when run state changes or we enter/exit design mode
@@ -218,7 +229,7 @@ var projects = module.exports = {
    * callback function was provided.
    * @param {string?} source Optional source to be provided, saving us another
    *   call to sourceHandler.getLevelSource
-   * @param {function} callback Fucntion to be called after saving
+   * @param {function} callback Function to be called after saving
    */
   save: function(source, callback) {
     if (arguments.length < 2) {
@@ -236,9 +247,12 @@ var projects = module.exports = {
     if (channelId && current.isOwner) {
       channels.update(channelId, current, function (err, data) {
         this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
+        sources.put(channelId, packSourceFile(), SOURCE_FILE, function (err, data) {
+          executeCallback(callback, data);
+        }.bind(this));
       }.bind(this));
     } else {
+      // TODO: remove once the server is providing the channel ID (/c/ remix uses `copy`)
       channels.create(current, function (err, data) {
         this.updateCurrentData_(err, data, true);
         executeCallback(callback, data);

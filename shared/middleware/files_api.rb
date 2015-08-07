@@ -22,7 +22,7 @@ class FilesApi < Sinatra::Base
       %w(.jpg .jpeg .gif .png .mp3).include? extension
     when 'sources'
       # Only allow JavaScript and Blockly XML source files.
-      %w(.js .xml).include? extension
+      %w(.js .xml .txt .json).include? extension
     else
       not_found
     end
