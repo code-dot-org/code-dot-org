@@ -337,10 +337,11 @@ var NetSimLogPacket = function (packetBinary, packetID, options) {
  * Re-render div contents to represent the packet in a different way.
  */
 NetSimLogPacket.prototype.render = function () {
+  var encodingsHash = NetSimEncodingControl.encodingsAsHash(this.encodings_);
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
     packetSpec: this.packetSpec_,
-    enabledEncodings: this.encodings_,
+    enabledEncodingsHash: encodingsHash,
     chunkSize: this.chunkSize_,
     isMinimized: this.isMinimized
   });

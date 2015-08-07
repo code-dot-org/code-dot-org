@@ -246,6 +246,14 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal @program, assigns[:level_view_options][:start_blocks]
   end
 
+  test "should load file contents when editing a dsl defined level" do
+    level = Level.find_by_name 'Test External Markdown'
+    get :edit, id: level.id
+
+    assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
+    assert_equal "name 'Test External Markdown'", assigns(:level).dsl_text.split("\n").first
+  end
+
   test "should update level" do
     patch :update, id: @level, level: {  }
     # Level update now uses AJAX callback, returns a 200 JSON response instead of redirect
