@@ -1810,6 +1810,19 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
   }
 };
 
+/**
+ * @returns {boolean} True if we have a function or variable named "" (empty string)
+ */
+StudioApp.prototype.hasEmptyFunctionOrVariableName = function () {
+  return Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
+    if (block.type !== 'functional_definition') {
+      return false;
+    }
+
+    return !(block.getProcedureInfo().name);
+  });
+};
+
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
   var svgName = options.svg;
   var origin = options.origin;
