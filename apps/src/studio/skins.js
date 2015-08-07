@@ -66,17 +66,6 @@ function loadInfinity(skin, assetUrl) {
   skin.projectileSpriteWidth  = 70;
   skin.projectileSpriteHeight = 70;
 
-  // Dimensions of a rectangle in collidable center in which item collisions occur.
-  skin.itemCollisionRectWidth  = 50;
-  skin.itemCollisionRectHeight = 50;
-
-  // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
-  // For isometric-style rendering, this would normally be the feet.
-  skin.wallCollisionRectOffsetX = 0;
-  skin.wallCollisionRectOffsetY = 24;
-  skin.wallCollisionRectWidth  = 30;
-  skin.wallCollisionRectHeight = 20;
-
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
@@ -250,6 +239,10 @@ function loadHoc2015(skin, assetUrl) {
   // Dimensions of a rectangle in collidable center in which item collisions occur.
   skin.itemCollisionRectWidth  = 50;
   skin.itemCollisionRectHeight = 50;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 50;
+  skin.spriteCollisionRectHeight = 50;
 
   // Offset & dimensions of a rectangle in collidable in which wall collisions occur.
   // For isometric-style rendering, this would normally be the feet.
