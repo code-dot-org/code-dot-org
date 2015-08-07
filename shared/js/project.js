@@ -59,6 +59,7 @@ var PathPart = {
  * @property {string} level Path where this particular app type is hosted
  */
 var current;
+var currentSourceVersionId;
 var isEditing = false;
 
 var projects = module.exports = {
@@ -253,7 +254,9 @@ var projects = module.exports = {
       current.migratedToS3 = true;
       channels.update(channelId, current, function (err, data) {
         this.updateCurrentData_(err, data, false);
-        sources.put(channelId, packSourceFile(), SOURCE_FILE, function (err, data) {
+        var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+        sources.put(channelId, packSourceFile(), filename, function (err, response) {
+          currentSourceVersionId = response.versionId;
           executeCallback(callback, data);
         }.bind(this));
       }.bind(this));
