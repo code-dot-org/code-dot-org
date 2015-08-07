@@ -57,6 +57,9 @@ var SVG_NS = "http://www.w3.org/2000/svg";
 // uniqueId that increments by 1 each time an element is created
 var uniqueId = 0;
 
+// Whether we are showing debug information
+var showDebugInfo = false;
+
 /**
  * Create a namespace for the application.
  */
@@ -2177,7 +2180,9 @@ function cellId(prefix, row, col) {
  */
 
 Studio.drawDebugRect = function(className, x, y, width, height) {
-  return;
+  if (!showDebugInfo) {
+    return;
+  }
 
   var svg = document.getElementById('svgStudio');
   var group = document.createElementNS(SVG_NS, 'g');
@@ -2628,6 +2633,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setItemAction(cmd.opts);
       break;
+    case 'showDebugInfo':
+      studioApp.highlight(cmd.id);
+      Studio.showDebugInfo(cmd.opts);
+      break;
     case 'onEvent':
       studioApp.highlight(cmd.id);
       Studio.onEvent(cmd.opts);
@@ -2719,7 +2728,10 @@ Studio.setItemAction = function (opts) {
         item.roamGrid();
     }
   }
+};
 
+Studio.showDebugInfo = function (opts) {
+  showDebugInfo = opts.value;
 };
 
 Studio.vanishActor = function (opts) {
