@@ -37,6 +37,7 @@ goog.require('goog.array');
 /** @const */ var FUNCTION_BLOCK_VERTICAL_MARGIN = Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN; // px
 /** @const */ var HEADER_HEIGHT = 30; // px
 /** @const */ var DEFAULT_EXAMPLE_CALL_SECTION_WIDTH = 100; // px
+/** @const */ var MARGIN_BLOCK_TO_CALL_SLOT = 13; // px
 
 /** @const */ var USER_TYPE_CHOICES = [
   Blockly.BlockValueType.NUMBER,
@@ -199,6 +200,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
   goog.dom.appendChild(this.exampleAreaDiv, this.resultText);
 
   this.examplesTableGroup = Blockly.createSvgElement('g', {}, canvasToDrawOn);
+  this.definitionTableGroup = Blockly.createSvgElement('g', {}, canvasToDrawOn);
 
   this.topHorizontalLine = Blockly.createSvgElement('rect', {
     'fill': '#000'
@@ -207,10 +209,30 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
   // TODO(bjordan): get horizontal line #X helper, lay out below examples
 
-  this.verticalMidline = Blockly.createSvgElement('rect', {
+
+  this.verticalExampleMidline = Blockly.createSvgElement('rect', {
     'fill': '#000'
   }, this.examplesTableGroup);
-  this.verticalMidline.setAttribute('width', 2.0);
+  this.verticalExampleMidline.setAttribute('width', 2.0);
+
+
+  this.grayDefinitionBackground = Blockly.createSvgElement('rect', {
+    'fill': '#DDD'
+  }, this.definitionTableGroup);
+
+  this.verticalDefinitionMidline = Blockly.createSvgElement('rect', {
+    'fill': '#000'
+  }, this.definitionTableGroup);
+  this.verticalDefinitionMidline.setAttribute('width', 2.0);
+
+  this.horizontalDefinitionTopLine = Blockly.createSvgElement('rect', {
+    'fill': '#000'
+  }, this.definitionTableGroup);
+  this.horizontalDefinitionTopLine.setAttribute('height', 2.0);
+  this.horizontalDefinitionBottomLine = Blockly.createSvgElement('rect', {
+    'fill': '#000'
+  }, this.definitionTableGroup);
+  this.horizontalDefinitionBottomLine.setAttribute('height', 2.0);
 
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
@@ -243,7 +265,10 @@ Blockly.ContractEditor.prototype.create_ = function() {
         this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this),
           this.hiddenDefinitionBlocks_);
-
+        this.verticalDefinitionMidline.style.display =
+            isNowCollapsed ? 'none' : 'block';
+        this.grayDefinitionBackground.style.display = isNowCollapsed ? 'none' : 'block';
+        this.definitionTableGroup.style.display = isNowCollapsed ? 'none' : 'block';
         this.position_();
       }, this),
       highlightBox: sharedHighlightBox,
@@ -251,6 +276,15 @@ Blockly.ContractEditor.prototype.create_ = function() {
         if (this.flyout_) {
           currentY = this.positionFlyout_(currentY);
         }
+
+        var verticalMidlineY = currentY;
+        this.horizontalDefinitionTopLine.setAttribute('transform',
+            'translate(' + 0 + ',' + verticalMidlineY + ')');
+        this.verticalDefinitionMidline.setAttribute('transform',
+            'translate(' + this.getVerticalMidlineOffset_() + ',' + verticalMidlineY + ')');
+        this.grayDefinitionBackground.setAttribute('transform',
+            'translate(' + 0 + ',' + currentY + ')');
+        this.horizontalDefinitionTopLine.setAttribute('width', this.getFullWidth());
 
         currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
 
@@ -263,7 +297,16 @@ Blockly.ContractEditor.prototype.create_ = function() {
           currentY += this.functionDefinitionBlock.getHeightWidth().height;
         }
 
-        return currentY + FUNCTION_BLOCK_VERTICAL_MARGIN;
+        currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
+
+        this.horizontalDefinitionBottomLine.setAttribute('transform',
+            'translate(' + 0 + ',' + currentY + ')');
+        this.horizontalDefinitionBottomLine.setAttribute('width', this.getFullWidth());
+        this.verticalDefinitionMidline.setAttribute('height', currentY - verticalMidlineY);
+        this.grayDefinitionBackground.setAttribute('height', currentY - verticalMidlineY);
+        this.grayDefinitionBackground.setAttribute('width', this.getVerticalMidlineOffset_());
+
+        return currentY;
       }, this)
     });
 
@@ -795,6 +838,18 @@ Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newNam
 };
 
 /**
+ * Returns the x offset for the vertical midline (w.r.t. the left side of the drawing
+ * canvas).
+ * @return {number}
+ * @private
+ */
+Blockly.ContractEditor.prototype.getVerticalMidlineOffset_ = function () {
+  return EXAMPLE_BLOCK_MARGIN_LEFT +
+      this.getMaxExampleCallBlockWidth_() +
+      MARGIN_BLOCK_TO_CALL_SLOT;
+};
+
+/**
  * Go through each of our example blocks and figure out which is widest
  * @return {number}
  */
@@ -807,7 +862,7 @@ Blockly.ContractEditor.prototype.getMaxExampleCallBlockWidth_ = function () {
     }
     var width = functionCallBlock.getHeightWidth().width;
     return Math.max(previousMax, width);
-  }, 0);
+  }, DEFAULT_EXAMPLE_CALL_SECTION_WIDTH);
 };
 
 /**
@@ -850,8 +905,7 @@ Blockly.ContractEditor.prototype.updateExampleResult = function (block, result) 
  * @returns {number} Updated y location
  */
 Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
-  var maxWidth = this.getMaxExampleCallBlockWidth_() ||
-      DEFAULT_EXAMPLE_CALL_SECTION_WIDTH;
+  var maxWidth = this.getMaxExampleCallBlockWidth_();
 
   var metrics = this.modalBlockSpace.getMetrics();
 
@@ -864,12 +918,10 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
 
   var newY = currentY;
 
-  var marginEgBlockToCallSlot = 13;
-  var verticalMidlineOffset = (EXAMPLE_BLOCK_MARGIN_LEFT + maxWidth +
-    marginEgBlockToCallSlot);
+  var verticalMidlineOffset = this.getVerticalMidlineOffset_();
 
   var verticalMidlineY = newY;
-  this.verticalMidline.setAttribute('transform',
+  this.verticalExampleMidline.setAttribute('transform',
     'translate(' + verticalMidlineOffset + ',' + newY + ')');
 
   var exampleSectionVisible = this.exampleBlocks.length > 0;
@@ -909,12 +961,12 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
   }
   this.exampleViews_.length = this.exampleBlocks.length;
 
-  this.verticalMidline.style.display = exampleSectionVisible ? 'block' : 'none';
+  this.verticalExampleMidline.style.display = exampleSectionVisible ? 'block' : 'none';
   this.topHorizontalLine.style.display = exampleSectionVisible ? 'block' : 'none';
   this.callText.style.display = exampleSectionVisible ? 'block' : 'none';
   this.resultText.style.display = exampleSectionVisible ? 'block' : 'none';
 
-  this.verticalMidline.setAttribute('height', newY - verticalMidlineY);
+  this.verticalExampleMidline.setAttribute('height', newY - verticalMidlineY);
 
   newY += blockSplitMargin;
 
