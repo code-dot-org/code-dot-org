@@ -64,7 +64,7 @@ module Ops
 
     test 'Ops team can add multiple cohorts to a workshop' do
       another_cohort = create(:cohort)
-      workshop_params = {"id"=>@workshop.id, "name"=>@workshop.name, "program_type"=>"5", "location"=>@workshop.location, "instructions"=>nil, "cohorts"=>[{"id"=>@cohort.id}, {"id"=>another_cohort.id}], "segments"=>nil, "facilitators"=>nil, "teachers"=>nil}
+      workshop_params = {"id"=>@workshop.id, "name"=>@workshop.name, "program_type"=>"5", "location"=>@workshop.location, "instructions"=>nil, "cohorts"=>[{"id"=>@cohort.id}, {"id"=>another_cohort.id}], "facilitators"=>nil, "teachers"=>nil}
       patch :update, id: @workshop.id, workshop: workshop_params
       assert_response :success
       @workshop.reload

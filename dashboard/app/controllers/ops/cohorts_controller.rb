@@ -150,7 +150,7 @@ module Ops
       return unless @added_teachers.present? || @removed_teachers.present?
       return unless current_user.district_contact?
 
-      OpsMailer.district_contact_added_teachers(current_user, @cohort, @added_teachers, @removed_teachers).deliver
+      OpsMailer.district_contact_added_teachers(current_user, @cohort, @added_teachers, @removed_teachers).deliver_now
     end
   end
 end

@@ -130,7 +130,7 @@ module Ops
     def notify_ops
       return unless @added_unexpected_teachers.present?
       return unless current_user.facilitator?
-      OpsMailer.unexpected_teacher_added(current_user, @added_unexpected_teachers, @workshop).deliver
+      OpsMailer.unexpected_teacher_added(current_user, @added_unexpected_teachers, @workshop).deliver_now
     end
   end
 end
