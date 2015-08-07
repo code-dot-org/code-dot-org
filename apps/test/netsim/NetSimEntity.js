@@ -118,11 +118,9 @@ describe("NetSimEntity", function () {
       NetSimEntity.create(NetSimClientNode, testShard, function () {});
       assertTableSize(testShard, 'nodeTable', 3);
 
-      var nodes;
-      testShard.nodeTable.refresh(function (err, rows) {
-        nodes = rows.map(function (row) {
-          return new NetSimClientNode(testShard, row);
-        });
+      testShard.nodeTable.refresh();
+      var nodes = testShard.nodeTable.readAll().map(function (row) {
+        return new NetSimClientNode(testShard, row);
       });
       assertEqual(3, nodes.length);
       assert(nodes[0] instanceof NetSimClientNode);

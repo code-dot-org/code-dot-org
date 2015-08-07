@@ -1851,6 +1851,14 @@ Studio.checkForPreExecutionFailure = function () {
     return true;
   }
 
+  if (studioApp.hasEmptyFunctionOrVariableName()) {
+    Studio.result = false;
+    Studio.testResults = TestResults.EMPTY_FUNCTION_NAME;
+    Studio.message = commonMsg.unnamedFunction();
+    Studio.preExecutionFailure = true;
+    return true;
+  }
+
   var outcome = Studio.checkExamples_();
   if (outcome.result !== undefined) {
     $.extend(Studio, outcome);

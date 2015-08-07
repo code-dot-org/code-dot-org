@@ -242,15 +242,6 @@ $websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, A
 
     # If I'm daemon, do some additional work:
     if rack_env?(:production) && CDO.daemon
-      # BUGBUG: Laurel added this here. It probably belongs in the top-level Rakefile as these values
-      #   should be seeded to memcached prior to restarting the Dashboard service which will already
-      #   have happened by this moment. In practice, no traffic hits Daemon so this isn't critical, but
-      #   should be addressed.
-      Dir.chdir(dashboard_dir) do
-        HipChat.log "Putting <b>dashboard</b> scripts in memcached..."
-        RakeUtils.rake 'seed:script_cache_to_memcached'
-      end
-
       # Update the front-end instances, in parallel, but not all at once. When the infrstracture is
       # properly scaled we should be able to upgrade 20% of the front-ends at a time. Right now we're
       # over-subscribed (have more resources than we need) so we're restarting 50% of the front-ends.

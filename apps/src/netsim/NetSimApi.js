@@ -146,19 +146,23 @@ var tableApi = {
   },
 
   /**
-   * Remove a row.
-   * @param {number} id - The row identifier.
+   * Remove multiple rows at once.
+   * @param {number[]} ids - The row IDs to remove.
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
-   * @param {boolean} [async] - default TRUE.  Pass FALSE only in special
-   *        onUnload cleanup attempt.
+   * @param {boolean} [async] default TRUE.
    */
-  deleteRow: function(id, callback, async) {
+  deleteRows: function(ids, callback, async) {
     async = async !== false; // `undefined` maps to true
 
+    // Generate query string in the form "id[]=1&id[]=2&..."
+    var queryString = ids.map(function (id) {
+      return 'id[]=' + id;
+    }).join('&');
+
     $.ajax({
-      url: this.baseUrl + "/" + id + "/delete",
-      type: "post",
-      dataType: "json",
+      url: this.baseUrl + '?' + queryString,
+      type: 'delete',
+      dataType: 'json',
       async: async
     }).done(function(data, text) {
       callback(null, true);

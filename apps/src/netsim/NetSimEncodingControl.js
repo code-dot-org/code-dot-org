@@ -122,3 +122,17 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
   rootElement.find(makeEncodingRowSelector(encodings)).show();
   rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
 };
+
+/**
+ * Static helper that converts a given array of encodings to an object
+ * mapping each encoding to `true`. Used for more efficient
+ * isEncodingEnabled checks
+ * @param {EncodingType[]} encodings
+ * @returns {Object.<EncodingType, boolean>}
+ */
+NetSimEncodingControl.encodingsAsHash = function (encodings) {
+  return encodings.reduce(function (hash, encoding) {
+    hash[encoding] = true;
+    return hash;
+  }, {});
+};

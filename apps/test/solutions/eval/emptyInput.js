@@ -168,5 +168,168 @@ module.exports = {
       '  </block>' +
       '</xml>'
     },
+
+    {
+      description: "unnamed function",
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTION_NAME
+      },
+      customValidator: function (assert) {
+        assert.equal(Eval.message, commonMsg.unnamedFunction());
+        return true;
+      },
+      xml: '<xml>' +
+        '<block type="functional_definition" inline="false" editable="false">' +
+        '  <mutation>' +
+        '    <arg name="size" type="Number"></arg>' +
+        '    <description>Produces a  of given size</description>' +
+        '    <outputtype>Image</outputtype>' +
+        '  </mutation>' +
+        '  <title name="NAME"></title>' +
+        '  <functional_input name="STACK">' +
+        '    <block type="functional_triangle" inline="false" id="callout_here">' +
+        '      <functional_input name="SIZE">' +
+        '        <block type="functional_parameters_get">' +
+        '          <mutation>' +
+        '            <outputtype>Number</outputtype>' +
+        '          </mutation>' +
+        '          <title name="VAR">size</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="STYLE">' +
+        '        <block type="functional_style">' +
+        '          <title name="VAL">solid</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="COLOR">' +
+        '        <block type="functional_string">' +
+        '          <title name="VAL">green</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        '<block type="functional_display" inline="false" deletable="false" movable="false">' +
+        '  <functional_input name="ARG1">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="">' +
+        '        <arg name="size" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">200</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+      '</xml>'
+    },
+
+    {
+      description: "unnamed variable",
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTION_NAME
+      },
+      customValidator: function (assert) {
+        assert.equal(Eval.message, commonMsg.unnamedFunction());
+        return true;
+      },
+      xml: '<xml>' +
+        '<block type="functional_definition" inline="false" editable="false">' +
+        '  <mutation>' +
+        '    <outputtype>Image</outputtype>' +
+        '    <isfunctionalvariable>true</isfunctionalvariable>' +
+        '  </mutation>' +
+        '  <title name="NAME"></title>' +
+        '  <functional_input name="STACK">' +
+        '    <block type="functional_triangle" inline="false">' +
+        '      <functional_input name="SIZE">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">10</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="STYLE">' +
+        '        <block type="functional_string">' +
+        '          <title name="VAL">solid</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="COLOR">' +
+        '        <block type="functional_string">' +
+        '          <title name="VAL">green</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        '<block type="functional_display" inline="false" deletable="false" movable="false">' +
+        '  <functional_input name="ARG1">' +
+        '    <block type="functional_call">' +
+        '      <mutation name=""></mutation>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+      '</xml>'
+    },
+
+    {
+      description: "unnamed function",
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTION_NAME
+      },
+      customValidator: function (assert) {
+        assert.equal(Eval.message, commonMsg.unnamedFunction());
+        return true;
+      },
+      xml: '<xml>' +
+        '<block type="functional_definition" inline="false" editable="false">' +
+        '  <mutation>' +
+        '    <arg name="size" type="Number"></arg>' +
+        '    <description>Produce a green triangle of given size</description>' +
+        '    <outputtype>Image</outputtype>' +
+        '  </mutation>' +
+        '  <title name="NAME"></title>' +
+        '  <functional_input name="STACK">' +
+        '    <block type="functional_triangle" inline="false">' +
+        '      <functional_input name="SIZE">' +
+        '        <block type="functional_parameters_get">' +
+        '          <mutation>' +
+        '            <outputtype>Number</outputtype>' +
+        '          </mutation>' +
+        '          <title name="VAR">size</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="STYLE">' +
+        '        <block type="functional_style">' +
+        '          <title name="VAL">solid</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="COLOR">' +
+        '        <block type="functional_string">' +
+        '          <title name="VAL">green</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        '<block type="functional_display" inline="false" deletable="false" movable="false">' +
+        '  <functional_input name="ARG1">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="">' +
+        '        <arg name="size" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">125</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+      '</xml>'
+    },
   ]
 };
