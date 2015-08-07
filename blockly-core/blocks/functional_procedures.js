@@ -45,9 +45,10 @@ Blockly.Blocks.functional_definition = {
     var name = Blockly.Procedures.findLegalName(Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE, this);
     this.appendDummyInput()
         .appendTitle(Blockly.Msg.DEFINE_FUNCTION_DEFINE)
-        .appendTitle(new Blockly.FieldTextInput(name, Blockly.Procedures.rename), 'NAME')
+        .appendTitle(new Blockly.FieldTextInput(name, Blockly.Procedures.rename), 'NAME');
+    this.appendDummyInput('PARAMSINPUT')
         .appendTitle('', 'PARAMS');
-    this.appendFunctionalInput('STACK');
+    this.appendFunctionalInput('STACK').setInline(true);
     this.setFunctional(true);
     this.setTooltip(Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP);
     /**

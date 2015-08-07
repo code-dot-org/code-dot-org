@@ -289,6 +289,22 @@ Blockly.ContractEditor.prototype.create_ = function() {
         currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
 
         if (this.functionDefinitionBlock) {
+          /**
+           * Add extra space to align definition with midline
+           */
+          var input = this.functionDefinitionBlock.getInput('STACK');
+          var maxWidth = this.getMaxExampleCallBlockWidth_();
+          var originalExtraSpace = input.extraSpace;
+
+          // TODO(bjordan): private access
+          var paramTitle = this.functionDefinitionBlock.getTitle_('PARAMS');
+
+          var paramsWidth = paramTitle.getSize().width;
+          input.extraSpace = maxWidth - paramsWidth;
+          if (input.extraSpace !== originalExtraSpace) {
+            this.functionDefinitionBlock.getSvgRenderer().render(true);
+          }
+
           var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
           var functionDefinitionX = Blockly.RTL ?
             fullWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
