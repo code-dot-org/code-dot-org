@@ -571,7 +571,7 @@ class UserTest < ActiveSupport::TestCase
 
     old_password = user.encrypted_password
 
-    user.reset_password!('goodpassword', 'goodpassword')
+    user.reset_password('goodpassword', 'goodpassword')
 
     # changed password
     assert user.reload.encrypted_password != old_password

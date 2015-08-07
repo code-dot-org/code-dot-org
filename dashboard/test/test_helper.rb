@@ -163,10 +163,11 @@ class ActionController::TestCase
 
   # override default html document to ask it to raise errors on invalid html
   def html_document
-    strict = true
-    xml = (@response.content_type =~ /xml$/)
-
-    @html_document ||= HTML::Document.new(@response.body, strict, xml)
+    @html_document ||= if @response.content_type === Mime::XML
+                         Nokogiri::XML::Document.parse(@response.body) { |config| config.strict }
+                       else
+                         Nokogiri::HTML::Document.parse(@response.body) { |config| config.strict }
+                       end
   end
 
   def assert_redirected_to_sign_in

@@ -26,7 +26,7 @@ class Cohort < ActiveRecord::Base
     return if script.nil?
     UserScript.find_or_create_by(user_id: teacher.id, script_id: script.id) do |user_script|
       user_script.assigned_at = Time.now
-      OpsMailer.script_assigned(user: teacher, script: script).deliver
+      OpsMailer.script_assigned(user: teacher, script: script).deliver_now
     end
   end
 
