@@ -134,6 +134,7 @@ class Deliverer
     subject = header['subject'].to_s.strip
     message.puts 'Subject: ' + subject unless subject.empty?
 
+    message.puts "X-Unsubscribe-Web: <#{unsubscribe_url}>"
     message.puts "List-Unsubscribe: <#{unsubscribe_url}>"
 
     message.puts 'MIME-Version: 1.0'
