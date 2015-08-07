@@ -1819,7 +1819,7 @@ StudioApp.prototype.hasEmptyFunctionOrVariableName = function () {
       return false;
     }
 
-    return block.getProcedureInfo().name === '';
+    return !(block.getProcedureInfo().name);
   });
 };
 
