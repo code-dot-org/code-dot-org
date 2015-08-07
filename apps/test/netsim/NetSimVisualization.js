@@ -7,8 +7,8 @@
 var testUtils = require('../util/testUtils');
 testUtils.setupLocale('netsim');
 var assert = testUtils.assert;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
 
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSim = require('@cdo/apps/netsim/netsim');
@@ -20,10 +20,10 @@ var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode'
 var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
 var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
 
-var netsimConstants = require('@cdo/apps/netsim/netsimConstants');
-var netsimGlobals = require('@cdo/apps/netsim/netsimGlobals');
-var DnsMode = netsimConstants.DnsMode;
-var EncodingType = netsimConstants.EncodingType;
+var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
+var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var DnsMode = NetSimConstants.DnsMode;
+var EncodingType = NetSimConstants.EncodingType;
 
 describe("NetSimVisualization", function () {
   
@@ -97,8 +97,8 @@ describe("NetSimVisualization", function () {
   describe("broadcast mode", function () {
 
     beforeEach(function () {
-      netsimTestUtils.initializeGlobalsToDefaultValues();
-      netsimGlobals.getLevelConfig().broadcastMode = true;
+      NetSimTestUtils.initializeGlobalsToDefaultValues();
+      NetSimGlobals.getLevelConfig().broadcastMode = true;
 
       testShard = fakeShard();
 
@@ -170,7 +170,7 @@ describe("NetSimVisualization", function () {
   describe("router network with peripheral connection", function () {
 
     beforeEach(function () {
-      netsimTestUtils.initializeGlobalsToDefaultValues();
+      NetSimTestUtils.initializeGlobalsToDefaultValues();
       testShard = fakeShard();
 
       alphaNode = makeRemoteClient('alpha');
@@ -254,7 +254,7 @@ describe("NetSimVisualization", function () {
         var newNode = makeRemoteClient('gamma');
 
         // Trigger visualization update, synchronous in tests.
-        testShard.nodeTable.readAll(function (_, data) {
+        testShard.nodeTable.refresh(function (_, data) {
           netSimVis.onNodeTableChange_(data);
         });
 
@@ -293,7 +293,7 @@ describe("NetSimVisualization", function () {
         makeRemoteWire(deltaNode, router, [deltaNode, router]);
 
         // Trigger visualization update, synchronous in tests.
-        testShard.wireTable.readAll(function (_, data) {
+        testShard.wireTable.refresh(function (_, data) {
           netSimVis.onWireTableChange_(data);
         });
 

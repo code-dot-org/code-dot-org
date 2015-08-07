@@ -115,7 +115,7 @@ Student and teacher profiles can NOT be customized with a photo.
 As part of “App Lab,” an in-browser programming tool available on Code Studio for students over the age of 13, students can upload custom photos, sound, and videos to the Code Studio platform to use within applications or “apps” that they create. These files are stored in the Code Studio platform, and are not used by Code.org for any purpose other than within the applications created by students.
 
 ## Message sending between users
-Code.org has created a tool called the [“Internet Simulator”](code.org/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool. 
+Code.org has created a tool called the [“Internet Simulator”](/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, students can send text-based messages to other students and the teacher in their specific classroom section only. Message contents are not accessed or used by Code.org for any purpose other than in this educational tool. 
 
 In some courses, students are asked to provide written responses or reflections to prompts within the Code Studio platform. These written responses are accessible by any teacher that the student is currently affiliated with on Code Studio.
 

@@ -14,7 +14,7 @@
 'use strict';
 
 require('../utils');
-var netsimGlobals = require('./netsimGlobals');
+var NetSimGlobals = require('./NetSimGlobals');
 var NetSimVizNode = require('./NetSimVizNode');
 var NetSimVizWire = require('./NetSimVizWire');
 
@@ -66,7 +66,7 @@ NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
     this.remoteVizNode.setAddress(sourceWire.remoteAddress);
   }
 
-  if (netsimGlobals.getLevelConfig().broadcastMode) {
+  if (NetSimGlobals.getLevelConfig().broadcastMode) {
     this.getRoot().css('display', 'none');
   }
 };

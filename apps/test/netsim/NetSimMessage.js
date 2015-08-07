@@ -3,9 +3,9 @@ var assert = testUtils.assert;
 var assertEqual = testUtils.assertEqual;
 var assertThrows = testUtils.assertThrows;
 var assertOwnProperty = testUtils.assertOwnProperty;
-var netsimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = netsimTestUtils.fakeShard;
-var assertTableSize = netsimTestUtils.assertTableSize;
+var NetSimTestUtils = require('../util/netsimTestUtils');
+var fakeShard = NetSimTestUtils.fakeShard;
+var assertTableSize = NetSimTestUtils.assertTableSize;
 
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
@@ -57,7 +57,7 @@ describe("NetSimMessage", function () {
     });
   });
 
-  it ("converts messageRow.base64Payload to local binary payload", function () {
+  it ("converts MessageRow.base64Payload to local binary payload", function () {
     var message = new NetSimMessage(testShard, {
       fromNodeID: 1,
       toNodeID: 2,
@@ -92,13 +92,13 @@ describe("NetSimMessage", function () {
 
   describe("static method send", function () {
     it ("adds an entry to the message table", function () {
-      messageTable.readAll(function (err, rows) {
+      messageTable.refresh(function (err, rows) {
         assert(rows.length === 0, "Table is empty");
       });
 
       NetSimMessage.send(testShard, { payload: '' }, function () {});
 
-      messageTable.readAll(function (err, rows) {
+      messageTable.refresh(function (err, rows) {
         assert(rows.length === 1, "Table has one row");
       });
     });
@@ -126,7 +126,7 @@ describe("NetSimMessage", function () {
           },
           function () {});
 
-      messageTable.readAll(function (err, rows) {
+      messageTable.refresh(function (err, rows) {
         var row = rows[0];
         assertEqual(row.fromNodeID, fromNodeID);
         assertEqual(row.toNodeID, toNodeID);
@@ -163,7 +163,7 @@ describe("NetSimMessage", function () {
     var testRow;
 
     // Create a message row in remote table
-    // The source payload that generates this base64Payload is "1001001"
+    // The source payload that generates this Base64Payload is "1001001"
     messageTable.create({
       fromNodeID: 1,
       toNodeID: 2,
@@ -204,7 +204,7 @@ describe("NetSimMessage", function () {
 
     // Verify that message is gone from the remote table.
     var rowCount = Infinity;
-    messageTable.readAll(function (err, rows) {
+    messageTable.refresh(function (err, rows) {
       rowCount = rows.length;
     });
     assertEqual(rowCount, 0);
@@ -242,7 +242,7 @@ describe("NetSimMessage", function () {
       assertTableSize(testShard, 'messageTable', 3);
 
       var messages;
-      messageTable.readAll(function (err, rows) {
+      messageTable.refresh(function (err, rows) {
         messages = rows.map(function (row) {
           return new NetSimMessage(testShard, row);
         });

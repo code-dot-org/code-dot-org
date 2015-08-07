@@ -1,9 +1,13 @@
 name 'U3L26 Free Response Wrap Up'
-title 'String and Substring: Wrap Up'
+title 'String and Substring: Assessment 1'
 
 
 markdown <<MARKDOWN
-Think about word-related games you have played either electronically or as old-fashion board games (Scrabble, etc.). 
+What is the output of this code segment?
 
-Select one game and describe how string functions are involved in the game play.
+	var str = "Hello World";
+	var worldIndex = str.indexOf("World");
+	console.log(worldIndex);
+
+<br/>
 MARKDOWN

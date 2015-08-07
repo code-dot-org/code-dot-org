@@ -14,15 +14,15 @@
 'use strict';
 
 require('../utils');
-var jQuerySvgElement = require('./netsimUtils').jQuerySvgElement;
+var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
 var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
-var dataConverters = require('./dataConverters');
-var netsimConstants = require('./netsimConstants');
+var DataConverters = require('./DataConverters');
+var NetSimConstants = require('./NetSimConstants');
 
-var EncodingType = netsimConstants.EncodingType;
+var EncodingType = NetSimConstants.EncodingType;
 
-var binaryToAB = dataConverters.binaryToAB;
+var binaryToAB = DataConverters.binaryToAB;
 
 /**
  * How far the flying label should rest above the wire.

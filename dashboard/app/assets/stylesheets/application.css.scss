@@ -53,6 +53,14 @@ body {
   font-style: normal;
 }
 
+body.pin_bottom {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
@@ -1503,6 +1511,15 @@ a.download-video {
     // level markdown (the question) into the answer box, so we want it
     // to be selectable.
     @include selectable;
+  }
+}
+
+.content-level {
+  #markdown.teacher {
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    border-radius: 5px;
+    padding: 10px;
   }
 }
 

@@ -214,5 +214,7 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: "
+  "workspaceHeaderShort": "مساحة العمل: ",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
 }

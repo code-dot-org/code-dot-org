@@ -11,20 +11,22 @@ require_relative 'fake_redis_client'
 
 class RedisPropertyBagTest < Minitest::Unit::TestCase
 
-  def test_property_bags
-
+  def setup
     # Create a redis client.
     # If the USE_REAL_REDIS environment variable is true, creates a real client
     # running against localhost, otherwise creates a fake client.
-    redis = ENV['USE_REAL_REDIS'] ?
+    @redis = ENV['USE_REAL_REDIS'] ?
         Redis.new({host: 'localhost'}) :
         FakeRedisClient.new
 
     # A unique suffix to ensure that each run uses a fresh key when running
     # against real Redis.
-    suffix = Random.rand
-    bag1 = RedisPropertyBag.new(redis, "bag1_#{suffix}")
-    bag2 = RedisPropertyBag.new(redis, "bag2_#{suffix}")
+    @suffix = Random.rand
+  end
+
+  def test_property_bags
+    bag1 = RedisPropertyBag.new(@redis, "bag1_#{@suffix}")
+    bag2 = RedisPropertyBag.new(@redis, "bag2_#{@suffix}")
 
     # Make sure the bag initially has nothing in it.
     assert_nil bag1.get('foo')
@@ -70,6 +72,33 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     assert_equal 2, bag2.increment_counter('foo_counter')
     assert_equal 3, bag2.increment_counter('foo_counter')
     assert_equal 2, bag2.increment_counter('bar_counter')
+  end
+
+  def test_delete_many
+    # Make two bags to ensure delete_many on one bag does not affect the other.
+    bag1 = RedisPropertyBag.new(@redis, "bag1_#{@suffix}")
+    bag2 = RedisPropertyBag.new(@redis, "bag2_#{@suffix}")
+
+    # Set a value and make sure we can fetch it correctly
+    bag1.set('foo1', 'value1')
+    bag1.set('foo2', 'value2')
+    bag1.set('foo3', 'value3')
+    bag2.set('foo1', 'value1')
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag1.to_hash)
+    assert_equal({'foo1' => 'value1'}, bag2.to_hash)
+
+    # Perform a multiple-delete operation and check the result
+    bag1.delete(['foo1', 'foo3'])
+    assert_equal({'foo2' => 'value2'}, bag1.to_hash)
+    assert_equal({'foo1' => 'value1'}, bag2.to_hash)
+
+    # Empty delete is safe
+    bag1.delete([])
+
+    # Clean up
+    bag1.delete_all
+    bag2.delete_all
+
   end
 
 end

@@ -103,7 +103,7 @@ NetSimWire.prototype.buildRow = function () {
 };
 
 /**
- * @param {messageRow} messageRow
+ * @param {MessageRow} MessageRow
  * @returns {boolean} TRUE if the given message is travelling between the nodes
  *          that this wire connects, in the wire's direction.
  */
@@ -113,7 +113,7 @@ NetSimWire.prototype.isMessageRowOnDuplexWire = function (messageRow) {
 };
 
 /**
- * @param {messageRow} messageRow
+ * @param {MessageRow} messageRow
  * @returns {boolean} TRUE if the given message is travelling between the nodes
  *          that this wire connects, in either direction.
  */
