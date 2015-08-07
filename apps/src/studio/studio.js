@@ -843,8 +843,12 @@ function spriteCollisionDistance  (i1, i2, yAxis) {
 }
 
 function spriteCollidableCollisionDistance (iS, collidable, yAxis) {
-  var dim1 = yAxis ? Studio.sprite[iS].height : Studio.sprite[iS].width;
-  var dim2 = yAxis ? collidable.height : collidable.width;
+  var spriteWidth = skin.spriteCollisionRectWidth || Studio.sprite[iS].width;
+  var spriteHeight = skin.spriteCollisionRectHeight || Studio.sprite[iS].height;
+  var collidableWidth = skin.itemCollisionRectWidth || collidable.width;
+  var collidableHeight = skin.itemCollisionRectHeight || collidable.height;
+  var dim1 = yAxis ? spriteHeight : spriteWidth;
+  var dim2 = yAxis ? collidableHeight : collidableWidth;
   return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
 }
 
@@ -871,6 +875,18 @@ function handleActorCollisionsWithCollidableList (
   for (var i = list.length - 1; i >= 0; i--) {
     var collidable = list[i];
     var next = collidable.getNextPosition();
+
+    Studio.drawDebugRect("itemCollision", 
+      next.x, 
+      next.y, 
+      skin.itemCollisionRectWidth || collidable.width, 
+      skin.itemCollisionRectHeight || collidable.height);
+    Studio.drawDebugRect("spriteCollision", 
+      xCenter, 
+      yCenter, 
+      skin.spriteCollisionRectWidth || Studio.sprite[spriteIndex].width, 
+      skin.spriteCollisionRectHeight || Studio.sprite[spriteIndex].height);
+    
     if (collisionTest(
           xCenter,
           next.x,
