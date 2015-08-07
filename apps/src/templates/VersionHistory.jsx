@@ -16,7 +16,7 @@ module.exports = React.createClass({
 
   componentWillMount: function () {
     // TODO: Use Dave's client api when it's finished.
-    sourcesApi.ajax('GET', 'main.xml/versions', this.onVersionListReceived, this.onVersionListFailure);
+    sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onVersionListFailure);
   },
 
   /**
@@ -55,6 +55,7 @@ module.exports = React.createClass({
 
         return <VersionRow
           lastModified={new Date(Date.parse(version.lastModified))}
+          isLatest={version.isLatest}
           onChoose={choose} />;
       }.bind(this));
 
