@@ -156,6 +156,7 @@ class ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    ActionDispatch::Cookies::CookieJar.always_write_cookie = true
     request.env["devise.mapping"] = Devise.mappings[:user]
     request.env['cdo.locale'] = 'en-US'
   end
@@ -262,5 +263,11 @@ class ActionController::TestCase
       assert_select 'meta[content="yes"][name="apple-mobile-web-app-capable"]'
       assert_select 'meta[content="black-translucent"][name="apple-mobile-web-app-status-bar-style"]'
     end
+  end
+end
+
+class ActionDispatch::IntegrationTest
+  setup do
+    https!
   end
 end

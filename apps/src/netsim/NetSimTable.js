@@ -196,6 +196,13 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
 };
 
 /**
+ * @returns {string} the configured table name.
+ */
+NetSimTable.prototype.getTableName = function () {
+  return this.tableName_;
+};
+
+/**
  * Subscribes this table's onPubSubEvent method to events for this table
  * on our local channel. Also saves the callback locally, so we can
  * later reference it on unsubscribe
@@ -348,9 +355,18 @@ NetSimTable.prototype.update = function (id, value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.api_.deleteRow(id, function (err, success) {
+  this.deleteMany([id], callback);
+};
+
+/**
+ * Deletes multiple rows from the table.
+ * @param {!number[]} ids
+ * @param {!NodeStyleCallback} callback
+ */
+NetSimTable.prototype.deleteMany = function (ids, callback) {
+  this.api_.deleteRows(ids, function (err, success) {
     if (err === null) {
-      this.removeRowFromCache_(id);
+      this.removeRowsFromCache_(ids);
     }
     callback(err, success);
   }.bind(this));
@@ -359,18 +375,18 @@ NetSimTable.prototype.delete = function (id, callback) {
 /**
  * Delete a row using a synchronous call. For use when navigating away from
  * the page; most of the time an asynchronous call is preferred.
- * @param id
+ * @param {!number} id
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
   var async = false; // Force synchronous request
-  this.api_.deleteRow(id, function (err) {
+  this.api_.deleteRows([id], function (err) {
     if (err) {
       // Nothing we can really do with the error, as we're in the process of
       // navigating away. Throw so that high incidence rates will show up in
       // new relic.
       throw err;
     }
-    this.removeRowFromCache_(id);
+    this.removeRowsFromCache_([id]);
   }.bind(this), async);
 };
 
@@ -430,12 +446,19 @@ NetSimTable.prototype.addRowToCache_ = function (row) {
 };
 
 /**
- * @param {!number} id
+ * @param {!number[]} ids
  * @private
  */
-NetSimTable.prototype.removeRowFromCache_ = function (id) {
-  if (this.cache_[id] !== undefined) {
-    delete this.cache_[id];
+NetSimTable.prototype.removeRowsFromCache_ = function (ids) {
+  var cacheChanged = false;
+  ids.forEach(function (id) {
+    if (this.cache_[id] !== undefined) {
+      delete this.cache_[id];
+      cacheChanged = true;
+    }
+  }, this);
+
+  if (cacheChanged) {
     this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };

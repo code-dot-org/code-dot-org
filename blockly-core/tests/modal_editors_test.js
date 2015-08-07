@@ -99,14 +99,19 @@ function test_initializeFunctionEditor() {
 function test_contractEditor_add_examples() {
   var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title></block></xml>';
   var container = initializeWithContractEditor(singleDefinitionString);
-  Blockly.contractEditor.autoOpenWithLevelConfiguration({
+  var contractEditor = Blockly.contractEditor;
+  contractEditor.autoOpenWithLevelConfiguration({
     autoOpenFunction: 'functional-function'
   });
-  assertEquals('Has zero examples', 0, Blockly.contractEditor.exampleBlocks.length);
-  Blockly.contractEditor.addNewExampleBlock_();
-  Blockly.contractEditor.addNewExampleBlock_();
-  assertEquals('Added two examples', 2, Blockly.contractEditor.exampleBlocks.length);
-  Blockly.contractEditor.hideIfOpen();
+  assertEquals('Has zero examples', 0, contractEditor.exampleBlocks.length);
+  contractEditor.addNewExampleBlock_();
+  contractEditor.addNewExampleBlock_();
+  assertEquals('Added two examples', 2, contractEditor.exampleBlocks.length);
+  var firstExample = contractEditor.exampleBlocks[0];
+  var callBlock = firstExample.getInputTargetBlock(
+      Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+  assertFalse(callBlock.canDisconnectFromParent());
+  contractEditor.hideIfOpen();
   goog.dom.removeNode(container);
 }
 

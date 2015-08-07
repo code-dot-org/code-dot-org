@@ -92,7 +92,7 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     urls.each do |url|
       get url
       assert_response :redirect#, "for url #{url}"
-      assert_redirected_to 'http://test.code.org/teacher-dashboard', "for url #{url}"
+      assert_redirected_to 'https://test.code.org/teacher-dashboard', "for url #{url}"
     end
   end
 
