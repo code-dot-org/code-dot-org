@@ -1,11 +1,12 @@
 var React = require('react');
 
 /**
- * A single row in the VersionHistory modal, describing one version of a project.
+ * A single row in the VersionHistory dialog, describing one version of a project.
  */
 module.exports = React.createClass({
   propTypes: {
     lastModified: React.PropTypes.instanceOf(Date),
+    isLatest: React.PropTypes.bool,
     onChoose: React.PropTypes.func
   },
 
@@ -19,6 +20,15 @@ module.exports = React.createClass({
 
   render: function () {
 
+    var button;
+    if (this.props.isLatest) {
+      button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>Current Version</button>
+    } else {
+      button = <button className="btn-info" onClick={this.props.onChoose}>
+        Restore this Version
+      </button>
+    }
+
     return (
       <tr className="versionRow">
         <td>
@@ -26,9 +36,7 @@ module.exports = React.createClass({
           {this.getTimestamp()}
         </td>
         <td width="250" style={{textAlign: 'right'}}>
-          <button className="btn-info" onClick={this.props.onChoose}>
-            Restore this Version
-          </button>
+          {button}
         </td>
       </tr>
     );
