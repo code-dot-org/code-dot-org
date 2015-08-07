@@ -136,22 +136,25 @@
     // Avoid multiple simultaneous submissions.
     submitButton.attr('disabled', true);
 
-    var onCompleteNoRedirect = function() {
-      $('.submitButton').attr('disabled', false);
+    var onComplete = function(willRedirect) {
+      if (!willRedirect) {
+        $('.submitButton').attr('disabled', false);
+      }
     };
 
-    processResults(onCompleteNoRedirect);
+    processResults(onComplete);
   });
 
   /**
    * Process the solution to the puzzle submitted by the user.
-   * @param {Function} onCompleteNoRedirect Optional callback function to call if
-   *     the server call completes and does not indicate an immediate redirect.
+   * @param {function(boolean)} onComplete Optional callback function to call when
+   *     the server call completes, which receives a boolean indicating whether
+   *     the browser will redirect to a new location after it is called.
    */
   // TODO(dave): move this logic into appOptions.onAttempt for levels of type
   // external (including pixelation), multi, match, and any others
   // which render 'levels/dialog'.
-  function processResults(onCompleteNoRedirect) {
+  function processResults(onComplete) {
     var results = getResult();
     var response = results['response'];
     var result = results['result'];
@@ -177,9 +180,9 @@
       result: result,
       testResult: result ? 100 : 0,
       onComplete: function () {
-        if (!lastServerResponse.nextRedirect) {
-          onCompleteNoRedirect && onCompleteNoRedirect();
-        }
+        var willRedirect = !!lastServerResponse.nextRedirect;
+        onComplete && onComplete(willRedirect);
+
         if (lastServerResponse.videoInfo)
         {
           showVideoDialog(lastServerResponse.videoInfo);

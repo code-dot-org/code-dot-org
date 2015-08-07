@@ -396,14 +396,21 @@ function onFinishedButtonClick() {
   if (options.saveProject) {
     options.saveProject(onSaveProjectComplete);
   } else {
-    processResults(enableFinishButton);
+    processResults(onComplete);
   }
 }
 
 function onSaveProjectComplete() {
-  processResults(enableFinishButton);
+  processResults(onComplete);
 }
 
-function enableFinishButton() {
-  finishedButton.attr('disabled', false);
+/**
+ * Function to be called after processResults completes.
+ * @param {Boolean} willRedirect Whether the browser will redirect to another
+ *     location after this function completes.
+ */
+function onComplete(willRedirect) {
+  if (!willRedirect) {
+    finishedButton.attr('disabled', false);
+  }
 }
