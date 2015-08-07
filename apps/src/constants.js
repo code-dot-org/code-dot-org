@@ -40,6 +40,9 @@ exports.TestResults = {
   EMPTY_FUNCTIONAL_BLOCK: 18,    // There's a functional block with an open input
   EXAMPLE_FAILED: 19,            // One of our examples didn't match the definition
 
+  // start using negative values, since we consider >= 20 to be "solved"
+  EMPTY_FUNCTION_NAME: -1,       // We have a variable or function with the name ""
+
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,   // More than the ideal number of blocks were used.
   APP_SPECIFIC_ACCEPTABLE_FAIL: 21,  // Application-specific acceptable failure.
