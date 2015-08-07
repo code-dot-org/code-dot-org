@@ -6910,6 +6910,72 @@ var asciiToBinary = DataConverters.asciiToBinary;
 var NetSimPacketEditor = module.exports = function (initialConfig) {
   var level = NetSimGlobals.getLevelConfig();
 
+
+  /**
+   * @type {RowType[]}
+   * @const
+   */
+  this.ROW_TYPES = [
+    {
+      typeName: EncodingType.A_AND_B,
+      addressFieldAllowedCharacters: /[AB\s]/i,
+      addressFieldConversion: function (abString) {
+        return DataConverters.binaryToAddressString(
+            DataConverters.abToBinary(abString), level.addressFormat);
+      },
+      shortNumberAllowedCharacters: /[AB]/i,
+      shortNumberConversion: truncatedABToInt,
+      messageAllowedCharacters: /[AB\s]/i,
+      messageConversion: abToBinary
+    },
+    {
+      typeName: EncodingType.BINARY,
+      addressFieldAllowedCharacters: /[01\s]/i,
+      addressFieldConversion: function (binaryString) {
+        return DataConverters.binaryToAddressString(
+            binaryString, level.addressFormat);
+      },
+      shortNumberAllowedCharacters: /[01]/,
+      shortNumberConversion: truncatedBinaryToInt,
+      messageAllowedCharacters: /[01\s]/,
+      messageConversion: minifyBinary
+    },
+    {
+      typeName: EncodingType.HEXADECIMAL,
+      addressFieldAllowedCharacters: /[0-9a-f\s]/i,
+      addressFieldConversion: function (hexString) {
+        return DataConverters.binaryToAddressString(
+            DataConverters.hexToBinary(hexString), level.addressFormat);
+      },
+      shortNumberAllowedCharacters: /[0-9a-f]/i,
+      shortNumberConversion: truncatedHexToInt,
+      messageAllowedCharacters: /[0-9a-f\s]/i,
+      messageConversion: hexToBinary
+    },
+    {
+      typeName: EncodingType.DECIMAL,
+      addressFieldAllowedCharacters: /[0-9.\s]/i,
+      addressFieldConversion: cleanAddressString,
+      shortNumberAllowedCharacters: /[0-9]/,
+      shortNumberConversion: truncatedDecimalToInt,
+      messageAllowedCharacters: /[0-9\s]/,
+      messageConversion: function (decimalString) {
+        return decimalToBinary(decimalString, this.currentChunkSize_);
+      }.bind(this)
+    },
+    {
+      typeName: EncodingType.ASCII,
+      addressFieldAllowedCharacters: /[0-9.\s]/i,
+      addressFieldConversion: cleanAddressString,
+      shortNumberAllowedCharacters: /[0-9]/,
+      shortNumberConversion: truncatedDecimalToInt,
+      messageAllowedCharacters: /./,
+      messageConversion: function (asciiString) {
+        return asciiToBinary(asciiString, this.currentChunkSize_);
+      }.bind(this)
+    }
+  ];
+
   /**
    * @type {jQuery}
    * @private
@@ -6971,12 +7037,13 @@ var NetSimPacketEditor = module.exports = function (initialConfig) {
    */
   this.bitRate_ = initialConfig.bitRate || Infinity;
 
+  var encodings = initialConfig.enabledEncodings || [];
   /**
    * Which encodings should be visible in the editor.
-   * @type {EncodingType[]}
+   * @type {Object.<EncodingType, boolean>}
    * @private
    */
-  this.enabledEncodings_ = initialConfig.enabledEncodings || [];
+  this.enabledEncodingsHash_ = NetSimEncodingControl.encodingsAsHash(encodings);
 
   /**
    * Method to call in order to remove this packet from its parent.
@@ -7083,14 +7150,16 @@ NetSimPacketEditor.prototype.getFirstVisibleMessageBox = function () {
 NetSimPacketEditor.prototype.render = function () {
   var newMarkup = $(markup({
     messageGranularity: this.messageGranularity_,
-    packetSpec: this.packetSpec_
+    packetSpec: this.packetSpec_,
+    enabledEncodingsHash: this.enabledEncodingsHash_
   }));
   this.rootDiv_.html(newMarkup);
   this.bindElements_();
   this.updateFields_();
   this.updateRemoveButtonVisibility_();
   NetSimLogPanel.adjustHeaderColumnWidths(this.rootDiv_);
-  NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, this.enabledEncodings_);
+  NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_,
+      Object.keys(this.enabledEncodingsHash_));
 };
 
 /**
@@ -7360,76 +7429,27 @@ var cleanAddressString = function (originalString) {
 };
 
 /**
+ * Helper method to filter this.ROW_TYPES by enabled encodings
+ * @private
+ * @returns {RowType[]}
+ */
+NetSimPacketEditor.prototype.getEnabledRowTypes_ = function () {
+  return this.ROW_TYPES.filter(function (rowType) {
+    return this.isEncodingEnabled_(rowType.typeName);
+  }, this);
+};
+
+/**
  * Get relevant elements from the page and bind them to local variables.
  * @private
  */
 NetSimPacketEditor.prototype.bindElements_ = function () {
   var level = NetSimGlobals.getLevelConfig();
+  var encoder = new Packet.Encoder(level.addressFormat,
+      level.packetCountBitWidth, this.packetSpec_);
   var rootDiv = this.rootDiv_;
 
-  /** @type {RowType[]} */
-  var rowTypes = [
-    {
-      typeName: EncodingType.A_AND_B,
-      addressFieldAllowedCharacters: /[AB\s]/i,
-      addressFieldConversion: function (abString) {
-        return DataConverters.binaryToAddressString(
-            DataConverters.abToBinary(abString), level.addressFormat);
-      },
-      shortNumberAllowedCharacters: /[AB]/i,
-      shortNumberConversion: truncatedABToInt,
-      messageAllowedCharacters: /[AB\s]/i,
-      messageConversion: abToBinary
-    },
-    {
-      typeName: EncodingType.BINARY,
-      addressFieldAllowedCharacters: /[01\s]/i,
-      addressFieldConversion: function (binaryString) {
-        return DataConverters.binaryToAddressString(
-            binaryString, level.addressFormat);
-      },
-      shortNumberAllowedCharacters: /[01]/,
-      shortNumberConversion: truncatedBinaryToInt,
-      messageAllowedCharacters: /[01\s]/,
-      messageConversion: minifyBinary
-    },
-    {
-      typeName: EncodingType.HEXADECIMAL,
-      addressFieldAllowedCharacters: /[0-9a-f\s]/i,
-      addressFieldConversion: function (hexString) {
-        return DataConverters.binaryToAddressString(
-            DataConverters.hexToBinary(hexString), level.addressFormat);
-      },
-      shortNumberAllowedCharacters: /[0-9a-f]/i,
-      shortNumberConversion: truncatedHexToInt,
-      messageAllowedCharacters: /[0-9a-f\s]/i,
-      messageConversion: hexToBinary
-    },
-    {
-      typeName: EncodingType.DECIMAL,
-      addressFieldAllowedCharacters: /[0-9.\s]/i,
-      addressFieldConversion: cleanAddressString,
-      shortNumberAllowedCharacters: /[0-9]/,
-      shortNumberConversion: truncatedDecimalToInt,
-      messageAllowedCharacters: /[0-9\s]/,
-      messageConversion: function (decimalString) {
-        return decimalToBinary(decimalString, this.currentChunkSize_);
-      }.bind(this)
-    },
-    {
-      typeName: EncodingType.ASCII,
-      addressFieldAllowedCharacters: /[0-9.\s]/i,
-      addressFieldConversion: cleanAddressString,
-      shortNumberAllowedCharacters: /[0-9]/,
-      shortNumberConversion: truncatedDecimalToInt,
-      messageAllowedCharacters: /./,
-      messageConversion: function (asciiString) {
-        return asciiToBinary(asciiString, this.currentChunkSize_);
-      }.bind(this)
-    }
-  ];
-
-  rowTypes.forEach(function (rowType) {
+  this.getEnabledRowTypes_().forEach(function (rowType) {
     var tr = rootDiv.find('tr.' + rowType.typeName);
     var rowUIKey = rowType.typeName + 'UI';
     this[rowUIKey] = {};
@@ -7440,10 +7460,6 @@ NetSimPacketEditor.prototype.bindElements_ = function () {
     // We attach keyup to live-update the widget as the user types
     // We attach blur to reformat the edited field when the user leaves it,
     //    and to catch non-keyup cases like copy/paste.
-
-    var level = NetSimGlobals.getLevelConfig();
-    var encoder = new Packet.Encoder(level.addressFormat,
-        level.packetCountBitWidth, this.packetSpec_);
 
     this.packetSpec_.forEach(function (fieldSpec) {
       /** @type {Packet.HeaderType} */
@@ -7541,61 +7557,81 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
       asciiConverter = decimalConverter;
     }
 
-    liveFields.push({
-      inputElement: this.a_and_bUI[fieldName],
-      newValue: abConverter(this[fieldName], fieldWidth)
-    });
+    if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+      liveFields.push({
+        inputElement: this.a_and_bUI[fieldName],
+        newValue: abConverter(this[fieldName], fieldWidth)
+      });
+    }
 
-    liveFields.push({
-      inputElement: this.binaryUI[fieldName],
-      newValue: binaryConverter(this[fieldName], fieldWidth)
-    });
+    if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+      liveFields.push({
+        inputElement: this.binaryUI[fieldName],
+        newValue: binaryConverter(this[fieldName], fieldWidth)
+      });
+    }
 
-    liveFields.push({
-      inputElement: this.hexadecimalUI[fieldName],
-      newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
-    });
+    if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+      liveFields.push({
+        inputElement: this.hexadecimalUI[fieldName],
+        newValue: hexConverter(this[fieldName], Math.ceil(fieldWidth / 4))
+      });
+    }
 
-    liveFields.push({
-      inputElement: this.decimalUI[fieldName],
-      newValue: decimalConverter(this[fieldName], fieldWidth)
-    });
+    if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
+      liveFields.push({
+        inputElement: this.decimalUI[fieldName],
+        newValue: decimalConverter(this[fieldName], fieldWidth)
+      });
+    }
 
-    liveFields.push({
-      inputElement: this.asciiUI[fieldName],
-      newValue: asciiConverter(this[fieldName], fieldWidth)
-    });
+    if (this.isEncodingEnabled_(EncodingType.ASCII)) {
+      liveFields.push({
+        inputElement: this.asciiUI[fieldName],
+        newValue: asciiConverter(this[fieldName], fieldWidth)
+      });
+    }
   }, this);
 
-  liveFields.push({
-    inputElement: this.a_and_bUI.message,
-    newValue: formatAB(binaryToAB(this.message), chunkSize),
-    watermark: netsimMsg.a_and_b()
-  });
+  if (this.isEncodingEnabled_(EncodingType.A_AND_B)) {
+    liveFields.push({
+      inputElement: this.a_and_bUI.message,
+      newValue: formatAB(binaryToAB(this.message), chunkSize),
+      watermark: netsimMsg.a_and_b()
+    });
+  }
 
-  liveFields.push({
-    inputElement: this.binaryUI.message,
-    newValue: formatBinary(this.message, chunkSize),
-    watermark: netsimMsg.binary()
-  });
+  if (this.isEncodingEnabled_(EncodingType.BINARY)) {
+    liveFields.push({
+      inputElement: this.binaryUI.message,
+      newValue: formatBinary(this.message, chunkSize),
+      watermark: netsimMsg.binary()
+    });
+  }
 
-  liveFields.push({
-    inputElement: this.hexadecimalUI.message,
-    newValue: formatHex(binaryToHex(this.message), chunkSize),
-    watermark: netsimMsg.hexadecimal()
-  });
+  if (this.isEncodingEnabled_(EncodingType.HEXADECIMAL)) {
+    liveFields.push({
+      inputElement: this.hexadecimalUI.message,
+      newValue: formatHex(binaryToHex(this.message), chunkSize),
+      watermark: netsimMsg.hexadecimal()
+    });
+  }
 
-  liveFields.push({
-    inputElement: this.decimalUI.message,
-    newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
-    watermark: netsimMsg.decimal()
-  });
+  if (this.isEncodingEnabled_(EncodingType.DECIMAL)) {
+    liveFields.push({
+      inputElement: this.decimalUI.message,
+      newValue: alignDecimal(binaryToDecimal(this.message, chunkSize)),
+      watermark: netsimMsg.decimal()
+    });
+  }
 
-  liveFields.push({
-    inputElement: this.asciiUI.message,
-    newValue: binaryToAscii(this.message, chunkSize),
-    watermark: netsimMsg.ascii()
-  });
+  if (this.isEncodingEnabled_(EncodingType.ASCII)) {
+    liveFields.push({
+      inputElement: this.asciiUI.message,
+      newValue: binaryToAscii(this.message, chunkSize),
+      watermark: netsimMsg.ascii()
+    });
+  }
 
   liveFields.forEach(function (field) {
     if (field.inputElement[0] !== skipElement) {
@@ -7725,8 +7761,20 @@ NetSimPacketEditor.prototype.setMaxPacketSize = function (maxPacketSize) {
  * @param {EncodingType[]} newEncodings
  */
 NetSimPacketEditor.prototype.setEncodings = function (newEncodings) {
-  this.enabledEncodings_ = newEncodings;
+  this.enabledEncodingsHash_ = NetSimEncodingControl.encodingsAsHash(newEncodings);
   NetSimEncodingControl.hideRowsByEncoding(this.rootDiv_, newEncodings);
+  this.render();
+};
+
+/**
+ * Helper method that checks this.enabledEncodingsHash_ to see if the given
+ * encoding is enabled
+ * @param {EncodingType} queryEncoding
+ * @returns {boolean} whether or not the given encoding is enabled
+ * @private
+ */
+NetSimPacketEditor.prototype.isEncodingEnabled_ = function (queryEncoding) {
+  return this.enabledEncodingsHash_[queryEncoding] === true;
 };
 
 /**
@@ -7813,6 +7861,15 @@ with (locals || {}) { (function(){
   var getEncodingLabel = NetSimUtils.getEncodingLabel;
   var forEachEnumValue = NetSimUtils.forEachEnumValue;
 
+  /**
+  * @name enabledEncodingsHash
+  * @type {Object}
+  */
+
+  function isEncodingEnabled(queryEncoding) {
+    return enabledEncodingsHash[queryEncoding] === true;
+  }
+
   /** @type {Packet.HeaderType[]} */
   var headerFields = packetSpec;
 
@@ -7833,7 +7890,7 @@ with (locals || {}) { (function(){
    * Write the table header to the page, with the appropriate packet-header columns enabled.
    */
   function tableHeader() {
-    ; buf.push('\n      <thead>\n        <tr>\n          <th nowrap class="', escape((37,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n          ');38; if (showToAddress) { ; buf.push('\n          <th nowrap class="', escape((39,  PacketUIColumnType.TO_ADDRESS )), '">', escape((39,  i18n.to() )), '</th>\n          ');40; } ; buf.push('\n          ');41; if (showFromAddress) { ; buf.push('\n          <th nowrap class="', escape((42,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((42,  i18n.from() )), '</th>\n          ');43; } ; buf.push('\n          ');44; if (showPacketInfo) { ; buf.push('\n          <th nowrap class="', escape((45,  PacketUIColumnType.PACKET_INFO )), '">', escape((45,  i18n.packet() )), '</th>\n          ');46; } ; buf.push('\n          <th class="', escape((47,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((48,  i18n.message() )), '\n            <div class="packet-controls">\n              <span class="netsim-button secondary remove-packet-button" title="', escape((50,  i18n.removePacket() )), '"><i class="fa fa-times"></i></span>\n            </div>\n          </th>\n        </tr>\n      </thead>\n    ');55;
+    ; buf.push('\n      <thead>\n        <tr>\n          <th nowrap class="', escape((46,  PacketUIColumnType.ENCODING_LABEL )), '"></th>\n          ');47; if (showToAddress) { ; buf.push('\n          <th nowrap class="', escape((48,  PacketUIColumnType.TO_ADDRESS )), '">', escape((48,  i18n.to() )), '</th>\n          ');49; } ; buf.push('\n          ');50; if (showFromAddress) { ; buf.push('\n          <th nowrap class="', escape((51,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((51,  i18n.from() )), '</th>\n          ');52; } ; buf.push('\n          ');53; if (showPacketInfo) { ; buf.push('\n          <th nowrap class="', escape((54,  PacketUIColumnType.PACKET_INFO )), '">', escape((54,  i18n.packet() )), '</th>\n          ');55; } ; buf.push('\n          <th class="', escape((56,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((57,  i18n.message() )), '\n            <div class="packet-controls">\n              <span class="netsim-button secondary remove-packet-button" title="', escape((59,  i18n.removePacket() )), '"><i class="fa fa-times"></i></span>\n            </div>\n          </th>\n        </tr>\n      </thead>\n    ');64;
   }
 
   /**
@@ -7841,19 +7898,21 @@ with (locals || {}) { (function(){
    * @param {EncodingType} encodingType
    */
   function editorRow(encodingType) {
-    ; buf.push('\n      <tr class="', escape((64,  encodingType )), '">\n        <th nowrap class="', escape((65,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((65,  getEncodingLabel(encodingType) )), '</th>\n        ');66; if (showToAddress) { ; buf.push('\n        <td nowrap class="', escape((67,  PacketUIColumnType.TO_ADDRESS )), '"><input type="text" class="', escape((67,  Packet.HeaderType.TO_ADDRESS )), '" /></td>\n        ');68; } ; buf.push('\n        ');69; if (showFromAddress) { ; buf.push('\n        <td nowrap class="', escape((70,  PacketUIColumnType.FROM_ADDRESS )), '"><input type="text" readonly class="', escape((70,  Packet.HeaderType.FROM_ADDRESS )), '" /></td>\n        ');71; } ; buf.push('\n        ');72; if (showPacketInfo) { ; buf.push('\n        <td nowrap class="', escape((73,  PacketUIColumnType.PACKET_INFO )), '"><input type="text" readonly class="', escape((73,  Packet.HeaderType.PACKET_INDEX )), '" />', escape((73,  i18n._of_() )), '<input type="text" readonly class="', escape((73,  Packet.HeaderType.PACKET_COUNT )), '" /></td>\n        ');74; } ; buf.push('\n        <td class="', escape((75,  PacketUIColumnType.MESSAGE )), '"><div><textarea class="message"></textarea></div></td>\n      </tr>\n    ');77;
+    ; buf.push('\n      <tr class="', escape((73,  encodingType )), '">\n        <th nowrap class="', escape((74,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((74,  getEncodingLabel(encodingType) )), '</th>\n        ');75; if (showToAddress) { ; buf.push('\n        <td nowrap class="', escape((76,  PacketUIColumnType.TO_ADDRESS )), '"><input type="text" class="', escape((76,  Packet.HeaderType.TO_ADDRESS )), '" /></td>\n        ');77; } ; buf.push('\n        ');78; if (showFromAddress) { ; buf.push('\n        <td nowrap class="', escape((79,  PacketUIColumnType.FROM_ADDRESS )), '"><input type="text" readonly class="', escape((79,  Packet.HeaderType.FROM_ADDRESS )), '" /></td>\n        ');80; } ; buf.push('\n        ');81; if (showPacketInfo) { ; buf.push('\n        <td nowrap class="', escape((82,  PacketUIColumnType.PACKET_INFO )), '"><input type="text" readonly class="', escape((82,  Packet.HeaderType.PACKET_INDEX )), '" />', escape((82,  i18n._of_() )), '<input type="text" readonly class="', escape((82,  Packet.HeaderType.PACKET_COUNT )), '" /></td>\n        ');83; } ; buf.push('\n        <td class="', escape((84,  PacketUIColumnType.MESSAGE )), '"><div><textarea class="message"></textarea></div></td>\n      </tr>\n    ');86;
   }
-; buf.push('\n<table>\n  ');81;
+; buf.push('\n<table>\n  ');90;
     // Only write the header row if we are using packets
     if (usePacketGranularity) {
       tableHeader();
     }
-  ; buf.push('\n  <tbody>\n    ');88;
+  ; buf.push('\n  <tbody>\n    ');97;
       // Write a body row for every packet encoding; we hide some of them post-render.
       forEachEnumValue(EncodingType, function (encodingType) {
-        editorRow(encodingType);
+        if (isEncodingEnabled(encodingType)) {
+          editorRow(encodingType);
+        }
       });
-    ; buf.push('\n  </tbody>\n</table>\n\n');97; if (usePacketGranularity) { ; buf.push('\n  <div class="bit-counter"></div>\n');99; } ; buf.push('\n'); })();
+    ; buf.push('\n  </tbody>\n</table>\n\n');108; if (usePacketGranularity) { ; buf.push('\n  <div class="bit-counter"></div>\n');110; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -8767,10 +8826,11 @@ var NetSimLogPacket = function (packetBinary, packetID, options) {
  * Re-render div contents to represent the packet in a different way.
  */
 NetSimLogPacket.prototype.render = function () {
+  var encodingsHash = NetSimEncodingControl.encodingsAsHash(this.encodings_);
   var rawMarkup = packetMarkup({
     packetBinary: this.packetBinary_,
     packetSpec: this.packetSpec_,
-    enabledEncodings: this.encodings_,
+    enabledEncodingsHash: encodingsHash,
     chunkSize: this.chunkSize_,
     isMinimized: this.isMinimized
   });
@@ -8988,10 +9048,13 @@ with (locals || {}) { (function(){
   var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
       headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
+  /**
+  * @name enabledEncodingsHash
+  * @type {Object}
+  */
+
   function isEncodingEnabled(queryEncoding) {
-    return enabledEncodings.some(function (enabledEncoding) {
-      return enabledEncoding === queryEncoding;
-    });
+    return enabledEncodingsHash[queryEncoding] === true;
   }
 
   /**
@@ -9020,17 +9083,19 @@ with (locals || {}) { (function(){
    * @param {string} packetInfo
    * @param {string} message
    */
-  function logRow(encodingType, toAddress, fromAddress, packetInfo, message) {
-    ; buf.push('\n      <tr class="', escape((75,  encodingType )), '">\n        <th nowrap class="', escape((76,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((76,  getEncodingLabel(encodingType) )), '</th>\n        ');77; if (showToAddress) { ; buf.push('\n          <td nowrap class="', escape((78,  PacketUIColumnType.TO_ADDRESS )), '">', escape((78,  toAddress )), '</td>\n        ');79; } ; buf.push('\n        ');80; if (showFromAddress) { ; buf.push('\n          <td nowrap class="', escape((81,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((81,  fromAddress )), '</td>\n        ');82; } ; buf.push('\n        ');83; if (showPacketInfo) { ; buf.push('\n          <td nowrap class="', escape((84,  PacketUIColumnType.PACKET_INFO )), '">', escape((84,  packetInfo )), '</td>\n        ');85; } ; buf.push('\n        <td class="', escape((86,  PacketUIColumnType.MESSAGE )), '">', escape((86,  message )), '</td>\n      </tr>\n  ');88;
+  function logRowIfEncodingEnabled(encodingType, toAddress, fromAddress, packetInfo, message) {
+    if (isEncodingEnabled(encodingType)) {
+      ; buf.push('\n        <tr class="', escape((79,  encodingType )), '">\n          <th nowrap class="', escape((80,  PacketUIColumnType.ENCODING_LABEL )), '">', escape((80,  getEncodingLabel(encodingType) )), '</th>\n          ');81; if (showToAddress) { ; buf.push('\n            <td nowrap class="', escape((82,  PacketUIColumnType.TO_ADDRESS )), '">', escape((82,  toAddress )), '</td>\n          ');83; } ; buf.push('\n          ');84; if (showFromAddress) { ; buf.push('\n            <td nowrap class="', escape((85,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((85,  fromAddress )), '</td>\n          ');86; } ; buf.push('\n          ');87; if (showPacketInfo) { ; buf.push('\n            <td nowrap class="', escape((88,  PacketUIColumnType.PACKET_INFO )), '">', escape((88,  packetInfo )), '</td>\n          ');89; } ; buf.push('\n          <td class="', escape((90,  PacketUIColumnType.MESSAGE )), '">', escape((90,  message )), '</td>\n        </tr>\n    ');92;
+    }
   }
- ; buf.push('\n  ');91;
+ ; buf.push('\n  ');96;
     var toAddress = showToAddress ? packet.getHeaderAsBinary(Packet.HeaderType.TO_ADDRESS) : '';
     var fromAddress = showFromAddress ? packet.getHeaderAsBinary(Packet.HeaderType.FROM_ADDRESS) : '';
     var packetIndex = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_INDEX) : '';
     var packetCount = showPacketInfo ? packet.getHeaderAsBinary(Packet.HeaderType.PACKET_COUNT) : '';
     var message = packet.getBodyAsBinary();
-  ; buf.push('\n  ');98; if (isMinimized) { ; buf.push('\n      <div class="minimized-packet single-line-with-ellipsis user-data">\n        <i class="fa fa-plus-square expander"></i>\n        ', escape((101,  getOneLinePacketSummary() )), '\n      </div>\n  ');103; } else { ; buf.push('\n    <table class="maximized-packet">\n      <thead>\n        <tr>\n          <th nowrap class="', escape((107,  PacketUIColumnType.ENCODING_LABEL )), '">\n            <i class="fa fa-minus-square expander"></i>\n          </th>\n          ');110; if (showToAddress) { ; buf.push('\n            <th nowrap class="', escape((111,  PacketUIColumnType.TO_ADDRESS )), '">', escape((111,  i18n.to() )), '</th>\n          ');112; } ; buf.push('\n          ');113; if (showFromAddress) { ; buf.push('\n            <th nowrap class="', escape((114,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((114,  i18n.from() )), '</th>\n          ');115; } ; buf.push('\n          ');116; if (showPacketInfo) { ; buf.push('\n            <th nowrap class="', escape((117,  PacketUIColumnType.PACKET_INFO )), '">', escape((117,  i18n.packet() )), '</th>\n          ');118; } ; buf.push('\n          <th class="', escape((119,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((120,  i18n.message() )), '\n          </th>\n        </tr>\n      </thead>\n      <tbody>\n      ');125;
-        logRow(EncodingType.ASCII,
+  ; buf.push('\n  ');103; if (isMinimized) { ; buf.push('\n      <div class="minimized-packet single-line-with-ellipsis user-data">\n        <i class="fa fa-plus-square expander"></i>\n        ', escape((106,  getOneLinePacketSummary() )), '\n      </div>\n  ');108; } else { ; buf.push('\n    <table class="maximized-packet">\n      <thead>\n        <tr>\n          <th nowrap class="', escape((112,  PacketUIColumnType.ENCODING_LABEL )), '">\n            <i class="fa fa-minus-square expander"></i>\n          </th>\n          ');115; if (showToAddress) { ; buf.push('\n            <th nowrap class="', escape((116,  PacketUIColumnType.TO_ADDRESS )), '">', escape((116,  i18n.to() )), '</th>\n          ');117; } ; buf.push('\n          ');118; if (showFromAddress) { ; buf.push('\n            <th nowrap class="', escape((119,  PacketUIColumnType.FROM_ADDRESS )), '">', escape((119,  i18n.from() )), '</th>\n          ');120; } ; buf.push('\n          ');121; if (showPacketInfo) { ; buf.push('\n            <th nowrap class="', escape((122,  PacketUIColumnType.PACKET_INFO )), '">', escape((122,  i18n.packet() )), '</th>\n          ');123; } ; buf.push('\n          <th class="', escape((124,  PacketUIColumnType.MESSAGE )), '">\n            ', escape((125,  i18n.message() )), '\n          </th>\n        </tr>\n      </thead>\n      <tbody>\n      ');130;
+        logRowIfEncodingEnabled(EncodingType.ASCII,
             binaryToAddressString(toAddress),
             binaryToAddressString(fromAddress),
             i18n.xOfYPackets({
@@ -9039,7 +9104,7 @@ with (locals || {}) { (function(){
             }),
             binaryToAscii(message, chunkSize));
 
-        logRow(EncodingType.DECIMAL,
+        logRowIfEncodingEnabled(EncodingType.DECIMAL,
             binaryToAddressString(toAddress),
             binaryToAddressString(fromAddress),
             i18n.xOfYPackets({
@@ -9048,7 +9113,7 @@ with (locals || {}) { (function(){
             }),
             alignDecimal(binaryToDecimal(message, chunkSize)));
 
-        logRow(EncodingType.HEXADECIMAL,
+        logRowIfEncodingEnabled(EncodingType.HEXADECIMAL,
             binaryToHex(toAddress),
             binaryToHex(fromAddress),
             i18n.xOfYPackets({
@@ -9057,18 +9122,18 @@ with (locals || {}) { (function(){
             }),
             formatHex(binaryToHex(message), chunkSize));
 
-        logRow(EncodingType.BINARY,
+        logRowIfEncodingEnabled(EncodingType.BINARY,
             formatBinaryForAddressHeader(toAddress, 4),
             formatBinaryForAddressHeader(fromAddress, 4),
             formatBinary(packetIndex + packetCount, level.packetCountBitWidth),
             formatBinary(message, chunkSize));
 
-        logRow(EncodingType.A_AND_B,
+        logRowIfEncodingEnabled(EncodingType.A_AND_B,
             binaryToAB(toAddress),
             binaryToAB(fromAddress),
             formatAB(binaryToAB(packetIndex + packetCount), level.packetCountBitWidth),
             formatAB(binaryToAB(message), chunkSize));
-       ; buf.push('\n      </tbody>\n    </table>\n  ');167; } ; buf.push('\n'); })();
+       ; buf.push('\n      </tbody>\n    </table>\n  ');172; } ; buf.push('\n'); })();
 } 
 return buf.join('');
 };
@@ -36217,6 +36282,20 @@ NetSimEncodingControl.hideRowsByEncoding = function (rootElement, encodings) {
   }
   rootElement.find(makeEncodingRowSelector(encodings)).show();
   rootElement.find(makeEncodingRowSelector(hiddenEncodings)).hide();
+};
+
+/**
+ * Static helper that converts a given array of encodings to an object
+ * mapping each encoding to `true`. Used for more efficient
+ * isEncodingEnabled checks
+ * @param {EncodingType[]} encodings
+ * @returns {Object.<EncodingType, boolean>}
+ */
+NetSimEncodingControl.encodingsAsHash = function (encodings) {
+  return encodings.reduce(function (hash, encoding) {
+    hash[encoding] = true;
+    return hash;
+  }, {});
 };
 
 
