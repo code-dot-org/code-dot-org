@@ -12,6 +12,7 @@ class ScriptTest < ActiveSupport::TestCase
     file = File.join(self.class.fixture_path, "login_required.script")
 
     scripts, _ = Script.setup([file])
+
     script = scripts[0]
     assert script.login_required?
     assert_equal 'Level 1', script.levels[0].name
@@ -142,12 +143,14 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level on last script_level points to next stage' do
-    script = create(:script)
+    script = create(:script, name: 'test2')
     first_stage = create(:stage, script: script, position: 1)
-    first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
-    second_stage = create(:stage, script: script, position: 2)
-    second_stage_first_level = create(:script_level, script: script, stage: second_stage, position: 1)
-    create(:script_level, script: script, stage: second_stage, position: 2)
+
+    first_stage_last_level = script.levels.create(stage: first_stage, position: 1)
+
+    second_stage = script.stages.create(position: 2)
+    second_stage_first_level = script.levels.create(stage: second_stage, position: 1)
+    second_stage_second_level = script.level.create(stage: second_stage, position: 2)
 
     assert_equal second_stage_first_level, first_stage_last_level.next_progression_level
   end

@@ -51,7 +51,8 @@ group :development, :test do
   gem 'colorize'
   gem 'spring'
   gem 'spring-commands-testunit'
-  gem 'minitest'
+  gem "test-unit", "~> 3.0"
+  gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'eyes_selenium'
 end
