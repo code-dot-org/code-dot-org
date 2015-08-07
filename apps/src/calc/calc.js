@@ -215,13 +215,20 @@ Calc.init = function(config) {
 
     if (Blockly.contractEditor) {
       Blockly.contractEditor.registerTestHandler(testCalcExample);
+      Blockly.contractEditor.registerTestResetHandler(resetCalcExample);
     }
   };
 
   studioApp.init(config);
 };
 
-function testCalcExample(exampleBlock) {
+/**
+ * @param {Blockly.Block}
+ * @param {boolean} [appInitiated] True if this test was initiated by the app
+ *   rather than via the contract editor
+ * @returns {string}
+ */
+function testCalcExample(exampleBlock, appInitiated) {
   try {
     var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
 
@@ -243,11 +250,27 @@ function testCalcExample(exampleBlock) {
     var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
 
     var areEqual = expected.result.equals(actual.result);
+
+    if (!appInitiated) {
+      var tokenList = constructTokenList(expectedEquation, null);
+      if (!expected.err) {
+        tokenList.push(new Token(' = ', false));
+        tokenList.push(new Token(expected.result, !areEqual));
+      }
+      clearSvgExpression('answerExpression');
+      displayEquation('userExpression', null, tokenList, 0, 'errorToken');
+    }
+
     return areEqual ? "Matches definition." : "Does not match definition";
   } catch (error) {
     // Most Calc error messages were not meant to be user facing.
     return "Evaluation Failed.";
   }
+}
+
+function resetCalcExample() {
+  clearSvgExpression('userExpression');
+  displayGoal(appState.targetSet);
 }
 
 /**
@@ -327,7 +350,7 @@ Calc.resetButtonClick = function () {
 
   timeoutList.clearTimeouts();
 
-  clearSvgUserExpression();
+  clearSvgExpression('userExpression');
 };
 
 /**
@@ -834,9 +857,9 @@ Calc.checkExamples_ = function () {
  */
 function displayComplexUserExpressions() {
   var result;
-  clearSvgUserExpression();
+  clearSvgExpression('userExpression');
 
-  // Clone userSet, and we might make small changes to them (i.e. if we need to
+  // Clone userSet, as we might make small changes to them (i.e. if we need to
   // vary variables)
   var userSet = appState.userSet.clone();
   var targetSet = appState.targetSet;
@@ -1001,15 +1024,18 @@ Calc.step = function (animationDepth) {
   }, stepSpeed);
 };
 
-function clearSvgUserExpression() {
-  var g = document.getElementById('userExpression');
+/**
+ * Gets rid of all the children from the svg of the given id
+ * @param {id} string
+ */
+function clearSvgExpression(id) {
+  var g = document.getElementById(id);
   if (!g) {
     return;
   }
-  // remove all existing children, in reverse order so that we don't have to
-  // worry about indexes changing
-  for (var i = g.childNodes.length - 1; i >= 0; i--) {
-    g.removeChild(g.childNodes[i]);
+
+  while (g.lastChild) {
+    g.removeChild(g.lastChild);
   }
 }
 
@@ -1034,7 +1060,7 @@ function animateUserExpression (maxNumSteps) {
     throw new Error("Can't animate if either user/target have functions/vars");
   }
 
-  clearSvgUserExpression();
+  clearSvgExpression('userExpression');
 
   var current = userExpression.clone();
   var previousExpression = current;
