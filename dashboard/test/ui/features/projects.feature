@@ -3,6 +3,7 @@ Feature: Projects
 Scenario: Save Artist Project
   Given I am on "http://learn.code.org/p/artist"
   And I rotate to landscape
+  And I wait to see "#runButton"
   And element "#runButton" is visible
   And element ".project_updated_at" has text "Not saved"
   Then I open the topmost blockly category "Color"
