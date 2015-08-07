@@ -80,6 +80,15 @@ class BucketHelper
     end
   end
 
+  # Copies the given version of the file to make it the current revision.
+  # (All intermediate versions are preserved.)
+  def restore_previous_version(encrypted_channel_id, filename, version_id)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    @s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
+  end
+
   protected
 
   def s3_path(owner_id, channel_id, filename = nil)
