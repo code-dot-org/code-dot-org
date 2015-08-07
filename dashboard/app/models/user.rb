@@ -432,6 +432,11 @@ SQL
     self.user_type == TYPE_TEACHER
   end
 
+  def authorized_teacher?
+    # you are "really" a teacher if you are in any cohort for an ops workshop
+    admin? || cohorts.present?
+  end
+
   def student_of?(teacher)
     followeds.find_by_user_id(teacher.id).present?
   end

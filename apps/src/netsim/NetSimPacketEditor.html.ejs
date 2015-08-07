@@ -11,6 +11,15 @@
   var getEncodingLabel = NetSimUtils.getEncodingLabel;
   var forEachEnumValue = NetSimUtils.forEachEnumValue;
 
+  /**
+  * @name enabledEncodingsHash
+  * @type {Object}
+  */
+
+  function isEncodingEnabled(queryEncoding) {
+    return enabledEncodingsHash[queryEncoding] === true;
+  }
+
   /** @type {Packet.HeaderType[]} */
   var headerFields = packetSpec;
 
@@ -88,7 +97,9 @@
     <%
       // Write a body row for every packet encoding; we hide some of them post-render.
       forEachEnumValue(EncodingType, function (encodingType) {
-        editorRow(encodingType);
+        if (isEncodingEnabled(encodingType)) {
+          editorRow(encodingType);
+        }
       });
     %>
   </tbody>

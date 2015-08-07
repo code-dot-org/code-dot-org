@@ -7,6 +7,7 @@ var assert = testUtils.assert;
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;
 
 /** binary to ascii */
 function to_a(binary) {
@@ -56,7 +57,42 @@ describe("NetSimLogPanel", function () {
         packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
         maximumLogPackets: 10
       });
+
+      panel.setEncodings([EncodingType.ASCII]);
       scrollArea = rootDiv.find('.scroll-area');
+    });
+
+    it ("only renders enabled encodings", function () {
+      panel.log(to_b('first-message'), 1);
+      panel.setEncodings([EncodingType.ASCII]);
+
+      assert.equal(1, scrollArea.find('.packet:first tr.ascii').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.decimal').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.hexadecimal').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.binary').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.a_and_b').length);
+
+      panel.setEncodings([]);
+
+      assert.equal(0, scrollArea.find('.packet:first tr.ascii').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.decimal').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.hexadecimal').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.binary').length);
+      assert.equal(0, scrollArea.find('.packet:first tr.a_and_b').length);
+
+      panel.setEncodings([
+          EncodingType.ASCII,
+          EncodingType.DECIMAL,
+          EncodingType.HEXADECIMAL,
+          EncodingType.BINARY,
+          EncodingType.A_AND_B,
+        ]);
+
+      assert.equal(1, scrollArea.find('.packet:first tr.ascii').length);
+      assert.equal(1, scrollArea.find('.packet:first tr.decimal').length);
+      assert.equal(1, scrollArea.find('.packet:first tr.hexadecimal').length);
+      assert.equal(1, scrollArea.find('.packet:first tr.binary').length);
+      assert.equal(1, scrollArea.find('.packet:first tr.a_and_b').length);
     });
 
     it ("can log a packet", function () {

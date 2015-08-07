@@ -257,11 +257,7 @@ var projects = module.exports = {
       // we've changed channels. If we aren't at a /projects/<appname> link,
       // always do a redirect (i.e. we're remix from inside a script)
       if (isEditing && parsePath().appName) {
-        if (location.hash || !window.history.pushState) {
-          // We're using a hash route or don't support replace state. Use our hash
-          // based route to ensure we don't have a page load.
-          location.href = current.level + '#' + current.id + '/edit';
-        } else {
+        if (window.history.pushState) {
           window.history.pushState(null, document.title, this.getPathName('edit'));
         }
       } else {
