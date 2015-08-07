@@ -429,7 +429,7 @@ class Documents < Sinatra::Base
         cache_file = cache_dir('fetch', request.site, request.path_info)
         unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
           FileUtils.mkdir_p File.dirname(cache_file)
-          IO.write(cache_file, Net::HTTP.get(URI(url)))
+          IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
         end
         pass unless File.file?(cache_file)
 

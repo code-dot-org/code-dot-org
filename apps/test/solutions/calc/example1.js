@@ -169,6 +169,90 @@ module.exports = {
       xml: '<xml>' +
         blockUtils.calcBlockXml('functional_dividedby', [4, 0]) +
       '</xml>'
+    },
+    {
+      description: "unnamed variable",
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTION_NAME
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, commonMsg.unnamedFunction());
+        return true;
+      },
+      xml: '<xml>' +
+        '<block type="functional_definition" inline="false" editable="false">' +
+        '  <mutation>' +
+        '    <outputtype>Number</outputtype>' +
+        '    <isfunctionalvariable>true</isfunctionalvariable>' +
+        '  </mutation>' +
+        '  <title name="NAME"></title>' +
+        '  <functional_input name="STACK">' +
+        '    <block type="functional_math_number">' +
+        '      <title name="NUM">12</title>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        '<block type="functional_compute" inline="false" deletable="false" movable="false">' +
+        '  <functional_input name="ARG1">' +
+        '    <block type="functional_call" movable="false" id="callout_here">' +
+        '      <mutation name=""></mutation>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+      '</xml>'
+    },
+
+    {
+      description: "unnamed function",
+      expected: {
+        result: false,
+        testResult: TestResults.EMPTY_FUNCTION_NAME
+      },
+      customValidator: function (assert) {
+        assert.equal(Calc.__testonly__.appState.message, commonMsg.unnamedFunction());
+        return true;
+      },
+      xml: '<xml>' +
+        '<block type="functional_definition" inline="false" editable="false">' +
+        '  <mutation>' +
+        '    <arg name="x" type="Number"></arg>' +
+        '    <outputtype>Number</outputtype>' +
+        '  </mutation>' +
+        '  <title name="NAME"></title>' +
+        '  <functional_input name="STACK">' +
+        '    <block type="functional_plus" inline="false">' +
+        '      <functional_input name="ARG1">' +
+        '        <block type="functional_parameters_get">' +
+        '          <mutation>' +
+        '            <outputtype>Number</outputtype>' +
+        '          </mutation>' +
+        '          <title name="VAR">x</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="ARG2">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">2</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        '<block type="functional_compute" inline="false" deletable="false" movable="false">' +
+        '  <functional_input name="ARG1">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="">' +
+        '        <arg name="x" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">15</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+      '</xml>'
     }
   ]
 };
