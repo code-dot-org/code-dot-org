@@ -25,7 +25,7 @@ function delayTest(delayMs, testDone, nextStep) {
 }
 
 describe("NetSimTable", function () {
-  var apiTable, netsimTable, callback, notified, fakeChannel;
+  var apiTable, netsimTable, callback, notified, notifyCount, fakeChannel;
 
   beforeEach(function () {
     fakeChannel = {
@@ -43,8 +43,10 @@ describe("NetSimTable", function () {
     apiTable = netsimTable.api_.remoteTable;
     callback = function () {};
     notified = false;
+    notifyCount = 0;
     netsimTable.tableChange.register(function () {
       notified = true;
+      notifyCount++;
     });
   });
 
@@ -379,6 +381,11 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), 'delete[1]');
   });
 
+  it ("calls deleteRows on the API table", function () {
+    netsimTable.deleteMany([1, 2], callback);
+    assertEqual(apiTable.log(), 'delete[1,2]');
+  });
+
   it ("notifies on refresh if any remote row changed", function () {
     netsimTable.create({data: "A"}, callback);
 
@@ -439,6 +446,22 @@ describe("NetSimTable", function () {
     assertEqual(notified, true);
   });
 
+  it ("notifies once on deleteMany operation if anything was deleted", function () {
+    notifyCount = 0;
+    netsimTable.deleteMany([1, 2, 3], callback);
+    assertEqual(notifyCount, 0);
+
+    notifyCount = 0;
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    assertEqual(notifyCount, 3);
+
+    notifyCount = 0;
+    netsimTable.deleteMany([1, 3], callback);
+    assertEqual(notifyCount, 1);
+  });
+
   it ("passes new full table contents to notification callbacks", function () {
     var receivedTableData;
     netsimTable.tableChange.register(function (newTableData) {
@@ -446,32 +469,44 @@ describe("NetSimTable", function () {
     });
 
     netsimTable.create({data: "A"}, callback);
-    assertEqual(receivedTableData,
-        [
-          {data: "A", id: 1}
-        ]);
-
-    // Remote change
-    apiTable.create({data: "B"}, callback);
-    netsimTable.refresh(callback);
+    netsimTable.create({data: "B"}, callback);
     assertEqual(receivedTableData,
         [
           {data: "A", id: 1},
           {data: "B", id: 2}
         ]);
 
-    netsimTable.update(2, {data: "C"}, callback);
+    // Remote change
+    apiTable.create({data: "C"}, callback);
+    netsimTable.refresh(callback);
     assertEqual(receivedTableData,
         [
           {data: "A", id: 1},
-          {data: "C", id: 2}
+          {data: "B", id: 2},
+          {data: "C", id: 3}
+        ]);
+
+    netsimTable.update(2, {data: "Z"}, callback);
+    assertEqual(receivedTableData,
+        [
+          {data: "A", id: 1},
+          {data: "Z", id: 2},
+          {data: "C", id: 3}
         ]);
 
     netsimTable.delete(1, callback);
     assertEqual(
         receivedTableData,
         [
-          {data: "C", id: 2}
+          {data: "Z", id: 2},
+          {data: "C", id: 3}
+        ]);
+
+    netsimTable.deleteMany([2], callback);
+    assertEqual(
+        receivedTableData,
+        [
+          {data: "C", id: 3}
         ]);
   });
 

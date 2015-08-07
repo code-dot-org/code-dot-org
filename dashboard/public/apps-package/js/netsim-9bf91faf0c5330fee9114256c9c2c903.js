@@ -4955,6 +4955,13 @@ var NetSimTable = module.exports = function (channel, shardID, tableName, option
 };
 
 /**
+ * @returns {string} the configured table name.
+ */
+NetSimTable.prototype.getTableName = function () {
+  return this.tableName_;
+};
+
+/**
  * Subscribes this table's onPubSubEvent method to events for this table
  * on our local channel. Also saves the callback locally, so we can
  * later reference it on unsubscribe
@@ -5107,9 +5114,18 @@ NetSimTable.prototype.update = function (id, value, callback) {
  * @param {!NodeStyleCallback} callback
  */
 NetSimTable.prototype.delete = function (id, callback) {
-  this.api_.deleteRow(id, function (err, success) {
+  this.deleteMany([id], callback);
+};
+
+/**
+ * Deletes multiple rows from the table.
+ * @param {!number[]} ids
+ * @param {!NodeStyleCallback} callback
+ */
+NetSimTable.prototype.deleteMany = function (ids, callback) {
+  this.api_.deleteRows(ids, function (err, success) {
     if (err === null) {
-      this.removeRowFromCache_(id);
+      this.removeRowsFromCache_(ids);
     }
     callback(err, success);
   }.bind(this));
@@ -5118,18 +5134,18 @@ NetSimTable.prototype.delete = function (id, callback) {
 /**
  * Delete a row using a synchronous call. For use when navigating away from
  * the page; most of the time an asynchronous call is preferred.
- * @param id
+ * @param {!number} id
  */
 NetSimTable.prototype.synchronousDelete = function (id) {
   var async = false; // Force synchronous request
-  this.api_.deleteRow(id, function (err) {
+  this.api_.deleteRows([id], function (err) {
     if (err) {
       // Nothing we can really do with the error, as we're in the process of
       // navigating away. Throw so that high incidence rates will show up in
       // new relic.
       throw err;
     }
-    this.removeRowFromCache_(id);
+    this.removeRowsFromCache_([id]);
   }.bind(this), async);
 };
 
@@ -5189,12 +5205,19 @@ NetSimTable.prototype.addRowToCache_ = function (row) {
 };
 
 /**
- * @param {!number} id
+ * @param {!number[]} ids
  * @private
  */
-NetSimTable.prototype.removeRowFromCache_ = function (id) {
-  if (this.cache_[id] !== undefined) {
-    delete this.cache_[id];
+NetSimTable.prototype.removeRowsFromCache_ = function (ids) {
+  var cacheChanged = false;
+  ids.forEach(function (id) {
+    if (this.cache_[id] !== undefined) {
+      delete this.cache_[id];
+      cacheChanged = true;
+    }
+  }, this);
+
+  if (cacheChanged) {
     this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
@@ -9448,44 +9471,6 @@ NetSimLocalClientNode.prototype.getMyRouter = function () {
   return _.find(this.routers_, function (router) {
     return router.entityID === this.myRouterID_;
   }.bind(this));
-};
-
-/**
- * Destroy the local node; performs appropriate clean-up leading up to
- * node destruction.
- * @param {!NodeStyleCallback} onComplete
- */
-NetSimLocalClientNode.prototype.destroy = function (onComplete) {
-  // If connected to remote, asynchronously disconnect then try destroy again.
-  if (this.myRemoteClient || this.myRouterID_ !== undefined) {
-    this.disconnectRemote(function (err) {
-      if (err) {
-        onComplete(err);
-        return;
-      }
-      this.destroy(onComplete);
-    }.bind(this));
-    return;
-  }
-
-  // Remove messages being simulated by this node
-  var myMessages = this.shard_.messageTable.readAll().filter(function (row) {
-    return row.simulatedBy === this.entityID;
-  }, this).map(function (row) {
-    return new NetSimMessage(this.shard_, row);
-  }, this);
-  if (myMessages.length > 0) {
-    NetSimEntity.destroyEntities(myMessages, function (err) {
-      if (err) {
-        onComplete(err);
-        return;
-      }
-      this.destroy(onComplete);
-    }.bind(this));
-    return;
-  }
-
-  NetSimLocalClientNode.superPrototype.destroy.call(this, onComplete);
 };
 
 /**
@@ -17811,6 +17796,7 @@ NetSimEntity.prototype.buildRow = function () {
  * calls onComplete when all entities have been destroyed and/or an error occurs.
  * @param {NetSimEntity[]} entities
  * @param {!NodeStyleCallback} onComplete
+ * @throws {Error} if all passed entities do not belong to the same table.
  */
 NetSimEntity.destroyEntities = function (entities, onComplete) {
   if (entities.length === 0) {
@@ -17818,14 +17804,15 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
     return;
   }
 
-  entities[0].destroy(function (err, result) {
-    if (err) {
-      onComplete(err, result);
-      return;
+  var table = entities[0].getTable();
+  var entityIDs = entities.map(function (entity) {
+    if (entity.getTable() !== table) {
+      throw new Error("destroyEntities requires all entities to be in the same table");
     }
+    return entity.entityID;
+  });
 
-    NetSimEntity.destroyEntities(entities.slice(1), onComplete);
-  }.bind(this));
+  table.deleteMany(entityIDs, onComplete);
 };
 
 
@@ -37107,19 +37094,23 @@ var tableApi = {
   },
 
   /**
-   * Remove a row.
-   * @param {number} id - The row identifier.
+   * Remove multiple rows at once.
+   * @param {number[]} ids - The row IDs to remove.
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
-   * @param {boolean} [async] - default TRUE.  Pass FALSE only in special
-   *        onUnload cleanup attempt.
+   * @param {boolean} [async] default TRUE.
    */
-  deleteRow: function(id, callback, async) {
+  deleteRows: function(ids, callback, async) {
     async = async !== false; // `undefined` maps to true
 
+    // Generate query string in the form "id[]=1&id[]=2&..."
+    var queryString = ids.map(function (id) {
+      return 'id[]=' + id;
+    }).join('&');
+
     $.ajax({
-      url: this.baseUrl + "/" + id + "/delete",
-      type: "post",
-      dataType: "json",
+      url: this.baseUrl + '?' + queryString,
+      type: 'delete',
+      dataType: 'json',
       async: async
     }).done(function(data, text) {
       callback(null, true);
