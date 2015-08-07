@@ -28,6 +28,16 @@ Volunteers have translated our tutorials in over 34 languages. Help us continue 
 
 [<button>Translate tutorials</button>](/translate)
 
+## Buy a CODE hat or t-shirt
+Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
+
+<br/>
+![Code.org Cap](/images//fit-160/swag7.jpg)
+![Code.org T-shirt](/images//fit-160/swag10.jpg)
+![Code.org Stickers](/images//fit-160/swag8.jpg)
+
+[<button>Shop</button>](/shop)
+
 ---
 <a name="engineer"></a>
 # Are you a software engineer? Help spread computer science

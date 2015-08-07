@@ -100,7 +100,7 @@ class Deliverer
 
   def initialize(params)
     @params = params.dup
-    @smtp = smtp_connect
+    @smtp = smtp_connect unless rack_env?(:development)
     @templates = {}
   end
 
@@ -165,7 +165,11 @@ class Deliverer
     message.puts ''
     message.puts "--#{marker}--"
 
-    @smtp.send_message message.string, from_address[:email], to_address[:email]
+    if !rack_env?(:development)
+      @smtp.send_message message.string, from_address[:email], to_address[:email]
+    else
+      puts(message.string)
+    end
   end
 
   private

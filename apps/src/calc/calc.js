@@ -703,7 +703,8 @@ function isPreAnimationFailure(testResult) {
   return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
     testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
     testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
-    testResult == TestResults.EXAMPLE_FAILED;
+    testResult === TestResults.EXAMPLE_FAILED ||
+    testResult === TestResults.EMPTY_FUNCTION_NAME;
 }
 
 /**
@@ -730,6 +731,13 @@ Calc.generateResults_ = function () {
   if (studioApp.hasQuestionMarksInNumberField()) {
     appState.result = ResultType.FAILURE;
     appState.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+    return;
+  }
+
+  if (studioApp.hasEmptyFunctionOrVariableName()) {
+    appState.result = ResultType.FAILURE;
+    appState.testResults = TestResults.EMPTY_FUNCTION_NAME;
+    appState.message = commonMsg.unnamedFunction();
     return;
   }
 

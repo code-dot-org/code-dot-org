@@ -13746,6 +13746,9 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     if(connection.targetConnection && !connection.targetBlock().isMovable()) {
       return true
     }
+    if(connection.targetConnection && !connection.targetBlock().canDisconnectFromParent()) {
+      return true
+    }
     if(!thisConnection.checkAllowedConnectionType_(connection)) {
       return true
     }
@@ -14666,6 +14669,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.collapsed_ = false;
   this.dragging_ = false;
   this.currentlyHidden_ = false;
+  this.canDisconnectFromParent_ = true;
   this.editLabel_ = null;
   this.blockSpace = blockSpace;
   this.isInFlyout = blockSpace.isFlyout;
@@ -14961,7 +14965,7 @@ Blockly.Block.prototype.onMouseDown_ = function(e) {
   this.blockSpace.blockSpaceEditor.hideChaff();
   if(Blockly.isRightButton(e)) {
   }else {
-    if(!this.isMovable()) {
+    if(!this.isMovable() || !this.canDisconnectFromParent()) {
       return
     }else {
       Blockly.removeAllRanges();
@@ -15216,6 +15220,12 @@ Blockly.Block.prototype.setDraggingHandleImmovable_ = function(adding, immovable
     }
     block.setDraggingHandleImmovable_(adding, immovableBlockHandler)
   }
+};
+Blockly.Block.prototype.setCanDisconnectFromParent = function(canDisconnect) {
+  this.canDisconnectFromParent_ = canDisconnect
+};
+Blockly.Block.prototype.canDisconnectFromParent = function() {
+  return this.canDisconnectFromParent_
 };
 Blockly.Block.prototype.moveToDragCanvas_ = function() {
   if(!this.svg_) {
@@ -20378,7 +20388,7 @@ Blockly.FunctionEditor.prototype.addCloseButton_ = function() {
   var padding = 7;
   var r = Blockly.createSvgElement("rect", {"rx":12, "ry":12, "fill":"#7665a0", "stroke":"white", "stroke-width":"2.5"}, this.closeButton_);
   var text = Blockly.createSvgElement("text", {"x":padding, "y":padding, "class":"blocklyText"}, this.closeButton_);
-  text.textContent = Blockly.Msg.SAVE_AND_CLOSE;
+  text.textContent = Blockly.Msg.CLOSE;
   this.modalBlockSpaceEditor.appendSVGChild(this.closeButton_);
   var bounds = text.getBoundingClientRect();
   r.setAttribute("width", bounds.width + 2 * padding);
@@ -22972,6 +22982,8 @@ Blockly.ContractEditor.prototype.registerTestResetHandler = function(testResetHa
 };
 Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(exampleBlock) {
   var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
+  var functionCall = movedExampleBlock.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
+  functionCall.setCanDisconnectFromParent(false);
   this.exampleBlocks.push(movedExampleBlock);
   movedExampleBlock.blockEvents.listenOnce(Blockly.Block.EVENTS.AFTER_DISPOSED, this.removeExampleBlock_.bind(this, movedExampleBlock), false, this)
 };
