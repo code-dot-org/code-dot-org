@@ -49,7 +49,7 @@ if node['cdo-apps']['daemon']
   if node.chef_environment == 'staging' && node.name == 'staging'
     cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'import_google_sheets')
-    cronjob at:'*/2 * * * *', do:pegasus_dir('bin','run_server_generate_pdfs'), notify:'brendan@code.org'
+    cronjob at:'*/2 * * * *', do:deploy_dir('bin','run_server_generate_pdfs'), notify:'brendan@code.org'
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs'), notify:'brian@code.org'
     cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs'), notify:'brian@code.org'
     cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev@code.org'
