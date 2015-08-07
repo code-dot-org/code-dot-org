@@ -1,9 +1,6 @@
 #! /usr/bin/env ruby
 require 'fileutils'
 
-`crowdin-cli upload sources`
-`crowdin-cli download`
-
 # copy xx.yml files to hourofcode.com/i18n
 my_dir = Dir["../locales/**/hourofcode/*.yml"]
 my_dir.each do |file|
