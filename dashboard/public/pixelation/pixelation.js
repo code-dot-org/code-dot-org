@@ -396,19 +396,14 @@ function onFinishedButtonClick() {
   if (options.saveProject) {
     options.saveProject(onSaveProjectComplete);
   } else {
-    notifyDashboardSubmit();
+    processResults(enableFinishButton);
   }
 }
 
 function onSaveProjectComplete() {
-  // TODO(dave): handle save failure
-  notifyDashboardSubmit();
+  processResults(enableFinishButton);
 }
 
-function notifyDashboardSubmit() {
-  $(window).trigger('submit_button_pressed', onCompleteNoRedirect);
-}
-
-function onCompleteNoRedirect() {
+function enableFinishButton() {
   finishedButton.attr('disabled', false);
 }
