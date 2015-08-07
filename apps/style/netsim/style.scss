@@ -55,6 +55,54 @@ $wide-column-width: 121px;
   left: 0;
   right: 0;
 
+  // Alerts
+
+  .netsim-alert-container {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 450px;
+    margin-left: -225px; // -(width/2)
+    z-index: 99999;
+  }
+
+  .alert {
+
+    border-radius: 5px;
+
+    &.alert-info {
+      color: $dark_charcoal;
+      background-color: $lightest-cyan;
+      border-color: $light-cyan;
+    }
+
+    &.alert-warn {
+      color: $dark_charcoal;
+      background-color: $lightest-orange;
+      border-color: $light-orange;
+    }
+
+    &.alert-success {
+      color: $dark_charcoal;
+      background-color: $lightest-green;
+      border-color: $light-green;
+    }
+
+    &.alert-error {
+      color: $dark_charcoal;
+      background-color: lighten($red, 50%);
+      border-color: lighten($red, 20%);
+    }
+
+  }
+  .alert.netsim-alert {
+    margin-bottom: 5px;
+  }
+
+  .netsim-alert-button {
+    margin: 0;
+  }
+
   #router-log-modal {
     display: none; // Initial state
     width: 90%;
