@@ -8,7 +8,8 @@
     "npm": "^2.10.1"
   },
   "scripts": {
-    "test": "grunt test"
+    "build": "grunt build",
+    "test": "grunt build && grunt test"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
