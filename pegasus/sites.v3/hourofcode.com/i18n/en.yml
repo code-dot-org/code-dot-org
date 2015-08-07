@@ -191,7 +191,7 @@
   front_join_us_host: "Host it"
   front_join_us_support: "Support it"
 
-  signup_header: 'Organize an Hour of Code during Dec 7 - 13, and register it here.'
+  signup_header: 'Organize an Hour of Code during campaign_date, and register it here.'
   signup_name_label: 'Your name'
   signup_email_label: 'Your email'
   signup_organization_name_label: 'School or organization name'
@@ -316,6 +316,7 @@
   resources_emails: Sample emails
   resources_stats: Useful stats and blurbs
   resources_press_kit: Press Kit
+  resources_country_resources: Country Specific Resources
 
   events_title: All Hour of Code Events
   events_nav_all: All Events

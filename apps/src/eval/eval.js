@@ -419,6 +419,10 @@ Eval.execute = function() {
   } else if (studioApp.hasQuestionMarksInNumberField()) {
     Eval.result = false;
     Eval.testResults = TestResults.QUESTION_MARKS_IN_NUMBER_FIELD;
+  } else if (studioApp.hasEmptyFunctionOrVariableName()) {
+    Eval.result = false;
+    Eval.testResults = TestResults.EMPTY_FUNCTION_NAME;
+    Eval.message = commonMsg.unnamedFunction();
   } else {
     var userObject = getDrawableFromBlockspace();
     if (userObject && userObject.draw) {

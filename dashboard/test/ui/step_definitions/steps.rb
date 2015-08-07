@@ -336,20 +336,24 @@ def encrypted_cookie(user)
 end
 
 def log_in_as(user)
-  params = { name: "_learn_session_#{Rails.env}",
-            value: encrypted_cookie(user)}
+  params = {
+    name: "_learn_session_#{Rails.env}",
+    value: encrypted_cookie(user),
+    secure: true
+  }
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
+  @browser.manage.delete_all_cookies
   @browser.manage.add_cookie params
 end
 
 Given(/^I am a teacher$/) do
   @teacher = User.find_or_create_by!(email: "teacher#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |teacher|
-    teacher.name = "Test teacher"
+    teacher.name = "TestTeacher Teacher"
     teacher.password = SecureRandom.base64
     teacher.user_type = 'teacher'
     teacher.age = 40
@@ -359,7 +363,7 @@ end
 
 Given(/^I am a student$/) do
   @student = User.find_or_create_by!(email: "student#{Time.now.to_i}_#{rand(1000)}@testing.xx") do |user|
-    user.name = "Test student"
+    user.name = "TestStudent Student"
     user.password = SecureRandom.base64
     user.user_type = 'student'
     user.age = 16

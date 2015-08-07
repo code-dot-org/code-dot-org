@@ -956,7 +956,28 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal [teacher], student.teachers
     assert_equal [], student.students
-
   end
+
+  test "authorized teacher" do
+    # you can't just create your own authorized teacher account
+    fake_teacher = create :teacher
+    assert fake_teacher.teacher?
+    assert !fake_teacher.authorized_teacher?
+
+    # you have to be in a cohort
+    c = create :cohort
+    c.teachers << (real_teacher = create(:teacher))
+    c.save!
+    assert real_teacher.teacher?
+    assert real_teacher.authorized_teacher?
+
+    # admins should be authorized teachers too
+    admin = create :teacher
+    admin.admin = true
+    admin.save!
+    assert admin.teacher?
+    assert admin.authorized_teacher?
+  end
+
 
 end

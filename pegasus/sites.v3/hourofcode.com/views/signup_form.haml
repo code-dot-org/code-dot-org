@@ -2,7 +2,7 @@
 -#%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
 
 #signupform
-  %h2= hoc_s(:signup_header)
+  %h2= hoc_s(:signup_header).gsub(/campaign_date/, campaign_date("full"))
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
     #error_message
 
