@@ -28,13 +28,13 @@ Volunteers have translated our tutorials in over 34 languages. Help us continue 
 
 [<button>Translate tutorials</button>](/translate)
 
-## Shop at the Code.org store
-Visit our online store and pick up cool swag, like the baseball cap President Obama wore at last year's Hour of Code. 
+## Buy a CODE hat or t-shirt
+Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
 
 <br/>
-![Code.org Cap](/images//fit-200/swag7.jpg)
-![Code.org T-shirt](/images//fit-200/swag9.jpg)
-![Code.org Stickers](/images//fit-200/swag8.jpg)
+![Code.org Cap](/images//fit-160/swag7.jpg)
+![Code.org T-shirt](/images//fit-160/swag10.jpg)
+![Code.org Stickers](/images//fit-160/swag8.jpg)
 
 [<button>Shop</button>](/shop)
 
