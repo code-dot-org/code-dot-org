@@ -131,12 +131,13 @@ class RedisTable
     merge_id(hash, id)
   end
 
-  # Deletes a row, notifying other clients using the pubsub service.
+  # Deletes multiple rows, notifying other clients using the pubsub service
   #
-  # @param [Integer] id The id for the new row
-  def delete(id)
-    deleted = @props.delete(row_key(id))
-    publish_change({:action => 'delete', :id => id}) if deleted
+  # @param [Integer, Array<Integer>] ids The row IDs to delete.
+  def delete(ids)
+    ids = [ids] unless ids.is_a?(Array)
+    deleted = @props.delete(ids.map {|id| row_key(id)})
+    publish_change({:action => 'delete', :ids => ids}) if deleted
     deleted
   end
 

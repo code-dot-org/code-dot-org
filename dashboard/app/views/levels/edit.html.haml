@@ -1,4 +1,4 @@
-%h1 #{@level.new_record? ? 'New' : 'Editing'} #{@level.class.to_s} level
+%h1= @page_title = @level.new_record? ? "New #{@level.class.to_s} level" : "Editing #{@level.name}"
 = render 'form'
 = link_to t('crud.show'), @level
 |
