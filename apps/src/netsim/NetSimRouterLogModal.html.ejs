@@ -51,7 +51,7 @@ function sortMarkupFor(sortKey) {
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
       <% if (canToggleRouterLogMode) { %>
-        <button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini"><%= (isAllRouterLogMode) ? i18n.logBrowserHeader_toggle_mine() : i18n.logBrowserHeader_toggle_all() %></button>
+        <button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini"><%= (isAllRouterLogMode) ? i18n.logBrowserHeader_toggleMine() : i18n.logBrowserHeader_toggleAll() %></button>
       <% } %>
 
       <% if (isAllRouterLogMode) { %>
