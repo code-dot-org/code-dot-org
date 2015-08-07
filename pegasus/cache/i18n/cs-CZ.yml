@@ -198,6 +198,9 @@
   homepage_banner_text_main: Code.org a College Board tvoří alianci pro zvýšení rozmanitosti
     v informatice.
   homepage_banner_text_link: Zjisti více
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Zjisti více
   homepage_slot_text_title_hoc: Hodina kódu
   homepage_slot_text_blurb_hoc: Každý se to může naučit. Začni dnes
   homepage_slot_text_link_hoc: Vyzkoušej Hodinu Programování
@@ -1155,6 +1158,3 @@
     Nebude mít přístup k Code.org po tomto datu. <a href='%{it_requirements_url}'>
     zde se dozvíte,</a> jak povolit HTTPS pro Code.org.
   compatibility_https_hide_this_warning: Skrýt toto varování
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

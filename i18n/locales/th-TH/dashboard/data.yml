@@ -376,7 +376,7 @@ th:
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
-        Unplug10: Internet
+        Unplug10: อินเทอร์เน็ต
         Unplug11: Wrap-up
         C1_happy_maps_unplugged: แผนที่แห่งความสุข
         C1_moveitmoveit_unplugged: Move It, Move It
@@ -425,7 +425,7 @@ th:
         C3_playlab_create_game: 'Play Lab - Create a Game'
         C3_computational_thinking: คิดคำนวณ
         C3_dice_race: Dice Race
-        C3_internet: Internet
+        C3_internet: อินเทอร์เน็ต
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
@@ -434,7 +434,7 @@ th:
         C4_bee_conditional: ผึ้ง Conditionals
         C4_variables_artist: 'Variables - Artist'
         C4_variables_playlab: 'Variables - Play Lab'
-        C4_for_loops: For Loops
+        C4_for_loops: การวนรอบ
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
@@ -443,7 +443,7 @@ th:
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
-        C4_unplugged_forloops: For Loops
+        C4_unplugged_forloops: การวนรอบ
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
         frozen_intro: Hour of Code Intro

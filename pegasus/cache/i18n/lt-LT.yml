@@ -204,6 +204,9 @@
   homepage_banner_text_main: Code.org ir College Board susijungė tam, kad pagerintų
     informatikos kokybę ir įvairovę.
   homepage_banner_text_link: Sužinok daugiau
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Sužinok daugiau
   homepage_slot_text_title_hoc: „Programavimo valanda“
   homepage_slot_text_blurb_hoc: Išmokti gali kiekvienas. Pradėk šiandien
   homepage_slot_text_link_hoc: Išmėgink „Programavimo valandą“
@@ -1165,6 +1168,3 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Slėpti šį įspėjimą
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

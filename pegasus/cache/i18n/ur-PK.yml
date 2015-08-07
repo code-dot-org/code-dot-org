@@ -3,7 +3,7 @@
   select_language: براہ مہربانی اپنی زبان منتخب کریں
   en: کمپیوٹر سائنس
   computer_science_edweek: کمپیوٹر سائنس کا تعلیمی ہفتہ
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: ۸-۱۴ دسمبر، ۲۰۱۵
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -13,8 +13,7 @@
   n_have_learned_an_hoc: <h1>#</h1><h3>have tried an</h3><h2>Hour of Code</h2>
   anybody_can_learn: ھر کوئ سیکھ سکتا ھے۔
   learn_now: Abi sikhiye
-  petition_message: Every student in every school should have the opportunity to learn
-    computer science
+  petition_message: ہر سکول کے ہر طالب علم کو کمپیوٹر سائنس سیکھنے کا موقع ملنا چاہئیے
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
@@ -214,6 +213,9 @@
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
   homepage_banner_text_link: Learn more
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Learn more
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code
@@ -1165,6 +1167,3 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Hide this warning
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

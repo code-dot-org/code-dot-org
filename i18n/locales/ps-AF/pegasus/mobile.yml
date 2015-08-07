@@ -88,7 +88,7 @@ ps-AF:
   petition_thankyou: Thank you for signing the petition
   continue_learning_header: Continue learning beyond One Hour
   continue_learning_body: 'There are lots of options.  You can learn online, or at a local school, or summer camp.'
-  learn_next_level: Continue to the next level
+  learn_next_level: Try another Code Studio course
   learn_online: Try other courses online
   learn_classes: Find local classes
   hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
@@ -196,6 +196,8 @@ ps-AF:
   homepage_signpetition_dropdown: 'I agree &#x25BE;'
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
   homepage_banner_text_link: Learn more
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Learn more
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code

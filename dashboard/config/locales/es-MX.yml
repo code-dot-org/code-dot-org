@@ -414,6 +414,7 @@
     local_school: escuela local
     online: en línea
     see_details: Ver detalles
+    view_course: View Course
     prize_info: 'Premio por participación (solo maestros de escuelas públicas de Estados
       Unidos): hasta 1000 dólares en material escolar.'
     tryfirst: 'O, puedes probarlo primero y registrarte más adelante:'
@@ -434,6 +435,7 @@
     heading_legacy: <h2>Nuestro curso general para</h2><h1>Todas las edades</h1>
     your_gallery: Galeria
     no_primary_course: Inénta un curso en Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Imprimir Certificado
   gender:
     male: Varón
@@ -470,12 +472,6 @@
     autoplay_option: Reproducir videos automáticamente
     download: Descargar video
   compatability:
-    https:
-      header: Por favor habilitar HTTPS para Code.org.
-      message: Para aumentar la seguridad, nos cambio a HTTPS en %{https_date}. Usted
-        no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'>
-        haga clic aquí</a> para aprender cómo activar HTTPS para Code.org.
-      hide_this_warning: Ocultar esta advertencia
     working:
       header: Estamos trabajando en dar soporte para tu navegador.
       message: Code.org utiliza moderna tecnología web. Esto permite que el sitio

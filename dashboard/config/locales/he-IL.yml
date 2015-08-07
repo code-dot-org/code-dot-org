@@ -65,8 +65,8 @@
     need_confirmation: לא קיבלת את  ההוראות האישור?
     need_unlock: לא קיבלת את ההוראות הפתיחה?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} תלמידים כבר נרשמו.'
+    teacher_count: '%{count} מורים כבר נרשמו.'
     overview_student: הירשם כדי לעקוב אחרי ההתקדמות שלך. כתובת המייל שלך תשמש לכניסה
       למערכת ולשחזור סיסמא . למידע נוסף ראה  <a href="http://code.org/privacy">מדיניות
       הפרטיות</a>.
@@ -150,9 +150,9 @@
       no_teacher: |
         לא נמצא משתמש רשום ע״י ״%{teacher_email_or_code}״.
         אנא בקש מהם להירשם כאן ונסה להוסיף אותם שנית
-      section_not_found: Could not find a section with code '%{section_code}'.
+      section_not_found: לא היתה אפשרות למצוא את מקטע קוד '%{section_code}'.
       blank_code: אנא הזן קוד סעיף
-      cant_join_own_section: Sorry, you can't join your own section.
+      cant_join_own_section: מצטערים, לא תוכל להוסיף מקטע משלך.
     mail:
       invite_student:
         subject: הצטרף לכיתה עם %{teacher_name} ב-Code.org!
@@ -171,8 +171,8 @@
     donorschoose_register: הירשם כמורה ב donorschoose.org
     donorschoose_project: פרסם פרוייקט
     donorschoose_how_to: איך להשתמש בקוד שלך
-    success: Your prize was succesfully redeemed, see code below.
-    error: Your prize could not be redeemed, please try again.
+    success: השגת את הפרס בהצלחה, הקוד מצורף מטה.
+    error: לא הצלחת לזכות בפרס, נסה שנית.
     error_us_only: הפרס הזה תקף אך ורק לתושבי ארצות הברית.
     error_not_earned: עדיין לא השגת את הפרס הזה.
     error_already_redeemed: הפרס שלך כבר נפדה.
@@ -263,9 +263,9 @@
       logout: התנתק
       signin: התחבר
       signup: הירשם
-      already_registered: Already registered?
+      already_registered: כבר נרשמת?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: ההתקדמות של %{name}
       progress: ההתקדמות שלך
       lines: 'סה כ שורות קוד: %{lines}'
       close: קרוב
@@ -285,11 +285,11 @@
     tools: כלים למורה
     followers:
       section: 'Section:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
+      stages: 'שלב(ים) להצגה:'
+      show_past: 'הצג פעילות התלמיד (%{bullet_html}) בעבר:'
       levels_key: Levels key
       perfect: Completed, perfect
-      completed: Completed, but using too many blocks
+      completed: הושלם, אך היה שימוש בבלוקים רבים מדי
       tried: ניסה אך לא השלים
       not_tried: טרם ניסה
       activity: Indicates student activity in the last %{hours} %{plural}
@@ -303,7 +303,7 @@
       dashboard: לגשת לתצגת המורה
       add: הוסף תלמיד
       remove: הסר סטודנט
-      confirm_remove: Are you sure you want to remove this student?
+      confirm_remove: האם הנך בטוח שהנך רוצה להסיר את התלמיד?
       help_reassign: To divide your class into multiple sections, select students
         to assign to a new section.
       help_register: Instead of making you spend a lot of time individually importing
@@ -395,6 +395,7 @@
     local_school: בה"ס מקומי
     online: באינטרנט
     see_details: ראה פרטים
+    view_course: View Course
     prize_info: 'פרסים על השתתפות(מורים מארצות הברית בלבד): עד ל 1000$ בפרסי כיתה.'
     tryfirst: 'או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:'
     trynow: נסה עכשיו
@@ -411,6 +412,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: גלריה
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: גבר
@@ -447,12 +449,6 @@
     autoplay_option: הפעלה אוטומטית של סרטונים
     download: הורד סרטון
   compatability:
-    https:
-      header: אנא אפשרו שימוש בHTTPS בCode.org.
-      message: כדי להגביר את בטיחות הגלישה, אנו עוברים לשימוש בHTTPS בתאריך  %{https_date}.
-        לא תוכלו לגשת לCode.org אחרי תאריך זה.  <a href='%{it_requirements_url}'לחצו
-        כאן</a>כדי ללמוד איך לאפשר שימוש בHTTPS על  Code.org.
-      hide_this_warning: הסתר את האזהרה הזו
     working:
       header: אנחנו עובדים על תמיכה עבור הדפדפן שלך.
       message: Code.org uses modern web technology. This makes the site faster to

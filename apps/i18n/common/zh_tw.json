@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "\"重複\"和\"如果\"程式積木需要包含其它積木在裏面才能正常運作, 請檢查裏面是否有安排適當的程式積木.",
   "emptyBlockInFunction": "The function {name} has an unfilled input.",
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "\"函式\"積木裡面需要放其他程式積木才能運作",
   "emptyFunctionalBlock": "你有一塊未填充的程式積木。",
   "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "點按\"編輯\"和加入必要的參數值，為你的函數建立一個參數。拖曳新參數區塊到你的函數定義中。",
   "errorUnusedFunction": "你建立一個函數，但從未在工作區上使用它 ！在工具箱中點按\"函數\"，並確認在你的程式中有使用它。",
   "errorUnusedParam": "你加入一個參數區塊，但是定義中沒有使用它。請點按\"編輯\"，並且在綠色區塊裏放入參數區塊，以確認使用你的參數。",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "你有一些獨立的區塊",
   "extraTopBlocksWhenRun": "你有一些獨立的區塊, 你的意思是要讓他們跟\"When run\"區塊相連嗎?",
   "finalStage": "恭喜你 ！你已完成最後關卡的挑戰。",
@@ -210,12 +212,10 @@
   "totalNumLinesOfCodeWritten": "到目前為止共撰寫了：{numLines, plural, one {1 行} other {# 行}} 的程式碼。",
   "tryAgain": "再試一次",
   "tryHOC": "試試一小時的程式設計課程",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "想要學習寫程式嗎?",
   "watchVideo": "觀看影片",
   "when": "當",
   "whenRun": "當按下\"執行\"時",
-  "workspaceHeaderShort": "工作區:",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
-  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name."
+  "workspaceHeaderShort": "工作區:"
 }

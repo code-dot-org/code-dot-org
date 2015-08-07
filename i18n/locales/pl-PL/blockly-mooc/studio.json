@@ -151,7 +151,7 @@
   "projectileCherry":"wiśnia",
   "projectileIce":"lód",
   "projectileDuck":"kaczka",
-  "reinfFeedbackMsg":"Możesz nacisnąć przycisk \"Keep Playing\", aby wrócić do grania swojej historii.",
+  "reinfFeedbackMsg":"Można nacisnąć przycisk \"{backButton}\", aby powrócić do grania swojej historyjki.",
   "repeatForever":"powtarzaj w nieskończoność",
   "repeatDo":"wykonaj",
   "repeatForeverTooltip":"Wykonuj akcje w tym bloku bez przerwy, dopóki trwa opowieść.",

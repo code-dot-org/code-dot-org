@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Da bi blokovi \"Ponovi\" ili \"Ako\" radili, u njih treba ugraditi druge blokove. Provjeri uklapa li se unutarnji blok pravilno u vanjski blok.",
   "emptyBlockInFunction": "The function {name} has an unfilled input.",
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Funkcijski blok treba u sebi sadržavati druge blokove da bi mogao raditi.",
   "emptyFunctionalBlock": "Imaš nepopunjen blok.",
   "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Napravi parametar za svoju funkciju tako da što ćeš kliknuti na \"uredi\" i dodati neophodne parametre. Dovuci nove blokove parametara u svoju definiciju funkcije.",
   "errorUnusedFunction": "Napravio si funkciju, ali je nikad nisi koristio na svojoj radnoj površini! Klikni na \"Funkcije\" na alatnoj traci i pobrini se da je iskoristiš u svom programu.",
   "errorUnusedParam": "Dodao si blok parametara, ali ga nisi koristio u definiciji. Pobrini se da koristiš svoj parametar tako da klikneš na \"uredi\" i staviš blok parametara unutar zelenog bloka.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Imaš neprivezane blokove.",
   "extraTopBlocksWhenRun": "Imaš neprivezane blokove. Da li si mislio/la da ih prikačiš za \"pri pokretanju\" blok?",
   "finalStage": "Čestitamo! Posljednja faza je završena.",
@@ -210,12 +212,10 @@
   "totalNumLinesOfCodeWritten": "Sveukupno: {numLines, plural, one {1 linija} other {# linija}} kôda.",
   "tryAgain": "Pokušaj ponovo",
   "tryHOC": "Isprobaj Sat Kodiranja",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Želiš li naučiti programirati?",
   "watchVideo": "Pogledaj Video",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radni prostor: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
-  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name."
+  "workspaceHeaderShort": "Radni prostor: "
 }

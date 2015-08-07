@@ -3,7 +3,7 @@ he:
     unplugged:
       Unplug1:
         title: היכרות למדעי המחשב
-        desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
+        desc: בשיעור זה נציג את הרעיון של מדעי המחשב, ונראה מה מהנדס תכנה עושה. התלמידים יקבלו הזדמנות להתנסות בתפקיד של מהנדס תכנה. בסוף הפעילות, כל תמיד יחזור עם רשימת התוכן הנלמד בשיעור. אין צורך להבהל מללמד את הילדים את אוצר המילים הנדרש לשיעורים הבאים, פעילות זו יכולה להיות מהנה וקלילה, ותתרום הרבה יותר מלחכות להזדמנויות אחרות.
         pdfs:
           - unplug1
         video: Unplug1

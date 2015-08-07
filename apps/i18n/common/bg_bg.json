@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Блоковете \"Повтори\" и \"или\" трябва да съдържат други блокове в себе си, за да работят. Уверете се, че вътрешния блок се вписва правилно във външния блок.",
   "emptyBlockInFunction": "Функцията {name} има незапълнен вход.",
   "emptyBlockInVariable": "Променливата {name} има незапълнен вход.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Блокът за функция трябва да има други блокове вътре в себе си, за да работи.",
   "emptyFunctionalBlock": "Имате блок с незапълнено поле.",
   "emptyTopLevelBlock": "Няма блокове, които да се изпълняват. Трябва да прикачите блок към {topLevelBlockName} блок.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Създайте параметър за вашата функция като щракнете върху \"Редактиране\" и добавите необходимите параметри. Плъзнете новите блокове за параметър в дефиницията на функцията Ви.",
   "errorUnusedFunction": "Създали сте функция, но  не сте я извадили във вашата работна област! Щракнете върху \"Функции\" в кутията с инструменти и  я използвайте във Вашата програма.",
   "errorUnusedParam": "Вие добавихте блок за параметър, но не го използвате в дефиницията. Не забравяйте да използвате вашия параметър като щракнете върху \"Редактиране\" и поставите блокът за параметър вътре в зеления блок.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Имате неприкрепени блокове.",
   "extraTopBlocksWhenRun": "Имате неприкрепени блокове. Искате ли да се приложат към \"при стартиране\" блока?",
   "finalStage": "Поздравления! Вие завършихте последния етап.",
@@ -210,12 +212,10 @@
   "totalNumLinesOfCodeWritten": "Общо: {numLines, plural, one {1 line} other {# lines}} код.",
   "tryAgain": "Опитайте отново",
   "tryHOC": "Опитайте Часа на Кодирането",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Искате ли да се научите да пишете код?",
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
-  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name."
+  "workspaceHeaderShort": "Работна област: "
 }

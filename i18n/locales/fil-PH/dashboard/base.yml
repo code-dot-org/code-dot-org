@@ -348,10 +348,11 @@ fil:
     student_stats: |-
       You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
     student_left_off: 'Where you left off:'
-    student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
+    student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Subukan ngayon
@@ -365,7 +366,8 @@ fil:
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Lalaki
@@ -399,10 +401,6 @@ fil:
     autoplay_option: I-Autoplay ang mga videos
     download: I-download ang video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Itago ang babalang ito
     working:
       header: Nagsusumikap kami sa suporta para sa iyong browser.
       message: "Code.org ay gumagamit ng modernong teknolohiya sa web . Ginagawa nitong mas mabilis ang site gamitin. Hindi sinusuportahan ng iyong browser ang lahat ng mga tampok na kailangan, at maaari kang makaranas ng mga isyu habang ginagamit ang bahaging ito ng site. Mangyaring tulungan kami sa pamamagitan ng <a href='%{report_issue_url}'> pag-uulat ng anumang mga isyu mo ang </a>. Maaari mo ring <a href='%{supported_browsers_url}'> -upgrade ang iyong browser sa isang suportadong bersyon </a>."
