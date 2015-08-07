@@ -1011,6 +1011,10 @@ $workspace-header-button-margin: ($workspace-headers-height -
   margin-left: -350px;
 }
 
+#showVersionsModal .versionRow p {
+  margin: 15px 0 0 0;
+}
+
 #rotateContainer {
   position: fixed;
   z-index: 10001;

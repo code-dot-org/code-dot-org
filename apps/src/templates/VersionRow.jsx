@@ -22,8 +22,8 @@ module.exports = React.createClass({
     return (
       <tr className="versionRow">
         <td>
-          {this.getTimestamp()}
           <p>Saved <time className="versionTimestamp" dateTime={this.props.lastModified.toISOString()}>{this.getTimestamp()}</time></p>
+          {this.getTimestamp()}
         </td>
         <td width="250" style={{textAlign: 'right'}}>
           <button className="btn-info" onClick={this.props.onChoose}>
