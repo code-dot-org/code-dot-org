@@ -131,6 +131,12 @@ exports.setItemAction = function(id, itemIndex, type) {
   });
 };
 
+exports.showDebugInfo = function(value) {
+  Studio.queueCmd(id, 'showDebugInfo', {
+    'value': value
+  });
+};
+
 exports.setScoreText = function(id, text) {
   Studio.queueCmd(id, 'setScoreText', {'text': text});
 };
