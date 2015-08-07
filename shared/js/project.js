@@ -18,6 +18,11 @@ function packSourceFile() {
   });
 }
 
+function unpackSourceFile(data) {
+  current.levelSource = data.source;
+  current.html = data.html;
+}
+
 var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
@@ -245,6 +250,7 @@ var projects = module.exports = {
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
+      current.migratedToS3 = true;
       channels.update(channelId, current, function (err, data) {
         this.updateCurrentData_(err, data, false);
         sources.put(channelId, packSourceFile(), SOURCE_FILE, function (err, data) {
@@ -417,8 +423,16 @@ var projects = module.exports = {
           deferred.reject();
         } else {
           current = data;
-          projects.showProjectLevelHeader();
-          deferred.resolve();
+          if (data.migratedToS3) {
+            sources.fetch(appOptions.channel + '/' + SOURCE_FILE, function (err, data) {
+              unpackSourceFile(data);
+              projects.showProjectLevelHeader();
+              deferred.resolve();
+            });
+          } else {
+            projects.showProjectLevelHeader();
+            deferred.resolve();
+          }
         }
       });
       return deferred;
