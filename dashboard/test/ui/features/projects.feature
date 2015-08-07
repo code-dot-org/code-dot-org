@@ -22,6 +22,7 @@ Scenario: Applab Flow
   Given I am on "http://studio.code.org/"
   And I am a student
   And I am on "http://studio.code.org/users/sign_in"
+  And I reload the page
   Then I am on "http://studio.code.org/projects/applab"
   And I rotate to landscape
   # TODO  ideally we should probably create some code and/or design elements here
@@ -58,6 +59,7 @@ Scenario: Applab Flow
   Given I am on "http://studio.code.org/"
   And I am a teacher
   And I am on "http://studio.code.org/users/sign_in"
+  And I reload the page
   And I navigate to the last shared URL
   Then I append "/edit" to the URL
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "pushState"
