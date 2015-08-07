@@ -16,12 +16,12 @@ module.exports = React.createClass({
 
   componentWillMount: function () {
     // TODO: Use Dave's client api when it's finished.
-    sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onVersionListFailure);
+    sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onAjaxFailure);
   },
 
   /**
    * Called after the component mounts, when the server responds with the
-   * current list of assets.
+   * current list of versions.
    * @param xhr
    */
   onVersionListReceived: function (xhr) {
@@ -29,11 +29,17 @@ module.exports = React.createClass({
   },
 
   /**
-   * Called after the component mounts, if the server responds with an error
-   * when loading the current list of assets.
+   * Called if the server responds with an error when loading an API request.
    */
-  onVersionListFailure: function () {
-    this.setState({statusMessage: 'Error loading version list.'});
+  onAjaxFailure: function () {
+    this.setState({statusMessage: 'An error occured.'});
+  },
+
+  /**
+   * Called when the server responds to a request to restore a previous version.
+   */
+  onRestoreSuccess: function () {
+    location.reload();
   },
 
   render: function () {
@@ -49,9 +55,12 @@ module.exports = React.createClass({
     } else {
       var rows = this.state.versions.map(function (version) {
         var choose = function () {
-          // TODO:
-          console.log('picked', version.versionId, version.lastModified);
-        };
+          // TODO: Use Dave's client api when it's finished.
+          sourcesApi.ajax('PUT', 'main.json/restore?version=' + version.versionId, this.onRestoreSuccess, this.onAjaxFailure);
+
+          // Show the spinner.
+          this.setState({versions: null});
+        }.bind(this);
 
         return <VersionRow
           lastModified={new Date(Date.parse(version.lastModified))}
