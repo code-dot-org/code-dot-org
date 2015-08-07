@@ -7,7 +7,7 @@ litmus_tracking_id: "5g5lyi1a"
 
 # Thanks for signing up to host an Hour of Code!
 
-<% if @country == 'la' %>
+<% if @country == 'la' || @country == 'br' || @country == 'ar' %>
 You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11.
 <% else %>
 You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
