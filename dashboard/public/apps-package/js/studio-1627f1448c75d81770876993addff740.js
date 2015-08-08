@@ -3702,7 +3702,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":491}],286:[function(require,module,exports){
+},{"ejs":495}],286:[function(require,module,exports){
 var CustomGameLogic = require('./customGameLogic');
 var studioConstants = require('./constants');
 var Direction = studioConstants.Direction;
@@ -6146,7 +6146,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":491}],279:[function(require,module,exports){
+},{"../locale":150,"ejs":495}],279:[function(require,module,exports){
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
 
@@ -6197,7 +6197,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"ejs":491}],274:[function(require,module,exports){
+},{"../locale":150,"ejs":495}],274:[function(require,module,exports){
 /**
  * Blockly App: Studio
  *

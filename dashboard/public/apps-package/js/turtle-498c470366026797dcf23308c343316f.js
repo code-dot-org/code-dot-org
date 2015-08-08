@@ -3528,7 +3528,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":311,"ejs":491}],315:[function(require,module,exports){
+},{"./locale":311,"ejs":495}],315:[function(require,module,exports){
 module.exports= (function() {
   var t = function anonymous(locals, filters, escape) {
 escape = escape || function (html){
@@ -3594,7 +3594,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":311,"ejs":491}],313:[function(require,module,exports){
+},{"./locale":311,"ejs":495}],313:[function(require,module,exports){
 /**
  * Sets BlocklyApp constants that depend on the page and level.
  * This encapsulates many functions used for StudioApp.requiredBlocks_.
@@ -3835,7 +3835,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"ejs":491}],308:[function(require,module,exports){
+},{"ejs":495}],308:[function(require,module,exports){
 /**
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */

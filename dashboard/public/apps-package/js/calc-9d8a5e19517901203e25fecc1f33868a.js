@@ -1217,7 +1217,7 @@ Calc.__testonly__ = {
 /* end-test-block */
 
 
-},{"../StudioApp":5,"../block_utils":77,"../dom":108,"../locale":150,"../skins":268,"../templates/page.html.ejs":296,"../timeoutList":302,"../utils":318,"./controls.html.ejs":91,"./equation":92,"./equationSet":93,"./expressionNode":94,"./inputIterator":95,"./js-numbers/js-numbers.js":96,"./levels":97,"./locale":98,"./token":100,"./visualization.html.ejs":101,"lodash":494}],494:[function(require,module,exports){
+},{"../StudioApp":5,"../block_utils":77,"../dom":108,"../locale":150,"../skins":268,"../templates/page.html.ejs":296,"../timeoutList":302,"../utils":318,"./controls.html.ejs":91,"./equation":92,"./equationSet":93,"./expressionNode":94,"./inputIterator":95,"./js-numbers/js-numbers.js":96,"./levels":97,"./locale":98,"./token":100,"./visualization.html.ejs":101,"lodash":498}],498:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -8026,7 +8026,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"./locale":98,"ejs":491}],97:[function(require,module,exports){
+},{"./locale":98,"ejs":495}],97:[function(require,module,exports){
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
@@ -13652,7 +13652,7 @@ return buf.join('');
     return t(locals, require("ejs").filters);
   }
 }());
-},{"../locale":150,"./locale":98,"ejs":491}],89:[function(require,module,exports){
+},{"../locale":150,"./locale":98,"ejs":495}],89:[function(require,module,exports){
 /**
  * Blockly Demo: Calc Graphics
  *
