@@ -69,6 +69,7 @@ $wide-column-width: 121px;
   .alert {
 
     border-radius: 5px;
+    transition-duration: 1s;
 
     &.alert-info {
       color: $dark_charcoal;
