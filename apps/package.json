@@ -4,8 +4,8 @@
   "repository": "code-dot-org/code-dot-org",
   "license" : "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": "~0.12.4",
-    "npm": "^2.10.1"
+    "node": ">=0.10.25 <0.13",
+    "npm": "^2.9.1"
   },
   "scripts": {
     "build": "grunt build",
