@@ -312,7 +312,14 @@ NetSimLocalClientNode.prototype.getMyRouter = function () {
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.myWire.destroy(function (err) {
+  // save the wire so we can destroy it
+  var wire = this.myWire;
+
+  // remove all local references to connections
+  this.cleanUpBeforeDestroyingWire_();
+
+  // destroy wire on API
+  wire.destroy(function (err) {
     // We're not going to stop if an error occurred here; the error might
     // just be that the wire was already cleaned up by another node.
     // As long as we make a good-faith disconnect effort, the cleanup system
@@ -321,8 +328,6 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     if (err) {
       logger.info("Error while disconnecting: " + err.message);
     }
-
-    this.cleanUpAfterDestroyingWire_();
     onComplete(null);
   }.bind(this));
 };
@@ -332,7 +337,7 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
  * disconnect paths.
  * @private
  */
-NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
+NetSimLocalClientNode.prototype.cleanUpBeforeDestroyingWire_ = function () {
   this.myWire = null;
   this.myRemoteClient = null;
   this.myRouterID_ = undefined;
