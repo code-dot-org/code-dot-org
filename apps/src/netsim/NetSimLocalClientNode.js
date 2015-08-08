@@ -19,8 +19,10 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
+var i18n = require('./locale');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimAlert = require('./NetSimAlert');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimRouterNode = require('./NetSimRouterNode');
@@ -510,6 +512,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   } else if (!mutualConnectionRow && this.myRemoteClient) {
     // Remote client disconnected or we disconnected; either way we are
     // no longer connected.
+    NetSimAlert.info(i18n.alertPartnerDisconnected());
     this.disconnectRemote();
   } else if (!mutualConnectionRow && ! this.myRemoteClient) {
     // The client we're trying to connect to might have connected to
@@ -524,6 +527,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
               row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
         }) : undefined;
     if (myConnectionTargetWireRow && isTargetConnectedToSomeoneElse) {
+      NetSimAlert.info(i18n.alertConnectionRefused());
       this.disconnectRemote();
     }
   }
