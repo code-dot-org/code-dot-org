@@ -243,7 +243,7 @@ EquationSet.prototype.evaluate = function () {
  * allows us to evaluate the expression f(1) or f(2)...
  * @param {ExpressionNode} computeExpression The expression to evaluate
  * @returns {Object} evaluation An object with either an err or result field
- * @returns {Error?} evalatuion.err
+ * @returns {Error?} evaluation.err
  * @returns {Number?} evaluation.result
  */
 EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
