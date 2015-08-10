@@ -78,8 +78,6 @@ Eval.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_display';
   config.enableShowCode = false;
-  config.pinWorkspaceToBottom = false;
-  config.hasVerticalScrollbars = false;
 
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
@@ -171,7 +169,7 @@ Eval.init = function(config) {
 
 /**
  * @param {Blockly.Block}
- * @param {boolean} [appInitiate] True if this test was initiated by the app
+ * @param {boolean} [appInitiated] True if this test was initiated by the app
  *   rather than via the contract editor
  * @returns {string}
  */

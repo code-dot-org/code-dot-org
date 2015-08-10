@@ -23,6 +23,8 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 [/col-75]
 
+Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning.
+
 <br />
 
 [col-50]
