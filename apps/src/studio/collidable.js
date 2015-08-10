@@ -112,7 +112,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-Collidable.prototype.roamGrid = function() {
+Collidable.prototype.roamGrid = function(type) {
 
   // Do we have an active location in grid coords?  If not, determine it.
   if (this.gridX === undefined) {
@@ -168,16 +168,33 @@ Collidable.prototype.roamGrid = function() {
         candidate = {gridX: candidateX, gridY: candidateY};
         candidate.score = 0;
 
-        if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
+        if (type == "roamGrid") {
           candidate.score ++;
-        } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
-          candidate.score ++;
-        }
+        } else if (type == "chaseGrid") {
+          if (candidateY == this.gridY - 1 && spriteY < this.y - bufferDistance) {
+            candidate.score ++;
+          } else if (candidateY == this.gridY + 1 && spriteY > this.y + bufferDistance) {
+            candidate.score ++;
+          }
 
-        if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
-          candidate.score ++;
-        } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
-          candidate.score ++;
+          if (candidateX == this.gridX - 1 && spriteX < this.x - bufferDistance) {
+            candidate.score ++;
+          } else if (candidateX == this.gridX + 1 && spriteX > this.x + bufferDistance) {
+            candidate.score ++;
+          }
+        } else if (type == "fleeGrid") {
+          candidate.score = 1;
+          if (candidateY == this.gridY - 1 && spriteY > this.y - bufferDistance) {
+            candidate.score ++;
+          } else if (candidateY == this.gridY + 1 && spriteY < this.y + bufferDistance) {
+            candidate.score ++;
+          }
+
+          if (candidateX == this.gridX - 1 && spriteX > this.x - bufferDistance) {
+            candidate.score ++;
+          } else if (candidateX == this.gridX + 1 && spriteX < this.x + bufferDistance) {
+            candidate.score ++;
+          }
         }
 
         if (candidate.score > 0) {
