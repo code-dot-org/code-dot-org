@@ -24,7 +24,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Here's a new variable called _age-in-months_ - use the variable _age_ to set _age-in-months_."
+    "markdown_instructions": "Here's a new variable called `age-in-months` - use the variable `age` to set `age-in-months`.",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

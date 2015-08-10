@@ -1,34 +1,48 @@
-name 'U1L5 Student Lesson Introduction'
-title 'title'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-## Unit 1: Lesson 5 - Sending Bits in the Real World
-
-# Background
-The Internet is really just an interconnected system of bit-sending devices, each relying on different methods of encoding bits. Most wired connections in your house or school will vary voltages in a copper wire to send binary messages. If you use a wireless connection your bits are translated into alternating frequencies on a radio wave. In either case, once these bits leave the building it is increasingly common that they will be converted into beams of light travelling along fiber optic cables. Each method of encoding bits has pros and cons which make it better suited for certain situations, and so a binary message may travel in many different forms on its journey across the Internet.
-
-# Vocabulary
-* Bandwidth: transmission capacity of a bit-sending system, as measured by bit rate
-* Latency: the amount of time it takes a bit to travel from a sender to a receiver
-
-# What happens in this lesson?
-* Investigate how bits are transmitted on the Internet.
-* Research the bit-sending technology underlying a familiar device
-* Present your finding to your classmates.
-
-
-# Resources
-
-* Video Guide: <a href="https://docs.google.com/document/d/1YviZiL1VjpUa9Gbe3j_4lETKyoZqEW14_RG7EEWEwgU/edit" target="_blank">The Internet: Wires, Cables, and WiFi</a>
-* Activity Guide: <a href="https://docs.google.com/document/d/1js03d0cgeLa0k05nufURz96Bb4py6tjtwavFYCV0c1U/edit?usp=sharing" target="_blank">Sending Bits in the Real World</a>
-* Assessment: <a href="https://docs.google.com/document/d/19ovLcsWFg7Oi-qm9bUV1ouS3jsDyII-C-reVCA-AbmE/edit?usp=sharing" target="_blank">Research and Presentation Rubric</a>
-* Reading: <a href="http://denninginstitute.com/pjd/GP/overviews/ov_computation.pdf" target="_blank"> Computation
-: A new way of science</a>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
+encrypted '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
+V7EfFpFhOq7krKuBP1yqIYvaYWFtwpcoyvU=
+'
