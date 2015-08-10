@@ -347,6 +347,7 @@ fa-AF:
     local_school: مدرسه محلی
     online: آنلاین
     see_details: مشاهده جزئیات
+    view_course: View Course
     prize_info: 'هدیه مشارکت (فقط معلمان مدارس عمومی ایالات متحده): تا سقف 1000$ از جوایز کلاسی.'
     tryfirst: 'یا شما می توانیدآن را اول امتحان کنید و بعد ثبت نام کنید:'
     trynow: هم اکنون شروع کنید
@@ -361,6 +362,7 @@ fa-AF:
     heading_legacy: '<h2> دوره عمومی ما </h2><h1>همه سنین</h1>'
     your_gallery: گالری
     no_primary_course: یک کلاس را در کد استدیو امتحان کنید
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: چاپ گواهینامه
   gender:
     male: مرد
@@ -394,10 +396,6 @@ fa-AF:
     autoplay_option: پخش خودکار فیلم ها
     download: دانلود ویدیو
   compatability:
-    https:
-      header: لطفا مرور امن (HTTPS) را برای code.org فعال کنید.
-      message: "برای افزایش امنیت سایت ما در تاریخ %{https_date} به حالت مرور امن (HTTPS) تغییر می کند. شما بعد از این تاریخ به Code.org دسترسی نخواهید داشت. برای این که ببینید چه طور می توانید مرور امن (HTTPS) را برای Code.org فعال کنید <a href='%{it_requirements_url}'>اینجا کلیک کنید</a>."
-      hide_this_warning: مخفی کردن هشدار
     working:
       header: ما در حال کار بر روی پشتیبانی از مرورگر شما هستیم.
       message: "Code.org از فناوری های نوین وب برای سریعتر ساختن سایت را برای استفاده  بکار می گیرد . مرورگر شما تمام ویژگی های مورد نیاز را پشتیبانی نمی کند، و شما ممکن است به مسایلی در موقع استفاده از این بخش از سایت برخورد کنید . لطفا ما را با <a href='%{report_issue_url}'> گزارش هر گونه مسائل پیش آمده </a> یاری دهید. شما همچنین می توانید <a href='%{supported_browsers_url}'> مرورگر خود را به آخرین نسخه ( که از این قابلیتها پشتیبانی کند ) ارتقا دهید</a>."

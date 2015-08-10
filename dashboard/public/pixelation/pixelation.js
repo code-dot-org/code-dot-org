@@ -385,3 +385,32 @@ function showPNG() {
   w.focus();
   options.saveProject && options.saveProject();
 }
+
+function onFinishedButtonClick() {
+  var finishedButton = $('#finished');
+  if (finishedButton.attr('disabled')) {
+    return;
+  }
+  finishedButton.attr('disabled', true);
+
+  if (options.saveProject) {
+    options.saveProject(onSaveProjectComplete);
+  } else {
+    processResults(onComplete);
+  }
+}
+
+function onSaveProjectComplete() {
+  processResults(onComplete);
+}
+
+/**
+ * Function to be called after processResults completes.
+ * @param {Boolean} willRedirect Whether the browser will redirect to another
+ *     location after this function completes.
+ */
+function onComplete(willRedirect) {
+  if (!willRedirect) {
+    finishedButton.attr('disabled', false);
+  }
+}

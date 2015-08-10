@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Znotraj 'Ponovi' ali 'če' bloka morajo biti drugi bloki, da bo delovalo. Prepričaj se, da se notranji bloki ustrezno prilegajo zunanjemu bloku.",
   "emptyBlockInFunction": "The function {name} has an unfilled input.",
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Da bi blok s funkcijo deloval, mora vsebovati druge bloke oz ukaze.",
   "emptyFunctionalBlock": "Eden od blokov je brez podatka.",
   "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Klikni na \"uredi\" (ang. \"edit\") in dodaj v svojo funkcijopotreben parametre tako, da ustrezen blok povezan s parametrom povlečeš v opredelitev funkcije.",
   "errorUnusedFunction": "Usvaril/a si funkcijo, a si jo pozabil/a uporabiti v svojem delovnem prostoru. Klikni na \"Funkcije\" in poskrbi, da boš uporabil/a funkcijo v svojem programu.",
   "errorUnusedParam": "Dodal/a si blok k parametru, a si ga pozabil/a uporabiti v opredelitvi. Klikni na \"uredi\" (ang. \"edit\") in dodaj v zeleni blok ustrezen blok povezan s parametrom.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Obstajajo bloki, ki niso povezani nikamor.",
   "extraTopBlocksWhenRun": "Obstajajo bloki, ki niso povezani nikamor. Ali jih nameravaš povezati na blok \"Ob zagonu\" (When run)?",
   "finalStage": "Čestitke! Zaključil si zadnjo stopnjo.",
@@ -210,11 +212,10 @@
   "totalNumLinesOfCodeWritten": "Seštevek vseh skupaj:  {numLines, plural, one {1 vrstica} other {# vrstic}} kode.",
   "tryAgain": "Poskusi ponovno",
   "tryHOC": "Poizkusi Uro za programiranje (Hour to Code)",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Se želiš naučiti programirati?",
   "watchVideo": "Glej video",
   "when": "ko",
   "whenRun": "ob zagonu",
-  "workspaceHeaderShort": "Delovni prostor: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
+  "workspaceHeaderShort": "Delovni prostor: "
 }

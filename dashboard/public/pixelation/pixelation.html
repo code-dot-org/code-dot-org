@@ -70,7 +70,7 @@
   <textarea id="pixel_data" oninput="drawGraph();" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
   <button class="btn" onclick="formatBitDisplay();" title="View bits separated by pixel">Readable format</button>
   <button class="btn" onclick="unformatBits();"  title="View bits without any formatting">Raw format</button>
-  <button id="finished" class="btn btn-primary submitButton right">Finished! Continue to next stage</button>
+  <button id="finished" class="btn btn-primary right" onclick="onFinishedButtonClick();">Finished! Continue to next stage</button>
 </div>
 <script>
   if (!window.options) {

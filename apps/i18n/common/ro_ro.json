@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Blocul \"Repetă\" sau \"Dacă\" trebuie să aibe alte blocuri în interiorul său  pentru a putea funcționa. Asigură-te că blocul interior se încadrează corect în blocul care îl conține.",
   "emptyBlockInFunction": "Funcţia {name} are o intrare necompletată.",
   "emptyBlockInVariable": "Variabila {name} are o intrare necompletată.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Blocul de funcţie trebuie să aibă alte blocuri în interior ca să funcţioneze.",
   "emptyFunctionalBlock": "Ai un bloc necompletat.",
   "emptyTopLevelBlock": "Nu există blocuri pentru a rula programul. Trebuie să atașezi un bloc la blocul {topLevelBlockName}.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Creează un parametru pentru funcţia ta făcând clic pe \"editare\" şi adăugând parametrii necesari. Glisează noile blocuri parametru în definiţia funcţiei tale.",
   "errorUnusedFunction": "Ai creat o funcţie, dar nu ai folosit-o în spaţiul tău de lucru! Fă clic pe \"Funcţii\" în caseta de instrumente şi asigură-te că o folosești în programul tău.",
   "errorUnusedParam": "Ai adăugat un bloc de parametri, dar nu l-ai utilizat în definiţie. Asigură-te de utilizarea parametrului tău făcând clic pe \"editare\" şi plasând blocul parametru în interiorul blocului verde.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Ai blocuri neataşate.",
   "extraTopBlocksWhenRun": "Ai blocuri neataşate. Ai vrut să le ataşezi la blocul \"când rulează\"?",
   "finalStage": "Felicitări! Ai terminat ultima etapă.",
@@ -210,11 +212,10 @@
   "totalNumLinesOfCodeWritten": "Totalul all-time: {numLines, plural, one {1 linie} other {# linii}} de cod.",
   "tryAgain": "Încearcă din nou",
   "tryHOC": "Încearcă Ora de Cod",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Vrei să înveți să codezi?",
   "watchVideo": "Urmărește clipul video",
   "when": "când",
   "whenRun": "când rulezi",
-  "workspaceHeaderShort": "Spaţiu de lucru: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
+  "workspaceHeaderShort": "Spaţiu de lucru: "
 }

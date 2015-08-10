@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Bloky \"Opakovat\" nebo \"Pokud\" v sobě musí mít další bloky, aby fungovaly. Ujisti se, že vnitřní bloky jsou v pořádku vložené dovnitř vnějších bloků.",
   "emptyBlockInFunction": "Funkce {name} má nevyplněné vstupy.",
   "emptyBlockInVariable": "Proměnná {name} má nevyplněné vstupy.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Blok funkce v sobě musí obsahovat další bloky.",
   "emptyFunctionalBlock": "Máš blok s nevyplněným vstupem.",
   "emptyTopLevelBlock": "Nejsou zde žádné bloky pro spuštění. Musíš připojit blok k bloku {topLevelBlockName}.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Vytvořte parametr pro funkci klepnutím na tlačítko \"Upravit\" a přidáním potřebných parametrů. Přetáhněte nové bloky parametrů do vaší definice funkce.",
   "errorUnusedFunction": "Vytvořili jste funkci, ale nikdy jste použili v pracovní prostor. Klikněte na \"Funkce\" v panelu a zkontrolujte, zda ji používáte ve vašem programu.",
   "errorUnusedParam": "Přidán blok parametru, ale nebyl nepoužit v definici. Ujistěte se, že parametr používáte klepnutím na tlačítko \"Upravit\" a uvedením parametru do zeleného bloku.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Máš nepřipojené bloky.",
   "extraTopBlocksWhenRun": "Máš nepřipojené bloky. Chtěl si je připojit k bloku \"po spuštění\"?",
   "finalStage": "Dobrá práce! Dokončil si poslední fázi.",
@@ -210,11 +212,10 @@
   "totalNumLinesOfCodeWritten": "Celkově: {numLines, plural, one {1 řádek} other {# řádků}} kódu.",
   "tryAgain": "Zkusit znovu",
   "tryHOC": "Vyzkoušej Hodinu Programování",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Chceš se naučit programovat?",
   "watchVideo": "Shlédnout Video",
   "when": "když",
   "whenRun": "po spuštění",
-  "workspaceHeaderShort": "Pracovní prostor: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
+  "workspaceHeaderShort": "Pracovní prostor: "
 }

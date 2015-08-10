@@ -57,7 +57,7 @@
   congratulations: تهانينا!
   congratulations_on_completing_hoc: تهانينا على اكمالك ساعة واحدة من البرمجة
   get_a_certificate_of_achievement: أحصل على شهادة الانجاز
-  enter_valid_age: Please select a valid age
+  enter_valid_age: يرجى إختيار عمر صحيح
   enter_valid_email: الرجاء ادخال عنوان بريد الكتروني صالح
   get_a_certificate_message: نحن سوف نرسل لك شهادة ومعلومات حول كيفية <a href='/learn/beyond'>
     تعلم بعد ساعة واحدة من البرمجة</a>
@@ -197,6 +197,9 @@
   homepage_banner_text_main: Code.org and the College Board form an alliance to improve
     diversity in computer science.
   homepage_banner_text_link: اعرف المزيد
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: اعرف المزيد
   homepage_slot_text_title_hoc: ساعة من البرمجة
   homepage_slot_text_blurb_hoc: أي أحد يستطيع أن يتعلم. ابدأ اليوم
   homepage_slot_text_link_hoc: جرب "Hour of Code"
@@ -307,10 +310,9 @@
   dashboard_landing_more_tutorials_desc: هناك المزيد من الدروس <a href="/learn/beyond">المقدمة
     من قبل شركائنا.</a> لتعلم برمجة الروبوتات أو صفحات الويب أو إنشاء تطبيقك الخاص
     أو استكشاف لغات برمجة أخرى مثل سي ++ أو روبي أو بايثون.
-  dashboard_hoc_courses: The Hour of Code for All Ages
-  dashboard_hoc_courses_desc: Try any of these shorter 1 hour tutorials with your
-    students!
-  dashboard_k5_courses: 20-Hour Courses for K-5
+  dashboard_hoc_courses: ساعة البرمجة لجميع الأعمار
+  dashboard_hoc_courses_desc: قم بتجريب واحد من الدروس القصيرة لساعة واحدة مع طلابك!
+  dashboard_k5_courses: 20 ساعة من الدروس لأطفال
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -414,12 +416,12 @@
   dashboard_students_reset_password: إعادة تعيين كلمة المرور
   dashboard_students_share_section: 'مشاركة صفحة تسجيل الدخول هذة مع الطلاب:'
   dashboard_students_print_info: طباعة بطاقات معلومات تسجيل الدخول الخاصة بطلابك.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: صورة سرية
   dashboard_students_secret_picture: صورة سرية
   dashboard_students_reset_picture: يمكنك إعادة تعيين صورة الطالب سرية في أي وقت عن
     طريق اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول
     السرية</b>. سيتم إنشاء صورة سرية جديدة لهذا الطالب لاستخدامها عند تسجيل الدخول.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: الكلمة السرية
   dashboard_students_secret_word: الكلمة السرية
   dashboard_students_reset_word: 'يمكنك إعادة تعيين كلمات سر الطالب في أي وقت عن طريق
     اختيار <b>إظهار طريقة الدخول السرية</b> ومن ثم <b>إعادة تعيين طريقة الدخول السرية</b>.
@@ -1133,6 +1135,3 @@
     لن تستطيع الوصول إلى code.org بعد هذا التاريخ. <a href='%{it_requirements_url}'>اضغط
     هنا</a> لتعلم كيفية تفعيل HTTPS لـ code.org.
   compatibility_https_hide_this_warning: إخفاء هذا التحذير
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

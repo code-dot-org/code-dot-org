@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "\"Errepikatu\" edo \"baldintza\" blokeak barruan beste bloke batzuk behar ditu funtzionatzeko. Egiaztatu barruko blokeak egoki kokatuak daudela.",
   "emptyBlockInFunction": "{name} funtzioak sarrera bat hutsik dauka.",
   "emptyBlockInVariable": "{name} aldagaiak sarrera bat hutsik dauka.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Bloke funtzioak beste bloke bat bere baitan izan behar du lan egiteko.",
   "emptyFunctionalBlock": "Bete gabeko sarrera bat du zure blokeak.",
   "emptyTopLevelBlock": "Ez dago blokerik funtzionatu ahal izateko. Blokeren bat atxiki behar diozu {topLevelBlockName} blokeari.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Sortu parametro bat zure funtziorako \"editatu\" klikatuz eta beharrezko parametroak gehituz. Arrastatu parametro berrien blokeak zure funtzioaren definiziora.",
   "errorUnusedFunction": "Funtzio bat sortu duzu, baina ez duzu inoiz erabili zure langunean! Klikatu \"Funtzioak\" tresnen kutxan eta ziurtatu zure programan erabiltzen dituzula.",
   "errorUnusedParam": "Parametro-bloke bat gehitu zenuen, baina ez zenuen definizioan gehitu. Ziurtatu zure parametroa erabiltzen duzula \"editatu\"n klik eginez eta parametro-blokea bloke berdearen barruan ezarriz.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Erantsi gabeko blokeak dituzu.",
   "extraTopBlocksWhenRun": "Erantsi gabeko blokeak dituzu. Hauek \"abiaraztean\" blokera erantsi nahi dituzu?",
   "finalStage": "Zorionak! Azkeneko eszenatokia osatu duzu.",
@@ -210,11 +212,10 @@
   "totalNumLinesOfCodeWritten": "Guztira:  {numLines, plural, one { kode lerro 1} other {# lerro kode}}.",
   "tryAgain": "Saiatu berriro",
   "tryHOC": "Probatu Kode Ordua",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Kodetzen ikasi nahi?",
   "watchVideo": "Ikusi Bideoa",
   "when": "noiz",
   "whenRun": "abiaraztean",
-  "workspaceHeaderShort": "Laneremua: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
+  "workspaceHeaderShort": "Laneremua: "
 }

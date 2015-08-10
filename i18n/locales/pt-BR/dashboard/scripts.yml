@@ -34,7 +34,7 @@ pt-BR:
           Getting Loopy: Repetindo
           The Big Event: O grande evento
           Going Places Safely: Navegando com segurança
-          description: O Curso 1 tem como propósito ensinar estudantes que estão começando a ler a criar programas de computador, o que os ajudará a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir na execução de tarefas difíceis. No final do curso, os estudantes criam seu próprio jogo ou história personalizados que eles podem compartilhar com outras pessoas. Este curso é recomendado para crianças da pré-escola até 1º ano.
+          description: Comece com o Curso 1 para alunos que estão começando a ler. Os alunos vão criar programas de computador, o que os ajudará a aprender a colaborar com outras pessoas, desenvolver habilidades de resolução de problemas e persistir na execução de tarefas difíceis. No final do curso, os estudantes criam seu próprio jogo ou história personalizados que eles podem compartilhar com outras pessoas. Este curso é recomendado para crianças da pré-escola até o 1º ano.
           "Bee: Sequence": 'Abelha: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
           "Artist: Shapes": 'Artista: Formas'
@@ -43,7 +43,7 @@ pt-BR:
           "Studio: Create a Story": 'Laboratório: Crie uma história'
           "Artist: Loops": 'Artista: Laços'
           description_audience: 4-6 anos de idade
-          description_short: O Curso 1 é destinado às crianças que estão aprendendo a ler.
+          description_short: Comece com o Curso 1 para alunos que estão começando a ler.
         course2:
           The Maze: O Labirinto
           Suzi: Suzi
@@ -69,7 +69,7 @@ pt-BR:
           Binary Bracelets: Pulseiras binárias
           The Big Event: O grande evento
           Your Digital Footprint: Seu rastro digital
-          description: O Curso 2 é voltado para estudantes que já sabem ler e não têm experiência em programação. Aqui, os alunos criarão programas para resolver problemas e desenvolver histórias ou jogos interativos que podem compartilhar com outras pessoas. Este curso é recomendado para alunos de 2º-5º ano.
+          description: Comece com o Curso 2 para alunos que sabem ler e não têm experiência prévia em programação. Neste curso, os alunos vão criar programas para resolver problemas e desenvolver jogos ou histórias interativas que eles podem compartilhar. Este curso é recomendado para alunos do 2° ao 5° ano.
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
           "Maze: Loops": 'Labirinto: Laços'
@@ -82,7 +82,7 @@ pt-BR:
           "Maze: Sequence2": 'Labirinto: Sequência 2'
           "Artist: Nested Loops": 'Artista: Laços Aninhados'
           description_audience: 6-18 anos de idade
-          description_short: O Curso 2 é destinado aos alunos que já sabem ler.
+          description_short: Comece com o Curso 2 para alunos que sabem ler.
         course3:
           The Maze: O Labirinto
           "Studio: Create a Story": 'Laboratório: Crie uma história'
@@ -292,6 +292,19 @@ pt-BR:
           "Unit 1: Sending Bits": 'Unidade 1: envio de bits'
           "Unit 2: Routing and DNS": 'Unidade 2: roteamento e DNS'
           Internet Simulator Templates: Modelos de simulador de internet
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Pixelização
           description: Crie imagens com bits e bytes.
@@ -613,6 +626,9 @@ pt-BR:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
         algebraPD3:
           title: 'DP - Fase 3'
           description: Ensine álgebra com programação funcional com base em blocos
@@ -735,8 +751,8 @@ pt-BR:
           new stage: nova fase
         sciencePD2:
           title: DP da ciência da computação na ciência
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           Phase 2 Summer Workshop: 'Workshop de verão - Fase 2'
           Welcome: Welcome
           Resources: Resources
@@ -803,8 +819,8 @@ pt-BR:
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Ciência da computação em álgebra PD
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           Evaluation Blocks: Blocos de cálculo
           Strings and Images: Strings e imagens
           Defining Variables: Definir variáveis
@@ -849,8 +865,8 @@ pt-BR:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Ciência da computação em álgebra PD
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           Course Overview: Visão geral do curso
           Computer Science Pedagogy: Pedagogia em ciência da computação
           Teacher Dashboard: Painel de controle do professor
@@ -903,8 +919,8 @@ pt-BR:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           Welcome!: Bem-vindo!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -953,8 +969,8 @@ pt-BR:
           Hour of Code: Hora do Código
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: Ensine programação funcional com álgebra
-          description_short: Ensine programação funcional com álgebra
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           Course Overview: Visão geral do curso
           Computer Science Pedagogy: Pedagogia em ciência da computação
           Teacher Dashboard: Painel de controle do professor
@@ -975,8 +991,8 @@ pt-BR:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Ensine programação funcional com álgebra
-          description: Ensine programação funcional com álgebra
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
           Welcome!: Bem-vindo!
           Wrap-Up: Resumo
           Review StarLogo Nova: Review StarLogo Nova
@@ -992,8 +1008,8 @@ pt-BR:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Ensine programação funcional com álgebra
-          description: Ensine programação funcional com álgebra
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
           Welcome!: Bem-vindo!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1012,8 +1028,8 @@ pt-BR:
         sciencePD2b-iZone:
           Welcome!: Bem-vindo!
           title: Computer Science in Science PD Phase 2b
-          description_short: Ensine programação funcional com álgebra
-          description: Ensine programação funcional com álgebra
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1022,8 +1038,8 @@ pt-BR:
           Wrap-Up: Resumo
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Ensine programação funcional com álgebra
-          description: Ensine programação funcional com álgebra
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
           Welcome!: Bem-vindo!
           0: |
             Unit 1, Days 1-2
@@ -1041,8 +1057,8 @@ pt-BR:
           Wrap-up: Resumo
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Ensine programação funcional com álgebra
-          description: Ensine programação funcional com álgebra
+          description_short: 'Fase 2 - on-line: combinado de estudos de verão'
+          description: 'Fase 2 - on-line: combinado de estudos de verão'
           Welcome!: Bem-vindo!
           0: |
             Unit 1, Days 1-2

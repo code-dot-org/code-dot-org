@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Kubbarnir \"endurtaka\" og \"ef\" verða að innihalda aðra kubba til að virka. Gættu þess að innri kubburinn smellpassi í ytri kubbinn.",
   "emptyBlockInFunction": "Fallið {name} er með óútfyllt inntak.",
   "emptyBlockInVariable": "Breytan {name} er með óútfyllt inntak.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Fallkubburinn þarf að innhalda aðra kubba til að virka.",
   "emptyFunctionalBlock": "Það er kubbur með óútfyllt inntak.",
   "emptyTopLevelBlock": "Það eru engir kubbar til að keyra. Þú verður að tengja kubb við kubbinn {topLevelBlockName}.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Búðu til stika fyrir fallið þitt með því að smella á \"breyta\" og bæta við stikunum sem þarf. Dragðu nýju stikakubbana inn í skilgreiningu þína fyrir fallið.",
   "errorUnusedFunction": "Þú bjóst til fall, en notaðir það aldrei á vinnusvæðinu! Smelltu á \"Föll\" í verkfærakassanum og gættu þess að nota fallið í forritinu þínu.",
   "errorUnusedParam": "Þú bættir við kubbi fyrir stika en notaðir hann ekki í skilgreiningunni. Gættu þess að nota stikann þinn með því að smella á \"breyta\" og setja stikakubbinn inn í græna kubbinn.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Það eru ótengdir kubbar.",
   "extraTopBlocksWhenRun": "Það eru ótengdir kubbar. Var meiningin að tengja þá við \"þegar keyrt\" kubbinn?",
   "finalStage": "Til hamingju! Þú hefur klárað síðasta áfangann.",
@@ -210,11 +212,10 @@
   "totalNumLinesOfCodeWritten": "Samtals: {numLines, plural, one {1 lína} other {# línur}} af kóða.",
   "tryAgain": "Reyna aftur",
   "tryHOC": "Prófa Klukkustund kóðunar",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Viltu læra að kóða?",
   "watchVideo": "Horfa á videóið",
   "when": "þegar",
   "whenRun": "þegar keyrt",
-  "workspaceHeaderShort": "Vinnusvæði: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
+  "workspaceHeaderShort": "Vinnusvæði: "
 }

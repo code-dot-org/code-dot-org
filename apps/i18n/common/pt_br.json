@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Os blocos \"Repita\" ou \"Se\" precisam de outros blocos para funcionar. Verifique se o bloco de dentro se ajusta corretamente ao bloco principal.",
   "emptyBlockInFunction": "A função {name} tem uma entrada não preenchida.",
   "emptyBlockInVariable": "A variável {name} tem uma entrada não preenchida.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "O bloco de função precisa ter outros blocos dentro dele para funcionar.",
   "emptyFunctionalBlock": "Você tem um bloco com uma entrada sem preencher.",
   "emptyTopLevelBlock": "Não há blocos para executar. Você deve anexar um bloco ao bloco {topLevelBlockName}.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Crie um parâmetro para sua função clicando em \"editar\" e adicionando os parâmetros necessários. Arraste os novos blocos de parâmetro em sua definição de função.",
   "errorUnusedFunction": "Você criou uma função, mas nunca a usou na sua área de trabalho! Clique em \"Funções\" na caixa de ferramentas e não deixe de usá-la em seu programa.",
   "errorUnusedParam": "Você adicionou um bloco de parâmetro, mas não o usou na definição. Não deixe de usar seu parâmetro, clique em \"editar\" e coloque o bloco de parâmetro dentro do bloco verde.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Você tem blocos não anexados.",
   "extraTopBlocksWhenRun": "Você tem blocos não anexados. Você queria anexar esses blocos ao bloco \"quando executar\"?",
   "finalStage": "Parabéns! Você concluiu a fase final.",
@@ -210,11 +212,10 @@
   "totalNumLinesOfCodeWritten": "Total: {numLines, plural, one {1 linha} other {# linhas}} de código.",
   "tryAgain": "Tente novamente",
   "tryHOC": "Tente a Hora do Código",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Quer aprender a programar?",
   "watchVideo": "Assista ao vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Área de trabalho: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
+  "workspaceHeaderShort": "Área de trabalho: "
 }

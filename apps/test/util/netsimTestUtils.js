@@ -52,8 +52,8 @@ exports.overrideNetSimTableApi = function (netsimTable) {
     updateRow: function (id, value, callback) {
       return table.update(id, value, callback);
     },
-    deleteRow: function (id, callback) {
-      return table.delete(id, callback);
+    deleteRows: function (ids, callback) {
+      return table.deleteMany(ids, callback);
     },
     log: function () {
       return table.log();
@@ -150,21 +150,31 @@ var fakeStorageTable = function () {
     },
 
     /**
-     * @param {!number} id
+     * @param {!number[]} ids
      * @param {!NodeStyleCallback} callback
      */
-    delete: function (id, callback) {
-      log_ += 'delete[' + id + ']';
+    deleteMany: function (ids, callback) {
+      log_ += 'delete[' + ids.join(',') + ']';
 
-      for (var i = 0; i < tableData_.length; i++) {
-        if (tableData_[i].id === id) {
+      var matchesAnyDeleteID = function (row) {
+        return ids.some(function (id) {
+          return row.id === id;
+        });
+      };
+
+      var deleteCount = 0;
+      for (var i = tableData_.length - 1; i >= 0; i--) {
+        if (matchesAnyDeleteID(tableData_[i])) {
           tableData_.splice(i, 1);
-          callback(null, null);
-          return;
+          deleteCount++;
         }
       }
 
-      callback(new Error('Not Found'), null);
+      if (deleteCount > 0) {
+        callback(null, null);
+      } else {
+        callback(new Error('Not Found'), null);
+      }
     },
 
     /**

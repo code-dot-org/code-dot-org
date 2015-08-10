@@ -413,6 +413,7 @@
     local_school: sekolah lokal
     online: online
     see_details: Lihat rincian
+    view_course: View Course
     prize_info: 'Hadiah untuk partisipasi (hanya untuk guru sekolah umum dari US):
       maximal $1.000 imbalan.'
     tryfirst: 'Atau, Anda dapat mencobanya dulu kemudian mendaftar:'
@@ -432,6 +433,7 @@
     heading_legacy: <h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Cetak Sertifikat
   gender:
     male: Laki-laki
@@ -468,12 +470,6 @@
     autoplay_option: Autoplay video
     download: Ungah Video
   compatability:
-    https:
-      header: Silakan aktifkan HTTPS untuk Code.org.
-      message: Untuk meningkatkan keamanan, kita beralih ke HTTPS pada %{https_date}.
-        Anda tidak akan dapat mengakses Code.org setelah tanggal ini. <a href='%{it_requirements_url}'>
-        Klik di sini</a> untuk belajar bagaimana untuk mengaktifkan HTTPS untuk Code.org.
-      hide_this_warning: Sembunyikan peringatan
     working:
       header: Kami dalam tahap bekerja untuk menyediakan layanan didalam browser Anda.
       message: Code.org menggunakan teknologi modern web. Hal ini membuat situs lebih

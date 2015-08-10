@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Ahhoz hogy az \"Ismételd\" vagy a \"Ha\" blokkok működjenek, más blokkoknak is kell bennük lenni. Győződj meg arról, hogy a belső blokk megfelelően illeszkedik a külső befogadó blokkhoz.",
   "emptyBlockInFunction": "A funkció {name} üres bemenettel rendelkezik.",
   "emptyBlockInVariable": "A változó {name} üres bemenettel rendelkezik.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "A függvény blokkon belül lenni kell más blokkoknak is ahhoz, hogy működjön.",
   "emptyFunctionalBlock": "Van egy blokkod kitöltetlen bemenettel.",
   "emptyTopLevelBlock": "Nincs blokk a futtatáshoz. Hozzá kell adnod egy {topLevelBlockName} blokkot.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Hozz létre egy paramétert a függvényed számára a \"szerkesztés\"-re kattintva, és hozzáadva a szükséges paramétereket! Húzd az új paraméterblokkokat a függvénydeklarációdra!",
   "errorUnusedFunction": "Létrehoztál egy függvényt, de soha sem használtad fel azt a munkaterületeden! Kattints a \"Függvények\"-re az eszközkészleten, és győződj meg róla, hogy használod a függvényt a programodban.",
   "errorUnusedParam": "Hozzáadtál egy paraméterblokkot, de nem használtad fel azt a deklarálásodban. Győződj meg róla, hogy használod a paraméteredet, rákattintva a \"szerkesztés\"-re  és arról is, hogy bele van-e illesztve a paraméterblokkod a zöld blokkba!",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Vannak nem csatolt blokkjaid.",
   "extraTopBlocksWhenRun": "Vannak nem csatolt blokkjaid. Úgy véled, hogy ezeket a blokkokat \"futtatáskor\" csatolod?",
   "finalStage": "Gratulálok! Teljesítetted az utolsó szakaszt.",
@@ -210,11 +212,10 @@
   "totalNumLinesOfCodeWritten": "Összesített eredmény: {numLines, plural, one {1 sor} other {# sor}} kód.",
   "tryAgain": "Próbáld újra",
   "tryHOC": "Próbáld ki a Kódolás Óráját",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Szeretnél megtanulni programozni?",
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
+  "workspaceHeaderShort": "Munkaterület: "
 }

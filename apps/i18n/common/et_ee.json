@@ -137,8 +137,9 @@
   "dropletBlock_whileBlock_description": "Repeat something while a condition is true",
   "dropletBlock_whileBlock_signatureOverride": "while loop",
   "emptyBlocksErrorMsg": "\"Korda\" või \"Kui\" ploki sees peavad olema teised plokid et see töötaks. Veendu et sisemine plokk sobib plokiga mille sees ta on.",
-  "emptyBlockInFunction": "The function {name} has an unfilled input.",
-  "emptyBlockInVariable": "The variable {name} has an unfilled input.",
+  "emptyBlockInFunction": "Funktsioonil{name} on täitmata sisend.",
+  "emptyBlockInVariable": "Muutujal {name} on täitmata sisend.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Funktsiooni plokk peab sisaldama teisi plokke et ta töötaks.",
   "emptyFunctionalBlock": "Teil on täitmata sisendiga plokk.",
   "emptyTopLevelBlock": "There are no blocks to run. You must attach a block to the {topLevelBlockName} block.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Loo oma funktsioonile parameeter vajutades \"muuda\" ning lisades vajalikud parameetrid. Lohista uued parameetriplokid oma funktsiooni definitsiooni.",
   "errorUnusedFunction": "Sa lõid funktsiooni aga ei kasutanud seda oma tööruumis! Kliki \"Funktsioon\" nupule tööriistakastis ja veendu et sa seda oma programmis kasutad.",
   "errorUnusedParam": "Sa lisasid parameetriploki aga ei kasutanud seda oma definitsioonis. Ära unusta oma parameetrit kasutada, vajuta \"muuda\" ja pane parameetri plokk rohelise ploki sisse.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Sul on kinnitamata klotse.",
   "extraTopBlocksWhenRun": "Sul on kinnitamata blokid. Kas sa mõtlesid need lisada \"kui käivitada\" blokile?",
   "finalStage": "Tubli! Sa läbisid viimase taseme.",
@@ -210,11 +212,10 @@
   "totalNumLinesOfCodeWritten": "Kokku: {numLines, plural, one {1 rida} other {# rida}} rida koodi.",
   "tryAgain": "Proovi uuesti",
   "tryHOC": "Proovi Koodi Tundi",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Tahad programmeerimist õppida?",
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "kui käib",
-  "workspaceHeaderShort": "Tööruum: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question."
+  "workspaceHeaderShort": "Tööruum: "
 }

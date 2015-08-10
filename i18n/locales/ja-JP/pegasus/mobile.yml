@@ -160,7 +160,7 @@ ja-JP:
   homepage_hero_text_teacher2: '&ldquo;生徒全員がこのプログラムに興味を持ち、集中して取り組みました。&rdquo;アダム、教師'
   homepage_hero_text_stat_loc: 生徒によってコードの＃locラインが書かれました。
   homepage_hero_text_stat_students: 'コードスタジオの学生アカウント #student_count  '
-  homepage_hero_text_stat_served: 'Hour of Code:  #served 提供'
+  homepage_hero_text_stat_served: 'コードの時間: #served 提供しています'
   homepage_slot_text_hoc: Hour of Code
   homepage_slot_text_frozen: 「アナと雪の女王」のアナとエルサ
   homepage_slot_text_teacher: Teacher Dashboard
@@ -175,6 +175,8 @@ ja-JP:
   homepage_signpetition_dropdown: '請願書に署名します &#x25BE;'
   homepage_banner_text_main: Code.orgとCollege Boardはコンピュータ・サイエンス分野での人材の多様性を向上するために協力して活動していきます。
   homepage_banner_text_link: 詳しく
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: 詳しく
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: 誰でも学べる！早速始めよう。
   homepage_slot_text_link_hoc: 「コードの時間」に挑戦する
@@ -270,7 +272,7 @@ ja-JP:
   dashboard_landing_view_progress: '進捗状況をみる %{biggest_section}'
   dashboard_landing_available_title: 利用可能なコース
   dashboard_landing_available_courses: あなたと生徒の皆さんが現在利用可能なコースはこちら
-  dashboard_landing_more_tutorials: 更に他のチュートリアルをご覧になりますか。
+  dashboard_landing_more_tutorials: 更に他のチュートリアルをご覧になりますか?
   dashboard_landing_more_tutorials_desc: '他にも<a href="/learn/beyond">パートナーから提供された</a>チュートリアルがあります。プログラムでロボットを動かす方法、ウェブページを作る方法、オリジナルのアプリを作る方法、あるいは C++、Ruby、Python のような他の言語に関する知識について学びましょう！'
   dashboard_hoc_courses: Hour of Code すべての年齢対象
   dashboard_hoc_courses_desc: 1時間未満のチュートリアルをお試しください。
@@ -492,7 +494,7 @@ ja-JP:
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: グー、パー、チョキ
   hourofcode_name: 新しいcode.or/hocのプレイスホルダ
-  playlab_name: Play Lab
+  playlab_name: プレイラボ
   codeorg_gradelevel: 4才-104才
   codeintl_gradelevel: 4才-104才
   thinkersmithspanish_gradelevel: Por todos
