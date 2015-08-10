@@ -2740,8 +2740,8 @@ Studio.setItemAction = function (opts) {
   var item = Studio.items[opts.itemIndex];
 
   if (item) {
-    if (opts.type == "roamGrid") {
-        item.roamGrid();
+    if (opts.type == "roamGrid" || opts.type == "chaseGrid" || opts.type == "fleeGrid") {
+        item.roamGrid(opts.type);
     }
   }
 };
