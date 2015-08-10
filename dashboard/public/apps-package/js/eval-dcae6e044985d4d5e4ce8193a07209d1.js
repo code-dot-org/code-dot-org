@@ -187,7 +187,7 @@ Eval.init = function(config) {
 
 /**
  * @param {Blockly.Block}
- * @param {boolean} [appInitiate] True if this test was initiated by the app
+ * @param {boolean} [appInitiated] True if this test was initiated by the app
  *   rather than via the contract editor
  * @returns {string}
  */
