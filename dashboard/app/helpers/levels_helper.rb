@@ -216,6 +216,9 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
+    app_options[:hasVerticalScrollbars] = true if enable_scrolling?
+    app_options[:showExampleTestButtons] = true if enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
         fallback_response: @fallback_response,
@@ -352,5 +355,13 @@ module LevelsHelper
     channel_id = "1337" # Stub value, until storage for channel_id's is available.
     user_id = current_user ? current_user.id.to_s : session.id
     Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
+  end
+
+  def enable_scrolling?
+    current_user && current_user.admin? && @level.is_a?(Blockly)
+  end
+
+  def enable_examples?
+    current_user && current_user.admin? && @level.is_a?(Blockly)
   end
 end
