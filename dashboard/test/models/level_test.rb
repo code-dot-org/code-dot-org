@@ -6,6 +6,8 @@ require 'test_helper'
 include ActionDispatch::TestProcess
 
 class LevelTest < ActiveSupport::TestCase
+  include Mocha::API
+
   setup do
     @turtle_data = {:game_id=>23, :name=>"__bob4", :level_num=>"custom", :skin=>"artist", :instructions=>"sdfdfs", :type=>'Artist'}
     @custom_turtle_data = {:solution_level_source_id=>4, :user_id=>1}
