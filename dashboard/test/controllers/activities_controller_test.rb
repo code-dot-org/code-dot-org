@@ -151,11 +151,16 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal @script_level.script, UserLevel.last.script
   end
 
-  test "logged in milestone does not allow negative lines of code" do
-    @controller.send(:milestone_logger).expects(:info).with do |log_string|
-      log_string !~ /-20/
-    end
+  # Expect the controller to invoke "milestone_logger.info()" with a
+  # string that matches given regular expression.
+  def expect_controller_logs_milestone_regexp(regexp)
+    @controller.stubs(:milestone_logger).returns(
+        mock(:milestone_logger).expects(:info).with{|log_string| log_string !~ regexp})
+  end
 
+  test "logged in milestone does not allow negative lines of code" do
+
+    expect_controller_logs_milestone_regexp(/-20/)
     @controller.expects :slog
 
     @controller.expects(:trophy_check).with(@user)
@@ -182,9 +187,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
 
   test "logged in milestone does not allow unreasonably high lines of code" do
-    @controller.send(:milestone_logger).expects(:info).with do |log_string|
-      log_string !~ /9999999/
-    end
+    expect_controller_logs_milestone_regexp(/9999999/)
 
     @controller.expects :slog
 
@@ -213,9 +216,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "anonymous milestone does not allow unreasonably high lines of code" do
     sign_out(@user)
 
-    @controller.send(:milestone_logger).expects(:info).with do |log_string|
-      log_string !~ /9999999/
-    end
+    expect_controller_logs_milestone_regexp(/9999999/)
 
     @controller.expects :slog
 

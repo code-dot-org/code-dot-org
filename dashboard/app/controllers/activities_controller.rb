@@ -121,6 +121,7 @@ class ActivitiesController < ApplicationController
 
     test_result = params[:testResult].to_i
     solved = ('true' == params[:result])
+
     lines = params[:lines].to_i
 
     current_user.backfill_user_scripts if current_user.needs_to_backfill_user_scripts?
