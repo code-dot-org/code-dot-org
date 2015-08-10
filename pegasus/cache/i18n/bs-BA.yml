@@ -208,6 +208,9 @@
   homepage_banner_text_main: Code.org i College Board čine savez čiji cilj je poboljšanje
     raznovrsnosti u računarstvu.
   homepage_banner_text_link: Nauči više
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Nauči više
   homepage_slot_text_title_hoc: Sat Kodiranja
   homepage_slot_text_blurb_hoc: Svako može naučiti. Započni danas
   homepage_slot_text_link_hoc: Isprobaj Sat Kodiranja
@@ -1178,6 +1181,3 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Sakrij ovo upozorenje
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

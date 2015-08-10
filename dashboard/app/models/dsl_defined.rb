@@ -65,12 +65,14 @@ class DSLDefined < Level
   end
 
   def filename
+    return nil if name.blank?
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
     grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
     `#{grep_string}`.chomp.presence || "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
   end
 
   def file_path
+    return nil if filename.blank?
     Rails.root.join filename
   end
 
@@ -80,7 +82,11 @@ class DSLDefined < Level
 
   def self.decrypt_dsl_text_if_necessary(dsl_text)
     if dsl_text =~ /^encrypted '(.*)'$/m
-      return Encryption::decrypt_object($1)
+      begin
+        return Encryption::decrypt_object($1)
+      rescue Exception
+        # just return the encrypted text
+      end
     end
     return dsl_text
   end

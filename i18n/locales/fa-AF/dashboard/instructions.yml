@@ -654,7 +654,7 @@ fa-AF:
         Ok, let's do that again for practice
         - this isn't very different, but watch out for the chompers!
       4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
+        The "If-else" block checks a condition,
         and then does one thing OR another. To get me to the sunflower try to use
         this new block.
       4-5 Maze Conditionals 9_instruction: |
@@ -843,9 +843,6 @@ fa-AF:
       Big Game Collision 4_instruction: |
         Complete the collide? function so that it
         returns true if the distance between two points is less than 100 pixels apart.
-      Big Game Complete (copy 1)_instruction: |
-        A demo of the completed CS in Algebra
-        Big Game project
       Big Game Complete_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1904,7 +1901,7 @@ fa-AF:
       Eval Define Funcs 5_instruction: |
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
-        radiuses of 25, 50, and 75.
+        radii of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -2296,6 +2293,51 @@ fa-AF:
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
+      NetSim Standalone Automatic DNS_instruction: |
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou can connect to up to 5 other people in a room. When you send messages\nin the room, everyone receives them. What are some of the challenges of this\nsystem, and how might you solve them?\r\n"
+      NetSim Standalone Classroom Routers_instruction: |
+        In this version of the Internet
+        Simulator, everyone connects to a router and has a specific address. To send
+        messages, you have to address your message to the specific address of the
+        recipient, and the router will take care of delivering it to the right computer.
+        If there are other routers created in your class, ask for the address of one
+        of your classmates and send them a message! View the Log Router to see the
+        path the messages have taken through the network.
+      NetSim Standalone Freeplay_instruction: |
+        In this configuration, most of the
+        options are turned on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS_instruction: |
+        In this version of the simulator
+        you can't see the other students' addresses.  Instead, one of you must act
+        as a name service, to help share addresses with each other.
+      NetSim Standalone Packets TCP_instruction: |
+        Messages on the Internet can take
+        many paths to get to their destination, and sometimes along the way the message
+        gets dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters.
+        
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto a router with the others in your group. Important note: The router will\nonly properly route messages where the first 4 bits are the To: address and\nthe second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone SendAB_instruction: |
+        You and your partner share a single
+        wire that can only be in state A or state B. You can set the wire to either
+        state at any time, and you can read the state of the wire at any time. Can
+        you figure out a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers Ascii_instruction: |
+        Now that you've transmitted
+        information represented as decimal numbers, you can map those numbers to text
+        characters to send text-based information back and forth. With a text-based
+        protocol, you can easily represent and communicate all kinds of information.
+        
+      NetSim Standalone Sending Numbers_instruction: |
+        You and your partner can now
+        reliably send messages back and forth without extra coordination! While you're
+        always sending bits back and forth, you can also represent those bits as decimal
+        numbers. What kinds of information can you represent with this system? 
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
         will connect to a Router instead of directly to another student. Enter an
@@ -2578,61 +2620,18 @@ fa-AF:
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Something happened
-        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
-        were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Something happened to
-        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
-        added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Make a 3x5 letter
-        'A'.  The widget is setup with the incorrect dimensions. Your first task
-        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
-        start entering pixel data.
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Now make
-        your own image! We've started you off with a 10x10 canvas but you can make
-        it whatever size you want.  Happy pixeling!
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Now make your
-        own image! We've started you off with a 10x10 canvas but you can make it
-        whatever size you want.  Happy pixeling!
-      Pixelation 2_instruction: |
-        Something happened to the bits in this image!  Find
-        error and fix it!
-      Pixelation 4x4 Empty_instruction: |
-        The width and height are now encoded in
-        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
-      Play Lab Rocket 2 (copy 1)_instruction: |
-        We've added your contract and two
-        examples into the Design Recipe for rocket-height. Now write the function
-        for rocket-height.
-      Play Lab Rocket 2 (copy 2)_instruction: |
-        We've started the Design Recipe for
-        rocket-height using the contract and examples you just wrote. Complete the
-        function definition for rocket-height and run your animation.
       Play Lab Rocket 2_instruction: |
         We've started the Design Recipe for rocket-height
         using the contract and examples you just wrote. Complete the function definition
         for rocket-height and run your animation.
-      Play Lab Rocket 2B (copy 1)_instruction: |
-        We've started the Design Recipe
-        for rocket-height using the contract and examples you just wrote. Complete
-        the function definition for rocket-height and run your animation.
       Play Lab Rocket 2B_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second. Using the Design Recipe, write a function called rocket-height
         that takes in a number of  seconds that have passed since the rocket took
         off, and produces the height of the rocket at that time.
-      Play Lab Rocket 3 (copy 1)_instruction: |
-        Awesome, now can you update that function
-        so that our rocket moves more quickly? Make sure to update the purpose statement,
-        examples, and function definition to launch a rocket at 40 meters per second.
       Play Lab Rocket 3_instruction: |
         Awesome, now can you update that function so
         that our rocket moves more quickly? Make sure to update the purpose statement,
@@ -2665,9 +2664,9 @@ fa-AF:
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move Sam
-        around his yard, making note of Sam's coordinates at different locations.
-        Click "Finish" when you're ready to move on.
+        the screen update to tell you his location. Click "Run" and then use the
+        arrow keys to move Sam around his yard, making note of Sam's coordinates
+        at different locations. Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -2765,10 +2764,6 @@ fa-AF:
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
       Test Play Lab_instruction: This is a test play lab level.
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3104,31 +3099,123 @@ fa-AF:
         Draw a square above and to the left
         of the turtle's starting position. Click to see full instructions.
       U3L23 Chatbot Conditionals 1_instruction: |
-        Ask the user the question "What
-        is your favorite color?" using the "prompt" block. Using the "if" block,
-        check if the user's response matches yours. Add a "write" block to the
-        body of the "if" statement to add the response "<favorite_color> is my
-        favorite color too!" to the screen.
-      U3L23 Chatbot Conditionals 2_instruction: |
-        Replace the "if" block with an
-        "if/else" block to make your chatbot respond in all circumstances.
-      U3L23 Chatbot Conditionals 3_instruction: |
-        In text mode, add several "else
-        if" statements to your program.
+        Adjust the "if" block to make
+        the bot respond "That's the color of the sky!" if the user inputs the color
+        "blue".
+      U3L23 Chatbot Intro 1a_instruction: |
+        Store the user's input inside a variable
+        and log it to the console.
       U3L23 Chatbot Intro 2_instruction: |
-        Create a click event for your button. Create
-        a conversation variable and store the user's input in it. You may need the
-        "getText," "setText," and "+" blocks in your code.
+        Use string concatenation to store the user's
+        input and assistant's answer into the conversation variable using the format
+        "User: <input><bot name>: <default response>" . Log the conversation to
+        the console.
+      U3L23 Chatbot Intro 2a_instruction: |
+        Display the conversation onto the "text_area"
+        element. Optional: clear the user's input after every "change" event.
       U3L23 Chatbot Intro 3_instruction: |
-        Add the response "uh huh" by using the
-        "+" operator. Add newline characters (\
-        ) where appropriate.
+        Add newline characters "\
+        " to separate
+        the user's input and the computer's response.
       U3L23 Chatbot Intro 4_instruction: |
         Use this level to make your chatbot look
         and work better!
       U3L23 Chatbot Intro_instruction: |
-        Add a Lable, Text Input, Button, and Text
-        Area object to your project
+        Choose a specialization topic for your digital
+        assistant. Update the assistant description, name, starter prompt, and default
+        response to match this specialization.
+      U3L24 Basic String Parsing 1_instruction: |
+        Use the function "userInput.indexOf(<food>)"
+        to check if the strings "pizza" or "soup" are anywhere in the user's
+        response.
+      U3L24 Chatbot Basic Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Chatbot Conditionals 2_instruction: |
+        Adjust the "if" block to make
+        the bot respond "I don't know that color." if the user types anything besides
+        "blue"
+      U3L24 Chatbot Conditionals 3_instruction: |
+        Adjust the "if/else" block to
+        make the bot respond to the colors blue, red, and green, and to two additional
+        colors.
+      U3L24 Chatbot Keyword Record_instruction: |
+        Use the next level to record your
+        digital assistant's keywords/phrases.
+      U3L24 Chatbot Nested Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Nested Conditionals 1_instruction: |
+        Replace all instances of `str.indexOf("word")`
+        with a function `contains(sentence, word)` that returns true if the word is
+        in the sentence and returns false otherwise.
+      U3L24 Nested Conditionals 2_instruction: |
+        Use a nested conditional to respond
+        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+      U3L24 Nested Conditionals Bugs 2_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs 3_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs_instruction: |
+        Expose the bugs in this problem
+        by typing inputs into the user-input box. Track which inputs cause unexpected
+        outputs.
+      U3L25 Chatbot Strings_instruction: |
+        1. Adjust your digital assistant to evaluate
+        inputs the same way whether the inputs are capitalized or lowercase. 2. If
+        a user asks "What is <phrase>?", where <phrase> is an input your digital
+        assistant does not recognize, make your digital assistant respond "I don't
+        know what <phrase> is."
+      U3L25 String Parsing 1_instruction: |
+        Given the string "Wisdom begins with
+        wonder." what is the index of the following characters W, t, w, ., d, and
+        k? Confirm your expectation using the string.indexOf() function.
+      U3L25 String Parsing 2_instruction: |
+        Use str.length to find the length of the
+        strings “Hello World”, “Computer science rocks!", and “I promise to do my
+        homework every day.”
+      U3L25 String Parsing 3_instruction: |
+        Write a password length checker that writes
+        “yes” to the console if a string has a length greater than 10, or “no” if
+        it is less than or equal to 10.  Test your function using two strings, one
+        that will satisfy each conditional option.
+      U3L25 String Parsing 4_instruction: |
+        You are given the string "Wisdom begins
+        with wonder." Use the string.substring(begin, end) function to print "begin"
+        and "nder" to the console.
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto get the strings \"begin\" and \"nder\" from a sentence no matter where\nin the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 6_instruction: |
+        Write a function that takes a name (first
+        last) and reorders it (last, first).
+      U3L25 String Parsing 7_instruction: |
+        You are given the string “The earth has
+        music for those who listen.” Manipulate it using the functions str.toUpperCase()
+        and str.toLowerCase().
+      U3L26 AND operator_instruction: |
+        Inside the findingNemo function, write a conditional
+        statement that detects if a command contains all the phrases "2000" "animated"
+        and "G-rated." The function should return true if the above conditions are
+        met and return false otherwise
+      U3L26 Chatbot Compound Conditionals_instruction: |
+        Update your digital assistant
+        to include at least one each of AND, OR, and NOT
+      U3L26 Compound Logic_instruction: |
+        Write a conditional statement that detects
+        if a command contains all the phrases "2000" "animated" and "G-rated."
+        If all these phrases are detected, make Movie Bot respond "The top grossing
+        animated and G-rated film in the 2000 decade was Finding Nemo."
+      U3L26 NOT operator_instruction: |
+        Write a conditional statement that detects
+        if a command does not contain the phrase "bad." If "bad" is not detected,
+        make Movie Bot respond normally. Otherwise, make Movie Bot respond "Sorry,
+        I don't know about bad movies." 
+      U3L26 OR operator_instruction: |
+        Inside the isBest function, write a conditional
+        statement that detects if a command contains at least one of the phrases "all
+        time" "all-time" "overall" or "millennium." The function should return
+        true if the above conditions are met and return false otherwise
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

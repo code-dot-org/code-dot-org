@@ -9,7 +9,7 @@
         tu cuenta en pocos minutos.
     failure:
       already_authenticated: Ya has iniciado sesión.
-      inactive: Tu cuenta todavía no fue activada.
+      inactive: Tu cuenta todavía no ha sido activada.
       invalid: Correo electrónico o contraseña inválidos.
       invalid_token: Token de autenticación no válido.
       locked: Tu cuenta está bloqueada.
@@ -26,12 +26,12 @@
         subject: Instrucciones de desbloqueo
     omniauth_callbacks:
       failure: No pudimos autenticarte desde %{kind} debido a "%{reason}".
-      success: Autenticado correctamente desde la cuenta %{kind}.
+      success: Has accedido correctamente desde la cuenta %{kind}.
     passwords:
-      no_token: No puedes acceder a esta página si no has sido derivado de un correo
-        electrónico para restablecer contraseña. Si vienes de un correo electrónico
-        para restablecer contraseña, por favor asegúrate de haber usado el URL proporcionado
-        completo.
+      no_token: No puedes acceder a esta página si antes no has recibido un correo
+        electrónico para restablecer tu contraseña. Si recibiste el correo electrónico
+        para restablecer tu contraseña, asegúrate de haber usado el URL proporcionado
+        completamente.
       send_instructions: Recibirás un correo electrónico con instrucciones sobre cómo
         restablecer la contraseña en unos minutos.
       send_paranoid_instructions: Si tu dirección de email existe en nuestra base
@@ -43,7 +43,7 @@
       destroyed: ¡Adiós! Tu cuenta fue cancelada con éxito. Esperamos verte pronto.
       signed_up: ¡Bienvenido! Te has registrado exitosamente.
       signed_up_but_inactive: Te has registrado con éxito. Sin embargo, no has podido
-        iniciar sesión porque tu cuenta todavía no fue activada.
+        iniciar sesión porque tu cuenta aún no está activada.
       signed_up_but_locked: Te has registrado con éxito. Sin embargo, no has podido
         iniciar sesión porque tu cuenta está bloqueada.
       signed_up_but_unconfirmed: Un mensaje con un enlace de confirmación ha sido
@@ -56,12 +56,12 @@
       updated: Has actualizado tu cuenta correctamente.
     sessions:
       signed_in: ''
-      signed_out: Has cerrado tu sesión con éxito.
+      signed_out: Sesión cerrada con éxito.
     unlocks:
       send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
-        tu cuenta en pocos minutos.
+        tu cuenta en unos minutos.
       send_paranoid_instructions: Si existe tu cuenta, recibirás un correo electrónico
-        con instrucciones sobre cómo desbloquearla en pocos minutos.
+        con instrucciones sobre cómo desbloquearla en unos minutos.
       unlocked: Tu cuenta ha sido desbloqueada con éxito. Por favor inicia sesión
         para continuar.
   errors:
@@ -71,7 +71,7 @@
         %{period}, por favor, solicita una nueva
       expired: ha caducado, por favor, solicita una nueva
       not_found: no encontrado
-      not_locked: No estaba bloqueada
+      not_locked: no estaba bloqueada
       not_saved:
         one: '1 error impidió que este %{resource} se guardara:'
         other: '%{count} errores impiden que este %{resource} sea guardado:'

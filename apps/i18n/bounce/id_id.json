@@ -16,7 +16,7 @@
   "ifelseTooltip": "Jika ada jalan ke arah yang ditentukan, maka lakukan perintah yang berada di blok pertama. Jika tidak ada, maka lakukan perintah yang berada di blok kedua.",
   "incrementOpponentScore": "Skor titik lawan",
   "incrementOpponentScoreTooltip": "Tambah satu pada skor lawan saat ini.",
-  "incrementPlayerScore": "Mengukur titik",
+  "incrementPlayerScore": "skor nilai",
   "incrementPlayerScoreTooltip": "tambahkan satu pada pemain saat ini.",
   "isWall": "apa ini dinding",
   "isWallTooltip": "Tampilkan 'true' bila ada dinding di sini",

@@ -52,38 +52,36 @@
   auth:
     sign_in_with: ลงทะเบียนด้วย %{provider}
     signed_in: ลงชื่อเข้าใช้
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
+    signed_out: คุณได้ลงทะเบียนออกจาก <a href="%{url}">Code.org</a>.
+    sign_out_of: คุณใช้ %{provider} ในการเข้าสู่ระบบ <a href="%{url}">คลิกที่นี่</a>เพื่อลงชื่อออกจาก%{provider}.
     already_signedup: พร้อมที่จะสมัครแล้วหรือยัง.
     notyet_signedup: สมัครใช้งานหรือยัง?
-    google_oauth2: Google Account
+    google_oauth2: บัญชี Google
     twitter: ทวิตเตอร์
     facebook: เฟซบุค
-    windowslive: Microsoft Account
+    windowslive: บัญชี Microsoft
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
-    overview_student: Sign up for an account to track your progress. Your email is
-      primarily used to allow you to log in and for password recovery. For more information,
-      see our <a href="http://code.org/privacy">Privacy Policy</a>.
-    overview_teacher: Teach computer science in your classroom by signing up for an
-      account.<p/> You'll be able to add your students and track their progress.
+    student_count: '%{count} นักเรียนได้ลงทะเบียนไว้แล้ว'
+    teacher_count: ครู %{count} ได้ลงทะเบียนไว้แล้ว
+    overview_student: สมัครเป็นสมาชิกเพื่อติดตามความคืบหน้าของคุณ อีเมล์ของคุณส่วนใหญ่ไว้เพื่อให้คุณสามารถเข้าสู่ระบบ
+      และ สำหรับการกู้คืนรหัสผ่าน สำหรับข้อมูลเพิ่มเติม ดู<a href="http://code.org/privacy">นโยบายความเป็นส่วนตัว</a>ของเรา
+    overview_teacher: สอนวิทยาศาสตร์คอมพิวเตอร์ในชั้นเรียน โดยลงนามในบัญชี. <p/> คุณจะสามารถเพิ่มนักเรียนของคุณ
+      และติดตามความคืบหน้าของพวกเขา
     no_signup_message: คุณสามารถ<a target="_blank" href="http://learn.code.org">เรียกดูระยะและปริศนาต่าง
       ๆ</a> แต่คุณจะต้องลงทะเบียนเพื่อบันทึกความคืบหน้าของคุณ
     teacher_educator_guide: ดูคำแนะนำสำหรับผู้ฝึกสอน
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: คุณครูสมัคร Code.org
     teacher_title: สมัครเป็นครู
     student_pitch: สมัครเป็นนักเรียนสำหรับ code.org
     student_title: สมัครเป็นนักเรียน
     school_name: ชื่อโรงเรียน (ถ้ามี)
     school_address: ที่อยู่โรงเรียน (ถ้ามี)
     address_placeholder: ที่อยู่, อำเภอ, จังหวัด, รหัสไปรษณีย์
-    gender: Gender (optional)
-    birthday: Birthday (optional)
+    gender: เพศ (เลือกได้)
+    birthday: วันเกิด (ปล่อยว่างไว้ได้)
     age: อายุ
     user_type: คุณเป็นนักเรียนหรืออาจารย์
     submit: สมัครสมาชิก
@@ -91,20 +89,17 @@
     valid_username: อนุญาต
     invalid_username: ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร
     taken_username: ชื่อผู้ใช้นี้ถูกใช้ไปแล้ว
-    valid_password: Valid password!
+    valid_password: รหัสผ่านถูกต้อง
     invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/>For users under 13, email addresses are not stored in a form that
-      allows us to contact them.
-    teacher_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>.
-    additional_information: We need some additional information to continue signing
-      you up.
+    student_terms: ฉันยอมรับ <a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a>
+      ของ Code.org ถ้าฉันอายุต่ำกว่า 13 ปี ฉันยืนยัน โดยการส่งแบบฟอร์มนี้ที่มีสิทธิ์ของผู้ปกครองเพื่อการใช้บริการ
+      Code.org <br/> สำหรับผู้ที่อายุต่ำกว่า 13 ที่อยู่อีเมล์จะไม่ถูกเก็บไว้ในแบบฟอร์มที่ช่วยให้เราสามารถติดต่อ
+    teacher_terms: ฉันยอมรับ<a href='http://code.org/tos'>เงื่อนไขการใช้บริการ</a>ของ
+      Code.org
+    additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
   signin_form:
-    title: Have an account already? Sign in
+    title: มีบัญชีผู้ใช้แล้ว? เข้าสู่ระบบ
     login: อีเมล หรือ ชื่อผู้ใช้งาน
     password: รหัสผ่าน
     remember: จำฉัน
@@ -114,10 +109,10 @@
     try_hoc: ลอง  Hour of Code ก่อนเป็นอันดับแรก
     try_20hours: ทดลอง  ๒๐  ชั่วโมงของเราเพื่อเริ่มต้นกับวิทยาศาสตร์คอมพิวเตอร์
   signinsection:
-    welcome: Welcome to %{section_name}
-    name: Choose your name
-    picture: Now find your secret picture
-    words: Now enter your secret words
+    welcome: ยินดีต้อนรับสู่ %{section_name}
+    name: เลือกชื่อของคุณ
+    picture: หารูปภาพลับ
+    words: ป้อนคำศัพท์ลับของคุณ
     login: เข้าสู่ระบบ
   password:
     reset_form:
@@ -401,6 +396,7 @@
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
@@ -419,6 +415,7 @@
     heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Male
@@ -455,12 +452,6 @@
     autoplay_option: Autoplay videos
     download: Download Video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Hide this warning
     working:
       header: We are working on support for your browser.
       message: Code.org uses modern web technology. This makes the site faster to

@@ -422,6 +422,7 @@
     local_school: τοπικό σχολείο
     online: σε σύνδεση
     see_details: Δείτε λεπτομέρειες
+    view_course: View Course
     prize_info: 'Έπαθλα για συμμετέχοντες (μόνο για δασκάλους σε αμερικάνικα δημόσια
       σχολεία): Μέχρι $1.000 σε έπαθλα για τάξεις.'
     tryfirst: 'Ή μπορείτε να κάνετε πρώτα μία δοκιμή και να εγγραφείτε αργότερα:'
@@ -441,6 +442,7 @@
     heading_legacy: <h2>Το γενικό μάθημα για </h2><h1>όλες τις ηλικίες</h1>
     your_gallery: Συλλογή φωτογραφιών
     no_primary_course: Δοκιμάστε μία σειρά μαθημάτων στο Στούντιο Κώδικα
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Αγόρι
@@ -477,12 +479,6 @@
     autoplay_option: Αυτόματη αναπαραγωγή βίντεο
     download: Κατεβάστε το βίντεο
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
     working:
       header: Εργαζόμαστε για την υποστήριξη του προγράμματος περιήγησης που χρησιμοποιείτε.
       message: Code.org χρησιμοποιεί σύγχρονες web τεχνολογίες. Αυτό κάνει τον ιστότοπο

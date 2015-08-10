@@ -34,7 +34,7 @@ ro:
           Getting Loopy: Să ne buclăm
           The Big Event: Marele eveniment
           Going Places Safely: Să mergem oriunde în siguranţă
-          description: Cursul 1 este proiectat pentru a permite cititorilor începători să creeze programe de calculator, care îi vor ajuta să înveţe să colaboreze cu alții, să-și dezvolte abilităţile de rezolvare a problemelor şi să persevereze prin sarcini dificile. Până la sfârşitul acestui curs, elevii vor crea propriul joc sau poveste personalizate, pe care îl/o pot partaja. Recomandat pentru clasa 1.
+          description: Cursul 1 este proiectat pentru a permite cititorilor începători să creeze programe de calculator, care îi vor ajuta să înveţe să colaboreze cu alții, să-și dezvolte abilităţile de rezolvare a problemelor şi să persevereze prin sarcini dificile. Până la sfârşitul acestui curs, elevii vor crea propriul joc sau poveste personalizate, pe care îl/o pot distribui. Recomandat pentru clasa 1.
           "Bee: Sequence": 'Albină: Secvenţă'
           "Artist: Sequence": 'Artist: Secvenţă'
           "Artist: Shapes": 'Artist: Forme'
@@ -296,6 +296,19 @@ ro:
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Pixelare
           description: Creaţi imagini cu biţi şi bytes.
@@ -617,6 +630,9 @@ ro:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -739,8 +755,8 @@ ro:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -807,8 +823,8 @@ ro:
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
           Evaluation Blocks: Blocuri de evaluare
           Strings and Images: Șiruri și Imagini
           Defining Variables: Definirea Variabilelor
@@ -853,8 +869,8 @@ ro:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -907,8 +923,8 @@ ro:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
           Welcome!: Bine ai venit!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -957,8 +973,8 @@ ro:
           Hour of Code: Oră de Cod
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Etapa 2 online: Studiu de vară mixt'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -979,8 +995,8 @@ ro:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vară mixt'
           Welcome!: Bine ai venit!
           Wrap-Up: Revizuire
           Review StarLogo Nova: Review StarLogo Nova
@@ -996,8 +1012,8 @@ ro:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vară mixt'
           Welcome!: Bine ai venit!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1016,8 +1032,8 @@ ro:
         sciencePD2b-iZone:
           Welcome!: Bine ai venit!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vară mixt'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1026,8 +1042,8 @@ ro:
           Wrap-Up: Revizuire
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vară mixt'
           Welcome!: Bine ai venit!
           0: |
             Unit 1, Days 1-2
@@ -1045,8 +1061,8 @@ ro:
           Wrap-up: Încheiere
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Etapa 2 online: Studiu de vară mixt'
+          description: 'Etapa 2 online: Studiu de vară mixt'
           Welcome!: Bine ai venit!
           0: |
             Unit 1, Days 1-2

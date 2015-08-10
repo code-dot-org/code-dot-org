@@ -397,6 +397,7 @@
     local_school: místní škola
     online: online
     see_details: Viz podrobnosti
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Nebo to můžeš nejdřív zkusit a zaregistrovat se později:'
@@ -415,6 +416,7 @@
     heading_legacy: <h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>
     your_gallery: Galerie
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Muž
@@ -451,12 +453,6 @@
     autoplay_option: Automatické přehrávání videa
     download: Stáhnout Video
   compatability:
-    https:
-      header: Prosím povolte HTTPS pro Code.org
-      message: Kvůli zvýšení zabezpečení, přecházíme  na HTTPS  %{https_date}. Nebude
-        mít přístup k Code.org po tomto datu. <a href='%{it_requirements_url}'> zde
-        se dozvíte,</a> jak povolit HTTPS pro Code.org.
-      hide_this_warning: Skrýt toto varování
     working:
       header: Pracujeme na podpoře pro tvůj prohlížeč.
       message: Code.org uses modern web technology. This makes the site faster to

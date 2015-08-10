@@ -166,7 +166,7 @@ pl-PL:
     &ldquo;Ten program zainteresował i zaangażował do 
     uczestnictwa 100% moich uczniów.&rdquo;
     Adam, nauczyciel
-  homepage_hero_text_stat_loc: '#loc linii kodu napisanych przez uczniów'
+  homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
   homepage_hero_text_stat_students: '#student_count kont uczniów w Studio Kodowania'
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
   homepage_slot_text_hoc: Godzina Kodowania
@@ -183,6 +183,8 @@ pl-PL:
   homepage_signpetition_dropdown: 'Zgadzam się &#x25BE;'
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Ucz się więcej
   homepage_slot_text_title_hoc: Godzina kodowania (Hour of Code)
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
@@ -199,7 +201,7 @@ pl-PL:
   homepage_slot_text_link_fullcurriculum: Zobacz nasz pełny program nauczania
   homepage_slot_text_link_pd: Rozwój zawodowy
   homepage_slot_text_title_advocates: Zwolennicy
-  homepage_slot_text_blurb_advocates: Wesprzyj naszą pracę
+  homepage_slot_text_blurb_advocates: Wspieraj różnorodność w informatyce
   homepage_slot_text_link_stats: Zobacz statystyki
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę

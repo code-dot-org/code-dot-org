@@ -394,6 +394,7 @@
     local_school: vietējā skola
     online: tiešsaiste
     see_details: Sīkāka informācija
+    view_course: View Course
     prize_info: 'Balvas par dalību (tikai ASV valsts skolu skolotājiem): līdz $1,000
       savā klasē.'
     tryfirst: 'Vai vari izmēģināt sākumā un pierakstīties vēlāk:'
@@ -411,6 +412,7 @@
     heading_legacy: <h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>
     your_gallery: Galerija
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Vīrietis
@@ -447,12 +449,6 @@
     autoplay_option: Automātiski atskaņot videoklipu
     download: Lejupielādēt videoklipu
   compatability:
-    https:
-      header: Lūdzu iespējo HTTPS priekš Code.org.
-      message: Lai uzlabotu drošību, mēs pāriesim uz HTTPS protokolu no %{https_date}.
-        Pēc šī datuma tu nevarēsi piekļūt code.org. <a href='%{it_requirements_url}'>Spied
-        šeit</a> un izlasi, kā iespējot HTTPS Code.org.
-      hide_this_warning: Nerādīt šo brīdinājumu
     working:
       header: Mēs strādājam pie atbalsta jūsu pārlūkam.
       message: Code.org izmanto mūsdienīgas tīmekļa lapu tehnoloģijas. Tas palīdz

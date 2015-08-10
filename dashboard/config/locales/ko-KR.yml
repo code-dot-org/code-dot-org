@@ -371,6 +371,7 @@
     local_school: 학교
     online: 온라인
     see_details: 자세히 살펴보기
+    view_course: View Course
     prize_info: '상품을 획득해 보세요(미국 공립학교 교사만 해당): 학급당 %1,000까지 제공됩니다.'
     tryfirst: '먼저 해보고, 나중에 가입하기:'
     trynow: 지금 해보기
@@ -386,6 +387,7 @@
     heading_legacy: <h1>모든 연령대를 위한 </h1><h2>일반 코스</h2>
     your_gallery: 갤러리
     no_primary_course: Code Studio에서 과정을 시도해보세요
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: 인증서 인쇄
   gender:
     male: 남
@@ -421,12 +423,6 @@
     autoplay_option: 비디오 자동 실행
     download: 동영상 다운로드
   compatability:
-    https:
-      header: Code.org가 HTTPS를 사용할 수 있도록 활성화 해주세요
-      message: 보안을 강화하기 위해서, %{https_date}부터 HTTPS방식으로 변경됩니다. 이 날짜 이후로는 Code.org에  들어올
-        수 없을 수도 있습니다. Code.org에서 HTTPS를 사용하도록 설정하는 방법은 <a href='%{it_requirements_url}'>여기</a>
-        를 클릭하여 알아볼 수 있습니다.
-      hide_this_warning: 경고창 숨기기
     working:
       header: 이 웹브라우져를 지원합니다.
       message: Code.org는 웹 페이지를 보다 빠르게 동작하도록 하기 위해 최신 웹 기술을 사용합니다. 지금 사용하고 있는 웹브라우져는

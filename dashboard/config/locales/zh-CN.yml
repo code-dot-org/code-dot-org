@@ -359,6 +359,7 @@
     local_school: 本地学校
     online: 在线
     see_details: 查看详细信息
+    view_course: View Course
     prize_info: 奖品为参与 （仅限美国公立学校教师）： 最高在课堂奖励 1000 元。
     tryfirst: 或者，你也可以先试一试，晚些再注册：
     trynow: 现在就试试
@@ -373,6 +374,7 @@
     heading_legacy: <h2>我们的一般课程</h2><h1>所有年龄</h1>
     your_gallery: 画廊
     no_primary_course: 试试在 Code Studio 参加一个课程
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: 男性
@@ -406,12 +408,6 @@
     autoplay_option: 自动播放视频
     download: 下载视频
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: 隐藏此警告
     working:
       header: 我们在努力加入对你的浏览器的支持。
       message: Code.org利用现代网络技术. 这使得网站速度更快. 你的浏览器不支持所需的所有功能，使用该网站这一部分时，你可能会遇到问题. 请帮助我们通过<a
