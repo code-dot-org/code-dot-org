@@ -154,8 +154,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   # Expect the controller to invoke "milestone_logger.info()" with a
   # string that matches given regular expression.
   def expect_controller_logs_milestone_regexp(regexp)
-    @controller.stubs(:milestone_logger).returns(
-        mock(:milestone_logger).expects(:info).with{|log_string| log_string !~ regexp})
+    milestone_logger = mock(:milestone_logger).expects(:info).with{|log_string| log_string !~ regexp}
+    @controller.stubs(:milestone_logger).returns(milestone_logger)
   end
 
   test "logged in milestone does not allow negative lines of code" do
