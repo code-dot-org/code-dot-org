@@ -212,6 +212,9 @@
   homepage_banner_text_main: Code.org in the College Board sta zaveznika pri izboljšanju
     raznolikosti računalništva.
   homepage_banner_text_link: Več o tem
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Več o tem
   homepage_slot_text_title_hoc: Ura kode
   homepage_slot_text_blurb_hoc: Vsak se lahko nauči. Začni danes
   homepage_slot_text_link_hoc: Poizkusi Uro za programiranje (Hour to Code)
@@ -1170,6 +1173,3 @@
     Po tem datumu ne boste mogli dostopati do Code.org. <a href='%{it_requirements_url}'>
     Kliknite tukaj</a>, če želite izvedeti, kako omogočiti HTTPS za Code.org.
   compatibility_https_hide_this_warning: Skrij to opozorilo
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

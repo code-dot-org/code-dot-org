@@ -201,7 +201,8 @@
     &ldquo;Esse programa manteve 100% dos meus alunos
     engajados, envolvidos e participando.&rdquo;
     Adam, professor
-  homepage_hero_text_stat_loc: '#loc linhas de código escritas por alunos'
+  homepage_hero_text_stat_loc: 2,5 milhões de garotas se inscreveram para aprender
+    no Code Studio
   homepage_hero_text_stat_students: '#student_count contas de aluno no Code Studio'
   homepage_hero_text_stat_served: 'A hora do código: #served já experimentaram'
   homepage_slot_text_hoc: A Hour of Code
@@ -219,6 +220,9 @@
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para
     aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saiba mais
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Saiba mais
   homepage_slot_text_title_hoc: Hora do Código
   homepage_slot_text_blurb_hoc: Qualquer pessoa pode aprender. Comece hoje mesmo
   homepage_slot_text_link_hoc: Tente a Hora do Código
@@ -235,7 +239,7 @@
   homepage_slot_text_link_fullcurriculum: Veja nosso currículo completo
   homepage_slot_text_link_pd: Desenvolvimento profissional
   homepage_slot_text_title_advocates: Apoiadores
-  homepage_slot_text_blurb_advocates: Apoie nosso trabalho
+  homepage_slot_text_blurb_advocates: Apoie a diversidade na computação
   homepage_slot_text_link_stats: Veja as estatísticas
   homepage_slot_text_link_buy: Participe
   homepage_slot_text_link_donate: Fazer uma doação
@@ -1250,6 +1254,3 @@
     em %{https_date}. Você não vai poder acessar a Code.org após essa data. <a href='%{it_requirements_url}'>Clique
     aqui</a> para aprender a habilitar o HTTPS para a Code.org.
   compatibility_https_hide_this_warning: Ocultar este aviso
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

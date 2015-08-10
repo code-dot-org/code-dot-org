@@ -71,6 +71,14 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    */
   this.sortDescending_ = true;
 
+  /**
+  * Whether we are currently in "All-Router" mode or dealing with a
+  * single router. Initializes to true iff we are currently capable of
+  * logging all routers
+  * @private {boolean}
+  */
+  this.isAllRouterLogMode_ = this.canLogAllRouters_();
+
   this.render();
 };
 
@@ -118,7 +126,7 @@ NetSimRouterLogModal.prototype.render = function () {
   this.rootDiv_.off('shown.bs.modal.onModalOpen');
   this.rootDiv_.off('hidden.bs.modal.onModalClose');
 
-  var filteredLogEntries = this.isAllRouterMode() ?
+  var filteredLogEntries = this.isAllRouterLogMode_ ?
       this.logEntries_ :
       this.logEntries_.filter(function (entry) {
         return entry.nodeID === this.router_.entityID;
@@ -133,11 +141,17 @@ NetSimRouterLogModal.prototype.render = function () {
 
   var renderedMarkup = $(markup({
     logEntries: sortedFilteredLogEntries,
-    isAllRouterMode: this.isAllRouterMode(),
+    isAllRouterLogMode: this.isAllRouterLogMode_,
+    canToggleRouterLogMode: this.canToggleRouterLogMode_(),
     sortBy: this.sortBy_,
     sortDescending: this.sortDescending_
   }));
   this.rootDiv_.html(renderedMarkup);
+
+  this.getRouterLogToggleButton().one('click', function() {
+    this.toggleRouterLogMode_();
+    this.render();
+  }.bind(this));
 
   this.rootDiv_.on('shown.bs.modal.onModalOpen', function () {
     if (this.shard_) {
@@ -178,23 +192,60 @@ NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
  */
 NetSimRouterLogModal.prototype.setRouter = function (router) {
   this.router_ = router;
+  this.isAllRouterLogMode_ = this.canLogAllRouters_();
   this.render();
 };
 
 /**
- * Helper method to determine whether or we are currently in
- * "All-Router" mode, or dealing with a single router. Currently is
- * true if we are in "connected routers" mode, and is otherwise true iff
- * we are connected to a router.
+ * Whether we are currently capable of logging all routers or not.
+ * Is always true if we are in a level with connected routers.
+ * Otherwise, is only true if we are not locally connected to a router.
  * @returns {boolean}
+ * @private
  */
-NetSimRouterLogModal.prototype.isAllRouterMode = function () {
-  var levelConfig = NetSimGlobals.getLevelConfig();
-  if (levelConfig.connectedRouters) {
-    return true;
+NetSimRouterLogModal.prototype.canLogAllRouters_ = function () {
+  return NetSimGlobals.getLevelConfig().connectedRouters || !this.hasLocalRouter_();
+};
+
+/**
+ * Returns true iff we are locally connected to a router.
+ * @returns {boolean}
+ * @private
+ */
+NetSimRouterLogModal.prototype.hasLocalRouter_ = function () {
+  return !!(this.router_);
+};
+
+/**
+ * Whether or not we can switch between all-router and single-router log
+ * mode. We can switch to single-router iff we have a local router, and
+ * we can switch to all-router iff we are capable of logging all routers
+ * @returns {boolean}
+ * @private
+ */
+NetSimRouterLogModal.prototype.canToggleRouterLogMode_ = function () {
+  if (this.isAllRouterLogMode_) {
+    return this.hasLocalRouter_();
   } else {
-    return !(this.router_);
+    return this.canLogAllRouters_();
   }
+};
+
+/**
+ * Toggles this.isAllRouterLogMode_ between `true` and `false`
+ * @private
+ */
+NetSimRouterLogModal.prototype.toggleRouterLogMode_ = function () {
+  this.isAllRouterLogMode_ = !this.isAllRouterLogMode_;
+};
+
+/**
+ * Finds the button used to toggle between router log modes
+ * @returns {jQuery}
+ * @private
+ */
+NetSimRouterLogModal.prototype.getRouterLogToggleButton = function () {
+  return this.rootDiv_.find('button#routerlog-toggle');
 };
 
 /**

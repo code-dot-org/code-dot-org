@@ -212,6 +212,9 @@
   homepage_banner_text_main: Code.org og College Board har dannet en alliance, for
     at øge mangfoldigheden i computerundervisning.
   homepage_banner_text_link: Lær mere
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Lær mere
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Alle kan lære det. Start i dag
   homepage_slot_text_link_hoc: Prøv Hour of Code
@@ -1173,6 +1176,3 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Skjul denne advarsel
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

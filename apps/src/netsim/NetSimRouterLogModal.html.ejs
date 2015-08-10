@@ -14,7 +14,7 @@ var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
  */
 
 /**
- * @name isAllRouterMode
+ * @name isAllRouterLogMode
  * @type {boolean}
  */
 
@@ -49,7 +49,12 @@ function sortMarkupFor(sortKey) {
 <div class="modal-dialog modal-lg">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <% if (isAllRouterMode) { %>
+
+      <% if (canToggleRouterLogMode) { %>
+        <button type="button" id="routerlog-toggle" class="pull-right btn btn-primary btn-mini"><%= (isAllRouterLogMode) ? i18n.logBrowserHeader_toggleMine() : i18n.logBrowserHeader_toggleAll() %></button>
+      <% } %>
+
+      <% if (isAllRouterLogMode) { %>
         <h4 class="modal-title"><%= i18n.logBrowserHeader_all() %></h4>
       <% } else { %>
         <h4 class="modal-title"><%= i18n.logBrowserHeader_mine() %></h4>
