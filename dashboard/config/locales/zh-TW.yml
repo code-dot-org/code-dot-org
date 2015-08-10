@@ -84,7 +84,7 @@
     submit: 登錄
     teacher: 你是老師嗎？
     valid_username: 可以使用!
-    invalid_username: 使用者名稱須 5 個字元以上
+    invalid_username: 使用者名稱必須至少 5 個字元
     taken_username: 使用者名稱已被使用
     valid_password: 有效的密碼 ！
     invalid_password: 密碼必須要 6 個字元以上
@@ -358,6 +358,7 @@
     local_school: 當地的學校
     online: 在線上
     see_details: 查看詳細資訊
+    view_course: View Course
     prize_info: 參加獎 (僅限美國公立學校教師)：至多$1,000元美金的獎金。
     tryfirst: 或者，你也可以先試試，之後再 註冊：
     trynow: 快來試試
@@ -372,6 +373,7 @@
     heading_legacy: <h2>我們的一般課程</h2>適合<h1>所有年齡</h1>
     your_gallery: 相片圖庫
     no_primary_course: 試試在 Code Studio 參加一個課程
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: 男性
@@ -406,11 +408,6 @@
     autoplay_option: 自動播放影片
     download: 下載影片
   compatability:
-    https:
-      header: 請對Code.org啟用HTTPS (加密傳輸協定)
-      message: 為了提高安全性，我們在 %{https_date} 切換到 HTTPS。你將不能在此日期後訪問 Code.org。<a href='%{it_requirements_url}'>
-        按一下此處</a> 瞭解如何對Code.org啟用 HTTPS。
-      hide_this_warning: 隱藏此警告
     working:
       header: 我們正在設法支援您的瀏覽器。
       message: Code.org uses modern web technology. This makes the site faster to

@@ -64,7 +64,7 @@
   share_achievement: 分享你的成就
   beyond_hour_message: 繼續<a href='http://studio.code.org'>其它的課程</a>，或點擊“<a href='/learn/beyond'>學習超過一小時</a>”查閱其它學習選項。
   leaderboards_for_hoc: 一小時的程式設計課程排行榜。
-  support_url: HTTP://support.code.org/
+  support_url: http://support.code.org
   country: 國家
   city: 城市
   gender: 性別
@@ -169,6 +169,9 @@
   homepage_signpetition_dropdown: 我同意 &#x25BE;
   homepage_banner_text_main: Code.org 和美國大學理事會形成一個以提高在電腦科學中的多樣性為宗旨的聯盟。
   homepage_banner_text_link: 瞭解更多資訊
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: 瞭解更多資訊
   homepage_slot_text_title_hoc: 一小時的程式設計課程
   homepage_slot_text_blurb_hoc: 任何人都可以學習。從今天開始
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
@@ -910,6 +913,3 @@
   compatibility_https_message: 為了提高安全性，我們在 %{https_date} 切換到 HTTPS。你將不能在此日期後訪問 Code.org。<a
     href='%{it_requirements_url}'> 按一下此處</a> 瞭解如何對Code.org啟用 HTTPS。
   compatibility_https_hide_this_warning: 隱藏此警告
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

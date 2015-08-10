@@ -106,7 +106,7 @@
         Webapp: Webapp
         ArtistEC: アーティスト
         TextMatch: Text Match
-        StudioEC: Play Lab
+        StudioEC: プレイラボ
         Applab: App Lab
         NetSim: Internet Simulator
     trophy:
@@ -271,7 +271,7 @@
         flappy_7: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください
         flappy_8: |
           ゲームが開始した以外にもいつでもビジュアルを設定できます。例えば、障害物を過ぎたとき、などの状況が起こるランダムな状況を設定するようにしてください
-        flappy_9: 物事をミックスするため、障害物や地面にヒットした時に、ゲーム終了の代わりに得点を０に戻してください。
+        flappy_9: 色々な組み合わせを試してみましょう。障害物や地面にヒットした時に、ゲーム終了のかわりにスコアが0にもどるように設定して下さい。
         flappy_11: じぶんのFlappyゲームを作ってみましょう。みためやルール、じゅうりょくもすきなようにかえられます。作りおわったら、「完了」ボタンをクリックしてともだちにおしえましょう。ともだちはけいたいでんわをつかって、あなたのゲームであそぶことができます。
         flappy_k1_1: Flappyであそぶ
         flappy_k1_2: 「クリックされたとき」のブロックにほかのブロックを1つくっつけて、「実行」ボタンをおしてください。クリック（またはがめんをタップ）すると、Flappyはもくひょうにむかってうごきます
@@ -282,18 +282,18 @@
         flappy_k1_7: どかんをとおりぬけるたびになんかいもてんすうがふえるかどうか、かくにんしてください。
         flappy_k1_8: 次に、「実行時」ブロックにもう1つのブロックをくっつけて背景を変えてみてください
         flappy_k1_9: 「実行時」ブロックに「プレイヤーをセット」のブロックをくっつけて、プレイヤーのみためをかえてみてください。
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_1: ブロックをクリックします。
+        jigsaw_2: ブロックをターゲットまでドラッグします。
+        jigsaw_3: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_4: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_5: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_6: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_7: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_8: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_9: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_10: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_11: 絵が完成するようにブロックを配置しましょう。
+        jigsaw_12: 絵が完成するようにブロックを配置しましょう。
         jigsaw_13: パズルをといて！
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
@@ -323,8 +323,7 @@
         studio_c3_game_4: まず、ペンギンが恐竜にぶつかったら「痛い！」としゃべり、同時に「ヒット」の音が鳴るようにブロックを組み立ててください。それから矢印を使ってペンギンをうごかし、恐竜にぶつけてみましょう。
         studio_c3_game_5: ペンギンがタコにさわったらポイントがもらえるようにブロックをくみたててから、矢印をつかってポイントがもらえるまでタコを動かしましょう。
         studio_c3_game_6: このゲームのはいけいと、ペンギンのうごくはやさをかえるブロックをついかしてから、ポイントがもらえるまで矢印をつかってペンギンをうごかしましょう。
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        studio_c3_game_7: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
         studio_playlab_1: Penguin wants to say "hello" - can you help him?
         studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
           say "hello" to each other. Can you help them by using the "say" block twice?
@@ -343,10 +342,8 @@
         studio_playlab_9: Set the background for this alien invasion and help the
           Spacebot get to the alien faster by changing its speed. Then move him with
           the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your game on their phones.
+        studio_playlab_10: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
+        studio_full_sandbox: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
         studio_k1_1: いぬに「こんにちは」といわせてみましょう。
         studio_k1_2: いぬがなにかはなしてから、ねこもなにかをはなすようにしてみましょう。
         studio_k1_3: いぬがねこのところに行くプログラムを作ってみてください。
@@ -372,8 +369,7 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
-        studio_ec_sandbox: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        studio_ec_sandbox: 自分だけのゲームを作りましょう。ゲームが完成したら「完了」をクリックして、ともだちのパソコンやスマートフォンでも遊んでもらいましょう。
     video:
       name:
         maze_intro: 迷路入門
@@ -399,7 +395,7 @@
         Unplug7: Songwriting
         Unplug8: 抽象化
         Unplug9: Relay programming
-        Unplug10: Internet
+        Unplug10: インターネット
         Unplug11: ラップアップ
         C1_happy_maps_unplugged: ハッピーマップ
         C1_moveitmoveit_unplugged: Move It, Move It
@@ -412,7 +408,7 @@
         C1_artist_intro: アーティスト紹介
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
-        C1_bee_loops: Bee Loops
+        C1_bee_loops: 'みつばち: ループ'
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
@@ -421,9 +417,9 @@
         C2_maze_intro: 迷路入門
         C2_artist_intro: アーティスト紹介
         C2_zuck_repeat_loop: Maze Loops
-        C2_artist_loops: Artist Loops
-        C2_artist_debugging: Artist Debugging
-        C2_bee_loops: Bee Loops
+        C2_artist_loops: アーティスト ループ
+        C2_artist_debugging: アーティスト デバッグ
+        C2_bee_loops: 'みつばち: ループ'
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
@@ -445,10 +441,10 @@
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
         C3_bounce: バウンド
-        C3_playlab_create_game: Play Lab - Create a Game
+        C3_playlab_create_game: プレイラボ：ゲームを作りましょう
         C3_computational_thinking: コンピュテーショナル・シンキング（コンピューターの様に考える）
         C3_dice_race: Dice Race
-        C3_internet: Internet
+        C3_internet: インターネット
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters

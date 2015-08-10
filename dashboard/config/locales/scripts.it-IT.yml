@@ -37,12 +37,11 @@
           Getting Loopy: Diventare Ripetitivi
           The Big Event: Il Grande Evento
           Going Places Safely: Visitare Luoghi in Modo Sicuro
-          description: Il Corso 1 è progettato per permettere a studenti di prima
-            elementare che stanno iniziando a leggere di creare programmi che li aiutano
-            a collaborare con altri, a sviluppare capacità di risolvere problemi,
-            e a perseverare su problemi difficili. Alla fine del corso gli studenti
-            creano i loro giochi o le loro storie, che possono condividere. Il corso
-            è raccomandato per la prima elementare.
+          description: Il Corso 1 è rivolto che stanno iniziando a leggere. Gli studenti
+            creeranno dei programmi che li aiutano a collaborare con altri, a sviluppare
+            capacità di risolvere problemi e a perseverare su problemi difficili.
+            Alla fine del corso gli studenti creano i loro giochi o le loro storie,
+            che possono condividere. Il corso è raccomandato per la prima elementare.
           'Bee: Sequence': 'Ape: Sequenze'
           'Artist: Sequence': 'Artista: Sequenze'
           'Artist: Shapes': 'Artista: Forme'
@@ -51,7 +50,7 @@
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
           'Artist: Loops': 'Artista: Cicli'
           description_audience: Età 4-6 anni (pre-scolare)
-          description_short: Il corso 1 è progettato per chi sta iniziando a leggere.
+          description_short: Il corso 1 è rivolto a chi sta iniziando a leggere.
         course2:
           The Maze: Il Labirinto
           Suzi: Suzi
@@ -78,11 +77,11 @@
           Binary Bracelets: Braccialetti Binari
           The Big Event: Il Grande Evento
           Your Digital Footprint: La tua Impronta Digitale
-          description: Il Corso 2 è progettato per studenti delle scuole elementari
-            che hanno già imparato a leggere e non hanno precedenti esperienze di
-            programmazione. Nel corso gli studenti creano programmi per risolvere
-            problemi e sviluppare giochi interattivi o storie da condividere. Il corso
-            è raccomandato dalla seconda alla quinta elementare.
+          description: Il Corso 2 è rivolto a studenti delle scuole elementari che
+            hanno già imparato a leggere e non hanno precedenti esperienze di programmazione.
+            Nel corso gli studenti creano programmi per risolvere problemi e sviluppare
+            giochi interattivi o storie da condividere. Il corso è raccomandato dalla
+            seconda alla quinta elementare.
           'Maze: Sequence': 'Labirinto: Sequenze'
           'Artist: Sequence': 'Artista: Sequenze'
           'Maze: Loops': 'Labirinto: Cicli'
@@ -95,7 +94,7 @@
           'Maze: Sequence2': 'Labirinto: Sequenza 2'
           'Artist: Nested Loops': 'Artista: Cicli Annidati'
           description_audience: Età 6-18 anni
-          description_short: Il corso 2 è progettato per studenti che sanno leggere.
+          description_short: Il corso 2 è rivolto a studenti che sanno leggere.
         course3:
           The Maze: Il Labirinto
           'Studio: Create a Story': 'Laboratorio: Crea una Storia'
@@ -334,6 +333,21 @@
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
           'Unit 2: Routing and DNS': 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          'Peer to Peer: Sending Bits on a Shared Wire': 'Peer to Peer: Sending Bits
+            on a Shared Wire'
+          'Peer to Peer: Sending Numbers': 'Peer to Peer: Sending Numbers'
+          'Peer to Peer: Sending Ascii': 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: Peer to Peer - Sending Bits
+            on a Shared Wire
+          Peer to Peer - Sending Numbers: Peer to Peer - Sending Numbers
+          Peer to Peer - Sending Ascii: Peer to Peer - Sending Ascii
         pixelation:
           title: Conversione di pixel
           description: Crea immagini utilizzando bit e byte.
@@ -680,6 +694,10 @@
           'Scene Design Part 1: Plan': 'Scene Design Part 1: Plan'
           'Scene Design Part 2: Code': 'Scene Design Part 2: Code'
           'Scene Design Part 3: Reflect': 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
+            Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -812,8 +830,9 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -883,8 +902,9 @@
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
           Evaluation Blocks: Blocchi di Valutazione
           Strings and Images: Stringhe e Immagini
           Defining Variables: Definizione di Variabili
@@ -931,8 +951,9 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -989,8 +1010,9 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
           Welcome!: Benvenuti!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1052,8 +1074,9 @@
           Hour of Code: L'Ora del Codice
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1075,8 +1098,9 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Welcome!: Benvenuti!
           Wrap-Up: Conclusione
           Review StarLogo Nova: Review StarLogo Nova
@@ -1092,8 +1116,9 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Welcome!: Benvenuti!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1114,8 +1139,9 @@
         sciencePD2b-iZone:
           Welcome!: Benvenuti!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1124,8 +1150,9 @@
           Wrap-Up: Conclusione
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Welcome!: Benvenuti!
           0: |
             Unit 1, Days 1-2
@@ -1148,8 +1175,9 @@
           Wrap-up: Conclusione
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
+          description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           Welcome!: Benvenuti!
           0: |
             Unit 1, Days 1-2

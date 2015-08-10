@@ -28,7 +28,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/resources/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="εικόνα" /></a>
+  <a href="/files/hoc-one-pager.pdf"><img src="/images/fit-250/one-pager.png" alt="εικόνα" /></a>
 </p>
 
 <h2>
@@ -91,7 +91,7 @@ nav: resources_nav
 </h2>
 
 <p>
-  <a href="/resources/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="εικόνα" /></a> <a href="/resources/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="εικόνα" /></a> <a href="/resources/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="εικόνα" /></a> <a href="/resources/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="εικόνα" /></a> <a href="/resources/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="εικόνα" /></a> <a href="/resources/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="εικόνα" /></a>
+  <a href="/files/mark-zuckerberg-poster.pdf"><img src="/images/fit-280/mark-zuckerberg.png" alt="εικόνα" /></a> <a href="/files/marissa-mayer-poster.pdf"><img src="/images/fit-280/marissa-mayer.png" alt="εικόνα" /></a> <a href="/files/chris-bosh-poster.pdf"><img src="/images/fit-280/chris-bosh.png" alt="εικόνα" /></a> <a href="/files/susan-wojcicki-poster.pdf"><img src="/images/fit-280/susan-wojcicki.png" alt="εικόνα" /></a> <a href="/files/barack-obama-poster.pdf"><img src="/images/fit-280/barack-obama.png" alt="εικόνα" /></a> <a href="/files/ashton-kutcher-poster.pdf"><img src="/images/fit-280/ashton-kutcher.png" alt="εικόνα" /></a>
 </p>
 
 <p>

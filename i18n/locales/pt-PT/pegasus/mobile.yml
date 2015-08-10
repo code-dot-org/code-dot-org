@@ -196,6 +196,8 @@ pt-PT:
   homepage_signpetition_dropdown: 'Assina a nossa petição &#x25BE;'
   homepage_banner_text_main: A Code.org e a College Board formam uma aliança para aumentar a diversidade na ciência da computação.
   homepage_banner_text_link: Saber mais
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: Saber mais
   homepage_slot_text_title_hoc: Hora de Código
   homepage_slot_text_blurb_hoc: |
     Todos podem aprender.

@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "\"Gentag\" eller \"Hvis\" blokkene skal have andre blokke inden i for at virke. Kontroller, at den indre blok passer ordentligt inde i blokken.",
   "emptyBlockInFunction": "Funktionen {name} har manglende input.",
   "emptyBlockInVariable": "Variablen {name} har manglende input.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Funktion blokken skal have andre blokke inde i den for at virke.",
   "emptyFunctionalBlock": "Du har en blok med et ikke-udfyldt input.",
   "emptyTopLevelBlock": "Der er ingen blokke til at køre. Du skal vedhæfte en blok til {topLevelBlockName} blokken.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Opret en parameter for din funktion ved at klikke på \"Rediger\" og tilføje de nødvendige parametre. Træk de nye parameter-blokke til din definitionen af din funktion.",
   "errorUnusedFunction": "Du har oprettet en funktion, men ikke brugt den i dit arbejdsområde! Klik på \"Funktioner\" i værktøjskassen, og sørg for du bruger den i dit program.",
   "errorUnusedParam": "Du har tilføjet en parameterblok, men ikke brugt den i definitionen. Klik på \"Rediger\" og placer parameterblokken inden i den grønne blok, for at bruge din parameter.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Du har separate blokke.",
   "extraTopBlocksWhenRun": "Du har separate blokke. Var det din mening at hæfte disse til \"ved kørsel\"-blokken?",
   "finalStage": "Tillykke! Du har fuldført det sidste trin.",
@@ -210,12 +212,10 @@
   "totalNumLinesOfCodeWritten": "I alt: {numLines, plural, one {1 linje} other {# linjer}} af kode.",
   "tryAgain": "Prøv igen",
   "tryHOC": "Prøv Hour of Code",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Vil du lære at kode?",
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når programmet kører",
-  "workspaceHeaderShort": "Arbejdsområde: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
-  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name."
+  "workspaceHeaderShort": "Arbejdsområde: "
 }

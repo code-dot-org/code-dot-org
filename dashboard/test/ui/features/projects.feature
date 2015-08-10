@@ -1,8 +1,9 @@
 Feature: Projects
 
 Scenario: Save Artist Project
-  Given I am on "http://learn.code.org/p/artist"
+  Given I am on "http://learn.code.org/projects/artist"
   And I rotate to landscape
+  And I wait to see "#runButton"
   And element "#runButton" is visible
   And element ".project_updated_at" has text "Not saved"
   Then I open the topmost blockly category "Color"
@@ -10,7 +11,9 @@ Scenario: Save Artist Project
   And I press "runButton"
 #  Then element ".project_updated_at" contains text "Saving..." # I think browserstack is too slow to catch this
   Then I wait until element ".project_updated_at" contains text "Saved"
-  And I reload the page
+  Then I click selector ".project_share"
+  And I wait to see "#x-close"
+  And I navigate to the share URL
   Then element "#draw-color" is a child of element "#when_run"
 
 # dashboard_db_access for sign in

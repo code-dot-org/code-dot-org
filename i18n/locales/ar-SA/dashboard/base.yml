@@ -350,6 +350,7 @@ ar:
     local_school: مدرسة محلية
     online: متصل
     see_details: مشاهدة التفاصيل
+    view_course: View Course
     prize_info: 'جوائز للمشاركة (معلمي المدارس العامة الولايات المتحدة فقط): تصل إلى 1000 $ في المكافآت الفصول الدراسية.'
     tryfirst: 'أو، يمكنك تجربة لأول مرة، والتسجيل في وقت لاحق:'
     trynow: جرب الآن
@@ -364,6 +365,7 @@ ar:
     heading_legacy: '<h2>دورتنا عامة لـ</h2><h1>جميع الأعمار</h1>'
     your_gallery: معرض
     no_primary_course: 'جرب الدورة تدريبية في "الاستوديو التعليمات البرمجية"'
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: ذكر
@@ -397,10 +399,6 @@ ar:
     autoplay_option: تشغيل تلقائي لاشرطة الفيديو
     download: تحميل الفيديو
   compatability:
-    https:
-      header: رجاءً فعل HTTPS لـ code.org.
-      message: "لزيادة الأمان. اصبحنا نستخدم HTTPS على %{https_date}. لن تستطيع الوصول إلى code.org بعد هذا التاريخ. <a href='%{it_requirements_url}'>اضغط هنا</a> لتعلم كيفية تفعيل HTTPS لـ code.org."
-      hide_this_warning: إخفاء هذا التحذير
     working:
       header: نحن نعمل على دعم متصفح الأنترنت الخاص بك.
       message: "Code.org تستخدم تكنولوجيا الإنترنت الحديثة. هذا يجعل الموقع أسرع للاستخدام. لا يدعم متصفحك كافة الميزات المطلوبة، و قد تواجه مشكلات أثناء استخدام هذا الجزء من الموقع. يرجى مساعدتنا <a href='%{report_issue_url}'>بالإبلاغ عن أي مشاكل تجدها</a>. تستطيع أيضاً <a href='%{supported_browsers_url}'>تحديث متصفحك إلى نسخة مدعومة</a>."

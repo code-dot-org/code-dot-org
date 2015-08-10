@@ -292,6 +292,19 @@ ru:
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Пикселизация
           description: Создавайте картинки при помощи битов и байтов.
@@ -308,7 +321,7 @@ ru:
           title: 20-часовой вводный курс
           description_audience: Возраст 10+ (после курса 3)
           description: Этот 20-часовой курс является введением в основы информатики. Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен для всех возрастов.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: Этот 20-часовой курс охватывает основны информатики и программирования в курсах 2-4.
           Introduction to Computer Science: Введение в Информатику
           The Maze: Лабиринт
           Computational Thinking: Вычислительное мышление
@@ -349,21 +362,21 @@ ru:
         flappy:
           title: Порхающий код
           description: 'Хотите написать собственную игру меньше, чем за 10 минут? Попробуйте наш учебник "Порхающий  код"!'
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Напишите собственную игру Flappy меньше чем за 10 минут!
           Flappy Code: Порхающий код
         jigsaw:
           title: Головоломки
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Попробуйте наш учебник по Jiqsaw
+          description_short: Попробуйте наш учебник по Jiqsaw
           Jigsaw: Головоломки
         step:
           title: шаг
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Пошаговое обучение
+          description_short: Пошаговое обучение
           Step: шаг
         Hour of Code:
           title: Час кода 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: Попробуйте основы информатики с персонажами из Angry Birds и Зомби против растений!
           description_short: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
           Hour of Code 2013: Час кода 2013
         Code Studio Puzzle Challenge:
@@ -613,6 +626,9 @@ ru:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -735,8 +751,8 @@ ru:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -803,8 +819,8 @@ ru:
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Evaluation Blocks: Блоки оценивания
           Strings and Images: Строки и картинки
           Defining Variables: Определение переменных
@@ -849,8 +865,8 @@ ru:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Панель управления преподавателя
@@ -903,8 +919,8 @@ ru:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Welcome!: Добро пожаловать!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -947,14 +963,14 @@ ru:
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Час кода 2015
+          description_short: Используйте Лабораторию игр для создания историй или игр.
+          description: Используйте Лабораторию игр для создания историй или игр.
           Hour of Code: Hour of Code
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Панель управления преподавателя
@@ -975,8 +991,8 @@ ru:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Welcome!: Добро пожаловать!
           Wrap-Up: Итоги
           Review StarLogo Nova: Review StarLogo Nova
@@ -992,8 +1008,8 @@ ru:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Welcome!: Добро пожаловать!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1012,8 +1028,8 @@ ru:
         sciencePD2b-iZone:
           Welcome!: Добро пожаловать!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1022,8 +1038,8 @@ ru:
           Wrap-Up: Итоги
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Welcome!: Добро пожаловать!
           0: |
             Unit 1, Days 1-2
@@ -1041,8 +1057,8 @@ ru:
           Wrap-up: Итоги
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Фаза 2 онлайн: Смешанная летняя учёба'
+          description: 'Фаза 2 онлайн: Смешанная летняя учёба'
           Welcome!: Добро пожаловать!
           0: |
             Unit 1, Days 1-2

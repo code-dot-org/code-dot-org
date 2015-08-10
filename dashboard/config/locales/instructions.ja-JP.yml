@@ -47,38 +47,22 @@
       2-3 Artist Functions 11_instruction: '"draw a square" という関数の名前を "draw a hexagon"
         に変えました。hexagon は六角形という意味ですが、この関数が描くのは正方形のままです。"draw a hexagon" という関数を一辺が 50
         ピクセルの六角形を描くように直して、その関数を使って絵を描いてください。'
-      2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex
-        things multiple times. Can you use the \"draw a flower\" function\nto fill
-        the rest of the planter box?(Hint: The plants are all separated by\n100 pixels
-        length)  \n"
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: これら3つの正方形をつくるために、リピートブロックを使おう。
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
+      2-3 Artist Functions 12_instruction: 関数は、複雑なものを何回も描くのにうってつけです。"draw a flower"
+        という関数を使って、花壇の残りの花を描いてください。（ヒント：植物は 100 ビクセルずつ離れています）
+      2-3 Artist Functions 13_instruction: ここに関数が 4 つあります。この関数をループと一緒に使って、友だちとシェアするための絵を作りましょう。[実行]
+        をクリックすると例を見ることができます。
+      2-3 Artist Functions 2_instruction: 関数を使えば新しいブロックを作ることができます！ここでは、正方形を描くためのブロックを
+        "draw a square" という名前の関数の中に移動しました。"draw a square" を使って、メガネを作ってみましょう。正方形と正方形の間は
+        75 ピクセル空いています。
+      2-3 Artist Functions 3_instruction: 正方形の一辺の長さが 115 ピクセルになるように関数の中身を変えて、もっと大きなメガネを描いてください。今回は、正方形と正方形の間は
+        45 ピクセルです。
+      2-3 Artist Functions 4_instruction: この 3 つの正方形を「繰り返し」のブロックを使って描いてみましょう。
+      2-3 Artist Functions 7_instruction: '"draw a house" という関数を使って、家を 2 つ描いてください。別々のパラメータを使いましょう。（ヒント:
+        ひとつ目の家は 100 ピクセルです。）'
+      2-3 Artist Functions 9_instruction: 雪の絵を描く関数があります。いろいろ試して冬の景色を描いてみましょう！このレベルにはパズルはありません。
+      2-3 Artist Loops 1_instruction: 各辺が 100 ピクセルの六角形を描いてセルを完成させましょう。向きを帰るときは、60
+        度だけ回転させれば大丈夫ですよ！
+      2-3 Artist Loops 10_instruction: 最後のステップで前に進む距離を半分にするとデザインはどうなるでしょう？
       2-3 Artist Loops 11_instruction: |
         Now let's put *another* loop around our
         whole creation!  Don't forget to add an angle at the end of the outer loop.
@@ -103,8 +87,8 @@
         This time let's draw it 24 times. Add
         a left turn of 30 degrees to this code and put it all in a repeat block.
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
+        各辺 100 ピクセルのダイヤモンドを描きましょう。
+      2-3 Artist Loops New 13_instruction: 今度はループを使って、ダイヤモンドを 3 回描きましょう。
       2-3 Artist Loops New 14_instruction: では、ダイヤモンドを10回描いてみましょう。ただし、各ダイヤモンドを90度ずつ回転させてください。
       2-3 Artist Loops New 15_instruction: なにかおもしろいものをえがきましょう。
       2-3 Artist Loops New 2_instruction: |
@@ -144,10 +128,8 @@
       2-3 Artist Nested Loops 5_instruction: |
         Fill in this building's windows with
         a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
+      2-3 Artist Nested Loops 6_instruction: 恐竜のしっぽには、30 ピクセルのスパイクが 8 つあります。三角形を 8
+        回ループしましょう。各ループの間で前に進むことを忘れずに。
       2-3 Artist Nested Loops 7_instruction: |
         Loop this triangle 10 times to draw
         the sun. You'll need to move and turn after each triangle. You can figure
@@ -198,49 +180,24 @@
         Functions are blocks of code that perform
         a task. Use the "get 2 nectar" function to collect the nectar from each
         flower.
-      2-3 Bee Functions 10_instruction: |
-        Purple flowers may have either 1 or 0 nectar.  Create
-        a function that collects nectar only from purple flowers that have nectar.
+      2-3 Bee Functions 10_instruction: 紫の花には、蜜が 1 か 0 あります。蜜のある紫の花からのみ蜜を集めるため関数を作りましょう。
       2-3 Bee Functions 2_instruction: |
         Functions are blocks of code that perform
         a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
         use a loop to get an ideal block count, too.
       2-3 Bee Functions 3_instruction: お花から蜜を全部集めてください。
-      2-3 Bee Functions 4_instruction: |
-        The "move and get nectar" function turns
-        the bee, collects nectar, and then returns the bee to where it started. Use
-        the function to collect all of the nectar.
-      2-3 Bee Functions 5_instruction: |
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
+      2-3 Bee Functions 4_instruction: 「動いてみつを集める」の関数は、ハチを回転させ、蜜を集め、スタート地点までハチを戻します。この関数を使って蜜を全部集めましょう。
+      2-3 Bee Functions 5_instruction: ひとつの花にある蜜の量が増えました。今度は蜜を 4 つ取れるように関数を修正しましょう。
+      2-3 Bee Functions 6_instruction: 同じ関数を使って 3 つの花から蜜を集めましょう。
+      2-3 Bee Functions 7_instruction: 花と花の距離が広まりました。関数を修正して、花から蜜を集めましょう。
+      2-3 Bee Functions 8_instruction: 蜜を 7 つ集め、前に進み、はちみつを 7 つ作るための関数を作りましょう。関数を使って、花で蜜を集め、蜂の巣ではちみつを作りましょう。
+      2-3 Bee Functions 9_instruction: 道を進み、蜜を集め、はちみつを作り、スタート地点にハチを戻す関数を作りましょう。
       2-3 Bee Functions Assessment 1_instruction: 課題：指定の関数を使って花から蜜を集めましょう。
       2-3 Bee Functions Assessment 2_instruction: 課題：蜜を3つずつ集めるための関数を作りましょう。
-      2-3 Bee Loops 1_instruction: "Each flower contains one unit of nectar. Collect\nnectar
-        from each of the flowers. \n"
-      2-3 Bee Loops 10_instruction: |
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
+      2-3 Bee Loops 1_instruction: '花には蜜が 1 ユニットずつあります。蜜を花から集めましょう。 '
+      2-3 Bee Loops 10_instruction: 「以下の間」ループを違う 2 つのループの中で使うことで蜜を全部集められるかな？
+      2-3 Bee Loops 11_instruction: 「以下の間」ループを使って花の蜜を集めましょう。
+      2-3 Bee Loops 12_instruction: 「以下の間」ループを使って花の蜜を集めましょう。
       2-3 Bee Loops 13_instruction: 課題：「繰り返す」ブロックを使って蜜を全部集めましょう。
       2-3 Bee Loops 1A_instruction: 'こんにちは、ハチです！花から蜜を集めるのを手伝ってください。 '
       2-3 Bee Loops 2_instruction: ループを使ってはちみつを作るための蜜を集めましょう。
@@ -267,15 +224,13 @@
       2-3 Maze 12 (copy 2)_instruction: さっきと同じ答えを２つのブロックだけで作ってみましょう。(ヒント：〜回繰り返すのブロックを使って、繰り返しましょう)
       2-3 Maze 12 (old)_instruction: ぶたを捕まえて、今度は〜回繰り返すブロック！
       2-3 Maze 12_instruction: この５つのブロックの動きを２つのブロックで置き換えられる？ (ヒント：「〜回繰り返す」ブロックを使って繰り返しの作業を作りましょう)
-      2-3 Maze 13 (old)_instruction: |
-        Get me to the pig, now with the Repeat until
-        block!
+      2-3 Maze 13 (old)_instruction: 今度は「繰り返す」ブロックを使って、ブタのところまで行ってみよう。
       2-3 Maze 13_instruction: ブロックを2つだけ使ってブタを捕まえよう。
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
+      2-3 Maze 14 (old)_instruction: 「繰り返す」ブロックを使って、ブタのところまで行こう。
       2-3 Maze 14_instruction: ひまわりまで連れてって！ (「繰り返す」ブロックはどこかな)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
+      2-3 Maze 15 (old)_instruction: 「繰り返す」ブロックを使って、ブタのところまで行こう。
       2-3 Maze 15_instruction: ループを2つ使って少ない数のブロックでブタを捕まえてみよう。
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
+      2-3 Maze 16 (old)_instruction: 「繰り返す」ブロックを使って、ブタのところまで行こう。
       2-3 Maze 16 before_instruction: ブタを捕まえよう。
       2-3 Maze 16_instruction: ひまわりまで連れて行って。ブロックの組み合わえをループさせよう。
       2-3 Maze 2_instruction: このブタにはイライラさせられるワ。彼を捕まえるのを手伝って！
@@ -551,7 +506,7 @@
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
       4-5 Maze 10_instruction: 4ブロックだけ使ってひまわりにたどり着けますか？
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
+      4-5 Maze 11_instruction: ブロックを6つだけ使ってひまわりにたどり着けますか？
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
         only six blocks?
@@ -594,7 +549,7 @@
         Ok, let's do that again for practice
         - this isn't very different, but watch out for the chompers!
       4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
+        The "If-else" block checks a condition,
         and then does one thing OR another. To get me to the sunflower try to use
         this new block.
       4-5 Maze Conditionals 9_instruction: |
@@ -783,9 +738,6 @@
       Big Game Collision 4_instruction: |
         Complete the collide? function so that it
         returns true if the distance between two points is less than 100 pixels apart.
-      Big Game Complete (copy 1)_instruction: |
-        A demo of the completed CS in Algebra
-        Big Game project
       Big Game Complete_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1878,7 +1830,7 @@
       Eval Define Funcs 5_instruction: |
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
-        radiuses of 25, 50, and 75.
+        radii of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -2049,25 +2001,25 @@
       K-1 Artist2 Assessment1_instruction: 課題：ほかの四角の隣に四角を描きます。
       K-1 Artist2 Free Draw_instruction: なんでも好きなものを描いてみましょう！
       K-1 Artist2_7_instruction: 長方形を描いて、たんすに一番上のひきだしをつけてあげましょう！
-      K-1 Bee 1_instruction: 花を私のところにいどうしてみつを手に入れて、それからはちの巣を私のところに入れて、はちみつを作ります。
-      K-1 Bee 10_instruction: よっつのみつを手に入れて、ふたつのはちみつを作ります。
-      K-1 Bee 11.5_instruction: よっつのみつを手にいれてよっつのはちみつを作ります！
-      K-1 Bee 11_instruction: みっつのみつを手にいれてひとつのはちみつをつくります。
-      K-1 Bee 12_instruction: みっつのみつを手にいれてふたつのはちみつをつくります。
-      K-1 Bee 13_instruction: みっつのみつを手にいれてひとつのはちみつをつくります。
-      K-1 Bee 14_instruction: 私をみつのところまで移動させてみつを拾って、私をはちのすのところまで動かして、はちみつをつくります。
-      K-1 Bee 15_instruction: みつをふたつ手にいれてふたつのはちみつを作ります！
-      K-1 Bee 2_instruction: 花を私のところにいどうしてみつを手に入れて、それからはちの巣を私のところに入れて、はちみつを作ります。
-      K-1 Bee 3_instruction: 花を私のところにいどうしてみつを手に入れて、それからはちの巣を私のところに入れて、はちみつを作ります。
-      K-1 Bee 4_instruction: ふたつのみつを手にいれてふたつのはちみつをつくります。
-      K-1 Bee 5_instruction: みっつのみつを手にいれてみっつのはちみつをつくります。
-      K-1 Bee 6_instruction: ふたつのみつを手にいれてふたつのはちみつをつくります。
-      K-1 Bee 7_instruction: みっつのみつを手にいれてふたつのはちみつをつくります。
-      K-1 Bee 8_instruction: ふたつのみつを手にいれてふたつのはちみつをつくります。
-      K-1 Bee 9_instruction: ふたつのみつを手にいれてふたつのはちみつをつくります。
-      K-1 Bee Assessment 1_instruction: みつを集めてはちみつを作ってください!
-      K-1 Bee Assessment 2_instruction: みつを集めてはちみつを作ってください!
-      K-1 Bee Loops 1_instruction: みつを集めてはちみつを作ってください!
+      K-1 Bee 1_instruction: 私を花のところまで動かして、みつを手に入れて、それからハチの巣のところまで動かして、ハチミツを作ってください。
+      K-1 Bee 10_instruction: みつを4つゲットして、ハチミツを2個作りましょう！
+      K-1 Bee 11.5_instruction: みつを4つゲットして、ハチミツを4個を作りましょう！
+      K-1 Bee 11_instruction: みつを3つゲット手して、ハチミツを1個作りましょう。
+      K-1 Bee 12_instruction: みつを3つゲットして、ハチミツを2個を作りましょう！
+      K-1 Bee 13_instruction: みつを3つゲットして、ハチミツを1個作りましょう！
+      K-1 Bee 14_instruction: 私をみつのところまで動かして、みつを拾って、ハチの巣のところまで動かして、そしてハチミツを作りましょう。
+      K-1 Bee 15_instruction: みつを2つゲットして、ハチミツを2個作りましょう！
+      K-1 Bee 2_instruction: 私を花のところまで動かして、みつを手に入れて、それからハチの巣のところまで動かして、ハチミツを作ってください。
+      K-1 Bee 3_instruction: 私を花のところまで動かして、みつを手に入れて、それからハチの巣のところまで動かして、ハチミツを作ってください。
+      K-1 Bee 4_instruction: みつを2つゲットして、ハチミツを2個を作りましょう！
+      K-1 Bee 5_instruction: みつを3つゲットして、ハチミツを1個作りましょう！
+      K-1 Bee 6_instruction: みつを2つゲットして、ハチミツを2個を作りましょう！
+      K-1 Bee 7_instruction: みつを3つゲットして、ハチミツを2個を作りましょう！
+      K-1 Bee 8_instruction: みつを2つゲットして、ハチミツを2個を作りましょう！
+      K-1 Bee 9_instruction: みつを2つゲットして、ハチミツを2個を作りましょう！
+      K-1 Bee Assessment 1_instruction: みつをゲットしてハチミツを作ってください!
+      K-1 Bee Assessment 2_instruction: みつをゲットしてハチミツを作ってください!
+      K-1 Bee Loops 1_instruction: みつをゲットしてハチミツを作ってください!
       K-1 Bee Loops 10_instruction: 繰り返しを使って、みつを集めて、はちみつを作って、移動してください!
       K-1 Bee Loops 11_instruction: '課題: ループを使って、みつを集めてはちみつを作ってください!'
       K-1 Bee Loops 12_instruction: '課題: 繰り返しを使って、みつを集めて、はちみつを作って、移動してください!'
@@ -2219,6 +2171,55 @@
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
+      NetSim Standalone Automatic DNS_instruction: |
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou
+        can connect to up to 5 other people in a room. When you send messages\nin
+        the room, everyone receives them. What are some of the challenges of this\nsystem,
+        and how might you solve them?\r\n"
+      NetSim Standalone Classroom Routers_instruction: |
+        In this version of the Internet
+        Simulator, everyone connects to a router and has a specific address. To send
+        messages, you have to address your message to the specific address of the
+        recipient, and the router will take care of delivering it to the right computer.
+        If there are other routers created in your class, ask for the address of one
+        of your classmates and send them a message! View the Log Router to see the
+        path the messages have taken through the network.
+      NetSim Standalone Freeplay_instruction: |
+        In this configuration, most of the
+        options are turned on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS_instruction: |
+        In this version of the simulator
+        you can't see the other students' addresses.  Instead, one of you must act
+        as a name service, to help share addresses with each other.
+      NetSim Standalone Packets TCP_instruction: |
+        Messages on the Internet can take
+        many paths to get to their destination, and sometimes along the way the message
+        gets dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters.
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto
+        a router with the others in your group. Important note: The router will\nonly
+        properly route messages where the first 4 bits are the To: address and\nthe
+        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
+        addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone SendAB_instruction: |
+        You and your partner share a single
+        wire that can only be in state A or state B. You can set the wire to either
+        state at any time, and you can read the state of the wire at any time. Can
+        you figure out a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers Ascii_instruction: |
+        Now that you've transmitted
+        information represented as decimal numbers, you can map those numbers to text
+        characters to send text-based information back and forth. With a text-based
+        protocol, you can easily represent and communicate all kinds of information.
+      NetSim Standalone Sending Numbers_instruction: "You and your partner can now\nreliably
+        send messages back and forth without extra coordination! While you're\nalways
+        sending bits back and forth, you can also represent those bits as decimal\nnumbers.
+        What kinds of information can you represent with this system? \n"
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
         will connect to a Router instead of directly to another student. Enter an
@@ -2485,11 +2486,9 @@
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: 関数を使えば新しいブロックを作ることができます！ここでは、正方形を描くためのブロックを "draw
+        a square" という名前の関数の中に移動しました。"draw a square" を使って、メガネを作ってみましょう。正方形と正方形の間は 75
+        ピクセル空いています。
       PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
         \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
         this is called a \"loop.\" \n"
@@ -2497,61 +2496,18 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Something happened
-        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
-        were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Something happened to
-        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
-        added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Make a 3x5 letter
-        'A'.  The widget is setup with the incorrect dimensions. Your first task
-        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
-        start entering pixel data.
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Now make
-        your own image! We've started you off with a 10x10 canvas but you can make
-        it whatever size you want.  Happy pixeling!
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Now make your
-        own image! We've started you off with a 10x10 canvas but you can make it
-        whatever size you want.  Happy pixeling!
-      Pixelation 2_instruction: |
-        Something happened to the bits in this image!  Find
-        error and fix it!
-      Pixelation 4x4 Empty_instruction: |
-        The width and height are now encoded in
-        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
-      Play Lab Rocket 2 (copy 1)_instruction: |
-        We've added your contract and two
-        examples into the Design Recipe for rocket-height. Now write the function
-        for rocket-height.
-      Play Lab Rocket 2 (copy 2)_instruction: |
-        We've started the Design Recipe for
-        rocket-height using the contract and examples you just wrote. Complete the
-        function definition for rocket-height and run your animation.
       Play Lab Rocket 2_instruction: |
         We've started the Design Recipe for rocket-height
         using the contract and examples you just wrote. Complete the function definition
         for rocket-height and run your animation.
-      Play Lab Rocket 2B (copy 1)_instruction: |
-        We've started the Design Recipe
-        for rocket-height using the contract and examples you just wrote. Complete
-        the function definition for rocket-height and run your animation.
       Play Lab Rocket 2B_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second. Using the Design Recipe, write a function called rocket-height
         that takes in a number of  seconds that have passed since the rocket took
         off, and produces the height of the rocket at that time.
-      Play Lab Rocket 3 (copy 1)_instruction: |
-        Awesome, now can you update that function
-        so that our rocket moves more quickly? Make sure to update the purpose statement,
-        examples, and function definition to launch a rocket at 40 meters per second.
       Play Lab Rocket 3_instruction: |
         Awesome, now can you update that function so
         that our rocket moves more quickly? Make sure to update the purpose statement,
@@ -2584,9 +2540,9 @@
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move Sam
-        around his yard, making note of Sam's coordinates at different locations.
-        Click "Finish" when you're ready to move on.
+        the screen update to tell you his location. Click "Run" and then use the
+        arrow keys to move Sam around his yard, making note of Sam's coordinates
+        at different locations. Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -2627,17 +2583,17 @@
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: よし、れんしゅうのためにもういちどやってみよう。さっきとそんなにかわらないけど、かべにきをつけてね。
+      scrat 17_instruction: よし、練習のためにもう一度やってみよう。さっきとそんなにかわらないけど、壁にきをつけてね。
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: '"もし〜そうでなければ"ブロックは、”もしも"のけっかによって、こういうことをするのか、あういうことをするのかがかわってきます。このあたらしいブロックをつかって、ぼくをドングリのところまでつれていってね！'
+      scrat 18_instruction: '"もし○○そうでなければ××"ブロックは、”もし"の結果によって、○○をするか、××をするかが変わってきます。この新しいブロックをつかって、ぼくをドングリまでつれていってね！'
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: ”もし〜そうでなければ”ブロックのれんしゅうをもういっかいやりましょう。いっかいでクリアできるかな？
-      scrat 20_instruction: あと3ブロックだけくわえて、もっとふくざつなめいろをクリアすることができるかな？もしせいかいなら、ぼくどんなにクネクネしたみちでも、どんなにながくても、ドングリまであるくことができるよ。いそいで！こおりがとけてきている！
+      scrat 19_instruction: ”もし○○でなければ××”ブロックの練習をもう一回やりましょう。一度でクリアできるかな？
+      scrat 20_instruction: ブロックをあと3つだけ足して、難しい迷路をクリアしてみよう。もしこの迷路をクリアできたら、どんなに長くてクネクネした道でも、ぼくはドングリまで歩くことができるよ。いそいで！氷がとけてきた！
       SpecialFrozenLevel_instruction: あなたは、マスターアーティストになったわ！じゆうに、ふゆのワンダーランドをつくりましょう。
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
@@ -2681,7 +2637,6 @@
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
       Test Play Lab_instruction: This is a test play lab level.
-      Text Compression Peter Piper_instruction: この詩は、よくあるフレーズを辞書の中にあるシンボルに置き換えて圧縮しています。よくあるパターンを他にも見つけて詩を更に圧縮できますか？
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3074,31 +3029,124 @@
         Draw a square above and to the left
         of the turtle's starting position. Click to see full instructions.
       U3L23 Chatbot Conditionals 1_instruction: |
-        Ask the user the question "What
-        is your favorite color?" using the "prompt" block. Using the "if" block,
-        check if the user's response matches yours. Add a "write" block to the
-        body of the "if" statement to add the response "<favorite_color> is my
-        favorite color too!" to the screen.
-      U3L23 Chatbot Conditionals 2_instruction: |
-        Replace the "if" block with an
-        "if/else" block to make your chatbot respond in all circumstances.
-      U3L23 Chatbot Conditionals 3_instruction: |
-        In text mode, add several "else
-        if" statements to your program.
+        Adjust the "if" block to make
+        the bot respond "That's the color of the sky!" if the user inputs the color
+        "blue".
+      U3L23 Chatbot Intro 1a_instruction: |
+        Store the user's input inside a variable
+        and log it to the console.
       U3L23 Chatbot Intro 2_instruction: |
-        Create a click event for your button. Create
-        a conversation variable and store the user's input in it. You may need the
-        "getText," "setText," and "+" blocks in your code.
+        Use string concatenation to store the user's
+        input and assistant's answer into the conversation variable using the format
+        "User: <input><bot name>: <default response>" . Log the conversation to
+        the console.
+      U3L23 Chatbot Intro 2a_instruction: |
+        Display the conversation onto the "text_area"
+        element. Optional: clear the user's input after every "change" event.
       U3L23 Chatbot Intro 3_instruction: |
-        Add the response "uh huh" by using the
-        "+" operator. Add newline characters (\
-        ) where appropriate.
+        Add newline characters "\
+        " to separate
+        the user's input and the computer's response.
       U3L23 Chatbot Intro 4_instruction: |
         Use this level to make your chatbot look
         and work better!
       U3L23 Chatbot Intro_instruction: |
-        Add a Lable, Text Input, Button, and Text
-        Area object to your project
+        Choose a specialization topic for your digital
+        assistant. Update the assistant description, name, starter prompt, and default
+        response to match this specialization.
+      U3L24 Basic String Parsing 1_instruction: |
+        Use the function "userInput.indexOf(<food>)"
+        to check if the strings "pizza" or "soup" are anywhere in the user's
+        response.
+      U3L24 Chatbot Basic Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Chatbot Conditionals 2_instruction: |
+        Adjust the "if" block to make
+        the bot respond "I don't know that color." if the user types anything besides
+        "blue"
+      U3L24 Chatbot Conditionals 3_instruction: |
+        Adjust the "if/else" block to
+        make the bot respond to the colors blue, red, and green, and to two additional
+        colors.
+      U3L24 Chatbot Keyword Record_instruction: |
+        Use the next level to record your
+        digital assistant's keywords/phrases.
+      U3L24 Chatbot Nested Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Nested Conditionals 1_instruction: |
+        Replace all instances of `str.indexOf("word")`
+        with a function `contains(sentence, word)` that returns true if the word is
+        in the sentence and returns false otherwise.
+      U3L24 Nested Conditionals 2_instruction: |
+        Use a nested conditional to respond
+        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+      U3L24 Nested Conditionals Bugs 2_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs 3_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs_instruction: |
+        Expose the bugs in this problem
+        by typing inputs into the user-input box. Track which inputs cause unexpected
+        outputs.
+      U3L25 Chatbot Strings_instruction: |
+        1. Adjust your digital assistant to evaluate
+        inputs the same way whether the inputs are capitalized or lowercase. 2. If
+        a user asks "What is <phrase>?", where <phrase> is an input your digital
+        assistant does not recognize, make your digital assistant respond "I don't
+        know what <phrase> is."
+      U3L25 String Parsing 1_instruction: |
+        Given the string "Wisdom begins with
+        wonder." what is the index of the following characters W, t, w, ., d, and
+        k? Confirm your expectation using the string.indexOf() function.
+      U3L25 String Parsing 2_instruction: |
+        Use str.length to find the length of the
+        strings “Hello World”, “Computer science rocks!", and “I promise to do my
+        homework every day.”
+      U3L25 String Parsing 3_instruction: |
+        Write a password length checker that writes
+        “yes” to the console if a string has a length greater than 10, or “no” if
+        it is less than or equal to 10.  Test your function using two strings, one
+        that will satisfy each conditional option.
+      U3L25 String Parsing 4_instruction: |
+        You are given the string "Wisdom begins
+        with wonder." Use the string.substring(begin, end) function to print "begin"
+        and "nder" to the console.
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto
+        get the strings \"begin\" and \"nder\" from a sentence no matter where\nin
+        the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 6_instruction: |
+        Write a function that takes a name (first
+        last) and reorders it (last, first).
+      U3L25 String Parsing 7_instruction: |
+        You are given the string “The earth has
+        music for those who listen.” Manipulate it using the functions str.toUpperCase()
+        and str.toLowerCase().
+      U3L26 AND operator_instruction: |
+        Inside the findingNemo function, write a conditional
+        statement that detects if a command contains all the phrases "2000" "animated"
+        and "G-rated." The function should return true if the above conditions are
+        met and return false otherwise
+      U3L26 Chatbot Compound Conditionals_instruction: |
+        Update your digital assistant
+        to include at least one each of AND, OR, and NOT
+      U3L26 Compound Logic_instruction: |
+        Write a conditional statement that detects
+        if a command contains all the phrases "2000" "animated" and "G-rated."
+        If all these phrases are detected, make Movie Bot respond "The top grossing
+        animated and G-rated film in the 2000 decade was Finding Nemo."
+      U3L26 NOT operator_instruction: "Write a conditional statement that detects\nif
+        a command does not contain the phrase \"bad.\" If \"bad\" is not detected,\nmake
+        Movie Bot respond normally. Otherwise, make Movie Bot respond \"Sorry,\nI
+        don't know about bad movies.\" \n"
+      U3L26 OR operator_instruction: |
+        Inside the isBest function, write a conditional
+        statement that detects if a command contains at least one of the phrases "all
+        time" "all-time" "overall" or "millennium." The function should return
+        true if the above conditions are met and return false otherwise
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

@@ -417,11 +417,12 @@
     student_stats: Hai guadagnato %{trophy_count} trofei su %{trophy_max} in "Padronanza
       dei concetti".
     student_left_off: 'Eri arrivato qua:'
-    student_finished: Hai completato tutti i corsi, scegli un'altra classe %{online_link}
+    student_finished: Hai completato tutti i tutorial, scegli un'altra classe %{online_link}
       o una %{local_school_link}
     local_school: scuola locale
     online: in linea
     see_details: Vedi i dettagli
+    view_course: View Course
     prize_info: 'Premi per la partecipazione (solo per insegnanti di scuola pubblica
       degli Stati Uniti): Fino a $1.000 in premi per la classe.'
     tryfirst: 'Oppure, puoi prima provarlo e successivamente iscriverti:'
@@ -443,6 +444,7 @@
     heading_legacy: <h2> Corso introduttivo per </h2><h1> tutte le età</h1>
     your_gallery: La tua collezione
     no_primary_course: Prova un corso presso Studio Code
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Stampa il certificato
   gender:
     male: Maschile
@@ -479,12 +481,6 @@
     autoplay_option: Avvia automaticamente i video
     download: Scarica il video
   compatability:
-    https:
-      header: Serve abilitare il protocollo HTTPS per Code.org.
-      message: Per aumentare la sicurezza, noi stiamo passando a HTTPS su %{https_date}.
-        Non sarete in grado di accedere Code.org dopo questa data. <a href='%{it_requirements_url}'>
-        Clicca qui</a> per informazioni su come abilitare HTTPS per accedere a Code.org.
-      hide_this_warning: Nascondi questo avviso
     working:
       header: Stiamo lavorando per supportare il tuo browser.
       message: Code.org utilizza una moderna tecnologia web. Questo rende il sito

@@ -349,6 +349,7 @@ ro:
     local_school: şcoală locală
     online: online
     see_details: Vezi detalii
+    view_course: View Course
     prize_info: 'Premii pentru participare (doar pentru profesorii americani din sistemul public de învățământ): până la 1.000 dolari în recompense pentru clasă.'
     tryfirst: 'Sau, poţi încerca prima dată, urmând să te înscrii mai târziu:'
     trynow: Încearcă acum
@@ -363,6 +364,7 @@ ro:
     heading_legacy: '<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>'
     your_gallery: Galerie
     no_primary_course: Încearcă un curs la Studio-ul Code
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Tipărește certificatul
   gender:
     male: De sex masculin
@@ -396,10 +398,6 @@ ro:
     autoplay_option: Redare Automată clipuri video
     download: Descarcă Video
   compatability:
-    https:
-      header: Te rugăm să activezi HTTPS pentru Code.org.
-      message: "Pentru a spori securitatea, vom trece la HTTPS pe %{https_date}. Nu vei mai putea accesa Code.org după această dată. <a href='%{it_requirements_url}'> click aici</a> pentru a afla cum să activezi HTTPS pentru Code.org."
-      hide_this_warning: Ascunde această avertizare
     working:
       header: Momentan efectuăm lucrări de susținere a browser-ului tău.
       message: "Code.org folosește tehnologii web moderne. Acest lucru face site-ul mai rapid de utilizat. Browserul pe care îl folosești nu suportă toate caracteristicile necesare şi este posibil să întâmpini probleme în timp ce utilizezi această parte a site-ului. Te rugăm să ne ajuți prin <a href='%{report_issue_url}'> raportarea oricărei probleme întâlnite</a>. Poți, de asemenea, <a href='%{supported_browsers_url}'> să-ți actualizezi browser-ul la o versiune acceptată</a>."

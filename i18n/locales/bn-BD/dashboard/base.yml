@@ -1,7 +1,7 @@
 bn:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
   activerecord:
     errors:
       messages:
@@ -64,8 +64,8 @@ bn:
     need_confirmation: নিশ্চিতকরণ নির্দেশনা পাওনি?
     need_unlock: আনলক করার নির্দেশাবলী পাওনি?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} জন ছাত্রছাত্রী ইতিমধ্যে সাইন আপ করেছেন।'
+    teacher_count: '%{count} জন শিক্ষক ইতোমধ্যে সাইন আপ করেছেন।'
     overview_student: 'আপনার উন্নতি সম্পর্কে জানার জন্য সাইন আপ করার মাধ্যমে একটি একাউন্ট তৈরি করুন। প্রাথমিকভাবে আপনাকে লগ ইন করতে দেয়া এবং পাসওয়ার্ড উদ্ধার করার জন্য আপনার ইমেইল ঠিকানাটি ব্যবহৃত হবে। বিস্তারিত তথ্যের জন্য <a href="http://code.org/privacy">গোপনীয়তা নীতি</a> দেখুন।'
     overview_teacher: 'একটি একাউন্ট খোলার মাধ্যমে আপনার শ্রেণীকক্ষে কম্পিউটার বিজ্ঞান শিক্ষা দিন।<p/> আপনি আপনার ছাত্রছাত্রীদের এতে যুক্ত করতে পারবেন এবং তাদের উন্নতি তদারকি করতে সক্ষম হবেন।'
     no_signup_message: 'আপনি <a target="_blank" href="http://learn.code.org">বিভিন্ন স্টেজ এবং পাজলসমূহ ব্রাউজ</a> করতে পারবেন, কিন্তু আপনার অগ্রগতি সংরক্ষন করতে আপনাকে সাইন আপ করতে হবে।'
@@ -139,23 +139,23 @@ bn:
       no_teacher: "'%{teacher_email_or_code}' দিয়ে সাইন আপ করা কাউকে খুঁজে পাওয়া যায় নি। অনুগ্রহ করে তাদের সাইন আপ করতে বলুন এবং আবার অ্যাড করুন"
       section_not_found: "কোন শাখা খুঁজে পাওয়া যায়নি এই কোডের '%{section_code}"
       blank_code: অনুগ্রহ করে একটি শাখা কোড প্রবেশ করান
-      cant_join_own_section: "Sorry, you can't join your own section."
+      cant_join_own_section: দুঃখিত, আপনি আপনার নিজের সেকশনে যোগ দিতে পারবেন না।
     mail:
       invite_student:
-        subject: 'Join a class with %{teacher_name} at Code.org!'
+        subject: 'Code.org এ %{teacher_name} -এর সাথে একটি ক্লাসে যোগ দিন!'
       student_disassociated:
-        subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
+        subject: 'Code.org বিজ্ঞপ্তি: %{student_name} আর আপনার ছাত্র হিসেবে যুক্ত নেই।'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as your teacher.'
+        subject: 'Code.org বিজ্ঞপ্তি: %{teacher_name} আর আপনার শিক্ষক হিসেবে যুক্ত নেই।'
   reports:
     error:
-      access_denied: "You don't have access to this person's stats"
+      access_denied: আপনার এই ব্যক্তির পরিসংখ্যান দেখার অনুমতি নেই
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
     provider: 'প্রদানকারী:'
     code: 'কোড:'
     redeem_header: 'To redeem:'
-    donorschoose_register: Register as a teacher on DonorsChoose.org
+    donorschoose_register: শিক্ষক হিসেবে DonorsChoose.org-এ নিবন্ধন করুন
     donorschoose_project: একটি প্রকল্প পোস্ট করুন
     donorschoose_how_to: কিভাবে আপনার কোড ব্যবহার করতে হবে
     success: Your prize was succesfully redeemed, see code below.
@@ -223,11 +223,11 @@ bn:
     user:
       classroom: শিক্ষক হোম পেজ
       district_dashboard: District Dashboard
-      label: 'Hi %{username}'
-      stats: Code Studio
-      settings: My account
-      prizes: Prizes
-      logout: Sign out
+      label: 'হ্যালো %{username}'
+      stats: কোড স্টুডিও
+      settings: আমার একাউন্ট
+      prizes: পুরস্কারসমূহ
+      logout: সাইন আউট
       signin: সাইন ইন করুন
       signup: সাইন আপ
       already_registered: Already registered?
@@ -268,7 +268,7 @@ bn:
       password: পাসওআর্ড
       manage: Manage students
       dashboard: Go to Teacher Dashboard
-      add: Add students
+      add: শিক্ষার্থীদের যুক্ত করন
       remove: remove student
       confirm_remove: Are you sure you want to remove this student?
       help_reassign: To divide your class into multiple sections, select students to assign to a new section.
@@ -325,7 +325,7 @@ bn:
     show_more: Show more
     classroom_activity: Unplugged Activity
   home:
-    title: Code Studio
+    title: কোড স্টুডিও
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
@@ -346,10 +346,11 @@ bn:
     student_stats: |-
       You've earned %{trophy_count} out of %{trophy_max} "Concept Mastery" trophies.
     student_left_off: 'Where you left off:'
-    student_finished: "You've completed all tutorials, pick another class %{online_link} or at a %{local_school_link}"
+    student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
     local_school: local school
     online: online
     see_details: See details
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: এখন চেষ্টা করুন
@@ -363,7 +364,8 @@ bn:
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Male
@@ -397,10 +399,6 @@ bn:
     autoplay_option: Autoplay videos
     download: Download Video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Hide this warning
     working:
       header: We are working on support for your browser.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."
