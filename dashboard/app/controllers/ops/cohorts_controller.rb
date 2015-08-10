@@ -16,7 +16,7 @@ module Ops
 
     # POST /ops/cohorts
     def create
-      @cohort.update!(params[:cohort])
+      @cohort.update!(cohort_params)
       respond_with :ops, @cohort
     end
 
@@ -93,7 +93,8 @@ module Ops
             :district_ids => [],
             :district_names => [],
             :districts => [:id, :max_teachers, :_destroy],
-            :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
+            :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender],
+            :cohorts_districts_attributes => [:cohort_id, :district_id, :max_teachers, :_destroy]
         )
       elsif current_user.try(:district_contact?)
         # district contacts can only edit teachers
