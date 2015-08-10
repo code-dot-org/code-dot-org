@@ -69,6 +69,7 @@ class ProjectsController < ApplicationController
     src_channel_id = params[:channel_id]
     new_channel_id = create_channel nil, src_channel_id
     AssetBucket.new.copy_assets src_channel_id, new_channel_id
+    SourceBucket.new.copy_assets src_channel_id, new_channel_id
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 
