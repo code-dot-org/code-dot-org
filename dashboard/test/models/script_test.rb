@@ -120,6 +120,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'script_levels are in order' do
     script = create(:script)
+    puts script
+
     s1 = create(:stage, script: script, position: 1)
     last = create(:script_level, script: script, stage: s1, chapter: 3)
     second = create(:script_level, script: script, stage: s1, chapter: 2)
@@ -146,11 +148,10 @@ class ScriptTest < ActiveSupport::TestCase
     script = create(:script, name: 'test2')
     first_stage = create(:stage, script: script, position: 1)
 
-    first_stage_last_level = script.levels.create(stage: first_stage, position: 1)
-
-    second_stage = script.stages.create(position: 2)
-    second_stage_first_level = script.levels.create(stage: second_stage, position: 1)
-    second_stage_second_level = script.level.create(stage: second_stage, position: 2)
+    first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
+    second_stage = create(:stage, script: script, position: 2)
+    second_stage_first_level = create(:script_level, script: script, stage: second_stage, position: 1)
+    create(:script_level, script: script, stage: second_stage, position: 2)
 
     assert_equal second_stage_first_level, first_stage_last_level.next_progression_level
   end
