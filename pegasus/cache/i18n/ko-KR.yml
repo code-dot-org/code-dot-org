@@ -185,6 +185,9 @@
   homepage_banner_text_main: Code.org와 College Board는 컴퓨터 과학 분야에서 다양성을 개선하기 위해 동맹을
     형성 한다.
   homepage_banner_text_link: 더 알아보기
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: 더 알아보기
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: 누구든지 배울 수 있습니다. 오늘 시작하세요.
   homepage_slot_text_link_hoc: Hour of Code 해보기
@@ -1014,6 +1017,3 @@
     이후로는 Code.org에  들어올 수 없을 수도 있습니다. Code.org에서 HTTPS를 사용하도록 설정하는 방법은 <a href='%{it_requirements_url}'>여기</a>
     를 클릭하여 알아볼 수 있습니다.
   compatibility_https_hide_this_warning: 경고창 숨기기
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

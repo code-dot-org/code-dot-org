@@ -204,6 +204,9 @@
   homepage_banner_text_main: কম্পিউটার বিজ্ঞান-বৈচিত্র্য বাড়ানোর জন্য জোট Code.org
     ও কলেজ বোর্ড গঠন করে।
   homepage_banner_text_link: আরও জানুন
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: আরও জানুন
   homepage_slot_text_title_hoc: এক ঘন্টার কোড
   homepage_slot_text_blurb_hoc: যে কেউ শিখতে পারে। আজ শুরু করুন
   homepage_slot_text_link_hoc: Try the Hour of Code
@@ -1161,6 +1164,3 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Hide this warning
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

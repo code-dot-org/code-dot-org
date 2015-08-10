@@ -30,7 +30,7 @@
     khóa học về khoa học máy tính và lập trình tiếp theo của chúng tôi.
   hoc2014_heading: Tham gia <a href="http://hourofcode.com">Giờ Mã</a> <br/> từ mùng
     8 đến 14 tháng 12, 2014 <br/>
-  hoc2014_students: Học sinh/sinh viên
+  hoc2014_students: học viên
   hoc2014_try: Hãy thử nó
   hoc2014_teachers: Giáo viên
   hoc2014_host: Lưu trữ nó
@@ -212,12 +212,15 @@
   homepage_banner_text_main: Code.org và College Board tạo thành một liên minh để
     nâng cao sự đa dạng trong khoa học máy tính.
   homepage_banner_text_link: Tìm hiểu thêm
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Tìm hiểu thêm
   homepage_slot_text_title_hoc: Giờ của mã
   homepage_slot_text_blurb_hoc: Ai cũng có thể học. Ngay hôm nay
   homepage_slot_text_link_hoc: Học thử Hour of Code
   homepage_slot_text_link_host: Đăng cai một Giờ Lập Trình
-  homepage_slot_text_link_hocserved: '# served'
-  homepage_slot_text_title_students: Học sinh/sinh viên
+  homepage_slot_text_link_hocserved: phục vụ
+  homepage_slot_text_title_students: học viên
   homepage_slot_text_blurb_students: Khám phá tất cả các bài hướng dẫn của chúng tôi
   homepage_slot_text_link_codestudio: Thử Code Studio
   homepage_slot_text_link_local: Tìm lớp ở địa phương
@@ -249,7 +252,7 @@
   contact_form_label_submit: Gửi thư
   class_submission_in_school: Ở trường
   class_submission_in_school_daily_programming_course: Khoá lập trình hàng ngày
-  class_submission_in_school_ap_computer_science: AP computer science
+  class_submission_in_school_ap_computer_science: khoa học máy tính AP
   class_submission_in_school_full_university_cs_curriculum: Chương trình KHMT đầy
     đủ cấp đại học
   class_submission_in_school_robotics_club: Câu lạc bộ robot
@@ -257,7 +260,7 @@
     hợp trong các lớp học khác (toán, khoa học, vv)
   class_submission_in_school_summer_school_cs_program: Chương trình hè KHMT
   class_submission_in_school_exploring_computer_science: Khám phá Khoa học Máy tính
-  class_submission_in_school_other: Other in school
+  class_submission_in_school_other: một lớp khác trong trường
   class_submission_out_of_school: Out of school
   class_submission_out_of_school_summer_camp: Trại hè
   class_submission_out_of_school_afterschool_program: Chương trình phụ đạo
@@ -395,7 +398,7 @@
   dashboard_sections_table_secret: Loại đăng nhập
   dashboard_sections_table_grade: Điểm số
   dashboard_sections_table_course: Khóa học
-  dashboard_sections_table_students: Học sinh/sinh viên
+  dashboard_sections_table_students: học viên
   dashboard_sections_table_code: Mã của học phần
   dashboard_sections_name: Tên phần
   dashboard_sections_choose_secret: Nếu bạn muốn cấp tài khoản cho học sinh của mình,
@@ -489,12 +492,12 @@
   dashboard_login_picture: Hình ảnh
   dashboard_login_none: Địa chỉ email
   dashboard_new_password: Mật khẩu mới
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: chưa bắt đầu
+  dashboard_progress_in_progress: trong tiến trình
   dashboard_progress_not_completed: chưa hoàn thành
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
+  dashboard_progress_completed_perfect: hoàn thành, hoàn hảo
+  dashboard_progress_furthest_level_attempted: đã cố gắng ở mức độ cao nhất
   stats_hoc_2013_heading: 'Đáng kinh ngạc số liệu thống kê từ cuối năm Giờ Mã. Trong
     một tuần:'
   stats_hoc_2013_image_alt: Số liệu thống kê Giờ Lập Trình từ năm 2013
@@ -519,7 +522,7 @@
   code_sign_up: Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính
   learn_more: Tìm hiểu thêm
   hoc2014_try_new_tutorials: Làm thử theo hướng dẫn của chúng tôi về Giờ lập trình
-  hoc2014_try_new_tutorial: Hãy thử lớp học Một giờ Lập trình phiên bản beta của chúng
+  hoc2014_try_new_tutorial: Hãy thử lớp học Giờ Lập trình phiên bản beta của chúng
     tôi
   hoc2014_try_scrat: Angry Birds, PvZ, và Scrat
   hoc2014_try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
@@ -1180,6 +1183,3 @@
     %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
     here</a> to learn how to enable HTTPS for Code.org.
   compatibility_https_hide_this_warning: Ẩn cảnh báo này
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more
