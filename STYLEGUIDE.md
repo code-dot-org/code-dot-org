@@ -150,6 +150,16 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
       .doSomethingElse();
   ```
 
+* <a name="js-avoid-inlinejs"></a>
+  Avoid inline JS in HAML and erb views.  Javascript in this form is hard to lint, test, and reuse, and tends to build in lots of global interdependencies between code and views.
+
+  Here are some hints and guidelines.
+    - New JS code in our Rails apps should go in a .js file, not inline in the view; this will be enforced by code review.
+
+    - If you find yourself modifying JS code in a template, please move it out of the file as part of the same CL.  (Exceptions can be granted on a case by case basis.)
+
+    - Server-side configuration information that needs to be shared with Javascript code should be put in app_options. (The have templates that conversion app_options to json and assigned it to a JS variable.)
+
 ### In /apps
 
 Use lodash and jQuery libraries in `/apps`.
