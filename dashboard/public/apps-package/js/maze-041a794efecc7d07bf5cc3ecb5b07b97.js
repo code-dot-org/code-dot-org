@@ -753,9 +753,7 @@ Maze.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
-  config.pinWorkspaceToBottom = false;
-  config.hasVerticalScrollbars = false;
-
+  
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
