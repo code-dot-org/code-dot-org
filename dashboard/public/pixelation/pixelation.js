@@ -414,3 +414,17 @@ function onComplete(willRedirect) {
     finishedButton.attr('disabled', false);
   }
 }
+
+/**
+ * Show a dialog prompting the user to confirm that they want to reset the
+ * level to its initial state, losing any of their own work on that level.
+ */
+function startOverClicked() {
+  startOverConfirmed();
+}
+
+function startOverConfirmed() {
+  pixel_data.value = options.data;
+  drawGraph();
+  formatBitDisplay();
+}
