@@ -28,7 +28,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "markdown_instructions": "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/bacb89807ce1d27f2e6e6987de268bd7-image-1439246151097.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
