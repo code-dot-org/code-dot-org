@@ -70,7 +70,7 @@ class FilesApi < Sinatra::Base
 
     encrypted_src_channel_id = request.GET['src']
     bad_request if encrypted_src_channel_id.empty?
-    get_bucket_impl(endpoint).new.copy_assets(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
+    get_bucket_impl(endpoint).new.copy_files(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
   end
 
   #
