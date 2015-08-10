@@ -229,7 +229,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # no age dropdown, yes age hidden field
     assert_select 'select[name*="age"]', 0
-    assert_select 'input[type="hidden"][name*="age"][value=21]'
+    assert_select 'input[type="hidden"][name*="age"][value="21"]'
   end
 
   test 'sign up as student' do

@@ -66,6 +66,7 @@ class ScriptDSL < BaseDSL
       :concepts => @concepts.join(','),
       :video_key => @video_key_for_next_level
     }.merge(properties).select{|_, v| v.present? }
+    puts @levels.inspect
     @video_key_for_next_level = nil
   end
 
