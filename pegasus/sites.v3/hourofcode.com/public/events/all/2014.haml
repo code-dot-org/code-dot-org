@@ -23,7 +23,7 @@ nav: events_nav
     -by_state[state_code] << event
     -state_names[state_code] = event['location_state_s'].to_s unless state_names.has_key?(state_code)
 
-%h1= hoc_s(:events_all_2014_title)
+%h1= hoc_s(:events_all_old_title).gsub(/\@year/, "2014")
 
 %ul
   %li{class: "hoc-event-country"}
