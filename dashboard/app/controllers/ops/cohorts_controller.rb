@@ -70,7 +70,7 @@ module Ops
         end
       end
 
-      @cohort.update!(params[:cohort])
+      @cohort.update!(cohort_params)
       respond_with @cohort
     end
 
