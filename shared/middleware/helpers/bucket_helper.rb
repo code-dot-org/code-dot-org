@@ -35,7 +35,7 @@ class BucketHelper
     end
   end
 
-  def copy_assets(src_channel, dest_channel)
+  def copy_files(src_channel, dest_channel)
     src_owner_id, src_channel_id = storage_decrypt_channel_id(src_channel)
     dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
 
