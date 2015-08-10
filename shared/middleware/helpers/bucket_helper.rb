@@ -60,7 +60,7 @@ class BucketHelper
     response = @s3.put_object(bucket: @bucket, key: key, body: body)
 
     # Delete the old version, if doing an in-place replace
-    @s3.delete_object(bucket: @bucket, key: key, version_id: version)
+    @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
 
     response
   end
