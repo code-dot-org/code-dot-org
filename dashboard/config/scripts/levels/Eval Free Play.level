@@ -12,7 +12,7 @@
     "is_k1": "false",
     "is_project_level": "true",
     "skip_instructions_popup": "false",
-    "scrollbars": "true",
+    "scrollbars": "false",
     "min_workspace_height": "1500",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -26,7 +26,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
