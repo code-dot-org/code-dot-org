@@ -6,7 +6,15 @@ var sourcesApi = require('../clientApi')('sources');
  * A component for viewing project version history.
  */
 module.exports = React.createClass({
+  propTypes: {},
 
+  /**
+   * @returns {{statusMessage: string, versions: (null|{
+   *   lastModified: Date,
+   *   isLatest: boolean,
+   *   versionId: string
+   * }[])}}
+   */
   getInitialState: function () {
     return {
       versions: null,
@@ -32,7 +40,7 @@ module.exports = React.createClass({
    * Called if the server responds with an error when loading an API request.
    */
   onAjaxFailure: function () {
-    this.setState({statusMessage: 'An error occured.'});
+    this.setState({statusMessage: 'An error occurred.'});
   },
 
   /**
@@ -42,8 +50,19 @@ module.exports = React.createClass({
     location.reload();
   },
 
-  render: function () {
+  /**
+   * Called when the user chooses a previous version to restore.
+   * @param versionId
+   */
+  onChooseVersion: function (versionId) {
+    // TODO: Use Dave's client api when it's finished.
+    sourcesApi.ajax('PUT', 'main.json/restore?version=' + versionId, this.onRestoreSuccess, this.onAjaxFailure);
 
+    // Show the spinner.
+    this.setState({versions: null});
+  },
+
+  render: function () {
     var versionList;
     // If `this.state.versions` is null, the versions are still loading.
     if (this.state.versions === null) {
@@ -54,18 +73,10 @@ module.exports = React.createClass({
       );
     } else {
       var rows = this.state.versions.map(function (version) {
-        var choose = function () {
-          // TODO: Use Dave's client api when it's finished.
-          sourcesApi.ajax('PUT', 'main.json/restore?version=' + version.versionId, this.onRestoreSuccess, this.onAjaxFailure);
-
-          // Show the spinner.
-          this.setState({versions: null});
-        }.bind(this);
-
         return <VersionRow
-          lastModified={new Date(Date.parse(version.lastModified))}
+          lastModified={new Date(version.lastModified)}
           isLatest={version.isLatest}
-          onChoose={choose} />;
+          onChoose={this.onChooseVersion.bind(this, version.versionId)} />;
       }.bind(this));
 
       versionList = (
