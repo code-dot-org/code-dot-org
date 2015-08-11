@@ -17,6 +17,9 @@
 
 var markup = require('./NetSimAlert.html.ejs');
 var ArgumentUtils = require('./ArgumentUtils');
+var NetSimLogger = require('./NetSimLogger');
+
+var logger = NetSimLogger.getSingleton();
 
 var NetSimAlert = module.exports = {};
 
@@ -45,6 +48,16 @@ NetSimAlert.getOrCreateAlertContainer_ = function () {
 };
 
 /**
+ * Simple check to see if Bootstrap's Alert function is attached to the
+ * global jQuery object.
+ * @return {boolean} whether or not bootstrap's `alert` function is
+ *                   loaded and available
+ */
+NetSimAlert.isBootstrapAlertLoaded_ = function () {
+  return (typeof $().alert == 'function');
+};
+
+/**
  * Primary alert creation method. Expects a body of content for the
  * alert and a flavor for the alert type. Can optionally include a title
  * and a timeout time.
@@ -57,6 +70,11 @@ NetSimAlert.getOrCreateAlertContainer_ = function () {
  * @return {jQuery} the created alert element
  */
 NetSimAlert.create_ = function (body, flavor, options) {
+
+  if (!NetSimAlert.isBootstrapAlertLoaded_()) {
+    logger.warn("Bootstrap Alert not loaded; NetSimAlert refusing to create alert");
+    return;
+  }
 
   ArgumentUtils.validateRequired(body, 'body', ArgumentUtils.isString);
   ArgumentUtils.validateRequired(flavor, 'flavor', ArgumentUtils.isString);
