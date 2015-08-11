@@ -28,5 +28,5 @@ function clientApi(endpoint) {
       xhr.open(method, this.basePath(file), true);
       xhr.send(data);
     }
-  }
+  };
 }
