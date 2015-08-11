@@ -534,6 +534,7 @@ DEPENDENCIES
   redcarpet (~> 3.2.3)
   redis (~> 3.1.0)
   rerun (~> 0.10.0)
+  responders (~> 2.0)
   retryable
   rmagick
   rspec
@@ -563,4 +564,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

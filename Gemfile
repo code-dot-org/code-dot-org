@@ -4,6 +4,10 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 
+# provide `respond_to` methods
+# (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
+gem 'responders', '~> 2.0'
+
 gem 'sinatra', '1.4.4', require: 'sinatra/base'
 gem 'rack-contrib', '~> 1.1'
 
@@ -35,7 +39,6 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'quiet_assets'
   gem 'active_record_query_trace'
-
   # for unit testing
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
