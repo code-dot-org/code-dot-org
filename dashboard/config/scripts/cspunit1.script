@@ -7,6 +7,7 @@ hidden 'false'
 stage "Innovation"
 level 'U1L1 Student Lesson Introduction'
 level 'U1L1 - FR computer science word association'
+level 'U1L1 Innovation - Video'
 
 stage "Sending Binary Messages"
 level 'U1L2 Student Lesson Introduction'
@@ -92,7 +93,6 @@ assessment 'U1L14 - Assessment 2'
 
 stage 'Encoding Color Images'
 level 'U1L15 Student Lesson Summary'
-level 'a bit about pixels'
 video_key_for_next_level 'csp_pixelation_color_1'
 level 'Pixelation - Lesson 15 - Complete 3-bit color'
 video_key_for_next_level 'csp_pixelation_color_2'
@@ -103,6 +103,7 @@ level 'Pixelation Flappy'
 level 'Pixelation Bee'
 level 'Pixelation - Lesson 15 - Favicon Instructions'
 level 'Pixelation - Lesson 15 - Color Free Play'
+level 'a bit about pixels'
 
 stage 'Lossy Compression and File Formats'
 level 'U1L16 Student Lesson Introduction'
