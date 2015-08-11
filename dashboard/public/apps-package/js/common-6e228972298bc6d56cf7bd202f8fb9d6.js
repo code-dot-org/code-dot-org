@@ -7327,7 +7327,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    readOnly: utils.valueOr(config.readonlyWorkspace, false)
+    readOnly: utils.valueOr(config.readonlyWorkspace, false),
+    showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing'].forEach(
