@@ -282,12 +282,11 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
 
 /**
  * Handle log table changes.
- * @param {LogEntryRow[]} logRows
  * @private
  */
-NetSimRouterLogModal.prototype.onLogTableChange_ = function (logRows) {
+NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
   var headerSpec = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
-  this.logEntries_ = logRows.map(function (row) {
+  this.logEntries_ = this.shard_.logTable.readAll().map(function (row) {
     return new NetSimLogEntry(this.shard_, row, headerSpec);
   }, this);
   this.render();

@@ -181,6 +181,7 @@ describe("NetSimVisualization", function () {
 
       var netsim = new NetSim();
       netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
+      netSimVis.setShard(testShard);
       netSimVis.elements_ = elements;
       netSimVis.localNode = alphaNode;
     });
@@ -249,8 +250,8 @@ describe("NetSimVisualization", function () {
         var newNode = makeRemoteClient('gamma');
 
         // Trigger visualization update, synchronous in tests.
-        testShard.nodeTable.refresh(function (_, data) {
-          netSimVis.onNodeTableChange_(data);
+        testShard.nodeTable.refresh(function () {
+          netSimVis.onNodeTableChange_();
         });
 
         // Check that newly created node has correct DNS mode.
@@ -288,8 +289,8 @@ describe("NetSimVisualization", function () {
         makeRemoteWire(deltaNode, router, [deltaNode, router]);
 
         // Trigger visualization update, synchronous in tests.
-        testShard.wireTable.refresh(function (_, data) {
-          netSimVis.onWireTableChange_(data);
+        testShard.wireTable.refresh(function () {
+          netSimVis.onWireTableChange_();
         });
 
         // Check that newly created wire has the encodings we originally set.
