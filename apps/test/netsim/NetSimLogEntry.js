@@ -66,6 +66,16 @@ describe("NetSimLogEntry", function () {
     assertEqual(logEntry.timestamp, 52000);
   });
 
+  it ("gracefully converts a malformed base64Payload to empty string", function () {
+    var logEntry = new NetSimLogEntry(testShard, {
+      base64Binary: {
+        string: "totally not a base64 string",
+        len: 7
+      },
+    });
+    assertEqual(logEntry.binary, '');
+  });
+
   describe("static method create", function () {
     it ("adds an entry to the log table", function () {
       assertTableSize(testShard, 'logTable', 0);
