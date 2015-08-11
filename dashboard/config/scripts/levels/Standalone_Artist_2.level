@@ -14,7 +14,23 @@
     "slider_speed": "0.4",
     "free_play": "false",
     "start_direction": "150",
-    "ideal": "8"
+    "ideal": "8",
+    "embed": "false",
+    "markdown_instructions": "Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/2b084d4810c05f81941de2b7a20e6ac5-image-1439246224688.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false"
   }
 }]]></config>
   <blocks>

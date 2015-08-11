@@ -1,42 +1,45 @@
-name 'Pixelation - Lesson 14 - Fix bit offset'
-title 'Pixelation - Lesson 14 - Fix bit offset'
-description 'Pixelation - Lesson 14 - Fix bit offset'
-href 'pixelation/pixelation.html'
-
-version '2'
-format 'raw'
-data '0001 0111
-0001 0111
-1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 
-0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 
-0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 
-0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 
-0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 
-0 1 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
-0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 
-1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 
-0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 
-0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 1 0 0 0 0 
-0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 
-0 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
-0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 
-1 '
-
-
-markdown <<MARKDOWN
-# Oh no! The Code.org logo got messed up during transmission!
-
-**The problem:** A *single extra bit* was inserted into the stream of bits that make up the Code.org logo.  That extra bit bumps all of the other bits down the line which makes the logo look messed up.<br> 
-**Your task:** Hunt down the extra bit and remove it to fix the Code.org logo. <br>
-**HINT:** Scroll down in the box of bits to make sure that you see all of them.  Remember: One bit early on would make it look like many bits were out of order. <br>
-MARKDOWN
+encrypted 'ULbYqEq9bHt+pD33DxRe7d+xr/uFRlYBWygyStZ6r63meV/s1Rbvf1wwnuS/
+7mtUX8OpEuKwzkVGTaP2l3hhmn+1VbG6A/qhdz4JKzJu8hygyuy1/H//55N5
+y8jmNn6Pt45EAZWxJg//PY+zzDy/O0ZFdalRZ11gGa/T2ixaft43UyN/yfba
+umAPyNX6qZDzU1XruUMkVKa6H9m+syPik3INoQDSpAAqXBntFpT/gT8PaMec
+NwI2Q2LFADIbp6/ZJ0cLvQZ0+psfp661rzppLnA9axxxBmoB+NczSuhkxn9w
+6H9ZRxLn/cZle9xLfXa/m3mcRdYPRvwQ8lf7dnIvTiZfrvV2y7u/aHYNIvvx
+SrV7xsLsnpQ0AOqA2cZgweLLGZkZM7yQuMqDY1Q/6k71SK7usxWc0P4zdoNC
+aU8nv8x4eAActCnOmU4oCXzrr8UnwIRW40gcPjpR12CnEsJgrLaoPOXPvLsU
+JLYWTRE9i/m2d9C1TrEb7LzYHQpDMv4Ph7mBTGJ+syMMKWHjeMg2iUc4Mix8
+ndCETR4p21rilUJp1GG5a0+3HxczNYTrBefhWYLF1ph1xdrsQrKIPmjiaTxr
+wAXzVIVIRT1X31RgB9I11wh1PSz4MP6GdkAV0mZKkSduQUr27AKuflb0EsHA
+Z6kDvFjer33lSkJdaxtbyX4DjS6yaehBdNVyCVEaiItFQJuF2RIiZcQouBWc
+tPDGJJ9G35Io8+/xyemPOjd8RUKhakjrbLtBU2gf3ucXos5wZeT5cCKBK9GH
+JLi98Nl6XejUBIybNwS8sZvbmvmRz6u4QW1TjFTSMgI76JgUdQiD8arwIcq3
+mywm3V4lacNPI/dLPLxY82XHheZSYjyiHt2nrQDm9PjsHwM1Pdlc0s56uaWn
+4l1BXxoiy3rpH++nv+7jDXZevOkdMJ0spTaEdrPrK1Ha5InvBYNlhIR7nPGn
+WEQSzDkYLDkuTuMeQ6oqnlVB7b8HdOjwT4SWWf+LR/jtPFvVaU9IWDDSkyGw
+PEvlHM0om8m+cxA0qVZozf07jE5RWtQPydj4jy60qhr6fcvuG9Thz1tQO3Fg
+zlc4SLpLz5P5TFuI3DZNtmtYU2YG7q3dafitIUPbCzmq/gqDfYiaISsBlY4T
+bsZbeJrwRBUIcN45nx49ficmT2pnccoqZzpil4/QvvdZ45rg53AotZ/2Bj8z
+g1sCgyiG8ICIEsUDlk+lQ0GkNyQ6Z8VA+sTekKWR4HprhxN7A8m6/n9WHced
++sbNjlMNXd3C/STSWC9wt43WyOG4ufhKyuMGqpJ36ULQzeU+HSpZHzprUmg1
+9AIc8WJ0/+CG1YsY/MwtCRIGgpCtQxy6ZhpDqI0eE0wWQlQl1PnJzkWvFygD
+50QDNyas7FL9GwKka9nzsxR3+0PZ2j3T1ncgTwaOprceZClaXuN6reouZBUF
+IoFqDCDw118WGMn4Wa8CkqdRDsoqCovSU3TxqKNIVT6SmCV5rsGJoxLtRT/X
+MzM7ijqaeENYttbtSs6Ke4IlbMBWP9NYMxYj1IxmzmEkWw1F3/DFKAHSfwsw
+e6WTVLpKtoC80FEPEQ/WHyk4Vt4YZV2RGfSnbVmYxTzyybv/fj8CFwBCsXko
+iH4gcxHIEkC+jZUEuhiu3No1VOiUO476j89lKNxYri0fc6pzX01xEN+bAgkS
+0LcotEYhCMqEdrQ3NZdK/QjJofvQO0GSgj0YyWsgO8u5VdKuoWjd7kUyQQhS
+DFwFdXHJyRKomEgwnYCkSitEoK0k5J2a8m/xYVui/kGbYbAIZrhgsznTiez+
+E+f4ZBF6wtONzxRD96Ie4kqdDbuHklcwVidtrpjILndv6gYzpghBhc1obc/F
+tU2Yk9aQDg49wmq3K2JLw0uOjI1hOYQGF+PTsge+u3v5+s2VdyBs29oDqD/D
+Im4DW+EJ3MgJLw/+VdeZA6SyuK+RqRs8kE7pfzsvRm7LEj5H5i9ROhEu/hEK
+HsuJuQnp5QGPgQbaxCMva5U+PYUJg7z8Q7WsBdncAQXF8LdPBHVF3dThFEdM
+o0hQdSlvYh74rYmRAUbJiWVy8vUplPR1bla2YGvMoQdhFh5dxg3rJsgwxcI6
+AYKHl+tylHnPp02D0MYhu2OiuIZW8dzUJM/XvUV4nxLI4AbfGsvKIRcb/45z
+EjOcSREmkt4oFYJ0rsZpaRejcyC0qlFaZBuuzQ1CWDoitXZVOLB/SHlqLqCN
+seYEzYwDM1y7ZgFVGUXCxK5/ybhojbyCfDj49MYcbDtjsB5OU4xcUU7X6D4E
+caw3YOop4X8pAEZY+Dpr+33hD8n3kntLtukK4uLGeOCtryYxw+t4AzyfMIeW
+Y6A9lcvPCFnWqLJSN6amqw/XxXjaItFxT+AAA2axz3h7uj/wy55yoIlr1MTc
+Ezd/jyravwefz4w/Qj3QWjCuV1FaLy0aj5yY/aJQyyj4qNWqFh2E+Iy4yk4n
+X8PaTSTENCIb3F+bCs+UxFbqjnlsbTPard+UKPCzElIZ4i0K5xukFUVIMaIJ
+hL1z3zuQXxMJcQgxaUkmbEmz+nH/EozWr+UkRH7oPIeSheu5o9WD1qVWLryY
+zQ==
+'

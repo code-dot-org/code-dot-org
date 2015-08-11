@@ -1,29 +1,33 @@
-name 'U1L13 Student Lesson Summary'
-title 'title'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-markdown <<MARKDOWN
-## Unit 1: Lesson 13 - Text Compression
-# Background
-
-Compression is a method or protocol for using fewer bits to represent the original information. Compression can be achieved in a variety of methods including looking for patterns and substituting symbols for the larger patterns of data. Compression is one of the "hard problems" for computers because it is difficult to verify a good solution in a reasonable amount of time.
-
-# Vocabulary
-* Compress: to decrease the number of bits used to represent a piece of information
-* Algorithm: a precise sequence of instructions designed to complete a task
-* Heuristic: a specific type of algorithm, usually used when exact solutions are difficult or impossible. Heuristics are generally simple to use and are designed to provide reasonably good results without guaranteeing a perfect solution.
-
-# Lesson 
-
-* Compress a piece of text using the Text Compression Tool.
-* Develop a heuristic for text compression.
-* Describe why compression is challenging.
- 
-# Resources 
-
-* Activity Guide: <a href= https://docs.google.com/document/d/1k_7idFW88iQ9s-xdj3z9K5sTANpGNPtRbE-i8RqbPD0/edit?usp=sharing" target="_blank">Compressing Text</a>
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted 'kLievGH7jLxDdVUhuQ2kbzczFusIJwY3AlmGaGf2mGvQpK3WhEZpAgRK9S5b
+C0wV1c/Lf9mO9q75YN0fOKTzcF/2x9f3CaWvXftBblOUSE2Vvr3GU4Ib/rlO
+cAXSMmcwShzKd70LFQA6ZUQbEaitFMhDMupXk76PwvTLN89nUftyddhKwX6m
+nIzqvYDvmxAzdmJymrMRHVPQZ1Q9/o8viRBLaF8A3vT2n8h+mxdBDgycmSsx
+HCg0hD8+KvdcUCPg53bSuxfWJJiAl7a9vEm1/GZIxmgxB6d2HJ/hiOmK6W+q
+3utNM6L9qs1P0eyASl39XiXDXKiUVpU7gZsOqVHdHfte5Z7ntY4P7sVwyL6X
+DDEU+/vFMwS/YNhKvnJUyhOIWDgQXXW8hW0MaPoaQBpVa07L4VKrlcyp7mjF
+YxyRxsm3Zck94FC2xxwhbD4r1TP14cOplBqry1WVOiDSJkrjbEIk+FqW4+4R
+2AokodRYRyg2fwce72XfVrVaUbBIwtWhK8akWXjfUS1/KRC7asDcDESeEMKC
+0WlHJm82X0ItwmBULHbLu5WE4hQzJwiT8WGax5XtHrjjtT456cLTgM429iJQ
+6DMUU0ohumgWtq3Ysfm3b6wvcDC5eGWojgjFl92HYMJKoXVUQzS2HxIslm6D
+gP3rwFNmeF6ZpH670IsdjISypyh4oB02GoRnmMOxywtrwhn7yhAV3fHYzXop
+FMzgHaIDqv2Rxe72gR8xxcYRRQ6ph+fmTnzyrM+S2QhM1jyTj9FeGEvKNRlX
+EN/zKMCpOFb0JFidsxmqKNw3f4Is/W9/YEgX4rbufvm+uSZSOzj9ennqC/wv
+JRkJctIhHs8C2Nxa9NwlN7tJSzLHcUaGi3OTGIMf8Zg8WwsjlcuexpQ4a8jf
+pssW9LGHlZW3J4iqOqm5ylGm4lxdNLZj31RsoWKiEuXV3z7xzVsCBBDc1Xit
+riJoGMh9Uyq+DPdRghXCCfVUU+/j0NaITsU1E7r7BBomv0C9HnnCBWrT0O8x
+KxejY3ZXrYmKawg4brtFlu1nxJMmK+pR2yfWwyZRUsP8HNT2QLFappKBqoKR
+vJc6kqSiVPh67r7R0RBjXMylQsrtE6YNhPP/+5QCvwSoQLf5Zy59zYZimprr
+xTxf09LVyQ9Gm6WDUxsKeeieqFOFaHYVOYzXbZiiEOJPTw0YAAD5wwnbagoO
+ivULLLq6oBPbyRs//I1CMFzAmYMOroLR8nahKXhxYr21UV+hIATkQosTGidN
+3A7Rd/0pMooniUqAsDXnD7dtQO8NsOdOuBM4c1jv7hJEaXraQkCvLfsrT0Ou
+TzSDDzYtJheneHRzrUyVJofcxjfi/komDLPfp+Yt1y5a7yMxPUFZS8QZ4e9A
+W615gOsqdiUyoqJJeyOBBZbMgZSGP7smoVKgAOREXez8W4iOLyoPD364is5/
+Yspojg9ZCehyhsSPAGkWno6BBcSVjr3cPt6nnQ7Z/+xbtGxiiVCJKXQhBSBN
+/gVvZOz2kxZPjvqns3a4f0hsMItJTaUxfG3C12aSMo3Wnu3drCWe49AGWGco
+ykMhoBRx0yZWEccWOmCX/9JgClMxYICvZsezSUj43liY7/iMOsnvX/KB5vM1
+xyaKU1MZYXXvCp6f6PNLxc9C4iCApqIVr9N8SCkPc2PNFZklmoYOTbPsYEsy
+r1FbamRrIUXdzC20U66aMdXhtvpTWMnB/PRi/4/703zQUyea8h76iirJZGU6
+b6Sjd3UiU2JuI5LOLQikQbxvIuODmQzrOxposGCWIPuUJvg2CNDhYAjkIoYd
+GRf0tRMBFfn8Dt0TUIjhkWRp4u9tFWJT+8Mg72UmsXnqLdeTrjiITRMd+Q5E
+v2Fz35L6VEEi5/RHzAzyw5VlfADI21wG4aXE7gpO31LBffAn9C6obSaNLLzK
+'

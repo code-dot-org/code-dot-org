@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-08-06T17:15:14.000Z",
+  "created_at": "2015-08-10T23:01:11.850Z",
   "level_num": "custom",
   "user_id": 112,
   "properties": {
@@ -150,8 +150,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "instructions": "Update your digital assistant to include at least one each of AND, OR, and NOT",
-    "markdown_instructions": "Here's your digital assistant again! Time to make it a little smarter.\r\n\r\n### Instructions\r\n\r\n* Add a compound conditional to your digital assistant\r\n* Your digital assistant should include at least one each of AND, OR, and NOT\r\n* As you make updates in your digital assistant, record those changes on the next level\r\n\r\nDon't stay here too long. We still have lots to do!",
-    "examples_required": "false"
+    "markdown_instructions": "Here's your digital assistant again! Time to make it a little smarter.\r\n\r\n### Instructions\r\n\r\n* Add a compound conditional to your digital assistant\r\n* Your digital assistant should include at least one each of AND, OR, and NOT\r\n\r\nDon't stay here too long. We still have lots to do!"
   }
 }]]></config>
   <blocks/>
