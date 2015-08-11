@@ -1,6 +1,6 @@
 var React = require('react');
 var VersionRow = require('./VersionRow.jsx');
-var sourcesApi = require('../clientApi')('sources');
+var sourcesApi = require('../clientApi').sources;
 
 /**
  * A component for viewing project version history.

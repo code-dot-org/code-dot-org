@@ -1,8 +1,13 @@
 /* global dashboard */
-// TODO: The client API should be instantiated with the channel ID, instead of
-// grabbing it from the `dashboard.project` global.
+// TODO(dave): Merge with the client API in /shared.
+// TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 
-module.exports = function (endpoint) {
+module.exports = {
+  assets: clientApi('assets'),
+  sources: clientApi('sources')
+};
+
+function clientApi(endpoint) {
   return {
     basePath: function (path) {
       return '/v3/' + endpoint + '/' + dashboard.project.getCurrentId() + (path ? '/' + path : '');
@@ -24,4 +29,4 @@ module.exports = function (endpoint) {
       xhr.send(data);
     }
   }
-};
+}
