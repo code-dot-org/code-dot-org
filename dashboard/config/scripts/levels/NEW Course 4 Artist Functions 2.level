@@ -22,14 +22,15 @@
     "impressive": "false",
     "disable_sharing": "false",
     "ideal": "23",
-    "markdown_instructions": "Can you draw 3 squares 20 pixels apart from one another? \r\n\r\n*Hint: each square is 100 pixels in size*",
+    "markdown_instructions": "Can you draw 3 squares 20 pixels apart from one another? \r\n\r\n*Hint: each square is 100 pixels in size*\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
