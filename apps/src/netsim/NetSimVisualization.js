@@ -16,6 +16,7 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
+var visualizationMarkup = require('./NetSimVisualization.html.ejs');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
@@ -37,18 +38,27 @@ var NodeType = NetSimConstants.NodeType;
  * independent of the rest of the controls on the page.  This separation means
  * that the visualization always has one canonical state to observe.
  *
- * @param {jQuery} svgRoot - The <svg> tag within which the visualization
+ * @param {jQuery} rootDiv - The <div> tag within which the visualization
  *        will be created.
  * @param {RunLoop} runLoop - Loop providing tick and render events that the
  *        visualization can hook up to and respond to.
  * @constructor
  */
-var NetSimVisualization = module.exports = function (svgRoot, runLoop) {
+var NetSimVisualization = module.exports = function (rootDiv, runLoop) {
   /**
    * @type {jQuery}
    * @private
    */
-  this.svgRoot_ = svgRoot;
+  this.rootDiv_ = rootDiv;
+
+  // Immediately, drop our SVG canvas and basic groups into the DOM
+  this.rootDiv_.html(visualizationMarkup());
+
+  /**
+   * @type {jQuery}
+   * @private
+   */
+  this.svgRoot_ = this.rootDiv_.find('svg');
 
   /**
    * The shard currently being represented.
