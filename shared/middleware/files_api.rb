@@ -22,7 +22,7 @@ class FilesApi < Sinatra::Base
       %w(.jpg .jpeg .gif .png .mp3).include? extension
     when 'sources'
       # Only allow JavaScript and Blockly XML source files.
-      %w(.js .xml).include? extension
+      %w(.js .xml .txt .json).include? extension
     else
       not_found
     end
@@ -70,13 +70,13 @@ class FilesApi < Sinatra::Base
 
     encrypted_src_channel_id = request.GET['src']
     bad_request if encrypted_src_channel_id.empty?
-    get_bucket_impl(endpoint).new.copy_assets(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
+    get_bucket_impl(endpoint).new.copy_files(encrypted_src_channel_id, encrypted_dest_channel_id).to_json
   end
 
   #
-  # PUT /v3/(assets|sources)/<channel-id>/<filename>
+  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
   #
-  # Create or replace a file.
+  # Create or replace a file. Optionally overwrite a specific version.
   #
   put %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
@@ -92,11 +92,11 @@ class FilesApi < Sinatra::Base
     # when serving assets.
     mime_type = Sinatra::Base.mime_type(file_type)
 
-    get_bucket_impl(endpoint).new.create_or_replace(encrypted_channel_id, filename, body)
+    response = get_bucket_impl(endpoint).new.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
     content_type :json
     category = mime_type.split('/').first
-    {filename: filename, category: category, size: body.length}.to_json
+    {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
   end
 
   #
