@@ -31,17 +31,12 @@ describe("NetSimVisualization", function () {
       alphaWire, betaWire, deltaWire, gammaWire, netSimVis;
 
   /**
-   * Creates an svg placeholder so that NetSimVisualization's foreground
-   * and background searches work
+   * Creates a div placeholder for the NetSimVisualization to render
+   * its SVG element within.
    * @returns {jQuery}
    */
-  var makeSVGElement = function () {
-    return $("<svg version=\"1.1\" width=\"298\" height=\"298\" xmlns=\"http://www.w3.org/2000/svg\">" +
-        "<g id=\"centered-group\">" +
-          "<g id=\"background-group\"></g>" +
-          "<g id=\"foreground-group\"></g>" +
-        "</g>" +
-      "</svg>");
+  var makeRootDiv = function () {
+    return $("<div>");
   };
 
   /**
@@ -116,7 +111,7 @@ describe("NetSimVisualization", function () {
       elements = elements.concat([alphaWire, betaWire, deltaWire, gammaWire]);
 
       var netsim = new NetSim();
-      netSimVis = new NetSimVisualization(makeSVGElement(), netsim.runLoop_);
+      netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
 
       netSimVis.setShard(testShard);
       netSimVis.elements_ = elements;
@@ -185,7 +180,7 @@ describe("NetSimVisualization", function () {
       elements = elements.concat([alphaWire, betaWire, deltaWire]);
 
       var netsim = new NetSim();
-      netSimVis = new NetSimVisualization(makeSVGElement(), netsim.runLoop_);
+      netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
       netSimVis.elements_ = elements;
       netSimVis.localNode = alphaNode;
     });
