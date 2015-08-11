@@ -9,7 +9,7 @@
   var dialogType = null;
   var adjustedScroll = false;
 
-  $(function () {
+  $(document).ready(function () {
     if (appOptions.dialog.preTitle != "") {
       window.setTimeout(function () {
         showDialog("pre");
@@ -18,11 +18,11 @@
   });
 
   function dialogHidden() {
-    if (dialogType == "success" && lastServerResponse.nextRedirect) {
+    if (dialogType === "success" && lastServerResponse.nextRedirect) {
       window.location.href = lastServerResponse.nextRedirect;
     }
 
-    if (dialogType == "error") {
+    if (dialogType === "error") {
       adjustScroll();
     }
   }
