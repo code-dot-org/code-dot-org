@@ -292,6 +292,13 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
         }
       }.bind(this))
       .done(function () {
+        // Because the lobby may not get table-change events from this refresh,
+        // manually pass the cached table contents in.
+        this.onNodeTableChange_(this.shard_.nodeTable.readAll());
+        this.onWireTableChange_(this.shard_.wireTable.readAll());
+
+        // If we use routers and there's no router, create a router.
+        // TODO: Move this logic to the server, somehow.
         if (NetSimGlobals.getLevelConfig().canConnectToRouters &&
             !this.doesShardContainRouter()) {
           this.addRouterToLobby();

@@ -1,24 +1,21 @@
 name 'U3L25 Student Lesson Introduction'
-title 'Compound Conditionals'
-
-markdown <<MARKDOWN
-## Unit 3: Lesson 25 - Compound Conditionals
-
-# Background
-
-Compound conditionals allow programs to evaluate multiple Boolean expressions together using AND, OR, and NOT operators. This enables programmers to build up more complex criteria for if-statements.
-
-# Lesson
-
-* Evaluate if-else statements and compound conditionals composed of AND, OR, and NOT.
-* Develop more complex chatbot interactions using compound conditionals. 
-
-
-# Resources
-* Worksheet: <a href="https://docs.google.com/document/d/1s4CeJMlmmkoGcYWM-oAAZPM5K8MOMVP1rSkRPvBVntI" target="_blank">
-Truth Tables
-</a>
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
+encrypted 'ncoeV0p6La+YE5KEAwQoUeKj2V7M9JTUhjEpancQJ0/O7yN3TKFrcaZr8Kqr
+9gQ8NP0tUOIy5zSun7bZSbT7tt2KH6ckM3sk2lctRXBVYAVf7ui9FbucCmlJ
+tQ2Op4xy7ft91U7vcH8VZRmpZGoVX2z7519kpr3eQx4u4BAtHMP445X/VTIC
+OHRaj9a8DLbi38cj9EJcj2KU3/HjYzRN0mvsL62ZJYptEraqt6rieQ7jhoRX
+m8BSvpA89pAz2+TLZAoLNKdlpDpQF4Z5ZsFICK+FQMBD9DBFK/9ZBYNbQ2ye
+vrfDxmU1EbEQ6WNhZigbf9WNTaTE+/AkLMnQ6BgJi0ppg5RM/f0wBbuFx8hL
+afNLIzY+8Y6dxEhGZqgqzMaUWmrkxE/C507WNl6tgBbOqjE7U++hwkSVsbGQ
+6RlWmsrCHf0Z2I6wvc98Si1rJOXBxXL+AAmRvqeMjeUnBaRH6rQjJy7W6UF5
+XRFs8bUvxW+A37bfh2XGIesfBiHF3A68D38Xu2gQoPkRNGzgjC5gQ6gK8Abr
+WPfXN8jeJ2i/Tdiv433TTaCjzsGVqMyTUXsNPvv2KWvyRKlXcvBp8HmnZ00m
+H7PHF+h8dGwBj2bJbnyEjY+1w/4PF7lEKpnpiJ12YJ2BwUaoULn08anseDZE
+89wmAIH7XX4YgGZ8rAE8aogfrVQwgVRoNRvolA/mNapbeTJpE47cFmlVwaha
+mGsGVSjo3zb0dvlicqFjaX2FYJsVq50bNh7XqpDlHJuxoMSlzb8uEFQqQ98S
+2jG9aHyA8/jrWneHWPFQpqHdYt7PMnp+b0nKGVnf9TxhY+d8kdf7LNxAtKOg
+xGXSgbZxoj8wyLVVQeGn4JPWhLXbb705fGsIz3ZT2T/Tf0LZSOkUb0tL4Bin
+ZIGkFXp1qYDuj79lU7VYknjX94VAEyT9HMZ9/2jzRZlaPyUU/eeWBFUThj6R
+eNY6fxDQkqqr8VpR3UvBxSyTftputRxWwiyvGdnPHRUwDMB8r0nZru4UdM0H
+5s3s6EBSb3dgCjrogtMkz+Fl01iycagwv/dR8cN6bRVGGStqQ8NVQ9FDqTTa
+hsHL4T7u
+'

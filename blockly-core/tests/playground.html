@@ -22,6 +22,7 @@ function start() {
   goog.tweak.registerBoolean('toggleScrollDragDebug', 'enables autoscroll debugging', false);
   goog.tweak.registerBoolean('openFunctionEditor', 'pre-opens function editor', false);
   goog.tweak.registerBoolean('enableExampleRunning', 'enables running of examples', false);
+  goog.tweak.registerNumber('addContractDomains', 'adds a given number of domain parameters to the auto-opened contract editor', 0);
 
   Blockly.inject(document.getElementById('blocklyDiv'), {
     rtl: rtl,
@@ -80,6 +81,14 @@ function newContractEditor() {
     disableExamples: false
   });
   Blockly.contractEditor.openWithNewFunction();
+  var numberContractDomains = goog.tweak.getNumber('addContractDomains');
+  if (numberContractDomains) {
+    for (var i = 0; i < numberContractDomains; i++) {
+      Blockly.contractEditor.addParameter('param' + i);
+    }
+    Blockly.contractEditor.refreshParamsEverywhere();
+    Blockly.contractEditor.layOutBlockSpaceItems_();
+  }
 }
 
 function newVariableEditor() {

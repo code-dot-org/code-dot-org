@@ -90,6 +90,16 @@ describe("NetSimMessage", function () {
     assertEqual(row.base64Payload.len, base64Payload.len);
   });
 
+  it ("gracefully converts a malformed base64Payload to empty string", function () {
+    var message = new NetSimMessage(testShard, {
+      base64Payload: {
+        string: "totally not a base64 string",
+        len: 7
+      },
+    });
+    assertEqual(message.payload, '');
+  });
+
   describe("static method send", function () {
     it ("adds an entry to the message table", function () {
       messageTable.refresh(function (err, rows) {

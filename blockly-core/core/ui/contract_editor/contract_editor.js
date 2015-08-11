@@ -13,6 +13,7 @@ goog.require('Blockly.ExampleView');
 goog.require('Blockly.BlockValueType');
 goog.require('Blockly.FunctionalTypeColors');
 goog.require('Blockly.ContractEditorSectionView');
+goog.require('Blockly.ContractDefinitionSection');
 goog.require('Blockly.SvgHeader');
 goog.require('Blockly.SvgTextButton');
 goog.require('Blockly.SvgHighlightBox');
@@ -34,9 +35,9 @@ goog.require('goog.array');
 /** @const */ var EXAMPLE_BLOCK_MARGIN_LEFT = Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN; // px
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_BELOW = 10; // px
 /** @const */ var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15; // px
-/** @const */ var FUNCTION_BLOCK_VERTICAL_MARGIN = Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN; // px
 /** @const */ var HEADER_HEIGHT = 30; // px
 /** @const */ var DEFAULT_EXAMPLE_CALL_SECTION_WIDTH = 100; // px
+/** @const */ var MARGIN_BLOCK_TO_CALL_SLOT = 13; // px
 
 /** @const */ var USER_TYPE_CHOICES = [
   Blockly.BlockValueType.NUMBER,
@@ -137,12 +138,6 @@ Blockly.ContractEditor = function(configuration) {
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
 
-/**
- * Whether to show the "Test" run buttons next to examples in the editor.
- * @type {boolean}
- */
-Blockly.ContractEditor.SHOW_TEST_BUTTONS = false;
-
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = 'functional_example';
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 
@@ -207,10 +202,11 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
   // TODO(bjordan): get horizontal line #X helper, lay out below examples
 
-  this.verticalMidline = Blockly.createSvgElement('rect', {
+
+  this.verticalExampleMidline = Blockly.createSvgElement('rect', {
     'fill': '#000'
   }, this.examplesTableGroup);
-  this.verticalMidline.setAttribute('width', 2.0);
+  this.verticalExampleMidline.setAttribute('width', 2.0);
 
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
@@ -230,6 +226,8 @@ Blockly.ContractEditor.prototype.create_ = function() {
     });
 
   this.hiddenDefinitionBlocks_ = [];
+
+  this.definitionSectionLogic_ = new Blockly.ContractDefinitionSection(canvasToDrawOn);
   this.definitionSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       sectionNumber: 3,
@@ -243,7 +241,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
         this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this),
           this.hiddenDefinitionBlocks_);
-
+        this.definitionSectionLogic_.handleCollapse(isNowCollapsed);
         this.position_();
       }, this),
       highlightBox: sharedHighlightBox,
@@ -252,18 +250,10 @@ Blockly.ContractEditor.prototype.create_ = function() {
           currentY = this.positionFlyout_(currentY);
         }
 
-        currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
-
-        if (this.functionDefinitionBlock) {
-          var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
-          var functionDefinitionX = Blockly.RTL ?
-            fullWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN :
-            Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
-          this.functionDefinitionBlock.moveTo(functionDefinitionX, currentY);
-          currentY += this.functionDefinitionBlock.getHeightWidth().height;
-        }
-
-        return currentY + FUNCTION_BLOCK_VERTICAL_MARGIN;
+        return this.definitionSectionLogic_.placeContent(currentY,
+            this.getVerticalMidlineOffset_(),
+            this.getFullWidth(),
+            this.functionDefinitionBlock);
       }, this)
     });
 
@@ -795,6 +785,18 @@ Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newNam
 };
 
 /**
+ * Returns the x offset for the vertical midline (w.r.t. the left side of the drawing
+ * canvas).
+ * @return {number}
+ * @private
+ */
+Blockly.ContractEditor.prototype.getVerticalMidlineOffset_ = function () {
+  return EXAMPLE_BLOCK_MARGIN_LEFT +
+      this.getMaxExampleCallBlockWidth_() +
+      MARGIN_BLOCK_TO_CALL_SLOT;
+};
+
+/**
  * Go through each of our example blocks and figure out which is widest
  * @return {number}
  */
@@ -807,7 +809,7 @@ Blockly.ContractEditor.prototype.getMaxExampleCallBlockWidth_ = function () {
     }
     var width = functionCallBlock.getHeightWidth().width;
     return Math.max(previousMax, width);
-  }, 0);
+  }, DEFAULT_EXAMPLE_CALL_SECTION_WIDTH);
 };
 
 /**
@@ -850,8 +852,7 @@ Blockly.ContractEditor.prototype.updateExampleResult = function (block, result) 
  * @returns {number} Updated y location
  */
 Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
-  var maxWidth = this.getMaxExampleCallBlockWidth_() ||
-      DEFAULT_EXAMPLE_CALL_SECTION_WIDTH;
+  var maxWidth = this.getMaxExampleCallBlockWidth_();
 
   var metrics = this.modalBlockSpace.getMetrics();
 
@@ -864,12 +865,10 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
 
   var newY = currentY;
 
-  var marginEgBlockToCallSlot = 13;
-  var verticalMidlineOffset = (EXAMPLE_BLOCK_MARGIN_LEFT + maxWidth +
-    marginEgBlockToCallSlot);
+  var verticalMidlineOffset = this.getVerticalMidlineOffset_();
 
   var verticalMidlineY = newY;
-  this.verticalMidline.setAttribute('transform',
+  this.verticalExampleMidline.setAttribute('transform',
     'translate(' + verticalMidlineOffset + ',' + newY + ')');
 
   var exampleSectionVisible = this.exampleBlocks.length > 0;
@@ -909,12 +908,12 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
   }
   this.exampleViews_.length = this.exampleBlocks.length;
 
-  this.verticalMidline.style.display = exampleSectionVisible ? 'block' : 'none';
+  this.verticalExampleMidline.style.display = exampleSectionVisible ? 'block' : 'none';
   this.topHorizontalLine.style.display = exampleSectionVisible ? 'block' : 'none';
   this.callText.style.display = exampleSectionVisible ? 'block' : 'none';
   this.resultText.style.display = exampleSectionVisible ? 'block' : 'none';
 
-  this.verticalMidline.setAttribute('height', newY - verticalMidlineY);
+  this.verticalExampleMidline.setAttribute('height', newY - verticalMidlineY);
 
   newY += blockSplitMargin;
 

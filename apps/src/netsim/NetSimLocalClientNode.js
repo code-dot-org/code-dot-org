@@ -19,8 +19,10 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
+var i18n = require('./locale');
 var NetSimClientNode = require('./NetSimClientNode');
 var NetSimEntity = require('./NetSimEntity');
+var NetSimAlert = require('./NetSimAlert');
 var NetSimMessage = require('./NetSimMessage');
 var NetSimLogger = require('./NetSimLogger');
 var NetSimRouterNode = require('./NetSimRouterNode');
@@ -312,7 +314,14 @@ NetSimLocalClientNode.prototype.getMyRouter = function () {
 NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
   onComplete = onComplete || function () {};
 
-  this.myWire.destroy(function (err) {
+  // save the wire so we can destroy it
+  var wire = this.myWire;
+
+  // remove all local references to connections
+  this.cleanUpBeforeDestroyingWire_();
+
+  // destroy wire on API
+  wire.destroy(function (err) {
     // We're not going to stop if an error occurred here; the error might
     // just be that the wire was already cleaned up by another node.
     // As long as we make a good-faith disconnect effort, the cleanup system
@@ -321,8 +330,6 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
     if (err) {
       logger.info("Error while disconnecting: " + err.message);
     }
-
-    this.cleanUpAfterDestroyingWire_();
     onComplete(null);
   }.bind(this));
 };
@@ -332,7 +339,7 @@ NetSimLocalClientNode.prototype.disconnectRemote = function (onComplete) {
  * disconnect paths.
  * @private
  */
-NetSimLocalClientNode.prototype.cleanUpAfterDestroyingWire_ = function () {
+NetSimLocalClientNode.prototype.cleanUpBeforeDestroyingWire_ = function () {
   this.myWire = null;
   this.myRemoteClient = null;
   this.myRouterID_ = undefined;
@@ -505,6 +512,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
   } else if (!mutualConnectionRow && this.myRemoteClient) {
     // Remote client disconnected or we disconnected; either way we are
     // no longer connected.
+    NetSimAlert.info(i18n.alertPartnerDisconnected());
     this.disconnectRemote();
   } else if (!mutualConnectionRow && ! this.myRemoteClient) {
     // The client we're trying to connect to might have connected to
@@ -519,6 +527,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
               row.localNodeID == myConnectionTargetWireRow.remoteNodeID;
         }) : undefined;
     if (myConnectionTargetWireRow && isTargetConnectedToSomeoneElse) {
+      NetSimAlert.info(i18n.alertConnectionRefused());
       this.disconnectRemote();
     }
   }
