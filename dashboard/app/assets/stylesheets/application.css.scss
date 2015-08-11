@@ -1686,7 +1686,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-mark {
     display: inline-block;
     float: left;
-    width: 32px;
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
@@ -1694,6 +1693,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   .item-label {
     display: inline-block;
+    text-align: left;
     float: left;
     label {
       font-size: 15px;

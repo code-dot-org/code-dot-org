@@ -24,8 +24,11 @@
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
 
-    - height = data['height'] || '20'
-    - height += 'px'
+    - if data['height'] == 'auto'
+      - height = 'auto'
+    - else
+      - height = data['height'] || '20'
+      - height += 'px'
 
     -# multi2 gets checkboxes; regular multi gets radio buttons.
     - if data['type'] == 'multi2'
