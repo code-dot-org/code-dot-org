@@ -79,8 +79,7 @@ namespace :seed do
       DSLS_GLOB.each do |filename|
         dsl_class = DSL_TYPES.detect{|type|filename.include?(".#{type.underscore}") }.try(:constantize)
         begin
-          level_name = File.basename(filename, ".*").humanize
-          data, i18n = dsl_class.parse_file(filename, level_name)
+          data, i18n = dsl_class.parse_file(filename)
           dsl_class.setup data
           i18n_strings.deep_merge! i18n
         rescue Exception

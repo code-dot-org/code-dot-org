@@ -18,13 +18,13 @@
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 요청하세요.
 
-[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물을](/resources/hoc-one-pager.pdf) 교장 선생님께 전달해 주세요.
+[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물을](/files/hoc-one-pager.pdf) 교장 선생님께 전달해 주세요.
 
 <% else %>
 
 ## 2. 여러분의 모든 학교에 Hour of Code 이벤트 행사를 열어달라고 요청하세요.
 
-[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물과](/resources/hoc-one-pager.pdf) 이 유인물을</a> 교장 선생님께 전달해 주세요.
+[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물과](/files/hoc-one-pager.pdf) 이 유인물을</a> 교장 선생님께 전달해 주세요.
 
 <% end %>
 
@@ -34,7 +34,7 @@
 
 ## 4. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 
-[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물을](http://hourofcode.com/resources/hoc-one-pager.pdf) 여러분의 직장 상사, CEO에게 전달해 주세요..
+[이 이메일을 보내거나](<%= hoc_uri('/resources#email') %>) [이 유인물을](http://hourofcode.com/files/hoc-one-pager.pdf) 여러분의 직장 상사, CEO에게 전달해 주세요..
 
 ## 5. Hour of Code를 여러분의 소속 단체나 커뮤니티에 홍보해 주세요.
 
@@ -42,6 +42,6 @@
 
 ## 6. 지역 의원 등에게 Hour of Code 를 지원해달라고 요청하세요.
 
-[이 이메일을 ](<%= hoc_uri('/resources#politicians') %>) 여러분의 시장, 시의원, 학교 운영위원회에 보내주세요. 또는 [이 유인물을](http://hourofcode.com/resources/hoc-one-pager.pdf) 보내 여러분의 학교에 초청하세요.
+[이 이메일을 ](<%= hoc_uri('/resources#politicians') %>) 여러분의 시장, 시의원, 학교 운영위원회에 보내주세요. 또는 [이 유인물을](http://hourofcode.com/files/hoc-one-pager.pdf) 보내 여러분의 학교에 초청하세요.
 
 <%= view 'popup_window.js' %>
