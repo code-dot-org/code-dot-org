@@ -227,7 +227,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
   this.hiddenDefinitionBlocks_ = [];
 
-  var definitionSection = new Blockly.ContractDefinitionSection(canvasToDrawOn);
+  this.definitionSectionLogic_ = new Blockly.ContractDefinitionSection(canvasToDrawOn);
   this.definitionSectionView_ = new Blockly.ContractEditorSectionView(
     canvasToDrawOn, {
       sectionNumber: 3,
@@ -241,7 +241,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
         this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(
           !isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this),
           this.hiddenDefinitionBlocks_);
-        definitionSection.handleCollapse(isNowCollapsed);
+        this.definitionSectionLogic_.handleCollapse(isNowCollapsed);
         this.position_();
       }, this),
       highlightBox: sharedHighlightBox,
@@ -250,7 +250,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
           currentY = this.positionFlyout_(currentY);
         }
 
-        return definitionSection.placeContent(currentY,
+        return this.definitionSectionLogic_.placeContent(currentY,
             this.getVerticalMidlineOffset_(),
             this.getFullWidth(),
             this.functionDefinitionBlock);
