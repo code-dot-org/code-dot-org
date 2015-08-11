@@ -344,7 +344,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.stage.position}"
     assert_select '.pdf-button' do
-      assert_select '[href="?"]', /.*#{unplugged_curriculum_path_start}.*/
+      assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}.*/
     end
 
     assert_equal script_level, assigns(:script_level)
@@ -490,13 +490,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show tracking pixel for frozen chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FROZEN_NAME, stage_id: 1, id: 1
-    assert_select 'img["src=//code.org/api/hour/begin_frozen.png"]'
+    assert_select 'img[src="//code.org/api/hour/begin_frozen.png"]'
   end
 
   test 'should show tracking pixel for flappy chapter 1 in prod' do
     set_env :production
     get :show, script_id: Script::FLAPPY_NAME, chapter: 1
-    assert_select 'img["src=//code.org/api/hour/begin_flappy.png"]'
+    assert_select 'img[src="//code.org/api/hour/begin_flappy.png"]'
   end
 
   test 'should show tracking pixel for playlab chapter 1 in prod' do

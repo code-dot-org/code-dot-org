@@ -115,12 +115,13 @@ class ReportsControllerTest < ActionController::TestCase
     get :header_stats, script_id: Script::COURSE1_NAME, user_id: teacher.id
     assert_select '.stage-lesson-plan-link'
 
+    # Sign in as a student and make sure we're forbidden.
     sign_out(teacher)
     student = create(:student)
     sign_in(student)
 
     get :header_stats, script_id: Script::COURSE1_NAME, user_id: student.id
-    assert_select '.stage-lesson-plan-link', 0
+    assert_response :forbidden
   end
 
   test "should not show lesson plan link if student" do
@@ -143,7 +144,7 @@ class ReportsControllerTest < ActionController::TestCase
 
     unplugged_curriculum_path_start = "curriculum/#{course1.name}/"
     assert_select '.stage-lesson-plan-link a' do
-      assert_select '[href="?"]', /.*#{unplugged_curriculum_path_start}\d.*/
+      assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}\d.*/
     end
   end
 

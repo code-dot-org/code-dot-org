@@ -56,7 +56,7 @@ module Ops
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
       assert_equal ['ops@code.org'], mail.to
-      assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
+      assert_equal "[ops notification] modified #{@cohort.name}", mail.subject
     end
 
     test 'adding existing under 13 user to a cohort makes them adult and teacher' do
@@ -108,7 +108,7 @@ module Ops
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
       assert_equal ['ops@code.org'], mail.to
-      assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
+      assert_equal "[ops notification] modified #{@cohort.name}", mail.subject
     end
 
     test 'district contact can re-add teachers in their district from deleted teachers' do
@@ -335,7 +335,7 @@ module Ops
       assert_response :success
 
       # only the two new districts
-      assert_equal [d1, d2], @cohort.reload.districts
+      assert_equal [d1, d2], @cohort.reload.districts.to_a
     end
 
     test 'district contact cannot update cohort districts' do

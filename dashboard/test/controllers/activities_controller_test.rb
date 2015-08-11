@@ -10,6 +10,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   setup do
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
+
     Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
 
     @user = create(:user, total_lines: 15)
@@ -154,9 +155,9 @@ class ActivitiesControllerTest < ActionController::TestCase
   # Expect the controller to invoke "milestone_logger.info()" with a
   # string that matches given regular expression.
   def expect_controller_logs_milestone_regexp(regexp)
-    milestone_logger = mock(:milestone_logger)
-    milestone_logger.expects(:info) # .with{|log_string| log_string !~ regexp}
-    @controller.stubs(:milestone_logger).returns(milestone_logger)
+    @controller.send(:milestone_logger).expects(:info).with do |log_string|
+      log_string !~ regexp
+    end
   end
 
   test "logged in milestone does not allow negative lines of code" do
