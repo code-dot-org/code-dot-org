@@ -18,13 +18,13 @@
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/files/hoc-one-pager.pdf) to your principal.
 
 <% else %>
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/files/hoc-one-pager.pdf) this handout</a> to your principal.
 
 <% end %>
 
@@ -34,7 +34,7 @@
 
 ## 4. 雇用主にも参加するよう聞いてみてください。
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf).
 
 ## 4. あなたのコミュニティーにもHour of Codeを宣伝しましょう。
 
@@ -42,6 +42,6 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 
 ## 6. Hour of Codeを支援してもらえるよう地元の議員に聞いてみましょう。
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

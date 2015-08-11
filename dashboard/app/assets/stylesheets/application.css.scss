@@ -1514,12 +1514,24 @@ a.download-video {
   }
 }
 
-.content-level {
+.content-level,
+.text-match {
   #markdown.teacher {
+    max-width: 800px;
     border: 5px solid $cyan;
     background-color: $lightest_cyan;
     border-radius: 5px;
-    padding: 10px;
+    .content {
+      padding: 10px;
+    }
+    h3 {
+      padding: 5px;
+      font-size: 18px;
+      font-family: $gotham-extra-bold; font-weight: normal;
+      color: white;
+      background: $cyan;
+      margin: 0;
+    }
   }
 }
 
