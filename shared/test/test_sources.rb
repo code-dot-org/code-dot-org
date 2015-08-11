@@ -41,9 +41,9 @@ class SourcesTest < Minitest::Unit::TestCase
     assert_equal 2, versions.count
 
     # Get the first and second version.
-    @files.get "/v3/sources/#{channel}/#{filename}?version=#{versions.last.first}"
+    @files.get "/v3/sources/#{channel}/#{filename}?version=#{versions.last['versionId']}"
     assert_equal file_data, @files.last_response.body
-    @files.get "/v3/sources/#{channel}/#{filename}?version=#{versions.first.first}"
+    @files.get "/v3/sources/#{channel}/#{filename}?version=#{versions.first['versionId']}"
     assert_equal new_file_data, @files.last_response.body
   end
 
