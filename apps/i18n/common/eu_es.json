@@ -217,5 +217,6 @@
   "watchVideo": "Ikusi Bideoa",
   "when": "noiz",
   "whenRun": "abiaraztean",
-  "workspaceHeaderShort": "Laneremua: "
+  "workspaceHeaderShort": "Laneremua: ",
+  "showVersionsHeader": "Version History"
 }

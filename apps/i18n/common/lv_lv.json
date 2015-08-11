@@ -217,5 +217,6 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: "
+  "workspaceHeaderShort": "Darba virsma: ",
+  "showVersionsHeader": "Version History"
 }

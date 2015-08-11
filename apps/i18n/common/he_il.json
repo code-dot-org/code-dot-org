@@ -217,5 +217,6 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "מתי לרוץ",
-  "workspaceHeaderShort": "סביבת העבודה: "
+  "workspaceHeaderShort": "סביבת העבודה: ",
+  "showVersionsHeader": "Version History"
 }

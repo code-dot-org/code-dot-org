@@ -217,5 +217,6 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "kui käib",
-  "workspaceHeaderShort": "Tööruum: "
+  "workspaceHeaderShort": "Tööruum: ",
+  "showVersionsHeader": "Version History"
 }
