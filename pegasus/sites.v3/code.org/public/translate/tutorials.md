@@ -25,7 +25,7 @@ Right now, we're focused on translating the instructions of our courses. Search 
 * [Course 3](https://studio.code.org/s/course3) - search for "4-5"
 * [Course 4](https://studio.code.org/s/course4) - search for "Course 4"
 
-## What do I translate next?
+## Where can I find context for translations?
 If you have more time, complete the project in the following prioritized order.
 
 <br/>
@@ -89,12 +89,15 @@ If you have more time, complete the project in the following prioritized order.
 1. blockly-mooc/bounce.json - context: [Bounce](https://studio.code.org/s/course3/stage/15/puzzle/1)
 1. blockly-mooc/jigsaw.json - context: [Jigsaw](https://studio.code.org/s/course1/stage/3/puzzle/1)
 
-
 ## How to Use CrowdIn
 
 <embed src="/files/crowdin.swf" width=800 height=550 />
 
 Watch the [demo video](/files/crowdin.swf) in full screen.
+
+## Strings that may still change
+
+Course 4 is still in Beta, so the instructions may still change as we prepare to release it. If you've completed all other translations, you can save these translations for last. We recommend that you still complete them and approve them as they are, and if changes are made then they will be mark as "unapproved" so that you can review and update the translation, if needed.
 
 
 ## How translations are selected
