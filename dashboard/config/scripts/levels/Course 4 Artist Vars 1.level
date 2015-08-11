@@ -29,7 +29,9 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Can you help me draw an equilateral triangle? It has to be exactly 100 pixels long on each side.\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
