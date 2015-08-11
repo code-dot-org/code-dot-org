@@ -157,16 +157,16 @@ var drawMap = function() {
 
   if (level.ghost) {
     var blockCanvas = Blockly.mainBlockSpace.getCanvas();
-    var image = Blockly.createSvgElement('rect', {
+    Blockly.createSvgElement('rect', {
       fill: "url(#pat_" + level.id + "A)",
       "fill-opacity": "0.2",
       width: level.image.width,
       height: level.image.height,
       transform: "translate(" + level.ghost.x + ", " +
         level.ghost.y + ")"
+    }, blockCanvas, {
+      beforeExisting: true
     });
-    // we want it to be first, so it's behind everything
-    blockCanvas.insertBefore(image, blockCanvas.childNodes[0]);
   }
 };
 
