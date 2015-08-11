@@ -4808,7 +4808,7 @@ var DEFAULT_MAXIMUM_DELAY_JITTER_MS = 200;
  * many invalidation events occur.
  * @type {number}
  */
-var DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS = 1000;
+var DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS = 2500;
 
 /**
  * Wraps the app storage table API in an object with local
