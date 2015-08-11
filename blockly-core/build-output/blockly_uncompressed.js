@@ -5419,11 +5419,14 @@ Blockly.PanDragHandler.prototype.onPanDragTargetMouseDown_ = function(e) {
   if(this.onTargetMouseDown_) {
     this.onTargetMouseDown_()
   }
-  var isClickDirectlyOnDragTarget = e.target && e.target === this.target_;
-  if(Blockly.selected && (!Blockly.readOnly && isClickDirectlyOnDragTarget)) {
+  var clickIsOnTarget = e.target && e.target === this.target_;
+  if(Blockly.selected && (!Blockly.readOnly && clickIsOnTarget)) {
     Blockly.selected.unselect()
   }
-  if(this.blockSpace_.scrollbarPair && (!Blockly.isRightButton(e) && (isClickDirectlyOnDragTarget || Blockly.readOnly))) {
+  var blockUnmovable = Blockly.selected && !Blockly.selected.isMovable();
+  var shouldDrag = clickIsOnTarget || (blockUnmovable || Blockly.readOnly);
+  var isLeftClick = !Blockly.isRightButton(e);
+  if(this.blockSpace_.scrollbarPair && (isLeftClick && shouldDrag)) {
     this.beginDragScroll_(e);
     e.stopPropagation();
     e.preventDefault()
