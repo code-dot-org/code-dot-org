@@ -12392,7 +12392,9 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
   // Is it another node?
   var destinationNode = _.find(nodes, function (node) {
     return address === node.getAddress() ||
-        (node.getNodeType() === NodeType.ROUTER && address === node.getAutoDnsAddress());
+        (node.dnsMode === DnsMode.AUTOMATIC &&
+          node.getNodeType() === NodeType.ROUTER &&
+          address === node.getAutoDnsAddress());
   });
 
   // If the node we're after doesn't exist anywhere, we should stop now.
