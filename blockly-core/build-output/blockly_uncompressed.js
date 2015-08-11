@@ -22697,9 +22697,9 @@ Blockly.ExampleView.prototype.setResult = function(result) {
   this.refreshTestingUI(false)
 };
 Blockly.ExampleView.prototype.refreshTestingUI = function(active) {
-  goog.style.setElementShown(this.resultText, Blockly.ContractEditor.SHOW_TEST_BUTTONS);
-  goog.style.setElementShown(this.testExampleButton, Blockly.ContractEditor.SHOW_TEST_BUTTONS && !active);
-  goog.style.setElementShown(this.resetExampleButton, Blockly.ContractEditor.SHOW_TEST_BUTTONS && active)
+  goog.style.setElementShown(this.resultText, Blockly.showExampleTestButtons);
+  goog.style.setElementShown(this.testExampleButton, Blockly.showExampleTestButtons && !active);
+  goog.style.setElementShown(this.resetExampleButton, Blockly.showExampleTestButtons && active)
 };
 Blockly.ExampleView.prototype.placeExampleAndGetNewY = function(block, currentY, maxWidth, marginLeft, marginBelow, fullWidth, midLineX) {
   this.block_ = block;
@@ -22829,7 +22829,6 @@ Blockly.ContractEditor = function(configuration) {
   this.exampleViews_ = []
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
-Blockly.ContractEditor.SHOW_TEST_BUTTONS = false;
 Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = "functional_example";
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = "ACTUAL";
 Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = Blockly.BlockValueType.NUMBER;
@@ -25286,7 +25285,7 @@ Blockly.parseOptions_ = function(options) {
   return{RTL:!!options["rtl"], collapse:hasCollapse, readOnly:readOnly, maxBlocks:options["maxBlocks"] || Infinity, assetUrl:options["assetUrl"] || function(path) {
     return"./" + path
   }, hasCategories:hasCategories, hasHorizontalScrollbars:options["hasHorizontalScrollbars"], hasVerticalScrollbars:options["hasVerticalScrollbars"], hasTrashcan:hasTrashcan, varsInGlobals:options["varsInGlobals"] || false, languageTree:tree, disableParamEditing:options["disableParamEditing"] || false, disableVariableEditing:options["disableVariableEditing"] || false, useModalFunctionEditor:options["useModalFunctionEditor"] || false, useContractEditor:options["useContractEditor"] || false, disableExamples:options["disableExamples"] || 
-  false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false}
+  false, defaultNumExampleBlocks:options["defaultNumExampleBlocks"] || 0, grayOutUndeletableBlocks:grayOutUndeletableBlocks, editBlocks:options["editBlocks"] || false, showExampleTestButtons:options["showExampleTestButtons"] || false}
 };
 Blockly.registerUISounds_ = function(audioPlayer) {
   audioPlayer.register({id:"click", mp3:Blockly.assetUrl("media/click.mp3"), wav:Blockly.assetUrl("media/click.wav"), ogg:Blockly.assetUrl("media/click.ogg")});

@@ -159,7 +159,8 @@ Blockly.parseOptions_ = function(options) {
     disableExamples: options['disableExamples'] || false,
     defaultNumExampleBlocks: options['defaultNumExampleBlocks'] || 0,
     grayOutUndeletableBlocks: grayOutUndeletableBlocks,
-    editBlocks: options['editBlocks'] || false
+    editBlocks: options['editBlocks'] || false,
+    showExampleTestButtons: options['showExampleTestButtons'] || false
   };
 };
 

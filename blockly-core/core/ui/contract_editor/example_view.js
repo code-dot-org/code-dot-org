@@ -99,12 +99,11 @@ Blockly.ExampleView.prototype.setResult = function (result) {
  * @param {boolean} active Is this example's result currently visualized
  */
 Blockly.ExampleView.prototype.refreshTestingUI = function (active) {
-  goog.style.setElementShown(this.resultText,
-      Blockly.ContractEditor.SHOW_TEST_BUTTONS);
+  goog.style.setElementShown(this.resultText, Blockly.showExampleTestButtons);
   goog.style.setElementShown(this.testExampleButton,
-      Blockly.ContractEditor.SHOW_TEST_BUTTONS && !active);
+      Blockly.showExampleTestButtons && !active);
   goog.style.setElementShown(this.resetExampleButton,
-      Blockly.ContractEditor.SHOW_TEST_BUTTONS && active);
+      Blockly.showExampleTestButtons && active);
 };
 
 /**
