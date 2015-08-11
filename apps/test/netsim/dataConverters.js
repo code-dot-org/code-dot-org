@@ -749,6 +749,13 @@ describe("DataConverters", function () {
 
   });
 
+  describe("base64ToBinary", function () {
+    var base64ToBinary = DataConverters.base64ToBinary;
+    it ("throws an exception when given a non-base64-encoded String", function () {
+      assertThrows(TypeError, base64ToBinary.bind(null, 'some non-base64 String'));
+    });
+  });
+
   describe("binaryToAddressString", function () {
     var binaryToAddressString = DataConverters.binaryToAddressString;
     var ipv4 = '8.8.8.8';
