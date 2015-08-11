@@ -768,22 +768,49 @@ FeedbackUtils.prototype.showGeneratedCode = function(Dialog) {
  * confirms they want to clear the puzzle.
  */
 FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback) {
-  var codeDiv = document.createElement('div');
-  codeDiv.innerHTML = '<p class="dialog-title">' + msg.clearPuzzleConfirmHeader() + '</p>' +
-      '<p>' + msg.clearPuzzleConfirm() + '</p>';
+  this.showSimpleDialog(Dialog, {
+    headerText: msg.clearPuzzleConfirmHeader(),
+    bodyText: msg.clearPuzzleConfirm(),
+    continueText: msg.clearPuzzle(),
+    cancelText: msg.dialogCancel(),
+    onContinue: callback,
+    onCancel: null
+  });
+};
+
+/**
+ * Shows a simple dialog that has a header, body, continue button, and cancel
+ * button
+ * @param {object} options Configurable options.
+ * @param {string} headerText Text for header portion
+ * @param {string} bodyText Text for body portion
+ * @param {string} cancelText Text for cancel button
+ * @param {string} continueTextText Text for continue button
+ * @param {function} [onContinue] Function to be called after clicking continue
+ * @param {function} [onCancel] Function to be called after clicking cancel
+ */
+FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
+  var contentDiv = document.createElement('div');
+  contentDiv.innerHTML = '';
+  if (options.headerText) {
+    contentDiv.innerHTML += '<p class="dialog-title">' + options.headerText + '</p>';
+  }
+  if (options.bodyText) {
+    contentDiv.innerHTML += '<p>' + options.bodyText + '</p>';
+  }
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
-      clearPuzzle: true,
-      cancel: true
+      continueText: options.continueText,
+      cancelText: options.cancelText
     }
   });
-  codeDiv.appendChild(buttons);
+  contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
     Dialog: Dialog,
-    contentDiv: codeDiv,
+    contentDiv: contentDiv,
     icon: this.studioApp_.icon,
     defaultBtnSelector: '#again-button'
   });
@@ -791,14 +818,15 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
   var cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
+      options.onCancel && options.onCancel();
       dialog.hide();
     });
   }
 
-  var clearPuzzleButton = buttons.querySelector('#continue-button');
-  if (clearPuzzleButton) {
-    dom.addClickTouchEvent(clearPuzzleButton, function() {
-      callback();
+  var continueButton = buttons.querySelector('#continue-button');
+  if (continueButton) {
+    dom.addClickTouchEvent(continueButton, function() {
+      options.onContinue && options.onContinue();
       dialog.hide();
     });
   }
@@ -1082,6 +1110,14 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
 /**
  * Show a modal dialog without an icon.
  * @param {Object} options
+ * @param {Dialog} options.Dialog
+ * @param {string} options.icon
+ * @param {HTMLElement} options.contentDiv
+ * @param {string} options.defaultBtnSelector
+ * @param {boolean} options.scrollContent
+ * @param {function} options.onHidden
+ * @parm {string} options.id
+ * @param {HTMLElement} options.header
  */
 FeedbackUtils.prototype.createModalDialog = function(options) {
   var modalBody = document.createElement('div');

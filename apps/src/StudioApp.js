@@ -434,6 +434,24 @@ StudioApp.prototype.init = function(config) {
 
       dialog.show();
     }).bind(this));
+
+  if (Blockly.contractEditor) {
+    Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
+      this.feedback_.showSimpleDialog(this.Dialog, {
+        headerText: undefined,
+        bodyText: msg.examplesFailedOnClose(),
+        cancelText: msg.ignore(),
+        continueText: msg.tryAgain(),
+        onContinue: null,
+        onCancel: function () {
+          Blockly.contractEditor.hideIfOpen();
+        }
+      });
+
+      // return true to indicate to blockly-core that we'll own closing the
+      // contract editor
+      return true;
+    }.bind(this));
   }
 
   smallFooterUtils.bindHandlers();
@@ -746,10 +764,7 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
 };
 
 StudioApp.prototype.createModalDialog = function(options) {
-  return this.feedback_.createModalDialog(options);
-};
-
-StudioApp.prototype.createModalDialog = function(options) {
+  options.Dialog = utils.valueOr(options.Dialog, this.Dialog);
   return this.feedback_.createModalDialog(options);
 };
 
@@ -810,7 +825,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   }
 
   var dialog = this.createModalDialog({
-    Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
@@ -1099,7 +1113,6 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
   builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialog({
-    Dialog: this.Dialog,
     contentDiv: builderDetails,
     icon: this.icon
   });

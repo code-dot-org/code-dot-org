@@ -39,6 +39,10 @@ goog.require('goog.array');
 /** @const */ var DEFAULT_EXAMPLE_CALL_SECTION_WIDTH = 100; // px
 /** @const */ var MARGIN_BLOCK_TO_CALL_SLOT = 13; // px
 
+// TODO (brent) - needs to be in sync with apps, which i don't love
+/** @const */ var SUCCESS_TEXT = "Matches definition.";
+
+
 /** @const */ var USER_TYPE_CHOICES = [
   Blockly.BlockValueType.NUMBER,
   Blockly.BlockValueType.STRING,
@@ -129,6 +133,8 @@ Blockly.ContractEditor = function(configuration) {
    * @private
    */
   this.testResetHandler_ = function () { };
+
+  this.appHijackedDialogClose_ = function () { return false; };
 
   /**
    * @type {Blockly.ExampleView[]}
@@ -393,12 +399,30 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
   }, this);
 };
 
+/**
+ * Allows app to pass in a function that should be run against an example block
+ * when user hits Test button
+ * @param {function}
+ */
 Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
   this.testHandler_ = testHandler;
 };
 
+/**
+ * Allows app to pass in a function that should be run when user resets a test
+ * @param {function}
+ */
 Blockly.ContractEditor.prototype.registerTestResetHandler = function (testResetHandler) {
   this.testResetHandler_ = testResetHandler;
+};
+
+/**
+ * Allows app to pass in a function that is called on contract editor close if
+ * any examples fail. This function should return true if the app wants to own
+ * closing the dialog
+ */
+Blockly.ContractEditor.prototype.registerTestsFailedOnCloseHandler = function (handler) {
+  this.appHijackedDialogClose_ = handler;
 };
 
 /**
@@ -928,4 +952,25 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function (currentY) {
   this.exampleAreaDiv.style.height = (newY - currentY) + 'px';
 
   return newY;
+};
+
+Blockly.ContractEditor.prototype.onClose = function() {
+  if (!this.isOpen()) {
+    return;
+  }
+  var allPassed = true;
+  this.exampleViews_.forEach(function (view) {
+    // TODO - private accessor
+    var result = this.testExample(view.block_);
+    view.setResult(result);
+    view.refreshTestingUI(false);
+    allPassed = allPassed && (result === SUCCESS_TEXT);
+  }.bind(this));
+  if (!allPassed && this.appHijackedDialogClose_()) {
+    // app has taken responsibilty for closing dialog (likely by launching
+    // modal confirm dialog
+    return;
+  }
+
+  this.hideIfOpen.call(this);
 };
