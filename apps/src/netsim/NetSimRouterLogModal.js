@@ -36,6 +36,20 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    */
   this.rootDiv_ = rootDiv;
 
+  // Attach handlers for showing and hiding the modal
+  this.rootDiv_.on('shown.bs.modal', function () {
+    if (this.shard_) {
+      this.shard_.logTable.subscribe();
+    }
+    this.render();
+  }.bind(this));
+
+  this.rootDiv_.on('hidden.bs.modal', function () {
+    if (this.shard_) {
+      this.shard_.logTable.unsubscribe();
+    }
+  }.bind(this));
+
   /**
    * @private {NetSimShard}
    */
@@ -119,12 +133,20 @@ NetSimRouterLogModal.iterateeMap = {
 };
 
 /**
+ * @returns {boolean} TRUE if the modal is currently showing.
+ */
+NetSimRouterLogModal.prototype.isVisible = function () {
+  return this.rootDiv_.is(':visible');
+};
+
+/**
  * Fill the root div with new elements reflecting the current state
  */
 NetSimRouterLogModal.prototype.render = function () {
-
-  this.rootDiv_.off('shown.bs.modal.onModalOpen');
-  this.rootDiv_.off('hidden.bs.modal.onModalClose');
+  // Be lazy, don't render if not visible.
+  if (!this.isVisible()) {
+    return;
+  }
 
   var filteredLogEntries = this.isAllRouterLogMode_ ?
       this.logEntries_ :
@@ -151,18 +173,6 @@ NetSimRouterLogModal.prototype.render = function () {
   this.getRouterLogToggleButton().one('click', function() {
     this.toggleRouterLogMode_();
     this.render();
-  }.bind(this));
-
-  this.rootDiv_.on('shown.bs.modal.onModalOpen', function () {
-    if (this.shard_) {
-      this.shard_.logTable.subscribe();
-    }
-  }.bind(this));
-
-  this.rootDiv_.on('hidden.bs.modal.onModalClose', function () {
-      if (this.shard_) {
-        this.shard_.logTable.unsubscribe();
-      }
   }.bind(this));
 
   this.rootDiv_.find('th').click(function (event) {
