@@ -1,3 +1,5 @@
+[Travis says](https://travis-ci.org/code-dot-org/code-dot-org): [![Build Status](https://travis-ci.org/code-dot-org/code-dot-org.svg?branch=staging)](https://travis-ci.org/code-dot-org/code-dot-org)
+
 # Build setup
 This document describes how to set up your workstation to develop for Code.org.
 
