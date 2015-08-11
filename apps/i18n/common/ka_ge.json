@@ -217,5 +217,6 @@
   "watchVideo": "უყურე ვიდეოს",
   "when": "როდის",
   "whenRun": "გაშვებისას",
-  "workspaceHeaderShort": "სამუშაო სივრცე: "
+  "workspaceHeaderShort": "სამუშაო სივრცე: ",
+  "showVersionsHeader": "Version History"
 }

@@ -1,3 +1,5 @@
+[Travis says](https://travis-ci.org/code-dot-org/code-dot-org): [![Build Status](https://travis-ci.org/code-dot-org/code-dot-org.svg?branch=staging)](https://travis-ci.org/code-dot-org/code-dot-org)
+
 # Build setup
 This document describes how to set up your workstation to develop for Code.org.
 
@@ -149,7 +151,7 @@ Please check your PR against our tests before submitting.
 
 #### Code style
 
-Running `rake lint` locally will find any Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
+Running `rake lint` locally will find most Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
 
 #### Manually
 

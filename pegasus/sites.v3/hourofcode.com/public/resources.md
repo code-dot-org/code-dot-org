@@ -10,7 +10,7 @@ nav: resources_nav
 
 <a id="handouts"></a>
 ## Use this handout to spread the word
-<a href="<%= resolve_file('/resources/hoc-one-pager.pdf') %>"><img src="/images/fit-250/one-pager.png"></a>
+<a href="<%= resolve_file('/files/hoc-one-pager.pdf') %>"><img src="/images/fit-250/one-pager.png"></a>
 
 ## Give this handout to teachers and schools
 <a href="<%= resolve_file('/files/schools-handout.pdf') %>"><img src="/images/fit-250/schools-handout.png"></a>
@@ -47,14 +47,14 @@ nav: resources_nav
 <a id="posters"></a>
 ## Hang these posters in your school
 
-[![image](/images/fit-280/malala-yousafzai.png)](/resources/malala-yousafzai-poster.pdf)
-[![image](/images/fit-280/sheryl-sandberg.png)](/resources/sheryl-sandberg-poster.pdf)
-[![image](/images/fit-280/mark-zuckerberg.png)](/resources/mark-zuckerberg-poster.pdf)
-[![image](/images/fit-280/marissa-mayer.png)](/resources/marissa-mayer-poster.pdf)
-[![image](/images/fit-280/susan.png)](/resources/susan-wojcicki-poster.pdf)
-[![image](/images/fit-280/chris-bosh.png)](/resources/chris-bosh-poster.pdf)
-[![image](/images/fit-280/barack-obama.png)](/resources/barack-obama-poster.pdf)
-[![image](/images/fit-280/ashton-kutcher.png)](/resources/ashton-kutcher-poster.pdf)
+[![image](/images/fit-280/malala-yousafzai.png)](/files/malala-yousafzai-poster.pdf)
+[![image](/images/fit-280/sheryl-sandberg.png)](/files/sheryl-sandberg-poster.pdf)
+[![image](/images/fit-280/mark-zuckerberg.png)](/files/mark-zuckerberg-poster.pdf)
+[![image](/images/fit-280/marissa-mayer.png)](/files/marissa-mayer-poster.pdf)
+[![image](/images/fit-280/susan.png)](/files/susan-wojcicki-poster.pdf)
+[![image](/images/fit-280/chris-bosh.png)](/files/chris-bosh-poster.pdf)
+[![image](/images/fit-280/barack-obama.png)](/files/barack-obama-poster.pdf)
+[![image](/images/fit-280/ashton-kutcher.png)](/files/ashton-kutcher-poster.pdf)
 
 <a id="banners"></a>
 ## Feature these banners on your website

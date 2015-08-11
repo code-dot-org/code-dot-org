@@ -116,7 +116,6 @@ var base = {
     });
   },
 
-
   /**
    * Copy to the destination collection, since we expect the destination
    * to be empty. A true rest API would replace the destination collection:
@@ -129,6 +128,27 @@ var base = {
     $.ajax({
       url: this.api_base_url + "/" + dest + '?src=' + src,
       type: "put"
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
+  },
+
+  /**
+   * Change the contents of an asset or source file.
+   * @param {number} id - The collection identifier.
+   * @param {String} value - The new file contents.
+   * @param {String} filename - The name of the file to create or update.
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
+  put: function(id, value, filename, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id + "/" + filename,
+      type: "put",
+      data: value
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {

@@ -217,5 +217,6 @@
   "watchVideo": "Voir la vidéo",
   "when": "lorsque",
   "whenRun": "lors du lancement",
-  "workspaceHeaderShort": "Espace de travail :"
+  "workspaceHeaderShort": "Espace de travail :",
+  "showVersionsHeader": "Version History"
 }

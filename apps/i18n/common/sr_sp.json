@@ -217,5 +217,6 @@
   "watchVideo": "Погледај видео",
   "when": "када",
   "whenRun": "када се извршава",
-  "workspaceHeaderShort": "Радни простор: "
+  "workspaceHeaderShort": "Радни простор: ",
+  "showVersionsHeader": "Version History"
 }

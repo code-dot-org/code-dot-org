@@ -217,5 +217,6 @@
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: "
+  "workspaceHeaderShort": "Munkaterület: ",
+  "showVersionsHeader": "Version History"
 }

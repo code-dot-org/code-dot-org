@@ -679,6 +679,9 @@ input[type="radio"] {
     vertical-align: text-bottom;
     padding-right: 8px; }
 
+#versions-header {
+  display: none; }
+
 #design-headers {
   height: 30px;
   background-color: #7665a0;
@@ -781,6 +784,13 @@ input[type="radio"] {
     transform: scale(-1, 1);
     padding-right: 0;
     padding-left: 8px; }
+
+#showVersionsModal {
+  width: 700px;
+  margin-left: -350px; }
+
+#showVersionsModal .versionRow p {
+  margin: 15px 0 0 0; }
 
 #rotateContainer {
   position: fixed;

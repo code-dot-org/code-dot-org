@@ -217,5 +217,6 @@
   "watchVideo": "Videoya baxın",
   "when": "nə zaman",
   "whenRun": "icra etdikdə",
-  "workspaceHeaderShort": "iş sahəsi: "
+  "workspaceHeaderShort": "iş sahəsi: ",
+  "showVersionsHeader": "Version History"
 }
