@@ -143,7 +143,7 @@ class ReportsControllerTest < ActionController::TestCase
 
     unplugged_curriculum_path_start = "curriculum/#{course1.name}/"
     assert_select '.stage-lesson-plan-link a' do
-      assert_select '[href="?"]', /.*#{unplugged_curriculum_path_start}\d.*/
+      assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}\d.*/
     end
   end
 

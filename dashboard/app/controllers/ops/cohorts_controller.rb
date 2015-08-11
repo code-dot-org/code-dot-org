@@ -86,6 +86,7 @@ module Ops
     def cohort_params
       if current_user.try(:admin?)
         params.require(:cohort).permit(
+            :id,
             :name,
             :program_type,
             :script_id,
