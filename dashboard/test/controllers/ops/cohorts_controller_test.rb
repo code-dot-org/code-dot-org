@@ -56,7 +56,7 @@ module Ops
       # the notification to the ops team
       mail = ActionMailer::Base.deliveries.last
       assert_equal ['ops@code.org'], mail.to
-      assert_equal "[ops notification] #{@district.contact.ops_first_name} #{@district.contact.ops_last_name} modified #{@cohort.name}", mail.subject
+      assert_equal "[ops notification] #{@district_contact.ops_first_name} #{@district_contact.ops_last_name} modified #{@cohort.name}", mail.subject
     end
 
     test 'adding existing under 13 user to a cohort makes them adult and teacher' do
