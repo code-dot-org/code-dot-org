@@ -31,6 +31,12 @@ var DnsMode = NetSimConstants.DnsMode;
 var NodeType = NetSimConstants.NodeType;
 
 /**
+ * Whether the blurred visualization background should be shown.
+ * @const {boolean}
+ */
+var SHOW_BACKGROUND = false;
+
+/**
  * Top-level controller for the network visualization.
  *
  * For the most part, the visualization attaches to the raw network state
@@ -52,7 +58,9 @@ var NetSimVisualization = module.exports = function (rootDiv, runLoop) {
   this.rootDiv_ = rootDiv;
 
   // Immediately, drop our SVG canvas and basic groups into the DOM
-  this.rootDiv_.html(visualizationMarkup());
+  this.rootDiv_.html(visualizationMarkup({
+    showBackground: SHOW_BACKGROUND
+  }));
 
   /**
    * @type {jQuery}
