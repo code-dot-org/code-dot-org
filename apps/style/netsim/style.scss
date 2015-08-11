@@ -57,12 +57,13 @@ $wide-column-width: 121px;
 
   // Alerts
 
+  $netsim-alert-container-width: 450px;
   .netsim-alert-container {
     position: absolute;
     top: -15px;
     left: 50%;
-    width: 450px;
-    margin-left: -225px; // -(width/2)
+    width: $netsim-alert-container-width;
+    margin-left: -($netsim-alert-container-width/2);
     z-index: 99999;
   }
 
@@ -70,6 +71,10 @@ $wide-column-width: 121px;
 
     border-radius: 5px;
     transition-duration: 1s;
+
+    &.netsim-alert {
+      margin-bottom: 5px;
+    }
 
     &.alert-info {
       color: $dark_charcoal;
@@ -95,9 +100,6 @@ $wide-column-width: 121px;
       border-color: lighten($red, 20%);
     }
 
-  }
-  .alert.netsim-alert {
-    margin-bottom: 5px;
   }
 
   .netsim-alert-button {
