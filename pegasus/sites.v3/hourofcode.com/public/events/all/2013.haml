@@ -3,11 +3,38 @@ title: <%= hoc_s(:events_all_title) %>
 layout: wide
 nav: events_nav
 ---
-%h1= hoc_s(:events_all_old_title).gsub(/\@year/, "2013")
-
 -SOLR = Solr::Server.new(host:CDO.solr_server)
 
--events = SOLR.query(q:"*:*", fq:["kind_s:CSEdWeekEvent2013", "country_s:[* TO *]", "state_code_s:[* TO *]", "organization_name_s:[* TO *]"], sort:'country_s asc, state_code_s asc', rows:10)
+-by_country = {}
+-by_state = {}
+-country_names = {}
+-state_names = {}
 
+-events = SOLR.query(q:"*:*", fq:["kind_s:CSEdWeekEvent2013", "country_s:[* TO *]", "state_code_s:[* TO *]", "organization_name_s:[* TO *]"], sort:'country_s asc, state_code_s asc', rows:1000)
 -events.each do |event|
-  %li= event['organization_name_s'].to_s
+  -country = event['country_s'].to_s
+  -by_country[country] = [] unless by_country.has_key?(country)
+  -by_country[country] << event
+  -country_names[country] = event['country_s'].to_s unless country_names.has_key?(country)
+
+  -if country == 'united states'
+  	-state_code = event['state_code_s'].to_s
+  	-by_state[state_code] = [] unless by_state.has_key?(state_code)
+  	-by_state[state_code] << event
+  	-state_names[state_code] = event['state_code_s'].to_s unless state_names.has_key?(state_code)
+
+%h1= hoc_s(:events_all_old_title).gsub(/\@year/, "2013")
+
+%ul
+  %li{class: "hoc-event-country"}
+    %span{style: "font-weight: bold;"}= "United States (#{by_country['united states'].count rescue '0'} #{hoc_s(:events)})"
+    %ul{style: "margin-top: 0; margin-bottom: 0;"}
+      -by_state.each_pair do |state_code, events|
+        -unless state_code.nil_or_empty?
+          %li{class: "hoc-event-state"}
+            %a{href: "/events/all/us/#{state_code.downcase}"}= events.count > 1 ? "#{state_names[state_code]} (#{events.count} #{hoc_s(:events)})" : "#{state_names[state_code]} (#{events.count} #{hoc_s(:event)})"
+%ul
+  -by_country.each_pair do |country, events|
+    -if country != 'united states'
+      %li{class: "hoc-event-country"}
+        %a{href: "/events/all/#{country.downcase}"}= events.count > 1 ? "#{country_names[country]} (#{events.count} #{hoc_s(:events)})" : "#{country_names[country]} (#{events.count} #{hoc_s(:event)})"
