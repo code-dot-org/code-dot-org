@@ -32,34 +32,35 @@
     Here’s what a successful online PD looks like. All the progress circles are green.
 %img{src:''}
 
-%h3
+%h2
   Workshops Details
 %p
   See below or visit code.org/pd for your in-person workshop details and bookmark for future use!
-%table
-  %tr
-    %th
-      Date and Time
-    %th
-      Location
-  %tr
-    %td
-      %ul
-        - @workshop[:segments].each do |segment|
-          %li
-            #{segment[:start].strftime("%A, %B %d, %Y")}
-            %br
-            #{segment[:start].strftime("%I:%M %P")} - #{segment[:end].strftime("%H:%M %P")}
-        %li
-          Catering: Breakfast and lunch will be served every day. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
-    %td
-      %p
-        #{@workshop[:location]}
+%h3
+  Dates and times
+%ul
+  - @workshop[:segments].each do |segment|
+    %li
+      #{segment[:start].strftime("%A, %B %d, %Y")}
+      %br
+      #{segment[:start].strftime("%I:%M %P")} - #{segment[:end].strftime("%H:%M %P")}
+%h3
+  Location
+%p
+  #{@workshop[:location]}
+%h3
+  Catering
+%p
+  Breakfast and lunch will be served every day. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 %h3
   What to bring
 %p
   Laptop (optional), water bottle, and snacks
-
+-if @workshop[:notes]
+  %h3
+    Notes
+  %p
+    #{@workshop[:notes]}
 %p
   See you soon,
 %p
