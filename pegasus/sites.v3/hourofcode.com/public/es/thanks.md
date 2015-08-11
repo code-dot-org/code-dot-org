@@ -18,13 +18,13 @@ Dile a tus amigos acerca de la #HourOfCode.
 
 ## 2. Pídele a toda tu escuela que ofrezca una Hora de Programación
 
-[Envía este correo electrónico](<%= hoc_uri('/resources#email') %>) o [este folleto](/resources/hoc-one-pager.pdf) al director de tu escuela.
+[Envía este correo electrónico](<%= hoc_uri('/resources#email') %>) o [este folleto](/files/hoc-one-pager.pdf) al director de tu escuela.
 
 <% else %>
 
 ## 2. Pídele a toda tu escuela que ofrezca una Hora de Programación
 
-[Envía este correo electrónico](<%= hoc_uri('/resources#email') %>) o [este folleto](/resources/hoc-one-pager.pdf) al director de tu escuela.
+[Envía este correo electrónico](<%= hoc_uri('/resources#email') %>) o [este folleto](/files/hoc-one-pager.pdf) al director de tu escuela.
 
 <% end %>
 
@@ -34,7 +34,7 @@ Dile a tus amigos acerca de la #HourOfCode.
 
 ## 4. Pídele a tu compañía que se involucre
 
- a su gerente o el director ejecutivo. O [darles este folleto](http://hourofcode.com/resources/hoc-one-pager.pdf).</p> 
+ a su gerente o el director ejecutivo. O [darles este folleto](http://hourofcode.com/files/hoc-one-pager.pdf).</p> 
 
 ## 5. Promociona la Hora del Código en tu comunidad
 
@@ -42,6 +42,6 @@ Reclutar a un grupo local — chico/chica scouts club, iglesia, Universidad, gru
 
 ## 6. Solícita a un funcionario de tu gobiero local que apoye la Hora del Código
 
- a su alcalde, Concejo Municipal o junta escolar. O [darles este folleto](http://hourofcode.com/resources/hoc-one-pager.pdf) e invitarlos a visitar su escuela.</p> 
+ a su alcalde, Concejo Municipal o junta escolar. O [darles este folleto](http://hourofcode.com/files/hoc-one-pager.pdf) e invitarlos a visitar su escuela.</p> 
 
 <%= view 'popup_window.js' %>

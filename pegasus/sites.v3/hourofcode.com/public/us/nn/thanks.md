@@ -18,13 +18,13 @@ Fortel venane dine om #Kodetimen.
 
 ## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/files/hoc-one-pager.pdf) to your principal.
 
 <% else %>
 
 ## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/files/hoc-one-pager.pdf) this handout</a> to your principal.
 
 <% end %>
 
@@ -34,7 +34,7 @@ Fortel venane dine om #Kodetimen.
 
 ## 4. Be arbeidsgjevaren din om å engasjere seg
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf).
 
 ## Reklamer for Kodetimen i lokalmiljøet
 
@@ -42,6 +42,6 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 
 ## 6. Be ein lokalpolitikar om å støtte Kodetimen
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

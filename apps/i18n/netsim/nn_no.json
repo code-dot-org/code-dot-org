@@ -4,6 +4,8 @@
   "addRoom": "Add Room",
   "addRouter": "Add Router",
   "appendCountToTitle": "{title} ({count})",
+  "alertPartnerDisconnected": "Your partner disconnected",
+  "alertConnectionRefused": "The partner you were trying to connect to has connected to someone else",
   "ascii": "ASCII",
   "autoDnsUsageMessage": "Automatic DNS Node\nUsage: GET hostname [hostname [hostname ...]]",
   "binary": "Binary",

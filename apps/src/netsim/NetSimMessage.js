@@ -18,6 +18,9 @@ var NetSimEntity = require('./NetSimEntity');
 var DataConverters = require('./DataConverters');
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
+var NetSimLogger = require('./NetSimLogger');
+
+var logger = NetSimLogger.getSingleton();
 
 /**
  * Local controller for a message that is 'on the wire'
@@ -62,10 +65,15 @@ var NetSimMessage = module.exports = function (shard, messageRow) {
    * All other message content, including the 'packets' students will send.
    * @type {*}
    */
-  var base64Payload = messageRow.base64Payload;
-  this.payload = (base64Payload) ?
-    base64ToBinary(base64Payload.string, base64Payload.len) :
-    '';
+  this.payload = '';
+  if (messageRow.base64Payload) {
+    try {
+      this.payload = base64ToBinary(messageRow.base64Payload.string,
+          messageRow.base64Payload.len);
+    } catch (e) {
+      logger.error(e.message);
+    }
+  }
 
   /**
    * If this is an inter-router message, the number of routers this
