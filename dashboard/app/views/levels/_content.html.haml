@@ -13,8 +13,3 @@
     #markdown
       / Render markdown text through the ActionView template engine.
       = ActionView::Base.new.render(inline: data['markdown'], type: :md)
-  / Teacher only markdown
-  - if data['teacher_markdown'].present? && current_user.try(:authorized_teacher?)
-    #markdown.teacher
-      / Render markdown text through the ActionView template engine.
-      = ActionView::Base.new.render(inline: data['teacher_markdown'], type: :md)

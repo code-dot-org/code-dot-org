@@ -15,4 +15,6 @@
   #external
     / Load the external file through ActionView templates.
     = ActionView::Base.new('public', {}, ActionController::Base.new).render(file: href)
+%div.content-level
+  = render partial: 'levels/teacher_markdown', locals: {data: @level.properties}
 = render partial: 'levels/dialog', locals: {app: 'external', data: @level.properties}
