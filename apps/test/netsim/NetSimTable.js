@@ -462,54 +462,6 @@ describe("NetSimTable", function () {
     assertEqual(notifyCount, 1);
   });
 
-  it ("passes new full table contents to notification callbacks", function () {
-    var receivedTableData;
-    netsimTable.tableChange.register(function (newTableData) {
-      receivedTableData = newTableData;
-    });
-
-    netsimTable.create({data: "A"}, callback);
-    netsimTable.create({data: "B"}, callback);
-    assertEqual(receivedTableData,
-        [
-          {data: "A", id: 1},
-          {data: "B", id: 2}
-        ]);
-
-    // Remote change
-    apiTable.create({data: "C"}, callback);
-    netsimTable.refresh(callback);
-    assertEqual(receivedTableData,
-        [
-          {data: "A", id: 1},
-          {data: "B", id: 2},
-          {data: "C", id: 3}
-        ]);
-
-    netsimTable.update(2, {data: "Z"}, callback);
-    assertEqual(receivedTableData,
-        [
-          {data: "A", id: 1},
-          {data: "Z", id: 2},
-          {data: "C", id: 3}
-        ]);
-
-    netsimTable.delete(1, callback);
-    assertEqual(
-        receivedTableData,
-        [
-          {data: "Z", id: 2},
-          {data: "C", id: 3}
-        ]);
-
-    netsimTable.deleteMany([2], callback);
-    assertEqual(
-        receivedTableData,
-        [
-          {data: "C", id: 3}
-        ]);
-  });
-
   it ("polls table on tick", function () {
     // Initial tick always triggers a poll event.
     netsimTable.tick();

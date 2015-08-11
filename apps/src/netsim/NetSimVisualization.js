@@ -333,12 +333,12 @@ NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
 
 /**
  * Handle notification that node table contents have changed.
- * @param {Array.<Object>} rows - node table rows
  * @private
  */
-NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
+NetSimVisualization.prototype.onNodeTableChange_ = function () {
   // Convert rows to correctly-typed objects
-  var tableNodes = NetSimNodeFactory.nodesFromRows(this.shard_, rows);
+  var tableNodes = NetSimNodeFactory.nodesFromRows(this.shard_,
+      this.shard_.nodeTable.readAll());
 
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
@@ -353,12 +353,11 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
 
 /**
  * Handle notification that wire table contents have changed.
- * @param {Array.<Object>} rows - wire table rows
  * @private
  */
-NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
+NetSimVisualization.prototype.onWireTableChange_ = function () {
   // Convert rows to correctly-typed objects
-  var tableWires = rows.map(function (row) {
+  var tableWires = this.shard_.wireTable.readAll().map(function (row) {
     return new NetSimWire(this.shard_, row);
   }, this);
 
