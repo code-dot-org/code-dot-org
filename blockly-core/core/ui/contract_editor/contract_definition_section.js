@@ -56,9 +56,7 @@ Blockly.ContractDefinitionSection.prototype.handleCollapse = function (isNowColl
  * @returns {number} new Y to continue laying out at
  */
 Blockly.ContractDefinitionSection.prototype.placeContent = function (currentY,
-                                                                     verticalMidlineX,
-                                                                     fullWidth,
-                                                                     functionDefinitionBlock) {
+    verticalMidlineX, fullWidth, functionDefinitionBlock) {
   var verticalMidlineY = currentY;
   this.horizontalDefinitionTopLine.setAttribute('transform',
       'translate(' + 0 + ',' + verticalMidlineY + ')');
