@@ -52,8 +52,7 @@ var SHOW_BACKGROUND = false;
  */
 var NetSimVisualization = module.exports = function (rootDiv, runLoop) {
   /**
-   * @type {jQuery}
-   * @private
+   * @private {jQuery}
    */
   this.rootDiv_ = rootDiv;
 
@@ -63,25 +62,36 @@ var NetSimVisualization = module.exports = function (rootDiv, runLoop) {
   }));
 
   /**
-   * @type {jQuery}
-   * @private
+   * @private {jQuery}
    */
   this.svgRoot_ = this.rootDiv_.find('svg');
+
+  /**
+   * Background group never goes away, so search for it once and cache
+   * it here.
+   * @private {jQuery}
+   */
+  this.backgroundGroup_ = this.svgRoot_.find('#background-group');
+
+  /**
+   * Foreground group never goes away, so search for it once and cache
+   * it here.
+   * @private {jQuery}
+   */
+  this.foregroundGroup_ = this.svgRoot_.find('#foreground-group');
 
   /**
    * The shard currently being represented.
    * We don't have a shard now, but we register with the connection manager
    * to find out when we have one.
-   * @type {NetSimShard}
-   * @private
+   * @private {NetSimShard}
    */
   this.shard_ = null;
 
   /**
    * List of VizEntities, which are all the elements that will actually show up
    * in our visualization.
-   * @type {Array.<NetSimVizElement>}
-   * @private
+   * @private {NetSimVizElement[]}
    */
   this.elements_ = [];
 
@@ -232,7 +242,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     } else {
       this.localNode = new NetSimVizSimulationNode(newLocalNode);
       this.elements_.push(this.localNode);
-      this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
+      this.backgroundGroup_.append(this.localNode.getRoot());
     }
     this.localNode.setIsLocalNode();
   } else {
@@ -521,7 +531,7 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
  */
 NetSimVisualization.prototype.addVizElement_ = function (vizElement) {
   this.elements_.push(vizElement);
-  this.svgRoot_.find('#background-group').prepend(vizElement.getRoot());
+  this.backgroundGroup_.prepend(vizElement.getRoot());
 };
 
 /**
@@ -570,8 +580,8 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Now, visited nodes belong in the foreground.
   // Move all nodes to their new, correct layers
   // Possible optimization: Can we do this with just one operation on the live DOM?
-  var foreground = this.svgRoot_.find('#foreground-group');
-  var background = this.svgRoot_.find('#background-group');
+  var foreground = this.foregroundGroup_;
+  var background = this.backgroundGroup_;
   this.elements_.forEach(function (vizElement) {
     var isForeground = $.contains(foreground[0], vizElement.getRoot()[0]);
 
