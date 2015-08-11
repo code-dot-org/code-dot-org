@@ -425,7 +425,7 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(versionsHeader, (function() {
       var codeDiv = document.createElement('div');
       var dialog = this.createModalDialog({
-        Dialog: Dialog,
+        Dialog: this.Dialog,
         contentDiv: codeDiv,
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'

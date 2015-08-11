@@ -1,3 +1,5 @@
+/* globals $ */
+
 var React = require('react');
 
 /**
@@ -21,11 +23,11 @@ module.exports = React.createClass({
   render: function () {
     var button;
     if (this.props.isLatest) {
-      button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>Current Version</button>
+      button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>Current Version</button>;
     } else {
       button = <button className="btn-info" onClick={this.props.onChoose}>
         Restore this Version
-      </button>
+      </button>;
     }
 
     return (
