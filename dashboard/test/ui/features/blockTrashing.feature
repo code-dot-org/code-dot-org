@@ -3,7 +3,7 @@ Feature: Blocks can be trashed in certain circumstances
 Background:
   Given I am on "http://learn.code.org/s/course2/stage/19/puzzle/2"
   And I rotate to landscape
-  Then element ".dialog-title" has text "Puzzle 2 of 13"
+  Then element ".markdown-level-header-text" has text "Puzzle 2 of 13"
   And I press "x-close"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
