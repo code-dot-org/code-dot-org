@@ -151,7 +151,7 @@ class HomeControllerTest < ActionController::TestCase
         url = "http://test.host/s/#{CGI.escape(script.to_param).gsub('+', '%20')}"
       end
       assert_select "a[href^="#{url}"]" # continue link
-      assert_select 'h3',  I18n.t("data.script.name.#{script.name}.title") # script title
+      assert_select 'h3', I18n.t("data.script.name.#{script.name}.title") # script title
     end
   end
 
@@ -177,7 +177,7 @@ class HomeControllerTest < ActionController::TestCase
     user = create(:user)
     user.update_attribute(:birthday, nil) # bypasses validations
     user = user.reload
-    assert !user.age
+    assert !user.age, "user should not have age, but value was #{user.age}"
 
     sign_in user
     get :index

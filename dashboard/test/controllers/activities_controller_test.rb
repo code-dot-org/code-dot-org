@@ -7,10 +7,17 @@ class ActivitiesControllerTest < ActionController::TestCase
   include LevelsHelper
   include Mocha::API
 
+  @@global_stubs_initialized = false
+
   setup do
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
-    Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
+
+    # Only stub class methods once.
+    if !@@global_helper_stubs_initialized
+      @@global_helper_stubs_initialized = true
+      Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
+    end
 
     @user = create(:user, total_lines: 15)
     sign_in(@user)

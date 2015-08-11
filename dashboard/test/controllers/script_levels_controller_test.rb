@@ -344,7 +344,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     unplugged_curriculum_path_start = "curriculum/#{script_level.script.name}/#{script_level.stage.position}"
     assert_select '.pdf-button' do
-      assert_select '[href="?"]', /.*#{unplugged_curriculum_path_start}.*/
+      assert_select ":match('href', ?)", /.*#{unplugged_curriculum_path_start}.*/
     end
 
     assert_equal script_level, assigns(:script_level)

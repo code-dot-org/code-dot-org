@@ -120,7 +120,6 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'script_levels are in order' do
     script = create(:script)
-    puts script
 
     s1 = create(:stage, script: script, position: 1)
     last = create(:script_level, script: script, stage: s1, chapter: 3)

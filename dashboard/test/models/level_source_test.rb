@@ -68,10 +68,10 @@ class LevelSourceTest < ActiveSupport::TestCase
                  @level_source.get_crowdsourced_hint.hint
   end
 
-
   test "should not get crowdsourced hint if locale is not en" do
-    I18n.stubs(:locale).returns(:'fr-FR')
-    assert_equal nil, @level_source.get_crowdsourced_hint
+    with_locale(:'fr-FR') do
+      assert_equal nil, @level_source.get_crowdsourced_hint
+    end
   end
 
   test "should get selected Stanford hint" do
@@ -80,9 +80,10 @@ class LevelSourceTest < ActiveSupport::TestCase
   end
 
   test "should not get external hint if locale is not en" do
-    I18n.stubs(:locale).returns(:'fr-FR')
-    assert_equal nil,
-                 @level_source.get_external_hint
+    with_locale(:'fr-FR') do
+      assert_equal nil,
+                   @level_source.get_external_hint
+    end
   end
 
 
