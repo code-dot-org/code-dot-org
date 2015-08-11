@@ -1514,7 +1514,7 @@ a.download-video {
   }
 }
 
-.content-level,
+.external
 .text-match {
   #markdown.teacher {
     max-width: 800px;
@@ -1533,6 +1533,14 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.text-match #markdown.teacher {
+  margin: 10px 0;
+}
+
+.external #markdown.teacher {
+  margin: 10px auto;
 }
 
 #current-script-levels, #all-levels {
