@@ -22803,6 +22803,7 @@ var EXAMPLE_BLOCK_SECTION_MAGIN_ABOVE = 15;
 var FUNCTION_BLOCK_VERTICAL_MARGIN = Blockly.FunctionEditor.BLOCK_LAYOUT_TOP_MARGIN;
 var HEADER_HEIGHT = 30;
 var DEFAULT_EXAMPLE_CALL_SECTION_WIDTH = 100;
+var MARGIN_BLOCK_TO_CALL_SLOT = 13;
 var USER_TYPE_CHOICES = [Blockly.BlockValueType.NUMBER, Blockly.BlockValueType.STRING, Blockly.BlockValueType.IMAGE, Blockly.BlockValueType.BOOLEAN];
 var CONTRACT_SECTION_NAME = "contract";
 var EXAMPLES_SECTION_NAME = "examples";
@@ -22861,10 +22862,18 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.resultText.innerHTML = "Result";
   goog.dom.appendChild(this.exampleAreaDiv, this.resultText);
   this.examplesTableGroup = Blockly.createSvgElement("g", {}, canvasToDrawOn);
+  this.definitionTableGroup = Blockly.createSvgElement("g", {}, canvasToDrawOn);
   this.topHorizontalLine = Blockly.createSvgElement("rect", {"fill":"#000"}, this.examplesTableGroup);
   this.topHorizontalLine.setAttribute("height", 2);
-  this.verticalMidline = Blockly.createSvgElement("rect", {"fill":"#000"}, this.examplesTableGroup);
-  this.verticalMidline.setAttribute("width", 2);
+  this.verticalExampleMidline = Blockly.createSvgElement("rect", {"fill":"#000"}, this.examplesTableGroup);
+  this.verticalExampleMidline.setAttribute("width", 2);
+  this.grayDefinitionBackground = Blockly.createSvgElement("rect", {"fill":"#DDD"}, this.definitionTableGroup);
+  this.verticalDefinitionMidline = Blockly.createSvgElement("rect", {"fill":"#000"}, this.definitionTableGroup);
+  this.verticalDefinitionMidline.setAttribute("width", 2);
+  this.horizontalDefinitionTopLine = Blockly.createSvgElement("rect", {"fill":"#000"}, this.definitionTableGroup);
+  this.horizontalDefinitionTopLine.setAttribute("height", 2);
+  this.horizontalDefinitionBottomLine = Blockly.createSvgElement("rect", {"fill":"#000"}, this.definitionTableGroup);
+  this.horizontalDefinitionBottomLine.setAttribute("height", 2);
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {sectionNumber:2, headerHeight:HEADER_HEIGHT, headerText:"Examples", placeContentCallback:this.onPlaceExampleContent.bind(this), highlightBox:sharedHighlightBox, onCollapseCallback:goog.bind(function(isNowCollapsed) {
     this.exampleAreaDiv.style.display = isNowCollapsed ? "none" : "block";
     this.examplesTableGroup.style.display = isNowCollapsed ? "none" : "block";
@@ -22878,19 +22887,31 @@ Blockly.ContractEditor.prototype.create_ = function() {
       this.refreshParamsInFlyout_()
     }
     this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(!isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this), this.hiddenDefinitionBlocks_);
+    this.verticalDefinitionMidline.style.display = isNowCollapsed ? "none" : "block";
+    this.grayDefinitionBackground.style.display = isNowCollapsed ? "none" : "block";
+    this.definitionTableGroup.style.display = isNowCollapsed ? "none" : "block";
     this.position_()
   }, this), highlightBox:sharedHighlightBox, placeContentCallback:goog.bind(function(currentY) {
     if(this.flyout_) {
       currentY = this.positionFlyout_(currentY)
     }
+    var verticalMidlineY = currentY;
+    this.horizontalDefinitionTopLine.setAttribute("transform", "translate(" + 0 + "," + verticalMidlineY + ")");
+    this.verticalDefinitionMidline.setAttribute("transform", "translate(" + this.getVerticalMidlineOffset_() + "," + verticalMidlineY + ")");
+    this.grayDefinitionBackground.setAttribute("transform", "translate(" + 0 + "," + currentY + ")");
+    this.horizontalDefinitionTopLine.setAttribute("width", this.getFullWidth());
     currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
     if(this.functionDefinitionBlock) {
-      var fullWidth = Blockly.modalBlockSpace.getMetrics().viewWidth;
-      var functionDefinitionX = Blockly.RTL ? fullWidth - Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN : Blockly.FunctionEditor.BLOCK_LAYOUT_LEFT_MARGIN;
-      this.functionDefinitionBlock.moveTo(functionDefinitionX, currentY);
+      this.functionDefinitionBlock.moveTo(this.getVerticalMidlineOffset_() + Blockly.BlockSvg.SEP_SPACE_X, currentY);
       currentY += this.functionDefinitionBlock.getHeightWidth().height
     }
-    return currentY + FUNCTION_BLOCK_VERTICAL_MARGIN
+    currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
+    this.horizontalDefinitionBottomLine.setAttribute("transform", "translate(" + 0 + "," + currentY + ")");
+    this.horizontalDefinitionBottomLine.setAttribute("width", this.getFullWidth());
+    this.verticalDefinitionMidline.setAttribute("height", currentY - verticalMidlineY);
+    this.grayDefinitionBackground.setAttribute("height", currentY - verticalMidlineY);
+    this.grayDefinitionBackground.setAttribute("width", this.getVerticalMidlineOffset_());
+    return currentY
   }, this)});
   this.allSections_.set(CONTRACT_SECTION_NAME, this.contractSectionView_);
   this.allSections_.set(EXAMPLES_SECTION_NAME, this.examplesSectionView_);
@@ -23214,6 +23235,9 @@ Blockly.ContractEditor.prototype.changeParameterName_ = function(paramID, newNam
   var oldName = paramInfo.name;
   Blockly.Variables.renameVariable(oldName, newName, Blockly.modalBlockSpace)
 };
+Blockly.ContractEditor.prototype.getVerticalMidlineOffset_ = function() {
+  return EXAMPLE_BLOCK_MARGIN_LEFT + this.getMaxExampleCallBlockWidth_() + MARGIN_BLOCK_TO_CALL_SLOT
+};
 Blockly.ContractEditor.prototype.getMaxExampleCallBlockWidth_ = function() {
   return this.exampleBlocks.reduce(function(previousMax, block) {
     var functionCallBlock = block.getInputTargetBlock(Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME);
@@ -23222,7 +23246,7 @@ Blockly.ContractEditor.prototype.getMaxExampleCallBlockWidth_ = function() {
     }
     var width = functionCallBlock.getHeightWidth().width;
     return Math.max(previousMax, width)
-  }, 0)
+  }, DEFAULT_EXAMPLE_CALL_SECTION_WIDTH)
 };
 Blockly.ContractEditor.prototype.resetExampleViews = function() {
   this.exampleViews_.forEach(function(exampleView) {
@@ -23244,17 +23268,16 @@ Blockly.ContractEditor.prototype.updateExampleResult = function(block, result) {
   })
 };
 Blockly.ContractEditor.prototype.onPlaceExampleContent = function(currentY) {
-  var maxWidth = this.getMaxExampleCallBlockWidth_() || DEFAULT_EXAMPLE_CALL_SECTION_WIDTH;
+  var maxWidth = this.getMaxExampleCallBlockWidth_();
   var metrics = this.modalBlockSpace.getMetrics();
   this.exampleAreaDiv.style.left = metrics.absoluteLeft + "px";
   this.exampleAreaDiv.style.top = metrics.absoluteTop + this.modalBlockSpace.yOffsetFromView + "px";
   this.exampleAreaDiv.style.width = metrics.viewWidth + "px";
   var blockSplitMargin = EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2;
   var newY = currentY;
-  var marginEgBlockToCallSlot = 13;
-  var verticalMidlineOffset = EXAMPLE_BLOCK_MARGIN_LEFT + maxWidth + marginEgBlockToCallSlot;
+  var verticalMidlineOffset = this.getVerticalMidlineOffset_();
   var verticalMidlineY = newY;
-  this.verticalMidline.setAttribute("transform", "translate(" + verticalMidlineOffset + "," + newY + ")");
+  this.verticalExampleMidline.setAttribute("transform", "translate(" + verticalMidlineOffset + "," + newY + ")");
   var exampleSectionVisible = this.exampleBlocks.length > 0;
   if(exampleSectionVisible) {
     newY += blockSplitMargin;
@@ -23279,11 +23302,11 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function(currentY) {
     this.exampleViews_[j].dispose()
   }
   this.exampleViews_.length = this.exampleBlocks.length;
-  this.verticalMidline.style.display = exampleSectionVisible ? "block" : "none";
+  this.verticalExampleMidline.style.display = exampleSectionVisible ? "block" : "none";
   this.topHorizontalLine.style.display = exampleSectionVisible ? "block" : "none";
   this.callText.style.display = exampleSectionVisible ? "block" : "none";
   this.resultText.style.display = exampleSectionVisible ? "block" : "none";
-  this.verticalMidline.setAttribute("height", newY - verticalMidlineY);
+  this.verticalExampleMidline.setAttribute("height", newY - verticalMidlineY);
   newY += blockSplitMargin;
   this.addExampleButton.style.top = newY + "px";
   this.addExampleButton.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + "px";
