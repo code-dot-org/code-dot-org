@@ -151,7 +151,7 @@ Please check your PR against our tests before submitting.
 
 #### Code style
 
-Running `rake lint` locally will find any Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
+Running `rake lint` locally will find most Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
 
 #### Manually
 
