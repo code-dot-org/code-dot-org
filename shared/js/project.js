@@ -407,11 +407,12 @@ var projects = module.exports = {
             location.href = location.pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
-            current = data;
-            if (current.isOwner && pathInfo.action === 'view') {
-              isEditing = true;
-            }
-            deferred.resolve();
+            fetchSource(data, function () {
+              if (current.isOwner && pathInfo.action === 'view') {
+                isEditing = true;
+              }
+              deferred.resolve();
+            });
           }
         });
         return deferred;
@@ -425,17 +426,10 @@ var projects = module.exports = {
         if (err) {
           deferred.reject();
         } else {
-          current = data;
-          if (data.migratedToS3) {
-            sources.fetch(appOptions.channel + '/' + SOURCE_FILE, function (err, data) {
-              unpackSourceFile(data);
-              projects.showProjectLevelHeader();
-              deferred.resolve();
-            });
-          } else {
+          fetchSource(data, function () {
             projects.showProjectLevelHeader();
             deferred.resolve();
-          }
+          });
         }
       });
       return deferred;
@@ -450,6 +444,18 @@ var projects = module.exports = {
     return pathName;
   }
 };
+
+function fetchSource(data, callback) {
+  current = data;
+  if (data.migratedToS3) {
+    sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
+      unpackSourceFile(data);
+      callback();
+    });
+  } else {
+    callback();
+  }
+}
 
 /**
  * Only execute the given argument if it is a function.
