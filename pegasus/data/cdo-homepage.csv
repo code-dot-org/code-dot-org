@@ -19,7 +19,7 @@ action_teachervideo,action,homepage_action_text_teachervideo,video,rH7AjDMz_dc,,
 action_learn,action,homepage_action_text_learn,learn,,,,,,both,show,all
 action_signpetition,action,homepage_action_text_signpetition,petition,,,,,,both,show,all
 banner_usatoday,banner,homepage_banner_text_main,homepage_banner_text_link,http://www.usatoday.com/story/tech/2015/05/14/codeorg-college-board-computer-science-high-school-diversity/27304593/,,,,,code.org,nah,all
-banner_privacy,banner,homepage_banner_privacy_main,homepage_banner_privacy_link,/privacy,,,,,code.org,show,en
+banner_privacy,banner,homepage_banner_privacy_main,homepage_banner_privacy_link,/privacy,,,,,code.org,nah,en
 block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_hoc.jpg,code.org,show,en
 block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,en
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en

@@ -395,6 +395,7 @@
     local_school: lokalna šola
     online: na spletu
     see_details: Glej podrobnosti
+    view_course: View Course
     prize_info: 'Nagrade za sodelovanje (le za učitelje v ameriških javnih šolah):
       do 1.000 $ v obliki nagrad razredu.'
     tryfirst: 'Ali pa takoj poskusite in se registrirate kasneje:'
@@ -413,6 +414,7 @@
     heading_legacy: <h2>Naš tečaj za</h2><h1>vse starosti</h1>
     your_gallery: Galerija
     no_primary_course: Try a course at Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Moški
@@ -449,12 +451,6 @@
     autoplay_option: Samodejno predvajanje videoposnetkov
     download: Prenos videa
   compatability:
-    https:
-      header: Prosimo, omogočite HTTPS za Code.org.
-      message: Da bi povečali varnost, smo prešli na HTTPS, dne %{https_date}. Po
-        tem datumu ne boste mogli dostopati do Code.org. <a href='%{it_requirements_url}'>
-        Kliknite tukaj</a>, če želite izvedeti, kako omogočiti HTTPS za Code.org.
-      hide_this_warning: Skrij to opozorilo
     working:
       header: Delamo na podpori za vaš brskalnik.
       message: Code.org uporablja sodobne spletne tehnologije, ker želimo, da se hitreje

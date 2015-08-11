@@ -1,0 +1,21 @@
+<%
+  /**
+   * @name body
+   * @type {!string}
+   */
+
+  /**
+   * @name flavor
+   * @type {!string}
+   */
+
+  /**
+   * @name title
+   * @type {string}
+   */
+%>
+<div class="alert netsim-alert <%= flavor %> fade in">
+  <button type="button" class="netsim-alert-button close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <% if (title) { %><strong><%= title %></strong><% } %>
+  <%= body %>
+</div>

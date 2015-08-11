@@ -99,24 +99,20 @@
         av det siste steget?
       2-3 Artist Loops 11_instruction: Nå skal vi lage *enda en* løkke rundt hele
         skapelsen! Ikke glem å legge til en vinkel på slutten av den ytre sløyfen.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
+      2-3 Artist Loops 2_instruction: Bruk en gjenta-blokk for å få cellen til et
+        skall.
+      2-3 Artist Loops 4_instruction: Vil du se hva som skjer når vi gjentar figuren
+        igjen og igjen med en løkke?
       2-3 Artist Loops 5_instruction: Nå skal vi gjøre en liten endring i løkken og
         se hvor ulikt bildet blir.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: Let's put both elements inside a loop.
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
+      2-3 Artist Loops 6_instruction: Legg til en flytt-bevegelse og en snu-bevegelse
+        til inne i løkka og se hvordan designet endrer seg.
+      2-3 Artist Loops 7_instruction: Vi kan bruke løkker til å lage alle slags polygoner.
+        Kan du lage en rombe inni denne heksagonen?
+      2-3 Artist Loops 8_instruction: La oss sette begge elementene inn i en løkke.
+      2-3 Artist Loops 9_instruction: "Vi skal opprette de samme elementene, men nå
+        skal vi legge til litt avstand mellom dem.\r Bruk den samme koden som tidligere,
+        men legg til et steg for å gå fram i slutten av den ytre løkka."
       2-3 Artist Loops New 1_instruction: La oss tegne hodet til denne roboten! Kan
         du lage et rektangel med sider som er 100 pixler lange?
       2-3 Artist Loops New 10_instruction: Nå skal vi koble sammen en haug med V'er
@@ -135,13 +131,13 @@
         koden fire ganger?
       2-3 Artist Loops New 9_instruction: Tegn en enkel V der hver av sidene er 50
         pixler for å fullføre pilen.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut
-        did you know you can put a loop inside another loop?\r\nLoop this whole\nblock
-        of code 3 times to draw the pattern."
+      2-3 Artist Match Hex Pic_instruction: 'Match: Hjelp til med å fullføre heksagonet.'
+      2-3 Artist Match Rho Pic_instruction: 'Match: Fullfør koden.'
+      2-3 Artist Match Sq Pic_instruction: 'Match: Fullfør koden'
+      2-3 Artist Match Tri pic_instruction: 'Match: Fyll inn den koden som mangler.'
+      2-3 Artist Nested Loops 1_instruction: "Du har brukt løkker til å tegne figurer
+        før, men visste du at du kan putte en løkke inni en annen løkke?\r Kjør en
+        løkke 3 ganger over hele denne blokken av kode for å tegne mønsteret."
       2-3 Artist Nested Loops 10_instruction: Repeter dette mønsteret 12 ganger for
         å fullføre mønsteret.
       2-3 Artist Nested Loops 11_instruction: Repeter denne koden 4 ganger for å fullføre
@@ -204,10 +200,9 @@
         Røde blomster har en kjent mengde med nektar, mens lilla har en ukjent mengde nektar.
         Samle inn all nektaren.
       2-3 Bee Conditionals 9_instruction: Samle inn nektar fra alle blomstene.
-      2-3 Bee Conditionals Assessment 1_instruction: |
-        Assessment: Collect all the
-        nectar. Be careful not to collect nectar from a purple flower if it doesn't
-        have any.
+      2-3 Bee Conditionals Assessment 1_instruction: 'Lekse: Samle alle nektarene.
+        Vær forsiktig så du ikke samler nektar fra en lilla blomst hvis den ikke har
+        noen.'
       2-3 Bee Debugging 1_instruction: 'Disse blokkene plager meg. Fiks feilene og
         samle inn nektaren for å lage all honningen. '
       2-3 Bee Debugging 10_instruction: 'Disse blokkene plager meg. Fiks feilene og
@@ -260,22 +255,19 @@
         3 honning om gangen.'
       2-3 Bee Loops 1_instruction: 'Hver blomst inneholder en enhet med nektar. Samle
         inn nektar fra alle blomstene. '
-      2-3 Bee Loops 10_instruction: Får du til å bruke en mens løkke inni to andre
+      2-3 Bee Loops 10_instruction: Får du til å bruke en mens-løkke inni to andre
         løkker for å samle inn all nektaren?
-      2-3 Bee Loops 11_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
+      2-3 Bee Loops 11_instruction: Bruk en mens-løkke til å samle alle nektarene
+        fra blomstene i dette feltet.
+      2-3 Bee Loops 12_instruction: Bruk en mens-løkke til å samle alle nektarene
+        fra blomstene i dette feltet.
       2-3 Bee Loops 13_instruction: |
         Assessment: Use the repeat block to collect
         all of the nectar.
-      2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
-        from these flowers? \n"
-      2-3 Bee Loops 2_instruction: |
-        Use a loop to collect the nectar and make the
-        honey.
+      2-3 Bee Loops 1A_instruction: 'Hei, jeg er en bie. Kan du hjelpe meg med å samle
+        alle nektarene fra disse blomstene? '
+      2-3 Bee Loops 2_instruction: Bruk en løkke for å samle alle nektarene og å lage
+        honningen.
       2-3 Bee Loops 2A_instruction: Klarer du å løse oppgaven lettere ved å bruke
         en løkke?
       2-3 Bee Loops 3_instruction: Samle inn nektar fra alle blomstene og lag honning
@@ -296,24 +288,19 @@
       2-3 Bee Loops 8_instruction: De lilla blomstene har en ukjent mengde nektar.
         Bruk løkken "mens nektar" til å samle inn all nektaren. Denne løkken vil kjøre
         så lenge betingelsen er sann. I dette tilfellet er det dersom Nektar > 0
-      2-3 Bee Loops 9_instruction: |
-        The while loop can perform the same action as
-        an if statement in a loop. Add a while loop to this code to perform the same
-        task.
-      2-3 Bee Loops Assessment 1_instruction: Lekse – Bruke en mens løkke til å samle
+      2-3 Bee Loops 9_instruction: Mens-løkken kan utføre de samme operasjonene som
+        en hvis-setning.
+      2-3 Bee Loops Assessment 1_instruction: Lekse – Bruke en mens-løkke til å samle
         inn all nektaren fra denne blomsten.
       2-3 Maze 1_instruction: 'Kan du hjelpe meg å fange den slemme grisen? Sett sammen
         et par «gå fremover» blokker og trykk "Kjør Program" '
       2-3 Maze 10_instruction: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
-      2-3 Maze 11_instruction: |
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
-      2-3 Maze 12 (copy 1)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (copy 2)_instruction: |
-        Can you replace the previous answer with
-        only two blocks? (Hint: Create a loop using a "repeat times" block.)
+      2-3 Maze 11_instruction: Få meg bort til blomsten, jeg er sulten! Hvor mange
+        ganger er du nødt til å repetere en blokk?
+      2-3 Maze 12 (copy 1)_instruction: 'Kan du erstatte det forrige svaret med kun
+        to blokker? (Hint: Lag en løkke ved å bruke "repeter ganger" blokk.)'
+      2-3 Maze 12 (copy 2)_instruction: 'Kan du erstatte det forrige svaret med kun
+        to blokker? (Hint: Lag en løkke ved å bruke "repeter ganger" blokk.)'
       2-3 Maze 12 (old)_instruction: Få meg til grisen ved å bruk "Gjenga ganger"
         blokken!
       2-3 Maze 12_instruction: |
@@ -341,7 +328,8 @@
       2-3 Maze 7_instruction: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
       2-3 Maze 8_instruction: Få meg til grisen!
       2-3 Maze 9_instruction: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
-      2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      2-3 Maze Loops 1_instruction: Kan du få meg bort til grisen ved å bruke kun
+        5 blokker?
       2-3 Maze Loops 17_instruction: Få meg til solsikken!
       2-3 Maze Loops 18_instruction: Få meg til solsikken!
       2-3 Maze Loops 19_instruction: Få meg til solsikken!
@@ -358,43 +346,41 @@
         ganger?
       2-3 maze sq11_instruction: Få meg til grisen! Hvilke blokker ble brukt flere
         ganger?
-      2-3 maze sq12_instruction: |
-        Can you replace the previous answer with a loop
-        by using a "repeat times" block?
+      2-3 maze sq12_instruction: Kan du erstatte det forrige svaret med en løkke ved
+        å bruke en "repeter ganger"-blokk?
       2-3 maze sq13_instruction: Kjære person. Meg zombie.. Må.... gå... til solsikken.
         Lage en løkke med "gjenta til" blokk.
       2-3 maze sq14_instruction: Klarer du å komme deg til solsikken med bare fire
         blokker?
       2-3 maze sq15_instruction: Klarer du å komme deg til solsikken med bare fem
         blokker?
-      2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
+      2-3 maze sq16_instruction: Ok, dette ligner, men er litt annerledes. Kan du
+        gjøre det med kun fem blokker?
       2-3 Maze sq2_instruction: Følg stien og led meg til den dumme grisen. Unngå
         dynamitten hvis du ikke vil at jeg skal forsvinne i en sky av fjær!
       2-3 Maze sq3_instruction: Før meg til den grøne styggingen! (Sjå opp for dynamitt)
       2-3 Maze sq4_instruction: Hold deg i ro og hjelp meg med å finne den slemme
         grisen. Ellers blir jeg kanskje sinna!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
-      2-3 Maze sq6_instruction: |
-        Can you replace the previous answer with only two
-        blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
-      2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
+      2-3 Maze sq5_instruction: Få meg bort til grisen! Hvor mange ganger må du repetere
+        en blokk?
+      2-3 Maze sq6_instruction: 'Kan du erstatte det forrige svaret med kun to blokker?
+        (Hing: Lag en løkke ved å bruke "repeter ganger"-blokk.)'
+      2-3 Maze sq7_instruction: Få meg bort til den grønne inntrengeren ved å kun
+        bruke tre blokker.
+      2-3 Maze sq8_instruction: Få meg bort til grisen! (Hvor er den "repeter ganger"-blokken
+        når jeg trenger den?)
+      2-3 Maze sq9_instruction: Opprett løkker for å komme bort til grisen ved bruk
+        av færre blokker.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
+      2-3level1_instruction: Hjelp fuglen å fange den slemme grisen ved å flytte den
+        framover
       4-5 Artist 1_instruction: Hjelp meg å tegne ferdig boksen. (Hver linje er 300
         pixler lang)
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
+      4-5 Artist 10_instruction: Trykk på "Kjør" for å teste koden. Deretter, repeter
+        det mange nok ganger til å fullføre tegningen. Fargene vil være forskjellig
+        hver gang.
       4-5 Artist 11_instruction: Fullføre grønne linjene. Linjene er 300 piksler lange
         og 15 piksler fra hverandre.
       4-5 Artist 2_instruction: Kan du fullføre kvadratet ved å repetere koden?
@@ -419,120 +405,89 @@
         Trekantene er likesidede og hver side er 50 pixler lange.
       4-5 Artist Assessment 1_instruction: 'Lekse: Bruk en løkke for å tegne en likesidig
         trekant. Hver side er 300 pixler.'
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
-      4-5 Artist For Loops 12_instruction: "What happens if you reverse the \"from\"\nand
-        \"to\" numbers? Complete the \"for\" block so that it counts 200, 180,\n160,
-        140, 120...0. \n"
-      4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 2_instruction: |
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+      4-5 Artist For Loops 1_instruction: Sett tallene 1 til 10 inn i bredde-boksene
+        og kjør koden.
+      4-5 Artist For Loops 11_instruction: Fullfør "for"-blokkene slik at den teller
+        0, 20, 40, 60, 80... 200.
+      4-5 Artist For Loops 12_instruction: 'Hva skjer hvis du reverserer "fra" og
+        "til"-tallene. Fullfør "for"-blokka så den teller 200, 180, 160, 140, 120...0. '
+      4-5 Artist For Loops 13_instruction: 'Designet startet uten en "for"-løkke og
+        bruker for mange blokker! Bruk en "for"-blokk til å fullføre spiralen. Hint:
+        lengden på den siste linja er 250 piksler.'
+      4-5 Artist For Loops 14_instruction: 'Noen startet koden, men innså at det måtte
+        være en raskere måte! Bruk en "for"-blokk til å erstatte blokkene og fullfør
+        triangel-spiralen. (Hint: lengden på den siste linja er 300 piksler.)'
+      4-5 Artist For Loops 15_instruction: 'Noen startet koden, men innså at det måtte
+        være en raskere måte! Bruk en "for"-blokk til å erstatte blokkene og fullfør
+        heksagon-spiralen. (Hint: lengden på den siste linja er 200 piksler.)'
+      4-5 Artist For Loops 2_instruction: Dette er en "for"-blokk. I stedet for å
+        taste inn 1,2,3... 10, så kan "for"-blokka repetere blokkene inni seg og telle
+        tallene for deg. Sett tallet 10 inn i "til"-seksjonen av "for"-blokka.
+      4-5 Artist For Loops 3_instruction: Hvordan kan vi telle fra 1 til 50? Endre
+        "for"-blokka.
+      4-5 Artist For Loops 4_instruction: Gjør ferdig "for"-blokka slik at den teller
+        fra 1 til 10 med 1-steg.
+      4-5 Artist For Loops 6_instruction: Tegn kvadrater med sider på 50, 60, 70,
+        80 og 90 piksler. Du blir nødt til å bruke "tegn et kvadrat"-funksjonen fem
+        ganger.
+      4-5 Artist For Loops 7_instruction: 'Tegn de samme kvadraten, men bruk en "tell
+        med"-blokk til å endre størrelsene. Plasser en "teller"-blokk i "tegn et kvadrat"-funksjonen.
+        Hint: Den er i Variabler-kategorien.'
+      4-5 Artist For Loops 8_instruction: Kan du fullføre programmet ved å plassere
+        blokkene inn i en "for"-blokk som teller fra 10 til 200 med steg på 10? Du
+        finner "for"-blokken i kategorien Løkker.
       4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
+        Disse sirklene er av størrelser på 5, 10, 15, 20,
+        25, 30 og 35. Tegn sirklene ved å bruke en "for"-løkke.
       4-5 Artist Free Draw 1_instruction: Fritegning. Tegn det du føler deg inspirert
         til.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
-        and \"draw a large triangle\". The \"draw a small triangle\" function\nis
-        done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
-        150 (large). \n"
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
+      4-5 Artist Functions 1_instruction: Bruk en repeter-løkke til å tegne dette
+        triangelet.
+      4-5 Artist Functions 10a_instruction: Putt denne koden inn i "tegn et snøfnugg"-funksjonen
+        og erstatt 50 med parameteret 'størrelse'. Funksjonen er allerede kalt på
+        for å opprette et snøfnugg på 100 piksler.
+      4-5 Artist Functions 10b_instruction: 'Bruk ''tegn et snøfnugg''-funksjonen
+        for å opprette snøfnugg av forskjellige størrelser. Hint: lengden på det første
+        snøflaket er 25 og hvert snøfnugg er dobbelt så stort som det forrige.'
+      4-5 Artist Functions 11_instruction: '"Tegn et heksagon"-funksjonen bruker "tegn
+        en trekant"-funksjonen. Gjør ferdig heksagon-funksjonen. (Hint: Et heksagon
+        har 6 sider, hvor hver er 100 piksler lang)'
+      4-5 Artist Functions 12_instruction: 'Fullfør ''tegn bølger''-funksjonen. Hver
+        bølge består av en Øvre bølge og en Nedre bølge. Hint: Tegn 5 blå bølger.'
+      4-5 Artist Functions 13 Free play_instruction: Her er noen funksjoner til å
+        tegne planeter, stjerner, raketter og roboter. Bruk dem på hvilken måte du
+        vil til å lage bilder du kan dele med vennene dine.
+      4-5 Artist Functions 14 Free play_instruction: Her har vi gitt deg flere funksjoner.
+        Bruk dem på hvilken måte du vil inni en eller flere løkker for å lage bilder
+        som du kan dele med vennene dine. Klikk 'Kjør' for å se et eksempel.
+      4-5 Artist Functions 15 Assessment_instruction: 'Lekse: Bruk "tegn et kvadrat"-funksjonen
+        til å opprette kvadratene. Kvadratene er 50, 100 og 150 piksler.'
+      4-5 Artist Functions 2a_instruction: Putt disse blokkene inn i en ny funksjon
+        kalt "tegn en liten trekant" og kall på den.
+      4-5 Artist Functions 2b_instruction: Opprett en funksjon kalt "tegn en liten
+        trekant" ved å bruke de gitte blokkene.
+      4-5 Artist Functions 3_instruction: 'Opprett funksjonene "tegn en medium trekant"
+        og "tegn en stor trekant". "Tegn en liten trekant"-funksjonen er opprettet
+        for deg. Trekantene har sider med lengdene 50 (liten), 100 (medium) og 150
+        (stor). '
+      4-5 Artist Functions 4_instruction: Эта новая функция "нарисовать треугольник"
+        содержит параметр и может выполнять действия предыдущих трех функций. Нарисуйте
+        такие же треугольники с помощью новой функции.
+      4-5 Artist Functions 5_instruction: Kan du endre "tegn en trekant"-funksjonen
+        til å en "tegn et kvadrat"-funksjon for å endre tegningen?
+      4-5 Artist Functions 6_instruction: 'Bruk "tegn et kvadrat" og "tegn en trekant"-funksjonene
+        til å tegne et hus. (Hint: Kvadratets sider er 200 piksler)'
+      4-5 Artist Functions 6b_instruction: Bruk funksjonene tegn et kvadrat og trekant
+        sammen med andre blokker for å lage et hus ved å legge dem til i "tegn et
+        hus"-funksjonen og kalle den.
+      4-5 Artist Functions 7_instruction: Bruk "tegn et hus"-funksjonen til å tegne
+        hus som er 100 piksler og 50 piksler. De to husene skal være separert med
+        50 piksler.
+      4-5 Artist Functions 8_instruction: Funksjonen "tegn en blomst" har et parameter
+        som tillater deg å sette stilkens høyde. Sett den til 200 og se hva som skjer.
+      4-5 Artist Functions 9_instruction: Tegn disse 3 blomstene. Høyden på den første
+        er 100 og den neste blomsten er alltid 50 piksler mer enn høyden på den forrige.
+        Blomstene er også 100 piksler unna hverandre.
       4-5 Artist Patterns 1_instruction: Får du til å tegne dette kvadratet ved bruk
         av en løkke? Hver side er 20 piksler lang.
       4-5 Artist Patterns 10_instruction: 'Denne koden tegner to rader med sekskanter
@@ -564,9 +519,8 @@
       4-5 Artist Patterns 5_instruction: |
         Nå skal vi repetere den for å tegne en rekke med 6 diaamanter.
          Legg merke til at vi har endret på diamantkoden slik at den repeteres 3 ganger istedenfor 2 – Hvorfor tror du vi har gjort det?
-      4-5 Artist Patterns 6_instruction: |
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
+      4-5 Artist Patterns 6_instruction: Hvor mange ganger er du nødt til å repetere
+        denne blokka for å tegne hele rutenettet av diamanter?
       4-5 Artist Patterns 7_instruction: Nå skal vi endre koden fra forrige oppgave
         for å gjøre mønsteret litt mer komplisert. Legg merke til hvordan diamantene
         nå overlapper hverandre. Forsøk å endre den første "hopp tilbake" fra 100
@@ -648,34 +602,32 @@
         lag honning i alle bikubene. Bruk løkke i løkke.
       4-5 Bee Nested Loops 5_instruction: Samle inn all nektaren ved å bruke en nestet
         løkke.
-      4-5 Bee Nested Loops 6_instruction: Collect all the nectar.
-      4-5 Bee Nested Loops 7_instruction: Put denne løkken inni en annen løkke for
+      4-5 Bee Nested Loops 6_instruction: Samle all nektaren.
+      4-5 Bee Nested Loops 7_instruction: Putt denne løkken inni en annen løkke for
         å opprette en nestet løkke til å samle inn all nektaren fra blomstene.
-      4-5 Bee Nested Loops 8_instruction: "Collect all of the nectar from these flowers\nby
-        nesting a while loop. Replace the inner repeat times block with a while\nblock.
-        \n"
+      4-5 Bee Nested Loops 8_instruction: 'Samle all nektaren fra disse blomstene
+        ved å bruke løkke i en annen mens-løkke. Erstatt den indre repeter antall-blokka
+        med en mens-løkke. '
       4-5 Bee Nested Loops 9_instruction: Samle inn all nektaren fra disse blomstene
         ved å bruke en nøstet mens-løkke ini en gjenta blokk.
       4-5 Bee Nested Loops Assessment 1_instruction: Lekse - Samle inn all nektaren
         og lag all honningen ved bruk av løkker.
-      4-5 Bee Nested Loops Rows_instruction: |
-        Gather nectar from the rows of flowers!
-        Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
-      4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      4-5 Bee Nested Loops Rows_instruction: Samle nektar fra radene med blomster!
+        Bruk løkke i løkke.
+      4-5 Maze 1 (copy 1)_instruction: Kjære person. Meg zombie. Må... komme... til
+        solsikke.
+      4-5 Maze 1_instruction: Kjære person. Meg zombie. Må... komme... til solsikke.
       4-5 Maze 10_instruction: Klarer du å komme deg til solsikken med bare fire blokker?
       4-5 Maze 11_instruction: Kan du komme deg til solsikken med bare seks blokker.
       4-5 Maze 12_instruction: OK, denne er litt anderledes. Klarer du å få det til
         med bare seks blokker?
       4-5 Maze 13_instruction: Få meg til grisen!
-      4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
+      4-5 Maze 14_instruction: Få meg bort til grisen! Bruk Gjenta til-blokka.
       4-5 Maze 2 (copy 1)_instruction: Få zombien til solsikken men unngå den kjøttetende
         planten!
       4-5 Maze 2_instruction: Få zombien til solsikken men unngå den kjøttetende planten!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
+      4-5 Maze 3 (copy 1)_instruction: Må... komme... meg til solsikke.
+      4-5 Maze 3_instruction: Må... komme... meg til solsikke.
       4-5 Maze 4 (copy 1)_instruction: Prøve å bruke "gjenta"-blokk for å bruke færre
         blokker...
       4-5 Maze 4_instruction: Prøve å bruke "gjenta"-blokk for å bruke færre blokker...
@@ -687,7 +639,7 @@
         så få oppgaver som mulig?
       4-5 Maze 6_instruction: Klarer du å løse denne oppgaven ved å bruke så få oppgaver
         som mulig?
-      4-5 Maze 7_instruction: Dear person. Me zombie. Must... get... to sunflower.
+      4-5 Maze 7_instruction: Kjære person. Meg zombie. Må... komme... til solsikke.
       4-5 Maze 8_instruction: Bruk "Gjenta"-blokken til å få zombien til solsikken.
         (Unngå de kjøttetende plantene!)
       4-5 Maze 9_instruction: Lag en løkke med "gjenta til" blokk.
@@ -721,10 +673,9 @@
       4-5 Nested Loops 1_instruction: |
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
-      4-5 Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag by
-        looping the provided blocks. The stars are 50 pixels apart, but remember that
-        the stars themselves are 30 pixels wide.
+      4-5 Nested Loops 10_instruction: Tegn den siste raden med stjerner på flagget
+        ved å kjøre en løkke over de gitte blokkene. Stjernene er 50 piksler fra hverandre,
+        men husk at stjernene er 30 piksler i bredde.
       4-5 Nested Loops 11_instruction: Klarer du å tegne de 10 kvadratene på fortauet
         ved å bruke en nestet løkke? Hvert kvadrat er 30 piksler.
       4-5 Nested Loops 12_instruction: Får du til å tegne disse  36 trianglene ved
@@ -753,7 +704,7 @@
         blokker som mulig.'
       4-5 While Loops 4_instruction: Wow, jeg fant et virkelig dypt hull! Jeg vet
         ikke hvor mange spadetak med jord det tar å fylle det. Kan du skrive et program
-        som fyller oppi det til bakken er helt jevn? Tips bruk en mens løkke denne
+        som fyller oppi det til bakken er helt jevn? Tips bruk en mens-løkke denne
         gangen.
       4-5 While Loops 5_instruction: Wow, nå er det to dype hull. Får du til å skrive
         et program som fyller de begge til bakken er helt jevn?
@@ -884,9 +835,6 @@
       Big Game Collision 4_instruction: |
         Complete the collide? function so that it
         returns true if the distance between two points is less than 100 pixels apart.
-      Big Game Complete (copy 1)_instruction: |
-        A demo of the completed CS in Algebra
-        Big Game project
       Big Game Complete_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1211,31 +1159,29 @@
       Course 2 Bee Loops 4_instruction: |
         What happens if you loop this sequence 3
         times? Don't forget to make the honey at the end!
-      Course 2 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
+      Course 2 Maze Loops 1_instruction: Kan du få meg bort til grisen ved å bruke
+        kun 5 blokker?
       Course 4 2_instruction: Bien vil bare ha nektar akkurat nå. Husk, ikke alle
         er blomster, så sjekk etter at du bare samler nektar fra blomster.
       Course 4 Artist 1_instruction: Hjelp meg å tegne ferdig boksen. (Hver linje
         er 300 pixler lang)
       Course 4 Artist 10_instruction: 'Frilek: Ha det gøy og tegn det det du har lyst
         til. '
-      Course 4 Artist 11_instruction: |
-        Now for a challenge!  Here is a design that
-        uses only blocks that you have already been shown.  Can you figure out how
-        to recreate it without any extra information?  Hint:  Feel free to use trial
-        and error. You are not expected to get it perfect the first time.
-      Course 4 Artist 12_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this! If this picture inspires\nyou,
-        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made? Visit https://studio.code.org/c/105671120/edit\nfor
-        the solution."
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
+      Course 4 Artist 11_instruction: 'Nå til en utfordring! Her er et design som
+        kun bruker blokker som du allerede har blitt vist. Kan du finne ut hvordan
+        du kan gjenskape det uten noen ekstra informasjon? Hint: Ikke vær redd for
+        å prøve og feile. Det er ikke forventet at du får det til perfekt første gangen.'
+      Course 4 Artist 12_instruction: "Fritt spill-inspirasjon: Du har nå lært alt
+        du trenger å vite for å lage et mønster som dette! Hvis dette bildet inspirerer
+        deg, prøv å lage noe lignende. Hvis ikke, lag noe helt på egenhånd.\r\n\n\r\nVil
+        du vite hvordan vårt inspirasjons-mønster ble laget? Besøk https://studio.code.org/c/105671120/edit
+        for å se løsningen."
+      Course 4 Artist 13_instruction: Spiller du fortsatt? Her er et blankt lerret
+        hvor du kan designe alt du vil!
       Course 4 Artist 2_instruction: Kan du repetere denne koden slik at den tegner
         det nedtonede kvadratet?
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
+      Course 4 Artist 20_instruction: Spiller du fortsatt? Her er et blankt lerret
+        hvor du kan designe alt du vil!
       Course 4 Artist 3_instruction: Ok, prøv å se hva som kommer til å skje hvis
         du kjører denne koden (eller kjør den ved å trykke "Kjør"). Deretter, gjentar
         du dette helt til bildet er ferdig.
@@ -1253,76 +1199,59 @@
       Course 4 Artist 9_instruction: 'Repeter dette designet 10 ganger og pass på
         at du roterer mellom hver figur som blir tegnet. Her har du et hint angående
         hvor mye du må snu deg: Hva er 360 delt på 10?'
-      Course 4 Artist Binary 1_instruction: "Here's a function that takes a binary\nstring
-        of 1's and 0's and instructs the artist to follow them from left\nto right,
-        top to bottom.  The artist will fill-in the squares when it sees\na 1 and
-        ignore the square when it sees a 0. \r\n\r\nRun this code to see how\nthe
-        artist uses binary to draw this pattern."
-      Course 4 Artist Binary 2_instruction: |
-        Which of these binary strings could
-        you loop 8 times to draw this image?
-      Course 4 Artist Binary 3_instruction: |
-        Can you draw this pattern by looping
-        a three digit binary string?
-      Course 4 Artist Binary 4_instruction: |
-        Each binary string represents one row
-        of this picture. Can you rearrange them so it draws a smiley face instead
-        of a frowny face?
-      Course 4 Artist Binary 5_instruction: |
-        Which 6 digit binary string, repeated
-        11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: |
-        What is the shortest binary string that
-        you can repeat to draw this image?
+      Course 4 Artist Binary 1_instruction: "Her er en funksjon som tar en binær-streng
+        av 1-ere og 0-ere og instruerer kunstneren til å følge dem fra venstre til
+        høyre, opp og ned. Artisten vil fylle inn rutene hvis den ser en 1 og ignorere
+        ruta hvis den ser en 0. \r\n\r\nKjør denne koden for å se hvordan artisten
+        bruker binær-strengen til å tegne dette mønsteret."
+      Course 4 Artist Binary 2_instruction: Hvilke av disse binære strengene kan du
+        gjenta 8 ganger for å tegne dette bildet?
+      Course 4 Artist Binary 3_instruction: Kan du tegne dette mønsteret ved å kjøre
+        en løkke over en tresifret binærstreng?
+      Course 4 Artist Binary 4_instruction: Hver binærstreng representerer en rad
+        i dette bildet. Kan du ordne strengene slik at de tegner et smile-ansikt i
+        stedet for et trist ansikt?
+      Course 4 Artist Binary 5_instruction: Hvilken 6-siftret binærstreng, repetert
+        11 ganger, vil tegne dette bildet?
+      Course 4 Artist Binary 6_instruction: Hva er den korteste binærstrengen du kan
+        repetere for å tegne dette bildet?
       Course 4 Artist Binary 7_instruction: Fullfør tegningen.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a higher
-        resolution canvas to draw on - 16 bits by 16 bits!
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
-      Course 4 Artist For  Functions 10_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For  Functions 11_instruction: |
-        Let's Step it up a little,
-        can you draw a Star shape using the "Draw a Square Line" function? Good
-        luck!
-      Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        in size. Hint: use a repeat block.
-      Course 4 Artist For Loops 10_instruction: |
-        Free Play Time! Have fun drawing
-        whatever you like with the blocks you have learned how to use
-      Course 4 Artist For Loops 11_instruction: |
-        Remember when we used a variable
-        to control the number of sides in a shape? This pattern starts with a triangle
-        and adds one side at a time until it draws a decagon (10 sides). Each side
-        should be 100 pixels long. Hint: 360 divided by the number of sides a shape
-        has is the number of degrees you'll need to turn.
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour
-        knowledge of \"for loops\" and the \"counter\", create this drawing where\neach
-        shape has two more sides than the last.  Make sure that each side is\n10 times
-        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
-        code has been provided for you."
-      Course 4 Artist For Loops 12_instruction: "That looked pretty cool, but now\nI'd
-        like to draw each shape next to the last one. This time each side is\n20 pixels.
-        Use a jump block to jump forward 40 pixels after each shape. \n"
-      Course 4 Artist For Loops 13_instruction: |
-        Hmmm, those shapes are getting bigger
-        every time! Didn't we already solve this problem with variables? How can
-        we use the counter variable to make the sides smaller as there are more of
-        them? Instead of moving forward by a set amount, try moving forward (100 /
-        counter) pixels.
-      Course 4 Artist For Loops 14_instruction: |
-        If you turn a little bit more or
-        less than you normally would for a shape, it creates a neat effect. Try turning
-        89 degrees to create this twisted square spiral.
-      Course 4 Artist For Loops 15_instruction: |
-        Free Play: Try making some drawings
-        of your own using For Loops. We've added a few generic variables for you
-        to use as well.
+      Course 4 Artist Binary Free Play 2_instruction: 'Fritt splitt: Her er et lerret
+        med høyere oppløsning du kan tegne på - 16 biter ganger 16 biter!'
+      Course 4 Artist Binary Free Play_instruction: 'Fritt spill: Tegn hva du vil
+        med binærstreng!'
+      Course 4 Artist For  Functions 10_instruction: Kan du tegne en stjerne-figur
+        ved å bruke "Tegn en kvadrat-linje"-funksjon? Lykke til!
+      Course 4 Artist For  Functions 11_instruction: Kan du tegne en stjerne-figur
+        ved å bruke "Tegn en kvadrat-linje"-funksjon? Lykke til!
+      Course 4 Artist For Loops 1_instruction: 'Tegn denne trekanten som er 50 piksler
+        i størrelse. Hing: Bruk en gjenta-blokk.'
+      Course 4 Artist For Loops 10_instruction: Tid for fritt spill! Ha det gøy med
+        å tegne hva enn du har lyst til med blokkene du har lært å bruke
+      Course 4 Artist For Loops 11_instruction: 'Husker da vi brukte en variabel til
+        å styre antallet sider i en figur? Mønsteret starter med en trekant og legger
+        til en side av gangen inntil det tegner et dekagon (10 sider). Hver side skal
+        være 100 piksler lang. Hint: 360 delt på antall sider en figur har er antall
+        grader du skal snu.'
+      Course 4 Artist For Loops 11a_instruction: "La oss sette alt sammen! Bruk din
+        kunnskap om \"for-løkker\" og \"teller\", opprett tegningen hvor hver side
+        har to sider mer enn den forrige. Kontroller at hver side er 10 ganger så
+        lang som antallet sider i polygonet.\r\n\r\nSvært lite av koden har blitt
+        gitt til deg her."
+      Course 4 Artist For Loops 12_instruction: 'Det så kult ut, men nå vil jeg tegne
+        hver figur ved siden av den forrige. Denne gangen er hver side 20 piksler.
+        Bruk en hopp-blokk til å hoppe 40 piksler fram etter hver figur. '
+      Course 4 Artist For Loops 13_instruction: Hmmm, disse figurene blir større hver
+        gang! Løste vi ikke allerede dette problemet med variabler? Hvordan kan vi
+        bruke teller-variabelen til å gjøre sidene mindre når det er flere av dem?
+        I stedet for å flytte framover med et gitt antall, prøv å flytte framover
+        med (100 / teller) piksler.
+      Course 4 Artist For Loops 14_instruction: Hvis du snur litt mer eller litt mindre
+        enn du normalt ville ha gjort for en figur lager det en stilig effekt. Prøv
+        å snu 89 grader for å lage denne vridde kvadrat-spiralen.
+      Course 4 Artist For Loops 15_instruction: 'Fritt spill: Prøv å lage noen tegninger
+        selv ved å bruke for-løkker. Vi har lagt til noen generiske variabler for
+        deg som du kan bruke også.'
       Course 4 Artist For Loops 2_instruction: "I've put the code for drawing a\ntriangle
         inside a for loop that counts from 50 to 100 by 10. Take a look at\nhow I
         built the code then click on \"Run\" when you are ready to see it in\naction.
@@ -1958,7 +1887,7 @@
       Eval Define Funcs 5_instruction: |
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
-        radiuses of 25, 50, and 75.
+        radii of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -2406,6 +2335,55 @@
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
+      NetSim Standalone Automatic DNS_instruction: |
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou
+        can connect to up to 5 other people in a room. When you send messages\nin
+        the room, everyone receives them. What are some of the challenges of this\nsystem,
+        and how might you solve them?\r\n"
+      NetSim Standalone Classroom Routers_instruction: |
+        In this version of the Internet
+        Simulator, everyone connects to a router and has a specific address. To send
+        messages, you have to address your message to the specific address of the
+        recipient, and the router will take care of delivering it to the right computer.
+        If there are other routers created in your class, ask for the address of one
+        of your classmates and send them a message! View the Log Router to see the
+        path the messages have taken through the network.
+      NetSim Standalone Freeplay_instruction: |
+        In this configuration, most of the
+        options are turned on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS_instruction: |
+        In this version of the simulator
+        you can't see the other students' addresses.  Instead, one of you must act
+        as a name service, to help share addresses with each other.
+      NetSim Standalone Packets TCP_instruction: |
+        Messages on the Internet can take
+        many paths to get to their destination, and sometimes along the way the message
+        gets dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters.
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto
+        a router with the others in your group. Important note: The router will\nonly
+        properly route messages where the first 4 bits are the To: address and\nthe
+        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
+        addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone SendAB_instruction: |
+        You and your partner share a single
+        wire that can only be in state A or state B. You can set the wire to either
+        state at any time, and you can read the state of the wire at any time. Can
+        you figure out a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers Ascii_instruction: |
+        Now that you've transmitted
+        information represented as decimal numbers, you can map those numbers to text
+        characters to send text-based information back and forth. With a text-based
+        protocol, you can easily represent and communicate all kinds of information.
+      NetSim Standalone Sending Numbers_instruction: "You and your partner can now\nreliably
+        send messages back and forth without extra coordination! While you're\nalways
+        sending bits back and forth, you can also represent those bits as decimal\nnumbers.
+        What kinds of information can you represent with this system? \n"
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
         will connect to a Router instead of directly to another student. Enter an
@@ -2687,61 +2665,18 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Something happened
-        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
-        were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Something happened to
-        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
-        added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Make a 3x5 letter
-        'A'.  The widget is setup with the incorrect dimensions. Your first task
-        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
-        start entering pixel data.
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Now make
-        your own image! We've started you off with a 10x10 canvas but you can make
-        it whatever size you want.  Happy pixeling!
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Now make your
-        own image! We've started you off with a 10x10 canvas but you can make it
-        whatever size you want.  Happy pixeling!
-      Pixelation 2_instruction: |
-        Something happened to the bits in this image!  Find
-        error and fix it!
-      Pixelation 4x4 Empty_instruction: |
-        The width and height are now encoded in
-        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
-      Play Lab Rocket 2 (copy 1)_instruction: |
-        We've added your contract and two
-        examples into the Design Recipe for rocket-height. Now write the function
-        for rocket-height.
-      Play Lab Rocket 2 (copy 2)_instruction: |
-        We've started the Design Recipe for
-        rocket-height using the contract and examples you just wrote. Complete the
-        function definition for rocket-height and run your animation.
       Play Lab Rocket 2_instruction: |
         We've started the Design Recipe for rocket-height
         using the contract and examples you just wrote. Complete the function definition
         for rocket-height and run your animation.
-      Play Lab Rocket 2B (copy 1)_instruction: |
-        We've started the Design Recipe
-        for rocket-height using the contract and examples you just wrote. Complete
-        the function definition for rocket-height and run your animation.
       Play Lab Rocket 2B_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second. Using the Design Recipe, write a function called rocket-height
         that takes in a number of  seconds that have passed since the rocket took
         off, and produces the height of the rocket at that time.
-      Play Lab Rocket 3 (copy 1)_instruction: |
-        Awesome, now can you update that function
-        so that our rocket moves more quickly? Make sure to update the purpose statement,
-        examples, and function definition to launch a rocket at 40 meters per second.
       Play Lab Rocket 3_instruction: |
         Awesome, now can you update that function so
         that our rocket moves more quickly? Make sure to update the purpose statement,
@@ -2774,9 +2709,9 @@
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move Sam
-        around his yard, making note of Sam's coordinates at different locations.
-        Click "Finish" when you're ready to move on.
+        the screen update to tell you his location. Click "Run" and then use the
+        arrow keys to move Sam around his yard, making note of Sam's coordinates
+        at different locations. Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -2881,10 +2816,6 @@
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
       Test Play Lab_instruction: This is a test play lab level.
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3277,31 +3208,124 @@
         Draw a square above and to the left
         of the turtle's starting position. Click to see full instructions.
       U3L23 Chatbot Conditionals 1_instruction: |
-        Ask the user the question "What
-        is your favorite color?" using the "prompt" block. Using the "if" block,
-        check if the user's response matches yours. Add a "write" block to the
-        body of the "if" statement to add the response "<favorite_color> is my
-        favorite color too!" to the screen.
-      U3L23 Chatbot Conditionals 2_instruction: |
-        Replace the "if" block with an
-        "if/else" block to make your chatbot respond in all circumstances.
-      U3L23 Chatbot Conditionals 3_instruction: |
-        In text mode, add several "else
-        if" statements to your program.
+        Adjust the "if" block to make
+        the bot respond "That's the color of the sky!" if the user inputs the color
+        "blue".
+      U3L23 Chatbot Intro 1a_instruction: |
+        Store the user's input inside a variable
+        and log it to the console.
       U3L23 Chatbot Intro 2_instruction: |
-        Create a click event for your button. Create
-        a conversation variable and store the user's input in it. You may need the
-        "getText," "setText," and "+" blocks in your code.
+        Use string concatenation to store the user's
+        input and assistant's answer into the conversation variable using the format
+        "User: <input><bot name>: <default response>" . Log the conversation to
+        the console.
+      U3L23 Chatbot Intro 2a_instruction: |
+        Display the conversation onto the "text_area"
+        element. Optional: clear the user's input after every "change" event.
       U3L23 Chatbot Intro 3_instruction: |
-        Add the response "uh huh" by using the
-        "+" operator. Add newline characters (\
-        ) where appropriate.
+        Add newline characters "\
+        " to separate
+        the user's input and the computer's response.
       U3L23 Chatbot Intro 4_instruction: |
         Use this level to make your chatbot look
         and work better!
       U3L23 Chatbot Intro_instruction: |
-        Add a Lable, Text Input, Button, and Text
-        Area object to your project
+        Choose a specialization topic for your digital
+        assistant. Update the assistant description, name, starter prompt, and default
+        response to match this specialization.
+      U3L24 Basic String Parsing 1_instruction: |
+        Use the function "userInput.indexOf(<food>)"
+        to check if the strings "pizza" or "soup" are anywhere in the user's
+        response.
+      U3L24 Chatbot Basic Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Chatbot Conditionals 2_instruction: |
+        Adjust the "if" block to make
+        the bot respond "I don't know that color." if the user types anything besides
+        "blue"
+      U3L24 Chatbot Conditionals 3_instruction: |
+        Adjust the "if/else" block to
+        make the bot respond to the colors blue, red, and green, and to two additional
+        colors.
+      U3L24 Chatbot Keyword Record_instruction: |
+        Use the next level to record your
+        digital assistant's keywords/phrases.
+      U3L24 Chatbot Nested Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Nested Conditionals 1_instruction: |
+        Replace all instances of `str.indexOf("word")`
+        with a function `contains(sentence, word)` that returns true if the word is
+        in the sentence and returns false otherwise.
+      U3L24 Nested Conditionals 2_instruction: |
+        Use a nested conditional to respond
+        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+      U3L24 Nested Conditionals Bugs 2_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs 3_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs_instruction: |
+        Expose the bugs in this problem
+        by typing inputs into the user-input box. Track which inputs cause unexpected
+        outputs.
+      U3L25 Chatbot Strings_instruction: |
+        1. Adjust your digital assistant to evaluate
+        inputs the same way whether the inputs are capitalized or lowercase. 2. If
+        a user asks "What is <phrase>?", where <phrase> is an input your digital
+        assistant does not recognize, make your digital assistant respond "I don't
+        know what <phrase> is."
+      U3L25 String Parsing 1_instruction: |
+        Given the string "Wisdom begins with
+        wonder." what is the index of the following characters W, t, w, ., d, and
+        k? Confirm your expectation using the string.indexOf() function.
+      U3L25 String Parsing 2_instruction: |
+        Use str.length to find the length of the
+        strings “Hello World”, “Computer science rocks!", and “I promise to do my
+        homework every day.”
+      U3L25 String Parsing 3_instruction: |
+        Write a password length checker that writes
+        “yes” to the console if a string has a length greater than 10, or “no” if
+        it is less than or equal to 10.  Test your function using two strings, one
+        that will satisfy each conditional option.
+      U3L25 String Parsing 4_instruction: |
+        You are given the string "Wisdom begins
+        with wonder." Use the string.substring(begin, end) function to print "begin"
+        and "nder" to the console.
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto
+        get the strings \"begin\" and \"nder\" from a sentence no matter where\nin
+        the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 6_instruction: |
+        Write a function that takes a name (first
+        last) and reorders it (last, first).
+      U3L25 String Parsing 7_instruction: |
+        You are given the string “The earth has
+        music for those who listen.” Manipulate it using the functions str.toUpperCase()
+        and str.toLowerCase().
+      U3L26 AND operator_instruction: |
+        Inside the findingNemo function, write a conditional
+        statement that detects if a command contains all the phrases "2000" "animated"
+        and "G-rated." The function should return true if the above conditions are
+        met and return false otherwise
+      U3L26 Chatbot Compound Conditionals_instruction: |
+        Update your digital assistant
+        to include at least one each of AND, OR, and NOT
+      U3L26 Compound Logic_instruction: |
+        Write a conditional statement that detects
+        if a command contains all the phrases "2000" "animated" and "G-rated."
+        If all these phrases are detected, make Movie Bot respond "The top grossing
+        animated and G-rated film in the 2000 decade was Finding Nemo."
+      U3L26 NOT operator_instruction: "Write a conditional statement that detects\nif
+        a command does not contain the phrase \"bad.\" If \"bad\" is not detected,\nmake
+        Movie Bot respond normally. Otherwise, make Movie Bot respond \"Sorry,\nI
+        don't know about bad movies.\" \n"
+      U3L26 OR operator_instruction: |
+        Inside the isBest function, write a conditional
+        statement that detects if a command contains at least one of the phrases "all
+        time" "all-time" "overall" or "millennium." The function should return
+        true if the above conditions are met and return false otherwise
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

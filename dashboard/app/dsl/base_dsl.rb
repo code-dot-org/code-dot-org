@@ -8,8 +8,13 @@ class BaseDSL
   end
 
   def encrypted(text)
-    @hash[:encrypted] = '1'
-    instance_eval(Encryption::decrypt_object(text))
+    @hash['encrypted'] = '1'
+    begin
+      instance_eval(Encryption::decrypt_object(text))
+    rescue OpenSSL::Cipher::CipherError
+      puts "warning: level #{@name} is encrypted, skipping"
+      return
+    end
   end
 
   # returns 'xyz' from 'XyzDSL' subclasses

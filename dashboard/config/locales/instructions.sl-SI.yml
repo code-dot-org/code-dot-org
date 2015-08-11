@@ -101,9 +101,8 @@
         naprej s polovičnim korakom?
       2-3 Artist Loops 11_instruction: Pa naredimo še 'eno' zanko okoli našega celotnega
         izdelka! Ne pozabi dodati kota na konec zunanje zanke.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
+      2-3 Artist Loops 2_instruction: Zdaj pa uporabi kocko ponovi in naredi celici
+        lupino.
       2-3 Artist Loops 4_instruction: Bi rad videl, kaj se zgodi, ko z uporabo zanke
         znova in znova ponavljamo to obliko?
       2-3 Artist Loops 5_instruction: Zdaj pa zanko malce spremenimo in videli bomo,
@@ -113,9 +112,9 @@
       2-3 Artist Loops 7_instruction: Zanke lahko uporabimo za izdelavo različnih
         poligonov. Ali lahko znotraj tega sedmerokotnika ustvariš romb?
       2-3 Artist Loops 8_instruction: Postavimo oba elementa znotraj zanke.
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
+      2-3 Artist Loops 9_instruction: "Zdaj bomo dali v zanko iste elemente, a bomo
+        med njimi dodali nekaj razdalje. /r\nUporabi isto kodo kot prej, \na na koncu
+        zunanje zanke dodaj korak naprej.\n"
       2-3 Artist Loops New 1_instruction: Narišimo glavo robota! Znaš narediti kvadrat
         s stranicami velikosti 100 pixlov?
       2-3 Artist Loops New 10_instruction: Zdaj pa združi vse V-je v predstavljen
@@ -143,84 +142,76 @@
         boš dokončal/a vzorec.
       2-3 Artist Nested Loops 11_instruction: 4 krat postavi to kodo v zanko, da dokončaš
         vzorec, po vsakem krogu naredi obrat za 90 stopinj.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
+      2-3 Artist Nested Loops 12_instruction: Za to kodo uporabi zanko 12 krat, da
+        dokončaš kodre.
+      2-3 Artist Nested Loops 2_instruction: Trikotnik postavi v zanko 6 krat. Za
+        vsakim trikotnikom moraš narediti obrat za 60 stopinj, preden narišeš naslednjega.
+      2-3 Artist Nested Loops 3_instruction: Da bi narisal/a ta vzorec, moraš postaviti
+        trikotnik v zanko 12 krat. Število stopinj v krogu (360) deli s številom oblik
+        (12), ki jih rišeš. Tako boš ugotovil/a, kakšen obrat moraš narediti po vsaki
+        obliki.
+      2-3 Artist Nested Loops 4_instruction: "Ta diamant postavi v zanko 12 krat in
+        nariši \nrožo. Namig: 12 diamantov je prav takih kot 12 trikotnikov, ki si
+        jih naredil/a - za koliko se moraš obrniti po vsaki obliki?\n"
+      2-3 Artist Nested Loops 5_instruction: "Okna te stavbe zapolni z \nugnezdeno
+        zanko. Okna so dolga 20 pik med njimi pa je razdalja, dolga 20 pik.\n"
+      2-3 Artist Nested Loops 6_instruction: Ta dinozaver ima po svojem repu razprostrtih
+        20 bodic. Vsaka bodica je dolga 30 pik. 8 krat postavi trikotnik v zanko,
+        a ne pozabi se za vsakim premakniti naprej.
       2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
+        Trikotnik postavi v zanko 10 krat
+        in nariši sonce. Za vsakim trikotnikom se moraš premakniti in obrniti.
+        Za koliko se moraš obrniti, lahko ugotoviš tako, da deliš število stopinj v krogu
+        s številom oblik, ki ga sestavljajo.
+      2-3 Artist Nested Loops 8_instruction: "Sedaj naši sliki dodaj nekaj trave.
+        \nRazdalja med šopi trave je 50 pik.\n"
+      2-3 Artist Nested Loops 9_instruction: "Sliko bomo dokočali tako, da bomo dodali
+        rožo. \nDiamant postavi v zanko 12 krat in nariši rožo.\n"
       2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
+        Poigraj se in nariši nekaj kul
+        z ugnezdenimi zankami.
       2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar.
-        Be careful not to collect nectar from a purple flower if it doesn't\nhave
-        any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
+        Živijo, jaz sem čebela. Pomagaj mi nabrati nektar
+        iz rože.
+      2-3 Bee Conditionals 10_instruction: Vijolične rože imajo lahko 1 ali 0 nektarja.
+        Pazi, da ne nabiraš nektarja z vijolične rože, ki ga nima./r
+      2-3 Bee Conditionals 11_instruction: Nabiraj nektar z rož, ki ga imajo.
+      2-3 Bee Conditionals 12_instruction: "Uporabi zanko, da preveriš in nabereš
+        nektar \nz vseh teh rož.\n"
       2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
+        Naberi nektar in naredi med. Namig:
+        kaj se zgodi, če uporabiš pogojnik "če je nektar" na rdeči roži?
+        Ali lahko to dokončaš z zanko?
       2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
+        Naberi nektar in naredi med. Pazi, da ne nabiraš medu
+        iz vijolične rože, ki ga nima.
+      2-3 Bee Conditionals 15_instruction: Naberi nektar iz vseh štirih rož.
       2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
+        Živijo, jaz sem čebela. Pomagaj mi nabrati nektar
+        iz vseh rož. Uporabi zanko.
+      2-3 Bee Conditionals 3_instruction: Pomagaj mi nabrati nektar iz rož in narediti
+        med. Uporabi zanko.
       2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
+        Pomagaj mi nabrati nektar
+        z vseh rož in naredi ves med.
       2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
+        Vijolične rože imajo lahko 1 ali 0 nektarja,
+        a ne veš, katere! Pazi, da ne
+        nabiraš nektarja iz
+        vijolične rože, če ga nima. Preveri, če ima
+        nektar vrednost ena tako,
+        da uporabiš če kocko.
       2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
+        S "če" kocko preveri,
+        če je na voljo kaj nektarja.
       2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
+        Naberi nektar iz vseh rož,
+        ki ga imajo.
       2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
+        Na polju so rdeče in vijolične rože.
+        Rdeče rože imajo znano količino nektarja,
+        ne ve pa se, koliko ga imajo vijolične.
+        Naberi ves nektar.
       2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
       2-3 Bee Conditionals Assessment 1_instruction: |
         Assessment: Collect all the
@@ -793,7 +784,7 @@
         Ok, let's do that again for practice
         - this isn't very different, but watch out for the chompers!
       4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
+        The "If-else" block checks a condition,
         and then does one thing OR another. To get me to the sunflower try to use
         this new block.
       4-5 Maze Conditionals 9_instruction: |
@@ -982,9 +973,6 @@
       Big Game Collision 4_instruction: |
         Complete the collide? function so that it
         returns true if the distance between two points is less than 100 pixels apart.
-      Big Game Complete (copy 1)_instruction: |
-        A demo of the completed CS in Algebra
-        Big Game project
       Big Game Complete_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -1739,9 +1727,8 @@
       Course 4 Bee Params 4_instruction: |
         Try using your new function to collect
         all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 5_instruction: |
-        Let's start from scratch - can you create
-        a new function called "get 5 nectar" with a direction parameter?
+      Course 4 Bee Params 5_instruction: Začnimo od začetka. Ali znaš narediti novo
+        funkcijo, ki se imenuje "naberi 5 nektarjev" s smernim parametrom?
       Course 4 Bee Params 6 (copy 1)_instruction: |
         Try using your new function to
         collect all of this nectar.
@@ -2086,7 +2073,7 @@
       Eval Define Funcs 5_instruction: |
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
-        radiuses of 25, 50, and 75.
+        radii of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -2183,64 +2170,54 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
-      frozen circle function in circle_instruction: |
-        Now let's create 20 overlapping
-        circles, turning 18 degrees between each circle.
-      frozen circle function with parameter_instruction: |
-        Here's a ”Create circle”
-        block that can make circles of different sizes. Can you use this to create
-        a small circle of size 5 and a larger circle of size 10?
+      frozen circle function in circle_instruction: Sedaj ustvarimo 20 prekrivajočih
+        se krogov, tako da se med vsakim krogom zasukamo za 18 stopinj.
+      frozen circle function with parameter_instruction: "Tu je kocka \"Ustvari krog\",\ns
+        katero lahko narediš kroge različnih velikosti. \nAli jo znaš uporabiti tako,
+        da narediš krog, velik 5 in krog, velik 10?\n"
       frozen circle function_instruction: |
-        Use the new “Create a circle” block to
-        create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
-      frozen cross rotate dense_instruction: |
-        Let's repeat it 90 times! How many
-        times does 90 go into 360? Hint: It's a really small number.
-      frozen cross rotate_instruction: |
-        Now try repeating it 10 times. How many degrees
-        do you need to turn between each line?
-      frozen cross_instruction: |
-        Use the “Repeat” block to create a plus sign. Did
-        you notice Elsa can move forward and backward?
+        Uporabi novo kocko "Ustvari krog" in z njo naredi 10 prekrivajočih se krogov. Ne pozabi med
+        posameznimi krogi skočiti naprej.
+      frozen circle_instruction: Krog je posebna oblika. Ali lahko ugotoviš, s katero
+        številko moraš zamenjati vprašaje, da bi narisal krog?
+      frozen cross rotate dense_instruction: 'Ponovimo 90-krat! Kolikokrat gre 90
+        v 360? Namig: To je res majhna številka.'
+      frozen cross rotate_instruction: Zdaj poskusit ponoviti 10-krat. Za Koliko stopinj
+        se moraš obrniti med vsako vrstico?
+      frozen cross_instruction: Uporabi kocko "Ponovi" in ustvari znak za plus. Si
+        opazil/a, da se Elsa lahko premika naprej in nazaj?
       frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using the “Repeat" block
-        to repeat a parallelogram 4 times, turning right by 90 degrees between each
-        parallelogram.
+        Ali ste vedeli, da ima vsaka snežinka drugačno obliko? Ustvarimo novo snežinko z uporabo
+         "Ponovi" kocke,
+        s katero ponovimo paralelogram 4-krat, pri tem pa naredimo obrat na desno za 90 stopinj med vsakim paralelogramom.
       frozen diamond snowflake_instruction: |
-        Now, let's create a new snowflake by
-        using the repeat block to repeat a parallelogram 10 times, turning right by
-        36 degrees between each one.
+        Zdaj pa ustvarimo novo snežinko
+        z uporabo ponovi kocke, s katero 10-krat ponovimo
+        paralelogram, med vsakim pa naredimo obrat
+        za 36 stopinj na desno.
       frozen diamond_instruction: |
-        Let's create a parallelogram. It's just like
-        a square but has different angles: 60 and 120 degree angles instead of 90
-        degree angles.
-      frozen freeplay_instruction: |
-        You've officially become a master artist! Create
-        a winter wonderland.
-      frozen line_instruction: |
-        Hi! I'm Elsa of Arendelle. Help me create a single
-        line.
+        Ustvarimo paralelogram! Tak je kot kvadrat, a ima
+        drugačne kote: 60 in 120 stopinjske namesto
+        kotov 90 stopinj.
+      frozen freeplay_instruction: Uradno si postal mojster umetnik! Ustvari zimsko
+        čudežno deželo.
+      frozen line_instruction: Živijo! Jaz sem Elsa Ardanelska. Pomagaj mi ustvariti
+        eno črto.
       frozen perpendicular_instruction: |
-        Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
+        Pa poglejmo, če lahko ustvarimo dve liniji,
+        med katerima je kot 90 stopinj. Uporabiti
+        boš moral/a kocki "Obrni"
+        in "Premakni".
       frozen snowflake branch_instruction: |
-        Try using the ”Create a snowflake branch”
-        block to create three branches, which starts to look like a snowflake.
-      frozen snowflake full_instruction: |
-        Now let's repeat it 8 times to make a
-        beautiful snowflake!
-      frozen snowflower_instruction: |
-        Intricate snow patterns can be created with
-        very simple shapes. Can you make a pattern by repeating 5 circles of size
-        5 and 5 circles of size 10?
-      frozen square iterative_instruction: |
-        It seems like we're halfway to making
-        a square. Let's put 4 lines together to create a square.
+        Poskusi uporabiti kocko "Ustvari snežinkin krak"
+        in ustvari tri krake, ki so počasi že videti kot
+        snežinka.
+      frozen snowflake full_instruction: Zdaj to ponovi 8 krat in naredi lepo snežinko!
+      frozen snowflower_instruction: "Zapleteni snežni vzorci so lahko narejeni z
+        zelo\npreprostimi oblikami. Ali znaš narediti vzorec tako,\nda ponavljaš 5
+        krogov velikosti 5 \nin 5 krogov velikosti 10?\n"
+      frozen square iterative_instruction: Smo ze na pol poti, da naredimo kvadrat.
+        Povežimo skupaj štiri črte in ustvarimo kvadrat.
       frozen square loop 3x_instruction: |
         Let's create three squares, turning after
         each square. Be sure to turn by 120 degrees before each new square.
@@ -2259,34 +2236,33 @@
         Hiro is "actor 1".  Use the Move block to move
         Hiro right to touch Baymax.
       Infinity_catch_instruction: |
-        Can you make Elsa ("actor 2") catch up with
-        Anna by using the arrow keys?
-      Infinity_finale_instruction: Create anything you like and share it!
+        Ali lahko naredis tako, da bo Elsa ("igralka 2") dohitela
+        Ano, z uporabo tipk s puščicami?
+      Infinity_finale_instruction: Ustvari karkoli želiš in deli!
       Infinity_move_collide_instruction: |
-        Hiro is "actor 1".  Move him right to
-        Baymax, and play a sound when they touch.
+        Hiro je "igralec 1". Premakni ga čisto do Baymaxa
+        in dodaj zvok, ko se dotakneta.
       Infinity_move_directions_instruction: |
-        Baymax is "actor 2".  Add Move blocks
-        and then move Baymax using the arrows.  Make him touch the two other characters.
+        Baymax je "igralec 2". Dodaj Premakni kocko in nato
+        premakni Baymaxa z uporabo puščic. Naredi tako,
+        da se bo dotaknil drugih dveh likov.
       Infinity_move_right_instruction: |
-        Hiro is "actor 1".  Use the Move block
-        to move Hiro right to touch Baymax.
+        Hiro je "igralec 1". Uporabi Premakni kocko
+        in premakni Hiroa tako, da se bo dotaknil Baymaxa.
       Infinity_repeat_instruction: |
-        Use a "repeat forever" block to make Anna move
-        up and down 400 pixels.
-      Infinity_say_instruction: Make Anna say "Hi there." by using the Say block.
-      Infinity_shoot_instruction: |
-        Baymax is "actor 2".  Make Baymax throw a rocket
-        at Hiro.
+        Uporabi kocko "ponavljaj za vedno", da se bo Ana
+        premikala za 400 pik gor in dol.
+      Infinity_say_instruction: Uporabi "reci kocko", da bo Ana rekla "Živijo."
+      Infinity_shoot_instruction: Baymax je "igralec 2". Naj Baymax vrže raketo Hiru.
       Infinity_shoot_directions_instruction: |
-        Hiro is "actor 3".  Make Hiro throw
-        a projectile to each of the four characters.  Wait one second between each
-        throw.
+        Hiro je "igralec 3". Naredi tako, da bo Hiro vrgel
+        izstrelek vsem štirim likom. Med posamičnim
+        metom počakaj
+        eno sekundo.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Touch even more snowflakes!
-      Infinity_touch_four_instruction: |
-        Move Anna up, down left, and right to touch
-        each of the four snowflakes.
+      Infinity_touch_faster_instruction: Dotakni se še večih snežink!
+      Infinity_touch_four_instruction: Ano premakniti navzgor, navzdol levo in desno,
+        da se bo dotaknila vseh štirih snežink.
       Infinity_touch_score_instruction: |
         Make Anna score a point when she touches
         a snowflake.  Then click "Run" and steer her to touch each snowflake once.
@@ -2563,6 +2539,55 @@
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
+      NetSim Standalone Automatic DNS_instruction: |
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou
+        can connect to up to 5 other people in a room. When you send messages\nin
+        the room, everyone receives them. What are some of the challenges of this\nsystem,
+        and how might you solve them?\r\n"
+      NetSim Standalone Classroom Routers_instruction: |
+        In this version of the Internet
+        Simulator, everyone connects to a router and has a specific address. To send
+        messages, you have to address your message to the specific address of the
+        recipient, and the router will take care of delivering it to the right computer.
+        If there are other routers created in your class, ask for the address of one
+        of your classmates and send them a message! View the Log Router to see the
+        path the messages have taken through the network.
+      NetSim Standalone Freeplay_instruction: |
+        In this configuration, most of the
+        options are turned on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS_instruction: |
+        In this version of the simulator
+        you can't see the other students' addresses.  Instead, one of you must act
+        as a name service, to help share addresses with each other.
+      NetSim Standalone Packets TCP_instruction: |
+        Messages on the Internet can take
+        many paths to get to their destination, and sometimes along the way the message
+        gets dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters.
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto
+        a router with the others in your group. Important note: The router will\nonly
+        properly route messages where the first 4 bits are the To: address and\nthe
+        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
+        addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone SendAB_instruction: |
+        You and your partner share a single
+        wire that can only be in state A or state B. You can set the wire to either
+        state at any time, and you can read the state of the wire at any time. Can
+        you figure out a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers Ascii_instruction: |
+        Now that you've transmitted
+        information represented as decimal numbers, you can map those numbers to text
+        characters to send text-based information back and forth. With a text-based
+        protocol, you can easily represent and communicate all kinds of information.
+      NetSim Standalone Sending Numbers_instruction: "You and your partner can now\nreliably
+        send messages back and forth without extra coordination! While you're\nalways
+        sending bits back and forth, you can also represent those bits as decimal\nnumbers.
+        What kinds of information can you represent with this system? \n"
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
         will connect to a Router instead of directly to another student. Enter an
@@ -2687,9 +2712,8 @@
       NEW Course 4 Artist Params 15_instruction: |
         Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
-      NEW Course 4 Artist Params 2_instruction: |
-        Create a “draw a triangle" function
-        with 50 pixels sides from scratch
+      NEW Course 4 Artist Params 2_instruction: "Čisto od začetka ustvari funkcijo
+        \n\"nariši trikotnik\" s stranicami s 50 pikami.\n"
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw\n3
         triangles from the last puzzle in a row. Hint: each triangle is 50 pixel\napart.\r\n"
       NEW Course 4 Artist Params 4_instruction: |
@@ -2848,61 +2872,18 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Something happened
-        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
-        were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Something happened to
-        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
-        added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Make a 3x5 letter
-        'A'.  The widget is setup with the incorrect dimensions. Your first task
-        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
-        start entering pixel data.
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Now make
-        your own image! We've started you off with a 10x10 canvas but you can make
-        it whatever size you want.  Happy pixeling!
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Now make your
-        own image! We've started you off with a 10x10 canvas but you can make it
-        whatever size you want.  Happy pixeling!
-      Pixelation 2_instruction: |
-        Something happened to the bits in this image!  Find
-        error and fix it!
-      Pixelation 4x4 Empty_instruction: |
-        The width and height are now encoded in
-        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
-      Play Lab Rocket 2 (copy 1)_instruction: |
-        We've added your contract and two
-        examples into the Design Recipe for rocket-height. Now write the function
-        for rocket-height.
-      Play Lab Rocket 2 (copy 2)_instruction: |
-        We've started the Design Recipe for
-        rocket-height using the contract and examples you just wrote. Complete the
-        function definition for rocket-height and run your animation.
       Play Lab Rocket 2_instruction: |
         We've started the Design Recipe for rocket-height
         using the contract and examples you just wrote. Complete the function definition
         for rocket-height and run your animation.
-      Play Lab Rocket 2B (copy 1)_instruction: |
-        We've started the Design Recipe
-        for rocket-height using the contract and examples you just wrote. Complete
-        the function definition for rocket-height and run your animation.
       Play Lab Rocket 2B_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second. Using the Design Recipe, write a function called rocket-height
         that takes in a number of  seconds that have passed since the rocket took
         off, and produces the height of the rocket at that time.
-      Play Lab Rocket 3 (copy 1)_instruction: |
-        Awesome, now can you update that function
-        so that our rocket moves more quickly? Make sure to update the purpose statement,
-        examples, and function definition to launch a rocket at 40 meters per second.
       Play Lab Rocket 3_instruction: |
         Awesome, now can you update that function so
         that our rocket moves more quickly? Make sure to update the purpose statement,
@@ -2935,9 +2916,9 @@
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move Sam
-        around his yard, making note of Sam's coordinates at different locations.
-        Click "Finish" when you're ready to move on.
+        the screen update to tell you his location. Click "Run" and then use the
+        arrow keys to move Sam around his yard, making note of Sam's coordinates
+        at different locations. Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -2974,32 +2955,29 @@
       scrat 16 (copy 1)_instruction: |
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
-      scrat 16_instruction: |
-        Acorn! Acorn! Acorn! Use an "if" block to get me there
-        with the fewest number of blocks.
+      scrat 16_instruction: Želod! Želod! Želod! Uporabi "če" kocko, da me pripelješ
+        tja čim manj kockami.
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: |
-        Ok, let's do that again for practice - this isn't
-        very different, but watch out for the wall!
+      scrat 17_instruction: Pa poskusimo tole za vajo še enkrat - ni zelo drugače,
+        a pazi na zid!
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
       scrat 18_instruction: |
-        The "If-else" blocks checks a condition, and then
-        does one thing OR another. To get me to the acorn try to use this new block.
+        Kocka "če drugo" preveri pogoj in nato naredi eno ALI drugo stvar. Da bi me pripeljal do želoda,
+        poskusi uporabiti to novo kocko.
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
       scrat 19_instruction: |
-        One more practice of the "if-else" block, can you
-        get it right on your first try?
-      scrat 20_instruction: |
-        Can you add just 3 blocks to help me solve a more complex
-        maze? If you do it right, I can walk any curvy path no matter the length.
-        Hurry! The ice is melting!
+        Še ena vaja za "če drugo" kocko. Ti lahko
+        uspe že v prvem poskusu?
+      scrat 20_instruction: "Ali lahko dodaš le tri kocke, da mi pomagaš rešiti bolj
+        zapleten labirint?\nČe boš naredil/a pravilno, bom lahko hodila po katerikoli\novinkasti
+        cesti, ne glede na to, \nkako dolga je.\nPohiti, led se topi!\n"
       SpecialFrozenLevel_instruction: |
         You've officially become a master artist!
         Create a winter wonderland.
@@ -3048,10 +3026,6 @@
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
       Test Play Lab_instruction: This is a test play lab level.
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3444,31 +3418,124 @@
         Draw a square above and to the left
         of the turtle's starting position. Click to see full instructions.
       U3L23 Chatbot Conditionals 1_instruction: |
-        Ask the user the question "What
-        is your favorite color?" using the "prompt" block. Using the "if" block,
-        check if the user's response matches yours. Add a "write" block to the
-        body of the "if" statement to add the response "<favorite_color> is my
-        favorite color too!" to the screen.
-      U3L23 Chatbot Conditionals 2_instruction: |
-        Replace the "if" block with an
-        "if/else" block to make your chatbot respond in all circumstances.
-      U3L23 Chatbot Conditionals 3_instruction: |
-        In text mode, add several "else
-        if" statements to your program.
+        Adjust the "if" block to make
+        the bot respond "That's the color of the sky!" if the user inputs the color
+        "blue".
+      U3L23 Chatbot Intro 1a_instruction: |
+        Store the user's input inside a variable
+        and log it to the console.
       U3L23 Chatbot Intro 2_instruction: |
-        Create a click event for your button. Create
-        a conversation variable and store the user's input in it. You may need the
-        "getText," "setText," and "+" blocks in your code.
+        Use string concatenation to store the user's
+        input and assistant's answer into the conversation variable using the format
+        "User: <input><bot name>: <default response>" . Log the conversation to
+        the console.
+      U3L23 Chatbot Intro 2a_instruction: |
+        Display the conversation onto the "text_area"
+        element. Optional: clear the user's input after every "change" event.
       U3L23 Chatbot Intro 3_instruction: |
-        Add the response "uh huh" by using the
-        "+" operator. Add newline characters (\
-        ) where appropriate.
+        Add newline characters "\
+        " to separate
+        the user's input and the computer's response.
       U3L23 Chatbot Intro 4_instruction: |
         Use this level to make your chatbot look
         and work better!
       U3L23 Chatbot Intro_instruction: |
-        Add a Lable, Text Input, Button, and Text
-        Area object to your project
+        Choose a specialization topic for your digital
+        assistant. Update the assistant description, name, starter prompt, and default
+        response to match this specialization.
+      U3L24 Basic String Parsing 1_instruction: |
+        Use the function "userInput.indexOf(<food>)"
+        to check if the strings "pizza" or "soup" are anywhere in the user's
+        response.
+      U3L24 Chatbot Basic Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Chatbot Conditionals 2_instruction: |
+        Adjust the "if" block to make
+        the bot respond "I don't know that color." if the user types anything besides
+        "blue"
+      U3L24 Chatbot Conditionals 3_instruction: |
+        Adjust the "if/else" block to
+        make the bot respond to the colors blue, red, and green, and to two additional
+        colors.
+      U3L24 Chatbot Keyword Record_instruction: |
+        Use the next level to record your
+        digital assistant's keywords/phrases.
+      U3L24 Chatbot Nested Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Nested Conditionals 1_instruction: |
+        Replace all instances of `str.indexOf("word")`
+        with a function `contains(sentence, word)` that returns true if the word is
+        in the sentence and returns false otherwise.
+      U3L24 Nested Conditionals 2_instruction: |
+        Use a nested conditional to respond
+        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+      U3L24 Nested Conditionals Bugs 2_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs 3_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs_instruction: |
+        Expose the bugs in this problem
+        by typing inputs into the user-input box. Track which inputs cause unexpected
+        outputs.
+      U3L25 Chatbot Strings_instruction: |
+        1. Adjust your digital assistant to evaluate
+        inputs the same way whether the inputs are capitalized or lowercase. 2. If
+        a user asks "What is <phrase>?", where <phrase> is an input your digital
+        assistant does not recognize, make your digital assistant respond "I don't
+        know what <phrase> is."
+      U3L25 String Parsing 1_instruction: |
+        Given the string "Wisdom begins with
+        wonder." what is the index of the following characters W, t, w, ., d, and
+        k? Confirm your expectation using the string.indexOf() function.
+      U3L25 String Parsing 2_instruction: |
+        Use str.length to find the length of the
+        strings “Hello World”, “Computer science rocks!", and “I promise to do my
+        homework every day.”
+      U3L25 String Parsing 3_instruction: |
+        Write a password length checker that writes
+        “yes” to the console if a string has a length greater than 10, or “no” if
+        it is less than or equal to 10.  Test your function using two strings, one
+        that will satisfy each conditional option.
+      U3L25 String Parsing 4_instruction: |
+        You are given the string "Wisdom begins
+        with wonder." Use the string.substring(begin, end) function to print "begin"
+        and "nder" to the console.
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto
+        get the strings \"begin\" and \"nder\" from a sentence no matter where\nin
+        the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 6_instruction: |
+        Write a function that takes a name (first
+        last) and reorders it (last, first).
+      U3L25 String Parsing 7_instruction: |
+        You are given the string “The earth has
+        music for those who listen.” Manipulate it using the functions str.toUpperCase()
+        and str.toLowerCase().
+      U3L26 AND operator_instruction: |
+        Inside the findingNemo function, write a conditional
+        statement that detects if a command contains all the phrases "2000" "animated"
+        and "G-rated." The function should return true if the above conditions are
+        met and return false otherwise
+      U3L26 Chatbot Compound Conditionals_instruction: |
+        Update your digital assistant
+        to include at least one each of AND, OR, and NOT
+      U3L26 Compound Logic_instruction: |
+        Write a conditional statement that detects
+        if a command contains all the phrases "2000" "animated" and "G-rated."
+        If all these phrases are detected, make Movie Bot respond "The top grossing
+        animated and G-rated film in the 2000 decade was Finding Nemo."
+      U3L26 NOT operator_instruction: "Write a conditional statement that detects\nif
+        a command does not contain the phrase \"bad.\" If \"bad\" is not detected,\nmake
+        Movie Bot respond normally. Otherwise, make Movie Bot respond \"Sorry,\nI
+        don't know about bad movies.\" \n"
+      U3L26 OR operator_instruction: |
+        Inside the isBest function, write a conditional
+        statement that detects if a command contains at least one of the phrases "all
+        time" "all-time" "overall" or "millennium." The function should return
+        true if the above conditions are met and return false otherwise
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

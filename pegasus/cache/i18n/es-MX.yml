@@ -212,6 +212,9 @@
   homepage_banner_text_main: Code.org y el College Board forman una alianza para mejorar
     la diversidad en Ciencias de la computación.
   homepage_banner_text_link: Aprende más
+  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
+    tools used in our new high school CS Principles course.'
+  homepage_banner_privacy_link: Aprende más
   homepage_slot_text_title_hoc: Hora del código
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -1226,6 +1229,3 @@
     Usted no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'>
     haga clic aquí</a> para aprender cómo activar HTTPS para Code.org.
   compatibility_https_hide_this_warning: Ocultar esta advertencia
-  homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
-    tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Learn more

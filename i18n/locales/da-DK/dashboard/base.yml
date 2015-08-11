@@ -349,6 +349,7 @@ da:
     local_school: lokal skole
     online: online
     see_details: Se detaljer
+    view_course: View Course
     prize_info: 'Præmier for deltagelse (kun amerikanske offentlige skolelærere): op til $1.000 i klasseværelset belønninger.'
     tryfirst: 'Eller du kan prøve det først, og tilmeld dig bagefter:'
     trynow: Prøv nu
@@ -363,6 +364,7 @@ da:
     heading_legacy: '<h2>Vores generelle kursus for</h2><h1>Alle aldre</h1>'
     your_gallery: Galleri
     no_primary_course: Prøv et kursusforløb på Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Udskriv certifikat
   gender:
     male: Mand
@@ -396,10 +398,6 @@ da:
     autoplay_option: Automatisk afspil videoer
     download: Hent Video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Skjul denne advarsel
     working:
       header: Vi arbejder på at understøtte din browser.
       message: "Code.org bruger moderne web-teknologi. Dette gør stedet hurtigere at bruge. Din browser understøtter ikke alle de funktioner, der kræves, og du kan opleve problemer med denne del af webstedet. Please hjælp os ved at <a href='%{report_issue_url}'> rapportere eventuelle problemer, du finder</a>. Du kan også <a href='%{supported_browsers_url}'> opgradere din browser til en understøttet version</a>."

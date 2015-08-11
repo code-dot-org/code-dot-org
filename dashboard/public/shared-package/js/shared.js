@@ -209,7 +209,6 @@ var base = {
     });
   },
 
-
   /**
    * Copy to the destination collection, since we expect the destination
    * to be empty. A true rest API would replace the destination collection:
@@ -222,6 +221,27 @@ var base = {
     $.ajax({
       url: this.api_base_url + "/" + dest + '?src=' + src,
       type: "put"
+    }).done(function(data, text) {
+      callback(null, data);
+    }).fail(function(request, status, error) {
+      var err = new Error('status: ' + status + '; error: ' + error);
+      callback(err, false);
+    });
+  },
+
+  /**
+   * Change the contents of an asset or source file.
+   * @param {number} id - The collection identifier.
+   * @param {String} value - The new file contents.
+   * @param {String} filename - The name of the file to create or update.
+   * @param {NodeStyleCallback} callback - Expected result is the new collection
+   *        object.
+   */
+  put: function(id, value, filename, callback) {
+    $.ajax({
+      url: this.api_base_url + "/" + id + "/" + filename,
+      type: "put",
+      data: value
     }).done(function(data, text) {
       callback(null, data);
     }).fail(function(request, status, error) {
@@ -245,6 +265,172 @@ module.exports = {
 };
 
 },{}],3:[function(require,module,exports){
+// TODO (brent) - way too many globals
+// TODO (brent) - I wonder if we should sub-namespace dashboard
+/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
+
+var timing = require('./timing');
+var chrome34Fix = require('./chrome34Fix');
+var loadApp = require('./loadApp');
+var project = require('./project');
+
+window.apps = {
+  // Loads the dependencies for the current app based on values in `appOptions`.
+  // This function takes a callback which is called once dependencies are ready.
+  load: loadApp,
+  // Legacy Blockly initialization that was moved here from _blockly.html.haml.
+  // Modifies `appOptions` with some default values in `baseOptions`.
+  // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
+  setupBlockly: function () {
+
+    if (!window.dashboard) {
+      throw new Error('Assume existence of window.dashboard');
+    }
+    dashboard.project = project;
+
+    timing.startTiming('Puzzle', script_path, '');
+
+    // Sets up default options and initializes blockly
+    var baseOptions = {
+      containerId: 'codeApp',
+      Dialog: Dialog,
+      cdoSounds: CDOSounds,
+      position: {blockYCoordinateInterval: 25},
+      onInitialize: function() {
+        dashboard.createCallouts(this.callouts);
+        if (window.dashboard.isChrome34) {
+          chrome34Fix.fixup();
+        }
+        if (appOptions.level.projectTemplateLevelName) {
+          $('#clear-puzzle-header').hide();
+        }
+        $(document).trigger('appInitialized');
+      },
+      onAttempt: function(report) {
+        if (appOptions.level.isProjectLevel) {
+          return;
+        }
+        if (appOptions.channel) {
+          // Don't send the levelSource or image to Dashboard for channel-backed levels.
+          // (The levelSource is already stored in the channels API.)
+          delete report.program;
+          delete report.image;
+        }
+        report.fallbackResponse = appOptions.report.fallback_response;
+        report.callback = appOptions.report.callback;
+        // Track puzzle attempt event
+        trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
+        if (report.pass) {
+          trackEvent('Puzzle', 'Success', script_path, report.attempt);
+          timing.stopTiming('Puzzle', script_path, '');
+        }
+        trackEvent('Activity', 'Lines of Code', script_path, report.lines);
+        sendReport(report);
+      },
+      onResetPressed: function() {
+        cancelReport();
+      },
+      onContinue: function() {
+        if (lastServerResponse.videoInfo) {
+          showVideoDialog(lastServerResponse.videoInfo);
+        } else if (lastServerResponse.nextRedirect) {
+          window.location.href = lastServerResponse.nextRedirect;
+        }
+      },
+      backToPreviousLevel: function() {
+        if (lastServerResponse.previousLevelRedirect) {
+          window.location.href = lastServerResponse.previousLevelRedirect;
+        }
+      },
+      showInstructionsWrapper: function(showInstructions) {
+        // Always skip all pre-level popups on share levels or when configured thus
+        if (this.share || appOptions.level.skipInstructionsPopup) {
+          return;
+        }
+
+        var hasVideo = !!appOptions.autoplayVideo;
+        var hasInstructions = !!(appOptions.level.instructions ||
+        appOptions.level.aniGifURL);
+
+        if (hasVideo) {
+          showVideoDialog(appOptions.autoplayVideo);
+          if (hasInstructions) {
+            $('.video-modal').on('hidden.bs.modal', function() {
+              showInstructions();
+            });
+          }
+        } else if (hasInstructions) {
+          showInstructions();
+        }
+      }
+    };
+    $.extend(true, appOptions, baseOptions);
+
+    // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
+    // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
+    (function fixUpFunctions(node) {
+      if (typeof node !== 'object') {
+        return;
+      }
+      for (var i in node) {
+        if (/^fn_/.test(i)) {
+          try {
+            /* jshint ignore:start */
+            node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
+            /* jshint ignore:end */
+          } catch (e) {
+          }
+        } else {
+          fixUpFunctions(node[i]);
+        }
+      }
+    })(appOptions.level);
+  },
+
+  // Set up projects, skipping blockly-specific steps. Designed for use
+  // by levels of type "external".
+  setupProjectsExternal: function() {
+    if (!window.dashboard) {
+      throw new Error('Assume existence of window.dashboard');
+    }
+
+    dashboard.project = project;
+  },
+
+  // Define blockly/droplet-specific callbacks for projects to access
+  // level source, HTML and headers.
+  // TODO(dave): Extract blockly-specific handler code into _blockly.html.haml.
+  sourceHandler: {
+    setInitialLevelHtml: function (levelHtml) {
+      appOptions.level.levelHtml = levelHtml;
+    },
+    getLevelHtml: function () {
+      return window.Applab && Applab.getHtml();
+    },
+    setInitialLevelSource: function (levelSource) {
+      appOptions.level.lastAttempt = levelSource;
+    },
+    getLevelSource: function (currentLevelSource) {
+      var source;
+      if (window.Blockly) {
+        // If we're readOnly, source hasn't changed at all
+        source = Blockly.readOnly ? currentLevelSource :
+          Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+      } else {
+        source = window.Applab && Applab.getCode();
+      }
+      return source;
+    },
+  },
+
+  // Initialize the Blockly or Droplet app.
+  init: function () {
+    dashboard.project.init(window.apps.sourceHandler);
+    window[appOptions.app + 'Main'](appOptions);
+  }
+};
+
+},{"./chrome34Fix":1,"./loadApp":4,"./project":5,"./timing":6}],4:[function(require,module,exports){
 /* global dashboard, appOptions, $ */
 
 // Attempts to lookup the name in the digest hash, or returns the name if not found.
@@ -313,7 +499,7 @@ module.exports = function (callback) {
       .then(callback);
 };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /* global dashboard, appOptions, $, trackEvent */
 
 // Attempt to save projects every 30 seconds
@@ -321,7 +507,23 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
+var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
+
+// Name of the packed source file
+var SOURCE_FILE = 'main.json';
+
+function packSourceFile() {
+  return JSON.stringify({
+    source: current.levelSource,
+    html: current.levelHtml
+  });
+}
+
+function unpackSourceFile(data) {
+  current.levelSource = data.source;
+  current.html = data.html;
+}
 
 var events = {
   // Fired when run state changes or we enter/exit design mode
@@ -359,6 +561,7 @@ var PathPart = {
  * @property {string} level Path where this particular app type is hosted
  */
 var current;
+var currentSourceVersionId;
 var isEditing = false;
 
 var projects = module.exports = {
@@ -534,7 +737,7 @@ var projects = module.exports = {
    * callback function was provided.
    * @param {string?} source Optional source to be provided, saving us another
    *   call to sourceHandler.getLevelSource
-   * @param {function} callback Fucntion to be called after saving
+   * @param {function} callback Function to be called after saving
    */
   save: function(source, callback) {
     if (arguments.length < 2) {
@@ -550,11 +753,17 @@ var projects = module.exports = {
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
+      current.migratedToS3 = true;
       channels.update(channelId, current, function (err, data) {
         this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
+        var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+        sources.put(channelId, packSourceFile(), filename, function (err, response) {
+          currentSourceVersionId = response.versionId;
+          executeCallback(callback, data);
+        }.bind(this));
       }.bind(this));
     } else {
+      // TODO: remove once the server is providing the channel ID (/c/ remix uses `copy`)
       channels.create(current, function (err, data) {
         this.updateCurrentData_(err, data, true);
         executeCallback(callback, data);
@@ -696,11 +905,12 @@ var projects = module.exports = {
             location.href = location.pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
-            current = data;
-            if (current.isOwner && pathInfo.action === 'view') {
-              isEditing = true;
-            }
-            deferred.resolve();
+            fetchSource(data, function () {
+              if (current.isOwner && pathInfo.action === 'view') {
+                isEditing = true;
+              }
+              deferred.resolve();
+            });
           }
         });
         return deferred;
@@ -714,9 +924,10 @@ var projects = module.exports = {
         if (err) {
           deferred.reject();
         } else {
-          current = data;
-          projects.showProjectLevelHeader();
-          deferred.resolve();
+          fetchSource(data, function () {
+            projects.showProjectLevelHeader();
+            deferred.resolve();
+          });
         }
       });
       return deferred;
@@ -731,6 +942,18 @@ var projects = module.exports = {
     return pathName;
   }
 };
+
+function fetchSource(data, callback) {
+  current = data;
+  if (data.migratedToS3) {
+    sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
+      unpackSourceFile(data);
+      callback();
+    });
+  } else {
+    callback();
+  }
+}
 
 /**
  * Only execute the given argument if it is a function.
@@ -816,7 +1039,7 @@ function parsePath() {
   };
 }
 
-},{"./clientApi":2}],5:[function(require,module,exports){
+},{"./clientApi":2}],6:[function(require,module,exports){
 /* global ga */
 
 var userTimings = {};
@@ -836,170 +1059,4 @@ module.exports = {
   }
 };
 
-},{}],6:[function(require,module,exports){
-// TODO (brent) - way too many globals
-// TODO (brent) - I wonder if we should sub-namespace dashboard
-/* global script_path, Dialog, CDOSounds, dashboard, appOptions, $, trackEvent, Applab, Blockly, sendReport, cancelReport, lastServerResponse, showVideoDialog, ga, digestManifest*/
-
-var timing = require('./timing');
-var chrome34Fix = require('./chrome34Fix');
-var loadApp = require('./loadApp');
-var project = require('./project');
-
-window.apps = {
-  // Loads the dependencies for the current app based on values in `appOptions`.
-  // This function takes a callback which is called once dependencies are ready.
-  load: loadApp,
-  // Legacy Blockly initialization that was moved here from _blockly.html.haml.
-  // Modifies `appOptions` with some default values in `baseOptions`.
-  // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
-  setupBlockly: function () {
-
-    if (!window.dashboard) {
-      throw new Error('Assume existence of window.dashboard');
-    }
-    dashboard.project = project;
-
-    timing.startTiming('Puzzle', script_path, '');
-
-    // Sets up default options and initializes blockly
-    var baseOptions = {
-      containerId: 'codeApp',
-      Dialog: Dialog,
-      cdoSounds: CDOSounds,
-      position: {blockYCoordinateInterval: 25},
-      onInitialize: function() {
-        dashboard.createCallouts(this.callouts);
-        if (window.dashboard.isChrome34) {
-          chrome34Fix.fixup();
-        }
-        if (appOptions.level.projectTemplateLevelName) {
-          $('#clear-puzzle-header').hide();
-        }
-        $(document).trigger('appInitialized');
-      },
-      onAttempt: function(report) {
-        if (appOptions.level.isProjectLevel) {
-          return;
-        }
-        if (appOptions.channel) {
-          // Don't send the levelSource or image to Dashboard for channel-backed levels.
-          // (The levelSource is already stored in the channels API.)
-          delete report.program;
-          delete report.image;
-        }
-        report.fallbackResponse = appOptions.report.fallback_response;
-        report.callback = appOptions.report.callback;
-        // Track puzzle attempt event
-        trackEvent('Puzzle', 'Attempt', script_path, report.pass ? 1 : 0);
-        if (report.pass) {
-          trackEvent('Puzzle', 'Success', script_path, report.attempt);
-          timing.stopTiming('Puzzle', script_path, '');
-        }
-        trackEvent('Activity', 'Lines of Code', script_path, report.lines);
-        sendReport(report);
-      },
-      onResetPressed: function() {
-        cancelReport();
-      },
-      onContinue: function() {
-        if (lastServerResponse.videoInfo) {
-          showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.nextRedirect) {
-          window.location.href = lastServerResponse.nextRedirect;
-        }
-      },
-      backToPreviousLevel: function() {
-        if (lastServerResponse.previousLevelRedirect) {
-          window.location.href = lastServerResponse.previousLevelRedirect;
-        }
-      },
-      showInstructionsWrapper: function(showInstructions) {
-        // Always skip all pre-level popups on share levels or when configured thus
-        if (this.share || appOptions.level.skipInstructionsPopup) {
-          return;
-        }
-
-        var hasVideo = !!appOptions.autoplayVideo;
-        var hasInstructions = !!(appOptions.level.instructions ||
-        appOptions.level.aniGifURL);
-
-        if (hasVideo) {
-          showVideoDialog(appOptions.autoplayVideo);
-          if (hasInstructions) {
-            $('.video-modal').on('hidden.bs.modal', function() {
-              showInstructions();
-            });
-          }
-        } else if (hasInstructions) {
-          showInstructions();
-        }
-      }
-    };
-    $.extend(true, appOptions, baseOptions);
-
-    // Turn string values into functions for keys that begin with 'fn_' (JSON can't contain function definitions)
-    // E.g. { fn_example: 'function () { return; }' } becomes { example: function () { return; } }
-    (function fixUpFunctions(node) {
-      if (typeof node !== 'object') {
-        return;
-      }
-      for (var i in node) {
-        if (/^fn_/.test(i)) {
-          try {
-            /* jshint ignore:start */
-            node[i.replace(/^fn_/, '')] = eval('(' + node[i] + ')');
-            /* jshint ignore:end */
-          } catch (e) {
-          }
-        } else {
-          fixUpFunctions(node[i]);
-        }
-      }
-    })(appOptions.level);
-  },
-
-  // Set up projects, skipping blockly-specific steps. Designed for use
-  // by levels of type "external".
-  setupProjectsExternal: function() {
-    if (!window.dashboard) {
-      throw new Error('Assume existence of window.dashboard');
-    }
-
-    dashboard.project = project;
-  },
-
-  // Define blockly/droplet-specific callbacks for projects to access
-  // level source, HTML and headers.
-  // TODO(dave): Extract blockly-specific handler code into _blockly.html.haml.
-  sourceHandler: {
-    setInitialLevelHtml: function (levelHtml) {
-      appOptions.level.levelHtml = levelHtml;
-    },
-    getLevelHtml: function () {
-      return window.Applab && Applab.getHtml();
-    },
-    setInitialLevelSource: function (levelSource) {
-      appOptions.level.lastAttempt = levelSource;
-    },
-    getLevelSource: function (currentLevelSource) {
-      var source;
-      if (window.Blockly) {
-        // If we're readOnly, source hasn't changed at all
-        source = Blockly.readOnly ? currentLevelSource :
-          Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-      } else {
-        source = window.Applab && Applab.getCode();
-      }
-      return source;
-    },
-  },
-
-  // Initialize the Blockly or Droplet app.
-  init: function () {
-    dashboard.project.init(window.apps.sourceHandler);
-    window[appOptions.app + 'Main'](appOptions);
-  }
-};
-
-},{"./chrome34Fix":1,"./loadApp":3,"./project":4,"./timing":5}]},{},[6]);
+},{}]},{},[3]);

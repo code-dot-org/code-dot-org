@@ -146,7 +146,7 @@ vi:
           Play Lab: Phòng trò chơi
           description_short: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng thí nghiệm trò chơi!
         artist:
-          title: Nghệ sĩ
+          title: Họa sĩ
           description: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
           Artist: Nghệ sĩ
           description_short: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
@@ -206,7 +206,7 @@ vi:
           "Bee: Debugging": 'Ong: sửa lỗi'
         usability:
           Intro: Giới thiệu
-          Variables and For Loops: Biến số cho vòng lặp
+          Variables and For Loops: Biến số và vòng lặp
           Functions and Functions with Parameters: Chức năng và chức năng với tham số
           title: Usability Testing
           description_short: ""
@@ -229,15 +229,15 @@ vi:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Trò chơi điện tử và trục tọa độ'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
+          "Eval: Strings and Images": Văn bản và hình ảnh
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
           "Eval: Writing Contracts": Writing Contracts
           "Calc: Defining Variables": Defining Variables and Substitution
           "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
           "Eval: Defining Functions": Composite Functions
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Unplugged: Các bước thiết kế'
           "Play Lab: Defining Functions": Rocket Height
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
@@ -245,7 +245,7 @@ vi:
           "Eval: Boolean Operators": Boolean Operators
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Điều kiện và đường chức năng'
           "Eval: Conditionals": Điều kiện
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
@@ -260,9 +260,9 @@ vi:
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Các khối đánh giá
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Các biến xác định
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
@@ -289,17 +289,30 @@ vi:
           "Programming Concept: Functions": 'Programming Concept: Functions'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: bộ mô phỏng internet
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
-          Internet Simulator: Internet Simulator
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Internet Simulator: bộ mô phỏng internet
+          Unit 1: Bài 1
+          Unit 2: Bài 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
@@ -316,7 +329,7 @@ vi:
           title: 20 giờ giới thiệu khóa học
           description_audience: Lứa tuổi 10 + (sau khóa học 3)
           description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: Khóa học 20 giờ này bao gồm khoa học máy tính và các khái niệm lập trình cốt lõi trong các khóa học từ 2-4.
           Introduction to Computer Science: Giới thiệu về khoa học máy tính
           The Maze: mê cung
           Computational Thinking: suy nghĩ máy móc
@@ -345,7 +358,7 @@ vi:
           Applab: Applab
           The Artist: nghệ sĩ
           Play Lab: Phòng trò chơi
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: Phòng thí nghiệm giải trí 2015
         events:
           title: Các sự kiện
           description: Các sự kiện
@@ -357,23 +370,23 @@ vi:
         flappy:
           title: Lập trình Flappy
           description: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút? Hãy thử lớp học lập trình Flappy của chúng tôi!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Viết chương trình trò chơi Flappy chưa đến 10 phút!
           Flappy Code: Lập trình Flappy
         jigsaw:
           title: Ghép hình
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Thử các trò chơi xếp hình của chúng tôi
+          description_short: Thử các trò chơi xếp hình của chúng tôi
           Jigsaw: Ghép hình
         step:
           title: Bước/ từng bước thực hiện
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Hướng dẫn các bước
+          description_short: Hướng dẫn các bước
           Step: Bước/ từng bước thực hiện
         Hour of Code:
-          title: Một giờ Lập trình 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          title: Giờ Lập trình 2013
+          description: thử những căn bản của khoa học máy tính với các đặc tính từ Angry bird và Plants vs zombies!
           description_short: Thử các nền tảng của khoa học máy tính với các đặc tính dãy kí tự vui nhộn!
-          Hour of Code 2013: Một giờ Lập trình 2013
+          Hour of Code 2013: Giờ Lập trình 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -458,29 +471,29 @@ vi:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
+          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Trò chơi điện tử và trục tọa độ'
+          "Calc: Evaluation Blocks": 'Calc: các khối đánh giá'
+          "Eval: Strings and Images": 'Eval: các xâu và các ảnh'
           "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
+          "Eval: Writing Contracts": 'Eval: các hợp đồng văn bản'
+          "Calc: Defining Variables": 'Calc: xác định các biến'
           "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
           "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Unplugged: Các bước thiết kế'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
           "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Eval: Boolean Operators": 'Eval: toán Boolean'
           "Play Lab: Booleans": 'Play Lab: Booleans'
           "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Điều kiện và đường chức năng'
+          "Eval: Conditionals": 'Eval: các điều kiện'
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Contracts: Contracts
+          Evaluation Blocks: Các khối đánh giá
+          Strings and Images: Văn bản và hình ảnh
+          Contracts: hợp đồng
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
@@ -501,8 +514,8 @@ vi:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Các khối đánh giá
+          Strings and Images: Văn bản và hình ảnh
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
@@ -623,6 +636,9 @@ vi:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -631,9 +647,9 @@ vi:
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Các khối đánh giá
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: Văn bản và hình ảnh
           The Design Recipe: The Design Recipe
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -681,7 +697,7 @@ vi:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Các khối đánh giá
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -693,7 +709,7 @@ vi:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Các khối đánh giá
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -815,9 +831,9 @@ vi:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          Evaluation Blocks: Các khối đánh giá
+          Strings and Images: Văn bản và hình ảnh
+          Defining Variables: Các biến xác định
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           The Design Recipe: The Design Recipe
@@ -830,7 +846,7 @@ vi:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
-          Free Play: Free Play
+          Free Play: chơi miễn phí
         allthethings:
           Jigsaw: Ghép hình
           Maze: Mê cung
@@ -864,14 +880,14 @@ vi:
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Các khối đánh giá
+          Strings and Images: Văn bản và hình ảnh
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Các biến xác định
+          Defining Functions: xác định các hàm số
           Rocket-Height: Rocket-Height
           Booleans: Booleans
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Eval: Conditionals": 'Eval: các điều kiện'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         cspfacilitator:
@@ -880,20 +896,20 @@ vi:
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: bộ mô phỏng internet
+          App Lab: Phòng thí nghiệm ứng dụng
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
-          App Lab: App Lab
+          Internet Simulator: bộ mô phỏng internet
+          App Lab: Phòng thí nghiệm ứng dụng
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -915,7 +931,7 @@ vi:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -968,26 +984,26 @@ vi:
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Các khối đánh giá
+          Strings and Images: Văn bản và hình ảnh
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: Các biến xác định
+          Defining Functions: xác định các hàm số
           Rocket-Height: Rocket-Height
           Booleans: Booleans
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Eval: Conditionals": 'Eval: các điều kiện'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
           Wrap-Up: Tổng hợp
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1004,7 +1020,7 @@ vi:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1020,7 +1036,7 @@ vi:
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1034,7 +1050,7 @@ vi:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1053,7 +1069,7 @@ vi:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: hoan nghênh!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?

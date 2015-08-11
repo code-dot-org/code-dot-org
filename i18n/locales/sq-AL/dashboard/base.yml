@@ -351,6 +351,7 @@ sq:
     local_school: shkolla lokale
     online: online
     see_details: Shiko detajet
+    view_course: View Course
     prize_info: 'Çmimet për pjesmarrje ( vetëm mësues të shkollave publike në U.S.): Mbi 1000$ në shpërblimet e klasës.'
     tryfirst: 'Ose, mund të përpiqesh si fillim dhe të rregjistrohesh më vonë:'
     trynow: Provo tani
@@ -365,6 +366,7 @@ sq:
     heading_legacy: '<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>'
     your_gallery: Galeria
     no_primary_course: Bëj një kurs ne Studion e Kodimit
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Printo Çertifikatën
   gender:
     male: Mashkull
@@ -398,10 +400,6 @@ sq:
     autoplay_option: Videot Autoplay
     download: Shkarko Video
   compatability:
-    https:
-      header: Ju lutem aktivizoni HTTPS per Code.org.
-      message: "Per te rritur sigurine, ne po kalojme ne HTTPS ne %{https_date}. Pas kesaj te dhene nuk do te arrish te kesh akese ne Code.org.  <a href='%{it_requirements_url}'> Kliko ketu </a>  per te mesuar si te mundesosh HTTPS per Code.org."
-      hide_this_warning: Fshih këtë paralajmërim
     working:
       header: Ne po punojmë në suportin e browserit tuaj.
       message: "Code.org përdor teknologji web-i bashkëkohore. Kjo e bën faqen të lehtë në përdorim. Browseri juaj nuk i suporton të gjitha karakteristikat e kërkuara dhe ju mund të keni probleme ndërkohë që jeni duke përdorur këtë pjesë faqeje. Ju lutem na ndihmoni duke<a href='%{report_issue_url}'>raportuar ndonjë problem që gjeni</a>. Ju, gjithashtu<a href='%{supported_browsers_url}'>mund të përmirësoni browserin tuaj në një version që e suporton</a>."

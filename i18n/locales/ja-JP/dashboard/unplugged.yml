@@ -80,11 +80,11 @@ ja:
         video: Unplug11
       UnplugHappyMaps:
         title: ハッピーマップ
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        title: 動かせ！動かせ！
+        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 現実のアルゴリズム：種を植えましょう
@@ -148,7 +148,7 @@ ja:
         desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
         video: C3_dice_race
       Internet:
-        title: Internet
+        title: インターネット
         desc: Students send messages representing various Internet transmission methods using pieces of paper.
         video: C3_internet
       Crowdsourcing:

@@ -55,7 +55,7 @@ zh-TW:
   share_achievement: 分享你的成就
   beyond_hour_message: "繼續<a href='http://studio.code.org'>其它的課程</a>，或點擊“<a href='/learn/beyond'>學習超過一小時</a>”查閱其它學習選項。"
   leaderboards_for_hoc: 一小時的程式設計課程排行榜。
-  support_url: HTTP://support.code.org/
+  support_url: http://support.code.org
   country: 國家
   city: 城市
   gender: 性別
@@ -157,6 +157,8 @@ zh-TW:
   homepage_signpetition_dropdown: '我同意 &#x25BE;'
   homepage_banner_text_main: Code.org 和美國大學理事會形成一個以提高在電腦科學中的多樣性為宗旨的聯盟。
   homepage_banner_text_link: 瞭解更多資訊
+  homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
+  homepage_banner_privacy_link: 瞭解更多資訊
   homepage_slot_text_title_hoc: 一小時的程式設計課程
   homepage_slot_text_blurb_hoc: 任何人都可以學習。從今天開始
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程

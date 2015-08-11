@@ -37,6 +37,14 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get new of all types" do
+    Level.descendants.each do |klass|
+      get :new, type: klass.name
+
+      assert_response :success
+    end
+  end
+
   test "should alphanumeric order custom levels on new" do
     Level.where(user_id: @user.id).map(&:destroy)
     level_1 = create(:level, user: @user, name: "BBBB")
@@ -247,11 +255,21 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
+    level = Level.find_by_name 'Test Demo Level'
+    get :edit, id: level.id
+
+    assert_equal 'config/scripts/test_demo_level.external', assigns(:level).filename
+    assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
+  end
+
+  test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
+    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     level = Level.find_by_name 'Test External Markdown'
     get :edit, id: level.id
 
     assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
-    assert_equal "name 'Test External Markdown'", assigns(:level).dsl_text.split("\n").first
+    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
+    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
   end
 
   test "should update level" do

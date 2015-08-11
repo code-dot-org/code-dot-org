@@ -24,13 +24,13 @@ pt:
           "Bee 2: Loops": 'Abelha 2: Ciclos'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: Flappy bird para pré-escolar
-          Flappy non blockly: Flappy bird sem blocos
+          Flappy non blockly: Flappy Bird sem blocos
           title: Curso 1
-          Artist 2: O Artista 2
+          Artist 2: Artista 2
           Happy Maps: Mapas felizes
           Move it, Move it: Criando caminhos
-          "Real-life Algorithms: Plant a Seed": 'Algoritmos da vida real: plante uma semente'
-          Building a Foundation: Criando uma base
+          "Real-life Algorithms: Plant a Seed": 'Algoritmos da Vida Real: Plante uma Semente'
+          Building a Foundation: Criar uma base
           Getting Loopy: Repetindo
           The Big Event: O Grande Evento
           Going Places Safely: Ir a Locais de um modo Seguro
@@ -40,29 +40,29 @@ pt:
           "Artist: Shapes": 'Artista: Formas'
           "Maze: Loops": 'Labirinto: Ciclos'
           "Bee: Loops": 'Abelha: Ciclos'
-          "Studio: Create a Story": 'Laboratório: Crie uma história'
-          "Artist: Loops": 'Artista: Laços'
+          "Studio: Create a Story": 'Laboratório do Jogo: Criar uma História'
+          "Artist: Loops": 'Artista: Ciclos'
           description_audience: Dos 4 aos 6 anos
-          description_short: O Curso 1 é destinado às crianças que estão aprendendo a ler.
+          description_short: Começar com o Curso 1, para os leitores principiantes.
         course2:
           The Maze: O Labirinto
           Suzi: Suzi
           The Artist: O Artista
           Artist Debugging: Depuração do Artista
           Bounce: saltar
-          "Studio: Create a Story": 'Laboratório: Crie uma história'
+          "Studio: Create a Story": 'Laboratório do Jogo: Criar uma História'
           Artist Loops: Laços do Artista
           Bee Conditionals: Condicionais da abelha
           Flappy: Flappy Bird
           title: Curso 2
           Bee Loops: Ciclos da abelha
-          Artist Functions: Funções do artista
+          Artist Functions: Funções do Artista
           The Artist Debugging: A depuração do artista
-          Bee Debugging: Depuração da abelha
-          Bee Functions: Funções da abelha
+          Bee Debugging: Depuração da Abelha
+          Bee Functions: Funções da Abelha
           Maze Loops: Ciclos do labirinto
           Graph Paper Programming: Programação de papel milimetrico
-          "Real-life Algorithms: Paper Planes": 'Algoritmos da vida real: aviões de papel'
+          "Real-life Algorithms: Paper Planes": 'Algoritmos da Vida Real: Aviões de Papel'
           Getting Loopy: Repetindo
           Relay programming: Programação por revezamento
           Conditionals: Condicionais
@@ -73,7 +73,7 @@ pt:
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
           "Maze: Loops": 'Labirinto: Ciclos'
-          "Artist: Loops": 'Artista: Laços'
+          "Artist: Loops": 'Artista: Ciclos'
           "Bee: Loops": 'Abelha: Ciclos'
           "Bee: Debugging": 'Abelha: Depuração'
           "Artist: Debugging": 'Artista: Depuração'
@@ -85,21 +85,21 @@ pt:
           description_short: O Curso 2 é destinado aos alunos que já sabem ler.
         course3:
           The Maze: O Labirinto
-          "Studio: Create a Story": 'Laboratório: Crie uma história'
+          "Studio: Create a Story": 'Laboratório do Jogo: Criar uma História'
           The Artist: O Artista
           title: Curso 3
-          Artist Functions: Funções do artista
+          Artist Functions: Funções do Artista
           Artist For Loops: Laços for do Artista
           Artist Nested Loops: Laços aninhados do artista
           Bee Conditionals: Condicionais da abelha
           Bee Nested Loops: Laços aninhados da abelha
-          Bee Debuggin: Depuração da abelha
-          Bee Debugging: Depuração da abelha
-          Bee Functions: Funções da abelha
-          Artist Functions with Params: Funções do artista com parâmetros
+          Bee Debuggin: Depuração da Abelha
+          Bee Debugging: Depuração da Abelha
+          Bee Functions: Funções da Abelha
+          Artist Functions with Params: Funções do Artista com Parâmetros
           Bounce: saltar
-          Maze Conditionals: Condicionais do labirinto
-          Artist Functions with Parameters: Funções do artista com parâmetros
+          Maze Conditionals: Condicionais de Labirinto
+          Artist Functions with Parameters: Funções do Artista com Parâmetros
           Computational Thinking: Pensamento computacional
           Functional Suncatchers: Caça-sóis funcionais
           Songwriting Parameters: Parâmetros de composição
@@ -109,7 +109,7 @@ pt:
           Digital Citizenship: Cidadania digital
           Farmer - While Loops: 'Agricultor - Ciclos “while”'
           description: O Curso 3 foi desenvolvido para estudantes que já fizeram o Curso 2. Os estudantes se aprofundarão nos tópicos de programação introduzidos nos cursos anteriores, buscando soluções flexíveis para problemas mais complexos. No final deste curso, os estudantes criam histórias e jogos interativos que podem compartilhar com qualquer pessoa. Este curso é recomendado para alunos de 4º-5º ano.
-          "Studio: Create a Game": 'Laboratório: Crie um jogo'
+          "Studio: Create a Game": 'Laboratório do Jogo: Criar Um jogo'
           Maze: Labirinto
           Artist: Artista
           "Artist: Functions": 'Artista: Funções'
@@ -122,15 +122,15 @@ pt:
           "Bee: Debugging": 'Abelha: Depuração'
           Maze2: Labirinto 2
           Artist2: Artista 2
-          "Artist: Functions2": 'Artista: Funções2'
-          "Bee: Functions2": 'Abelha: Funções2'
-          "Bee: Conditionals2": 'Abelha: Condicionais2'
-          "Maze: Conditionals2": 'Labirinto: Condicionais2'
+          "Artist: Functions2": 'Artista: Funções 2'
+          "Bee: Functions2": 'Abelha: Funções 2'
+          "Bee: Conditionals2": 'Abelha: Condicionais 2'
+          "Maze: Conditionals2": 'Labirinto: Condicionais 2'
           "Artist: Nested Loops2": 'Artista: Laços Aninhados2'
           "Farmer: While Loops2": 'Fazendeira: Laços Enquanto2'
           "Bee: Nested Loops2": 'Abelha: Laços Aninhados2'
-          "Bee: Debugging2": 'Abelha: Depuração2'
-          "Artist: Patterns": 'Artista: padrões'
+          "Bee: Debugging2": 'Abelha: Depuração 2'
+          "Artist: Patterns": 'Artista: Padrões'
           Songwriting: Composição
           description_audience: Dos 8 aos 18 anos
           description_short: O Curso 3 é uma continuação do Curso 2.
@@ -189,7 +189,7 @@ pt:
           Course 4 Prerequisite: Pré-requisitos do curso 4
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
-          "Artist: Loops": 'Artista: Laços'
+          "Artist: Loops": 'Artista: Ciclos'
           "Bee: Conditionals": 'Abelha: Condicionais'
           "Artist: Nested Loops": 'Artista: Laços Aninhados'
           "Farmer: While Loops": 'Fazendeira: Laços Enquanto'
@@ -221,15 +221,15 @@ pt:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Unplugged: Video Games and Coordinate Planes": 'Offline: video games e planos de coordenadas'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
+          "Eval: Strings and Images": Cadeias de caracteres e imagens
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
           "Eval: Writing Contracts": Writing Contracts
           "Calc: Defining Variables": Defining Variables and Substitution
           "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
           "Eval: Defining Functions": Composite Functions
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Offline: a receita de design'
           "Play Lab: Defining Functions": Rocket Height
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
@@ -237,7 +237,7 @@ pt:
           "Eval: Boolean Operators": Boolean Operators
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Unplugged: Conditionals and Piecewise Functions": 'Offline: condicionais e funções definidas por partes'
           "Eval: Conditionals": Condicionais
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
@@ -252,9 +252,9 @@ pt:
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blocos de cálculo
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: Definir variáveis
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: The Design Recipe
         K5PD:
@@ -292,6 +292,19 @@ pt:
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
@@ -308,7 +321,7 @@ pt:
           title: Curso de introdução acelerada ao CS
           description_audience: 10-18 anos de idade
           description: Este curso de 20 horas apresenta o informática de núcleo e conceitos de programação. O curso é projetado para uso em salas de aula para os graus K-8, mas é divertido de aprender em todos os tempos.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: Este curso de 20 horas aborda os conceitos fundamentais de ciência da computação e programação nos cursos de 2 a 4.
           Introduction to Computer Science: Introdução à Ciência Computacional
           The Maze: O Labirinto
           Computational Thinking: Pensamento computacional
@@ -349,21 +362,21 @@ pt:
         flappy:
           title: Flappy Bird
           description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Escreva seu próprio jogo no estilo Flappy Bird em menos de 10 minutos!
           Flappy Code: Flappy Bird
         jigsaw:
           title: Quebra-cabeça
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Experimente nosso tutorial sobre quebra-cabeça
+          description_short: Experimente nosso tutorial sobre quebra-cabeça
           Jigsaw: Quebra-cabeça
         step:
           title: Avançar
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Etapa do tutorial
+          description_short: Etapa do tutorial
           Step: Avançar
         Hour of Code:
           title: Hora de Código 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: Conheça as noções básicas de ciência da computação com personagens de Angry Birds e Plants vs. Zombies!
           description_short: Conheça os conceitos básicos da ciência da computação com a ajuda de vários personagens divertidos!
           Hour of Code 2013: Hora de Código 2013
         Code Studio Puzzle Challenge:
@@ -403,7 +416,7 @@ pt:
           Course 4 Prerequisite: Pré-requisitos do curso 4
           "Maze: Sequence": 'Labirinto: Sequência'
           "Artist: Sequence": 'Artista: Sequência'
-          "Artist: Loops": 'Artista: Laços'
+          "Artist: Loops": 'Artista: Ciclos'
           "Bee: Conditionals": 'Abelha: Condicionais'
           "Artist: Nested Loops": 'Artista: Laços Aninhados'
           "Farmer: While Loops": 'Fazendeira: Laços Enquanto'
@@ -448,28 +461,28 @@ pt:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
-          "Calc: Defining Variables": 'Calc: Defining Variables'
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Unplugged: Video Games and Coordinate Planes": 'Offline: video games e planos de coordenadas'
+          "Calc: Evaluation Blocks": 'Calc: Blocos de cálculo'
+          "Eval: Strings and Images": 'Eval: Strings e imagens'
+          "Unplugged: Contracts": 'Offline: contratos'
+          "Eval: Writing Contracts": 'Eval: Escrever contratos'
+          "Calc: Defining Variables": 'Cálculo: definir variáveis'
+          "Play Lab: Defining Variables (Big Game)": 'Laboratório: Definição de variáveis (O Grande Jogo)'
           "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 'Offline: a receita de design'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          "Play Lab: Booleans": 'Play Lab: Booleans'
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          "Play Lab: Animation (Big Game)": 'Laboratório: Animação (O Grande Jogo)'
+          "Unplugged: Booleans": 'Offline: booleanos'
+          "Eval: Boolean Operators": 'Eval: Operadores booleanos'
+          "Play Lab: Booleans": 'Laboratório: booleanos'
+          "Play Lab: Boolean (Big Game)": 'Laboratório: Booleano (O Grande Jogo)'
+          "Unplugged: Conditionals and Piecewise Functions": 'Offline: condicionais e funções definidas por partes'
+          "Eval: Conditionals": 'Eval: Condicionais'
+          "Unplugged: Collision Detection and the Distance Formula": 'Offline: deteção de colisão e fórmula da distância'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratório: Deteção de colisão (O Grande Jogo)'
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Cadeias de caracteres e imagens
           Contracts: Contratos
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
@@ -491,8 +504,8 @@ pt:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Cadeias de caracteres e imagens
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
@@ -500,7 +513,7 @@ pt:
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          "Play Lab: Collision Detection (Big Game)": 'Laboratório: Deteção de colisão (O Grande Jogo)'
           Your Game - Player Movement: 'Your Game - Player Movement'
           Your Game - Collision Detection: 'Your Game - Collision Detection'
         text-compression:
@@ -613,6 +626,9 @@ pt:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -621,9 +637,9 @@ pt:
           Course Overview: Visão geral do curso
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blocos de cálculo
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: Cadeias de caracteres e imagens
           The Design Recipe: The Design Recipe
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -671,7 +687,7 @@ pt:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blocos de cálculo
           logo_image: nextech_logo.png
           Course Overview: Visão geral do curso
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -683,7 +699,7 @@ pt:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: Blocos de cálculo
           logo_image: izone_logo.png
           Course Overview: Visão geral do curso
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -735,8 +751,8 @@ pt:
           new stage: nova fase
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: combinado de estudos de verão'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -803,11 +819,11 @@ pt:
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
-          Defining Variables: Defining Variables
+          description: 'Fase 2 Online: combinado de estudos de verão'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Cadeias de caracteres e imagens
+          Defining Variables: Definir variáveis
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           The Design Recipe: The Design Recipe
@@ -849,19 +865,19 @@ pt:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: combinado de estudos de verão'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
           Course Overview: Visão geral do curso
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Cadeias de caracteres e imagens
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
+          Defining Variables: Definir variáveis
           Defining Functions: Definir funções
           Rocket-Height: Rocket-Height
           Booleans: Booleanos
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Eval: Conditionals": 'Eval: Condicionais'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         cspfacilitator:
@@ -903,8 +919,8 @@ pt:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: combinado de estudos de verão'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
           Welcome!: Olá!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -953,19 +969,19 @@ pt:
           Hour of Code: Hora de Código
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: combinado de estudos de verão'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
           Course Overview: Visão geral do curso
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Evaluation Blocks: Blocos de cálculo
+          Strings and Images: Cadeias de caracteres e imagens
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
+          Defining Variables: Definir variáveis
           Defining Functions: Definir funções
           Rocket-Height: Rocket-Height
           Booleans: Booleanos
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Eval: Conditionals": 'Eval: Condicionais'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
@@ -975,8 +991,8 @@ pt:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
+          description: 'Fase 2 Online: combinado de estudos de verão'
           Welcome!: Olá!
           Wrap-Up: Resumo
           Review StarLogo Nova: Review StarLogo Nova
@@ -992,8 +1008,8 @@ pt:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
+          description: 'Fase 2 Online: combinado de estudos de verão'
           Welcome!: Olá!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1012,8 +1028,8 @@ pt:
         sciencePD2b-iZone:
           Welcome!: Olá!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
+          description: 'Fase 2 Online: combinado de estudos de verão'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1022,8 +1038,8 @@ pt:
           Wrap-Up: Resumo
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
+          description: 'Fase 2 Online: combinado de estudos de verão'
           Welcome!: Olá!
           0: |
             Unit 1, Days 1-2
@@ -1041,8 +1057,8 @@ pt:
           Wrap-up: Sumário
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: combinado de estudos de verão'
+          description: 'Fase 2 Online: combinado de estudos de verão'
           Welcome!: Olá!
           0: |
             Unit 1, Days 1-2

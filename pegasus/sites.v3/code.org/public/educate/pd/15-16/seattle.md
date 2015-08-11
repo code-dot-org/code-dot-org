@@ -78,9 +78,18 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**Sept 26th Location**
 
-TBD
+[Talaris Conference Center](http://www.talarisconferencecenter.com/)
+<br />
+Cedar Room
+<br />
+4000 NE 41st Street
+<br />
+Seattle, WA 98105
+<br />
+
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's Exploring Computer Science event.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -106,9 +115,8 @@ More info coming soon!
 
 ### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Algebra course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
+Milestone Complete! 
+
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
 **Save the dates**
@@ -166,7 +174,7 @@ TBD
 
 Laptop
 <br/>
-ECS green journal and curriculum guide
+Curriculum guide
 <br/>
 Snacks
 <br/>
@@ -181,9 +189,8 @@ Water
 
 ### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the Code.org program and CS in Science course resources. It creates a space for participants to become familiar with the curriculum, the platform, and the tools that will be used in the course.
-</br>
-</br>
+Milestone Complete! 
+
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
 **Save the dates**
@@ -232,15 +239,24 @@ Semester 2: Saturday, February 20, 2016
 <br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**Sept 26th Location**
 
-TBD
+[Talaris Conference Center](http://www.talarisconferencecenter.com/)
+<br />
+Maple Room
+<br />
+4000 NE 41st Street
+<br />
+Seattle, WA 98105
+<br />
+
+Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000and let them know you are attending the Code.org CS in Science event.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
 Laptop
 <br/>
-ECS green journal and curriculum guide
+Curriculum guide
 <br/>
 Snacks
 <br/>

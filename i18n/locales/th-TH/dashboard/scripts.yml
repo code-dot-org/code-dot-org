@@ -17,7 +17,7 @@ th:
           "Maze: Debugging": 'เขาวงกต: Debugging'
           "Artist 1: Intro": 'ศิลปิน 1: Intro'
           Artists 2: ศิลปิน 2
-          Spelling Bee: Spelling ผึ้ง
+          Spelling Bee: การแข่งขันสะกดคำ
           Spelling Bee not blockly: Spelling ผึ้ง not blockly
           "Bee 1: Intro": 'ผึ้ง 1: แนะนำ'
           "Maze 2: Loops": 'เขาวงกต 2: ลูป'
@@ -81,7 +81,7 @@ th:
           "Artist: Sequence2": 'ศิลปิน: Sequence2'
           "Maze: Sequence2": 'เขาวงกต: Sequence2'
           "Artist: Nested Loops": 'ศิลปิน: Nested Loops'
-          description_audience: Ages 6-18
+          description_audience: อายุ 6-18 ปี
           description_short: คอร์ส 2 is designed for students who can read.
         course3:
           The Maze: เขาวงกต
@@ -104,7 +104,7 @@ th:
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
-          Internet: Internet
+          Internet: อินเทอร์เน็ต
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: 'Farmer - While Loops'
@@ -132,7 +132,7 @@ th:
           "Bee: Debugging2": 'ผึ้ง: Debugging2'
           "Artist: Patterns": 'ศิลปิน: Patterns'
           Songwriting: Songwriting
-          description_audience: Ages 8-18
+          description_audience: อายุ 8-18 ปี
           description_short: คอร์ส 3 is a follow-up to คอร์ส 2.
         playlab:
           title: Play Lab
@@ -181,7 +181,7 @@ th:
           Farmer Binary: Farmer Binary
           Maze and Bee: เขาวงกต and ผึ้ง
           Artist Binary: ศิลปิน Binary
-          description_audience: Ages 10-18
+          description_audience: อายุ 10-18 ปี
         Course4pre:
           title: คอร์ส 4 Prerequisite
           description_short: A brief rampup of concepts for students who have not taken คอร์ส 2 and 3.
@@ -197,14 +197,14 @@ th:
           "Artist: Functions": 'ศิลปิน: Functions'
           "Bee: Debugging": 'ผึ้ง: Debugging'
         usability:
-          Intro: Intro
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Intro: บทนำ
+          Variables and For Loops: ตัวแปรและ การวนรอบ
+          Functions and Functions with Parameters: ฟังก์ชันและฟังก์ชันกับพารามิเตอร์
           title: Usability Testing
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
           Variables: ตัวแปร
-          For Loops: For Loops
+          For Loops: การวนรอบ
           Binary: Binary
         potus:
           title: special
@@ -223,7 +223,7 @@ th:
           description_short: Learn Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
+          "Eval: Strings and Images": สายอักขระและรูปภาพ
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
           "Eval: Writing Contracts": Writing Contracts
           "Calc: Defining Variables": Defining Variables and Substitution
@@ -285,13 +285,26 @@ th:
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
           Internet Simulator: Internet Simulator
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Unit 1: หน่วยที่ 1
+          Unit 2: หน่วยที่ 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           "Unit 1: Sending Bits": 'Unit 1: Sending Bits'
           "Unit 2: Routing and DNS": 'Unit 2: Routing and DNS'
           Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Pixelation
           description: Create images with bits and bytes.
@@ -306,7 +319,7 @@ th:
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Accelerated Intro to CS คอร์ส
-          description_audience: Ages 10-18
+          description_audience: อายุ 10-18 ปี
           description: This 20-hour คอร์ส covers the core computer science and programming concepts in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส 2-4 for a more complete experience!
           description_short: This 20-hour คอร์ส covers the core computer science and programming concepts in คอร์ส 2-4.
           Introduction to Computer Science: แนะนำวิทยาการคอมพิวเตอร์เบื้องต้น
@@ -349,7 +362,7 @@ th:
         flappy:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: เขียนเกม Flappy ของตัวเองใน 10 นาที
           Flappy Code: Flappy Code
         jigsaw:
           title: Jigsaw
@@ -469,7 +482,7 @@ th:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: สายอักขระและรูปภาพ
           Contracts: Contracts
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
@@ -492,7 +505,7 @@ th:
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: สายอักขระและรูปภาพ
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
@@ -613,6 +626,9 @@ th:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -623,7 +639,7 @@ th:
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
+          Strings and Images: สายอักขระและรูปภาพ
           The Design Recipe: The Design Recipe
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -806,7 +822,7 @@ th:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: สายอักขระและรูปภาพ
           Defining Variables: Defining Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
@@ -820,7 +836,7 @@ th:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
-          Free Play: Free Play
+          Free Play: เล่นฟรี
         allthethings:
           Jigsaw: Jigsaw
           Maze: เขาวงกต
@@ -855,10 +871,10 @@ th:
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: สายอักขระและรูปภาพ
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Functions: กำหนดฟังก์ชัน
           Rocket-Height: Rocket-Height
           Booleans: Booleans
           "Eval: Conditionals": 'Eval: Conditionals'
@@ -874,12 +890,12 @@ th:
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internet Simulator
@@ -905,7 +921,7 @@ th:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -947,7 +963,7 @@ th:
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
+          title: ชั่วโมงของรหัส 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: ช่วงเวลาของ Code
@@ -959,10 +975,10 @@ th:
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: สายอักขระและรูปภาพ
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Functions: กำหนดฟังก์ชัน
           Rocket-Height: Rocket-Height
           Booleans: Booleans
           "Eval: Conditionals": 'Eval: Conditionals'
@@ -970,14 +986,14 @@ th:
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
           Wrap-Up: Wrap-Up
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -994,7 +1010,7 @@ th:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1010,7 +1026,7 @@ th:
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1024,7 +1040,7 @@ th:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1043,7 +1059,7 @@ th:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ยินดีต้อนรับ!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?

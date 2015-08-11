@@ -8,267 +8,203 @@
       2-3 Artist 11_instruction: 'შექმენით საზღვარი გაჩერების ნიშნისთვის რვაკუთხედის
         დახატვით, რომელსაც რვა გვერდი ექნება, თითო 100 პიქსელი სიგრძის. რამდენი გრადუსით
         მოგიწევთ მობრუნება? (მინიშნება: რას უდრის 360 გაყოფილი რვაზე?) '
-      2-3 Artist 12_instruction: |
-        Set the "repeat times" block so that it creates
-        a "circle" to finish the eyeball. If each movement turns right by one degree,
-        how many times do you need to repeat to complete the circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side\nis
-        100, but the half-finished wall is only 50. Complete the wall. \n"
+      2-3 Artist 12_instruction: დააყენეთ "გამეორების" ბლოკი ისე, რომ მან შექმნას
+        "წრე", რომელიც თვალს დაასრულებს. თუ ყოველი მოძრაობა ერთი გრადუსით მარჯვნივ
+        ბრუნვას შეესაბამება, რამდენჯერ უნდა გავიმეოროთ მოძრაობა სრული წრის შესრულებისთვის?
+        180? 360? 500?
+      2-3 Artist 2 new_instruction: 'ამ სახლს ნახევრად დასრულებული კედელი აქვს. ყოველი
+        გვერდის სიგრძეა 100, მაგრამ ნახევრად დასრულებული კედლის სიგრძეა 50. დაასრულეთ
+        კედელი. '
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
-      2-3 Artist 3.4_instruction: |
-        The jump block moves the artist without drawing.
-        Draw the dashed line by using both the jump and draw blocks.
-      2-3 Artist 3_instruction: |
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
-      2-3 Artist 3new_instruction: |
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. The width of the black hat is 50 pixels.
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
-      2-3 Artist 5_instruction: |
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: "Finish drawing the right half of the last window.\nEach
-        square window pane is 25 pixels wide. \n"
-      2-3 Artist 8_instruction: |
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall.
-      2-3 Artist 9_instruction: Finish this kite
-      2-3 Artist Assessment 1_instruction: |
-        Assessment: Finish drawing the last tooth,
-        25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |
-        Can you make this hat with a top length
-        of 100?
-      2-3 Artist Debugging 10_instruction: |
-        The direction pad on my game controller
-        is too narrow. Hint: Make it wider by 10 pixels
-      2-3 Artist Debugging 11_instruction: |
-        Help me finish my beautiful snowflake.
-        How many times do I need to "repeat" to finish it?
-      2-3 Artist Debugging 12_instruction: |
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
-      2-3 Artist Debugging 2_instruction: |
-        The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
-      2-3 Artist Debugging 3_instruction: |
-        My boat has a hole! Can you fix it by
-        changing the angle of the line? Hint: the last angle is off by 15 degrees.
-      2-3 Artist Debugging 4_instruction: |
-        What is the image that we're trying to
-        draw? Finish connecting the dots using the proper lines and angles.
-      2-3 Artist Debugging 5_instruction: |
-        The code for the leg and foot that you
-        see is wrong. Hint: The foot is too long, we may need to delete a step (pun
-        intended)
-      2-3 Artist Debugging 6_instruction: |
-        Looks like I'm sitting on a chair that’s
-        missing a leg. Edit blocks to draw the leg.
-      2-3 Artist Debugging 7_instruction: |
-        Looks like C in code is drawn backwards.
-        Can you make it look like a C?
-      2-3 Artist Debugging 8_instruction: |
-        My pinwheel is not finished. How many
-        times do I need to repeat to finish it?
-      2-3 Artist Debugging 9_instruction: |
-        The code for this stem is incorrect. Hint:
-        The angle is off by 60 degrees
-      2-3 Artist Debugging Assessment 1_instruction: |
-        This shape is too small. Can
-        you make it bigger? Hint: it should be 75 pixels longer on each side.
-      2-3 Artist Free Play_instruction: Free-play! Draw anything you'd like.
-      2-3 Artist Functions 1_instruction: |
-        Hello. Me zombie artist. Me love drawing!
-        Help me draw the square glasses.  Hint:  the bridge between the glasses is
-        25 pixels shorter than the square length.
-      2-3 Artist Functions 10_instruction: |
-        Here's two functions, one to draw a
-        big gear and one to draw a small gear. Use them to draw the inside of a machine!
-      2-3 Artist Functions 11.5_instruction: |
-        Here's that same "Draw a hexagon"
-        function. What happens if you only turn 60 degrees each time you loop?
-      2-3 Artist Functions 11_instruction: |
-        We've renamed the "draw a square"
-        function to "draw a hexagon," but it still only draws squares! Can you modify
-        the "draw a hexagon" function to draw a hexagon with 50 pixel sides, and
-        draw the image by using the function?
-      2-3 Artist Functions 12_instruction: "Functions are really great for drawing\ncomplex
-        things multiple times. Can you use the \"draw a flower\" function\nto fill
-        the rest of the planter box?(Hint: The plants are all separated by\n100 pixels
-        length)  \n"
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: |
-        Use the "repeat" block to draw these
-        3 squares.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
-      2-3 Artist Loops 10_instruction: |
-        What happens to the design when we make our
-        final step forward half as long?
-      2-3 Artist Loops 11_instruction: |
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
-      2-3 Artist Loops 2_instruction: |
-        Now use a repeat block to make the cell a
-        shell.
-      2-3 Artist Loops 4_instruction: |
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
-      2-3 Artist Loops 5_instruction: |
-        Now let's make a small change to the loop
-        and see how different our picture becomes.
-      2-3 Artist Loops 6_instruction: |
-        Add one more move and another turn inside
-        the loop and see how your design changes.
-      2-3 Artist Loops 7_instruction: |
-        We can use loops to make all kinds of polygons.  Can
-        you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: Let's put both elements inside a loop.
-      2-3 Artist Loops 9_instruction: "We're going to loop the same elements, but\nnow
-        we're going to add some distance between them.\r\nUse the same code as\nbefore,
-        but add a step forward at the end of the outer loop."
-      2-3 Artist Loops New 1_instruction: |
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |
-        Now let's connect a bunch of V's together,
-        drawing them in a loop.
-      2-3 Artist Loops New 11_instruction: |
-        This time let's draw it 24 times. Add
-        a left turn of 30 degrees to this code and put it all in a repeat block.
+      2-3 Artist 3.4_instruction: ახტომის ბლოკი მხატვარს დახატვის გარეშე ამოძრავებს.
+        დახატეთ წყვეტილი ხაზი ახტომისა და დახატვის ბლოკების გამოყენებით.
+      2-3 Artist 3_instruction: ეს ქუდის სიმაღლეა 100 პიქსელი. დახატეთ ქუდი, რომლის
+        სიმაღლეა 70 პიქსელით ნაკლები.
+      2-3 Artist 3new_instruction: წითელი ქუდის სიმაღლეა 100 პიქსელი. დაასრულეთ შავი
+        ქუდის ხატვა ისე, რომ ის 70 პიქსელით უფრო მნოკლე იყოს. შავი ქუდის სიგანეა 50
+        პიქსელი.
+      2-3 Artist 4_instruction: მომეხმარეთ ამ კატისთვის სახლის ბოლომდე დახატვაში.
+      2-3 Artist 5_instruction: ჩაანაცვლეთ ეს კოდი "გამეორების" ბლოკით, რათა იგივე
+        სახლი მხოლოდ სამი ბლოკის გამოყენებით დახატოთ.
+      2-3 Artist 6_instruction: 'სახლს სახურავი სჭირდება! დახატეთ სამკუთხედი. მინიშნება:
+        სამივე გვერდი თანაბარი სიგრძისაა.'
+      2-3 Artist 7_instruction: 'დაასრულეთ უკანასკნელი ფანჯრის მარჯვენა ნახევრის ხატვა.
+        ყოველი კვადრატული ფანჯრის სიგანეა 25 პიქსელი. '
+      2-3 Artist 8_instruction: დახატეთ ბოლომდე ოთახები თითოეული ცხოველისთვის მართკუთხედის
+        ორ თანაბარ კვადრატად გაყოფით. მართკუთხედის სიგანეა 200, ხოლო სიმაღლე - 100
+        პიქსელი.
+      2-3 Artist 9_instruction: დახატეთ ბოლომდე ეს ფრანი
+      2-3 Artist Assessment 1_instruction: 'შეჯამება: დაასრულეთ უკანასკნელი კბილის
+        ხატვა, 25 პიქსელი სიგანისა და 25 პიქსელი სიმაღლის.'
+      2-3 Artist Debugging 1_instruction: შეგიძლიათ ამ ქუდის ზედა ნაწილის სიგრზე 100
+        გახადოთ?
+      2-3 Artist Debugging 10_instruction: 'მიმართულების პლატფორმა ჩემს კონტროლერზე
+        ძალიან ვიწროა. რჩევა: გაზარდეთ სიგანეში 10 პიქსელით'
+      2-3 Artist Debugging 11_instruction: დამეხმარეთ ჩემი მშვენიერი ფიფქის დასრულებაში.
+        რამდენჯერ მომიწევს "გამეორება" ბოლომდე დასახატად?
+      2-3 Artist Debugging 12_instruction: ამ სცენას ოკეანის ტალღა უნდა დავუმატო.
+        შეგიძლიათ დამეხმაროთ?
+      2-3 Artist Debugging 2_instruction: კოდი სამი ულვაშისთვის, რომელსაც თქვენ ხედავთ,
+        არასწორია. თითოეული ულვაშის სიგრძეა 75 პიქსელი. გაასწორეთ კოდი რომ სწორად
+        დახატოთ ულვაშები.
+      2-3 Artist Debugging 3_instruction: 'ჩემს ნავს ხვრელი აქვს! შეგიძლია შეაკეთო
+        ხაზის კუთხის შეცვლით? მინიშნება: უკანასკნელი კუთხე 15 გრადუსით აცდენილია.'
+      2-3 Artist Debugging 4_instruction: რა სურათს დახატვას ვცდილობთ? დაასრულეთ წერტილების
+        შეერთება შესაბამისი ხაზებითა და კუთხეებით.
+      2-3 Artist Debugging 5_instruction: 'კოდი ფეხისა და ტერფისთვის არასწორია. მინიშნება:
+        ტერფი ძალიან გრძელია, შესაძლოა ერთი ნაბიჯის წაშლა დაგვჭირდეს'
+      2-3 Artist Debugging 6_instruction: როგორც ჩანს სკამზე ვზივარ რომელსაც ერთი
+        ფეხი აკლია. შეასწორეთ ბლოკები რომ ფეხი დაიხატოს.
+      2-3 Artist Debugging 7_instruction: როგორც ჩანს code-ში C უკუღმაა დახატული.
+        შეგიძლიათ C-ს დაამგვანოთ?
+      2-3 Artist Debugging 8_instruction: ჩემი პოპელერი დაუსრულებელია. რამდენჯერ უნდა
+        გავაკეთო "გამეორება" რომ დასრულდეს?
+      2-3 Artist Debugging 9_instruction: 'კოდი ამ ფესვისთვის არასწორია. მინიშნება:
+        კუთხე აცდენილია 60 გრადუსით'
+      2-3 Artist Debugging Assessment 1_instruction: 'ეს ფორმა ძალიან პატარაა. შეგიძლიათ
+        გაზარდოთ? მინიშნება: ორივე მხარეს უნდა იყოს 75 პიქსელით გრძელი.'
+      2-3 Artist Free Play_instruction: თავისუფლება! დახატეთ რაც გსურთ.
+      2-3 Artist Functions 1_instruction: 'სალამი. მე ზომბი მხატვარი. მე სიყვარული
+        ხატვა! დამეხმარეთ კვადრატული სათვალეების დახატვაში. მინიშნება: სათვალის ხიდი
+        25 პიქსელით მოკლეა კვადრატის სიგრძეზე.'
+      2-3 Artist Functions 10_instruction: აქ ორი ფუნქციაა, ერთი დიდი მექანიზმების
+        დასახატად, მეორე კი - პატარა. გამოიყენეთ ისინი მანქანის შიდა ნაწილის დასახატად!
+      2-3 Artist Functions 11.5_instruction: აქაც მოცემულია იგივე "დახატე ექვსკუთხედი"
+        ფუნქცია. რა მოხდება თუ მხოლოდ 60 გრადუსით შემოვბრუნდებით ყოველი ციკლისას?
+      2-3 Artist Functions 11_instruction: '"დახატე კვადრატი" ფუნქციას დავარქვით "დახატე
+        ექვსკუთხედი", მაგრამ ის მაინც კვადრატებს ხატავს! შეგიძლიათ "დახატე ექვსკუთხედი"
+        ფუნქცია ისე შეცვალოთ, რომ დახატოს ექვსკუთხედი, 50 პიქსელიანი გვერდებით და
+        სურათის დახატვაში ფუნქცია გამოიყენოთ?'
+      2-3 Artist Functions 12_instruction: 'ფუნქციებით მარტივია რთული რაღაცების მრავალჯერ
+        დახატვა. შეგიძლიათ გამოიყენოთ "დახატე ყვავილი" ფუნქცია რათა მებაღის ყუთი ბოლომდე
+        შეავსოთ?(მინიშნება: მცენარეები 100 პიქსელით არიან დაშორებული)  '
+      2-3 Artist Functions 13_instruction: ჩვენ მოგაწოდეთ ფუნქციები. გამოიყენეთ ისინი
+        როგორც მოგესურვებათ ერთ ან რამდენიმე ციკლში რათა დახატოთ სურათები, რომელთა
+        მეგობრებთან გაზიარება შეგეძლებათ. დააჭირეთ run-ს რომ იხილოთ მაგალითი.
+      2-3 Artist Functions 2_instruction: ფუნქციები ახალი ბლოკების განსაზღვრის საშუალებას
+        გაძლევთ! კვადრატის დამხატავი ბლოკები გადავიტანეთ ფუნქციაში "დახატე კვადრატი".
+        შეგიძლიათ გამოიყენოთ "დახატე კვადრატი" სათვალეების შესაქმნელად? კვადრატები
+        75 პიქსელითაა დაშორებული.
+      2-3 Artist Functions 3_instruction: ჩაასწორეთ ფუნქცია რომ დახატოს კვადრატი გვერდით
+        115 და დახატეთ უფრო დიდი სათვალე. კვადრატები ახლა 45 პიქსელითაა დაშორებული.
+      2-3 Artist Functions 4_instruction: გამოიყენეთ "გამეორება" ბლოკი რომ დახატოთ
+        3 კვადრატი.
+      2-3 Artist Functions 7_instruction: 'გამოიყენეთ "დახატე სახლი" ფუნქცია რომ დახატოთ
+        ორი სახლი განსხვავებული პარამეტრებით. (მინიშნება: პირველი სახლი 100 პიქსელია).'
+      2-3 Artist Functions 9_instruction: ეს არის ფიფქის ფუნქცია. ითამაშეთ ამ ფუნქციით
+        და შექმენით ზამთრის სურათი! ეს თავისუფალი დონეა, ამიტომ არანაირი თავსატეხი
+        არაა ამოსახსნელი. გაერთეთ!
+      2-3 Artist Loops 1_instruction: შეგიძლიათ შექმნათ ექვსკუთხედი, გვერდებით 100
+        პიქსელი, რათა დაასრულოთ სურათი? შეგახსენებთ, ეს ნიშნავს რომ თქვენ მხოლოდ 60
+        გრადუსით მობრუნება მოგიწევთ!
+      2-3 Artist Loops 10_instruction: რა მოუვა დიზაინს თუ უკანასკნელი წინ გადადგმული
+        ნაბიჯის სიგრძეს გავანახევრებთ?
+      2-3 Artist Loops 11_instruction: ახლა კი *კიდევ ერთი* ციკლი შემოვავლოთ ჩვენს
+        ქმნილებას. არ დაგავიწყდეთ გარე ციკლის ბოლოს კუთხის დამატება.
+      2-3 Artist Loops 2_instruction: ახლა კი გამოიყენეთ გამეორების ბლოკი რათა უჯრედისგან
+        გარსი მიიღოთ.
+      2-3 Artist Loops 4_instruction: გინდათ იხილოთ რა მოხდება თუ ფიგურას ციკლის გამოყენებით
+        ისევ და ისევ გავიმეორებთ?
+      2-3 Artist Loops 5_instruction: ახლა ციკლი ოდნავ შევცვალოთ და ვნახოთ რამდენად
+        განსხვავებულ სურათს მივიღებთ.
+      2-3 Artist Loops 6_instruction: დაამატეთ კიდევ ერთი მოძრაობა და მობრუნება ციკლში
+        და ნახეთ როგორ შეიცვლება თქვენი დიზაინი.
+      2-3 Artist Loops 7_instruction: ციკლების გამოყენება მრავალგვარი მრავალკუთხედის
+        შესაქმნელად შეგვიძლია. შეგიძლიათ ამ ექვსკუთხედში რომბი შექმნათ?
+      2-3 Artist Loops 8_instruction: ჩავსვათ ორივე ელემენტი ციკლში.
+      2-3 Artist Loops 9_instruction: "ერთსა და იმავე ელემენტები ციკლშია, მაგრამ ახლა
+        მათ შორის მანძილსაც დავამატებთ.\r\nგამოიყენეთ აქამდე გამოყენებუკი კოდი, მაგრამ
+        გარე ციკლის ბოლოს დაუმატეთ ერთი ნაბიჯი წინ."
+      2-3 Artist Loops New 1_instruction: დავხატოთ ამ რობოტის თავი! შეგიძლიათ შექმნათ
+        კვადრატი, რომლის გვერდების სიგრძე 100 პიქსელი იქნება?
+      2-3 Artist Loops New 10_instruction: ახლა რამდენიმე V შევაერთოთ მათი ციკლში
+        დახატვით.
+      2-3 Artist Loops New 11_instruction: ამჯერად 24-ჯერ დავხატოთ. დაამატეთ კოდს
+        30 გრადუსით მარცხნივ მობრუნება და ჩასვით ყველაფერი გამეორების ბლოკში.
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
-      2-3 Artist Loops New 13_instruction: Now draw the diamond 3 times in a loop.
-      2-3 Artist Loops New 14_instruction: |
-        Now let's draw the diamond 10 times
-        but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
-      2-3 Artist Loops New 2_instruction: |
-        Here's some of the code you used to draw
-        that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut
-        did you know you can put a loop inside another loop?\r\nLoop this whole\nblock
-        of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |
-        Loop this code 12 times to complete
-        the curls.
-      2-3 Artist Nested Loops 2_instruction: |
-        Now loop the triangle 6 times. After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
-      2-3 Artist Nested Loops 3_instruction: |
-        You'll need to loop the triangle 12
-        times to draw this pattern. Divide the number of degrees in a circle (360)
-        by the number of shapes you're drawing (12) to figure out how much to turn
-        after each shape.
-      2-3 Artist Nested Loops 4_instruction: |
-        Loop this diamond 12 times to draw
-        a flower. Hint: 12 diamonds is just like the 12 triangles you did - how much
-        do you need to turn after each shape?
-      2-3 Artist Nested Loops 5_instruction: |
-        Fill in this building's windows with
-        a nested loop. The windows are 20 pixels long and 20 pixels apart.
-      2-3 Artist Nested Loops 6_instruction: |
-        This dinosaur has 8 spikes running
-        up its tail; each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to move forward after each one.
-      2-3 Artist Nested Loops 7_instruction: |
-        Loop this triangle 10 times to draw
-        the sun. You'll need to move and turn after each triangle. You can figure
-        out how much to turn by dividing the number of degrees in a circle by the
-        number of shapes that make it up.
-      2-3 Artist Nested Loops 8_instruction: |
-        Now let's add some grass to our picture.
-        Each tuft of grass is 50 pixels apart.
-      2-3 Artist Nested Loops 9_instruction: |
-        We'll finish this picture by adding
-        a flower. Loop the diamond 12 times to draw your flower.
-      2-3 Artist Nested Loops Free Play_instruction: |
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
-      2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar.
-        Be careful not to collect nectar from a purple flower if it doesn't\nhave
-        any.\r\n"
-      2-3 Bee Conditionals 11_instruction: Collect nectar where flowers have nectar.
-      2-3 Bee Conditionals 12_instruction: |
-        Use a loop to check and collect the nectar
-        from all of these flowers.
-      2-3 Bee Conditionals 13_instruction: |
-        Collect nectar and make honey. Hint:
-        what happens if you use the "if nectar" conditional on a red flower? Can
-        you complete this with a loop?
-      2-3 Bee Conditionals 14_instruction: |
-        Collect nectar and make honey. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
-      2-3 Bee Conditionals 2_instruction: |
-        Hi, I'm a bee! Help me collect all of
-        the nectar from the flowers. Use a loop.
-      2-3 Bee Conditionals 3_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make honey. Use a loop.
-      2-3 Bee Conditionals 4_instruction: |
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |
-        Purple flowers may have either 1 or 0
-        nectar, but you don't know which one! Be careful not to collect nectar from
-        a purple flower if it doesn't have any. Check if the nectar is equal to 1
-        by using the if block.
-      2-3 Bee Conditionals 6_instruction: |
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |
-        Collect nectar from each flower if it
-        has any.
-      2-3 Bee Conditionals 8_instruction: |
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
+        დახატეთ ბრილიანტი, გვერდით 100 პიქსელი.
+      2-3 Artist Loops New 13_instruction: ახლა დახატეთ ბრილიანტი სამჯერ, ციკლის მეშვეობით.
+      2-3 Artist Loops New 14_instruction: ახლა დავხატოთ ბრილიანტი ათჯერ, მაგრამ ყოველ
+        ბრილიანტს შორის 90 გრადუსით მოვბრუნდეთ.
+      2-3 Artist Loops New 15_instruction: დახატეთ რამე სახალისო.
+      2-3 Artist Loops New 2_instruction: ესაა კოდი, რომლითაც კვადრატს ხატავთ. რა
+        მოხდება თუ გამეორების ბლოკს გამოიენებთ ამ კოდის ოთხჯერ გასაშვებად?
+      2-3 Artist Loops New 9_instruction: დახატეთ უბრალო V სადაც ორივე გვერდი 50 პიქსელი
+        სიგრძისაა, რათა დაასრულოთ ისარი.
+      2-3 Artist Match Hex Pic_instruction: 'შესაბამისობა: დაეხმარეთ ექვსკუთხედის
+        დასრულებაში.'
+      2-3 Artist Match Rho Pic_instruction: 'შესაბამისობა: ბოლომდე მიიყვანეთ გამოტოვებული
+        კოდი.'
+      2-3 Artist Match Sq Pic_instruction: 'შესაბამისობა: დაასრულეთ გამოტოვებული კოდი'
+      2-3 Artist Match Tri pic_instruction: 'შესაბამისობა: შეავსეთ გამოტოვებული კოდის
+        ადგილი.'
+      2-3 Artist Nested Loops 1_instruction: "ციკლებს აქამდე იყენებდით ფორმების დასახატად,
+        მაგრამ იცოდით რომ შეგიძლიათ ციკლი კიდევ ერთ ციკლში მოათავსოთ?\r\nციკლით გაიმეორეთ
+        მთელი ეს ბლოკი სამჯერ სურათის დასახატად."
+      2-3 Artist Nested Loops 10_instruction: სურათის დასასრულებლად ეს კოდი ციკლით
+        გაიმეორეთ 12-ჯერ.
+      2-3 Artist Nested Loops 11_instruction: სურათის დასასრულებლად ეს კოდი ციკლით
+        ოთხჯერ გაიმეორეთ, ყოველი წრის შემდეგ შემობრუნდით 90 გრადუსით.
+      2-3 Artist Nested Loops 12_instruction: სპირალის დასასრულებლად ეს კოდი ციკლით
+        გაიმეორეთ 12-ჯერ.
+      2-3 Artist Nested Loops 2_instruction: ახლა ციკლში 6-ჯერ გაატარეთ სამკუთხედი.
+        ყოველი სამკუთხედის შემდეგ, დაგჭირდებათ 60 გრადუსით მობრუნება შემდეგი სამკუთხედის
+        დახატვამდე.
+      2-3 Artist Nested Loops 3_instruction: სურათის დასახატად თქვენ დაგჭირდებათ ამ
+        სამკუთხედის ციკლით 12-ჯერ გამეორება. გაყავით წრეში გრადუსების რაოდენობა (360)
+        იმ ფორმების რაოდენობაზე, რომლებიც უნდა დახატოთ (12), რათა გაარკვიოთ თუ რამდენი
+        გრადუსით მოგიწევთ მობრუნება ყოველი ფორმის შემდეგ.
+      2-3 Artist Nested Loops 4_instruction: 'ყვავილის დასახატად ეს ბრილიანტი 12-ჯერ
+        გაიმეორეთ ციკლით. მინიშნება: 12 ბრილიანტი იგივეა, რაც 12 სამკუთეხდი რომელიც
+        გააკეთეთ - რამდენი მობრუნებაა საჭირო ყოველი ფორმის შემდეგ?'
+      2-3 Artist Nested Loops 5_instruction: შეავსეთ ამ შენობის ფანჯრები ჩასმული ციკლით.
+        ფანჯრები 20 პიქსელი სიგრძისაა და 20 პიქსელითაა დაშორებული.
+      2-3 Artist Nested Loops 6_instruction: დინოზავრს კუდის გასწვრივ რვა წვეტიანი
+        გამონაზრარდი აქვს. თითოეული გამონაზარდი 30 პიქსელი სიგრძისაა. სამკუთხედი ციკლში
+        რვაჯერ გაატარეთ, მაგრამ დარწმუნდით, რომ თითოეულ ციკლს შორის წინ გადაადგილდებით.
+      2-3 Artist Nested Loops 7_instruction: ათჯერ გაატარეთ ციკლში ეს სამკუთხედი რომ
+        დახატოთ მზე. ყოველი სამკუთხედის შემდეგ მოგიწევთ გადაადგილება და მობრუნება.
+        შეგიძლიათ გაიგოთ რამდენითაა საჭირო მობრუნება თუ გაყოფთ წრეში გრადუსების რაოდენობას
+        შემადგენელი ფიგურების რაოდენობაზე.
+      2-3 Artist Nested Loops 8_instruction: ახლა ჩვენს სურათს ბალახი დავუმატოთ. თითოეული
+        კონა 50 პიქსელითაა დაშორებული.
+      2-3 Artist Nested Loops 9_instruction: ამ სურათს ყვავილის დამატებით დავასრულებთ.
+        გაიმეორეთ ბრილიანტი ციკლში 12-ჯერ რათა დახატოთ თქვენი ყვავილი.
+      2-3 Artist Nested Loops Free Play_instruction: თავისუფლება! დახატეთ რამე მაგარი
+        ჩასმული ციკლების გამოყენებით.
+      2-3 Bee Conditionals 1_instruction: სალამი! მე ფუტკარი ვარ. დამეხმარე ყვავილიდან
+        ნექტრის აღებაში.
+      2-3 Bee Conditionals 10_instruction: "იასამნისფერ ყვავილს შეიძლება ჰქონდეს 1
+        ან 0 ნექტარი. ფრთხილად - არ მოკრიბო ნექტარი ისეთი ყვავილისგან, რომელიც მას
+        არ შეიცავს. \r\n"
+      2-3 Bee Conditionals 11_instruction: მოკრიბე ნექტარი იმ ყვავილებისგან, რომელიც
+        მას შეიცავენ.
+      2-3 Bee Conditionals 12_instruction: ყველა ყვავილის შესამოწმებლად და მათგან
+        ნექტარის მოსაკრებად გამოიყენე ციკლი.
+      2-3 Bee Conditionals 13_instruction: 'შეაგროვე ნექტარი და დაამზადე თაფლი. მინიშნება:
+        რა მოხდება, თუ "თუ ნექტარი არის" პირობას წითელი ყვავილისთვის გამოიყენებ? შეგიძლია
+        ამ დავალებაში ციკლის გამოყენება?'
+      2-3 Bee Conditionals 14_instruction: შეაგროვე ნექტარი და დაამზადე თაფლი. ფრთხილად
+        - არ მოკრიბო ნექტარი იისფერი ყვავილისგან, თუ ის ნექტარს არ შეიცავს.
+      2-3 Bee Conditionals 15_instruction: მოკრიბე ნექტრი ოთხივე ყვავილისგან.
+      2-3 Bee Conditionals 2_instruction: ჰეი, მე ფუთკარი ვარ! დამეხმარე - ყველა ყვავილის
+        ნექტარი უნდა მოვკრიბო. გამოიყენე ციკლი.
+      2-3 Bee Conditionals 3_instruction: დამეხმარე, მოვკრიბო ყველა ნექტარი და დავამზადო
+        თაფლი. გამოიყენე ციკლი.
+      2-3 Bee Conditionals 4_instruction: დამეხმარე - ყველა ყვავილის ნექტარი უნდა
+        მოვკრიბო და მერე თაფლი გავაკეთო.
+      2-3 Bee Conditionals 5_instruction: იისფერ ყვავილებს აქვთ 1 ან 0 ნექტარი, მაგრამ
+        შენ არ იცი, რომელს რამდენი აქვს. ფრთხილად - არ მოკრიბო ნექტარი ისეთი ყვავილისგან,
+        რომელიც მას არ შეიცავს. "თუ" ბლოკით შეამოწმე, შეიცავს თუ არა ყვავილი ნექტარს.
+      2-3 Bee Conditionals 6_instruction: შეამოწმე ეს ყვავილი "თუ" ბლოკით და ნახე,
+        შეიცავს თუ არა იგი ნექტარს.
+      2-3 Bee Conditionals 7_instruction: მოაროვე ნექტარი ყოველი ყვავილისგან, რომელიც
+        მას შეიცავს.
+      2-3 Bee Conditionals 8_instruction: ამ მდელოზე წითელი და იისფერი ყვავილებია.
+        წითელ ყვავილებში ნექტარის რაოდენობა ცნობილია, იისფერებში კი - უცნობი. მოაგროვე
+        ნექტარი მთლიანად.
+      2-3 Bee Conditionals 9_instruction: მოკრიბე მთლიანად ყოველი ყვავილის ნექტარი.
       2-3 Bee Conditionals Assessment 1_instruction: |
         Assessment: Collect all the
         nectar. Be careful not to collect nectar from a purple flower if it doesn't
@@ -319,7 +255,7 @@
         Functions are blocks of code that perform
         a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
         use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+      2-3 Bee Functions 3_instruction: მოკრიბე მთლიანად ყოველი ყვავილის ნექტარი.
       2-3 Bee Functions 4_instruction: |
         The "move and get nectar" function turns
         the bee, collects nectar, and then returns the bee to where it started. Use
@@ -867,7 +803,7 @@
         Ok, let's do that again for practice
         - this isn't very different, but watch out for the chompers!
       4-5 Maze Conditionals 8_instruction: |
-        The "If-else" blocks checks a condition,
+        The "If-else" block checks a condition,
         and then does one thing OR another. To get me to the sunflower try to use
         this new block.
       4-5 Maze Conditionals 9_instruction: |
@@ -1056,9 +992,6 @@
       Big Game Collision 4_instruction: |
         Complete the collide? function so that it
         returns true if the distance between two points is less than 100 pixels apart.
-      Big Game Complete (copy 1)_instruction: |
-        A demo of the completed CS in Algebra
-        Big Game project
       Big Game Complete_instruction: |
         A demo of the completed CS in Algebra Big Game
         project
@@ -2159,7 +2092,7 @@
       Eval Define Funcs 5_instruction: |
         Let's use that aqua-star function to make
         a row of different sized stars. From left to right, the stars should have
-        radiuses of 25, 50, and 75.
+        radii of 25, 50, and 75.
       Eval Defining Vars Free Play 1_instruction: |
         Free Play: We've provided a function
         that fills your screen with my-image. Change my-image to see what patterns
@@ -2636,6 +2569,55 @@
         Variables can also be used to control the
         speed of players in a game. Set the player speed and the enemy speed and see
         how the movement changes. Speed can be between 2 and 12.
+      NetSim Standalone Automatic DNS_instruction: |
+        In this version of the Internet
+        Simulator, a Domain Name System (DNS) is provided for you and knows the IP
+        addresses of all connected computers. Send a message in the form GET [hostname]
+        to the DNS service at address <yourRouterNumber>.15 to get a student's address.
+      NetSim Standalone Broadcast_instruction: "In this version of the Internet Simulator,\nyou
+        can connect to up to 5 other people in a room. When you send messages\nin
+        the room, everyone receives them. What are some of the challenges of this\nsystem,
+        and how might you solve them?\r\n"
+      NetSim Standalone Classroom Routers_instruction: |
+        In this version of the Internet
+        Simulator, everyone connects to a router and has a specific address. To send
+        messages, you have to address your message to the specific address of the
+        recipient, and the router will take care of delivering it to the right computer.
+        If there are other routers created in your class, ask for the address of one
+        of your classmates and send them a message! View the Log Router to see the
+        path the messages have taken through the network.
+      NetSim Standalone Freeplay_instruction: |
+        In this configuration, most of the
+        options are turned on, and you can play with them. Have fun!
+      NetSim Standalone Manual DNS_instruction: |
+        In this version of the simulator
+        you can't see the other students' addresses.  Instead, one of you must act
+        as a name service, to help share addresses with each other.
+      NetSim Standalone Packets TCP_instruction: |
+        Messages on the Internet can take
+        many paths to get to their destination, and sometimes along the way the message
+        gets dropped. In this version of the Internet Simulator, there is a 10% chance
+        of a packet being dropped, multiple packets may take different paths to the
+        destination, and the default max packet size is set to 6 additional characters.
+      NetSim Standalone Routers Addresses_instruction: "For this activity, connect\nto
+        a router with the others in your group. Important note: The router will\nonly
+        properly route messages where the first 4 bits are the To: address and\nthe
+        second 4 bits are the From: address.\r\n\r\n[TODO: NetSim needs to support\nhierarchical
+        addresses. For now, level is set up for 4 bit to and from addresses]"
+      NetSim Standalone SendAB_instruction: |
+        You and your partner share a single
+        wire that can only be in state A or state B. You can set the wire to either
+        state at any time, and you can read the state of the wire at any time. Can
+        you figure out a way to effectively communicate with just this system?
+      NetSim Standalone Sending Numbers Ascii_instruction: |
+        Now that you've transmitted
+        information represented as decimal numbers, you can map those numbers to text
+        characters to send text-based information back and forth. With a text-based
+        protocol, you can easily represent and communicate all kinds of information.
+      NetSim Standalone Sending Numbers_instruction: "You and your partner can now\nreliably
+        send messages back and forth without extra coordination! While you're\nalways
+        sending bits back and forth, you can also represent those bits as decimal\nnumbers.
+        What kinds of information can you represent with this system? \n"
       NetSim_AddressingMessages_instruction: |
         In this version of the simulator, you
         will connect to a Router instead of directly to another student. Enter an
@@ -2910,11 +2892,10 @@
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: ფუნქციები ახალი ბლოკების განსაზღვრის საშუალებას
+        გაძლევთ! კვადრატის დამხატავი ბლოკები გადავიტანეთ ფუნქციაში "დახატე კვადრატი".
+        შეგიძლიათ გამოიყენოთ "დახატე კვადრატი" სათვალეების შესაქმნელად? კვადრატები
+        75 პიქსელითაა დაშორებული.
       PDK5 Loops 1_instruction: "Instead of using 5 \"move forward\" blocks, use\nthe
         \"repeat\" block with a \"move forward\" block inside of it. In computer\nscience,
         this is called a \"loop.\" \n"
@@ -2922,61 +2903,18 @@
         Here's another puzzle to practice loops. What happens
         if you use the repeat block to run the code already provided on the workspace
         4 times?
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |
-        Something happened
-        to the bits in this image!  Find error and fix it!  Hint: a few extra bits
-        were added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Fix the error_instruction: |
-        Something happened to
-        the bits in this image!  Find error and fix it!  Hint: a few extra bits were
-        added.  You should only need to remove some bits.
-      Pixelation - Lesson 14 - Make the Letter A_instruction: |
-        Make a 3x5 letter
-        'A'.  The widget is setup with the incorrect dimensions. Your first task
-        is to set the second byte to the 8-bit binary code for 5: 0000 0101.  Then
-        start entering pixel data.
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: |
-        Now make
-        your own image! We've started you off with a 10x10 canvas but you can make
-        it whatever size you want.  Happy pixeling!
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: |
-        Now make your
-        own image! We've started you off with a 10x10 canvas but you can make it
-        whatever size you want.  Happy pixeling!
-      Pixelation 2_instruction: |
-        Something happened to the bits in this image!  Find
-        error and fix it!
-      Pixelation 4x4 Empty_instruction: |
-        The width and height are now encoded in
-        the pixel data. Can you figure out how to adjust the dimensions?
       Play Lab Rocket 1_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second... press "Run" to see how this word problem looks as an animation.
-      Play Lab Rocket 2 (copy 1)_instruction: |
-        We've added your contract and two
-        examples into the Design Recipe for rocket-height. Now write the function
-        for rocket-height.
-      Play Lab Rocket 2 (copy 2)_instruction: |
-        We've started the Design Recipe for
-        rocket-height using the contract and examples you just wrote. Complete the
-        function definition for rocket-height and run your animation.
       Play Lab Rocket 2_instruction: |
         We've started the Design Recipe for rocket-height
         using the contract and examples you just wrote. Complete the function definition
         for rocket-height and run your animation.
-      Play Lab Rocket 2B (copy 1)_instruction: |
-        We've started the Design Recipe
-        for rocket-height using the contract and examples you just wrote. Complete
-        the function definition for rocket-height and run your animation.
       Play Lab Rocket 2B_instruction: |
         A rocket blasts off, traveling at 15 meters
         per second. Using the Design Recipe, write a function called rocket-height
         that takes in a number of  seconds that have passed since the rocket took
         off, and produces the height of the rocket at that time.
-      Play Lab Rocket 3 (copy 1)_instruction: |
-        Awesome, now can you update that function
-        so that our rocket moves more quickly? Make sure to update the purpose statement,
-        examples, and function definition to launch a rocket at 40 meters per second.
       Play Lab Rocket 3_instruction: |
         Awesome, now can you update that function so
         that our rocket moves more quickly? Make sure to update the purpose statement,
@@ -3009,9 +2947,9 @@
         This bat is named Sam, and the game area
         is Sam’s yard. Sam's yard is 400 pixels wide by 400 pixels tall! As you can
         see, Sam is free to walk around the yard, and the coordinates at the top of
-        the screen update to tell you his location. Use the arrow keys to move Sam
-        around his yard, making note of Sam's coordinates at different locations.
-        Click "Finish" when you're ready to move on.
+        the screen update to tell you his location. Click "Run" and then use the
+        arrow keys to move Sam around his yard, making note of Sam's coordinates
+        at different locations. Click "Finish" when you're ready to move on.
       Sam the Butterfly 2_instruction: |
         Sam's mom wants to make sure that she can
         always see at least a bit of him, so lets write some functions that help make
@@ -3122,10 +3060,6 @@
         to make a simple square using the turn right block and move forward block.
         Each side should be 100 pixels long.
       Test Play Lab_instruction: This is a test play lab level.
-      Text Compression Peter Piper_instruction: |
-        This poem has been compressed by
-        replacing two common phrases with symbols in the dictionary. Can you identify
-        another common pattern to compress the poem further?
       U1L10 NetSim numbers with decimal_instruction: |
         Invent and test a protocol
         for encoding and sending text messages. Your protocol must include the letters
@@ -3518,31 +3452,124 @@
         Draw a square above and to the left
         of the turtle's starting position. Click to see full instructions.
       U3L23 Chatbot Conditionals 1_instruction: |
-        Ask the user the question "What
-        is your favorite color?" using the "prompt" block. Using the "if" block,
-        check if the user's response matches yours. Add a "write" block to the
-        body of the "if" statement to add the response "<favorite_color> is my
-        favorite color too!" to the screen.
-      U3L23 Chatbot Conditionals 2_instruction: |
-        Replace the "if" block with an
-        "if/else" block to make your chatbot respond in all circumstances.
-      U3L23 Chatbot Conditionals 3_instruction: |
-        In text mode, add several "else
-        if" statements to your program.
+        Adjust the "if" block to make
+        the bot respond "That's the color of the sky!" if the user inputs the color
+        "blue".
+      U3L23 Chatbot Intro 1a_instruction: |
+        Store the user's input inside a variable
+        and log it to the console.
       U3L23 Chatbot Intro 2_instruction: |
-        Create a click event for your button. Create
-        a conversation variable and store the user's input in it. You may need the
-        "getText," "setText," and "+" blocks in your code.
+        Use string concatenation to store the user's
+        input and assistant's answer into the conversation variable using the format
+        "User: <input><bot name>: <default response>" . Log the conversation to
+        the console.
+      U3L23 Chatbot Intro 2a_instruction: |
+        Display the conversation onto the "text_area"
+        element. Optional: clear the user's input after every "change" event.
       U3L23 Chatbot Intro 3_instruction: |
-        Add the response "uh huh" by using the
-        "+" operator. Add newline characters (\
-        ) where appropriate.
+        Add newline characters "\
+        " to separate
+        the user's input and the computer's response.
       U3L23 Chatbot Intro 4_instruction: |
         Use this level to make your chatbot look
         and work better!
       U3L23 Chatbot Intro_instruction: |
-        Add a Lable, Text Input, Button, and Text
-        Area object to your project
+        Choose a specialization topic for your digital
+        assistant. Update the assistant description, name, starter prompt, and default
+        response to match this specialization.
+      U3L24 Basic String Parsing 1_instruction: |
+        Use the function "userInput.indexOf(<food>)"
+        to check if the strings "pizza" or "soup" are anywhere in the user's
+        response.
+      U3L24 Chatbot Basic Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Chatbot Conditionals 2_instruction: |
+        Adjust the "if" block to make
+        the bot respond "I don't know that color." if the user types anything besides
+        "blue"
+      U3L24 Chatbot Conditionals 3_instruction: |
+        Adjust the "if/else" block to
+        make the bot respond to the colors blue, red, and green, and to two additional
+        colors.
+      U3L24 Chatbot Keyword Record_instruction: |
+        Use the next level to record your
+        digital assistant's keywords/phrases.
+      U3L24 Chatbot Nested Conditionals_instruction: |
+        Add a chained conditional with
+        at least 3 "else if" statements to your personal assistant.
+      U3L24 Nested Conditionals 1_instruction: |
+        Replace all instances of `str.indexOf("word")`
+        with a function `contains(sentence, word)` that returns true if the word is
+        in the sentence and returns false otherwise.
+      U3L24 Nested Conditionals 2_instruction: |
+        Use a nested conditional to respond
+        to the category "pizza" and the details "Hawaiian," "vegan," and "meat."
+      U3L24 Nested Conditionals Bugs 2_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs 3_instruction: |
+        Fix the bugs that still exist
+        in this program. Prove that the program works correctly.
+      U3L24 Nested Conditionals Bugs_instruction: |
+        Expose the bugs in this problem
+        by typing inputs into the user-input box. Track which inputs cause unexpected
+        outputs.
+      U3L25 Chatbot Strings_instruction: |
+        1. Adjust your digital assistant to evaluate
+        inputs the same way whether the inputs are capitalized or lowercase. 2. If
+        a user asks "What is <phrase>?", where <phrase> is an input your digital
+        assistant does not recognize, make your digital assistant respond "I don't
+        know what <phrase> is."
+      U3L25 String Parsing 1_instruction: |
+        Given the string "Wisdom begins with
+        wonder." what is the index of the following characters W, t, w, ., d, and
+        k? Confirm your expectation using the string.indexOf() function.
+      U3L25 String Parsing 2_instruction: |
+        Use str.length to find the length of the
+        strings “Hello World”, “Computer science rocks!", and “I promise to do my
+        homework every day.”
+      U3L25 String Parsing 3_instruction: |
+        Write a password length checker that writes
+        “yes” to the console if a string has a length greater than 10, or “no” if
+        it is less than or equal to 10.  Test your function using two strings, one
+        that will satisfy each conditional option.
+      U3L25 String Parsing 4_instruction: |
+        You are given the string "Wisdom begins
+        with wonder." Use the string.substring(begin, end) function to print "begin"
+        and "nder" to the console.
+      U3L25 String Parsing 5_instruction: "Fill in the function, findBeginNder()\nto
+        get the strings \"begin\" and \"nder\" from a sentence no matter where\nin
+        the sentence they exist.\r\nPrint the strings and their index to the console.\n"
+      U3L25 String Parsing 6_instruction: |
+        Write a function that takes a name (first
+        last) and reorders it (last, first).
+      U3L25 String Parsing 7_instruction: |
+        You are given the string “The earth has
+        music for those who listen.” Manipulate it using the functions str.toUpperCase()
+        and str.toLowerCase().
+      U3L26 AND operator_instruction: |
+        Inside the findingNemo function, write a conditional
+        statement that detects if a command contains all the phrases "2000" "animated"
+        and "G-rated." The function should return true if the above conditions are
+        met and return false otherwise
+      U3L26 Chatbot Compound Conditionals_instruction: |
+        Update your digital assistant
+        to include at least one each of AND, OR, and NOT
+      U3L26 Compound Logic_instruction: |
+        Write a conditional statement that detects
+        if a command contains all the phrases "2000" "animated" and "G-rated."
+        If all these phrases are detected, make Movie Bot respond "The top grossing
+        animated and G-rated film in the 2000 decade was Finding Nemo."
+      U3L26 NOT operator_instruction: "Write a conditional statement that detects\nif
+        a command does not contain the phrase \"bad.\" If \"bad\" is not detected,\nmake
+        Movie Bot respond normally. Otherwise, make Movie Bot respond \"Sorry,\nI
+        don't know about bad movies.\" \n"
+      U3L26 OR operator_instruction: |
+        Inside the isBest function, write a conditional
+        statement that detects if a command contains at least one of the phrases "all
+        time" "all-time" "overall" or "millennium." The function should return
+        true if the above conditions are met and return false otherwise
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

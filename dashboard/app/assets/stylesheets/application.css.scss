@@ -1514,13 +1514,33 @@ a.download-video {
   }
 }
 
-.content-level {
+.external
+.text-match {
   #markdown.teacher {
+    max-width: 800px;
     border: 5px solid $cyan;
     background-color: $lightest_cyan;
     border-radius: 5px;
-    padding: 10px;
+    .content {
+      padding: 10px;
+    }
+    h3 {
+      padding: 5px;
+      font-size: 18px;
+      font-family: $gotham-extra-bold; font-weight: normal;
+      color: white;
+      background: $cyan;
+      margin: 0;
+    }
   }
+}
+
+.text-match #markdown.teacher {
+  margin: 10px 0;
+}
+
+.external #markdown.teacher {
+  margin: 10px auto;
 }
 
 #current-script-levels, #all-levels {

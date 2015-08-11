@@ -105,12 +105,12 @@ vi:
         Jigsaw: Ghép hình
         MazeStep: Chế độ mê cung từng bước thực hiện
         Wordsearch: Tìm kiếm từ/ từ vựng
-        Webapp: App Lab
+        Webapp: Phòng thí nghiệm ứng dụng
         ArtistEC: nghệ sĩ
         TextMatch: Text Match
         StudioEC: Phòng trò chơi
-        Applab: App Lab
-        NetSim: Internet Simulator
+        Applab: Phòng thí nghiệm ứng dụng
+        NetSim: bộ mô phỏng internet
     trophy:
       name:
         Bronze: Đồng

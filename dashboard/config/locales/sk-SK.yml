@@ -398,6 +398,7 @@
     local_school: miestna škola
     online: Online
     see_details: Pozri detaily
+    view_course: View Course
     prize_info: 'Ceny za účasti (iba pre učiteľov verejných škôl v U.S.): Nad $1,000
       v odmenách tried.'
     tryfirst: 'Alebo môžete najprv vyskúšať a neskôr sa zaregistrovať:'
@@ -415,6 +416,7 @@
     heading_legacy: <h2>Náš všeobecný kurz pre</h2><h1>Všetky vekové kategórie</h1>
     your_gallery: Galéria
     no_primary_course: Vyskúšajte kurz v Štúdiu kódu
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Muž
@@ -451,12 +453,6 @@
     autoplay_option: Prehrávať videá automaticky
     download: Stiahnuť video
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Skryť toto upozornenie
     working:
       header: Pracujeme na podpore pre Váš prehliadač.
       message: Code.org uses modern web technology. This makes the site faster to

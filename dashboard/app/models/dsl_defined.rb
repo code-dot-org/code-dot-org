@@ -33,7 +33,6 @@ class DSLDefined < Level
 
   def self.create_from_level_builder(params, level_params, old_name = nil)
     text = level_params[:dsl_text] || params[:dsl_text]
-    encrypted = level_params[:encrypted]
     transaction do
       # Parse data, save updated level data to database
       data, i18n = dsl_class.parse(text, '')
@@ -47,7 +46,7 @@ class DSLDefined < Level
       level = setup data
 
       # Save updated level data to external files
-      File.write(level.file_path, (encrypted ? encrypt_dsl_text(text) : text))
+      File.write(level.file_path, (level.encrypted ? level.encrypted_dsl_text(text) : text))
       self.rewrite_i18n_file(i18n)
 
       level
@@ -65,22 +64,29 @@ class DSLDefined < Level
   end
 
   def filename
+    return nil if name.blank?
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
     grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
     `#{grep_string}`.chomp.presence || "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
   end
 
   def file_path
+    return nil if filename.blank?
     Rails.root.join filename
   end
 
-  def self.encrypt_dsl_text(dsl_text)
-    "encrypted '#{Encryption::encrypt_object(dsl_text)}'"
+  def encrypted_dsl_text(dsl_text)
+    ["name '#{name}'",
+     "encrypted '#{Encryption::encrypt_object(dsl_text)}'"].join("\n")
   end
 
   def self.decrypt_dsl_text_if_necessary(dsl_text)
     if dsl_text =~ /^encrypted '(.*)'$/m
-      return Encryption::decrypt_object($1)
+      begin
+        return Encryption::decrypt_object($1)
+      rescue Exception
+        # just return the encrypted text
+      end
     end
     return dsl_text
   end
@@ -98,11 +104,11 @@ class DSLDefined < Level
   end
 
   def encrypted
-    properties[:encrypted] || properties['encrypted']
+    properties['encrypted'].present? && properties['encrypted'] != "false"
   end
 
   def encrypted=(value)
-    properties[:encrypted] = value
+    properties['encrypted'] = value
   end
 
 

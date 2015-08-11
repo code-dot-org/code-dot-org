@@ -351,6 +351,7 @@ cs:
     local_school: místní škola
     online: online
     see_details: Viz podrobnosti
+    view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Nebo to můžeš nejdřív zkusit a zaregistrovat se později:'
     trynow: Vyzkoušej hned
@@ -364,7 +365,8 @@ cs:
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>'
     your_gallery: Galerie
-    no_primary_course: Try a course at Code Studio
+    no_primary_course: Try a Code Studio course
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
   gender:
     male: Muž
@@ -398,10 +400,6 @@ cs:
     autoplay_option: Automatické přehrávání videa
     download: Stáhnout Video
   compatability:
-    https:
-      header: Prosím povolte HTTPS pro Code.org
-      message: "Kvůli zvýšení zabezpečení, přecházíme  na HTTPS  %{https_date}. Nebude mít přístup k Code.org po tomto datu. <a href='%{it_requirements_url}'> zde se dozvíte,</a> jak povolit HTTPS pro Code.org."
-      hide_this_warning: Skrýt toto varování
     working:
       header: Pracujeme na podpoře pro tvůj prohlížeč.
       message: "Code.org uses modern web technology. This makes the site faster to use. Your browser doesn't support all the features required, and you may experience issues while using this part of the site. Please help us by <a href='%{report_issue_url}'>reporting any issues you find</a>. You can also <a href='%{supported_browsers_url}'>upgrade your browser to a supported version</a>."

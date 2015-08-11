@@ -24,7 +24,7 @@ vi:
         <strong>P</strong>: '<strong>P</strong>'
         <strong>Q</strong>: '<strong>Q</strong>'
         Matching: Phù hợp với/ khớp với / Chính xác với
-        Use the key to match each code to its letter: Use the key to match each code to its letter
+        Use the key to match each code to its letter: sử dụng chìa khóa để nối mật mã với ký hiệu của nó
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -43,7 +43,7 @@ vi:
         /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
+        Instructions: lời chỉ đẫn
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       2-3 Relay Programming Match 1:
@@ -153,7 +153,7 @@ vi:
         /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
+        Instructions: lời chỉ đẫn
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
       K-1 Artist 2 Match 1:
@@ -246,7 +246,7 @@ vi:
         /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Drag the blocks to match.
-        Instructions: Instructions
+        Instructions: lời chỉ đẫn
         Match the puzzles and blocks: Match the puzzles and blocks
         Matching: Phù hợp với/ khớp với / Chính xác với
       K-1 Move It Match 1:
@@ -269,7 +269,7 @@ vi:
         /script_assets/matches/images/q3.jpg: /script_assets/matches/images/q3.jpg
         /script_assets/matches/images/q4.jpg: /script_assets/matches/images/q4.jpg
         Drag the images from right to center.: Drag the images from right to center.
-        Instructions: Instructions
+        Instructions: lời chỉ đẫn
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
@@ -299,21 +299,21 @@ vi:
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: Nhiều lựa chọn
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square'
-        Which image does <em>not</em> follow this algorithm?: 'Which image does <em>not</em> follow this algorithm?'
+        Which image does <em>not</em> follow this algorithm?: 'Hiện hình ảnh nào <em>không</em> làm theo thuật toán này?'
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Nhiều lựa chọn
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Chương trình nào làm nên hình ảnh này?
       2-3 Conditionals Multi 1:
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: According to the rules of the game, which set of cards is scored correctly?
+        According to the rules of the game, which set of cards is scored correctly?: Theo các quy tắc của trò chơi, bộ thẻ nào được ghi một cách chính xác?
         Multiple Choice: Nhiều lựa chọn
       2-3 Getting Loopy Multi 1:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
@@ -321,7 +321,7 @@ vi:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
+        How would you simplify this sequence with loops?: Bạn sẽ đơn giản hóa trình tự này với vòng như thế nào?
         Multiple Choice: Nhiều lựa chọn
       2-3 Graph Paper Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
@@ -329,14 +329,14 @@ vi:
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Nhiều lựa chọn
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Chương trình nào làm nên hình ảnh này?
       2-3 Maze Multi 2:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Mê cung nhiều sự lựa chọn
         Which blocks work?: Block nào hoạt động?
       2-3 Relay Programming Multi 1:
         /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
@@ -344,13 +344,13 @@ vi:
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
         Multiple Choice: Nhiều lựa chọn
-        Which program does not create this image?: Which program does not create this image?
+        Which program does not create this image?: Chương trình mà không tạo ra hình ảnh này?
       2-3 Relay Programming Multi 2:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
         Multiple Choice: Nhiều lựa chọn
-        Which image-program combo does not contain mistakes?: Which image-program combo does not contain mistakes?
+        Which image-program combo does not contain mistakes?: Kết hợp hình ảnh chương trình nào không chứa lỗi?
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
@@ -358,7 +358,7 @@ vi:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
         Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
-        Why won't this circle go all the way around?: "Why won't this circle go all the way around?"
+        Why won't this circle go all the way around?: Tại sao sẽ không vòng tròn này đi tất cả các con đường xung quanh?
       2-3 artist functions multi 1:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
@@ -431,7 +431,7 @@ vi:
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene là một thành phố _____.
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        1: ': Ở đây có 3 câu . Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
+        1: ': Dưới đây là ba câu. Mẫu nào bên dướng  tóm tắt một cách chính xác rằng cả 3 đều phù hợp một mẫu với mẫu đó ?'
         Multiple Choice: Nhiều lựa chọn
         Seattle _____ a _____ _____.: Bang Seattle _____ a _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle là một thành phố lớn.<br/>Eugene là một thành phố khá lớn<br/>Hillview là một thành phố nhỏ.'
@@ -463,7 +463,7 @@ vi:
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
         Multiple Choice: Nhiều lựa chọn
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Khi bạn cố gắng đăng nhập vào code.org, địa chỉ IP nào là nhiều khả năng DNS để đưa bạn đến?
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Khi bạn cố gắng đăng nhập vào code.org, địa chỉ IP nào là tên miền (DNS) đưa bạn đến ?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Nếu DNS đã gửi cho bạn đến trang địa chỉ IP 100.42.50.110, trang web nào bạn đang dùng?
@@ -474,15 +474,12 @@ vi:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        0: "? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
-        1: ": Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
         Lou, Lou, skip to my Lou,: Lou, Lou, Lou, chuyển qua Lou của tôi nào,
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, chuyển qua Lou của tôi nào, <br/>Lou, Lou, chuyển qua Lou của tôi, <br/>Lou, Lou, chuyển qua Lou của tôi, <br/>Chuyển qua Lou của tôi, người yêu .'
-        2: "? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
-        3: ": Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Nhiều lựa chọn
-        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
-        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -576,7 +573,7 @@ vi:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500
-        Maze Multiple Choice: Maze Multiple Choice
+        Maze Multiple Choice: Mê cung nhiều sự lựa chọn
         Which blocks solve the puzzle?: Which blocks solve the puzzle?
       Baker test of multi can delete:
         2+3: 2+3
@@ -652,7 +649,7 @@ vi:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
+        How would you simplify this sequence with loops?: Bạn sẽ đơn giản hóa trình tự này với vòng như thế nào?
         Multiple Choice: Nhiều lựa chọn
       K-1 Happy Maps Multi 1:
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
