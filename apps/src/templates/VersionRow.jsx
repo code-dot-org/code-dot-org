@@ -10,7 +10,7 @@ module.exports = React.createClass({
     onChoose: React.PropTypes.func
   },
 
-  getTimestamp: function () {
+  getLastModifiedTimestamp: function () {
     var timestamp = this.props.lastModified;
     if (timestamp.toLocaleString) {
       return timestamp.toLocaleString();
@@ -19,7 +19,6 @@ module.exports = React.createClass({
   },
 
   render: function () {
-
     var button;
     if (this.props.isLatest) {
       button = <button className="btn-default" disabled="disabled" style={{cursor: "default"}}>Current Version</button>
@@ -32,8 +31,8 @@ module.exports = React.createClass({
     return (
       <tr className="versionRow">
         <td>
-          <p>Saved <time className="versionTimestamp" dateTime={this.props.lastModified.toISOString()}>{this.getTimestamp()}</time></p>
-          {this.getTimestamp()}
+          <p>Saved <time className="versionTimestamp" dateTime={this.props.lastModified.toISOString()}>{this.getLastModifiedTimestamp()}</time></p>
+          {this.getLastModifiedTimestamp()}
         </td>
         <td width="250" style={{textAlign: 'right'}}>
           {button}
