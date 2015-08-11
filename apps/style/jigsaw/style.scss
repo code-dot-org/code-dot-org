@@ -14,6 +14,7 @@ html[dir='rtl'] div#codeWorkspace {
   height: 600px;
   &.pin_bottom {
     height: initial;
+    bottom: 25px;
   }
 }
 
