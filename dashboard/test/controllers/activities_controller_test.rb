@@ -7,7 +7,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   include LevelsHelper
   include Mocha::API
 
-
   setup do
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
