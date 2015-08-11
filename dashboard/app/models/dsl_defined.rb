@@ -33,7 +33,6 @@ class DSLDefined < Level
 
   def self.create_from_level_builder(params, level_params, old_name = nil)
     text = level_params[:dsl_text] || params[:dsl_text]
-    encrypted = level_params[:encrypted]
     transaction do
       # Parse data, save updated level data to database
       data, i18n = dsl_class.parse(text, '')
@@ -47,7 +46,7 @@ class DSLDefined < Level
       level = setup data
 
       # Save updated level data to external files
-      File.write(level.file_path, (encrypted ? encrypt_dsl_text(text) : text))
+      File.write(level.file_path, (level.encrypted ? level.encrypted_dsl_text(text) : text))
       self.rewrite_i18n_file(i18n)
 
       level
@@ -76,8 +75,9 @@ class DSLDefined < Level
     Rails.root.join filename
   end
 
-  def self.encrypt_dsl_text(dsl_text)
-    "encrypted '#{Encryption::encrypt_object(dsl_text)}'"
+  def encrypted_dsl_text(dsl_text)
+    ["name '#{name}'",
+     "encrypted '#{Encryption::encrypt_object(dsl_text)}'"].join("\n")
   end
 
   def self.decrypt_dsl_text_if_necessary(dsl_text)
@@ -104,11 +104,11 @@ class DSLDefined < Level
   end
 
   def encrypted
-    properties[:encrypted] || properties['encrypted']
+    properties['encrypted'].present? && properties['encrypted'] != "false"
   end
 
   def encrypted=(value)
-    properties[:encrypted] = value
+    properties['encrypted'] = value
   end
 
 
