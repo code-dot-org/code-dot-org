@@ -20807,6 +20807,7 @@ goog.color.colorDiff_ = function(rgb1, rgb2) {
 goog.provide("Blockly.ContractDefinitionSection");
 goog.require("Blockly.BlockSpaceEditor");
 var FUNCTION_BLOCK_VERTICAL_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_TOP;
+var FUNCTION_BLOCK_MIN_HORIZONTAL_MARGIN = Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT;
 Blockly.ContractDefinitionSection = function(canvasToDrawOn) {
   this.definitionTableGroup = Blockly.createSvgElement("g", {}, canvasToDrawOn);
   this.grayDefinitionBackground = Blockly.createSvgElement("rect", {"fill":"#DDD"}, this.definitionTableGroup);
@@ -20821,22 +20822,31 @@ Blockly.ContractDefinitionSection.prototype.handleCollapse = function(isNowColla
   this.definitionTableGroup.style.display = isNowCollapsed ? "none" : "block"
 };
 Blockly.ContractDefinitionSection.prototype.placeContent = function(currentY, verticalMidlineX, fullWidth, functionDefinitionBlock) {
+  if(!functionDefinitionBlock) {
+    return currentY
+  }
   var verticalMidlineY = currentY;
-  this.horizontalDefinitionTopLine.setAttribute("transform", "translate(" + 0 + "," + verticalMidlineY + ")");
-  this.verticalDefinitionMidline.setAttribute("transform", "translate(" + verticalMidlineX + "," + verticalMidlineY + ")");
-  this.grayDefinitionBackground.setAttribute("transform", "translate(" + 0 + "," + currentY + ")");
-  this.horizontalDefinitionTopLine.setAttribute("width", fullWidth);
-  currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
-  if(functionDefinitionBlock) {
-    functionDefinitionBlock.moveTo(verticalMidlineX + Blockly.BlockSvg.SEP_SPACE_X, currentY);
-    currentY += functionDefinitionBlock.getHeightWidth().height
+  if(functionDefinitionBlock.isVariable()) {
+    this.definitionTableGroup.style.display = "none"
+  }else {
+    this.definitionTableGroup.style.display = "block";
+    this.horizontalDefinitionTopLine.setAttribute("transform", "translate(" + 0 + "," + verticalMidlineY + ")");
+    this.verticalDefinitionMidline.setAttribute("transform", "translate(" + verticalMidlineX + "," + verticalMidlineY + ")");
+    this.grayDefinitionBackground.setAttribute("transform", "translate(" + 0 + "," + currentY + ")");
+    this.horizontalDefinitionTopLine.setAttribute("width", fullWidth)
   }
   currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
-  this.horizontalDefinitionBottomLine.setAttribute("transform", "translate(" + 0 + "," + currentY + ")");
-  this.horizontalDefinitionBottomLine.setAttribute("width", fullWidth);
-  this.verticalDefinitionMidline.setAttribute("height", currentY - verticalMidlineY);
-  this.grayDefinitionBackground.setAttribute("height", currentY - verticalMidlineY);
-  this.grayDefinitionBackground.setAttribute("width", verticalMidlineX);
+  var xOffset = functionDefinitionBlock.isVariable() ? FUNCTION_BLOCK_MIN_HORIZONTAL_MARGIN : FUNCTION_BLOCK_MIN_HORIZONTAL_MARGIN + verticalMidlineX;
+  functionDefinitionBlock.moveTo(xOffset, currentY);
+  currentY += functionDefinitionBlock.getHeightWidth().height;
+  currentY += FUNCTION_BLOCK_VERTICAL_MARGIN;
+  if(!functionDefinitionBlock.isVariable()) {
+    this.horizontalDefinitionBottomLine.setAttribute("transform", "translate(" + 0 + "," + currentY + ")");
+    this.horizontalDefinitionBottomLine.setAttribute("width", fullWidth);
+    this.verticalDefinitionMidline.setAttribute("height", currentY - verticalMidlineY);
+    this.grayDefinitionBackground.setAttribute("height", currentY - verticalMidlineY);
+    this.grayDefinitionBackground.setAttribute("width", verticalMidlineX)
+  }
   return currentY
 };
 goog.provide("Blockly.TypeDropdown");
@@ -22908,20 +22918,20 @@ Blockly.ContractEditor.prototype.create_ = function() {
     this.position_()
   }, this)});
   this.hiddenDefinitionBlocks_ = [];
-  var definitionSection = new Blockly.ContractDefinitionSection(canvasToDrawOn);
+  this.definitionSectionLogic_ = new Blockly.ContractDefinitionSection(canvasToDrawOn);
   this.definitionSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {sectionNumber:3, headerHeight:HEADER_HEIGHT, headerText:"Definition", onCollapseCallback:goog.bind(function(isNowCollapsed) {
     this.flyout_.setVisibility(!isNowCollapsed);
     if(!isNowCollapsed) {
       this.refreshParamsInFlyout_()
     }
     this.hiddenDefinitionBlocks_ = this.setBlockSubsetVisibility(!isNowCollapsed, goog.bind(this.isBlockInFunctionArea, this), this.hiddenDefinitionBlocks_);
-    definitionSection.handleCollapse(isNowCollapsed);
+    this.definitionSectionLogic_.handleCollapse(isNowCollapsed);
     this.position_()
   }, this), highlightBox:sharedHighlightBox, placeContentCallback:goog.bind(function(currentY) {
     if(this.flyout_) {
       currentY = this.positionFlyout_(currentY)
     }
-    return definitionSection.placeContent(currentY, this.getVerticalMidlineOffset_(), this.getFullWidth(), this.functionDefinitionBlock)
+    return this.definitionSectionLogic_.placeContent(currentY, this.getVerticalMidlineOffset_(), this.getFullWidth(), this.functionDefinitionBlock)
   }, this)});
   this.allSections_.set(CONTRACT_SECTION_NAME, this.contractSectionView_);
   this.allSections_.set(EXAMPLES_SECTION_NAME, this.examplesSectionView_);
