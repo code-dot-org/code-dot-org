@@ -25,15 +25,14 @@
       var result = answers.some(function(element) {
         return response == element.replace(/\s+/g, '');
       });
-      response = encodeURIComponent(response);
       return {
-        response: response,
+        response: encodeURIComponent(response),
         result: result
       };
     } else {
       // Always succeed for any non-empty response to open-ended question without answer(s)
       return {
-        response: response,
+        response: encodeURIComponent(response),
         result: response.length > 0
       };
     }
