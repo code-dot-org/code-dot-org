@@ -344,6 +344,7 @@ ru:
     local_school: местная школа
     online: онлайн
     see_details: Подробнее
+    view_course: View Course
     prize_info: 'Призы за участие (только для учителей государственных школ США): до $1000 на  класс.'
     tryfirst: 'Или Вы можете сначала попробовать, а зарегистрироваться позже:'
     trynow: Попробуйте сейчас
@@ -358,6 +359,7 @@ ru:
     heading_legacy: '<h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
     no_primary_course: Попробуйте курс Студии Кода
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Распечатать сертификат
   gender:
     male: Мужской
@@ -391,10 +393,6 @@ ru:
     autoplay_option: Автозапуск видео
     download: Скачать видео
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: "To increase security, we are switching to HTTPS on %{https_date}. You will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click here</a> to learn how to enable HTTPS for Code.org."
-      hide_this_warning: Скрыть это предупреждение
     working:
       header: Мы работаем над поддержкой для Вашего браузера.
       message: "Code.org использует современные Web-технологии. Это делает сайт быстрее в использовании. Ваш браузер не поддерживает все необходимые функции, поэтому могут возникнуть проблемы при использовании этой части сайта. Пожалуйста, помогите нам, <a href='%{report_issue_url}'> сообщая любые проблемы, которые вы обнаружите</a>. Вы также можете <a href='%{supported_browsers_url}'> обновить ваш браузер до поддерживаемой версии</a>."

@@ -365,7 +365,6 @@ en:
       Big Game Collision 2_instruction: crwdns35678:0crwdne35678:0
       Big Game Collision 3_instruction: crwdns36439:0crwdne36439:0
       Big Game Collision 4_instruction: crwdns38336:0crwdne38336:0
-      Big Game Complete (copy 1)_instruction: crwdns34947:0crwdne34947:0
       Big Game Complete_instruction: crwdns34948:0crwdne34948:0
       Big Game Final_instruction: crwdns34949:0crwdne34949:0
       Big Game Player 1_instruction: crwdns36441:0crwdne36441:0
@@ -859,6 +858,16 @@ en:
       MSM Play Lab Butterfly 2_instruction: crwdns34586:0crwdne34586:0
       MSM Play Lab Butterfly 3_instruction: crwdns34587:0crwdne34587:0
       MSM Play Lab Game 2_instruction: crwdns34589:0crwdne34589:0
+      NetSim Standalone Automatic DNS_instruction: 'crwdns43455:0[hostname]crwdne43455:0'
+      NetSim Standalone Broadcast_instruction: crwdns43456:0crwdne43456:0
+      NetSim Standalone Classroom Routers_instruction: crwdns43457:0crwdne43457:0
+      NetSim Standalone Freeplay_instruction: crwdns43458:0crwdne43458:0
+      NetSim Standalone Manual DNS_instruction: crwdns43459:0crwdne43459:0
+      NetSim Standalone Packets TCP_instruction: crwdns43460:0crwdne43460:0
+      NetSim Standalone Routers Addresses_instruction: crwdns43461:0crwdne43461:0
+      NetSim Standalone SendAB_instruction: crwdns43462:0crwdne43462:0
+      NetSim Standalone Sending Numbers Ascii_instruction: crwdns43463:0crwdne43463:0
+      NetSim Standalone Sending Numbers_instruction: crwdns43464:0crwdne43464:0
       NetSim_AddressingMessages_instruction: crwdns35176:0crwdne35176:0
       NetSim_AutomaticDNS_instruction: 'crwdns36447:0[hostname]crwdne36447:0'
       NetSim_ManualDNS_instruction: crwdns35178:0crwdne35178:0
@@ -943,20 +952,9 @@ en:
       PDK5 Functions 2_instruction: crwdns37650:0crwdne37650:0
       PDK5 Loops 1_instruction: crwdns36456:0crwdne36456:0
       PDK5 Loops 3_instruction: crwdns36457:0crwdne36457:0
-      Pixelation - Lesson 14 - Fix bit offset v.2_instruction: crwdns36240:0crwdne36240:0
-      Pixelation - Lesson 14 - Fix the error_instruction: crwdns36241:0crwdne36241:0
-      Pixelation - Lesson 14 - Make the Letter A_instruction: crwdns36242:0crwdne36242:0
-      Pixelation - Lesson 14 - Make your own B and W Image_instruction: crwdns36243:0crwdne36243:0
-      Pixelation - Lesson 14 - Make your own B&W Image_instruction: crwdns36244:0crwdne36244:0
-      Pixelation 2_instruction: crwdns36245:0crwdne36245:0
-      Pixelation 4x4 Empty_instruction: crwdns36246:0crwdne36246:0
       Play Lab Rocket 1_instruction: crwdns38340:0crwdne38340:0
-      Play Lab Rocket 2 (copy 1)_instruction: crwdns34653:0crwdne34653:0
-      Play Lab Rocket 2 (copy 2)_instruction: crwdns35186:0crwdne35186:0
       Play Lab Rocket 2_instruction: crwdns34654:0crwdne34654:0
-      Play Lab Rocket 2B (copy 1)_instruction: crwdns35187:0crwdne35187:0
       Play Lab Rocket 2B_instruction: crwdns35188:0crwdne35188:0
-      Play Lab Rocket 3 (copy 1)_instruction: crwdns34655:0crwdne34655:0
       Play Lab Rocket 3_instruction: crwdns34656:0crwdne34656:0
       Play Lab Rocket 4 (copy 1)_instruction: crwdns34657:0crwdne34657:0
       Play Lab Rocket 4_instruction: crwdns35189:0crwdne35189:0
@@ -993,7 +991,6 @@ en:
       Standalone_Artist_9_instruction: crwdns34700:0crwdne34700:0
       Standalone_Artist_v2_instruction: crwdns35014:0crwdne35014:0
       Test Play Lab_instruction: crwdns43227:0crwdne43227:0
-      Text Compression Peter Piper_instruction: crwdns36247:0crwdne36247:0
       U1L10 NetSim numbers with decimal_instruction: crwdns41846:0crwdne41846:0
       U1L11 NetSim numbers with Ascii_instruction: crwdns41847:0crwdne41847:0
       U1L4 NetSim SendAB_instruction: crwdns38964:0crwdne38964:0
@@ -1067,12 +1064,36 @@ en:
       U3L19 - write var and string with same name_instruction: crwdns38459:0crwdne38459:0
       U3L2 Using Simple Commands_instruction: crwdns37681:0crwdne37681:0
       U3L23 Chatbot Conditionals 1_instruction: crwdns43362:0crwdne43362:0
-      U3L23 Chatbot Conditionals 2_instruction: crwdns43363:0crwdne43363:0
-      U3L23 Chatbot Conditionals 3_instruction: crwdns43364:0crwdne43364:0
+      U3L23 Chatbot Intro 1a_instruction: crwdns43465:0crwdne43465:0
       U3L23 Chatbot Intro 2_instruction: crwdns43365:0crwdne43365:0
+      U3L23 Chatbot Intro 2a_instruction: crwdns43466:0crwdne43466:0
       U3L23 Chatbot Intro 3_instruction: crwdns43366:0crwdne43366:0
       U3L23 Chatbot Intro 4_instruction: crwdns43367:0crwdne43367:0
       U3L23 Chatbot Intro_instruction: crwdns43368:0crwdne43368:0
+      U3L24 Basic String Parsing 1_instruction: crwdns43467:0crwdne43467:0
+      U3L24 Chatbot Basic Conditionals_instruction: crwdns43468:0crwdne43468:0
+      U3L24 Chatbot Conditionals 2_instruction: crwdns43469:0crwdne43469:0
+      U3L24 Chatbot Conditionals 3_instruction: crwdns43470:0crwdne43470:0
+      U3L24 Chatbot Keyword Record_instruction: crwdns43471:0crwdne43471:0
+      U3L24 Chatbot Nested Conditionals_instruction: crwdns43472:0crwdne43472:0
+      U3L24 Nested Conditionals 1_instruction: crwdns43473:0crwdne43473:0
+      U3L24 Nested Conditionals 2_instruction: crwdns43474:0crwdne43474:0
+      U3L24 Nested Conditionals Bugs 2_instruction: crwdns43475:0crwdne43475:0
+      U3L24 Nested Conditionals Bugs 3_instruction: crwdns43476:0crwdne43476:0
+      U3L24 Nested Conditionals Bugs_instruction: crwdns43477:0crwdne43477:0
+      U3L25 Chatbot Strings_instruction: crwdns43478:0crwdne43478:0
+      U3L25 String Parsing 1_instruction: crwdns43479:0crwdne43479:0
+      U3L25 String Parsing 2_instruction: crwdns43480:0crwdne43480:0
+      U3L25 String Parsing 3_instruction: crwdns43481:0crwdne43481:0
+      U3L25 String Parsing 4_instruction: crwdns43482:0crwdne43482:0
+      U3L25 String Parsing 5_instruction: crwdns43483:0crwdne43483:0
+      U3L25 String Parsing 6_instruction: crwdns43484:0crwdne43484:0
+      U3L25 String Parsing 7_instruction: crwdns43485:0crwdne43485:0
+      U3L26 AND operator_instruction: crwdns43486:0crwdne43486:0
+      U3L26 Chatbot Compound Conditionals_instruction: crwdns43487:0crwdne43487:0
+      U3L26 Compound Logic_instruction: crwdns43488:0crwdne43488:0
+      U3L26 NOT operator_instruction: crwdns43489:0crwdne43489:0
+      U3L26 OR operator_instruction: crwdns43490:0crwdne43490:0
       U3L2_Turtle3by3Grid_instruction: crwdns37682:0crwdne37682:0
       U3L2_TurtleSquare_right_instruction: crwdns37683:0crwdne37683:0
       XML Scratchpad_instruction: crwdns31218:0crwdne31218:0

@@ -292,6 +292,19 @@ en:
           "Unit 1: Sending Bits": crwdns35330:0crwdne35330:0
           "Unit 2: Routing and DNS": crwdns35331:0crwdne35331:0
           Internet Simulator Templates: crwdns35332:0crwdne35332:0
+          Overview and Setup Instructions: crwdns43491:0crwdne43491:0
+          "Peer to Peer: Sending Bits on a Shared Wire": crwdns43492:0crwdne43492:0
+          "Peer to Peer: Sending Numbers": crwdns43493:0crwdne43493:0
+          "Peer to Peer: Sending Ascii": crwdns43494:0crwdne43494:0
+          Broadcasting messages: crwdns43495:0crwdne43495:0
+          Routers and addresses: crwdns43496:0crwdne43496:0
+          Packets and Reliability: crwdns43497:0crwdne43497:0
+          Manual DNS: crwdns43498:0crwdne43498:0
+          Automatic DNS node: crwdns43499:0crwdne43499:0
+          Internet Simulator Freeplay: crwdns43500:0crwdne43500:0
+          Peer to Peer - Sending Bits on a Shared Wire: crwdns43501:0crwdne43501:0
+          Peer to Peer - Sending Numbers: crwdns43502:0crwdne43502:0
+          Peer to Peer - Sending Ascii: crwdns43503:0crwdne43503:0
         pixelation:
           title: crwdns34820:0crwdne34820:0
           description: crwdns34821:0crwdne34821:0
@@ -613,6 +626,9 @@ en:
           "Scene Design Part 1: Plan": crwdns39076:0crwdne39076:0
           "Scene Design Part 2: Code": crwdns39077:0crwdne39077:0
           "Scene Design Part 3: Reflect": crwdns39078:0crwdne39078:0
+          Natural Language Processing: crwdns43504:0crwdne43504:0
+          Chained and Nested Conditionals: crwdns43505:0crwdne43505:0
+          Intelligent Personal Assistant Challenge: crwdns43506:0crwdne43506:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0

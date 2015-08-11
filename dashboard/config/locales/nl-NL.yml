@@ -415,6 +415,7 @@
     local_school: lokale school
     online: online
     see_details: Bekijk details
+    view_course: View Course
     prize_info: 'Prijzen voor deelname (alleen voor leerkrachten van Amerikaanse openbare
       scholen): tot $1.000 aan prijzengeld voor je klas.'
     tryfirst: 'Of, je kunt het eerst proberen, en later registreren:'
@@ -433,6 +434,7 @@
     heading_legacy: <h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: print certificaat
   gender:
     male: Man
@@ -469,12 +471,6 @@
     autoplay_option: Video's automatisch afspelen
     download: Video downloaden
   compatability:
-    https:
-      header: Schakel HTTPS in voor Code.org.
-      message: Om de veiligheid te verhogen schakelen we op %{https_date} over naar
-        HTTPS. Na deze datum kan u Code.org niet bereiken. <a href='%{it_requirements_url}'>Klik
-        hier</a> om te leren hoe je HTTPS moet inschakelen voor Code.org.
-      hide_this_warning: Verberg deze waarschuwing
     working:
       header: We zijn bezig om ondersteuning voor je browser toe te voegen.
       message: Code.org gebruikt moderne webtechnologie. Dat maakt de site sneller.

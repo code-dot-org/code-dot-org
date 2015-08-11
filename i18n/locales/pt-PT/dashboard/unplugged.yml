@@ -76,11 +76,11 @@ pt:
         desc: Estudantes criam um algoritmo simples (conjunto de instruções) para mover a personagem através de um labirinto usando um único comando.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Algoritmos da vida real: plante uma semente'
+        title: 'Algoritmos da Vida Real: Plante uma Semente'
         desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando o ato de plantar uma semente como exemplo. Também se concentra no quadro geral de ciência da computação e como os algoritmos desempenham um papel fundamental.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Criando uma base
+        title: Criar uma base
         desc: Os alunos constroem uma estrutura usando apenas os materiais fornecidos. Essas estruturas devem completar uma tarefa (chegar a uma certa altura ou suportar um determinado peso), e os alunos discutem a ideia de ser persistente quando as coisas ficam complicadas.
         video: C1_building_foundation
       GettingLoopy:
@@ -108,7 +108,7 @@ pt:
         desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um conjunto predefinido de comandos para orientar seus colegas de classe na reprodução de um desenho.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Algoritmos da vida real: aviões de papel'
+        title: 'Algoritmos da Vida Real: Aviões de Papel'
         desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente na hora de fazer aviões de papel. Esta lição também apresenta a ciência da computação de forma geral, e como os algoritmos têm um papel essencial.
         video: C2_paper_airplanes
       BinaryBracelets:

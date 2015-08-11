@@ -349,6 +349,7 @@ is:
     local_school: nálægur skóli
     online: á netinu
     see_details: Sjá nánar
+    view_course: View Course
     prize_info: 'Verðlaun fyrir þátttöku (aðeins kennarar í opinberum skólum í USA): Allt að $1.000 bekkjarverðlaun.'
     tryfirst: 'Eða þú getur prófað fyrst og skráð þig seinna:'
     trynow: Prófa núna
@@ -363,6 +364,7 @@ is:
     heading_legacy: '<h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>'
     your_gallery: Safn
     no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Prenta skírteini
   gender:
     male: Karlkyns
@@ -396,10 +398,6 @@ is:
     autoplay_option: Spila myndbönd sjálfvirkt
     download: Hala niður myndband
   compatability:
-    https:
-      header: Vinsamlegast virkjaðu HTTPS fyrir Code.org.
-      message: "Til að auka öryggi erum við að skipta yfir í HTTPS frá og með %{https_date}. Þú munt ekki geta opnað Code.org eftir það nema með HTTPS. <a href='%{it_requirements_url}'>Smelltu hér</a> til að læra að virkja HTTPS fyrir Code.org."
-      hide_this_warning: Fela þessa aðvörun
     working:
       header: Við erum að vinna í stuðningi við vafrann sem þú notar.
       message: "Code.org notar nútíma veftækni. Þetta gerir vefinn hraðvirkari. Vafrinn þinn ræður ekki við alla tækni sem er notuð og því geta komið upp vandamál þegar þú notar þennan hluta vefsins. Vinsamlegast hjálpaðu okkur með því að  <a href='%{report_issue_url}'>tilkynna vandamál sem upp koma</a>. Þú getur líka <a href='%{supported_browsers_url}'>uppfært vafrann þinn í studda útgáfu</a>."

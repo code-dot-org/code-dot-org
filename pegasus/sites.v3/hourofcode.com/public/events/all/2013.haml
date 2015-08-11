@@ -1,0 +1,13 @@
+---
+title: <%= hoc_s(:events_all_title) %>
+layout: wide
+nav: events_nav
+---
+%h1= hoc_s(:events_all_old_title).gsub(/\@year/, "2013")
+
+-SOLR = Solr::Server.new(host:CDO.solr_server)
+
+-events = SOLR.query(q:"*:*", fq:["kind_s:CSEdWeekEvent2013", "country_s:[* TO *]", "state_code_s:[* TO *]", "organization_name_s:[* TO *]"], sort:'country_s asc, state_code_s asc', rows:10)
+
+-events.each do |event|
+  %li= event['organization_name_s'].to_s

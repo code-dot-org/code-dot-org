@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Blloku \"Përsërit\" ose \"Nëse\"  ka nevojë të ketë blloqe të tjera brënda në mënyrë që të funksionojë. Sigurohu që blloku i brendshëm të përshtatet në mënyrë sa më të mirë brenda bllokut që e përmban.",
   "emptyBlockInFunction": "Funksioni {name} ka nje input te pa plotesuar.",
   "emptyBlockInVariable": "Elementi {name} ka nje input te paplotesuar.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "Blloku i funksionit ka nevojë për blloqe të tjera brënda, në mënyrë që të funksionojë.",
   "emptyFunctionalBlock": "Ti ke një bllok me një input të pambushur.",
   "emptyTopLevelBlock": "Nuk ka blloqe per te drejtuar. Duhet te ngjisesh nje bllok tek blloku {topLevelBlockName}.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Krijo një parametër për funksionin tënd duke klikuar \"redakto\" dhe duke shtuar parametrat e nevojshëm. Zhvendos blloqet e reja me parametra brenda në përcaktimin e funksionit tënd.",
   "errorUnusedFunction": "Ti krijove një funksion, por nuk e përdore asnjëherë në hapësirën tënde të punës! Kliko tek \"Funksionet\" në grupin e komandave dhe sigurohu që ta përdorësh atë në programin tënd.",
   "errorUnusedParam": "Ti shtove një bllok parametër, por nuk e përdore atë në përcaktim. Sigurohu që të përdorësh parametrin tënd duke klikuar \"redakto\" dhe duke vendosur këtë parametër bllok brenda bllokut të gjelbër.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Ke blloqe te pa bashkuara.",
   "extraTopBlocksWhenRun": "Ke blloqe te pa bashkuara. Mos deshiron t'i bashkosh keto blloqe me bllokun \"kur nis\" ?",
   "finalStage": "Urime! Ju sapo perfunduat fazen finale ",
@@ -210,12 +212,10 @@
   "totalNumLinesOfCodeWritten": "Totali i gjithë kohës: {numLines, plural, one {1 line} other {# lines}} i kodit.",
   "tryAgain": "Provo perseri",
   "tryHOC": "Provo Orën e Kodimit",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Dëshiron të mësosh se si të kodosh?",
   "watchVideo": "Shiko Videon",
   "when": "kur",
   "whenRun": "kur vrapon",
-  "workspaceHeaderShort": "Vendi i punës: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
-  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name."
+  "workspaceHeaderShort": "Vendi i punës: "
 }

@@ -292,6 +292,19 @@ nl:
           "Unit 1: Sending Bits": 'Deel 1: Bits verzenden'
           "Unit 2: Routing and DNS": 'Deel 2: Routering en DNS'
           Internet Simulator Templates: Internet Simulator Templates
+          Overview and Setup Instructions: Overview and Setup Instructions
+          "Peer to Peer: Sending Bits on a Shared Wire": 'Peer to Peer: Sending Bits on a Shared Wire'
+          "Peer to Peer: Sending Numbers": 'Peer to Peer: Sending Numbers'
+          "Peer to Peer: Sending Ascii": 'Peer to Peer: Sending Ascii'
+          Broadcasting messages: Broadcasting messages
+          Routers and addresses: Routers and addresses
+          Packets and Reliability: Packets and Reliability
+          Manual DNS: Manual DNS
+          Automatic DNS node: Automatic DNS node
+          Internet Simulator Freeplay: Internet Simulator Freeplay
+          Peer to Peer - Sending Bits on a Shared Wire: 'Peer to Peer - Sending Bits on a Shared Wire'
+          Peer to Peer - Sending Numbers: 'Peer to Peer - Sending Numbers'
+          Peer to Peer - Sending Ascii: 'Peer to Peer - Sending Ascii'
         pixelation:
           title: Pixelachtig
           description: Maak afbeeldingen met bits en bytes.
@@ -613,6 +626,9 @@ nl:
           "Scene Design Part 1: Plan": 'Scene Design Part 1: Plan'
           "Scene Design Part 2: Code": 'Scene Design Part 2: Code'
           "Scene Design Part 3: Reflect": 'Scene Design Part 3: Reflect'
+          Natural Language Processing: Natural Language Processing
+          Chained and Nested Conditionals: Chained and Nested Conditionals
+          Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -735,8 +751,8 @@ nl:
           new stage: nieuw niveau
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -803,8 +819,8 @@ nl:
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
           Evaluation Blocks: evaluatie blokken
           Strings and Images: Tekenreeksen en afbeeldingen
           Defining Variables: Variabelen definiëren
@@ -849,8 +865,8 @@ nl:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -903,8 +919,8 @@ nl:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
           Welcome!: Welkom!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -953,8 +969,8 @@ nl:
           Hour of Code: Een Uur Code
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Fase 2 Online: Gemengde zomer studie'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -975,8 +991,8 @@ nl:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
           Welcome!: Welkom!
           Wrap-Up: Terugblik
           Review StarLogo Nova: Review StarLogo Nova
@@ -992,8 +1008,8 @@ nl:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
           Welcome!: Welkom!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1012,8 +1028,8 @@ nl:
         sciencePD2b-iZone:
           Welcome!: Welkom!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1022,8 +1038,8 @@ nl:
           Wrap-Up: Terugblik
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
           Welcome!: Welkom!
           0: |
             Unit 1, Days 1-2
@@ -1041,8 +1057,8 @@ nl:
           Wrap-up: Einde
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Fase 2 Online: Gemengde zomer studie'
+          description: 'Fase 2 Online: Gemengde zomer studie'
           Welcome!: Welkom!
           0: |
             Unit 1, Days 1-2

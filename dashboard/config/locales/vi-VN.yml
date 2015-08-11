@@ -5,7 +5,7 @@
   activerecord:
     errors:
       messages:
-        blank: là bắt buộc
+        blank: được yêu cầu
     attributes:
       user:
         name: Tên hiển thị
@@ -83,20 +83,20 @@
     student_pitch: Sinh viên đăng ký Code.org
     student_title: Sinh viên đăng ký
     school_name: Tên trường (tùy chọn)
-    school_address: Địa chỉ trường (tùy chọn)
+    school_address: Địa chỉ trường (không bắt buộc)
     address_placeholder: địa chỉ, thành phố, tỉnh, mã bưu điện
-    gender: Giới tính (tùy chọn)
+    gender: Giới tính (không bắt buộc)
     birthday: Ngày sinh (tùy chọn)
     age: Tuổi
-    user_type: Bạn là Sinh viên hay Giáo viên?
+    user_type: Bạn là học viên hay Giáo viên?
     submit: Đăng ký
     teacher: Bạn có phải là giáo viên?
     valid_username: Đã tồn tại!
     invalid_username: Tên người dùng phải nhiều hơn 5 ký tự
     taken_username: Tên người dùng đã được sử dụng
     valid_password: Mật khẩu hợp lệ!
-    invalid_password: Mật khẩu phải có từ 6 ký tự trở lên
-    mismatch_password: Hai mật khẩu phải giống nhau
+    invalid_password: Mật khẩu phải có ít nhất 6 ký tự
+    mismatch_password: Hai mật khẩu bạn nhập không khớp
     student_terms: Tôi đồng ý bị ràng buộc bởi <a href='http://code.org/tos'> điều
       khoản Dịch vụ</a> Code.org . Nếu tôi dưới 13 tuổi, tôi xác nhận bằng cách gửi
       biểu mẫu này rằng cha mẹ tôi hay người giám hộ hợp pháp của tôi cho phép sử
@@ -110,11 +110,11 @@
     title: Đã có một tài khoản? Đăng nhập
     login: Email hoặc tên người dùng
     password: Mật khẩu
-    remember: Nhớ mật khẩu
+    remember: ghi nhớ tôi
     submit: Đăng nhập
   signin:
     try_heading: Bạn muốn thử lập trình mà không cần đăng ký?
-    try_hoc: Hãy thử lập trình một giờ đầu tiên
+    try_hoc: Hãy thử Giờ Lập trình
     try_20hours: 20 tiếng để xem bài giới thiệu về khoa học máy tính của chúng tôi
   signinsection:
     welcome: Chào mừng đến với %{section_name}
@@ -152,7 +152,7 @@
       cant_join_own_section: Xin lỗi, bạn không thể tham gia phần riêng của bạn.
     mail:
       invite_student:
-        subject: Tham gia một lớp học với % {giáo viên_tên} tại Code.org!
+        subject: Tham gia một lớp học với %{teacher_name} tại Code.org!
       student_disassociated:
         subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách
           là học viên của bạn.'
@@ -168,8 +168,8 @@
     provider: 'Nhà cung cấp:'
     code: 'Mã:'
     redeem_header: 'Để mua lại:'
-    donorschoose_register: Đăng ký như là một giáo viên trên DonorsChoose.org
-    donorschoose_project: Đăng một dự án
+    donorschoose_register: Đăng ký với tư cách là một giáo viên trên DonorsChoose.org
+    donorschoose_project: Đăng một chương trình
     donorschoose_how_to: Làm thế nào để sử dụng mã
     success: Giải thưởng của bạn đã mua lại thành công, xem mã dưới đây.
     error: Giải thưởng của bạn có thể không thu hồi được, xin vui lòng thử lại.
@@ -233,9 +233,8 @@
           target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> chỉ
           có thể sử dụng bởi giáo viên ở các trường công lập tại Mỹ.
         bonus:
-          not_earned_title: You can still earn an additional $250 in <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
-            only)
+          not_earned_title: Bạn có cở hội kiếm được 250$ tại <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+            credits (Chỉ giáo viên Hoa Kì)
           earned: 7 hoặc nhiều hơn sinh viên/học sinh đã thu thập được tất cả các
             danh hiệu %{num_trophies} là sinh viên/học sinh nữ. Bạn đã thắng được
             một phần tiền thưởng! (Chỉ dành cho giáo viên tại Hoa Kỳ)
@@ -267,7 +266,7 @@
         calculate: Calculate Something
     user:
       classroom: Trang chủ giáo viên
-      district_dashboard: District Dashboard
+      district_dashboard: khu vực điều khiển
       label: Chào %{username}
       stats: TIến trình của bạn
       settings: Tài khoản của bạn
@@ -292,7 +291,7 @@
     title:
       one: 'Giáo viên của bạn:'
       other: 'Giáo viên của bạn:'
-    remove: (loại bỏ giáo viên)
+    remove: (thay đổi giáo viên)
     confirm:
       remove: Bạn có chắc bạn muốn loại bỏ giáo viên này không?
     tools: Công cụ dành cho giáo viên
@@ -300,7 +299,7 @@
       section: 'Mục:'
       stages: '(Các) Quá trình để hiển thị:'
       show_past: 'Hiển thị hoạt động của sinh viên (%{bullet_html}) trong quá khứ:'
-      levels_key: Levels key
+      levels_key: Cấp độ khóa
       perfect: Hoàn thành, hoàn hảo
       completed: Hoàn thành, nhưng bằng cách sử dụng quá nhiều khối
       tried: Đã cố gắng, nhưng chưa hoàn thành
@@ -317,8 +316,8 @@
       add: Thêm học sinh
       remove: loại bỏ sinh viên
       confirm_remove: Bạn có chắc muốn loại bỏ sinh viên/học sinh này?
-      help_reassign: To divide your class into multiple sections, select students
-        to assign to a new section.
+      help_reassign: Để chia lớp của bạn thành nhiều nhóm, lựa chọn các học viên để
+        phân công thành nhóm mới.
       help_register: Thay vì dành nhiều thời gian cá nhân của bạn vào việc nhập dữ
         liệu của sinh viên/học sinh, bạn có thể thiết lập lớp học của bạn một cách
         nhanh chóng bằng cách yêu cầu sinh viên/học sinh của bạn đăng ký. Các sinh
@@ -335,9 +334,9 @@
       add: Thêm phần
       manage: Quản lý các học phần
       section: Học phần
-      students: Học sinh/sinh viên
+      students: học viên
       section_code: Mã của học phần
-      add_section_code: Thêm Sinh Viên/Học Sinh Vào Học Phần
+      add_section_code: Thêm học viên Vào Học Phần
       secret: Loại bí mật
       grade: Điểm số
       course: Khóa học
@@ -353,8 +352,8 @@
       sách sinh viên của bạn vì %{student_name} chưa đăng ký với một địa chỉ email'
     cant_remove_teacher_no_email: '%{teacher_name} không thể được gỡ bỏ khỏi danh
       sách giáo viên của bạn vì bạn chưa đăng ký địa chỉ email'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
-      for %{student_name}'
+    student_teacher_disassociated: '%{teacher_name} đã được thay thế như là môt giáo
+      viên cho %{student_name}'
     panel:
       answer_viewer: Xem câu trả lời
       student: học sinh
@@ -371,11 +370,11 @@
     delete: Xóa tài khoản của bạn
     delete_text: Nhấp vào nút bên dưới sẽ xóa tài khoản của bạn.
     delete_text_teacher_note: 'Xin lưu ý: xóa tài khoản của bạn sẽ không xóa tài khoản
-      sinh viên của bạn.'
+      học viên của bạn.'
     delete_confirm: Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?
   user_level:
     completed: Đã hoàn thành
-    tried: Cố gắng
+    tried: thử lại
   user_stats:
     recent_activity: Hoạt động gần đây
     show_more: Hiển thị thêm
@@ -385,7 +384,7 @@
     description: Code Studio là nơi có các khóa học trực tuyến được tạo bởi Code.org
     lines_of_code: '%{lines_count} DÒNG MÃ ĐƯỢC VIẾT BỞI HỌC SINH/SINH VIÊN'
     lines_of_code_linebreak: '%{lines_count} dòng mã <br/> được viết bởi %{students_count}
-      triệu sinh viên'
+      hàng triêu học viên'
     all_courses: Tổng quan về các khóa học 1, 2 và 3
     lesson_plans: Giáo án
     signin_message: Đã đăng ký? %{link}
@@ -412,6 +411,7 @@
     local_school: trường học ở địa phương
     online: trực tuyến
     see_details: Xem chi tiết
+    view_course: View Course
     prize_info: 'Giải thưởng cho sự tham gia (chỉ dành cho giáo viên trường công lập
       tại Hoa Kỳ): lên đến $1,000 trong lớp học phần thưởng.'
     tryfirst: 'Hoặc, bạn có thể thử nó trước, và đăng ký sau:'
@@ -425,13 +425,14 @@
     try_beta_courses: Tính năng mới! Hãy thử nghiệm các khóa học phiên bản beta cho
       học sinh lớp 5
     use_as_teacher: Sử dụng trang web này với tư cách là giáo viên
-    heading_hoc2014: <h2>Một Giờ Lập Trình</h2><h1>Mọi lứa tuổi</h1>
+    heading_hoc2014: <h2> Giờ Lập Trình</h2><h1>Mọi lứa tuổi</h1>
     heading_elementary: <h2>các khóa học 20 giờ cho</h2> <h1>Người nhập môn (mọi lứa
       tuổi)</h1>
     heading_apps: <h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>
     heading_legacy: <h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>
     your_gallery: Bộ sưu tập
     no_primary_course: Hãy thử một khóa học ở Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: In giấy chứng nhận
   gender:
     male: Nam
@@ -468,12 +469,6 @@
     autoplay_option: Tự phát video
     download: Tải video xuống
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Ẩn cảnh báo này
     working:
       header: Chúng tôi đang làm việc để hỗ trợ cho trình duyệt của bạn.
       message: Code.org sử dụng công nghệ web hiện đại. Điều này làm cho việc sử dụng
@@ -544,8 +539,7 @@
       body_short: Học những căn bản về khoa học máy tính với phiên bản cấp tốc của
         các lớp 2-4.
     hoc2014:
-      try_new_tutorial: Hãy thử lớp học Một giờ Lập trình phiên bản beta của chúng
-        tôi
+      try_new_tutorial: Hãy thử lớp học Giờ Lập trình phiên bản beta của chúng tôi
       try_frozen: Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen
     gallery:
       title: Bộ sưu tập
@@ -629,7 +623,7 @@
             và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên
             nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
         Hour of Code:
-          title: Một giờ Lập trình 2013
+          title: Giờ Lập trình 2013
           description: ''
         edit-code:
           title: Hiệu chỉnh mã
@@ -638,7 +632,7 @@
           title: Các sự kiện
           description: ''
         builder:
-          title: Builder
+          title: Xây dựng
           description: ''
         flappy:
           title: Lập trình Flappy
@@ -654,60 +648,62 @@
           title: Sample Level Builder
           description: ''
   age_interstitial:
-    age: Your age
-    header: Account Information Update
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
-  zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
-    You may browse <a href="http://support.code.org">support.code.org</a> without
-    signing in or ask your parent or teacher to contact us for you.
+    age: Tuổi của bạn
+    header: Cập nhật thông tin tài khoản
+    message: Chúng tôi đang trong quá trình thu thập thêm kinh nghiệm để bảo vệ quyền
+      riêng tư cho ban mạnh hơn nữa. Để làm được điều đó, chúng tôi cần người dùng
+      nhập tuổi của họ vào đây <br/> Như mọi khi, code.org sẽ không thê, bán hoặc
+      chia sẻ thông tìn này với bất kì bên thứ 3 nào.
+    sign_out: Nếu bạn không muốn cung cấp tuổi của mình, bạn có thể đăng nhập vào
+      <a href="%{url}">sign out</a>
+  zendesk_too_young_message: Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang
+    web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a>
+    mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên
+    hệ với chúng tôi .
   progress:
-    not_started: not started
-    in_progress: in progress
-    completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
-    furthest_level_attempted: furthest level attempted
-    assessment: assessment
+    not_started: chưa bắt đầu
+    in_progress: trong tiến trình
+    completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
+    completed_perfect: hoàn thành, hoàn hảo
+    furthest_level_attempted: đã cố gắng ở mức độ cao nhất
+    assessment: đánh giá
   studio:
-    courses_working_on: Courses you're working on
-    completed_courses: Completed courses
-    all_courses: All courses
+    courses_working_on: Các khóa học bạn đang tiến hành
+    completed_courses: Hoàn thành khóa học
+    all_courses: Tất cả các khóa học
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: chương trình
+    create: Tạo ra chương trình
+    create_a_project: 'Tạo một chương trình mới:'
+    new: Tạo mới
+    rename: Đổi tên
     save: Lưu
     delete: Xóa
-    exit: Return to Course
-    my_projects: My Projects
+    exit: Trở về khóa học
+    my_projects: chương trình của tôi
     share: Chia sẻ
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: Chia sẻ chương trình của tôi
+    share_copy_link: 'Sao chép liên kết:'
+    close: Đóng
     more: Nhiều hơn
     name: Tên
-    updated: Updated
-    project_type: Project Type
-    help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
-      below to make a new Play Lab or Artist project!<br/>You can come back and work
-      on your projects at any time.
-    need_help: Need help getting started?
+    updated: Đã cập nhật
+    project_type: loại chương trình
+    help_text: Nhấp vào liên kết bên dưới để tạo một chương trình Play Lap (trò chơi
+      thí nghiệm) hoặc Artist (đồ họa) <strong>Make an App</strong> hoặc <strong>Draw
+      Something</strong> below to make a new Play Lab or Artist project!<br/> Bạn
+      có thể trở lại và làm việc với các dự án của mình bất cứ lúc nào
+    need_help: Cần trợ giúp ban đầu?
     really_delete: Xóa?
     delete_yes: Đồng ý
     delete_no: Không
-    saved: Saved
-    not_saved: Not saved
+    saved: Đã lưu
+    not_saved: Không lưu
     cancel: Huỷ
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: Deleting your project will permanently remove it from your
-      My Projects list. Anyone you have shared the link to will no longer be able
-      to view your project.
-    view_all: View My Projects
-    remix: Remix
-    click_to_remix: Click 'Remix' to spin-off your own version!
+    delete_confirm_title: Bạn có chắc bạn muốn xóa bỏ chương trình này?
+    delete_confirm_text: Xóa chương trình của bạn sẽ vĩnh viễn loại bỏ nó từ danh
+      sách chương trình của bạn. Bất cừ ai đã được bạn chia sẽ sẽ không còn nhìn thấy
+      chương trình của bạn.
+    view_all: Xem chương trình của tôi
+    remix: đảo lại
+    click_to_remix: Nhấp vào 'Remix' để xáo trộn phiên bản của bạn!

@@ -339,8 +339,8 @@
         turtle_3_7: Aggiungi un parametro chiamato "lunghezza" alla funzione "disegna
           una casa" e costruisci una casa grande per l'elefante (con lati lunghi 150
           pixel)
-        turtle_3_8: Modificare "disegnare una casa" così finisco all'angolo inferiore
-          destro dopo aver disegnato una nuova casa. Utilizzare questa funzione modificata
+        turtle_3_8: Modifica "disegna una casa" così finisco all'angolo inferiore
+          destro dopo aver disegnato una nuova casa. Utilizza questa funzione modificata
           per disegnare tre case.
         turtle_3_9: Riesci a ricreare la funzione "disegna una casa" senza aiuto?
           Provaci e poi disegna una fila di case.
@@ -709,7 +709,7 @@
         playlab_intro: Introduzione al Laboratorio
         playlab_events: 'Laboratorio: Eventi'
         playlab_repeat_forever: 'Laboratorio: Ripeti per Sempre'
-        tutorial_puzzle_challenge: Tutorial Puzzle sfida
+        tutorial_puzzle_challenge: Sfida "Tutorial Puzzle"
         infinity_playlab_intro: Play Lab - Introduzione
         infinity_playlab_events: Play Lab - Eventi
         infinity_playlab_repeat_forever: Play Lab - Ripeti per sempre
@@ -854,8 +854,8 @@
         Infinity_move_right_runbutton: Aggiungi qui il blocco "sposta il personaggio"
         Infinity_move_directions_callout: Quale blocco farà spostare Baymax verso
           l'alto quando viene premuta la freccia in su?
-        Infinity_move_directions_callout_arrow: Usa le frecce per muovere il personaggio
+        Infinity_move_directions_callout_arrow: Usa queste frecce per muovere il personaggio
         Infinity_move_collide_callout: Riproduci un suono quando si verifica questo
           evento.
-        Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
+        Infinity_repeat_callout: Aggiungi i blocchi "Sposta" all'interno di questo
           blocco di ripetizione

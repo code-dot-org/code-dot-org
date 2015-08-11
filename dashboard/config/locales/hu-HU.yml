@@ -400,6 +400,7 @@
     local_school: helyi iskola
     online: online
     see_details: Részletek
+    view_course: View Course
     prize_info: 'Részvételért járó díjak (csak USA állami iskolai tanároknak): akár
       $1,000.'
     tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
@@ -417,6 +418,7 @@
     heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
     your_gallery: Galéria
     no_primary_course: Próbálj ki egy tanfolyamot a Code Studio-nál
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Igazolás kinyomtatása
   gender:
     male: Férfi
@@ -453,12 +455,6 @@
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
   compatability:
-    https:
-      header: Kérjük engedélyezd a HTTPS protokollt a Code.org-nak.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: Figyelmen kívül hagyom
     working:
       header: Azon dolgozunk, hogy a rendszerünk az Ön böngészőjével is tökéletesen
         együtt tudjon működni.

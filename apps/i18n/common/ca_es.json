@@ -139,6 +139,7 @@
   "emptyBlocksErrorMsg": "Els blocs \"Repetir\" o el \"Si\" necessiten tenir altres blocs dins per a treballar. Assegureu-vos que el bloc interior encaixa bé dins del bloc que conté.",
   "emptyBlockInFunction": "La funció {name} té una entrada buida.",
   "emptyBlockInVariable": "La variable {name} té una entrada buida.",
+  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
   "emptyFunctionBlocksErrorMsg": "La funció bloc ha de tenir altres blocs a dins perquè funcioni.",
   "emptyFunctionalBlock": "Tens un bloc amb una entrada buida.",
   "emptyTopLevelBlock": "No hi ha blocs per executar. Has de connectar un bloc al bloc de {topLevelBlockName}.",
@@ -150,6 +151,7 @@
   "errorRequiredParamsMissing": "Crea un paràmetre per a la funció fent clic a \"edita\" i afegint els paràmetres necessaris. Arrossega els nous blocs de paràmetres a la definició de funció.",
   "errorUnusedFunction": "Heu creat una funció però no l'heu utilitzat al vostre espai de treball! Feu clic a \"Funcions\" a la caixa d'eines i assegureu-vos d'utilitzar-la en el programa.",
   "errorUnusedParam": "Has afegit un bloc de paràmetre, però no l'has utilitzat a la definició. Assegura't d'utilitzar el paràmetre fent clic a \"edita\" i col·locant el bloc de paràmetre dins del bloc verd.",
+  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "extraTopBlocks": "Tens blocs sense connectar.",
   "extraTopBlocksWhenRun": "Tens blocs sense connectar. Vols dir que no els hauries de connectar al bloc \"quan s'executa\"?",
   "finalStage": "Enhorabona! Has completat l'etapa final.",
@@ -210,12 +212,10 @@
   "totalNumLinesOfCodeWritten": "Total de tots els temps: {numLines, plural, one {1 línia} other {# línies}} de codi.",
   "tryAgain": "Torna a intentar-ho",
   "tryHOC": "Proveu l'Hora de programació",
+  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
   "wantToLearn": "Vols aprendre a programar?",
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Zona de treball: ",
-  "emptyExampleBlockErrorMsg": "You need at least one example in function {functionName}. Make sure each example has a call and a result.",
-  "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
-  "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name."
+  "workspaceHeaderShort": "Zona de treball: "
 }

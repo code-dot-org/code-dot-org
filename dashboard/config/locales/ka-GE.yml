@@ -22,7 +22,7 @@
           future: არ შეიძლება იყოს მომავალში
   hello: ჰეი, სამყარო
   welcome_back: კარგია, რომ დაბრუნდით, %{name}
-  submit: Submit
+  submit: გაგზავნა
   add_teacher_form:
     code:
       label: 'მასწავლებლის დამატება:'
@@ -46,7 +46,7 @@
   k8intro: K-8 შესავალი კურსი ინფორმატიკაში (15-25 საათი)
   already_started: 'უკვე დაიწყე? გააგრძელე აქ >> '
   demos: 'ადმინი: ყველა დემო-ვერსია'
-  continue: Continue
+  continue: გაგრძელება
   prize: პრიზი
   more_info: მეტი ინფორმაცია
   auth:
@@ -183,8 +183,8 @@
       მისამართი სჭირდება:'
     confirm:
       title: დაადასტურეთ
-      'no': 'No'
-      'yes': 'Yes'
+      'no': არა
+      'yes': დიახ
       msg: დარწმუნებული ხართ, რომ გინდათ %{prize_name} პრიზის განაღდება?
       msg_student: 'მინიშნება: მხოლოდ ერთი ტიპის პრიზის აღჩევა შეგიძლიათ.'
       msg_publicschool: თუ შეიძლება, დაადასტურეთ, რომ აშშ-ს საჯარო სკოლის მასწავლებელი
@@ -400,6 +400,7 @@
     local_school: ადგილობრივი სკოლა
     online: ონლაინ
     see_details: დეტალების ნახვა
+    view_course: View Course
     prize_info: პრიზები მონაწილეობისთვის ( მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებისთვის)
       1,000 დოლარამდე თით კლასისთვის.
     tryfirst: 'ან, შეგიძლიათ ჯერ სცადოთ და მოგვიანებით დარეგისტრირდეთ:'
@@ -418,6 +419,7 @@
     heading_legacy: <h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>
     your_gallery: გალერეა
     no_primary_course: ნახეთ კურსი კოდის სტუდიაში
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: სერტიფიკატის ამობეჭდვა
   gender:
     male: მამრობითი
@@ -454,12 +456,6 @@
     autoplay_option: ვიდეოების ავტომატური ჩართვა
     download: ვიდეოს გადმოწერა
   compatability:
-    https:
-      header: Please enable HTTPS for Code.org.
-      message: To increase security, we are switching to HTTPS on %{https_date}. You
-        will not be able to access Code.org after this date. <a href='%{it_requirements_url}'>Click
-        here</a> to learn how to enable HTTPS for Code.org.
-      hide_this_warning: ამ გაფრთხილების გათიშვა
     working:
       header: უკვე ვმუშაობთ თქვენი ბრაუზერის მხარდაჭერაზე.
       message: Code.org იყენებს თანამედროვე ვებ-ტექნოლოგიებს, რის შედეგადაც საიტი
@@ -519,9 +515,9 @@
         Code"!
     20-hour:
       title: დაჩქარებული კურსი
-      body: This 20-hour course covers the core computer science and programming concepts
-        in courses 2-4. The course is designed for use with ages 10-18. Check out
-        courses 2-4 for a more complete experience!
+      body: ეს ოცსაათიანი კურსი ფარავს კომპიუტერული მეცნიერებისა და პროგრამირების
+        ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის.
+        ნახეთ კურსები 2-4 უფრო სრული გამოცდილებისთვის!
       body_short: ისწავლეთ ინფორმატიკის საფუძვლები 2-4 კურსების დაჩქარებულ ვერსიაში.
     hoc2014:
       try_new_tutorial: ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია
@@ -533,7 +529,8 @@
       title: '"გაყინული"'
     infinity:
       title: თამაშების ლაბორატორია Infinity
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს
+        პერსონაჟების მონაწილეობით.
   gallery:
     students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
     students_made_these_with_code: მოსწავლეებმა ეს კოდით შექმნეს!
@@ -548,8 +545,8 @@
     caption_by_name_age: 'შემქმნელი: %{name}, ასაკი %{age}'
     caption_time_ago: '%{time_ago} წინ'
     header: გალერეა
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: თამაშების ლაბორატორია
+    header_artist: მხატვარი
   landing:
     prerelease: ეს არის კურსის <span class='betatext'>ბეტა-ვერსია</span>. ანუ, ეს
       არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე.
@@ -619,7 +616,7 @@
           title: ფაზლი
           description: ''
         step:
-          title: Step
+          title: ნაბიჯი
           description: ''
         sample_level_builder:
           title: საცდელი დონის კონსტრუქტორი
@@ -669,11 +666,11 @@
       და პროექტებზე მუშაობა ნებისმიერ დროს შეგეძლება.
     need_help: გჭირდებათ დახმარება დასაწყებად?
     really_delete: წავშალოთ?
-    delete_yes: 'Yes'
-    delete_no: 'No'
+    delete_yes: დიახ
+    delete_no: არა
     saved: შენახულია
     not_saved: არაა შენახული
-    cancel: Cancel
+    cancel: გაუქმება
     delete_confirm_title: დარწმუნებული ხართ, რომ ამ პროექტის წაშლა გინდათ?
     delete_confirm_text: პროექტის წაშლა სამუდამოდ ამოშლის მას შენი პროექტების სიიდან.
       მასზე წვდომა არც იმათ ექნებათ, ვისაც ეს პროექტი ადრე გაუზიარეთ.

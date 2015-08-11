@@ -412,6 +412,7 @@
     local_school: escola local
     online: en línia
     see_details: Veure detalls
+    view_course: View Course
     prize_info: 'Premis de participació (només per escoles públiques dels Estats Units):
       fins a 1.000 dòlars recompenses per aula.'
     tryfirst: 'O podeu provar-ho primer i registrar-vos després:'
@@ -430,6 +431,7 @@
     heading_legacy: <h2>El nostre curs general per a</h2><h1>Totes les edats</h1>
     your_gallery: Galeria
     no_primary_course: Intenta un curs a Code Studio
+    choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Imprimeix el certificat
   gender:
     male: Home
@@ -466,12 +468,6 @@
     autoplay_option: Reprodueix automàticament els vídeos
     download: Descarregar vídeo
   compatability:
-    https:
-      header: Si us plau accepta HTTPS per a Code.org.
-      message: Per augmentar la seguretat, estem canviant a HTTPS en %{https_date}.  No
-        podràs accedir a Code.org passada aquesta data. <a href='%{it_requirements_url}'>
-        feu clic aquí</a> per aprendre com permetre HTTPS per Code.org.
-      hide_this_warning: Amaga aquest avís
     working:
       header: Estem treballant per a afegir suport per al teu navegador.
       message: Code.org utilitza moderna tecnologia web. Això fa el lloc més ràpid
