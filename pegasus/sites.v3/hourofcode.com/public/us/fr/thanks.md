@@ -18,13 +18,13 @@ Parlez de #HourOfCode à vos amis.
 
 ## 2. Demandez à toute votre école de participer à l'Heure de Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/resources/hoc-one-pager.pdf) to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or [this handout](/files/hoc-one-pager.pdf) to your principal.
 
 <% else %>
 
 ## 2. Demandez à toute votre école de participer à l'Heure de Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/resources/hoc-one-pager.pdf) this handout</a> to your principal.
+[Send this email](<%= hoc_uri('/resources#email') %>) or give [this handout](/files/hoc-one-pager.pdf) this handout</a> to your principal.
 
 <% end %>
 
@@ -34,7 +34,7 @@ Parlez de #HourOfCode à vos amis.
 
 ## 4. Demandez à votre employeur de s'impliquer
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Send this email](<%= hoc_uri('/resources#email') %>) to your manager, or the CEO. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf).
 
 ## 5. Promouvoir Une Heure de Code au sein de votre communauté
 
@@ -42,6 +42,6 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 
 ## 6. Demandez à un élu local d'appuyer l'heure de Code
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/resources/hoc-one-pager.pdf) and invite them to visit your school.
+[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board. Or [give them this handout](http://hourofcode.com/files/hoc-one-pager.pdf) and invite them to visit your school.
 
 <%= view 'popup_window.js' %>

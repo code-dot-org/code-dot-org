@@ -18,13 +18,13 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Envie este e-mail](<%= hoc_uri('/resources#email') %>) ou [este folheto](/resources/hoc-one-pager.pdf) para seu diretor.
+[Envie este e-mail](<%= hoc_uri('/resources#email') %>) ou [este folheto](/files/hoc-one-pager.pdf) para seu diretor.
 
 <% else %>
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Envie este e-mail](<%= hoc_uri('/resources#email') %>) ou entregue [este folheto](/resources/hoc-one-pager.pdf) </a> para seu diretor.
+[Envie este e-mail](<%= hoc_uri('/resources#email') %>) ou entregue [este folheto](/files/hoc-one-pager.pdf) </a> para seu diretor.
 
 <% end %>
 
@@ -34,7 +34,7 @@ Fale aos seus amigos sobre o #HoraDoCódigo.
 
 ## 4. Peça para seu empregador participar
 
-[Envie este e-mail](<%= hoc_uri('/resources#email') %>) para seu gerente ou CEO. Ou [entregue a eles este folheto](http://hourofcode.com/resources/hoc-one-pager.pdf).
+[Envie este e-mail](<%= hoc_uri('/resources#email') %>) para seu gerente ou CEO. Ou [entregue a eles este folheto](http://hourofcode.com/files/hoc-one-pager.pdf).
 
 ## 5. Promova a Hora do Código em sua comunidade
 
@@ -42,6 +42,6 @@ Reúna um grupo local — clube de escoteiros, igreja, universidade, grupo de ve
 
 ## 6. Peça a um representante político para apoiar a Hora do Código
 
-[Envie este e-mail](<%= hoc_uri('/resources#politicians') %>) para seu prefeito, Câmara municipal ou conselho escolar. Ou [entregue a eles este folheto](http://hourofcode.com/resources/hoc-one-pager.pdf) e convide-os para visitar sua escola.
+[Envie este e-mail](<%= hoc_uri('/resources#politicians') %>) para seu prefeito, Câmara municipal ou conselho escolar. Ou [entregue a eles este folheto](http://hourofcode.com/files/hoc-one-pager.pdf) e convide-os para visitar sua escola.
 
 <%= view 'popup_window.js' %>

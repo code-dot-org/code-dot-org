@@ -80,14 +80,14 @@ DSL
     assert level.encrypted
     assert_equal 'visible to teachers only', level.properties['teacher_markdown']
 
-    encrypted_dsl_text = DSLDefined::encrypt_dsl_text(dsl_text)
+    encrypted_dsl_text = level.encrypted_dsl_text(dsl_text)
 
     # remove the existing level so we can try to create it from the encrypted text (instead of updating)
     level.destroy
 
     # check parsed data
     new_level_data, _ = External.parse(encrypted_dsl_text, 'text_external_3.external', 'test external 3')
-    assert new_level_data[:properties][:encrypted]
+    assert new_level_data[:properties]['encrypted']
     assert_equal 'visible to teachers only', new_level_data[:properties][:teacher_markdown]
 
     # check created level

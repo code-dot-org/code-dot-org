@@ -5,7 +5,23 @@ var AUTOSAVE_INTERVAL = 30 * 1000;
 var hasProjectChanged = false;
 
 var assets = require('./clientApi').create('/v3/assets');
+var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
+
+// Name of the packed source file
+var SOURCE_FILE = 'main.json';
+
+function packSourceFile() {
+  return JSON.stringify({
+    source: current.levelSource,
+    html: current.levelHtml
+  });
+}
+
+function unpackSourceFile(data) {
+  current.levelSource = data.source;
+  current.html = data.html;
+}
 
 var events = {
   // Fired when run state changes or we enter/exit design mode
@@ -43,6 +59,7 @@ var PathPart = {
  * @property {string} level Path where this particular app type is hosted
  */
 var current;
+var currentSourceVersionId;
 var isEditing = false;
 
 var projects = module.exports = {
@@ -218,7 +235,7 @@ var projects = module.exports = {
    * callback function was provided.
    * @param {string?} source Optional source to be provided, saving us another
    *   call to sourceHandler.getLevelSource
-   * @param {function} callback Fucntion to be called after saving
+   * @param {function} callback Function to be called after saving
    */
   save: function(source, callback) {
     if (arguments.length < 2) {
@@ -234,11 +251,17 @@ var projects = module.exports = {
     current.level = this.appToProjectUrl();
 
     if (channelId && current.isOwner) {
+      current.migratedToS3 = true;
       channels.update(channelId, current, function (err, data) {
         this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
+        var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+        sources.put(channelId, packSourceFile(), filename, function (err, response) {
+          currentSourceVersionId = response.versionId;
+          executeCallback(callback, data);
+        }.bind(this));
       }.bind(this));
     } else {
+      // TODO: remove once the server is providing the channel ID (/c/ remix uses `copy`)
       channels.create(current, function (err, data) {
         this.updateCurrentData_(err, data, true);
         executeCallback(callback, data);
@@ -380,11 +403,12 @@ var projects = module.exports = {
             location.href = location.pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1).join('/');
           } else {
-            current = data;
-            if (current.isOwner && pathInfo.action === 'view') {
-              isEditing = true;
-            }
-            deferred.resolve();
+            fetchSource(data, function () {
+              if (current.isOwner && pathInfo.action === 'view') {
+                isEditing = true;
+              }
+              deferred.resolve();
+            });
           }
         });
         return deferred;
@@ -398,9 +422,10 @@ var projects = module.exports = {
         if (err) {
           deferred.reject();
         } else {
-          current = data;
-          projects.showProjectLevelHeader();
-          deferred.resolve();
+          fetchSource(data, function () {
+            projects.showProjectLevelHeader();
+            deferred.resolve();
+          });
         }
       });
       return deferred;
@@ -415,6 +440,18 @@ var projects = module.exports = {
     return pathName;
   }
 };
+
+function fetchSource(data, callback) {
+  current = data;
+  if (data.migratedToS3) {
+    sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
+      unpackSourceFile(data);
+      callback();
+    });
+  } else {
+    callback();
+  }
+}
 
 /**
  * Only execute the given argument if it is a function.
