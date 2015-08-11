@@ -34,12 +34,12 @@
     "show_tabs": "[\"instructions\",\"my_device\"]",
     "default_tab_index": "0",
     "show_pulse_rate_slider": "false",
-    "show_metronome": "true",
+    "show_metronome": "false",
     "show_encoding_controls": "[\"binary\",\"decimal\"]",
     "default_enabled_encodings": "[\"binary\"]",
     "show_bit_rate_control": "false",
     "lock_bit_rate_control": "true",
-    "default_bit_rate_bits_per_second": "2",
+    "default_bit_rate_bits_per_second": "4",
     "show_chunk_size_control": "true",
     "lock_chunk_size_control": "false",
     "default_chunk_size_bits": "4",
@@ -51,7 +51,8 @@
     "show_log_browser_button": "false",
     "connected_routers": "false",
     "instructions": "With your partner, develop a protocol or set of rules for communicating a drawing using only bits. See the worksheet handed out by your teacher for more detailed instructions!",
-    "video_key": "csp_internetsimulator_2"
+    "video_key": "csp_internetsimulator_2",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks/>

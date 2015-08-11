@@ -411,12 +411,21 @@ exports.binaryToBase64 = function (binaryString) {
  * @param {string} base64string
  * @param {number} len
  * @returns {string} binaryString
+ * @throws {TypeError} if base64string argument is not a
+ *         properly base64-encoded string
  * @example
  * // returns "1001001"
  * DataConverters.base64ToBinary("kg==", 7);
  */
 exports.base64ToBinary = function (base64string, len) {
-  return exports.asciiToBinary(window.atob(base64string), 8).substr(0, len);
+  var decodedData;
+  try {
+    decodedData = window.atob(base64string);
+  } catch (e) {
+    throw new TypeError("argument base64string to method base64ToBinary" +
+        "must be a base64-encoded string");
+  }
+  return exports.asciiToBinary(decodedData, 8).substr(0, len);
 };
 
 /**
