@@ -240,7 +240,7 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
     } else {
-      this.localNode = new NetSimVizSimulationNode(newLocalNode);
+      this.localNode = new NetSimVizSimulationNode(newLocalNode, SHOW_BACKGROUND);
       this.elements_.push(this.localNode);
       this.backgroundGroup_.append(this.localNode.getRoot());
     }
@@ -342,7 +342,7 @@ NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
 
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
-    var newVizNode = new NetSimVizSimulationNode(node);
+    var newVizNode = new NetSimVizSimulationNode(node, SHOW_BACKGROUND);
     newVizNode.setDnsMode(this.dnsMode_);
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
@@ -829,7 +829,7 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
  */
 NetSimVisualization.prototype.makeAutoDnsNode = function () {
   if (!this.autoDnsNode_) {
-    this.autoDnsNode_ = new NetSimVizAutoDnsNode();
+    this.autoDnsNode_ = new NetSimVizAutoDnsNode(SHOW_BACKGROUND);
     this.addVizElement_(this.autoDnsNode_);
 
     this.autoDnsWire_ = new NetSimVizWire(this.autoDnsNode_, null);
