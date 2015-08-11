@@ -74,10 +74,10 @@ Blockly.ExampleView.prototype.isViewForBlock = function (block) {
  * Performs the test for this example, setting the result text appropriately.
  */
 Blockly.ExampleView.prototype.testExample_ = function () {
-  // TODO  (brent)- only reset examples that current have a reset button?
   this.contractEditor_.resetExampleViews();
 
-  this.setResult(this.contractEditor_.testExample(this.block_));
+  var result = this.contractEditor_.testExample(this.block_);
+  this.setResult(result);
   this.refreshTestingUI(true);
 
   // TODO(bjordan): UI re-layout post-result?
