@@ -117,21 +117,32 @@ NetSimVizElement.prototype.tick = function () {
  * @param {RunLoop.Clock} [clock] - sometimes omitted during setup
  */
 NetSimVizElement.prototype.render = function (clock) {
-  if (clock) {
-    // Update tweens in the render loop so they are very smooth
-    this.tweens_.forEach(function (tween) {
-      tween.tick(clock);
-    });
-    this.tweens_ = this.tweens_.filter(function (tween) {
-      return !tween.isFinished;
-    });
+  if (!clock) {
+    return;
   }
 
-  // TODO (bbuchanan): Use a dirty flag to only update the DOM when it's
-  //                   out of date.
-  var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
-      ' scale(' + this.scale + ')';
-  this.rootGroup_.attr('transform', transform);
+  // cache initial settings here; we check them later to see if anything
+  // has actually changed
+  var posX = this.posX;
+  var posY = this.posY;
+  var scale = this.scale;
+
+  // Update tweens in the render loop so they are very smooth
+  this.tweens_.forEach(function (tween) {
+    tween.tick(clock);
+  });
+  this.tweens_ = this.tweens_.filter(function (tween) {
+    return !tween.isFinished;
+  });
+
+  // If nothing has changed, don't bother to update transform
+  if (posX !== this.posX ||
+      posY !== this.posY ||
+      scale !== this.scale) {
+    var transform = 'translate(' + this.posX + ' ' + this.posY + ')' +
+        ' scale(' + this.scale + ')';
+    this.rootGroup_.attr('transform', transform);
+  }
 };
 
 /**
