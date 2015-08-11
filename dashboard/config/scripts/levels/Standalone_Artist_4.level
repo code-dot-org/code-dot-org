@@ -14,7 +14,23 @@
     "slider_speed": "0.4",
     "free_play": "false",
     "start_direction": "90",
-    "ideal": "4"
+    "ideal": "4",
+    "embed": "false",
+    "markdown_instructions": "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?\r\n\r\n<h5>\r\n<details>\r\n<summary>Angles</summary>\r\n![](https://images.code.org/b3e16306f7b61c467d9cd9fbad36f41d-image-1438990511487.gif)\r\n![](https://images.code.org/f136858614ddcb18ab7cf2901300efa6-image-1438990602704.png)\r\n</details>\r\n</h5>",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "impressive": "false"
   }
 }]]></config>
   <blocks>
