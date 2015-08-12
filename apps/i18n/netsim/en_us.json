@@ -101,6 +101,7 @@
   "setWire": "Set Wire",
   "setWireToValue": "Set Wire to {value}",
   "shareThisNetwork": "Share this network",
+  "showingFirstXLogEntries": "Showing first {x} log entries.  Sort/filter to see more.",
   "size": "Size",
   "status": "Status",
   "time": "Time",

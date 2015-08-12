@@ -16,6 +16,7 @@
 'use strict';
 
 var _ = require('../utils').getLodash();
+var i18n = require('./locale');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');
@@ -185,6 +186,15 @@ NetSimRouterLogModal.prototype.render = function () {
       .slice(0, MAXIMUM_ROWS_IN_FULL_RENDER)
       .map(this.makeTableRow_.bind(this));
   this.rootDiv_.find('tbody').append(rows);
+
+  if (rows.length === MAXIMUM_ROWS_IN_FULL_RENDER) {
+    var maxRenderedWarning = document.createElement('div');
+    maxRenderedWarning.className = 'log-browser-limit-message';
+    maxRenderedWarning.innerText = i18n.showingFirstXLogEntries({
+      x: MAXIMUM_ROWS_IN_FULL_RENDER
+    });
+    this.rootDiv_.find('table').after(maxRenderedWarning);
+  }
 };
 
 /**
