@@ -10,7 +10,7 @@
   Dear #{@recipient_ops_data['ops_first_name']},
 
 %p
-  Your #{@workshop[:phase][:short_name]} workshop on <start date> is coming up. <if ECS4Phase2wk/3day + CSP4Phase2wk/3day Make sure you have completed Phase 3 online.>
+  Your #{@workshop[:phase][:short_name]} workshop on #{@workshop[:start]} is coming up. <if ECS4Phase2wk/3day + CSP4Phase2wk/3day> Make sure you have completed Phase 3 online.
 
 %p
   Please email
@@ -56,11 +56,11 @@
   What to bring
 %p
   Laptop (optional), water bottle, and snacks
--if @workshop[:notes]
+-if @workshop[:instructions]
   %h3
     Notes
   %p
-    #{@workshop[:notes]}
+    #{@workshop[:instructions]}
 %p
   See you soon,
 %p
