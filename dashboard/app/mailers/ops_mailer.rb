@@ -38,8 +38,8 @@ class OpsMailer < ActionMailer::Base
     @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type].to_i]
     @workshop[:phase] = ActivityConstants::PHASES[workshop[:phase]]
     subject = "Important: Your #{@workshop[:phase][:short_name]} workshop is coming up."
-    if workshop[:prerequisite_phase]
-      @workshop[:prerequisite_phase] = ActivityConstants::PHASES[workshop[:prerequisite_phase]]
+    if @workshop[:phase][:prerequisite_phase]
+      @workshop[:prerequisite_phase] = ActivityConstants::PHASES[@workshop[:phase][:prerequisite_phase]]
       subject += " Complete #{@workshop[:prerequisite_phase][:short_name]}"
     end
     @recipient = recipient
