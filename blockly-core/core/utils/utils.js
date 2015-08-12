@@ -762,6 +762,6 @@ Blockly.addToNonZeroSides = function (box, amount) {
  * {@link https://css-tricks.com/almanac/properties/p/pointer-events/}
  * @param {Element} element - SVG element
  */
-Blockly.svgIgnoreMouse = function (element) {
+Blockly.svgIgnoreMouseEvents = function (element) {
   element.style.pointerEvents = 'none';
 };

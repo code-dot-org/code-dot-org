@@ -27,24 +27,24 @@ Blockly.ContractDefinitionSection = function (canvasToDrawOn) {
   this.grayDefinitionBackground = Blockly.createSvgElement('rect', {
     'fill': '#DDD'
   }, this.definitionTableGroup);
-  Blockly.svgIgnoreMouse(this.grayDefinitionBackground);
+  Blockly.svgIgnoreMouseEvents(this.grayDefinitionBackground);
 
   this.verticalDefinitionMidline = Blockly.createSvgElement('rect', {
     'fill': '#000'
   }, this.definitionTableGroup);
   this.verticalDefinitionMidline.setAttribute('width', 2.0);
-  Blockly.svgIgnoreMouse(this.verticalDefinitionMidline);
+  Blockly.svgIgnoreMouseEvents(this.verticalDefinitionMidline);
 
   this.horizontalDefinitionTopLine = Blockly.createSvgElement('rect', {
     'fill': '#000'
   }, this.definitionTableGroup);
   this.horizontalDefinitionTopLine.setAttribute('height', 2.0);
-  Blockly.svgIgnoreMouse(this.horizontalDefinitionTopLine);
+  Blockly.svgIgnoreMouseEvents(this.horizontalDefinitionTopLine);
   this.horizontalDefinitionBottomLine = Blockly.createSvgElement('rect', {
     'fill': '#000'
   }, this.definitionTableGroup);
   this.horizontalDefinitionBottomLine.setAttribute('height', 2.0);
-  Blockly.svgIgnoreMouse(this.horizontalDefinitionBottomLine);
+  Blockly.svgIgnoreMouseEvents(this.horizontalDefinitionBottomLine);
 };
 
 /**
