@@ -250,7 +250,7 @@ Blockly.Css.CONTENT = [
   '}',
   '.contractEditorHeaderText {',
   '  cursor: default;',
-  '  font-size: 13pt;',
+  '  font-size: 12pt;',
   '  fill: #fff;',
   '}',
   '.contract-type-hint {',
