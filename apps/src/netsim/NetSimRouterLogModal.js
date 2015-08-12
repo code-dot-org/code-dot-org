@@ -275,12 +275,12 @@ NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
  * @returns {{index: number, tableRow: jQuery, sortValue: ?}}
  */
 function getNextInfo(rows, atIndex, getSortValue) {
-  var tempRow = rows.eq(atIndex);
+  var row = rows.eq(atIndex);
   return {
     index: atIndex,
-    tableRow: tempRow,
-    sortValue: tempRow.length > 0 ?
-        getSortValue(tempRow.data(LOG_ENTRY_DATA_KEY)) : undefined
+    tableRow: row,
+    sortValue: row.length > 0 ?
+        getSortValue(row.data(LOG_ENTRY_DATA_KEY)) : undefined
   };
 }
 
