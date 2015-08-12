@@ -755,3 +755,13 @@ Blockly.addToNonZeroSides = function (box, amount) {
     }
   });
 };
+
+/**
+ * Sets element to ignore pointer events.
+ * Note: only use for SVG elements, only those support IE9 and 10
+ * {@link https://css-tricks.com/almanac/properties/p/pointer-events/}
+ * @param {Element} element - SVG element
+ */
+Blockly.svgIgnoreMouse = function (element) {
+  element.style.pointerEvents = 'none';
+};

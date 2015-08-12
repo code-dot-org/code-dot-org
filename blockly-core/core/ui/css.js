@@ -260,7 +260,7 @@ Blockly.Css.CONTENT = [
   '.exampleAreaDiv {',
   '  pointer-events: none;',
   '}',
-  '.callText {',
+  '.callResultText {',
   '  color: #000;',
   '  position: absolute;',
   '}',

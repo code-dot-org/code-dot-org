@@ -185,13 +185,15 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.exampleAreaDiv.style.position = 'absolute';
   goog.dom.insertChildAt(this.frameClipDiv_, this.exampleAreaDiv, 0);
 
-  this.callText = goog.dom.createDom('div', 'callText');
+  this.callText = goog.dom.createDom('div', 'callResultText');
   this.callText.innerHTML = "Call";
+  Blockly.svgIgnoreMouse(this.callText);
   goog.dom.appendChild(this.exampleAreaDiv, this.callText);
 
-  this.resultText = goog.dom.createDom('div', 'callText');
+  this.resultText = goog.dom.createDom('div', 'callResultText');
   this.resultText.innerHTML = "Result";
   goog.dom.appendChild(this.exampleAreaDiv, this.resultText);
+  Blockly.svgIgnoreMouse(this.resultText);
 
   this.examplesTableGroup = Blockly.createSvgElement('g', {}, canvasToDrawOn);
 
@@ -199,6 +201,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
     'fill': '#000'
   }, this.examplesTableGroup);
   this.topHorizontalLine.setAttribute('height', 2.0);
+  Blockly.svgIgnoreMouse(this.topHorizontalLine);
 
   // TODO(bjordan): get horizontal line #X helper, lay out below examples
 
