@@ -130,7 +130,7 @@ Blockly.ContractEditor = function(configuration) {
    */
   this.testResetHandler_ = function () { };
 
-  this.appHijackedDialogClose_ = function () { return false; };
+  this.customFailureCloseHandler_ = function () { return false; };
 
   /**
    * @type {Blockly.ExampleView[]}
@@ -398,7 +398,7 @@ Blockly.ContractEditor.prototype.moveExampleBlocksToModal_ = function (functionN
 /**
  * Allows app to pass in a function that should be run against an example block
  * when user hits Test button
- * @param {function}
+ * @param {function} testHandler
  */
 Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
   this.testHandler_ = testHandler;
@@ -406,7 +406,7 @@ Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
 
 /**
  * Allows app to pass in a function that should be run when user resets a test
- * @param {function}
+ * @param {function} testResetHandler
  */
 Blockly.ContractEditor.prototype.registerTestResetHandler = function (testResetHandler) {
   this.testResetHandler_ = testResetHandler;
@@ -416,9 +416,10 @@ Blockly.ContractEditor.prototype.registerTestResetHandler = function (testResetH
  * Allows app to pass in a function that is called on contract editor close if
  * any examples fail. This function should return true if the app wants to own
  * closing the dialog
+ * @param {function} handler
  */
 Blockly.ContractEditor.prototype.registerTestsFailedOnCloseHandler = function (handler) {
-  this.appHijackedDialogClose_ = handler;
+  this.customFailureCloseHandler_ = handler;
 };
 
 /**
@@ -846,8 +847,8 @@ Blockly.ContractEditor.prototype.resetExampleViews = function () {
 
 /**
  * Call our app-specific test handler for this block
- * @param {Blockly.Block}
- * @param {boolean} True if app should visualize the test
+ * @param {Blockly.Block} block
+ * @param {boolean} visualize True if app should visualize the test
  * @return {string} Result failure, or null if no failure
  */
 Blockly.ContractEditor.prototype.testExample = function (block, visualize) {
@@ -856,6 +857,7 @@ Blockly.ContractEditor.prototype.testExample = function (block, visualize) {
 
 /**
  * Call our app-specific test reset handler for this block
+ * @param {Blockly.Block} block
  */
 Blockly.ContractEditor.prototype.resetExample = function (block) {
   this.testResetHandler_(block);
@@ -963,11 +965,11 @@ Blockly.ContractEditor.prototype.onClose = function() {
     view.refreshTestingUI(false);
     allPass = allPass && !failure;
   }.bind(this));
-  if (!allPass && this.appHijackedDialogClose_()) {
+  if (!allPass && this.customFailureCloseHandler_()) {
     // app has taken responsibilty for closing dialog (likely by launching
     // modal confirm dialog
     return;
   }
 
-  this.hideIfOpen.call(this);
+  this.hideIfOpen();
 };
