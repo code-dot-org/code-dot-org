@@ -39,10 +39,6 @@ goog.require('goog.array');
 /** @const */ var DEFAULT_EXAMPLE_CALL_SECTION_WIDTH = 100; // px
 /** @const */ var MARGIN_BLOCK_TO_CALL_SLOT = 13; // px
 
-// TODO (brent) - needs to be in sync with apps, which i don't love
-/** @const */ var SUCCESS_TEXT = "Matches definition.";
-
-
 /** @const */ var USER_TYPE_CHOICES = [
   Blockly.BlockValueType.NUMBER,
   Blockly.BlockValueType.STRING,
@@ -850,10 +846,12 @@ Blockly.ContractEditor.prototype.resetExampleViews = function () {
 
 /**
  * Call our app-specific test handler for this block
- * @return {string} Result describing pass/failure
+ * @param {Blockly.Block}
+ * @param {boolean} True if app should visualize the test
+ * @return {string} Result failure, or null if no failure
  */
-Blockly.ContractEditor.prototype.testExample = function (block) {
-  return this.testHandler_(block);
+Blockly.ContractEditor.prototype.testExample = function (block, visualize) {
+  return this.testHandler_(block, visualize);
 };
 
 /**
@@ -863,10 +861,10 @@ Blockly.ContractEditor.prototype.resetExample = function (block) {
   this.testResetHandler_(block);
 };
 
-Blockly.ContractEditor.prototype.updateExampleResult = function (block, result) {
+Blockly.ContractEditor.prototype.updateExampleResult = function (block, failure) {
   this.exampleViews_.some(function (view) {
-    if (view.isViewForBlock(block)) {
-      view.setResult(result);
+    if (view.getBlock() === block) {
+      view.setResult(failure);
       // Return true so that we stop looking for a matching view
       return true;
     }
@@ -958,15 +956,14 @@ Blockly.ContractEditor.prototype.onClose = function() {
   if (!this.isOpen()) {
     return;
   }
-  var allPassed = true;
+  var allPass = true;
   this.exampleViews_.forEach(function (view) {
-    // TODO - private accessor
-    var result = this.testExample(view.block_);
-    view.setResult(result);
+    var failure = this.testExample(view.getBlock(), false);
+    view.setResult(failure);
     view.refreshTestingUI(false);
-    allPassed = allPassed && (result === SUCCESS_TEXT);
+    allPass = allPass && !failure;
   }.bind(this));
-  if (!allPassed && this.appHijackedDialogClose_()) {
+  if (!allPass && this.appHijackedDialogClose_()) {
     // app has taken responsibilty for closing dialog (likely by launching
     // modal confirm dialog
     return;
