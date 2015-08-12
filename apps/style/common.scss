@@ -1161,7 +1161,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
   margin-right: 10px;
 }
 
-#continue-button:not(.arrow-container) {
+#continue-button:not(.arrow-container), #confirm-button:not(.arrow-container) {
   background-color: $orange;
   border: 1px solid $orange;
   color: white;
