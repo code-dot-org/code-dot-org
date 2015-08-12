@@ -311,16 +311,6 @@ NetSimTable.prototype.readAll = function () {
 };
 
 /**
- * @param {!number} firstRowID
- * @returns {Array} all locally cached table rows having row ID >= firstRowID
- */
-NetSimTable.prototype.readAllFromID = function (firstRowID) {
-  return this.arrayFromCache_(function (key) {
-    return key >= firstRowID;
-  });
-};
-
-/**
  * @param {!number} id
  * @param {!NodeStyleCallback} callback
  */
@@ -419,7 +409,7 @@ NetSimTable.prototype.fullCacheUpdate_ = function (allRows) {
   if (!_.isEqual(this.cache_, newCache)) {
     this.cache_ = newCache;
     this.latestRowID_ = maxRowID;
-    this.tableChange.notifyObservers();
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 
   this.lastRefreshTime_ = Date.now();
@@ -439,7 +429,7 @@ NetSimTable.prototype.incrementalCacheUpdate_ = function (newRows) {
       maxRowID = Math.max(maxRowID, row.id);
     }, this);
     this.latestRowID_ = maxRowID;
-    this.tableChange.notifyObservers();
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 
   this.lastRefreshTime_ = Date.now();
@@ -452,7 +442,7 @@ NetSimTable.prototype.incrementalCacheUpdate_ = function (newRows) {
  */
 NetSimTable.prototype.addRowToCache_ = function (row) {
   this.cache_[row.id] = row;
-  this.tableChange.notifyObservers();
+  this.tableChange.notifyObservers(this.arrayFromCache_());
 };
 
 /**
@@ -469,7 +459,7 @@ NetSimTable.prototype.removeRowsFromCache_ = function (ids) {
   }, this);
 
   if (cacheChanged) {
-    this.tableChange.notifyObservers();
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
 
@@ -487,20 +477,18 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;
-    this.tableChange.notifyObservers();
+    this.tableChange.notifyObservers(this.arrayFromCache_());
   }
 };
 
 /**
- * @param {function(key, value)} [predicate] - A condition on returning the row.
  * @returns {Array}
  * @private
  */
-NetSimTable.prototype.arrayFromCache_ = function (predicate) {
-  predicate = predicate || function () { return true; };
+NetSimTable.prototype.arrayFromCache_ = function () {
   var result = [];
   for (var k in this.cache_) {
-    if (this.cache_.hasOwnProperty(k) && predicate(k, this.cache_[k])) {
+    if (this.cache_.hasOwnProperty(k)) {
       result.push(this.cache_[k]);
     }
   }

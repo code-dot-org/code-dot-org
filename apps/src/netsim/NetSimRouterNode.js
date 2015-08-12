@@ -767,10 +767,12 @@ NetSimRouterNode.prototype.initializeSimulation = function (nodeID) {
     this.newMessageEventKey_ = newMessageEvent.register(newMessageHandler);
 
     // Populate router wire cache with initial data
-    this.onWireTableChange_();
+    var cachedWires = this.shard_.wireTable.readAll();
+    this.onWireTableChange_(cachedWires);
 
     // Populate router log cache with initial data
-    this.onLogTableChange_();
+    var cachedLogs = this.shard_.logTable.readAll();
+    this.onLogTableChange_(cachedLogs);
   }
 };
 
@@ -1261,11 +1263,12 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (address,
 /**
  * When the node table changes, we check whether our own row has changed
  * and propagate those changes as appropriate.
+ * @param rows
  * @private
  * @throws
  */
-NetSimRouterNode.prototype.onNodeTableChange_ = function () {
-  var myRow = _.find(this.shard_.nodeTable.readAll(), function (row) {
+NetSimRouterNode.prototype.onNodeTableChange_ = function (rows) {
+  var myRow = _.find(rows, function (row) {
     return row.id === this.entityID;
   }.bind(this));
 
@@ -1285,10 +1288,11 @@ NetSimRouterNode.prototype.onNodeTableChange_ = function () {
 /**
  * When the wires table changes, we may have a new connection or have lost
  * a connection.  Propagate updates about our connections
+ * @param rows
  * @private
  */
-NetSimRouterNode.prototype.onWireTableChange_ = function () {
-  var myWireRows = this.shard_.wireTable.readAll().filter(function (row) {
+NetSimRouterNode.prototype.onWireTableChange_ = function (rows) {
+  var myWireRows = rows.filter(function (row) {
     return row.remoteNodeID === this.entityID;
   }.bind(this));
 
@@ -1301,10 +1305,11 @@ NetSimRouterNode.prototype.onWireTableChange_ = function () {
 /**
  * When the logs table changes, we may have a new connection or have lost
  * a connection.  Propagate updates about our connections
+ * @param rows
  * @private
  */
-NetSimRouterNode.prototype.onLogTableChange_ = function () {
-  var myLogRows = this.shard_.logTable.readAll().filter(function (row) {
+NetSimRouterNode.prototype.onLogTableChange_ = function (rows) {
+  var myLogRows = rows.filter(function (row) {
     return row.nodeID === this.entityID;
   }.bind(this));
 
@@ -1354,16 +1359,17 @@ NetSimRouterNode.prototype.getCurrentDataRate = function () {
 /**
  * When the message table changes, we might have a new message to handle.
  * Check for and handle unhandled messages.
+ * @param {MessageRow[]} rows
  * @private
  * @throws if this method is called on a non-simulating router.
  */
-NetSimRouterNode.prototype.onMessageTableChange_ = function () {
+NetSimRouterNode.prototype.onMessageTableChange_ = function (rows) {
   if (!this.simulateForSender_) {
     // What?  Only simulating routers should be hooked up to message notifications.
     throw new Error("Non-simulating router got message table change notifiction");
   }
 
-  var messages = this.shard_.messageTable.readAll().map(function(row){
+  var messages = rows.map(function(row){
     return new NetSimMessage(this.shard_, row);
   }.bind(this));
 

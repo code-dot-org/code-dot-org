@@ -294,8 +294,8 @@ NetSimLobby.prototype.fetchInitialLobbyData_ = function () {
       .done(function () {
         // Because the lobby may not get table-change events from this refresh,
         // manually pass the cached table contents in.
-        this.onNodeTableChange_();
-        this.onWireTableChange_();
+        this.onNodeTableChange_(this.shard_.nodeTable.readAll());
+        this.onWireTableChange_(this.shard_.wireTable.readAll());
 
         // If we use routers and there's no router, create a router.
         // TODO: Move this logic to the server, somehow.
@@ -353,20 +353,20 @@ NetSimLobby.prototype.onCancelButtonClick_ = function () {
 /**
  * Called whenever a change is detected in the nodes table - which should
  * trigger a refresh of the lobby listing
+ * @param {!Array} rows
  * @private
  */
-NetSimLobby.prototype.onNodeTableChange_ = function () {
-  this.nodesOnShard_ = NetSimNodeFactory.nodesFromRows(this.shard_,
-      this.shard_.nodeTable.readAll());
+NetSimLobby.prototype.onNodeTableChange_ = function (rows) {
+  this.nodesOnShard_ = NetSimNodeFactory.nodesFromRows(this.shard_, rows);
   this.render();
 };
 
 /**
  * Called whenever a change is detected in the wires table.
+ * @param {!Array} rows
  * @private
  */
-NetSimLobby.prototype.onWireTableChange_ = function () {
-  var rows = this.shard_.wireTable.readAll();
+NetSimLobby.prototype.onWireTableChange_ = function (rows) {
   // Update the collection of nodes with connections pointing toward us.
   this.incomingConnectionNodes_ = rows.filter(function (wireRow) {
     return wireRow.remoteNodeID === this.myNode_.entityID;

@@ -47,23 +47,19 @@ describe("NetSimLocalClientNode", function () {
       testRemoteNode.connectToNode(testLocalNode, function () {});
 
       localWireRow = testLocalNode.myWire.buildRow();
-      localWireRow.id = 1;
       remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
-      remoteWireRow.id = 2;
 
       assertEqual(localWireRow.localNodeID, remoteWireRow.remoteNodeID);
       assertEqual(localWireRow.remoteNodeID, remoteWireRow.localNodeID);
 
       // Trigger onWireTableChange_ with both wires; the connection
       // should be complete!
-      testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow]);
-      testLocalNode.onWireTableChange_();
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow]);
       assertEqual(testLocalNode.myRemoteClient, testRemoteNode);
 
       // Trigger onWireTableChange_ without the remoteWire; the
       // connection should be broken
-      testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow]);
-      testLocalNode.onWireTableChange_();
+      testLocalNode.onWireTableChange_([localWireRow]);
       assertEqual(testLocalNode.myWire, null);
       assertEqual(testLocalNode.myRemoteClient, null);
 
@@ -81,23 +77,16 @@ describe("NetSimLocalClientNode", function () {
       testRemoteNode.connectToNode(testThirdNode, function () {});
 
       localWireRow = testLocalNode.myWire.buildRow();
-      localWireRow.id = 1;
       remoteWireRow = testRemoteNode.getOutgoingWire().buildRow();
-      remoteWireRow.id = 2;
 
-      testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow]);
-      testLocalNode.onWireTableChange_();
-      var newLocalWireRow = testLocalNode.myWire.buildRow();
-      newLocalWireRow.id = 1;
-      assertEqual(newLocalWireRow, localWireRow);
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow]);
+      assertEqual(testLocalNode.myWire.buildRow(), localWireRow);
       assertEqual(testLocalNode.myRemoteClient, null);
 
       testThirdNode.connectToNode(testRemoteNode, function () {});
 
       thirdWireRow = testThirdNode.getOutgoingWire().buildRow();
-      thirdWireRow.id = 3;
-      testLocalNode.shard_.wireTable.fullCacheUpdate_([localWireRow, remoteWireRow, thirdWireRow]);
-      testLocalNode.onWireTableChange_();
+      testLocalNode.onWireTableChange_([localWireRow, remoteWireRow, thirdWireRow]);
       assertEqual(testLocalNode.myWire, null);
 
     });

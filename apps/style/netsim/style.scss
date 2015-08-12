@@ -127,12 +127,6 @@ $wide-column-width: 121px;
       @include user_select(text);
     }
 
-    .log-browser-limit-message {
-      padding: 0.5em;
-      text-align: center;
-      font-style: italic;
-      color: $charcoal;
-    }
   }
 
   #netsim-disconnected {

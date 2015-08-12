@@ -8,12 +8,10 @@ var headerFields = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
 /** @type {boolean} */
 var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
 
-/** @type {boolean} */
-var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
-
-/** @type {boolean} */
-var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
-    headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
+/**
+ * @name logEntries
+ * @type {Array|NetSimLogEntry}
+ */
 
 /**
  * @name isAllRouterLogMode
@@ -22,13 +20,20 @@ var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &
 
 /**
  * @name sortBy
- * @type {string}
+ * @type {sring}
  */
 
 /**
  * @name sortDescending
  * @type {boolean}
  */
+
+/** @type {boolean} */
+var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+
+/** @type {boolean} */
+var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+    headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
 
 function sortMarkupFor(sortKey) {
   if (sortKey === sortBy) {
@@ -75,6 +80,28 @@ function sortMarkupFor(sortKey) {
           </tr>
         </thead>
         <tbody>
+          <%
+            logEntries.forEach(function (entry) {
+              var originNode = entry.getOriginNode();
+              %>
+              <tr>
+                <td nowrap><%= entry.getTimeString() %></td>
+                <td nowrap><%= originNode ? originNode.getDisplayName() : entry.nodeID %></td>
+                <td nowrap><%= entry.getLocalizedStatus() %></td>
+                <% if (showFromAddress) { %>
+                  <td nowrap><%= entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS) %></td>
+                <% } %>
+                <% if (showToAddress) { %>
+                  <td nowrap><%= entry.getHeaderField(Packet.HeaderType.TO_ADDRESS) %></td>
+                <% } %>
+                <% if (showPacketInfo) { %>
+                  <td nowrap><%= entry.getLocalizedPacketInfo() %></td>
+                <% } %>
+                <td><%= entry.getMessageAscii() %></td>
+              </tr>
+              <%
+            });
+          %>
         </tbody>
       </table>
     </div>
