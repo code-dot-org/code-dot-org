@@ -152,7 +152,7 @@ module Ops
 
     # PATCH/PUT /ops/attendance/1
     def update
-      @workshop_attendance.update_attributes(params[:workshop_attendance])
+      @workshop_attendance.update_attributes(workshop_attendance_params)
       respond_with @workshop_attendance
     end
 
