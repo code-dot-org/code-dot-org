@@ -132,7 +132,21 @@ module LevelsHelper
     view_options(is_channel_backed: true) if @level.channel_backed?
 
     return blockly_options if @level.is_a? Blockly
+    return dsl_defined_options if @level.is_a? DSLDefined
     Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
+  end
+
+  def dsl_defined_options
+    app_options = {}
+
+    level_options = app_options[:level] ||= Hash.new
+
+    level_options[:lastAttempt] = @last_attempt
+    level_options.merge! Hash[@level.properties.map{|key, value|[key.to_s.camelize(:lower), value]}]
+
+    app_options.merge! Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
+
+    app_options
   end
 
   # Code for generating the blockly options hash
