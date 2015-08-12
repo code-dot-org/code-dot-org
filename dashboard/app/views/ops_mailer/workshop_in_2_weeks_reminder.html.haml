@@ -1,78 +1,64 @@
+%pre
+  #{@workshop}
+%hr
+%pre
+  #{@recipient}
+%hr
+%pre
+  #{@recipient_ops_data}
+%p
+  Dear #{@recipient_ops_data['ops_first_name']},
+%p
+  Your #{@workshop[:phase][:short_name]} workshop on #{@workshop[:start]} is coming up. <if ECS4Phase2wk/3day + CSP4Phase2wk/3day> Make sure you have completed Phase 3 online.
+%p
+  Please email
+  %a{href:'mailto:pd@code.org'}
+    pd@code.org
+  if you have any conflicts with these dates.
 %h2
-  #{@workshop[:program_type][:long_name]} (#{@workshop[:program_type][:short_name]})
-- if @workshop[:phase] == "Phase 2"
-  %h3
-    It's time to finish Phase 1 and RSVP for your Phase 2 in-person workshop!
-- elsif @workshop[:phase] == "Phase 4"
-  %h3
-    Please RSVP for your Phase 4: Summer Wrap Up PD
-
+  Complete #{@workshop[:phase][:long_name]}
 %p
-  Dear #{@recipient_ops_data["ops_first_name"]},
-
+  You must complete <Phase n> prior to attending the <Phase n-1> in-person workshop. Here are some tips to successfully complete your online PD.
+%ul
+  %li
+    Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
+  %li
+    Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
 %p
-  It's time to complete ECS Phase 1: Online Introduction and RSVP for your Phase 2: Blended Summer Study in-person workshop on Monday, June 22 through Friday, June 26 at the Applications Research Laboratory.
+  %em
+    Here’s what a successful online PD looks like. All the progress circles are green.
+%img{src:''}
 
-%h3
-  RSVP for in-person Phase 2: Blended Summer Study workshop
-%p
-  Please RSVP here. Your RSVP allows us to properly prepare catering and other workshop logistics. If you cannot make it to part of your PD, please note the date, time, and reason in your RSVP response in the free text field. This is important and affects PD activities throughout the week. Thank you in advance!
-
-%h3
-  Completing Phase 1: Online Introduction
-%p
-  To successfully complete Phase 1 professional development, please refer back to the email "Important: Your Code.org enrollment and program information." Please note that you must complete Phase 1 prior to attending the Phase 2 workshop. In order to be paid for Phase 1, make sure that the progress circles in your Code Studio ECS progress bar are green.
-
-%em
-  In the following example, you'll notice that levels 1 & 2 in Stage 1 are incomplete. The green circle with the check mark is the indicator that you have completed the level and it will count towards payment.
-
-
-%h3
+%h2
   Workshops Details
 %p
   See below or visit code.org/pd for your in-person workshop details and bookmark for future use!
-%table
-  %tr
-    %th
-      Date and Time
-    %th
-      Location
-    %th
-  %tr
-    %td
-      %ul
-        - @workshop[:segments].each do |segment|
-          %li
-            #{segment[:start].strftime("%A, %B %d, %Y")}
-            %br
-            #{segment[:start].strftime("%I:%M %P")} - #{segment[:end].strftime("%H:%M %P")}
-        %li
-          Breakfast and lunch will be served.
-    %td
-      %ul
-        %li
-          Applications and Research Laboratory (ARL)
-        %li
-          10920 Clarksville Pike
-        %li
-          Ellicott City, MD 21042
-    %tr
-      %td
-        %ul
-          %li
-            Water bottle
-          %li
-            Snacks
-          %li
-            Laptop (Optional)
-
+%h3
+  Dates and times
+%ul
+  - @workshop[:segments].each do |segment|
+    %li
+      #{segment[:start].strftime("%A, %B %d, %Y")}
+      %br
+      #{segment[:start].strftime("%I:%M %P")} - #{segment[:end].strftime("%H:%M %P")}
+%h3
+  Location
 %p
-  Have questions or concerns? Check out the Exploring Computer Science Welcome Kit at code.org/pd or feel free to reach out to pd@code.org at any time.
-
+  #{@workshop[:location]}
+%h3
+  Catering
 %p
-  We look forward to working with you to increase the presence of Computer Science education in your school!
-
+  Breakfast and lunch will be served every day. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
+%h3
+  What to bring
+%p
+  Laptop (optional), water bottle, and snacks
+-if @workshop[:instructions]
+  %h3
+    Notes
+  %p
+    #{@workshop[:instructions]}
 %p
   See you soon,
-%p
-  Your Code.org PD team
+%br
+  The Code.org PD team
