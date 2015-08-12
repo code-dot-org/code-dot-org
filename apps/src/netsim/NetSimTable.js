@@ -564,7 +564,7 @@ NetSimTable.prototype.tick = function () {
 
 /**
  * Called when the PubSub service fires an event that this table is subscribed to.
- * @param {Object} eventData
+ * @private
  */
 NetSimTable.prototype.onPubSubEvent_ = function () {
   this.refreshTable_();
