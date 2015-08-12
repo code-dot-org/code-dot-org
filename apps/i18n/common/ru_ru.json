@@ -217,5 +217,6 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: "
+  "workspaceHeaderShort": "Место сбора блоков: ",
+  "showVersionsHeader": "Version History"
 }

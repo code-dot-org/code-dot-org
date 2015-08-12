@@ -217,5 +217,6 @@
   "watchVideo": "ویدیو را ببینید",
   "when": "وقتی",
   "whenRun": "زمان اجرا",
-  "workspaceHeaderShort": "محیط کار: "
+  "workspaceHeaderShort": "محیط کار: ",
+  "showVersionsHeader": "Version History"
 }

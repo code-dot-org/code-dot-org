@@ -2,7 +2,7 @@
 
 # Teacher Announcements
 
-August 4, 2015 &mdash; Did you know? Code.org is offering a full calendar of free online events for the Fall 2015 semester? Join us to connect with other educators, hear from experts and discuss the future of CS education.
+August 4, 2015 &mdash; Did you know? Code.org is offering a full calendar of free online events for the Fall 2015 semester. Join us to connect with other educators, hear from experts and discuss the future of CS education.
 
 [Explore Upcoming Events >](http://teacherblog.code.org/events)
 <br/>

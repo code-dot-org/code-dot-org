@@ -1514,7 +1514,7 @@ a.download-video {
   }
 }
 
-.content-level,
+.external
 .text-match {
   #markdown.teacher {
     max-width: 800px;
@@ -1533,6 +1533,14 @@ a.download-video {
       margin: 0;
     }
   }
+}
+
+.text-match #markdown.teacher {
+  margin: 10px 0;
+}
+
+.external #markdown.teacher {
+  margin: 10px auto;
 }
 
 #current-script-levels, #all-levels {
@@ -1670,6 +1678,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       width: 55%;
     }
     .multi-question {
+      width: 90%;
       font-size: 17px;
     }
   }
@@ -1698,7 +1707,6 @@ $information-desktop: "only screen and (min-width: 1024px)";
   .item-mark {
     display: inline-block;
     float: left;
-    width: 32px;
     text-align: right;
     padding-right: 10px;
     box-sizing: border-box;
@@ -1706,6 +1714,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   }
   .item-label {
     display: inline-block;
+    text-align: left;
     float: left;
     label {
       font-size: 15px;

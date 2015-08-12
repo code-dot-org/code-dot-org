@@ -50,7 +50,7 @@ To attend, follow these steps:
 
 ## Is attendance required?
 
-For educators currently enrolled in our Code.org ECS professional development for the 2015-16 school year, attendance at the monthly meetings is **highly recommended.** Attendance will be taken and your Code.org facilitators will be making note of your participation. If you cannot attend a meeting, you can view a recording. Your viewing of the recording will also be tracked and count towards “attendance.”
+For educators currently enrolled in our Code.org ECS professional development for the 2015-16 school year, attendance at the monthly meetings is **highly recommended but optional.** If you cannot attend a meeting, you can view a recording. Join us if you can! 
 
 ## I’m not currently enrolled in Code.org ECS professional development. Can I still attend?
 

@@ -217,5 +217,6 @@
   "watchVideo": "Гледайте видеото",
   "when": "когато",
   "whenRun": "при стартиране",
-  "workspaceHeaderShort": "Работна област: "
+  "workspaceHeaderShort": "Работна област: ",
+  "showVersionsHeader": "Version History"
 }

@@ -217,5 +217,6 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: "
+  "workspaceHeaderShort": "Työtila: ",
+  "showVersionsHeader": "Version History"
 }

@@ -217,5 +217,6 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "wenn ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: "
+  "workspaceHeaderShort": "Arbeitsbereich: ",
+  "showVersionsHeader": "Version History"
 }

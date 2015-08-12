@@ -217,5 +217,6 @@
   "watchVideo": "Sjå videoen",
   "when": "når",
   "whenRun": "når køyrande",
-  "workspaceHeaderShort": "Arbeidsområde: "
+  "workspaceHeaderShort": "Arbeidsområde: ",
+  "showVersionsHeader": "Version History"
 }
