@@ -158,7 +158,7 @@ NetSimRouterLogModal.prototype.render = function () {
     return;
   }
 
-  // Rerender entire log browser UI
+  // Re-render entire log browser UI
   var renderedMarkup = $(markup({
     isAllRouterLogMode: this.isAllRouterLogMode_,
     canToggleRouterLogMode: this.canToggleRouterLogMode_(),
@@ -167,7 +167,7 @@ NetSimRouterLogModal.prototype.render = function () {
   }));
   this.rootDiv_.html(renderedMarkup);
 
-  // Handlers
+  // Add input handlers
   this.getRouterLogToggleButton().one('click', function() {
     this.toggleRouterLogMode_();
     this.render();
@@ -179,8 +179,9 @@ NetSimRouterLogModal.prototype.render = function () {
 
   // Add rows to the table
   var sortedFilteredLogEntries = this.getSortedFilteredLogEntries(this.logEntries_);
-  var tbody = this.rootDiv_.find('tbody');
-  tbody.append(sortedFilteredLogEntries.map(this.makeTableRow_.bind(this)));
+  this.rootDiv_.find('tbody').append(
+      sortedFilteredLogEntries.map(
+          this.makeTableRow_.bind(this)));
 };
 
 /**
@@ -190,39 +191,63 @@ NetSimRouterLogModal.prototype.render = function () {
  * @private
  */
 NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
-  // Be lazy, don't render if not visible.
-  if (!this.isVisible()) {
+  // Be lazy, don't render at all if not visible.
+  if (!this.isVisible() || newEntries.length === 0) {
     return;
   }
 
+  /** @type {jQuery} Table body element. */
+  var tbody = this.rootDiv_.find('tbody');
+
+  // Get existing table row elements, which are already sorted and filtered.
+  var oldRows = tbody.find('tr');
+
+  // Sort and filter the new entries, and generate DOM rows for them.
+  newEntries = this.getSortedFilteredLogEntries(newEntries);
+  var newRows = $(newEntries.map(this.makeTableRow_.bind(this)));
+
+  // Get the current sort value function
   var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
 
-  // Add rows to the table
-  var sortedFilteredLogEntries = this.getSortedFilteredLogEntries(newEntries);
-  var newRows = sortedFilteredLogEntries.map(this.makeTableRow_.bind(this));
-  var tbody = this.rootDiv_.find('tbody');
-  var existingRows = tbody.find('tr');
-  var newRowIndex = 0, existingRowIndex = 0;
-  var existingRow, existingSortValue, newRow, newSortValue, belongsBeforeExisting;
+  // Walk both collections to merge new rows into the DOM
+  var nextOld = getNextInfo(oldRows, 0, iterateeFunction);
+  var nextNew = getNextInfo(newRows, 0, iterateeFunction);
+  var insertHere = false;
+  while (nextNew.index < newRows.length && nextOld.index < oldRows.length) {
 
-  while (newRowIndex < newRows.length && existingRowIndex < existingRows.length) {
-    existingRow = existingRows.eq(existingRowIndex);
-    existingSortValue = iterateeFunction(existingRow.data(LOG_ENTRY_DATA_KEY));
-    newRow = newRows[newRowIndex];
-    newSortValue = iterateeFunction(sortedFilteredLogEntries[newRowIndex]);
-    belongsBeforeExisting = newSortValue < existingSortValue ?
+    // Is this where the next row goes?
+    insertHere = nextNew.sortValue < nextOld.sortValue ?
         !this.sortDescending_ : this.sortDescending_;
-    if (belongsBeforeExisting) {
-      existingRow.before(newRow);
-      newRowIndex++;
+
+    if (insertHere) {
+      nextNew.tableRow.insertBefore(nextOld.tableRow);
+      nextNew = getNextInfo(newRows, nextNew.index + 1, iterateeFunction);
     } else {
-      existingRowIndex++;
+      nextOld = getNextInfo(oldRows, nextOld.index + 1, iterateeFunction);
     }
   }
 
   // Put whatever's left on the end of the table
-  tbody.append(newRows.slice(newRowIndex));
+  tbody.append(newRows.slice(nextNew.index));
 };
+
+/**
+ * Generates a helper object for performing the log row merge.
+ * @param {jQuery} rows - Wrapped collection of table rows.
+ * @param {!number} atIndex - Index into `rows` at which info should be generated.
+ * @param {!function(NetSimLogEntry)} iterateeFunction - function to get current
+ *        sort value from log entry object.
+ * @returns {{index: number, tableRow: jQuery, sortValue: ?}}
+ */
+function getNextInfo(rows, atIndex, iterateeFunction) {
+  var tempRow = rows.eq(atIndex);
+  return {
+    index: atIndex,
+    tableRow: tempRow,
+    sortValue: tempRow.length > 0 ?
+        iterateeFunction(tempRow.data(LOG_ENTRY_DATA_KEY)) : undefined
+  };
+}
 
 /**
  * @param {!NetSimLogEntry[]} logEntries
@@ -249,7 +274,7 @@ NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntrie
 /**
  * Given a log entry, generate a table row that can be added to the log modal.
  * @param {!NetSimLogEntry} logEntry
- * @returns {jQuery} that wraps a tr element.
+ * @returns {Element} a tr element.
  * @private
  */
 NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
@@ -296,7 +321,7 @@ NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
       .appendTo(row);
 
   row.data(LOG_ENTRY_DATA_KEY, logEntry);
-  return row;
+  return row[0];
 };
 
 NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
