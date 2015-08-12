@@ -110,7 +110,7 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
   this.render();
 };
 
-NetSimRouterLogModal.iterateeMap = {
+NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
 
   'timestamp': function (logEntry) {
     return logEntry.timestamp;
@@ -220,11 +220,11 @@ NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
   var newRows = $(newEntries.map(this.makeTableRow_.bind(this)));
 
   // Get the current sort value function
-  var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
+  var getSortValue = NetSimRouterLogModal.sortKeyToSortValueGetterMap[this.sortBy_];
 
   // Walk both collections to merge new rows into the DOM
-  var nextOld = getNextInfo(oldRows, 0, iterateeFunction);
-  var nextNew = getNextInfo(newRows, 0, iterateeFunction);
+  var nextOld = getNextInfo(oldRows, 0, getSortValue);
+  var nextNew = getNextInfo(newRows, 0, getSortValue);
   var insertHere = false;
   while (nextNew.index < newRows.length && nextOld.index < oldRows.length) {
 
@@ -234,9 +234,9 @@ NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
 
     if (insertHere) {
       nextNew.tableRow.insertBefore(nextOld.tableRow);
-      nextNew = getNextInfo(newRows, nextNew.index + 1, iterateeFunction);
+      nextNew = getNextInfo(newRows, nextNew.index + 1, getSortValue);
     } else {
-      nextOld = getNextInfo(oldRows, nextOld.index + 1, iterateeFunction);
+      nextOld = getNextInfo(oldRows, nextOld.index + 1, getSortValue);
     }
   }
 
@@ -248,17 +248,17 @@ NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
  * Generates a helper object for performing the log row merge.
  * @param {jQuery} rows - Wrapped collection of table rows.
  * @param {!number} atIndex - Index into `rows` at which info should be generated.
- * @param {!function(NetSimLogEntry)} iterateeFunction - function to get current
+ * @param {!function(NetSimLogEntry)} getSortValue - function to get current
  *        sort value from log entry object.
  * @returns {{index: number, tableRow: jQuery, sortValue: ?}}
  */
-function getNextInfo(rows, atIndex, iterateeFunction) {
+function getNextInfo(rows, atIndex, getSortValue) {
   var tempRow = rows.eq(atIndex);
   return {
     index: atIndex,
     tableRow: tempRow,
     sortValue: tempRow.length > 0 ?
-        iterateeFunction(tempRow.data(LOG_ENTRY_DATA_KEY)) : undefined
+        getSortValue(tempRow.data(LOG_ENTRY_DATA_KEY)) : undefined
   };
 }
 
@@ -276,8 +276,8 @@ NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntrie
       }, this);
 
   // Sort entries according to current log browser sort setting
-  var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
-  var sortedFilteredLogEntries = _.sortBy(filteredLogEntries, iterateeFunction);
+  var getSortValue = NetSimRouterLogModal.sortKeyToSortValueGetterMap[this.sortBy_];
+  var sortedFilteredLogEntries = _.sortBy(filteredLogEntries, getSortValue);
   if (this.sortDescending_) {
     sortedFilteredLogEntries.reverse();
   }
