@@ -82,7 +82,7 @@ var NetSimVizWire = module.exports = function (localNode, remoteNode) {
   this.textPosY_ = 0;
 
   /**
-   * Flag that allows us to force a updating the text position; used
+   * Flag that allows us to force an update of the text position; used
    * when we move text without tweens because that method prevents us
    * from being able to detect normally that something has changed
    * @type {boolean}
