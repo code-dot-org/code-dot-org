@@ -229,8 +229,11 @@ NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
   while (nextNew.index < newRows.length && nextOld.index < oldRows.length) {
 
     // Is this where the next row goes?
-    insertHere = nextNew.sortValue < nextOld.sortValue ?
-        !this.sortDescending_ : this.sortDescending_;
+    if (this.sortDescending_) {
+      insertHere = nextNew.sortValue >= nextOld.sortValue;
+    } else {
+      insertHere = nextNew.sortValue <= nextOld.sortValue;
+    }
 
     if (insertHere) {
       nextNew.tableRow.insertBefore(nextOld.tableRow);
