@@ -4,7 +4,7 @@ description 'description here'
 css 'unplugged'
 skip_dialog 'true'
 markdown <<MARKDOWN
-## Unit 1: Lesson 17 - Practice PT: Encode a Complex Thing
+## Unit 1: Lesson 17 - Encode a Complex Thing
 # Background
 
 
@@ -29,3 +29,4 @@ Throughout this unit you have learned a sequence of increasingly complex encodin
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+

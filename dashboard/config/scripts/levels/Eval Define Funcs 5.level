@@ -24,7 +24,8 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's use that _aqua-star_ function to make a row of different sized stars. From left to right, the stars should have radii of 25, 50, and 75."
+    "markdown_instructions": "Let's use that `aqua-star` function to make a row of different sized stars. From left to right, the stars should have radii of 25, 50, and 75.",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
