@@ -4,6 +4,7 @@ var Direction = studioConstants.Direction;
 var Position = studioConstants.Position;
 var codegen = require('../codegen');
 var api = require('./api');
+var utils = require('../utils');
 
 
 /**
@@ -11,7 +12,9 @@ var api = require('./api');
  * @constructor
  * @implements CustomGameLogic
  */
-var BigGameLogic = function (studio) {
+var BigGameLogic = function (studio, options) {
+  options = options || {};
+
   CustomGameLogic.apply(this, arguments);
 
   this.playerSpriteIndex = 0;
@@ -19,6 +22,8 @@ var BigGameLogic = function (studio) {
   this.dangerSpriteIndex = 2;
 
   this.finished = false;
+  // If set to true, player always faces forward
+  this.staticPlayer = utils.valueOr(options.staticPlayer, false);
 };
 BigGameLogic.inherits(CustomGameLogic);
 
@@ -178,6 +183,9 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
 
   // reinvertY
   playerSprite.y = this.studio_.MAZE_HEIGHT - newUserSpaceY - playerSprite.height / 2;
+  if (this.staticPlayer) {
+    playerSprite.dir = studioConstants.Direction.NONE;
+  }
 };
 
 /**
