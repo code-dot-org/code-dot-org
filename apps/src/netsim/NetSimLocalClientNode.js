@@ -257,7 +257,10 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
 NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
   this.connectToNode(client, function (err, wire) {
     // Check whether WE just established a mutual connection with a remote client.
-    this.shard_.wireTable.refresh().always(onComplete.bind(null, err, wire));
+    this.shard_.wireTable.refresh().always(function () {
+      this.onWireTableChange_(this.shard_.wireTable.readAll());
+      onComplete(err, wire);
+    }.bind(this));
   }.bind(this));
 };
 
