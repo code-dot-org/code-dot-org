@@ -1120,7 +1120,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {string} options.defaultBtnSelector
  * @param {boolean} options.scrollContent
  * @param {function} options.onHidden
- * @parm {string} options.id
+ * @param {string} options.id
  * @param {HTMLElement} options.header
  */
 FeedbackUtils.prototype.createModalDialog = function(options) {

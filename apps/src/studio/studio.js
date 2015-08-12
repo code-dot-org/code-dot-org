@@ -1897,21 +1897,7 @@ Studio.checkExamples_ = function () {
     return outcome;
   }
 
-  // TODO - what of this belongs in studio app?
-  var failingBlockName = '';
-  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
-    var failure = Studio.getStudioExampleFailure(exampleBlock, true);
-
-    // Update the example result. No-op if we're not currently editing this
-    // function.
-    Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
-
-    if (failure) {
-      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
-        .getTitleValue('NAME');
-    }
-  });
-
+  var failingBlockName = studioApp.checkForFailingExamples(Studio.getStudioExampleFailure);
   if (failingBlockName) {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;

@@ -1844,6 +1844,30 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
 };
 
 /**
+ * Looks for failing examples, and updates the result text for them if they're
+ * open in the contract editor
+ * @param {function} failureChecker
+ * @returns {string} Name of block containing first failing example we found, or
+ *   empty string if no failures.
+ */
+StudioApp.prototype.checkForFailingExamples = function (failureChecker) {
+  var failingBlockName = '';
+  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
+    var failure = failureChecker(exampleBlock, false);
+
+    // Update the example result. No-op if we're not currently editing this
+    // function.
+    Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
+
+    if (failure) {
+      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
+        .getTitleValue('NAME');
+    }
+  });
+  return failingBlockName;
+};
+
+/**
  * @returns {boolean} True if we have a function or variable named "" (empty string)
  */
 StudioApp.prototype.hasEmptyFunctionOrVariableName = function () {
