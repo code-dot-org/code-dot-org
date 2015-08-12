@@ -434,6 +434,7 @@ StudioApp.prototype.init = function(config) {
 
       dialog.show();
     }).bind(this));
+  }
 
   if (Blockly.contractEditor) {
     Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
@@ -1846,7 +1847,8 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
 /**
  * Looks for failing examples, and updates the result text for them if they're
  * open in the contract editor
- * @param {function} failureChecker
+ * @param {function} failureChecker Apps example tester that takes in an example
+ *   block, and outputs a failure string (or null if success)
  * @returns {string} Name of block containing first failing example we found, or
  *   empty string if no failures.
  */
