@@ -82,6 +82,30 @@ var NetSimVizWire = module.exports = function (localNode, remoteNode) {
   this.textPosY_ = 0;
 
   /**
+   * Flag that allows us to force a updating the text position; used
+   * when we move text without tweens because that method prevents us
+   * from being able to detect normally that something has changed
+   * @type {boolean}
+   * @private
+   */
+  this.forceTextPosRender_ = false;
+
+  /**
+   * SVG Path Description of this.line_, for animation
+   * @type {string}
+   * @private
+   */
+  this.pathData_ = '';
+
+  /**
+   * `TEXT_FINAL_VERTICAL_OFFSET`-offset X and Y coordinates for the
+   * center of the wire; used for positioning the question mark
+   * @type {{x:number, y:number}}
+   * @private
+   */
+  this.wireCenter_ = { x: 0, y: 0 };
+
+  /**
    * Enabled encoding types.
    * @type {EncodingType[]}
    * @private
@@ -96,27 +120,45 @@ var NetSimVizWire = module.exports = function (localNode, remoteNode) {
 NetSimVizWire.inherits(NetSimVizElement);
 
 /**
- * Update path data for wire.
+ * Update path data for wire if we can detect pending changes
  * @param {RunLoop.Clock} [clock] - somtimes omitted during setup
  */
 NetSimVizWire.prototype.render = function (clock) {
+
+  // Cache the local position values here, so we can check later if
+  // anything has changed before making an expensive `.attr` call
+  var textPosX = this.textPosX_;
+  var textPosY = this.textPosY_;
+  var pathData = this.pathData_;
+  var wireCenter = this.wireCenter_;
+
+  // Make the call to super to update everything we can, then
+  // recalculate the values of ours that are dependent on the movement
+  // of our connected nodes
   NetSimVizWire.superPrototype.render.call(this, clock);
 
-  var pathData = 'M 0 0';
-  var wireCenter = { x: 0, y: 0 };
   if (this.localVizNode && this.remoteVizNode) {
-    pathData = 'M ' + this.localVizNode.posX + ' ' + this.localVizNode.posY +
-        ' L ' + this.remoteVizNode.posX + ' ' + this.remoteVizNode.posY;
-    wireCenter = this.getWireCenterPosition();
+    this.pathData_ = ['M', this.localVizNode.posX, this.localVizNode.posY,
+        'L', this.remoteVizNode.posX, this.remoteVizNode.posY].join(' ');
+    this.wireCenter_ = this.getWireCenterPosition();
   }
-  this.line_.attr('d', pathData);
-  this.text_
-      .attr('x', this.textPosX_)
-      .attr('y', this.textPosY_);
-  this.questionMark_
-      .attr('x', wireCenter.x)
-      .attr('y', wireCenter.y);
 
+  // Finally, if and only if any of the values we care about have
+  // changed, update our element in the DOM
+  if (this.forceTextPosRender_ || textPosX !== this.textPosX_ || textPosY !== this.textPosY_) {
+    this.text_
+        .attr('x', this.textPosX_)
+        .attr('y', this.textPosY_);
+    this.forceTextPosRender_ = false;
+  }
+  if (pathData !== this.pathData_) {
+    this.line_.attr('d', this.pathData_);
+  }
+  if (wireCenter.x !== this.wireCenter_.x || wireCenter.y !== this.wireCenter_.y) {
+    this.questionMark_
+        .attr('x', this.wireCenter_.x)
+        .attr('y', this.wireCenter_.y);
+  }
 };
 
 /**
@@ -255,6 +297,7 @@ NetSimVizWire.prototype.tweenTextToPosition = function (destination, duration,
   } else {
     this.textPosX_ = destination.x;
     this.textPosY_ = destination.y;
+    this.forceTextPosRender_ = true;
   }
 };
 
