@@ -67,15 +67,17 @@
         %button#ok-button.secondary
           =t('dialog.ok')
 
-:javascript
-  appOptions.dialog = {
-    skipSound: #{ !!(data['options'].try(:[], 'skip_sound'))},
-    preTitle: "#{ data['pre_title']}",
-    fallbackResponse: '#{ @fallback_response.to_json}',
-    callback: '#{ @callback}',
-    app: '#{ app}',
-    level: '#{ @level.level_num}',
-    shouldShowDialog: #{ data['options'].try(:[], 'skip_dialog').blank?}
-  };
+:ruby
+  dialogOptions = {
+    skipSound: !!(data['options'].try(:[], 'skip_sound')),
+    preTitle: data['pre_title'],
+    fallbackResponse: @fallback_response.to_json,
+    callback: @callback,
+    app: app,
+    level: @level.level_num,
+    shouldShowDialog: data['options'].try(:[], 'skip_dialog').blank?
+  }
 
+:javascript
+  appOptions.dialog = #{dialogOptions.to_json};
   #{render partial: 'levels/dialogHelper', formats: [:js]}
