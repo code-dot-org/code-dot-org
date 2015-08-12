@@ -145,7 +145,8 @@ NetSimVizWire.prototype.render = function (clock) {
 
   // Finally, if and only if any of the values we care about have
   // changed, update our element in the DOM
-  if (this.forceTextPosRender_ || textPosX !== this.textPosX_ || textPosY !== this.textPosY_) {
+  if (this.forceTextPosRender_ || textPosX !== this.textPosX_ ||
+      textPosY !== this.textPosY_) {
     this.text_
         .attr('x', this.textPosX_)
         .attr('y', this.textPosY_);
