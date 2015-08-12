@@ -20,6 +20,8 @@ FactoryGirl.define do
       end
       factory :district_contact do
         name 'District Contact Person'
+        ops_first_name 'District'
+        ops_last_name 'Person'
       end
     end
 

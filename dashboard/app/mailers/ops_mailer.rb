@@ -9,7 +9,6 @@ class OpsMailer < ActionMailer::Base
     @cohort = cohort
     @added_teachers = added_teachers
     @removed_teachers = removed_teachers
-    puts district_contact.inspect
     subject = "[ops notification] #{district_contact.ops_first_name} #{district_contact.ops_last_name} modified #{cohort.name}"
 
     mail content_type: 'text/html', subject: subject
