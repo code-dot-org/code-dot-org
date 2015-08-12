@@ -37,7 +37,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   /** @type {PubSubService} */
   this.pubSub = PubSubService.create(pubSubConfig);
   var channel = this.pubSub.subscribe(shardID);
-  channel.subscribe('all_tables', NetSimShard.prototype.onPubSubEvent.bind(this));
+  channel.subscribe('all_tables', NetSimShard.prototype.onPubSubEvent_.bind(this));
 
   /**
    * Collection of client (user) nodes and router nodes on the shard.
@@ -132,10 +132,7 @@ NetSimShard.prototype.tick = function (clock) {
 /**
  * The "panic button" option - clears all data on the shard, kicking all
  * users out and starting over.
- * @param {function} onComplete
- * TODO (bbuchanan): Right now anyone can do this.  This needs to have an
- *                   authentication step on the server that only allows an admin
- *                   or the teacher that owns the section to do this.
+ * @param {NodeStyleCallback} onComplete
  */
 NetSimShard.prototype.resetEverything = function (onComplete) {
   $.ajax({
@@ -153,11 +150,11 @@ NetSimShard.prototype.resetEverything = function (onComplete) {
 
 /**
  * Called when the PubSub service fires an event that applies to all tables
- * @param {Object} eventData
+ * @private
  */
-NetSimShard.prototype.onPubSubEvent = function () {
+NetSimShard.prototype.onPubSubEvent_ = function () {
   // Right now, the only all_tables event is the shard reset.
-  // Reading the node table informs our node that a reset has occurred.
+  // Refreshing the node table informs our node that a reset has occurred.
   // TODO: Use a "disconnect from shard" callback instead here.
-  this.nodeTable.readAll(function () {});
+  this.nodeTable.refresh();
 };
