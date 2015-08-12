@@ -20212,6 +20212,9 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
     this.create_()
   }
 };
+Blockly.FunctionEditor.prototype.onClose = function() {
+  this.hideIfOpen()
+};
 Blockly.FunctionEditor.prototype.hideIfOpen = function() {
   if(!this.isOpen()) {
     return
@@ -20308,7 +20311,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
       }
     }
   });
-  Blockly.bindEvent_(goog.dom.getElement("modalEditorClose"), "mousedown", this, this.hideIfOpen);
+  Blockly.bindEvent_(goog.dom.getElement("modalEditorClose"), "mousedown", this, this.onClose);
   Blockly.bindEvent_(goog.dom.getElement("functionNameText"), "input", this, functionNameChange);
   Blockly.bindEvent_(goog.dom.getElement("functionNameText"), "keydown", this, functionNameChange);
   function functionNameChange(e) {
@@ -20970,6 +20973,7 @@ Blockly.SvgHeader.prototype.removeSelf = function() {
 };
 goog.provide("Blockly.ExampleView");
 var NO_RESULT_TEXT = "";
+var SUCCESS_TEXT = "Matches definition.";
 var RESULT_TEXT_TOP_MARGIN = 14;
 Blockly.ExampleView = function(dom, svg, contractEditor) {
   this.domParent_ = dom;
@@ -21003,23 +21007,24 @@ Blockly.ExampleView.prototype.initializeTestButton_ = function(buttonText, iconC
   Blockly.bindEvent_(newButton, "click", null, callback);
   return newButton
 };
-Blockly.ExampleView.prototype.isViewForBlock = function(block) {
-  return this.block_ === block
+Blockly.ExampleView.prototype.getBlock = function() {
+  return this.block_
 };
 Blockly.ExampleView.prototype.testExample_ = function() {
   this.contractEditor_.resetExampleViews();
-  this.setResult(this.contractEditor_.testExample(this.block_));
+  var failure = this.contractEditor_.testExample(this.block_, true);
+  this.setResult(failure || SUCCESS_TEXT);
   this.refreshTestingUI(true)
 };
 Blockly.ExampleView.prototype.reset = function() {
   if(goog.style.isElementShown(this.resetExampleButton)) {
     this.contractEditor_.resetExample(this.block_);
-    this.setResult(NO_RESULT_TEXT);
+    this.resultText.innerHTML = NO_RESULT_TEXT;
     this.refreshTestingUI(false)
   }
 };
-Blockly.ExampleView.prototype.setResult = function(result) {
-  this.resultText.innerHTML = result;
+Blockly.ExampleView.prototype.setResult = function(failure) {
+  this.resultText.innerHTML = failure || SUCCESS_TEXT;
   this.refreshTestingUI(false)
 };
 Blockly.ExampleView.prototype.refreshTestingUI = function(active) {
@@ -22893,6 +22898,9 @@ Blockly.ContractEditor = function(configuration) {
   };
   this.testResetHandler_ = function() {
   };
+  this.customFailureCloseHandler_ = function() {
+    return false
+  };
   this.exampleViews_ = []
 };
 goog.inherits(Blockly.ContractEditor, Blockly.FunctionEditor);
@@ -22913,7 +22921,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
     return currentY + this.getContractDivHeight()
   }, this), highlightBox:sharedHighlightBox, headerText:"Contract and Purpose Statement"});
   this.hiddenExampleBlocks_ = [];
-  this.exampleAreaDiv = goog.dom.createDom("div", "exampleAreaDiv");
+  this.exampleAreaDiv = goog.dom.createDom("div", "exampleAreaDiv innerModalDiv");
   this.addExampleButton = goog.dom.createDom("button", "exampleAreaButton btn");
   this.addExampleButton.innerHTML = "Add Example";
   Blockly.bindEvent_(this.addExampleButton, "click", this, this.addNewExampleBlock_);
@@ -23043,6 +23051,9 @@ Blockly.ContractEditor.prototype.registerTestHandler = function(testHandler) {
 };
 Blockly.ContractEditor.prototype.registerTestResetHandler = function(testResetHandler) {
   this.testResetHandler_ = testResetHandler
+};
+Blockly.ContractEditor.prototype.registerTestsFailedOnCloseHandler = function(handler) {
+  this.customFailureCloseHandler_ = handler
 };
 Blockly.ContractEditor.prototype.addExampleBlockFromMainBlockSpace = function(exampleBlock) {
   var movedExampleBlock = this.moveToModalBlockSpace(exampleBlock);
@@ -23297,16 +23308,16 @@ Blockly.ContractEditor.prototype.resetExampleViews = function() {
     exampleView.reset()
   })
 };
-Blockly.ContractEditor.prototype.testExample = function(block) {
-  return this.testHandler_(block)
+Blockly.ContractEditor.prototype.testExample = function(block, visualize) {
+  return this.testHandler_(block, visualize)
 };
 Blockly.ContractEditor.prototype.resetExample = function(block) {
   this.testResetHandler_(block)
 };
-Blockly.ContractEditor.prototype.updateExampleResult = function(block, result) {
+Blockly.ContractEditor.prototype.updateExampleResult = function(block, failure) {
   this.exampleViews_.some(function(view) {
-    if(view.isViewForBlock(block)) {
-      view.setResult(result);
+    if(view.getBlock() === block) {
+      view.setResult(failure);
       return true
     }
   })
@@ -23359,6 +23370,22 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function(currentY) {
   newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
   this.exampleAreaDiv.style.height = newY - currentY + "px";
   return newY
+};
+Blockly.ContractEditor.prototype.onClose = function() {
+  if(!this.isOpen()) {
+    return
+  }
+  var allPass = true;
+  this.exampleViews_.forEach(function(view) {
+    var failure = this.testExample(view.getBlock(), false);
+    view.setResult(failure);
+    view.refreshTestingUI(false);
+    allPass = allPass && !failure
+  }.bind(this));
+  if(!allPass && this.customFailureCloseHandler_()) {
+    return
+  }
+  this.hideIfOpen()
 };
 goog.provide("Blockly.FieldIcon");
 goog.require("Blockly.FieldLabel");
