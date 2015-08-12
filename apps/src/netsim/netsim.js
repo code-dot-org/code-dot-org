@@ -348,7 +348,8 @@ NetSim.prototype.initWithUserName_ = function (user) {
 
   this.routerLogModal_ = new NetSimRouterLogModal($('#router-log-modal'));
 
-  this.visualization_ = new NetSimVisualization($('svg'), this.runLoop_);
+  this.visualization_ = new NetSimVisualization($('#netsim-visualization'),
+      this.runLoop_);
 
   // Lobby panel: Controls for picking a remote node and connecting to it.
   this.lobby_ = new NetSimLobby(
