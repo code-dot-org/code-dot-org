@@ -420,7 +420,7 @@ function onComplete(willRedirect) {
  * level to its initial state, losing any of their own work on that level.
  */
 function startOverClicked() {
-  startOverConfirmed();
+  showStartOverDialog(startOverConfirmed);
 }
 
 function startOverConfirmed() {

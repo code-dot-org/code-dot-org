@@ -527,6 +527,10 @@ en:
     open_response_body: "Thanks for your response!"
   dialog:
     ok: "OK"
+    startover_title: "Are you sure you want to start over?"
+    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_ok: "Start Over"
+    startover_cancel: "Cancel"
   time:
     hour: '1 hour'
     day: 'day'
