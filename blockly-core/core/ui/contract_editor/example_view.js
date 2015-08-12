@@ -22,9 +22,13 @@ Blockly.ExampleView = function (dom, svg, contractEditor) {
     'fill': '#000',
     'height': 2.0
   }, this.svgParent_);
+  Blockly.svgIgnoreMouse(this.horizontalLine);
+
   this.grayBackdrop = Blockly.createSvgElement('rect', {
     'fill': '#DDD'
   }, this.svgParent_, {'belowExisting': true});
+  this.grayBackdrop.style.pointerEvents = 'none';
+  Blockly.svgIgnoreMouse(this.grayBackdrop);
 
   this.testExampleButton = this.initializeTestButton_("Test", "run26",
     this.testExample_.bind(this));
@@ -34,6 +38,7 @@ Blockly.ExampleView = function (dom, svg, contractEditor) {
   goog.dom.append(this.domParent_, this.testExampleButton);
   goog.dom.append(this.domParent_, this.resetExampleButton);
   this.resultText = goog.dom.createDom('div', 'example-result-text');
+  Blockly.svgIgnoreMouse(this.resultText);
   this.resultText.innerHTML = NO_RESULT_TEXT;
   goog.dom.append(this.domParent_, this.resultText);
   this.refreshTestingUI(false);
@@ -63,7 +68,7 @@ Blockly.ExampleView.prototype.initializeTestButton_ = function (buttonText,
  */
 Blockly.ExampleView.prototype.isViewForBlock = function (block) {
   return this.block_ === block;
-}
+};
 
 /**
  * Performs the test for this example, setting the result text appropriately.
