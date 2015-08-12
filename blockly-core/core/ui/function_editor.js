@@ -416,6 +416,10 @@ Blockly.FunctionEditor.prototype.create_ = function() {
         function() {
           // `this` is the new BlockSpaceEditor
           var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+          if (!metrics) {
+            return null;
+          }
+
           metrics.absoluteLeft +=
               FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
           metrics.absoluteTop += self.getBlockSpaceEditorToScreenTop_();
