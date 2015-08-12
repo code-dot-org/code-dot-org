@@ -18,7 +18,7 @@
     "open_function_definition": "wide-rect",
     "default_num_example_blocks": "2",
     "min_workspace_height": "1500",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"eval_design_recipe_3\",\r\n  \"callout_text\": \"This is your function definition. This code runs every time you use the 'wide-rect' function\",\r\n  \"element_id\": \"[block-id='26']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"eval_design_recipe_3\",\r\n  \"callout_text\": \"This is your function definition. This code runs every time you use the 'wide-rect' function\",\r\n  \"element_id\": \"[block-id='26']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "true",
     "examples_highlight": "false",
@@ -27,7 +27,8 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "The design recipe for _wide-rect_ already has a contract and one example. Can you write a second example and then complete the definition. The _wide-rect_ function should produce a rectangle of given color that is twice as wide as it is high."
+    "markdown_instructions": "The design recipe for _wide-rect_ already has a contract and one example. Can you write a second example and then complete the definition. The _wide-rect_ function should produce a rectangle of given color that is twice as wide as it is high.",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
