@@ -3,6 +3,7 @@
 goog.provide('Blockly.ExampleView');
 
 /** @const */ var NO_RESULT_TEXT = "";
+/** @const */ var RESULT_TEXT_TOP_MARGIN = 14;
 
 /**
  * Handles laying out an example block with a test button
@@ -107,17 +108,21 @@ Blockly.ExampleView.prototype.refreshTestingUI = function (active) {
 };
 
 /**
- * Places the example at the specified location,
- * returning an incremented Y coordinate
+ * Places the example at the specified location, returning an incremented Y
+ * coordinate.
  * @param block
- * @param currentY
- * @param maxWidth
- * @param marginLeft
- * @param marginBelow
+ * @param {number} currentY - Y coordinate to start at, relative to svgParent
+ * @param {number} exampleMaxInputWidth - max width of example call blocks
+ * @param {number} marginLeft
+ * @param {number} marginBelow
+ * @param {number} fullWidth - full width of layout area
+ * @param {number} midLineX - midline location
+ * @param {number} exampleDivTop - top of our DOM parent relative to SVG parent
  * @returns {number} the y coordinate to continue laying out at
  */
 Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
-    block, currentY, maxWidth, marginLeft, marginBelow, fullWidth, midLineX) {
+    block, currentY, exampleMaxInputWidth, marginLeft, marginBelow, fullWidth,
+    midLineX, exampleDivTop) {
   this.block_ = block;
   var newY = currentY;
 
@@ -133,7 +138,7 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
     if (functionCallBlock) {
       width = functionCallBlock.getHeightWidth().width;
     }
-    input.extraSpace = maxWidth - width;
+    input.extraSpace = exampleMaxInputWidth - width;
     if (input.extraSpace !== originalExtraSpace) {
       block.getSvgRenderer().render(true);
     }
@@ -147,7 +152,7 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
 
   var exampleButtonX = midLineX + commonMargin;
   [this.testExampleButton, this.resetExampleButton].forEach(function (button) {
-    button.style.top = newY + 'px';
+    button.style.top = newY - exampleDivTop + 'px';
     button.style.left = exampleButtonX + 'px';
   });
 
@@ -157,7 +162,8 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
   var buttonHeight = Math.max(this.resetExampleButton.offsetHeight,
     this.testExampleButton.offsetHeight);
 
-  this.resultText.style.top = (newY + 14) + 'px';
+  this.resultText.style.top = (newY + RESULT_TEXT_TOP_MARGIN - exampleDivTop)
+      + 'px';
   var exampleButtonRight = exampleButtonX + buttonWidth;
   this.resultText.style.left = commonMargin + exampleButtonRight + 'px';
 
