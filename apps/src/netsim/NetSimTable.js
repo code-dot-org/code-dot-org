@@ -208,7 +208,7 @@ NetSimTable.prototype.getTableName = function () {
  * later reference it on unsubscribe
  */
 NetSimTable.prototype.subscribe = function () {
-  this.channelCallback_ = NetSimTable.prototype.onPubSubEvent.bind(this);
+  this.channelCallback_ = NetSimTable.prototype.onPubSubEvent_.bind(this);
   this.channel_.subscribe(this.tableName_, this.channelCallback_);
 };
 
@@ -566,6 +566,6 @@ NetSimTable.prototype.tick = function () {
  * Called when the PubSub service fires an event that this table is subscribed to.
  * @param {Object} eventData
  */
-NetSimTable.prototype.onPubSubEvent = function () {
+NetSimTable.prototype.onPubSubEvent_ = function () {
   this.refreshTable_();
 };
