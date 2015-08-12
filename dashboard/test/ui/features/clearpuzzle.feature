@@ -13,7 +13,7 @@ Scenario: Deleting start blocks then clearing the puzzle
   And block "5" has been deleted
   Then I click selector "#clear-puzzle-header"
   And I wait to see ".modal"
-  And I click selector "#continue-button"
+  And I click selector "#confirm-button"
   Then block "7" is child of block "6"
 
 Scenario: Adding blocks then clearing the puzzle
@@ -21,6 +21,6 @@ Scenario: Adding blocks then clearing the puzzle
   Then I drag block "1" to block "6"
   Then I click selector "#clear-puzzle-header"
   And I wait to see ".modal"
-  And I click selector "#continue-button"
+  And I click selector "#confirm-button"
   And block "6" has been deleted
   And block "7" has been deleted
