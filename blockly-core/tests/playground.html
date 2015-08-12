@@ -32,6 +32,10 @@ function start() {
     assetUrl: function(path) { return '../' + path; }
   });
 
+  if (goog.tweak.getBoolean('enableExampleRunning')) {
+    Blockly.showExampleTestButtons = true;
+  }
+
   if (goog.tweak.getBoolean('openContractEditor')) {
     newContractEditor();
   } else if (goog.tweak.getBoolean('openFunctionEditor')) {
@@ -39,9 +43,6 @@ function start() {
   }
   if (goog.tweak.getBoolean('toggleScrollDragDebug')) {
     Blockly.ScrollOnBlockDragHandler.DEBUG = true;
-  }
-  if (goog.tweak.getBoolean('enableExampleRunning')) {
-    Blockly.ContractEditor.SHOW_TEST_BUTTONS = true;
   }
 }
 

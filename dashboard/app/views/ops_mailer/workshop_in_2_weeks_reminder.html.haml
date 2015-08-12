@@ -8,18 +8,15 @@
   #{@recipient_ops_data}
 %p
   Dear #{@recipient_ops_data['ops_first_name']},
-
 %p
   Your #{@workshop[:phase][:short_name]} workshop on #{@workshop[:start]} is coming up. <if ECS4Phase2wk/3day + CSP4Phase2wk/3day> Make sure you have completed Phase 3 online.
-
 %p
   Please email
   %a{href:'mailto:pd@code.org'}
     pd@code.org
   if you have any conflicts with these dates.
-
 %h2
-  Complete #{@workshop[:phase]}
+  Complete #{@workshop[:phase][:long_name]}
 %p
   You must complete <Phase n> prior to attending the <Phase n-1> in-person workshop. Here are some tips to successfully complete your online PD.
 %ul
@@ -63,5 +60,5 @@
     #{@workshop[:instructions]}
 %p
   See you soon,
-%p
+%br
   The Code.org PD team
