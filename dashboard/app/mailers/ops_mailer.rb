@@ -32,12 +32,12 @@ class OpsMailer < ActionMailer::Base
   end
 
   def workshop_in_2_weeks_reminder(workshop, recipient, recipient_ops_data)
-    subject = "Important: Your #{@workshop[:phase][:short_name]} workshop is coming up."
     @workshop = workshop
     # program_type was originally stored as a string in the db, but was later changed to an id that maps to activity_constants.
     # The datatype in MySql was never changed, so for now you have to coerce it to an integer
     @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type].to_i]
     @workshop[:phase] = ActivityConstants::PHASES[workshop[:phase]]
+    subject = "Important: Your #{@workshop[:phase][:short_name]} workshop is coming up."
     if workshop[:prerequisite_phase]
       @workshop[:prerequisite_phase] = ActivityConstants::PHASES[workshop[:prerequisite_phase]]
       subject += " Complete #{@workshop[:prerequisite_phase][:short_name]}"
