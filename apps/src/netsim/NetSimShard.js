@@ -121,6 +121,8 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
  * @param {!RunLoop.Clock} clock
  */
 NetSimShard.prototype.tick = function (clock) {
+  // TODO (bbuchanan): Eventaully, these polling events should just be
+  //                   backup for the notification system.
   this.nodeTable.tick(clock);
   this.wireTable.tick(clock);
   this.messageTable.tick(clock);
