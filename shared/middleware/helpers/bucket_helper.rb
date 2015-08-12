@@ -35,7 +35,7 @@ class BucketHelper
     end
   end
 
-  def copy_assets(src_channel, dest_channel)
+  def copy_files(src_channel, dest_channel)
     src_owner_id, src_channel_id = storage_decrypt_channel_id(src_channel)
     dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
 
@@ -53,11 +53,16 @@ class BucketHelper
     end
   end
 
-  def create_or_replace(encrypted_channel_id, filename, body)
+  def create_or_replace(encrypted_channel_id, filename, body, version = nil)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, channel_id, filename
-    @s3.put_object(bucket: @bucket, key: key, body: body)
+    response = @s3.put_object(bucket: @bucket, key: key, body: body)
+
+    # Delete the old version, if doing an in-place replace
+    @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
+
+    response
   end
 
   def delete(encrypted_channel_id, filename)
@@ -72,8 +77,21 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
 
     @s3.list_object_versions(bucket: @bucket, prefix: key).versions.map do |version|
-      [version.version_id, version.last_modified]
+      {
+        versionId: version.version_id,
+        lastModified: version.last_modified,
+        isLatest: version.is_latest
+      }
     end
+  end
+
+  # Copies the given version of the file to make it the current revision.
+  # (All intermediate versions are preserved.)
+  def restore_previous_version(encrypted_channel_id, filename, version_id)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    @s3.copy_object(bucket: @bucket, key: key, copy_source: "#{@bucket}/#{key}?versionId=#{version_id}")
   end
 
   protected

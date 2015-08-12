@@ -146,6 +146,50 @@ function test_contractEditor_new_variable_button() {
   goog.dom.removeNode(container);
 }
 
+function test_contractEditor_new_function_then_variable_then_function() {
+  Blockly.defaultNumExampleBlocks = 2;
+  var container = initializeWithContractEditor('<xml/>');
+  var contractEditor = Blockly.contractEditor;
+
+  contractEditor.openWithNewFunction();
+  assertContractDefinitionLaidOutAsExpected(contractEditor);
+  contractEditor.hideIfOpen();
+  contractEditor.openWithNewVariable();
+  assertContractVariableDefinitionLaidOutAsExpected(contractEditor);
+  contractEditor.hideIfOpen();
+  contractEditor.openWithNewFunction();
+  assertContractDefinitionLaidOutAsExpected(contractEditor);
+
+  contractEditor.hideIfOpen();
+  goog.dom.removeNode(container);
+}
+
+function assertContractDefinitionLaidOutAsExpected(contractEditor) {
+  var definitionSectionLogic = contractEditor.definitionSectionLogic_;
+  var definitionTableGroup = definitionSectionLogic.definitionTableGroup;
+  var functionDefinitionBlock = contractEditor.functionDefinitionBlock;
+
+  assertEquals('block', definitionTableGroup.style.display);
+  assert('Contract definition is not variable',
+      !functionDefinitionBlock.isVariable());
+  assert('Contract definition is positioned relative to examples.',
+      functionDefinitionBlock.getRelativeToSurfaceXY().x >
+      Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT);
+}
+
+function assertContractVariableDefinitionLaidOutAsExpected(contractEditor) {
+  var definitionSectionLogic = contractEditor.definitionSectionLogic_;
+  var definitionTableGroup = definitionSectionLogic.definitionTableGroup;
+  var variableDefinitionBlock = contractEditor.functionDefinitionBlock;
+
+  assert('Variable is detected properly', variableDefinitionBlock.isVariable());
+  assertEquals('Variable definition block laid out to the',
+      Blockly.BlockSpaceEditor.BUMP_PADDING_LEFT,
+      variableDefinitionBlock.getRelativeToSurfaceXY().x);
+  assertEquals('Variable definition is hidden properly',
+      'none', definitionTableGroup.style.display);
+}
+
 function test_contractEditor_change_output_types() {
   var singleDefinitionString = '<xml><block type="functional_definition" inline="false" editable="false"><mutation><outputtype>Number</outputtype></mutation><title name="NAME">functional-function</title><functional_input name="STACK"><block type="functional_call"><mutation name="functional-function"></mutation></block></functional_input></block></xml>';
   var container = initializeWithContractEditor(singleDefinitionString);
