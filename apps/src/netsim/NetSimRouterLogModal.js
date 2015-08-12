@@ -329,49 +329,42 @@ NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
   // Store the actual logEntry on the row for sorting/merging later.
   $(row).data(LOG_ENTRY_DATA_KEY, logEntry);
 
-  var tdTimestamp = document.createElement('td');
-  tdTimestamp.innerText = logEntry.getTimeString();
-  tdTimestamp.style.whiteSpace = 'nowrap';
+  row.appendChild(makeCell(logEntry.getTimeString()));
 
-  var tdDisplayName = document.createElement('td');
-  tdDisplayName.innerText = (originNode ?
-      originNode.getDisplayName() : logEntry.nodeID);
-  tdDisplayName.style.whiteSpace = 'nowrap';
+  row.appendChild(makeCell(originNode ?
+      originNode.getDisplayName() : logEntry.nodeID));
 
-  var tdStatus = document.createElement('td');
-  tdStatus.innerText = logEntry.getLocalizedStatus();
-  tdStatus.style.whiteSpace = 'nowrap';
-
-  row.appendChild(tdTimestamp);
-  row.appendChild(tdDisplayName);
-  row.appendChild(tdStatus);
+  row.appendChild(makeCell(logEntry.getLocalizedStatus())); 
 
   if (showFromAddress) {
-    var tdFrom = document.createElement('td');
-    tdFrom.innerText = logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS);
-    tdFrom.style.whiteSpace = 'nowrap';
-    row.appendChild(tdFrom);
-  }
-  if (showToAddress) {
-    var tdTo = document.createElement('td');
-    tdTo.innerText = logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS);
-    tdTo.style.whiteSpace = 'nowrap';
-    row.appendChild(tdTo);
-  }
-  if (showPacketInfo) {
-    var tdPacketInfo = document.createElement('td');
-    tdPacketInfo.innerText = logEntry.getLocalizedPacketInfo();
-    tdPacketInfo.style.whiteSpace = 'nowrap';
-    row.appendChild(tdPacketInfo);
+    row.appendChild(makeCell(logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS)));
   }
 
-  var tdMessageBody = document.createElement('td');
+  if (showToAddress) {
+    row.appendChild(makeCell(logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS)));
+  }
+
+  if (showPacketInfo) {
+    row.appendChild(makeCell(logEntry.getLocalizedPacketInfo()));
+  }
+
+  var tdMessageBody = makeCell(logEntry.getMessageAscii());
   tdMessageBody.className = 'message';
-  tdMessageBody.innerText = logEntry.getMessageAscii();
   row.appendChild(tdMessageBody);
 
   return row;
 };
+
+/**
+ * @param {!string} text
+ * @returns {HTMLElement} the new TD element.
+ */
+function makeCell(text) {
+  var td = document.createElement('td');
+  td.style.whiteSpace = 'nowrap';
+  td.innerText = text;
+  return td;
+}
 
 /**
  * Change the sort settings and re-render the log table.
