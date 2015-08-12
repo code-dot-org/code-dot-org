@@ -416,13 +416,15 @@ Blockly.FunctionEditor.prototype.create_ = function() {
         function() {
           // `this` is the new BlockSpaceEditor
           var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
-          metrics.absoluteLeft +=
-              FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-          metrics.absoluteTop += self.getBlockSpaceEditorToScreenTop_();
-          metrics.viewWidth -=
-              (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
-          metrics.viewHeight -=
-              FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + self.getWindowBorderChromeHeight();
+          if (metrics) {
+            metrics.absoluteLeft +=
+                FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
+            metrics.absoluteTop += self.getBlockSpaceEditorToScreenTop_();
+            metrics.viewWidth -=
+                (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
+            metrics.viewHeight -=
+                FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + self.getWindowBorderChromeHeight();
+          }
           return metrics;
         },
 
