@@ -43,19 +43,15 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    */
   this.rootDiv_ = rootDiv;
 
-  // Attach handlers for showing and hiding the modal
-  this.rootDiv_.on('shown.bs.modal', function () {
-    if (this.shard_) {
-      this.shard_.logTable.subscribe();
-    }
-    this.render();
-  }.bind(this));
+  /**
+   * Hidden by default.
+   * @private {boolean}
+   */
+  this.isVisible_ = false;
 
-  this.rootDiv_.on('hidden.bs.modal', function () {
-    if (this.shard_) {
-      this.shard_.logTable.unsubscribe();
-    }
-  }.bind(this));
+  // Attach handlers for showing and hiding the modal
+  this.rootDiv_.on('shown.bs.modal', this.onShow_.bind(this));
+  this.rootDiv_.on('hidden.bs.modal', this.onHide_.bind(this));
 
   /**
    * @private {NetSimShard}
@@ -147,10 +143,33 @@ NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
 };
 
 /**
+ * State changes that occur when shoing the log.
+ * @private
+ */
+NetSimRouterLogModal.prototype.onShow_ = function () {
+  if (this.shard_) {
+    this.shard_.logTable.subscribe();
+  }
+  this.isVisible_ = true;
+  this.render();
+};
+
+/**
+ * State changes that occur when hiding the log.
+ * @private
+ */
+NetSimRouterLogModal.prototype.onHide_ = function () {
+  if (this.shard_) {
+    this.shard_.logTable.unsubscribe();
+  }
+  this.isVisible_ = false;
+};
+
+/**
  * @returns {boolean} TRUE if the modal is currently showing.
  */
 NetSimRouterLogModal.prototype.isVisible = function () {
-  return this.rootDiv_.is(':visible');
+  return this.isVisible_;
 };
 
 /**
@@ -347,6 +366,7 @@ NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
   }
 
   var tdMessageBody = document.createElement('td');
+  tdMessageBody.className = 'message';
   tdMessageBody.innerText = logEntry.getMessageAscii();
   row.appendChild(tdMessageBody);
 
