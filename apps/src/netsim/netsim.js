@@ -27,6 +27,7 @@ var smallFooterUtils = require('@cdo/shared/smallFooter');
 var ObservableEvent = require('../ObservableEvent');
 var RunLoop = require('../RunLoop');
 var page = require('./page.html.ejs');
+var NetSimAlert = require('./NetSimAlert');
 var NetSimConstants = require('./NetSimConstants');
 var NetSimUtils = require('./NetSimUtils');
 var DashboardUser = require('./DashboardUser');
@@ -505,7 +506,10 @@ NetSim.prototype.createMyClientNode_ = function (displayName, onComplete) {
       return;
     }
 
-    node.setLostConnectionCallback(this.disconnectFromShard.bind(this));
+    node.setLostConnectionCallback(function () {
+      NetSimAlert.warn(i18n.alertConnectionReset());
+      this.disconnectFromShard();
+    }.bind(this));
     node.initializeSimulation(this.sentMessageLog_, this.receivedMessageLog_);
     onComplete(err, node);
   }.bind(this));
