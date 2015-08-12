@@ -10,7 +10,7 @@
   var adjustedScroll = false;
 
   $(document).ready(function () {
-    if (appOptions.dialog.preTitle != "") {
+    if (appOptions.dialog.preTitle) {
       window.setTimeout(function () {
         showDialog("pre");
       }, 1000);
