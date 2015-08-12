@@ -21,6 +21,9 @@ var Packet = require('./Packet');
 var markup = require('./NetSimRouterLogModal.html.ejs');
 var NetSimGlobals = require('./NetSimGlobals');
 
+/** @const {string} */
+var LOG_ENTRY_DATA_KEY = 'LogEntry';
+
 /**
  * Generator and controller for contents of modal dialog that reveals
  * all router logs together, in a searchable/sortable/filterable manner.
@@ -70,7 +73,7 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
    * log rows, we don't need to retrieve everything.
    * @private {number}
    */
-  this.latestLogRowID_ = 0;
+  this.latestRowID_ = 0;
 
   /**
    * Tracking information for which events we're registered to, so we can
@@ -155,21 +158,8 @@ NetSimRouterLogModal.prototype.render = function () {
     return;
   }
 
-  var filteredLogEntries = this.isAllRouterLogMode_ ?
-      this.logEntries_ :
-      this.logEntries_.filter(function (entry) {
-        return entry.nodeID === this.router_.entityID;
-      }, this);
-
-  // Sort before rendering
-  var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
-  var sortedFilteredLogEntries = _.sortBy(filteredLogEntries, iterateeFunction);
-  if (this.sortDescending_) {
-    sortedFilteredLogEntries.reverse();
-  }
-
+  // Rerender entire log browser UI
   var renderedMarkup = $(markup({
-    logEntries: sortedFilteredLogEntries,
     isAllRouterLogMode: this.isAllRouterLogMode_,
     canToggleRouterLogMode: this.canToggleRouterLogMode_(),
     sortBy: this.sortBy_,
@@ -177,6 +167,7 @@ NetSimRouterLogModal.prototype.render = function () {
   }));
   this.rootDiv_.html(renderedMarkup);
 
+  // Handlers
   this.getRouterLogToggleButton().one('click', function() {
     this.toggleRouterLogMode_();
     this.render();
@@ -185,6 +176,127 @@ NetSimRouterLogModal.prototype.render = function () {
   this.rootDiv_.find('th').click(function (event) {
     this.onSortHeaderClick_($(event.target).attr('data-sort-key'));
   }.bind(this));
+
+  // Add rows to the table
+  var sortedFilteredLogEntries = this.getSortedFilteredLogEntries(this.logEntries_);
+  var tbody = this.rootDiv_.find('tbody');
+  tbody.append(sortedFilteredLogEntries.map(this.makeTableRow_.bind(this)));
+};
+
+/**
+ * Convert the given set of log entries to table rows and insert them
+ * into the DOM, instead of re-rendering the whole table.
+ * @param {!NetSimLogEntry[]} newEntries
+ * @private
+ */
+NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
+  // Be lazy, don't render if not visible.
+  if (!this.isVisible()) {
+    return;
+  }
+
+  var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
+
+  // Add rows to the table
+  var sortedFilteredLogEntries = this.getSortedFilteredLogEntries(newEntries);
+  var newRows = sortedFilteredLogEntries.map(this.makeTableRow_.bind(this));
+  var tbody = this.rootDiv_.find('tbody');
+  var existingRows = tbody.find('tr');
+  var newRowIndex = 0, existingRowIndex = 0;
+  var existingRow, existingSortValue, newRow, newSortValue, belongsBeforeExisting;
+
+  while (newRowIndex < newRows.length && existingRowIndex < existingRows.length) {
+    existingRow = existingRows.eq(existingRowIndex);
+    existingSortValue = iterateeFunction(existingRow.data(LOG_ENTRY_DATA_KEY));
+    newRow = newRows[newRowIndex];
+    newSortValue = iterateeFunction(sortedFilteredLogEntries[newRowIndex]);
+    belongsBeforeExisting = newSortValue < existingSortValue ?
+        !this.sortDescending_ : this.sortDescending_;
+    if (belongsBeforeExisting) {
+      existingRow.before(newRow);
+      newRowIndex++;
+    } else {
+      existingRowIndex++;
+    }
+  }
+
+  // Put whatever's left on the end of the table
+  tbody.append(newRows.slice(newRowIndex));
+};
+
+/**
+ * @param {!NetSimLogEntry[]} logEntries
+ * @returns {NetSimLogEntry[]} subset of logEntries, sorted and filtered
+ *          according to the log browser's current settings.
+ */
+NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntries) {
+  // Filter entries to current log browser filter mode
+  var filteredLogEntries = this.isAllRouterLogMode_ ?
+      logEntries :
+      logEntries.filter(function (entry) {
+        return entry.nodeID === this.router_.entityID;
+      }, this);
+
+  // Sort entries according to current log browser sort setting
+  var iterateeFunction = NetSimRouterLogModal.iterateeMap[this.sortBy_];
+  var sortedFilteredLogEntries = _.sortBy(filteredLogEntries, iterateeFunction);
+  if (this.sortDescending_) {
+    sortedFilteredLogEntries.reverse();
+  }
+  return sortedFilteredLogEntries;
+};
+
+/**
+ * Given a log entry, generate a table row that can be added to the log modal.
+ * @param {!NetSimLogEntry} logEntry
+ * @returns {jQuery} that wraps a tr element.
+ * @private
+ */
+NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
+  var headerFields = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
+
+  var showToAddress = headerFields.indexOf(Packet.HeaderType.TO_ADDRESS) > -1;
+
+  var showFromAddress = headerFields.indexOf(Packet.HeaderType.FROM_ADDRESS) > -1;
+
+  var showPacketInfo = headerFields.indexOf(Packet.HeaderType.PACKET_INDEX) > -1 &&
+      headerFields.indexOf(Packet.HeaderType.PACKET_COUNT) > -1;
+
+  var originNode = logEntry.getOriginNode();
+
+  // TODO: This dom creation should happen with document.createElement()
+  //       because it's nearly 10 times faster!
+  var row = $('<tr>');
+  $('<td nowrap>')
+      .text(logEntry.getTimeString())
+      .appendTo(row);
+  $('<td nowrap>')
+      .text(originNode ? originNode.getDisplayName() : logEntry.nodeID)
+      .appendTo(row);
+  $('<td nowrap>')
+      .text(logEntry.getLocalizedStatus())
+      .appendTo(row);
+  if (showFromAddress) {
+    $('<td nowrap>')
+        .text(logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS))
+        .appendTo(row);
+  }
+  if (showToAddress) {
+    $('<td nowrap>')
+        .text(logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS))
+        .appendTo(row);
+  }
+  if (showPacketInfo) {
+    $('<td nowrap>')
+        .text(logEntry.getLocalizedPacketInfo())
+        .appendTo(row);
+  }
+  $('<td nowrap>')
+      .text(logEntry.getMessageAscii())
+      .appendTo(row);
+
+  row.data(LOG_ENTRY_DATA_KEY, logEntry);
+  return row;
 };
 
 NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
@@ -303,5 +415,5 @@ NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
   }, this);
   // Modify this.logEntries_ in-place, appending new log entries
   Array.prototype.push.apply(this.logEntries_, newLogEntries);
-  this.render();
+  this.renderNewLogEntries_(newLogEntries);
 };
