@@ -65,15 +65,9 @@ Blockly.ExampleView.prototype.initializeTestButton_ = function (buttonText,
 /**
  * @returns {Blockly.Block} The example block this view represents
  */
-<<<<<<< HEAD
-Blockly.ExampleView.prototype.isViewForBlock = function (block) {
-  return this.block_ === block;
-};
-=======
  Blockly.ExampleView.prototype.getBlock  = function() {
   return this.block_;
 }
->>>>>>> example tests only return failures. blockly-core owns success text
 
 /**
  * Performs the test for this example, setting the result text appropriately.
