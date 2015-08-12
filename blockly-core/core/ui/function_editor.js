@@ -333,6 +333,10 @@ Blockly.FunctionEditor.prototype.ensureCreated_ = function() {
   }
 };
 
+Blockly.FunctionEditor.prototype.onClose = function() {
+  this.hideIfOpen();
+};
+
 Blockly.FunctionEditor.prototype.hideIfOpen = function() {
   if (!this.isOpen()) {
     return;
@@ -504,7 +508,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   });
 
   Blockly.bindEvent_(goog.dom.getElement('modalEditorClose'), 'mousedown', this,
-      this.hideIfOpen);
+      this.onClose);
   Blockly.bindEvent_(goog.dom.getElement('functionNameText'), 'input', this,
       functionNameChange);
   // IE9 doesn't fire oninput when delete key is pressed, bind keydown also
