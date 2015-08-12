@@ -311,6 +311,16 @@ NetSimTable.prototype.readAll = function () {
 };
 
 /**
+ * @param {!number} firstRowID
+ * @returns {Array} all locally cached table rows having row ID >= firstRowID
+ */
+NetSimTable.prototype.readAllFromID = function (firstRowID) {
+  return this.arrayFromCache_(function (key) {
+    return key >= firstRowID;
+  });
+};
+
+/**
  * @param {!number} id
  * @param {!NodeStyleCallback} callback
  */
@@ -482,13 +492,15 @@ NetSimTable.prototype.updateCacheRow_ = function (id, row) {
 };
 
 /**
+ * @param {function(key, value)} [predicate] - A condition on returning the row.
  * @returns {Array}
  * @private
  */
-NetSimTable.prototype.arrayFromCache_ = function () {
+NetSimTable.prototype.arrayFromCache_ = function (predicate) {
+  predicate = predicate || function () { return true; };
   var result = [];
   for (var k in this.cache_) {
-    if (this.cache_.hasOwnProperty(k)) {
+    if (this.cache_.hasOwnProperty(k) && predicate(k, this.cache_[k])) {
       result.push(this.cache_[k]);
     }
   }
