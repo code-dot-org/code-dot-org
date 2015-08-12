@@ -3,6 +3,7 @@
 goog.provide('Blockly.ExampleView');
 
 /** @const */ var NO_RESULT_TEXT = "";
+/** @const */ var SUCCESS_TEXT = "Matches definition.";
 /** @const */ var RESULT_TEXT_TOP_MARGIN = 14;
 
 /**
@@ -62,13 +63,17 @@ Blockly.ExampleView.prototype.initializeTestButton_ = function (buttonText,
 };
 
 /**
- * @param {Blockly.Block} block
- * @returns {boolean} True if the provided example block is the one that we're
- *   the view for.
+ * @returns {Blockly.Block} The example block this view represents
  */
+<<<<<<< HEAD
 Blockly.ExampleView.prototype.isViewForBlock = function (block) {
   return this.block_ === block;
 };
+=======
+ Blockly.ExampleView.prototype.getBlock  = function() {
+  return this.block_;
+}
+>>>>>>> example tests only return failures. blockly-core owns success text
 
 /**
  * Performs the test for this example, setting the result text appropriately.
@@ -76,8 +81,8 @@ Blockly.ExampleView.prototype.isViewForBlock = function (block) {
 Blockly.ExampleView.prototype.testExample_ = function () {
   this.contractEditor_.resetExampleViews();
 
-  var result = this.contractEditor_.testExample(this.block_);
-  this.setResult(result);
+  var failure = this.contractEditor_.testExample(this.block_, true);
+  this.setResult(failure || SUCCESS_TEXT);
   this.refreshTestingUI(true);
 
   // TODO(bjordan): UI re-layout post-result?
@@ -91,13 +96,16 @@ Blockly.ExampleView.prototype.reset = function () {
   // old result text
   if (goog.style.isElementShown(this.resetExampleButton)) {
     this.contractEditor_.resetExample(this.block_);
-    this.setResult(NO_RESULT_TEXT);
+    this.resultText.innerHTML = NO_RESULT_TEXT;
     this.refreshTestingUI(false);
   }
 };
 
-Blockly.ExampleView.prototype.setResult = function (result) {
-  this.resultText.innerHTML = result;
+/**
+ * @param {string} failure The failure text. If null, set to success text
+ */
+Blockly.ExampleView.prototype.setResult = function (failure) {
+  this.resultText.innerHTML = failure || SUCCESS_TEXT;
   this.refreshTestingUI(false);
 };
 

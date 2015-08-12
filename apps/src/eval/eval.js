@@ -159,7 +159,7 @@ Eval.init = function(config) {
     dom.addClickTouchEvent(resetButton, Eval.resetButtonClick);
 
     if (Blockly.contractEditor) {
-      Blockly.contractEditor.registerTestHandler(testEvalExample);
+      Blockly.contractEditor.registerTestHandler(getEvalExampleFailure);
       Blockly.contractEditor.registerTestResetHandler(resetEvalExample);
     }
   };
@@ -169,25 +169,27 @@ Eval.init = function(config) {
 
 /**
  * @param {Blockly.Block}
- * @param {boolean} [appInitiated] True if this test was initiated by the app
- *   rather than via the contract editor
- * @returns {string}
+ * @param {boolean} [evaluateInPlayspace] True if this test should also show
+ *   evaluation in the play space
+ * @returns {string} Error string, or null if success
  */
-function testEvalExample(exampleBlock, appInitiated) {
-  if (!appInitiated) {
+function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
+  if (evaluateInPlayspace) {
     studioApp.resetButtonClick();
     Eval.resetButtonClick();
+    Eval.clearCanvasWithID('user');
   }
 
   Eval.clearCanvasWithID("test-call");
   Eval.clearCanvasWithID("test-result");
-  Eval.clearCanvasWithID('user');
+
   document.getElementById('answer').style.display = 'none';
   document.getElementById('test-call').style.opacity = 0.5;
   document.getElementById('test-result').style.opacity = 0.5;
   document.getElementById('test-call').style.display = 'block';
   document.getElementById('test-result').style.display = 'block';
 
+  var failure;
   try {
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
@@ -206,10 +208,18 @@ function testEvalExample(exampleBlock, appInitiated) {
 
     actualDrawer.draw(document.getElementById("test-call"));
     expectedDrawer.draw(document.getElementById("test-result"));
-    return canvasesMatch('test-call', 'test-result') ? "Matches definition." : "Does not match definition";
+
+    failure = canvasesMatch('test-call', 'test-result') ? null :
+      "Does not match definition";
+
   } catch (error) {
-    return "Execution error: " + error.message;
+    failure = "Execution error: " + error.message;
   }
+
+  if (!evaluateInPlayspace) {
+    resetEvalExample();
+  }
+  return failure;
 }
 
 function resetEvalExample() {
@@ -515,21 +525,21 @@ Eval.checkExamples_ = function (resetPlayspace) {
   // TODO - what of this belongs in studio app?
   var failingBlockName = '';
   Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
-    var result = testEvalExample(exampleBlock, true);
-    var success = result === "Matches definition.";
+    var failure = getEvalExampleFailure(exampleBlock, false);
 
     // Update the example result. No-op if we're not currently editing this
     // function.
-    Blockly.contractEditor.updateExampleResult(exampleBlock, result);
+    Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
 
-    if (!success) {
+    if (failure) {
       failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
         .getTitleValue('NAME');
     }
-
   });
 
   if (failingBlockName) {
+    // Clear user canvas, as this is meant to be a pre-execution failure
+    Eval.clearCanvasWithID('user');
     Eval.result = false;
     Eval.testResults = TestResults.EXAMPLE_FAILED;
     Eval.message = commonMsg.exampleErrorMessage({functionName: failingBlockName});
