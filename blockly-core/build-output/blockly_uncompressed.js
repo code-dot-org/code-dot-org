@@ -20261,6 +20261,9 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   var self = this;
   this.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, function() {
     var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+    if(!metrics) {
+      return null
+    }
     metrics.absoluteLeft += FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
     metrics.absoluteTop += self.getBlockSpaceEditorToScreenTop_();
     metrics.viewWidth -= (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
