@@ -763,7 +763,12 @@ Blockly.BlockSpaceEditor.prototype.hideChaff = function(opt_allowToolbox) {
 
 /**
  * Return an object with all the metrics required to size scrollbars for the
- * main blockSpace.  The following properties are computed:
+ * main blockSpace.
+ *
+ * Returned object may be null, typically if the blockspace is not visible and
+ * we are running Firefox.
+ *
+ * The following properties are computed:
  * .viewHeight: Height of the visible rectangle,
  * .viewWidth: Width of the visible rectangle,
  * .contentHeight: Height of the contents,
@@ -774,7 +779,7 @@ Blockly.BlockSpaceEditor.prototype.hideChaff = function(opt_allowToolbox) {
  * .contentLeft: Offset of the left-most content from the x=0 coordinate.
  * .absoluteTop: Top-edge of view.
  * .absoluteLeft: Left-edge of view.
- * @return {Object} Contains size and position metrics of main blockSpace.
+ * @return {Object|null} Contains size and position metrics of main blockSpace.
  * @private
  */
 Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_ = function() {
