@@ -441,8 +441,8 @@ StudioApp.prototype.init = function(config) {
         headerText: undefined,
         bodyText: msg.examplesFailedOnClose(),
         cancelText: msg.ignore(),
-        continueText: msg.tryAgain(),
-        onContinue: null,
+        confirmText: msg.tryAgain(),
+        onConfirm: null,
         onCancel: function () {
           Blockly.contractEditor.hideIfOpen();
         }

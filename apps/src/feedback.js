@@ -771,9 +771,9 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
   this.showSimpleDialog(Dialog, {
     headerText: msg.clearPuzzleConfirmHeader(),
     bodyText: msg.clearPuzzleConfirm(),
-    continueText: msg.clearPuzzle(),
+    confirmText: msg.clearPuzzle(),
     cancelText: msg.dialogCancel(),
-    onContinue: callback,
+    onConfirm: callback,
     onCancel: null
   });
 };
@@ -785,8 +785,8 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function(Dialog, callback)
  * @param {string} headerText Text for header portion
  * @param {string} bodyText Text for body portion
  * @param {string} cancelText Text for cancel button
- * @param {string} continueTextText Text for continue button
- * @param {function} [onContinue] Function to be called after clicking continue
+ * @param {string} confirmText Text for confirm button
+ * @param {function} [onConfirm] Function to be called after clicking confirm
  * @param {function} [onCancel] Function to be called after clicking cancel
  */
 FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
@@ -802,7 +802,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
     data: {
-      continueText: options.continueText,
+      confirmText: options.confirmText,
       cancelText: options.cancelText
     }
   });
@@ -818,15 +818,19 @@ FeedbackUtils.prototype.showSimpleDialog = function (Dialog, options) {
   var cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function() {
-      options.onCancel && options.onCancel();
+      if (options.onCancel) {
+        options.onCancel();
+      }
       dialog.hide();
     });
   }
 
-  var continueButton = buttons.querySelector('#continue-button');
-  if (continueButton) {
-    dom.addClickTouchEvent(continueButton, function() {
-      options.onContinue && options.onContinue();
+  var confirmButton = buttons.querySelector('#confirm-button');
+  if (confirmButton) {
+    dom.addClickTouchEvent(confirmButton, function() {
+      if (options.onConfirm) {
+        options.onConfirm();
+      }
       dialog.hide();
     });
   }
