@@ -166,7 +166,7 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
   this.eventKeys.registeredOnShard = this.shard_;
 
   // Set up initial state from cached rows
-  this.onNodeTableChange_(this.shard_.nodeTable.readAll());
+  this.onNodeTableChange_();
 };
 
 /**
@@ -453,10 +453,11 @@ NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
 /**
  * Whenever the node table changes, make needed changes to our collection of
  * routers configured to simulate for the local node.
- * @param {Array} nodeRows
  * @private
  */
-NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
+NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
+  var nodeRows = this.shard_.nodeTable.readAll();
+
   // 1. Remove simulating routers that have vanished from remote storage.
   this.routers_ = this.routers_.filter(function (simulatingRouter) {
     var stillExists = nodeRows.some(function (row) {
@@ -489,14 +490,14 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
  * Handler for any wire table change.  Used here to detect mutual
  * connections between client nodes that indicate we can move to a
  * "connected" state or stop trying to connect
- * @param {Array} wireRows
  * @private
  */
-NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
+NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
   if (!this.myWire) {
     return;
   }
 
+  var wireRows = this.shard_.wireTable.readAll();
   var myConnectionTargetWireRow, isTargetConnectedToSomeoneElse;
 
   // Look for mutual connection
@@ -539,10 +540,9 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
 /**
  * Listens for changes to the message table.  Detects and handles messages
  * sent to this node.
- * @param {Array} rows
  * @private
  */
-NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
+NetSimLocalClientNode.prototype.onMessageTableChange_ = function () {
   if (!NetSimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
@@ -555,7 +555,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
     return;
   }
 
-  var messages = rows
+  var messages = this.shard_.messageTable.readAll()
       .map(function (row) {
         return new NetSimMessage(this.shard_, row);
       }.bind(this))
