@@ -202,7 +202,8 @@ exports.fakeShard = function () {
   /* jshint unused:false */
   /** @implements {PubSubChannel} */
   var fakeChannel = {
-    subscribe: function (eventName, callback) {}
+    subscribe: function (eventName, callback) {},
+    unsubscribe: function (eventName, callback) {}
   };
   /* jshint unused:true */
 
