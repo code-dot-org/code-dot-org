@@ -522,21 +522,7 @@ Eval.checkExamples_ = function (resetPlayspace) {
     return;
   }
 
-  // TODO - what of this belongs in studio app?
-  var failingBlockName = '';
-  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
-    var failure = getEvalExampleFailure(exampleBlock, false);
-
-    // Update the example result. No-op if we're not currently editing this
-    // function.
-    Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
-
-    if (failure) {
-      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
-        .getTitleValue('NAME');
-    }
-  });
-
+  var failingBlockName = studioApp.checkForFailingExamples(getEvalExampleFailure);
   if (failingBlockName) {
     // Clear user canvas, as this is meant to be a pre-execution failure
     Eval.clearCanvasWithID('user');
