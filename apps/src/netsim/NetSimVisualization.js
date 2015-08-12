@@ -16,7 +16,6 @@
 
 var utils = require('../utils');
 var _ = utils.getLodash();
-var visualizationMarkup = require('./NetSimVisualization.html.ejs');
 var NetSimNodeFactory = require('./NetSimNodeFactory');
 var NetSimWire = require('./NetSimWire');
 var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
@@ -31,12 +30,6 @@ var DnsMode = NetSimConstants.DnsMode;
 var NodeType = NetSimConstants.NodeType;
 
 /**
- * Whether the blurred visualization background should be shown.
- * @const {boolean}
- */
-var SHOW_BACKGROUND = false;
-
-/**
  * Top-level controller for the network visualization.
  *
  * For the most part, the visualization attaches to the raw network state
@@ -44,54 +37,33 @@ var SHOW_BACKGROUND = false;
  * independent of the rest of the controls on the page.  This separation means
  * that the visualization always has one canonical state to observe.
  *
- * @param {jQuery} rootDiv - The <div> tag within which the visualization
+ * @param {jQuery} svgRoot - The <svg> tag within which the visualization
  *        will be created.
  * @param {RunLoop} runLoop - Loop providing tick and render events that the
  *        visualization can hook up to and respond to.
  * @constructor
  */
-var NetSimVisualization = module.exports = function (rootDiv, runLoop) {
+var NetSimVisualization = module.exports = function (svgRoot, runLoop) {
   /**
-   * @private {jQuery}
+   * @type {jQuery}
+   * @private
    */
-  this.rootDiv_ = rootDiv;
-
-  // Immediately, drop our SVG canvas and basic groups into the DOM
-  this.rootDiv_.html(visualizationMarkup({
-    showBackground: SHOW_BACKGROUND
-  }));
-
-  /**
-   * @private {jQuery}
-   */
-  this.svgRoot_ = this.rootDiv_.find('svg');
-
-  /**
-   * Background group never goes away, so search for it once and cache
-   * it here.
-   * @private {jQuery}
-   */
-  this.backgroundGroup_ = this.svgRoot_.find('#background-group');
-
-  /**
-   * Foreground group never goes away, so search for it once and cache
-   * it here.
-   * @private {jQuery}
-   */
-  this.foregroundGroup_ = this.svgRoot_.find('#foreground-group');
+  this.svgRoot_ = svgRoot;
 
   /**
    * The shard currently being represented.
    * We don't have a shard now, but we register with the connection manager
    * to find out when we have one.
-   * @private {NetSimShard}
+   * @type {NetSimShard}
+   * @private
    */
   this.shard_ = null;
 
   /**
    * List of VizEntities, which are all the elements that will actually show up
    * in our visualization.
-   * @private {NetSimVizElement[]}
+   * @type {Array.<NetSimVizElement>}
+   * @private
    */
   this.elements_ = [];
 
@@ -240,9 +212,9 @@ NetSimVisualization.prototype.setLocalNode = function (newLocalNode) {
     if (this.localNode) {
       this.localNode.configureFrom(newLocalNode);
     } else {
-      this.localNode = new NetSimVizSimulationNode(newLocalNode, SHOW_BACKGROUND);
+      this.localNode = new NetSimVizSimulationNode(newLocalNode);
       this.elements_.push(this.localNode);
-      this.backgroundGroup_.append(this.localNode.getRoot());
+      this.svgRoot_.find('#background-group').append(this.localNode.getRoot());
     }
     this.localNode.setIsLocalNode();
   } else {
@@ -333,16 +305,16 @@ NetSimVisualization.prototype.getWiresAttachedToNode = function (vizNode) {
 
 /**
  * Handle notification that node table contents have changed.
+ * @param {Array.<Object>} rows - node table rows
  * @private
  */
-NetSimVisualization.prototype.onNodeTableChange_ = function () {
+NetSimVisualization.prototype.onNodeTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
-  var tableNodes = NetSimNodeFactory.nodesFromRows(this.shard_,
-      this.shard_.nodeTable.readAll());
+  var tableNodes = NetSimNodeFactory.nodesFromRows(this.shard_, rows);
 
   // Update collection of VizNodes from source data
   this.updateVizEntitiesOfType_(NetSimVizSimulationNode, tableNodes, function (node) {
-    var newVizNode = new NetSimVizSimulationNode(node, SHOW_BACKGROUND);
+    var newVizNode = new NetSimVizSimulationNode(node);
     newVizNode.setDnsMode(this.dnsMode_);
     newVizNode.snapToPosition(
         Math.random() * this.visualizationWidth - (this.visualizationWidth / 2),
@@ -353,11 +325,12 @@ NetSimVisualization.prototype.onNodeTableChange_ = function () {
 
 /**
  * Handle notification that wire table contents have changed.
+ * @param {Array.<Object>} rows - wire table rows
  * @private
  */
-NetSimVisualization.prototype.onWireTableChange_ = function () {
+NetSimVisualization.prototype.onWireTableChange_ = function (rows) {
   // Convert rows to correctly-typed objects
-  var tableWires = this.shard_.wireTable.readAll().map(function (row) {
+  var tableWires = rows.map(function (row) {
     return new NetSimWire(this.shard_, row);
   }, this);
 
@@ -530,7 +503,7 @@ NetSimVisualization.prototype.killVizEntitiesOfTypeMissingMatch_ = function (
  */
 NetSimVisualization.prototype.addVizElement_ = function (vizElement) {
   this.elements_.push(vizElement);
-  this.backgroundGroup_.prepend(vizElement.getRoot());
+  this.svgRoot_.find('#background-group').prepend(vizElement.getRoot());
 };
 
 /**
@@ -579,8 +552,8 @@ NetSimVisualization.prototype.pullElementsToForeground = function () {
   // Now, visited nodes belong in the foreground.
   // Move all nodes to their new, correct layers
   // Possible optimization: Can we do this with just one operation on the live DOM?
-  var foreground = this.foregroundGroup_;
-  var background = this.backgroundGroup_;
+  var foreground = this.svgRoot_.find('#foreground-group');
+  var background = this.svgRoot_.find('#background-group');
   this.elements_.forEach(function (vizElement) {
     var isForeground = $.contains(foreground[0], vizElement.getRoot()[0]);
 
@@ -828,7 +801,7 @@ NetSimVisualization.prototype.setDnsMode = function (newDnsMode) {
  */
 NetSimVisualization.prototype.makeAutoDnsNode = function () {
   if (!this.autoDnsNode_) {
-    this.autoDnsNode_ = new NetSimVizAutoDnsNode(SHOW_BACKGROUND);
+    this.autoDnsNode_ = new NetSimVizAutoDnsNode();
     this.addVizElement_(this.autoDnsNode_);
 
     this.autoDnsWire_ = new NetSimVizWire(this.autoDnsNode_, null);

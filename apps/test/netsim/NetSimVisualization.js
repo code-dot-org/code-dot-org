@@ -31,12 +31,17 @@ describe("NetSimVisualization", function () {
       alphaWire, betaWire, deltaWire, gammaWire, netSimVis;
 
   /**
-   * Creates a div placeholder for the NetSimVisualization to render
-   * its SVG element within.
+   * Creates an svg placeholder so that NetSimVisualization's foreground
+   * and background searches work
    * @returns {jQuery}
    */
-  var makeRootDiv = function () {
-    return $("<div>");
+  var makeSVGElement = function () {
+    return $("<svg version=\"1.1\" width=\"298\" height=\"298\" xmlns=\"http://www.w3.org/2000/svg\">" +
+        "<g id=\"centered-group\">" +
+          "<g id=\"background-group\"></g>" +
+          "<g id=\"foreground-group\"></g>" +
+        "</g>" +
+      "</svg>");
   };
 
   /**
@@ -111,7 +116,7 @@ describe("NetSimVisualization", function () {
       elements = elements.concat([alphaWire, betaWire, deltaWire, gammaWire]);
 
       var netsim = new NetSim();
-      netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
+      netSimVis = new NetSimVisualization(makeSVGElement(), netsim.runLoop_);
 
       netSimVis.setShard(testShard);
       netSimVis.elements_ = elements;
@@ -180,8 +185,7 @@ describe("NetSimVisualization", function () {
       elements = elements.concat([alphaWire, betaWire, deltaWire]);
 
       var netsim = new NetSim();
-      netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
-      netSimVis.setShard(testShard);
+      netSimVis = new NetSimVisualization(makeSVGElement(), netsim.runLoop_);
       netSimVis.elements_ = elements;
       netSimVis.localNode = alphaNode;
     });
@@ -250,8 +254,8 @@ describe("NetSimVisualization", function () {
         var newNode = makeRemoteClient('gamma');
 
         // Trigger visualization update, synchronous in tests.
-        testShard.nodeTable.refresh(function () {
-          netSimVis.onNodeTableChange_();
+        testShard.nodeTable.refresh(function (_, data) {
+          netSimVis.onNodeTableChange_(data);
         });
 
         // Check that newly created node has correct DNS mode.
@@ -289,8 +293,8 @@ describe("NetSimVisualization", function () {
         makeRemoteWire(deltaNode, router, [deltaNode, router]);
 
         // Trigger visualization update, synchronous in tests.
-        testShard.wireTable.refresh(function () {
-          netSimVis.onWireTableChange_();
+        testShard.wireTable.refresh(function (_, data) {
+          netSimVis.onWireTableChange_(data);
         });
 
         // Check that newly created wire has the encodings we originally set.
