@@ -20272,8 +20272,7 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   }, function(xyRatio) {
     Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
     if(self.contractDiv_) {
-      self.positionClippingRects_();
-      self.positionSizeContractDom_();
+      self.resizeUIComponents_();
       self.layOutBlockSpaceItems_()
     }
   }, true);
@@ -20295,11 +20294,11 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   this.modalBackground_ = Blockly.createSvgElement("g", {"class":"modalBackground"});
   Blockly.mainBlockSpaceEditor.appendSVGChild(this.modalBackground_);
   this.addCloseButton_();
+  this.addEditorFrame_();
   this.createContractDom_();
   this.createParameterEditor_();
   this.setupParametersToolbox_();
-  this.positionClippingRects_();
-  this.positionSizeContractDom_();
+  this.resizeUIComponents_();
   this.bindToolboxHandlers_();
   Blockly.bindEvent_(goog.dom.getElement("modalContainer"), "mousedown", this, function(e) {
     if(e.target === e.currentTarget) {
@@ -20331,9 +20330,47 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   function functionDescriptionChange(e) {
     this.functionDefinitionBlock.description_ = e.target.value
   }
-  this.addEditorFrame_();
   this.onResizeWrapper_ = Blockly.bindEvent_(window, goog.events.EventType.RESIZE, this, this.position_);
   this.modalBlockSpaceEditor.svgResize()
+};
+Blockly.FunctionEditor.prototype.resizeUIComponents_ = function() {
+  var metrics = this.modalBlockSpace.getMetrics();
+  this.resizeFrame_(metrics.viewWidth, metrics.viewHeight);
+  this.positionClippingRects_(metrics);
+  this.positionSizeContractDom_(metrics.viewWidth);
+  this.positionCloseButton_(metrics.absoluteLeft, metrics.viewWidth)
+};
+Blockly.FunctionEditor.prototype.resizeFrame_ = function(width, height) {
+  this.frameBase_.setAttribute("width", width + 2 * Blockly.Bubble.BORDER_WIDTH);
+  this.frameBase_.setAttribute("height", height + 2 * Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT);
+  this.frameInner_.setAttribute("width", width);
+  this.frameInner_.setAttribute("height", height);
+  if(Blockly.RTL) {
+    this.frameBase_.setAttribute("x", FRAME_MARGIN_SIDE);
+    this.frameInner_.setAttribute("x", FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1);
+    this.frameText_.setAttribute("x", width - 2 * FRAME_MARGIN_SIDE)
+  }
+};
+Blockly.FunctionEditor.prototype.positionClippingRects_ = function(metrics) {
+  var width = metrics.viewWidth;
+  var height = metrics.viewHeight;
+  this.clipPathRect_.setAttribute("x", metrics.absoluteLeft);
+  this.clipPathRect_.setAttribute("y", metrics.absoluteTop);
+  this.clipPathRect_.setAttribute("width", width);
+  this.clipPathRect_.setAttribute("height", height);
+  this.frameClipDiv_.style.left = metrics.absoluteLeft + "px";
+  this.frameClipDiv_.style.top = metrics.absoluteTop + "px";
+  this.frameClipDiv_.style.width = width + "px";
+  this.frameClipDiv_.style.height = height + "px"
+};
+Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function(viewWidth) {
+  this.contractDiv_.style.left = this.modalBlockSpace.xOffsetFromView + "px";
+  this.contractDiv_.style.top = this.getContractDomTopY_() + "px";
+  this.contractDiv_.style.width = viewWidth + "px";
+  this.positionFlyout_(0)
+};
+Blockly.FunctionEditor.prototype.positionCloseButton_ = function(absoluteLeft, viewWidth) {
+  this.closeButton_.setAttribute("transform", "translate(" + (Blockly.RTL ? 5 : absoluteLeft + viewWidth + 14 - this.closeButton_.firstElementChild.getAttribute("width")) + ",19)")
 };
 Blockly.FunctionEditor.prototype.getBlockSpaceEditorToScreenTop_ = function() {
   return this.getWindowBorderChromeHeight()
@@ -20394,41 +20431,10 @@ Blockly.FunctionEditor.prototype.position_ = function() {
     return
   }
   var metrics = this.modalBlockSpace.getMetrics();
-  var width = metrics.viewWidth;
-  var height = metrics.viewHeight;
-  this.frameBase_.setAttribute("width", width + 2 * Blockly.Bubble.BORDER_WIDTH);
-  this.frameBase_.setAttribute("height", height + 2 * Blockly.Bubble.BORDER_WIDTH + FRAME_HEADER_HEIGHT);
-  this.frameInner_.setAttribute("width", width);
-  this.frameInner_.setAttribute("height", height);
-  if(Blockly.RTL) {
-    this.frameBase_.setAttribute("x", FRAME_MARGIN_SIDE);
-    this.frameInner_.setAttribute("x", FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1);
-    this.frameText_.setAttribute("x", width - 2 * FRAME_MARGIN_SIDE)
-  }
-  this.positionSizeContractDom_();
-  this.closeButton_.setAttribute("transform", "translate(" + (Blockly.RTL ? 5 : metrics.absoluteLeft + metrics.viewWidth + 14 - this.closeButton_.firstElementChild.getAttribute("width")) + ",19)");
+  this.resizeFrame_(metrics.viewWidth, metrics.viewHeight);
+  this.positionSizeContractDom_(metrics.viewWidth);
   this.layOutBlockSpaceItems_();
   this.modalBlockSpaceEditor.svgResize()
-};
-Blockly.FunctionEditor.prototype.positionClippingRects_ = function() {
-  var metrics = this.modalBlockSpace.getMetrics();
-  var width = metrics.viewWidth;
-  var height = metrics.viewHeight;
-  this.clipPathRect_.setAttribute("x", metrics.absoluteLeft);
-  this.clipPathRect_.setAttribute("y", metrics.absoluteTop);
-  this.clipPathRect_.setAttribute("width", width);
-  this.clipPathRect_.setAttribute("height", height);
-  this.frameClipDiv_.style.left = metrics.absoluteLeft + "px";
-  this.frameClipDiv_.style.top = metrics.absoluteTop + "px";
-  this.frameClipDiv_.style.width = width + "px";
-  this.frameClipDiv_.style.height = height + "px"
-};
-Blockly.FunctionEditor.prototype.positionSizeContractDom_ = function() {
-  var metrics = this.modalBlockSpace.getMetrics();
-  this.contractDiv_.style.left = this.modalBlockSpace.xOffsetFromView + "px";
-  this.contractDiv_.style.top = this.getContractDomTopY_() + "px";
-  this.contractDiv_.style.width = metrics.viewWidth + "px";
-  this.positionFlyout_(0)
 };
 Blockly.FunctionEditor.prototype.getContractDomTopY_ = function() {
   return this.modalBlockSpace.yOffsetFromView
@@ -20960,6 +20966,7 @@ Blockly.SvgHeader.prototype.removeSelf = function() {
 };
 goog.provide("Blockly.ExampleView");
 var NO_RESULT_TEXT = "";
+var RESULT_TEXT_TOP_MARGIN = 14;
 Blockly.ExampleView = function(dom, svg, contractEditor) {
   this.domParent_ = dom;
   this.svgParent_ = svg;
@@ -21012,7 +21019,7 @@ Blockly.ExampleView.prototype.refreshTestingUI = function(active) {
   goog.style.setElementShown(this.testExampleButton, Blockly.showExampleTestButtons && !active);
   goog.style.setElementShown(this.resetExampleButton, Blockly.showExampleTestButtons && active)
 };
-Blockly.ExampleView.prototype.placeExampleAndGetNewY = function(block, currentY, maxWidth, marginLeft, marginBelow, fullWidth, midLineX) {
+Blockly.ExampleView.prototype.placeExampleAndGetNewY = function(block, currentY, exampleMaxInputWidth, marginLeft, marginBelow, fullWidth, midLineX, exampleDivTop) {
   this.block_ = block;
   var newY = currentY;
   var commonMargin = marginBelow / 2;
@@ -21025,7 +21032,7 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function(block, currentY,
     if(functionCallBlock) {
       width = functionCallBlock.getHeightWidth().width
     }
-    input.extraSpace = maxWidth - width;
+    input.extraSpace = exampleMaxInputWidth - width;
     if(input.extraSpace !== originalExtraSpace) {
       block.getSvgRenderer().render(true)
     }
@@ -21035,12 +21042,12 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function(block, currentY,
   newY += commonMargin;
   var exampleButtonX = midLineX + commonMargin;
   [this.testExampleButton, this.resetExampleButton].forEach(function(button) {
-    button.style.top = newY + "px";
+    button.style.top = newY - exampleDivTop + "px";
     button.style.left = exampleButtonX + "px"
   });
   var buttonWidth = Math.max(this.resetExampleButton.offsetWidth, this.testExampleButton.offsetWidth);
   var buttonHeight = Math.max(this.resetExampleButton.offsetHeight, this.testExampleButton.offsetHeight);
-  this.resultText.style.top = newY + 14 + "px";
+  this.resultText.style.top = newY + RESULT_TEXT_TOP_MARGIN - exampleDivTop + "px";
   var exampleButtonRight = exampleButtonX + buttonWidth;
   this.resultText.style.left = commonMargin + exampleButtonRight + "px";
   newY += buttonHeight;
@@ -22905,7 +22912,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
   goog.dom.append(this.exampleAreaDiv, this.addExampleButton);
   this.exampleAreaDiv.style.display = "block";
   this.exampleAreaDiv.style.position = "absolute";
-  goog.dom.insertChildAt(this.container_, this.exampleAreaDiv, 0);
+  goog.dom.insertChildAt(this.frameClipDiv_, this.exampleAreaDiv, 0);
   this.callText = goog.dom.createDom("div", "callText");
   this.callText.innerHTML = "Call";
   goog.dom.appendChild(this.exampleAreaDiv, this.callText);
@@ -23296,8 +23303,9 @@ Blockly.ContractEditor.prototype.updateExampleResult = function(block, result) {
 Blockly.ContractEditor.prototype.onPlaceExampleContent = function(currentY) {
   var maxWidth = this.getMaxExampleCallBlockWidth_();
   var metrics = this.modalBlockSpace.getMetrics();
-  this.exampleAreaDiv.style.left = metrics.absoluteLeft + "px";
-  this.exampleAreaDiv.style.top = metrics.absoluteTop + this.modalBlockSpace.yOffsetFromView + "px";
+  var exampleDivTop = currentY;
+  this.exampleAreaDiv.style.left = this.modalBlockSpace.xOffsetFromView + "px";
+  this.exampleAreaDiv.style.top = this.modalBlockSpace.yOffsetFromView + currentY + "px";
   this.exampleAreaDiv.style.width = metrics.viewWidth + "px";
   var blockSplitMargin = EXAMPLE_BLOCK_SECTION_MAGIN_BELOW / 2;
   var newY = currentY;
@@ -23307,9 +23315,9 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function(currentY) {
   var exampleSectionVisible = this.exampleBlocks.length > 0;
   if(exampleSectionVisible) {
     newY += blockSplitMargin;
-    this.callText.style.top = newY + "px";
+    this.callText.style.top = newY - exampleDivTop + "px";
     this.callText.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + "px";
-    this.resultText.style.top = newY + "px";
+    this.resultText.style.top = newY - exampleDivTop + "px";
     this.resultText.style.left = verticalMidlineOffset + EXAMPLE_BLOCK_MARGIN_LEFT + "px";
     newY += this.callText.offsetHeight;
     newY += blockSplitMargin;
@@ -23321,7 +23329,7 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function(currentY) {
         var newExampleView = new Blockly.ExampleView(this.exampleAreaDiv, this.examplesTableGroup, this);
         this.exampleViews_.push(newExampleView)
       }
-      newY = this.exampleViews_[index].placeExampleAndGetNewY(block, newY, maxWidth, EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW, this.getFullWidth(), verticalMidlineOffset)
+      newY = this.exampleViews_[index].placeExampleAndGetNewY(block, newY, maxWidth, EXAMPLE_BLOCK_MARGIN_LEFT, EXAMPLE_BLOCK_MARGIN_BELOW, this.getFullWidth(), verticalMidlineOffset, exampleDivTop)
     }, this))
   }
   for(var j = this.exampleBlocks.length;j < this.exampleViews_.length;j++) {
@@ -23334,7 +23342,7 @@ Blockly.ContractEditor.prototype.onPlaceExampleContent = function(currentY) {
   this.resultText.style.display = exampleSectionVisible ? "block" : "none";
   this.verticalExampleMidline.setAttribute("height", newY - verticalMidlineY);
   newY += blockSplitMargin;
-  this.addExampleButton.style.top = newY + "px";
+  this.addExampleButton.style.top = newY - exampleDivTop + "px";
   this.addExampleButton.style.left = EXAMPLE_BLOCK_MARGIN_LEFT + "px";
   newY += this.addExampleButton.offsetHeight;
   newY += EXAMPLE_BLOCK_SECTION_MAGIN_BELOW;
