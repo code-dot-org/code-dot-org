@@ -27,7 +27,7 @@
 %p
   %em
     Here’s what a successful online PD looks like. All the progress circles are green.
-%img{src:''}
+%img{src:"#{@workshop[:program_type][:short_name].gsub(/\s+/, "") + @workshop[:phase][:short_name].gsub(/\s+/, "")}.jpg"}
 
 %h2
   Workshops Details
@@ -51,8 +51,20 @@
   Breakfast and lunch will be served every day. We will offer vegetarian options, but please plan to bring your own meal or eat responsibly if you have any other dietary restrictions or food allergies.
 %h3
   What to bring
-%p
-  Laptop (optional), water bottle, and snacks
+- if @workshop[:phase][:id] == 2
+  -if @workshop[:program_type][:id] == 3
+    %p
+      Laptop (optional), water bottle, and snacks
+  -else
+    %p
+      Laptop and charger, water bottle, and snacks
+- elsif @workshop[:phase][:id] >= 4 && @workshop[:phase][:id] <= 8
+  -if @workshop[:program_type][:id] == 3
+    %p
+      Curriculum guide, green journal, laptop and charger, water bottle, and snacks
+  -else
+    %p
+      Curriculum guide, laptop and charger, water bottle, and snacks
 -if @workshop[:instructions]
   %h3
     Notes
