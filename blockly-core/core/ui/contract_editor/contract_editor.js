@@ -178,7 +178,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
   );
 
   this.hiddenExampleBlocks_ = [];
-  this.exampleAreaDiv = goog.dom.createDom('div', 'exampleAreaDiv');
+  this.exampleAreaDiv = goog.dom.createDom('div', 'exampleAreaDiv innerModalDiv');
   this.addExampleButton = goog.dom.createDom('button', 'exampleAreaButton btn');
   this.addExampleButton.innerHTML = "Add Example";
   Blockly.bindEvent_(this.addExampleButton, 'click', this, this.addNewExampleBlock_);
