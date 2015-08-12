@@ -289,39 +289,52 @@ NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
 
   var originNode = logEntry.getOriginNode();
 
-  // TODO: This dom creation should happen with document.createElement()
-  //       because it's nearly 10 times faster!
-  var row = $('<tr>');
-  $('<td nowrap>')
-      .text(logEntry.getTimeString())
-      .appendTo(row);
-  $('<td nowrap>')
-      .text(originNode ? originNode.getDisplayName() : logEntry.nodeID)
-      .appendTo(row);
-  $('<td nowrap>')
-      .text(logEntry.getLocalizedStatus())
-      .appendTo(row);
+  var row = document.createElement('tr');
+
+  // Store the actual logEntry on the row for sorting/merging later.
+  $(row).data(LOG_ENTRY_DATA_KEY, logEntry);
+
+  var tdTimestamp = document.createElement('td');
+  tdTimestamp.innerText = logEntry.getTimeString();
+  tdTimestamp.style.whiteSpace = 'nowrap';
+
+  var tdDisplayName = document.createElement('td');
+  tdDisplayName.innerText = (originNode ?
+      originNode.getDisplayName() : logEntry.nodeID);
+  tdDisplayName.style.whiteSpace = 'nowrap';
+
+  var tdStatus = document.createElement('td');
+  tdStatus.innerText = logEntry.getLocalizedStatus();
+  tdStatus.style.whiteSpace = 'nowrap';
+
+  row.appendChild(tdTimestamp);
+  row.appendChild(tdDisplayName);
+  row.appendChild(tdStatus);
+
   if (showFromAddress) {
-    $('<td nowrap>')
-        .text(logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS))
-        .appendTo(row);
+    var tdFrom = document.createElement('td');
+    tdFrom.innerText = logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS);
+    tdFrom.style.whiteSpace = 'nowrap';
+    row.appendChild(tdFrom);
   }
   if (showToAddress) {
-    $('<td nowrap>')
-        .text(logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS))
-        .appendTo(row);
+    var tdTo = document.createElement('td');
+    tdTo.innerText = logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS);
+    tdTo.style.whiteSpace = 'nowrap';
+    row.appendChild(tdTo);
   }
   if (showPacketInfo) {
-    $('<td nowrap>')
-        .text(logEntry.getLocalizedPacketInfo())
-        .appendTo(row);
+    var tdPacketInfo = document.createElement('td');
+    tdPacketInfo.innerText = logEntry.getLocalizedPacketInfo();
+    tdPacketInfo.style.whiteSpace = 'nowrap';
+    row.appendChild(tdPacketInfo);
   }
-  $('<td nowrap>')
-      .text(logEntry.getMessageAscii())
-      .appendTo(row);
 
-  row.data(LOG_ENTRY_DATA_KEY, logEntry);
-  return row[0];
+  var tdMessageBody = document.createElement('td');
+  tdMessageBody.innerText = logEntry.getMessageAscii();
+  row.appendChild(tdMessageBody);
+
+  return row;
 };
 
 NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
