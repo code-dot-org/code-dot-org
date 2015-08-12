@@ -66,6 +66,13 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
   this.logEntries_ = [];
 
   /**
+   * The highest log row ID stored in logEntries_, used to only retrieve new
+   * log rows, we don't need to retrieve everything.
+   * @private {number}
+   */
+  this.latestLogRowID_ = 0;
+
+  /**
    * Tracking information for which events we're registered to, so we can
    * perform cleanup as needed.
    * @private {Object}
@@ -277,6 +284,9 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
     this.eventKeys_.registeredWithShard = newShard;
   }
 
+  // When changing shards, reset log so we fetch the whole thing next time.
+  this.logEntries_.length = 0;
+  this.latestRowID_ = 0;
   this.shard_ = newShard;
 };
 
@@ -286,8 +296,12 @@ NetSimRouterLogModal.prototype.setShard = function (newShard) {
  */
 NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
   var headerSpec = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
-  this.logEntries_ = this.shard_.logTable.readAll().map(function (row) {
+  var newRows = this.shard_.logTable.readAllFromID(this.latestRowID_ + 1);
+  var newLogEntries = newRows.map(function (row) {
+    this.latestRowID_ = Math.max(row.id, this.latestRowID_);
     return new NetSimLogEntry(this.shard_, row, headerSpec);
   }, this);
+  // Modify this.logEntries_ in-place, appending new log entries
+  Array.prototype.push.apply(this.logEntries_, newLogEntries);
   this.render();
 };

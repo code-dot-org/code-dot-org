@@ -361,6 +361,29 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), 'readAll');
   });
 
+  it ("can give back all rows in local cache with readAll", function () {
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    var rows = netsimTable.readAll();
+    assertEqual(5, rows.length);
+  });
+
+  it ("can give back a subset of rows with readAllFromID", function () {
+    netsimTable.create({type: 'old'}, callback);
+    netsimTable.create({type: 'old'}, callback);
+    netsimTable.create({type: 'old'}, callback);
+    netsimTable.create({type: 'new'}, callback);
+    netsimTable.create({type: 'new'}, callback);
+    var rows = netsimTable.readAllFromID(4);
+    assertEqual(2, rows.length);
+    rows.forEach(function (row) {
+      assertEqual('new', row.type);
+    });
+  });
+
   it ("calls read on the API table", function () {
     netsimTable.read(1, callback);
     assertEqual(apiTable.log(), 'read[1]');
