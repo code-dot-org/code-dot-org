@@ -24,6 +24,9 @@ var NetSimGlobals = require('./NetSimGlobals');
 /** @const {string} */
 var LOG_ENTRY_DATA_KEY = 'LogEntry';
 
+/** @const {number} */
+var MAXIMUM_ROWS_IN_FULL_RENDER = 500;
+
 /**
  * Generator and controller for contents of modal dialog that reveals
  * all router logs together, in a searchable/sortable/filterable manner.
@@ -178,10 +181,10 @@ NetSimRouterLogModal.prototype.render = function () {
   }.bind(this));
 
   // Add rows to the table
-  var sortedFilteredLogEntries = this.getSortedFilteredLogEntries(this.logEntries_);
-  this.rootDiv_.find('tbody').append(
-      sortedFilteredLogEntries.map(
-          this.makeTableRow_.bind(this)));
+  var rows = this.getSortedFilteredLogEntries(this.logEntries_)
+      .slice(0, MAXIMUM_ROWS_IN_FULL_RENDER)
+      .map(this.makeTableRow_.bind(this));
+  this.rootDiv_.find('tbody').append(rows);
 };
 
 /**
@@ -337,6 +340,11 @@ NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
   return row;
 };
 
+/**
+ * Change the sort settings and re-render the log table.
+ * @param {!string} sortKey
+ * @private
+ */
 NetSimRouterLogModal.prototype.onSortHeaderClick_ = function (sortKey) {
   if (!sortKey) {
     return;
