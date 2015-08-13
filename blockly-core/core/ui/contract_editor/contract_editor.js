@@ -146,6 +146,8 @@ Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = 'ACTUAL';
 Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = Blockly.BlockValueType.NUMBER;
 Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = Blockly.BlockValueType.NUMBER;
 
+Blockly.ContractEditor.GRID_LINE_COLOR = '#5b6770'; // dark gray
+
 Blockly.ContractEditor.prototype.definitionBlockType = 'functional_definition';
 Blockly.ContractEditor.prototype.parameterBlockType = 'functional_parameters_get';
 
@@ -200,7 +202,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
   this.examplesTableGroup = Blockly.createSvgElement('g', {}, canvasToDrawOn);
 
   this.topHorizontalLine = Blockly.createSvgElement('rect', {
-    'fill': '#000'
+    'fill': Blockly.ContractEditor.GRID_LINE_COLOR
   }, this.examplesTableGroup);
   this.topHorizontalLine.setAttribute('height', 2.0);
   Blockly.svgIgnoreMouseEvents(this.topHorizontalLine);
@@ -209,7 +211,7 @@ Blockly.ContractEditor.prototype.create_ = function() {
 
 
   this.verticalExampleMidline = Blockly.createSvgElement('rect', {
-    'fill': '#000'
+    'fill': Blockly.ContractEditor.GRID_LINE_COLOR
   }, this.examplesTableGroup);
   this.verticalExampleMidline.setAttribute('width', 2.0);
 
