@@ -1135,8 +1135,18 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
  */
 
 Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
-  xCenter += skin.wallCollisionRectOffsetX;
-  yCenter += skin.wallCollisionRectOffsetY;
+  var collidableHeight = collidable.height;
+  var collidableWidth = collidable.width;
+
+  if (!level.gridAlignedMovement) {
+    xCenter += skin.wallCollisionRectOffsetX;
+    yCenter += skin.wallCollisionRectOffsetY;
+    collidableHeight = skin.wallCollisionRectHeight || collidableHeight;
+    collidableWidth = skin.wallCollisionRectWidth || collidableWidth;
+  }
+
+  Studio.drawDebugRect("avatarCollision", xCenter, yCenter, collidableWidth, collidableHeight);
+
   var colsOffset = Math.floor(xCenter) + 1;
   var rowsOffset = Math.floor(yCenter) + 1;
   var xGrid = Math.floor(xCenter / Studio.SQUARE_SIZE);
@@ -1148,9 +1158,6 @@ Studio.willCollidableTouchWall = function (collidable, xCenter, yCenter) {
          row < Math.min(Studio.ROWS, iYGrid + rowsOffset);
          row++) {
       if (Studio.map[row][col] & SquareType.WALL) {
-        var collidableHeight = skin.wallCollisionRectHeight || collidable.height;
-        var collidableWidth = skin.wallCollisionRectWidth || collidable.width;
-        Studio.drawDebugRect("avatarCollision", xCenter, yCenter, collidableWidth, collidableHeight);
         if (overlappingTest(xCenter,
                             (col + 0.5) * Studio.SQUARE_SIZE,
                             Studio.SQUARE_SIZE / 2 + collidableWidth / 2,
@@ -2350,8 +2357,8 @@ Studio.displaySprite = function(i, isWalking) {
     spriteRegularIcon.setAttribute('visibility', 'hidden');
     spriteWalkIcon.setAttribute('visibility', 'visible');
 
-    xOffset = sprite.width * spriteFrameNumber(i, {walkDirection: true});
-    yOffset = sprite.height * spriteFrameNumber(i, {walkFrame: true});
+    xOffset = sprite.drawWidth * spriteFrameNumber(i, {walkDirection: true});
+    yOffset = sprite.drawHeight * spriteFrameNumber(i, {walkFrame: true});
 
     spriteIcon = spriteWalkIcon;
     spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
@@ -2362,7 +2369,7 @@ Studio.displaySprite = function(i, isWalking) {
     spriteRegularIcon.setAttribute('visibility', 'visible');
     spriteWalkIcon.setAttribute('visibility', 'hidden');
 
-    xOffset = sprite.width * spriteFrameNumber(i);
+    xOffset = sprite.drawWidth * spriteFrameNumber(i);
     yOffset = 0;
 
     spriteIcon = spriteRegularIcon;
@@ -2400,6 +2407,9 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
+  var extraOffsetX = 0;
+  var extraOffsetY = 0;
+
   if (level.gridAlignedMovement) {
     if (sprite.x > sprite.displayX) {
       sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
@@ -2411,22 +2421,25 @@ Studio.displaySprite = function(i, isWalking) {
     } else if (sprite.y < sprite.displayY) {
       sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     }
+
+    var extraOffsetX = skin.gridSpriteRenderOffsetX || 0;
+    var extraOffsetY = skin.gridSpriteRenderOffsetX || 0;
   } else {
     sprite.displayX = sprite.x;
     sprite.displayY = sprite.y;
   }
 
-  spriteIcon.setAttribute('x', sprite.displayX - xOffset);
-  spriteIcon.setAttribute('y', sprite.displayY - yOffset);
+  spriteIcon.setAttribute('x', sprite.displayX - xOffset + extraOffsetX);
+  spriteIcon.setAttribute('y', sprite.displayY - yOffset + extraOffsetY);
 
-  spriteClipRect.setAttribute('x', sprite.displayX);
-  spriteClipRect.setAttribute('y', sprite.displayY);
+  spriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
+  spriteClipRect.setAttribute('y', sprite.displayY + extraOffsetX);
 
   // Update the other clip rect too, so that calculations involving
   // inter-frame differences (just above, to calculate sprite.dir)
   // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.displayX);
-  unusedSpriteClipRect.setAttribute('y', sprite.displayY);
+  unusedSpriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
+  unusedSpriteClipRect.setAttribute('y', sprite.displayY + extraOffsetX);
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -2892,10 +2905,13 @@ Studio.setSprite = function (opts) {
   if (level.gridAlignedMovement) {
     // This mode only works properly with square sprites
     sprite.height = sprite.width = Studio.SQUARE_SIZE;
-    sprite.size = sprite.width / skin.spriteWidth;
+    sprite.size = 1; //sprite.width / skin.spriteWidth;
+    
+    sprite.drawHeight = sprite.size * skin.spriteHeight;
+    sprite.drawWidth = sprite.size * skin.spriteWidth;
   } else {
-    sprite.height = sprite.size * skin.spriteHeight;
-    sprite.width = sprite.size * skin.spriteWidth;
+    sprite.drawHeight = sprite.height = sprite.size * skin.spriteHeight;
+    sprite.drawWidth = sprite.width = sprite.size * skin.spriteWidth;
   }
   if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
@@ -2905,25 +2921,25 @@ Studio.setSprite = function (opts) {
   }
 
   var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
-  spriteClipRect.setAttribute('width', sprite.width);
-  spriteClipRect.setAttribute('height', sprite.height);
+  spriteClipRect.setAttribute('width', sprite.drawWidth);
+  spriteClipRect.setAttribute('height', sprite.drawHeight);
 
   spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
     skin[spriteValue].sprite);
-  spriteIcon.setAttribute('width', sprite.width * spriteTotalFrames(spriteIndex));
-  spriteIcon.setAttribute('height', sprite.height);
+  spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
+  spriteIcon.setAttribute('height', sprite.drawHeight);
 
   if (spriteWalk) {
     // And set up the cliprect so we can show the right item from the spritesheet.
     var spriteWalkClipRect = document.getElementById('spriteWalkClipRect' + spriteIndex);
-    spriteWalkClipRect.setAttribute('width', sprite.width);
-    spriteWalkClipRect.setAttribute('height', sprite.height);
+    spriteWalkClipRect.setAttribute('width', sprite.drawWidth);
+    spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
 
     spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       skin[spriteValue].walk);
     var spriteFramecounts = Studio.sprite[spriteIndex].frameCounts;
-    spriteWalk.setAttribute('width', sprite.width * spriteFramecounts.turns); // 800
-    spriteWalk.setAttribute('height', sprite.height * spriteFramecounts.walk); // 1200
+    spriteWalk.setAttribute('width', sprite.drawWidth * spriteFramecounts.turns); // 800
+    spriteWalk.setAttribute('height', sprite.drawHeight * spriteFramecounts.walk); // 1200
   }
 
   // call display right away since the frame number may have changed:
