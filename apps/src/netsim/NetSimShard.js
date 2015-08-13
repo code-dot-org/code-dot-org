@@ -136,9 +136,9 @@ NetSimShard.prototype.tick = function (clock) {
  */
 NetSimShard.prototype.resetEverything = function (onComplete) {
   $.ajax({
-    url: '/v3/netsim/' + this.id + '/delete',
-    type: "post",
-    contentType: "application/json; charset=utf-8",
+    url: '/v3/netsim/' + this.id,
+    type: 'delete',
+    contentType: 'application/json; charset=utf-8',
     dataType: "json"
   }).done(function() {
     onComplete(null, true);
