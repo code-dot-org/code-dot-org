@@ -646,7 +646,7 @@ en:
       U2L18 Student Lesson Introduction:
         One Way Functions - Ice Cream Vans: One Way Functions - Ice Cream Vans
       U2L19 Student Lesson Introduction:
-        Public Key Crypto: Public Key Crypto
+        Public Key Encryption: Public Key Encryption
       U2L2 Student Lesson Introduction:
         The Need for Addressing: The Need for Addressing
       U2L20 Student Lesson Introduction:
@@ -1510,11 +1510,11 @@ en:
         What is an unplugged activity?: What is an unplugged activity?
       U1L16 - Matching File Compression Types:
         BMP: BMP
+        Compressed Files - Lossless: Compressed Files - Lossless
         Compressed Image - Lossless: Compressed Image - Lossless
         Compressed Image - Lossless (256 color limit): Compressed Image - Lossless (256 color limit)
         Compressed Image - Lossy: Compressed Image - Lossy
         Compressed Sound - Lossy: Compressed Sound - Lossy
-        Compressed Text - Lossless: Compressed Text - Lossless
         GIF: GIF
         JPEG: JPEG
         MP3: MP3
@@ -1524,7 +1524,6 @@ en:
         Uncompressed Sound: Uncompressed Sound
         WAV: WAV
         ZIP: ZIP
-        description here: description here
       U1L5 Matching Assessment:
         Alternating Frequencies: Alternating Frequencies
         Beam of Light: Beam of Light
@@ -2477,8 +2476,9 @@ en:
         5 bits: 5 bits
         6 bits: 6 bits
         'Assessment: Encoding Text': 'Assessment: Encoding Text'
-        What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of alphabet plus a space?
+        What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?: What is the minimum number of bits you need to encode the 26 letters of the alphabet plus a space?
       U1L10 Assessment 2:
+        12 bits: 12 bits
         3 bits: 3 bits
         4 bits: 4 bits
         5 bits: 5 bits
@@ -3508,6 +3508,10 @@ en:
         Respond to this prompt or to another as directed by your teacher.: Respond to this prompt or to another as directed by your teacher.
       U1L13 - Assess Text Compression reverse process:
         Act as the computer!: Act as the computer!
+        the big bug bit the bull but the bull bit the big bug back: the big bug bit the bull but the bull bit the big bug back
+        the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back: the_big_bug_bit_the_bull_but_the_bull_bit_the_big_bug_back
+      U1L13 Assess Text Compression amount:
+        Is this a good compression rate?: Is this a good compression rate?
       U1L13 Assessment 1:
         Why Compress?: Why Compress?
       U1L13 Assessment 2:
@@ -3576,7 +3580,7 @@ en:
         How did collaboration play a role in the creation of your protocol?: How did collaboration play a role in the creation of your protocol?
         'Sending Numbers:  Reflection': 'Sending Numbers:  Reflection'
       U1L9 Free Response Assessment:
-        'Reflection: Real-world Numbers ': 'Reflection: Real-world Numbers '
+        'Reflection: Real-World Numbers ': 'Reflection: Real-World Numbers '
       U2L01 Assessment 4: {}
       U2L02 Assessment 5:
         Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?: Even with a good protocol, what are some privacy and security challenges while playing battleship on the Internet Simulator?

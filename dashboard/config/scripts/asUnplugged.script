@@ -1,0 +1,32 @@
+title 'Afterschool Unplugged'
+description_short "Short unplugged course designed for informal learning"
+description "Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8."
+description_audience "Ages 6-13"
+hidden 'false'
+
+stage 'Happy Maps'
+level 'UnplugHappyMaps'
+
+stage 'Move it, Move it'
+level 'MoveIt'
+
+stage 'Real-life Algorithms: Plant a Seed'
+level 'PlantASeed'
+
+stage 'Graph Paper Programming'
+level 'GraphPaperProgramming'
+
+stage 'Building a Foundation'
+level 'BuildingAFoundation'
+
+stage 'Getting Loopy'
+level 'GettingLoopy'
+
+stage 'The Big Event'
+level 'BigEvent'
+
+stage 'Binary Bracelets'
+level 'BinaryBracelets'
+
+stage 'Songwriting'
+level 'SongwritingParameters'

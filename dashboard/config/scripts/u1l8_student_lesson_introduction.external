@@ -13,7 +13,7 @@ All communication protocols solve the problem of how to send (binary encoded) in
 
 * Invent your own communication protocol to send a list of numbers to create an image on a grid.
 * Use the Internet Simulator to send the numbers to a friend.
-* Could your parnter draw the image based upon your message?
+* Could your partner draw the image based upon your message?
 
 
 # Resources
@@ -27,3 +27,5 @@ All communication protocols solve the problem of how to send (binary encoded) in
 
 
 MARKDOWN
+
+

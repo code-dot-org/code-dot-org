@@ -27,7 +27,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"Eval Define Funcs 3\",\r\n  \"callout_text\": \"Make our function use the radius parameter instead of always having a radius of 50.\",\r\n  \"element_id\": \"[block-id='24']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 5,\r\n     \"y\": 130\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_examples": "false",
     "markdown_instructions": "Here's the start of another new function called `purple-circle` with a domain of one Number (the radius) and a range of Image. The body of the function is broken though, it always draws a circle of 50 pixel radius instead of using the radius parameter. Replace the current Number with the `radius` block from the domain.\r\n\r\nWhen you've fixed the function, test your new function with a 150 pixel radius.",
-    "examples_required": "false"
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>
