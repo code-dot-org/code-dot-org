@@ -20,7 +20,7 @@ Blockly.ExampleView = function (dom, svg, contractEditor) {
   this.block_ = null;
 
   this.horizontalLine = Blockly.createSvgElement('rect', {
-    'fill': '#000',
+    'fill': Blockly.ContractEditor.GRID_LINE_COLOR,
     'height': 2.0
   }, this.svgParent_);
   Blockly.svgIgnoreMouseEvents(this.horizontalLine);
