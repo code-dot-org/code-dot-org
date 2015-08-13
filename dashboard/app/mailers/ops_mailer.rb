@@ -45,6 +45,6 @@ class OpsMailer < ActionMailer::Base
     @recipient = recipient
     @recipient_ops_data = recipient_ops_data
 
-    mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
+    mail content_type: 'text/html', subject: subject, to: 'andre@code.org', from: 'pd@code.org'
   end
 end
