@@ -15,6 +15,7 @@ class ApiControllerTest < ActionController::TestCase
     @student_3 = create(:follower, section: @flappy_section).student_user
     @student_4 = create(:follower, section: @flappy_section).student_user
     @student_3.backfill_user_scripts
+    @student_3.reload
   end
 
   test "should get progress for section with default script" do
