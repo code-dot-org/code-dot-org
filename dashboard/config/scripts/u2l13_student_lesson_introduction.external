@@ -5,7 +5,7 @@ css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 13 - Tell Me a Secret - Encrypting Text
+## Unit 2: Lesson 13 - The Need for Encryption
 
 # Background
 
@@ -46,3 +46,27 @@ Encryption is a process - an algorithm - for transforming a message so that the 
 
 
 MARKDOWN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
