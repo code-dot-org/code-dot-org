@@ -1081,6 +1081,12 @@ exports.display = function (object) {
   if (object === undefined) {
     object = "";
   }
+
+  // call tolocaleString on numbers so that we get commas for large numbers
+  if (typeof(object) === 'number' && object.toLocaleString) {
+    object = object.toLocaleString();
+  }
+
   if (!object.draw) {
     object = new EvalText(object.toString(), 12, 'black');
   }
