@@ -17,14 +17,14 @@ class LevelSourceTest < ActiveSupport::TestCase
 
   setup do
     @level = create :level
-    @level_source = create(:level_source, level_id: @level[:id], data: 'data')
+    @level_source = create(:level_source, level_id: @level.id, data: 'data')
 
     # Set up crowdsourced hints.
     @selected_crowdsourced_message = 'selected crowdsourced hint'
 
     @experimental_crowdsourced_messages = [ 'experiment crowdsourced 1',
                                             'experiment crowdsourced 2' ]
-    setup_helper(@level_source[:id],
+    setup_helper(@level_source.id,
                  LevelSourceHint::CROWDSOURCED,
                  @selected_crowdsourced_message,
                  @experimental_crowdsourced_messages)
@@ -32,7 +32,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     # Set up external (Stanford) hints.
     @selected_stanford_message = 'selected stanford hint'
     @experimental_stanford_messages = ['stanford exp1', 'stanford exp2' ]
-    setup_helper(@level_source[:id],
+    setup_helper(@level_source.id,
                  LevelSourceHint::STANFORD,
                  @selected_stanford_message,
                  @experimental_stanford_messages)
@@ -42,9 +42,9 @@ class LevelSourceTest < ActiveSupport::TestCase
     @variant_data =
         LevelSource::XMLNS_STRING + @standard_data + LevelSource::XMLNS_STRING
     @ls1_standard = create(:level_source,
-        level_id: @level[:id], data: @standard_data)
+        level_id: @level.id, data: @standard_data)
     @ls1_variant = create(:level_source,
-        level_id: @level[:id], data: @variant_data)
+        level_id: @level.id, data: @variant_data)
     assert_equal @ls1_standard.level_id, @ls1_variant.level_id
 
     level2_id = create(:level).id

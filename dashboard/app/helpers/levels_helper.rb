@@ -105,7 +105,7 @@ module LevelsHelper
       callout_hash = callout.attributes
       callout_hash.delete('localization_key')
       callout_text = data_t('callout.text', callout.localization_key)
-      if I18n.locale == 'en-us' || callout_text.nil?
+      if callout_text.nil?
         callout_hash['localized_text'] = callout.callout_text
       else
         callout_hash['localized_text'] = callout_text
@@ -167,7 +167,7 @@ module LevelsHelper
     # Fetch localized strings
     if l.custom?
       loc_val = data_t("instructions", "#{l.name}_instruction")
-      unless I18n.locale.to_s == 'en-us' || loc_val.nil?
+      unless I18n.en? || loc_val.nil?
         level_options['instructions'] = loc_val
       end
     else
