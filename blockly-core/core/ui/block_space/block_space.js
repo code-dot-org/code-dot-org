@@ -102,6 +102,8 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   if (Blockly.BlockSpace.DEBUG_EVENTS) {
     this.debugLogOnEvents();
   }
+
+  this.updateScrollOnBlockImport_();
 };
 
 Blockly.BlockSpace.DEBUG_EVENTS = false;
@@ -187,6 +189,15 @@ Blockly.BlockSpace.prototype.debugLogOnEvents = function() {
       console.log(eventIdentifier);
     }, false, this);
   }, this);
+};
+
+/**
+ * Listens for block importing and triggers a scrollable size update.
+ * @private
+ */
+Blockly.BlockSpace.prototype.updateScrollOnBlockImport_ = function () {
+  this.events.listen(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED,
+      this.updateScrollableSize.bind(this));
 };
 
 Blockly.BlockSpace.prototype.findFunction = function(functionName) {
