@@ -152,6 +152,7 @@
   "errorUnusedFunction": "Sa lõid funktsiooni aga ei kasutanud seda oma tööruumis! Kliki \"Funktsioon\" nupule tööriistakastis ja veendu et sa seda oma programmis kasutad.",
   "errorUnusedParam": "Sa lisasid parameetriploki aga ei kasutanud seda oma definitsioonis. Ära unusta oma parameetrit kasutada, vajuta \"muuda\" ja pane parameetri plokk rohelise ploki sisse.",
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
+  "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "extraTopBlocks": "Sul on kinnitamata klotse.",
   "extraTopBlocksWhenRun": "Sul on kinnitamata blokid. Kas sa mõtlesid need lisada \"kui käivitada\" blokile?",
   "finalStage": "Tubli! Sa läbisid viimase taseme.",
@@ -165,6 +166,7 @@
   "hintHeader": "Vihje:",
   "hintRequest": "Anna vihje",
   "hintTitle": "Vihje:",
+  "ignore": "Ignore",
   "infinity": "Lõpmatus",
   "jump": "hüppa",
   "keepPlaying": "Jätka Mängimist",
@@ -198,6 +200,7 @@
   "showCodeHeader": "Näita koodi",
   "showGeneratedCode": "Näita koodi",
   "showTextHeader": "Kuva tekst",
+  "showVersionsHeader": "Version History",
   "showToolbox": "Kuva Tööriistakast",
   "signup": "Pane ennast kirja sissejuhatavale kursusele",
   "stringEquals": "string=?",
@@ -217,6 +220,5 @@
   "watchVideo": "Vaata videot",
   "when": "kui",
   "whenRun": "kui käib",
-  "workspaceHeaderShort": "Tööruum: ",
-  "showVersionsHeader": "Version History"
+  "workspaceHeaderShort": "Tööruum: "
 }

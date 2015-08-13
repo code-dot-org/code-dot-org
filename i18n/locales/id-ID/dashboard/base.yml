@@ -350,7 +350,7 @@ id:
     local_school: sekolah lokal
     online: online
     see_details: Lihat rincian
-    view_course: View Course
+    view_course: Lihat Kursus
     prize_info: 'Hadiah untuk partisipasi (hanya untuk guru sekolah umum dari US): maximal $1.000 imbalan.'
     tryfirst: 'Atau, Anda dapat mencobanya dulu kemudian mendaftar:'
     trynow: Coba sekarang
@@ -365,7 +365,7 @@ id:
     heading_legacy: '<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>'
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Coba kursus Code Studio dengan memilih salah satu di bawah ini
     print_certificate: Cetak Sertifikat
   gender:
     male: Laki-laki

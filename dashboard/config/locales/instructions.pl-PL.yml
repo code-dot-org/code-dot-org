@@ -1,7 +1,7 @@
 "pl":
   data:
     instructions:
-      2-3 Artist 1 new_instruction: Witam jestem artystą. Jeżeli napiszesz mi kod
+      2-3 Artist 1 new_instruction: Witam, jestem artystą. Jeżeli napiszesz mi kod
         - mogę narysować prawie wszystko. Użyj kilku bloków, abym rysował wzdłuż szarych
         linii. (Każda linia ma długość 100 pikseli)
       2-3 Artist 11_instruction: 'Utwórz znak stopu na granicy tworząc ośmiokąt o
@@ -15,8 +15,8 @@
         bok ma długość 100, ale ściana w połowie ukończona ma 50. Ukończ tę ścianę. '
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
-      2-3 Artist 3.4_instruction: Blok "skok" (jump) przesuwa artystę bez rysowania.
-        Narysuj linię przerywaną za pomocą obu bloków, skoku i rysowania.
+      2-3 Artist 3.4_instruction: Blok "skocz" przesuwa artystę bez rysowania. Narysuj
+        linię przerywaną za pomocą obu bloków, skoku i rysowania.
       2-3 Artist 3_instruction: Ten kapelusz jest wysoki na 100 pikseli. Narysuj kapelusz,
         który jest o 70 pikseli niższy.
       2-3 Artist 3new_instruction: Czerwony kapelusz ma 100 pikseli wysokości. Dokończ
@@ -67,21 +67,22 @@
         się rysowanie! Pomóż mi narysować kwadratowe okulary.  Wskazówka: połączenie
         między szkłami okularów jest o 25 pikseli krótsze niż wielkość kwadratu.'
       2-3 Artist Functions 10_instruction: Oto dwie funkcje, jedna do rysowania dużego
-        trybu, a druga do rysowania małego trybu. Użyj ich, by narysować wnętrze maszyny!
+        trybu ("big gear"), a druga do rysowania małego trybu ("small gear"). Użyj
+        ich, by narysować wnętrze maszyny!
       2-3 Artist Functions 11.5_instruction: Tutaj jest ta sama funkcja "draw a hexagon"
         (narysuj sześciokąt). Co się stanie, jeśli obrócisz się tylko o 60 stopni
         w każdym obrocie pętli?
       2-3 Artist Functions 11_instruction: Zmieniliśmy nazwę funkcji "draw a square"
         (narysuj kwadrat) na "draw a hexagon" (narysuj sześciokąt), ale ona nadal
-        rysuje tylko kwadraty! Czy mógłbyś zmodyfikować funkcję "draw a hexagont",
+        rysuje tylko kwadraty! Czy mógłbyś zmodyfikować funkcję "draw a hexagon",
         by rysowała sześciokąt o boku 50 pikseli, i wykonaj rysunek używając tej funkcji?
       2-3 Artist Functions 12_instruction: 'Funkcje są naprawdę świetne do rysowania
         złożonych rzeczy wiele razy. Czy mógłbyś użyć funkcji "draw a flower" (narysuj
         kwiat), aby wypełnić resztę pola plantatora? (Wskazówka: Wszystkie rośliny
-        są oddalone o 100 pikseli)  '
+        są oddalone od siebie o 100 pikseli)  '
       2-3 Artist Functions 13_instruction: Daliśmy ci cztery funkcje. Skorzystaj z
         nich, jak chcesz, wewnątrz jednej lub więcej pętli, by wykonać obrazek, którym
-        mógłbyś podzielić się ze swoimi znajomymi. Naciśnij przycisk Uruchom, aby
+        mógłbyś podzielić się ze swoimi znajomymi. Naciśnij przycisk "Uruchom", aby
         zobaczyć przykład.
       2-3 Artist Functions 2_instruction: Funkcje umożliwiają definiowanie nowych
         bloków! Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie
@@ -144,7 +145,7 @@
         Powtórz w pętli cały ten blok kodu 3 razy, aby narysować ten wzór."
       2-3 Artist Nested Loops 10_instruction: Powtórz w pętli ten kod 12 razy, aby
         ukończyć ten rysunek.
-      2-3 Artist Nested Loops 11_instruction: Powtórz w pętla ten kod 4 razy, aby
+      2-3 Artist Nested Loops 11_instruction: Powtórz w pętli ten kod 4 razy, aby
         ukończyć ten obrazek, obróć się o 90 stopni po każdym obiegu.
       2-3 Artist Nested Loops 12_instruction: Powtórz w pętli ten kod 12 razy, aby
         otrzymać te loki.
@@ -194,8 +195,7 @@
         zrobić miód.
       2-3 Bee Conditionals 5_instruction: Fioletowe kwiaty mogą mieć 1 lub 0 nektaru,
         ale nie wiesz który. Uważaj, by nie zbierać nektaru z fioletowego kwiatka,
-        jeśli go nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku "jeśli
-        (if)".
+        jeśli go nie ma. Sprawdzaj, czy nektar jest równy 1 przy użyciu bloku "jeśli".
       2-3 Bee Conditionals 6_instruction: Sprawdź ten kwiat za pomoc bloku "jeśli",
         czy zawiera nektar.
       2-3 Bee Conditionals 7_instruction: Zbierz nektar z każdego kwiatka, który go
@@ -217,7 +217,7 @@
       2-3 Bee Debugging 4_instruction: Te bloki naprawdę bugging mnie. Napraw błędy,
         aby zebrać cały nektar i zrobić miód.
       2-3 Bee Debugging 5_instruction: Te bloki naprawdę bugging mnie. Napraw błędy,
-        aby zebrać cały nektar i zrobić miód. Możesz teraz użyć Uruchom i Krok.
+        aby zebrać cały nektar i zrobić miód. Możesz teraz użyć "Uruchom" i "Krok".
       2-3 Bee Debugging 6_instruction: Te bloki naprawdę bugging mnie. Napraw błędy,
         aby zebrać cały nektar i zrobić miód.
       2-3 Bee Debugging 7_instruction: Te bloki naprawdę bugging mnie. Napraw błędy,
@@ -229,34 +229,36 @@
       2-3 Bee Debugging Assessment 1_instruction: 'Sprawdzian: Te bloki naprawdę bugging
         mnie. Napraw błędy, aby zebrać cały nektar i zrobić miód.'
       2-3 Bee Functions 1_instruction: Funkcje są blokami kodu, które wykonują określone
-        zadanie. Użyj funkcji "pobierz 2 nektary" (get 2 nectar), aby zebrać nektar
+        zadanie. Użyj funkcji "get 2 nectar" (pobierz 2 nektary), aby zebrać nektar
         z każdy kwiatka.
       2-3 Bee Functions 10_instruction: Fioletowe kwiaty mogą mieć 1 lub 0 nektaru,
-        Utwórz funkcję, która zbiera nektar tylko z tych fioletowych kwiatów, które
-        mają nektar.
+        Utwórz funkcję "collect purple nectar" (zbierz fioletowy nektar), która zbiera
+        nektar tylko z tych fioletowych kwiatów, które mają nektar.
       2-3 Bee Functions 2_instruction: Funkcje są blokami kodu, które wykonują określone
-        zadanie. Użyj funkcji "pobierz 5" (get 5), aby pobrać 5 nektarów. Użyj pętli,
+        zadanie. Użyj funkcji "get 5" (pobierz 5), aby pobrać 5 nektarów. Użyj pętli,
         aby otrzymać użyć małej liczby bloków.
       2-3 Bee Functions 3_instruction: Zbierz cały nektar z każdego kwiatka.
-      2-3 Bee Functions 4_instruction: Funkcja "przejdź i pobierz nektar" (move and
-        get nectar) uruchamia pszczołę, zbiera nektar, a następnie prowadzi pszczołę
-        do miejsca, gdzie zaczęła. Użyj tej funkcji, aby zebrać cały nektar.
+      2-3 Bee Functions 4_instruction: Funkcja "move and get nectar" (przejdź i pobierz
+        nektar) uruchamia pszczołę, zbiera nektar, a następnie prowadzi pszczołę do
+        miejsca, gdzie zaczęła. Użyj tej funkcji, aby zebrać cały nektar.
       2-3 Bee Functions 5_instruction: Teraz jest więcej nektaru na kwiatkach. Zmodyfikuj
-        daną funkcję tak, że zbiera ona 4 nektary i użyj jej, aby zebrać cały nektar
-        z kwiatów.
+        daną funkcję "move and get 4" tak, że zbiera ona 4 nektary i użyj jej, aby
+        zebrać cały nektar z kwiatów.
       2-3 Bee Functions 6_instruction: Teraz użyj tej samej funkcji, aby zebrać nektar
         z trzech kwiatów.
       2-3 Bee Functions 7_instruction: Kwiaty znajdują się dalej. Zmodyfikuj daną
         funkcję i użyj jej, aby zebrać cały nektar z kwiatów.
-      2-3 Bee Functions 8_instruction: Utwórz własną funkcję, która pobiera 7 nektarów,
-        porusza się do przodu i tworzy 7 miodów. Użyj tej funkcji, aby zebrać nektar
-        z każdego kwiatka i zrobić miód na każdym plastrze miodu.
-      2-3 Bee Functions 9_instruction: Utwórz własną funkcję, dzięki której pszczółka
-        idzie wzdłuż ścieżki, zbiera nektar, robi miód i wraca na ścieżkę.
-      2-3 Bee Functions Assessment 1_instruction: 'Sprawdzian: Użyj danej funkcji,
-        aby zebrać nektar z każdego kwiatka.'
-      2-3 Bee Functions Assessment 2_instruction: 'Sprawdzian: Utwórz funkcję, która
-        robi 3 miody.'
+      2-3 Bee Functions 8_instruction: Utwórz własną funkcję "get 7 nectar make 7
+        honey", która pobiera 7 nektarów, porusza się do przodu i tworzy 7 miodów.
+        Użyj tej funkcji, aby zebrać nektar z każdego kwiatka i zrobić miód na każdym
+        plastrze miodu.
+      2-3 Bee Functions 9_instruction: Utwórz własną funkcję "get 7 make 7", dzięki
+        której pszczółka idzie wzdłuż ścieżki, zbiera nektar, robi miód i wraca na
+        ścieżkę.
+      2-3 Bee Functions Assessment 1_instruction: 'Sprawdzian: Użyj danej funkcji
+        "get 7", aby zebrać nektar z każdego kwiatka.'
+      2-3 Bee Functions Assessment 2_instruction: 'Sprawdzian: Utwórz funkcję "make
+        3", która robi 3 miody.'
       2-3 Bee Loops 1_instruction: 'Każdy kwiat zawiera jedną jednostkę nektaru. Zbierz
         nektar z każdego z kwiatów. '
       2-3 Bee Loops 10_instruction: Czy potrafisz użyć pętli "dopóki" wewnątrz dwóch
@@ -275,9 +277,9 @@
       2-3 Bee Loops 3_instruction: Zbierz nektar z każdego kwiatka i zrób miód na
         każdym plastrze miodu.
       2-3 Bee Loops 3A_instruction: Czy potrafisz użyć pętli, by zebrać cały nektar?
-      2-3 Bee Loops 3B_instruction: Teraz użyj nowego bloku "powtarzaj", aby zebrać
+      2-3 Bee Loops 3B_instruction: Teraz użyj nowego bloku "powtórzj", aby zebrać
         cały nektar i zrobić cały miód.
-      2-3 Bee Loops 4_instruction: Użyj podobnej pętli, jak w ostatniej łamigłówce,
+      2-3 Bee Loops 4_instruction: Użyj podobnej pętli, jak w poprzedniej łamigłówce,
         ale wprowadź do niej obrót.
       2-3 Bee Loops 4A_instruction: Co się stanie, jeśli powtórzysz w pętli tę sekwencję
         3 razy? Nie zapomnij zrobić na końcu miodu!
@@ -306,7 +308,7 @@
       2-3 Maze 12 (copy 2)_instruction: 'Czy możesz zastąpić poprzednią odpowiedź
         przez tylko dwa bloki? (Wskazówka: utwórz pętlę z użyciem bloku "powtórz razy")'
       2-3 Maze 12 (old)_instruction: Doprowadź mnie do świnki, teraz z użyciem bloku
-        "powtarzaj razy"!
+        "powtórz razy"!
       2-3 Maze 12_instruction: 'Czy możesz zastąpić te pięć bloków tylko dwoma blokami?
         (Wskazówka: Utwórz pętlę z użyciem bloku "powtórz razy".)'
       2-3 Maze 13 (old)_instruction: Doprowadź mnie do świnki, teraz z użyciem bloku
@@ -373,7 +375,7 @@
       2-3 Maze sq5_instruction: Doprowadź mnie do świnki! Ile razy musisz powtórzyć
         blok?
       2-3 Maze sq6_instruction: 'Czy potrafisz zastąpić poprzednią odpowiedź tylko
-        z dwoma blokami? (Wskazówka: Utwórz pętlę z użyciem bloku "powtarzaj razy".)'
+        z dwoma blokami? (Wskazówka: Utwórz pętlę z użyciem bloku "powtórz razy".)'
       2-3 Maze sq7_instruction: Doprowadź mnie do tego zielonego intruza używając
         tylko trzech bloków.
       2-3 Maze sq8_instruction: Doprowadź mnie do świnki! (Gdzie jest ten blok "powtórz
@@ -432,9 +434,6 @@
         sobie, że musi istnieć szybszy sposób! Użyj bloku "dla", by zastąpić inne
         bloki i ukończyć sześciokątną spiralę. Wskazówka: Długość ostatniej linii
         wynosi 200 pikseli.'
-      4-5 Artist For Loops 2_instruction: To jest blok "dla". Zamiast wypisywać 1,
-        2, 3, ..., 10, blok "dla" służy do powtarzania bloków w nim zawartych, może
-        także zliczać liczby. Umieść liczbę 10 w sekcji "do" w bloku "dla".
       4-5 Artist For Loops 3_instruction: Jak możemy liczyć od 1 do 50? Zmodyfikuj
         blok "dla".
       4-5 Artist For Loops 4_instruction: Uzupełnij blok "dla" tak, że liczy on od
@@ -442,9 +441,9 @@
       4-5 Artist For Loops 6_instruction: Narysuj kwadraty o bokach 50, 60, 70, 80
         i 90 pikseli. Musisz użyć funkcji "draw a square" (narysuj kwadrat) pięć razy.
       4-5 Artist For Loops 7_instruction: 'Narysuj takie same kwadraty, ale użyj bloku
-        "licz z" (count with), dla zmiany rozmiaru. Umieść blok "licznik" (counter)
-        w funkcji "rysuj kwadrat". Wskazówka: ten blok znajduje się w kategorii "Zmienne"
-        (Variables).'
+        "count with" (licz z), dla zmiany rozmiaru. Umieść blok "counter" (licznik)
+        w funkcji "draw a square" (rysuj kwadrat). Wskazówka: ten blok znajduje się
+        w kategorii "Variables" (Zmienne).'
       4-5 Artist For Loops 8_instruction: Czy potrafisz ukończyć program umieszczając
         w bloku "dla" bloki, które liczą od 10 do 200 co 10? Blok "dla" możesz znaleźć
         w kategorii "Loops" (Pętle).
@@ -454,9 +453,9 @@
         Cię do kreatywności.
       4-5 Artist Functions 1_instruction: Użyj pętli "powtórz", aby narysować ten
         trójkąt.
-      4-5 Artist Functions 10a_instruction: Umieść ten kod w funkcji "rysuj płatek
-        śniegu" i zastąp 50 przez parametr "rozmiar". Ta funkcja jest już wywoływana,
-        by utworzyć płatek śniegu, który ma 100 pikseli.
+      4-5 Artist Functions 10a_instruction: Umieść ten kod w funkcji "draw a snowflake"
+        (narysuj płatek śniegu) i zastąp 50 przez parametr "size" (rozmiar). Ta funkcja
+        jest już wywoływana, by utworzyć płatek śniegu, który ma 100 pikseli.
       4-5 Artist Functions 10b_instruction: 'Użyj funkcji "draw a snowflake" (narysuj
         płatek śniegu) do tworzenia płatków różnej wielkości.  Wskazówka: pierwszy
         płatek śniegu ma długość 25 i każdy następny płatek śniegu jest dwa razy większy
@@ -481,9 +480,10 @@
         nazwie "draw a small triangle" (narysuj mały trójkąt) i wywołaj ją.
       4-5 Artist Functions 2b_instruction: Teraz utwórz funkcję o nazwie "draw a small
         triangle" (narysuj mały trójkąt) przy użyciu dostępnych bloków.
-      4-5 Artist Functions 3_instruction: 'Teraz utwórz funkcje "rysuj średni trójkąt"
-        i "rysuj duży trójkąt". Funkcję "rysuj mały trójkąt" wykonaliśmy już dla Ciebie.
-        Długości boków trójkątów wynoszą 50 (mały), 100 (średni) i 150 (duży). '
+      4-5 Artist Functions 3_instruction: 'Teraz utwórz funkcje "draw a medium triangle"
+        (narysuj średni trójkąt) i "draw a large triangle" (narysuj duży trójkąt).
+        Funkcję "draw a small triangle" (narysuj mały trójkąt) wykonaliśmy już dla
+        Ciebie. Długości boków trójkątów wynoszą 50 (mały), 100 (średni) i 150 (duży). '
       4-5 Artist Functions 4_instruction: Ta nowa funkcja "draw a triangle" (narysuj
         trójkąt) ma parametr i może wykonać to, co robią wszystkie trzy wcześniejsze
         funkcje. Narysuj te same trójkąty przy użyciu tej nowej funkcji.
@@ -496,11 +496,12 @@
       4-5 Artist Functions 6b_instruction: Użyj funkcji służących do rysowania kwadratu
         i trójkąta wraz z innymi blokami, aby utworzyć dom, dodając je do funkcji
         "draw a house" (narysuj dom) a następnie wywołaj ją.
-      4-5 Artist Functions 7_instruction: Użyj funkcji "rysuj dom", aby narysować
-        domy, które mają 100 pikseli i 50 pikseli. Te dwa domy są oddzielone o 50
-        pikseli.
-      4-5 Artist Functions 8_instruction: Funkcja "rysuj kwiat" ma parametr, który
-        pozwala ustawić wysokość łodygi.  Ustaw go na 200 i obserwuj, co się dzieje.
+      4-5 Artist Functions 7_instruction: Użyj funkcji "draw a hause" (narysuj dom),
+        aby narysować domy, które mają 100 pikseli i 50 pikseli. Te dwa domy są oddalone
+        od siebie o 50 pikseli.
+      4-5 Artist Functions 8_instruction: Funkcja "draw a flower" (narysuj kwiat)
+        ma parametr, który pozwala ustawić wysokość łodygi.  Ustaw go na 200 i obserwuj,
+        co się dzieje.
       4-5 Artist Functions 9_instruction: Narysuj te 3 kwiaty. Pierwszy ma ma wysokość
         100 i kolejny kwiat jest zawsze 50 pikseli wyższy niż poprzedni kwiat. Odległość
         między kwiatami wynosi 100 pikseli.
@@ -519,7 +520,7 @@
         by narysować tę falę?
       4-5 Artist Patterns 13_instruction: Teraz powtórz to wszystko 4 razy w pętli,
         aby utworzyć ramkę na obrazek. Uważaj na rogi - nie możesz tak po prostu obrócić
-        się o 90 stopni! Jeśli powtórzenie w pętli 3 stopni 60 razy tworzy półokrąg,
+        się o 90 stopni! Jeśli powtórzenie w pętli trzech stopni 60 razy tworzy półokrąg,
         to które z tych bloków kodu spowodują utworzenie ćwiartki okręgu na rogach?
       4-5 Artist Patterns 2_instruction: Jeśli umieścisz pętlę dla kwadratu w innej
         pętli, to otrzymasz zagnieżdżoną pętlę. Co powinieneś dodać do swojej zewnętrznej
@@ -553,52 +554,48 @@
         do prawej.'
       4-5 Artist Patterns Free Play_instruction: Czas na zabawę - spróbuj swoich sił
         tworząc własny wzór!
-      4-5 Bee Conditionals 1 (copy 1)_instruction: |
-        The bee can't tell if this is
-        a flower or a honeycomb. Gather nectar only from flowers, but first check
-        if it is a flower or a honeycomb.
+      4-5 Bee Conditionals 1 (copy 1)_instruction: Pszczółka nie rozpoznaje, czy to
+        jest kwiat czy plaster miodu. Zbierz nektar z kwiatów, ale najpierw sprawdź,
+        czy to jest kwiat czy plaster miodu.
       4-5 Bee Conditionals 1_instruction: Pszczółka nie rozpoznaje, czy to jest kwiat
         czy plaster miodu. Zbierz nektar z kwiatów, ale najpierw sprawdź, czy to jest
         kwiat czy plaster miodu.
-      4-5 Bee Conditionals 2 (copy 1)_instruction: |
-        The bee only wants nectar right
-        now. Remember, not all objects are flowers, so check to gather nectar only
-        at flowers.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Pszczółka chce teraz tylko nektaru.
+        Pamiętaj, że nie wszystkie obiekty są kwiatami, upewniaj się więc, że nektar
+        jest zbierany tylko z kwiatów.
       4-5 Bee Conditionals 2_instruction: Pszczółka chce teraz tylko nektaru. Pamiętaj,
         że nie wszystkie obiekty są kwiatami, upewniaj się więc, że nektar jest zbierany
         tylko z kwiatów.
       4-5 Bee Conditionals 3_instruction: Teraz pszczółka chce robić miód. Upewniaj
         się, że miód jest robiony tylko na plastrze miodu.
-      4-5 Bee Conditionals 4 (copy 1)_instruction: |
-        The unknown object is either
-        a flower or a honeycomb. Use the if/else block to collect nectar if it is
-        a flower, else to make honey (because it is a honeycomb).
+      4-5 Bee Conditionals 4 (copy 1)_instruction: Nieznany obiekt jest kwiatem lub
+        plastrem miodu. Użyj bloku "jeśli-w przeciwnym razie", by zebrać nektar, jeśli
+        jest to kwiat, lub w przeciwnym razie robić miód (bo to jest plaster miodu).
       4-5 Bee Conditionals 4_instruction: Nieznany obiekt jest kwiatem lub plastrem
-        miodu. Użyj bloku "jeśli/w przeciwnym razie", by zebrać nektar, jeśli jest
+        miodu. Użyj bloku "jeśli-w przeciwnym razie", by zebrać nektar, jeśli jest
         to kwiat, lub w przeciwnym razie robić miód (bo to jest plaster miodu).
       4-5 Bee Conditionals 5_instruction: Może to być kwiat lub plaster miodu. Użyj
-        bloku "jeśli/w przeciwnym razie", by zbierać nektar, jeśli jest to kwiat,
+        bloku "jeśli-w przeciwnym razie", by zbierać nektar, jeśli jest to kwiat,
         lub w przeciwnym razie robić miód (bo to jest plaster miodu).
-      4-5 Bee Conditionals 6 (copy 1)_instruction: |
-        This purple flower may have either
-        3, 2, or 1 nectar. Here an if-else block is combined with another if-else
-        block to create an if, else-if, else block. Complete the solution to collect
-        the unknown amount of nectar.
+      4-5 Bee Conditionals 6 (copy 1)_instruction: Ten fioletowy kwiat może mieć 3,
+        2 lub 1 nektaru. Tutaj, blok "jeśli-w przeciwnym razie" jest połączony z innym
+        blokiem "jeśli-w przeciwnym razie", by utworzyć blok "jeśli-w przeciwnym razie/jeśli-w
+        przeciwnym razie". Ukończ rozwiązanie, by zebrać nieznaną ilość nektaru.
       4-5 Bee Conditionals 6_instruction: Ten fioletowy kwiat może mieć 3, 2 lub 1
-        nektaru. Tutaj, blok "jeśli/w przeciwnym razie" jest połączony z innym blokiem
-        "jeśli/w przeciwnym razie", by utworzyć blok "jeśli/w przeciwnym razie-jeśli/w
+        nektaru. Tutaj, blok "jeśli-w przeciwnym razie" jest połączony z innym blokiem
+        "jeśli-w przeciwnym razie", by utworzyć blok "jeśli-w przeciwnym razie/jeśli-w
         przeciwnym razie". Ukończ rozwiązanie, by zebrać nieznaną ilość nektaru.
       4-5 Bee Conditionals 7_instruction: Pamiętaj, że fioletowe kwiaty mogą mieć
         3, 2 lub 1 nektarów. Ukończ funkcję "check purple flower" (sprawdź fioletowy
         kwiat) i użyj jej, by zebrać cały nektar z kwiatów.
-      4-5 Bee Conditionals 8_instruction: Napisz funkcję wewnątrz bloku o nazwie "check
-        flower make honey" (sprawdź kwiat zrób miód). Twoja funkcja powinna sprawdzać,
-        jak dużo nektaru ma fioletowy kwiat, zebrać go, przejść dalej a następnie
-        zrobić miód.
+      4-5 Bee Conditionals 8_instruction: Wypełnij wnętrze funkcji "check flower make
+        honey" (sprawdź kwiat zrób miód). Twoja funkcja powinna sprawdzać, czy fioletowy
+        kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar, a następnie przejść dalej
+        i zrobić miód.
       4-5 Bee Conditionals Assessment 1_instruction: 'Sprawdzian: Ten kod nie jest
-        poprawny. Ukończ funkcję "zbierz nektar lub zrób miód", a następnie wywołaj
-        ją, by zebrać cały nektar i miód. Pamiętaj, że fioletowe kwiaty mogą mieć
-        3, 2 lub 1 nektarów.'
+        poprawny. Ukończ funkcję "get nectar or make honey" (zbierz nektar lub zrób
+        miód), a następnie wywołaj ją, by zebrać cały nektar i miód. Pamiętaj, że
+        fioletowe kwiaty mogą mieć 3, 2 lub 1 nektarów.'
       4-5 Bee Debugging 1_instruction: Te bloki nie odpowiadaj mi. Czy mógłbyś je
         naprawić?
       4-5 Bee Debugging 10_instruction: Znajdź błędy i napraw je.
@@ -652,9 +649,9 @@
       4-5 Maze 2_instruction: Doprowadź zombie do słonecznika, ale unikaj chrupacza!
       4-5 Maze 3 (copy 1)_instruction: Muszę ... dotrzeć ... do słonecznika.
       4-5 Maze 3_instruction: Muszę ... dotrzeć ... do słonecznika.
-      4-5 Maze 4 (copy 1)_instruction: Spróbuj użyć blok "powtórz", by użyć mniej
+      4-5 Maze 4 (copy 1)_instruction: Spróbuj użyć bloku "powtórz", by użyć mniej
         bloków...
-      4-5 Maze 4_instruction: Spróbuj użyć blok "powtórz", by użyć mniej bloków...
+      4-5 Maze 4_instruction: Spróbuj użyć bloku "powtórz", by użyć mniej bloków...
       4-5 Maze 5 (copy 1)_instruction: Czy potrafisz rozwiązać tę łamigłówkę używając
         możliwie najmniejszej liczby bloków?
       4-5 Maze 5_instruction: Czy potrafisz rozwiązać tę łamigłówkę używając możliwie
@@ -679,7 +676,7 @@
         kiedy skręcić. Wskazówka: wystarczy użyć tylko jednego więcej bloku, ale zobacz,
         jak to zrobiliśmy, byś następnym razem mógł to wykonać samodzielnie.'
       4-5 Maze Conditionals 4_instruction: OK, to jest podobne do poprzedniej łamigłówki,
-        ale musisz pamiętać, jak użyłeś bloków "jeśli" i "powtarzaj" razem.
+        ale musisz pamiętać, jak użyłeś bloków "jeśli" i "powtórz" razem.
       4-5 Maze Conditionals 5_instruction: Potrzeba mi słonecznik! Użyj bloku "jeśli",
         aby doprowadzić mnie tam z najmniejszą liczbę bloków.
       4-5 Maze Conditionals 6_instruction: Potrzeba mi słonecznik! Użyj bloku "jeśli",
@@ -690,8 +687,7 @@
         warunek, a następnie wykonuje jedno albo drugie. Użyj tego nowego bloku, aby
         doprowadzić mnie do słonecznika.
       4-5 Maze Conditionals 9_instruction: Jeszcze jedno ćwiczenie z wykorzystaniem
-        bloczku "Jeśli - w przeciwnym razie". Ciekawe czy uda Ci się za pierwszym
-        razem?
+        bloczku "Jeśli-w przeciwnym razie". Ciekawe, czy uda Ci się za pierwszym razem?
       4-5 Maze Conditionals Assessment 1_instruction: Użyj bloków "powtarzaj aż" i
         "jeśli-w przeciwnym razie", aby doprowadzić mnie do słonecznika za pomocą
         możliwie najmniejszej liczby bloków.
@@ -721,16 +717,16 @@
       4-5 Nested Loops Assessment 1_instruction: Użyj zagnieżdżonej pętli, aby ukończyć
         projekt.
       4-5 While Loops 1_instruction: Doprowadź mnie do otworu i wypełnij go z dwoma
-        szufelkami śmieci przy użyciu bloku "wypełnij" (fill).
+        szufelkami śmieci przy użyciu bloku "wypełnij".
       4-5 While Loops 2_instruction: Doprowadź mnie do kupy śmieci i usuń je za pomocą
         5 szufelek przy użyciu bloku "usuń".
       4-5 While Loops 3_instruction: 'Doprowadź mnie do sterty śmieci i usuń je, a
-        następnie przejdź do dziury i wypełnij ją całkowicie.  Wskazówka: Użyj możliwie
+        następnie przejdź do otworu i wypełnij go całkowicie.  Wskazówka: Użyj możliwie
         jak najmniej bloków.'
-      4-5 While Loops 4_instruction: 'Wow, znalazłem naprawdę głęboką dziurę! Nie
-        wiem, ile szufelek śmieci potrzeba.  Czy potrafisz napisać program, który
-        wypełni ją do poziomu ziemi?  Wskazówka: Spróbuj użyć pętli "dopóki".'
-      4-5 While Loops 5_instruction: Wow, teraz są dwie głębokie dziury! Czy potrafisz
+      4-5 While Loops 4_instruction: 'Wow, znalazłem naprawdę głęboki otwór! Nie wiem,
+        ile szufelek śmieci potrzeba.  Czy potrafisz napisać program, który wypełni
+        go do poziomu ziemi?  Wskazówka: Spróbuj użyć pętli "dopóki".'
+      4-5 While Loops 5_instruction: Wow, teraz są dwa głębokie otwory! Czy potrafisz
         napisać program, który wypełni je do poziomu ziemi?
       4-5 While Loops 6_instruction: Wow, tam jest duża kupa śmieci! Czy mógłbyś napisać
         program, który usuwa wszystko do poziomu ziemi?
@@ -1181,9 +1177,8 @@
       Course 2 Bee Loops 3__instruction: |
         Can you use a loop to collect all that
         nectar?
-      Course 2 Bee Loops 4_instruction: |
-        What happens if you loop this sequence 3
-        times? Don't forget to make the honey at the end!
+      Course 2 Bee Loops 4_instruction: Co się stanie, jeśli powtórzysz w pętli tę
+        sekwencję 3 razy? Nie zapomnij zrobić na końcu miodu!
       Course 2 Maze Loops 1_instruction: Czy potrafisz doprowadzić mnie do świnki
         przy użyciu 5 bloków?
       Course 4 2_instruction: Pszczółka chce nektaru. Pamiętaj, że nie wszystkie obiekty
@@ -1265,7 +1260,7 @@
         Ci niewiele kodu."
       Course 4 Artist For Loops 12_instruction: 'To wygląda całkiem fajnie, ale teraz
         chciałbym narysować każdy kształt obok poprzedniego. Tym razem każdy bok ma
-        długość 20 pikseli. Użyj bloku skoku by przejść do przodu 40 pikseli po każdym
+        długość 20 pikseli. Użyj bloku skoku, by przejść do przodu 40 pikseli po każdym
         kształcie. '
       Course 4 Artist For Loops 13_instruction: Hmmm, te kształty stają się coraz
         większe za każdym razem! Czy nie rozwiązaliśmy już tego problemu z użyciem
@@ -1321,11 +1316,11 @@
         "rysuj rząd kwadratów". Przyjrzyj się, jak ta funkcja została utworzona. Kliknij
         "Uruchom", gdy jesteś gotowy na następną łamigłówkę.
       Course 4 Artist Functions 14_instruction: Świetnie sobie radzisz! Użyj swojej
-        nowej funkcji "rysuj rząd kwadratów", narysować kwadratowy kształt. Pamiętaj,
-        że każdy kwadrat ma bok o długości 40 pikseli.
+        nowej funkcji "draw a line of squares" (narysuj rząd kwadratów), by narysować
+        kwadratowy kształt. Pamiętaj, że każdy kwadrat ma bok o długości 40 pikseli.
       Course 4 Artist Functions 15_instruction: 'Zróbmy krok dalej - czy potrafisz
-        narysować kształt gwiazdy za pomocą funkcji "rysuj rząd kwadratów"? Powodzenia!
-        Wskazówka: być może musisz skręcić o 144 stopnie'
+        narysować kształt gwiazdy za pomocą funkcji "draw a line od squares" (narysuj
+        rząd kwadratów)? Powodzenia! Wskazówka: być może musisz skręcić o 144 stopnie'
       Course 4 Artist Functions 2_instruction: 'Czy mógłbyś narysować 3 kwadraty oddalone
         od siebie o 20 pikseli? Wskazówka: bok każdego kwadratu ma 100 pikseli'
       Course 4 Artist Functions 3_instruction: "Używając bloku funkcji \"rysuj kwadrat\",
@@ -1345,7 +1340,8 @@
       Course 4 Artist Functions 6_instruction: Który blok musisz dodać, aby otrzymać
         trójkąt leżący na kwadracie?
       Course 4 Artist Functions 7_instruction: Czy potrafisz narysować rząd kwadratów
-        przy użyciu funkcji kwadrat? Każdy kwadrat ma bok o długości 40 pikseli.
+        przy użyciu funkcji do rysowania kwadratu? Każdy kwadrat ma bok o długości
+        40 pikseli.
       Course 4 Artist Functions 8_instruction: 'Czy poznałeś już, jak używać bloków
         funkcyjnych? Zmodyfikujmy ten kwadrat tak, aby miał bok o długości 200 pikseli.
         Wskazówka: Kliknij na "Edytuj", aby zmienić w edytorze funkcji "draw a square"
@@ -1565,12 +1561,12 @@
       Course 4 Binary 7_instruction: Który łańcuch binarny, powtórzony 10 razy, posłuży
         do narysowania tego obrazu?
       Course 4 Binary 8_instruction: Możesz wykonać większość tego obrazka powtarzając
-        w pętli 5-cio bitową liczbę - następnie będziesz potrzebować 4-bitow liczbę,
+        w pętli 5-cio bitową liczbę - następnie będziesz potrzebować 4-bitową liczbę,
         aby otrzymać prawy dolny róg.
       Course 4 Maze 1_instruction: Doprowadź złego ptaka do świnki!
       Course 4 Maze 2_instruction: Unikaj TNT!
       Course 4 Maze 3_instruction: 'Zaprogramuj złego ptaka, aby dostał się do świnki. '
-      Course 4 Maze 4_instruction: Spróbuj użyć blok "powtórz", by użyć mniej bloków...
+      Course 4 Maze 4_instruction: Spróbuj użyć bloku "powtórz", by użyć mniej bloków...
       Course 4 Maze 5_instruction: Czy potrafisz rozwiązać tę łamigłówkę używając
         możliwie najmniejszej liczby bloków?
       Course 4 Maze 6_instruction: Czy potrafisz rozwiązać tę łamigłówkę używając
@@ -1580,10 +1576,10 @@
       Course 4 Play Lab Params 1_instruction: Tutaj jest funkcja o nazwie "jump" (skocz),
         która powoduje, że Twój główny bohater skacze do 100 pikseli. Użyj tej funkcji,
         by zebrać wszystkie flagi.
-      Course 4 Play Lab Params 10_instruction: Dodaliśmy dla Ciebie jeszcze jedną
-        funkcję. Zaprogramuj swoją grę wywołując funkcję "poziom_do_góry" (level_up),
-        jeśli "punkty_gracza" (player_points) > 10. Zagraj w tę grę i spowoduj, że
-        przejdzie poziom 4, aby przejść do następnej łamigłówki.
+      Course 4 Play Lab Params 10_instruction: "Dodaliśmy dla Ciebie jeszcze jedną
+        funkcję. \r\n\r\nZaprogramuj swoją grę wywołując funkcję \"level_up\" (poziom
+        do góry), jeśli \"player_points\" (punkty gracza) > 10. \r\n\r\nZagraj w tę
+        grę i spowoduj, że przejdzie poziom 4, aby przejść do następnej łamigłówki. "
       Course 4 Play Lab Params 2_instruction: Mamy tutaj flagi, które są zbyt wysokie
         dla aktualnego skoku! Dodajmy więc parametr "wysokość" do naszej funkcji "skocz".
         Górna strzałka powinna skoczyć 200 pikseli, a dolna - 100 pikseli. Kliknij
@@ -1594,8 +1590,8 @@
         jest reprezentowany numerem, zaczynając od cyfry 1. Zmień funkcję skoku tak,
         by definicja zawierała numer aktora. \n"
       Course 4 Play Lab Params 4_instruction: |
-        Mamy tu funkcję, która nosi nazwę "patrol".
-        Zmień ją tak, by Cat poruszała się 400 pikseli w górę, po czym 400 pikseli w dół.
+        Mamy tu funkcję, która nosi nazwę "patrol" (patrol).
+        Zmień ją tak, by Kot poruszał się 400 pikseli w górę, po czym 400 pikseli w dół.
       Course 4 Play Lab Params 5_instruction: |
         Wpisz numer aktora w kwadracik,
         aby można było zostać funkcję "patrol" do innych aktorów. Pamiętaj,
@@ -1989,29 +1985,28 @@
       hoc2015_sandbox_instruction: Hiro to "aktor 1". Użyj bloku "idź" do przeniesienia
         Hiro, aby dotknął Baymax.
       Infinity_catch_instruction: Czy za pomocą klawiszy ze strzałkami możesz spowodować,
-        że Elsa ("aktor 2") dogoni Annę?
+        że Elsa ("postać 2") dogoni Annę?
       Infinity_finale_instruction: Utwórz cokolwiek, co Ci się podoba, i podziel się
         tym!
-      Infinity_move_collide_instruction: Hiro to "aktor 1".  Przenieś go blisko Baymax
-        i zagraj jakiś dźwięk, gdy dotkną się.
-      Infinity_move_directions_instruction: Baymax to "aktor 2".  Dodaj bloki "idź"
-        a następnie przenieś Baymax za pomocą klawiszy ze strzałkami.  Spowoduj, że
-        dotknie dwie inne postacie.
-      Infinity_move_right_instruction: Hiro to "aktor 1". Użyj bloku "idź" do przeniesienia
-        Hiro, aby dotknął Baymax.
-      Infinity_repeat_instruction: Użyj bloku "powtarzaj bez końca", aby Anna przeniosła
-        się w górę i w dół 400 pikseli.
-      Infinity_say_instruction: Spowoduj przy użyciu bloku "powiedz" (say), by Anna
-        powiedziała "Hi there.".
-      Infinity_shoot_instruction: Baymax to "aktor 2".  Spowoduj, by Baymax rzucił
+      Infinity_move_collide_instruction: Hiro to "postać 1".  Przenieś go blisko Baymax
+        i zagraj jakiś dźwięk, gdy się dotkną.
+      Infinity_move_directions_instruction: Baymax to "postać 2".  Dodaj bloki "przenieś
+        postać", a następnie przenieś Baymax za pomocą klawiszy ze strzałkami.  Spowoduj,
+        że dotknie dwie inne postacie.
+      Infinity_move_right_instruction: Hiro to "postać 1". Użyj bloku "przenieś postać",
+        aby Hiro dotknął Baymax.
+      Infinity_repeat_instruction: Użyj bloku "powtarzaj w nieskończoność", aby Anna
+        przeniosła się w górę i w dół 400 pikseli.
+      Infinity_say_instruction: Spowoduj przy użyciu bloku "powiedz", by Anna powiedziała
+        "Hi there.".
+      Infinity_shoot_instruction: Baymax to "postać 2".  Spowoduj, by Baymax rzucił
         rakietą w Hiro.
-      Infinity_shoot_directions_instruction: Hiro to "aktor 3".  Spowoduj, by Hiro
-        rzucił pociskiem w każdą z czterech postaci. Odczekaj sekundę między dwoma
-        rzutami.
+      Infinity_shoot_directions_instruction: Hiro to "postać 3".  Spowoduj, by Hiro
+        rzucił rakietą w każdą z czterech postaci. Odczekaj sekundę między dwoma rzutami.
       Infinity_test_instruction: This is a test Infinity level.
-      Infinity_touch_faster_instruction: Dotknij nawet więcej płatków niegu!
+      Infinity_touch_faster_instruction: Dotknij nawet więcej płatków śniegu!
       Infinity_touch_four_instruction: Przenieś Annę w górę, do dołu na lewo i na
-        prawo, aby dotknąć każdego z czterech płatków śniegu.
+        prawo, aby dotknęła każdego z czterech płatków śniegu.
       Infinity_touch_score_instruction: Dodaj punkt do wyniku Anny, gdy dotyka płatka
         śniegu.  Następnie kliknij "Uruchom" i pokieruj nią, aby dotknęła każdy płatek
         śniegu raz.
@@ -2020,12 +2015,12 @@
       K-1 Artist 1 Assessment 1_instruction: Narysuj krótką linię do góry a długą
         w prawo!
       K-1 artist 1 level 10_instruction: Narysuj przerywaną linię używając obu bloków
-        skocz i rysuj
+        "skocz" i "rysuj"
       K-1 artist 1 level 9_instruction: Narysuj to używając trzech linii
-      K-1 Artist Loops 1_instruction: Narysuj tę linię poruszając się na wschód (East)
-        4 razy.
+      K-1 Artist Loops 1_instruction: Narysuj tę linię poruszając się na wschód (E
+        - East) 4 razy.
       K-1 Artist Loops 2_instruction: Czy potrafisz narysować taką samą linię używając
-        pętli?
+        pętli ("powtórz")?
       K-1 Artist Loops 3_instruction: Czy potrafisz powtórzyć te bloki, by narysować
         6 linii?
       K-1 Artist Loops 4_instruction: Czy pętla może nam pomóc narysować szczyt tego
@@ -2037,25 +2032,24 @@
       K-1 Artist Loops 7_instruction: Czu potrafisz ukończyć ten wzór za pomocą dwóch
         pętli?
       K-1 Artist Loops 8_instruction: Te schody mają dłuższe stopnie.
-      K-1 Artist Loops 9_instruction: 'Ocena: Użyj pętli do rysowania schodów'
+      K-1 Artist Loops 9_instruction: 'Sprawdzian: Użyj pętli do rysowania schodów'
       K-1 Artist Loops Free Play_instruction: 'Czas na zabawę: narysuj coś ciekawego!'
       K-1 Artist1 1_instruction: Narysuj stopę człowieka za pomocą jednej linii
-      K-1 Artist1 10_instruction: Rysuj i Skacz, by narysować przerywaną ścieżki do
-        skarbu X
-      K-1 Artist1 2_instruction: Narysuj kotu wąsy złożone z dwóch linie!
-      K-1 Artist1 3_instruction: Narysuj dwa linie na wschód i dwie linie na północ,
+      K-1 Artist1 10_instruction: Narysuj przerywaną linię używając obu bloków "rysuj"
+        i "skocz"
+      K-1 Artist1 2_instruction: Dorysuj kotu wąsy złożone z dwóch linii!
+      K-1 Artist1 3_instruction: Narysuj dwie linie na wschód i dwie linie na północ,
         aby zakończyć rysowanie domu!
-      K-1 Artist1 4_instruction: Dorysuj linie do góry, dookoła i na dół, by narysować
+      K-1 Artist1 4_instruction: Dorysuj linie w prawo, do góry i na dół, by narysować
         zamek!
       K-1 Artist1 5.5_instruction: Zakończ rysowanie trzeciej wieży zamku używając
         krótkich linii
       K-1 Artist1 5_instruction: Narysuj łodygę tego kwiatka używając dwóch linii!
       K-1 Artist1 6_instruction: Ukończ ten obrazek przy użyciu bloku "skocz"!
-      K-1 Artist1 7_instruction: Użyj bloku "skocz", by przejść bez rysowania. Podskocz
-        i narysuj linię.
-      K-1 Artist1 8_instruction: Narysuj przerywaną linię używając obu bloków "skocz"
-        i "rysuj"
-      K-1 Artist1 9_instruction: Rysuj i Skacz, by utworzyć przerywaną linię
+      K-1 Artist1 7_instruction: Rysuj i skacz, by narysować przerywaną linię.
+      K-1 Artist1 8_instruction: Rysuj i skacz, by narysować przerywaną ścieżkę do
+        skarbu X.
+      K-1 Artist1 9_instruction: Rysuj i skacz, by utworzyć przerywaną linię
       K-1 Artist1 Assessment 1_instruction: Narysuj krótkie i długie linie!
       K-1 Artist1 Assessment 2_instruction: Narysuj krótkie linie przerywane!
       K-1 Artist2 1_instruction: Narysuj kwadrat poniżej trójkąta.
@@ -2064,7 +2058,8 @@
       K-1 Artist2 4_instruction: Narysuj prostokąt, aby ukończyć most.
       K-1 Artist2 5_instruction: Narysuj prostokąt, aby ukończyć podpory mostu
       K-1 Artist2 6_instruction: Narysuj dwa kwadraty, aby utworzyć prostokąt!
-      K-1 Artist2 Assessment1_instruction: 'Ocena: Narysuj kwadrat obok innego kwadratu.'
+      K-1 Artist2 Assessment1_instruction: 'Sprawdzian: Narysuj kwadrat obok innego
+        kwadratu.'
       K-1 Artist2 Free Draw_instruction: Narysuj cokolwiek!
       K-1 Artist2_7_instruction: Narysuj prostokąt, aby utworzyć górną szufladę w
         kredensie (garderobie)!
@@ -2119,13 +2114,17 @@
       k-1 maze 1_instruction: Czy mógłbyś przenieść mnie na zachód, aby dotrzeć do
         świnki?
       K-1 Maze 10_instruction: 'Obejdź TNT, aby doprowadzić mnie do świnki! '
-      K-1 Maze 11_instruction: 'Znajdź drogę i doprowadź mnie do tej głupiej świni.
+      K-1 Maze 11_instruction: 'Znajdź drogę i doprowadź mnie do tej głupiej świnki.
         Unikaj TNT, bo inaczej pióra będą latać! Wskazówka: Ona jest na południe od
         mnie.'
-      K-1 Maze 2_instruction: Przenieś mnie na wschód, aby doprowadzić mnie do świnki!
-      K-1 Maze 3_instruction: Przenieś mnie na południe, aby doprowadzić mnie do świnki!
-      K-1 Maze 4_instruction: Przenieś mnie na północ, aby doprowadzić mnie do świnki!
-      K-1 Maze 5_instruction: Przenieś mnie na wschód, aby doprowadzić mnie do świnki!
+      K-1 Maze 2_instruction: Przenieś mnie na wschód (E), aby doprowadzić mnie do
+        świnki!
+      K-1 Maze 3_instruction: Przenieś mnie na południe (S), aby doprowadzić mnie
+        do świnki!
+      K-1 Maze 4_instruction: Przenieś mnie na północ (N), aby doprowadzić mnie do
+        świnki!
+      K-1 Maze 5_instruction: Przenieś mnie na wschód (E), aby doprowadzić mnie do
+        świnki!
       K-1 Maze 6_instruction: Przenieś mnie w jedną stronę, a później w drugą, by
         doprowadzić mnie do świnki!
       K-1 Maze 7_instruction: Przenieś mnie w jedną stronę, a później w drugą, by
@@ -2134,10 +2133,10 @@
         doprowadzić mnie do świnki!
       K-1 Maze 9_instruction: Przenieś mnie w jedną stronę, a później w drugą, by
         doprowadzić mnie do świnki!
-      K-1 Maze Assessment 1_instruction: 'Ocena: Doprowadź mnie do świnki!'
+      K-1 Maze Assessment 1_instruction: 'Sprawdzian: Doprowadź mnie do świnki!'
       K-1 Maze Assessment 12_instruction: Poziom Sprawdzianu
       K-1 Maze Assessment 13_instruction: Poziom Sprawdzianu
-      K-1 Maze Assessment 2_instruction: 'Ocena: Doprowadź mnie do świnki!'
+      K-1 Maze Assessment 2_instruction: 'Sprawdzian: Doprowadź mnie do świnki!'
       K-1 maze debug 1_instruction: Zmień kod, aby doprowadzić mnie do świnki!
       K-1 maze debug 10_instruction: Napraw ten program przestawiając lub dodając
         bloki, aby doprowadzić mnie do świnki!
@@ -2147,7 +2146,7 @@
         bloki, by doprowadzić mnie do świnki!
       K-1 maze debug 3_instruction: Zorientuj się, czego brakuje, a następnie usuń
         bloki, aby doprowadzić mnie do świnki!
-      K-1 maze debug 4_instruction: Przeglądnij te bloki i popraw je! Wydaje mi się,
+      K-1 maze debug 4_instruction: Przejrzyj te bloki i popraw je! Wydaje mi się,
         będę podążać w złym kierunku.
       K-1 maze debug 5_instruction: Napraw ten program przestawiając lub dodając bloki,
         aby doprowadzić mnie do świnki!
@@ -2363,8 +2362,8 @@
         zapisany jako projekt i możesz wrócić do niego w dowolnym momencie.
       NEW Course 4 Artist Functions 1_instruction: Czy stosując pętlę potrafisz narysować
         kwadrat, który ma boki o długości 100 pikseli?
-      NEW Course 4 Artist Functions 10_instruction: Kliknij na "edytuj" (edit), by
-        wypełnić bloki w definicji funkcji, aby utworzyć kwadrat o bokach 40 pikseli.
+      NEW Course 4 Artist Functions 10_instruction: Kliknij na "edytuj", by wypełnić
+        bloki w definicji funkcji, aby utworzyć kwadrat o bokach 40 pikseli.
       NEW Course 4 Artist Functions 11_instruction: Mamy nową funkcję o nazwie "draw
         a line of squares" (narysuj rząd kwadratów). Możesz zajrzeć do wnętrza bloku
         tej funkcji, aby zobaczyć, jak ją zbudowaliśmy. Kliknij przycisk "Uruchom",
@@ -2431,8 +2430,8 @@
         Przeciągnij parametr "długość" do definicji funkcji.
       NEW Course 4 Artist Params 15_instruction: 'Czas na zabawę: To są funkcje, które
         napisałeś do tej pory, oraz kilka dodatkowych. Narysuj coś wspaniałego!'
-      NEW Course 4 Artist Params 2_instruction: 'Stwórz funkcję "rysuj trójkąt" o
-        długości boku 50 pikseli. '
+      NEW Course 4 Artist Params 2_instruction: Utwórz funkcję "narysuj trójkąt" (draw
+        a triangle) o długości boków 50 pikseli
       NEW Course 4 Artist Params 3_instruction: "Teraz użyj funkcji, by narysować
         rząd 3 trójkątów z poprzedniej łamigłówki. Wskazówka: każdy trójkąt jest oddalony
         o 50 pikseli.\r\n"
@@ -2503,10 +2502,8 @@
       NEW Course 4 Bee For Loops 6_instruction: Ostatnia liczba w pętli to "przyrost",
         i za każdym obrotem pętli counter (licznik) zmienia się o ten przyrost. Spróbuj
         zebrać cały nektar z tych kwiatów używając przyrostu o wartości 2.
-      NEW Course 4 Bee For Loops 7_instruction: Czy nie masz już dość używania pętli
-        "dla"? Ta jest podobna do poprzedniej, ale teraz masz zebrać 2, 4, 6, 8, 10
-        nektary. Otrzymujesz kod, w którym brakuje tylko liczb w pętli. Zbierz cały
-        nektar!
+      NEW Course 4 Bee For Loops 7_instruction: |
+        Czy nie masz już dość używania pętli "dla"? Ta jest podobna do poprzedniej, ale teraz masz zebrać 2, 4, 6, 8, 10 nektary.
       NEW Course 4 Bee For Loops 8_instruction: "Jeśli Twoja pętla liczy do góry,
         to przyrost jest dodawany do licznika (counter) w każdej pętli. Jaki powinien
         być przyrost, aby zebrać 3, 6, 9 nektary? \r\n"
@@ -2657,23 +2654,23 @@
         Acorn! Acorn! Acorn! Use an "if" block to
         get me there with the fewest number of blocks.
       scrat 16_instruction: Żołądź! Żołądź! Żołądź! Użyj bloku "Jeśli", aby przenieść
-        mnie tam używając jak najmniejszej liczby bloczków.
+        mnie tam używając jak najmniejszej liczby bloków.
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: Ok, zróbmy to jeszcze raz by potrenować. To ćwiczenie
+      scrat 17_instruction: Ok, zróbmy to jeszcze raz, aby potrenować. To ćwiczenie
         nie różni się bardzo od poprzedniego, ale uważaj na ścianę!
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
         new block.
-      scrat 18_instruction: Bloczek "Jeśli - w przeciwnym razie" sprawdza warunek,
-        a następnie wykonuje jedną lub drugą rzecz. Spróbuj użyć tego bloczku abym
-        dotarł do żołędzia.
+      scrat 18_instruction: Blok "jeśli - w przeciwnym razie" sprawdza warunek, a
+        następnie wykonuje jedno lub drugie. Spróbuj użyć tego bloku, abym dotarł
+        do żołędzia.
       scrat 19 (copy 1)_instruction: |
         One more practice of the "if-else" block,
         can you get it right on your first try?
-      scrat 19_instruction: Jeszcze jedno ćwiczenie z blokiem "jeśli/w przeciwnym
+      scrat 19_instruction: Jeszcze jedno ćwiczenie z blokiem "jeśli-w przeciwnym
         razie", czy potrafisz je wykonać za pierwszym razem?
       scrat 20_instruction: Czy mógłbyś dodać tylko 3 bloki, aby pomóc mi rozwiązać
         bardziej skomplikowany labirynt? Jeśli zrobisz to dobrze, to mogę chodzić
@@ -3212,6 +3209,9 @@
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3226,6 +3226,11 @@
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

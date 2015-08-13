@@ -414,9 +414,6 @@
       4-5 Artist For Loops 15_instruction: 'Það er til betri lausn til að ljúka þessum
         kóða! Notaðu "frá" kubb í stað þessara kubba og ljúktu við sexhyrningaspíralinn.
         (Vísbending: Lengd síðustu línunnar er 200 dílar.)'
-      4-5 Artist For Loops 2_instruction: Þetta er "frá" kubbur. Í stað þess að skrifa
-        1,2,3... 10, getum við látið "frá" kubb telja, og um leið endurtaka  kubbana
-        innan í sér. Settu töluna 10 í "til" hluta kubbsins.
       4-5 Artist For Loops 3_instruction: Hvernig getum við talið frá 1 til 50? Breyttu
         "frá" kubbnum.
       4-5 Artist For Loops 4_instruction: Ljúktu við "frá" kubbinn svo að hann telji
@@ -2890,6 +2887,9 @@
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -2904,6 +2904,11 @@
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: 'Teiknaðu 3x3 grind fyrir ofan og hægra megin
         við skjaldbökuna. Reyndu að gera það með sem allra fæstum skipunum. Athugaðu:
         Þetta verkefni reynir mikið á. Þú gætir þurft að gera þó nokkrar tilraunir

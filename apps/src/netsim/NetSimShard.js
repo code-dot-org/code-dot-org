@@ -13,6 +13,7 @@
  maxparams: 3,
  maxstatements: 200
  */
+/* global $ */
 'use strict';
 
 var NetSimTable = require('./NetSimTable');
@@ -36,6 +37,7 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
   /** @type {PubSubService} */
   this.pubSub = PubSubService.create(pubSubConfig);
   var channel = this.pubSub.subscribe(shardID);
+  channel.subscribe('all_tables', NetSimShard.prototype.onPubSubEvent_.bind(this));
 
   /**
    * Collection of client (user) nodes and router nodes on the shard.
@@ -121,10 +123,38 @@ var NetSimShard = module.exports = function (shardID, pubSubConfig) {
  * @param {!RunLoop.Clock} clock
  */
 NetSimShard.prototype.tick = function (clock) {
-  // TODO (bbuchanan): Eventaully, these polling events should just be
-  //                   backup for the notification system.
   this.nodeTable.tick(clock);
   this.wireTable.tick(clock);
   this.messageTable.tick(clock);
   this.logTable.tick(clock);
+};
+
+/**
+ * The "panic button" option - clears all data on the shard, kicking all
+ * users out and starting over.
+ * @param {NodeStyleCallback} onComplete
+ */
+NetSimShard.prototype.resetEverything = function (onComplete) {
+  $.ajax({
+    url: '/v3/netsim/' + this.id,
+    type: 'delete',
+    contentType: 'application/json; charset=utf-8',
+    dataType: "json"
+  }).done(function() {
+    onComplete(null, true);
+  }).fail(function(request, status, error) {
+    var err = new Error('status: ' + status + '; error: ' + error);
+    onComplete(err, false);
+  });
+};
+
+/**
+ * Called when the PubSub service fires an event that applies to all tables
+ * @private
+ */
+NetSimShard.prototype.onPubSubEvent_ = function () {
+  // Right now, the only all_tables event is the shard reset.
+  // Refreshing the node table informs our node that a reset has occurred.
+  // TODO: Use a "disconnect from shard" callback instead here.
+  this.nodeTable.refresh();
 };

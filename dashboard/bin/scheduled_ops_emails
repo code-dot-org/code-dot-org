@@ -14,6 +14,7 @@ def main
       recipients.each do |recipient|
         recipient_ops_data = JSON.parse(recipient[:properties])
         workshop[:segments] = workshop_segments
+        puts("Sending email")
         OpsMailer.workshop_in_2_weeks_reminder(workshop, recipient, recipient_ops_data).deliver
       end
     end

@@ -215,7 +215,6 @@ bg:
       4-5 Artist For Loops 13_instruction: 'Този дизайн е започнат без цикъл "за" и е с твърде много блокове!  Използвайте блок "за", за да завършите спиралата.  Съвет: на последния ред дължината е 250 пиксела.'
       4-5 Artist For Loops 14_instruction: 'Някой е започнал кода, но след това е разбрал, че трябва да има по-бърз начин! Използвайте блок "за", за да замените блоковете и да завършите триъгълната спирала. (Съвет: в последния ред дължината е 300 пиксела.)'
       4-5 Artist For Loops 15_instruction: 'Някой започна кода, но след това разбрах, трябва да има бърз начин! Използвайте "за" блок да замени блокове и пълна шестоъгълни спирала. (Намек: дължината на последния ред е 200 пиксела.)'
-      4-5 Artist For Loops 2_instruction: 'Това е "за" блок. Вместо да въвеждате 1,2,3... 10, "за" блока може да повтаря блокове, които са вътре в него и да преброява числата за вас. Поставете 10 в раздела "до" на "за" блока.'
       4-5 Artist For Loops 3_instruction: 'Как може да преброим от 1 до 50? Редактирайте "за" блока.'
       4-5 Artist For Loops 4_instruction: 'Завършете "за" блока, така че той да брои от 1 до 10 през 1.'
       4-5 Artist For Loops 6_instruction: 'Начертайте квадрати със страни от 50, 60, 70, 80 и 90 пиксела. Трябва да използвате функцията "начертава квадрат" пет пъти.'
@@ -2094,6 +2093,9 @@ bg:
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -2109,6 +2111,11 @@ bg:
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

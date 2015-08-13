@@ -527,11 +527,6 @@
         Dikush filloi kodin, por më pas kuptoi
         që duhet të ketë një mënyrë më të shpejtë! Përdor një bllok "for" për të zëvëndësuar blloqet dhe
         përfundo spiralen gjashtëkëndore. (Ndihmë: gjatësia e vijës së fundit është 200 piksela.
-      4-5 Artist For Loops 2_instruction: |
-        Ky është një bllok "for". Në vend të shtypësh
-        1,2,3... 10, blloku "for" mund të përsëritë blloqet brenda tij dhe
-        numëron numrat për ty. Vendos numrin 10  në seksionin "to" të bllokut
-        "for".
       4-5 Artist For Loops 3_instruction: |
         Si mund të numërojmë nga 1 deri në 50? Redakto
         bllokun "for".
@@ -1363,14 +1358,12 @@
         perpiqu te besh dicka te ngjashme. ne te kundert, krijo dicka tenden. \r\n\n\r\nDeshiron
         te dish si eshte pergatitur dizenjoja jote? Kliko ne butonin blu ne te djathte
         dhe me pas kliko butonin \"shiko zgjidhjen\"."
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
+      Course 4 Artist 13_instruction: Ende po luani? Ja një pikturë bosh ku mund të
+        dizenjoni çdo gjë që dëshironi!
       Course 4 Artist 2_instruction: Mund t'a permbledhesh kete kod per te nxjerre
         ate ne ngjyre grih jashte katrorit?
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
+      Course 4 Artist 20_instruction: Ende po luani? Ja një pikturë bosh ku mund të
+        krijoni çdo gjë që dëshironi!
       Course 4 Artist 3_instruction: Perpiqu te kuptosh se cfare ndodh nese aplikon
         kete kod (apo shtyp "Jepi" per t'a provuar). Pastaj, perserite aq here sa
         do te nevojiten per te ploesuar vizatimin.
@@ -1428,11 +1421,11 @@
         (10 faqe). Secila faqe duhet te jete 100 pixel e gjate. Shenim: 360-ta e ndare
         ne baze te pjeseve qe ka nje faqe perben edhe numrin e grades qe do te te
         duhet te rrotullisesh.'
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour
-        knowledge of \"for loops\" and the \"counter\", create this drawing where\neach
-        shape has two more sides than the last.  Make sure that each side is\n10 times
-        as long as the number of sides in the polygon.\r\n\r\nVery little\nof the
-        code has been provided for you."
+      Course 4 Artist For Loops 11a_instruction: "Le t'i vendosim të gjitha sëbashku!
+        Duke vendosur në punë njohuritë tuaja rreth \"litarëve\" dhe \"të kundërtave\",
+        krijoni një vizatim të tillë ku secila formë ka dy faqe më shumë sesa e fundit.
+        Sigurohu që secila faqe është 10-fish nga secila faqe e shumëkëndëshit.\r\n\r\nShumë
+        pak\nnga kodimi është e gatshme për ju."
       Course 4 Artist For Loops 12_instruction: Dukej goxha mire por tani do te doja
         te vizatoja secilen forme pas te fundit. Kete radhe secila ane eshte 20 pixel.
         Perdor nje pjese hedhjeje per t'u hedhur perpara 40 pixel pas seciles forme.
@@ -1473,11 +1466,11 @@
         te shkelqyer?
       Course 4 Artist For Loops 9_instruction: Arrin dot te besh nje spirale? Leviz
         perpara nga 1 ne 75 piksel, duke e rritur me 1 piksel secilen here.
-      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow
-        learned everything you need to know to make a pattern like this! If this\npicture
-        inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604
-        for the solution."
+      Course 4 Artist For Loops inspire_instruction: "Frymëzim i Lojës së Lirë: Tashmë
+        keni mësuar gjithçka ju nevojitet për të përgatitur një dizenjo të tillë!
+        Në rast se kjo pikturë ju frymëzon të  krijoni diçka të ngjashme. Në të kundërt,
+        krijoni diçka tuajën.\r\n\r\nDëshironi të dini si është krijuar modeli ynë
+        i frymëzimit? Vizitoni https://studio.code.org/c/106387604 për një zgjidhje."
       Course 4 Artist Functions 1_instruction: Mund te vizatosh nje rreth qe eshte
         100 piksel i gjate, duke perdorur nje litar?
       Course 4 Artist Functions 10_instruction: Cilen pjese duhet te shtosh qe trekendeshi
@@ -1645,25 +1638,21 @@
         Ketu nje bllok nese-tjeter kombinohet me nje bllok tjeter nese-tjeter per
         te krijuar nje bllok tjeter nese dhe tjeter. Jep zgjidhjen per te mbledhur
         sasine e panjohur te nektarit.
-      Course 4 Bee 5_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Add an if-else block to create an if, else-if, else block. Complete
-        the solution to collect the unknown amount of nectar.
-      Course 4 Bee 6_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Create an if, else-if, else block to collect the unknown amount of
-        nectar.
-      Course 4 Bee 7_instruction: |
-        Use everything you have learned so far to collect
-        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
+      Course 4 Bee 5_instruction: Kjo lule në fotografi mund të ketë 3,2 ose 1 nektar.
+        Shtoni një bllok nëse-ndryshe për të krijuar një bllok nëse, tjetër-nëse,
+        tjetër. Jepni një zgjidhje për të mbledhur shumën e panjohur të nektarit.
+      Course 4 Bee 6_instruction: Kjo lule manushaqe mund të ketë 3, 2 ose 1 nektarë.
+        Krijoni një bllok nëse, tjetër-nëse, tjetër për të mbledhur sasinë e panjohur
+        të nektarit.
+      Course 4 Bee 7_instruction: Përdorni gjithçka keni mësuar deri më tani për të
+        mbledhur të gjithë nektarin. Lule manushaqja mund të ketë 3, 2 ose 1 nektarë.
       Course 4 Bee For Loops 1_instruction: Perdor nje litar per te mbledhur nektarin
         nga secila lule.
       Course 4 Bee For Loops 10_instruction: Nese litari yt po dobesohet, rritja bie
         nga variabla jote e kundert per secilin litar. Sa duhet te jete rritja jote
         per te mbledhur 9, pastaj 6 dhe me pas 3 nektar?
-      Course 4 Bee For Loops 11_instruction: |
-        What's wrong with this loop? See if
-        you can fix it and make the bee collect all the nectar.
+      Course 4 Bee For Loops 11_instruction: Cfare ka që nuk shkon me litarin e humbur?
+        Shikoni nëse mund t'a rregulloni dhe të bëni bletën të mbledhi të gjithë nektarin.
       Course 4 Bee For Loops 2_instruction: Ja nje tjeter lloj litari, i quajtur "per"
         litar. Ky "per litar" i vecante do te numeroje nga 1 deri ne 5 me nga 1, dhe
         do hapi permbajtjen e litarit pas cdo numerimi.Ndihmoje bleten te marri nektarin.
@@ -1731,33 +1720,26 @@
         ne 0 dhe meson fermerin te lancoje nisjen nga e majta ne te djathte, nga fillimi
         ne mes, duke ndezur katroret ku numri ka nje zero. Provo kodin e dhene per
         te pare sesi fermeri perdor dypolesine per te vizatuar nje pamje.
-      Course 4 Binary 2_instruction: |
-        What binary string could you loop 8 times to
-        draw this image? Hint: the number "1" fills a hole.
-      Course 4 Binary 3_instruction: |
-        Can you draw this pattern by looping a single
-        binary string?
-      Course 4 Binary 5 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 5_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 6 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 6_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 7_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
+      Course 4 Binary 2_instruction: 'C''lloj fije dyjore do të lidhnit 8 herë për
+        të vizatuar këtë imazh? Ndihmë: Numri "1" mbush një gropë.'
+      Course 4 Binary 3_instruction: Mund t'a vizatoni këtë model duke lidhur vetëm
+        një fije dyjore?
+      Course 4 Binary 5 (copy 1)_instruction: Cila fije dyjore, e përsëritur 10 herë,
+        do të vizatojë këtë imazh?
+      Course 4 Binary 5_instruction: Cila fije dyjore, e përsëritur 10 herë, do të
+        vizatojë këtë imazh?
+      Course 4 Binary 6 (copy 1)_instruction: Cila fije dyjore, e përsëritur 10 herë,
+        do të vizatojë këtë imazh?
+      Course 4 Binary 6_instruction: Cila fije dyjore, e përsëritur 10 herë, do të
+        vizatojë këtë imazh?
+      Course 4 Binary 7_instruction: Cila fije dyjore, e përsëritur 10 herë, do të
+        vizatojë këtë imazh?
       Course 4 Binary 8_instruction: |
         You can complete the most of this image by
         looping a 5 bit binary number - then you'll need one more 4 bit number to
         get the bottom right-hand corner.
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
+      Course 4 Maze 2_instruction: Shmang TNT-në!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: Provo bllokun "përsërit" për të përdorur më pak
         blloqe...
@@ -1767,9 +1749,8 @@
       Course 4 Maze 6_instruction: |
         A mund ta zgjidhësh këtë puzzle duke përdorur numrin
         më të pakët të mundshëm të blloqeve?
-      Course 4 Play Lab For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Play Lab For Loops 2_instruction: Kësaj here, le të përpiqemi të numërojm
+        numrat tek nga 1 në 100.
       Course 4 Play Lab Params 1_instruction: |
         Here's a function called "jump"
         that causes your main character to jump up 100 pixels. Use the jump function
@@ -1875,9 +1856,8 @@
         Let's make the dog speak every
         number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
-      Course 4 Play Labs For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Play Labs For Loops 2_instruction: Kësaj here, le të përpiqemi të numërojm
+        numrat tek nga 1 në 100.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
@@ -3496,6 +3476,9 @@
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3510,6 +3493,11 @@
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

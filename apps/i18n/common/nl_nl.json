@@ -152,6 +152,7 @@
   "errorUnusedFunction": "Je maakte een functie  maar gebruikte deze nooit in je werkruimte! Klik op \"Functies\" in de gereedschapskist en zorg ervoor dat je ze gebruikt in je programma.",
   "errorUnusedParam": "Je voegde een parameter blok toe maar gebruikte deze niet in je functie. Zorg ervoor dat je je parameter gebruikt door op \"bewerk\" te klikken en de parameter blok binnen de groene blok te plaatsen.",
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
+  "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "extraTopBlocks": "Je hebt niet-gekoppelde blokken.",
   "extraTopBlocksWhenRun": "Je hebt niet-gekoppelde blokken. Was het de bedoeling om deze te koppelen aan het \"bij uitvoeren\"-blok?",
   "finalStage": "Gefeliciteerd! Je hebt de laatste fase voltooid.",
@@ -165,6 +166,7 @@
   "hintHeader": "Een tip:",
   "hintRequest": "Bekijk tip",
   "hintTitle": "Tip:",
+  "ignore": "Ignore",
   "infinity": "Oneindig",
   "jump": "spring",
   "keepPlaying": "Doorgaan met spelen",
@@ -198,6 +200,7 @@
   "showCodeHeader": "Code weergeven",
   "showGeneratedCode": "Code weergeven",
   "showTextHeader": "Bekijk tekst",
+  "showVersionsHeader": "Version History",
   "showToolbox": "Toon Toolbox",
   "signup": "Neem deel aan de introductie cursus",
   "stringEquals": "tekenreeks =?",
@@ -217,6 +220,5 @@
   "watchVideo": "Bekijk de video",
   "when": "wanneer",
   "whenRun": "als gestart",
-  "workspaceHeaderShort": "Werkplaats: ",
-  "showVersionsHeader": "Version History"
+  "workspaceHeaderShort": "Werkplaats: "
 }

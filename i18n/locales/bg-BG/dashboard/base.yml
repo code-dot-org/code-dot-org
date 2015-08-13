@@ -347,7 +347,7 @@ bg:
     local_school: местно училище
     online: онлайн
     see_details: Вижте детайли
-    view_course: View Course
+    view_course: Виж курса
     prize_info: 'Награди за участие (САЩ държавно училище само учители): до $1000 в класната стая награди.'
     tryfirst: 'Или можете да пробвате първо и по-късно да се регистрирате:'
     trynow: Опитайте сега
@@ -362,7 +362,7 @@ bg:
     heading_legacy: '<h2>Нашият общ курс за</h2><h1>всички възрасти</h1>'
     your_gallery: Галерия
     no_primary_course: Опитайте курс в студиото по кодиране
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Опитайте курс като си избирете един от тези по-долу
     print_certificate: Печат на сертификат
   gender:
     male: Мъж

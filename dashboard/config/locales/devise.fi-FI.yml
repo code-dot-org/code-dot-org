@@ -72,22 +72,22 @@
     invitations:
       send_instructions: Sähköpostikutsu on lähetetty osoitteeseen %{email}.
       invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
+      updated: Salasanasi määritys onnistui. Olet nyt kirjautunut sisään.
       no_invitations_remaining: Ei kutsuja jäljellä
       invitation_removed: Kutsusi poistettiin.
       new:
         header: Lähetä kutsu
         submit_button: Lähetä kutsu
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Aseta salasanasi
+        submit_button: Aseta salasanani
     mailer:
       invitation_instructions:
         subject: Ohjeet kutsumiseen
-        hello: Hello %{email}
+        hello: Hei %{email}
         someone_invited_you: Joku on kutsunut sinut %{url}. Voit hyväksyä kutsun oheisesta
           linkistä klikkaamalla.
         accept: Hyväksy kutsu
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        ignore: Jos et halua vastaanottaa kutsua, jätä email huomiotta.<br />Sinun
+          tilisi luodaan vasta, kun olet klikannut yllä olevaa linkkiä ja määrittänyt
+          salasanan.

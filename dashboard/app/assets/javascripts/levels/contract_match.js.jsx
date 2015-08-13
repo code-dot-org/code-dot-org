@@ -165,15 +165,13 @@ $(window).load(function () {
           <div>
             <input id='functionNameText' onChange={this.onNameChangeEvent} placeholder='Name' type='text' value={this.state.name}/>
           </div>
-          <div id='sectionTitle'>Domain</div>
-          <div className='section-type-hint'>(the domain is the type of input)</div>
+          <div id='sectionTitle'>Domain <span className='section-type-hint'>(the domain is the type of input)</span></div>
           <DomainsList
             domainTypes={this.state.domainTypes}
             onDomainChange={this.onDomainChange}
             onDomainAdd={this.onDomainAdd}
             onDomainRemove={this.onDomainRemove}/>
-          <div id='sectionTitle' className="clear">Range</div>
-          <div className='section-type-hint'>(the range is the type of output)</div>
+          <div id='sectionTitle' className="clear">Range <span className='section-type-hint'>(the range is the type of output)</span></div>
           <TypeChooser type={this.state.rangeType} onTypeChange={this.onRangeChange}/>
         </div>
       )
@@ -194,14 +192,14 @@ $(window).load(function () {
               type={object.type}
               key={object.key}
               onTypeChange={curry(self.props.onDomainChange, object.key)}/>
-            <button className="domain-x-button" onClick={curry(self.props.onDomainRemove, object.key)}>x</button>
+            <button className="btn domain-x-button" onClick={curry(self.props.onDomainRemove, object.key)}>Remove</button>
           </div>
         );
       });
       return (
         <div className="domainsList">
           {typeChoiceNodes}
-          <button className="domain-add-button" onClick={this.props.onDomainAdd}>Add</button>
+          <button className="btn domain-add-button" onClick={this.props.onDomainAdd}>Add Domain</button>
         </div>
       )
     }

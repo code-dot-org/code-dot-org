@@ -908,7 +908,7 @@ input[type="radio"] {
   margin-left: 0px;
   margin-right: 10px; }
 
-#continue-button:not(.arrow-container) {
+#continue-button:not(.arrow-container), #confirm-button:not(.arrow-container) {
   background-color: #ffa400;
   border: 1px solid #ffa400;
   color: white;
