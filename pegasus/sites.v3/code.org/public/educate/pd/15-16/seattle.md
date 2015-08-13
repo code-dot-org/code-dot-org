@@ -14,7 +14,7 @@ nav: pd2_nav
 <a id="csp"></a>
 ## Computer Science Principles
 
-Seattle teachers enrolled in the Computer Science Principles program will attend PD in Spokane, WA. Please visit the [Spokane location page](/educate/pd/15-16/spokane) for all  workshop details. 
+Seattle teachers enrolled in the Computer Science Principles program will attend PD in Spokane, WA. Please visit the [Spokane CSP](/educate/pd/15-16/spokane) page for all  workshop details. 
 
 [**Back to the top**](#top)
 
@@ -24,47 +24,26 @@ Seattle teachers enrolled in the Computer Science Principles program will attend
 
 ### Phase 1: Online Introduction (~2 hours) ###
 
-The first phase of professional development is a two-hour introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and online PD platform.
-</br>
+Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-**Save the dates**
+**In-person**
 
-Monday, August 10, 2015 - Friday, August 14, 2015
-<br/>
-Mon-Thurs: 8:30am - 3:30pm
-<br />
-Friday: 8:30am - 1:30pm
-<br/>
-Breakfast and lunch will be served. 
+Milestone Complete!
 
-**Location**
+**Online Study**
 
-Amazon's Mayday Building 
-<br />
-Suite 700
-<br />
-1220 Howell St.
-<br />
-Seattle, WA 98101
+<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 
-The Mayday parking garage entrance is located near the 24 Hour Fitness on Stewart St. The entrance is West of Yale Ave on your left-hand side. Visitors may park on levels P1 through P6. Go to Amazon reception on level 7 to check in and validate parking. 
 
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop optional, not required
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
+**Save the dates**
 
 Quarter 1: Saturday, September 26, 2015
 
@@ -95,7 +74,8 @@ Free parking is available. If you need hotel accommodations, Talaris is offering
 
 Laptop
 <br/>
-ECS green journal and curriculum guide
+ECS green journal
+<br/>Curriculum guide
 <br/>
 Snacks
 <br/>
@@ -118,61 +98,34 @@ More info coming soon!
 Milestone Complete! 
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
+**In-person**
 
-**Save the dates**
+Milestone Complete!
 
-Monday, August 3, 2015 - Wednesday, August 5, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served. 
+**Online Study**
 
-**Location**
-
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Lodge Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
-
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org CS in Algebra event.
-
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop
-
-</br>
+<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
-**Save the dates:**
+**Save the dates**
 
 Semester 1: Saturday, November 7, 2015 
 
 Semester 2: Saturday, April 30, 2016 
 
 8:00am - 4:00pm
-</br>
-<br/>
 Breakfast and lunch will be served. 
-
+<br/><br/>
 **Location**
 
 TBD
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 Curriculum guide
 <br/>
@@ -193,39 +146,17 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-**Save the dates**
+**In-person**
 
-Monday, August 3, 2015 - Wednesday, August 5, 2015
-<br/>
-8:00am - 4:00pm
-<br />
-Breakfast and lunch will be served. 
+Milestone Complete!
 
-**Location**
+**Online Study**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Willow Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
+<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000and let them know you are attending the Code.org CS in Science event.
-
-**What do I bring to Phase 2?**
-
-Water Bottle
-<br />
-Snacks
-<br />
-Laptop
-
-</br>
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
 
 
 **Save the dates:**
@@ -235,10 +166,9 @@ Semester 1: Saturday, September 26, 2015
 Semester 2: Saturday, February 20, 2016 
 
 8:00am - 4:00pm
-</br>
-<br/>
-Breakfast and lunch will be served. 
 
+Breakfast and lunch will be served. 
+<br/><br/>
 **Sept 26th Location**
 
 [Talaris Conference Center](http://www.talarisconferencecenter.com/)
@@ -254,7 +184,7 @@ Free parking is available. If you need hotel accommodations, Talaris is offering
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 Curriculum guide
 <br/>
