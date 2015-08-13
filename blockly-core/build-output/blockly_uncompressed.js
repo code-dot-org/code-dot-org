@@ -20828,13 +20828,13 @@ Blockly.ContractDefinitionSection = function(canvasToDrawOn) {
   this.definitionTableGroup = Blockly.createSvgElement("g", {}, canvasToDrawOn);
   this.grayDefinitionBackground = Blockly.createSvgElement("rect", {"fill":"#DDD"}, this.definitionTableGroup);
   Blockly.svgIgnoreMouseEvents(this.grayDefinitionBackground);
-  this.verticalDefinitionMidline = Blockly.createSvgElement("rect", {"fill":"#000"}, this.definitionTableGroup);
+  this.verticalDefinitionMidline = Blockly.createSvgElement("rect", {"fill":Blockly.ContractEditor.GRID_LINE_COLOR}, this.definitionTableGroup);
   this.verticalDefinitionMidline.setAttribute("width", 2);
   Blockly.svgIgnoreMouseEvents(this.verticalDefinitionMidline);
-  this.horizontalDefinitionTopLine = Blockly.createSvgElement("rect", {"fill":"#000"}, this.definitionTableGroup);
+  this.horizontalDefinitionTopLine = Blockly.createSvgElement("rect", {"fill":Blockly.ContractEditor.GRID_LINE_COLOR}, this.definitionTableGroup);
   this.horizontalDefinitionTopLine.setAttribute("height", 2);
   Blockly.svgIgnoreMouseEvents(this.horizontalDefinitionTopLine);
-  this.horizontalDefinitionBottomLine = Blockly.createSvgElement("rect", {"fill":"#000"}, this.definitionTableGroup);
+  this.horizontalDefinitionBottomLine = Blockly.createSvgElement("rect", {"fill":Blockly.ContractEditor.GRID_LINE_COLOR}, this.definitionTableGroup);
   this.horizontalDefinitionBottomLine.setAttribute("height", 2);
   Blockly.svgIgnoreMouseEvents(this.horizontalDefinitionBottomLine)
 };
@@ -20981,7 +20981,7 @@ Blockly.ExampleView = function(dom, svg, contractEditor) {
   this.svgParent_ = svg;
   this.contractEditor_ = contractEditor;
   this.block_ = null;
-  this.horizontalLine = Blockly.createSvgElement("rect", {"fill":"#000", "height":2}, this.svgParent_);
+  this.horizontalLine = Blockly.createSvgElement("rect", {"fill":Blockly.ContractEditor.GRID_LINE_COLOR, "height":2}, this.svgParent_);
   Blockly.svgIgnoreMouseEvents(this.horizontalLine);
   this.grayBackdrop = Blockly.createSvgElement("rect", {"fill":"#DDD"}, this.svgParent_, {"belowExisting":true});
   this.grayBackdrop.style.pointerEvents = "none";
@@ -22909,6 +22909,7 @@ Blockly.ContractEditor.EXAMPLE_BLOCK_TYPE = "functional_example";
 Blockly.ContractEditor.EXAMPLE_BLOCK_ACTUAL_INPUT_NAME = "ACTUAL";
 Blockly.ContractEditor.DEFAULT_OUTPUT_TYPE = Blockly.BlockValueType.NUMBER;
 Blockly.ContractEditor.DEFAULT_PARAMETER_TYPE = Blockly.BlockValueType.NUMBER;
+Blockly.ContractEditor.GRID_LINE_COLOR = "#5b6770";
 Blockly.ContractEditor.prototype.definitionBlockType = "functional_definition";
 Blockly.ContractEditor.prototype.parameterBlockType = "functional_parameters_get";
 Blockly.ContractEditor.prototype.create_ = function() {
@@ -22939,10 +22940,10 @@ Blockly.ContractEditor.prototype.create_ = function() {
   goog.dom.appendChild(this.exampleAreaDiv, this.resultText);
   Blockly.svgIgnoreMouseEvents(this.resultText);
   this.examplesTableGroup = Blockly.createSvgElement("g", {}, canvasToDrawOn);
-  this.topHorizontalLine = Blockly.createSvgElement("rect", {"fill":"#000"}, this.examplesTableGroup);
+  this.topHorizontalLine = Blockly.createSvgElement("rect", {"fill":Blockly.ContractEditor.GRID_LINE_COLOR}, this.examplesTableGroup);
   this.topHorizontalLine.setAttribute("height", 2);
   Blockly.svgIgnoreMouseEvents(this.topHorizontalLine);
-  this.verticalExampleMidline = Blockly.createSvgElement("rect", {"fill":"#000"}, this.examplesTableGroup);
+  this.verticalExampleMidline = Blockly.createSvgElement("rect", {"fill":Blockly.ContractEditor.GRID_LINE_COLOR}, this.examplesTableGroup);
   this.verticalExampleMidline.setAttribute("width", 2);
   this.examplesSectionView_ = new Blockly.ContractEditorSectionView(canvasToDrawOn, {sectionNumber:2, headerHeight:HEADER_HEIGHT, headerText:"Examples", placeContentCallback:this.onPlaceExampleContent.bind(this), highlightBox:sharedHighlightBox, onCollapseCallback:goog.bind(function(isNowCollapsed) {
     this.exampleAreaDiv.style.display = isNowCollapsed ? "none" : "block";
