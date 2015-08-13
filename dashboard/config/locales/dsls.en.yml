@@ -48,27 +48,21 @@ en:
         Write a contract for the text function: Write a contract for the text function
         text|Image|String|Number|String: text|Image|String|Number|String
       Eval Contracts 4 B:
-        Eval Contracts 4 A.solution_blocks, 300: Eval Contracts 4 A.solution_blocks, 300
-        Eval Contracts 4.solution_blocks, 300: Eval Contracts 4.solution_blocks, 300
         Eval Contracts 4.solution_blocks, 350: Eval Contracts 4.solution_blocks, 350
         Scale Contract: Scale Contract
         Write a contract for the scale function: Write a contract for the scale function
         scale|Image|Number|Image: scale|Image|Number|Image
       Eval Contracts B:
-        Eval Contracts 1 A.solution_blocks, 300: Eval Contracts 1 A.solution_blocks, 300
         Eval Contracts A.solution_blocks, 300: Eval Contracts A.solution_blocks, 300
         Star Contract: Star Contract
         Write a contract for the star function: Write a contract for the star function
         star|Image|Number|String|String: star|Image|Number|String|String
       Eval Contracts D:
-        Eval Contracts 2 A.solution_blocks, 300: Eval Contracts 2 A.solution_blocks, 300
-        Eval Contracts C.solution_blocks, 300: Eval Contracts C.solution_blocks, 300
         Eval Contracts C.solution_blocks, 350: Eval Contracts C.solution_blocks, 350
         Rotate Contract: Rotate Contract
         Write a contract for the rotate function: Write a contract for the rotate function
         rotate|Image|Number|Image: rotate|Image|Number|Image
       Eval Contracts F:
-        Eval Contracts 3 A.solution_blocks, 300: Eval Contracts 3 A.solution_blocks, 300
         Eval Contracts E.solution_blocks, 300: Eval Contracts E.solution_blocks, 300
         Text Contract: Text Contract
         Write a contract for the text function: Write a contract for the text function
