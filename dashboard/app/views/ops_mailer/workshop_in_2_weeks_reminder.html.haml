@@ -9,21 +9,24 @@
 %p
   Dear #{@recipient_ops_data['ops_first_name']},
 %p
-  Your #{@workshop[:phase][:short_name]} workshop on #{@workshop[:start]} is coming up. <if ECS4Phase2wk/3day + CSP4Phase2wk/3day> Make sure you have completed Phase 3 online.
+  Your #{@workshop[:phase][:long_name]} workshop on #{@workshop[:start].strftime("%A, %B %d, %Y")} is coming up.
+  - if @workshop[:phase][:id] == 8 && (@workshop[:program_type] == 4 || @workshop[:program_type] == 3)
+    Make sure you have completed Phase 3 online.
 %p
   Please email
   %a{href:'mailto:pd@code.org'}
     pd@code.org
   if you have any conflicts with these dates.
-%h2
-  Complete #{@workshop[:phase][:long_name]}
-%p
-  You must complete <Phase n> prior to attending the <Phase n-1> in-person workshop. Here are some tips to successfully complete your online PD.
-%ul
-  %li
-    Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
-  %li
-    Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
+- if @workshop[:phase][:id] == 2
+  %h2
+    Complete #{@workshop[:phase][:long_name]}
+  %p
+    You must complete #{@workshop[:prerequisite_phase][:long_name]} prior to attending the #{@workshop[:phase][:long_name]} in-person workshop. Here are some tips to successfully complete your online PD.
+  %ul
+    %li
+      Check your progress in Code Studio by clicking the orange button in the top-right corner and selecting Code Studio from the drop down. Then select the PD course you are enrolled in.
+    %li
+      Payment: To be paid, you must complete all the circles in your Code Studio progress bar for the phase and program. Completion is indicated by a green circle (see example below). You will be paid once ALL portions of this PD segment are completed.
 %p
   %em
     Here’s what a successful online PD looks like. All the progress circles are green.
