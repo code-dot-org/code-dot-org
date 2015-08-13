@@ -2363,7 +2363,6 @@ Studio.displaySprite = function(i, isWalking) {
     spriteIcon = spriteWalkIcon;
     spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
     unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
-
   } else {
     // Show regular sprite, and hide walk sprite.
     spriteRegularIcon.setAttribute('visibility', 'visible');
@@ -2377,8 +2376,16 @@ Studio.displaySprite = function(i, isWalking) {
     unusedSpriteClipRect = document.getElementById('spriteWalkClipRect' + i);
   }
 
-  var xCoordPrev = spriteClipRect.getAttribute('x');
-  var yCoordPrev = spriteClipRect.getAttribute('y');
+  var extraOffsetX = 0;
+  var extraOffsetY = 0;
+
+  if (level.gridAlignedMovement) {
+    extraOffsetX = skin.gridSpriteRenderOffsetX || 0;
+    extraOffsetY = skin.gridSpriteRenderOffsetY || 0;
+  }
+
+  var xCoordPrev = spriteClipRect.getAttribute('x') - extraOffsetX;
+  var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
 
   var dirPrev = sprite.dir;
   if (dirPrev === Direction.NONE) {
@@ -2407,9 +2414,6 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
-  var extraOffsetX = 0;
-  var extraOffsetY = 0;
-
   if (level.gridAlignedMovement) {
     if (sprite.x > sprite.displayX) {
       sprite.displayX += Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
@@ -2422,8 +2426,6 @@ Studio.displaySprite = function(i, isWalking) {
       sprite.displayY -= Studio.SQUARE_SIZE / level.slowJsExecutionFactor;
     }
 
-    var extraOffsetX = skin.gridSpriteRenderOffsetX || 0;
-    var extraOffsetY = skin.gridSpriteRenderOffsetX || 0;
   } else {
     sprite.displayX = sprite.x;
     sprite.displayY = sprite.y;
