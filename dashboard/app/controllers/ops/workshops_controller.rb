@@ -1,6 +1,6 @@
 module Ops
   class WorkshopsController < OpsControllerBase
-    before_filter :convert_facilitators, :convert_cohorts, :convert_unexpected_teachers, only: [:create, :update]
+    before_filter :convert_cohorts, only: [:create, :update]
     after_filter :notify_ops, only: [:update]
 
     load_and_authorize_resource
@@ -15,7 +15,9 @@ module Ops
 
     # POST /ops/workshops
     def create
-      @workshop.update!(params[:workshop])
+      add_facilitators
+
+      @workshop.update!(workshop_params)
       respond_with :ops, @workshop
     end
 
@@ -45,11 +47,11 @@ module Ops
 
     # PATCH/PUT /ops/workshops/1
     def update
-      unexpected_teachers = params[:workshop][:unexpected_teachers]
-      if unexpected_teachers
-        @added_unexpected_teachers = unexpected_teachers - @workshop.unexpected_teachers
-      end
-      @workshop.update!(params[:workshop])
+      add_facilitators
+
+      add_unexpected_teachers
+
+      @workshop.update!(workshop_params)
       respond_with @workshop
     end
 
@@ -60,16 +62,15 @@ module Ops
     end
 
     private
-    # Required for CanCanCan to work with strong parameters
-    # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
+
     def workshop_params
-      #This is necessary because rails turns empty arrays into nil
+      # This is necessary because rails turns empty arrays into nil
       if params[:workshop]
         params[:workshop][:facilitators] ||= [] if params[:workshop].has_key?(:facilitators)
         params[:workshop][:unexpected_teachers] ||= [] if params[:workshop].has_key?(:unexpected_teachers)
       end
 
-      params.require(:workshop).permit(
+      params.fetch(:workshop, {}).permit(
         :name,
         :program_type,
         :location,
@@ -77,39 +78,46 @@ module Ops
         :link,
         :phase,
         cohorts: [:id, :_destroy],
-        facilitators: [:ops_first_name, :ops_last_name, :email],
-        unexpected_teachers: [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
+        unexpected_teachers: [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender],
+        workshop_cohorts_attributes: [:id, :cohort_id, :_destroy]
       )
     end
 
-    def convert_facilitators
-      return unless params[:workshop] && params[:workshop][:facilitators]
-      facilitator_param_list = params[:workshop].delete :facilitators
+    def add_facilitators
+      facilitator_param_list = params[:workshop].try(:delete, :facilitators)
       return unless facilitator_param_list
 
-      params[:workshop][:facilitators] = facilitator_param_list.map do |facilitator_params|
+      @workshop.facilitators = facilitator_param_list.map do |facilitator_params|
         next if facilitator_params[:email].blank?
 
-        User.find_or_create_facilitator(facilitator_params, current_user)
+        User.find_or_create_facilitator(facilitator_params.permit(:ops_first_name, :ops_last_name, :email), current_user)
       end
     end
 
-    def convert_unexpected_teachers
-      return unless params[:workshop] && params[:workshop][:unexpected_teachers]
-      unexpected_teacher_param_list = params[:workshop].delete :unexpected_teachers
+    def add_unexpected_teachers
+      unexpected_teacher_param_list = params[:workshop].try(:delete, :unexpected_teachers)
       return unless unexpected_teacher_param_list
 
-      params[:workshop][:unexpected_teachers] = unexpected_teacher_param_list.map do |unexpected_teacher_params|
+      unexpected_teachers = unexpected_teacher_param_list.map do |unexpected_teacher_params|
         next if unexpected_teacher_params[:email].blank?
 
+        # find district
         district_params = unexpected_teacher_params.delete :district
         if district_params.is_a?(String)
           unexpected_teacher_params[:district_id] = District.find_by!(name: district_params).id
         elsif district_params.is_a?(Hash) && district_params[:id]
-          teacher_params[:district_id] = district_params[:id]
+          unexpected_teacher_params[:district_id] = district_params[:id]
         end
-        User.find_or_create_teacher(unexpected_teacher_params, current_user)
+
+        # find teacher
+        User.find_or_create_teacher(unexpected_teacher_params.permit(:ops_first_name, :ops_last_name, :email, :district_id, :ops_school, :ops_gender), current_user)
       end
+
+      if unexpected_teachers
+        @added_unexpected_teachers = unexpected_teachers - @workshop.unexpected_teachers
+      end
+
+      @workshop.unexpected_teachers = unexpected_teachers
     end
 
     def convert_cohorts
