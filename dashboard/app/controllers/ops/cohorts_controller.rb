@@ -2,7 +2,7 @@ module Ops
   class CohortsController < OpsControllerBase
     after_filter :notify_district_contact, only: [:update, :destroy_teacher]
 
-    load_and_authorize_resource except: [:index]
+    load_and_authorize_resource except: [:index, :create]
 
     # DELETE /ops/cohorts/1/teachers/:teacher_id
     def destroy_teacher
@@ -15,6 +15,11 @@ module Ops
 
     # POST /ops/cohorts
     def create
+      @cohort = Cohort.new
+      authorize! :create, @cohort
+
+      update_teachers
+
       @cohort.update!(cohort_params)
       respond_with :ops, @cohort
     end
@@ -50,24 +55,7 @@ module Ops
 
     # PATCH/PUT /ops/cohorts/1
     def update
-      teachers = cohort_params.delete(:teachers)
-      if teachers
-        @added_teachers = teachers - @cohort.teachers
-
-        if current_user.admin?
-          # replace
-          @cohort.teachers = teachers
-        elsif current_user.district_as_contact
-          # replace only those in the district
-          teachers_in_district = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
-          @cohort.teachers = @cohort.teachers - teachers_in_district + teachers
-
-          # cannoy modify districts
-        else
-          # weird.
-          # don't do anything
-        end
-      end
+      update_teachers
 
       @cohort.update!(cohort_params)
       respond_with @cohort
@@ -83,38 +71,32 @@ module Ops
     # Required for CanCanCan to work with strong parameters
     # (see: http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
     def cohort_params
-      return @cohort_params if @cohort_params
+      convert_districts_to_cohorts_districts_attributes
+      timestamp_cutoff_date
+
       if current_user.try(:admin?)
-        @cohort_params = params.require(:cohort).permit(
-            :name,
-            :program_type,
-            :script_id,
-            :cutoff_date,
-            :district_ids => [],
-            :district_names => [],
-            :districts => [:id, :max_teachers, :_destroy],
-            :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender],
-            :cohorts_districts_attributes => [:cohort_id, :district_id, :max_teachers, :_destroy]
+        params.require(:cohort).permit(
+          :name,
+          :program_type,
+          :script_id,
+          :cutoff_date,
+          :district_ids => [],
+          :district_names => [],
+          :teachers => Ops::TEACHER_PERMITTED_ATTRIBUTES,
+          :cohorts_districts_attributes => [:cohort_id, :district_id, :max_teachers, :_destroy, :id]
         )
       elsif current_user.try(:district_contact?)
         # district contacts can only edit teachers
-        @cohort_params = params.require(:cohort).permit(
-            :teachers => [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender]
-        )
+        params.fetch(:cohort, []).permit(teachers: Ops::TEACHER_PERMITTED_ATTRIBUTES)
       end
-      # Do some extra params filtering
-      convert_districts_to_cohorts_districts_attributes @cohort_params
-      convert_teachers @cohort_params
-      timestamp_cutoff_date @cohort_params
-      @cohort_params
     end
 
     # Support district_names in the API
-    def convert_districts_to_cohorts_districts_attributes(cp)
-      return unless cp
-      district_params_list = cp.delete :districts
+    def convert_districts_to_cohorts_districts_attributes
+      district_params_list = params[:cohort].try(:delete, :districts)
       return unless district_params_list
-      cp[:cohorts_districts_attributes] = district_params_list.map do |district_params|
+
+      params[:cohort][:cohorts_districts_attributes] = district_params_list.map do |district_params|
         {district_id: district_params[:id],
          max_teachers: district_params[:max_teachers],
          _destroy: district_params[:_destroy]}.tap do |cohorts_districts_attrs|
@@ -125,11 +107,11 @@ module Ops
       end
     end
 
-    def convert_teachers(cp)
-      return unless cp
-      teacher_param_list = cp.delete :teachers
-      return unless teacher_param_list
-      cp[:teachers] = teacher_param_list.map do |teacher_params|
+    def update_teachers
+      teacher_params_list = params[:cohort].try(:delete, :teachers)
+      return unless teacher_params_list
+
+      teachers = teacher_params_list.map do |teacher_params|
         next if teacher_params[:email].blank?
 
         district_params = teacher_params.delete :district
@@ -138,15 +120,33 @@ module Ops
         elsif district_params.is_a?(Hash) && district_params[:id]
           teacher_params[:district_id] = district_params[:id]
         end
-        User.find_or_create_teacher(teacher_params, current_user)
+        User.find_or_create_teacher(teacher_params.permit(Ops::TEACHER_PERMITTED_ATTRIBUTES), current_user)
+      end
+
+      if teachers
+        @added_teachers = teachers - @cohort.teachers
+
+        if current_user.admin?
+          # replace all teachers
+          @cohort.teachers = teachers
+        elsif current_user.district_as_contact
+          # replace only those in the district
+          teachers_in_district = @cohort.teachers.select {|teacher| teacher.district_id == current_user.district_as_contact.id}
+          @cohort.teachers = @cohort.teachers - teachers_in_district + teachers
+
+          # cannoy modify districts
+        else
+          # weird.
+          # don't do anything
+        end
       end
     end
 
-    def timestamp_cutoff_date(cp)
-      return unless cp
-      cutoff_date = cp.delete :cutoff_date
+    def timestamp_cutoff_date
+      cutoff_date = params[:cohort].try(:delete, :cutoff_date)
       return unless cutoff_date.present?
-      cp[:cutoff_date] = Chronic.parse(cutoff_date).strftime('%Y-%m-%d 00:00:00')
+
+      params[:cohort][:cutoff_date] = Chronic.parse(cutoff_date).strftime('%Y-%m-%d 00:00:00')
     end
 
     def notify_district_contact

@@ -78,7 +78,7 @@ module Ops
         :link,
         :phase,
         cohorts: [:id, :_destroy],
-        unexpected_teachers: [:ops_first_name, :ops_last_name, :email, :district, :district_id, :ops_school, :ops_gender],
+        unexpected_teachers: [Ops::TEACHER_PERMITTED_ATTRIBUTES],
         workshop_cohorts_attributes: [:id, :cohort_id, :_destroy]
       )
     end
@@ -90,7 +90,7 @@ module Ops
       @workshop.facilitators = facilitator_param_list.map do |facilitator_params|
         next if facilitator_params[:email].blank?
 
-        User.find_or_create_facilitator(facilitator_params.permit(:ops_first_name, :ops_last_name, :email), current_user)
+        User.find_or_create_facilitator(facilitator_params.permit(Ops::TEACHER_PERMITTED_ATTRIBUTES), current_user)
       end
     end
 
@@ -110,7 +110,7 @@ module Ops
         end
 
         # find teacher
-        User.find_or_create_teacher(unexpected_teacher_params.permit(:ops_first_name, :ops_last_name, :email, :district_id, :ops_school, :ops_gender), current_user)
+        User.find_or_create_teacher(unexpected_teacher_params.permit(Ops::TEACHER_PERMITTED_ATTRIBUTES), current_user)
       end
 
       if unexpected_teachers
@@ -121,8 +121,7 @@ module Ops
     end
 
     def convert_cohorts
-      return unless params[:workshop]
-      cohort_params_list = params[:workshop].delete :cohorts
+      cohort_params_list = params[:workshop].try(:delete, :cohorts)
       return unless cohort_params_list
 
       params[:workshop][:workshop_cohorts_attributes] = cohort_params_list.map do |cohort_params|
