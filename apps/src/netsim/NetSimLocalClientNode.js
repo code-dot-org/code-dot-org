@@ -201,7 +201,6 @@ NetSimLocalClientNode.prototype.tick = function (clock) {
  * Give this node an action to take if it detects that it is no longer part
  * of the shard.
  * @param {function} onNodeLostConnection
- * @throws if set would clobber a previously-set callback.
  */
 NetSimLocalClientNode.prototype.setLostConnectionCallback = function (
     onNodeLostConnection) {
