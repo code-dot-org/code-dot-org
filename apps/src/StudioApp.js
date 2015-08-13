@@ -436,7 +436,7 @@ StudioApp.prototype.init = function(config) {
     }).bind(this));
   }
 
-  if (Blockly.contractEditor) {
+  if (this.isUsingBlockly() && Blockly.contractEditor) {
     Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
       this.feedback_.showSimpleDialog(this.Dialog, {
         headerText: undefined,
