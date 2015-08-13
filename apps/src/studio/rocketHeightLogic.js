@@ -31,6 +31,7 @@ RocketHeightLogic.prototype.onTick = function () {
     this.seconds = 0;
     this.rocket = this.studio_.sprite[this.rocketIndex];
     this.height = 0;
+    this.studio_.setBackground({value: 'space'});
   }
 
   // Update the rocket once a second

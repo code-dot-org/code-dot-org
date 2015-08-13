@@ -8,15 +8,15 @@
   </div>
 <% } -%>
 
-<% if (data.cancel) { -%>
+<% if (data.cancelText) { -%>
 <button id="again-button">
-    <%= msg.dialogCancel() %>
+    <%= data.cancelText %>
 </button>
 <% } -%>
 
-<% if (data.clearPuzzle) { -%>
-<button id="continue-button" class="launch" style="float: right">
-    <%= msg.clearPuzzle() %>
+<% if (data.confirmText) { -%>
+<button id="confirm-button" class="launch" style="float: right">
+    <%= data.confirmText %>
 </button>
 <% } -%>
 

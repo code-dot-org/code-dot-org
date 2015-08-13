@@ -458,9 +458,6 @@
         und dann festgestellt, dass es einen schnelleren Weg geben muss. Nutze den
         "Für"-Baustein, um die bereits vorhandenen Bausteine auszutauschen und zeichne
         die Sechsecksspirale zu Ende. (Hinweis: Die letzte Linie ist 200 Pixel lang.'
-      4-5 Artist For Loops 2_instruction: Das ist ein "Für"-Baustein. Anstatt 1,2,3...
-        10 zu schreiben, kann der "Für"-Baustein in sich Bausteine wiederholen und
-        für dich mitzählen. Schreibe die Zahl 10 in den "Bis"-Bereich des "Für"-Bausteins.
       4-5 Artist For Loops 3_instruction: Wie können wir von 1 bis 50 zählen? Ändere
         den "Für"-Baustein.
       4-5 Artist For Loops 4_instruction: Vervollständige den "for"- Baustein, so
@@ -3443,6 +3440,9 @@
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3457,6 +3457,11 @@
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

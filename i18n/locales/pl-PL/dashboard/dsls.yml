@@ -293,7 +293,7 @@ pl:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Zacznij od kwadratu<br/>Umieść równoległobok nad kwadratem<br/>Umieść trójkąt na prawo od równoległoboku'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Rozpocznij od kwadratu <br/> umieść trójkąt powyżej kwadratu <br/> umieścić trójkąt poniżej kwadratu'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Zacznij od kwadratu<br/>Umieść trójkąt pod kwadratem<br/>Umieść równoległobok na prawo od trójkąta'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Rozpocznij z kwadratu<br/>Umieść trójkąt na prawo od kwadratu<br/>Umieść równoległobok poniżej kwadratu<br/> Umieść trójkąt na prawo od równoległoboku'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -481,7 +481,7 @@ pl:
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Przeskocz do mojej Lou, moja kochana.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Test wyboru
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Co jest największym fragmentem tej piosenki, który możesz zdefiniować jako chór tak, że chór powtarza go za każdym razem, gdy jest wywoływany?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
@@ -614,7 +614,7 @@ pl:
         /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
         /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png, 500
         Multiple Choice: Test wyboru
-        Which shape do these squares combine to make?: Which shape do these squares combine to make?
+        Which shape do these squares combine to make?: Jaki kształt utworzą te kwadraty?
       K-1 Artist Loops Multi 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
@@ -645,7 +645,7 @@ pl:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: Test wyboru
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?'
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Które ze zwierząt ma cyfrowy ślad, który powoduje, że jest ono <strong>najbardziej zagrożone</strong>?'
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png

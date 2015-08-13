@@ -11,8 +11,8 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: 一致する組み合わせをえらびましょう。
-        Matching: 合致
+        Match the button combination to the dance moves.: 一致するボタンの組み合わせをえらびましょう。
+        Matching: 一致
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
@@ -25,7 +25,7 @@
         <strong>P</strong>: <strong>P</strong>
         <strong>Q</strong>: <strong>Q</strong>
         Matching: 合致
-        Use the key to match each code to its letter: 一致する組み合わせをえらびましょう。
+        Use the key to match each code to its letter: キーを使って一致する文字の組み合わせをえらびましょう。
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -33,7 +33,7 @@
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: 一致する組み合わせをえらびましょう。
+        Match the grid to the program.: 一致するマス目のプログラムの組み合わせをえらびましょう。
         Matching: 合致
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -45,8 +45,8 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: 一致するようにブロックをドラッグしましょう。
         Instructions: 'やり方:'
-        Match the puzzles to the blocks: 一致する組み合わせをえらびましょう。
-        Maze Match: Maze Match
+        Match the puzzles to the blocks: 一致するパズルのブロックの組み合わせをえらびましょう。
+        Maze Match: 迷路パズル
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
@@ -109,7 +109,7 @@
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: 一致する組み合わせをえらびましょう。
+        Match the puzzles to the blocks: 一致するパズルのブロックの組み合わせをえらびましょう。
         Maze Match One: Maze Match One
       4-5 Algorithms Match 1:
         <h4>1)</h4>: <h4>1)</h4>
@@ -155,8 +155,8 @@
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: 一致するようにブロックをドラッグする。
         Instructions: 'やり方:'
-        Match the puzzles to the blocks: 一致する組み合わせをえらびましょう。
-        Maze Match: Maze Match
+        Match the puzzles to the blocks: 一致するパズルのブロックの組み合わせをえらびましょう。
+        Maze Match: 迷路パズル
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
@@ -164,8 +164,7 @@
         <br/><br/>above: <br/><br/>上記
         <br/><br/>below: <br/> <br/> 以下
         <br/><br/>next to: <br/> <br/> 次へ
-        Is the square next to, above, or below the ball?: Is the square next to, above,
-          or below the ball?
+        Is the square next to, above, or below the ball?: 正方形は、ボールの横、上、下のどこにありますか？
         Matching: 合致
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -217,7 +216,7 @@
         /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        Match the button combination to the dance moves.: 一致する組み合わせをえらびましょう。
+        Match the button combination to the dance moves.: 一致するボタンの組み合わせをえらびましょう。
         Matching: 合致
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
@@ -448,15 +447,15 @@
         Which set of blocks is the correct answer?: Which set of blocks is the correct
           answer?
       4-5 Algorithms Multi 1:
-        Baking cookies: Baking cookies
-        Banana: Banana
-        Brushing your teeth: Brushing your teeth
+        Baking cookies: クッキーを焼く
+        Banana: バナナ
+        Brushing your teeth: 歯を磨く
         Multiple Choice: 複数の選択肢
         Shopping from a grocery list: Shopping from a grocery list
         Which one of these items is hardest to describe an algorithm for?: Which one
           of these items is hardest to describe an algorithm for?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene is a _____ city.
+        Eugene is a _____ city.: Eugene は _____ 都市です。
         0: '? Here are three sentences. Which of the templates below correctly abstracts
           so that all three match the same pattern as the template?'
         1: ': Here are three sentences. Which of the templates below correctly abstracts
@@ -466,7 +465,7 @@
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
           is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
         _____ is _____ a _____.: _____ is _____ a _____.
-        _____ is a _____ city.: _____ is a _____ city.
+        _____ is a _____ city.: _____ は、_____ 都市です。
       4-5 Crowdsourcing Multi 1:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
@@ -485,10 +484,10 @@
         Multiple Choice: 複数の選択肢
         Which piece of information listed below is okay to share on the internet?: Which
           piece of information listed below is okay to share on the internet?
-        Your address: Your address
-        Your birthday: Your birthday
-        Your favorite food: Your favorite food
-        Your parent's credit card number: Your parent's credit card number
+        Your address: あなたの住所
+        Your birthday: あなたの誕生日
+        Your favorite food: あなたの好きな食べ物
+        Your parent's credit card number: 親のクレジットカード番号
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -819,7 +818,7 @@
           700
         Multiple Choice: 複数の選択肢
         SET: SET
-        SOUTH: SOUTH
+        SOUTH: 南
         SQUARE: SQUARE
         Which word is spelled?: このつづりはどの単語でしょう？
       K-1 multi 4:

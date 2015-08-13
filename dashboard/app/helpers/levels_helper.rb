@@ -131,11 +131,31 @@ module LevelsHelper
 
     view_options(is_channel_backed: true) if @level.channel_backed?
 
-    return blockly_options if @level.is_a? Blockly
-    Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}]
+    if @level.is_a? Blockly
+      blockly_options
+    elsif @level.is_a? DSLDefined
+      dsl_defined_options
+    else
+      # currently, all levels are Blockly or DSLDefined except for Unplugged
+      view_options.camelize_keys
+    end
   end
 
-  # Code for generating the blockly options hash
+  # Options hash for DSLDefined
+  def dsl_defined_options
+    app_options = {}
+
+    level_options = app_options[:level] ||= Hash.new
+
+    level_options[:lastAttempt] = @last_attempt
+    level_options.merge! @level.properties.camelize_keys
+
+    app_options.merge! view_options.camelize_keys
+
+    app_options
+  end
+
+  # Options hash for Blockly
   def blockly_options
     l = @level
     throw ArgumentError("#{l} is not a Blockly object") unless l.is_a? Blockly
@@ -200,8 +220,8 @@ module LevelsHelper
     level_overrides.merge!(no_padding: view_options[:no_padding])
 
     # Add all level view options to the level_options hash
-    level_options.merge!(Hash[level_overrides.map{|key, value|[key.to_s.camelize(:lower), value]}])
-    app_options.merge!(Hash[view_options.map{|key, value|[key.to_s.camelize(:lower), value]}])
+    level_options.merge! level_overrides.camelize_keys
+    app_options.merge! view_options.camelize_keys
 
     # Move these values up to the app_options hash
     %w(hideSource share noPadding embed).each do |key|
@@ -216,6 +236,9 @@ module LevelsHelper
     app_options[:isMobile] = true if browser.mobile?
     app_options[:applabUserId] = applab_user_id if @game == Game.applab
     app_options[:isAdmin] = true if (@game == Game.applab && current_user && current_user.admin?)
+    app_options[:pinWorkspaceToBottom] = true if enable_scrolling?
+    app_options[:hasVerticalScrollbars] = true if enable_scrolling?
+    app_options[:showExampleTestButtons] = true if enable_examples?
     app_options[:rackEnv] = CDO.rack_env
     app_options[:report] = {
         fallback_response: @fallback_response,
@@ -352,5 +375,13 @@ module LevelsHelper
     channel_id = "1337" # Stub value, until storage for channel_id's is available.
     user_id = current_user ? current_user.id.to_s : session.id
     Digest::SHA1.base64digest("#{channel_id}:#{user_id}").tr('=', '')
+  end
+
+  def enable_scrolling?
+    current_user && current_user.admin? && @level.is_a?(Blockly)
+  end
+
+  def enable_examples?
+    current_user && current_user.admin? && @level.is_a?(Blockly)
   end
 end

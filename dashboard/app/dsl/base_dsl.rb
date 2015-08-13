@@ -8,7 +8,7 @@ class BaseDSL
   end
 
   def encrypted(text)
-    @hash[:encrypted] = '1'
+    @hash['encrypted'] = '1'
     begin
       instance_eval(Encryption::decrypt_object(text))
     rescue OpenSSL::Cipher::CipherError

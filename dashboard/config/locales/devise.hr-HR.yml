@@ -72,24 +72,24 @@
         one: '1 greška zabranjuje spremanje ovom %{resource} : '
         other: '%{count} grešaka zabranjuju %{resource} da se spremi:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: E-mail pozivnica je poslana na %{email}.
+      invitation_token_invalid: Dan token pozivnice nije valjan!
+      updated: Vaša lozinka je uspješno postavljena. Sada ste prijavljeni.
+      no_invitations_remaining: Nema više preostalih pozivnica
+      invitation_removed: Vaša pozivnica je uklonjena.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Pošalji pozivnicu
+        submit_button: Pošalji pozivnicu
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Postavi lozinku
+        submit_button: Postavi moju lozinku
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Upute pozivnice
+        hello: Pozdrav %{email}
+        someone_invited_you: Netko vas je pozvao na %{url}, možete prihvatiti pozivnicu
+          kroz poveznicu ispod.
+        accept: Prihvati pozivnicu
+        ignore: Ako ne želite prihvatiti pozivnicu, molimo ignorirajte ovaj e-mail.<br
+          />Vaš račun neće biti kreiran sve dok ne prisupite gornjoj poveznici i postavite
+          svoju lozinku.

@@ -4,8 +4,9 @@ description_short "Explore how digital information is represented and transferre
 login_required 'true'
 hidden 'false'
 
-stage "Innovation"
+stage "Personal Innovations"
 level 'U1L1 Student Lesson Introduction'
+level 'U1L1 Innovation - Video'
 level 'U1L1 - FR computer science word association'
 
 stage "Sending Binary Messages"
@@ -14,13 +15,13 @@ assessment 'U1L2 Multiple Choice Assessment Question'
 assessment 'U1L2 Free response assessment question'
 assessment 'U1L2 Free response reflection question'
 
-stage "Sending More Complex Messages"
+stage "Sending Complex Messages"
 level 'U1L3 Student Lesson Introduction'
 assessment  'U1L3 Free response reflection question'
 assessment 'U1L3 Multiple Choice'
 assessment 'U1L3 Free Response'
 
-stage 'Bit Sending Widget'
+stage 'Sending Binary Messages with the Internet Simulator'
 level 'U1L4 Student Lesson Introduction'
 level 'U1L4 NetSim SendAB'
 assessment 'U1L4 Multiple Choice'
@@ -69,7 +70,7 @@ assessment 'U1L11 Assessment 2'
 assessment 'U1L11 Reflection Free Response'
 assessment 'U1L11 Collaboration Reflection'
 
-stage 'Data Storage'
+stage 'Bytes and File Sizes'
 level 'U1L12 Student Lesson Introduction'
 assessment 'U1L12 Reflection Free Response'
 
@@ -92,7 +93,6 @@ assessment 'U1L14 - Assessment 2'
 
 stage 'Encoding Color Images'
 level 'U1L15 Student Lesson Summary'
-level 'a bit about pixels'
 video_key_for_next_level 'csp_pixelation_color_1'
 level 'Pixelation - Lesson 15 - Complete 3-bit color'
 video_key_for_next_level 'csp_pixelation_color_2'
@@ -103,10 +103,11 @@ level 'Pixelation Flappy'
 level 'Pixelation Bee'
 level 'Pixelation - Lesson 15 - Favicon Instructions'
 level 'Pixelation - Lesson 15 - Color Free Play'
+level 'a bit about pixels'
 
 stage 'Lossy Compression and File Formats'
 level 'U1L16 Student Lesson Introduction'
 assessment 'U1L16 - Matching File Compression Types'
 
-stage 'Practice PT: Encode a Complex Thing'
+stage 'Encode a Complex Thing'
 level 'U1L17 Student Lesson Introduction'

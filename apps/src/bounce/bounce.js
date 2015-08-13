@@ -666,9 +666,6 @@ Bounce.init = function(config) {
   window.addEventListener("keydown", Bounce.onKey, false);
   window.addEventListener("keyup", Bounce.onKey, false);
 
-  config.pinWorkspaceToBottom = false;
-  config.hasVerticalScrollbars = false;
-
   config.html = page({
     assetUrl: studioApp.assetUrl,
     data: {

@@ -159,7 +159,7 @@ ar-SA:
   homepage_action_text_learn: ابدأ التعلم
   homepage_action_text_signpetition: وقّع على العريضة
   homepage_signpetition_dropdown: 'أوافق &#x25BE;'
-  homepage_banner_text_main: Code.org and the College Board form an alliance to improve diversity in computer science.
+  homepage_banner_text_main: Code.org ومجلس الكلية يشكل تحالفا لتحسين التنوع في علوم الكمبيوتر.
   homepage_banner_text_link: اعرف المزيد
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: اعرف المزيد
@@ -266,7 +266,7 @@ ar-SA:
   dashboard_k5_courses_desc: 'These courses blend online, self-guided and self-paced tutorials with "unplugged" activities that require no computer at all. Each course consists of about 20 lessons that may be implemented as one unit or over the course of a semester. Even kindergarten-aged pre-readers can participate. To help you get started, we offer high quality professional development workshops around the U.S. free of charge. <a href="/professional-development-workshops">Find one near you!</a>'
   dashboard_middle_courses: مساقات العشرون ساعة للمدارس المتوسطة / الإعدادية
   dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: مقررات الثانوية العامة مدى العام
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: code.org في شراكة مع بوتستراب (Bootstrap) لتطوير منهج لتدريس الجبر و الهندسة من خلال مفهوم برمجة الحاسب.
@@ -274,8 +274,8 @@ ar-SA:
   dashboard_course_csins_desc: code.org في شراكة مع مشروع جي يو تي إس (GUTS) لتوصيل المفاهيم الأساسية لعلوم الحاسب من خلال سياق النمذجة و المحاكاة.
   dashboard_course_ecs: استكشاف علوم الحاسب الآلي
   dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
+  dashboard_course_csp: مبادئ علوم الحاسوب بنظام ® AP
+  dashboard_course_csp_desc: Code.org صممت دورة صارمة، قائمة على المشاركة الودية من أجل اسنكشاف الأفكار التأسيسية للحوسبة.
   dashboard_landing_loading: جاري التحميل...
   dashboard_action_edit: تعديل
   dashboard_action_save: حفظ

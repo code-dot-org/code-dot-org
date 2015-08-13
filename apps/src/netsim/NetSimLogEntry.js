@@ -25,7 +25,10 @@ var DataConverters = require('./DataConverters');
 var formatBinary = DataConverters.formatBinary;
 var base64ToBinary = DataConverters.base64ToBinary;
 var binaryToBase64 = DataConverters.binaryToBase64;
+var NetSimLogger = require('./NetSimLogger');
+
 var BITS_PER_BYTE = require('./NetSimConstants').BITS_PER_BYTE;
+var logger = NetSimLogger.getSingleton();
 
 /**
  * @typedef {Object} LogEntryRow
@@ -66,10 +69,14 @@ var NetSimLogEntry = module.exports = function (shard, row, packetSpec) {
    * Binary content of the log entry.  Defaults to empty string.
    * @type {string}
    */
-  var base64Binary = row.base64Binary;
-  this.binary = (base64Binary) ?
-    base64ToBinary(base64Binary.string, base64Binary.len) :
-    '';
+  this.binary = '';
+  if (row.base64Binary) {
+    try {
+      this.binary = base64ToBinary(row.base64Binary.string, row.base64Binary.len);
+    } catch (e) {
+      logger.error(e.message);
+    }
+  }
 
   /**
    * Status value for log entry; for router log, usually SUCCESS for completion

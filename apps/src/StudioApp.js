@@ -13,6 +13,8 @@ var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
 var smallFooterUtils = require('@cdo/shared/smallFooter');
+var React = require('react');
+var VersionHistory = require('./templates/VersionHistory.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -417,6 +419,42 @@ StudioApp.prototype.init = function(config) {
     }).bind(this));
   }
 
+  // Bind listener to 'Version History' button
+  var versionsHeader = document.getElementById('versions-header');
+  if (versionsHeader) {
+    dom.addClickTouchEvent(versionsHeader, (function() {
+      var codeDiv = document.createElement('div');
+      var dialog = this.createModalDialog({
+        Dialog: this.Dialog,
+        contentDiv: codeDiv,
+        defaultBtnSelector: 'again-button',
+        id: 'showVersionsModal'
+      });
+      React.render(React.createElement(VersionHistory, {}), codeDiv);
+
+      dialog.show();
+    }).bind(this));
+  }
+
+  if (Blockly.contractEditor) {
+    Blockly.contractEditor.registerTestsFailedOnCloseHandler(function () {
+      this.feedback_.showSimpleDialog(this.Dialog, {
+        headerText: undefined,
+        bodyText: msg.examplesFailedOnClose(),
+        cancelText: msg.ignore(),
+        confirmText: msg.tryAgain(),
+        onConfirm: null,
+        onCancel: function () {
+          Blockly.contractEditor.hideIfOpen();
+        }
+      });
+
+      // return true to indicate to blockly-core that we'll own closing the
+      // contract editor
+      return true;
+    }.bind(this));
+  }
+
   smallFooterUtils.bindHandlers();
 };
 
@@ -727,10 +765,7 @@ StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
 };
 
 StudioApp.prototype.createModalDialog = function(options) {
-  return this.feedback_.createModalDialog(options);
-};
-
-StudioApp.prototype.createModalDialog = function(options) {
+  options.Dialog = utils.valueOr(options.Dialog, this.Dialog);
   return this.feedback_.createModalDialog(options);
 };
 
@@ -791,7 +826,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   }
 
   var dialog = this.createModalDialog({
-    Dialog: this.Dialog,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
@@ -1080,7 +1114,6 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
   var builderDetails = document.createElement('div');
   builderDetails.innerHTML = require('./templates/builder.html.ejs')();
   var dialog = this.createModalDialog({
-    Dialog: this.Dialog,
     contentDiv: builderDetails,
     icon: this.icon
   });
@@ -1612,7 +1645,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     hasVerticalScrollbars: config.hasVerticalScrollbars,
     hasHorizontalScrollbars: config.hasHorizontalScrollbars,
     editBlocks: utils.valueOr(config.level.edit_blocks, false),
-    readOnly: utils.valueOr(config.readonlyWorkspace, false)
+    readOnly: utils.valueOr(config.readonlyWorkspace, false),
+    showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
     'disableParamEditing'].forEach(
@@ -1808,6 +1842,31 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
   } else {
     return msg.emptyBlockInFunction({name: procedureInfo.name});
   }
+};
+
+/**
+ * Looks for failing examples, and updates the result text for them if they're
+ * open in the contract editor
+ * @param {function} failureChecker Apps example tester that takes in an example
+ *   block, and outputs a failure string (or null if success)
+ * @returns {string} Name of block containing first failing example we found, or
+ *   empty string if no failures.
+ */
+StudioApp.prototype.checkForFailingExamples = function (failureChecker) {
+  var failingBlockName = '';
+  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
+    var failure = failureChecker(exampleBlock, false);
+
+    // Update the example result. No-op if we're not currently editing this
+    // function.
+    Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
+
+    if (failure) {
+      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
+        .getTitleValue('NAME');
+    }
+  });
+  return failingBlockName;
 };
 
 /**

@@ -199,6 +199,10 @@ class Script < ActiveRecord::Base
     name == 'course1'
   end
 
+  def hide_solutions?
+    name == 'algebra'
+  end
+
   def banner_image
     if k5_course?
       "banner_#{name}_cropped.jpg"
