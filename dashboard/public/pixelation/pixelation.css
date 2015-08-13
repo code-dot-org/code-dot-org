@@ -19,8 +19,8 @@
   float: right;
 }
 
-#save_image, #start_over {
-  margin: 3px 0 5px 3px;
+#save_image {
+  margin: 3px 0 5px 0;
 }
 
 #actual_size_label {
