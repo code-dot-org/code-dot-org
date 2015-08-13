@@ -308,7 +308,7 @@ NetSim.prototype.shouldShowAnyTabs = function () {
  *       only allows section owners and admins to perform a reset.
  */
 NetSim.prototype.shouldResetShard = function () {
-  return location.search.match(/resetShard/i);
+  return /\bresetShard\b/i.test(location.search);
 };
 
 /**
@@ -1108,7 +1108,7 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
         return;
       }
       // Reload page without the shard-reset query parameter
-      location.href=location.href.replace(/&?resetShard([^&]$|[^&]*)/i, "");
+      location.search = location.search.replace(/&?resetShard([^&]$|[^&]*)/i, "");
     }.bind(this));
   }
 };
