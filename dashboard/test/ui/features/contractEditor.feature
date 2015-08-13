@@ -74,8 +74,9 @@ Scenario: Changing Parameter names
   Given I am on "http://learn.code.org/s/algebra/stage/8/puzzle/3?noautoplay=true"
   And I rotate to landscape
   And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I press "modalEditorClose"
+  And I press "again-button"
   When I open the topmost blockly category "Functions"
   And I press the SVG text "Create a Function"
   And I press "paramAddButton"
@@ -93,6 +94,7 @@ Scenario: Changing Parameter names
   And I see no difference for "changed one variable"
 
   Then I press "modalEditorClose"
+  And I press "again-button"
   And I open the topmost blockly category "Functions"
   And I drag block "62" to block "10" plus offset 0, 100
   And I see no difference for "two blocks have same name params"
@@ -101,5 +103,6 @@ Scenario: Changing Parameter names
   And I press the edit button on a function call named "something"
   And I press keys "2" for element "#domain-area input"
   And I press "modalEditorClose"
+  And I press "again-button"
   And I see no difference for "only one function's radius param changed"
   And I close my eyes
