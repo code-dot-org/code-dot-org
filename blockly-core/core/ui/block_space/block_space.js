@@ -102,6 +102,9 @@ Blockly.BlockSpace = function(blockSpaceEditor, getMetrics, setMetrics) {
   if (Blockly.BlockSpace.DEBUG_EVENTS) {
     this.debugLogOnEvents();
   }
+
+  this.events.listen(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED,
+      this.updateScrollableSize.bind(this));
 };
 
 Blockly.BlockSpace.DEBUG_EVENTS = false;
