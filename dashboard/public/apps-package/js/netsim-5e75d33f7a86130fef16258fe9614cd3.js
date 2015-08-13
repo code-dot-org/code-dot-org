@@ -11255,7 +11255,7 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
   var isRouter = (connectionTarget.getNodeType() === NodeType.ROUTER);
 
   // Can't connect to full routers
-  if (isRouter && connectionTarget.isFull()) {
+  if (connectionTarget.isFull()) {
     return false;
   }
 
@@ -11360,7 +11360,7 @@ var nodeToRowMetadata = function (node) {
     displayName: node.getDisplayName(),
     hostname: node.getHostname(),
     status: node.getStatus(),
-    isFull: (node.getNodeType() === NodeType.ROUTER) && node.isFull(),
+    isFull: node.isFull(),
     canConnectToNode: controller.canConnectToNode(node)
   };
 };
@@ -12287,9 +12287,7 @@ NetSimRouterNode.prototype.getStatus = function () {
   });
 };
 
-/**
- * @returns {boolean} whether the router is at its client connection capacity.
- */
+/** @inheritdoc */
 NetSimRouterNode.prototype.isFull = function () {
   // Determine status based on cached wire data
   var cachedWireRows = this.shard_.wireTable.readAll();
@@ -17895,7 +17893,7 @@ NetSimClientNode.prototype.getStatus = function () {
     mutualConnection = true;
   } else {
     var cachedWireRows = this.shard_.wireTable.readAll();
-    mutualConnection = _.find(cachedWireRows, function (wireRow) {
+    mutualConnection = cachedWireRows.some(function (wireRow) {
       return wireRow.localNodeID === outgoingWire.remoteNodeID &&
           wireRow.remoteNodeID === outgoingWire.localNodeID;
     });
@@ -17905,6 +17903,19 @@ NetSimClientNode.prototype.getStatus = function () {
     return i18n.connectedToNodeName({nodeName:remoteNodeName});
   }
   return i18n.connectingToNodeName({nodeName:remoteNodeName});
+};
+
+/** @inheritdoc */
+NetSimClientNode.prototype.isFull = function () {
+  var outgoingWire = this.getOutgoingWire();
+  if (!outgoingWire) {
+    return false;
+  }
+  var cachedWireRows = this.shard_.wireTable.readAll();
+  return cachedWireRows.some(function (wireRow) {
+    return wireRow.localNodeID === outgoingWire.remoteNodeID &&
+        wireRow.remoteNodeID === outgoingWire.localNodeID;
+  });
 };
 
 /**
@@ -18062,6 +18073,14 @@ NetSimNode.prototype.getStatus = function () {
 };
 
 /**
+ * Whether or not this node can accept any more connections
+ * @returns {boolean}
+ */
+NetSimNode.prototype.isFull = function () {
+  throw new Error('isFull method is not implemented');
+};
+
+/**
  * Establish a connection between this node and another node,
  * by creating a wire between them, and verifying that the remote node
  * can accept the connection.
@@ -18103,6 +18122,7 @@ NetSimNode.prototype.connectToNode = function (otherNode, onComplete) {
 NetSimNode.prototype.acceptConnection = function (otherNode, onComplete) {
   onComplete(null, true);
 };
+
 
 },{"../utils":323,"./NetSimEntity":204,"./NetSimWire":257,"./locale":263}],257:[function(require,module,exports){
 /**
