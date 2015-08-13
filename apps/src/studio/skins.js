@@ -251,6 +251,15 @@ function loadHoc2015(skin, assetUrl) {
   skin.wallCollisionRectWidth  = 30;
   skin.wallCollisionRectHeight = 20;
 
+  // When movement is grid aligned, sprites coordinates are the top-left corner
+  // of the sprite, and match the top-left corner of the grid square in question.
+  // When we draw the sprites bigger, this means the sprite's "feet" will usually
+  // be too far to the right and below that square.  These offsets are a chance
+  // to move the rendering of the sprite up and to the left, when negative, so
+  // that the "feet" are planted at the bottom center of the grid square.
+  skin.gridSpriteRenderOffsetX = -30;
+  skin.gridSpriteRenderOffsetY = -30;
+
   skin.avatarList = ['anna', 'elsa', 'hiro', 'baymax', 'rapunzel'];
   skin.avatarList.forEach(function (name) {
     skin[name] = {
