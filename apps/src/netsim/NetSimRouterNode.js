@@ -699,9 +699,7 @@ NetSimRouterNode.prototype.getStatus = function () {
   });
 };
 
-/**
- * @returns {boolean} whether the router is at its client connection capacity.
- */
+/** @inheritdoc */
 NetSimRouterNode.prototype.isFull = function () {
   // Determine status based on cached wire data
   var cachedWireRows = this.shard_.wireTable.readAll();
