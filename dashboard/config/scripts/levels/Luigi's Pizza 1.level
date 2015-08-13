@@ -27,7 +27,8 @@
     "instructions": "Welcome to Luigi's Pizza! To order a pizza, type the name of a topping into the cost function, and we'll return the price of that pizza. Try ordering a pepperoni pizza to start.",
     "disable_examples": "false",
     "video_key": "alg_10_conditionals",
-    "markdown_instructions": "Welcome to Luigi's Pizza! To order a pizza, type the name of a topping into the _cost_ function, and we'll return the price of that pizza. Try ordering a pepperoni pizza to start."
+    "markdown_instructions": "Welcome to Luigi's Pizza! To order a pizza, type the name of a topping into the `cost` function, and we'll return the price of that pizza. Try ordering a pepperoni pizza to start.",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>
