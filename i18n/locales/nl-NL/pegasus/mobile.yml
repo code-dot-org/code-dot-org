@@ -288,7 +288,7 @@ nl-NL:
   dashboard_k5_courses_desc: 'Deze cursussen mengen de online zelfsturende online cursussen op eigen tempo, met de "unplugged" activiteiten die geen computer nodig hebben. elke cursus bestaat uit 20 lessen die als een blok kunnen worden ingezet, of welke kunnen uitgesmeerd over meerdere semesters.'
   dashboard_middle_courses: 20-uur durende middelbare school cursussen
   dashboard_middle_courses_desc: 'Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
-  dashboard_high_courses: Year-long High School Courses
+  dashboard_high_courses: Een jaar durend Middelbare School vak
   dashboard_high_courses_desc: 'Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.'
   dashboard_course_csina: Informatica in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
@@ -402,7 +402,7 @@ nl-NL:
   dashboard_curriculum_csina: 'Computer Science in Algebra:'
   dashboard_curriculum_csins: 'Computerwetenschap in de wetenschap:'
   dashboard_curriculum_csp: 'AP® Computer Science Principles:'
-  dashboard_curriculum_ecs: 'Exploring Computer Science:'
+  dashboard_curriculum_ecs: 'ICT ontdekken:'
   dashboard_grade_k: K
   dashboard_grade_other: Anders
   dashboard_login_word: Woord

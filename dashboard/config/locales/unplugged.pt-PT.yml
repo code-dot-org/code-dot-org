@@ -233,7 +233,7 @@
         desc: Os alunos exploram a diferença entre informações privadas e pessoais,
           distinguindo o que é seguro e o que não é seguro para compartilhar online.
       TangramAlgorithms:
-        title: Algoritmos do tangram
+        title: Algoritmos Tangram
         desc: 'Esta aula nos mostra algo importante sobre os algoritmos: se você o
           mantiver simples, poderá fazer muitas coisas com ele; se quiser garantir
           que todos tenham o mesmo resultado no final, seu algoritmo precisará de
@@ -289,7 +289,7 @@
           linguagem de programação ou função.
         video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: A receita do design
         desc: No último estágio, os alunos escreveram algumas funções bastante simples
           - mas funções mais sofisticadas exigem uma abordagem mais profunda. A fórmula
           de design é uma abordagem estruturada para escrever funções que inclui casos
@@ -302,7 +302,7 @@
           podem nos ajudar a escrever funções que pensam de forma lógica
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
+        title: Condições e funções definidas por partes
         desc: Os parâmetros que passamos para as funções fazem as saídas variarem
           com base em um padrão bastante rígido. Suponha que queremos parâmetros com
           alguns valores para criar saídas usando um padrão, mas outros valores para

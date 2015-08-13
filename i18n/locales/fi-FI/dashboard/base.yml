@@ -312,7 +312,7 @@ fi:
     panel:
       answer_viewer: Answer Viewer
       student: Oppilas
-      viewing_solution: Viewing Solution
+      viewing_solution: Vastauksen katselu
       try_it_yourself: Kokeile itse
       section: Ryhmä
   user:
@@ -358,7 +358,7 @@ fi:
     local_school: koulu
     online: online
     see_details: Lisätietoja
-    view_course: View Course
+    view_course: Näytä kurssi
     prize_info: 'Palkinnot osallistumisesta (vain USA): Jopa 1000 dollaria luokkahuonepalkintoja.'
     tryfirst: 'Tai, voit kokeilla ensin ja rekisteröityä myöhemmin:'
     trynow: Kokeile nyt

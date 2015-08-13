@@ -457,6 +457,11 @@ lv:
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
           "Practice PT: Encode a Complex Thing": 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -629,6 +634,7 @@ lv:
           Natural Language Processing: Natural Language Processing
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1090,3 +1096,8 @@ lv:
           Practice PT: Practice PT
           Ramping Up: Ramping Up
           Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number bases. Binary, Decimal and Hexadecimal are the most common number systems to see in computer science.
+          Odometer Widget: Odometer Widget

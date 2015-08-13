@@ -204,7 +204,6 @@ en:
       4-5 Artist For Loops 13_instruction: crwdns34079:0crwdne34079:0
       4-5 Artist For Loops 14_instruction: crwdns34080:0crwdne34080:0
       4-5 Artist For Loops 15_instruction: crwdns34081:0crwdne34081:0
-      4-5 Artist For Loops 2_instruction: crwdns34082:0crwdne34082:0
       4-5 Artist For Loops 3_instruction: crwdns34083:0crwdne34083:0
       4-5 Artist For Loops 4_instruction: crwdns34084:0crwdne34084:0
       4-5 Artist For Loops 6_instruction: crwdns34086:0crwdne34086:0
@@ -1091,9 +1090,11 @@ en:
       U3L25 String Parsing 7_instruction: crwdns43485:0crwdne43485:0
       U3L26 AND operator_instruction: crwdns43486:0crwdne43486:0
       U3L26 Chatbot Compound Conditionals_instruction: crwdns43487:0crwdne43487:0
+      U3L26 Chatbot Final_instruction: crwdns43513:0crwdne43513:0
       U3L26 Compound Logic_instruction: crwdns43488:0crwdne43488:0
       U3L26 NOT operator_instruction: crwdns43489:0crwdne43489:0
       U3L26 OR operator_instruction: crwdns43490:0crwdne43490:0
+      U3L27 Chatbot Final_instruction: crwdns43514:0crwdne43514:0
       U3L2_Turtle3by3Grid_instruction: crwdns37682:0crwdne37682:0
       U3L2_TurtleSquare_right_instruction: crwdns37683:0crwdne37683:0
       XML Scratchpad_instruction: crwdns31218:0crwdne31218:0

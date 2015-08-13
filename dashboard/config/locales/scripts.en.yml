@@ -459,6 +459,11 @@ en:
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
           'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'

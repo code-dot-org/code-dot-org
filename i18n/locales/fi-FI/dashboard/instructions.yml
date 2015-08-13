@@ -240,7 +240,6 @@ fi:
         Viimeisen viivan pituus on 250 pikseliä.
       4-5 Artist For Loops 14_instruction: 'Joku aloitti koodin, mutta tajusi että on oltava nopeampikin tapa! Käytä "for" lohkoa korvaamaan lohkot ja tee kolmiomainen spiraali valmiiksi. (Vihje: viimeisen viivan pituus on 300 pikseliä.)'
       4-5 Artist For Loops 15_instruction: 'Joku aloitti koodin, mutta tajusi että on oltava nopeampikin tapa! Käytä "for" lohkoa korvaamaan lohkot ja tee kuusikulmainen spiraali valmiiksi. (Vihje: viimeisen viivan pituus on 200 pikseliä.)'
-      4-5 Artist For Loops 2_instruction: 'Tämä on "for" lohko. Sen sijaan että kirjoittaisit 1,2,3... 10, "for" lohko voi toistaa sisältämänsä lohkot ja laskea numerot puolestasi. Aseta numero 10 "for" lohkon "to" osioon.'
       4-5 Artist For Loops 3_instruction: 'Kuinka voimme laskea 1:stä 50:een? Muokkaa "for" lohkoa.'
       4-5 Artist For Loops 4_instruction: 'Täydennä "for" lohko niin että se laskee 1:stä 10:een askelpituudella 1.'
       4-5 Artist For Loops 6_instruction: 'Piirrä neliöitä, joiden sivut ovat 50, 60, 70, 80, ja 90 pikseliä. Sinun tarvitsee käyttää "piirrä neliö" -toimintoa viisi kertaa.'
@@ -433,7 +432,7 @@ fi:
       4-5 Bee Debugging 4_instruction: Nämä lohkot eivät toimi. Mikä on kaava?
       4-5 Bee Debugging 5_instruction: Jotakin ei ole tässä oikein...
       4-5 Bee Debugging 6_instruction: Violetissa kukassa on tuntematon määrä mettä. Korjaa lohkot siten, että kaikki mesi saadaan kerättyä.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
+      4-5 Bee Debugging 7_instruction: Funktiosta puuttuu jotain...
       4-5 Bee Debugging 8_instruction: |
         This function is fine, but it isn't used
         properly.
@@ -464,18 +463,16 @@ fi:
         sunflower.
       4-5 Maze 1_instruction: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
       4-5 Maze 10_instruction: Pääsetkö auringonkukan luo käyttämällä vain neljää lohkoa?
-      4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
-      4-5 Maze 12_instruction: |
-        Ok, this is slightly different. Can you do it in
-        only six blocks?
+      4-5 Maze 11_instruction: Pääsetkö auringonkukan luo käyttämällä vain kuutta lohkoa?
+      4-5 Maze 12_instruction: Ok, tämä on hiukan erilainen. Voitko tehdä sen käyttämällä vain kuutta lohkoa?
       4-5 Maze 13_instruction: Hoida minut tuon possun luo!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |
         Get the zombie to the sunflower, but avoid
         the chomper!
       4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
+      4-5 Maze 3 (copy 1)_instruction: Täytyy.. päästä... auringonkukalle.
+      4-5 Maze 3_instruction: Täytyy.. päästä... auringonkukalle.
       4-5 Maze 4 (copy 1)_instruction: 'Try the "repeat" block to use fewer blocks...'
       4-5 Maze 4_instruction: 'Try the "repeat" block to use fewer blocks...'
       4-5 Maze 5 (copy 1)_instruction: |
@@ -495,7 +492,7 @@ fi:
         Use the "repeat" block to get the zombie to the
         sunflower. (Avoid the chompers!)
       4-5 Maze 9_instruction: 'Create a loop with the "repeat until" block.'
-      4-5 Maze Assessment 1_instruction: 'Assessment: Get to the sunflower.'
+      4-5 Maze Assessment 1_instruction: 'Tehtävä: Mene auringonkukan luo.'
       4-5 Maze Conditionals 1_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
@@ -514,12 +511,8 @@ fi:
         Ok, this is just like the last puzzle,
         but you need to remember how you used the "if" block and the "repeat"
         block together.
-      4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
+      4-5 Maze Conditionals 5_instruction: 'Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi minut sinne käyttäen mahdollisimman pientä määrää lohkoja.'
+      4-5 Maze Conditionals 6_instruction: 'Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi minut sinne käyttäen mahdollisimman pientä määrää lohkoja.'
       4-5 Maze Conditionals 7_instruction: |
         Ok, let's do that again for practice
         - this isn't very different, but watch out for the chompers!
@@ -3117,6 +3110,9 @@ fi:
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3132,6 +3128,11 @@ fi:
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original
