@@ -14,10 +14,11 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create retries on Duplicate exception" do
     # some Mocha shenanigans to simulate throwing a duplicate entry
-    # error and then succeeding by returning the existing userlevel
+    # error and then succeeding by returning the existing user
 
     exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
     User.any_instance.stubs(:save).raises(exception).then.returns(true)
+    User.any_instance.stubs(:persisted?).returns(true)
 
     student_params = {name: "A name",
                       password: "apassword",
