@@ -107,7 +107,7 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @type {function}
    * @private
    */
-  this.onNodeLostConnection_ = undefined;
+  this.onNodeLostConnection_ = function () {};
 
   /**
    * Event registration information
@@ -205,10 +205,6 @@ NetSimLocalClientNode.prototype.tick = function (clock) {
  */
 NetSimLocalClientNode.prototype.setLostConnectionCallback = function (
     onNodeLostConnection) {
-  if (this.onNodeLostConnection_ !== undefined &&
-      onNodeLostConnection !== undefined) {
-    throw new Error('Node already has a lost connection callback.');
-  }
   this.onNodeLostConnection_ = onNodeLostConnection;
 };
 
@@ -223,9 +219,7 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
   NetSimLocalClientNode.superPrototype.update.call(this, function (err, result) {
     if (err) {
       logger.error("Local node update failed: " + err.message);
-      if (self.onNodeLostConnection_ !== undefined) {
-        self.onNodeLostConnection_();
-      }
+      self.onNodeLostConnection_();
     }
     onComplete(err, result);
   });
@@ -459,7 +453,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
   var nodeRows = this.shard_.nodeTable.readAll();
 
   // If our own row is gone, drop everything and handle disconnect.
-  if (this.onNodeLostConnection_ && !this.canFindOwnRowIn(nodeRows)) {
+  if (!this.canFindOwnRowIn(nodeRows)) {
     this.onNodeLostConnection_();
     return;
   }
