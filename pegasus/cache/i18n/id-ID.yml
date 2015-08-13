@@ -1,7 +1,7 @@
 "id-ID":
   hello: Halo dunia
   select_language: Silahkan pilih bahasa Anda
-  en: Computer Science
+  en: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
   csedweek_dates: 8-14 Desember 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -63,7 +63,7 @@
   congratulations: Selamat!
   congratulations_on_completing_hoc: Selamat atas penyelesaian satu jam dari kode
   get_a_certificate_of_achievement: Ambil sertifikat prestasi
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Silakan pilih usia yang berlaku
   enter_valid_email: Masukkan alamat email yang valid
   get_a_certificate_message: Kami akan kirimkan sertifikat dan informasi tentang cara
     untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>

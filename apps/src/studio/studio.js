@@ -180,6 +180,11 @@ function loadLevel() {
     case 'Sam the Bat':
       Studio.customLogic = new SamBatLogic(Studio);
       break;
+    case 'Ninja Cat':
+      Studio.customLogic = new BigGameLogic(Studio, {
+        staticPlayer: true
+      });
+
   }
   blocks.registerCustomGameLogic(Studio.customLogic);
 
@@ -1353,7 +1358,7 @@ Studio.init = function(config) {
       Blockly.SNAP_RADIUS *= Studio.scale.snapRadius;
 
       if (Blockly.contractEditor) {
-        Blockly.contractEditor.registerTestHandler(Studio.runTest);
+        Blockly.contractEditor.registerTestHandler(Studio.getStudioExampleFailure);
       }
     }
 
@@ -1606,7 +1611,7 @@ Studio.reset = function(first) {
  * @param exampleBlock
  * @returns {string} string to display after example execution
  */
-Studio.runTest = function (exampleBlock) {
+Studio.getStudioExampleFailure = function (exampleBlock) {
   try {
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
@@ -1627,7 +1632,7 @@ Studio.runTest = function (exampleBlock) {
         Studio: api,
         Globals: Studio.Globals
       });
-      return resultBoolean ? "Matches definition." : "Does not match definition.";
+      return resultBoolean ? null : "Does not match definition.";
     } else {
       return "No example code.";
     }
@@ -1897,23 +1902,7 @@ Studio.checkExamples_ = function () {
     return outcome;
   }
 
-  // TODO - what of this belongs in studio app?
-  var failingBlockName = '';
-  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
-    var result = Studio.runTest(exampleBlock, true);
-    var success = result === "Matches definition.";
-
-    // Update the example result. No-op if we're not currently editing this
-    // function.
-    Blockly.contractEditor.updateExampleResult(exampleBlock, result);
-
-    if (!success) {
-      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
-        .getTitleValue('NAME');
-    }
-
-  });
-
+  var failingBlockName = studioApp.checkForFailingExamples(Studio.getStudioExampleFailure);
   if (failingBlockName) {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;

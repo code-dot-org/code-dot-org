@@ -3,6 +3,8 @@
 goog.provide('Blockly.ExampleView');
 
 /** @const */ var NO_RESULT_TEXT = "";
+/** @const */ var SUCCESS_TEXT = "Matches definition.";
+/** @const */ var RESULT_TEXT_TOP_MARGIN = 14;
 
 /**
  * Handles laying out an example block with a test button
@@ -21,9 +23,13 @@ Blockly.ExampleView = function (dom, svg, contractEditor) {
     'fill': '#000',
     'height': 2.0
   }, this.svgParent_);
+  Blockly.svgIgnoreMouseEvents(this.horizontalLine);
+
   this.grayBackdrop = Blockly.createSvgElement('rect', {
     'fill': '#DDD'
   }, this.svgParent_, {'belowExisting': true});
+  this.grayBackdrop.style.pointerEvents = 'none';
+  Blockly.svgIgnoreMouseEvents(this.grayBackdrop);
 
   this.testExampleButton = this.initializeTestButton_("Test", "run26",
     this.testExample_.bind(this));
@@ -33,6 +39,7 @@ Blockly.ExampleView = function (dom, svg, contractEditor) {
   goog.dom.append(this.domParent_, this.testExampleButton);
   goog.dom.append(this.domParent_, this.resetExampleButton);
   this.resultText = goog.dom.createDom('div', 'example-result-text');
+  Blockly.svgIgnoreMouseEvents(this.resultText);
   this.resultText.innerHTML = NO_RESULT_TEXT;
   goog.dom.append(this.domParent_, this.resultText);
   this.refreshTestingUI(false);
@@ -56,22 +63,20 @@ Blockly.ExampleView.prototype.initializeTestButton_ = function (buttonText,
 };
 
 /**
- * @param {Blockly.Block} block
- * @returns {boolean} True if the provided example block is the one that we're
- *   the view for.
+ * @returns {Blockly.Block} The example block this view represents
  */
-Blockly.ExampleView.prototype.isViewForBlock = function (block) {
-  return this.block_ === block;
+ Blockly.ExampleView.prototype.getBlock  = function() {
+  return this.block_;
 }
 
 /**
  * Performs the test for this example, setting the result text appropriately.
  */
 Blockly.ExampleView.prototype.testExample_ = function () {
-  // TODO  (brent)- only reset examples that current have a reset button?
   this.contractEditor_.resetExampleViews();
 
-  this.setResult(this.contractEditor_.testExample(this.block_));
+  var failure = this.contractEditor_.testExample(this.block_, true);
+  this.setResult(failure || SUCCESS_TEXT);
   this.refreshTestingUI(true);
 
   // TODO(bjordan): UI re-layout post-result?
@@ -85,13 +90,16 @@ Blockly.ExampleView.prototype.reset = function () {
   // old result text
   if (goog.style.isElementShown(this.resetExampleButton)) {
     this.contractEditor_.resetExample(this.block_);
-    this.setResult(NO_RESULT_TEXT);
+    this.resultText.innerHTML = NO_RESULT_TEXT;
     this.refreshTestingUI(false);
   }
 };
 
-Blockly.ExampleView.prototype.setResult = function (result) {
-  this.resultText.innerHTML = result;
+/**
+ * @param {string} failure The failure text. If null, set to success text
+ */
+Blockly.ExampleView.prototype.setResult = function (failure) {
+  this.resultText.innerHTML = failure || SUCCESS_TEXT;
   this.refreshTestingUI(false);
 };
 
@@ -107,17 +115,21 @@ Blockly.ExampleView.prototype.refreshTestingUI = function (active) {
 };
 
 /**
- * Places the example at the specified location,
- * returning an incremented Y coordinate
+ * Places the example at the specified location, returning an incremented Y
+ * coordinate.
  * @param block
- * @param currentY
- * @param maxWidth
- * @param marginLeft
- * @param marginBelow
+ * @param {number} currentY - Y coordinate to start at, relative to svgParent
+ * @param {number} exampleMaxInputWidth - max width of example call blocks
+ * @param {number} marginLeft
+ * @param {number} marginBelow
+ * @param {number} fullWidth - full width of layout area
+ * @param {number} midLineX - midline location
+ * @param {number} exampleDivTop - top of our DOM parent relative to SVG parent
  * @returns {number} the y coordinate to continue laying out at
  */
 Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
-    block, currentY, maxWidth, marginLeft, marginBelow, fullWidth, midLineX) {
+    block, currentY, exampleMaxInputWidth, marginLeft, marginBelow, fullWidth,
+    midLineX, exampleDivTop) {
   this.block_ = block;
   var newY = currentY;
 
@@ -133,7 +145,7 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
     if (functionCallBlock) {
       width = functionCallBlock.getHeightWidth().width;
     }
-    input.extraSpace = maxWidth - width;
+    input.extraSpace = exampleMaxInputWidth - width;
     if (input.extraSpace !== originalExtraSpace) {
       block.getSvgRenderer().render(true);
     }
@@ -147,7 +159,7 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
 
   var exampleButtonX = midLineX + commonMargin;
   [this.testExampleButton, this.resetExampleButton].forEach(function (button) {
-    button.style.top = newY + 'px';
+    button.style.top = newY - exampleDivTop + 'px';
     button.style.left = exampleButtonX + 'px';
   });
 
@@ -157,7 +169,8 @@ Blockly.ExampleView.prototype.placeExampleAndGetNewY = function (
   var buttonHeight = Math.max(this.resetExampleButton.offsetHeight,
     this.testExampleButton.offsetHeight);
 
-  this.resultText.style.top = (newY + 14) + 'px';
+  this.resultText.style.top = (newY + RESULT_TEXT_TOP_MARGIN - exampleDivTop)
+      + 'px';
   var exampleButtonRight = exampleButtonX + buttonWidth;
   this.resultText.style.left = commonMargin + exampleButtonRight + 'px';
 
