@@ -24,7 +24,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "input_output_table": "[[2,1],[4,2],[21,10.5],[32.5,16.25]]",
-    "markdown_instructions": "Write a function called _half_ that takes a number _x_ and returns half that number. Once you've written the function, use it to calculate half(21)"
+    "markdown_instructions": "Write a function called _half_ that takes a number _x_ and returns half that number. Once you've written the function, use it to calculate half(21)",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>

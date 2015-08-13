@@ -23,8 +23,9 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Here's a new function called _green-triangle_ that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle",
-    "instructions": "Here's a new function called green-triangle that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle."
+    "markdown_instructions": "Here's a new function called `green-triangle` that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle",
+    "instructions": "Here's a new function called green-triangle that takes a single Number for size and produces a green triangle. Use the new function to create a 125 pixel green triangle.",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>
