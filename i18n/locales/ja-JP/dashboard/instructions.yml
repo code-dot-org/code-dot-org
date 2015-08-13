@@ -1,7 +1,7 @@
 ja:
   data:
     instructions:
-      2-3 Artist 1 new_instruction: こんにちは、私は芸術家です。プログラムで私にどんな線でも引かせることができます。いくつかのブロックを使用して、写真に灰色の線を引きます。(各ラインの長さは 100 ピクセル)
+      2-3 Artist 1 new_instruction: こんにちは、私は絵を描くのが得意です。あなたが書いたプログラムでどんな線でも描くことができます。いくつかのブロックを使用して、写真に灰色の線を引いてみてください。(各線の長さは 100 ピクセル)
       2-3 Artist 11_instruction: |
         8 辺、それぞれ 100 ピクセルの長さを持つ八角形を作って一時停止の標識に境界線を加えます。
         何度回す必要がありますか？(ヒント: 360 を 8 で割ると何ですか?)
@@ -83,17 +83,13 @@ ja:
       2-3 Artist Loops New 2_instruction: |
         Here's some of the code you used to draw
         that square. What happens if you use the repeat block to run this code 4 times?
-      2-3 Artist Loops New 9_instruction: |
-        Draw a simple V where both sides are 50
-        pixels to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
+      2-3 Artist Loops New 9_instruction: それぞれの辺が50ピクセルのシンプルな「V」の文字を描き、矢印を完成させましょう。
+      2-3 Artist Match Hex Pic_instruction: '選ぼう: 六角形を完成させよう'
       2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
       2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
       2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: "You've used loops to draw shapes before,\nbut did you know you can put a loop inside another loop?\r\nLoop this whole\nblock of code 3 times to draw the pattern."
-      2-3 Artist Nested Loops 10_instruction: |
-        Loop this code 12 times to complete
-        the pattern.
+      2-3 Artist Nested Loops 1_instruction: "前にループを使って図形を書きましたが、ループを別のループの中で使うこともできます。\rループを使ってコード全体を3回繰り返してパターンを書きましょう。"
+      2-3 Artist Nested Loops 10_instruction: パターンを完成させるためにコードを12回繰り返しましょう。
       2-3 Artist Nested Loops 11_instruction: |
         Loop this code 4 times to complete
         the pattern, turn 90 degrees after each circle.
@@ -217,7 +213,7 @@ ja:
       2-3 Maze 15_instruction: ループを2つ使って少ない数のブロックでブタを捕まえてみよう。
       2-3 Maze 16 (old)_instruction: 「繰り返す」ブロックを使って、ブタのところまで行こう。
       2-3 Maze 16 before_instruction: ブタを捕まえよう。
-      2-3 Maze 16_instruction: ひまわりまで連れて行って。ブロックの組み合わえをループさせよう。
+      2-3 Maze 16_instruction: ひまわりまで連れて行って。ブロックの組み合わせをループさせよう。
       2-3 Maze 2_instruction: このブタにはイライラさせられるワ。彼を捕まえるのを手伝って！
       2-3 Maze 3_instruction: 足あとをたどってお調子者のブタまで連れて行って。でも、TNTの箱には注意してね。
       2-3 Maze 4_instruction: 緑の悪者のところにつれていって！(ばくだんに気をつけて)
@@ -277,7 +273,6 @@ ja:
       4-5 Artist For Loops 13_instruction: この設計は、for ループがないのでブロックをたくさん使っています！for ブロックを使ってスパイラルを完成させましょう。最後のラインの長さは 250 ピクセルです。
       4-5 Artist For Loops 14_instruction: '誰かがコードを書き始めたあとで、もっといい方法があることに途中で気づきました。ブロックを for ブロックに置き換えて、三角形のスパイラルを完成させましょう。（ヒント: 最後のラインの長さは 300 ピクセルです。）'
       4-5 Artist For Loops 15_instruction: '誰かがコードを書き始めたあとで、もっといい方法があることに途中で気づきました。ブロックを for ブロックに置き換えて、六角形のスパイラルを完成させましょう。（ヒント: 最後のラインの長さは 200 ピクセルです。）'
-      4-5 Artist For Loops 2_instruction: これは for ブロックです。1,2,3…10と入力する代わりに、ブロックの中で実行を繰り返し、回数を数えてくれるのが for ブロックです。for ブロックの中の to の部分に、10と入力します。
       4-5 Artist For Loops 3_instruction: どうやって 1 から 50 まで数えますか？for ブロックを使ってください。
       4-5 Artist For Loops 4_instruction: 1 から 10 まで、1 ずつ数えるように、for ブロックを完成させましょう。
       4-5 Artist For Loops 6_instruction: '1辺の長さが50、60、70、80、90の正方形をそれぞれ作ります。"正方形を描く" 関数を 5 回使ってください。'
@@ -358,9 +353,7 @@ ja:
         to make this more complex pattern. Notice how the diamonds overlap now, try
         changing the first "jump backwards" from 100 to 50 (half as far) - now how
         far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
+      4-5 Artist Patterns 8_instruction: ループを使って、40ピクセルの辺と60度の角を持つ6角形を書きましょう。
       4-5 Artist Patterns 9.5_instruction: |
         Let's loop this code to draw two rows
         of hexagons. Notice how our second row is shifted to the right.
@@ -2998,6 +2991,9 @@ ja:
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3013,6 +3009,11 @@ ja:
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

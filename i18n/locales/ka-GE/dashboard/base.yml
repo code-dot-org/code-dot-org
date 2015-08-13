@@ -221,7 +221,7 @@ ka:
         artist: რამის დახატვა
         calculate: Calculate Something
     user:
-      classroom: Teacher Home Page
+      classroom: მასწავლებლის მთავარი გვერდი
       district_dashboard: განყოფილების მართვის პანელი
       label: 'გამარჯობა %{username}'
       stats: კოდის სტუდია
@@ -349,7 +349,7 @@ ka:
     local_school: ადგილობრივი სკოლა
     online: ონლაინ
     see_details: დეტალების ნახვა
-    view_course: View Course
+    view_course: კურსის ნახვა
     prize_info: პრიზები მონაწილეობისთვის ( მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებისთვის) 1,000 დოლარამდე თით კლასისთვის.
     tryfirst: 'ან, შეგიძლიათ ჯერ სცადოთ და მოგვიანებით დარეგისტრირდეთ:'
     trynow: სცადე ახლა
@@ -364,7 +364,7 @@ ka:
     heading_legacy: '<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
     your_gallery: გალერეა
     no_primary_course: ნახეთ კურსი კოდის სტუდიაში
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: სცადე Code Studio კურსი ქვემოთ ერთის არჩევით
     print_certificate: სერტიფიკატის ამობეჭდვა
   gender:
     male: მამრობითი

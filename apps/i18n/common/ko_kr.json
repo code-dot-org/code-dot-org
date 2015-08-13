@@ -152,6 +152,7 @@
   "errorUnusedFunction": "작성한 함수가 한 번도 사용되지 않았습니다. 도구상자에서 \"함수\"를 클릭하고 프로그램에서 함수를 사용하도록 만드세요.",
   "errorUnusedParam": "파라매터 블럭은 추가했지만 함수 정의에서 파라매터 블럭을 사용하지 않았습니다. \"편집\"을 클릭해서 파라매터를 사용하도록 만들고 파라매터 블럭을 녹색 블럭 안으로 옮기세요.",
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
+  "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "extraTopBlocks": "연결시키지 않은 블록들이 있습니다.",
   "extraTopBlocksWhenRun": "연결하지 않은 블록들이 있습니다.  \"실행하면\" 블록에 연결하시겠습니까?",
   "finalStage": "축하합니다! 마지막 단계까지 성공적으로 해결했습니다.",
@@ -165,6 +166,7 @@
   "hintHeader": "도움말:",
   "hintRequest": "도움 보기",
   "hintTitle": "힌트:",
+  "ignore": "Ignore",
   "infinity": "무한",
   "jump": "점프",
   "keepPlaying": "계속 실행",
@@ -198,6 +200,7 @@
   "showCodeHeader": "코드 보기",
   "showGeneratedCode": "코드 보기",
   "showTextHeader": "텍스트 표시",
+  "showVersionsHeader": "Version History",
   "showToolbox": "도구 상자 보이기",
   "signup": "샘플 코스를 위해 가입하기",
   "stringEquals": "문장=?",
@@ -217,6 +220,5 @@
   "watchVideo": "비디오 보기",
   "when": "~할 때",
   "whenRun": "실행하면",
-  "workspaceHeaderShort": "작업 영역: ",
-  "showVersionsHeader": "Version History"
+  "workspaceHeaderShort": "작업 영역: "
 }

@@ -25,7 +25,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "is_project_level": true
   }
 }]]></config>
   <blocks>

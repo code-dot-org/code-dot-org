@@ -338,9 +338,9 @@ end
 def log_in_as(user)
   params = {
     name: "_learn_session_#{Rails.env}",
-    value: encrypted_cookie(user),
-    secure: true
+    value: encrypted_cookie(user)
   }
+  params[:secure] = true if @browser.current_url.start_with? 'https://'
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/

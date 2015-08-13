@@ -420,9 +420,6 @@
       4-5 Artist For Loops 15_instruction: 'Noen startet koden, men innså at det måtte
         være en raskere måte! Bruk en "for"-blokk til å erstatte blokkene og fullfør
         heksagon-spiralen. (Hint: lengden på den siste linja er 200 piksler.)'
-      4-5 Artist For Loops 2_instruction: Dette er en "for"-blokk. I stedet for å
-        taste inn 1,2,3... 10, så kan "for"-blokka repetere blokkene inni seg og telle
-        tallene for deg. Sett tallet 10 inn i "til"-seksjonen av "for"-blokka.
       4-5 Artist For Loops 3_instruction: Hvordan kan vi telle fra 1 til 50? Endre
         "for"-blokka.
       4-5 Artist For Loops 4_instruction: Gjør ferdig "for"-blokka slik at den teller
@@ -1252,157 +1249,129 @@
       Course 4 Artist For Loops 15_instruction: 'Fritt spill: Prøv å lage noen tegninger
         selv ved å bruke for-løkker. Vi har lagt til noen generiske variabler for
         deg som du kan bruke også.'
-      Course 4 Artist For Loops 2_instruction: "I've put the code for drawing a\ntriangle
-        inside a for loop that counts from 50 to 100 by 10. Take a look at\nhow I
-        built the code then click on \"Run\" when you are ready to see it in\naction.
-        \n"
-      Course 4 Artist For Loops 3_instruction: |
-        The smallest triangle has 20 pixel
-        sides, the largest has 200 pixel sides, and each triangle is 20 pixels larger
-        than the last. Update the for loop to draw these triangles.
-      Course 4 Artist For Loops 4_instruction: |
-        Use a for loop to draw these squares.
-        They start at 50 pixels long, the largest is 300 pixels long, and each square
-        is 25 pixels larger than the last. I have given you almost all the code you
-        will need - you're missing one block, which one is it?
-      Course 4 Artist For Loops 5_instruction: "Good job on the last puzzle! Let's\nuse
-        that \"counter\" variable block again to draw this cool picture. \n"
-      Course 4 Artist For Loops 6_instruction: |
-        Free Play! Try using a for loop to
-        draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 7_instruction: |
-        What happens if you remove the "Repeat
-        3" from this algorithm, keeping the "move" and "turn" blocks in the for
-        loop? In this spiraling triangle, each side is a 20 pixels longer than the
-        last.
-      Course 4 Artist For Loops 8_instruction: |
-        The smallest line of this square
-        spiral is 10, the largest is 200, and each line is 10 pixels longer than the
-        last. Can you fill in the missing blocks to complete this awesome picture?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops inspire_instruction: "Free Play Inspiration: You've\nnow
-        learned everything you need to know to make a pattern like this! If this\npicture
-        inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\r\n\r\nWant to know how our inspiration pattern was made? Visit\nhttps://studio.code.org/c/106387604
-        for the solution."
-      Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is 100
-        pixels in length, using a loop?
-      Course 4 Artist Functions 10_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 11_instruction: |
-        Check out this code that draws a
-        cube - can you move it into a function called "Draw a Cube"
-      Course 4 Artist Functions 12_instruction: Loop square function to draw a line
-      Course 4 Artist Functions 13_instruction: |
-        Check it out we have a new function
-        called "draw a line of squares". Feel free to take a look inside the function
-        block to see how we built it. Click on "Run" when your are ready for the
-        next puzzle.
-      Course 4 Artist Functions 14_instruction: |
-        You're doing great! Let's use
-        your new "Draw a line of squares" function to draw a Square shape. Remember
-        each square is 40 pixels in length.
-      Course 4 Artist Functions 15_instruction: |
-        Let's Step it up a little, can
-        you draw a star shape using the "draw a line of squares" function? Good
-        luck! Hint: you may have to turn 144 degrees
-      Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
-      Course 4 Artist Functions 3_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 4_instruction: |
-        Are you ready to create your own
-        "Function Block"? Click on the "Functions" block in the tool box, name
-        it "draw a triangle", then create a triangle as you have done before with
-        the Action and Loops blocks. Then click on the Save and Close in the upper
-        right hand corner. Hint: Create a triangle that is 100 pixels in length. Good
-        luck!
-      Course 4 Artist Functions 5 OLD_instruction: |
-        Let's try to use our two functions
-        to draw a house - what needs to be fixed in this code to draw the house properly?
-      Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock,
-        can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 6_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 7_instruction: |
-        Can you draw a line of squares using
-        a Square function? Each square is 40 pixel's in length.
-      Course 4 Artist Functions 8_instruction: "Are you getting the hang of how to\nuse
-        function blocks? Let's modify this square so that it is 200 pixels in\nsize.
-        Hint: click on \"edit\" to change the size of the \"draw a square\"\nfunction
-        editor. Remember to click on \"save and close\" to get out of the\nfunction
-        editor. \n"
-      Course 4 Artist Functions 9_instruction: |
-        We have given you most of the code
-        to create a function. However there seems to be something missing. Can you
-        make this function block complete?
-      Course 4 Artist Inspire_instruction: "Free Play Inspiration: You've now learned\neverything
-        you need to know to make a pattern like this! If this picture inspires\nyou,
-        try to make something similar. Otherwise, create something all your own.\r\n\n\r\nWant
-        to know how our inspiration pattern was made?  Visit https://studio.code.org/c/105765376/edit\nfor
-        the solution."
-      Course 4 Artist Params 1_instruction: |
-        Let's edit a function that draws a
-        square with 50 pixel sides
-      Course 4 Artist Params 10_instruction: "You can call functions from inside\nother
-        functions! Using your \"shape\" function as a base, create 3 house shapes\neach
-        20 pixels larger than the last starting at 50 pixels in length. Using\na counter
-        loop might be helpful. \n"
+      Course 4 Artist For Loops 2_instruction: 'Jeg har puttet koden for å tegne en
+        trekant inni en for-løkke som teller fra 50 til 100 med steg på 10. Ta en
+        kikk på hvordan jeg har bygd koden og klikk "Kjør" når du er klar for å se
+        den i aksjon. '
+      Course 4 Artist For Loops 3_instruction: Den minste trekanten har sider på 20
+        piksler, den største har sider på 200 piksler, og hver trekant er 20 piksler
+        større enn den forrige. Oppdater for-løkkene for å tegne disse trekantene.
+      Course 4 Artist For Loops 4_instruction: Bruk en for-løkke til å tegne disse
+        kvadratene. De starter med sider på 50 piksler, det største har sider på 300
+        piksler, og hvert kvadrat er 25 piksler større enn den forrige. Jeg har gitt
+        deg nesten all koden du trenger - du mangler en blokk, hvilken er det?
+      Course 4 Artist For Loops 5_instruction: 'Godt jobba på den siste oppgaven!
+        La oss bruke "teller"-variabelen igjen til å tegne dette kule bildet. '
+      Course 4 Artist For Loops 6_instruction: Fritt spill! Prøv å bruke en for-løkke
+        til å tegne et voksende-figur mønster som du designer selv.
+      Course 4 Artist For Loops 7_instruction: Hva skjer hvis du fjerner "Repeter
+        3" fra denne algoritmen, beholder blokkene "flytt" og "snu"i løkka? I denne
+        spiral-trekanten er hver side 20 piksler lenger enn den forrige.
+      Course 4 Artist For Loops 8_instruction: Den korteste linja i denne kvadrat-spiralen
+        er 10, den største er 200 og hver linje er 10 piksler lenger enn den forrige.
+        Kan du fylle inn de manglende blokkene i dette stilige bildet?
+      Course 4 Artist For Loops 9_instruction: Kan du lage en spiral? Flytt framover
+        fra 1 til 75 piksler, øk med 1 piksel hver gang.
+      Course 4 Artist For Loops inspire_instruction: "Fritt spill-inspirasjon: Du
+        har nå lært alt du trenger å vite for å vite for å lage et mønster som dette!
+        Hvis du liker dette bildet, prøv å lage noe lignende. Hvis ikke kan du lage
+        noe helt annet.\r\n\r\nVil du vite hvordan vårt inspirasjons-mønster ble laget?
+        Besøk https://studio.code.org/c/106387604 for å se løsningen."
+      Course 4 Artist Functions 1_instruction: Kan du tegne et kvadrat som er 100
+        piksler i lengde ved å bruke en løkke?
+      Course 4 Artist Functions 10_instruction: Hvilken blokk må du legge til for
+        å få trekanten til å stå på toppen av kvadratet?
+      Course 4 Artist Functions 11_instruction: Sjekk ut denne koden som tegner en
+        kube - kan du flytte den inn i en funksjon kalt "Tegn en kube"
+      Course 4 Artist Functions 12_instruction: Kjør en løkke over firkant-funksjonen
+        for å tegne en linje
+      Course 4 Artist Functions 13_instruction: Vi har lagt til en ny funksjon kalt
+        "tegn en linje av firkanter". Ta gjerne en kikk inni funksjon-blokka for å
+        se hvordan vi lagde den. Klikk "Kjør" når du er klar for neste oppgave.
+      Course 4 Artist Functions 14_instruction: Bra jobba! Bruk den nye "Tegn en linje
+        av kvadrater"-funksjonen til å tegne en Kvadrat-figur. Husk at hvert kvadrat
+        er 40 piksler i lengde.
+      Course 4 Artist Functions 15_instruction: 'La oss fortsette, kan du tegne en
+        stjerne-figur ved å bruke "tegn en linje av kvadrater"-funksjonen? Lykke til!
+        Hint: du må snu 144 grader'
+      Course 4 Artist Functions 2_instruction: 'Kan du tegne 3 kvadrater med 20 piksler
+        mellomrom? Hint: hvert kvadrat er 100 piksler i størrelse'
+      Course 4 Artist Functions 3_instruction: "Kan du tegne dette bildet ved å bruke
+        \"tegn et kvadrat\"-funksjonen? Hint: hvert kvadrat er 120 piksler fra hverandre.\r\n"
+      Course 4 Artist Functions 4_instruction: 'Er du klar for å lage din egen "Funksjon-blokk"?
+        Klikk på "Funksjon"-blokka i verktøyboksen, gi den navnet "tegn en trekant".
+        Deretter opprett en trekant slik du har gjort tidligere med Handling- og Løkke-blokker.
+        Klikk så på Lagre og Lukk i øvre høyre hjørne. Hint: Opprett en trekant som
+        er 100 piksler i lengde. Lykke til!'
+      Course 4 Artist Functions 5 OLD_instruction: La oss prøve å bruke to funksjoner
+        til å tegne et hus - hva må fikses i denne koden for å tegne huset riktig?
+      Course 4 Artist Functions 5_instruction: "Kan du tegne dette bildet ved å bruke
+        \"tegn et kvadrat\"-funksjonen? Hint: hvert kvadrat er 120 piksler fra hverandre.\r\n"
+      Course 4 Artist Functions 6_instruction: Hvilken blokk må du legge til for å
+        få trekanten til å stå på toppen av kvadratet?
+      Course 4 Artist Functions 7_instruction: Kan du tegne en linje av kvadrater
+        ved å bruke en Kvadrat-funksjon? Hvert kvadrat er 40 piksler i lengde.
+      Course 4 Artist Functions 8_instruction: 'Begynner du å få taket på hvordan
+        du bruker funksjons-blokker? La oss endre dette kvadratet så det er 200 piksler
+        i størrelse. Hint: klikk på "endre" for å endre størrelsen på "tegn et kvadrat"
+        i funksjons-redigeringen. Husk å klikke på "lagre og lukk" for å gå ut av
+        funksjons-redigeringen. '
+      Course 4 Artist Functions 9_instruction: Vi har gitt det mesteparten av koden
+        til å opprette en funksjon. Allikevel, det ser ut til at det er noe som mangler.
+        Kan du fullføre denne funksjons-blokken?
+      Course 4 Artist Inspire_instruction: "Fritt spill: Du har nå lært alt du trenger
+        å vite for å lage et mønster som dette! Hvis du liker dette bildet, prøv å
+        lage noe lignende. Hvis ikke, lag noe helt annet.\r\n\n\r\nVil du vite hvordan
+        vårt mønster ble laget? Besøk https://studio.code.org/c/105765376/edit for
+        å se løsningen."
+      Course 4 Artist Params 1_instruction: La oss redigere en funksjon som tegner
+        et kvadrat med sider på 50 piksler
+      Course 4 Artist Params 10_instruction: 'Du kan kalle på funksjoner fra innsiden
+        av andre funksjoner! Bruk "figur"-funksjonen som grunnlag, opprett 3 hus-figurer
+        som hver er 20 piksler større enn den forrige. Den første starter på 50 piksler
+        i lengde. Å bruke en teller-løkke kan være nyttig. '
       Course 4 Artist Params 11_instruction: |
         How about a function called "pinwheel"
         that takes three parameters - "sides," "length" and "repeat." You can
         calculate how much to turn after each shape using the same math you used to
         figure out the turns for a shape of "sides". Can you recreate this picture?
         Here's a tip each shape is 100 pixel's in length.
-      Course 4 Artist Params 12_instruction: |
-        Use your "pinwheel" function to draw
-        each of these shapes. The side length for each image is 50.
-      Course 4 Artist Params 13_instruction: |
-        Freeplay: Here are the functions you've
-        written, and some more for you to play with. Draw something awesome!
+      Course 4 Artist Params 12_instruction: Bruk din "hjul"-funksjon til å tegne
+        hver av disse figurene. Lengden på siden av hvert bilde er 50 piksler.
+      Course 4 Artist Params 13_instruction: 'Fritt spill: Her er funksjonene du har
+        skrevet og noen til du kan spille med. Tegn noe tøft!'
       Course 4 Artist Params 2_instruction: |
         That triangle function would be a whole
         lot more useful if it could draw triangles of different sizes. I've added
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: "Awesome, can you draw each of these\ntriangles
-        with that new function? The first is 25 pixels long, the second\nis 50, and
-        the third is 75. \n"
-      Course 4 Artist Params 4_instruction: |
-        Can you add a new function called square?
-        It should also take a length parameter, just like the triangle. This time
-        draw 3 squares 25, 50 and 75 pixels in length,100 pixels apart.
+      Course 4 Artist Params 3_instruction: 'Tøft! Kan du tegne hver av disse trekantene
+        med den nye funksjonen? Den første er 25 piksler lang, den andre er 50 og
+        den tredje er 75. '
+      Course 4 Artist Params 4_instruction: Kan du legge til en ny funksjon kalt kvadrat?
+        Den bør også ta inn et parameter for lengde, akkurat som trekanten. Denne
+        gangen skal du tegne 3 kvadrater 25, 50 og 75 piksler i lengde, 100 piksler
+        fra hverandre.
       Course 4 Artist Params 5_instruction: |
-        Use both of your new functions to draw
-        this picture. To make this easier you use a loop with a "counter" parameter.
-      Course 4 Artist Params 6_instruction: "Let's edit this \"draw a shape\" function.\nIt
-        already has a \"length\" parameter. Now, let's edit the function to also\nadd
-        a \"sides\" parameter. Remember the angle to turn for a given shape is\n360
-        divided by the sides it has. Hint: lengths for each shape are the triangle\nis
-        100 pixels, the hexagon is 25 pixels and the square is 50 pixels. \n"
-      Course 4 Artist Params 7_instruction: "Can you draw these shapes by filling\nin
-        the \"???\" The square and triangle are 100 pixels in size while the hexagon\nis
-        75 pixels in size. \n"
+        Bruk begge de nye funksjonene til å tegne dette bildet. For å gjøre det lettere kan du bruke en løkke med en "teller"-parameter.
+      Course 4 Artist Params 6_instruction: 'La oss redigere denne "tegn en figur"-funksjonen.
+        Den har alt et parameter "lengde". La oss endre funksjonen så den også har
+        et parameter "sider". Husk at vinkelen du skal snu i en gitt figur er 360
+        delt på antall sider figuren har. Hint: Lengdene for figurene er: for trekanten
+        100 piksler, heksagonet 25 piksler og kvadratet 50 piksler. '
+      Course 4 Artist Params 7_instruction: 'Kan du tegne disse figurene ved å fylle
+        ut "???"? Kvadratet og trekanten er 100 piksler i størrelse mens heksagonet
+        er 75 piksler i størrelse. '
       Course 4 Artist Params 8_instruction: |
-        Can you figure out how to draw this
-        shape? Here's a hint create a new function with 6 sides called a hexagon.
-      Course 4 Artist Params 9_instruction: |
-        Do you remember when we used the counter
-        loop but removed a loop within? Let's have some fun and use the "draw a
-        shape" function with "sides" and "length" parameters. Can you re create
-        these shapes? The square counter should be 5/100/5, the triangle counter should
-        be 10/100/10 and the hexagon is 2/100/2.
-      Course 4 Artist Var 9_instruction: |
-        Here's the algorithm to draw a triangle,
-        modify it so it uses the "sides" variable instead. Replace the number 3
-        with the "sides" variable. Hint: remember to use the "set sides to" block.
+        Finner du ut hvordan du kan tegne denne figuren? Her er et hint: Lag en ny funksjon med 6 sider kalt en sekskant.
+      Course 4 Artist Params 9_instruction: Husker du da vi brukte teller-løkka, men
+        fjernet en løkke inni? La oss ha det litt gøy og bruke "tegn en figur"-funksjonen
+        med parameterne "sider" og "lengde". Kan du gjenskape disse figurene? Kvadrat-telleren
+        skal være 5/100/5, trekant-telleren skal være 10/100/10 og heksagonet 2/100/2.
+      Course 4 Artist Var 9_instruction: 'Her er algoritmen for å tegne en trekant.
+        Endre den så den bruker "sider"-variabelen i stedet. Erstatt nummeret 3 med
+        "sider"-variabelen. Hint: Husk å bruke "angi sider"-blokken.'
       Course 4 Artist Vars 1_instruction: Kan du hjelpe meg å tegne et triangel? Det
         er 100 piksler langt på hver side.
       Course 4 Artist Vars 10_instruction: Her er en algoritme som bruker mindre triangler
@@ -1462,137 +1431,101 @@
         Her er en "hvis/ellers"-blokk kombinert med en annen "hvis/ellers"-blokk for
         å danne en "Hvis/ellers hvis, ellers"-blokk. fullfør løsningen for å samle
         inn en ukjent mengde med nektar.
-      Course 4 Bee 5_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Add an if-else block to create an if, else-if, else block. Complete
-        the solution to collect the unknown amount of nectar.
-      Course 4 Bee 6_instruction: |
-        This purple flower may have either 3, 2, or 1
-        nectar. Create an if, else-if, else block to collect the unknown amount of
-        nectar.
-      Course 4 Bee 7_instruction: |
-        Use everything you have learned so far to collect
-        all the nectar. The purple flower may have either 3, 2, or 1 nectar.
-      Course 4 Bee For Loops 1_instruction: |
-        Use a loop to collect the nectar from
-        each flower.
-      Course 4 Bee For Loops 10_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
-      Course 4 Bee For Loops 11_instruction: |
-        What's wrong with this loop? See if
-        you can fix it and make the bee collect all the nectar.
-      Course 4 Bee For Loops 2_instruction: |
-        Here's a new kind of loop, called the
-        "for" loop. This particular for loop will count from 1 to 5 by 1, and run
-        the contents of the loop each time it counts. Help the Bee get the nectar.
-      Course 4 Bee For Loops 3_instruction: |
-        You can solve this puzzle by using a
-        for loop to count from 1 to 3 by 1. Now let's go get some nectar!
-      Course 4 Bee For Loops 4_instruction: |
-        Collect all of the nectar from these
-        flowers. I wonder if there's an easier way to do this...
-      Course 4 Bee For Loops 5_instruction: "Ah, the for loop makes this much easier!\nUsing
-        the \"counter\" variable from the for loop to loop the \"get nectar\"\nblock
-        the same number of times as the loop. Whew! That's a lot of loops.\nAll the
-        code you need it there, take a look at how it is put together then\nclick
-        on Run and see how it works. \n"
-      Course 4 Bee For Loops 6_instruction: |
-        You can also use a for loop to count
-        down. Try gathering this nectar by counting down from 5 to 1 by 1.
-      Course 4 Bee For Loops 7_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
-      Course 4 Bee For Loops 8_instruction: |
-        Can you use the loop variable to control
-        movement and nectar collection?
-      Course 4 Bee For Loops 9_instruction: |
-        The last number in your for loop is
-        called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
-      Course 4 Bee Params 1_instruction: |
-        Use the function "get 3 nectar" which
-        turns, moves to collect the nectar, and then returns to the original location.
-        Write a sequence to collect all of the nectar using "get 3 nectar."
-      Course 4 Bee Params 2_instruction: |
-        Modify the "get 3 nectar" function so
-        it makes me turn right instead of left to the flowers.
-      Course 4 Bee Params 3 (copy 1)_instruction: |
-        Now there are flowers on both
-        sides! Maybe you can use a parameter so that the same function works for flowers
-        on either side. I've added a parameter called "direction" to the function.
-        If the "direction" parameter equals 0 I should turn left, if it's 1 I should
-        turn right.
-      Course 4 Bee Params 3_instruction: |
-        Now there are flowers on both sides! I've
-        added a parameter called "direction" to the function. Use the "left" and
-        "right" variables to control direction. Fill in the rest of the function
-        definition and then click "Save and Close."
-      Course 4 Bee Params 4 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of the flowers. Remember, 0 = left and 1 = right.
-      Course 4 Bee Params 4 backup_instruction: |
-        Wouldn't it be nice if we could
-        collect all of these nectars with the a single function? Try adding a new
-        parameter to your function called "nectars" to control the amount of nectar
-        to collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 4_instruction: |
-        Try using your new function to collect
-        all of the flowers. Remember to use the left and right variables.
-      Course 4 Bee Params 5_instruction: |
-        Let's start from scratch - can you create
-        a new function called "get 5 nectar" with a direction parameter?
-      Course 4 Bee Params 6 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 6_instruction: |
-        Wouldn't it be nice if we could collect
-        all of these nectars with the a single function? Try adding a new parameter
-        to your function called "nectar units" to control the amount of nectar to
-        collect. You'll probably want to rename the function too!
-      Course 4 Bee Params 7 (copy 1)_instruction: |
-        Try using your new function to
-        collect all of this nectar.
-      Course 4 Bee Params 7_instruction: |
-        Try using your new function to collect
-        all of this nectar.
-      Course 4 Bee Params 8_instruction: |
-        Challenge: Now there's honey to deal with
-        too! Rewrite your function to take in both the number of honey units and the
-        number of nectar units.  How would you use those numbers to decide what you
-        should do?
-      Course 4 Binary 1_instruction: |
-        Here's a function that takes a binary string
-        of 1's and 0's and instructs the farmer to turn on the go from left to right,
-        top to bottom, turning on the squares where the number has a zero. Run the
-        code provided to see how the farmers uses binary to draw an image.
-      Course 4 Binary 2_instruction: |
-        What binary string could you loop 8 times to
-        draw this image? Hint: the number "1" fills a hole.
-      Course 4 Binary 3_instruction: |
-        Can you draw this pattern by looping a single
-        binary string?
-      Course 4 Binary 5 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 5_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 6 (copy 1)_instruction: |
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 6_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 7_instruction: |
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 8_instruction: |
-        You can complete the most of this image by
-        looping a 5 bit binary number - then you'll need one more 4 bit number to
-        get the bottom right-hand corner.
+      Course 4 Bee 5_instruction: Denne lilla blomsten må enten ha 3, 2 eller 1 nektar.
+        Legg til en hvis-ellers-blokk for å lage en hvis, ellers-hvis og ellers-blokk.
+        Fullfør løsningen for å samle inn det ukjente antallet nektar.
+      Course 4 Bee 6_instruction: Denne lilla blomsten må enten ha 3, 2 eller 1 nektar.
+        Legg til en hvis, ellers-hvis, ellers-blokk for å samle inn det ukjente antallet
+        nektar.
+      Course 4 Bee 7_instruction: Bruk alt du har lært så langt for å samle all nektaren.
+        Den lilla blomsten har enten 3, 2 eller 1 nektar.
+      Course 4 Bee For Loops 1_instruction: Bruk en løkke til å samle all nektaren
+        fra hver blomst.
+      Course 4 Bee For Loops 10_instruction: Hvis løkka di teller ned, så trekkes
+        veksten fra teller-variabelen hver gang løkka går. Hva skal du øke med for
+        å samle 9, så 6 og så 3 nektar?
+      Course 4 Bee For Loops 11_instruction: Hva er galt med denne løkka? Se om du
+        kan fikse den og gjøre slik at bia samler alle nektarene.
+      Course 4 Bee For Loops 2_instruction: Her er en ny type løkke, kalt en "for"-løkke.
+        Akkurat denne for-løkka vil telle fra 1 til 5 med steg på 1, og kjøre innholdet
+        i løkka hver gang den teller. Hjelp Bie å hente nektaren.
+      Course 4 Bee For Loops 3_instruction: Du kan løse denne oppgaven ved å bruke
+        en for-løkke til å telle fra 1 til 3 med steg på 1. La oss skaffe noen nektar!
+      Course 4 Bee For Loops 4_instruction: Samle all nektaren fra disse blomstene.
+        Jeg lurer på om det er en enklere måte å gjøre dette...
+      Course 4 Bee For Loops 5_instruction: 'Åh, for-løkka gjør dette så mye enklere!
+        Bruk "teller"-variabelen fra for-løkka til å kjøre en løkke over "hent nektar"-blokka
+        samme antall ganger som løkka. Oooh! Det var mange løkker. All koden du trenger
+        er der, ta en titt på hvordan den er satt sammen før du klikker på Kjør og
+        ser hvordan den funker. '
+      Course 4 Bee For Loops 6_instruction: Du kan også bruke en for-løkke til å telle
+        ned. Prøv å samle nektaren ved å telle ned fra 5 til 1 med steg på 1.
+      Course 4 Bee For Loops 7_instruction: Bruk for-løkkas teller-variabel til å
+        kontrollere hvor langt du beveger deg vannrett.
+      Course 4 Bee For Loops 8_instruction: Kan du bruke løkke-variabelen til å kontrollere
+        bevegelse og innsamling av nektar?
+      Course 4 Bee For Loops 9_instruction: Det siste tallet i for-løkka di er kalt
+        "vekst" og hver gang løkka kjører endres teller-variabelen med veksten. Prøv
+        å samle disse blomstene ved å bruke en vekst på 2.
+      Course 4 Bee Params 1_instruction: Bruk funksjonen "hent 3 nektar" som snur,
+        beveger seg for å samle nektar og så returnerer til opprinnelig posisjon.
+        Skriv en sekvens for å samle all nektar ved å bruke "hent 3 nektar"
+      Course 4 Bee Params 2_instruction: Endre funksjonen "hent 3 nektar" slik at
+        den får meg til å snu til høyre i stedet for til venstre for blomstene.
+      Course 4 Bee Params 3 (copy 1)_instruction: Nå er det blomster på begge sider!
+        Kanskje du kan bruke et parameter slik at den samme funksjonen fungerer for
+        blomster på begge sider. Jeg har lagt til et parameter som heter "retning"
+        i funksjonen. Hvis "retning"-parameteret er lik 0 så skal jeg gå til venstre,
+        hvis det er 1 så skal jeg gå til høyre.
+      Course 4 Bee Params 3_instruction: Nå er det blomster på begge sider! Jeg har
+        lagt til et parameter kalt "retning" i funksjonen. Bruk "venstre" og "høyre"-variabler
+        til å kontrollere retning. Fyll inn resten av funksjons-definisjonen og klikk
+        til slutt på "Lagre og Lukk"
+      Course 4 Bee Params 4 (copy 1)_instruction: Prøv å bruke den nye funksjonen
+        din til å samle alle blomstene. Husk 0 = venstre og 1 = høyre.
+      Course 4 Bee Params 4 backup_instruction: Ville det ikke vært fint om vi kunne
+        samle alle disse nektarene med en enkelt funksjon? Prøv å legge til et nytt
+        parameter til funksjonen din kalt "nektar" for å kontrollere antallet nektar
+        som skal samles. Du vil antakelig ønske å endre navnet på funksjonen også!
+      Course 4 Bee Params 4_instruction: Prøv å bruke den nye funksjonen til å samle
+        alle blomstene. Husk å bruke variablene venstre og høyre.
+      Course 4 Bee Params 5_instruction: La oss starte fra bunnen av - kan du lage
+        en ny funksjon kalt "hent 5 nektar" med et parameter for retning?
+      Course 4 Bee Params 6 (copy 1)_instruction: Prøv å bruke din nye funksjon til
+        å samle inn all denne nektaren.
+      Course 4 Bee Params 6_instruction: Ville det ikke vært fint om vi kunne samlet
+        all denne nektaren med en enkelt funksjon? Prøv å legge til et nytt parameter
+        til funksjonen din, kalt "nektar-mengde" til å kontrollere antall nektar som
+        skal samles inn. Du vil antakelig ønske å endre navnet på funksjonen også!
+      Course 4 Bee Params 7 (copy 1)_instruction: Prøv å bruke din nye funksjon til
+        å samle inn all denne nektaren.
+      Course 4 Bee Params 7_instruction: Prøv å bruke den nye funksjonen din til å
+        samle inn all denne nektaren.
+      Course 4 Bee Params 8_instruction: 'Utfordring: Nå må du håndtere honning også!
+        Skriv om funksjonen din til å ta inn både antall honning-enheter og antall
+        nektar som skal samles inn. Hvordan vil du bruke disse tallene til å avgjøre
+        hva du skal gjøre?'
+      Course 4 Binary 1_instruction: Her er en funksjon som tar inn en binærstreng
+        av 1-ere og 0-ere og instruerer bonden til å gå fra venstre til høyre, øverst
+        til nederst mens han skrur på rutene hvor nummeret er 0. Kjør koden for å
+        se hvordan bøndene bruker binærstrenger til å tegne et bilde.
+      Course 4 Binary 2_instruction: 'Hvilken binærstreng kan du gjenta 8 ganger for
+        å tegne dette bildet? Hint: nummeret 1 fyller et hull.'
+      Course 4 Binary 3_instruction: Kan du tegne dette mønsteret ved å kjøre en løkke
+        over en enkelt binærstreng?
+      Course 4 Binary 5 (copy 1)_instruction: Hvilken binærstreng, gjentatt 10 ganger,
+        vil tegne dette bildet?
+      Course 4 Binary 5_instruction: Hvilken binærstreng, gjentatt 10 ganger, vil
+        tegne dette bildet?
+      Course 4 Binary 6 (copy 1)_instruction: Hvilken binærstreng, gjentatt 10 ganger,
+        vil tegne dette bildet?
+      Course 4 Binary 6_instruction: Hvilken binærstreng, gjentatt 10 ganger, vil
+        tegne dette bildet?
+      Course 4 Binary 7_instruction: Hvilken binærstreng, gjentatt 10 ganger, vil
+        tegne dette bildet?
+      Course 4 Binary 8_instruction: Du kan fullføre mesteparten av dette bildet ved
+        å kjøre en løkke over et 5-bits binærtall - så trenger du et til 4-bits binærtall
+        til å få til nedre høyre hjørne.
       Course 4 Maze 1_instruction: Få den sinte fuglen til grisen!
       Course 4 Maze 2_instruction: Hold deg unna dynamitten!
       Course 4 Maze 3_instruction: 'Programmer den sinte fuglen til å komme seg bort
@@ -1603,70 +1536,59 @@
         få oppgaver som mulig?
       Course 4 Maze 6_instruction: Klarer du å løse denne oppgaven ved å bruke så
         få oppgaver som mulig?
-      Course 4 Play Lab For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
-      Course 4 Play Lab Params 1_instruction: |
-        Here's a function called "jump"
-        that causes your main character to jump up 100 pixels. Use the jump function
-        to collect all of the flags.
-      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou
-        to use. \r\n\r\nProgram your game to call the \"level_up\" function if\n\"player_points\"
-        > 10.  \r\n\r\nPlay the game, and make it past level 4 to\nmove to the next
-        puzzle. "
-      Course 4 Play Lab Params 2_instruction: "Now we've got flags that are too\nhigh
-        for our current jump! Let's use both the \"up\" and \"down\" arrows\nso that
-        we can have multiple jump heights.  \r\n\r\nWe need to add a parameter\nto
-        our jump function called \"height\".  The up arrow should cause the dog\nto
-        jump 200 pixels and the down arrow should make it jump only 100 pixels.\n\r\n\r\nHint:
-        You will need to click \"edit\" on the jump function and update\nit so that
-        it uses the \"height\" parameter."
-      Course 4 Play Lab Params 3_instruction: "Let's add another parameter to the\njump
-        function so that we can use it with other actors. Each actor is represented\nby
-        a number, starting from one. Edit the \"jump\" function so that the definition\nincludes
-        the \"actor\" parameter. \n"
-      Course 4 Play Lab Params 4_instruction: |
-        Here's a function called "patrol."
-        Edit it to move the Cat up 400 pixels and then down 400 pixels.
-      Course 4 Play Lab Params 5_instruction: |
-        Fill in the "actor" parameter input
-        so that we can call the "patrol" function for each of the actors. Remember,
-        the actors correspond to numbers 1, 2, and 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Use a "set speed" block with the new "speed"
-        parameter.
-      Course 4 Play Lab Params 7_instruction: "Look at the code provided to see if\nyou
-        can figure out what each block does.  \r\n\r\nWhen you're done, use the\narrow
-        keys to control the Dog and collect all of the flags."
-      Course 4 Play Lab Params 8_instruction: |
-        Use a "when touching" block to send
-        Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "You may recognize this game from an\nearlier
-        level. \r\n\r\nWe've added a function called \"score_points\" that\ntakes
-        the parameter \"points\". \r\n\r\nEdit the function so that the \"points\"\nparameter
-        is added to the \"player_points\" variable. \r\n\r\nWhen you're\ndone, click
-        \"Run\" to play.  When Dog scores 10 points, you will move on\nto the next
-        puzzle. "
-      Course 4 Play Lab Vars 1_instruction: |
-        This time you don't have to write any
-        code, just hit "Run" to play the game! In this game, you're the Dog who
-        is trying to collect more flags than the Cat. Use the down arrow to control
-        the Dog. Press "Finish" when you're done playing.
-      Course 4 Play Lab Vars 2_instruction: |
-        The race in that last puzzle wasn't
-        very fair! Change the "dog_speed" variable to make sure you can collect
-        more flags than the Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3_instruction: |
-        Here's a new kind of game! Use the
-        left and right arrows to move, and the up arrow to jump. See if you can collect
-        all of the flags.
-      Course 4 Play Lab Vars 4_instruction: |
-        Now we're using a variable called "height"
-        to control how high the dog can jump. Update the "height" variable so that
-        the dog can jump high enough to reach all the flags.
-      Course 4 Play Lab Vars 5_instruction: "Let's build a game! First we'll need\na
-        score. Use the \"set points to\" block to set the score to 10. \n"
+      Course 4 Play Lab For Loops 2_instruction: Denne gangen, la oss telle oddetallene
+        fra 1 til 100.
+      Course 4 Play Lab Params 1_instruction: Her er en funksjon kalt "hopp" som får
+        hovedpersonen din til å hoppe 100 piksler. Bruk hopp-funksjonen til å samle
+        alle flaggene.
+      Course 4 Play Lab Params 10_instruction: "Vi har lagt til en siste funksjon
+        du kan bruke. \r\n\r\nProgrammer ditt spill til å kalle på \"levle_opp\"-funksjonen
+        hvis \"spiller_poeng\" > 10. \r\n\r\nSpill spillet og oppnå level 4 for å
+        gå videre til neste oppgave. "
+      Course 4 Play Lab Params 2_instruction: "Nå har vi flagg som er alt for høye
+        for vårt nåværende hopp! La oss bruke pilene \"opp\" og \"ned\" så vi ha flere
+        hopp-høyder. \r\n\r\nVi trenger å legge til et parameter kalt \"høyde\" til
+        vår hopp-funksjon. Opp-pila skal få hunden til å hoppe 200 piksler og ned-pila
+        skal få den til å kun hoppe 100 piksler.\n\r\n\r\nHint: Du må klikke på \"endre\"
+        på hopp-funksjonen og oppdatere den slik at den bruker \"høyde\"-parameteret."
+      Course 4 Play Lab Params 3_instruction: 'La oss legge til et til parameter til
+        hopp-funksjonen slik at vi kan bruke den med andre spillere. Hver spiller
+        er representert med et nummer, fra en og oppover. Endre "hopp"-funksjonen
+        slik at definisjonen inneholder "spiller"-parameteret. '
+      Course 4 Play Lab Params 4_instruction: Her er en funksjon kalt "patruljer".
+        Endre den slik at Katt beveger seg opp 400 piksler og så ned 400 piksler.
+      Course 4 Play Lab Params 5_instruction: Fyll inn "spiller"-parameteret slik
+        at vi kaller på "patruljer"-funksjonen for hver spiller. Husk at spillerne
+        tilsvarer tallene 1, 2 og 3.
+      Course 4 Play Lab Params 6_instruction: Legg til enda et parameter kalt "fart"
+        til "patruljer"-funksjonen. Bruk en "sett fart"-blokk sammen med det nye "fart"-parameteret.
+      Course 4 Play Lab Params 7_instruction: "Se på denne koden og se om du kan finne
+        ut hva hver blokk gjør. \r\n\r\nNår du er ferdig, bruk piltastene til å styre
+        Hund og samle alle flaggene."
+      Course 4 Play Lab Params 8_instruction: Bruk en "når berører"-blokk til å sende
+        Hund tilbake til øvre venstre hjørne BARE hvis Hund berører noen av de andre
+        spillerne.
+      Course 4 Play Lab Params 9_instruction: "Du gjenkjenner kanskje dette spillet
+        fra tidligere. \r\n\r\nVi har lagt til en funksjon kalt \"score_poeng\" som
+        tar inn parameteret \"poeng\". \r\n\r\nEndre funksjonen slik at \"poeng\"-parameteret
+        legges til på \"spiller_poeng\"-variabelen. \r\n\r\nNår du er ferdig klikker
+        du på \"Kjør\" for å spille. Når Hund scorer 10 poeng kan du flytte til neste
+        oppgave. "
+      Course 4 Play Lab Vars 1_instruction: Denne gangen trenger du ikke å omskrive
+        noe kode, bare trykk på "Kjør" for å spille spillet! I dette spillet er du
+        Hund, som prøver å samle mer flagg enn Katt. Bruk ned-piltasten til å kontrollere
+        Hund. Trykk "Fullfør" når du er ferdig med å spille.
+      Course 4 Play Lab Vars 2_instruction: Løpet i forrige oppgave var ikke veldig
+        rettferdig! Endre variabelen "hund_fart" for å sikre at du kan samle mer flagg
+        enn Katt. Den første til å samle 10 flagg vinner!
+      Course 4 Play Lab Vars 3_instruction: Her er et nytt type spill! Bruk venstre-
+        og høyre-pilene til å bevege deg og opp-pila til å hoppe. Se om du kan samle
+        alle flaggene.
+      Course 4 Play Lab Vars 4_instruction: Nå bruker vi en variabel kalt "høyde"
+        for å kontrollere hvor høyt hunden kan hoppe. Oppdater "høyde"-variabelen
+        slik at hunden kan hoppe høyt nok til å nå alle flaggene.
+      Course 4 Play Lab Vars 5_instruction: 'La oss bygge et spill! Først trenger
+        vi en poengsum. Bruk "sett poeng til"-blokk for å sette scoren til 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: |
         Cool, now we've got our score
         variable, but how are we going to make it useful? How about adding to your
@@ -1711,9 +1633,8 @@
         Let's make the dog speak every
         number from 1 to 100. Use a for loop and the counter block to speak the counter
         variable each time the loop is run.
-      Course 4 Play Labs For Loops 2_instruction: |
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Play Labs For Loops 2_instruction: Denne gangen, la oss telle oddetallene
+        fra 1 til 100.
       Course 4 Play Labs For Loops 3_instruction: |
         If we count by larger numbers,
         we count even higher in the same amount of time. Try making the dog count
@@ -2445,9 +2366,8 @@
         the "draw a line of squares" function? Hint: Each iteration, you'll have
         to move forward a certain number of pixels and turn 144 degrees.
       NEW Course 4 Artist Functions 14_instruction: 'Free Play time! '
-      NEW Course 4 Artist Functions 2_instruction: |
-        Can you draw 3 squares 20 pixels
-        apart from one another? Hint: each square is 100 pixels in size
+      NEW Course 4 Artist Functions 2_instruction: 'Kan du tegne 3 kvadrater med 20
+        piksler mellomrom? Hint: hvert kvadrat er 100 piksler i størrelse'
       NEW Course 4 Artist Functions 3_instruction: "Here is a new type of Block.\nIt
         is called a \"Function block.\" Click \"Run\" to see what it can do. \n"
       NEW Course 4 Artist Functions 4_instruction: |
@@ -2562,9 +2482,8 @@
       NEW Course 4 Bee For Loops 1_instruction: |
         Use a loop to collect the nectar
         from each flower.
-      NEW Course 4 Bee For Loops 10_instruction: |
-        Use your for loop "counter" variable
-        to control how far to move horizontally.
+      NEW Course 4 Bee For Loops 10_instruction: Bruk for-løkkas teller-variabel til
+        å kontrollere hvor langt du beveger deg vannrett.
       NEW Course 4 Bee For Loops 11_instruction: |
         Can you use the loop variable to
         control movement and nectar collection?
@@ -2597,10 +2516,9 @@
         blocks? Can you add them back to help the bee collect the nectar?\r\nRemember:\nIf
         your loop is counting up, the increment is added to your counter variable\neach
         time through. What should your increment be to collect 3, 6, 9 nectar?\r\n"
-      NEW Course 4 Bee For Loops 9_instruction: |
-        If your loop is counting down, the
-        increment is subtracted from your counter variable each loop. What should
-        your increment be to collect 9, then 6, and then 3 nectar?
+      NEW Course 4 Bee For Loops 9_instruction: Hvis løkka di teller ned, så trekkes
+        veksten fra teller-variabelen hver gang løkka går. Hva skal du øke med for
+        å samle 9, så 6 og så 3 nektar?
       NEW Course 4 Bee For Loops 95_instruction: |
         Take a look at each piece of the
         "for loop" that you have just created.  Can you figure out which numbers
@@ -3312,6 +3230,9 @@
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3326,6 +3247,11 @@
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

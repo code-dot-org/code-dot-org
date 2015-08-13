@@ -253,7 +253,6 @@ nl:
       4-5 Artist For Loops 13_instruction: 'Dit ontwerp is begonnen zonder een "for" lus en gebruikt te veel blokken! Gebruik een "for" blok om de spiraal af te maken. Tip: de lengte van de laatste lijn is 250 pixels.'
       4-5 Artist For Loops 14_instruction: 'Iemand begon de code, maar besefte toen dat er een snellere manier moest zijn! Gebruik een "for" blok om de blokken te vervangen en de driehoekige spiraal af te maken (Tip: de lengte van de laatste lijn is 300 pixels).'
       4-5 Artist For Loops 15_instruction: 'Iemand begon de code, maar besefte toen dat er een snellere manier moest zijn! Gebruik een "for" blok om de blokken te vervangen en de zeshoekige spiraal af te maken (Tip: de lengte van de laatste lijn is 200 pixels).'
-      4-5 Artist For Loops 2_instruction: 'Dit is een "for" blok. In plaats van 1,2,3... 10 te typen kan het "for" blok de blokken binnenin herhalen en de getallen voor je tellen. Plaats het getal 10 in de sectie "tot" van het "for" blok.'
       4-5 Artist For Loops 3_instruction: 'Hoe kunnen we van 1 tot 50 tellen? Bewerk het "for" blok.'
       4-5 Artist For Loops 4_instruction: 'Maak het "for" blok af zodat het telt van 1 tot 10 met 1.'
       4-5 Artist For Loops 6_instruction: 'Teken vierkanten met zijden van 50, 60, 70, 80 en 90 pixels. Je zult de "teken een vierkant" functie vijf keer moeten gebruiken.'
@@ -844,13 +843,9 @@ nl:
       Course 4 Artist 10_instruction: 'Vrije speelruimte! Veel plezier, je kan tekenen wat je wilt. '
       Course 4 Artist 11_instruction: 'Klaar voor een uitdaging? Hier is een programma die alleen blokken gebruikt die je al hebt gehad. Kun je het programma zonder extra informatie opnieuw opnieuw maken? Tip: voel je vrij om het te doen met testen en problemen oplossen. Het gaat vast niet in een keer goed.'
       Course 4 Artist 12_instruction: "Vrij spel inspiratie: Je hebt nu alles geleerd wat je nodig hebt om een patroon als deze te maken! Als deze afbeelding je inspireert, probeer om net zo iets te maken. Maak anders iets helemaal alleen.\r\n\n\r\nWil je weten hoe ons patroon is gemaakt? Klik dan rechts op de blauwe tab en klik dan op de \"Bekijk de oplossing\"-knop."
-      Course 4 Artist 13_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can design anything you want!
+      Course 4 Artist 13_instruction: Nog aan het spelen? Hier is een leeg canvas on te ontwerpen wat je maar wilt!
       Course 4 Artist 2_instruction: Kan je met een lus rond deze code het grijze vierkant tekenen?
-      Course 4 Artist 20_instruction: |
-        Still playing?  Here is a blank canvas where
-        you can create whatever you want!
+      Course 4 Artist 20_instruction: Nog aan het spelen? Hier is een leeg canvas waar je kan maken wat je wilt!
       Course 4 Artist 3_instruction: 'Ok. probeer te bedenken wat er gebeurd als je deze code uitvoert (of druk op "Uitvoeren" om het te proberen). Herhaal het daarna voldoende keren om de tekening helemaal af te maken.'
       Course 4 Artist 4_instruction: Hoeveel graden heeft een cirkel? Vul dat getal in bij het herhaal blok om de cirkel van kleuren te maken.
       Course 4 Artist 5_instruction: Teken de andere helft van deze tekening zodat het symmetrisch is. De driehoeken zijn gelijkzijdig en zijn 50 pixels lang.
@@ -872,7 +867,10 @@ nl:
       Course 4 Artist For Loops 1_instruction: 'Teken deze driehoek van 50 pixels groot. Hint: gebruik een herhaal blok.'
       Course 4 Artist For Loops 10_instruction: Vrije speelruimte! Veel plezier, je kan tekenen wat je wilt met de blokken die je hebt geleerd te gebruiken
       Course 4 Artist For Loops 11_instruction: 'Weet je nog dat we een variabele gebruikte om de aantal zijden in een figuur te bepalen? Dit patroon begint met een driehoek en voegt daarbij één zijde per keer totdat het een tienhoek (10 zijden) vormt. Elke zijde moet 100 pixels lang zijn. Tip:  360 gedeeld door het aantal zijden dat een figuur heeft, is het aantal graden dat je zal willen draaien.'
-      Course 4 Artist For Loops 11a_instruction: "Let's put it all together!  Using\nyour knowledge of \"for loops\" and the \"counter\", create this drawing where\neach shape has two more sides than the last.  Make sure that each side is\n10 times as long as the number of sides in the polygon.\r\n\r\nVery little\nof the code has been provided for you."
+      Course 4 Artist For Loops 11a_instruction: |
+        Laten we het samen voegen! Met behulp van je kennis over "for loops" en de "counter" maken we deze tekening waar elke vorm twee zijden meer heeft dan de laatste. Zorg ervoor dat elke zijde 10 keer zo lang is als het aantal zijdes in de veelhoek.  /r/r 
+        
+        Een klein beetje van de code is voorbereid voor jou.
       Course 4 Artist For Loops 12_instruction: 'Dat zag er vet uit, maar nu wil ik een figuur tekenen naast de laatste. Deze keer is elke zijde 20 pixels. Gebruik een spring blok om 40 pixels vooruit te springen na elke figuur. '
       Course 4 Artist For Loops 13_instruction: Hmmm, de figuren worden iedere keer groter! Hebben we dit probleem niet eerder al opgelost met variabelen? Hoe kunnen we de teller gebruiken van de variabelen om de zijden kleiner te maken omdat daar meer van zijn? In plaats van vooruit te gaan met een vaste hoeveelheid, gaan we (100/teller) pixels vooruit.
       Course 4 Artist For Loops 14_instruction: Als je iets meer of minder draait dan je normaal zou doen voor een figuur, geeft dat een nette effect. Probeer eens 89 graden te draaien om deze gedraaide vierkante spiraal te vormen.
@@ -2459,6 +2457,9 @@ nl:
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -2474,6 +2475,11 @@ nl:
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original
