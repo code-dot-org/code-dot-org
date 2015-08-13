@@ -15,7 +15,6 @@
 /* global $ */
 'use strict';
 
-var _ = require('../utils').getLodash();
 var i18n = require('./locale');
 var NetSimLogEntry = require('./NetSimLogEntry');
 var Packet = require('./Packet');
@@ -104,6 +103,25 @@ var NetSimRouterLogModal = module.exports = function (rootDiv) {
   this.isAllRouterLogMode_ = this.canLogAllRouters_();
 
   this.render();
+};
+
+/**
+ * Create a comparator function that can be used to sort log entries, configured
+ * to sort according to the log browser's current configuration.
+ * @returns {function(NetSimLogEntry, NetSimLogEntry)} compares two log entries,
+ *          returns -1 if the first one belongs before the second one, 1 if
+ *          the first one belongs after the second one, and 0 if they have the
+ *          same sort position.
+ * @private
+ */
+NetSimRouterLogModal.prototype.getSortComparator_ = function () {
+  var getSortValue = NetSimRouterLogModal.sortKeyToSortValueGetterMap[this.sortBy_];
+  var invertMultiplier = this.sortDescending_ ? -1 : 1;
+  return function (a, b) {
+    var x = getSortValue(a);
+    var y = getSortValue(b);
+    return (x < y ? -1 : x > y ? 1 : 0) * invertMultiplier;
+  };
 };
 
 NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
@@ -238,27 +256,16 @@ NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
   newEntries = this.getSortedFilteredLogEntries(newEntries);
   var newRows = $(newEntries.map(this.makeTableRow_.bind(this)));
 
-  // Get the current sort value function
-  var getSortValue = NetSimRouterLogModal.sortKeyToSortValueGetterMap[this.sortBy_];
-
   // Walk both collections to merge new rows into the DOM
-  var nextOld = getNextInfo(oldRows, 0, getSortValue);
-  var nextNew = getNextInfo(newRows, 0, getSortValue);
-  var insertHere = false;
+  var nextOld = getNextInfo(oldRows, 0);
+  var nextNew = getNextInfo(newRows, 0);
+  var comparator = this.getSortComparator_();
   while (nextNew.index < newRows.length && nextOld.index < oldRows.length) {
-
-    // Is this where the next row goes?
-    if (this.sortDescending_) {
-      insertHere = nextNew.sortValue >= nextOld.sortValue;
-    } else {
-      insertHere = nextNew.sortValue <= nextOld.sortValue;
-    }
-
-    if (insertHere) {
+    if (comparator(nextNew.logEntry, nextOld.logEntry) <= 0) {
       nextNew.tableRow.insertBefore(nextOld.tableRow);
-      nextNew = getNextInfo(newRows, nextNew.index + 1, getSortValue);
+      nextNew = getNextInfo(newRows, nextNew.index + 1);
     } else {
-      nextOld = getNextInfo(oldRows, nextOld.index + 1, getSortValue);
+      nextOld = getNextInfo(oldRows, nextOld.index + 1);
     }
   }
 
@@ -270,17 +277,14 @@ NetSimRouterLogModal.prototype.renderNewLogEntries_ = function (newEntries) {
  * Generates a helper object for performing the log row merge.
  * @param {jQuery} rows - Wrapped collection of table rows.
  * @param {!number} atIndex - Index into `rows` at which info should be generated.
- * @param {!function(NetSimLogEntry)} getSortValue - function to get current
- *        sort value from log entry object.
- * @returns {{index: number, tableRow: jQuery, sortValue: ?}}
+ * @returns {{index: number, tableRow: jQuery, logEntry: NetSimLogEntry}}
  */
-function getNextInfo(rows, atIndex, getSortValue) {
+function getNextInfo(rows, atIndex) {
   var row = rows.eq(atIndex);
   return {
     index: atIndex,
     tableRow: row,
-    sortValue: row.length > 0 ?
-        getSortValue(row.data(LOG_ENTRY_DATA_KEY)) : undefined
+    logEntry: row.length > 0 ? row.data(LOG_ENTRY_DATA_KEY) : {}
   };
 }
 
@@ -297,13 +301,7 @@ NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntrie
         return entry.nodeID === this.router_.entityID;
       }, this);
 
-  // Sort entries according to current log browser sort setting
-  var getSortValue = NetSimRouterLogModal.sortKeyToSortValueGetterMap[this.sortBy_];
-  var sortedFilteredLogEntries = _.sortBy(filteredLogEntries, getSortValue);
-  if (this.sortDescending_) {
-    sortedFilteredLogEntries.reverse();
-  }
-  return sortedFilteredLogEntries;
+  return filteredLogEntries.sort(this.getSortComparator_());
 };
 
 /**
@@ -334,7 +332,7 @@ NetSimRouterLogModal.prototype.makeTableRow_ = function (logEntry) {
   row.appendChild(makeCell(originNode ?
       originNode.getDisplayName() : logEntry.nodeID));
 
-  row.appendChild(makeCell(logEntry.getLocalizedStatus())); 
+  row.appendChild(makeCell(logEntry.getLocalizedStatus()));
 
   if (showFromAddress) {
     row.appendChild(makeCell(logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS)));
