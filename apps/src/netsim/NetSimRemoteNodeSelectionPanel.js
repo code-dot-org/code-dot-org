@@ -213,7 +213,7 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (connection
   var isRouter = (connectionTarget.getNodeType() === NodeType.ROUTER);
 
   // Can't connect to full routers
-  if (isRouter && connectionTarget.isFull()) {
+  if (connectionTarget.isFull()) {
     return false;
   }
 
