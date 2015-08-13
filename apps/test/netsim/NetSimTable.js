@@ -361,6 +361,29 @@ describe("NetSimTable", function () {
     assertEqual(apiTable.log(), 'readAll');
   });
 
+  it ("can give back all rows in local cache with readAll", function () {
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    netsimTable.create({}, callback);
+    var rows = netsimTable.readAll();
+    assertEqual(5, rows.length);
+  });
+
+  it ("can give back a subset of rows with readAllFromID", function () {
+    netsimTable.create({type: 'old'}, callback);
+    netsimTable.create({type: 'old'}, callback);
+    netsimTable.create({type: 'old'}, callback);
+    netsimTable.create({type: 'new'}, callback);
+    netsimTable.create({type: 'new'}, callback);
+    var rows = netsimTable.readAllFromID(4);
+    assertEqual(2, rows.length);
+    rows.forEach(function (row) {
+      assertEqual('new', row.type);
+    });
+  });
+
   it ("calls read on the API table", function () {
     netsimTable.read(1, callback);
     assertEqual(apiTable.log(), 'read[1]');
@@ -460,54 +483,6 @@ describe("NetSimTable", function () {
     notifyCount = 0;
     netsimTable.deleteMany([1, 3], callback);
     assertEqual(notifyCount, 1);
-  });
-
-  it ("passes new full table contents to notification callbacks", function () {
-    var receivedTableData;
-    netsimTable.tableChange.register(function (newTableData) {
-      receivedTableData = newTableData;
-    });
-
-    netsimTable.create({data: "A"}, callback);
-    netsimTable.create({data: "B"}, callback);
-    assertEqual(receivedTableData,
-        [
-          {data: "A", id: 1},
-          {data: "B", id: 2}
-        ]);
-
-    // Remote change
-    apiTable.create({data: "C"}, callback);
-    netsimTable.refresh(callback);
-    assertEqual(receivedTableData,
-        [
-          {data: "A", id: 1},
-          {data: "B", id: 2},
-          {data: "C", id: 3}
-        ]);
-
-    netsimTable.update(2, {data: "Z"}, callback);
-    assertEqual(receivedTableData,
-        [
-          {data: "A", id: 1},
-          {data: "Z", id: 2},
-          {data: "C", id: 3}
-        ]);
-
-    netsimTable.delete(1, callback);
-    assertEqual(
-        receivedTableData,
-        [
-          {data: "Z", id: 2},
-          {data: "C", id: 3}
-        ]);
-
-    netsimTable.deleteMany([2], callback);
-    assertEqual(
-        receivedTableData,
-        [
-          {data: "C", id: 3}
-        ]);
   });
 
   it ("polls table on tick", function () {
