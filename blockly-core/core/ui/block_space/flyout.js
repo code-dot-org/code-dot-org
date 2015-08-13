@@ -327,7 +327,7 @@ Blockly.Flyout.prototype.position_ = function() {
   // Center the trashcan
   if (this.svgTrashcan_) {
     var flyoutWidth = this.svgGroup_.getBoundingClientRect().width;
-    var trashcanWidth = this.svgTrashcan_.getBoundingClientRect().width;
+    var trashcanWidth = 70;
     var trashcanX = Math.round(flyoutWidth / 2 - trashcanWidth / 2);
     this.svgTrashcan_.setAttribute('transform', 'translate(' + trashcanX + ', 20)');
   }
