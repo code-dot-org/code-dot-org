@@ -291,7 +291,7 @@ id:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Mulailah dengan sebuah persegi <br/> Letakkan suatu jajar genjang di atas persegi <br/> Letakkan sebuah segitiga sebelah kanan jajaran genjang'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Mulailah dengan sebuah persegi<br/>Letakkan sebuah segitiga di atas persegi<br/>Letakkan sebuah segitiga di bawah persegi'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Mulailah dengan sebuah persegi <br/> Letakkan segitiga bawah persegi <br/> Letakkan genjang sebelah kanan segitiga'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Mulailah dengan sebuah persegi <br/> Tempatkan segitiga pada sisi kanan persegi <br/> tempatkan jajarangenjang di bawah persegi <br/> menempatkan segitiga pada sisi kanan jajarangenjang'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -420,7 +420,7 @@ id:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Maze Multiple Choice One: Pilihan Ganda Labirin Satu
-        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
+        Which set of blocks is the correct answer?: Kumpulan blok mana yang merupakan jawaban yang tepat?
       4-5 Algorithms Multi 1:
         Baking cookies: Memanggang kue
         Banana: Pisang
@@ -479,7 +479,7 @@ id:
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou, <br/> melompat ke saya Lou, Sayang Ku.'
         Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
         Multiple Choice: Pilihan Berganda
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Apa potongan terbesar dari lagu ini yang dapat Anda definisikan sebagai bagian chorus sehingga bagian chorus mengulangi persis setiap kali hal itu dipanggil?
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png

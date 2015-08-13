@@ -152,6 +152,7 @@
   "errorUnusedFunction": "You created a function, but never used it on your workspace! Click on \"Functions\" in the toolbox and make sure you use it in your program.",
   "errorUnusedParam": "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.",
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
+  "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "extraTopBlocks": "You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
   "extraTopBlocksWhenRun": "You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
   "finalStage": "Congratulations! You have completed the final stage.",
@@ -165,6 +166,7 @@
   "hintHeader": "Here's a tip:",
   "hintRequest": "See hint",
   "hintTitle": "সংকেত:",
+  "ignore": "Ignore",
   "infinity": "অসীম",
   "jump": "jump",
   "keepPlaying": "Keep Playing",
@@ -198,6 +200,7 @@
   "showCodeHeader": "কোড প্রদর্শন করুন",
   "showGeneratedCode": "কোড প্রদর্শন করুন",
   "showTextHeader": "Show Text",
+  "showVersionsHeader": "Version History",
   "showToolbox": "Show Toolbox",
   "signup": "Sign up for the intro course",
   "stringEquals": "string=?",
@@ -217,6 +220,5 @@
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "showVersionsHeader": "Version History"
+  "workspaceHeaderShort": "Workspace: "
 }

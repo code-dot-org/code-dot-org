@@ -152,6 +152,7 @@
   "errorUnusedFunction": "Lumikha ka ng isang function, ngunit hindi kailanman ginamit ito sa iyong workspace! Mag-click sa \"Mga Functions\" sa toolbox at tiyakin na ginagamit mo ito sa iyong program.",
   "errorUnusedParam": "Nagdagdag ka ng isang block na parameter, ngunit hindi ito ginamit sa definition. Siguraduhin na gamitin ang iyong mga parameter sa pamamagitan ng pag-click sa \"i-edit\" at paglalagay ng parameter block sa loob ng berdeng block.",
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
+  "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "extraTopBlocks": "Mayroon kang hindi isinama na block. Ibig mo bang ilakip ang mga ito sa \"when run\" block?",
   "extraTopBlocksWhenRun": "You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
   "finalStage": "Maligayang pagbati! Natapos mo na ang pinakahuling stage.",
@@ -165,6 +166,7 @@
   "hintHeader": "Narito ang isang tip:",
   "hintRequest": "Tingnan ang hint",
   "hintTitle": "Pahiwatig:",
+  "ignore": "Ignore",
   "infinity": "Walang katapusan",
   "jump": "talon",
   "keepPlaying": "Keep Playing",
@@ -198,6 +200,7 @@
   "showCodeHeader": "Ipakita ang Code",
   "showGeneratedCode": "Ipakita ang Code",
   "showTextHeader": "Show Text",
+  "showVersionsHeader": "Version History",
   "showToolbox": "Show Toolbox",
   "signup": "Mag-sign up para sa intro ng kurso",
   "stringEquals": "string=?",
@@ -217,6 +220,5 @@
   "watchVideo": "Panoorin ang Video",
   "when": "kelan",
   "whenRun": "kapag tumakbo",
-  "workspaceHeaderShort": "Workspace: ",
-  "showVersionsHeader": "Version History"
+  "workspaceHeaderShort": "Workspace: "
 }

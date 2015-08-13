@@ -152,6 +152,7 @@
   "errorUnusedFunction": "Bir fonksiyon yarattın ama çalışma alanında kullanmadın! Araç çubuğundaki \"fonksiyonlar\" kısmına tıkla ve fonksiyonunu programında kullandığına emin ol.",
   "errorUnusedParam": "Parametre bloğu ekledin ama bunu tanımında kullanmadın. \"Düzenle\" butonuna tıklayarak ve parametre bloğunu yeşil bloğun içine yerleştirerek parametreni kullandığından emin ol.",
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
+  "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "extraTopBlocks": "Bağımsız bloğa sahipsin.",
   "extraTopBlocksWhenRun": "Bağlanmamış bloklarınız var. Bunları \"değerlendir\" bloğuna bağlamak mı istiyorsunuz?",
   "finalStage": "Son aşamayı bitirdiniz. Tebrikler!",
@@ -165,6 +166,7 @@
   "hintHeader": "İşte bir ipucu:",
   "hintRequest": "İpucunu gör",
   "hintTitle": "İpucu:",
+  "ignore": "Ignore",
   "infinity": "Sonsuz",
   "jump": "zıpla",
   "keepPlaying": "Oynamaya devam et",
@@ -198,6 +200,7 @@
   "showCodeHeader": "Kodu Görüntüle",
   "showGeneratedCode": "Kodu Görüntüle",
   "showTextHeader": "Metni göster",
+  "showVersionsHeader": "Version History",
   "showToolbox": "Araç kutusunu göster",
   "signup": "Giriş dersi için üye olun",
   "stringEquals": "dizi=?",
@@ -217,6 +220,5 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: ",
-  "showVersionsHeader": "Version History"
+  "workspaceHeaderShort": "Çalışma alanı: "
 }

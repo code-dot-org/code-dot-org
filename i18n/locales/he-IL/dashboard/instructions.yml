@@ -433,10 +433,6 @@ he:
         מישהו התחיל לכתוב את הקוד אבל הפסיק כשהבין שחייבת להיות דרך מהירה יותר!
         השתמש בלולאת "ספור עם" כדי להחליף את הבלוקים והשלם את הספירלה המשושה.
         (רמז: אורכה של השורה האחרונה 200 פיקסלים).
-      4-5 Artist For Loops 2_instruction: |
-        זהו בלוק "ספור עם", במקום להקיש 10.....1,2,3 לולאת ה"ספור עם" 
-        יכולה לחזור על הבלוקים בתוכה ולמנות את המספרים בשבילך.
-        הקש את המספר 10 ב-"ל" שבלולאת ה"ספור עם".
       4-5 Artist For Loops 3_instruction: |
         איך נוכל לספור מ-1 ועד 50?
         ערוך את בלוק ה"ספור עם".
@@ -3335,6 +3331,9 @@ he:
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
+      U3L26 Chatbot Final_instruction: |
+        Update your digital assistant to include
+        at least one each of AND, OR, and NOT
       U3L26 Compound Logic_instruction: |
         Write a conditional statement that detects
         if a command contains all the phrases "2000" "animated" and "G-rated."
@@ -3350,6 +3349,11 @@ he:
         statement that detects if a command contains at least one of the phrases "all
         time" "all-time" "overall" or "millennium." The function should return
         true if the above conditions are met and return false otherwise
+      U3L27 Chatbot Final_instruction: |
+        Make your digital assistant awesome and when
+        you are finished, ask one of your classmates to test it for you using the
+        activity guide. As you add features to your digital assistant, track them
+        on the next level.
       U3L2_Turtle3by3Grid_instruction: |
         Draw a 3x3 grid to the front and right of
         the turtle as efficiently as possible. The turtle should end at its original

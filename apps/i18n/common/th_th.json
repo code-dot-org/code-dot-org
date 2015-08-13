@@ -152,6 +152,7 @@
   "errorUnusedFunction": "คุณสร้างฟังก์ชัน แต่ไม่เคยใช้มันบนพื้นที่ทำงานของคุณ คลิกที่ \"ฟังก์ชัน\" ในกล่องเครื่องมือ และให้แน่ใจว่า คุณใช้ในโปรแกรมของคุณ.",
   "errorUnusedParam": "คุณเพิ่มบล็อกของตัวแทนค่า แต่อย่าใช้มันในการให้ความหมาย ให้แน่ใจว่า คุณ ใช้ตัวแปรของคุณโดยการคลิ่กที่ การแก้ไข และ วางมันลงไปที่บล็อกตัวแปร ด้านใน ของบล็อกเขียว.",
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
+  "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
   "extraTopBlocks": "คุณมีบล็อกที่ไม่ได้ต่อ",
   "extraTopBlocksWhenRun": "คุณมีบล็อกที่ไม่ได้ต่อ คุณต้องการเอามาต่อกับบล็อกเมื่อเรียกให้ทำงานหรือไม่",
   "finalStage": "ขอแสดงความยินดี ขั้นตอนสุดท้ายสำเร็จแล้ว.",
@@ -165,6 +166,7 @@
   "hintHeader": "เคล็ดลับ:",
   "hintRequest": "ดูคำแนะนำ",
   "hintTitle": "คำแนะนำ:",
+  "ignore": "Ignore",
   "infinity": "ไม่จำกัด",
   "jump": "กระโดด",
   "keepPlaying": "เล่นต่อไป",
@@ -198,6 +200,7 @@
   "showCodeHeader": "แสดงรหัส",
   "showGeneratedCode": "แสดงโค้ด",
   "showTextHeader": "แสดงข้อความ",
+  "showVersionsHeader": "Version History",
   "showToolbox": "แสดงกล่องเลรื่องมือ",
   "signup": "ลงทะเบียนเพื่อทดลองเรียน",
   "stringEquals": "ประโยค = ?",
@@ -217,6 +220,5 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
-  "showVersionsHeader": "Version History"
+  "workspaceHeaderShort": "พื้นที่ทำงาน: "
 }

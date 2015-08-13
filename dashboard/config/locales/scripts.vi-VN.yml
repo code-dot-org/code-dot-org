@@ -13,7 +13,7 @@
           description_short: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'Mê cung: trình tự'
+          'Maze: Sequence': 'Mê cung: Trình tự'
           'Maze: Debugging': 'Mê cung: Hiệu chỉnh'
           'Artist 1: Intro': 'Nghệ sĩ 1: giới thiệu'
           Artists 2: Nghệ sĩ 2
@@ -80,7 +80,7 @@
             nghiệm lập trình. Trong khóa học này, học viên sẽ tạo ra các chương trình
             để giải quyết vấn đề và phát triển các trò chơi tương tác hoặc chia sẻ
             những mẩu chuyện. Khuyến khích cho học sinh từ lớp 2 đến lớp 5.
-          'Maze: Sequence': 'Mê cung: trình tự'
+          'Maze: Sequence': 'Mê cung: Trình tự'
           'Artist: Sequence': |
             Nghệ sĩ: trình tự
           'Maze: Loops': Vòng lặp mê cung
@@ -223,7 +223,7 @@
           description: Một dựng lên các khái niệm ngắn cho những sinh viên đã không
             thực hiện khóa học 2 và 3.
           Course 4 Prerequisite: Khóa học 4 điều kiện tiên quyết
-          'Maze: Sequence': 'Mê cung: trình tự'
+          'Maze: Sequence': 'Mê cung: Trình tự'
           'Artist: Sequence': |
             Nghệ sĩ: trình tự
           'Artist: Loops': 'Nghệ sĩ: vòng'
@@ -472,7 +472,7 @@
           description: Một dựng lên các khái niệm ngắn cho những sinh viên đã không
             thực hiện khóa học 2 và 3.
           Course 4 Prerequisite: Khóa học 4 điều kiện tiên quyết
-          'Maze: Sequence': 'Mê cung: trình tự'
+          'Maze: Sequence': 'Mê cung: Trình tự'
           'Artist: Sequence': |
             Nghệ sĩ: trình tự
           'Artist: Loops': 'Nghệ sĩ: vòng'
@@ -517,6 +517,12 @@
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
           'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -525,27 +531,29 @@
             tử và trục tọa độ'
           'Calc: Evaluation Blocks': 'Calc: các khối đánh giá'
           'Eval: Strings and Images': 'Eval: các xâu và các ảnh'
-          'Unplugged: Contracts': 'Unplugged: Contracts'
+          'Unplugged: Contracts': 'Unplugged: Hợp đồng'
           'Eval: Writing Contracts': 'Eval: các hợp đồng văn bản'
           'Calc: Defining Variables': 'Calc: xác định các biến'
-          'Play Lab: Defining Variables (Big Game)': 'Play Lab: Defining Variables
-            (Big Game)'
+          'Play Lab: Defining Variables (Big Game)': 'Phòng thí nghiệm trò chơi: Biến
+            xác định (Trò chơi lớn)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
           'Unplugged: The Design Recipe': 'Unplugged: Các bước thiết kế'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Play Lab: Animation (Big Game)'
-          'Unplugged: Booleans': 'Unplugged: Booleans'
+          'Play Lab: Animation (Big Game)': 'Phòng thí nghiệm giải trí: Hoạt hình
+            (trò chơi lớn)'
+          'Unplugged: Booleans': 'Unplugged: Các toán tử'
           'Eval: Boolean Operators': 'Eval: toán Boolean'
-          'Play Lab: Booleans': 'Play Lab: Booleans'
-          'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
+          'Play Lab: Booleans': 'Phòng thí nghiệm trò chơi: Các toán tử'
+          'Play Lab: Boolean (Big Game)': 'Phòng thí nghiệm trò chơi: Các toán tử
+            (Trò chơi lớn)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Điều kiện
             và đường chức năng'
           'Eval: Conditionals': 'Eval: các điều kiện'
-          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
-            Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
+          'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Phát
+            hiện sự va chạm và Công thức khoảng cách'
+          'Play Lab: Collision Detection (Big Game)': 'Phòng thí nghiệm trò chơi:
+            Phát hiện va chạm (Trò chơi lớn)'
           Evaluation Blocks: Các khối đánh giá
           Strings and Images: Văn bản và hình ảnh
           Contracts: hợp đồng
@@ -553,7 +561,7 @@
           Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: Các toán tử
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
@@ -575,12 +583,12 @@
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
-          Booleans: Booleans
+          Booleans: Các toán tử
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
-            (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': 'Phòng thí nghiệm trò chơi:
+            Phát hiện va chạm (Trò chơi lớn)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
         text-compression:
@@ -704,6 +712,7 @@
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -836,8 +845,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -907,8 +916,8 @@
           Routers and Redundancy: Routers and Redundancy
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Evaluation Blocks: Các khối đánh giá
           Strings and Images: Văn bản và hình ảnh
           Defining Variables: Các biến xác định
@@ -916,7 +925,7 @@
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           The Design Recipe: The Design Recipe
           Big Game - Animation: Big Game - Animation
-          Booleans: Booleans
+          Booleans: Các toán tử
           Sam the Bat: Sam the Bat
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -954,8 +963,8 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -965,7 +974,7 @@
           Defining Variables: Các biến xác định
           Defining Functions: xác định các hàm số
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
+          Booleans: Các toán tử
           'Eval: Conditionals': 'Eval: các điều kiện'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
@@ -1012,8 +1021,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Welcome!: hoan nghênh!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1067,14 +1076,16 @@
           Code.org Equity PD: Code.org Equity PD
           Necessary Background: Necessary Background
         hoc2015:
-          title: Hour of Code 2015
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          title: Giờ lập trình 2015
+          description_short: Sử dụng Phòng thí nghiệm trò chơi để tạo ra một câu chuyện
+            hoặc một trò chơi.
+          description: Sử dụng Phòng thí nghiệm trò chơi để tạo ra một câu chuyện
+            hoặc một trò chơi.
           Hour of Code: Giờ của mã
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1084,7 +1095,7 @@
           Defining Variables: Các biến xác định
           Defining Functions: xác định các hàm số
           Rocket-Height: Rocket-Height
-          Booleans: Booleans
+          Booleans: Các toán tử
           'Eval: Conditionals': 'Eval: các điều kiện'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
@@ -1096,8 +1107,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Welcome!: hoan nghênh!
           Wrap-Up: Tổng hợp
           Review StarLogo Nova: Review StarLogo Nova
@@ -1113,8 +1124,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Welcome!: hoan nghênh!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1135,8 +1146,8 @@
         sciencePD2b-iZone:
           Welcome!: hoan nghênh!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1145,8 +1156,8 @@
           Wrap-Up: Tổng hợp
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Welcome!: hoan nghênh!
           0: |
             Unit 1, Days 1-2
@@ -1169,8 +1180,8 @@
           Wrap-up: Gói gọn
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
+          description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           Welcome!: hoan nghênh!
           0: |
             Unit 1, Days 1-2
@@ -1215,3 +1226,10 @@
           Practice PT: Practice PT
           Ramping Up: Ramping Up
           Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number
+            bases. Binary, Decimal and Hexadecimal are the most common number systems
+            to see in computer science.
+          Odometer Widget: Odometer Widget
