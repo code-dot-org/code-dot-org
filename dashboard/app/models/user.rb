@@ -778,9 +778,4 @@ SQL
   def to_csv
     User.csv_attributes.map{ |attr| self.send(attr) }
   end
-
-  def after_password_reset
-    # Nothing to do, needed to work around Devise deprecation of after_password_reset.
-  end
-
 end
