@@ -2494,23 +2494,12 @@ en:
 
           How many bits would you need to encode everything that could be typed on this keyboard?
       U1L11 Assessment 1:
-        '': ''
-        15 bits: 15 bits
         16 bits: 16 bits
-        21 bits: 21 bits
         24 bits: 24 bits
         3 bits: 3 bits
-        30 bits: 30 bits
         32 bits: 32 bits
         8 bits: 8 bits
-        ? 'ASCII has an encoding for every character of the alphabet as well as encodings for numbers -- that is, the symbols of the digits 0-9.  So here is a trick question: How many bits are required to store the text of the number "150" in ASCII?'
-        : 'ASCII has an encoding for every character of the alphabet as well as encodings for numbers -- that is, the symbols of the digits 0-9.  So here is a trick question: How many bits are required to store the text of the number "150" in ASCII?'
-        ? 'ASCII has an encoding for every character of the alphabet, as well as encodings for numbers.  That is the symbols of the digits 0-9.  So here is a trick question: How many bits are required to store the text of the number "150" in ASCII?'
-        : 'ASCII has an encoding for every character of the alphabet, as well as encodings for numbers.  That is the symbols of the digits 0-9.  So here is a trick question: How many bits are required to store the text of the number "150" in ASCII?'
-        'Assessment: Sending Formatted Text': 'Assessment: Sending Formatted Text'
         'Assessment: Sending Numbers': 'Assessment: Sending Numbers'
-        How many bits are required to store the number "150" in ASCII?: How many bits are required to store the number "150" in ASCII?
-        foo: foo
       U1L11 Assessment 2:
         041 108 108 111 119: 041 108 108 111 119
         065 110 110 105 101: 065 110 110 105 101
