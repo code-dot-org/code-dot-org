@@ -395,6 +395,24 @@ class CurriculumRouter < Pegasus::Base
     return send_file(path)
   end
 
+  get '/curriculum/advocacy/*' do |file|
+    pass unless request.site == 'code.org'
+
+    document = resolve_document(sites_dir('virtual'), File.join('curriculum-advocacy', file))
+    pass if document.nil?
+    render(document, partials_dir: File.join(sites_dir('virtual'), "/curriculum-advocacy/#{file}"))
+  end
+
+  get '/curriculum/advocacy/*' do |filename|
+    # Static files in /curriculum/advocacy
+    path = sites_dir('virtual', 'curriculum-advocacy', filename)
+    pass if settings.template_extnames.include?(File.extname(path))
+    pass unless File.file?(path)
+
+    cache_control :public, :must_revalidate, :max_age=>settings.document_max_age
+    return send_file(path)
+  end
+
   get '/curriculum/:kind/docs/*' do |kind, file|
     unless Course::PRODUCTION_COURSES.include? kind
       pass if rack_env == :production
