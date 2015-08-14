@@ -1,6 +1,5 @@
 require 'minitest/autorun'
 require 'rack/test'
-require 'securerandom'
 
 require_relative '../../lib/cdo/aws/s3'
 require_relative '../../deployment'
