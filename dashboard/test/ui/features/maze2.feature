@@ -4,7 +4,7 @@ Feature: Complete a simple maze level
     Given I am on "http://learn.code.org/reset_session"
     Given I am on "http://learn.code.org/s/20-hour/stage/2/puzzle/11?noautoplay=true"
     And I rotate to landscape
-    Then the dialog is titled "Puzzle 11 of 20"
+    Then I wait to see a dialog titled "Puzzle 11 of 20"
     And element ".modal-content p:nth-child(2)" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
     And element "#prompt" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
 
