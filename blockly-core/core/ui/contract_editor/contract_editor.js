@@ -960,6 +960,12 @@ Blockly.ContractEditor.prototype.onClose = function() {
   if (!this.isOpen()) {
     return;
   }
+
+  if (this.disableExamples_ || this.isEditingVariable()) {
+    this.hideIfOpen();
+    return;
+  }
+
   var allPass = true;
   this.exampleViews_.forEach(function (view) {
     var failure = this.testExample(view.getBlock(), false);

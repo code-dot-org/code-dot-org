@@ -17,6 +17,10 @@ When(/^I configure the contract editor to disable examples$/) do
   @browser.execute_script('Blockly.contractEditor.disableExamples_ = true;')
 end
 
+When(/^I configure the contract editor to enable examples$/) do
+  @browser.execute_script('Blockly.contractEditor.disableExamples_ = false;')
+end
+
 And(/^I press the contract editor header "([^"]*)"$/) do |header_name|
   @browser.execute_script("$('.contractEditorHeaderText:contains(#{header_name})').simulate('drag', {})")
 end
