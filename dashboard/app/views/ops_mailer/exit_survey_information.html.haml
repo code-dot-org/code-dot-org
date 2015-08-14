@@ -1,0 +1,31 @@
+%p
+  Dear #{@recipient.properties['ops_first_name']},
+%p
+  Thanks for attending your #{@workshop.phase_info[:long_name]} in-person workshop. We appreciate any feedback you have. Please take a moment to complete this
+  %a{href:"#{@workshop.program_type_info[:short_name].gsub(/\s+/, "") + @workshop.phase_info[:short_name].gsub(/\s+/, "")}ExitSurvey"}
+    short survey
+  about your Code.org workshop experience.
+
+- if @workshop[:phase] == 2
+  %h2
+    Phase 2: Blended Summer Study:
+  %p
+    You’ll receive access to the online portion of Phase 2 on Monday. You must complete this before September 7th. For online PD troubleshooting, visit the FAQ.
+- elsif @workshop[:phase] >= 4 && @workshop[:phase] <= 7
+  %h2
+    Next steps for your #{@workshop.phase_info[:long_name]} PD:
+  %p
+    Your next Phase 3 workshop is on <workshop date>. Mark your calendar!
+- elsif @workshop[:phase] == 8
+  %h2
+    How to stay involved in the Code.org community:
+  %p
+    Now that you’ve finished your first year teaching ECS, we hope you’re as excited as we are to keep the momentum going locally! Please
+    %a
+      complete this survey to update your contact info
+    and tell us how you’d like to be involved in the future.
+    %a
+      Check out this PDF
+    for the many ways you can stay in touch with this community.
+%p
+  The Code.org PD team

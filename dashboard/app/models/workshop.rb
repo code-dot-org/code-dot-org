@@ -25,4 +25,28 @@ class Workshop < ActiveRecord::Base
                           class_name: 'User',
                           association_foreign_key: 'facilitator_id',
                           join_table: 'facilitators_workshops'
+
+  def self.workshops_ending_today
+    Workshop.joins(:segments).group(:workshop_id).having('(DATE(MAX(start)) = CURDATE())')
+  end
+
+  def self.workshops_in_2_weeks
+    Workshop.joins(:segments).group(:workshop_id).having('
+      (DATE(MIN(start)) = DATE_ADD(CURDATE(), INTERVAL 2 WEEK))
+    ')
+  end
+
+  def self.workshops_in_3_days
+    Workshop.joins(:segments).group(:workshop_id).having('
+      DATE(MIN(start)) = (DATE_ADD(CURDATE(), INTERVAL 3 DAY))
+    ')
+  end
+
+  def phase_info
+    ActivityConstants::PHASES[self.phase]
+  end
+
+  def program_type_info
+    ActivityConstants::PHASES[self.program_type.to_i]
+  end
 end
