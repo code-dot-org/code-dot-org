@@ -11,12 +11,12 @@ def main
       HAVING (DATE(MIN(start)) = (DATE_ADD(CURDATE(), INTERVAL 2 WEEK)))
       OR (DATE(MIN(start)) = (DATE_ADD(CURDATE(), INTERVAL 3 DAY)));
     ')
-    completed_workshops = DASHBOARD_DB.fetch('
+    ending_workshops = DASHBOARD_DB.fetch('
       SELECT * FROM segments JOIN workshops ON workshops.id = workshop_id  GROUP BY workshop_id
-      HAVING (DATE(MAX(start)) = DATE_ADD(CURDATE(), INTERVAL -1 DAY));
+      HAVING (DATE(MAX(start)) = CURDATE());
     ')
 
-    [upcoming_workshops, completed_workshops].each do |workshop_list|
+    [upcoming_workshops, ending_workshops].each do |workshop_list|
       workshop_list.each do |workshop|
         workshop_segments = DASHBOARD_DB.fetch("SELECT * FROM segments WHERE workshop_id = #{workshop[:id]};")
         teachers = Workshop.find(workshop[:id]).teachers
@@ -26,8 +26,8 @@ def main
           recipient_list.each do |recipient|
             workshop[:segments] = workshop_segments
             # workshop[:start] will be the start of the first workshop segment for upcoming workshops, and the start
-            # of the last segment for completed workshops. See the group by clause of the workshop queries
-            if workshop[:start].to_date == (Date.today - 1.day)
+            # of the last segment for ending workshops. See the group by clause of the workshop queries
+            if workshop[:start].to_date == (Date.today)
               puts("Sending exit survey info to #{recipient.properties['ops_first_name']}")
               OpsMailer.exit_survey_information(workshop, recipient).deliver
             else
