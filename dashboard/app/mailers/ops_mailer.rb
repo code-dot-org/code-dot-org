@@ -32,30 +32,20 @@ class OpsMailer < ActionMailer::Base
   end
 
   def workshop_reminder(workshop, recipient)
-    # Must duplicate because workshop is passed in from scheduled_ops_emails and requires it in its original state
-    @workshop = workshop.dup
-    # program_type was originally stored as a string in the db, but was later changed to an id that maps to activity_constants.
-    # The datatype in MySql was never changed, so for now you have to coerce it to an integer
-    @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type].to_i]
-    @workshop[:phase] = ActivityConstants::PHASES[workshop[:phase]]
-    subject = "Important: Your #{@workshop[:phase][:short_name]} workshop is coming up."
-    if @workshop[:phase][:prerequisite_phase]
-      @workshop[:prerequisite_phase] = ActivityConstants::PHASES[@workshop[:phase][:prerequisite_phase]]
-      subject += " Complete #{@workshop[:prerequisite_phase][:short_name]}"
-    end
+    @workshop = workshop
     @recipient = recipient
+
+    subject = "Important: Your #{@workshop.phase_info[:short_name]} workshop is coming up."
+    if @workshop.phase_info[:prerequisite_phase]
+      @prerequisite_phase = ActivityConstants::PHASES[@workshop.phase_info[:prerequisite_phase]]
+      subject += " Complete #{@prerequisite_phase[:short_name]}"
+    end
 
     mail content_type: 'text/html', subject: subject, to: 'andre@code.org', from: 'pd@code.org'
   end
 
   def exit_survey_information(workshop, recipient)
-    # Must duplicate because workshop is passed in from scheduled_ops_emails and requires it in its original state
-    @workshop = workshop.dup
-    # program_type was originally stored as a string in the db, but was later changed to an id that maps to activity_constants.
-    # The datatype in MySql was never changed, so for now you have to coerce it to an integer
-    @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type].to_i]
-    @workshop[:phase] = ActivityConstants::PHASES[workshop[:phase]]
-
+    @workshop = workshop
     @recipient = recipient
 
     subject = "Feedback requested for your Code.org PD workshop"
