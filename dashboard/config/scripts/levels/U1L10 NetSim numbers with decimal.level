@@ -34,7 +34,7 @@
     "show_tabs": "[\"instructions\",\"my_device\"]",
     "default_tab_index": "0",
     "show_pulse_rate_slider": "false",
-    "show_metronome": "true",
+    "show_metronome": "false",
     "show_encoding_controls": "[\"binary\",\"decimal\"]",
     "default_enabled_encodings": "[\"binary\",\"decimal\"]",
     "show_bit_rate_control": "true",
@@ -49,6 +49,8 @@
     "default_dns_mode": "none",
     "show_log_browser_button": "false",
     "connected_routers": "false",
+    "examples_required": "false",
+    "markdown_instructions": "**Instructions**:\r\n\r\nInvent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!",
     "instructions": "Invent and test a protocol for encoding and sending text messages. Your protocol must include the letters a-z, spaces, and common punctuation marks. You may add additional characters if you wish. See the worksheet handed out by your teacher for more detailed instructions!"
   }
 }]]></config>
