@@ -64,6 +64,7 @@ level 'Eval Define Funcs 3'
 level 'Eval Booleans 2'
 level 'Sam the Butterfly 2'
 level "Luigi's Pizza 1"
+level 'Eval Define Funcs Test'
 
 stage 'Netsim'
 level 'U1L4 NetSim SendAB'
