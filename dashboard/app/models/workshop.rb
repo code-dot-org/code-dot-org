@@ -49,4 +49,12 @@ class Workshop < ActiveRecord::Base
   def program_type_info
     ActivityConstants::PHASES[self.program_type.to_i]
   end
+
+  def first_segment
+    self.segments.order(:start).first
+  end
+
+  def last_segment
+    self.segments.order(:start).last
+  end
 end
