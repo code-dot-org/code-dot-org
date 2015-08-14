@@ -217,7 +217,7 @@ module Poste2
       content_type = mail.header['Content-Type'].to_s
       raise ArgumentError, "Unsupported message type: #{content_type}" unless content_type =~ /^text\/html;/ && content_type =~ /charset=UTF-8/
       sender = mail.from.first
-      raise ArgumentError, "Unsupported sender: #{sender}" unless sender == 'noreply@code.org' || sender == 'pd@code.org'
+      raise ArgumentError, "Unsupported sender: #{sender}" unless sender == 'noreply@code.org'
 
       subject = mail.subject.to_s
       body = mail.body.to_s
