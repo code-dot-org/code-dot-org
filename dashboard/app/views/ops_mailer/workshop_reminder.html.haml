@@ -1,7 +1,7 @@
 %p
   Dear #{@recipient.properties['ops_first_name']},
 %p
-  Your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.segments.order(:start).first[:start].strftime("%A, %B %d, %Y")} is coming up.
+  Your #{@workshop.phase_info[:long_name]} workshop on #{@workshop.first_segment[:start].strftime("%A, %B %d, %Y")} is coming up.
   - if @workshop[:phase] == 8 && (@workshop[:program_type] == 4 || @workshop[:program_type] == 3)
     Make sure you have completed Phase 3 online.
 %p
