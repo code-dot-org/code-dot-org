@@ -1,5 +1,5 @@
 %p
-  Dear #{@recipient.properties['ops_first_name']},
+  Dear #{@recipient.ops_first_name},
 %p
   Thanks for attending your #{@workshop.phase_info[:long_name]} in-person workshop. We appreciate any feedback you have. Please take a moment to complete this
   %a{href:"#{@workshop.program_type_info[:short_name].gsub(/\s+/, "") + @workshop.phase_info[:short_name].gsub(/\s+/, "")}ExitSurvey"}
