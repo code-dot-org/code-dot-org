@@ -15,14 +15,15 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false",
-    "markdown_instructions": "Can you write an expression that calculates _age_ in months?",
+    "markdown_instructions": "Can you write an expression that calculates `age` in months?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

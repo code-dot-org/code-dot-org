@@ -197,6 +197,13 @@ Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedTe
   element_has_text(selector, expectedText)
 end
 
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+  steps %{
+    Then I wait to see a ".dialog-title"
+    And element ".dialog-title" has text "#{expectedText}"
+  }
+end
+
 Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, locKey|
   element_has_i18n_text(selector, language, locKey)
 end
@@ -338,9 +345,9 @@ end
 def log_in_as(user)
   params = {
     name: "_learn_session_#{Rails.env}",
-    value: encrypted_cookie(user),
-    secure: true
+    value: encrypted_cookie(user)
   }
+  params[:secure] = true if @browser.current_url.start_with? 'https://'
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /code.org/ &&
       ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /code.org/

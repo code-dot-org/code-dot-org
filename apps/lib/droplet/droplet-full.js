@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-07-31
+ * Date: 2015-08-07
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Generated from C.g4 by ANTLR 4.5
@@ -36200,7 +36200,6 @@ Lexer.prototype.notifyListeners = function(e) {
 	var stop = this._input.index;
 	var text = this._input.getText(start, stop);
 	var msg = "token recognition error at: '" + this.getErrorDisplay(text) + "'";
-  msg += e.stack;
 	var listener = this.getErrorListenerDispatch();
 	listener.syntaxError(this, null, this._tokenStartLine,
 			this._tokenStartColumn, msg, e);
@@ -46453,7 +46452,7 @@ exports.dfa = require('./dfa/index');
 exports.tree = require('./tree/index');
 exports.error = require('./error/index');
 exports.Token = require('./Token').Token;
-exports.CommonToken = require('./Token').CommonToken;
+exports.CommonToken = require('./Token').Token;
 exports.InputStream = require('./InputStream').InputStream;
 exports.FileStream = require('./FileStream').FileStream;
 exports.CommonTokenStream = require('./CommonTokenStream').CommonTokenStream;
@@ -46881,7 +46880,6 @@ exports.SlowBuffer = SlowBuffer
 exports.INSPECT_MAX_BYTES = 50
 Buffer.poolSize = 8192 // not used by this implementation
 
-var kMaxLength = 0x3fffffff
 var rootParent = {}
 
 /**
@@ -46892,32 +46890,45 @@ var rootParent = {}
  * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
  * Opera 11.6+, iOS 4.2+.
  *
+ * Due to various browser bugs, sometimes the Object implementation will be used even
+ * when the browser supports typed arrays.
+ *
  * Note:
  *
- * - Implementation must support adding new properties to `Uint8Array` instances.
- *   Firefox 4-29 lacked support, fixed in Firefox 30+.
- *   See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
+ *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
+ *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
  *
- *  - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
+ *   - Safari 5-7 lacks support for changing the `Object.prototype.constructor` property
+ *     on objects.
  *
- *  - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
- *    incorrect length in some situations.
+ *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
  *
- * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they will
- * get the Object implementation, which is slower but will work correctly.
+ *   - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
+ *     incorrect length in some situations.
+
+ * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
+ * get the Object implementation, which is slower but behaves correctly.
  */
 Buffer.TYPED_ARRAY_SUPPORT = (function () {
+  function Bar () {}
   try {
-    var buf = new ArrayBuffer(0)
-    var arr = new Uint8Array(buf)
+    var arr = new Uint8Array(1)
     arr.foo = function () { return 42 }
+    arr.constructor = Bar
     return arr.foo() === 42 && // typed array instances can be augmented
+        arr.constructor === Bar && // constructor can be set
         typeof arr.subarray === 'function' && // chrome 9-10 lack `subarray`
-        new Uint8Array(1).subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
+        arr.subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
   } catch (e) {
     return false
   }
 })()
+
+function kMaxLength () {
+  return Buffer.TYPED_ARRAY_SUPPORT
+    ? 0x7fffffff
+    : 0x3fffffff
+}
 
 /**
  * Class: Buffer
@@ -46985,8 +46996,13 @@ function fromObject (that, object) {
     throw new TypeError('must start with number, buffer, array or string')
   }
 
-  if (typeof ArrayBuffer !== 'undefined' && object.buffer instanceof ArrayBuffer) {
-    return fromTypedArray(that, object)
+  if (typeof ArrayBuffer !== 'undefined') {
+    if (object.buffer instanceof ArrayBuffer) {
+      return fromTypedArray(that, object)
+    }
+    if (object instanceof ArrayBuffer) {
+      return fromArrayBuffer(that, object)
+    }
   }
 
   if (object.length) return fromArrayLike(that, object)
@@ -47019,6 +47035,18 @@ function fromTypedArray (that, array) {
   // of the old Buffer constructor.
   for (var i = 0; i < length; i += 1) {
     that[i] = array[i] & 255
+  }
+  return that
+}
+
+function fromArrayBuffer (that, array) {
+  if (Buffer.TYPED_ARRAY_SUPPORT) {
+    // Return an augmented `Uint8Array` instance, for best performance
+    array.byteLength
+    that = Buffer._augment(new Uint8Array(array))
+  } else {
+    // Fallback: Return an object instance of the Buffer class
+    that = fromTypedArray(that, new Uint8Array(array))
   }
   return that
 }
@@ -47069,9 +47097,9 @@ function allocate (that, length) {
 function checked (length) {
   // Note: cannot use `length < kMaxLength` here because that fails when
   // length is NaN (which is otherwise coerced to zero.)
-  if (length >= kMaxLength) {
+  if (length >= kMaxLength()) {
     throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-                         'size: 0x' + kMaxLength.toString(16) + ' bytes')
+                         'size: 0x' + kMaxLength().toString(16) + ' bytes')
   }
   return length | 0
 }
@@ -47140,8 +47168,6 @@ Buffer.concat = function concat (list, length) {
 
   if (list.length === 0) {
     return new Buffer(0)
-  } else if (list.length === 1) {
-    return list[0]
   }
 
   var i
@@ -47163,29 +47189,38 @@ Buffer.concat = function concat (list, length) {
 }
 
 function byteLength (string, encoding) {
-  if (typeof string !== 'string') string = String(string)
+  if (typeof string !== 'string') string = '' + string
 
-  if (string.length === 0) return 0
+  var len = string.length
+  if (len === 0) return 0
 
-  switch (encoding || 'utf8') {
-    case 'ascii':
-    case 'binary':
-    case 'raw':
-      return string.length
-    case 'ucs2':
-    case 'ucs-2':
-    case 'utf16le':
-    case 'utf-16le':
-      return string.length * 2
-    case 'hex':
-      return string.length >>> 1
-    case 'utf8':
-    case 'utf-8':
-      return utf8ToBytes(string).length
-    case 'base64':
-      return base64ToBytes(string).length
-    default:
-      return string.length
+  // Use a for loop to avoid recursion
+  var loweredCase = false
+  for (;;) {
+    switch (encoding) {
+      case 'ascii':
+      case 'binary':
+      // Deprecated
+      case 'raw':
+      case 'raws':
+        return len
+      case 'utf8':
+      case 'utf-8':
+        return utf8ToBytes(string).length
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return len * 2
+      case 'hex':
+        return len >>> 1
+      case 'base64':
+        return base64ToBytes(string).length
+      default:
+        if (loweredCase) return utf8ToBytes(string).length // assume utf8
+        encoding = ('' + encoding).toLowerCase()
+        loweredCase = true
+    }
   }
 }
 Buffer.byteLength = byteLength
@@ -47194,8 +47229,7 @@ Buffer.byteLength = byteLength
 Buffer.prototype.length = undefined
 Buffer.prototype.parent = undefined
 
-// toString(encoding, start=0, end=buffer.length)
-Buffer.prototype.toString = function toString (encoding, start, end) {
+function slowToString (encoding, start, end) {
   var loweredCase = false
 
   start = start | 0
@@ -47236,6 +47270,13 @@ Buffer.prototype.toString = function toString (encoding, start, end) {
         loweredCase = true
     }
   }
+}
+
+Buffer.prototype.toString = function toString () {
+  var length = this.length | 0
+  if (length === 0) return ''
+  if (arguments.length === 0) return utf8Slice(this, 0, length)
+  return slowToString.apply(this, arguments)
 }
 
 Buffer.prototype.equals = function equals (b) {
@@ -47301,13 +47342,13 @@ Buffer.prototype.indexOf = function indexOf (val, byteOffset) {
   throw new TypeError('val must be string, number or Buffer')
 }
 
-// `get` will be removed in Node 0.13+
+// `get` is deprecated
 Buffer.prototype.get = function get (offset) {
   console.log('.get() is deprecated. Access using array indexes instead.')
   return this.readUInt8(offset)
 }
 
-// `set` will be removed in Node 0.13+
+// `set` is deprecated
 Buffer.prototype.set = function set (v, offset) {
   console.log('.set() is deprecated. Access using array indexes instead.')
   return this.writeUInt8(v, offset)
@@ -47996,9 +48037,16 @@ Buffer.prototype.copy = function copy (target, targetStart, start, end) {
   }
 
   var len = end - start
+  var i
 
-  if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
-    for (var i = 0; i < len; i++) {
+  if (this === target && start < targetStart && targetStart < end) {
+    // descending copy from end
+    for (i = len - 1; i >= 0; i--) {
+      target[i + targetStart] = this[i + start]
+    }
+  } else if (len < 1000 || !Buffer.TYPED_ARRAY_SUPPORT) {
+    // ascending copy from start
+    for (i = 0; i < len; i++) {
       target[i + targetStart] = this[i + start]
     }
   } else {
@@ -48074,7 +48122,7 @@ Buffer._augment = function _augment (arr) {
   // save reference to original Uint8Array set method before overwriting
   arr._set = arr.set
 
-  // deprecated, will be removed in node 0.13+
+  // deprecated
   arr.get = BP.get
   arr.set = BP.set
 
@@ -48130,7 +48178,7 @@ Buffer._augment = function _augment (arr) {
   return arr
 }
 
-var INVALID_BASE64_RE = /[^+\/0-9A-z\-]/g
+var INVALID_BASE64_RE = /[^+\/0-9A-Za-z-_]/g
 
 function base64clean (str) {
   // Node strips out invalid characters like \n and \t from the string, base64-js does not
@@ -48408,14 +48456,14 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 },{}],58:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
-  var e, m,
-      eLen = nBytes * 8 - mLen - 1,
-      eMax = (1 << eLen) - 1,
-      eBias = eMax >> 1,
-      nBits = -7,
-      i = isLE ? (nBytes - 1) : 0,
-      d = isLE ? -1 : 1,
-      s = buffer[offset + i]
+  var e, m
+  var eLen = nBytes * 8 - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var nBits = -7
+  var i = isLE ? (nBytes - 1) : 0
+  var d = isLE ? -1 : 1
+  var s = buffer[offset + i]
 
   i += d
 
@@ -48441,14 +48489,14 @@ exports.read = function (buffer, offset, isLE, mLen, nBytes) {
 }
 
 exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
-  var e, m, c,
-      eLen = nBytes * 8 - mLen - 1,
-      eMax = (1 << eLen) - 1,
-      eBias = eMax >> 1,
-      rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0),
-      i = isLE ? 0 : (nBytes - 1),
-      d = isLE ? 1 : -1,
-      s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
+  var e, m, c
+  var eLen = nBytes * 8 - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
+  var i = isLE ? 0 : (nBytes - 1)
+  var d = isLE ? 1 : -1
+  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
 
   value = Math.abs(value)
 
@@ -62732,24 +62780,14 @@ Editor.prototype.populateSocket = function(socket, string) {
 };
 
 Editor.prototype.populateBlock = function(block, string) {
-  var cursor, newBlock, oldBlockEnd;
+  var location, newBlock;
   newBlock = this.mode.parse(string, {
     wrapAtRoot: false
   }).start.next.container;
   if (newBlock) {
-    if (this.cursor.count < block.start.getLocation().count) {
-      this.replace(block, newBlock);
-    } else if (this.cursor.count < block.end.getLocation().count) {
-      this.setCursor(block, null, 'before');
-      this.replace(block, newBlock);
-    } else {
-      cursor = this.cursor.clone();
-      oldBlockEnd = block.end.getLocation().count;
-      this.setCursor(this.tree);
-      this.replace(block, newBlock);
-      cursor.count += newBlock.end.getLocation().count - oldBlockEnd;
-      this.cursor = cursor;
-    }
+    location = block.start.prev;
+    this.spliceOut(block);
+    this.spliceIn(newBlock, location);
     return true;
   }
   return false;
@@ -62846,6 +62884,32 @@ Editor.prototype.formatDropdown = function(socket) {
   return this.dropdownElement.style.minWidth = this.view.getViewNodeFor(socket).bounds[0].width;
 };
 
+Editor.prototype.getDropdownList = function(socket) {
+  var result;
+  result = socket.dropdown;
+  if (result.generate) {
+    result = result.generate;
+  }
+  if ('function' === typeof result) {
+    result = socket.dropdown();
+  } else {
+    result = socket.dropdown;
+  }
+  if (result.options) {
+    result = result.options;
+  }
+  return result.map(function(x) {
+    if ('string' === typeof x) {
+      return {
+        text: x,
+        display: x
+      };
+    } else {
+      return x;
+    }
+  });
+};
+
 Editor.prototype.showDropdown = function(socket) {
   var dropdownItems, el, fn1, i, j, len, ref1;
   if (socket == null) {
@@ -62856,7 +62920,7 @@ Editor.prototype.showDropdown = function(socket) {
   this.dropdownElement.innerHTML = '';
   this.dropdownElement.style.display = 'inline-block';
   this.formatDropdown(socket);
-  ref1 = socket.dropdown.generate();
+  ref1 = this.getDropdownList(socket);
   fn1 = (function(_this) {
     return function(el) {
       var div, setText;
@@ -66084,11 +66148,11 @@ exports.CoffeeScriptParser = CoffeeScriptParser = (function(superClass) {
 
   CoffeeScriptParser.prototype.markRoot = function() {
     var e, firstError, j, len, node, nodes, retries, tree;
-    this.stripComments();
     retries = Math.max(1, Math.min(5, Math.ceil(this.lines.length / 2)));
     firstError = null;
     while (true) {
       try {
+        this.stripComments();
         tree = CoffeeScript.nodes(this.text);
         annotateCsNodes(tree);
         nodes = tree.expressions;
@@ -66883,13 +66947,13 @@ fixQuotedString = function(lines) {
   var line, quotechar;
   line = lines[0];
   quotechar = /^"|"$/.test(line) ? '"' : "'";
-  if (line.getCharAt(0) === quotechar) {
+  if (line.charAt(0) === quotechar) {
     line = line.substr(1);
   }
-  if (line.getCharAt(line.length - 1) === quotechar) {
-    line = line.substr(0, line.length(-1));
+  if (line.charAt(line.length - 1) === quotechar) {
+    line = line.substr(0, line.length - 1);
   }
-  return quoteAndCEscape(fixQuotedLine(line));
+  return lines[0] = quoteAndCEscape(looseCUnescape(line), quotechar);
 };
 
 looseCUnescape = function(str) {
@@ -66916,7 +66980,7 @@ quoteAndCEscape = function(str, quotechar) {
   var result;
   result = JSON.stringify(str);
   if (quotechar === "'") {
-    return quotechar + result.substr(1, result.length(-2)).replace(/\\"/g, '"').replace(/'/g, "\\'") + quotechar;
+    return quotechar + result.substr(1, result.length - 2).replace(/((?:^|[^\\])(?:\\\\)*)\\"/g, '$1"').replace(/'/g, "\\'") + quotechar;
   }
   return result;
 };
@@ -67090,10 +67154,16 @@ TAGS = {
     category: 'metadata'
   },
   link: {
-    category: 'metadata'
+    category: 'metadata',
+    dropdown: {
+      '*': ['href=""', 'rel=""', 'type=""', 'media=""', 'title=""']
+    }
   },
   meta: {
-    category: 'metadata'
+    category: 'metadata',
+    dropdown: {
+      '*': ['content=""', 'name=""', 'http-equiv=""', 'property=""']
+    }
   },
   style: {
     category: 'metadata'
@@ -67111,7 +67181,10 @@ TAGS = {
     category: 'grouping'
   },
   div: {
-    category: 'grouping'
+    category: 'grouping',
+    dropdown: {
+      '*': ['class=""', 'id=""', 'style=""']
+    }
   },
   ul: {
     category: 'grouping'
@@ -67150,7 +67223,10 @@ TAGS = {
     category: 'grouping'
   },
   a: {
-    category: 'content'
+    category: 'content',
+    dropdown: {
+      '*': ['href=""', 'target=""', 'title=""', 'rel=""', 'onclick=""']
+    }
   },
   i: {
     category: 'content'
@@ -67231,7 +67307,10 @@ TAGS = {
     category: 'content'
   },
   span: {
-    category: 'content'
+    category: 'content',
+    dropdown: {
+      '*': ['class=""', 'id=""', 'style=""']
+    }
   },
   wbr: {
     category: 'content'
@@ -67315,16 +67394,26 @@ TAGS = {
     category: 'table'
   },
   form: {
-    category: 'form'
+    category: 'form',
+    dropdown: {
+      '*': ['action=""', 'method=""', 'name=""']
+    }
   },
   input: {
-    category: 'form'
+    category: 'form',
+    dropdown: {
+      '*': ['type=""', 'name=""', 'value=""']
+    }
   },
   textarea: {
-    category: 'form'
+    category: 'form',
+    content: 'optional'
   },
   label: {
-    category: 'form'
+    category: 'form',
+    dropdown: {
+      '*': ['for=""']
+    }
   },
   button: {
     category: 'form'
@@ -67348,10 +67437,12 @@ TAGS = {
     category: 'form'
   },
   progress: {
-    category: 'form'
+    category: 'form',
+    content: 'optional'
   },
   meter: {
-    category: 'form'
+    category: 'form',
+    content: 'optional'
   },
   fieldset: {
     category: 'form'
@@ -67360,10 +67451,14 @@ TAGS = {
     category: 'form'
   },
   img: {
-    category: 'embedded'
+    category: 'embedded',
+    dropdown: {
+      '*': ['src=""', 'alt=""', 'width=""', 'height=""', 'border=""', 'title=""']
+    }
   },
   iframe: {
-    category: 'embedded'
+    category: 'embedded',
+    content: 'optional'
   },
   embed: {
     category: 'embedded'
@@ -67420,7 +67515,8 @@ TAGS = {
     category: 'other'
   },
   canvas: {
-    category: 'other'
+    category: 'other',
+    content: 'optional'
   },
   svg: {
     category: 'other'
@@ -67538,6 +67634,11 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
     return this.opts.categories.Default.color;
   };
 
+  HTMLParser.prototype.getDropdown = function(node) {
+    var ref, ref1, ref2;
+    return (ref = (ref1 = this.opts.tags[node.nodeName]) != null ? (ref2 = ref1.dropdown) != null ? ref2['*'] : void 0 : void 0) != null ? ref : null;
+  };
+
   HTMLParser.prototype.getBounds = function(node) {
     var bounds;
     bounds = {
@@ -67633,7 +67734,7 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
   };
 
   HTMLParser.prototype.cleanTree = function(node) {
-    var i, results;
+    var child, i, k, len, ref, results;
     if (!node) {
       return;
     }
@@ -67643,6 +67744,13 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
       while (i < node.childNodes.length) {
         this.cleanTree(node.childNodes[i]);
         if (!node.childNodes[i].__location) {
+          if (node.childNodes[i].childNodes != null) {
+            ref = node.childNodes[i].childNodes;
+            for (k = 0, len = ref.length; k < len; k++) {
+              child = ref[k];
+              child.parentNode = node;
+            }
+          }
           results.push(node.childNodes = node.childNodes.slice(0, i).concat(node.childNodes[i].childNodes || []).concat(node.childNodes.slice(i + 1)));
         } else {
           results.push(i++);
@@ -67653,14 +67761,14 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
   };
 
   HTMLParser.prototype.fixBounds = function(node) {
-    var child, k, l, len, len1, newList, ref, ref1, ref2;
+    var child, i, k, l, len, len1, newList, ref, ref1, ref2;
     if (!node) {
       return;
     }
     if (node.childNodes != null) {
       ref = node.childNodes;
-      for (k = 0, len = ref.length; k < len; k++) {
-        child = ref[k];
+      for (i = k = 0, len = ref.length; k < len; i = ++k) {
+        child = ref[i];
         this.fixBounds(child);
       }
       newList = [];
@@ -67707,9 +67815,52 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
       node.__indentLocation.end = node.__location.startTag.end;
     }
     if (!node.__location.endTag) {
-      node.__location.end = node.__indentLocation.end;
+      node.__location = {
+        start: node.__location.start,
+        end: node.__indentLocation.end
+      };
     }
     return this.setAttribs(node, this.text.slice(node.__location.start, node.__indentLocation.start));
+  };
+
+  HTMLParser.prototype.getEndPoint = function(node) {
+    var ind, last, parent, ref, ref1;
+    if ((ref = node.nodeName) === '#document' || ref === '#document-fragment') {
+      return this.text.length;
+    }
+    last = null;
+    parent = node.parentNode;
+    ind = parent.childNodes.indexOf(node);
+    if (ind === parent.childNodes.length - 1) {
+      last = ((ref1 = parent.__location) != null ? ref1.endTag : void 0) != null ? parent.__location.endTag.start : this.getEndPoint(parent);
+    } else {
+      last = parent.childNodes[ind + 1].__location.start;
+    }
+    return last;
+  };
+
+  HTMLParser.prototype.trimText = function(node) {
+    var i, j, leftTrimText, location, text;
+    location = node.__location;
+    location.end = Math.min(location.end, this.getEndPoint(node));
+    text = this.text.slice(location.start, location.end).split('\n');
+    i = 0;
+    while (text[i].trim().length === 0) {
+      location.start += text[i].length + 1;
+      i++;
+    }
+    j = text.length - 1;
+    while (text[j].trim().length === 0) {
+      j--;
+    }
+    text = text.slice(i, +j + 1 || 9e9).join('\n');
+    location.end = location.start + text.length;
+    if (i !== 0) {
+      leftTrimText = text.trimLeft();
+      location.start += text.length - leftTrimText.length;
+      text = leftTrimText;
+    }
+    return node.value = text;
   };
 
   HTMLParser.prototype.makeIndentBounds = function(node) {
@@ -67732,30 +67883,6 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
     return bounds;
   };
 
-  HTMLParser.prototype.trimText = function(node) {
-    var i, j, leftTrimText, location, text;
-    text = node.value;
-    location = node.__location;
-    text = text.split('\n');
-    i = 0;
-    while (text[i].trim().length === 0) {
-      location.start += text[i].length + 1;
-      i++;
-    }
-    j = text.length - 1;
-    while (text[j].trim().length === 0) {
-      j--;
-    }
-    text = text.slice(i, +j + 1 || 9e9).join('\n');
-    location.end = location.start + text.length;
-    if (i !== 0) {
-      leftTrimText = text.trimLeft();
-      location.start += text.length - leftTrimText.length;
-      text = leftTrimText;
-    }
-    return node.value = text;
-  };
-
   HTMLParser.prototype.getSocketLevel = function(node) {
     return helper.ANY_DROP;
   };
@@ -67773,12 +67900,13 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
     });
   };
 
-  HTMLParser.prototype.htmlSocket = function(node, depth, precedence, bounds, classes) {
+  HTMLParser.prototype.htmlSocket = function(node, depth, precedence, bounds, classes, noDropdown) {
     return this.addSocket({
       bounds: bounds != null ? bounds : this.getBounds(node),
       depth: depth,
       precedence: precedence,
-      classes: classes != null ? classes : this.getClasses(node)
+      classes: classes != null ? classes : this.getClasses(node),
+      dropdown: noDropdown ? null : this.getDropdown(node)
     });
   };
 
@@ -67838,74 +67966,110 @@ exports.HTMLParser = HTMLParser = (function(superClass) {
         this.fixBounds(root);
       }
     }
+    window.root = root;
+    window.parse5 = htmlParser;
     return this.mark(0, root, 0, null);
   };
 
-  HTMLParser.prototype.mark = function(indentDepth, node, depth, bounds) {
-    var attrib, child, indentBounds, k, l, len, len1, len2, len3, m, n, prefix, ref, ref1, ref2, ref3, results, results1, results2;
+  HTMLParser.prototype.mark = function(indentDepth, node, depth, bounds, nomark) {
+    var attrib, child, indentBounds, k, l, lastChild, len, len1, len2, len3, m, n, prefix, ref, ref1, ref2, ref3, results, results1, results2;
+    if (nomark == null) {
+      nomark = false;
+    }
     switch (node.type) {
       case 'document':
+        lastChild = null;
         ref = node.childNodes;
         results = [];
         for (k = 0, len = ref.length; k < len; k++) {
           child = ref[k];
-          results.push(this.mark(indentDepth, child, depth + 1, null));
+          if (lastChild && lastChild.__location.end > child.__location.start) {
+            nomark = true;
+          } else {
+            nomark = false;
+          }
+          this.mark(indentDepth, child, depth + 1, null, nomark);
+          if (!nomark) {
+            results.push(lastChild = child);
+          } else {
+            results.push(void 0);
+          }
         }
         return results;
         break;
       case 'emptyTag':
-        this.htmlBlock(node, depth, bounds);
-        ref1 = node.attributes;
-        results1 = [];
-        for (l = 0, len1 = ref1.length; l < len1; l++) {
-          attrib = ref1[l];
-          if (attrib.end - attrib.start > 1) {
-            results1.push(this.htmlSocket(node, depth + 1, null, this.genBounds(attrib), ATTRIBUTE_CLASSES));
-          } else {
-            results1.push(void 0);
+        if (!nomark) {
+          this.htmlBlock(node, depth, bounds);
+          ref1 = node.attributes;
+          results1 = [];
+          for (l = 0, len1 = ref1.length; l < len1; l++) {
+            attrib = ref1[l];
+            if (attrib.end - attrib.start > 1) {
+              results1.push(this.htmlSocket(node, depth + 1, null, this.genBounds(attrib), ATTRIBUTE_CLASSES));
+            } else {
+              results1.push(void 0);
+            }
           }
+          return results1;
         }
-        return results1;
         break;
       case 'blockTag':
-        this.htmlBlock(node, depth, bounds);
-        ref2 = node.attributes;
-        for (m = 0, len2 = ref2.length; m < len2; m++) {
-          attrib = ref2[m];
-          this.htmlSocket(node, depth + 1, null, this.genBounds(attrib), ATTRIBUTE_CLASSES);
-        }
-        indentBounds = this.makeIndentBounds(node);
-        if (indentBounds.start.line !== indentBounds.end.line || indentBounds.start.column !== indentBounds.end.column) {
-          depth++;
-          prefix = this.getIndentPrefix(indentBounds, indentDepth, depth);
-          indentDepth += prefix.length;
-          this.addIndent({
-            bounds: indentBounds,
-            depth: depth,
-            prefix: prefix,
-            classes: this.getClasses(node)
-          });
-          ref3 = node.childNodes;
-          results2 = [];
-          for (n = 0, len3 = ref3.length; n < len3; n++) {
-            child = ref3[n];
-            results2.push(this.mark(indentDepth, child, depth + 1, null));
+        if (!nomark) {
+          this.htmlBlock(node, depth, bounds);
+          ref2 = node.attributes;
+          for (m = 0, len2 = ref2.length; m < len2; m++) {
+            attrib = ref2[m];
+            this.htmlSocket(node, depth + 1, null, this.genBounds(attrib), ATTRIBUTE_CLASSES);
           }
-          return results2;
-        } else {
-          if ((node.nodeName !== 'script' || !this.hasAttribute(node, 'src')) && node.__indentLocation.end !== node.__location.end) {
-            return this.htmlSocket(node, depth + 1, null, indentBounds);
+          indentBounds = this.makeIndentBounds(node);
+          if (indentBounds.start.line !== indentBounds.end.line || indentBounds.start.column !== indentBounds.end.column) {
+            depth++;
+            prefix = this.getIndentPrefix(indentBounds, indentDepth, depth);
+            indentDepth += prefix.length;
+            this.addIndent({
+              bounds: indentBounds,
+              depth: depth,
+              prefix: prefix,
+              classes: this.getClasses(node)
+            });
+            lastChild = null;
+          } else {
+            if (!(TAGS[node.nodeName].content === 'optional' || (node.nodeName === 'script' && this.hasAttribute(node, 'src')) || node.__indentLocation.end === node.__location.end)) {
+              this.htmlSocket(node, depth + 1, null, indentBounds, null, true);
+            }
           }
         }
+        ref3 = node.childNodes;
+        results2 = [];
+        for (n = 0, len3 = ref3.length; n < len3; n++) {
+          child = ref3[n];
+          if (lastChild && lastChild.__location.end > child.__location.start) {
+            nomark = true;
+          } else {
+            nomark = false;
+          }
+          this.mark(indentDepth, child, depth + 1, null, nomark);
+          if (!nomark) {
+            results2.push(lastChild = child);
+          } else {
+            results2.push(void 0);
+          }
+        }
+        return results2;
         break;
       case 'text':
-        this.htmlBlock(node, depth, bounds);
-        return this.htmlSocket(node, depth + 1, null);
+        if (!nomark) {
+          this.htmlBlock(node, depth, bounds);
+          return this.htmlSocket(node, depth + 1, null);
+        }
+        break;
       case 'comment':
-        this.htmlBlock(node, depth, bounds);
-        node.__location.start += 4;
-        node.__location.end -= 3;
-        return this.htmlSocket(node, depth + 1, null);
+        if (!nomark) {
+          this.htmlBlock(node, depth, bounds);
+          node.__location.start += 4;
+          node.__location.end -= 3;
+          return this.htmlSocket(node, depth + 1, null);
+        }
     }
   };
 
@@ -68747,7 +68911,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             classes: ['no-drop'],
             empty: ''
           });
-        } else {
+        } else if (this.opts.zeroParamFunctions) {
           nodeBoundsStart = this.getBounds(node.id).end;
           match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*\()(\s*)\)/);
           if (match != null) {
@@ -68789,13 +68953,13 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             classes: ['no-drop'],
             empty: ''
           });
-        } else {
+        } else if (this.opts.zeroParamFunctions) {
           if (node.id != null) {
             nodeBoundsStart = this.getBounds(node.id).end;
             match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*\()(\s*)\)/);
           } else {
             nodeBoundsStart = this.getBounds(node).start;
-            match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*function\s*\()(\s*\))/);
+            match = this.lines[nodeBoundsStart.line].slice(nodeBoundsStart.column).match(/^(\s*function\s*\()(\s*)\)/);
           }
           if (match != null) {
             return position = this.addSocket({
@@ -69780,7 +69944,7 @@ exports.List = List = (function() {
     str = '';
     indent = [];
     head = this.start;
-    while (head !== this.end) {
+    while (true) {
       if (head instanceof IndentStartToken) {
         indent.push(head.container.prefix);
       } else if (head instanceof IndentEndToken) {
@@ -69790,6 +69954,9 @@ exports.List = List = (function() {
         str += '\n' + ((ref = head.specialIndent) != null ? ref : indent.join(''));
       } else {
         str += head.stringify();
+      }
+      if (head === this.end) {
+        break;
       }
       head = head.next;
     }
@@ -70872,49 +71039,8 @@ exports.ParserFactory = ParserFactory = (function() {
 
 exports.Parser = Parser = (function() {
   function Parser(text1, opts1) {
-    var convertFunction, fn, index, key, options, ref, ref1, val;
     this.text = text1;
     this.opts = opts1 != null ? opts1 : {};
-    convertFunction = function(x) {
-      if ((typeof x === 'string') || x instanceof String) {
-        return {
-          text: x,
-          display: x
-        };
-      } else {
-        return x;
-      }
-    };
-    ref = this.opts.functions;
-    for (key in ref) {
-      val = ref[key];
-      ref1 = val.dropdown;
-      fn = (function(_this) {
-        return function(options) {
-          var dropdownOnly;
-          dropdownOnly = false;
-          if (options.dropdownOnly != null) {
-            dropdownOnly = options.dropdownOnly;
-            options = options.options;
-          }
-          return _this.opts.functions[key].dropdown[index] = {
-            dropdownOnly: dropdownOnly,
-            options: options,
-            generate: function() {
-              if (typeof options === 'function') {
-                return options().map(convertFunction);
-              } else {
-                return options.map(convertFunction);
-              }
-            }
-          };
-        };
-      })(this);
-      for (index in ref1) {
-        options = ref1[index];
-        fn(options);
-      }
-    }
     this.originalText = this.text;
     this.markup = [];
   }
@@ -72444,7 +72570,7 @@ exports.View = View = (function() {
             bottomMargin = margins.bottom;
           }
           this.minDistanceToBase[desiredLine].above = Math.max(this.minDistanceToBase[desiredLine].above, minDistanceToBase[line].above + margins.top);
-          this.minDistanceToBase[desiredLine].below = Math.max(this.minDistanceToBase[desiredLine].below, minDistanceToBase[line].below + Math.max(bottomMargin, ((((ref1 = this.model.buttons) != null ? ref1.addButton : void 0) || ((ref2 = this.model.buttons) != null ? ref2.subtractButton : void 0)) && desiredLine === this.lineLength - 1 ? this.view.opts.buttonPadding + this.view.opts.buttonHeight : 0)));
+          this.minDistanceToBase[desiredLine].below = Math.max(this.minDistanceToBase[desiredLine].below, minDistanceToBase[line].below + Math.max(bottomMargin, ((((ref1 = this.model.buttons) != null ? ref1.addButton : void 0) || ((ref2 = this.model.buttons) != null ? ref2.subtractButton : void 0)) && desiredLine === this.lineLength - 1 && this.multilineChildrenData[line] === MULTILINE_END && this.lineChildren[line].length === 1 ? this.view.opts.buttonPadding + this.view.opts.buttonHeight : 0)));
         }
       }
       ref3 = this.minDimensions;

@@ -457,6 +457,11 @@ en:
           Encoding Color Images: crwdns36525:0crwdne36525:0
           Lossy Compression and File Formats: crwdns41851:0crwdne41851:0
           "Practice PT: Encode a Complex Thing": crwdns42115:0crwdne42115:0
+          Bytes and File Sizes: crwdns43515:0crwdne43515:0
+          Personal Innovations: crwdns43516:0crwdne43516:0
+          Sending Complex Messages: crwdns43517:0crwdne43517:0
+          Sending Binary Messages with the Internet Simulator: crwdns43518:0crwdne43518:0
+          Encode a Complex Thing: crwdns43519:0crwdne43519:0
         algebraPD:
           title: crwdns35393:0crwdne35393:0
           description: crwdns35394:0crwdne35394:0
@@ -629,6 +634,7 @@ en:
           Natural Language Processing: crwdns43504:0crwdne43504:0
           Chained and Nested Conditionals: crwdns43505:0crwdne43505:0
           Intelligent Personal Assistant Challenge: crwdns43506:0crwdne43506:0
+          Digital Assistant Challenge: crwdns43520:0crwdne43520:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -1073,3 +1079,8 @@ en:
           Practice PT: crwdns43446:0crwdne43446:0
           Ramping Up: crwdns43447:0crwdne43447:0
           Wrap Up and Next Steps: crwdns43448:0crwdne43448:0
+        odometer:
+          title: crwdns43521:0crwdne43521:0
+          description_short: crwdns43522:0crwdne43522:0
+          description: crwdns43523:0crwdne43523:0
+          Odometer Widget: crwdns43524:0crwdne43524:0

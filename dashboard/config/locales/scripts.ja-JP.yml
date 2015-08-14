@@ -307,8 +307,8 @@
           description_short: ''
           description: ''
           Internet Simulator: Internet Simulator
-          Unit 1: Unit 1
-          Unit 2: Unit 2
+          Unit 1: ユニット 1
+          Unit 2: ユニット 2
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -485,6 +485,12 @@
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
           'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -516,7 +522,7 @@
             (Big Game)'
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Strings and Images
-          Contracts: Contracts
+          Contracts: 契約
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
@@ -672,6 +678,7 @@
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -947,12 +954,12 @@
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: ようこそ!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: ようこそ!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internet Simulator
@@ -981,7 +988,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ようこそ!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1058,15 +1065,15 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: ようこそ!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
-          Wrap-Up: Wrap-Up
+          Welcome!: ようこそ!
+          Wrap-Up: まとめ
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1082,13 +1089,13 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ようこそ!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: まとめ
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1100,7 +1107,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: ようこそ!
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1109,12 +1116,12 @@
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: まとめ
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ようこそ!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1138,7 +1145,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: ようこそ!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1182,3 +1189,10 @@
           Practice PT: Practice PT
           Ramping Up: Ramping Up
           Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number
+            bases. Binary, Decimal and Hexadecimal are the most common number systems
+            to see in computer science.
+          Odometer Widget: Odometer Widget

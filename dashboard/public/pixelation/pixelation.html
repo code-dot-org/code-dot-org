@@ -70,6 +70,7 @@
   <textarea id="pixel_data" oninput="drawGraph();" autocapitalize="false" autocorrect="false" autocomplete="false" spellcheck="false"></textarea>
   <button class="btn" onclick="formatBitDisplay();" title="View bits separated by pixel">Readable format</button>
   <button class="btn" onclick="unformatBits();"  title="View bits without any formatting">Raw format</button>
+  <button id="start_over" class="btn btn-danger" onclick="startOverClicked();">Start Over</button>
   <button id="finished" class="btn btn-primary right" onclick="onFinishedButtonClick();">Finished! Continue to next stage</button>
 </div>
 <script>
@@ -92,7 +93,7 @@
   pixelationInit();
 
   function pixelationDisplay() {
-    pixel_data.value = options.data;
+    pixel_data.value = options.projectData || options.data;
     drawGraph();
     formatBitDisplay();
   }
@@ -106,7 +107,7 @@
         return '';
       },
       setInitialLevelSource: function (levelSource) {
-        options.data = levelSource;
+        options.projectData = levelSource;
       },
       getLevelSource: function () {
         return pixel_data.value.replace(/[ \n]/g, "");

@@ -203,7 +203,7 @@
           function).
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
+        title: 'خوارزميات الحياة الحقيقية: سباق النرد'
         desc: This lesson calls out ways we use algorithms in our daily lives. As
           part of that, students will identify and write down the algorithm for a
           dice race game.
@@ -224,7 +224,7 @@
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Tangram Algorithms
+        title: خوارزميات tangram
         desc: This lesson shows us something important about algorithms. If you keep
           an algorithm simple there are lots of ways to use it. If you want to make
           sure everyone ends up with the same thing, then your algorithm needs more
@@ -245,7 +245,7 @@
           become templates for fun and crazy new ones.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: For Loop Fun
+        title: حلقة فور، مرح
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops
@@ -258,7 +258,7 @@
           functions is such a helpful practice.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
+        title: صور ثنائية
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
@@ -278,7 +278,7 @@
         desc: Design Recipe lesson description
         video: alg_8_design_recipe
       Booleans:
-        title: القيم المنطقية
+        title: القيم المنطقية والمنطق
         desc: Booleans lesson description
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:

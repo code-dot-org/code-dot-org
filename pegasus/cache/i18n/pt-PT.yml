@@ -112,9 +112,9 @@
   continue_learning_header: Vê o que podes fazer além da Hora de Código
   continue_learning_body: Existem muitas opções. Podes aprender online, numa escola
     local ou num acampamento de verão.
-  learn_next_level: Continuar para o próximo nível
-  learn_online: Experimenta outros cursos online
-  learn_classes: Encontra aulas perto de ti
+  learn_next_level: Experimentar outro curso do Code Studio
+  learn_online: Experimentar outros cursos online
+  learn_classes: Encontrar aulas perto de ti
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
   twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos
@@ -516,7 +516,7 @@
   dashboard_login_picture: Imagem
   dashboard_login_none: E-mail
   dashboard_new_password: palavra-passe nova
-  dashboard_progress_not_started: não iniciado
+  dashboard_progress_not_started: por iniciar
   dashboard_progress_in_progress: em progresso
   dashboard_progress_not_completed: por concluir
   dashboard_progress_completed_too_many_blocks: concluído, muitos blocos

@@ -40,6 +40,7 @@
     "custom_game_type": "Rocket Height",
     "disable_examples": "false",
     "video_key": "alg_8_design_recipe",
+    "examples_required": "true",
     "maze_data": null
   }
 }]]></config>

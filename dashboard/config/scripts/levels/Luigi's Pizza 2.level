@@ -26,7 +26,8 @@
     "instructions": "Right now there are only four choices available at Luigi's pizza - let's fix that! Add a couple of new toppings to the conditional block in the cost function. Once you've added your toppings, test out the function to make sure it works.",
     "min_workspace_height": "2000",
     "disable_examples": "false",
-    "markdown_instructions": "Right now there are only four choices available at Luigi's pizza - let's fix that! Add a couple of new toppings to the conditional block in the _cost_ function. Once you've added your toppings, test out the function to make sure it works."
+    "markdown_instructions": "Right now there are only four choices available at Luigi's pizza - let's fix that! Add a couple of new toppings to the conditional block in the `cost` function. Once you've added your toppings, test out the function to make sure it works.",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

@@ -107,7 +107,7 @@ var NetSimLocalClientNode = module.exports = function (shard, clientRow) {
    * @type {function}
    * @private
    */
-  this.onNodeLostConnection_ = undefined;
+  this.onNodeLostConnection_ = function () {};
 
   /**
    * Event registration information
@@ -166,7 +166,7 @@ NetSimLocalClientNode.prototype.initializeSimulation = function (sentLog,
   this.eventKeys.registeredOnShard = this.shard_;
 
   // Set up initial state from cached rows
-  this.onNodeTableChange_(this.shard_.nodeTable.readAll());
+  this.onNodeTableChange_();
 };
 
 /**
@@ -201,14 +201,9 @@ NetSimLocalClientNode.prototype.tick = function (clock) {
  * Give this node an action to take if it detects that it is no longer part
  * of the shard.
  * @param {function} onNodeLostConnection
- * @throws if set would clobber a previously-set callback.
  */
 NetSimLocalClientNode.prototype.setLostConnectionCallback = function (
     onNodeLostConnection) {
-  if (this.onNodeLostConnection_ !== undefined &&
-      onNodeLostConnection !== undefined) {
-    throw new Error('Node already has a lost connection callback.');
-  }
   this.onNodeLostConnection_ = onNodeLostConnection;
 };
 
@@ -223,9 +218,7 @@ NetSimLocalClientNode.prototype.update = function (onComplete) {
   NetSimLocalClientNode.superPrototype.update.call(this, function (err, result) {
     if (err) {
       logger.error("Local node update failed: " + err.message);
-      if (self.onNodeLostConnection_ !== undefined) {
-        self.onNodeLostConnection_();
-      }
+      self.onNodeLostConnection_();
     }
     onComplete(err, result);
   });
@@ -257,7 +250,10 @@ NetSimLocalClientNode.prototype.connectToNode = function (otherNode, onComplete)
 NetSimLocalClientNode.prototype.connectToClient = function (client, onComplete) {
   this.connectToNode(client, function (err, wire) {
     // Check whether WE just established a mutual connection with a remote client.
-    this.shard_.wireTable.refresh().always(onComplete.bind(null, err, wire));
+    this.shard_.wireTable.refresh().always(function () {
+      this.onWireTableChange_(this.shard_.wireTable.readAll());
+      onComplete(err, wire);
+    }.bind(this));
   }.bind(this));
 };
 
@@ -450,11 +446,18 @@ NetSimLocalClientNode.prototype.sendMessages = function (payloads, onComplete) {
 /**
  * Whenever the node table changes, make needed changes to our collection of
  * routers configured to simulate for the local node.
- * @param {Array} nodeRows
  * @private
  */
-NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
-  // 1. Remove simulating routers that have vanished from remote storage.
+NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
+  var nodeRows = this.shard_.nodeTable.readAll();
+
+  // If our own row is gone, drop everything and handle disconnect.
+  if (!this.canFindOwnRowIn(nodeRows)) {
+    this.onNodeLostConnection_();
+    return;
+  }
+
+  // Remove simulating routers that have vanished from remote storage.
   this.routers_ = this.routers_.filter(function (simulatingRouter) {
     var stillExists = nodeRows.some(function (row) {
       return row.id === simulatingRouter.entityID;
@@ -466,7 +469,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
     return true;
   });
 
-  // 2. Create and simulate new routers
+  // Create and simulate new routers
   nodeRows.filter(function (row) {
     return row.type === NetSimConstants.NodeType.ROUTER;
   }).forEach(function (row) {
@@ -483,17 +486,27 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function (nodeRows) {
 };
 
 /**
+ * @param {Object[]} nodeRows
+ * @returns {boolean} TRUE if own row is in given row collection
+ */
+NetSimLocalClientNode.prototype.canFindOwnRowIn = function (nodeRows) {
+  return nodeRows.some(function (row) {
+    return row.id === this.entityID;
+  }, this);
+};
+
+/**
  * Handler for any wire table change.  Used here to detect mutual
  * connections between client nodes that indicate we can move to a
- * "connected" state or stop trying to connect
- * @param {Array} wireRows
+ * "connected" state or stop trying to connect.
  * @private
  */
-NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
+NetSimLocalClientNode.prototype.onWireTableChange_ = function () {
   if (!this.myWire) {
     return;
   }
 
+  var wireRows = this.shard_.wireTable.readAll();
   var myConnectionTargetWireRow, isTargetConnectedToSomeoneElse;
 
   // Look for mutual connection
@@ -536,10 +549,9 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function (wireRows) {
 /**
  * Listens for changes to the message table.  Detects and handles messages
  * sent to this node.
- * @param {Array} rows
  * @private
  */
-NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
+NetSimLocalClientNode.prototype.onMessageTableChange_ = function () {
   if (!NetSimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
@@ -552,7 +564,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function (rows) {
     return;
   }
 
-  var messages = rows
+  var messages = this.shard_.messageTable.readAll()
       .map(function (row) {
         return new NetSimMessage(this.shard_, row);
       }.bind(this))
