@@ -33,11 +33,9 @@ module AWS
     # @param [String] key
     # @return [String]
     def self.download_from_bucket(bucket, key, options={})
-      begin
-        create_client.get_object(bucket: bucket, key: key).body.string
-      rescue Aws::S3::Errors::NoSuchKey
+      create_client.get_object(bucket: bucket, key: key).body.string
+    rescue Aws::S3::Errors::NoSuchKey
         raise NoSuchKey.new("No such key `#{key}'")
-      end
     end
 
     # Sets the value of a key in the given S3 bucket.
