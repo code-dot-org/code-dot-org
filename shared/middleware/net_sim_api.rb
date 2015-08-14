@@ -19,6 +19,7 @@ class NetSimApi < Sinatra::Base
   helpers do
     %w{
       core.rb
+      auth_helpers.rb
       storage_id.rb
       table.rb
       null_pub_sub_api.rb
@@ -146,7 +147,7 @@ class NetSimApi < Sinatra::Base
   #         current user is the teacher who owns the shard indicated by the
   #         shard_id parameter.
   def allowed_to_delete_shard?(shard_id)
-    have_permission? 'admin' or owns_shard? shard_id
+    is_admin? or owns_shard? shard_id
   end
 
   # @param [String] shard_id - The shard we're checking ownership for.
@@ -161,7 +162,7 @@ class NetSimApi < Sinatra::Base
     # on custom shard IDs, and it's not particularly harmful to reset a shard.
     match_result = /_(\d+)$/.match(shard_id)
     section_id = match_result.nil? ? nil : match_result[1].to_i
-    not (section_id.nil? or DashboardSection.fetch_if_teacher(section_id, dashboard_user_id).nil?)
+    owns_section? section_id
   end
 
   #
