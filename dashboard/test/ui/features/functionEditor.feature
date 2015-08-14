@@ -3,6 +3,7 @@ Feature: Opening the function editor
 Background:
   Given I am on "http://learn.code.org/s/course4/stage/14/puzzle/12?noautoplay=true"
   And I rotate to landscape
+  And I wait to see ".markdown-level-header-text"
   Then element ".markdown-level-header-text" has text "Puzzle 12 of 17"
   And I close the dialog
   Then element "#runButton" is visible
