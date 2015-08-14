@@ -4,6 +4,7 @@ require 'openssl'
 require 'base64'
 
 module Poste
+
   def self.logger()
     @@logger ||= $log
   end
