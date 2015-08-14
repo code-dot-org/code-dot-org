@@ -32,7 +32,8 @@ class OpsMailer < ActionMailer::Base
   end
 
   def workshop_in_2_weeks_reminder(workshop, recipient, recipient_ops_data)
-    @workshop = workshop
+    # Must duplicate because workshop is passed in from scheduled_ops_emails and requires it in its original state
+    @workshop = workshop.dup
     # program_type was originally stored as a string in the db, but was later changed to an id that maps to activity_constants.
     # The datatype in MySql was never changed, so for now you have to coerce it to an integer
     @workshop[:program_type] = ActivityConstants::PROGRAM_TYPES[workshop[:program_type].to_i]
@@ -45,6 +46,6 @@ class OpsMailer < ActionMailer::Base
     @recipient = recipient
     @recipient_ops_data = recipient_ops_data
 
-    mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
+    mail content_type: 'text/html', subject: subject, to: 'andre@code.org', from: 'pd@code.org'
   end
 end
