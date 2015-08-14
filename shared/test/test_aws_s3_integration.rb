@@ -12,10 +12,23 @@ class AwsS3IntegrationTest < Minitest::Unit::TestCase
   def test_aws_s3
     # Test upload_to_bucket and download_from_bucket with :no_random.
     test_key = Random.rand.to_s
-    test_value = Random.rand.to_s
+    test_value = 'hello\x00\x01\xFF'
     upload_key = AWS::S3::upload_to_bucket(TEST_BUCKET, test_key, test_value, :no_random => true)
     assert_equal test_value, AWS::S3::download_from_bucket(TEST_BUCKET, test_key)
     assert_equal test_key, upload_key
+
+
+    # Make sure a string all of possible bytes and make sure it round trips correctly
+    all_bytes = (0..255).to_a.pack('C*')
+    AWS::S3::upload_to_bucket(TEST_BUCKET, test_key, all_bytes, :no_random => true)
+    value = AWS::S3::download_from_bucket(TEST_BUCKET, test_key)
+    assert_equal all_bytes, value
+    assert_equal Encoding::BINARY, value.encoding
+    assert_equal 256, value.bytesize
+    bytes = value.codepoints
+    (0..255).each do |i|
+      assert_equal i, bytes[i]
+    end
 
     # Test upload_to_bucket and download_from_bucket with key randomization.
     key = 'key'
