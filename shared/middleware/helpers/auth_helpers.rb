@@ -2,9 +2,13 @@
 # Utility methods that help middleware access dashboard authentication and
 # permissions information.
 #
+# Note: This file should be loaded in the context of a Sinatra application;
+#       see net_sim_api.rb for an example of this.
+#
 
 # @returns [Integer] the user_id associated with the current request
 def current_user_id
+  # @request is a Sinatra::Request < Rack::Request provided by Sinatra::Base
   @request.user_id
 end
 
@@ -14,7 +18,7 @@ def current_user
 end
 
 # @returns [Boolean] true if the current user is an admin.
-def is_admin?
+def is_admin?qq
   !!current_user[:admin]
 end
 
