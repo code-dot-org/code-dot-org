@@ -18,8 +18,8 @@ Scenario: Examples should be hidden when specified in contract editor
   And the "Examples" contract editor header is visible
   And the "Definition" contract editor header is visible
 
-  And I press "modalEditorClose"
   And I configure the contract editor to disable examples
+  And I press "modalEditorClose"
 
   And I open the blockly category with ID "7"
   And I press the SVG text "Create a Function"
@@ -53,7 +53,9 @@ Scenario: Collapsing all sections, re-opening editor and expanding examples shou
   And I press the contract editor header "Definition"
   And the function editor definition block is not visible
 
+  And I configure the contract editor to disable examples
   And I press "modalEditorClose"
+  And I configure the contract editor to enable examples
 
   And I open the blockly category with ID "7"
   And I press the SVG text "Create a Function"
@@ -68,6 +70,7 @@ Scenario: Collapsing all sections, re-opening editor and expanding examples shou
   And only one functional definition block is visible
 
 Scenario: Opening a variable then a function should show proper headers
+  And I configure the contract editor to disable examples
   And I press "modalEditorClose"
 
   And I open the blockly category with ID "6"
@@ -78,6 +81,7 @@ Scenario: Opening a variable then a function should show proper headers
   And I press "modalEditorClose"
 
   And I open the blockly category with ID "7"
+  And I configure the contract editor to enable examples
   And I press the SVG text "Create a Function"
   And I wait to see "#modalEditorClose"
 
