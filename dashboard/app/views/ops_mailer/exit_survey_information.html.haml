@@ -2,7 +2,7 @@
   Dear #{@recipient.properties['ops_first_name']},
 %p
   Thanks for attending your #{@workshop[:phase][:long_name]} in-person workshop. We appreciate any feedback you have. Please take a moment to complete this
-  %a{href:"#{}"}
+  %a{href:"#{@workshop[:program_type][:short_name].gsub(/\s+/, "") + @workshop[:phase][:short_name].gsub(/\s+/, "")}ExitSurvey"}
     short survey
   about your Code.org workshop experience.
 
