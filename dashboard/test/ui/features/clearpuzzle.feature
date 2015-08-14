@@ -3,8 +3,8 @@ Feature: Clear Puzzle
 Background:
   Given I am on "http://learn.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
-  Then element ".dialog-title" has text "Puzzle 1 of 20"
-  And I press "x-close"
+  Then I wait to see a dialog titled "Puzzle 1 of 20"
+  And I close the dialog
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 

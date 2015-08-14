@@ -26,7 +26,7 @@ Milestone Complete!
 
 **Online Study**
 
-Milestone Complete!
+<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -52,7 +52,7 @@ TBD
 
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
 Green journal
 <br/>Curriculum guide
@@ -82,7 +82,7 @@ Milestone Complete!
 
 **Online Study**
 
-Milestone Complete!
+<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
@@ -91,21 +91,20 @@ Milestone Complete!
 Semester 1: Saturday, September 19, 2015 
 
 Semester 2: Saturday, February 6, 2016 
-
+<br/><br/>
 **Location**
 
 TBD
-
-
-
+<br/><br/>
 **What to bring to Phase 3 quarterly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>Curriculum guide
 <br/>
 Snacks
 <br/>
 Water
+<br/><br/>
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)###
 
 More info coming soon!
@@ -123,7 +122,13 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-In-person milestone complete! More info coming soon on your Phase 2 online portion. 
+**In-Person Workshop**
+
+Milestone Complete!
+
+**Online Study**
+
+<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
@@ -140,9 +145,9 @@ TBD
 
 **What to bring to Phase 3 biyearly sessions:**
 
-Laptop
+Laptop and Charger
 <br/>
-ECS green journal and curriculum guide
+Curriculum guide
 <br/>
 Snacks
 <br/>
@@ -168,11 +173,15 @@ More info coming soon!
 
 Milestone complete!
 
-### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
+### Phase 2: Blended Summer Study ###
+**In-Person Workshop**
 
-In-person milestone complete! It is now time to complete the 8 hour online portion of your Phase 2: Blended Summer Study.
+Milestone Complete!
 
-</br>
+**Online Study**
+
+<b><i>Deadline:</b> Phase 2 Online is due on September 7th.</i>
+
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online)###
 
 Phase 3 is composed of quarterly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of ECS. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
@@ -187,16 +196,17 @@ Quarter 2: Saturday, December 5, 2015
 Quarter 3: Saturday, February 6, 2016
 
 Quarter 4: Saturday, April 23, 2016
-
+<br/><br/>
 **Location**
 
 TBD
-
+<br/><br/>
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop
 <br/>
-ECS green journal and curriculum guide
+ECS green journal
+<br/>Curriculum guide
 <br/>
 Snacks
 <br/>

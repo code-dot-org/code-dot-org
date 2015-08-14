@@ -4,9 +4,9 @@ description '/script_assets/k_1_images/artist_images/square.png, 500'
 height '150'
 
 question 'Which blocks draw the square?'
-right '/script_assets/k_1_images/artist_images/N|E|S|W.png'
-wrong '/script_assets/k_1_images/artist_images/E|S|W|N.png'
-wrong '/script_assets/k_1_images/artist_images/E|S|W|N.png'
-wrong '/script_assets/k_1_images/artist_images/N|W|S|E.png'
+right '/script_assets/k_1_images/artist_images/N-E-S-W.png'
+wrong '/script_assets/k_1_images/artist_images/E-S-W-N.png'
+wrong '/script_assets/k_1_images/artist_images/N-S-E-W.png'
+wrong '/script_assets/k_1_images/artist_images/N-W-S-E.png'
 
 # http://staging.learn.code.org/s/course1/stage/4/puzzle/10

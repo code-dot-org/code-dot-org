@@ -3,8 +3,7 @@ Feature: Hour of Code and Frozen tutorial in Spanish and Portuguese
 Scenario: HoC tutorial in Spanish
   Given I am on "http://learn.code.org/hoc/15/lang/es"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  Then element ".dialog-title" has text "Puzzle 15 de 20"
+  Then I wait to see a dialog titled "Puzzle 15 de 20"
   Then element ".modal-content p:nth-child(2)" has "es" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -15,8 +14,7 @@ Scenario: HoC tutorial in Spanish
 Scenario: Frozen tutorial in Spanish
   Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/es"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  Then element ".dialog-title" has text "Puzzle 2 de 20"
+  Then I wait to see a dialog titled "Puzzle 2 de 20"
   Then element ".modal-content p:nth-child(2)" has "es" text from key "data.instructions.frozen perpendicular_instruction"
   And I press "x-close"
   Then element "#runButton" is visible
@@ -28,8 +26,7 @@ Scenario: Frozen tutorial in Spanish
 Scenario: HoC tutorial in Portuguese
   Given I am on "http://learn.code.org/hoc/15/lang/pt-br"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  Then element ".dialog-title" has text "Desafio 15 de 20"
+  Then I wait to see a dialog titled "Desafio 15 de 20"
   Then element ".modal-content p:nth-child(2)" has "pt-br" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -40,8 +37,7 @@ Scenario: HoC tutorial in Portuguese
 Scenario: Frozen tutorial in Portuguese
   Given I am on "http://learn.code.org/s/frozen/stage/1/puzzle/2/lang/pt-br"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  Then element ".dialog-title" has text "Desafio 2 de 20"
+  Then I wait to see a dialog titled "Desafio 2 de 20"
   Then element ".modal-content p:nth-child(2)" has "pt-br" text from key "data.instructions.frozen perpendicular_instruction"
   And I press "x-close"
   Then element "#runButton" is visible
