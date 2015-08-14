@@ -3,15 +3,19 @@
 %p
   Thanks for attending your #{@workshop.phase_info[:long_name]} in-person workshop. We appreciate any feedback you have. Please take a moment to complete this
   - if @workshop.phase == 2
-    - if @workshop.program_type.to_i == 1
-      %a{href:"https://docs.google.com/a/code.org/forms/d/1QG9eCbKJD26UNvTC0C9ZZyrp63WjzQSK5gQPP4lsZ2c/viewform"}
-    - elsif @workshop.program_type.to_i == 2
-      %a{href:"https://docs.google.com/a/code.org/forms/d/1kEkyOk-Y4MsWVVjmkaw-UDfCE4Wl2Ol3MTrCw4IW8vw/viewform"}
-    - elsif @workshop.program_type.to_i == 3
-      %a{href:"https://docs.google.com/a/code.org/forms/d/12-HzFgPn6vP-D5P1XCkYxg_Dv3_DWM0B-xh1VDBuhNo/viewform"}
-    - elsif @workshop.program_type.to_i == 4
-      %a{href:"https://docs.google.com/a/code.org/forms/d/1lvvH5JCh6L40pFDqT9UaibyNtYUIwAEJQg2ulXIv6WQ/viewform"}
-    short survey
+    - case @workshop.program_type.to_i
+      - when 1
+        %a{href:"https://docs.google.com/a/code.org/forms/d/1QG9eCbKJD26UNvTC0C9ZZyrp63WjzQSK5gQPP4lsZ2c/viewform"}
+          short survey
+      - when 2
+        %a{href:"https://docs.google.com/a/code.org/forms/d/1kEkyOk-Y4MsWVVjmkaw-UDfCE4Wl2Ol3MTrCw4IW8vw/viewform"}
+          short survey
+      - when 3
+        %a{href:"https://docs.google.com/a/code.org/forms/d/12-HzFgPn6vP-D5P1XCkYxg_Dv3_DWM0B-xh1VDBuhNo/viewform"}
+          short survey
+      - when 4
+        %a{href:"https://docs.google.com/a/code.org/forms/d/1lvvH5JCh6L40pFDqT9UaibyNtYUIwAEJQg2ulXIv6WQ/viewform"}
+          short survey
   about your Code.org workshop experience.
 
 - if @workshop.phase == 2
