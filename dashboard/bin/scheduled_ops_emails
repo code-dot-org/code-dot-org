@@ -12,7 +12,7 @@ def main
         facilitators = Workshop.find(workshop[:id]).facilitators
         [teachers, drop_ins, facilitators].each do |recipient_list|
           recipient_list.each do |recipient|
-            if workshop.first_segment.start.to_date == Date.today
+            if workshop.segments.first.start.to_date == Date.today
               puts("Sending exit survey info to #{recipient.properties['ops_first_name']}")
               OpsMailer.exit_survey_information(workshop, recipient).deliver
             else
