@@ -28,7 +28,7 @@
     "sprites_hidden_to_start": "true",
     "coordinate_grid_background": "false",
     "generate_function_pass_blocks": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"big_game_title\",\r\n  \"callout_text\": \"Click \\\"edit\\\" to change the title of your game\",\r\n  \"element_id\": \"#game_title > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"Big Game Vars 2_callout1\",\r\n  \"callout_text\": \"Click \\\"edit\\\" to change the title of your game\",\r\n  \"element_id\": \"#game_title > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"Big Game Vars 2_callout2\",\r\n  \"callout_text\": \"Change the value of the title variable here\",\r\n  \"element_id\": \"[block-id='127']\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -39,6 +39,7 @@
     "min_workspace_height": "1500",
     "disable_examples": "false",
     "markdown_instructions": "The first step to making this game your own is to give it a good Title. Click edit on the _title_ and _subtitle_ variables and change them to something new.",
+    "examples_required": "false",
     "maze_data": null
   }
 }]]></config>
