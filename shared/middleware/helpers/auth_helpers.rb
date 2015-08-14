@@ -5,8 +5,7 @@
 
 # @returns [Integer] the user_id associated with the current request
 def current_user_id
-  @dashboard_request ||= Rack::Request.new(@env)
-  @dashboard_request.user_id
+  @request.user_id
 end
 
 # @returns [User] the dashboard user associated with the current request.
