@@ -3,7 +3,7 @@ Feature: Solving a jigsaw puzzle
 Background:
   Given I am on "http://learn.code.org/s/course1/stage/3/puzzle/2?noautoplay=1"
   And I rotate to landscape
-  Then element ".dialog-title" has text "Puzzle 2 of 12"
+  Then the dialog is titled "Puzzle 2 of 12"
   And I close the dialog
 
 Scenario: Solving puzzle
