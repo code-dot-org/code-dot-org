@@ -12,26 +12,14 @@ def main
     ')
     workshops.each do |workshop|
       workshop_segments = DASHBOARD_DB.fetch("SELECT * FROM segments WHERE workshop_id = #{workshop[:id]};")
-
-      # Get all attendees of a single workshop (teachers, drop-ins, and facilitators)
-      teachers = DASHBOARD_DB.fetch("
-        SELECT * FROM users JOIN cohorts_users ON id = user_id JOIN workshop_cohorts
-        ON workshop_cohorts.cohort_id = cohorts_users.cohort_id WHERE workshop_cohorts.workshop_id = #{workshop[:id]};
-      ")
-      drop_ins = DASHBOARD_DB.fetch("
-        SELECT * FROM users JOIN unexpected_teachers_workshops
-        ON id = unexpected_teacher_id WHERE workshop_id = #{workshop[:id]};
-      ")
-      facilitators = DASHBOARD_DB.fetch("
-        SELECT * FROM users JOIN facilitators_workshops ON id = facilitator_id WHERE workshop_id = #{workshop[:id]};
-      ")
-
+      teachers = Workshop.find(workshop[:id]).teachers
+      drop_ins = Workshop.find(workshop[:id]).unexpected_teachers
+      facilitators = Workshop.find(workshop[:id]).facilitators
       [teachers, drop_ins, facilitators].each do |recipient_list|
         recipient_list.each do |recipient|
-          recipient_ops_data = JSON.parse(recipient[:properties])
           workshop[:segments] = workshop_segments
-          puts("Sending email to #{recipient_ops_data['ops_first_name']}")
-          OpsMailer.workshop_in_2_weeks_reminder(workshop, recipient, recipient_ops_data).deliver
+          puts("Sending email to #{recipient.properties['ops_first_name']}")
+          OpsMailer.workshop_in_2_weeks_reminder(workshop, recipient).deliver
         end
       end
 
