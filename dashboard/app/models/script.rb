@@ -87,8 +87,7 @@ class Script < ActiveRecord::Base
   # indexed by both id and name. This is cached both in a class
   # variable (ie. in memory in the worker process) and in a
   # distributed cache (Rails.cache)
-  cattr_accessor :script_cache
-
+  @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
 
   def self.script_cache_to_cache
