@@ -8,7 +8,7 @@
 .clear
 %div{style: 'display: none;'}
   #error-dialogcontent
-    .modal-content
+    .modal-content.no-modal-icon
       %p.dialog-title
         =t("#{app == 'match' ? 'match' : 'multi'}.wrong_title")
       %p
@@ -18,7 +18,7 @@
           =t('dialog.ok')
 
   #toofew-dialogcontent
-    .modal-content
+    .modal-content.no-modal-icon
       %p.dialog-title
         =t("multi.toofew_title")
       %p
@@ -28,17 +28,10 @@
           =t('dialog.ok')
 
   #pre-dialogcontent
-    - if data['pre_image']
-      .modal-image{style: 'margin-top: 0px;'}
-        != string_or_image(app, data['pre_image'])
-    .modal-content
-      - if data['pre_image'].blank?
-        - adjust_layout_class = 'unindentContent'
-      - else
-        - adjust_layout_class = ''
-      %p.dialog-title{class: adjust_layout_class}
+    .modal-content.no-modal-icon
+      %p.dialog-title
         != string_or_image(app, data['pre_title']) if data['pre_title']
-      %p{class: adjust_layout_class}
+      %p
         != string_or_image(app, data['pre_body']) if data['pre_body']
       - if data['pre_ani']
         .aniGif.example-image{style: 'overflow: hidden;'}
@@ -48,7 +41,7 @@
           =t('dialog.ok')
 
   #success-dialogcontent
-    .modal-content
+    .modal-content.no-modal-icon
       %p.dialog-title
         - if data['options'].try(:[], 'success_title')
           = data['options']['success_title']

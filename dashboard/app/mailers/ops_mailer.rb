@@ -31,6 +31,9 @@ class OpsMailer < ActionMailer::Base
     mail content_type: 'text/html', subject: subject
   end
 
+  def workshop_in_2_weeks_reminder(workshop, recipient, recipient_ops_data)
+    # Must duplicate because workshop is passed in from scheduled_ops_emails and requires it in its original state
+    @workshop = workshop.dup
   def workshop_in_2_weeks_reminder(workshop, recipient)
     @workshop = workshop
     # program_type was originally stored as a string in the db, but was later changed to an id that maps to activity_constants.
@@ -44,6 +47,6 @@ class OpsMailer < ActionMailer::Base
     end
     @recipient = recipient
 
-    mail content_type: 'text/html', subject: subject, to: 'andre@code.org'
+    mail content_type: 'text/html', subject: subject, to: 'andre@code.org', from: 'pd@code.org'
   end
 end
