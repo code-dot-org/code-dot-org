@@ -26,7 +26,8 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Here's a similar function `red shape` with an additional variable for size. Complete the conditionals so the correct solid red image of a given size is drawn for \"circle\", \"triangle\", and \"star\"."
+    "markdown_instructions": "Here's a similar function `red shape` with an additional variable for size. Complete the conditionals so the correct solid red image of a given size is drawn for \"circle\", \"triangle\", and \"star\".",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>

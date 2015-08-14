@@ -23,11 +23,14 @@ var NetSimGlobals = require('./NetSimGlobals');
 
 /**
  * @param {NetSimNode} sourceNode
+ * @param {boolean} useBackgroundAnimation - changes the behavior of this node
+ *        when it's in the background layer
  * @constructor
  * @augments NetSimVizNode
  */
-var NetSimVizSimulationNode = module.exports = function (sourceNode) {
-  NetSimVizNode.call(this);
+var NetSimVizSimulationNode = module.exports = function (sourceNode,
+    useBackgroundAnimation) {
+  NetSimVizNode.call(this, useBackgroundAnimation);
 
   /**
    * ID of the simulation node that this viz element represents.

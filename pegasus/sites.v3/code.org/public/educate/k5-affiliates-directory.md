@@ -232,6 +232,14 @@ agbowo@pd.code.org
 
 [/col-33]
 
+[col-33]
+### Cheryl Carter
+Fairfield, CA
+
+carter@pd.code.org
+
+[/col-33]
+
 <p style="clear:both">&nbsp;</p>
 
 ### **Sacramento Area**
@@ -252,18 +260,25 @@ gargiulo@pd.code.org
 
 [/col-33]
 
-[col-33]
+<p style="clear:both">&nbsp;</p>
 
-### Sandy Feder
-Fair Oaks, CA
+### **Central California**
+### Jason Horsman
+Fresno, CA
 
-feder@pd.code.org
-
-[/col-33]
+horsman@pd.code.org
 
 <p style="clear:both">&nbsp;</p>
 
 ### **Los Angeles Area**
+[col-33]
+### Alisa McCord
+Orange County, CA
+
+mccord@pd.code.org
+
+[/col-33]
+
 [col-33]
 ### Dave Dawson
 Lancaster, CA
@@ -352,6 +367,22 @@ carmody@pd.code.org
 San Diego, CA
 
 hopper@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Kathy Gligo
+El Cajon, CA
+
+gligo@pd.code.org
+
+[/col-33]
+
+[col-33]
+### Liz Loether
+El Cajon, Ca
+
+loether@pd.code.org
 
 [/col-33]
 
@@ -910,15 +941,6 @@ sjones@pd.code.org
 
 [col-33]
 
-### Owen Astrachan
-Durham, NC
-
-astrachan@pd.code.org
-
-[/col-33]
-
-[col-33]
-
 ### April Thomas
 Cary, NC
 
@@ -978,15 +1000,6 @@ presbrey@pd.code.org
 Egg Harbor Township
 
 monroe@pd.code.org
-
-[/col-33]
-
-[col-33]
-
-### Jerri Drakes
-Newark, NJ
-
-drakes@pd.code.org
 
 [/col-33]
 

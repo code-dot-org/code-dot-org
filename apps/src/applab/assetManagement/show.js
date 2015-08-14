@@ -16,7 +16,6 @@ var showAssetManager = function(assetChosen, typeFilter) {
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
   var dialog = studioApp.createModalDialog({
-    Dialog: Dialog,
     contentDiv: codeDiv,
     defaultBtnSelector: 'again-button',
     id: 'manageAssetsModal'
