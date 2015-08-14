@@ -147,7 +147,7 @@ class NetSimApi < Sinatra::Base
   #         current user is the teacher who owns the shard indicated by the
   #         shard_id parameter.
   def allowed_to_delete_shard?(shard_id)
-    is_admin? or owns_shard? shard_id
+    admin? or owns_shard? shard_id
   end
 
   # @param [String] shard_id - The shard we're checking ownership for.
