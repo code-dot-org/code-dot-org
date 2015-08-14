@@ -81,4 +81,13 @@ class RedisPropertyBag
     @redis.hincrby(@key, name, 1)
   end
 
+  # Causes the property bag to expire (be deleted) after the given time.
+  # If the property bag already has an expire time, this resets the countdown.
+  #
+  # @param [Integer] seconds_from_now
+  # @see http://redis.io/commands/expire
+  def expire(seconds_from_now)
+    @redis.expire(@key, seconds_from_now)
+  end
+
 end
