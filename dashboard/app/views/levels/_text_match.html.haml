@@ -4,7 +4,7 @@
 
   .mainblock
     = render partial: 'levels/content', locals: {app: app, data: data}
-    - height = data['height'] || '40'
+    - height = data['height'] || '80'
     %textarea.response{placeholder: data['placeholder'] ? string_or_image(app, data['placeholder']) : t(app + '.placeholder'), style: "width: 700px; height: #{height}px;", readonly: @view_options.readonly_workspace}
     = render partial: 'levels/dialog', locals: {app: app, data: data}
     = render partial: 'levels/teacher_markdown', locals: {data: data}
