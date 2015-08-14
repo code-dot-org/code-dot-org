@@ -163,7 +163,7 @@
 
   var poemSelect = document.getElementById("poemsList");
   $('#writeYourOwn').click(showWriteYourOwnDialog);
-  var editor = CodeMirror.fromTextArea($dictionary[0], {
+  window.editor = CodeMirror.fromTextArea($dictionary[0], {
     lineNumbers: true,
     lineWrapping: true,
     firstLineNumber: 0,
