@@ -5,6 +5,8 @@ class FakeRedisClient
 
   def initialize
     @hash = Hash.new
+    @fake_time = 0
+    @expirations = Hash.new
   end
 
   def get_hash_for_key(key)
@@ -45,10 +47,23 @@ class FakeRedisClient
     end
   end
 
+  def expire(key, seconds_from_now)
+    @expirations[key] = @fake_time + seconds_from_now
+  end
+
   def hincrby(key, name, increment)
     hash = get_hash_for_key(key)
     hash[name] ||= 0  # Initialize new counters to 0.
     hash[name] += 1  # Return incremented counter.
   end
 
+  def time_travel(seconds)
+    @fake_time += seconds
+    @expirations.each do |key, value|
+      if @fake_time >= value
+        @hash.delete(key)
+        @expirations.delete(key)
+      end
+    end
+  end
 end

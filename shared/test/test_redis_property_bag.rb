@@ -101,4 +101,39 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
 
   end
 
+  def test_expire
+    bag = RedisPropertyBag.new(@redis, "bag_#{@suffix}")
+
+    # Set some values
+    bag.set('foo2', 'value2')
+    bag.set('foo3', 'value3')
+    bag.set('foo1', 'value1')
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
+
+    # Set an expiration time
+    test_delay_seconds = 2
+    bag.expire(test_delay_seconds)
+
+    # Make sure the bag contents are still intact
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
+
+    # Jump to just before expiration
+    time_travel test_delay_seconds - 0.1
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
+
+    # Jump forward in time to expiration
+    time_travel 0.1
+    assert_equal({}, bag.to_hash)
+  end
+
+  private
+
+  def time_travel(seconds)
+    if ENV['USE_REAL_REDIS']
+      sleep seconds
+    else
+      @redis.time_travel seconds
+    end
+  end
+
 end
