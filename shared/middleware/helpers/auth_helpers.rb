@@ -14,11 +14,12 @@ end
 
 # @returns [User] the dashboard user associated with the current request.
 def current_user
+  nil if current_user_id.nil?
   @dashboard_user ||= DASHBOARD_DB[:users][id: current_user_id]
 end
 
 # @returns [Boolean] true if the current user is an admin.
-def is_admin?qq
+def admin?
   !!current_user[:admin]
 end
 
