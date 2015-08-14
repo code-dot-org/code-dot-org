@@ -23,7 +23,6 @@ class ContentDSL < BaseDSL
 
   def pre_title(text) @hash[:pre_title] = text end
   def pre_body(text) @hash[:pre_body] = text end
-  def pre_image(text) @hash[:pre_image] = text end
   def pre_ani(text) @hash[:pre_ani] = text end
 
   def parse_output
@@ -44,7 +43,6 @@ class ContentDSL < BaseDSL
       content3
       pre_title
       pre_body
-      pre_image
       pre_ani
     ).each do |property|
       strings[@hash[property]] = @hash[property] unless @hash[property].blank?
