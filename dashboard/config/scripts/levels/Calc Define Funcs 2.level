@@ -24,7 +24,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "input_output_table": "[[15,5],[20,10],[33,23],[42,32]]",
-    "markdown_instructions": "Write a function _f_ that takes a parameter _x_ and returns x - 10. Test your function using f(15)."
+    "markdown_instructions": "Write a function _f_ that takes a parameter _x_ and returns x - 10. Test your function using f(15).",
+    "examples_required": "true"
   }
 }]]></config>
   <blocks>

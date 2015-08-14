@@ -1,11 +1,11 @@
 name 'U2L19 Student Lesson Introduction'
-title 'Public Key Crypto'
+title 'Public Key Encryption'
 
 css 'unplugged'
 skip_dialog 'true'
 
 markdown <<MARKDOWN
-## Unit 2: Lesson 19 - Public Key Crypto
+## Unit 2: Lesson 19 - Public Key Encryption
 
 # Background
 
@@ -37,3 +37,13 @@ private key: the complementary key to a public key that is used to decrypt a mes
 
 
 MARKDOWN
+
+
+
+
+
+
+
+
+
+

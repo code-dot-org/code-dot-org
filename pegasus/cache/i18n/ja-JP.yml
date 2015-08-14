@@ -101,7 +101,7 @@
   learn_online: 他のオンラインのコースを試してください
   learn_classes: 近くのクラスを見つける
   hoc_is_here: '#HourOfCode はここです - 見つける @codeorg'
-  just_did_hoc: '私は #HourOfCode に挑戦しました - 見つける @codeorg'
+  just_did_hoc: '私は #HourOfCode に挑戦しました。あなたもやってみて！ @codeorg'
   twitter_teach_cs: なぜもっと多くの学校がコンピューターサイエンスを教えないのでしょうか？この問題を解決することができます。http://youtu.be/nKIu9yen5nc。詳細については
     http://code.org/を参照してください。
   learn_hoc: Hour of Codeを学ぶ
@@ -165,7 +165,7 @@
   homepage_hero_text_student5: '&ldquo;コンピューターサイエンスは他の人のためにあるんじゃない。あなたのためにあるのだ。いま、ここから始めよう。&rdquo;ジェラルド先生'
   homepage_hero_text_teacher1: '&ldquo;コーディングは創造性、インスピレーション、革新性が育てられます&mdash;これらは、どのような仕事でも大事なことです」&rdquo;フローレサ先生'
   homepage_hero_text_teacher2: '&ldquo;生徒全員がこのプログラムに興味を持ち、集中して取り組みました。&rdquo;アダム、教師'
-  homepage_hero_text_stat_loc: 生徒によってコードの＃locラインが書かれました。
+  homepage_hero_text_stat_loc: 250万人の女の子がCode Studioに参加して学んでいます。
   homepage_hero_text_stat_students: 'コードスタジオの学生アカウント #student_count  '
   homepage_hero_text_stat_served: 'コードの時間: #served 提供しています'
   homepage_slot_text_hoc: Hour of Code
@@ -199,9 +199,9 @@
   homepage_slot_text_blurb_educators: 学生たちに教えよう
   homepage_slot_text_link_k5: 小学生以下向けのコース
   homepage_slot_text_link_fullcurriculum: すべてのカリキュラムを見る
-  homepage_slot_text_link_pd: プロになるために
+  homepage_slot_text_link_pd: プロフェッショナルな開発
   homepage_slot_text_title_advocates: 応援してくださる方へ
-  homepage_slot_text_blurb_advocates: 支援しよう
+  homepage_slot_text_blurb_advocates: 人々の多様性をコンピューターによってサポートします
   homepage_slot_text_link_stats: 統計情報を表示
   homepage_slot_text_link_buy: 参加しよう
   homepage_slot_text_link_donate: 寄付をする
@@ -287,7 +287,7 @@
   dashboard_hoc_courses_desc: 1時間未満のチュートリアルをお試しください。
   dashboard_k5_courses: 20時間コース（幼稚園/小学生対象）
   dashboard_k5_courses_desc: このコースは、自分のペースで進められるオンラインのチュートリアルと、コンピューターを使わない活動の2つの要素から成り立っています。コース毎に20前後のレッスンがあるので、1学期間かけて教えることも、1ユニットとして教えることもできます。まだ文字が読めない幼稚園児でも参加は可能です。先生を対象に、アメリカ国内では無料の教員研修を提供しています。<a
-    href="/professional-development-workshops">教員研修について</a>
+    href="/professional-development-workshops">近くのワークショップを探す</a>
   dashboard_middle_courses: 20時間コース（中学生対象）
   dashboard_middle_courses_desc: 中学生向けカリキュラムでは、題材に中学レベルの数学や科学を取り込んでいるので、コンピューターサイエンスやプログラミングを通してその概念を教えることもできます。教員研修に参加するには、まず<a
     href="/educate/districts">Code.org と教育委員会のパートナーシップ</a>に応募してください。
@@ -369,10 +369,10 @@
   dashboard_students_share_section: このセクションのサインインページを生徒達と共有する：
   dashboard_students_print_info: 学生用のログイン情報でカードを印刷する
   dashboard_students_secret_picture_title: 秘密の画像
-  dashboard_students_secret_picture: 秘密の画像
+  dashboard_students_secret_picture: このセクションでは、各生徒が秘密の<b>画像</b>をパスワードの変わりに使用してログインします。ログインする際は上記のWebアドレスにログインしてください。
   dashboard_students_reset_picture: <b>秘密を表示</b> し、<b>秘密をリセット</b> を選択して、いつでも学生の秘密の画像をリセットできます。新しい秘密の画像は生徒がサインインする際に生成されます
   dashboard_students_secret_word_title: 秘密の言葉
-  dashboard_students_secret_word: 秘密の単語
+  dashboard_students_secret_word: このセクションでは、生徒が各自で設定したパスワードを使ってログインします。ログインするためには上記のWebアドレスにアクセスしてください。
   dashboard_students_reset_word: <b>秘密の表示</b>と<b>秘密のリセット</b>を選ぶことで、いつでも生徒の秘密の単語をリセットすることができます。新しい秘密の単語はサインインしたときに生成されます
   dashboard_students_join_link: あなたのセクションに入るよう生徒に自分のアカウントの作り方を教えましょう
   dashboard_students_no_email: 生徒がEメールアドレスを持っていない場合、もしくはあなたが生徒のアカウントを作りたい場合、セクションの秘密の種類を<b>単語</b>か<b>画像</b>にしてください。
@@ -413,11 +413,11 @@
   dashboard_login_none: Eメール
   dashboard_new_password: '新規パスワード:'
   dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_in_progress: 途中
   dashboard_progress_not_completed: 完了していません。
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_completed_too_many_blocks: 完成、ブロック達が多すぎ
+  dashboard_progress_completed_perfect: 完成、完璧
+  dashboard_progress_furthest_level_attempted: 最も遠いレベルの試行
   stats_hoc_2013_heading: 昨年のHour of Codeによる、ほんの一週間での素晴らしい成果：
   stats_hoc_2013_image_alt: 2013年の Hour of Codeの成果
   dashboard_teacher: 先生
@@ -665,7 +665,7 @@
   robomindnl_longdescription: バーチャルロボットの制御を通して、生徒の皆さんはプログラミングの基本を学びます。このオンラインのコースは、簡単なプレゼンテーション、動画、クイズ、自動ガイダンスやヒントがついているので、独習することができます
   flappy_longdescription: ドラッグ&ドロップによるプログラミングであなた独自のFlappyバードのゲームを作ります。見た目をカスタマイズしてみましょう
     (Flappyザメ、Flappyサンタなど)。そして、あなたの携帯にそのゲームを1クリックで登録しましょう
-  bitsbox_longdescription: あなた独自の仮想タブレットをカスタマイズし、アプリを作って、遊んで、共有しましょう。簡単なチュートリアルが用意されているので、小さなお子さんでも本当のJavaScriptでプログラムを作成することができます。そのあとより高度なことに進むことになるでしょう。
+  bitsbox_longdescription: あなた独自の仮想タブレットをカスタマイズし、アプリを作って、遊んで、共有しましょう。簡単なチュートリアルが用意されているので、小さなお子さんでも本当のJavaScriptでプログラムを作成することができます。あなたが熟練していればより進めるでしょう。
   makegameswithus_longdescription: Swiftと呼ばれる初心者用の新しいプログラミング言語を使って、iPhone用ゲームの作り方を勉強しましょう！ポケモン風のアクションゲームを作って、モンスターに新しい動きをプログラミングします。モンスターを勝たせるために、変数、メソッド、オブジェクトなどの使い方を学びましょう。
   touchdevelop_longdescription: タッチで簡単に操作できるエディターを使って、ピクセルアートを作ったり、パズルを解いたり、鳥がジャンプするあなた独自のゲームを作成します
   appinventor_longdescription: 楽くて短いビデオチュートリアルが用意してあります。このビデオでは、Android携帯やタブレット用の簡単なアプリケーション3つの作り方を紹介しています。初心者もエキスパートも同じように、このHour
@@ -887,7 +887,7 @@
   arduino_beyond_longdescription: Arduino はアーティストやデザイナーに向けの人気のあるプラットフォームで、本物のセンサーやLED、ブザーなどを使うことができます。Sparkfun
     Virtual Sandbox は実際のArduinoコードをブラウザ上で教えてくれます。
   processing_beyond_longdescription: Processing はプログラミング言語のひとつであり、また開発環境のひとつでもあり、オンラインのコミュニティでもあります。2001
-    年に生まれてから、ビジュアルアートの分野でのプログラミングを促進させてきました。元々、ソフトウェアのスケッチブックであったり、ビジュアルプログラミングの基礎を教えるものとして作られ、後にプロフェッショナル向けのツールへと進化しました。現在では学習用、試作用、そして作品用として、何千何万もの学生、アーティスト、デザイナー、研究者や愛好家によって使われています。
+    年に生まれてから、ビジュアルアートの分野でのソフトウェアリテラシーを促進させてきました。元々、ソフトウェアのスケッチブックであったり、ビジュアルプログラミングの基礎を教えるものとして作られ、後にプロフェッショナル向けのツールへと進化しました。現在では学習用、試作用、そして作品用として、何千何万もの学生、アーティスト、デザイナー、研究者や愛好家によって使われています。
   alice_beyond_longdescription: 3Dアニメーションの作成をサポートする革新的なプログラミング環境を使いながら、Aliceプロジェクトでは、幅広い年代の人に対して、コンピューターでの考え方、問題解決方法、コンピュータープログラミングを教えたり学んだりするための資料やツールを提供しています。
   sphero_beyond_longdescription: SPRK のレッスンなら、ご自身の立場が先生であろうと保護者であろうと、子どもたちに楽しくロボットのプログラミングについて学ぶ機会を提供できます。その過程で、算数と科学のスキルも身につきます。
   compatibility_https_header: HTTPS を有効にしてください

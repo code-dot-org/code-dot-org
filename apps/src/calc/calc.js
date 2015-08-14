@@ -143,7 +143,7 @@ Calc.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'functional_compute';
   config.enableShowCode = false;
-  
+
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
   config.skin.smallStaticAvatar = null;
@@ -212,7 +212,7 @@ Calc.init = function(config) {
     dom.addClickTouchEvent(resetButton, Calc.resetButtonClick);
 
     if (Blockly.contractEditor) {
-      Blockly.contractEditor.registerTestHandler(testCalcExample);
+      Blockly.contractEditor.registerTestHandler(getCalcExampleFailure);
       Blockly.contractEditor.registerTestResetHandler(resetCalcExample);
     }
   };
@@ -222,11 +222,11 @@ Calc.init = function(config) {
 
 /**
  * @param {Blockly.Block}
- * @param {boolean} [appInitiated] True if this test was initiated by the app
- *   rather than via the contract editor
- * @returns {string}
+ * @param {boolean} [evaluateInPlayspace] True if this test should also show
+ *   evaluation in the play space
+ * @returns {string} Error string, or null if success
  */
-function testCalcExample(exampleBlock, appInitiated) {
+function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
   try {
     var entireSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
 
@@ -249,7 +249,7 @@ function testCalcExample(exampleBlock, appInitiated) {
 
     var areEqual = expected.result.equals(actual.result);
 
-    if (!appInitiated) {
+    if (evaluateInPlayspace) {
       var tokenList = constructTokenList(expectedEquation, null);
       if (!expected.err) {
         tokenList.push(new Token(' = ', false));
@@ -259,7 +259,7 @@ function testCalcExample(exampleBlock, appInitiated) {
       displayEquation('userExpression', null, tokenList, 0, 'errorToken');
     }
 
-    return areEqual ? "Matches definition." : "Does not match definition";
+    return areEqual ? null : "Does not match definition";
   } catch (error) {
     // Most Calc error messages were not meant to be user facing.
     return "Evaluation Failed.";
@@ -823,23 +823,7 @@ Calc.checkExamples_ = function () {
     return outcome;
   }
 
-  // TODO - what of this belongs in studio app?
-  var failingBlockName = '';
-  Blockly.mainBlockSpace.findFunctionExamples().forEach(function (exampleBlock) {
-    var result = testCalcExample(exampleBlock, true);
-    var success = result === "Matches definition.";
-
-    // Update the example result. No-op if we're not currently editing this
-    // function.
-    Blockly.contractEditor.updateExampleResult(exampleBlock, result);
-
-    if (!success) {
-      failingBlockName = exampleBlock.getInputTargetBlock('ACTUAL')
-        .getTitleValue('NAME');
-    }
-
-  });
-
+  var failingBlockName = studioApp.checkForFailingExamples(getCalcExampleFailure);
   if (failingBlockName) {
     outcome.result = false;
     outcome.testResults = TestResults.EXAMPLE_FAILED;

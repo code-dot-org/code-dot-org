@@ -77,8 +77,11 @@ class Eval < Blockly
         <block type="functional_logical_not" />
         <block type="functional_boolean" />
       </category>
-      <category name ="Cond">
-        <block type="functional_cond" />
+      <category name ="Conditionals">
+        <block type="functional_cond_number" />
+        <block type="functional_cond_string" />
+        <block type="functional_cond_image" />
+        <block type="functional_cond_boolean" />
       </category>
       <category name="Functions" custom="PROCEDURE"/>
       <category name="Variables" custom="FUNCTIONAL_VARIABLE" />

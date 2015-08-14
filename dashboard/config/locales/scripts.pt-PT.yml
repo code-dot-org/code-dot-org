@@ -298,7 +298,7 @@
           Making Pictures: Making Pictures
           Defining Variables: Definir variáveis
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: A receita do design
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -512,6 +512,12 @@
           Encoding Color Images: Encoding Color Images
           Lossy Compression and File Formats: Lossy Compression and File Formats
           'Practice PT: Encode a Complex Thing': 'Practice PT: Encode a Complex Thing'
+          Bytes and File Sizes: Bytes and File Sizes
+          Personal Innovations: Personal Innovations
+          Sending Complex Messages: Sending Complex Messages
+          Sending Binary Messages with the Internet Simulator: Sending Binary Messages
+            with the Internet Simulator
+          Encode a Complex Thing: Encode a Complex Thing
         algebraPD:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -546,12 +552,13 @@
           Contracts: Contratos
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: A receita do design
           Your Game - Animation: Your Game - Animation
           Booleans: Booleanos
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: Condições e funções definidas por
+            partes
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
@@ -699,6 +706,7 @@
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
+          Digital Assistant Challenge: Digital Assistant Challenge
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -711,7 +719,7 @@
           Evaluation Blocks: Blocos de cálculo
           The Big Game: The Big Game
           Strings and Images: Cadeias de caracteres e imagens
-          The Design Recipe: The Design Recipe
+          The Design Recipe: A receita do design
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -909,7 +917,7 @@
           Defining Variables: Definir variáveis
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: A receita do design
           Big Game - Animation: Big Game - Animation
           Booleans: Booleanos
           Sam the Bat: Sam the Bat
@@ -1086,7 +1094,7 @@
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
           Welcome!: Olá!
-          The Design Recipe: The Design Recipe
+          The Design Recipe: A receita do design
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
@@ -1209,3 +1217,10 @@
           Practice PT: Practice PT
           Ramping Up: Ramping Up
           Wrap Up and Next Steps: Wrap Up and Next Steps
+        odometer:
+          title: Odometer Widget
+          description_short: Odometer widget
+          description: Use the Odometer widget to control odometers with various number
+            bases. Binary, Decimal and Hexadecimal are the most common number systems
+            to see in computer science.
+          Odometer Widget: Odometer Widget

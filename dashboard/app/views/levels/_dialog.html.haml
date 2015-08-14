@@ -8,7 +8,7 @@
 .clear
 %div{style: 'display: none;'}
   #error-dialogcontent
-    .modal-content
+    .modal-content.no-modal-icon
       %p.dialog-title
         =t("#{app == 'match' ? 'match' : 'multi'}.wrong_title")
       %p
@@ -18,7 +18,7 @@
           =t('dialog.ok')
 
   #toofew-dialogcontent
-    .modal-content
+    .modal-content.no-modal-icon
       %p.dialog-title
         =t("multi.toofew_title")
       %p
@@ -28,17 +28,10 @@
           =t('dialog.ok')
 
   #pre-dialogcontent
-    - if data['pre_image']
-      .modal-image{style: 'margin-top: 0px;'}
-        != string_or_image(app, data['pre_image'])
-    .modal-content
-      - if data['pre_image'].blank?
-        - adjust_layout_class = 'unindentContent'
-      - else
-        - adjust_layout_class = ''
-      %p.dialog-title{class: adjust_layout_class}
+    .modal-content.no-modal-icon
+      %p.dialog-title
         != string_or_image(app, data['pre_title']) if data['pre_title']
-      %p{class: adjust_layout_class}
+      %p
         != string_or_image(app, data['pre_body']) if data['pre_body']
       - if data['pre_ani']
         .aniGif.example-image{style: 'overflow: hidden;'}
@@ -48,7 +41,7 @@
           =t('dialog.ok')
 
   #success-dialogcontent
-    .modal-content
+    .modal-content.no-modal-icon
       %p.dialog-title
         - if data['options'].try(:[], 'success_title')
           = data['options']['success_title']
@@ -67,132 +60,17 @@
         %button#ok-button.secondary
           =t('dialog.ok')
 
+:ruby
+  dialogOptions = {
+    skipSound: !!(data['options'].try(:[], 'skip_sound')),
+    preTitle: data['pre_title'],
+    fallbackResponse: @fallback_response.to_json,
+    callback: @callback,
+    app: app,
+    level: @level.level_num,
+    shouldShowDialog: data['options'].try(:[], 'skip_dialog').blank?
+  }
+
 :javascript
-  var dialogType = null;
-  var adjustedScroll = false;
-  var skipSound = #{ !!(data['options'].try(:[], 'skip_sound'))};
-
-  $(function () {
-    if ("#{ data['pre_title']}" != "") {
-      setTimeout(function () {
-        showDialog("pre");
-      }, 1000);
-    }
-  });
-
-  function dialogHidden() {
-    if (dialogType == "success" && lastServerResponse.nextRedirect) {
-      window.location.href = lastServerResponse.nextRedirect;
-    }
-
-    if (dialogType == "error") {
-      adjustScroll();
-    }
-  }
-
-  function showDialog(type) {
-    dialogType = type;
-
-    var dialog = new Dialog({ body: "", onHidden: dialogHidden });
-
-    // Use our prefabricated dialog content.
-    $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
-
-    // Clicking the okay button in the dialog box dismisses it.
-    $(".modal-body #ok-button").click(function () {
-      dialog.hide();
-    });
-
-    dialog.show();
-  }
-
-  function adjustScroll() {
-    if (adjustedScroll) {
-      return;
-    }
-
-    var win = $(window);
-    var el = $('.mainblock');
-    var winPos = win.scrollTop() + win.height();
-    var elPos = el.offset().top + el.height() - 10;
-
-    if (winPos < elPos) {
-      $('html, body').animate({
-        scrollTop: $(".submitButton:first").offset().top - 10
-      }, 1000);
-    }
-
-    adjustedScroll = true;
-  }
-
-  // TODO(dave): Dashboard shouldn't be reaching into the internal implementation of
-  // individual levels. Instead levels should call appOptions.onAttempt.
-  $('.submitButton').click(function () {
-    var submitButton = $('.submitButton');
-    if (submitButton.attr('disabled')) {
-      return;
-    }
-
-    // Avoid multiple simultaneous submissions.
-    submitButton.attr('disabled', true);
-
-    var onComplete = function(willRedirect) {
-      if (!willRedirect) {
-        $('.submitButton').attr('disabled', false);
-      }
-    };
-
-    processResults(onComplete);
-  });
-
-  /**
-   * Process the solution to the puzzle submitted by the user.
-   * @param {function(boolean)} onComplete Optional callback function to call when
-   *     the server call completes, which receives a boolean indicating whether
-   *     the browser will redirect to a new location after it is called.
-   */
-  // TODO(dave): move this logic into appOptions.onAttempt for levels of type
-  // external (including pixelation), multi, match, and any others
-  // which render 'levels/dialog'.
-  function processResults(onComplete) {
-    var results = getResult();
-    var response = results['response'];
-    var result = results['result'];
-    var errorType = results['errorType'];
-
-    if (!result) {
-      showDialog(errorType || "error");
-      if (!skipSound) {
-        CDOSounds.play('failure');
-      }
-    } else {
-      if (!skipSound) {
-        CDOSounds.play('success');
-      }
-    }
-
-    sendReport({
-      program: response,
-      fallbackResponse: '#{ @fallback_response.to_json}',
-      callback: '#{ @callback}',
-      app: '#{ app}',
-      level: '#{ @level.level_num}',
-      result: result,
-      testResult: result ? 100 : 0,
-      onComplete: function () {
-        var willRedirect = !!lastServerResponse.nextRedirect;
-        onComplete && onComplete(willRedirect);
-
-        if (lastServerResponse.videoInfo)
-        {
-          showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.nextRedirect) {
-          if (#{ data['options'].try(:[], 'skip_dialog').blank?}) {
-            showDialog("success");
-          } else {
-            window.location.href = lastServerResponse.nextRedirect;
-          }
-        }
-      }
-    });
-  }
+  appOptions.dialog = #{dialogOptions.to_json};
+  #{render partial: 'levels/dialogHelper', formats: [:js]}

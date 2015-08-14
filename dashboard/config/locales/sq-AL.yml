@@ -400,7 +400,7 @@
     local_school: shkolla lokale
     online: online
     see_details: Shiko detajet
-    view_course: View Course
+    view_course: Shiko kursin
     prize_info: 'Çmimet për pjesmarrje ( vetëm mësues të shkollave publike në U.S.):
       Mbi 1000$ në shpërblimet e klasës.'
     tryfirst: 'Ose, mund të përpiqesh si fillim dhe të rregjistrohesh më vonë:'
@@ -419,7 +419,7 @@
     heading_legacy: <h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>
     your_gallery: Galeria
     no_primary_course: Bëj një kurs ne Studion e Kodimit
-    choose_next_course: Try a Code Studio course by choosing one below
+    choose_next_course: Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë
     print_certificate: Printo Çertifikatën
   gender:
     male: Mashkull
