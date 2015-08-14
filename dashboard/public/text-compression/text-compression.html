@@ -2,6 +2,15 @@
 <!-- Text compression widget. Original code written by Baker Franke. -->
 <html>
 <head>
+  <!--[if IE 9]>
+  <style>
+    /* override calc() styles which don't always work in IE9 */
+    div.widgetLeft, div.widgetLeftHeader {
+      width: 63%;
+    }
+  </style>
+  <![endif]-->
+
   <style>
     .full_container {
       position: absolute;
@@ -23,6 +32,13 @@
     #widgetMainWrapper {
       height: 100%;
       position: relative;
+    }
+    #widgetMainWrapper:after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      visibility: hidden;
     }
     .widgetLeft, .widgetLeftHeader {
       margin-right: 20px;
