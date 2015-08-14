@@ -197,7 +197,7 @@ Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedTe
   element_has_text(selector, expectedText)
 end
 
-Then /^the dialog is titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
+Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
   steps %{
     Then I wait to see a ".dialog-title"
     And element ".dialog-title" has text "#{expectedText}"
