@@ -9,9 +9,6 @@ require_relative '../middleware/channels_api'
 # NetSimApi implements a rest service for interacting with NetSim tables.
 class NetSimApi < Sinatra::Base
 
-  # Idle time in seconds (no writes) before the shard expires and is deleted.
-  SHARD_EXPIRATION = 7200
-
   TABLE_NAMES = {
       node: 'n',
       wire: 'w',
@@ -43,7 +40,8 @@ class NetSimApi < Sinatra::Base
 
   # Return a new RedisTable instance for the given shard_id and table_name.
   def get_table(shard_id, table_name)
-    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name, SHARD_EXPIRATION)
+    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
+                   CDO.netsim_shard_expire_time)
   end
 
   #
