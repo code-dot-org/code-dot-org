@@ -4,7 +4,7 @@ require 'rack/test'
 require_relative '../../lib/cdo/aws/s3'
 require_relative '../../deployment'
 
-class AwsS3IntegrationTest < Minitest::Test
+class AwsS3IntegrationTest < Minitest::Unit::TestCase
   # A test bucket, only used for these tests.
   TEST_BUCKET = 'cdo-temp'
 
