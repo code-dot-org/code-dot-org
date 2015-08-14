@@ -3,7 +3,7 @@ require 'aws-sdk'
 module AWS
   module S3
 
-    # Region for storing S3 buckets. TODO: Move this CDO configuration.
+    # Region for storing S3 buckets. TODO: Move this to the CDO configuration.
     S3_REGION = 'us-east-1'
 
     # An exception class used to wrap the underlying Amazon NoSuchKey exception.
