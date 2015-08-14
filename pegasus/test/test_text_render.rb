@@ -1,7 +1,7 @@
 require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
 
-class TextRenderTest < Minitest::Unit::TestCase
+class TextRenderTest < Minitest::Test
   include TextRender
 
   def test_erb

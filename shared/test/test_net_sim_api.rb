@@ -7,7 +7,7 @@ require_relative 'spy_pub_sub_api'
 
 ENV['RACK_ENV'] = 'test'
 
-class NetSimApiTest < Minitest::Unit::TestCase
+class NetSimApiTest < Minitest::Test
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
 

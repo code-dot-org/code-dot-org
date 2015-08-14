@@ -4,7 +4,7 @@ require_relative '../../deployment'
 
 ENV['RACK_ENV'] = 'test'
 
-class LogTest < Minitest::Unit::TestCase
+class LogTest < Minitest::Test
   def setup
     @old_log = CDO.log
   end

@@ -6,7 +6,7 @@ require File.expand_path '../../middleware/channels_api', __FILE__
 
 ENV['RACK_ENV'] = 'test'
 
-class SourcesTest < Minitest::Unit::TestCase
+class SourcesTest < Minitest::Test
 
   def setup
     # The Sources API does not *currently* need to share a cookie jar with the Channels API,
