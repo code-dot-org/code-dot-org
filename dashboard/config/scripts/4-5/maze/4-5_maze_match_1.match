@@ -5,7 +5,6 @@ content1 'Match the puzzles to the blocks'
 
 pre_title 'Instructions'
 pre_body 'Drag the blocks to match.'
-pre_image ' '
 pre_ani '/script_assets/images/matching_ani.gif'
 
 height '200'
