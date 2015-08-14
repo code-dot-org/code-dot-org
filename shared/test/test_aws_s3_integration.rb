@@ -12,9 +12,6 @@ class AwsS3IntegrationTest < Minitest::Test
   # An integration test of the AWS S3 wrapper that runs against the actual AWS service.
   # This must be run a server with access to the production AWS keys.
   def test_aws_s3
-
-    skip 'Run this test manually with TEST_AWS_S3=1' unless ENV['TEST_AWS_S3']
-
     # Test upload_to_bucket and download_from_bucket with :no_random.
     test_key = Random.rand.to_s
     test_value = Random.rand.to_s
