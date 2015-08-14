@@ -3,11 +3,8 @@
 %hr
 %pre
   #{@recipient}
-%hr
-%pre
-  #{@recipient_ops_data}
 %p
-  Dear #{@recipient_ops_data['ops_first_name']},
+  Dear #{@recipient.properties['ops_first_name']},
 %p
   Your #{@workshop[:phase][:long_name]} workshop on #{@workshop[:start].strftime("%A, %B %d, %Y")} is coming up.
   - if @workshop[:phase][:id] == 8 && (@workshop[:program_type] == 4 || @workshop[:program_type] == 3)
