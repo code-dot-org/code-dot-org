@@ -33,6 +33,10 @@ function drawGraph() {
   var binCode = "";
   var hexMode = isHex();
 
+  // Save the cursor position before doing any manipulatino of the textarea.
+  var cursorPosition = pixel_data.selectionStart;
+  var characterCount = pixel_data.value.length;
+
   // If the hex radio button is currently selected.
   if (hexMode) {
     // Then we need to get the binary representation for this function to work.
@@ -49,6 +53,10 @@ function drawGraph() {
     // Binary code needs to have everything stripped except for 0s and 1s.
     binCode = pixel_data.value.replace(/[^01]/gi, "");
   }
+
+  // Restore cursor position.
+  cursorPosition += (pixel_data.value.length - characterCount);
+  pixel_data.setSelectionRange(cursorPosition, cursorPosition);
 
   var w, h, bitsPerPix = 1;
   if (options.version == '1') {
