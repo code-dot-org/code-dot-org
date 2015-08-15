@@ -105,13 +105,13 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     bag = RedisPropertyBag.new(@redis, "bag_#{@suffix}")
 
     # Set some values
+    bag.set('foo1', 'value1')
     bag.set('foo2', 'value2')
     bag.set('foo3', 'value3')
-    bag.set('foo1', 'value1')
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Set an expiration time
-    test_delay_seconds = 2
+    test_delay_seconds = 1
     bag.expire(test_delay_seconds)
 
     # Make sure the bag contents are still intact
@@ -122,7 +122,44 @@ class RedisPropertyBagTest < Minitest::Unit::TestCase
     assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
 
     # Jump forward in time to expiration
+    time_travel 0.2 # 0.1s margin of error for real redis
+    assert_equal({}, bag.to_hash)
+  end
+
+  def test_deferred_expiration
+    bag = RedisPropertyBag.new(@redis, "bag_#{@suffix}")
+
+    # Set some values
+    bag.set('foo1', 'value1')
+    bag.set('foo2', 'value2')
+    bag.set('foo3', 'value3')
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
+
+    # Set an expiration time
+    test_delay_seconds = 1
+    bag.expire(test_delay_seconds)
+
+    # Make sure the bag contents are still intact
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
+
+
+    # Jump to just before expiration
+    time_travel test_delay_seconds - 0.1
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
+
+    # Call expire again to reset the expiration time
+    bag.expire(test_delay_seconds)
+
+    # Jump forward in time to original expiration
     time_travel 0.1
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
+
+    # Jump to just before new expiration
+    time_travel test_delay_seconds - 0.2
+    assert_equal({'foo1' => 'value1', 'foo2' => 'value2', 'foo3' => 'value3'}, bag.to_hash)
+
+    # Jump forward in time to new expiration
+    time_travel 0.2 # 0.1s margin of error for real redis
     assert_equal({}, bag.to_hash)
   end
 
