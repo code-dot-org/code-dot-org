@@ -31,14 +31,13 @@ class RedisTable
 
     @shard_id = shard_id
     @table_name = table_name
-    @expire_in = expire_in
 
     # A counter key in the underlying RedisPropertyBag, used to generate
     # asecending row ids.
     @row_id_key = "#{table_name}#{ROW_ID_SUFFIX}"
 
     # A redis property bag for storing all tables in the shard.
-    @props = RedisPropertyBag.new(redis, shard_id)
+    @props = RedisPropertyBag.new(redis, shard_id, expire_in)
   end
 
   # Inserts a new row, notifying other clients using the pubsub service.
@@ -49,7 +48,6 @@ class RedisTable
   def insert(value, ignored_ip=nil)
     new_id = next_id
     @props.set(row_key(new_id), value.to_json)
-    @props.expire(@expire_in) if @expire_in
     publish_change({:action => 'insert', :id => new_id})
     merge_id(value, new_id)
   end
@@ -131,7 +129,6 @@ class RedisTable
   # @param [String] ignored_ip Unused, for compatability with other table apis.
   def update(id, hash, ignored_ip=nil)
     @props.set(row_key(id), hash.to_json)
-    @props.expire(@expire_in) if @expire_in
     publish_change({:action => 'update', :id => id})
     merge_id(hash, id)
   end
@@ -143,7 +140,6 @@ class RedisTable
     ids = [ids] unless ids.is_a?(Array)
     deleted = @props.delete(ids.map {|id| row_key(id)})
     if deleted
-      @props.expire(@expire_in) if @expire_in
       publish_change({:action => 'delete', :ids => ids})
     end
     deleted
