@@ -1,6 +1,5 @@
 require 'minitest/autorun'
 require 'rack/test'
-require 'securerandom'
 
 require_relative '../../lib/cdo/aws/s3'
 require_relative '../../deployment'
@@ -10,17 +9,25 @@ class AwsS3IntegrationTest < Minitest::Test
   TEST_BUCKET = 'cdo-temp'
 
   # An integration test of the AWS S3 wrapper that runs against the actual AWS service.
-  # This must be run a server with access to the production AWS keys.
   def test_aws_s3
-
-    skip 'Run this test manually with TEST_AWS_S3=1' unless ENV['TEST_AWS_S3']
-
     # Test upload_to_bucket and download_from_bucket with :no_random.
     test_key = Random.rand.to_s
-    test_value = Random.rand.to_s
+    test_value = 'hello\x00\x01\xFF'
     upload_key = AWS::S3::upload_to_bucket(TEST_BUCKET, test_key, test_value, :no_random => true)
     assert_equal test_value, AWS::S3::download_from_bucket(TEST_BUCKET, test_key)
     assert_equal test_key, upload_key
+
+    # Make sure a string all of possible bytes and make sure it round trips correctly
+    all_bytes = (0..255).to_a.pack('C*')
+    AWS::S3::upload_to_bucket(TEST_BUCKET, test_key, all_bytes, :no_random => true)
+    value = AWS::S3::download_from_bucket(TEST_BUCKET, test_key)
+    assert_equal all_bytes, value
+    assert_equal Encoding::BINARY, value.encoding
+    assert_equal 256, value.bytesize
+    bytes = value.codepoints
+    (0..255).each do |i|
+      assert_equal i, bytes[i]
+    end
 
     # Test upload_to_bucket and download_from_bucket with key randomization.
     key = 'key'
@@ -32,7 +39,17 @@ class AwsS3IntegrationTest < Minitest::Test
 
     test_value3 = Random.rand.to_s
     randomized_key2 = AWS::S3::upload_to_bucket(TEST_BUCKET, key, test_value3)
-    assert randomized_key != randomized_key2
+    assert randomized_key2 != randomized_key
     assert_equal test_value3, AWS::S3::download_from_bucket(TEST_BUCKET, randomized_key2)
+
+    # Test that it throws a NoSuchKey exception for a non-existent key
+    assert_raises(AWS::S3::NoSuchKey) do
+      AWS::S3::download_from_bucket(TEST_BUCKET, 'nonexistent_key')
+    end
+
+    # Test connect_v2!
+    client = AWS::S3::connect_v2!
+    assert_equal test_value3, client.get_object(bucket: TEST_BUCKET, key: randomized_key2).body.string
   end
+
 end

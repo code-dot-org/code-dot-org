@@ -3,7 +3,7 @@ Feature: Playing multi2 levels
 Background:
   Given I am on "http://learn.code.org/s/allthethings/stage/10/puzzle/1?noautoplay=true"
   Then I rotate to landscape
-  And element ".submitButton" is visible
+  And I wait until element ".submitButton" is visible
 
 Scenario: Loading the level
   And element ".multi-question" has text "Which lines of code should be removed so the program will work as intended? Select two answers"
