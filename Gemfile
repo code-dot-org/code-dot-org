@@ -129,7 +129,6 @@ gem 'codemirror-rails' # edit code in textarea
 gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
-gem 'aws-s3'
 
 gem 'font-awesome-rails'
 gem 'sequel', '~> 4.10.0'
