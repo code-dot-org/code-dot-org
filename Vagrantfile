@@ -31,8 +31,14 @@ Vagrant.configure(2) do |config|
     vb.memory = "2048"
   end
 
-  # View the documentation for the provider you are using for more
-  # information on available options.
+  # A virtualbox synced folder is created from the current directory in the host system
+  # to a subfolder of the guest OS user's home directory. There can be complications if
+  # the synced folder is placed on the home directory itself and the synced folder has
+  # to be a parent folder of the git repo that will be cloned in provisioning.
+  config.vm.synced_folder ".", "/home/vagrant/repo"
+
+  # Chef is used as a provisioner in order to have the ability to detect errors and retry
+  # (for example in case of network interruptions).
   config.vm.provision "chef_apply", recipe: <<-RECIPE1
     execute 'update-and-upgrade-packages' do
       command 'aptitude update && aptitude upgrade -y'
@@ -72,7 +78,7 @@ Vagrant.configure(2) do |config|
       retry_delay 5
     end
 
-    git "/home/vagrant/code-dot-org" do
+    git "/home/vagrant/repo/code-dot-org" do
       repository "https://github.com/code-dot-org/code-dot-org.git"
       action :sync
       user 'vagrant'
@@ -80,28 +86,30 @@ Vagrant.configure(2) do |config|
       timeout 12000
       retries 5
       retry_delay 5
-      notifies :run, "execute[bundle-install]", :immediately
     end
 
     execute 'bundle-install' do
       command 'HOME=/home/vagrant/ bundle install'
-      cwd '/home/vagrant/code-dot-org/aws'
+      cwd '/home/vagrant/repo/code-dot-org/aws'
       retries 5
       retry_delay 5
       user 'vagrant'
       group 'vagrant'
-      action :nothing
     end
   RECIPE1
 
+  # Shell provisioning is used on initial setup for the chown and rake install steps to make
+  # sure that correct permissions are applied to the resulting files.
   config.vm.provision "shell", privileged: false, inline: <<-SHELL1
-    cd code-dot-org
+    cd repo/code-dot-org
     sudo chown vagrant /home/vagrant/.npm
     rake install
   SHELL1
 
+  # This next shell provisioning step is set to run everytime the machine is brought online.
+  # A git fetch is used instead of git pull to avoid causing unexpected merge situations.
   config.vm.provision "shell", run: "always", privileged: false, inline: <<-SHELL2
-    cd code-dot-org
+    cd repo/code-dot-org
     git fetch
     rake build:dashboard
     rake build:pegasus
