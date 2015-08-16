@@ -57,12 +57,14 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
   1. Just download the project's [Vagrantfile](https://github.com/code-dot-org/code-dot-org/raw/staging/Vagrantfile) (you will be able to skip all Ubuntu and common setup instructions) to your desired code-dot-org project directory
   1. In the directory where you downloaded the Vagrantfile:
+    1. [Open an elevated command prompt](http://windows.microsoft.com/en-us/windows/command-prompt-faq) (or elevated terminal application of your choice). This is important for Virtualbox to be able to create symlinks in your Windows filesystem.
     1. `vagrant up` (Note that on first run this could take up to an hour depending on connection bandwidth and machine speed; subsequent runs should be very much faster)
     1. `vagrant ssh`
     1. Dashboard and Pegasus are setup/built by default, to run them both in the development environment execute the following in the Vagrant SSH session:
-      1. `cd code-dot-org`
+      1. `cd repo/code-dot-org` (Note that in the guest VM, the path to the Code.org source code is located at ~/repo/code-dot-org)
       1. `bin/dashboard-server`
   1. On your host machine you can now visit [Dashboard](http://localhost.studio.code.org:3000/) and [Pegasus](http://localhost.code.org:3000/)
+  1. You can use an editor or IDE of your choice to modify project files from your host machine in the code-dot-org subdirectory that is created in the directory where you downloaded the project's Vagrantfile. Changes you make on the host machine will be synced to the Ubunutu guest VM. Git operations may work more smoothly from inside a Vagrant ssh session, but you can also try git operations on the files that are synced to the Windows host.
 * Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Common setup
